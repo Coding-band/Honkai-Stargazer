@@ -1,0 +1,2450 @@
+{
+ "name": "Firesmith of Lava-Forging",
+ "iconPath": "22d43cbd5c0f3b3809c32b721831d32db76bef9d14a958fab8f3aa0eb00c1348",
+ "artPath": "6aba550abc821ace3be0003e8ef1103842305e2c6cd73bb62aec9f9a41b11d05",
+ "rarity": 5,
+ "relicType": 0,
+ "embeddedBaseTypes": {
+  "0": {
+   "id": 0,
+   "iconPath": "5d2ab974d1ee331db8c68ff5876aafe98296d6b753c281baf277ae25a1fcf3f6",
+   "color": "#FFFFFF",
+   "name": "",
+   "rarity": 0
+  },
+  "1": {
+   "id": 1,
+   "iconPath": "f10eb995d0a12b6cd4c8e7b63e95efd05037dc151928fe8698c8f52ea0331483",
+   "color": "#FFFFFF",
+   "name": "Head",
+   "rarity": 0
+  },
+  "2": {
+   "id": 2,
+   "iconPath": "0c540ef3cca7426d82cd0aae4a8a28ea761e0c3287f43bd1a4df4cf7a57d45f9",
+   "color": "#FFFFFF",
+   "name": "Hands",
+   "rarity": 0
+  },
+  "3": {
+   "id": 3,
+   "iconPath": "d20ecc1ab7faa188a97a5efa00ed3d8cdc5b0eec5f816dd163c042ec1536b8de",
+   "color": "#FFFFFF",
+   "name": "Body",
+   "rarity": 0
+  },
+  "4": {
+   "id": 4,
+   "iconPath": "b3a1dd0fd3208b4aa3a3e9d194d9eee05302518d525aa75d6f8ffceb382d18e7",
+   "color": "#FFFFFF",
+   "name": "Feet",
+   "rarity": 0
+  },
+  "5": {
+   "id": 5,
+   "iconPath": "1949766874109dc95d0de9f21598a19bcb6772b08807b3ef345d3f21409e3244",
+   "color": "#FFFFFF",
+   "name": "Planar Sphere",
+   "rarity": 0
+  },
+  "6": {
+   "id": 6,
+   "iconPath": "8d48e32c3a2eadffdb7eaa9475f9c6e580ba1a9fc2de6c66480b845b17b0325e",
+   "color": "#FFFFFF",
+   "name": "Link Rope",
+   "rarity": 0
+  }
+ },
+ "skills": [
+  {
+   "useNum": 2,
+   "desc": "Increases <span style=\"color:#F84F36;\">Fire </span>DMG by <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.1
+   ]
+  },
+  {
+   "useNum": 4,
+   "desc": "Increases the wearer's Skill DMG by <nobr>#1[i]%</nobr>. After unleashing Ultimate, increases the wearer's <span style=\"color:#F84F36;\">Fire </span>DMG by <nobr>#2[i]%</nobr> for the next attack.",
+   "params": [
+    0.12,
+    0.12
+   ]
+  }
+ ],
+ "pieces": {
+  "1": {
+   "name": "Firesmith's Obsidian Goggles",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "8888c582d632f0ee525c9248b60322a25e89b81bf595634b6127d8c7d29f2653",
+   "baseTypeText": "Head",
+   "loreTitle": "Firesmith's Obsidian Goggles",
+   "miniLore": "Protective goggles crafted from dark-black fire crystals. Through these lenses, even the flurry of intense sparks becomes a mosaic of dull shadows.",
+   "lore": "To the Firesmith clan, crafting unparalleled weapons is both their talent's calling and a lifelong curse.<br /><br />Ever since the arrival of the liberated Firesmith Clan in the world of Warforge, their skills bloomed to the extremes while also becoming tainted with the aura of Destruction.<br /><br />The dazzling light of the furnace, the sparks of metal clashing, and the long-lasting forging process can turn raw ore into a fine weapon, but can also gradually strip the firesmith of their eyesight. One day, at the bottom of a volcano, Foy found a deposit of rare obsidian flame crystal. From this, he carefully polished a pair of protective goggles, which transformed the fierce sparks of fire into pale-white silhouettes. However, the greedy smith was unable to fully escape his cursed fate either, burning everything he was into cinders in the ultimate fire.<br /><br />Foy deemed the Antimatter Legion in the Warforge as the raw materials for his creations, and himself as the rising flame.<br /><br />\"I wonder... is it possible to harness the power of a thermonuclear reaction in my furnace?\" Foy's pursuit of the ultimate fire came to an unfruitful end in an out-of-control thermonuclear fusion.",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 45.1584,
+       "levelAdd": 15.80544,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect RES",
+       "propertyIconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Break Effect",
+       "propertyIconPath": "bb107dac9985a6025c3207d0e3ec331dfcd4aa226ca148265e186dd9e8889c7f",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 67.7376,
+       "levelAdd": 23.70816,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect RES",
+       "propertyIconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Break Effect",
+       "propertyIconPath": "bb107dac9985a6025c3207d0e3ec331dfcd4aa226ca148265e186dd9e8889c7f",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 90.3168,
+       "levelAdd": 31.61088,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect RES",
+       "propertyIconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Break Effect",
+       "propertyIconPath": "bb107dac9985a6025c3207d0e3ec331dfcd4aa226ca148265e186dd9e8889c7f",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 112.896,
+       "levelAdd": 39.5136,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect RES",
+       "propertyIconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Break Effect",
+       "propertyIconPath": "bb107dac9985a6025c3207d0e3ec331dfcd4aa226ca148265e186dd9e8889c7f",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "2": {
+   "name": "Firesmith's Ring of Flame-Mastery",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "53d69c609cacebbb0c62901687034335459684f6f599dc3ec0d6a4272148760b",
+   "baseTypeText": "Hands",
+   "loreTitle": "Firesmith's Ring of Flame-Mastery",
+   "miniLore": "A ring with a symbol of flames. It is the highest symbol of honor among the Firesmith clan.",
+   "lore": "A <nobr>900</nobr>-degree kiln can turn clay into ceramic, a <nobr>1000</nobr>-degree furnace can melt tin and copper... As one pursues a purer creation, one must also pursue a more extreme temperature.<br /><br />Creatures of the Legion crave for separation from the material existence, longing for the fundamental mutations that can only be brought forth by the scorching heat waves of Destruction.<br /><br />A highly-skilled master Firesmith can raise the forge's temperature to unbelievable levels — the flame's black-body radiation would exhibit the blue spectrum like that of a dying star. Firesmiths are also geniuses at controlling flames, but only the best among them are bestowed with a ring of flame-mastery as a mark of their superb skill.<br /><br />The Warforge had long ceased to differentiate between the smith and the smithed. All those Firesmith masters who had been smelting the Antimatter Creatures had also become parts of the Weapons of Destruction.<br /><br />\"The smelting depends on the temperature, and the temperature depends on the Firesmith.\" This is matter-of-fact knowledge to any Firesmith who can control the art of Destruction.",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 22.5792,
+       "levelAdd": 7.90272,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect RES",
+       "propertyIconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Break Effect",
+       "propertyIconPath": "bb107dac9985a6025c3207d0e3ec331dfcd4aa226ca148265e186dd9e8889c7f",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 33.8688,
+       "levelAdd": 11.85408,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect RES",
+       "propertyIconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Break Effect",
+       "propertyIconPath": "bb107dac9985a6025c3207d0e3ec331dfcd4aa226ca148265e186dd9e8889c7f",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 45.1584,
+       "levelAdd": 15.80544,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect RES",
+       "propertyIconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Break Effect",
+       "propertyIconPath": "bb107dac9985a6025c3207d0e3ec331dfcd4aa226ca148265e186dd9e8889c7f",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 56.448,
+       "levelAdd": 19.7568,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect RES",
+       "propertyIconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Break Effect",
+       "propertyIconPath": "bb107dac9985a6025c3207d0e3ec331dfcd4aa226ca148265e186dd9e8889c7f",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "3": {
+   "name": "Firesmith's Fireproof Apron",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "d425db8ca907b9b8f2dab2bd4548d306ed8fb1c08ecbd1e7a6e810010701f58b",
+   "baseTypeText": "Body",
+   "loreTitle": "Firesmith's Fireproof Apron",
+   "miniLore": "A blacksmith's apron without any superfluous adornment. The texture of the leather and the family emblem are clearly visible.",
+   "lore": "The Antimatter Legion gifted the dying Warforge to the Firesmiths, letting them forge to their hearts' desire in a fiery world.<br /><br />In this scorching world of lava, as long as the smelting and hammering never ceased, creation and destruction were no longer polar opposites of each other.<br /><br />Surtur was especially good at using the molten magma that erupted from active volcanoes to infuse the Legion's creatures with a violent aura of destruction. Neither the bubbling of toxic gases nor the gurgling of magma could interrupt Surtur's concentration at the forge. Though burning waves of molten rock would splash on Surtur's fireproof apron of giant firelizard skin, the leather never lost its luster when the flames faded.<br /><br />A massive proportion of the Legion's fighting forces were repeatedly hammered and smelted in the forge until their flesh and weaponry were fused together under the hammers of the Firesmiths, becoming weapons of Destruction.<br /><br />\"This incomparable power of destruction...\" The Firesmiths who control the flames have never hidden the terrible aspirations they place in their weapons.",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.012096001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.007258,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Outgoing Healing Boost",
+       "propertyIconPath": "149abd902573860d5d76b5f79ad182f95a92f1f0533fc48d870a54028b25ec8b",
+       "isPercent": true,
+       "baseValue": 0.022118,
+       "levelAdd": 0.0077410005,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect RES",
+       "propertyIconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Break Effect",
+       "propertyIconPath": "bb107dac9985a6025c3207d0e3ec331dfcd4aa226ca148265e186dd9e8889c7f",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.010886001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.062208,
+       "levelAdd": 0.021773001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Outgoing Healing Boost",
+       "propertyIconPath": "149abd902573860d5d76b5f79ad182f95a92f1f0533fc48d870a54028b25ec8b",
+       "isPercent": true,
+       "baseValue": 0.033178,
+       "levelAdd": 0.011612,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect RES",
+       "propertyIconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Break Effect",
+       "propertyIconPath": "bb107dac9985a6025c3207d0e3ec331dfcd4aa226ca148265e186dd9e8889c7f",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.082944,
+       "levelAdd": 0.029029999,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Outgoing Healing Boost",
+       "propertyIconPath": "149abd902573860d5d76b5f79ad182f95a92f1f0533fc48d870a54028b25ec8b",
+       "isPercent": true,
+       "baseValue": 0.044237,
+       "levelAdd": 0.015483,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect RES",
+       "propertyIconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Break Effect",
+       "propertyIconPath": "bb107dac9985a6025c3207d0e3ec331dfcd4aa226ca148265e186dd9e8889c7f",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.0864,
+       "levelAdd": 0.030240001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.10368,
+       "levelAdd": 0.036288,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Outgoing Healing Boost",
+       "propertyIconPath": "149abd902573860d5d76b5f79ad182f95a92f1f0533fc48d870a54028b25ec8b",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect RES",
+       "propertyIconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Break Effect",
+       "propertyIconPath": "bb107dac9985a6025c3207d0e3ec331dfcd4aa226ca148265e186dd9e8889c7f",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "4": {
+   "name": "Firesmith's Alloy Leg",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "11e71e1ef84e5183048ff5aaa6388c38e84f8025c8228599eed4076d0ddb3141",
+   "baseTypeText": "Feet",
+   "loreTitle": "Firesmith's Alloy Leg",
+   "miniLore": "A prosthetic produced from metallic alloy. Its surface is entwined with vivid fiery carvings.",
+   "lore": "In the old days, the prison masters feared losing the extraordinary arts of Firesmithing, so they would employ the most despicable tricks to incarcerate the Firesmith clan — all the chiefs of the Firesmiths would undoubtedly suffer deformities in the legs in those days of imprisonment.<br /><br />It was the Master of Destruction that set free the imprisoned Firesmith clan and bestowed upon them the mark of Destruction which in turn granted the Firesmiths unlimited power.<br /><br />Despite the inability to move around like an able-bodied man, the chief of Firesmith obtained true freedom, for he was no longer imprisoned just for his extraordinary skills and talents in the art of Firesmithing. The chief poured in all his resentment and humiliation into the forge and would never be tired, not even by days of non-stop hammering. Upon one hammering after another, the once stubborn and proud antimatter creatures had to eventually change their form and give in to the remolding by the Destroyer.<br /><br />Despite being free from any tangible cages, the Firesmiths' obsession with forging had become another form of prison for them, had it not?<br /><br />\"Flesh and blood are a burden. Forging is also destruction.\" The chief looked at the ever-growing number of deformed Firesmiths and lamented.",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.012096001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 1.6128,
+       "levelAdd": 1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect RES",
+       "propertyIconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Break Effect",
+       "propertyIconPath": "bb107dac9985a6025c3207d0e3ec331dfcd4aa226ca148265e186dd9e8889c7f",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 2.4192,
+       "levelAdd": 1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect RES",
+       "propertyIconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Break Effect",
+       "propertyIconPath": "bb107dac9985a6025c3207d0e3ec331dfcd4aa226ca148265e186dd9e8889c7f",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 3.2256,
+       "levelAdd": 1.1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect RES",
+       "propertyIconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Break Effect",
+       "propertyIconPath": "bb107dac9985a6025c3207d0e3ec331dfcd4aa226ca148265e186dd9e8889c7f",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.0864,
+       "levelAdd": 0.030240001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 4.032,
+       "levelAdd": 1.4,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "HP",
+       "propertyIconPath": "bf90f90a1846d695bb7c7e30daf58d306c7d68475227cf8ae8c406d9a7c30f61",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATK",
+       "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "004fe0783f194cb505c834848f4471149984b629ea93819a36dc60a38c528c28",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "SPD",
+       "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT Rate",
+       "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "CRIT DMG",
+       "propertyIconPath": "46391a6239ee475d938d3a37900d041f7fb1ed1f4cf9a487c20a9e0ee7ac3cfe",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect Hit Rate",
+       "propertyIconPath": "55928c2afc9b09338022e999031a2528da10eef55d87f05bd4659d29d746a7bc",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effect RES",
+       "propertyIconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Break Effect",
+       "propertyIconPath": "bb107dac9985a6025c3207d0e3ec331dfcd4aa226ca148265e186dd9e8889c7f",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  }
+ },
+ "pageId": "107"
+}

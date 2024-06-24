@@ -1,0 +1,518 @@
+{
+ "name": "幽邃",
+ "rarity": 3,
+ "descHash": "自时光中凝取的稀薄力量。正是所有微不足道的刹那，编织成了壮绝的命运。<br /><br />「他凝视着那轮空洞，它犹如在万物终末时高悬的漆黑太阳，又像是一张解答一切疑问的口——那张口说道：███ █ ███ ██ 这答案无法以任何人类的语言诠释，却能被所有人听懂。 」",
+ "iconPath": "a17211ec735e7ee9fd138e1b5096c654283973fd9a02062d84b4476b7eb9abb2",
+ "artPath": "247ae23f8a355853e3776c36f6ad4a70b764e1f0bb6f4abb36cdb8e624e5eff6",
+ "artPlaceholder": {
+  "data": "data:image/webp;base64,UklGRtgBAABXRUJQVlA4WAoAAAAQAAAAEwAAGwAAQUxQSCoAAAABD9D/iAgwjSQrlkROqISNRD4Fw/mPDCL6H4qBBb1yR380qeIRooRJeQZWUDggiAEAAHAHAJ0BKhQAHAA+bTCTRiQjIaEwGAgAgA2JZACdMuItMcBhVWmk7yeV4HurISPnr/ODVdKhtyfaXNYwzjNZ1KLlGmhAAP76ZsbI9ktbZm0dege2jIApB/EDLip0tkuA0+OoJvD8yE+t+n/HzkrJVxwlgYn4VRunwJQZtfHeRUzqaupkoxm6qxCI3RGC3xD3sS42/OHeDy2ReMGtqguoANYZTJuhwNJ/XTPk2IWsFKAG9iX66v0j3ODNIpwD1umdAVN8UU7yxwAUGTPmZKnMVBYCxR8q4Ksk6YQw2uBp1N3K9rEZtNOMVybdzfwNlU1Wbv4AjcIQqLbtHKv4HSXubSeVNfEeOs3dgZkxmGYYFI+8Pp5zWR+RG3K8WjoXvc/3YxCMDj3lsrtyMt1pwGn4FdFbQoF/YMQqXjbSx+HtlirkVZTTOVImw/hZLAEzNKxrddf2x/HWgL/kvj0e9OwffoSxC8xvCF7a8r9yXVw6qEiSh3struzsLPtcD/JWu48NfZxcKgcPZAAA",
+  "w": 867,
+  "h": 1230
+ },
+ "mediumIconPath": "5949181e89be60b83f5dde80776ebc9c74eba49948e3a7c038b6bfdae00b45f5",
+ "baseType": {
+  "id": 0,
+  "iconPath": "2e8dee1b2516e0376a0ff1ec3cf5cf7d2d37bd482cf5efb5cf79367f9d2be218",
+  "color": "#FFFFFF",
+  "name": "虚无",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "8fc9b77806662a775629ea8ec25d17374356ee5827146419aefefb4e5fa64a27",
+   "name": "信用点",
+   "desc": "星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。",
+   "lore": "「人们奔波、争斗、贸易，为的不过是个终端里显示的数字。但真正珍贵之物，公司的数字是买不到的。」",
+   "purpose": "通用货币",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "拟造花萼【大矿区】",
+    "拟造花萼【工造司】",
+    "拟造花萼【「白日梦」酒店-梦境】",
+    "任务奖励",
+    "委托奖励",
+    "余烬兑换"
+   ]
+  },
+  "549408": {
+   "id": 549408,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "66b7af9abc3a5b3a0c397e90ff5b79398ad5f3ed452c3adeb20a467543fd8810",
+   "name": "古代零件",
+   "desc": "旧世界时代遗留的机器零件。强化所需的简单材料。",
+   "lore": "尽管体积微不足道，却以如今的人们难以重现的技术铸造打磨而成。<br /><br />「旧世界的一颗小螺丝都比我们的盔甲结实。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 2,
+   "rewardPath": "/material/549408",
+   "comeFrom": [
+    "自动机兵掉落",
+    "「差分宇宙」中敌方掉落",
+    "「模拟宇宙」中敌方掉落",
+    "委托奖励",
+    "余烬兑换",
+    "「万能合成机」- 材料置换",
+    "拟造花萼（金）"
+   ]
+  },
+  "633349": {
+   "id": 633349,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "eee031381b2ae54c8df870a7c9f5089dfb9b6fa995a2c2ff29efb09bbffa02ef",
+   "name": "古代转轴",
+   "desc": "旧世界时代遗留的机器传动轴。强化所需的普通材料。",
+   "lore": "精密结合的机件一旦拆开就再也无法复原，即便贝洛伯格技术部的维修老手也不敢轻易动它。<br /><br />「笨蛋，这东西交给蓝甲人才值几个罐头？拿去给史瓦罗大佬，保你吃穿不愁。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 3,
+   "rewardPath": "/material/633349",
+   "comeFrom": [
+    "突破至均衡等级2后，自动机兵掉落",
+    "「万能合成机」- 材料合成",
+    "「差分宇宙」中敌方掉落",
+    "「模拟宇宙」中敌方掉落",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "635669": {
+   "id": 635669,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "825865adfbcce2087595f3e3f5f83074ff634bac538fef3447ca92d001377dd8",
+   "name": "黯淡黑曜",
+   "desc": "一片自虚空中捕获的黑质。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虚无</span>角色的命途行迹。",
+   "lore": "任何手段都无法验明它的本体。<br />轻轻触碰，从碎片中传来不明的呓语。<br /><br />「████ ██ █ █」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 2,
+   "rewardPath": "/material/635669",
+   "comeFrom": [
+    "拟造花萼【大矿区】",
+    "余烬兑换",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "d5866e4c57959f77b39cfa0d05369fae9baec594e2cb9d76bb9d40f1046f206e",
+   "name": "提纯以太",
+   "desc": "光锥的强化材料，可以获得<nobr>6000</nobr>点光锥经验。",
+   "lore": "一罐经由特殊技术精炼而成的以太。<br /><br />「忆庭盼望重现往日的辉煌，但那是由他们所选择的『往日辉煌』，明白吗？」",
+   "purpose": "光锥经验材料",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "拟造花萼【边缘通路】",
+    "拟造花萼【太卜司】",
+    "拟造花萼【稚子的梦】",
+    "「忘却之庭」"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "42e7a259fea56f95597d32fc400f255d0b0f23e677981562484e970737564410",
+   "name": "凝缩以太",
+   "desc": "光锥的强化材料，可以获得<nobr>2000</nobr>点光锥经验。",
+   "lore": "一罐经由特殊技术精炼而成的以太。<br /><br />「小心轻放，勿压勿摔。破损泄漏后请参照《流溢灾难应对手册》第二章内容进行灾后处置。」",
+   "purpose": "光锥经验材料",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "拟造花萼【边缘通路】",
+    "拟造花萼【太卜司】",
+    "拟造花萼【稚子的梦】",
+    "余烬兑换"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "008db407e717c5e4703a0152c945bb21883550260a93ee6c7bb0fa9229346126",
+   "name": "稀薄以太",
+   "desc": "光锥的强化材料，可以获得<nobr>500</nobr>点光锥经验。",
+   "lore": "本不应存在于现实的假想介质，创造光锥的基本原料。<br />将之注入光锥，能令封装其中的事象更为清晰。<br /><br />「原来如此，流光忆庭的『忆质』就是这东西，怪不得忆者能携带记忆进行星际旅行。」",
+   "purpose": "光锥经验材料",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "拟造花萼【边缘通路】",
+    "拟造花萼【太卜司】",
+    "拟造花萼【稚子的梦】",
+    "委托奖励"
+   ]
+  },
+  "717290": {
+   "id": 717290,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "e57cd777cd6ae2ec9c4d8aa0fa1e9a18f5114a2b78d59db8bcc9231d470f77fc",
+   "name": "古代引擎",
+   "desc": "旧世界时代遗留的机器引擎。强化所需的高级材料。",
+   "lore": "以地髓为能源注入动力，运转时喷燃的并非火星，而是游走的极光。<br /><br />「只有大守护者直属的技术部有权调阅旧世界的资料，我嘛，被开除后就进不去啦。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 4,
+   "rewardPath": "/material/717290",
+   "comeFrom": [
+    "突破至均衡等级4后，自动机兵掉落",
+    "「万能合成机」- 材料合成",
+    "「差分宇宙」中敌方掉落",
+    "「模拟宇宙」中敌方掉落",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "836255": {
+   "id": 836255,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a006d01f6dff4b81ed47879eec1b9c3513644d0677c4815bc3c8530882c4be21",
+   "name": "沉沦黑曜",
+   "desc": "一整块自虚空中捕获的黑质。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虚无</span>角色的命途行迹。",
+   "lore": "意志薄弱之人只是向其棱面送去一瞥，便会在混沌中永世沉沦。<br /><br />「         」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 4,
+   "rewardPath": "/material/836255",
+   "comeFrom": [
+    "拟造花萼【大矿区】",
+    "「万能合成机」- 材料合成",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "920196": {
+   "id": 920196,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "eec42c153a07330e42c7c9d85fb5fd5e1dc72c10e1912f3f825bc4f853ae4bd1",
+   "name": "虚空黑曜",
+   "desc": "一块自虚空中捕获的黑质。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虚无</span>角色的命途行迹。",
+   "lore": "漆黑的棱面上甚至反射不出任何倒影。它不仅吸收着光，似乎还夺走了持有者的情绪起伏，只留下淡淡的空洞感。<br /><br />「……」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 3,
+   "rewardPath": "/material/920196",
+   "comeFrom": [
+    "拟造花萼【大矿区】",
+    "「万能合成机」- 材料合成",
+    "余烬兑换",
+    "「万能合成机」- 材料置换"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3000
+    },
+    {
+     "id": 549408,
+     "count": 4
+    }
+   ],
+   "attackBase": 14.4,
+   "attackAdd": 2.16,
+   "hpBase": 38.4,
+   "hpAdd": 5.76,
+   "defenseBase": 12,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6000
+    },
+    {
+     "id": 635669,
+     "count": 2
+    },
+    {
+     "id": 549408,
+     "count": 8
+    }
+   ],
+   "attackBase": 31.68,
+   "attackAdd": 2.16,
+   "hpBase": 84.48,
+   "hpAdd": 5.76,
+   "defenseBase": 26.4,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12000
+    },
+    {
+     "id": 920196,
+     "count": 2
+    },
+    {
+     "id": 633349,
+     "count": 4
+    }
+   ],
+   "attackBase": 54.72,
+   "attackAdd": 2.16,
+   "hpBase": 145.92,
+   "hpAdd": 5.76,
+   "defenseBase": 45.6,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 30000
+    },
+    {
+     "id": 920196,
+     "count": 4
+    },
+    {
+     "id": 633349,
+     "count": 6
+    }
+   ],
+   "attackBase": 77.76,
+   "attackAdd": 2.16,
+   "hpBase": 207.36,
+   "hpAdd": 5.76,
+   "defenseBase": 64.8,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 60000
+    },
+    {
+     "id": 836255,
+     "count": 3
+    },
+    {
+     "id": 717290,
+     "count": 3
+    }
+   ],
+   "attackBase": 100.8,
+   "attackAdd": 2.16,
+   "hpBase": 268.8,
+   "hpAdd": 5.76,
+   "defenseBase": 84,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 120000
+    },
+    {
+     "id": 836255,
+     "count": 6
+    },
+    {
+     "id": 717290,
+     "count": 5
+    }
+   ],
+   "attackBase": 123.84,
+   "attackAdd": 2.16,
+   "hpBase": 330.24,
+   "hpAdd": 5.76,
+   "defenseBase": 103.2,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 146.88,
+   "attackAdd": 2.16,
+   "hpBase": 391.68,
+   "hpAdd": 5.76,
+   "defenseBase": 122.4,
+   "defenseAdd": 1.8
+  }
+ ],
+ "skill": {
+  "id": 20004,
+  "name": "沉沦",
+  "descHash": "战斗开始时，使装备者的效果命中提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>，持续<nobr>#2[i]</nobr>回合。",
+  "levelData": [
+   {
+    "params": [
+     0.2,
+     3
+    ],
+    "level": 1,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.25,
+     3
+    ],
+    "level": 2,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.3,
+     3
+    ],
+    "level": 3,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.35,
+     3
+    ],
+    "level": 4,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.4,
+     3
+    ],
+    "level": 5,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 40,
+   "2": 60,
+   "3": 100,
+   "4": 160,
+   "5": 220,
+   "6": 300,
+   "7": 380,
+   "8": 480,
+   "9": 580,
+   "10": 700,
+   "11": 820,
+   "12": 950,
+   "13": 1090,
+   "14": 1240,
+   "15": 1390,
+   "16": 1560,
+   "17": 1730,
+   "18": 1910,
+   "19": 2090,
+   "20": 2170,
+   "21": 2260,
+   "22": 2350,
+   "23": 2430,
+   "24": 2520,
+   "25": 2620,
+   "26": 2710,
+   "27": 2800,
+   "28": 2900,
+   "29": 2990,
+   "30": 3100,
+   "31": 3200,
+   "32": 3300,
+   "33": 3400,
+   "34": 3510,
+   "35": 3620,
+   "36": 3730,
+   "37": 3830,
+   "38": 3950,
+   "39": 4060,
+   "40": 4170,
+   "41": 4580,
+   "42": 4840,
+   "43": 5110,
+   "44": 5380,
+   "45": 5660,
+   "46": 5950,
+   "47": 6230,
+   "48": 6530,
+   "49": 6830,
+   "50": 7140,
+   "51": 7450,
+   "52": 7760,
+   "53": 8090,
+   "54": 8410,
+   "55": 8750,
+   "56": 9080,
+   "57": 9430,
+   "58": 9770,
+   "59": 10130,
+   "60": 10480,
+   "61": 10970,
+   "62": 11560,
+   "63": 12160,
+   "64": 12760,
+   "65": 13370,
+   "66": 13990,
+   "67": 14620,
+   "68": 15260,
+   "69": 15910,
+   "70": 16570,
+   "71": 18490,
+   "72": 20230,
+   "73": 22000,
+   "74": 23790,
+   "75": 25610,
+   "76": 27450,
+   "77": 29320,
+   "78": 31220,
+   "79": 33140,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "20004"
+}

@@ -1,0 +1,518 @@
+{
+ "name": "Flüsse plätschern im Frühling",
+ "rarity": 4,
+ "descHash": "Der kleine Junge erlaubte sich eine kurze Pause von seinen Schwertübungen.<br />Das Sonnenlicht fiel heiß auf seinen bereits aufgeheizten Nacken. Langsam ging er ins Wasser,<br />dessen Kälte seine bloßen Füße berührte.<br />Wenn die Glocken klingen und die Vögel zwitschern,<br />dann wissen selbst die Menschen von weit weg, dass der Frühling gekommen ist.",
+ "iconPath": "8ab30073a124794a596bd3bfb39c5ed183cf97379efbc4bd0a0703331193b887",
+ "artPath": "2d0639616c85c9c6d38f5297e9d1cba8c5b11be944328a273d9199a06cef4f45",
+ "artPlaceholder": {
+  "data": "data:image/webp;base64,UklGRh4CAABXRUJQVlA4WAoAAAAQAAAAEwAAGwAAQUxQSCIAAAABD9D/iAioiSRJCS9cySec4dFBRP8jAm8Ujoh/QcTCiDgBVlA4INYBAACQCQCdASoUABwAPm0uk0akIqGhMBgIAIANiWwAnTKEemWgNs1zyWmJ7x9/qEe9xwrwHQE5sfpD0XP90GyAuUTYl5xFA3BV1RA2SkaJWWEGko5x1EdAAP76oxcSOOuMvsxtLZ/ZiesDu+ml7XCNy7RSvqslJDsuEcenO4SP9LWjGky5vcclKx9azprzze7jNOUBZVVnMa+0FD+ySx3qT9sZr28DNFp9Of7WqA5dEKOWteYgog3Wy9LJ5br3iq1dndKCDPJgTx+Y7NAvJxMytMp4K5AC8P8F++XZdr2fteyDLv90HTsP4gTbK875mNK51A/9EA7F/7cNqDcDpyAJoWUZw719zjuL/r7x/yQMeELw/ZZRkhO13e8FXVDK5budDqmor/8HrOfdj8Jffv/LPR+ajlJVP532sNUKPiAbxetj/3lT60fylvjH0Eb4I/d/HyJ9g/xTXLFr8Nc5EnF6DEjA9WkN1rD6vr8+5877mdKwk1pnEEWfDtLnqP6Gi6n1jXLBMVzErgwad9AhPl8mjfbYmpxmXU3n34SpdsZ02D0/4Q2qFr/jqTUHcb/rVoG+kMHDIjkwCIEbeaSvWe46aBAHCEO+S7KwxMJf0t+Ggu4FNsOxnFoAAA==",
+  "w": 867,
+  "h": 1230
+ },
+ "mediumIconPath": "0a8d65cf7f1184672f89fbf6a8a565981c109736d9290ca154a910b1aeb3d1a0",
+ "baseType": {
+  "id": 0,
+  "iconPath": "d5302975290739e51dc53d919353f47705d836fa6db628c190b1faaf195f7319",
+  "color": "#FFFFFF",
+  "name": "Die Jagd",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "8fc9b77806662a775629ea8ec25d17374356ee5827146419aefefb4e5fa64a27",
+   "name": "Credit",
+   "desc": "Diese Währung, die von der Interastralen Friedenskorporation für die Abrechnung mit ihren Kunden verwendet wird, ist heute als hartes Zahlungsmittel für Weltraumreisende akzeptiert.",
+   "lore": "„Die Leute laufen herum, streiten sich und handeln für Zahlen auf einem Bildschirm, aber was wirklich von Wert ist, kann man nicht kaufen.“",
+   "purpose": "Gemeinsame Währung",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Blütenkelch (Große Mine)",
+    "Blütenkelch: Kunsthandwerkskommission",
+    "Blütenkelch: Hotel Reverie (Traumlandschaft)",
+    "Missionsbelohnungen",
+    "Auftragsbelohnungen",
+    "Glut-Tausch"
+   ]
+  },
+  "549408": {
+   "id": 549408,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "66b7af9abc3a5b3a0c397e90ff5b79398ad5f3ed452c3adeb20a467543fd8810",
+   "name": "Uraltes Teil",
+   "desc": "Zurückgelassene Maschinenteile aus der Alten Welt. Ein Rohmaterial zur Verstärkung.",
+   "lore": "So ein winziges Bauteil könnte in dieser hohen Qualität heute kaum mehr gegossen und geschliffen werden.<br /><br />„Eine kleine Schraube der Alten Welt hält mehr aus als unsere Rüstungen.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 2,
+   "rewardPath": "/material/549408",
+   "comeFrom": [
+    "Automatons",
+    "Gegner in Divergentes Universum",
+    "Universum-Simulation-Gegner",
+    "Auftragsbelohnungen",
+    "Glut-Tausch",
+    "Omni-Synthesemaschine – Materialtausch",
+    "Blütenkelch (Golden)"
+   ]
+  },
+  "633349": {
+   "id": 633349,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "eee031381b2ae54c8df870a7c9f5089dfb9b6fa995a2c2ff29efb09bbffa02ef",
+   "name": "Uralte Spindel",
+   "desc": "Eine zurückgelassene Maschinenspindel aus der Alten Welt. Ein normales Material zur Verstärkung.",
+   "lore": "Wurden diese Präzisionsbauteile einmal auseinandergenommen, kann sie niemand wieder zusammensetzen. Selbst die erfahrenen Mechaniker der Technologieabteilung von Belobog überlegen sich zweimal, sie anzufassen.<br /><br />„Du Depp! Von den Blaumänteln bekommst du dafür höchstens ein paar Konserven. Wenn du das Ding zu Boss Svarog bringst, hast du für eine ganze Weile genug Kleidung und Essen.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 3,
+   "rewardPath": "/material/633349",
+   "comeFrom": [
+    "Automatons auf Balance-Stufe 2 oder höher",
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Gegner in Divergentes Universum",
+    "Universum-Simulation-Gegner",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "635674": {
+   "id": 635674,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "11a70d892dc3b897bc3d714367c18fe413d9538c809eb21c211f322eed806403",
+   "name": "Pfeil des Bestienjägers",
+   "desc": "Eine Pfeilspitze, die von den Schmieden von Xianzhou aus Froststahl gefertigt wurde. Damit können Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Pfad der Jagd</span> ein wenig hochgestuft werden.",
+   "lore": "Ein Kind bekommt dies traditionell von seinen Eltern überreicht, nachdem es seine erste Beute erlegt hat und damit als erwachsen gilt. Sie wünschen ihm damit, dass sein Leben dem Flug eines Pfeils gleicht, der ins Schwarze trifft.<br /><br />„Mögen der Pfeil in deinem Köcher und das Schwert an deinem Gurt dir immer treu dienen und ihr Ziel finden.“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 2,
+   "rewardPath": "/material/635674",
+   "comeFrom": [
+    "Blütenkelch (Äußere Schneewüste)",
+    "Glut-Tausch",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "d5866e4c57959f77b39cfa0d05369fae9baec594e2cb9d76bb9d40f1046f206e",
+   "name": "Raffinierter Äther",
+   "desc": "Verstärkungsmaterial für Lichtkegel, enthält <nobr>6.000</nobr> Lichtkegel-EP.",
+   "lore": "Ein Behälter mit Äther, der durch ein spezielles Verfahren gereinigt wurde.<br /><br />„Der Garten freut sich darauf, seine frühere Pracht wiederherzustellen. Aber es ist eine ‚frühere Pracht‘, die sie selbst ausgewählt haben. Verstehst du?“",
+   "purpose": "Material zu Lichtkegel-EP",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "Blütenkelch (Abgelegener Pass)",
+    "Blütenkelch: Wahrsagekommission",
+    "Blütenkelch: Der Traum eines Kindes",
+    "Vergessene Halle"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "42e7a259fea56f95597d32fc400f255d0b0f23e677981562484e970737564410",
+   "name": "Verdichteter Äther",
+   "desc": "Verstärkungsmaterial für Lichtkegel, enthält <nobr>2.000</nobr> Lichtkegel-EP.",
+   "lore": "Ein Behälter mit Äther, der durch ein spezielles Verfahren gereinigt wurde.<br /><br />„Behälter mit Vorsicht handhaben, nicht fallen lassen oder unter Druck setzen. Bei Beschädigung oder undichten Stellen bitte Kapitel II der ‚Anweisungen für den Umgang mit Leckagen‘ befolgen.“",
+   "purpose": "Material zu Lichtkegel-EP",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "Blütenkelch (Abgelegener Pass)",
+    "Blütenkelch: Wahrsagekommission",
+    "Blütenkelch: Der Traum eines Kindes",
+    "Glut-Tausch"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "008db407e717c5e4703a0152c945bb21883550260a93ee6c7bb0fa9229346126",
+   "name": "Verdünnter Äther",
+   "desc": "Verstärkungsmaterial für Lichtkegel, enthält <nobr>500</nobr> Lichtkegel-EP.",
+   "lore": "Eine imaginäre Substanz, die eigentlich nicht in der Realität existieren dürfte und als Grundstoff zur Herstellung von Lichtkegeln verwendet wird.<br />Die in Lichtkegeln enthaltenen Bilder werden klarer, wenn sie mit dieser Substanz angereichert werden.<br /><br />„Aha, das ist also die sogenannte Erinnerung des Gartens des Gedächtnisses. Kein Wunder, dass die Wahrer der Erinnerungen durch die Galaxie reisen können.“",
+   "purpose": "Material zu Lichtkegel-EP",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "Blütenkelch (Abgelegener Pass)",
+    "Blütenkelch: Wahrsagekommission",
+    "Blütenkelch: Der Traum eines Kindes",
+    "Auftragsbelohnungen"
+   ]
+  },
+  "717290": {
+   "id": 717290,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "e57cd777cd6ae2ec9c4d8aa0fa1e9a18f5114a2b78d59db8bcc9231d470f77fc",
+   "name": "Uraltes Triebwerk",
+   "desc": "Ein zurückgelassener Triebwerk aus der Alten Welt. Ein fortschrittliches Material zur Verstärkung.",
+   "lore": "Es nutzt Geomark als Energiequelle. Wenn es mit Energie versorgt wird, spuckt es wandernde Polarlichter, keine Funken.<br /><br />„Nur die Technologieabteilung, die direkt der Obersten Wächterin untersteht, hat Zugang zu Informationen über die Alte Welt. Ich habe meine Privilegien verloren, nachdem ich gefeuert wurde.“",
+   "purpose": "Spurenmaterial <br />Material zum Figurenaufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/717290",
+   "comeFrom": [
+    "Automatons auf Balance-Stufe 4 oder höher",
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Gegner in Divergentes Universum",
+    "Universum-Simulation-Gegner",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "836260": {
+   "id": 836260,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "cf5a458a6f5b56925e970a2f6e10ac8fc3034f2b045e7d87e13c0a49e4c8fba8",
+   "name": "Pfeil des Sternenfängers",
+   "desc": "Ein Splitter des Himmelsbrechenden Lux-Pfeils, den der Gebieter des Herrscherbogens verschoss. Damit können Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Pfad der Jagd</span> stark hochgestuft werden.",
+   "lore": "Welche Kraft könnte Lichtjahre entfernte Sterne zerschmettern? Menschen können sich die Macht des Lux-Pfeils nur anhand der Asche ausmalen, die er hinterlassen hat.<br />Allein der Ofenmeister, das Oberhaupt der Schmiede von Xianzhou, kann die Splitter erneuern – für diejenigen, die würdig sind.<br /><br />„Der Tod eines Sterns wirft sein Licht weit in die Zukunft.“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 4,
+   "rewardPath": "/material/836260",
+   "comeFrom": [
+    "Blütenkelch (Äußere Schneewüste)",
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  },
+  "920201": {
+   "id": 920201,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "cde54d9ea3870506cfb7367e25d2eada09bfe948b459125b5e916d55fa6d4133",
+   "name": "Pfeil des Dämonentöters",
+   "desc": "Eine Pfeilspitze, die von den Schmieden von Xianzhou aus Stellaris-Essenz gefertigt wurde. Damit können Spuren für Figuren auf dem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Pfad der Jagd</span> mäßig hochgestuft werden.",
+   "lore": "Ein Pfeil, der schmaler als ein Finger breit ist. Er kann in eine elektromagnetische Armbrust oder einen thermischen Suchbogen als fliegende Pfeilmunition geladen werden. Seine Kraft reicht aus, um die zähen Panzer der Ausgeburten mit nur einem Treffer zu durchdringen.<br /><br />„Der himmlische Verbannte trifft ein von weit her, große Weiten durchquert im Sternenmeer. Wie Regen gehen drunten die Pfeile nieder, ein Helm spiegelt das helle Mondlicht wider.“",
+   "purpose": "Spurenmaterial <br />Material zum Lichtkegel-Aufstieg",
+   "rarity": 3,
+   "rewardPath": "/material/920201",
+   "comeFrom": [
+    "Blütenkelch (Äußere Schneewüste)",
+    "Omni-Synthesemaschine – Materialsynthese",
+    "Glut-Tausch",
+    "Omni-Synthesemaschine – Materialtausch"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549408,
+     "count": 5
+    }
+   ],
+   "attackBase": 21.6,
+   "attackAdd": 3.24,
+   "hpBase": 38.4,
+   "hpAdd": 5.76,
+   "defenseBase": 18,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 635674,
+     "count": 3
+    },
+    {
+     "id": 549408,
+     "count": 10
+    }
+   ],
+   "attackBase": 47.52,
+   "attackAdd": 3.24,
+   "hpBase": 84.48,
+   "hpAdd": 5.76,
+   "defenseBase": 39.6,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 920201,
+     "count": 3
+    },
+    {
+     "id": 633349,
+     "count": 6
+    }
+   ],
+   "attackBase": 82.08,
+   "attackAdd": 3.24,
+   "hpBase": 145.92,
+   "hpAdd": 5.76,
+   "defenseBase": 68.4,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 920201,
+     "count": 6
+    },
+    {
+     "id": 633349,
+     "count": 9
+    }
+   ],
+   "attackBase": 116.64,
+   "attackAdd": 3.24,
+   "hpBase": 207.36,
+   "hpAdd": 5.76,
+   "defenseBase": 97.2,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 836260,
+     "count": 4
+    },
+    {
+     "id": 717290,
+     "count": 5
+    }
+   ],
+   "attackBase": 151.2,
+   "attackAdd": 3.24,
+   "hpBase": 268.8,
+   "hpAdd": 5.76,
+   "defenseBase": 126,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 836260,
+     "count": 8
+    },
+    {
+     "id": 717290,
+     "count": 7
+    }
+   ],
+   "attackBase": 185.76,
+   "attackAdd": 3.24,
+   "hpBase": 330.24,
+   "hpAdd": 5.76,
+   "defenseBase": 154.8,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 220.32,
+   "attackAdd": 3.24,
+   "hpBase": 391.68,
+   "hpAdd": 5.76,
+   "defenseBase": 183.6,
+   "defenseAdd": 2.7
+  }
+ ],
+ "skill": {
+  "id": 21024,
+  "name": "Die nachklingende Kälte abwehren",
+  "descHash": "Erhöht nach Kampfeintritt die GES des Trägers um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> und verursachten SCH um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. Wenn der Träger SCH erleidet, wird dieser Effekt aufgehoben und nach dem Ende der nächsten Runde wieder aktiviert.",
+  "levelData": [
+   {
+    "params": [
+     0.08,
+     0.12
+    ],
+    "level": 1,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.09,
+     0.15
+    ],
+    "level": 2,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.1,
+     0.18
+    ],
+    "level": 3,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.11,
+     0.21
+    ],
+    "level": 4,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.12,
+     0.24
+    ],
+    "level": 5,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 50,
+   "2": 80,
+   "3": 140,
+   "4": 210,
+   "5": 300,
+   "6": 400,
+   "7": 510,
+   "8": 640,
+   "9": 780,
+   "10": 930,
+   "11": 1090,
+   "12": 1260,
+   "13": 1460,
+   "14": 1650,
+   "15": 1860,
+   "16": 2080,
+   "17": 2300,
+   "18": 2540,
+   "19": 2790,
+   "20": 2900,
+   "21": 3010,
+   "22": 3130,
+   "23": 3240,
+   "24": 3360,
+   "25": 3490,
+   "26": 3610,
+   "27": 3740,
+   "28": 3860,
+   "29": 3990,
+   "30": 4130,
+   "31": 4260,
+   "32": 4400,
+   "33": 4540,
+   "34": 4680,
+   "35": 4820,
+   "36": 4970,
+   "37": 5110,
+   "38": 5260,
+   "39": 5410,
+   "40": 5560,
+   "41": 6100,
+   "42": 6450,
+   "43": 6810,
+   "44": 7180,
+   "45": 7550,
+   "46": 7930,
+   "47": 8310,
+   "48": 8710,
+   "49": 9110,
+   "50": 9520,
+   "51": 9940,
+   "52": 10350,
+   "53": 10780,
+   "54": 11220,
+   "55": 11660,
+   "56": 12110,
+   "57": 12570,
+   "58": 13030,
+   "59": 13500,
+   "60": 13980,
+   "61": 14630,
+   "62": 15420,
+   "63": 16210,
+   "64": 17010,
+   "65": 17830,
+   "66": 18660,
+   "67": 19500,
+   "68": 20350,
+   "69": 21220,
+   "70": 22100,
+   "71": 24650,
+   "72": 26970,
+   "73": 29330,
+   "74": 31720,
+   "75": 34140,
+   "76": 36600,
+   "77": 39100,
+   "78": 41620,
+   "79": 44180,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "21024"
+}

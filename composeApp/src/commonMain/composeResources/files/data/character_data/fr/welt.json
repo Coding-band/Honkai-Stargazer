@@ -1,0 +1,2769 @@
+{
+ "spRequirement": 120,
+ "iconPath": "334701394355c74a444840926e49cffe198c7ad5a212c9e07dd0a762b5c09db5",
+ "bgPath": "9a3f91a8eee17167d08af8694b10144c1aabccf6dedb2bd0bd0c24e4ed22094b",
+ "figPath": "c933382bf952b11f2679f25d226cd70bd4c70d9bc1d345018b4191a1d7a61ed8",
+ "fgPath": "ce14ccf8ce018ef76e9d9f39a5182f7d40d29159874c9cd8ebc5dbb1e330410b",
+ "splashIconPath": "f190942d3f870ebaed94f7917bf644519e2b3de88cd084bfbc9f6f68b5b4dec2",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRoQCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSOwAAAABkLJt/2LFG3r/c4Dm7g7JneTa3LW5fACiOzSHTHbPJHfbrdvcd878/+/KnImICYCpcPV2ydrNgUWB0M2zq4d3xvlJPzRHzfxfkUdBoWbOM++pG4ZUhs4XH4j/tCvqylTyd9V/Aj4vNMyU5NtQCGiI/kZp4WsCBATKJZVjqlTYNAyQyqLkthtQSEorys4hoIO6sizV50g0UFmlsnNDAxYoLSiDuwGwoV23IskuOGkYoVQ0k3w7HwcBET/2kdJM6dwUADQknf6mmeSPQQ0AbMi+oaHb7b+lPEiGY99zmrfB2RE8asfXl4fL8orxP1ZQOCByAQAAUAgAnQEqFAAUAD5tMpVHpCKiISgIAIANiWwAsR80PJrKa++gA8TP1w9MA3mn/cvoDcu80qoH0dP2ADWzf6R73Sxq6cqy0Btq95gAAP6Tut8dyM7G8jH65IXa++TCfzn+/hqBzMXK/e9SD9LaD1srRjF/yzHRkXYNnHavIzbQ/dupSY63uFem/f2zxdujOoh8wARMqCj8S3KjEX2cHPZif616H7gYNL8j1F18/xHT8hlM9NcGQZZuaEcRbQpQB6cFxX77xdAF7ZCsaohQUxdeuMlNKefWsd7GzCX4Z/USD9Gvf+1SJkED5ldtdGUG+7NIH61VmpJI1pp78CVDZn9GP8pGQOAfHOKTQ9jhd34WX1QFW4+jkrBSo1CYP0PHgKKoXBV5FaGpMtrsjAZ3L3z/RQvnqrZ/YpP0zTrTcY5X4Qv62/jS9VN/vFWKUF8fgQn/RwSzGEEt/93GTnjHy7OPgFtFodTbAbBDp5DrwZbkcIAAAA==",
+  "w": 2048,
+  "h": 2048
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 5,
+  "iconPath": "28571bec548b7a0a6b24ad8825c718a27732ae7c72c79d9288924e1258360ada",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "8fc9b77806662a775629ea8ec25d17374356ee5827146419aefefb4e5fa64a27",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Calice de la Commission de l'artisanat",
+    "Calice de l'Hôtel Rêverie du Pays des rêves",
+    "Récompense de mission",
+    "Récompense d'affectation",
+    "Échange de braises immortelles"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "a13a7372ac0adb820a562ba21ce6f48c8c05f59f5577f55583601af8e972cf54",
+   "name": "Voies de la destinée",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "La victoire s'acquiert au terme de nombreux échecs, et chaque pas conduit à l'instant décisif.",
+   "purpose": "Matériau de Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Récompenses de points de l'Univers simulé",
+    "Honneur des Sans Noms",
+    "Échange de braises immortelles",
+    "Lumières d'étoile",
+    "Récompense d'événement à durée limitée"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "becaa9417d3a40db16e3d16da7b2864bd92c804f9b6062824c49aae61bb6b7a1",
+   "name": "Guide du voyageur",
+   "desc": "Matériau d'EXP de personnage. Confère <nobr>20</nobr> <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Lecture indispensable à l'exploration des mondes. Appuyez sur le bouton de lecture pour activer une voix agréable, dans une langue de votre choix qui vous racontera les rencontres légendaires d'aventuriers de renom à travers différents mondes, ainsi que la sagesse précieuse et les connaissances qui en découlent.<br /><br />« La nouvelle série du Guide du voyageur, \"Le manuel du chef de la cuisine galactique\" est désormais disponible en magasin. »<br />« Pour toute question, connectez-vous à la balise de synesthésie ERD<nobr>-23</nobr>θ et contactez un représentant de la Guilde de l'intelligentsia. Facilités de paiement disponibles. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Calice de Passenuage",
+    "Calice de la Frontière des rêves",
+    "Salle oubliée"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "519019265755cdebba3968237a9ed2399097c89086d762698f9314ffc3180578",
+   "name": "Journal d'aventure",
+   "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Calice de Passenuage",
+    "Calice de la Frontière des rêves",
+    "Entraînement quotidien",
+    "Échange de braises immortelles"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "1895aeac789646d78ca7843ce780b8ac9baa5ccb50a135aafb1042a8fe0b0337",
+   "name": "Rencontres de voyage",
+   "desc": "Matériau d'EXP de personnage. Confère 1 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un carnet de voyage parsemé de commentaires et de contenus divers griffonnés. Il ne vous sera pas très utile.<br /><br />« Dan Heng, dépêche-toi de lire ça pour t'en débarrasser. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Calice de Passenuage",
+    "Calice de la Frontière des rêves",
+    "Récompense d'affectation"
+   ]
+  },
+  "468391": {
+   "id": 468391,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "3cc2affb44dd151c097d84ddde38ba3a682b7b9f312b03ac9339cf3c26f28c30",
+   "name": "Couronne d'or de l'ombre révolue",
+   "desc": "Casque d'Ombre en décomposition. Permet l'élévation des personnages de type imaginaire.",
+   "lore": "Un accessoire abandonné par l'ombre d'une Gardienne du passé. Il raconte l'histoire de la ville de l'Hiver éternel.<br /><br />« Alina la Bienveillante... Sa bonté est céleste et sa compassion est d'or. »",
+   "purpose": "Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/468391",
+   "comeFrom": [
+    "Ombre stagnante du Col de Backwater",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "549407": {
+   "id": 549407,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "a72fcf2954997ca8c5928ceaf5a1627bb831e3c8632cf048466d7885560c65be",
+   "name": "Badge de la crinière d'argent",
+   "desc": "Badge porté par les soldats de la Garde de la crinière d'argent. Matériau commun utilisé pour le renforcement.",
+   "lore": "Il est criblé d'éraflures dues à l'érosion causée par le vent et la neige.<br /><br />« Dans l'ancien temps, il n'y avait qu'un seul moyen pour les Gardes de la crinière d'argent de partir à la retraite : la mort. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549407",
+   "comeFrom": [
+    "Marcheur de l'ombre de l'Hiver éternel et Marcheur de l'ombre de l'Incinération",
+    "Gardes de la crinière d'argent et vagabonds",
+    "Butin d'ennemis dans l'Univers parallèle",
+    "Ennemi de l'Univers simulé",
+    "Récompense d'affectation",
+    "Échange de braises immortelles",
+    "Échange de matériaux de l'Omni-synthétiseur",
+    "Calice doré"
+   ]
+  },
+  "633348": {
+   "id": 633348,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ba6bf0222b2d45356ef4505a36cbe77c7a9b780b174dba76a2ee29427b344447",
+   "name": "Insigne de la crinière d'argent",
+   "desc": "Insigne militaire porté par les capitaines de la Garde de la crinière d'argent. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "Il s'agit peut-être d'une preuve d'héroïsme qui permet de se vanter auprès de sa famille. Ou peut-être qu'il s'agit d'un porte-bonheur qui peut protéger d'une balle.<br /><br />« Les temps ont changé. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633348",
+   "comeFrom": [
+    "Marcheur de l'ombre d'Hiver éternel et Marcheur de l'ombre de l'Incinération au niveau d'équilibre 2 ou supérieur",
+    "Gardes de la crinière d'argent et vagabonds au niveau d'équilibre 2 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Butin d'ennemis dans l'Univers parallèle",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "635669": {
+   "id": 635669,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "825865adfbcce2087595f3e3f5f83074ff634bac538fef3447ca92d001377dd8",
+   "name": "Obsidienne d'effroi",
+   "desc": "Fragment de matière noire capturé dans le vide. Permet d'améliorer légèrement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihilité</span>.",
+   "lore": "Rien ne prouve son noumène.<br />Touchez avec délicatesse pour entendre un vague murmure de la part de l'éclat.<br /><br />« ████ ██ █ █ »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/635669",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Échange de braises immortelles",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "717289": {
+   "id": 717289,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "0f804f4f5903741a391df7dca374c8f9a80e5a258e74bdebf04d9f811b23ba67",
+   "name": "Médaille de la crinière d'argent",
+   "desc": "Médaille d'honneur portée par les soldats de la Garde de la crinière d'argent ayant servi de façon courageuse et méritante. Matériau avancé utilisé pour le renforcement.",
+   "lore": "Une marque d'honneur décernée à ceux qui ont combattu les créatures du Fragmentum, les habitants du Souterrain, et les catastrophes soudaines.<br />Elle est plus souvent placée sur le cercueil qu'épinglée sur la poitrine de son propriétaire.<br /><br />« Rappelle-toi, jeune Gepard. Ceci n'est pas un jouet : c'est le destin et le sang de la famille Landau. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717289",
+   "comeFrom": [
+    "Marcheur de l'ombre d'Hiver éternel et Marcheur de l'ombre de l'Incinération au niveau d'équilibre 4 ou supérieur",
+    "Gardes de la crinière d'argent et vagabonds au niveau d'équilibre 4 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Butin d'ennemis dans l'Univers parallèle",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "836255": {
+   "id": 836255,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "a006d01f6dff4b81ed47879eec1b9c3513644d0677c4815bc3c8530882c4be21",
+   "name": "Obsidienne d'obsession",
+   "desc": "Beau fragment de matière noire capturé dans le vide. Permet d'améliorer considérablement les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihilité</span>.",
+   "lore": "Un simple regard dans le prisme enverra les faibles d'esprit et les moins déterminés dans le chaos pour l'éternité.<br /><br />«           »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/836255",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "920196": {
+   "id": 920196,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "eec42c153a07330e42c7c9d85fb5fd5e1dc72c10e1912f3f825bc4f853ae4bd1",
+   "name": "Obsidienne de désolation",
+   "desc": "Fragment de matière noire capturé dans le vide. Permet d'améliorer modérément les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihilité</span>.",
+   "lore": "Il n'y a aucun reflet à la surface du prisme noir. Non seulement il absorbe toute la lumière, mais il semble aussi capturer les émotions de son porteur, ne laissant qu'un vide absolu.<br /><br />« ... »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/920196",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Échange de braises immortelles",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "985668": {
+   "id": 985668,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "04088e0733990d7a0c884c42641a26089c8376f465104345af368511bbcedbac",
+   "name": "Route finale du destructeur",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "Le cœur du Léviathan a cessé de battre, mais son esprit est toujours vivant, bien que prisonnier d'une boîte. Tant que le couvercle reste fermé, il erre entre deux mondes et alimente le moteur de la destruction.<br /><br />« La Bête du jugement dernier est un fléau fabriqué dans la Forge de la guerre en utilisant les restes d'un Léviathan et les os de la lamentation d'un millier de morts. Il aspire à sa propre destruction et à celle de l'univers. »",
+   "purpose": "Matériau de Trace",
+   "rarity": 4,
+   "rewardPath": "/material/985668",
+   "comeFrom": [
+    "Écho de la guerre de la Zone de ravitaillement"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 84.48,
+   "attackAdd": 4.224,
+   "hpBase": 153.12,
+   "hpAdd": 7.656,
+   "defenseBase": 69.3,
+   "defenseAdd": 3.465,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549407,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 118.272,
+   "attackAdd": 4.224,
+   "hpBase": 214.368,
+   "hpAdd": 7.656,
+   "defenseBase": 97.02,
+   "defenseAdd": 3.465,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549407,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 152.064,
+   "attackAdd": 4.224,
+   "hpBase": 275.616,
+   "hpAdd": 7.656,
+   "defenseBase": 124.74,
+   "defenseAdd": 3.465,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633348,
+     "count": 6
+    },
+    {
+     "id": 468391,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 185.856,
+   "attackAdd": 4.224,
+   "hpBase": 336.864,
+   "hpAdd": 7.656,
+   "defenseBase": 152.46,
+   "defenseAdd": 3.465,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633348,
+     "count": 9
+    },
+    {
+     "id": 468391,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 219.648,
+   "attackAdd": 4.224,
+   "hpBase": 398.112,
+   "hpAdd": 7.656,
+   "defenseBase": 180.18,
+   "defenseAdd": 3.465,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717289,
+     "count": 6
+    },
+    {
+     "id": 468391,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 253.44,
+   "attackAdd": 4.224,
+   "hpBase": 459.36,
+   "hpAdd": 7.656,
+   "defenseBase": 207.9,
+   "defenseAdd": 3.465,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717289,
+     "count": 9
+    },
+    {
+     "id": 468391,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 287.232,
+   "attackAdd": 4.224,
+   "hpBase": 520.608,
+   "hpAdd": 7.656,
+   "defenseBase": 235.62,
+   "defenseAdd": 3.465,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "a1d1b419dfa2f345585ed33edaaaffd09649a7cfef1a3ea5a19d1580b14716eb",
+   "artPath": "74a4c38f0b18576adef9f83b63d4d6123045c88945d01bae0d17cb2f26e13d2a",
+   "name": "Héritage d'honneur",
+   "descHash": "Après utilisation de l'ultime de Welt, ses capacités sont renforcées. Lors des <nobr>#3[i]</nobr> prochaines fois où il utilise son ATQ normale ou sa compétence, il inflige des DGT additionnels à la cible équivalents respectivement à <nobr>#1[i]%</nobr> du multiplicateur de DGT de son ATQ normale et à <nobr>#2[i]%</nobr> du multiplicateur de DGT de sa compétence.",
+   "params": [
+    0.5,
+    0.8,
+    2
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "4dc2823911be6fb60678a948571c14c17c6cd9fd4baa22efc95ed5b54441fa71",
+   "artPath": "278203a4bba3464b54bbf52c0f4ed6bcc419368d6569142c4868edf03f80ed63",
+   "name": "Confluence des étoiles",
+   "descHash": "Lorsque son talent est déclenché, Welt régénère <nobr>#1[i]</nobr> points d'énergie.",
+   "params": [
+    3
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "2c3004f709d1a21f8d62ff388a4b55656eca2df8fec9f235763b2c04fc9444eb",
+   "artPath": "4f5b75ec3cbcba5f38c7013d6f113057ced8ce01c9f55a930c41c50d22f8eb22",
+   "name": "Prière de paix",
+   "descHash": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "c03806156f8eebca9d0dba716a0f1b31ccf49d7515641621a12dc5bd788a1d3d",
+   "artPath": "8ccbb790bfa1a3d9a4a5181abd6e9be84c476b27ad68b75fed51a02f5c384239",
+   "name": "Au nom de la justice",
+   "descHash": "Augmente les chances de base de la compétence de réduire la VIT des ennemis touchés de <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.35
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "13dd3e15ddff2a2626159f3b833bbcf4ba6fc232991f73846e3a01a6065514b4",
+   "artPath": "60499953206aeb7368d645e7beb6ee5d4a91ce6908a183c77b5364843d97b4dd",
+   "name": "Pouvoir de la bonté",
+   "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "d5eb83682cece968235751a09aed2102435795fcec0d3827d73c771edd24939b",
+   "artPath": "62213bc928310f53b4517686cfb0c67fbc8857db37367eed80acc9992037aa15",
+   "name": "Perspective de gloire",
+   "descHash": "Lors de l'utilisation de la compétence, inflige des DGT 1 fois supplémentaire à un ennemi aléatoire.",
+   "params": []
+  }
+ ],
+ "skillGrouping": [
+  [
+   628516
+  ],
+  [
+   913043
+  ],
+  [
+   796398
+  ],
+  [
+   80925
+  ],
+  [
+   197570
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT imaginaires équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Welt à un ennemi unique.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 628516,
+   "name": "Suppression de la gravité",
+   "iconPath": "fd26215d1da85d3271c16280081fbf66ca47de63f0f36ddadb6126c18df34021",
+   "typeDescHash": "ATQ normale",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Rebond",
+   "descHash": "Inflige des DGT imaginaires équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Welt à un ennemi unique et inflige des DGT 2 fois supplémentaires, infligeant à chaque fois des DGT imaginaires équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Welt à un ennemi aléatoire. Les attaques qui touchent un ennemi ont <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de <u>chances de base</u> de réduire sa VIT de <nobr>#3[i]%</nobr> pendant <nobr>#4[i]</nobr> tours.",
+   "ultimateCost": 0,
+   "break": "30/hit",
+   "energy": "10/hit",
+   "id": 913043,
+   "name": "Frontière du vide",
+   "iconPath": "2c3004f709d1a21f8d62ff388a4b55656eca2df8fec9f235763b2c04fc9444eb",
+   "typeDescHash": "Compétence",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.36,
+      0.65,
+      0.1,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.396,
+      0.66,
+      0.1,
+      2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549407,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.432,
+      0.67,
+      0.1,
+      2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.468,
+      0.68,
+      0.1,
+      2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.504,
+      0.69,
+      0.1,
+      2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.54,
+      0.7,
+      0.1,
+      2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920196,
+       "count": 7
+      },
+      {
+       "id": 633348,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.585,
+      0.7125,
+      0.1,
+      2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.63,
+      0.725,
+      0.1,
+      2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836255,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.675,
+      0.7375,
+      0.1,
+      2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.72,
+      0.75,
+      0.1,
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836255,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.756,
+      0.76,
+      0.1,
+      2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.792,
+      0.77,
+      0.1,
+      2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.828,
+      0.78,
+      0.1,
+      2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.864,
+      0.79,
+      0.1,
+      2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.9,
+      0.8,
+      0.1,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ZdE",
+   "descHash": "Inflige des DGT imaginaires équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Welt à tous les ennemis, avec <nobr>#3[i]%</nobr> de <u>chances de base</u> d'emprisonner les ennemis touchés pendant 1 tour.<br />Les ennemis emprisonnés voient leurs <u>actions retardées</u> de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> et leur VIT réduite de <nobr>#4[i]%</nobr>.",
+   "ultimateCost": 120,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 796398,
+   "name": "Trou noir synthétique",
+   "iconPath": "283d91e90d7b74270b79aa582461b103a66bfdf87f893ce35460100958a5fff4",
+   "typeDescHash": "Ultime",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.9,
+      0.32,
+      1,
+      0.1
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.96,
+      0.328,
+      1,
+      0.1
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549407,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.02,
+      0.336,
+      1,
+      0.1
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.08,
+      0.344,
+      1,
+      0.1
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.14,
+      0.352,
+      1,
+      0.1
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2,
+      0.36,
+      1,
+      0.1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920196,
+       "count": 7
+      },
+      {
+       "id": 633348,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.275,
+      0.37,
+      1,
+      0.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.35,
+      0.38,
+      1,
+      0.1
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836255,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.425,
+      0.39,
+      1,
+      0.1
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5,
+      0.4,
+      1,
+      0.1
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836255,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.56,
+      0.408,
+      1,
+      0.1
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.62,
+      0.416,
+      1,
+      0.1
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.68,
+      0.424,
+      1,
+      0.1
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.74,
+      0.432,
+      1,
+      0.1
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.8,
+      0.44,
+      1,
+      0.1
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Renforcement",
+   "descHash": "Lorsqu'il touche un ennemi qui est ralenti, Welt lui inflige des DGT imaginaires <u>additionnels</u> équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de son ATQ.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 80925,
+   "name": "Distorsion temporelle",
+   "iconPath": "d254947ba1312505b218d27da6344ca623235b35b40e8a1f5ceafbf31f55326e",
+   "typeDescHash": "Talent",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.33
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549407,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.36
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635669,
+       "count": 3
+      },
+      {
+       "id": 549407,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.39
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920196,
+       "count": 3
+      },
+      {
+       "id": 633348,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.42
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920196,
+       "count": 5
+      },
+      {
+       "id": 633348,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.45
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920196,
+       "count": 7
+      },
+      {
+       "id": 633348,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.4875
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836255,
+       "count": 3
+      },
+      {
+       "id": 717289,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.525
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836255,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717289,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.5625
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836255,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836255,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.63
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.66
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.69
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.72
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.75
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 281511,
+   "name": "Attaque",
+   "iconPath": "fd26215d1da85d3271c16280081fbf66ca47de63f0f36ddadb6126c18df34021",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Incapacitation",
+   "descHash": "Crée une dimension spéciale qui dure <nobr>#4[i]</nobr> secondes. Les ennemis dans cette dimension spéciale voient leur vitesse de déplacement réduite de <nobr>#5[i]%</nobr>. Il y a <nobr>#1[i]%</nobr> de <u>chances de base</u> d'emprisonner les ennemis pour 1 tour après être entré en combat avec des ennemis dans la dimension spéciale.<br />Les ennemis emprisonnés voient leur <u>action retardée</u> de <nobr>#2[i]%</nobr> et leur VIT réduite de <nobr>#3[i]%</nobr>. Il ne peut exister qu'1 dimension créée par les alliés à la fois.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 197570,
+   "name": "Emprisonnement gravitationnel",
+   "iconPath": "985d5b58ec293f50f5f9e56da6e2e21eb9e8d19b8d5657a98f3ab14ad19f3378",
+   "typeDescHash": "Technique",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1,
+      0.2,
+      0.1,
+      15,
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1004101,
+   "anchor": 6,
+   "type": 1,
+   "children": [
+    {
+     "id": 1004202,
+     "anchor": 10,
+     "type": 2,
+     "children": [
+      {
+       "id": 1004203,
+       "anchor": 11,
+       "type": 2,
+       "children": [
+        {
+         "id": 1004204,
+         "anchor": 12,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 233111,
+          "name": "Augmentation de la RÉS aux effets",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+          "statusList": [
+           {
+            "key": "RÉS aux effets",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 920196,
+            "count": 3
+           },
+           {
+            "id": 633348,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 233114,
+        "name": "Augmentation d'ATQ",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920196,
+          "count": 3
+         },
+         {
+          "id": 633348,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 233113,
+      "name": "Augmentation des DGT imaginaires",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "f8c06e18c87cc064c37d3cd55387680660f5a7886d4075d970ac56da0ea0e068",
+      "statusList": [
+       {
+        "key": "Augm. des DGT imaginaires",
+        "value": 0.032
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635669,
+        "count": 3
+       },
+       {
+        "id": 549407,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Il y a <nobr>#1[i]%</nobr> de chances de base d'augmenter les DGT subis par les cibles de <nobr>#2[i]%</nobr> pendant <nobr>#3[i]</nobr> tours lors de l'utilisation de l'ultime.",
+    "ultimateCost": 0,
+    "id": 233017,
+    "name": "Acharnement",
+    "iconPath": "95524ba0b95df7befd1f46f9d76f84925d09632392a8d5105eaee0bc688857b9",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       1,
+       0.12,
+       2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635669,
+        "count": 3
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1004102,
+   "anchor": 7,
+   "type": 1,
+   "children": [
+    {
+     "id": 1004205,
+     "anchor": 13,
+     "type": 2,
+     "children": [
+      {
+       "id": 1004206,
+       "anchor": 14,
+       "type": 2,
+       "children": [
+        {
+         "id": 1004207,
+         "anchor": 15,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 233110,
+          "name": "Augmentation d'ATQ",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+          "statusList": [
+           {
+            "key": "ATQ",
+            "value": 0.06
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 836255,
+            "count": 3
+           },
+           {
+            "id": 717289,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 233109,
+        "name": "Augmentation des DGT imaginaires",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "f8c06e18c87cc064c37d3cd55387680660f5a7886d4075d970ac56da0ea0e068",
+        "statusList": [
+         {
+          "key": "Augm. des DGT imaginaires",
+          "value": 0.048
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836255,
+          "count": 3
+         },
+         {
+          "id": 717289,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 233112,
+      "name": "Augmentation d'ATQ",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920196,
+        "count": 5
+       },
+       {
+        "id": 633348,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Régénère <nobr>#1[i]</nobr> points d'énergie supplémentaires lorsque le personnage utilise son ultime.",
+    "ultimateCost": 0,
+    "id": 233020,
+    "name": "Jugement",
+    "iconPath": "98035c3030a5285f2c4177ac598e34d0ff74c6e5ac7161e9471d94f7837f10b9",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       10
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920196,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1004103,
+   "anchor": 8,
+   "type": 1,
+   "children": [
+    {
+     "id": 1004208,
+     "anchor": 16,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 233123,
+      "name": "Augmentation de la RÉS aux effets",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+      "statusList": [
+       {
+        "key": "RÉS aux effets",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 717289,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1004209,
+     "anchor": 17,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 233124,
+      "name": "Augmentation des DGT imaginaires",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "f8c06e18c87cc064c37d3cd55387680660f5a7886d4075d970ac56da0ea0e068",
+      "statusList": [
+       {
+        "key": "Augm. des DGT imaginaires",
+        "value": 0.064
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 717289,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Inflige <nobr>#1[i]%</nobr> de DGT supplémentaires aux ennemis qui subissent une Rupture de faiblesse.",
+    "ultimateCost": 0,
+    "id": 233019,
+    "name": "Châtiment",
+    "iconPath": "371c108327727436ca6c2c08ecc20647c3f977c7d37161ef1346450081ae039b",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1004201,
+   "anchor": 9,
+   "type": 2,
+   "children": [
+    {
+     "id": 1004210,
+     "anchor": 18,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 149174,
+      "name": "Augmentation d'ATQ",
+      "levelReq": 80,
+      "promotionReq": 0,
+      "iconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836255,
+        "count": 8
+       },
+       {
+        "id": 717289,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 233116,
+    "name": "Augmentation d'ATQ",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549407,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "Corps",
+    "relicTypeIcon": "d20ecc1ab7faa188a97a5efa00ed3d8cdc5b0eec5f816dd163c042ec1536b8de",
+    "propertyName": "Chances de coup critique",
+    "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695"
+   },
+   {
+    "relicTypeHash": "Pieds",
+    "relicTypeIcon": "b3a1dd0fd3208b4aa3a3e9d194d9eee05302518d525aa75d6f8ffceb382d18e7",
+    "propertyName": "VIT",
+    "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94"
+   },
+   {
+    "relicTypeHash": "Sphère planaire",
+    "relicTypeIcon": "1949766874109dc95d0de9f21598a19bcb6772b08807b3ef345d3f21409e3244",
+    "propertyName": "Augm. des DGT imaginaires",
+    "propertyIconPath": "f8c06e18c87cc064c37d3cd55387680660f5a7886d4075d970ac56da0ea0e068"
+   },
+   {
+    "relicTypeHash": "Corde de liaison",
+    "relicTypeIcon": "8d48e32c3a2eadffdb7eaa9475f9c6e580ba1a9fc2de6c66480b845b17b0325e",
+    "propertyName": "ATQ",
+    "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Première rencontre",
+   "text": "Salut, je m'appelle Welt Yang. Viens me voir si tu as besoin de quoi que ce soit.",
+   "unlockRequirement": "",
+   "cnUrl": "e445a8bca3104c64f138f706233b8e02931521ca5034a6e4f5afb80863d5fc18",
+   "jpUrl": "d0d9bf4428c7b952c4baf6d273aaac809da9cffe0f1120b883d06aa31dcb27bc",
+   "enUrl": "f5de7a8f8c43cd35401679872c2554fdcd5c995e7dd2075101755f44779e6bf5",
+   "krUrl": "03126050d1396d43c269e21a1d76e3f94a10c4cee50be59f1e0c4f26e1b589cc"
+  },
+  {
+   "id": 2,
+   "title": "Salutation",
+   "text": "Hum ? Encore à moitié endormi/endormie ? Tu devrais te reposer davantage.",
+   "unlockRequirement": "",
+   "cnUrl": "a5a3b62b49f4dd4aaa54ba96d5be02bc286075a034dabbb4c0c9e96b9d9668bf",
+   "jpUrl": "9cc105542eeeae4b7b1d8f40ff87f2ea267f7f1ac8602b14dc34e851a2ae9589",
+   "enUrl": "d1696a5573fd79a68917d6b8e03ad927eb732afd505064b31e45b9b9875898ca",
+   "krUrl": "7362ce5e5d5c1f697d21b3afbb72691649015ed7ebffdc35757b5db50d3cc732"
+  },
+  {
+   "id": 3,
+   "title": "Au revoir",
+   "text": "Tu n'arrives pas à dormir ? Je comprends. C'est la nuit que nous viennent nos meilleures idées. Difficile de les ignorer, n'est-ce pas ?",
+   "unlockRequirement": "",
+   "cnUrl": "4eaa6f8466d1f777dd4996bdad2310b5b22b575a5646cbb3f5029d834c919e21",
+   "jpUrl": "7c775785bd412c7bcfef9f3a47f5bc12649f7b2860c102ff76b651ad8ba0c2f6",
+   "enUrl": "2a1d1c08efd5e1eaeb593248b4df08c04193df349c2c068bc2aca6e1eb24a028",
+   "krUrl": "7172abcd4a8d3a5d6f3440b48d5981b6fb701a781d26cfa784d740ccab7e592d"
+  },
+  {
+   "id": 4,
+   "title": "Anecdote personnelle : Métier précédent",
+   "text": "J'ai été animateur pendant huit ans. J'avais un quotidien très routinier, et peut-être un peu ennuyeux comparé à une vie d'aventures. Mais le travail est une bonne chose, ça permet de réaliser ses rêves.",
+   "unlockRequirement": "",
+   "cnUrl": "cd0031a07e38f87138fdf80b94109aed2174c6eaa88605ffe2c9abd0d89c0d94",
+   "jpUrl": "a332f646c5e966eb030cfa010d171ad9959f1bbea013654387f53034092d07f5",
+   "enUrl": "79dabbf51da24d48ac512968ac6aabecbc59caed0f9d9332327ff2ed5e597914",
+   "krUrl": "8bf64f44a430f64480e189c97d88d789350eb23ea4a2450365eaddf8be4d02cd"
+  },
+  {
+   "id": 5,
+   "title": "Anecdote personnelle : Raison de sa présence à bord de l'Express",
+   "text": "Oh, c'est une longue histoire. Elle implique beaucoup de gens et d'incidents que tout le monde préférerait oublier, haha. Mieux vaut ne pas en parler. Pour faire simple, je me suis perdu dans l'univers, mais j'ai eu la chance de croiser Himeko aux commandes de l'Express.",
+   "unlockRequirement": "",
+   "cnUrl": "430b78de48005d1a4217b1d86946ac4c051baa13e64a79c074e191a6b64400eb",
+   "jpUrl": "c3dde4fc2a2782fb23f28d6c8fcb6a8df07ceb26e2c040cb9efef1c150ffc3b7",
+   "enUrl": "d180e958caf62d32d2e03bcf934cfd0aa0a09edad842a3a5e3e5d46d0e28fcce",
+   "krUrl": "16f2073bf551e2fd4ada16f8a0dd5fd45c7c655aed1f1a805297d290ed10318c"
+  },
+  {
+   "id": 6,
+   "title": "Bavardage : Arahato",
+   "text": "Oh, il y a beaucoup à dire sur ce sujet. Je crois que cette série n'était diffusée que dans mon monde d'origine, je ne pense pas l'avoir vue ailleurs dans l'univers... Je pourrais utiliser mon pouvoir mimétique pour te montrer quelques épisodes, mais je ne peux pas te garantir une bonne résolution...",
+   "unlockRequirement": "",
+   "cnUrl": "613267ee01e5d4c2ac75125f10426e0f55ffaaa4bf356fbc52008f0fe4f32c3e",
+   "jpUrl": "de119b5f4d06c15aa98825bca75017d656ee75c8264b6dc4a4ec0b6ac42f969b",
+   "enUrl": "370dd9632bc6a7b78122af344cffaeab0f9d142292072d14514586806082d50c",
+   "krUrl": "06f8414265b0cf7201207355bb7f12615059c73c0b6836c9e821ceba8bc3ae2d"
+  },
+  {
+   "id": 7,
+   "title": "Passe-temps",
+   "text": "Les recherches historiques et la production d'animations... Des passe-temps qui vont de pair.",
+   "unlockRequirement": "",
+   "cnUrl": "d0604f63e0fb6511211a3f7d66046881746714c05c9f07d2105072cf730ca3d8",
+   "jpUrl": "cbd7092da56ccf2a7e3ff07b9d95691e5e17568ffb9ceb6cc735412f4aeb7126",
+   "enUrl": "05e066f53330ab13ecc310e8e23c2a97ae8a110dc0881f6b46e29806015c2487",
+   "krUrl": "87f02a80c77146b1e1b51f7ea31a85943b41a2498707841604e91677528b451f"
+  },
+  {
+   "id": 8,
+   "title": "Problèmes",
+   "text": "Tu sais, Pionnier/Pionnière, tu me fais penser à un personnage de cartoon. Tu sembles attirer les compagnons comme un aimant... Surtout, ne le prends pas mal. C'est juste que... j'ai l'impression que mes chances de partir à l'aventure se sont effondrées à nouveau...",
+   "unlockRequirement": "",
+   "cnUrl": "8491652ab7c9080dc40b6dbae64d022532d5afdc82a618f6fe54d908067c9a00",
+   "jpUrl": "1361e636ed8b8a06551d60a321c29118931853d2b49b1814024a5668e853ed49",
+   "enUrl": "039dffeb53081e817a765534684c8b86b44dc281d4c47ba2099390d320fb20a3",
+   "krUrl": "eb9b147d3d7948c5dd09875bdb7fdc6a410c6b29a87dc93e5fd8d387af797a22"
+  },
+  {
+   "id": 9,
+   "title": "Fait notable",
+   "text": "Mon monde a été corrodé par une force connue sous le nom d'Honkai. Ça ne l'empêche pas d'être magnifique et chaleureux.",
+   "unlockRequirement": "",
+   "cnUrl": "8cf2252c54e7f628883773cee7a057bf09a8617067bd49537b93ccddc0223d10",
+   "jpUrl": "f4939af270cad3640acfb993c80683afc98c29b6f727acdee1644e7cba9ee06c",
+   "enUrl": "81e9f5802e0426b51ccdd691d24a46beba4e6b534c183b5e618fbb0a864a9f27",
+   "krUrl": "bd8ebaa15c2db60c69df7c217e56f2a10864fa392bd169d6417dfcbbdc1433fb"
+  },
+  {
+   "id": 10,
+   "title": "Connaissances",
+   "text": "Tu sais comment les disciples de Qlipoth la Préservation sont devenus la Corporation pour la Paix Interastrale ? L'Aiôn voulait construire un mur, alors l'humanité s'est mise en quête de matériaux de construction pour marcher sur les traces de Qlipoth... Quand on y pense, c'est amusant.",
+   "unlockRequirement": "",
+   "cnUrl": "12c7e453a1d0f8e299d7b56143661b13d9fee79798d5a28f788ceb23fab06ee1",
+   "jpUrl": "ac8e3aac28fe6d808a97f0ca00b84cc982c77899d475f9bfe0915d09e3d57d0a",
+   "enUrl": "d9a4a53c49b700c885393da9d9d977f5a01d93ede2750b09ff7fa1c64345ca3d",
+   "krUrl": "c2b29460ac3ee271c5e8223a15a20391bb8d44f3a9d2a6f5e99442f0da0a79ba"
+  },
+  {
+   "id": 11,
+   "title": "À propos de March 7th",
+   "text": "March est très curieuse et me demande toujours de prendre des poses de combat. D'après elle, je m'en sors assez bien. Tu es du même avis ? Hum...",
+   "unlockRequirement": "",
+   "cnUrl": "f61a05c4aecff4cd7ff7470c9c7d2b065c5772f16e55f518c2bf995cae48efc8",
+   "jpUrl": "aff4e0e927109689266300772ff8620b7d2086b97467ed67c7cd6c9ddc494fb6",
+   "enUrl": "4b281591276fd33ed39ab164e0da8ce85f223f797925faf3e3a7418df0f76b41",
+   "krUrl": "bc88597816a144551d568c296b8d065bdcb9e7873e01c3070f0e1fd6c6ab9ca4"
+  },
+  {
+   "id": 12,
+   "title": "À propos de Dan Heng",
+   "text": "Il est en sécurité. Je sais qu'il a des doutes, mais... il fait partie de l'équipe, maintenant. Himeko et moi ne laisserons rien lui arriver.",
+   "unlockRequirement": "",
+   "cnUrl": "60fac66ad86e146b192bf6a4fd44ceaee1561b7b56498ebdc33188815f72862a",
+   "jpUrl": "268417db98fcac76f9797b2c788c806bb44de1732e80d4cbd936a0ec101a1318",
+   "enUrl": "996bc39049c813e23a2738b9356c087a71825820b09bf3db92718bbc776d8c88",
+   "krUrl": "7409fdcbafd69c489b12848d1f75f90f2961f20972b8b7f7fcb0cc97b9d7f6d5"
+  },
+  {
+   "id": 13,
+   "title": "À propos de Himeko",
+   "text": "Himeko est le genre de personne qui... brille de mille feux. On a beau voyager sur l'ancien itinéraire du train, on peut voir les rêves de Himeko défiler devant ses yeux quand on la regarde. C'est comme si elle avait toujours été à bord de ce train, se dirigeant inexorablement vers les étoiles.",
+   "unlockRequirement": "",
+   "cnUrl": "7a7b0ee392924ae1366be4b929ae3b0842197ead08300708abde09b1ad6def9b",
+   "jpUrl": "f4efbefd845d402a4934aa27567ebf889e455d3b3a75a3b28ac9e97aa9772461",
+   "enUrl": "4a5fa1bf2ceb6d4642c5c9c640b23ee3dcbb24a193b3de6399f84cf09aba0552",
+   "krUrl": "f663d1d82b114545941c9888db075b0f8b4a4b33601c33a99d29009969048b58"
+  },
+  {
+   "id": 14,
+   "title": "À propos de Pom-Pom",
+   "text": "Pom-Pom est toujours là pour prêter main-forte, mais j'éviterais de le provoquer si j'étais toi. La dernière personne à avoir essayé...",
+   "unlockRequirement": "",
+   "cnUrl": "8b66102d572a23d8a1a58feadd549a9b206d38c0b73ceb7ccfa15284c1301f86",
+   "jpUrl": "0d800d4ef142453a152cad0016e762464be461f5a05faf8b08a9226841b5b05e",
+   "enUrl": "2e83d6819db6bc3d668071bfb81aad0063fb7b7041cf5204521596b3d3abc07d",
+   "krUrl": "69af555df604d8073402631c9506113b64331b21c707ae9c97bfb00311428a29"
+  },
+  {
+   "id": 15,
+   "title": "À propos de Dan Heng 2",
+   "text": "Voici une citation que j'affectionne tout particulièrement et dont j'aimerais lui faire part : « L'immensité du cosmos est sans commune mesure. Le destin de tout un chacun ne devrait pas se limiter à une voie unique choisie par les cieux. »",
+   "unlockRequirement": "",
+   "cnUrl": "a6befedea42e9ac66fbbf97ddadce5cd9829303b1ea330c714e59294bb1d32fc",
+   "jpUrl": "bca654dd434b22a77b349264a9de23d1ef611d5767c97a08859490cff2ece64d",
+   "enUrl": "0f1c7f274be7e6980d5ea818ff5217a43f8de4cdb889c2e4e263ed38bda094c9",
+   "krUrl": "ad41ff51e3fa497898b021a1c6d27570bfc666bc508be2f167f43beb8d2dbb5a"
+  },
+  {
+   "id": 16,
+   "title": "Activation d'Eidolon",
+   "text": "De nouvelles aventures, de nouveaux amis... C'est génial, n'est-ce pas ?",
+   "unlockRequirement": "",
+   "cnUrl": "a10707984cfe1de58cb9bfc5700b724b2675a08533909be576c65446ab45d390",
+   "jpUrl": "1dec8e36cf8f5c85418c7768ca22e3d6245ca26ca043f6a6e92d7a7e813b3660",
+   "enUrl": "eb18736449fbff19324a6ffc4353ed379af89e824e85f4890c8ff904a19dc653",
+   "krUrl": "f6c30f49fc7651efeddec41201c0a8d99f4de7eec8ee22e70b3ad4840333e8bd"
+  },
+  {
+   "id": 17,
+   "title": "Élévation de personnage",
+   "text": "La passion passée n'est pas la seule chose qui m'est revenue...",
+   "unlockRequirement": "",
+   "cnUrl": "ffb2f98182d71f9c7bfbb1e91bae282273de0f22e23c7cd7b8cc9f013b12b014",
+   "jpUrl": "ed194c2d5131de550ad427d942f7602a08a0cd498a51fec1b6cd66cda182f054",
+   "enUrl": "e09ca63e56813e3add53512c163c4b32b744eb8168d2edcc093b452792456dc4",
+   "krUrl": "7bab1bc35a8af36e7addfcb8547180484df0fe49850d0a8c15e812c3a117ae37"
+  },
+  {
+   "id": 18,
+   "title": "Niveau max atteint",
+   "text": "Nous allons, nous aussi, laisser notre marque dans l'immense mer d'étoiles.",
+   "unlockRequirement": "",
+   "cnUrl": "45d42a886d220319494fbecd54b6922abbce9521e1795d6a89f76109f35ac803",
+   "jpUrl": "962431eb3f863abf0977c34ecdbcea4ea67c38d284101518cbdb5ed106635bc3",
+   "enUrl": "ed94e25c5a80d8585b4fdf4e4e77fa364dd7b7bb9c8eaed448d2701c76daedaf",
+   "krUrl": "d7937f3039e0ddace90ea567b4a3645f7b4b52f036e522f32dd0f7dd9d6e0583"
+  },
+  {
+   "id": 19,
+   "title": "Activation de Trace",
+   "text": "J'ai l'impression de rajeunir lorsque je passe du temps avec tout le monde.",
+   "unlockRequirement": "",
+   "cnUrl": "c3375e48300f6ce122fbfc58d651caa47e8cebc48016a1bc9f8ce0f2c01fc9f7",
+   "jpUrl": "980324f88f655bee735a97ee768b45003ef82d7696b58b13cec5110fe48fd2e9",
+   "enUrl": "9c78967ef425d9b35a3d0a8d56cbd0d4a244a93b1eec4f3b11af7590dd9c94bd",
+   "krUrl": "a5e93d2c819d88ca7e262e738b236fcae65a333f93ce024850f5d01f3d1d0a33"
+  },
+  {
+   "id": 20,
+   "title": "Rejoint l'équipe avec Pionnier/Pionnière",
+   "text": "En tant que protagoniste de l'histoire, tu te dois de surmonter les obstacles avec détermination sans regarder en arrière.",
+   "unlockRequirement": "",
+   "cnUrl": "c78c3d04381d6f7f6ef17a526132b8ec52eab3091c99d6420920fcc2829207bd",
+   "jpUrl": "61b8b382c1647c7be27d72a17c60fd12ce07236eeeb9c77ccbb8f8786f30258e",
+   "enUrl": "bc5728b422a37cd407cc3ca2fb24f6a80b7f0313518ff0f86aec075d20e9461d",
+   "krUrl": "8c8e2080c9d27fd021fc7f1862450b0f0948e67b7640c6ec4a9cb393759990d5"
+  },
+  {
+   "id": 21,
+   "title": "Rejoint l'équipe avec Himeko",
+   "text": "Ce n'est pas tous les jours que j'ai l'occasion de me battre à tes côtés, Himeko. L'heure est venue de montrer ce dont on est capables.",
+   "unlockRequirement": "",
+   "cnUrl": "4661747f6974fbf890bf140dea50b45865769fc37022bac44ab0993b02389560",
+   "jpUrl": "13402717069f44437a632e4f7c9b29393d0cde70d69c51150137ede8e1eedec1",
+   "enUrl": "0d958e531a41169e87e3b3971f9ebc483db0a495cd63088e9f2f070d9992af22",
+   "krUrl": "ae5e303b14f70484e8ebfb3f7f6ca2afa9c7180e2085916408aec008032173a5"
+  },
+  {
+   "id": 22,
+   "title": "Rejoint l'équipe avec Dan Heng",
+   "text": "Je suis rassuré de t'avoir à mes côtés, Dan Heng. Mais il faut que tu économises tes forces.",
+   "unlockRequirement": "",
+   "cnUrl": "0b439b4df40669fbbc58da56f4cbbdf9b4504fa967ed20f3fa1892d0e21e8b11",
+   "jpUrl": "e7ebcf6fe8ccbd011c8488d2a1d6d15344e0f6c650351008e23d52a5e0c54932",
+   "enUrl": "86eab12703657ec49e8ae439056d25ca8fe8b6a165425a292a20e6773a525bcc",
+   "krUrl": "3a392dcac476c283bf1225a8ae1c17b2f35821f1f4aafcfdc1540c01bb540ca8"
+  },
+  {
+   "id": 23,
+   "title": "Rejoint l'équipe avec Dan Heng • Imbibitor Lunae",
+   "text": "Je suis rassuré de t'avoir à mes côtés, Dan Heng. Mais... Bon, j'arrête de t'embêter.",
+   "unlockRequirement": "",
+   "cnUrl": "c8ea33c0f97adb311e312ce9e8f06b941e2a1ddb0303d0e190a45df44fca9c06",
+   "jpUrl": "bd836fafcab99c008ead2978c3b052d369c494bbab0a4da9ac9df78bb3b03449",
+   "enUrl": "530505b0389d8b0005ad66e891af8786b2f801015ed36d2bb4c445dbaedde433",
+   "krUrl": "109caf2579c119fbbf7ca2044b78db00530ecaeb8bbcbbd86b93a39d1494ddb7"
+  },
+  {
+   "id": 24,
+   "title": "Rejoint l'équipe avec March 7th",
+   "text": "C'est bien que tu aies autant d'énergie... mais préviens avant d'agir la prochaine fois, March.",
+   "unlockRequirement": "",
+   "cnUrl": "d22477f4595cc441a5cef8be9ba954a70a7ffb578109c64433bf9eb69f5e20e2",
+   "jpUrl": "971b0253aa7c402fcaa3a7bd20491c94df6fc2eb44ba31697176d5457e12fb14",
+   "enUrl": "cc8bcf51459804015a2b409876957a7ffffae0f69face6a85332b084bbbe48df",
+   "krUrl": "7df0321d603900451049e46ea5040aeff25251da2f5d48aa426f5ddbec244c42"
+  },
+  {
+   "id": 51,
+   "title": "Rupture de faiblesse en début de combat",
+   "text": "On dirait que vous avez besoin de vous endurcir un peu.",
+   "unlockRequirement": "",
+   "cnUrl": "0642305aa9fdfaa84ffc965cb586ca0cfb447c0363f839e3c1be95b96fc8ed48",
+   "jpUrl": "8770e194f700e1482a82dc48f7891b273277e0f74551197b830314ef0c9fcb67",
+   "enUrl": "106e2fa0b58510585fd0237eb7a324c1a31a50f39077b9f8ba2f712abde2a8c5",
+   "krUrl": "0c7944ee18f0ede65f769cc6f102e9f96bbabcf1dde7693e64cd5c7dd2bf5119"
+  },
+  {
+   "id": 52,
+   "title": "Avertissement de danger en début de combat",
+   "text": "On reste calme.",
+   "unlockRequirement": "",
+   "cnUrl": "c855b1bc86717a49fd99734e03c3b464507acf98da61e159bb623dc7ba08b9b5",
+   "jpUrl": "f44532fbbafad6e11c65ef6f1cb3007e0b8918f06a78562a7043119be0433ee7",
+   "enUrl": "23f4e250159db1b3ff8c0db1b19aae91b12b41122f802d9be9ded0f400004311",
+   "krUrl": "f6574d1cd93664ec602c85b823077aee4e42cbef402bcb978a0f6961d5f29fa4"
+  },
+  {
+   "id": 53,
+   "title": "Début du tour 1",
+   "text": "Laissez-moi m'occuper du reste.",
+   "unlockRequirement": "",
+   "cnUrl": "8decc8a2c18fbe6bfef87e2bff08059965762655c9ecfbc5f9f2059add1bb2af",
+   "jpUrl": "4f4cf63ffa83a5569bf1a33765ca1b060d6e668cacc4dd7de0348246ed0bd276",
+   "enUrl": "eae5fb61955e75fd5fc489f71a538f8750e8001a19a9d5d5af011be901259292",
+   "krUrl": "8c221ea79252cc14637afdd89556c3c1f700149e05cd41979974f4bb7368ceb0"
+  },
+  {
+   "id": 54,
+   "title": "Début du tour 2",
+   "text": "Vous pouvez encore partir.",
+   "unlockRequirement": "",
+   "cnUrl": "8efb8df88df29f54d969fd353146925761f65b6bd8a1c7b2f24dd0a70a04a426",
+   "jpUrl": "4f9c6495ba4827129249776b25fd745bf2b62a0dbe300e25fcaa409e53a4eb59",
+   "enUrl": "732a013fd838c59fe87983cb3ed62a6fda8f3eebf01c9d3032ce69b92a57a20f",
+   "krUrl": "9f3ab5f17369385a831f547c379630cb912f98779f4d83494b66e5263de253e6"
+  },
+  {
+   "id": 55,
+   "title": "Tour inactif",
+   "text": "Il vaut mieux faire un choix.",
+   "unlockRequirement": "",
+   "cnUrl": "4d33bf3b5f6a8ea0eb34671b1ca01faaf4d83d1915f0a7f46f35b33a6f5645f4",
+   "jpUrl": "33668ae3a5ff397099a78578a2cc30134ea764678391eda74fb9c3e153e50960",
+   "enUrl": "a4eb5675c4435c4931ec8edcffb28cb4732cff9b9ceb14ee65c3f9555207477a",
+   "krUrl": "2ef4352890bbd868087afb76acc3cf9693daa15da9074baa222fb1ee9ab58bf7"
+  },
+  {
+   "id": 56,
+   "title": "ATQ normale",
+   "text": "Abandonnez.",
+   "unlockRequirement": "",
+   "cnUrl": "c10c0ccb6ac6be945fcc9109c4bde051c47898ac4e83086d410f7a25df8669ed",
+   "jpUrl": "b1891704cfaace104eb8a8bb1736a4fdbcf7ae7eda4fac32675e790ea0d6ab65",
+   "enUrl": "a76b60690787f6ac1cfed9cd74ffba927e791717262287d25c43e4c994295b95",
+   "krUrl": "3536a22214d2399810116c934269f23524ccde0b8eb5566bcbeeacdfd9ba17ce"
+  },
+  {
+   "id": 57,
+   "title": "Compétence 1",
+   "text": "Apaisez votre corps et votre esprit.",
+   "unlockRequirement": "",
+   "cnUrl": "9dfe32abf7182713aaf05ccdec57ddefd6e9d90c304dc1bb2fe044f7b6da3512",
+   "jpUrl": "fa1eb04656cc2a1c4980227c414c13e6ad385da4633c4ad1a46eff963f75cd5c",
+   "enUrl": "968c2226bef01b744dfb401059fcc72c22da64acc1c7e566984764fcb04d42be",
+   "krUrl": "d54ffbd621247a1bcc34d8188ea8f9fc78be174a33cdc7481e73a4260514217d"
+  },
+  {
+   "id": 58,
+   "title": "Compétence 2",
+   "text": "Je ne vous ferai pas de cadeaux !",
+   "unlockRequirement": "",
+   "cnUrl": "e75f2be3af6a50d64206c3d757c3d89b4cb0971c0231c4cb5c1f7f519ac9f7b8",
+   "jpUrl": "cb8eb9fbd9cbbf1491cd3de302f205df2b5d3d7beff558526384be3f5e2efcb3",
+   "enUrl": "7165ec565b6ce6f65f93ce78042c8c56437d2ab627b1174c563e36a8d1fcd38b",
+   "krUrl": "5d2627d21cec917c0d995f4b31ebb1379291f483f8d1da608d51781c0e1502ef"
+  },
+  {
+   "id": 59,
+   "title": "Attaque légère subie",
+   "text": "Je vais bien.",
+   "unlockRequirement": "",
+   "cnUrl": "9cb3274ef3f1fa3c8d20330b65cb426f06c6b0f83c3a666e8061292bcffddd79",
+   "jpUrl": "988c696b6ce2558da508c6fbeea1256ab6b42944cf8af6e0f4c1605789325497",
+   "enUrl": "c9e09f1f8dc1f965429dc2da15f100088db21be9db9c68c7278a1cb84c360f70",
+   "krUrl": "dab65dc51c335bd5f5fde5fcf63bbd30829c4896579a2103f33f044995886cca"
+  },
+  {
+   "id": 60,
+   "title": "Attaque lourde subie",
+   "text": "Ça ne m'arrêtera pas...",
+   "unlockRequirement": "",
+   "cnUrl": "a6c56c83f0f6b0992868ab7bbaa89af7c2759ae9843f6974cf0ac3a93e859aea",
+   "jpUrl": "3fa399344a884950cf8338c5b75d225ac4b2de379c92ad14d1218c26f11a39d4",
+   "enUrl": "e3027642a1f3fc113c9072d29a3c962a1d65a414d2b18bd61a69e0769f0bde17",
+   "krUrl": "12c646ab35e195b15ccb4a6fe32bd1fd7f8bce3b03053578869a2ed843c28d6e"
+  },
+  {
+   "id": 61,
+   "title": "Activation de l'ultime",
+   "text": "Vous ne savez rien du poids de ce pouvoir.",
+   "unlockRequirement": "",
+   "cnUrl": "0db7f46859c84fd863f8660171c23c228a8ba06cc0206f725f0003e175904252",
+   "jpUrl": "30d9e15d5267cef90cb897d0624f437d0afe22577793014c91607f77e991c3c9",
+   "enUrl": "abdd07554b7f1c10989a00f8f0092fb217ee755622c84e2041781eb4dd5849a0",
+   "krUrl": "cb73e0ca9939fd739b994147016bc938ad950fef658fd02fcb6fd0c3c9a6234e"
+  },
+  {
+   "id": 62,
+   "title": "Déclenchement de l'ultime",
+   "text": "Voyez les étoiles se briser sous vos yeux... Survivre ou être détruit, il n'y a pas d'autres choix.",
+   "unlockRequirement": "",
+   "cnUrl": "1077644ae2a159380ee90016a1575af2313032bc9bf20fb91eb99154427a3622",
+   "jpUrl": "bb693e066cd72f22273d6bffb7951ce5533c9374e7219b12f04582129a7d5467",
+   "enUrl": "a7414600b4c130a7332c8c7337fe704ba765691b4f53816e28e52b1ecac1955e",
+   "krUrl": "593a4d068ac010408fe6a1dfabf8c051c89d4d4993c4c45a275809208036c679"
+  },
+  {
+   "id": 63,
+   "title": "À terre",
+   "text": "Je vous laisse... la suite...",
+   "unlockRequirement": "",
+   "cnUrl": "2d2a8ccffb2437bbf8c1dc026da00b91cb168c6cab043f68d6dfb0c9bb468202",
+   "jpUrl": "e5c5155205afaf10ef2e1f8e518d831eea510e925b12eda923f52d34c08e7fc9",
+   "enUrl": "1c8ade16ae093e5c0e04275925917301c64f91643048e127f6456e9accff288b",
+   "krUrl": "915dbcdb2e5fe6ad4e974cb9d2f3e507f8153a6e880dc0ce8290fb9df80d5747"
+  },
+  {
+   "id": 64,
+   "title": "Retour au combat",
+   "text": "Ce n'est pas le moment de me relâcher.",
+   "unlockRequirement": "",
+   "cnUrl": "f72053c554d38e81d0e72660f78559a98f328be959d5e73efb31426d78120f59",
+   "jpUrl": "9be330a5354478ebad68f5772ccff292457df9b3a1a9fed133c99308e061238a",
+   "enUrl": "35222917b5d83696c6a24c56d83779fae15a459c443393c97d82adc145b18d4e",
+   "krUrl": "ca9540ba61184c49733e2ad9a404868e8ed23bf3d7a316ef4dbdd8ca75895f32"
+  },
+  {
+   "id": 65,
+   "title": "Récupération de santé",
+   "text": "À la bonne heure.",
+   "unlockRequirement": "",
+   "cnUrl": "340cfa9381ea38762a0e208e0f4e224758cbf3b0d688f0230ce940d22b3d082e",
+   "jpUrl": "98b0e37e6131dcfb8fb60f30d922743ff0f7aa8e68b0617b7eb753eace659fe1",
+   "enUrl": "5ddd51aa424e5ba3d5820c3c84611a88426c43aedfe0a71c5109a532687d9de1",
+   "krUrl": "8d4531eaed0f55923bf3671fa05eae79c588532959f021b7b0524d6dbac0f6a9"
+  },
+  {
+   "id": 66,
+   "title": "Technique",
+   "text": "On ne bouge plus.",
+   "unlockRequirement": "",
+   "cnUrl": "9bdfc757987cfdd3c24c8d94095c82a401ecb7ff7029f3c749803706d85cbeda",
+   "jpUrl": "4df7d49e90f9f3e8042f9361b6823f5a26d45ec24c6efa9c5fe26a232332ddd4",
+   "enUrl": "1d1b9432e16c221e70caa249b5677689a9d965eab7f7a4c83922ba6f8967a5c1",
+   "krUrl": "1c08d07f0f5a826b819cdfa29ec28aebeaf12a4ba7c803d7697d00d14df680d4"
+  },
+  {
+   "id": 67,
+   "title": "Combat gagné",
+   "text": "L'immensité du cosmos est sans commune mesure.",
+   "unlockRequirement": "",
+   "cnUrl": "520733958312640d7bcf7fcb16d27d0289639a30f30d64d8193a4dd88f5db76c",
+   "jpUrl": "125f3a4c4d43e11affdec7cffa0ad5c8568a86276460ec65bdb8a02c0805b41e",
+   "enUrl": "9e3f22bd4132e9ac0cedb6d53f823e65625947306bf5f797480d202e076fc888",
+   "krUrl": "125fe2df6f6af0e42fc33e59efbcc0d4035b0e8d51fdeee01318fce30db76100"
+  },
+  {
+   "id": 68,
+   "title": "Ouverture de coffre au trésor 1",
+   "text": "Intéressant.",
+   "unlockRequirement": "",
+   "cnUrl": "6a90bf57538ada6b19f290f10fe2012deed918ed6542f92606c22b42c8098637",
+   "jpUrl": "cf860876605c550a36436746fc00d1c4cd42ed7af8f705d3db2f0b9f84a8436e",
+   "enUrl": "cdcbbde35cc3d507188d02c1ba739c9528b56368a35b6d4c1c6842bd90a74c68",
+   "krUrl": "1271a0e8493812a00884b0e639bd5db2837f7911c11785a065e6a802152addf8"
+  },
+  {
+   "id": 72,
+   "title": "Ouverture de coffre au trésor 2",
+   "text": "Ce sera sûrement utile.",
+   "unlockRequirement": "",
+   "cnUrl": "d7283ca531a2ae79fe9c998a3f83462a6aef63e333f094f4c33b0880219b4753",
+   "jpUrl": "74afc7f8635aed3e3c0b2b96ba26b23df66592f6bc5ff6be7fc15495432c8847",
+   "enUrl": "7522298de8bd7ea92f1c6cbf439b414dd63c2b574b019d5fb3b245a2a7f44d02",
+   "krUrl": "e76665f0d575a2a9f456139665e4286901d71bc1f9164fc1df6c351777e9f52a"
+  },
+  {
+   "id": 73,
+   "title": "Ouverture de coffre précieux",
+   "text": "Ce n'est pas tous les jours qu'on voit ça...",
+   "unlockRequirement": "",
+   "cnUrl": "653c143ed852dcaeff90ae1d351e39d88bcc48bc0257dea9fc954cef7840cba7",
+   "jpUrl": "a828a44ca7cd9f78f03c8c1ab8b24c3e56774ed671d09356c3e95c8e5ffd023e",
+   "enUrl": "40e7b8dee7600bc0dc8f253d0be49c4ae29250bd70f49e029d075b7334df2baa",
+   "krUrl": "fa46cf45406d2728d41d413a41247f3072a9564219bb47a89458d9a03634eab5"
+  },
+  {
+   "id": 69,
+   "title": "Énigme réussie 1",
+   "text": "Bien vu.",
+   "unlockRequirement": "",
+   "cnUrl": "66fa75d8ed8b74d9aa731ffdf969063fc5cf703c84160384e06bb9585b696a51",
+   "jpUrl": "8cb51a25c05ee2b52391b264b1ddff53dff332cbf7076cf330a346d2e8f926b7",
+   "enUrl": "3315b9bd9fe8eb7d5b15bc29d24dfacea19394e6f6e30c7c3b08ec6236f3c512",
+   "krUrl": "ee348657f69c8bffdbded30b401200ab8ff3d0f310628e69b0b20a21b614b809"
+  },
+  {
+   "id": 74,
+   "title": "Énigme réussie 2",
+   "text": "Alors ça, c'est du talent.",
+   "unlockRequirement": "",
+   "cnUrl": "c197af864cb4b8710035005fad1c8b00e7ca997a723b90fd1c7230bd26e9f2ad",
+   "jpUrl": "837003089c66d28794dedfa083459bce5d86ba24660c96664bda2baa298fd4b7",
+   "enUrl": "192c240cf275b667cd4b369e6949d12477ba2c839670261bbe444ad57c5d9ef0",
+   "krUrl": "77082111fd4a27dde8894cc7515dd9b159883145da9cb0a2ab9533473e72368d"
+  },
+  {
+   "id": 70,
+   "title": "Cible ennemie trouvée",
+   "text": "Ennemi puissant droit devant... Ça ne coûte rien de tenter sa chance.",
+   "unlockRequirement": "",
+   "cnUrl": "76dca37b75cd9277c8b71fae7af9e6dcd7b6509e043909812c5d21004d65f71d",
+   "jpUrl": "c6db8af7353b4fce6f1f49ece236e2f3833f0cfe5d21db128a8f8815669bff87",
+   "enUrl": "2e4db96164ab4d4488bea1a6a0832eaf40acf5ca631d12f7fb097832a99e6567",
+   "krUrl": "f8a4004be141630da8543141982d721580a5c65087e758a1d65f853bee88994c"
+  },
+  {
+   "id": 71,
+   "title": "Retour en ville",
+   "text": "La prochaine destination...? À toi de décider.",
+   "unlockRequirement": "",
+   "cnUrl": "62c340538aa398e1d567edd040c1083c306193eef276656d15d698ccd61795c1",
+   "jpUrl": "ed0380c427733e276e99e5257183af69d3afb3a853ca25bf04c6d370903eec12",
+   "enUrl": "534bec05792c9ce5db58ecd33d6b632f984114541275be39bc55552daaef9b9a",
+   "krUrl": "56c20fbce4a96991a01e96353686a79dffa9e43068763c56d667440a1d690e23"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Détails du personnage",
+   "text": "L'ancien souverain d'Anti-Entropy à la grande sagesse qui a hérité du nom du monde : Welt. Grâce à son expérience, il a sauvé la Terre de l'anéantissement à maintes reprises.<br />Au terme de l'incident de Ste Fontaine, Welt n'avait eu d'autre choix que de s'aventurer avec l'initiateur de l'incident de l'autre côté du portail.<br />Peut-être ne s'attendait-il pas au nouveau voyage et aux compagnons qu'il allait découvrir là-bas.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Histoire du personnage : Partie I",
+   "text": "Sur le chemin du portail, Welt sortit un stylo et commença à esquisser un croquis. Depuis huit ans, il répétait cette tâche.<br /><br />Par le passé, il construisait les objets d'une manière différente : il suffisait qu'il se représente les images dans son esprit. Mais il ne pouvait considérer cela comme une véritable « création », car il s'agissait simplement d'objets similaires à ceux originaux.Ils n'avaient rien à voir avec son propre esprit.<br /><br />C'était la responsabilité de Welt, l'homme qui avait hérité du nom du monde. Si le monde avait besoin d'être secouru, il deviendrait ce héros sans hésiter. Il était tombé de nombreuses fois et avait bien plus encore été le sujet de moqueries. Mais il résistait, gardant toujours la tête haute. Par-delà le passé et l'avenir, il ne changerait jamais.<br /><br />Or aujourd'hui, il se retrouvait embarqué dans un nouveau voyage.",
+   "unlockRequirement": "Disponible au niveau <nobr>20</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie II",
+   "text": "Lorsque Welt regagna ce dangereux champ de bataille cosmique, il pouvait sentir son sang bouillir une fois de plus.<br /><br />Même lorsque son vaisseau spatial perdait de la puissance, dérivant sans but dans l'espace, il se contentait de plaisanter gaiement avec son compagnon : « La fin d'une aventure marque souvent le début d'une autre. »<br /><br />Lorsque Himeko parvint à les sauver et les informa qu'ils ne pouvaient pas rentrer chez eux, il continua à plaisanter : « On dirait un scénario de dessin animé, ça ne tient pas debout. Il y a trop de coïncidences. »<br /><br />La vie n'est qu'une succession de coïncidences.<br /><br />Puisqu'il ne peut pas retrouver son chemin ni mener une existence paisible pour le moment, pourquoi ne pas reprendre les armes et se battre ?<br /><br />Cette fois, point de fardeau ou de destin à assumer. Il est maître de son propre destin.",
+   "unlockRequirement": "Disponible au niveau <nobr>40</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie III",
+   "text": "Désormais, Welt ne se bat qu'en de rares occasions. Personne ne sait s'il a conservé sa force d'antan. La manipulation de la gravité est restée sa technique de combat de prédilection depuis que sa canne a été transformée en étoile d'Éden.<br /><br />Il supprime ses ennemis par la gravité, créant une sorte de mini trou noir. Ce qu'il considérait comme des pouvoirs ordinaires suscite l'émerveillement des jeunes de l'Express.<br /><br />« Monsieur Yang est incroyable, vraiment incroyable !<br />– Si tu as besoin d'aide pour quoi que ce soit, Pionnier/Pionnière, va demander à monsieur Yang.<br />– Chacun son tour, laissez-le respirer... »<br /><br />Il n'arrive pas à croire que sa légèreté d'esprit et son assurance sont le résultat de ses nombreuses expériences passées, véritables marques du passage du temps. Cependant, les jeunes à bord de l'Express sont comme une feuille de papier vierge : ils écrivent leur propre vie.<br /><br />Quel type de responsabilités doit-il assumer dans la vie ?<br /><br />Il ne peut s'empêcher de penser aux noms de ces personnes qui, tout au long de sa vie, l'ont aidé.",
+   "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie IV",
+   "text": "— Registre de Welt ██/██/████.<br /><br />Relation de ███ avec les protagonistes :<br /><br />« La personnalité pétillante de █—███ est celle d'un héros de dessin animé. Je prends !<br />███ — Une jeune femme pleine de vie. J'espère qu'elle pourra continuer à faire preuve d'imagination, et ne pas se sentir coupable même si elle bute sur un obstacle. Les jeunes font toujours des erreurs, et ███ ne sera pas toujours là pour la soutenir.<br />██ — Un jeune fiable. En gros, pas de quoi s'inquiéter. J'espère qu'il pourra bavarder davantage avec ███, mais s'il ne le souhaite pas, ce n'est pas un problème non plus.<br />██ — Je pourrais lui confier ma vie. ███ croit qu'elle prendra la bonne décision.<br />██ — Un personnage tout droit sorti d'un dessin animé. Une créature apparemment normale, mais qui possède en réalité des capacités étonnamment puissantes et un passé tumultueux. »<br /><br />Remarque : si jamais je rentre chez moi, je devrais envisager d'adapter mon périple en dessin animé.",
+   "unlockRequirement": "Disponible au niveau <nobr>80</nobr> de personnage"
+  }
+ ],
+ "archive": {
+  "cvCn": "彭博",
+  "cvJp": "細谷佳正",
+  "cvKr": "한신",
+  "cvEn": "Corey Landis",
+  "camp": "Astral Express"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "Welt",
+ "rarity": 5,
+ "descHash": "L'un des membres d'équipage de l'Express les plus aguerris. L'ardeur enfouie dans son cœur brûle à nouveau depuis qu'il s'est lancé à corps perdu dans cette nouvelle aventure. Il dessine parfois ses observations lors de ses voyages dans un carnet de croquis.",
+ "artPath": "6d4e97aa3408569f9de6c514e1e6e5c2444f168db3fc9627c07e51e9f98b3d0f",
+ "miniIconPath": "1c518edbc6e9c8208bc19f613850a34f2404aad9fbda98ca2246adf345c5f0ed",
+ "damageType": {
+  "id": 64,
+  "iconPath": "e2b4f38f1a093eaeb29590634279febc9a6f3a1b5753684b7fffac8e5d23e981",
+  "color": "#F4D258",
+  "name": "Imaginaire",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "2e8dee1b2516e0376a0ff1ec3cf5cf7d2d37bd482cf5efb5cf79367f9d2be218",
+  "altIconPath": "61e195ac81b36d68bb63480397b0f78505a2cd8c8970b059540187a975563a72",
+  "color": "#FFFFFF",
+  "name": "La Nihilité",
+  "rarity": 0
+ },
+ "pageId": "welt"
+}

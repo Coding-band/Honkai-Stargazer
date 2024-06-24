@@ -1,0 +1,518 @@
+{
+ "name": "春水初生",
+ "rarity": 4,
+ "descHash": "练剑的少年稍事歇息。<br />阳光烘着他微热的脖颈，缓缓入水，<br />没过脚边时，虽是凉的，<br />但铃铛叮铃，飞鸟啁啾，<br />远方的人们知是春天到了。",
+ "iconPath": "8ab30073a124794a596bd3bfb39c5ed183cf97379efbc4bd0a0703331193b887",
+ "artPath": "2d0639616c85c9c6d38f5297e9d1cba8c5b11be944328a273d9199a06cef4f45",
+ "artPlaceholder": {
+  "data": "data:image/webp;base64,UklGRh4CAABXRUJQVlA4WAoAAAAQAAAAEwAAGwAAQUxQSCIAAAABD9D/iAioiSRJCS9cySec4dFBRP8jAm8Ujoh/QcTCiDgBVlA4INYBAACQCQCdASoUABwAPm0uk0akIqGhMBgIAIANiWwAnTKEemWgNs1zyWmJ7x9/qEe9xwrwHQE5sfpD0XP90GyAuUTYl5xFA3BV1RA2SkaJWWEGko5x1EdAAP76oxcSOOuMvsxtLZ/ZiesDu+ml7XCNy7RSvqslJDsuEcenO4SP9LWjGky5vcclKx9azprzze7jNOUBZVVnMa+0FD+ySx3qT9sZr28DNFp9Of7WqA5dEKOWteYgog3Wy9LJ5br3iq1dndKCDPJgTx+Y7NAvJxMytMp4K5AC8P8F++XZdr2fteyDLv90HTsP4gTbK875mNK51A/9EA7F/7cNqDcDpyAJoWUZw719zjuL/r7x/yQMeELw/ZZRkhO13e8FXVDK5budDqmor/8HrOfdj8Jffv/LPR+ajlJVP532sNUKPiAbxetj/3lT60fylvjH0Eb4I/d/HyJ9g/xTXLFr8Nc5EnF6DEjA9WkN1rD6vr8+5877mdKwk1pnEEWfDtLnqP6Gi6n1jXLBMVzErgwad9AhPl8mjfbYmpxmXU3n34SpdsZ02D0/4Q2qFr/jqTUHcb/rVoG+kMHDIjkwCIEbeaSvWe46aBAHCEO+S7KwxMJf0t+Ggu4FNsOxnFoAAA==",
+  "w": 867,
+  "h": 1230
+ },
+ "mediumIconPath": "0a8d65cf7f1184672f89fbf6a8a565981c109736d9290ca154a910b1aeb3d1a0",
+ "baseType": {
+  "id": 0,
+  "iconPath": "d5302975290739e51dc53d919353f47705d836fa6db628c190b1faaf195f7319",
+  "color": "#FFFFFF",
+  "name": "巡猎",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "8fc9b77806662a775629ea8ec25d17374356ee5827146419aefefb4e5fa64a27",
+   "name": "信用点",
+   "desc": "星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。",
+   "lore": "「人们奔波、争斗、贸易，为的不过是个终端里显示的数字。但真正珍贵之物，公司的数字是买不到的。」",
+   "purpose": "通用货币",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "拟造花萼【大矿区】",
+    "拟造花萼【工造司】",
+    "拟造花萼【「白日梦」酒店-梦境】",
+    "任务奖励",
+    "委托奖励",
+    "余烬兑换"
+   ]
+  },
+  "549408": {
+   "id": 549408,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "66b7af9abc3a5b3a0c397e90ff5b79398ad5f3ed452c3adeb20a467543fd8810",
+   "name": "古代零件",
+   "desc": "旧世界时代遗留的机器零件。强化所需的简单材料。",
+   "lore": "尽管体积微不足道，却以如今的人们难以重现的技术铸造打磨而成。<br /><br />「旧世界的一颗小螺丝都比我们的盔甲结实。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 2,
+   "rewardPath": "/material/549408",
+   "comeFrom": [
+    "自动机兵掉落",
+    "「差分宇宙」中敌方掉落",
+    "「模拟宇宙」中敌方掉落",
+    "委托奖励",
+    "余烬兑换",
+    "「万能合成机」- 材料置换",
+    "拟造花萼（金）"
+   ]
+  },
+  "633349": {
+   "id": 633349,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "eee031381b2ae54c8df870a7c9f5089dfb9b6fa995a2c2ff29efb09bbffa02ef",
+   "name": "古代转轴",
+   "desc": "旧世界时代遗留的机器传动轴。强化所需的普通材料。",
+   "lore": "精密结合的机件一旦拆开就再也无法复原，即便贝洛伯格技术部的维修老手也不敢轻易动它。<br /><br />「笨蛋，这东西交给蓝甲人才值几个罐头？拿去给史瓦罗大佬，保你吃穿不愁。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 3,
+   "rewardPath": "/material/633349",
+   "comeFrom": [
+    "突破至均衡等级2后，自动机兵掉落",
+    "「万能合成机」- 材料合成",
+    "「差分宇宙」中敌方掉落",
+    "「模拟宇宙」中敌方掉落",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "635674": {
+   "id": 635674,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "11a70d892dc3b897bc3d714367c18fe413d9538c809eb21c211f322eed806403",
+   "name": "猎兽之矢",
+   "desc": "仙舟匠人以星间寒铁锻造的箭头。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">巡猎</span>角色的命途行迹。",
+   "lore": "在行成年礼时，父母们将它赠予狩猎了人生中第一头猎物的少年少女们，期许他们的生命如离弦之矢，终能中的。<br /><br />「愿腰间箭，匣中剑，不空蠹。」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 2,
+   "rewardPath": "/material/635674",
+   "comeFrom": [
+    "拟造花萼【城郊雪原】",
+    "余烬兑换",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "d5866e4c57959f77b39cfa0d05369fae9baec594e2cb9d76bb9d40f1046f206e",
+   "name": "提纯以太",
+   "desc": "光锥的强化材料，可以获得<nobr>6000</nobr>点光锥经验。",
+   "lore": "一罐经由特殊技术精炼而成的以太。<br /><br />「忆庭盼望重现往日的辉煌，但那是由他们所选择的『往日辉煌』，明白吗？」",
+   "purpose": "光锥经验材料",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "拟造花萼【边缘通路】",
+    "拟造花萼【太卜司】",
+    "拟造花萼【稚子的梦】",
+    "「忘却之庭」"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "42e7a259fea56f95597d32fc400f255d0b0f23e677981562484e970737564410",
+   "name": "凝缩以太",
+   "desc": "光锥的强化材料，可以获得<nobr>2000</nobr>点光锥经验。",
+   "lore": "一罐经由特殊技术精炼而成的以太。<br /><br />「小心轻放，勿压勿摔。破损泄漏后请参照《流溢灾难应对手册》第二章内容进行灾后处置。」",
+   "purpose": "光锥经验材料",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "拟造花萼【边缘通路】",
+    "拟造花萼【太卜司】",
+    "拟造花萼【稚子的梦】",
+    "余烬兑换"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "008db407e717c5e4703a0152c945bb21883550260a93ee6c7bb0fa9229346126",
+   "name": "稀薄以太",
+   "desc": "光锥的强化材料，可以获得<nobr>500</nobr>点光锥经验。",
+   "lore": "本不应存在于现实的假想介质，创造光锥的基本原料。<br />将之注入光锥，能令封装其中的事象更为清晰。<br /><br />「原来如此，流光忆庭的『忆质』就是这东西，怪不得忆者能携带记忆进行星际旅行。」",
+   "purpose": "光锥经验材料",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "拟造花萼【边缘通路】",
+    "拟造花萼【太卜司】",
+    "拟造花萼【稚子的梦】",
+    "委托奖励"
+   ]
+  },
+  "717290": {
+   "id": 717290,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "e57cd777cd6ae2ec9c4d8aa0fa1e9a18f5114a2b78d59db8bcc9231d470f77fc",
+   "name": "古代引擎",
+   "desc": "旧世界时代遗留的机器引擎。强化所需的高级材料。",
+   "lore": "以地髓为能源注入动力，运转时喷燃的并非火星，而是游走的极光。<br /><br />「只有大守护者直属的技术部有权调阅旧世界的资料，我嘛，被开除后就进不去啦。」",
+   "purpose": "行迹材料 <br />角色晋阶材料",
+   "rarity": 4,
+   "rewardPath": "/material/717290",
+   "comeFrom": [
+    "突破至均衡等级4后，自动机兵掉落",
+    "「万能合成机」- 材料合成",
+    "「差分宇宙」中敌方掉落",
+    "「模拟宇宙」中敌方掉落",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "836260": {
+   "id": 836260,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "cf5a458a6f5b56925e970a2f6e10ac8fc3034f2b045e7d87e13c0a49e4c8fba8",
+   "name": "逐星之矢",
+   "desc": "帝弓司命射出的倾天光矢的碎片。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">巡猎</span>角色的命途行迹。",
+   "lore": "无缘不可目睹的神迹残余。超逸光年，击破天星，人们只能从光矢留下的余烬中追想其力量。<br />也只有仙舟的工匠首领百冶才有资格将碎片重铸，赠予功业盖世的大英雄。<br /><br />「星裂天倾，光昭万古。」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 4,
+   "rewardPath": "/material/836260",
+   "comeFrom": [
+    "拟造花萼【城郊雪原】",
+    "「万能合成机」- 材料合成",
+    "「万能合成机」- 材料置换"
+   ]
+  },
+  "920201": {
+   "id": 920201,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "cde54d9ea3870506cfb7367e25d2eada09bfe948b459125b5e916d55fa6d4133",
+   "name": "屠魔之矢",
+   "desc": "仙舟匠人以星辰天瑛精心铸造的箭头。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">巡猎</span>角色的命途行迹。",
+   "lore": "阔不盈一指的锋镝，装入电磁弩或是热寻弓作为飞矢弹药，其力道足以一击贯穿孽物们坚如金石的躯壳。<br /><br />「天上谪仙来，乘槎渡星海。飞矢坠疾雨，明盔映月白。」",
+   "purpose": "行迹材料 <br />光锥晋阶材料",
+   "rarity": 3,
+   "rewardPath": "/material/920201",
+   "comeFrom": [
+    "拟造花萼【城郊雪原】",
+    "「万能合成机」- 材料合成",
+    "余烬兑换",
+    "「万能合成机」- 材料置换"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549408,
+     "count": 5
+    }
+   ],
+   "attackBase": 21.6,
+   "attackAdd": 3.24,
+   "hpBase": 38.4,
+   "hpAdd": 5.76,
+   "defenseBase": 18,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 635674,
+     "count": 3
+    },
+    {
+     "id": 549408,
+     "count": 10
+    }
+   ],
+   "attackBase": 47.52,
+   "attackAdd": 3.24,
+   "hpBase": 84.48,
+   "hpAdd": 5.76,
+   "defenseBase": 39.6,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 920201,
+     "count": 3
+    },
+    {
+     "id": 633349,
+     "count": 6
+    }
+   ],
+   "attackBase": 82.08,
+   "attackAdd": 3.24,
+   "hpBase": 145.92,
+   "hpAdd": 5.76,
+   "defenseBase": 68.4,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 920201,
+     "count": 6
+    },
+    {
+     "id": 633349,
+     "count": 9
+    }
+   ],
+   "attackBase": 116.64,
+   "attackAdd": 3.24,
+   "hpBase": 207.36,
+   "hpAdd": 5.76,
+   "defenseBase": 97.2,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 836260,
+     "count": 4
+    },
+    {
+     "id": 717290,
+     "count": 5
+    }
+   ],
+   "attackBase": 151.2,
+   "attackAdd": 3.24,
+   "hpBase": 268.8,
+   "hpAdd": 5.76,
+   "defenseBase": 126,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 836260,
+     "count": 8
+    },
+    {
+     "id": 717290,
+     "count": 7
+    }
+   ],
+   "attackBase": 185.76,
+   "attackAdd": 3.24,
+   "hpBase": 330.24,
+   "hpAdd": 5.76,
+   "defenseBase": 154.8,
+   "defenseAdd": 2.7
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 220.32,
+   "attackAdd": 3.24,
+   "hpBase": 391.68,
+   "hpAdd": 5.76,
+   "defenseBase": 183.6,
+   "defenseAdd": 2.7
+  }
+ ],
+ "skill": {
+  "id": 21024,
+  "name": "驱散余寒",
+  "descHash": "进入战斗后，使装备者速度提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>，造成的伤害提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>。当装备者受到伤害后该效果失效，下个回合结束时该效果恢复。",
+  "levelData": [
+   {
+    "params": [
+     0.08,
+     0.12
+    ],
+    "level": 1,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.09,
+     0.15
+    ],
+    "level": 2,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.1,
+     0.18
+    ],
+    "level": 3,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.11,
+     0.21
+    ],
+    "level": 4,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.12,
+     0.24
+    ],
+    "level": 5,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 50,
+   "2": 80,
+   "3": 140,
+   "4": 210,
+   "5": 300,
+   "6": 400,
+   "7": 510,
+   "8": 640,
+   "9": 780,
+   "10": 930,
+   "11": 1090,
+   "12": 1260,
+   "13": 1460,
+   "14": 1650,
+   "15": 1860,
+   "16": 2080,
+   "17": 2300,
+   "18": 2540,
+   "19": 2790,
+   "20": 2900,
+   "21": 3010,
+   "22": 3130,
+   "23": 3240,
+   "24": 3360,
+   "25": 3490,
+   "26": 3610,
+   "27": 3740,
+   "28": 3860,
+   "29": 3990,
+   "30": 4130,
+   "31": 4260,
+   "32": 4400,
+   "33": 4540,
+   "34": 4680,
+   "35": 4820,
+   "36": 4970,
+   "37": 5110,
+   "38": 5260,
+   "39": 5410,
+   "40": 5560,
+   "41": 6100,
+   "42": 6450,
+   "43": 6810,
+   "44": 7180,
+   "45": 7550,
+   "46": 7930,
+   "47": 8310,
+   "48": 8710,
+   "49": 9110,
+   "50": 9520,
+   "51": 9940,
+   "52": 10350,
+   "53": 10780,
+   "54": 11220,
+   "55": 11660,
+   "56": 12110,
+   "57": 12570,
+   "58": 13030,
+   "59": 13500,
+   "60": 13980,
+   "61": 14630,
+   "62": 15420,
+   "63": 16210,
+   "64": 17010,
+   "65": 17830,
+   "66": 18660,
+   "67": 19500,
+   "68": 20350,
+   "69": 21220,
+   "70": 22100,
+   "71": 24650,
+   "72": 26970,
+   "73": 29330,
+   "74": 31720,
+   "75": 34140,
+   "76": 36600,
+   "77": 39100,
+   "78": 41620,
+   "79": 44180,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "21024"
+}

@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Project Honkai Stargazer and app Stargazer (星穹觀星者) were
+  ~ Organized & Develop by Coding Band.
+  ~ Copyright © 2024 Coding Band 版權所有
+  -->
+<resources>
+
+    <!--server-->
+    <string name="asia">"Asia"</string>
+    <string name="europe">"Europa"</string>
+    <string name="america">"America"</string>
+    <string name="twhkmo">"TW HK MO"</string>
+    <string name="cn1">"星穹列车"</string>
+    <string name="cn2">"无名客"</string>
+    <string name="Trailblazer">"Desbravador"</string>
+
+    <!--path-->
+    <string name="Abundance">"Abundância"</string>
+    <string name="Destruction">"Destruição"</string>
+    <string name="Erudition">"Erudição"</string>
+    <string name="Harmony">"Harmonia"</string>
+    <string name="Hunt">"Caça"</string>
+    <string name="Nihility">"Inexistência"</string>
+    <string name="Preservation">"Preservação"</string>
+
+    <!--element (combat type)-->
+    <string name="Physical">"Físico"</string>
+    <string name="Wind">"Vento"</string>
+    <string name="Ice">"Gelo"</string>
+    <string name="Fire">"Fogo"</string>
+    <string name="Lightning">"Raio"</string>
+    <string name="Quantum">"Quântico"</string>
+    <string name="Imaginary">"Imaginário"</string>
+
+    <!--relic-->
+    <string name="RelicPropBody">"Corpo"</string>
+    <string name="RelicPropFeet">"Pés"</string>
+    <string name="RelicPropPlanarSphere">"Esfera Plana"</string>
+    <string name="RelicPropLinkRope">"Corda de Ligação"</string>
+    <string name="RelicPropBodyShort">"Corpo"</string>
+    <string name="RelicPropFeetShort">"Pés"</string>
+    <string name="RelicPropPlanarSphereShort">"Esfera"</string>
+    <string name="RelicPropLinkRopeShort">"Corda"</string>
+
+    <!--ui - main page-->
+    <string name="Character">"Personagens"</string>
+    <string name="CharacterList">"Lista de Personagens"</string>
+    <string name="Lightcone">"Cones de Luz"</string>
+    <string name="LightconeList">"Lista de Cones de Luz"</string>
+    <string name="Relic">"Relíquias"</string>
+    <string name="RelicList">"Lista de Relíquias"</string>
+    <string name="Stamina">"Poder"</string>
+    <string name="StaminaIsFull">"Completo"</string>
+    <string name="Map">"Mapa"</string>
+    <string name="Login">"Iniciar Sessão"</string>
+    <string name="Logout">"Desconectar-se"</string>
+    <string name="Expedition">"Exped."</string>
+    <string name="ExpeditionFullName">"Expedição"</string>
+    <string name="Setting">"Configurações"</string>
+    <string name="MemoryOfChaos">"Memória do Caos"</string>
+    <string name="NoDataYet">"Ainda não há dados"</string>
+    <string name="IsDone">"Concluído"</string>
+    <string name="PlayerLevel">"Nível."</string>
+    <string name="AccountLogin">"Iniciar Sessão"</string>
+    <string name="ModifyHomePage">"Modificar Página"</string>
+    <string name="SimulatedUniverse">"Universo Simulado"</string>
+    <string name="Event">"Evento"</string>
+    <string name="Codes">"Códigos"</string>
+
+    <!--ui - filter and sort-->
+    <string name="SortByTime">"Data de lançamento"</string>
+    <string name="SortByName">"Nome (En)"</string>
+    <string name="SortByAtk">"ATQ"</string>
+    <string name="SortByDef">"DEF"</string>
+    <string name="SortByHp">"PV"</string>
+    <string name="SortByEnergy">"Energia Máxima"</string>
+    <string name="SortByRare">"Raridade"</string>
+    <string name="Reset">"Redefinir"</string>
+    <string name="OK">"Ok"</string>
+    <string name="NotOK">"Recusar"</string>
+    <string name="FilterTitle">"Filtrar"</string>
+    <string name="FilterFindCharacter">"Pesquisar por Personagens"</string>
+    <string name="FilterFindLightcone">"Pesquisar por Cones de Luz"</string>
+    <string name="FilterFindRelic">"Pesquisar por Relíquias"</string>
+
+    <!--ui - character, lightcone, relic pages-->
+    <string name="BasicStatus">"Atributos Básicos"</string>
+    <string name="SkillDesc">"Descrição de Habilidade"</string>
+    <string name="SkillDetail">"Detalhes de Habilidade"</string>
+    <string name="RelicDetail">"Detalhe da Relíquia"</string>
+    <string name="TraceTree">"Rastros"</string>
+    <string name="TraceEnergyEarn">"Recuperação de Energia"</string>
+    <string name="Eidolon">"Eidolons"</string>
+    <string name="AdviceCharacters">"Conselho de Personagens"</string>
+    <string name="AdviceLightcones">"Conselho de Cones"</string>
+    <string name="AdviceTeams">"Conselhos de Times"</string>
+    <string name="RelicStatus2Pcs">"2pçs"</string>
+    <string name="RelicStatus4Pcs">"4pçs"</string>
+    <string name="AdviceRelics">"Conselho de Relíquias"</string>
+    <string name="AdviceGetPath">"Como Conseguir"</string>
+    <string name="CharacterStory">"História"</string>
+    <string name="MainAffix">"Principal"</string>
+    <string name="SubAffix">"Segundário"</string>
+    <string name="CommentNumber">"${1} Comentários"</string>
+
+    <!--ui - Memory Of Chaos-->
+    <string name="PlayersBattleReport">"${1} Batalhas Crônicas"</string>
+    <string name="PlayersRemainRounds">"${1} Ciclo(s) Restante(s)"</string>
+    <string name="PlayersAverageRounds">"Média de ${1} Ciclos"</string>
+    <string name="PlayersRounds">"${1} Ciclo(s)"</string>
+
+    <!--ui - Setting Page-->
+    <string name="Navigate">"Navegar"</string>
+    <string name="SwitchOn">"ATIVO"</string>
+    <string name="SwitchOff">"DESL."</string>
+    <string name="AccountSetup">"Configuração de Conta (${1})"</string>
+    <string name="UseInviteCode">"Usar Código de Convite"</string>
+    <string name="HaveNotUsed">"Não Utilizado"</string>
+    <string name="LanguageSetup">"Configuração de Idioma"</string>
+    <string name="DocumentLanguage">"Idioma dos Documentos"</string>
+    <string name="AppLanguage">"Idioma do Aplicativo"</string>
+    <string name="Customize">"Personalizar"</string>
+    <string name="UseHSRFont">"Usar Fonte do Jogo"</string>
+    <string name="WallPaper">"Plano de Fundo"</string>
+    <string name="ChangeWallPaper">"Trocar Plano de Fundo"</string>
+    <string name="Notifi">"Notificação"</string>
+    <string name="NotifiAll">"Todas as Notificações"</string>
+    <string name="NotiStamina">"Poder"</string>
+    <string name="NotiExpedition">"Expedição"</string>
+    <string name="NotiMission">"Missões Diárias"</string>
+    <string name="NotiSimulatedUniverse">"Universo Simulado"</string>
+    <string name="SupportUs">"Apoie-nos"</string>
+    <string name="Donation">"Doação"</string>
+    <string name="InviteOthers">"Convidar Outros"</string>
+    <string name="DevOptions">"Opções de Desenvolvedor"</string>
+    <string name="DevUseCookieLogin">"Utilizar Cookies para Login"</string>
+    <string name="OsVersion">"Versão do SO"</string>
+    <string name="AppVersion">"Versão do Aplicativo"</string>
+    <string name="SpecialThanks">"Agradecimentos Especiais"</string>
+    <string name="SpecialThanksDevs">"Desenvolvedores"</string>
+    <string name="SpecialThanksOpenSource">"Agradecimento ao Código Aberto"</string>
+    <string name="SelectAccountInServer">"Por favor, selecione o servidor que você está jogando."</string>
+    <string name="ManuallySetup">"Configurar Manualmente"</string>
+    <string name="SelectServerTitle">"Selecionar Servidor"</string>
+    <string name="RemarksInLogin">"Lembrete de Login"</string>
+    <string name="CopyToClipBoard">"Copiado Para a Área de Transferência ~"</string>
+    <string name="FailToCopy">"Falha ao Copiar</string>
+
+    <!--ui - WallPaper Page-->
+    <string name="SaveWallPaper">"Salvar"</string>
+    <string name="SetWallPaper">"Definir"</string>
+
+    <!--ui - Code Page-->
+    <string name="HasCopy">"Copiado"</string>
+
+    <!--toast-->
+    <string name="PleaseLogin">"Por favor, primeiro faça o login!"</string>
+
+    <!--Add in 20240114 - User Info Page
+    E.g. 10 Days Before / 30mins Before || In the User Info Page -> Status, which shows how long does he/she offline-->
+    <string name="UserInfoLastLoginAt">"${1} Antes"</string>
+    <string name="UserInfoGameData">"Dados do Jogo"</string>
+    <string name="UserInfoStatus">"Status"</string>
+    <string name="UserInfoGamePlayerLevel">"Nível de Desbravamento."</string>
+    <string name="UserInfoCountComments">"Comentários"</string>
+
+    <!--Equilibrium level-->
+    <string name="UserInfoGameWorldLevel">"Nível de Equilíbrio."</string>
+    <string name="UserInfoLastOnlineTime">"Última vez Online em"</string>
+    <string name="UserInfoOwnedCharacters">"Personagens"</string>
+    <string name="UserInfoGameActiveDays">"Dias Ativos"</string>
+    <string name="UserInfoGameAchievements">"Conquistas"</string>
+    <string name="UserInfoGameOpenedChests">"Tesouros"</string>
+    <string name="UserInfoGameForgottenHall">"Salão Esquecido"</string>
+    <string name="UserCharLevelLv">"Nv."</string>
+    <string name="UserCharLevelSoul">"Eidolon"</string>
+    <string name="ProducedByStargazer">"Produzido por Stargazer"</string>
+
+    <!--Add in 20240114 - After 2.0.15-->
+    <string name="NoOnlineData">"Sem registo"</string>
+
+    <!--Add in 20240115 - Lightcone Info Page Buttons-->
+    <string name="LightconeEffect">"Efeito do Cone de Luz"</string>
+    <string name="LightconeStory">"História do Cone de Luz"</string>
+
+    <!--Add in 20240116 - For identify the relic sub stat-->
+    <string name="UseBlurEffect">"Usar Efeito de Blur"</string>
+    <string name="ATTR_CRIT_RATE">"Taxa-Crit"</string>
+    <string name="ATTR_CRIT_DMG">"Dano-Crit"</string>
+    <string name="ATTR_HP">"PV"</string>
+    <string name="ATTR_HPP">"PV%"</string>
+    <string name="ATTR_ATK">"ATQ"</string>
+    <string name="ATTR_ATKP">"ATQ%"</string>
+    <string name="ATTR_DEF">"DEF"</string>
+    <string name="ATTR_DEFP">"DEF%"</string>
+    <string name="ATTR_SPD">"VEL"</string>
+    <string name="ATTR_BREAK_DMG">"Efeito de Quebra"</string>
+    <string name="ATTR_SP">"Energia Máxima"</string>
+    <string name="ATTR_EFFECT_HIT">"Acerto de Efeito"</string>
+    <string name="ATTR_EFFECT_RES">"Resis. ao Efeito"</string>
+    <string name="ATTR_QUANTUM_DMG">"Dano Quântico"</string>
+    <string name="ATTR_FIRE_DMG">"Dano de Fogo"</string>
+    <string name="ATTR_ICE_DMG">"Dano de Gelo"</string>
+    <string name="ATTR_IMAGINARY_DMG">"Dano Imaginário"</string>
+    <string name="ATTR_WIND_DMG">"Dano de Vento"</string>
+    <string name="ATTR_LIGHTNING_DMG">"Dano de Raio"</string>
+    <string name="ATTR_PHYSICAL_DMG">"Dano Físico"</string>
+    <string name="ATTR_SP_RATE">"Recup. de Energia."</string>
+    <string name="ATTR_HEAL_RATE">"Bônus de Cura"</string>
+
+    <!--Add in 20240117 - Setting Page-->
+    <string name="UnLockAll">"Destravar Todos"</string>
+    <string name="BlurOn">"Blur</string>
+    <string name="BlurOff">"Blur</string>
+    <string name="GetCharAndUnLock">"Desbloqueado quando possuir"</string>
+    <string name="Leaderboard">"Classificação"</string>
+    <string name="UIDSearch">"Busca por UID"</string>
+    <string name="PublicChars">"Divulgar personagens"</string>
+    <string name="Switch">"Alternar"</string>
+
+    <!--Add in 20240118 - User Character Info Page-->
+    <string name="Comments">"${1} Comentários"</string>
+    <string name="UserOwned">"Adquirido"</string>
+    <string name="FullEidolon">"E6"</string>
+
+    <!--普攻-->
+    <string name="TraceNormalATK">"ATQ Normal"</string>
+
+    <!--戰技-->
+    <string name="TraceSkill">"Habilidade"</string>
+
+    <!--終結技-->
+    <string name="TraceUltimate">"Supremo"</string>
+
+    <!--天賦-->
+    <string name="TraceTalent">"Talento"</string>
+
+    <!--秘技-->
+    <string name="TraceTechnique">"Técnica"</string>
+
+    <!--疊影-->
+    <string name="Superimpose">"Sobreposição ${1}"</string>
+    <string name="RelicScore">"Pontuação de Relíquia"</string>
+    <string name="CharScore">"Pontuação de Pers."</string>
+
+    <!--In the User Character's Info Page, showing the ranking (SS, A, B, ...) of the score-->
+    <string name="RelicRank">"Rank de Relíquia"</string>
+
+    <!--In the User Character's Info Page, showing the ranking (SS, A, B, ...) of the score-->
+    <string name="CharRank">"Rank de Pers."</string>
+
+    <!--In the User Character's Info Page, showing percentage of character's graduation-->
+    <string name="CharGradRate">"Grau de Personagem"</string>
+    <string name="LackOfUserData">"Sem classificação devido à falta de dados do usuário"</string>
+    <string name="LeaderboardOver">"Mais de ${1}% Usuários"</string>
+    <string name="LeaderboardDataFrom">"(Dados de Todos os usuários logados)"</string>
+    <string name="AppStatusLoading">"PomPom está Orando"</string>
+    <string name="AppStatusLostConnect">"Conexão perdida com o Expresso..."</string>
+    <string name="AppStatusPlayerNoReleaseData">"Jogador não divulgou seus dados"</string>
+    <string name="AppStatusNoDataFound">"Nenhum dado encontrado..."</string>
+    <string name="CharSoul">"Eidolon ${1}"</string>
+    <string name="StatusNow">"Agora"</string>
+    <string name="StatusHours">"${1}Hrs"</string>
+    <string name="StatusMinutes">"${1}Mins"</string>
+    <string name="StatusSeconds">"${1}s"</string>
+    <string name="StatusDays">"${1}d"</string>
+    <string name="StatusToday">"Hoje ${1}"</string>
+    <string name="StatusTomorrow">"AMÂ ${1}"</string>
+
+    <!--Lightcone Superimpose Level-->
+    <string name="SuperimposeLvl">"S.${1}"</string>
+
+    <!--That character is not equipping any lightcones-->
+    <string name="SuperimposeNotEquipped">"Não Disponível"</string>
+
+    <!--Notification-->
+    <string name="TrailblazerNoti">"Notificação de Desbravador!"</string>
+
+    <!--Character Page Comment Function-->
+    <string name="CommentFailed">"Falha ao comentar, erro</string>
+    <string name="CommentPlsEnterComment">"Por favor, escreva o seu comentário"</string>
+    <string name="CommentHaventLogin">"Por favor, primeiro faça o login!"</string>
+    <string name="CommentSuccessful">"Sucesso!"</string>
+    <string name="CommentTextInputHint">"Socorro, Sr. Svarog!"</string>
+    <string name="CommentInDiscussion">"Em \" Discissão de${1}\""</string>
+
+    <!--Memory Of Chaos (Leaderboard, MOC info)-->
+    <string name="MOCMissionInfoTitle">"Informações da Missão"</string>
+    <string name="MOCSkipped">"Ignorado"</string>
+    <string name="MOCMissionPart1">"Parte I"</string>
+    <string name="MOCMissionPart2">"Parte II"</string>
+    <string name="MOCMissionPart3">"Parte III"</string>
+    <string name="MOCMissionPart4">"Parte IV"</string>
+    <string name="MOCMissionPart5">"Parte V"</string>
+    <string name="MOCMissionPart6">"Parte VI"</string>
+    <string name="MOCMissionPart7">"Parte VII"</string>
+    <string name="MOCMissionPart8">"Parte VIII"</string>
+    <string name="MOCMissionPart9">"Parte IX"</string>
+    <string name="MOCMissionPart10">"Parte X"</string>
+    <string name="MOCMissionPart11">"Parte XI"</string>
+    <string name="MOCMissionPart12">"Parte XII"</string>
+    <string name="MOCEffect">"Efeito"</string>
+    <string name="MOCMyBattleReport">"Relatório de Batalha"</string>
+    <string name="MOCPart1">"(Parte1)"</string>
+    <string name="MOCPart2">"(Parte2)"</string>
+    <string name="MOCShowMore">"Mostrar mais"</string>
+    <string name="MOCRounds">"${1} Ciclo(s)"</string>
+    <string name="MOCStars">"${1} Estrelas"</string>
+
+    <!--UID Search-->
+    <string name="Searching">"Procurando..."</string>
+    <string name="UIDEnter">"Por favor, insira o UID"</string>
+    <string name="UIDFormatError">"Erro no formato do UID"</string>
+    <string name="UIDNoData">"Sem Dados"</string>
+    <string name="UIDSearchRecord">"Registros de Busca"</string>
+    <string name="UIDSearchRecordClear">"Apagar"</string>
+
+    <!--Redeem Star Rail Code-->
+    <string name="RedeemCodeForever">"Para Sempre"</string>
+    <string name="RedeemCodeUntil">"Até ${1}"</string>
+    <string name="RedeemCodeExpired">"Expirado"</string>
+
+    <!--Setting Page-->
+    <string name="SettingPersonalPage">"Mostrar Página Pessoal"</string>
+    <string name="SettingPersonalPageShow">"Mostrar"</string>
+    <string name="SettingPersonalPageDisable">"Desativado"</string>
+    <string name="SettingChangedWallpaper">"Alterou o plano de fundo para \"${1}\""</string>
+    <string name="SettingSaveWallpaperSuccess">"Plano de Fundo Salvo com Sucesso"</string>
+    <string name="SettingSaveWallpaperError">"Erro ao salvar plano de fundo</string>
+
+    <!--Toast display / Donation Bar at the Home Page's bottom-->
+    <string name="FunctionStillInDevelop">"Essa função ainda está em desenvolvimento"</string>
+    <string name="LoginEnterCookies">"Por favor insira Cookies!"</string>
+    <string name="ConfirmBTN">"Confirmar"</string>
+    <string name="ShareSuccess">"Compartilhado com Sucesso!"</string>
+    <string name="ShareError">"Falha ao Compartilhar</string>
+    <string name="CodeAll">"Todos os servidores"</string>
+    <string name="CharSoulShort">"E${1}"</string>
+    <string name="PlsDonateUs">"Por favor, considere doar para nos apoiar, obrigado!"</string>
+    <string name="DonateInRandomCount">"Aleatório"</string>
+
+    <!--20240122 -> Home Page Button-->
+    <string name="MemoryOfChaosShort">"MDC"</string>
+    <string name="ScoreLevel">"Proficiência"</string>
+    <string name="MemoryOfChaosLeaderboard">"Placar de MDC"</string>
+    <string name="ScoreLevelLeaderboard">"Placar de Proficiência"</string>
+
+    <!--20240125 -> Home Page Button-->
+    <string name="PureFiction">"Pura Ficção"</string>
+
+    <!--20240126 -> Home Page Button & Pure Fiction (Leaderboard & Info Page)-->
+    <string name="PureFictionShort">"Puro"</string>
+    <string name="PureFictionLeaderboard">"Placar de Pura Ficção"</string>
+
+    <!--Short form for display in Home Page-->
+    <string name="About">"Sobre"</string>
+
+    <!--Full form for display in Setting Page-->
+    <string name="AboutTheApp">"Sobre Stargazer"</string>
+
+    <!--Pure Fiction Score, in Pure Fiction Leaderboard-->
+    <string name="PFScore">"${1} pts"</string>
+
+    <!--20240127-->
+    <string name="EventDuration">"Duração"</string>
+
+    <!--20240128-->
+    <string name="Upgrade">"Atualizar"</string>
+
+    <!--In the bottom of User Character's Info Page-->
+    <string name="OverWholeServerUser">"Top ${1}% de todos os recordes dos usuários"</string>
+
+    <!--20240129
+    User Info Page -> Status-->
+    <string name="NoCommentYet">"Sem comentários ainda..."</string>
+
+    <!--20240131
+    Navigate User to read codes in GitHub, belongs to the "About" page-->
+    <string name="SourceCode">"Código Fonte"</string>
+    <string name="PrevPage">"Página Anterior"</string>
+    <string name="NextPage">"Próxima Página"</string>
+
+    <!--20240209 - Wrap Simulator-->
+    <string name="LotterySimulator">"Simulador de Saltos"</string>
+    <string name="MakeOnePull">"Usar Salto  x1"</string>
+    <string name="MakeTenPull">"Usar Saltos x10"</string>
+    <string name="TutorialVideo">"Vídeo de Instrução"</string>
+
+    <!--Donation Message-->
+    <string name="DonationDesc">"Obrigado pela sua doação, seu apoio é importante para melhorarmos este aplicativo, todas as doações serão utilizadas em &lt;span style=\"color</string>
+    <string name="DonateUs">"Doe-nos"</string>
+    <string name="ShareToOthers">"Desbravadores, o vasto universo está cheio de segredos infinitos e, em sua jornada para perseguir os segredos, um guia confiável irá ajudá-los! Stargazer não é apenas um Aplicativo de Assistência para Star Rail que inclui sugestões de desenvolvimento, consulta de dados, classificação de treinamento e outras funções, mas também um parceiro poderoso para sua jornada de exploração! Baixe agora e comece sua própria aventura interestelar!\nApp Store</string>
+
+    <!--20240218 - Common Errors
+    Errors when user try to use in-app-purchase in BETA version, deprecated-->
+    <string name="ErrorDonationInBeta">"Doação não está disponível em BETA"</string>
+    <string name="ErrorIdentifier">"Não foi possível encontrar a doação..."</string>
+    <string name="ErrorPurchaseAlready">"Por favor, espere um pouco e tente novamente"</string>
+
+    <!--20240219 - Permissions and isNotch ...-->
+    <string name="ErrorscreenshotPermissionRejected">"A permissão para acessar a captura de tela foi rejeitada, pressione o botão novamente/ conceda a permissão nas configurações do sistema."</string>
+
+    <!--The buttom button / geasure bar-->
+    <string name="UserCustomHasNotch">"Adaptação de Notch"</string>
+
+    <!--iPhone 15 new design (靈動島)-->
+    <string name="UserCustomHasDynamicIsland">"Adaptação para Dynamic Island"</string>
+
+    <!--20240302 - Wrap Simulator (Record page)-->
+    <string name="LotterySimulatorRecord">"Registro do Simulador"</string>
+    <string name="LotterySimulatorRecordNotice">"Os registros mostrados abaixo NÂO são do jogo, apenas do Simulador"</string>
+    <string name="LotteryRecordType">"Tipo"</string>
+    <string name="LotteryRecordName">"Nome"</string>
+    <string name="LotteryRecordTime">"Tempo"</string>
+
+    <!--20240308 ~ 0311 - Wrap Analysis-->
+    <string name="WrapAnalysis">"Análise de Salto"</string>
+    <string name="WrapNeedInit">"Ainda não há comentários. Clique no botão no canto inferior para importar o URL de saltos."</string>
+    <string name="WrapCharPool">"Salto de Personagem de Evento"</string>
+    <string name="WrapLcPool">"Salto de Evento de Cone de Luz"</string>
+    <string name="WrapStaticPool">"Salto Comum"</string>
+    <string name="WrapNewbiePool">"Salto Hiperespacial de Partida"</string>
+    <string name="WrapLuckTitle">"Sua Avaliação da Sorte"</string>
+    <string name="WrapDetails">"Detalhe dos Registros"</string>
+    <string name="WrapFourFiveStarRecord">"4-Estrelas e 5-Estrelas"</string>
+    <string name="WrapInfoPity">"Percentagem de Sem-Pity"</string>
+    <string name="WrapAvgGetUP">"Média de Saltos de 5-Estrelas"</string>
+    <string name="WrapTotalPull">"Total Saltado"</string>
+    <string name="WrapPopUpURLTitle">"Coloque o URL de Salto"</string>
+    <string name="WrapPopUpURLInfo">"Por favor cole o URL de Salto abaixo"</string>
+
+    <!--Show when u don't enter the URL / token in Toast-->
+    <string name="WrapPopUpURLToast">"Por favor coloque o URL de Salto!"</string>
+    <string name="WrapPopUpURLTextArea">"Por favor coloque o URL de Salto lá"</string>
+    <string name="WrapPopUpURLTutorial">"Como conseguir o URL de Salto?"</string>
+    <string name="WrapPopUpURLAnalysisButton">"Análise"</string>
+    <string name="WrapPopUpURLProgress">"Progresso da Análise</string>
+
+    <!--Show when it's reading your Wrap Record one-by-one from official server
+    20240325 - Codename (Just like Android's Mashmellow, Nought, Pie, etc...), for devs to know which version easily-->
+    <string name="AppInnerVersionCode">"Codinome da versão"</string>
+
+    <!--20240328 - Wrap Analysis-->
+    <string name="VisitToDCServer">"Por favor, visite o nosso Server no Discord para receber ajuda / soluções"</string>
+
+    <!--20240403 - New Update
+    Replaced "ManuallySetup"-->
+    <string name="UseCookiesToLogin">"Logar via Cookies"</string>
+
+    <!--Character Info -> Advice Team-->
+    <string name="PressToView">"Pressione Para Ver"</string>
+
+    <!--Character Info -> Advice Team -> Press To View-->
+    <string name="MatchRequirementChar">"Personagens que combinam【${1}】"</string>
+
+    <!--Character Info -> Advice Team -> Press To View-->
+    <string name="RequirementOR">" OU "</string>
+
+    <!--Character Info -> Advice Team -> Press To View-->
+    <string name="RequirementAND">" E "</string>
+</resources>

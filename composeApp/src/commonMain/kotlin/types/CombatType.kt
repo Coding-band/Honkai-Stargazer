@@ -1,0 +1,39 @@
+/*
+ * Project Honkai Stargazer and app Stargazer (星穹觀星者) were
+ * Organized & Develop by Coding Band.
+ * Copyright © 2024 Coding Band 版權所有
+ */
+
+package types
+
+import files.Res
+import files.app_name
+import files.element_fire
+import files.element_ice
+import files.element_imaginary
+import files.element_lightning
+import files.element_physical
+import files.element_quantum
+import files.element_wind
+import files.ic_fire
+import files.ic_ice
+import files.ic_imaginary
+import files.ic_lightning
+import files.ic_physical
+import files.ic_quatumn
+import files.icon_wind
+import org.jetbrains.compose.resources.DrawableResource
+import org.jetbrains.compose.resources.StringResource
+
+/**
+ * 屬性 CombatType
+ */
+enum class CombatType (var chName : String, var iconWhite : DrawableResource, var iconColor : DrawableResource, localeStringId : StringResource = Res.string.app_name){
+    Imaginary("虛數", Res.drawable.ic_imaginary, Res.drawable.element_imaginary),
+    Quantum("毀滅", Res.drawable.ic_quatumn, Res.drawable.element_quantum),
+    Lightning("智識", Res.drawable.ic_lightning, Res.drawable.element_lightning),
+    Fire("同諧", Res.drawable.ic_fire, Res.drawable.element_fire),
+    Ice("巡獵", Res.drawable.ic_ice, Res.drawable.element_ice),
+    Wind("虛無", Res.drawable.icon_wind, Res.drawable.element_wind),
+    Physical("存謢", Res.drawable.ic_physical, Res.drawable.element_physical),
+}

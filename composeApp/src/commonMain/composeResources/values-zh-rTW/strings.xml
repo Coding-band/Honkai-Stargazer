@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Project Honkai Stargazer and app Stargazer (星穹觀星者) were
+  ~ Organized & Develop by Coding Band.
+  ~ Copyright © 2024 Coding Band 版權所有
+  -->
+<resources>
+
+    <!--server-->
+    <string name="asia">"亞服"</string>
+    <string name="europe">"歐服"</string>
+    <string name="america">"美服"</string>
+    <string name="twhkmo">"台港澳服"</string>
+    <string name="cn1">"星穹列車"</string>
+    <string name="cn2">"無名客"</string>
+    <string name="Trailblazer">"開拓者"</string>
+
+    <!--path-->
+    <string name="Abundance">"豐饒"</string>
+    <string name="Destruction">"毀滅"</string>
+    <string name="Erudition">"智識"</string>
+    <string name="Harmony">"同諧"</string>
+    <string name="Hunt">"巡獵"</string>
+    <string name="Nihility">"虛無"</string>
+    <string name="Preservation">"存謢"</string>
+
+    <!--element (combat type)-->
+    <string name="Physical">"物理"</string>
+    <string name="Wind">"風"</string>
+    <string name="Ice">"冰"</string>
+    <string name="Fire">"火"</string>
+    <string name="Lightning">"雷"</string>
+    <string name="Quantum">"量子"</string>
+    <string name="Imaginary">"虛數"</string>
+
+    <!--relic-->
+    <string name="RelicPropBody">"軀幹"</string>
+    <string name="RelicPropFeet">"腳部"</string>
+    <string name="RelicPropPlanarSphere">"位面球"</string>
+    <string name="RelicPropLinkRope">"連結繩"</string>
+    <string name="RelicPropBodyShort">"軀幹"</string>
+    <string name="RelicPropFeetShort">"腳部"</string>
+    <string name="RelicPropPlanarSphereShort">"位面球"</string>
+    <string name="RelicPropLinkRopeShort">"連結繩"</string>
+
+    <!--ui - main page-->
+    <string name="Character">"角色"</string>
+    <string name="CharacterList">"角色列表"</string>
+    <string name="Lightcone">"光錐"</string>
+    <string name="LightconeList">"光錐列表"</string>
+    <string name="Relic">"遺器"</string>
+    <string name="RelicList">"遺器列表"</string>
+    <string name="Stamina">"開拓力"</string>
+    <string name="StaminaIsFull">"開拓力已滿"</string>
+    <string name="Map">"地圖"</string>
+    <string name="Login">"登入"</string>
+    <string name="Logout">"登出"</string>
+    <string name="Expedition">"派遣"</string>
+    <string name="ExpeditionFullName">"派遣委託"</string>
+    <string name="Setting">"設定"</string>
+    <string name="MemoryOfChaos">"混沌回憶"</string>
+    <string name="NoDataYet">"暫無數據"</string>
+    <string name="IsDone">"已完成"</string>
+    <string name="PlayerLevel">"開拓等級"</string>
+    <string name="AccountLogin">"帳戶綁定"</string>
+    <string name="ModifyHomePage">"編輯首頁"</string>
+    <string name="SimulatedUniverse">"模擬宇宙"</string>
+    <string name="Event">"活動"</string>
+    <string name="Codes">"兌換碼"</string>
+
+    <!--ui - filter and sort-->
+    <string name="SortByTime">"實裝日期"</string>
+    <string name="SortByName">"名稱（英文）"</string>
+    <string name="SortByAtk">"攻擊力"</string>
+    <string name="SortByDef">"防禦力"</string>
+    <string name="SortByHp">"生命值"</string>
+    <string name="SortByEnergy">"能量上限"</string>
+    <string name="SortByRare">"稀有度"</string>
+    <string name="Reset">"重置"</string>
+    <string name="OK">"同意"</string>
+    <string name="NotOK">"不同意"</string>
+    <string name="FilterTitle">"篩選規則"</string>
+    <string name="FilterFindCharacter">"搜尋角色"</string>
+    <string name="FilterFindLightcone">"搜尋光錐"</string>
+    <string name="FilterFindRelic">"搜尋遺器"</string>
+
+    <!--ui - character, lightcone, relic pages-->
+    <string name="BasicStatus">"基礎屬性"</string>
+    <string name="SkillDesc">"技能描述"</string>
+    <string name="SkillDetail">"技能詳情"</string>
+    <string name="RelicDetail">"遺器詳情"</string>
+    <string name="TraceTree">"行跡樹"</string>
+    <string name="TraceEnergyEarn">"能量回復："</string>
+    <string name="Eidolon">"星魂"</string>
+    <string name="AdviceCharacters">"推薦角色"</string>
+    <string name="AdviceLightcones">"推薦光錐"</string>
+    <string name="AdviceTeams">"推薦隊伍"</string>
+    <string name="RelicStatus2Pcs">"兩件套"</string>
+    <string name="RelicStatus4Pcs">"四件套"</string>
+    <string name="AdviceRelics">"推薦遺器"</string>
+    <string name="AdviceGetPath">"獲取途徑"</string>
+    <string name="CharacterStory">"角色故事"</string>
+    <string name="MainAffix">"主詞條"</string>
+    <string name="SubAffix">"副詞條"</string>
+    <string name="CommentNumber">"${1}條評論"</string>
+
+    <!--ui - Memory Of Chaos-->
+    <string name="PlayersBattleReport">"${1}的戰績"</string>
+    <string name="PlayersRemainRounds">"剩餘${1}輪"</string>
+    <string name="PlayersAverageRounds">"平均${1}輪"</string>
+    <string name="PlayersRounds">"使用${1}輪"</string>
+
+    <!--ui - Setting Page-->
+    <string name="Navigate">"前往"</string>
+    <string name="SwitchOn">"開"</string>
+    <string name="SwitchOff">"關"</string>
+    <string name="AccountSetup">"帳戶設定(${1})"</string>
+    <string name="UseInviteCode">"使用邀請碼"</string>
+    <string name="HaveNotUsed">"未使用"</string>
+    <string name="LanguageSetup">"語言設定"</string>
+    <string name="DocumentLanguage">"文本語言"</string>
+    <string name="AppLanguage">"App語言"</string>
+    <string name="Customize">"個性化"</string>
+    <string name="UseHSRFont">"使用遊戲字體"</string>
+    <string name="WallPaper">"桌布"</string>
+    <string name="ChangeWallPaper">"更換桌布"</string>
+    <string name="Notifi">"通知"</string>
+    <string name="NotifiAll">"所有通知"</string>
+    <string name="NotiStamina">"開拓力"</string>
+    <string name="NotiExpedition">"派遣委託"</string>
+    <string name="NotiMission">"每日實訓"</string>
+    <string name="NotiSimulatedUniverse">"模擬宇宙"</string>
+    <string name="SupportUs">"支持我們"</string>
+    <string name="Donation">"捐贈"</string>
+    <string name="InviteOthers">"邀請他人"</string>
+    <string name="DevOptions">"開發者選項"</string>
+    <string name="DevUseCookieLogin">"使用Cookies登入"</string>
+    <string name="OsVersion">"作業系統版本"</string>
+    <string name="AppVersion">"App版本"</string>
+    <string name="SpecialThanks">"感謝"</string>
+    <string name="SpecialThanksDevs">"開發人員"</string>
+    <string name="SpecialThanksOpenSource">"開源感謝"</string>
+    <string name="SelectAccountInServer">"請選擇帳戶所在的伺服器。"</string>
+    <string name="ManuallySetup">"手動設定"</string>
+    <string name="SelectServerTitle">"選擇伺服器"</string>
+    <string name="RemarksInLogin">"登入須知"</string>
+    <string name="CopyToClipBoard">"已複製到剪貼簿"</string>
+    <string name="FailToCopy">"複製失敗, 錯誤代碼："</string>
+
+    <!--ui - WallPaper Page-->
+    <string name="SaveWallPaper">"保存壁紙"</string>
+    <string name="SetWallPaper">"設置"</string>
+
+    <!--ui - Code Page-->
+    <string name="HasCopy">"已複製"</string>
+
+    <!--toast-->
+    <string name="PleaseLogin">"請先登入！"</string>
+
+    <!--Add in 20240114 - User Info Page
+    E.g. 10 Days Before / 30mins Before || In the User Info Page -> Status, which shows how long does he/she offline-->
+    <string name="UserInfoLastLoginAt">"${1}前"</string>
+    <string name="UserInfoGameData">"遊戲數據"</string>
+    <string name="UserInfoStatus">"動態"</string>
+    <string name="UserInfoGamePlayerLevel">"開拓等級"</string>
+    <string name="UserInfoCountComments">"留言數"</string>
+
+    <!--Equilibrium level-->
+    <string name="UserInfoGameWorldLevel">"均衡等级"</string>
+    <string name="UserInfoLastOnlineTime">"上次上線"</string>
+    <string name="UserInfoOwnedCharacters">"擁有角色"</string>
+    <string name="UserInfoGameActiveDays">"活躍天數"</string>
+    <string name="UserInfoGameAchievements">"達成成就"</string>
+    <string name="UserInfoGameOpenedChests">"戰利品"</string>
+    <string name="UserInfoGameForgottenHall">"忘卻之庭"</string>
+    <string name="UserCharLevelLv">"等級"</string>
+    <string name="UserCharLevelSoul">"星魂"</string>
+    <string name="ProducedByStargazer">"由 Stargazer 製作"</string>
+
+    <!--Add in 20240114 - After 2.0.15-->
+    <string name="NoOnlineData">"無上線紀錄"</string>
+
+    <!--Add in 20240115 - Lightcone Info Page Buttons-->
+    <string name="LightconeEffect">"光錐效果"</string>
+    <string name="LightconeStory">"光錐故事"</string>
+
+    <!--Add in 20240116 - For identify the relic sub stat-->
+    <string name="UseBlurEffect">"使用模糊效果"</string>
+    <string name="ATTR_CRIT_RATE">"暴擊率"</string>
+    <string name="ATTR_CRIT_DMG">"暴擊傷害"</string>
+    <string name="ATTR_HP">"生命值"</string>
+    <string name="ATTR_HPP">"生命值%"</string>
+    <string name="ATTR_ATK">"攻擊力"</string>
+    <string name="ATTR_ATKP">"攻擊力%"</string>
+    <string name="ATTR_DEF">"防禦力"</string>
+    <string name="ATTR_DEFP">"防禦力%"</string>
+    <string name="ATTR_SPD">"速度"</string>
+    <string name="ATTR_BREAK_DMG">"擊破特攻"</string>
+    <string name="ATTR_SP">"能量上限"</string>
+    <string name="ATTR_EFFECT_HIT">"效果命中"</string>
+    <string name="ATTR_EFFECT_RES">"效果抵抗"</string>
+    <string name="ATTR_QUANTUM_DMG">"量子傷害提高"</string>
+    <string name="ATTR_FIRE_DMG">"火傷害提高"</string>
+    <string name="ATTR_ICE_DMG">"冰傷害提高"</string>
+    <string name="ATTR_IMAGINARY_DMG">"虛數傷害提高"</string>
+    <string name="ATTR_WIND_DMG">"風傷害提高"</string>
+    <string name="ATTR_LIGHTNING_DMG">"雷傷害提高"</string>
+    <string name="ATTR_PHYSICAL_DMG">"物理傷害提高"</string>
+    <string name="ATTR_SP_RATE">"能量恢復效率"</string>
+    <string name="ATTR_HEAL_RATE">"治療量加成"</string>
+
+    <!--Add in 20240117 - Setting Page-->
+    <string name="UnLockAll">"解鎖全部"</string>
+    <string name="BlurOn">"模糊：開啟"</string>
+    <string name="BlurOff">"模糊：關閉"</string>
+    <string name="GetCharAndUnLock">"獲得該角色即可解鎖"</string>
+    <string name="Leaderboard">"排行榜"</string>
+    <string name="UIDSearch">"UID查詢"</string>
+    <string name="PublicChars">"公開角色"</string>
+    <string name="Switch">"切換"</string>
+
+    <!--Add in 20240118 - User Character Info Page-->
+    <string name="Comments">"${1}條評論"</string>
+    <string name="UserOwned">"已擁有"</string>
+    <string name="FullEidolon">"滿命"</string>
+
+    <!--普攻-->
+    <string name="TraceNormalATK">"普攻"</string>
+
+    <!--戰技-->
+    <string name="TraceSkill">"戰技"</string>
+
+    <!--終結技-->
+    <string name="TraceUltimate">"終結技"</string>
+
+    <!--天賦-->
+    <string name="TraceTalent">"天賦"</string>
+
+    <!--秘技-->
+    <string name="TraceTechnique">"秘技"</string>
+
+    <!--疊影-->
+    <string name="Superimpose">"${1}疊影"</string>
+    <string name="RelicScore">"遺器評分"</string>
+    <string name="CharScore">"角色評分"</string>
+
+    <!--In the User Character's Info Page, showing the ranking (SS, A, B, ...) of the score-->
+    <string name="RelicRank">"遺器評價"</string>
+
+    <!--In the User Character's Info Page, showing the ranking (SS, A, B, ...) of the score-->
+    <string name="CharRank">"角色評價"</string>
+
+    <!--In the User Character's Info Page, showing percentage of character's graduation-->
+    <string name="CharGradRate">"角色畢業率"</string>
+    <string name="LackOfUserData">"用戶量不足 暫無排行"</string>
+    <string name="LeaderboardOver">"超過${1}%用戶"</string>
+    <string name="LeaderboardDataFrom">"（數據來自已登入用戶）"</string>
+    <string name="AppStatusLoading">"帕姆祈禱中"</string>
+    <string name="AppStatusLostConnect">"和列車失去聯繋了..."</string>
+    <string name="AppStatusPlayerNoReleaseData">"玩家沒有公開數據哦"</string>
+    <string name="AppStatusNoDataFound">"暫時沒找到數據..."</string>
+    <string name="CharSoul">"星魂${1}"</string>
+    <string name="StatusNow">"上線中"</string>
+    <string name="StatusHours">"${1}小時"</string>
+    <string name="StatusMinutes">"${1}分鐘"</string>
+    <string name="StatusSeconds">"${1}秒"</string>
+    <string name="StatusDays">"${1}天"</string>
+    <string name="StatusToday">"今天 ${1}"</string>
+    <string name="StatusTomorrow">"明天 ${1}"</string>
+
+    <!--Lightcone Superimpose Level-->
+    <string name="SuperimposeLvl">"${1}階"</string>
+
+    <!--That character is not equipping any lightcones-->
+    <string name="SuperimposeNotEquipped">"沒裝備"</string>
+
+    <!--Notification-->
+    <string name="TrailblazerNoti">"開拓者快訊"</string>
+
+    <!--Character Page Comment Function-->
+    <string name="CommentFailed">"留言失敗，錯誤訊息："</string>
+    <string name="CommentPlsEnterComment">"請輸入訊息！"</string>
+    <string name="CommentHaventLogin">"您尚未登入！"</string>
+    <string name="CommentSuccessful">"留言成功！"</string>
+    <string name="CommentTextInputHint">"幫幫我 史瓦羅先生！"</string>
+    <string name="CommentInDiscussion">"在「${1}」的評論區"</string>
+
+    <!--Memory Of Chaos (Leaderboard, MOC info)-->
+    <string name="MOCMissionInfoTitle">"關卡資訊"</string>
+    <string name="MOCSkipped">"快速通關"</string>
+    <string name="MOCMissionPart1">"其一"</string>
+    <string name="MOCMissionPart2">"其二"</string>
+    <string name="MOCMissionPart3">"其三"</string>
+    <string name="MOCMissionPart4">"其四"</string>
+    <string name="MOCMissionPart5">"其五"</string>
+    <string name="MOCMissionPart6">"其六"</string>
+    <string name="MOCMissionPart7">"其七"</string>
+    <string name="MOCMissionPart8">"其八"</string>
+    <string name="MOCMissionPart9">"其九"</string>
+    <string name="MOCMissionPart10">"其十"</string>
+    <string name="MOCMissionPart11">"其十一"</string>
+    <string name="MOCMissionPart12">"其十二"</string>
+    <string name="MOCEffect">"效果"</string>
+    <string name="MOCMyBattleReport">"我的戰績"</string>
+    <string name="MOCPart1">"（上半）"</string>
+    <string name="MOCPart2">"（下半）"</string>
+    <string name="MOCShowMore">"展示更多"</string>
+    <string name="MOCRounds">"${1}輪"</string>
+    <string name="MOCStars">"${1}星"</string>
+
+    <!--UID Search-->
+    <string name="Searching">"搜尋中..."</string>
+    <string name="UIDEnter">"請輸入 UID"</string>
+    <string name="UIDFormatError">"UID 格式錯誤"</string>
+    <string name="UIDNoData">"查無資料"</string>
+    <string name="UIDSearchRecord">"查詢記錄"</string>
+    <string name="UIDSearchRecordClear">"清除"</string>
+
+    <!--Redeem Star Rail Code-->
+    <string name="RedeemCodeForever">"永久"</string>
+    <string name="RedeemCodeUntil">"直至${1}"</string>
+    <string name="RedeemCodeExpired">"已過期"</string>
+
+    <!--Setting Page-->
+    <string name="SettingPersonalPage">"展示個人頁面"</string>
+    <string name="SettingPersonalPageShow">"展示"</string>
+    <string name="SettingPersonalPageDisable">"隱藏"</string>
+    <string name="SettingChangedWallpaper">"已切換成壁紙 「${1}」"</string>
+    <string name="SettingSaveWallpaperSuccess">"成功儲存壁紙"</string>
+    <string name="SettingSaveWallpaperError">"儲存壁紙</string>
+
+    <!--Toast display / Donation Bar at the Home Page's bottom-->
+    <string name="FunctionStillInDevelop">"此功能仍在開發中"</string>
+    <string name="LoginEnterCookies">"請輸入 cookie！"</string>
+    <string name="ConfirmBTN">"確定"</string>
+    <string name="ShareSuccess">"分享成功！"</string>
+    <string name="ShareError">"分享失敗，錯誤訊息："</string>
+    <string name="CodeAll">"所有伺服器"</string>
+    <string name="CharSoulShort">"魂 ${1}"</string>
+    <string name="PlsDonateUs">"請考慮透過捐贈支持我們，謝謝！"</string>
+    <string name="DonateInRandomCount">"隨機"</string>
+
+    <!--20240122 -> Home Page Button-->
+    <string name="MemoryOfChaosShort">"混沌"</string>
+    <string name="ScoreLevel">"練度"</string>
+    <string name="MemoryOfChaosLeaderboard">"混沌排行榜"</string>
+    <string name="ScoreLevelLeaderboard">"練度排行榜"</string>
+
+    <!--20240125 -> Home Page Button-->
+    <string name="PureFiction">"虛構敘事"</string>
+
+    <!--20240126 -> Home Page Button & Pure Fiction (Leaderboard & Info Page)-->
+    <string name="PureFictionShort">"虛構"</string>
+    <string name="PureFictionLeaderboard">"虛構排行榜"</string>
+
+    <!--Short form for display in Home Page-->
+    <string name="About">"關於"</string>
+
+    <!--Full form for display in Setting Page-->
+    <string name="AboutTheApp">"關於 Stargazer"</string>
+
+    <!--Pure Fiction Score, in Pure Fiction Leaderboard-->
+    <string name="PFScore">"${1}分"</string>
+
+    <!--20240127-->
+    <string name="EventDuration">"活動期間"</string>
+
+    <!--20240128-->
+    <string name="Upgrade">"提升"</string>
+
+    <!--In the bottom of User Character's Info Page-->
+    <string name="OverWholeServerUser">"超過全服 ${1}% 用戶"</string>
+
+    <!--20240129
+    User Info Page -> Status-->
+    <string name="NoCommentYet">"還沒有留言..."</string>
+
+    <!--20240131
+    Navigate User to read codes in GitHub, belongs to the "About" page-->
+    <string name="SourceCode">"原始碼"</string>
+    <string name="PrevPage">"上一頁"</string>
+    <string name="NextPage">"下一頁"</string>
+
+    <!--20240209 - Wrap Simulator-->
+    <string name="LotterySimulator">"躍遷模擬"</string>
+    <string name="MakeOnePull">"躍遷1次"</string>
+    <string name="MakeTenPull">"躍遷10次"</string>
+    <string name="TutorialVideo">"教學影片"</string>
+
+    <!--Donation Message-->
+    <string name="DonationDesc">"感謝您的捐贈，有您的支持我們才能更好地完善本App，所有捐贈都將用於Stargazer的&lt;span style=\"color</string>
+    <string name="DonateUs">"捐贈"</string>
+    <string name="ShareToOthers">"開拓者們，浩瀚的宇宙中充滿了無盡的秘密，而在追尋秘密的旅途中，一位可靠的嚮導將助你一臂之力！ 星穹觀星者不僅是個包含養成建議、資料查詢、練度排名等功能的星穹鐵道小助手 App，更是你探索之旅的得力夥伴！ 立即下載，開啟屬於你的星際冒險之旅！ \nApp Store：${AppStoreLink}\nPlay Store：${PlayStoreLink}"</string>
+
+    <!--20240218 - Common Errors
+    Errors when user try to use in-app-purchase in BETA version, deprecated-->
+    <string name="ErrorDonationInBeta">"BETA不開放App内捐贈哦~"</string>
+    <string name="ErrorIdentifier">"暫時沒法找到該捐贈選項..."</string>
+    <string name="ErrorPurchaseAlready">"請在一分鐘後重試"</string>
+
+    <!--20240219 - Permissions and isNotch ...-->
+    <string name="ErrorscreenshotPermissionRejected">"申請獲取存取截圖權限被拒絕，請重新按下按鈕/到系統設定允許存取權限。"</string>
+
+    <!--The buttom button / geasure bar-->
+    <string name="UserCustomHasNotch">"瀏海屏適配"</string>
+
+    <!--iPhone 15 new design (靈動島)-->
+    <string name="UserCustomHasDynamicIsland">"動態島適配"</string>
+
+    <!--20240302 - Wrap Simulator (Record page)-->
+    <string name="LotterySimulatorRecord">"躍遷模擬紀錄"</string>
+    <string name="LotterySimulatorRecordNotice">"此處僅顯示躍遷模擬紀錄，並非遊戲內躍遷紀錄"</string>
+    <string name="LotteryRecordType">"類型"</string>
+    <string name="LotteryRecordName">"名稱"</string>
+    <string name="LotteryRecordTime">"時間"</string>
+
+    <!--20240308 ~ 0311 - Wrap Analysis-->
+    <string name="WrapAnalysis">"躍遷分析"</string>
+    <string name="WrapNeedInit">"暫無評價，請點擊左下角按鈕導入躍遷鏈結"</string>
+    <string name="WrapCharPool">"角色活動躍遷"</string>
+    <string name="WrapLcPool">"光錐活動躍遷"</string>
+    <string name="WrapStaticPool">"常駐躍遷"</string>
+    <string name="WrapNewbiePool">"始發躍遷"</string>
+    <string name="WrapLuckTitle">"您的運氣評價"</string>
+    <string name="WrapDetails">"詳細記錄"</string>
+    <string name="WrapFourFiveStarRecord">"四星及五星"</string>
+    <string name="WrapInfoPity">"保底不歪概率"</string>
+    <string name="WrapAvgGetUP">"平均出貨抽數"</string>
+    <string name="WrapTotalPull">"總抽數"</string>
+    <string name="WrapPopUpURLTitle">"粘貼躍遷連結"</string>
+    <string name="WrapPopUpURLInfo">"請在下方粘貼躍遷連結"</string>
+
+    <!--Show when u don't enter the URL / token in Toast-->
+    <string name="WrapPopUpURLToast">"請輸入躍遷連結！"</string>
+    <string name="WrapPopUpURLTextArea">"躍遷連結請放在這裏~"</string>
+    <string name="WrapPopUpURLTutorial">"如何獲取連結？"</string>
+    <string name="WrapPopUpURLAnalysisButton">"分析"</string>
+    <string name="WrapPopUpURLProgress">"分析進度</string>
+
+    <!--Show when it's reading your Wrap Record one-by-one from official server
+    20240325 - Codename (Just like Android's Mashmellow, Nought, Pie, etc...), for devs to know which version easily-->
+    <string name="AppInnerVersionCode">"開發代號"</string>
+
+    <!--20240328 - Wrap Analysis-->
+    <string name="VisitToDCServer">"請到我們的Discord伺服器獲取解決方法/協助"</string>
+
+    <!--20240403 - New Update
+    Replaced "ManuallySetup"-->
+    <string name="UseCookiesToLogin">"透過Cookies登入"</string>
+
+    <!--Character Info -> Advice Team-->
+    <string name="PressToView">"按我查看"</string>
+
+    <!--Character Info -> Advice Team -> Press To View-->
+    <string name="MatchRequirementChar">"符合【${1}】要求的角色"</string>
+
+    <!--Character Info -> Advice Team -> Press To View-->
+    <string name="RequirementOR">"或"</string>
+
+    <!--Character Info -> Advice Team -> Press To View-->
+    <string name="RequirementAND">"和"</string>
+</resources>

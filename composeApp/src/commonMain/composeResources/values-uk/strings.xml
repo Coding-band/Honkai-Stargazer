@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Project Honkai Stargazer and app Stargazer (星穹觀星者) were
+  ~ Organized & Develop by Coding Band.
+  ~ Copyright © 2024 Coding Band 版權所有
+  -->
+
+<resources>
+
+    <!--server-->
+    <string name="asia">"Азія"</string>
+    <string name="europe">"Європа"</string>
+    <string name="america">"Америка"</string>
+    <string name="twhkmo">"TW HK MO"</string>
+    <string name="cn1">"星穹列车"</string>
+    <string name="cn2">"无名客"</string>
+    <string name="Trailblazer">"Першопроходець"</string>
+
+    <!--path-->
+    <string name="Abundance">"Достаток"</string>
+    <string name="Destruction">"Руйнування"</string>
+    <string name="Erudition">"Ерудиція"</string>
+    <string name="Harmony">"Гармонія"</string>
+    <string name="Hunt">"Полювання"</string>
+    <string name="Nihility">"Небуття"</string>
+    <string name="Preservation">"Збереження"</string>
+
+    <!--element (combat type)-->
+    <string name="Physical">"Фізичний"</string>
+    <string name="Wind">"Вітер"</string>
+    <string name="Ice">"Лід"</string>
+    <string name="Fire">"Вогонь"</string>
+    <string name="Lightning">"Електричний"</string>
+    <string name="Quantum">"Квантовий"</string>
+    <string name="Imaginary">"Уявний"</string>
+
+    <!--relic-->
+    <string name="RelicPropBody">"Тіло"</string>
+    <string name="RelicPropFeet">"Ноги"</string>
+    <string name="RelicPropPlanarSphere">"Планарна сфера"</string>
+    <string name="RelicPropLinkRope">"Зв'язувальна мотузка"</string>
+    <string name="RelicPropBodyShort">"Тіло"</string>
+    <string name="RelicPropFeetShort">"Ноги"</string>
+    <string name="RelicPropPlanarSphereShort">"Сфера"</string>
+    <string name="RelicPropLinkRopeShort">"Мотузка"</string>
+
+    <!--ui - main page-->
+    <string name="Character">"Герої"</string>
+    <string name="CharacterList">"Список персонажів"</string>
+    <string name="Lightcone">"Конуси"</string>
+    <string name="LightconeList">"Список конусів"</string>
+    <string name="Relic">"Реліквії"</string>
+    <string name="RelicList">"Список реліквій"</string>
+    <string name="Stamina">"Енергія"</string>
+    <string name="StaminaIsFull">"Повна"</string>
+    <string name="Map">"Мапа"</string>
+    <string name="Login">"Увійти"</string>
+    <string name="Logout">"Вихід"</string>
+    <string name="Expedition">"Експедиції"</string>
+    <string name="ExpeditionFullName">"Експедиція"</string>
+    <string name="Setting">"Налаштування"</string>
+    <string name="MemoryOfChaos">"Пам'ять Хаосу"</string>
+    <string name="NoDataYet">"Поки немає даних"</string>
+    <string name="IsDone">"Виконано"</string>
+    <string name="PlayerLevel">"Рівень"</string>
+    <string name="AccountLogin">"Увійти"</string>
+    <string name="ModifyHomePage">"Редагувати"</string>
+    <string name="SimulatedUniverse">"Симуляція Всесвіту"</string>
+    <string name="Event">"Події"</string>
+    <string name="Codes">"Коди"</string>
+
+    <!--ui - filter and sort-->
+    <string name="SortByTime">"Дата випуску"</string>
+    <string name="SortByName">"Ім'я (EN)"</string>
+    <string name="SortByAtk">"Шкода"</string>
+    <string name="SortByDef">"Захист"</string>
+    <string name="SortByHp">"HP"</string>
+    <string name="SortByEnergy">"Макс. енергія"</string>
+    <string name="SortByRare">"Рідкість"</string>
+    <string name="Reset">"Скинути"</string>
+    <string name="OK">"Прийняти"</string>
+    <string name="NotOK">"Відхилити"</string>
+    <string name="FilterTitle">"Фільтр"</string>
+    <string name="FilterFindCharacter">"Пошук персонажів"</string>
+    <string name="FilterFindLightcone">"Пошук конусів"</string>
+    <string name="FilterFindRelic">"Пошук реліквій"</string>
+
+    <!--ui - character, lightcone, relic pages-->
+    <string name="BasicStatus">"Характеристики"</string>
+    <string name="SkillDesc">"Опис навички"</string>
+    <string name="SkillDetail">"Деталі навички"</string>
+    <string name="RelicDetail">"Сет реліквії"</string>
+    <string name="TraceTree">"Дерево слідів"</string>
+    <string name="TraceEnergyEarn">"Відновлення енергії"</string>
+    <string name="Eidolon">"Ейдолон"</string>
+    <string name="AdviceCharacters">"Підходить для"</string>
+    <string name="AdviceLightcones">"Порада конусів"</string>
+    <string name="AdviceTeams">"Поради команд"</string>
+    <string name="RelicStatus2Pcs">"2 шт."</string>
+    <string name="RelicStatus4Pcs">"4 шт."</string>
+    <string name="AdviceRelics">"Поради реліквій"</string>
+    <string name="AdviceGetPath">"Шлях"</string>
+    <string name="CharacterStory">"Історія"</string>
+    <string name="MainAffix">"Головний Аффікс"</string>
+    <string name="SubAffix">"Під аффікс"</string>
+    <string name="CommentNumber">"${1} коментарів"</string>
+
+    <!--ui - Memory Of Chaos-->
+    <string name="PlayersBattleReport">"Бойова хроніка за ${1}"</string>
+    <string name="PlayersRemainRounds">"Залишилось ${1} раунд(ів)"</string>
+    <string name="PlayersAverageRounds">"${1} раундів в середньому"</string>
+    <string name="PlayersRounds">"${1} раундів"</string>
+
+    <!--ui - Setting Page-->
+    <string name="Navigate">"Перейти"</string>
+    <string name="SwitchOn">"Ввімк"</string>
+    <string name="SwitchOff">"Вимк."</string>
+    <string name="AccountSetup">"Налаштування запису (${1})"</string>
+    <string name="UseInviteCode">"Застосувати код запрошення"</string>
+    <string name="HaveNotUsed">"Не використано"</string>
+    <string name="LanguageSetup">"Налаштування мови"</string>
+    <string name="DocumentLanguage">"Мова файлів"</string>
+    <string name="AppLanguage">"Мова додатку"</string>
+    <string name="Customize">"Налаштувати"</string>
+    <string name="UseHSRFont">"Шрифт як в грі"</string>
+    <string name="WallPaper">"Шпалери"</string>
+    <string name="ChangeWallPaper">"Змінити шпалери "</string>
+    <string name="Notifi">"Сповіщення"</string>
+    <string name="NotifiAll">"Усі сповіщення"</string>
+    <string name="NotiStamina">"Енергія"</string>
+    <string name="NotiExpedition">"Експедиція"</string>
+    <string name="NotiMission">"Щоденні місії"</string>
+    <string name="NotiSimulatedUniverse">"Симуляція Всесвіту"</string>
+    <string name="SupportUs">"Підтримайте нас"</string>
+    <string name="Donation">"Пожертва"</string>
+    <string name="InviteOthers">"Запросити інших користувачів"</string>
+    <string name="DevOptions">"Налаштування для розробника"</string>
+    <string name="DevUseCookieLogin">"Використовувати куки для входу"</string>
+    <string name="OsVersion">"Версія ОС"</string>
+    <string name="AppVersion">"Версія додатку"</string>
+    <string name="SpecialThanks">"Особлива подяка"</string>
+    <string name="SpecialThanksDevs">"Розробники"</string>
+    <string name="SpecialThanksOpenSource">"Подяка Open Source"</string>
+    <string name="SelectAccountInServer">"Будь ласка, виберіть сервер, на якому ви граєте."</string>
+    <string name="ManuallySetup">"Налаштувати вручну"</string>
+    <string name="SelectServerTitle">"Оберіть сервер"</string>
+    <string name="RemarksInLogin">"Зауваження"</string>
+    <string name="CopyToClipBoard">"Скопійовано до буфера обміну"</string>
+    <string name="FailToCopy">"Не вдалося скопіювати</string>
+
+    <!--ui - WallPaper Page-->
+    <string name="SaveWallPaper">"Зберегти"</string>
+    <string name="SetWallPaper">"Встановити"</string>
+
+    <!--ui - Code Page-->
+    <string name="HasCopy">"Скопійовано"</string>
+
+    <!--toast-->
+    <string name="PleaseLogin">"Будь ласка, спершу увійдіть!"</string>
+
+    <!--Add in 20240114 - User Info Page
+    E.g. 10 Days Before / 30mins Before || In the User Info Page -> Status, which shows how long does he/she offline-->
+    <string name="UserInfoLastLoginAt">"${1} назад"</string>
+    <string name="UserInfoGameData">"Ігрові дані"</string>
+    <string name="UserInfoStatus">"Характеристики"</string>
+    <string name="UserInfoGamePlayerLevel">"Рівень Освоєння"</string>
+    <string name="UserInfoCountComments">"Коментарі"</string>
+
+    <!--Equilibrium level-->
+    <string name="UserInfoGameWorldLevel">"Рівень рівноваги"</string>
+    <string name="UserInfoLastOnlineTime">"Останній онлайн"</string>
+    <string name="UserInfoOwnedCharacters">"Персонажі"</string>
+    <string name="UserInfoGameActiveDays">"Активні дні"</string>
+    <string name="UserInfoGameAchievements">"Досягнення"</string>
+    <string name="UserInfoGameOpenedChests">"Скарби"</string>
+    <string name="UserInfoGameForgottenHall">"Зал забуття"</string>
+    <string name="UserCharLevelLv">"Рів."</string>
+    <string name="UserCharLevelSoul">"Ейдолон"</string>
+    <string name="ProducedByStargazer">"Створено за Stargazer"</string>
+
+    <!--Add in 20240114 - After 2.0.15-->
+    <string name="NoOnlineData">"Немає записів"</string>
+
+    <!--Add in 20240115 - Lightcone Info Page Buttons-->
+    <string name="LightconeEffect">"Ефект конуса"</string>
+    <string name="LightconeStory">"Історія конуса"</string>
+
+    <!--Add in 20240116 - For identify the relic sub stat-->
+    <string name="UseBlurEffect">"Ефект розмиття"</string>
+    <string name="ATTR_CRIT_RATE">"Шанс. крит шкоди"</string>
+    <string name="ATTR_CRIT_DMG">"Крит шкода"</string>
+    <string name="ATTR_HP">"HP"</string>
+    <string name="ATTR_HPP">"HP%"</string>
+    <string name="ATTR_ATK">"Шкода"</string>
+    <string name="ATTR_ATKP">"Атака%"</string>
+    <string name="ATTR_DEF">"Захист"</string>
+    <string name="ATTR_DEFP">"Захист%"</string>
+    <string name="ATTR_SPD">"Швид."</string>
+    <string name="ATTR_BREAK_DMG">"Ефект пробиття"</string>
+    <string name="ATTR_SP">"Макс. енергія"</string>
+    <string name="ATTR_EFFECT_HIT">"Шанс ефекту влуч."</string>
+    <string name="ATTR_EFFECT_RES">"Супротив ефекту"</string>
+    <string name="ATTR_QUANTUM_DMG">"Квант шкода"</string>
+    <string name="ATTR_FIRE_DMG">"Вогняна шкода"</string>
+    <string name="ATTR_ICE_DMG">"Крижана шкода"</string>
+    <string name="ATTR_IMAGINARY_DMG">"Уявна шкода"</string>
+    <string name="ATTR_WIND_DMG">"Вітрова шкода"</string>
+    <string name="ATTR_LIGHTNING_DMG">"Блискавична шкода"</string>
+    <string name="ATTR_PHYSICAL_DMG">"Фізична шкода"</string>
+    <string name="ATTR_SP_RATE">"Відн. енергії"</string>
+    <string name="ATTR_HEAL_RATE">"Бонус лікування"</string>
+
+    <!--Add in 20240117 - Setting Page-->
+    <string name="UnLockAll">"Розблокувати все"</string>
+    <string name="BlurOn">"Розмиття</string>
+    <string name="BlurOff">"Розмиття</string>
+    <string name="GetCharAndUnLock">"Розблокується власником"</string>
+    <string name="Leaderboard">"Лідери"</string>
+    <string name="UIDSearch">"Пошук UID"</string>
+    <string name="PublicChars">"Видимі персонажі"</string>
+    <string name="Switch">"Переключити"</string>
+
+    <!--Add in 20240118 - User Character Info Page-->
+    <string name="Comments">"${1} коментарів"</string>
+    <string name="UserOwned">"Отримано"</string>
+    <string name="FullEidolon">"E6"</string>
+
+    <!--普攻-->
+    <string name="TraceNormalATK">"Звичайна Атака"</string>
+
+    <!--戰技-->
+    <string name="TraceSkill">"Навичка"</string>
+
+    <!--終結技-->
+    <string name="TraceUltimate">"Ультимейт"</string>
+
+    <!--天賦-->
+    <string name="TraceTalent">"Талант"</string>
+
+    <!--秘技-->
+    <string name="TraceTechnique">"Техніка"</string>
+
+    <!--疊影-->
+    <string name="Superimpose">"Накласти ${1}"</string>
+    <string name="RelicScore">"Рейтинг реліквії"</string>
+    <string name="CharScore">"Рейтинг персонажу"</string>
+
+    <!--In the User Character's Info Page, showing the ranking (SS, A, B, ...) of the score-->
+    <string name="RelicRank">"Ранг реліквії"</string>
+
+    <!--In the User Character's Info Page, showing the ranking (SS, A, B, ...) of the score-->
+    <string name="CharRank">"Ранг персонажу"</string>
+
+    <!--In the User Character's Info Page, showing percentage of character's graduation-->
+    <string name="CharGradRate">"Оцінка персонажу%"</string>
+    <string name="LackOfUserData">"Немає таблиці лідерів, оскільки бракує даних користувача"</string>
+    <string name="LeaderboardOver">"Більше ${1}% гравців"</string>
+    <string name="LeaderboardDataFrom">"(Дані всіх зареєстрованих гравців)"</string>
+    <string name="AppStatusLoading">"Пом-пом молиться"</string>
+    <string name="AppStatusLostConnect">"Втрачено зв'язок з потягом..."</string>
+    <string name="AppStatusPlayerNoReleaseData">"Гравець не приховав свої дані"</string>
+    <string name="AppStatusNoDataFound">"Дані не знайдено..."</string>
+    <string name="CharSoul">"Ейдолонів ${1}"</string>
+    <string name="StatusNow">"Щойно"</string>
+    <string name="StatusHours">"${1} год"</string>
+    <string name="StatusMinutes">"${1} хв"</string>
+    <string name="StatusSeconds">"${1} с"</string>
+    <string name="StatusDays">"${1} днів"</string>
+    <string name="StatusToday">"Сьогодні ${1}"</string>
+    <string name="StatusTomorrow">"Завтра ${1}"</string>
+
+    <!--Lightcone Superimpose Level-->
+    <string name="SuperimposeLvl">"Накладено ${1}"</string>
+
+    <!--That character is not equipping any lightcones-->
+    <string name="SuperimposeNotEquipped">"Недоступно"</string>
+
+    <!--Notification-->
+    <string name="TrailblazerNoti">"Сповіщення першопроходця!"</string>
+
+    <!--Character Page Comment Function-->
+    <string name="CommentFailed">"Не вдалося прокоментувати, помилка</string>
+    <string name="CommentPlsEnterComment">"Будь ласка, додайте коментарі"</string>
+    <string name="CommentHaventLogin">"Будь ласка, спершу увійдіть!"</string>
+    <string name="CommentSuccessful">"Успіх!"</string>
+    <string name="CommentTextInputHint">"Допоможи мені, містере Сварог!"</string>
+    <string name="CommentInDiscussion">"В \"${1} обговореннях\""</string>
+
+    <!--Memory Of Chaos (Leaderboard, MOC info)-->
+    <string name="MOCMissionInfoTitle">"Відомості про місію"</string>
+    <string name="MOCSkipped">"Пропущено"</string>
+    <string name="MOCMissionPart1">"Частина I</string>
+    <string name="MOCMissionPart2">"Частина II"</string>
+    <string name="MOCMissionPart3">"Частина III"</string>
+    <string name="MOCMissionPart4">"Частина IV"</string>
+    <string name="MOCMissionPart5">"Частина V"</string>
+    <string name="MOCMissionPart6">"Частина VI"</string>
+    <string name="MOCMissionPart7">"Частина VII"</string>
+    <string name="MOCMissionPart8">"Частина VIII"</string>
+    <string name="MOCMissionPart9">"Частина IX"</string>
+    <string name="MOCMissionPart10">"Частина X"</string>
+    <string name="MOCMissionPart11">"Частина XI"</string>
+    <string name="MOCMissionPart12">"Частина XII"</string>
+    <string name="MOCEffect">"Ефект"</string>
+    <string name="MOCMyBattleReport">"Мій звіт про битву"</string>
+    <string name="MOCPart1">"(Частина 1)"</string>
+    <string name="MOCPart2">"(Частина 2)"</string>
+    <string name="MOCShowMore">"Деталі"</string>
+    <string name="MOCRounds">"${1} раундів"</string>
+    <string name="MOCStars">"${1} зірок"</string>
+
+    <!--UID Search-->
+    <string name="Searching">"Пошук..."</string>
+    <string name="UIDEnter">"Будь ласка, введіть UID"</string>
+    <string name="UIDFormatError">"Помилка формату UID"</string>
+    <string name="UIDNoData">"Немає даних"</string>
+    <string name="UIDSearchRecord">"Шукати записи"</string>
+    <string name="UIDSearchRecordClear">"Очистити"</string>
+
+    <!--Redeem Star Rail Code-->
+    <string name="RedeemCodeForever">"Без обмежень"</string>
+    <string name="RedeemCodeUntil">"До ${1}"</string>
+    <string name="RedeemCodeExpired">"Застарів"</string>
+
+    <!--Setting Page-->
+    <string name="SettingPersonalPage">"Показати особисту сторінку"</string>
+    <string name="SettingPersonalPageShow">"Показати"</string>
+    <string name="SettingPersonalPageDisable">"Вимкнути"</string>
+    <string name="SettingChangedWallpaper">"Змінено шпалери на \"${1}\""</string>
+    <string name="SettingSaveWallpaperSuccess">"Шпалери успішно збережені"</string>
+    <string name="SettingSaveWallpaperError">"Помилка при збереженні шпалер</string>
+
+    <!--Toast display / Donation Bar at the Home Page's bottom-->
+    <string name="FunctionStillInDevelop">"Ця функція все ще в розробці"</string>
+    <string name="LoginEnterCookies">"Будь ласка, введіть куки!"</string>
+    <string name="ConfirmBTN">"Підтвердити"</string>
+    <string name="ShareSuccess">"Успішно надіслано!"</string>
+    <string name="ShareError">"Не вдалося поділитися"</string>
+    <string name="CodeAll">"Усі сервери"</string>
+    <string name="CharSoulShort">"Е${1}"</string>
+    <string name="PlsDonateUs">"Будь ласка, розгляньте можливість пожертвувати на нашу підтримку, дякуємо!"</string>
+    <string name="DonateInRandomCount">"Випадкове"</string>
+
+    <!--20240122 -> Home Page Button-->
+    <string name="MemoryOfChaosShort">"Хаос"</string>
+    <string name="ScoreLevel">"Майстерність"</string>
+    <string name="MemoryOfChaosLeaderboard">"Лідери хаосу"</string>
+    <string name="ScoreLevelLeaderboard">"Лідери"</string>
+
+    <!--20240125 -> Home Page Button-->
+    <string name="PureFiction">"Чиста Фікція"</string>
+
+    <!--20240126 -> Home Page Button & Pure Fiction (Leaderboard & Info Page)-->
+    <string name="PureFictionShort">"Фікція"</string>
+    <string name="PureFictionLeaderboard">"Лідери фікції"</string>
+
+    <!--Short form for display in Home Page-->
+    <string name="About">"Про додаток"</string>
+
+    <!--Full form for display in Setting Page-->
+    <string name="AboutTheApp">"Про Stargazer"</string>
+
+    <!--Pure Fiction Score, in Pure Fiction Leaderboard-->
+    <string name="PFScore">"${1} оч."</string>
+
+    <!--20240127-->
+    <string name="EventDuration">"Тривалість</string>
+
+    <!--20240128-->
+    <string name="Upgrade">"Поліпшити"</string>
+
+    <!--In the bottom of User Character's Info Page-->
+    <string name="OverWholeServerUser">"Топ ${1}% всіх користувачів"</string>
+
+    <!--20240129
+    User Info Page -> Status-->
+    <string name="NoCommentYet">"Ще немає коментарів..."</string>
+
+    <!--20240131
+    Navigate User to read codes in GitHub, belongs to the "About" page-->
+    <string name="SourceCode">"Початковий код"</string>
+    <string name="PrevPage">"Попередня сторінка"</string>
+    <string name="NextPage">"Наступна стор."</string>
+
+    <!--20240209 - Wrap Simulator-->
+    <string name="LotterySimulator">"Симулятор стрибків"</string>
+    <string name="MakeOnePull">"х1 Стрибок"</string>
+    <string name="MakeTenPull">"10 Стрибків"</string>
+    <string name="TutorialVideo">"Відеоінструкція"</string>
+
+    <!--Donation Message-->
+    <string name="DonationDesc">"Дякуємо за вашу підтримку, яка має важливе значення для нас у покращенні цього додатку, всі пожертви будуть використовуватися в &lt;span style=\"color</string>
+    <string name="DonateUs">"Підтримати нас"</string>
+    <string name="ShareToOthers">"Першопроходці, неосяжний всесвіт сповнений нескінченних таємниць, і у вашій подорожі за цими таємницями вам допоможе надійний провідник! Stargazer - це не лише додаток-помічник, який містить пропозиції щодо розвитку, запити даних, рейтинг тренувань та інші функції, але й потужний партнер у вашій дослідницькій подорожі! Завантажуйте зараз і розпочніть власну міжзоряну пригоду!\nApp Store</string>
+
+    <!--20240218 - Common Errors
+    Errors when user try to use in-app-purchase in BETA version, deprecated-->
+    <string name="ErrorDonationInBeta">"Донат не доступний в бета-версії"</string>
+    <string name="ErrorIdentifier">"Не вдається знайти внесок..."</string>
+    <string name="ErrorPurchaseAlready">"Зачекайте кілька хвилин і спробуйте ще раз"</string>
+
+    <!--20240219 - Permissions and isNotch ...-->
+    <string name="ErrorscreenshotPermissionRejected">"Дозвіл на доступ до скріншота був відхилений, будь ласка, натисніть кнопку повторно / надайте дозвіл в налаштуваннях системи."</string>
+
+    <!--The buttom button / geasure bar-->
+    <string name="UserCustomHasNotch">"Нотч Адаптація"</string>
+
+    <!--iPhone 15 new design (靈動島)-->
+    <string name="UserCustomHasDynamicIsland">"Динамічний Острів"</string>
+
+    <!--20240302 - Wrap Simulator (Record page)-->
+    <string name="LotterySimulatorRecord">"Записи емулятора стрибків"</string>
+    <string name="LotterySimulatorRecordNotice">"Записи, що показані нижче, не в грі, а лише від симулятора"</string>
+    <string name="LotteryRecordType">"Тип"</string>
+    <string name="LotteryRecordName">"Назва"</string>
+    <string name="LotteryRecordTime">"Час"</string>
+
+    <!--20240308 ~ 0311 - Wrap Analysis-->
+    <string name="WrapAnalysis">"Аналіз Стрибків"</string>
+    <string name="WrapNeedInit">"Ще немає даних для перегляду. Будь ласка, натисніть на кнопку у нижньому куті щоб імпортувати URL зі стрибками."</string>
+    <string name="WrapCharPool">"Подія Стрибків персонажа"</string>
+    <string name="WrapLcPool">"Подія Стрибків конусів"</string>
+    <string name="WrapStaticPool">"Звичайні стрибки"</string>
+    <string name="WrapNewbiePool">"Відправний стрибок"</string>
+    <string name="WrapLuckTitle">"Огляд вашої удачі"</string>
+    <string name="WrapDetails">"Деталізація записів"</string>
+    <string name="WrapFourFiveStarRecord">"4 і 5-зіркових"</string>
+    <string name="WrapInfoPity">"Відсоток не по гаранту"</string>
+    <string name="WrapAvgGetUP">"Середня к-сть стрибків 5⭐ персонажів"</string>
+    <string name="WrapTotalPull">"Загальна к-сть стрибків"</string>
+    <string name="WrapPopUpURLTitle">"Вставити URL стрибків"</string>
+    <string name="WrapPopUpURLInfo">"Будь ласка, вставте URL стрибків нижче"</string>
+
+    <!--Show when u don't enter the URL / token in Toast-->
+    <string name="WrapPopUpURLToast">"Будь ласка, введіть URL стрибків!"</string>
+    <string name="WrapPopUpURLTextArea">"Будь ласка, вставте URL стрибків"</string>
+    <string name="WrapPopUpURLTutorial">"Як отримати URL стрибків?"</string>
+    <string name="WrapPopUpURLAnalysisButton">"Аналіз"</string>
+    <string name="WrapPopUpURLProgress">"Аналіз</string>
+
+    <!--Show when it's reading your Wrap Record one-by-one from official server
+    20240325 - Codename (Just like Android's Mashmellow, Nought, Pie, etc...), for devs to know which version easily-->
+    <string name="AppInnerVersionCode">"Кодова назва"</string>
+
+    <!--20240328 - Wrap Analysis-->
+    <string name="VisitToDCServer">"Будь ласка, відвідайте наш Discord сервер для отримання рішень / допомоги"</string>
+
+    <!--20240403 - New Update
+    Replaced "ManuallySetup"-->
+    <string name="UseCookiesToLogin">"Увійти через Cookies"</string>
+
+    <!--Character Info -> Advice Team-->
+    <string name="PressToView">"Натисніть для перегляду"</string>
+
+    <!--Character Info -> Advice Team -> Press To View-->
+    <string name="MatchRequirementChar">"Символи, які збігаються【${1}】"</string>
+
+    <!--Character Info -> Advice Team -> Press To View-->
+    <string name="RequirementOR">" АБО "</string>
+
+    <!--Character Info -> Advice Team -> Press To View-->
+    <string name="RequirementAND">" ТА "</string>
+</resources>

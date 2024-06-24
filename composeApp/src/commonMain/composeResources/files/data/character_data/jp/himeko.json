@@ -1,0 +1,2720 @@
+{
+ "spRequirement": 120,
+ "iconPath": "5eeeeea4d7555a34f30b903a3cbd81e626ca28810bfd11e9a38fe55ad81576ae",
+ "bgPath": "c742f8bae612cc5f313f81de01787dc3c4130fd9e3d3e02fa34b7b8c7bcf5f79",
+ "figPath": "8fa95713cba27a5a786aa841f73de134dbae3115247069d24a84b87fe04d7d09",
+ "fgPath": "94adfd16808ccc4307ee25b982d5f9745fe570cd1e56a0649349eca0379046bd",
+ "splashIconPath": "5fe1d9163833b02761b51843edca9f322c63ea0369aec5b78073103124643f74",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRlYCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSOMAAAABkFvbtrJV+34fHnlKCKG7u7tD5rTgWoVD7nTgEEFIA26Ry7WNfO97LUTEBACACwAhMcBwFQQ8XSBjauf0Zm2VBQj0cJF7Zuh5VQBPB6UvtFJpoyQ5mxQECMS/UVpPGvIxDkJgm1/0staYz1S4ECfU1qfiXhAwRm19UycA+1T+NJuBOWp/kr3A9H8YPuUDi/zypTgbDNS/0fgx7IGLwHNqP/Y2C46LJX76ULwKh3CQeUGlvBTZDQcQCNgmpbHWWHIIDgA4CGw6IJWiPUyFgKcQiD24J3erw+Di3wFA2Xh7MODgLwBWUDggTAEAANAGAJ0BKhQAFAA+bTKUR6QioiEoCACADYlmAJ0yhH4n0YhBvKswAlUf2P9gDogBDpRymWHEpXxussb/zOJIAAD+0fEdg6qJ/p/4d1TRDvLN3nxeOqGAY4S7Q0dBJuCYQs0jd/9bLw27U/HykgX3dx/uKXtBFA8b8W4Vel15ke7ioZAD+2rZGHAqIeThbkVUHHSd0iZYbqbgLCeWH+4/JwXRYfM6+1Urs5xKLlv58r73FADvcQHxQWUIJpA2oeWWGWNWvguIqnG6dBzh2mkbxebHe3GKI/7qb0AUTfVkMekp/uaurv2f+k8BnHkp+At/4ucCyrjadmY5Y+X9drfIcAVeRf6EBbwbW9o0+gLyIp6zHvAZdpbi9O/PtxGdcxdMA6PX1T/TBjk6ABflyz11wCZX0YO9VSfgBPlkr+cvWWrvbbKCwQ09rdVl/wAA",
+  "w": 2048,
+  "h": 2048
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 3,
+  "iconPath": "d2b129dec7122e506216fee426a9319946327741f972bd953a176be01cb2d931",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "8fc9b77806662a775629ea8ec25d17374356ee5827146419aefefb4e5fa64a27",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "疑似花萼「大鉱区」",
+    "疑似花萼「工造司」",
+    "疑似花萼「ホテル・『レバリー』-夢境」",
+    "クエスト報酬",
+    "依頼報酬",
+    "エンバー交換"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "a13a7372ac0adb820a562ba21ce6f48c8c05f59f5577f55583601af8e972cf54",
+   "name": "運命の足跡",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "幾度の敗北があなたに勝利をもたらし、一歩一歩の前進があなたを運命の転換点へと導いた。",
+   "purpose": "軌跡素材",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」ポイント報酬",
+    "ナナシの勲功",
+    "エンバー交換",
+    "星芒交換",
+    "期間限定イベント報酬"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "becaa9417d3a40db16e3d16da7b2864bd92c804f9b6062824c49aae61bb6b7a1",
+   "name": "漫遊指南",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>20000</nobr>獲得できる。",
+   "lore": "世界を渡り歩くためには欠かせない、冒険手引き集。閲覧キーを押すと、電子音声が理解可能な言語で、有名な冒険者たちが様々な世界で体験したことや、彼らが色々な星で得た貴重な知識を語り聞かせてくれる。<br /><br />「漫遊指南最新シリーズ『スペースグルメガイド』が現在発売中。ぜひお買い求めください」<br />「投稿の際は、博識学会共感覚ビーコンのオペレーター<nobr>23</nobr>θにお繋ぎください。原稿料はあなたが普段から利用している方法でお振込みいたします」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "疑似花萼「流雲渡し」",
+    "疑似花萼「ドリームボーダー」",
+    "「忘却の庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "519019265755cdebba3968237a9ed2399097c89086d762698f9314ffc3180578",
+   "name": "冒険記録",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>5000</nobr>獲得できる。",
+   "lore": "綺麗に装丁された、一目でためになるとわかる冒険日誌。冒険に関する細かい描写、価値のある情報、サバイバル術が書かれている。<br /><br />「なんで数字化してデバイスに保存しないの？持ち歩きやすくなるでしょ」<br />「お前が思っているより、先進技術は恒星嵐や中性子噴出に弱いんだ。なにより、この本の制作者は、最も簡単な方法で人々に読んでもらいたかったんだろう」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "疑似花萼「流雲渡し」",
+    "疑似花萼「ドリームボーダー」",
+    "デイリー訓練",
+    "エンバー交換"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "1895aeac789646d78ca7843ce780b8ac9baa5ccb50a135aafb1042a8fe0b0337",
+   "name": "旅の見聞",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>1000</nobr>獲得できる。",
+   "lore": "旅の出来事を記した日記。字はかすれており、不鮮明。思うままに内容が書かれてあるので、あまり助けにはならないだろう。<br /><br />「読み終わったら早くその紙切れを捨てるのよ、丹恒？」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "疑似花萼「流雲渡し」",
+    "疑似花萼「ドリームボーダー」",
+    "依頼報酬"
+   ]
+  },
+  "549438": {
+   "id": 549438,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "e700f5830b00d37882b23acfb0b87aade99e878187f0e8683a4f04047b74cc6a",
+   "name": "消滅した原核",
+   "desc": "裂界を徘徊するモンスターの心臓。強化に必要な簡易素材。",
+   "lore": "悪性腫瘍の病巣のように、罪を犯す衝動を育てる。これが裂界の歪みの根源である。<br />重い衝撃により、この心臓は鼓動をやめ、輝きを失った。<br /><br />「これは交雑の産物だと初歩的に判断できる。半分が原体、もう半分のデータは星核と酷似している——生物科、サラ・カストラ」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/549438",
+   "comeFrom": [
+    "一部の裂界造物からドロップ",
+    "「階差宇宙」で敵からドロップ",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換",
+    "疑似花萼（金）"
+   ]
+  },
+  "633379": {
+   "id": 633379,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "659dbba8b4192386c1150f38f3233d432a759a3121a97cf97202942f7a0c2ce6",
+   "name": "微かに光る原核",
+   "desc": "裂界を徘徊するモンスターの心臓。強化に必要な普通素材。",
+   "lore": "悪性腫瘍の病巣のように、罪を犯す衝動を育てる。これが裂界の歪みの根源である。<br />この心臓はまだわずかな光を放ち、その筋には未だ生命力が宿っている。<br /><br />「あれは一体どんなモンスターなんだ？お前はあれの顔を見たか——あれは前任の隊長の顔だった、彼の顔だったんだ！」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/633379",
+   "comeFrom": [
+    "均衡Lv.2に達した後、一部の裂界造物からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「階差宇宙」で敵からドロップ",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "635675": {
+   "id": 635675,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "0558df3e5e5ca8710ff54542568bf59d21e7ffd5fd542d4ce0b64236047cc80b",
+   "name": "着想のカギ",
+   "desc": "苦慮している学者の手の中に現れる幻のカギ。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">知恵</span>の運命を歩むキャラクターの軌跡を小アップできる。",
+   "lore": "意識の奥底に封じられた閃きを解き放つことができる。<br />カギを掴んだということは、己の中にある進むべき道を照らす光を掴んだということである。<br /><br />「エウレカ！」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/635675",
+   "comeFrom": [
+    "疑似花萼「リベットタウン」",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "717320": {
+   "id": 717320,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "b44e1a4200fb1d3c919589c4287277e97e9094c3da3ce2381beaa68224119583",
+   "name": "脈動する原核",
+   "desc": "裂界を徘徊するモンスターの心臓。強化に必要な高級素材。",
+   "lore": "悪性腫瘍の病巣のように、罪を犯す衝動を育てる。これが裂界の歪みの根源である。<br />この心臓はまだ緩やかに鼓動している。これに残る力は、いずれ新たな災いを引き起こすだろう。恐怖が再び訪れる前に、不活化処理した方がいい。<br /><br />「まるで癌のようだ……」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/717320",
+   "comeFrom": [
+    "均衡Lv.4に達した後、一部の裂界造物からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「階差宇宙」で敵からドロップ",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "836261": {
+   "id": 836261,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "f20dcddb7d5f53ca8e31f98f97f55ba2c8ebc935e110471bb9e1d913fa53025e",
+   "name": "叡智のカギ",
+   "desc": "宇宙の頂点に立つ天才の手の中に現れるカギ。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">知恵</span>の運命を歩むキャラクターの軌跡を大アップできる。",
+   "lore": "このカギは、持ち主が知恵の神殿の扉を開く権利を得たという証拠である。<br />カギを手にしても、そのカギで開けられる扉を見つける方が大変である。扉の向こうに行った者は、もう振り返る必要がないことを悟るだろう。<br /><br />「知恵は宇宙の真理を教えてくれるわけではないが、どのように疑問を持てばよいかを教えてくれる」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/836261",
+   "comeFrom": [
+    "疑似花萼「リベットタウン」",
+    "「万能合成マシン」- 素材合成",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "920202": {
+   "id": 920202,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "26f9f701e21f71fb607d18470b7aee7ab70485eae418ec41e6b0ff10940c2f16",
+   "name": "啓発のカギ",
+   "desc": "諸界の智者の手の中に現れる幻のカギ。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">知恵</span>の運命を歩むキャラクターの軌跡を中アップできる。",
+   "lore": "真実を封印している錠前を開き、人智ではたどり着けない領域へと到達させる力を持つ。<br />持ち主がどうにかしてカギを見せようとしても、周りの人はカギの存在を認識することができない。ある人はこれを天啓とし、ある人は狂気の兆しとした。<br /><br />「分子が蛇のようにとぐろを巻いている夢を見たんだ。目覚めたときに気付いた、これが私の求めていた答えだと！」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/920202",
+   "comeFrom": [
+    "疑似花萼「リベットタウン」",
+    "「万能合成マシン」- 素材合成",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "983278": {
+   "id": 983278,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "9623b51c49bcaf6f35eacb9eccd123f9612dc6c2c3b2d74598fa9ba5e8fc8234",
+   "name": "恒温晶殻",
+   "desc": "まるで炎が固まったかのような熱い結晶。炎属性キャラクターの昇格素材。",
+   "lore": "異次元の生物の遺体から採れる奇妙な結晶の殻。生前ほど高温ではないが、今でも暖かさを放っている。<br /><br />「外は寒いけど、この宝石を持っていれば、遠くまで行って、人がいるかもしれない都市を探すことができる…」",
+   "purpose": "キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/983278",
+   "comeFrom": [
+    "凝結虚影「シルバーメイン禁区」",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "985668": {
+   "id": 985668,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "04088e0733990d7a0c884c42641a26089c8376f465104345af368511bbcedbac",
+   "name": "壊滅者の末路",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "古獣の身躯は既に滅びたが、匣の中には未だ死滅していない意志が閉じ込められている。だが、この匣を開く者がいなければ、その意志は存在すると存在しないが重なり合った状態を保ち、壊滅のエンジンを動かし続ける。<br /><br />「終末獣。古獣の残片を礎に、幾万もの死者の恨みと悲しみを触媒として、戦争洪炉で鋳造した災い——壊滅の道を貫くと同時に、自身の消滅を渇望している」",
+   "purpose": "軌跡素材",
+   "rarity": 4,
+   "rewardPath": "/material/985668",
+   "comeFrom": [
+    "歴戦余韻「サポート部分」"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 102.96,
+   "attackAdd": 5.148,
+   "hpBase": 142.56,
+   "hpAdd": 7.128,
+   "defenseBase": 59.4,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549438,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 144.144,
+   "attackAdd": 5.148,
+   "hpBase": 199.584,
+   "hpAdd": 7.128,
+   "defenseBase": 83.16,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549438,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 185.328,
+   "attackAdd": 5.148,
+   "hpBase": 256.608,
+   "hpAdd": 7.128,
+   "defenseBase": 106.92,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633379,
+     "count": 6
+    },
+    {
+     "id": 983278,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 226.512,
+   "attackAdd": 5.148,
+   "hpBase": 313.632,
+   "hpAdd": 7.128,
+   "defenseBase": 130.68,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633379,
+     "count": 9
+    },
+    {
+     "id": 983278,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 267.696,
+   "attackAdd": 5.148,
+   "hpBase": 370.656,
+   "hpAdd": 7.128,
+   "defenseBase": 154.44,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717320,
+     "count": 6
+    },
+    {
+     "id": 983278,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 308.88,
+   "attackAdd": 5.148,
+   "hpBase": 427.68,
+   "hpAdd": 7.128,
+   "defenseBase": 178.2,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717320,
+     "count": 9
+    },
+    {
+     "id": 983278,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 350.064,
+   "attackAdd": 5.148,
+   "hpBase": 484.704,
+   "hpAdd": 7.128,
+   "defenseBase": 201.96,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "8983402118b13c46c0e33d4ce8a39e2b47f050057e43ecfb6237d18a004b23f2",
+   "artPath": "2875917432b51506e2d44abc723c1b2987e3c032ed89e66f7c4f1698a20709a4",
+   "name": "子供時代",
+   "descHash": "「乗勝追撃」発動後、姫子の速度+<nobr>#1[i]%</nobr>、<nobr>#2[i]</nobr>ターン継続。",
+   "params": [
+    0.2,
+    2
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "5f6903341d491357170483043a378c4f3d8e6f517b7f97edd2b79dc79a40b097",
+   "artPath": "e3dac7dfb00924dfc0e12099febb5d33e5eb085ae69a83f4376d8379cfe20d3d",
+   "name": "邂逅",
+   "descHash": "残りHPが<nobr>#1[i]%</nobr>以下の敵に対して与ダメージ+<nobr>#2[i]%</nobr>。",
+   "params": [
+    0.5,
+    0.15
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "b236e661cfec196ff2ae1c23c3156cecab7bf201ba983c9d192621b33a997a23",
+   "artPath": "4dcd3b7b6241cedf510cc8381976c382025164d3b517a28df1d3597f3fe7da36",
+   "name": "自我",
+   "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "8ae0ef00d82efce719168e287baaf010eb74898c6a90d020db3e81a065172a3e",
+   "artPath": "1937681c1128f04e4ca1221a14dae12f30ad48e87b1924daa91f2913add81225",
+   "name": "没頭",
+   "descHash": "戦闘スキルで敵を弱点撃破した時、姫子はさらにチャージを<nobr>#1[i]</nobr>獲得する。",
+   "params": [
+    1
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "205f1336598633f3fe3c9cd19d405c93d2428b61f20186ae82f4ea60f2d44627",
+   "artPath": "9c468be77b428a280790ec989dae7fd0b49e623ffc97dd3cdb0e9b091fd2a299",
+   "name": "夢",
+   "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "a5c5f9e940ffed9cd090f74330d3e7d1859226c2f5380ae5d687f281100b4beb",
+   "artPath": "7712fe530b48f9103f80d4bb841fa8cc2ab7c713cd80266bbe30724c672ea057",
+   "name": "開拓！",
+   "descHash": "必殺技を発動した時、さらに2ヒットし、1ヒットごとにランダムな敵単体に本来のダメージ<nobr>#1[i]%</nobr>分の炎属性ダメージを与える。",
+   "params": [
+    0.4
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   766023
+  ],
+  [
+   481496
+  ],
+  [
+   565437
+  ],
+  [
+   280910
+  ],
+  [
+   196969
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "単体攻撃",
+   "descHash": "指定した敵単体に姫子の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#F84F36;\">炎</span>属性ダメージを与える。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 766023,
+   "name": "武装調律",
+   "iconPath": "ec70a3a438a4b1d8c863250f7ee442f34b78e4e331eab435a3cc109761207bc1",
+   "typeDescHash": "通常攻撃",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549438,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633379,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 717320,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "拡散攻撃",
+   "descHash": "指定した敵単体に姫子の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#F84F36;\">炎</span>属性ダメージを与え、隣接する敵に姫子の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>分の<span style=\"color:#F84F36;\">炎</span>属性ダメージを与える。",
+   "ultimateCost": 0,
+   "break": "60 + 30/adjacent",
+   "energy": "30",
+   "id": 481496,
+   "name": "溶核爆裂",
+   "iconPath": "b236e661cfec196ff2ae1c23c3156cecab7bf201ba983c9d192621b33a997a23",
+   "typeDescHash": "戦闘スキル",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1,
+      0.4
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.1,
+      0.44
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549438,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2,
+      0.48
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549438,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.3,
+      0.52
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.4,
+      0.56
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633379,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5,
+      0.6
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920202,
+       "count": 7
+      },
+      {
+       "id": 633379,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.625,
+      0.65
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.75,
+      0.7
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836261,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717320,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.875,
+      0.75
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2,
+      0.8
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836261,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.1,
+      0.84
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.2,
+      0.88
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.3,
+      0.92
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.4,
+      0.96
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.5,
+      1
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "全体攻撃",
+   "descHash": "敵全体に姫子の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#F84F36;\">炎</span>属性ダメージを与える。敵を1体倒すごとに、さらに姫子のEPを<nobr>#2[i]</nobr>回復する。",
+   "ultimateCost": 120,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 565437,
+   "name": "天墜の火",
+   "iconPath": "25d8a000d8916e77445cd9f8794718a30494f6078f80c6f77bbe08a1f94ed6af",
+   "typeDescHash": "必殺技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.38,
+      5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.472,
+      5
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549438,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.564,
+      5
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549438,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.656,
+      5
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.748,
+      5
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633379,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.84,
+      5
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920202,
+       "count": 7
+      },
+      {
+       "id": 633379,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.955,
+      5
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.07,
+      5
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836261,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717320,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      2.185,
+      5
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.3,
+      5
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836261,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.392,
+      5
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.484,
+      5
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.576,
+      5
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.668,
+      5
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.76,
+      5
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "全体攻撃",
+   "descHash": "敵が弱点撃破された時、姫子はチャージを獲得する、最大で<nobr>#2[i]</nobr>層まで。<br />味方が攻撃を行った後、姫子のチャージが最大に達した場合、チャージを全部消費して<u>追加攻撃</u>を1回発動し、敵全体に姫子の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#F84F36;\">炎</span>属性ダメージを与える。<br />戦闘開始時にチャージを1層獲得。",
+   "ultimateCost": 0,
+   "break": "30/hit",
+   "energy": "10",
+   "id": 280910,
+   "name": "乗勝追撃",
+   "iconPath": "59fd8d210c553499c39ce889ee951f2da3d8641b23270bb6e2cfbc7de761c9ca",
+   "typeDescHash": "天賦",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.7,
+      3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.77,
+      3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549438,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.84,
+      3
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 635675,
+       "count": 3
+      },
+      {
+       "id": 549438,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.91,
+      3
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 920202,
+       "count": 3
+      },
+      {
+       "id": 633379,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.98,
+      3
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 920202,
+       "count": 5
+      },
+      {
+       "id": 633379,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05,
+      3
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 920202,
+       "count": 7
+      },
+      {
+       "id": 633379,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1375,
+      3
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 836261,
+       "count": 3
+      },
+      {
+       "id": 717320,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.225,
+      3
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 836261,
+       "count": 5
+      },
+      {
+       "id": 985668,
+       "count": 1
+      },
+      {
+       "id": 717320,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.3125,
+      3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 836261,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.4,
+      3
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 836261,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 985668,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.47,
+      3
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.54,
+      3
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.61,
+      3
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.68,
+      3
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.75,
+      3
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "敵を攻撃。戦闘に入った後、敵の対応する属性の靭性を削る。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 80324,
+   "name": "攻撃",
+   "iconPath": "ec70a3a438a4b1d8c863250f7ee442f34b78e4e331eab435a3cc109761207bc1",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "妨害",
+   "descHash": "秘技を使用した後、<nobr>#4[i]</nobr>秒間継続する特殊領域を作り出す。特殊領域内にいる敵と戦闘に入った後、<nobr>#1[i]%</nobr>の<u>基礎確率</u>で敵の受ける<span style=\"color:#F84F36;\">炎</span>属性ダメージ+<nobr>#2[i]%</nobr>、<nobr>#3[i]</nobr>ターン継続。味方が作り出した領域は1つまで存在できる。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 196969,
+   "name": "不完全燃焼",
+   "iconPath": "08c57b00d96fb6ef09151b139071cb51e7103a50b2efa8264c83393fc3c84d63",
+   "typeDescHash": "秘技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1,
+      0.1,
+      2,
+      15
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1003101,
+   "anchor": 6,
+   "type": 1,
+   "children": [
+    {
+     "id": 1003202,
+     "anchor": 10,
+     "type": 2,
+     "children": [
+      {
+       "id": 1003203,
+       "anchor": 11,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 202739,
+        "name": "ダメージ強化・炎",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "83f3836fb03139f90f05e3cec77273f6dd86c2e49bb7a6002fbdfb5ef49a540e",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#F84F36;\">炎</span>属性ダメージ",
+          "value": 0.032
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920202,
+          "count": 3
+         },
+         {
+          "id": 633379,
+          "count": 3
+         }
+        ]
+       }
+      },
+      {
+       "id": 1003204,
+       "anchor": 12,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 202736,
+        "name": "効果抵抗強化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+        "statusList": [
+         {
+          "key": "効果抵抗",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 920202,
+          "count": 3
+         },
+         {
+          "id": 633379,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 202738,
+      "name": "攻撃強化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+      "statusList": [
+       {
+        "key": "攻撃力",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635675,
+        "count": 3
+       },
+       {
+        "id": 549438,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "攻撃を行った時、<nobr>#1[i]%</nobr>の基礎確率で敵を燃焼状態にする、<nobr>#2[i]</nobr>ターン継続。<br />燃焼状態の敵はターンが回ってくるたびに、姫子の攻撃力<nobr>#3[i]%</nobr>分の<span style=\"color:#F84F36;\">炎</span>属性持続ダメージを受ける。",
+    "ultimateCost": 0,
+    "id": 202642,
+    "name": "星火",
+    "iconPath": "be5bab6ce62eb1dcc9f708d3afeb5d436c574dcc481c18e5a5b00132e68b4e73",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.5,
+       2,
+       0.3
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 635675,
+        "count": 3
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1003102,
+   "anchor": 7,
+   "type": 1,
+   "children": [
+    {
+     "id": 1003205,
+     "anchor": 13,
+     "type": 2,
+     "children": [
+      {
+       "id": 1003206,
+       "anchor": 14,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 202734,
+        "name": "攻撃強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+        "statusList": [
+         {
+          "key": "攻撃力",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836261,
+          "count": 3
+         },
+         {
+          "id": 717320,
+          "count": 3
+         }
+        ]
+       }
+      },
+      {
+       "id": 1003207,
+       "anchor": 15,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 202735,
+        "name": "ダメージ強化・炎",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "83f3836fb03139f90f05e3cec77273f6dd86c2e49bb7a6002fbdfb5ef49a540e",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#F84F36;\">炎</span>属性ダメージ",
+          "value": 0.048
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 836261,
+          "count": 3
+         },
+         {
+          "id": 717320,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 202737,
+      "name": "ダメージ強化・炎",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "83f3836fb03139f90f05e3cec77273f6dd86c2e49bb7a6002fbdfb5ef49a540e",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#F84F36;\">炎</span>属性ダメージ",
+        "value": 0.048
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920202,
+        "count": 5
+       },
+       {
+        "id": 633379,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "燃焼状態の敵に対する、戦闘スキルによるダメージ+<nobr>#1[i]%</nobr>。",
+    "ultimateCost": 0,
+    "id": 202645,
+    "name": "灼熱",
+    "iconPath": "814978aa16eb6cd445d14914dc088cccbd32e942097ed2fcd044def6b03e95bc",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 920202,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1003103,
+   "anchor": 8,
+   "type": 1,
+   "children": [
+    {
+     "id": 1003208,
+     "anchor": 16,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 202748,
+      "name": "効果抵抗強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "9fd554ab9916a645c0badb618498ad3c76f58e6fd09005f69990a7d6bfd0c625",
+      "statusList": [
+       {
+        "key": "効果抵抗",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836261,
+        "count": 8
+       },
+       {
+        "id": 717320,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1003209,
+     "anchor": 17,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 202749,
+      "name": "攻撃強化",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d",
+      "statusList": [
+       {
+        "key": "攻撃力",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836261,
+        "count": 8
+       },
+       {
+        "id": 717320,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "残りHPが<nobr>#1[i]%</nobr>以上の場合、会心率+<nobr>#2[i]%</nobr>。",
+    "ultimateCost": 0,
+    "id": 202644,
+    "name": "道標",
+    "iconPath": "b80de08ad58771300810331aebef9698d1d4098ad46d5358daadb69192937f45",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.8,
+       0.15
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 836261,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1003201,
+   "anchor": 9,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 202741,
+    "name": "ダメージ強化・炎",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "83f3836fb03139f90f05e3cec77273f6dd86c2e49bb7a6002fbdfb5ef49a540e",
+    "statusList": [
+     {
+      "key": "<span style=\"color:#F84F36;\">炎</span>属性ダメージ",
+      "value": 0.032
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549438,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1003210,
+   "anchor": 18,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 286681,
+    "name": "ダメージ強化・炎",
+    "levelReq": 80,
+    "promotionReq": 0,
+    "iconPath": "83f3836fb03139f90f05e3cec77273f6dd86c2e49bb7a6002fbdfb5ef49a540e",
+    "statusList": [
+     {
+      "key": "<span style=\"color:#F84F36;\">炎</span>属性ダメージ",
+      "value": 0.064
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 160000
+     },
+     {
+      "id": 836261,
+      "count": 8
+     },
+     {
+      "id": 717320,
+      "count": 8
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": [
+   {
+    "relicTypeHash": "胴体",
+    "relicTypeIcon": "d20ecc1ab7faa188a97a5efa00ed3d8cdc5b0eec5f816dd163c042ec1536b8de",
+    "propertyName": "会心率",
+    "propertyIconPath": "fe4e1f43ad0ba2ccbd2b8682c52f8b482fa982ec6f1cef3dc386bc0787393695"
+   },
+   {
+    "relicTypeHash": "脚部",
+    "relicTypeIcon": "b3a1dd0fd3208b4aa3a3e9d194d9eee05302518d525aa75d6f8ffceb382d18e7",
+    "propertyName": "速度",
+    "propertyIconPath": "8644da0614c2e7f1fee80f5cf1c301bf2b2374f0692a8f632f7ab0f9e0b61c94"
+   },
+   {
+    "relicTypeHash": "次元界オーブ",
+    "relicTypeIcon": "1949766874109dc95d0de9f21598a19bcb6772b08807b3ef345d3f21409e3244",
+    "propertyName": "炎属性ダメージ",
+    "propertyIconPath": "83f3836fb03139f90f05e3cec77273f6dd86c2e49bb7a6002fbdfb5ef49a540e"
+   },
+   {
+    "relicTypeHash": "連結縄",
+    "relicTypeIcon": "8d48e32c3a2eadffdb7eaa9475f9c6e580ba1a9fc2de6c66480b845b17b0325e",
+    "propertyName": "攻撃力",
+    "propertyIconPath": "bcda5fe73e12a2d13d72e7a19e964c9a15b53168a893147c8984523daf5a7e7d"
+   }
+  ]
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初対面",
+   "text": "ようこそ列車へ、開拓者。私は星穹列車のナビゲーター、姫子よ。これから一緒に旅を楽しみましょう。",
+   "unlockRequirement": "",
+   "cnUrl": "e80bf828fbc6770bb9752979573a2b2fe2f388e32df6fcef50015903d5a1df55",
+   "jpUrl": "a05de977d58ef2638c29d6e6046d2938deecfd3f0cbb6bdad4521f74811c9c04",
+   "enUrl": "d69ed5458fc6b097c3ef09f2a06256dbff94e9cc31a3825d28839b48ec5bf836",
+   "krUrl": "736ba593486091b6025b2d29c45780c224f1926fe64e25cfc113cc003422a213"
+  },
+  {
+   "id": 2,
+   "title": "挨拶",
+   "text": "どうしたの、眠気覚ましにコーヒーでも飲む？",
+   "unlockRequirement": "",
+   "cnUrl": "ad7b4b3e904d6c7da12c553b612ce4a439026bbb8984de29f0af4b337aa777e1",
+   "jpUrl": "094492970b2f9a677c4508697eb549c653b2f422a882aec4cad23501798c73d3",
+   "enUrl": "bac2a3cd213eae7ebe4993dfed395ab446f06ee7adf29b51b40c8611d74e1e97",
+   "krUrl": "ccd95be65c5b7bc98e40aa8437b50fbc2d50ff1cbafd35554411895b7960b33d"
+  },
+  {
+   "id": 3,
+   "title": "お別れ",
+   "text": "安心して休みなさい。私とパムがいるから、列車の心配はしなくても大丈夫よ。",
+   "unlockRequirement": "",
+   "cnUrl": "72b5a633e88c4cab4d6827f773aa1c98011a2e766bf96693e7b5de23ac9bf986",
+   "jpUrl": "609434ef4f21de663d05e18dd3b2185c6a74569d688f49a7d32ae501a543b893",
+   "enUrl": "3aa603916e9720972ac0b0bb19c230365aaa89a9b9c8974c46ad51deb1d51f61",
+   "krUrl": "35267d2736a78864b2ea3c8b87cabfe03ee5bf95925166e7d39fdaecbd36e177"
+  },
+  {
+   "id": 4,
+   "title": "自分について・列車との関係",
+   "text": "私と列車は、お互いを支え合う親友のような関係なの。私が修理したことで、列車は再び元の航路を進めるようになった。そして、これら全ては私にとって、新鮮で知らないことばかりだったわ。",
+   "unlockRequirement": "",
+   "cnUrl": "344740a2fbce056a017f8825e018ef6a34ea2b66aa60955a408a35f615a635ff",
+   "jpUrl": "fef802659a2d53c27a6258835dd0bb015d80863860d10450badeefd2d43468b8",
+   "enUrl": "2295af1d8ce049b17f913a9a5856d308cfd64c4e60e3a474f3f61f478046120d",
+   "krUrl": "0f6c4dc1f46d4739944a844f6d83e415daa48407418de8a1e76be1a4d2d15678"
+  },
+  {
+   "id": 5,
+   "title": "自分について・列車の修理",
+   "text": "あんたたちが列車の故障箇所を見つける前に、私が既に修理していることのほうが多いのよ。",
+   "unlockRequirement": "",
+   "cnUrl": "f41d674790bbe073536468317c4eea986187b912832ab591a3d4f2fc73326ebb",
+   "jpUrl": "cdf77923a237be8050ecaf00cd84bc82705482218f39fedaa1b6c45f06196d24",
+   "enUrl": "7d8eefd1b221e14339f0043120edf48d539fa8059335b4f08f73c050a011680b",
+   "krUrl": "878de3ae4d07cf0a0464a1a1f0d64f28859f9ad7c395b5b8fb1cfe7679b49aa4"
+  },
+  {
+   "id": 6,
+   "title": "世間話・旅の終着点",
+   "text": "ただの私の推測だけど、列車はアキヴィリの故郷から出発し、最終的にはそこに戻り、新たな旅を始める。だから列車に終点なんてないのよ。旅の「終点」を決めるのは、あんた自身なの。",
+   "unlockRequirement": "",
+   "cnUrl": "95f749f36814a2696c943acf40ea2ce7f465f17c9f1c99c7115ed3a6f330a9b9",
+   "jpUrl": "ea6e15fb0cc127512c82439309739281c10ae3df08cf06c308ecd8822fddb9d1",
+   "enUrl": "f03f2c60855e555ea14536729c1ff17852e756658a64c8152337782fe7864923",
+   "krUrl": "1b66692e582e52cd20819eff2bcbbd693b688428ab174c3b27c5ef7b18932911"
+  },
+  {
+   "id": 7,
+   "title": "趣味",
+   "text": "色んな風味のコーヒー豆をブレンドするのが私の特技よ。今淹れてあげるわね。ミルクなしをおすすめするわ。ブラックが一番だもの。",
+   "unlockRequirement": "",
+   "cnUrl": "08d107a0aa0d01bbaa564c0f4c55c1ad3a9d63642bd5bdef5eece5f37913fe88",
+   "jpUrl": "f9e5f298cba2c7c16343592dd9d6e9d02ad5625271d6fe0683b5af135b35003e",
+   "enUrl": "aa054fcaba5019dc13f13b1ba3d8b2ef24eec718aa9aee7186cfacafc93f2fcb",
+   "krUrl": "074071e24822d9d12d6be17aeae0904392c8e3ed5d35049766afb5dbe3fb099c"
+  },
+  {
+   "id": 8,
+   "title": "悩み事",
+   "text": "丹恒以外は、私のコーヒーを酷評しているの。あんたはどう？…私のブラックコーヒーの「ブラック」は暗黒料理の「暗黒」じゃないわよ。",
+   "unlockRequirement": "",
+   "cnUrl": "ef509898f24f5fefad15c253a12d0ac803f8107f6d8b16c519651e57cca28c28",
+   "jpUrl": "6b9b827d3b06f229b23b3cb58fa58fbbd77c38e0901ea5b676598ebac4a97caf",
+   "enUrl": "7f3a5a78b1e5ae9b142a40e0210d35ebb650875043135208ef64e0a7b4c3127c",
+   "krUrl": "276daab35223328d0eb6e9f2d6fcf7f150948810f97cecd807de040a75bcfbe0"
+  },
+  {
+   "id": 9,
+   "title": "シェア",
+   "text": "毎日みんなと一緒に過ごしていると、誰にも変化がないように思えるわ。長く離れてる人だけに、凄まじい変化が見えるの。",
+   "unlockRequirement": "",
+   "cnUrl": "0359c116194ef0ed7d34500a56535a83e16e76a17f53c8874fdd5bb51efc0ea5",
+   "jpUrl": "eebe3848b53fb6f4024a38fed6c5f75e2d1041885b1e57f36e9052aa7c76f3b8",
+   "enUrl": "f6cfb6f4b769117a00af047882c8995772a1c3750a71469f7418d2b4433ac702",
+   "krUrl": "dc2b70b8a54fe8739a9e6231be47f72daed4d326a78b042158241087c6c582ff"
+  },
+  {
+   "id": 10,
+   "title": "見聞",
+   "text": "宇宙で探し物をしている時、多くの場合は「あった！これに違いない！」とひらめくのではなく、「本当にこれなのか？万が一違っていたら？」と考え、疑い、躊躇うものよ。",
+   "unlockRequirement": "",
+   "cnUrl": "5f8b25e72eb1c8fd13740d231ba82dffa94915b482dad336501c504f3c6e5f90",
+   "jpUrl": "f0fdb8dffba89c96b297af70a4a4276ef1e62b6741bd80490135240320bc859e",
+   "enUrl": "bc5f553e3f0a5ba05ed0a116bfe10c9ee3b8f5b4f4759e18cb782f541833f423",
+   "krUrl": "6697fe42495488bcb7e9f1635e9de9767ae12d130e85069e9472f5e35aafd80c"
+  },
+  {
+   "id": 11,
+   "title": "三月なのかについて",
+   "text": "私が列車で目覚め、何も覚えていない状態だったら、三月ちゃんのように元気を取り戻すことはできなかったと思うわ。だから彼女を見ていると、尊敬するのと同時に、不安になるのよ…私は忙しくてあまり時間が取れないから、話し相手になってあげて。",
+   "unlockRequirement": "",
+   "cnUrl": "66ff9f7cab3d89c7025c7549bf6154771ce8571a62745bcf06835486250b7476",
+   "jpUrl": "b2b15c83987f9d0610cdc2c3b8ce203079738e6c1211c0fbfdca92bf314a05da",
+   "enUrl": "f3e0948c5b83f2a4caea71600d92d15b0e5325588dac6df4ce0013c23862c9da",
+   "krUrl": "ed07c4a318955e05f5b8277767abd9b3b9b13c37419344eb4444696bdc660394"
+  },
+  {
+   "id": 12,
+   "title": "丹恒について",
+   "text": "あの子はとても慎重よ。1人に慣れているから、他人に迷惑をかける行為を嫌い、人を巻き込むことを恐れているのね。だから、護衛とアーカイブの管理を任せたの。そうでなければ、彼は列車に乗らなかったと思うわ。",
+   "unlockRequirement": "",
+   "cnUrl": "b4a4396f90103ce20e78463d0a9f78c9af1b72034c0762595be6566abc4ce9f2",
+   "jpUrl": "1a1651e246166e8493ee00ec24fb40b6c3afcf6a7d38920317ac3dd3587563a1",
+   "enUrl": "70fce527c9af4c39df5ff9ea94d25360d36b214e8b457dc31a7a4f286ed86a32",
+   "krUrl": "00f5bbd1525c8a97459b68c9293a3588b433ef7bbcec107a75251b4e417da477"
+  },
+  {
+   "id": 13,
+   "title": "ヴェルトについて",
+   "text": "ヴェルトは、自分が若者についていけないんじゃないかと心配しているようね。私に言わせれば、彼の心はまだまだ若いわ…",
+   "unlockRequirement": "",
+   "cnUrl": "1bab44db4ebd8739ad8e3871a2fe97b2d746a37286b29b1a9e5073234414dbec",
+   "jpUrl": "682db7e1a57f5a4b54e0414d7f15f93298c740e8ab6012ac7f96ed8de4e92273",
+   "enUrl": "66bfa1d611ac7f7476158b86758cf9542b320df5d6e0691fdf61e73f9b0d3f43",
+   "krUrl": "a96f7f875c09f48b81fc3a9ab78961bced36d19d35188a39d1316bdfce03ecf5"
+  },
+  {
+   "id": 14,
+   "title": "パムについて",
+   "text": "パムにとって私はずっと、列車の修理工に過ぎないわ。",
+   "unlockRequirement": "",
+   "cnUrl": "18d06a65b4e982c89d11b630ebe17a3e05a5c3c9954d258a37f0aab8f700f558",
+   "jpUrl": "ac0d0315cb31607d95b37b526ffdc8e8f409ec7123d3be9307d53ffdd01aa268",
+   "enUrl": "e714f3e459fd2e232813419f144305be52bf1266ada87533abdb58eeae244235",
+   "krUrl": "e74552e6663d26bbee56a81e9f5d6d5f5f8d0505e486af2ed27ad12805c1eb25"
+  },
+  {
+   "id": 15,
+   "title": "丹恒について・2",
+   "text": "最近の彼は随分リラックスしているように見えるわ。開拓者と三月ちゃんが、たまには他の人に頼ってもいいんだって気付かせてくれたのね。",
+   "unlockRequirement": "",
+   "cnUrl": "f9aef8d276caa8ebdde51d383f60e9ca1793e729343d5cbf7a8f873422a84a63",
+   "jpUrl": "0ed4ba73e43bec7b27baf088067dc3268ed650d33a7e93ed32696d01dd451343",
+   "enUrl": "04fdefa09073910c60b01f6a7ee2f69f48da4276b96d3e851ba82b51e28f621b",
+   "krUrl": "8b29a028befdbed39c18443e5cf8a5863ba5ec46f19e98c6c34f61b6c6f8f0ed"
+  },
+  {
+   "id": 16,
+   "title": "星魂覚醒",
+   "text": "まるできらめく真珠を繋げる糸のように、列車の軌跡は星々を繋ぐのよ。",
+   "unlockRequirement": "",
+   "cnUrl": "c18e94acb3ccdeff93aa3867470572f890770a92c14b5e242a9552f9ceba2ac6",
+   "jpUrl": "ba2b7ef8696abcaac1c7e4e70bc22d9cf18bb564df17e8c0a8e0b301b962b7be",
+   "enUrl": "551f9ee9428a19af81503c6ecac490c53aa87c797e67ba925d188e2e10bb8c23",
+   "krUrl": "cffbceefd4ede6b1f64bfac93553a1b2c1c91e22562b956ffa87a31eb0eeba85"
+  },
+  {
+   "id": 17,
+   "title": "キャラクター昇格",
+   "text": "この先には数えきれないほどの素晴らしい景色がある。ここで立ち止まってはいられないわ。",
+   "unlockRequirement": "",
+   "cnUrl": "c1998c7010224080c5a828d4bec6016b5de388851378b298969b2083ce879284",
+   "jpUrl": "2bf6721bdefaade5ad59fe5a352463f65473254f19b7a04ae7ca1f3fb740db1b",
+   "enUrl": "78b7bc1a36559616c1c30a837b86ed9594926fd689cadeba7c432adaa4808996",
+   "krUrl": "117c72b0049bb1720dceb9e04e7ce62489b916b44b169eebc616320bf9ef80b6"
+  },
+  {
+   "id": 18,
+   "title": "レベルMax",
+   "text": "終点……実際に辿り着いたことはないわね。",
+   "unlockRequirement": "",
+   "cnUrl": "1d2cc6f1a54a1e1ed1eeb5f78cc8233bc9db2182f3811f68b0c16eea8b446954",
+   "jpUrl": "867234de8652069efd997cd5c17f6822fbc342584d63d1b64d9615a292cdad25",
+   "enUrl": "17872a343c53125d9b64275567912c3c053bc2c459f07860a454327ed27708d7",
+   "krUrl": "daf8deca6eb8b610c904af34a9e4001698ea9bb613586299fe725df411f1e7af"
+  },
+  {
+   "id": 19,
+   "title": "軌跡覚醒",
+   "text": "人間の探求心は果てしないのよ。",
+   "unlockRequirement": "",
+   "cnUrl": "bee9e29eab02445cbf21370d42b63398fd6f801aed097685e3aa31c8ade1f282",
+   "jpUrl": "1a510e7ebef66faaf333ef0299ff5493ba0346120158ca07da53827035a0675b",
+   "enUrl": "a0519495ac1a9e0669110a1f611fe9f030b5d61619aef86a91e01c7bd495fc38",
+   "krUrl": "20f8d40ef2e71d03c86ef9424429c0b0437c4ae6fa857cb792a8c7e6476f9960"
+  },
+  {
+   "id": 20,
+   "title": "パーティ編成・開拓者",
+   "text": "開拓者、必要なことがあったら何でも言ってちょうだい。列車組の心は一つよ。",
+   "unlockRequirement": "",
+   "cnUrl": "91fae7084a79c0517e15e1f8b20f6d5bc7169418d3dd07b0861dd13d59a6d175",
+   "jpUrl": "091cdbcd4ad91b08cddae4f89a615fd4283fd74b00bcf777faaa5e3f921489f2",
+   "enUrl": "f5c8fe1c412f847117d353640ad6fb5052252f11a8d88a345cd4621e21f5e1e7",
+   "krUrl": "12e531e2c92b55bde8be327252330f18e39a9c7ed058ed813b7729ac32a38dd1"
+  },
+  {
+   "id": 21,
+   "title": "パーティ編成・三月なのか",
+   "text": "三月ちゃん、自分をちゃんと守るのよ…大丈夫、みんなもいるわ。",
+   "unlockRequirement": "",
+   "cnUrl": "8d80d532677b07edfa8fb568bc56c209c3f4c8971da7124338c41b0f936d9e98",
+   "jpUrl": "bcb6a8c8716b8f255411305d08d7069e31b2c91ccc0248f9db0308b43add3d90",
+   "enUrl": "92ddd3863456ce24d25eff21c4168f001a1658639359f62a07a7b790763eebe3",
+   "krUrl": "ad5f8242ea7c375ec7245a18be74395209a5482bc50f96b846557c5c454385e1"
+  },
+  {
+   "id": 22,
+   "title": "パーティ編成・丹恒",
+   "text": "支援は任せて…好きに動きなさい、丹恒。",
+   "unlockRequirement": "",
+   "cnUrl": "5fb910fea8771ddca1404b3fda4d4d8ad00394a34ca08206ac260815071806c8",
+   "jpUrl": "127f0ac0b060e21257bd064ec27f5719a07f4c978b82fec5baddec07401b557e",
+   "enUrl": "50c6fdb35d4b3c244df9ba9b7845ec179a7f165529e3d5b9c400b8f1a228fcaf",
+   "krUrl": "40f124902503885a05f0f1024c5d6873619deec026088c143dc7d1c2cb4be661"
+  },
+  {
+   "id": 23,
+   "title": "パーティ編成・丹恒・飲月",
+   "text": "支援は任せて…好きに動きなさい、丹恒。大胆にね。",
+   "unlockRequirement": "",
+   "cnUrl": "15cb40b94f3a4edc770d9a5ce17f7fab0ac92047bd29a3f36d4fe79a1914a01e",
+   "jpUrl": "056d12403d0ba94539439819796e7caa4da02acf76ec2fe76f7fdc44919a3f1f",
+   "enUrl": "1f559b402a2292841c3ca1ac08bade89fdba6aa602efc2a9efb307afc80d8e01",
+   "krUrl": "172203b9ed73e39b4afaf967ee62feebd3a2e33ace1d05dfa2ecf82206cc179f"
+  },
+  {
+   "id": 24,
+   "title": "パーティ編成・ヴェルト",
+   "text": "私たちの出番はまだたくさんあるって言ったでしょ、ヴェルト。",
+   "unlockRequirement": "",
+   "cnUrl": "dbc61a6e7e339127065f419eb8bcd636f6337ee3f7205aef7046444b4c317115",
+   "jpUrl": "14af50b3e06dd3a5e3694bd82ea5b647d4436db2246494a5c37f44ffce0db717",
+   "enUrl": "3f784e6bae6462e2229e0721a42cc1ce2c347cffe8753dcede76fe5a9f865b67",
+   "krUrl": "41656b51ef2925bc9ade3e18da5f4e50a68e5b4bbc17d734bcc50e8a5c58daa0"
+  },
+  {
+   "id": 51,
+   "title": "戦闘開始・弱点撃破",
+   "text": "さあ、全部あんたのために用意したのよ。",
+   "unlockRequirement": "",
+   "cnUrl": "5aaceb9134b12a55ca3e8994d1a4c5cfd4946d5c44c996cbcf96d20f07777093",
+   "jpUrl": "f35289eb933c92dd83e678e8cc22939a1f99abedc6912333e267775d52f7083f",
+   "enUrl": "6b2648d908dc0e53c8b10f482cf4baa5486365504c7c8868ab5a21feb68fb110",
+   "krUrl": "c635d62580a9d0c4575b51f72ff3edc82a5dbc8cb123f2da3f343c251a626e89"
+  },
+  {
+   "id": 52,
+   "title": "戦闘開始・危険予知",
+   "text": "気を付けなさい。",
+   "unlockRequirement": "",
+   "cnUrl": "4e81bd3bf5ed461099d69517e81c222b8a4a7dfd06d092eb06aef8abc7a0e736",
+   "jpUrl": "c387e06c1e0d297d05f79f9fd4871b97da7e79439c4508ac7c09abc4412412ca",
+   "enUrl": "551e043277e0718660df4e86a7ada9d788daa8c00b6afe81598d7123d44eb95f",
+   "krUrl": "2f5dcd260fe4656ddc95aaba35ca3944a5ee8a318b33a4d8484d9aa96a0713f5"
+  },
+  {
+   "id": 53,
+   "title": "ターン・1",
+   "text": "戦闘は精巧なデザインなの。",
+   "unlockRequirement": "",
+   "cnUrl": "bd39b17860c4b568b8ec17bd395f908616b39060d161a686a859ba6feb804c37",
+   "jpUrl": "e1e5e99efe4b455322afe9218e1b02606daf952ab8463b88a757eb92ccc20e57",
+   "enUrl": "ccd2e634ecb4a9f56ac6a8affab5e21c9cb251aca71cace7dc8e062c330546f4",
+   "krUrl": "f0d7775ef4ac7ebb43348811a33c70e98dd448992df631173294c1d006625064"
+  },
+  {
+   "id": 54,
+   "title": "ターン・2",
+   "text": "ちゃんと直さないと。",
+   "unlockRequirement": "",
+   "cnUrl": "6bb8d29eeeb85071b7e95e27b2f1399e7a87cc07d9c4ea1e9070314ea187a34f",
+   "jpUrl": "6ee92891f710210efed9a1f918a5906a8ce1eb56daf8d7b98acc2ec12dcf7547",
+   "enUrl": "775bebf7f27244a0aec392e018a81163b1e33e3951b46dc932d7cf80874969c0",
+   "krUrl": "ccc1a86d931dc495587c69ac945931cae266cabc8ccc1ae7d57e21fbbddbbdef"
+  },
+  {
+   "id": 55,
+   "title": "戦闘中待機",
+   "text": "次はそう簡単には行かないわよ。",
+   "unlockRequirement": "",
+   "cnUrl": "b433234b79c064d155425c76aef9a230826ba24e515abde4981d4a7963fccc85",
+   "jpUrl": "7fa50f05828ad3afe0b05c0d42ed3085529e619302222cae38692c19d43fa958",
+   "enUrl": "7004603767a16b93792a05073202e2f3ec2f6fe5576332865e127181851505c7",
+   "krUrl": "99f439557386da1005cb5941156df647dad6df753333dc1cef25663ce13279e6"
+  },
+  {
+   "id": 56,
+   "title": "通常攻撃",
+   "text": "順番にね！",
+   "unlockRequirement": "",
+   "cnUrl": "6affaafbbe9bc2e5da0952120c4df5bb9f93eb2557e33dd9081f15cfd39f5124",
+   "jpUrl": "d992848fbff60b8c71209bc686d26a37848c92533aa4f6568a0d5aff0757e747",
+   "enUrl": "37680c4e343e31dbc20a4a388f55c97ab83c49596867e51f89687fc3a9bbf94f",
+   "krUrl": "c2ba469685d75f17723953c59b8c44b464aa41092717dc8994fc2bf09fb243f6"
+  },
+  {
+   "id": 57,
+   "title": "戦闘スキル",
+   "text": "もちろん、誰でも構わないわ。",
+   "unlockRequirement": "",
+   "cnUrl": "1212a06d906ec5ba4d8796db2abe7b64c307b7c69d5748d28b90c4d149d90cc1",
+   "jpUrl": "66a490e8cb5399f9b11328f494de72cd5e545180b0567950c92c282857dd70a9",
+   "enUrl": "4519a30c00e8bd6f8b61b220bcf3da24b5c14d12bf982fafd92a2e08fa915690",
+   "krUrl": "4ee72a7e3bb06c58da01609c72632f207e6a4eed2f5505594dcb03890eafd6b5"
+  },
+  {
+   "id": 58,
+   "title": "攻撃を受ける",
+   "text": "軽傷よ。",
+   "unlockRequirement": "",
+   "cnUrl": "d25f4d4ff3cd51cfc33953e4fc37933d9f19a2b8d7575f53b93a1f8e2a3320fa",
+   "jpUrl": "e1040073dc7ad98afc64185b70fc1476beeac1e8df631c065ba59339f9899c12",
+   "enUrl": "98d5a8f723408400750f9186c1082b0687c59af48a81b4085a9332691437a911",
+   "krUrl": "1c3049813425381e9c13745ed7d2f12832270192e32a395323c54f07ced8444d"
+  },
+  {
+   "id": 59,
+   "title": "重撃を受ける",
+   "text": "いい度胸ね。",
+   "unlockRequirement": "",
+   "cnUrl": "8158ab0caf19d2e9b03a6e76b60f426d28815bc8ab5360d0c0b183ebb09dadb0",
+   "jpUrl": "2785d1fa1f869129e68909a9715024d9608df4338ab293de1ce30a309251d3eb",
+   "enUrl": "f63f09cf19ce86cbd8a92c69ac2ac6098df0ea524783b6f939ea90f2207286ec",
+   "krUrl": "6d559ec06a670ebb6448dcaf5b38d9bf55d3bd4f3d557df396947ee2ec20a12e"
+  },
+  {
+   "id": 60,
+   "title": "必殺技・アクティブ",
+   "text": "まだ、分かってないのね…",
+   "unlockRequirement": "",
+   "cnUrl": "21ed45465aae510fd313d9a408b79594ea8eb61f8c5460be07ebf8e1cd048ace",
+   "jpUrl": "4cf219fb2a8f0de522a6ca27ac8d9835386f9fd0a27983fbf8f20b8a38765d42",
+   "enUrl": "95851d8a4da6902fad2f9e01487694f968637ec546b94c5dd4b05ce04a870ce5",
+   "krUrl": "fd1aeca9c0faece815735df53e428548ad93625b3783e2a4d0b01e7c8a6f63c9"
+  },
+  {
+   "id": 61,
+   "title": "必殺技・発動",
+   "text": "人間は星空を掌握する欲望を隠さない…もちろん、私もよ。",
+   "unlockRequirement": "",
+   "cnUrl": "92aaf036fb0daa9b1ee674902c234f8d4a61bdd0e202df1da88b0c9dde33dc0d",
+   "jpUrl": "00ab12aed75d1402e8b903340111da2b79a20133d87a9dd361ecfb0e01196bfa",
+   "enUrl": "32dea8cbda2a1e5c8f79cbd5a775019bf4137ee8829cd8c487ab2cca5d976229",
+   "krUrl": "39c0be34c16896e0f82ad0581124f924b41605d412ddffc8af31814450a59bf7"
+  },
+  {
+   "id": 62,
+   "title": "天賦",
+   "text": "逃がさないわ！",
+   "unlockRequirement": "",
+   "cnUrl": "3bbb48ad064f8ed0956a39136342029df84e01a2462f5ce390d5afae49a1c067",
+   "jpUrl": "23cd10947e05b74e79d2bca0fdb89550d91b1a4f17a980e626eb841a7c7f018f",
+   "enUrl": "9480fff620852a20ef9379c39ecc54e46a56b86b839384fd6e9d2bc82f83002a",
+   "krUrl": "f1cae28359e61bd6a352fb4a0bbd11aadf440e14e22fd94e07b3f895c34b5d7a"
+  },
+  {
+   "id": 63,
+   "title": "戦闘不能",
+   "text": "これからっ…と言うのに…",
+   "unlockRequirement": "",
+   "cnUrl": "1869fd6ab82f53c987721781c9e2099520ebc41b16098cd483137458c30628fd",
+   "jpUrl": "16ba6126580c857dabdaed729a386638ca4dd51eaeb10f93f2550fb5b0033f66",
+   "enUrl": "a3a56b7c673b9806036da1716f7140aa38a462fd8031555f010c387cc413243e",
+   "krUrl": "8d61ad33ce8759f3385b745da55dcd13bcecff69a72e89912657e272581fcc3a"
+  },
+  {
+   "id": 64,
+   "title": "戦闘に戻る",
+   "text": "私に会いたかった？",
+   "unlockRequirement": "",
+   "cnUrl": "30a7f57621b222996413a568308bbe89b9954cc1f415599e88adc6766f689d94",
+   "jpUrl": "49118e292925e5c91267ba0f30dcf4bd984e253e10e8c1bda13d5a3473ae8b2d",
+   "enUrl": "ee5723c401d4eb30e69f06a5004b14e0f4ddaa676a3676b493b8ef328a56122c",
+   "krUrl": "e659fa7d4ceadd346c55d54eac34d676ad654659405c3e60066978049d5afe28"
+  },
+  {
+   "id": 65,
+   "title": "HP回復",
+   "text": "ありがとう。",
+   "unlockRequirement": "",
+   "cnUrl": "e60c256e312ea10729f8880be37caae92727acbd33195fe84ed25237a88c65e6",
+   "jpUrl": "c21c9e2dd06c741638e5f40d5d8512c2455a1329a90b954a8453c262a0972174",
+   "enUrl": "f1c19f5134e629b5c6e55d740499d843e8d0617a82d2e1f6dda17ce63ef48bd6",
+   "krUrl": "cf6cea2b2bdba3b8efa560da4611a9b83212579510f098dc6e8a88cb915a016f"
+  },
+  {
+   "id": 66,
+   "title": "秘技",
+   "text": "燃やし尽くせ。",
+   "unlockRequirement": "",
+   "cnUrl": "309da14a84e6ecdc652d0a60efd35a2781a4726dd2b5cc31f5292b968d11ac4f",
+   "jpUrl": "dbc7d86e998527a50af657bd5bd3114b061ceb7cb0bcc353bd2fa4f0d74b7eba",
+   "enUrl": "6e1bb01ec2da2ff91cc0f22971ba47782c93054cb455061d901f2b354bbc6909",
+   "krUrl": "7151704328c24faf99d8017942a98fcd7610a098418ad15fe3731d1db8bc5f0d"
+  },
+  {
+   "id": 67,
+   "title": "戦闘勝利",
+   "text": "星々に一歩近づけたわね。",
+   "unlockRequirement": "",
+   "cnUrl": "be6d8ea407d871ec1d6d02b650f123e7b8a22779fa68e262e83c2571c1a2ce9f",
+   "jpUrl": "e6aff27bb13aba0a06ad11553ee0e35ceaf388f162d606bcd1cc7b3082532b63",
+   "enUrl": "ebb1524ac9986703fda89efe8c66715e432e12e8f8cb53069730a7abdbe16ee0",
+   "krUrl": "06360e2b5b5b7ba84d1034a1cc15cd70435bf5c2341ab43cdc2fd5f823fe66d0"
+  },
+  {
+   "id": 68,
+   "title": "戦利品を開ける・1",
+   "text": "これも「開拓」ゆえの収穫ね。",
+   "unlockRequirement": "",
+   "cnUrl": "f2e37d1d64e6ffc9ac0ead1270b747e392f464354b0088f75b403fc044f9a5f1",
+   "jpUrl": "b65e423bd024b740765f4c072022287aa0c72621702e1755af665a566b0fd6d8",
+   "enUrl": "a4623aec598e5fcd7bb9ca6ef8fa4d217478b610f8188ae0af16a8a5be9dcc0c",
+   "krUrl": "300c21ab48247ce8c572bd2fffc6eaa22a7654648c04591b110dc9e6e5594421"
+  },
+  {
+   "id": 72,
+   "title": "戦利品を開ける・2",
+   "text": "ふふ、いいわね。",
+   "unlockRequirement": "",
+   "cnUrl": "7431620a6cb14a1c24412eb092d09c4b7978f6c557e69ff876720bea14be40c4",
+   "jpUrl": "f46285e1315214ca22f169d799c779d5c69eaeb8450b703f7c62524010c5c9f9",
+   "enUrl": "26be7cf78c7dc0d6b2ec00c2e7c4f12dd351804864f49bc055b2531961be72f3",
+   "krUrl": "ed46cd68b8e55d5dcd6eda53fe5786efe031ba217b3e26bf230943a9531a8c4f"
+  },
+  {
+   "id": 73,
+   "title": "貴重な戦利品を開ける",
+   "text": "予想外の喜びね。",
+   "unlockRequirement": "",
+   "cnUrl": "8317036003c62572f2d98052d6492543510338ebaa59053bf028bbea8c606c2e",
+   "jpUrl": "e314a69e35cfe2296b5e2293c4899c9520aa02fab05c4d6d6e4e197c6f7715fa",
+   "enUrl": "3e04625500ff3acbf8bc10f75b154ba7c86cb682fb58acac5579a6125298b263",
+   "krUrl": "50f0c2aca8d1490c8bd8b4096c4f6618d8579848a808d3c062ca29b3664ff1cc"
+  },
+  {
+   "id": 69,
+   "title": "謎解きに成功・1",
+   "text": "やっぱり自分の手でやらなきゃね。",
+   "unlockRequirement": "",
+   "cnUrl": "514197f039cbdfcbcae76b3708073b7fb4ace90f1f02f5934e787797b3bd5bdf",
+   "jpUrl": "abea9b44da3fea0867f4d22d686541084c95afc6072c5d9abc47a2c216a672ee",
+   "enUrl": "2dbb5104b0e244ada01dd6d70f1e11a6e6d78901a52f8eb04050600b37d50848",
+   "krUrl": "d1b8a23d4bc2e942fcbc00f65423305e5833994a799a9557da1789ce72e46988"
+  },
+  {
+   "id": 74,
+   "title": "謎解きに成功・2",
+   "text": "どうやら、私の手助けは必要ないようね。",
+   "unlockRequirement": "",
+   "cnUrl": "705e4e1a1329af932bfc65c55e287d4f1956b4dcb5a1b025e55526943900e3a0",
+   "jpUrl": "011cb6dc341293f3525ceba1ca963c9c702fe3745d137508baaf142f24a34ffd",
+   "enUrl": "4a803d9bad2801c00e12ce167be53039ba9d38cbfcab7da97527d6210f3e30c9",
+   "krUrl": "9ea529bfe07c3d22f63f5fb6f555f2f6aee3c240abb6f00cefc4e5d19ceacee4"
+  },
+  {
+   "id": 70,
+   "title": "敵ターゲット発見",
+   "text": "あいつで練習する？",
+   "unlockRequirement": "",
+   "cnUrl": "2e5e0ab5f4075aaf8d10f60ecfa7ae9dc457336733a00c72a31235065e458cb4",
+   "jpUrl": "2a2f33ba22fc58d9ca27c6afd76769dfc67fc53b621cb4179a3244021b4f769b",
+   "enUrl": "3651f0bc6ff2335dfb733722393c35e90db102c8c5732773634c72c9dcfde15d",
+   "krUrl": "5873ffa98f6d0e90c314bef0ba4f548d41ba53076d9eda10f802a5de4b865d29"
+  },
+  {
+   "id": 71,
+   "title": "町に戻る",
+   "text": "コーヒーでもどう？",
+   "unlockRequirement": "",
+   "cnUrl": "243d6f725a7f1d7c5111f96c3401d3eecc95ec3fb331044b8642579bda4c55a3",
+   "jpUrl": "08e8bec387970f557876701b2d21de1caf0325c460c0c22f8ca516829fece634",
+   "enUrl": "332ff7309c788850be3dff11140955fdecc83f40bef072804a165171826b3bc3",
+   "krUrl": "1dbfdd15960384c24fb377f9252bbb9e30d927916d25cf81f83643db63916438"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "キャラクター詳細",
+   "text": "チャレンジ精神に溢れた科学者。彼女がまだ少女であった頃、故郷で座礁した星穹列車を発見した。<br />数年後、ついに列車の修理を終えた姫子は、それがただの始まりに過ぎないことに気付いた。新たな世界を「開拓」する旅路には、より多くの仲間が必要である——<br />たとえ同行者たちの目指す方向が違っていても、彼らは同じ星空の下にいる。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "ストーリー・1",
+   "text": "少女は道に迷っていた。<br /><br />彼女は自分がいつ方向を見失ったのかもわからないまま、ただひたすら歩き続ける。何度も何度も、倒れるまで闇夜の中を歩き続け、太陽と月を追い求めた。<br /><br />彼女は大学に入ったばかりの自分を思い出した。自分が選んだ学科——星間航行動力学。そして今、彼女は泥濘の道に横たわっている。<br /><br />星空を見上げると流れ星が見えた。1つ、2つ、3つ…そして無数の小さな星がチカチカと点滅したかと思うと、最後に壮麗な烈光が夜を引き裂いていく。<br /><br />彼女の四肢は体を引きずり、彼女を陸地の果てに導いた。そこは海の起点、海岸線。座礁した列車を打つように、潮水は彼女を押し進める、一人ぼっちで、道に迷ってしまった彼女を。<br /><br />彼女が列車に足を踏み入れると、舷窓の外の景色が変わり始めた。列車は色とりどりの景色を彼女に見せていく。それは故郷から遥か遠い場所でもあり、列車に乗れば辿り着ける場所でもあった。<br /><br />彼女は列車の修復を試みた。それは短い時間しか動かなかったが、彼女を乗せて故郷の空を横切るには十分だった。彼女は一目で帰り道を見つけた。上空から見れば、その道はあまりにも近い場所にある。故郷の海さえもちっぽけなものに思えた。<br /><br />列車は彼女に尋ねた、一緒に行くか？と。一体どのような旅になるのか、彼女は興味が湧いた。<br /><br />「それは始まりへ向かう旅」<br />「行くわ」少女は躊躇なく答えた。「私を家に連れ帰ってくれたように、今度は私があんたを家まで連れて行ってあげる」",
+   "unlockRequirement": "キャラLv.<nobr>20</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・2",
+   "text": "姫子はトランクを持っている。<br /><br />トランクは彼女の宝箱だ。以前は列車の修理に使う道具がぎっしり詰まっていて、彼女はそれを頼りに列車を修理した。現在は単分子チェーンソー、軌道を逸脱した衛星、そして様々な機巧が詰め込まれている。それぞれが彼女の奇想を具現化したものであり、彼女が歩み続けてきた証でもある。<br /><br />彼女のトランクほど忠実な旅の仲間はいない。列車の乗客はしばしば変わる。あの「車掌」でさえ、最後まで彼女と列車に同行できるとは限らない。<br /><br />しかし彼女は気にしない。あの気取った金髪の男が、別れも告げずに列車を降りたことを気にも留めなかったように――遠すぎる故郷や家族のことを気にも留めていないように。<br /><br />彼女はこの旅が孤独であることを知っている。たとえ旅の途中で志を同じくする仲間に出会ったとしても、たとえ旅の仲間から恩恵を受けたとしても、たとえ仲間と共にひとつの旅の終点を見届けられたとしても——それは彼女にとって単なる僥倖に過ぎない。<br /><br />彼女はこの旅が孤独であることを知っている。如何なる者も、他人と同じ軌跡を辿ることはできない。如何なる者も、他人の代わりに旅路の風景を見ることはできない。彼女が頼れるのは、自分の両目と両足だけ。<br /><br />そして彼女は、その目で見たすべての景色と、その足で残したすべての足跡を、自分のトランクに収めるのだ。",
+   "unlockRequirement": "キャラLv.<nobr>40</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・3",
+   "text": "姫子は記憶力がいい。<br /><br />旅が長くなり、仲間が増えても、彼女は常に多くの物事を覚えている。<br /><br />彼女は覚えている。パムと気ままにおしゃべりした時間も、列車の最初の乗客がヴェルトと彼の金髪の仲間だったことも。寡黙な丹恒が星を吞む巨獣を一撃で退けた姿も、明るい三月なのかが氷の中から目覚めた時のことも。三月なのかのためにデザインした服も、彼女の最愛も。そして、宇宙ステーション「ヘルタ」で開拓者に出会い、また新たな旅に出たことも。<br /><br />彼女は覚えている。列車のあらゆる部品の仕様も、それらをどのように接続するのかも。列車のベアリングに潤滑油を供給する周期も、列車の植物に水やりをする時間と頻度も。パムには決して越えてはならない一線があることも、ヴェルトには少し子供っぽい趣味があることも。丹恒が夜通しアーカイブを整理していることも、三月なのかは寝坊が大好きだということも。列車組全員の性格、習慣、趣味、誕生日、そして他の記念日も。<br /><br />もし彼らが列車に乗って自分の終点に辿り着くことができれば、姫子にとってそれ以上に喜ばしいことはない。<br /><br />「旅には必ず終わりがある。その時が来たら、きっと笑ってみんなに別れを告げるわ」<br /><br />いつもそう言っている姫子だが、彼女は決して忘れないだろう。<br /><br />その記憶が彼女の歩んできた道を織り成し、やがて起点となった海に戻ることを。",
+   "unlockRequirement": "キャラLv.<nobr>60</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・4",
+   "text": "「本当に長い旅ね」彼女は言った。<br /><br />「僕はずっと待っていた。とても、とても長い時間を」█████は彼女のほうを向いた。「君をこの道に導いたのは不運ではなく、探求欲と好奇心だ」<br /><br />「その通りよ」彼女は笑った。「でも、私の経験はあなたに遠く及ばないわ」<br /><br />「そうでもないよ。僕は君が経験したすべてを経験していない」█████は首を横に振る。「歩む足の数だけ旅路があるんだ」<br /><br />「今この瞬間、僕たちは同じ場所に立っているけれど、見るものや考えることには違いがある」<br /><br />彼らは静かに星空を見上げた。すると、流れ星が1つ、2つ、3つと横切っていく…やがて、無数の小さな星がチカチカと点滅したかと思うと、最後に壮麗な烈光が夜を引き裂いた。<br /><br />静かな声が再び空気を震えさせる。「君には何が見えた？」<br /><br />「星々が旅の終わりを迎えたわ」彼女は答えた。<br /><br />█████は笑う。「でも僕から見れば、彼らの旅はまだ始まったばかりだ」<br /><br />彼らは黙り込んだ。<br /><br />「そろそろ帰りましょう。彼らがまだ待ってるわ」<br /><br />█████は沈黙する。そして口を開いた。「今までの旅は、幸せだったと思うかい？」<br /><br />彼女はトランクを持ち上げ、振り返ることなく列車へと歩き出した。<br /><br />「いつも通りよ」",
+   "unlockRequirement": "キャラLv.<nobr>80</nobr>で解放"
+  }
+ ],
+ "archive": {
+  "cvCn": "林簌",
+  "cvJp": "田中理恵",
+  "cvKr": "김보나",
+  "cvEn": "Cia Court",
+  "camp": "星穹列車"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328
+ },
+ "name": "姫子",
+ "rarity": 5,
+ "descHash": "星穹列車の修復者。 広い星空を見るため、星穹列車に乗ることを決めた。 趣味は自分で豆を挽いてコーヒーを淹れること。",
+ "artPath": "8a256606dc6889f7ecd4dc5fb7d3c5f36b363fea319b877c7cc9b951d60921d8",
+ "miniIconPath": "f40907e56e3f64bf9ebe0bc58d541deedc68f36cde45e44e49bdbd3115f7deff",
+ "damageType": {
+  "id": 2,
+  "iconPath": "3db4afd1325bfbc8556d408d0a891e86c7aa6c578b5930e059ac9289401312ca",
+  "color": "#F84F36",
+  "name": "炎",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "666728a6ff62e1312e1a1fc35ef8beb21f55310b14a5b76c94fbbdcaf2cb9a89",
+  "altIconPath": "e96af62e75a86b9636b568d3aacf3a12916f164383a76d4491d09ff1db87fe9e",
+  "color": "#FFFFFF",
+  "name": "知恵",
+  "rarity": 0
+ },
+ "pageId": "himeko"
+}
