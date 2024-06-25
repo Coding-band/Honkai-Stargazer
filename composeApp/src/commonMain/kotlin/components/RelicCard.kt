@@ -33,10 +33,10 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.Constants.Companion.getCardBgColorByRare
 import types.Relic
+import utils.FontSizeNormal12
 import utils.TextColorNormalDim
 import utils.UtilTools
 
@@ -113,7 +113,7 @@ fun RelicCard(
                     text = displayName!!,
                     textAlign = TextAlign.Center,
                     color = TextColorNormalDim,
-                    fontSize = 12.sp,
+                    fontSize = FontSizeNormal12().fontSize,
                     maxLines = 2
                 )
             }

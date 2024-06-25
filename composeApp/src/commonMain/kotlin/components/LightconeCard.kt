@@ -39,12 +39,12 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.Constants.Companion.getCardBgColorByRare
 import types.Lightcone
 import types.Path
+import utils.FontSizeNormal12
 import utils.TextColorNormalDim
 import utils.UtilTools
 
@@ -119,7 +119,7 @@ fun LightconeCard(
                     text = displayName!!,
                     textAlign = TextAlign.Center,
                     color = TextColorNormalDim,
-                    fontSize = 12.sp,
+                    fontSize = FontSizeNormal12().fontSize,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )

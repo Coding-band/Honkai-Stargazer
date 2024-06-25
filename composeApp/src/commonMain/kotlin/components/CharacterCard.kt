@@ -39,13 +39,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.Character
 import types.CombatType
 import types.Constants.Companion.getCardBgColorByRare
 import types.Path
+import utils.FontSizeNormal12
 import utils.TextColorNormalDim
 import utils.UtilTools
 
@@ -88,6 +88,7 @@ fun CharacterCard(
         //val path = LocalContext.current.assets.open("images/character_icon/${Character.getCharacterImageNameByRegistName(character.registName!!)}.webp")
         //val painter = rememberAsyncImagePainter(model = path)
         Column(modifier = Modifier.fillMaxSize()) {
+
             Image(
                 bitmap = Character.getCharacterImageFromJSON(
                     UtilTools.ImageFolderType.CHAR_ICON,
@@ -110,8 +111,9 @@ fun CharacterCard(
                 Text(
                     text = displayName!!,
                     textAlign = TextAlign.Center,
+                    modifier = Modifier.align(Alignment.CenterVertically),
                     color = TextColorNormalDim,
-                    fontSize = 12.sp,
+                    fontSize = FontSizeNormal12().fontSize,
                     maxLines = 1
                 )
             }

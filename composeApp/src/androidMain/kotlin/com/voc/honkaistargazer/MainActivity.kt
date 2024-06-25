@@ -1,6 +1,7 @@
 package com.voc.honkaistargazer
 
 import App
+import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.SystemBarStyle
@@ -27,7 +28,21 @@ class MainActivity : ComponentActivity() {
             )
         )
     }
+
+    /**
+     * Prevent Android Text Scaling
+     */
+    override fun attachBaseContext(newBase: Context) {
+        val newOverride = newBase.createConfigurationContext(newBase.resources.configuration.apply {
+            fontScale = 1f
+        })
+        super.attachBaseContext(newOverride)
+    }
+
+
+
 }
+
 
 @Preview
 @Composable

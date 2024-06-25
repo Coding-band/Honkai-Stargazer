@@ -42,7 +42,6 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.layoutId
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -111,7 +110,7 @@ fun HomePageHeader(modifier: Modifier = Modifier, navController: NavController) 
                 text = "900033852",
                 modifier = Modifier
                     .background(BlackAlpha30, CircleShape)
-                    .padding(all = 10.dp)
+                    .padding(all = 8.dp)
                     .wrapContentSize(),
                 color = TextColorNormal,
                 style = FontSizeNormal(),
@@ -183,7 +182,7 @@ fun HomePageHeader(modifier: Modifier = Modifier, navController: NavController) 
                             text = "開拓等級 58",
                             color = TextColorLevel,
                             style = FontSizeNormal(),
-                            fontWeight = FontWeight.Bold
+                            //fontWeight = FontWeight.Bold
                         )
                     }
                 }

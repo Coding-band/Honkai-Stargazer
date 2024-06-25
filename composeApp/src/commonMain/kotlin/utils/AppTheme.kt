@@ -6,11 +6,9 @@ import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
 import files.Res
 import files.misans_regular
@@ -86,33 +84,29 @@ fun AppTypography() = androidx.compose.material.Typography(
 fun FontSizeNormalSmall() = TextStyle(
     fontFamily = AppFont(),
     fontWeight = FontWeight.Medium,
-    fontSize = 10.scaledSp()
+    fontSize = 10.sp
+)
+@Composable
+fun FontSizeNormal12() = TextStyle(
+    fontFamily = AppFont(),
+    fontWeight = FontWeight.Medium,
+    fontSize = 12.sp
 )
 @Composable
 fun FontSizeNormal() = TextStyle(
     fontFamily = AppFont(),
     fontWeight = FontWeight.Medium,
-    fontSize = 14.scaledSp()
+    fontSize = 14.sp
 )
 @Composable
 fun FontSizeNormal16() = TextStyle(
     fontFamily = AppFont(),
     fontWeight = FontWeight.Medium,
-    fontSize = 16.scaledSp()
+    fontSize = 16.sp
 )
 @Composable
 fun FontSizeNormalLarge() = TextStyle(
     fontFamily = AppFont(),
     fontWeight = FontWeight.Medium,
-    fontSize = 24.scaledSp(),
+    fontSize = 24.sp
 )
-
-@Composable
-fun Int.scaledSp(): TextUnit {
-    val value: Int = this
-    return with(LocalDensity.current) {
-        val fontScale = this.fontScale
-        val textSize = value / fontScale
-        textSize.sp
-    }
-}
