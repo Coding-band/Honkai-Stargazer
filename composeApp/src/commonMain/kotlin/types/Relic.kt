@@ -11,7 +11,7 @@ import kotlinx.serialization.json.JsonElement
 import utils.UtilTools
 
 
-class Relic(
+open class Relic(
     var officialId : Int? = 21018,
     var registName : String? = "Dance! Dance! Dance!",
     var fileName : String? = "21018",

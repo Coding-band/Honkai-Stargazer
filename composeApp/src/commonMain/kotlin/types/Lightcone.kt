@@ -11,7 +11,7 @@ import kotlinx.serialization.json.JsonElement
 import utils.UtilTools
 
 
-class Lightcone(
+open class Lightcone(
     var officialId : Int? = 21018,
     var registName : String? = "Dance! Dance! Dance!",
     var fileName : String? = "21018",

@@ -12,7 +12,7 @@ import utils.UtilTools
 
 
 
-class Character(
+open class Character(
     var officialId : Int? = 1006,
     var registName : String? = "Silver Wolf",
     var fileName : String? = "silverwolf",
@@ -30,14 +30,14 @@ class Character(
             return UtilTools().getAssetsJsonByFilePath("character_data/character_list.json")
         }
 
-        fun getCharacterDataFromJSON(characterFileName : String, textLanguage: UtilTools.TextLanguage) : JsonElement {
+        fun getCharacterDataFromFileName(characterFileName : String, textLanguage: UtilTools.TextLanguage) : JsonElement {
             return UtilTools().getAssetsJsonByFilePath("character_data/${textLanguage.folderName}/${characterFileName}.json")
         }
 
         /**
          * composeResources/files/files/images/character_icon/jade_icon.webp
          */
-        fun getCharacterImageFromJSON(imageFolderType: UtilTools.ImageFolderType, characterName : String) : ImageBitmap {
+        fun getCharacterImageFromFileName(imageFolderType: UtilTools.ImageFolderType, characterName : String) : ImageBitmap {
             return UtilTools().getAssetsWebpByFileName(imageFolderType, UtilTools().getImageNameByRegistName(characterName))
         }
     }
