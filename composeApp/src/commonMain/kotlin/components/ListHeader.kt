@@ -62,7 +62,8 @@ enum class BackIcon(var res: DrawableResource) {
 class HeaderData(
     var title: String? = null,
     var titleRId: StringResource? = null,
-    var titleIconId: DrawableResource = Res.drawable.phorphos_sun_fill
+    var titleIconId: DrawableResource = Res.drawable.phorphos_sun_fill,
+    var otherData : Any? = null
 )
 
 @Composable

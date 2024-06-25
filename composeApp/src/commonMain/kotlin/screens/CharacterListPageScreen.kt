@@ -55,7 +55,7 @@ fun CharacterListPage(
     val charListJSON: JsonArray = Character.getCharacterListFromJSON() as JsonArray
     val charNameList: ArrayList<String> = arrayListOf()
     charListJSON.forEach { jsonElement ->
-        val localeName : String? = Character.getCharacterDataFromJSON(
+        val localeName : String? = Character.getCharacterDataFromFileName(
             jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!, UtilTools.TextLanguage.ZH_HK
         ).jsonObject["name"]?.jsonPrimitive?.content
 

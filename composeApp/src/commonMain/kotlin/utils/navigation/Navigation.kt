@@ -23,10 +23,12 @@ import files.CharacterList
 import files.LightconeList
 import files.RelicList
 import files.Res
+import files.europe
 import files.phorphos_baseball_cap_fill
 import files.phorphos_house_fill
 import files.phorphos_person_fill
 import files.phorphos_sword_fill
+import screens.CharacterInfoPage
 import screens.CharacterListPage
 import screens.HomePage
 import screens.MakeBackground
@@ -36,6 +38,7 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     object CharacterListPage  : Screen("CharacterListPage",HeaderData(titleRId = Res.string.CharacterList, titleIconId = Res.drawable.phorphos_person_fill))
     object LightconeListPage  : Screen("LightconeListPage",HeaderData(titleRId = Res.string.LightconeList, titleIconId = Res.drawable.phorphos_sword_fill))
     object RelicListPage  : Screen("RelicListPage",HeaderData(titleRId = Res.string.RelicList, titleIconId = Res.drawable.phorphos_baseball_cap_fill))
+    object CharacterInfoPage  : Screen("CharacterInfoPage",HeaderData(titleRId = Res.string.europe, titleIconId = Res.drawable.phorphos_person_fill))
 }
 @Composable
 fun Navigation(){
@@ -53,6 +56,9 @@ fun Navigation(){
         }
         composable(route = Screen.RelicListPage.route, enterTransition = { EnterTransition.None} , exitTransition = { ExitTransition.None }){
             RootContent(screen = Screen.RelicListPage, navController = navController, page = { RelicListPage(navController = navController, headerData = Screen.RelicListPage.headerData) })
+        }
+        composable(route = Screen.CharacterInfoPage.route, enterTransition = { EnterTransition.None} , exitTransition = { ExitTransition.None }){
+            RootContent(screen = Screen.CharacterInfoPage, navController = navController, page = { CharacterInfoPage(navController = navController, headerData = Screen.CharacterInfoPage.headerData) })
         }
 
     }
