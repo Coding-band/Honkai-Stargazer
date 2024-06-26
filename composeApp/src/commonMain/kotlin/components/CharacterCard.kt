@@ -61,6 +61,8 @@ fun CharacterCard(
     ascensionPhase: Int? = -1, //Rank 突破等級
     displayName: String? = "?",
     isMultiDisplay: Boolean? = false, //展示推薦隊伍
+    onClick: () -> Unit = {}, //按下後會做甚麼
+
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     Box(
@@ -80,7 +82,7 @@ fun CharacterCard(
                 )
             )
             .clickable(
-                onClick = { /* Ignoring onClick */ },
+                onClick = onClick,
                 indication = rememberRipple(),
                 interactionSource = interactionSource
             )
@@ -90,7 +92,7 @@ fun CharacterCard(
         Column(modifier = Modifier.fillMaxSize()) {
 
             Image(
-                bitmap = Character.getCharacterImageFromJSON(
+                bitmap = Character.getCharacterImageFromFileName(
                     UtilTools.ImageFolderType.CHAR_ICON,
                     character.registName!!
                 ),

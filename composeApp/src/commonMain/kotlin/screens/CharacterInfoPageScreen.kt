@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import components.HeaderData
 import components.defaultHeaderData
@@ -21,30 +22,37 @@ import utils.UtilTools
 fun CharacterInfoPage(
     modifier: Modifier = Modifier,
     navController: NavController,
-    headerData: HeaderData = defaultHeaderData
+    headerData: HeaderData = defaultHeaderData,
+    backStackEntry : NavBackStackEntry? = null,
 ) {
-    var character = headerData.otherData as Character
-    if (character.fileName === null) return;
+    val characterFileName = backStackEntry!!.arguments?.getString("fileName")
+    val characterName = backStackEntry!!.arguments?.getString("charName")
+
+    if (characterFileName === null || characterName === null) return;
 
     val hazeState = remember { HazeState() }
     val textLanguage = UtilTools.TextLanguage.ZH_HK //Later edit
-    val charInfoJson = Character.getCharacterDataFromFileName(character.fileName!!, textLanguage)
+    val charInfoJson = Character.getCharacterDataFromFileName(characterFileName, textLanguage)
 
     Box{
-        CharacterInfoFullImgWithRare(character = character)
+        CharacterInfoFullImgWithRare(fileName = characterName)
     }
 }
 
 @Composable
 fun CharacterInfoFullImgWithRare(
     modifier: Modifier = Modifier,
-    character: Character
+    fileName: String
 ) {
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
+
             bitmap = Character.getCharacterImageFromFileName(
                 UtilTools.ImageFolderType.CHAR_FULL,
-                character.fileName!!
+                fileName
+                    .replace("_imaginary","")
+                    .replace("_fire","")
+                    .replace("_physical","")
             ),
             contentDescription = "Character Full Image",
             modifier = Modifier

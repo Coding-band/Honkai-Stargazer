@@ -63,7 +63,7 @@ class HeaderData(
     var title: String? = null,
     var titleRId: StringResource? = null,
     var titleIconId: DrawableResource = Res.drawable.phorphos_sun_fill,
-    var otherData : Any? = null
+    var otherData : Any? = null //But seem unable to use...
 )
 
 @Composable

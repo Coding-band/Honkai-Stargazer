@@ -159,8 +159,10 @@ fun HomePageBlock2x1(
         colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent),
         onClick = {
             if (blockData.itemOnClickToNavigate !== null) {
-                //navController.navigate(NavigateController.NavPath.HomePage.name)
+                println("Ok I'm Navigating to " + blockData.itemOnClickToNavigate)
+                navController.navigate(blockData.itemOnClickToNavigate!!.route)
             } else {
+                println("Ok I'm OnClick la")
                 blockData.itemOnClickAction;
             }
         },

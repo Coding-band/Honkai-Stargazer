@@ -114,7 +114,16 @@ fun CharacterListPage(
                         rarity = charListItem.jsonObject["rare"]?.jsonPrimitive?.int!!,
                         path = Path.valueOf(charListItem.jsonObject["path"]?.jsonPrimitive?.content!!),
                     ),
-                    displayName = charNameList[index]
+                    displayName = charNameList[index],
+                    onClick = {
+                        val charName = charListItem.jsonObject["name"]?.jsonPrimitive?.content!!;
+                        val fileName = charListItem.jsonObject["fileName"]?.jsonPrimitive?.content!!;
+                        navController.navigate(
+                            Screen.CharacterInfoPage.route
+                                  + "/${charName}"
+                                  + "/${fileName}"
+                        )
+                    }
                 )
             }
             item(span = { GridItemSpan(maxLineSpan) }) {

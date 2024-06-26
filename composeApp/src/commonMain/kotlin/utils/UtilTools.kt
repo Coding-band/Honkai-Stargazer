@@ -118,6 +118,7 @@ class UtilTools {
     }
 
 
+    @VersionUpdateCheck
     fun getImageNameByRegistName(registName: String) : String {
         return registName
             .replace("Trailblazer Boy (Physical)","trailblazer_physical_male")
@@ -131,6 +132,8 @@ class UtilTools {
             .replace("Void","Void_")
 
             .lowercase()
+
+            .replace("sam",if (registName.lowercase() === "sam") "firefly" else "sam")
 
             .replace("(","")
             .replace(")","")
