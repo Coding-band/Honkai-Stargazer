@@ -1,5 +1,6 @@
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.unit.Dp
 
 /**
  * This is the declaration kt file for specific-platform function
@@ -16,3 +17,9 @@ expect fun getImageBitmapByByteArray(byteArray: ByteArray): ImageBitmap;
 
 @Composable
 expect fun getIsLandscape(): Boolean;
+
+/** Getting screen size info for UI-related calculations */
+data class ScreenSizeInfo(val hPX: Int, val wPX: Int, val hDP: Dp, val wDP: Dp)
+
+@Composable
+expect fun getScreenSizeInfo(): ScreenSizeInfo

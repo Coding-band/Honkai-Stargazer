@@ -106,6 +106,5 @@ fun LightconeListPage(modifier: Modifier = Modifier, navController: NavControlle
 fun LightconeListPagePreview() {
     RootContent(
         screen = Screen.LightconeListPage,
-        navController = rememberNavController(),
         page = {LightconeListPage(navController = rememberNavController()) })
 }

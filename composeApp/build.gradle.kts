@@ -91,7 +91,6 @@ android {
     }
     dependencies {
         debugImplementation(compose.uiTooling)
-        debugImplementation(compose.components.uiToolingPreview)
     }
 }
 dependencies {

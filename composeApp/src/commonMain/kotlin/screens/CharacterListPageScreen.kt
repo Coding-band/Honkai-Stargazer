@@ -143,7 +143,6 @@ fun CharacterListPage(
 fun CharacterListPagePreview() {
     RootContent(
         screen = Screen.CharacterListPage,
-        navController = rememberNavController(),
         page = {
             CharacterListPage(
                 headerData = Screen.CharacterListPage.headerData,

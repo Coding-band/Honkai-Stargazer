@@ -11,7 +11,6 @@ import androidx.compose.animation.ExitTransition
 import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -34,9 +33,11 @@ import screens.CharacterInfoPage
 import screens.CharacterListPage
 import screens.HomePage
 import screens.MakeBackground
+import screens.SplashPage
 
 sealed class Screen(val route: String, val headerData: HeaderData = defaultHeaderData){
-    object HomePage : Screen("HomeScreen" , HeaderData(titleIconId = Res.drawable.phorphos_house_fill))
+    object SplashPage : Screen("SplashPage" , HeaderData(titleIconId = Res.drawable.phorphos_house_fill))
+    object HomePage : Screen("HomePage" , HeaderData(titleIconId = Res.drawable.phorphos_house_fill))
     object CharacterListPage  : Screen("CharacterListPage",HeaderData(titleRId = Res.string.CharacterList, titleIconId = Res.drawable.phorphos_person_fill))
     object LightconeListPage  : Screen("LightconeListPage",HeaderData(titleRId = Res.string.LightconeList, titleIconId = Res.drawable.phorphos_sword_fill))
     object RelicListPage  : Screen("RelicListPage",HeaderData(titleRId = Res.string.RelicList, titleIconId = Res.drawable.phorphos_baseball_cap_fill))
@@ -49,32 +50,35 @@ fun Navigation(){
     //val defaultExitTransition = ExitTransition.None
     val defaultEnterTransition = EnterTransition.None
     val defaultExitTransition = ExitTransition.None
-    NavHost(navController = navController, startDestination = Screen.HomePage.route){
+    NavHost(navController = navController, startDestination = Screen.SplashPage.route){
+        composable(route = Screen.SplashPage.route, enterTransition = { defaultEnterTransition} , exitTransition = { defaultExitTransition }){
+            SplashPage(navController = navController, headerData = Screen.HomePage.headerData)
+        }
         composable(route = Screen.HomePage.route, enterTransition = { defaultEnterTransition} , exitTransition = { defaultExitTransition }){
-            RootContent(screen = Screen.HomePage, navController = navController, page = { HomePage(navController = navController, headerData = Screen.HomePage.headerData) })
+            RootContent(screen = Screen.HomePage, page = { HomePage(navController = navController, headerData = Screen.HomePage.headerData) })
         }
         composable(route = Screen.CharacterListPage.route, enterTransition = { defaultEnterTransition} , exitTransition = { defaultExitTransition }){
-            RootContent(screen = Screen.CharacterListPage, navController = navController, page = { CharacterListPage(navController = navController, headerData = Screen.CharacterListPage.headerData) })
+            RootContent(screen = Screen.CharacterListPage, page = { CharacterListPage(navController = navController, headerData = Screen.CharacterListPage.headerData) })
         }
         composable(route = Screen.LightconeListPage.route, enterTransition = { defaultEnterTransition} , exitTransition = { defaultExitTransition }){
-            RootContent(screen = Screen.LightconeListPage, navController = navController, page = { LightconeListPage(navController = navController, headerData = Screen.LightconeListPage.headerData) })
+            RootContent(screen = Screen.LightconeListPage, page = { LightconeListPage(navController = navController, headerData = Screen.LightconeListPage.headerData) })
         }
         composable(route = Screen.RelicListPage.route, enterTransition = { defaultEnterTransition} , exitTransition = { defaultExitTransition }){
-            RootContent(screen = Screen.RelicListPage, navController = navController, page = { RelicListPage(navController = navController, headerData = Screen.RelicListPage.headerData) })
+            RootContent(screen = Screen.RelicListPage, page = { RelicListPage(navController = navController, headerData = Screen.RelicListPage.headerData) })
         }
         composable(
             route = "${Screen.CharacterInfoPage.route}/{charName}/{fileName}",
             arguments = listOf((navArgument("fileName") {type = NavType.StringType}), (navArgument("charName") {type = NavType.StringType})),
             enterTransition = { defaultEnterTransition} , exitTransition = { defaultExitTransition }
         ){backStackEntry ->
-            RootContent(screen = Screen.CharacterInfoPage, navController = navController, page = { CharacterInfoPage(navController = navController, headerData = Screen.CharacterInfoPage.headerData, backStackEntry = backStackEntry) })
+            RootContent(screen = Screen.CharacterInfoPage, page = { CharacterInfoPage(navController = navController, headerData = Screen.CharacterInfoPage.headerData, backStackEntry = backStackEntry) })
         }
 
     }
 }
 
 @Composable
-fun RootContent(screen : Screen, modifier: Modifier = Modifier, navController: NavController, page : @Composable () -> Unit){
+fun RootContent(screen : Screen, modifier: Modifier = Modifier, page : @Composable () -> Unit){
     Box{
         MakeBackground(screen = screen)
         //Landscape can do ... ?

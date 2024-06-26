@@ -105,6 +105,5 @@ fun RelicListPage(modifier: Modifier = Modifier, navController: NavController, h
 fun RelicListPagePreview() {
     RootContent(
         screen = Screen.LightconeListPage,
-        navController = rememberNavController(),
         page = {RelicListPage(navController = rememberNavController()) })
 }

@@ -1,6 +1,9 @@
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.toComposeImageBitmap
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalWindowInfo
 import org.jetbrains.skia.Image
 import platform.UIKit.UIDevice
 import platform.UIKit.UIInterfaceOrientation
@@ -22,4 +25,19 @@ actual fun getIsLandscape(): Boolean {
     val orientation = UIDevice.currentDevice.orientation.value
     return orientation == UIInterfaceOrientationLandscapeLeft || orientation == UIInterfaceOrientationLandscapeRight
 
+}
+
+@OptIn(ExperimentalComposeUiApi::class)
+@Composable
+actual fun getScreenSizeInfo(): ScreenSizeInfo {
+    val density = LocalDensity.current
+    val config = LocalWindowInfo.current.containerSize
+
+
+    return ScreenSizeInfo(
+        hPX = config.height,
+        wPX = config.width,
+        hDP = with(density) { config.height.toDp() },
+        wDP = with(density) { config.width.toDp() }
+    )
 }

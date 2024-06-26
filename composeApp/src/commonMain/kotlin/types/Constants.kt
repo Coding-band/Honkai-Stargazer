@@ -49,6 +49,9 @@ class Constants {
         val CARD_BG_COLOR_RARE_5 = listOf(Color(0xFF905A52), Color(0xFFC8A471))
         val CARD_BG_COLOR_RARE_UNKNOWN = listOf(Color(0xFF905273), Color(0xFF71B8C8))
 
+        val SPLASH_PAGE_DISPLAY_MILLSEC_DEFAULT = 1500L
+        val SPLASH_PAGE_DISPLAY_MILLSEC_ADS = 5000L
+
         fun getCardBgColorByRare(rare: Int): List<Color> {
             when (rare) {
                 1 -> return CARD_BG_COLOR_RARE_1
