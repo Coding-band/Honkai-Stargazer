@@ -51,7 +51,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import utils.FontSizeNormal
 import utils.TextColorNormal
 
-val LISTHEADER_HEIGHT = 64.dp
+val PAGE_HEADER_HEIGHT = 64.dp
 val defaultHeaderData = HeaderData(title = "?", titleIconId = Res.drawable.phorphos_sun_fill)
 
 enum class BackIcon(var res: DrawableResource) {
@@ -67,7 +67,7 @@ class HeaderData(
 )
 
 @Composable
-fun ListHeader(
+fun PageHeader(
     navController: NavController = rememberNavController(),
     onBack: ((navController: NavController) -> Unit) = { navController: NavController -> navController.popBackStack() },
     backIconId: BackIcon = BackIcon.BACK,
@@ -86,7 +86,7 @@ fun ListHeader(
             .background(Color(0x66FFFFFF))
             //.clippedShadow(elevation = 2.dp)
             .statusBarsPadding()
-            .requiredHeight(LISTHEADER_HEIGHT)
+            .requiredHeight(PAGE_HEADER_HEIGHT)
 
     ) {
         //BlurView can place in there
@@ -189,6 +189,6 @@ fun ListHeader(
 
 @Preview()
 @Composable
-fun ListHeaderPreview() {
-    ListHeader(rememberNavController())
+fun PageHeaderPreview() {
+    PageHeader(rememberNavController())
 }

@@ -2,19 +2,20 @@ package screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material.SnackbarHostState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.layout.ContentScale
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import components.HeaderData
+import components.PageHeader
 import components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import kotlinx.coroutines.CoroutineScope
@@ -44,6 +45,7 @@ fun CharacterInfoPage(
     localSnackbarHostState = snackbarHostState!!;
 
     Box{
+        PageHeader()
         CharacterInfoFullImgWithRare(fileName = characterName)
     }
 }
@@ -63,9 +65,11 @@ fun CharacterInfoFullImgWithRare(
             contentDescription = "Character Full Image",
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(start = 16.dp, end = 16.dp)
+                .fillMaxHeight(0.8f)
                 .align(Alignment.BottomCenter)
             ,
+            contentScale = ContentScale.Fit,
+
         )
     }
 }

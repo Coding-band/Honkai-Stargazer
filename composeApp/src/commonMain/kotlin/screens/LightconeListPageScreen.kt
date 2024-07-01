@@ -27,8 +27,8 @@ import com.voc.honkai_stargazer.component.CHAR_CARD_WIDTH
 import com.voc.honkai_stargazer.component.LightconeCard
 import components.BackIcon
 import components.HeaderData
-import components.LISTHEADER_HEIGHT
-import components.ListHeader
+import components.PAGE_HEADER_HEIGHT
+import components.PageHeader
 import components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
@@ -74,7 +74,7 @@ fun LightconeListPage(modifier: Modifier = Modifier, navController: NavControlle
                 Spacer(
                     modifier = Modifier
                         .statusBarsPadding()
-                        .height(LISTHEADER_HEIGHT)
+                        .height(PAGE_HEADER_HEIGHT)
                 )
             }
             items(count = lcListJSON.size) { index ->
@@ -97,7 +97,7 @@ fun LightconeListPage(modifier: Modifier = Modifier, navController: NavControlle
                 )
             }
         }
-        ListHeader(navController = navController, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.CANCEL)
+        PageHeader(navController = navController, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.CANCEL)
     }
 }
 
