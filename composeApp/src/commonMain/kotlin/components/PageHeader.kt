@@ -63,7 +63,7 @@ class HeaderData(
     var title: String? = null,
     var titleRId: StringResource? = null,
     var titleIconId: DrawableResource = Res.drawable.phorphos_sun_fill,
-    var otherData : Any? = null //But seem unable to use...
+    var otherData: Any? = null //But seem unable to use...
 )
 
 @Composable
@@ -83,10 +83,12 @@ fun PageHeader(
                 state = hazeState!!,
                 style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE)
             )
+            //.shadow(8.dp)
             .background(Color(0x66FFFFFF))
             //.clippedShadow(elevation = 2.dp)
             .statusBarsPadding()
             .requiredHeight(PAGE_HEADER_HEIGHT)
+
 
     ) {
         //BlurView can place in there
@@ -143,10 +145,11 @@ fun PageHeader(
                             text =
                             if (headerData.title === null) {
                                 if (headerData.titleRId === null)
-                                    stringResource(Res.string.AppStatusLostConnect).removePrefix("\"").removeSuffix("\"")
-                                else (stringResource((headerData.titleRId!!)).removePrefix("\"").removeSuffix("\""))
-                            }
-                            else headerData.title!!,
+                                    stringResource(Res.string.AppStatusLostConnect).removePrefix("\"")
+                                        .removeSuffix("\"")
+                                else (stringResource((headerData.titleRId!!)).removePrefix("\"")
+                                    .removeSuffix("\""))
+                            } else headerData.title!!,
                             color = TextColorNormal,
                             style = FontSizeNormal(),
                             modifier = Modifier.padding(start = 12.dp, end = 12.dp)
@@ -186,6 +189,7 @@ fun PageHeader(
 
     }
 }
+
 
 @Preview()
 @Composable
