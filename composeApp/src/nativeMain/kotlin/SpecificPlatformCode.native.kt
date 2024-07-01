@@ -41,3 +41,14 @@ actual fun getScreenSizeInfo(): ScreenSizeInfo {
         wDP = with(density) { config.width.toDp() }
     )
 }
+
+@Composable
+actual fun getAppDataDir(): String {
+    val fileManager = NSFileManager.defaultManager()
+    val urls = fileManager.URLsForDirectory(NSApplicationSupportDirectory, NSUserDomainMask)
+    val appSupportDir = urls.lastObject() as NSURL
+    return appSupportDir.path ?: throw IllegalStateException("Could not get the path for app support directory")
+}
+
+actual fun getTimeStamp(): Long = NSDate().timeIntervalSince1970.toLong() * 1000
+actual fun getDeviceName(): String = UIDevice.currentDevice.systemName() + " " + UIDevice.currentDevice.systemVersion

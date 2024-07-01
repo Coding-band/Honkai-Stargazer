@@ -1,9 +1,11 @@
 import android.content.res.Configuration
 import android.graphics.BitmapFactory
+import android.os.Build
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 
@@ -11,6 +13,8 @@ import androidx.compose.ui.unit.dp
  * This is the declaration kt file for specific-platform function
  * THIS IS ANDROID-MAIN, so ONLY ACTUAL
  */
+
+
 
 actual fun getImageBitmapByByteArray(byteArray: ByteArray): ImageBitmap {
     return BitmapFactory.decodeByteArray(byteArray,0,byteArray.size).asImageBitmap();
@@ -36,3 +40,11 @@ actual fun getScreenSizeInfo(): ScreenSizeInfo {
         wDP = wDp
     )
 }
+
+@Composable
+actual fun getAppDataDir(): String {
+    return LocalContext.current.filesDir.absolutePath
+}
+
+actual fun getTimeStamp(): Long = System.currentTimeMillis()
+actual fun getDeviceName(): String = Build.MODEL+" (SDK ${Build.VERSION.SDK_INT})"

@@ -14,6 +14,7 @@ actual fun getImageBitmapByByteArray(byteArray: ByteArray): ImageBitmap {
 }
 
 
+@Composable
 actual fun getIsLandscape(): Boolean {
     TODO("Not yet implemented")
 }
@@ -32,4 +33,14 @@ actual fun getScreenSizeInfo(): ScreenSizeInfo {
             wDP = with(density) { windowInfo.containerSize.width.toDp() }
         )
     }
+}
+
+@Composable
+actual fun getAppDataDir(): String {
+    TODO("Not yet implemented")
+}
+
+actual fun getTimeStamp(): Long = System.currentTimeMillis()
+actual fun getDeviceName(): String {
+    TODO("Not yet implemented")
 }

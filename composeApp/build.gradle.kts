@@ -48,6 +48,8 @@ kotlin {
             implementation("io.coil-kt.coil3:coil:3.0.0-alpha06")
             implementation(libs.kotlinx.serialization.json)
             implementation(compose.components.uiToolingPreview)
+            implementation("com.russhwolf:multiplatform-settings:1.1.1")
+            implementation("com.russhwolf:multiplatform-settings-no-arg:1.1.1")
 
 
         }

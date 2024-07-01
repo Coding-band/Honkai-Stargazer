@@ -119,8 +119,8 @@ class UtilTools {
 
 
     @VersionUpdateCheck
-    fun getImageNameByRegistName(registName: String) : String {
-        return registName
+    fun getImageNameByRegistName(registName: String, isCharFullImg: Boolean = false) : String {
+        var registNameFinal = registName
             .replace("Trailblazer Boy (Physical)","trailblazer_physical_male")
             .replace("Trailblazer Girl (Physical)","trailblazer_physical_female")
             .replace("Trailblazer Boy (Fire)","trailblazer_fire_male")
@@ -146,5 +146,76 @@ class UtilTools {
             .replace(".","")
             .replace(" ","_")
             .replace("-","_")
+
+        if(isCharFullImg){
+            registNameFinal = registNameFinal
+                .replace("trailblazer_physical_male","trailblazer_boy")
+                .replace("trailblazer_fire_male","trailblazer_boy")
+                .replace("trailblazer_imaginary_male","trailblazer_boy")
+                .replace("trailblazer_physical_female","trailblazer_girl")
+                .replace("trailblazer_fire_female","trailblazer_girl")
+                .replace("trailblazer_imaginary_female","trailblazer_girl")
+        }
+
+        return registNameFinal
     }
+
+    fun unixTimestampToFormattedString(timestamp: Long): String {
+        // 計算時間各部分
+        val secondsInMinute = 60
+        val secondsInHour = 60 * secondsInMinute
+        val secondsInDay = 24 * secondsInHour
+
+        // Unix 時間戳是從 1970-01-01 開始的秒數
+        val baseYear = 1970
+        var secondsRemaining = timestamp / 1000
+
+        // 計算年份
+        var year = baseYear
+        while (true) {
+            val leapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)
+            val daysInYear = if (leapYear) 366 else 365
+            val secondsInCurrentYear = daysInYear * secondsInDay
+            if (secondsRemaining >= secondsInCurrentYear) {
+                secondsRemaining -= secondsInCurrentYear
+                year++
+            } else {
+                break
+            }
+        }
+
+        // 計算月份和日期
+        val months = intArrayOf(31, if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) 29 else 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
+        var month = 1
+        for (daysInMonth in months) {
+            val secondsInMonth = daysInMonth * secondsInDay
+            if (secondsRemaining >= secondsInMonth) {
+                secondsRemaining -= secondsInMonth
+                month++
+            } else {
+                break
+            }
+        }
+
+        val day = (secondsRemaining / secondsInDay) + 1
+        secondsRemaining %= secondsInDay
+
+        // 計算小時、分鐘和秒
+        val hour = secondsRemaining / secondsInHour
+        secondsRemaining %= secondsInHour
+
+        val minute = secondsRemaining / secondsInMinute
+        val second = secondsRemaining % secondsInMinute
+
+        // 格式化結果
+        val yearStr = year.toString().padStart(4, '0')
+        val monthStr = month.toString().padStart(2, '0')
+        val dayStr = day.toString().padStart(2, '0')
+        val hourStr = hour.toString().padStart(2, '0')
+        val minuteStr = minute.toString().padStart(2, '0')
+        val secondStr = second.toString().padStart(2, '0')
+
+        return "$yearStr-$monthStr-$dayStr $hourStr:$minuteStr:$secondStr"
+    }
+
 }

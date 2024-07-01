@@ -10,9 +10,6 @@ import androidx.compose.ui.unit.Dp
 interface Platform {
     val name: String
 }
-
-expect fun getPlatform(): Platform
-
 expect fun getImageBitmapByByteArray(byteArray: ByteArray): ImageBitmap;
 
 @Composable
@@ -23,3 +20,8 @@ data class ScreenSizeInfo(val hPX: Int, val wPX: Int, val hDP: Dp, val wDP: Dp)
 
 @Composable
 expect fun getScreenSizeInfo(): ScreenSizeInfo
+
+@Composable
+expect fun getAppDataDir(): String
+expect fun getTimeStamp(): Long
+expect fun getDeviceName(): String

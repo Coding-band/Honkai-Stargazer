@@ -79,6 +79,7 @@ Here's the major purpose we rewrite Stargazer
 - 用戶在啟動app時，若果混沌回憶/虛構敘事數據和上次啟動app一樣
   - 則不會向伺服器更新這部分的數據
 
+EN:
 - When the user opens the leaderboards, first check whether the database data has been read in the last hour
   - If there is, temporary data stored locally will be read.
   - Otherwise, it will apply to the server to read the data and store it locally.
@@ -94,6 +95,7 @@ Here's the major purpose we rewrite Stargazer
   - 橫幅廣告
 - 透過App内購/Buy Me A Coffee支持我們的用戶，可永久免廣告（需要商榷）
 
+EN:
 - Prepare all the settings required for the ads framework
 - Determine whether to enable ads based on Close BETA response loading
 - Avoid affecting user experience
