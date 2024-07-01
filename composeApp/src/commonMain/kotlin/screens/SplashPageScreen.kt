@@ -26,11 +26,9 @@ import files.app_icon_black_bg
 import files.euclid_circular_a_medium
 import files.star_peace_icon
 import getScreenSizeInfo
-import kotlinx.coroutines.delay
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import types.Constants.Companion.SPLASH_PAGE_DISPLAY_MILLSEC_DEFAULT
 import utils.FontSizeNormalLarge
 import utils.FontSizeNormalSmall
 import utils.navigation.Screen
@@ -43,8 +41,9 @@ fun SplashPage(
     headerData: HeaderData = defaultHeaderData
 ) {
 
+    //This will be use when finishing initize user data
     LaunchedEffect(Unit){
-        delay(SPLASH_PAGE_DISPLAY_MILLSEC_DEFAULT)
+        //delay(SPLASH_PAGE_DISPLAY_MILLSEC_DEFAULT)
         navController.navigate(Screen.HomePage.route)
     }
 
