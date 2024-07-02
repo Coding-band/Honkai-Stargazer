@@ -2,6 +2,7 @@ package utils
 
 import androidx.compose.material.SnackbarDuration
 import androidx.compose.material.SnackbarHostState
+import androidx.compose.runtime.Composable
 import com.russhwolf.settings.Settings
 import getDeviceName
 import getTimeStamp
@@ -42,10 +43,17 @@ class LogExport {
                 "App Version : " + "BETA 2.4.0 (1234)" + "\n\n" +
                 error.stackTraceToString()
 
-        Settings().putString("errorLog", logFinal);
-        println(Settings().getString("errorLog", "nope"))
+        //Error Log will save as Preference
+        Settings().putString("errorLogContent", logFinal);
+        Settings().putString("errorLogTimestamp", logFinal);
+    }
 
-        //Not done yet, will finish second part
+    /**
+     * This function is aims to
+     */
+    @Composable
+    fun checkHasErrorLogFromLastCrash(){
+
     }
 
 }

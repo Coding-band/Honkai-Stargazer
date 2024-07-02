@@ -1,6 +1,7 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import java.util.Properties
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -8,6 +9,7 @@ plugins {
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
 }
+
 
 kotlin {
     androidTarget {
@@ -29,7 +31,10 @@ kotlin {
             isStatic = true
         }
     }
-    
+
+    applyDefaultHierarchyTemplate()
+
+
     sourceSets {
         val desktopMain by getting
         
@@ -50,6 +55,8 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation("com.russhwolf:multiplatform-settings:1.1.1")
             implementation("com.russhwolf:multiplatform-settings-no-arg:1.1.1")
+            //https://github.com/yshrsmz/BuildKonfig
+            //implementation("com.codingfeline.buildkonfig:buildkonfig-gradle-plugin:0.15.1")
 
 
         }
@@ -67,12 +74,23 @@ android {
     sourceSets["main"].res.srcDirs("src/androidMain/res")
     sourceSets["main"].resources.srcDirs("src/commonMain/resources")
 
+
+    val properties = Properties()
+    file("../gradle.properties").inputStream().use { properties.load(it) }
+
+    val versionProfile = properties.getProperty("APP_PROFILE").uppercase()
+    val versionNameCommon = properties.getProperty(if (versionProfile === "RELEASE") "APP_VERSION" else "APP_VERSION_BETA")
+    val versionCodeCommon = properties.getProperty("APP_VERSION_CODE").toInt() + 1
+
+    properties["APP_VERSION_CODE"] = versionCodeCommon.toString()
+    properties.store(file("../gradle.properties").outputStream(),null)
+
     defaultConfig {
         applicationId = "com.voc.honkaistargazer"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = versionCodeCommon
+        versionName = "$versionProfile $versionNameCommon ($versionCodeCommon)"
     }
     packaging {
         resources {
@@ -117,4 +135,34 @@ compose.resources {
     packageOfResClass = "files"
     generateResClass = always
 }
+
+tasks.register("updateIosVersion") {
+    group = "versioning"
+    description = "Updates the iOS version and build number"
+
+    doLast {
+        val properties = Properties()
+        file("gradle.properties").inputStream().use { properties.load(it) }
+
+        val versionProfile = properties.getProperty("APP_PROFILE")
+        val versionName = properties.getProperty(if (versionProfile === "RELEASE") "APP_VERSION" else "APP_VERSION_BETA")
+        val versionCode = properties.getProperty("APP_VERSION_CODE")
+
+        val xcodeProjectPath = "iosApp/iosApp.xcodeproj/project.pbxproj"
+        val xcodeProjectFile = file(xcodeProjectPath)
+
+        if (!xcodeProjectFile.exists()) {
+            throw GradleException("Xcode project file not found: $xcodeProjectPath")
+        }
+
+        val updatedContent = xcodeProjectFile.readText()
+            .replace(Regex("MARKETING_VERSION = [^\n]+"), "MARKETING_VERSION = $versionProfile $versionName ($versionCode);")
+            .replace(Regex("CURRENT_PROJECT_VERSION = [^\n]+"), "CURRENT_PROJECT_VERSION = $versionName;")
+
+        xcodeProjectFile.writeText(updatedContent)
+
+        println("iOS version updated to $versionName ($versionCode)")
+    }
+}
+
 
