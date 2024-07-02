@@ -4,7 +4,7 @@
  * Copyright © 2024 Coding Band 版權所有
  */
 
-package com.voc.honkai_stargazer.screen
+package screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -56,7 +56,6 @@ fun RelicListPage(modifier: Modifier = Modifier, navController: NavController, h
         if(localeName !== null){
             relicNameList.add(localeName)
         }
-
     }
 
     Box {
@@ -105,5 +104,5 @@ fun RelicListPage(modifier: Modifier = Modifier, navController: NavController, h
 fun RelicListPagePreview() {
     RootContent(
         screen = Screen.LightconeListPage,
-        page = {RelicListPage(navController = rememberNavController()) })
+        page = { RelicListPage(navController = rememberNavController()) })
 }

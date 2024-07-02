@@ -4,7 +4,7 @@
  * Copyright © 2024 Coding Band 版權所有
  */
 
-package com.voc.honkai_stargazer.screen
+package screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -106,5 +106,5 @@ fun LightconeListPage(modifier: Modifier = Modifier, navController: NavControlle
 fun LightconeListPagePreview() {
     RootContent(
         screen = Screen.LightconeListPage,
-        page = {LightconeListPage(navController = rememberNavController()) })
+        page = { LightconeListPage(navController = rememberNavController()) })
 }

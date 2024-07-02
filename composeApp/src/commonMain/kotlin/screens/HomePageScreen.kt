@@ -69,6 +69,7 @@ import utils.ProgressLevelBackground
 import utils.ProgressLevelPrimary
 import utils.TextColorLevel
 import utils.TextColorNormal
+import utils.checkHasErrorLogFromLastCrash
 
 
 @Composable
@@ -76,6 +77,8 @@ fun HomePage(modifier: Modifier = Modifier, navController: NavController, header
     Box(modifier = Modifier
         .statusBarsPadding()
     ) {
+        checkHasErrorLogFromLastCrash()
+
         Column {
             HomePageHeader(navController = navController)
             HomePageMenuScrollView(navController = navController)

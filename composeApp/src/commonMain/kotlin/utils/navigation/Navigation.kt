@@ -23,8 +23,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.voc.honkai_stargazer.screen.LightconeListPage
-import com.voc.honkai_stargazer.screen.RelicListPage
+import screens.LightconeListPage
+import screens.RelicListPage
 import components.HeaderData
 import components.defaultHeaderData
 import files.CharacterList

@@ -8,6 +8,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
+import types.DeviceInfo
 
 /**
  * This is the declaration kt file for specific-platform function
@@ -47,4 +48,8 @@ actual fun getAppDataDir(): String {
 }
 
 actual fun getTimeStamp(): Long = System.currentTimeMillis()
-actual fun getDeviceName(): String = Build.MODEL+" (SDK ${Build.VERSION.SDK_INT})"
+actual fun getDeviceInfo(): DeviceInfo = DeviceInfo(
+    deviceModel = Build.MODEL,
+    deviceOSName = "Android",
+    deviceOSVersion = Build.VERSION.SDK_INT.toString()
+)

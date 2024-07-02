@@ -1,59 +1,202 @@
 package utils
 
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.AlertDialog
 import androidx.compose.material.SnackbarDuration
 import androidx.compose.material.SnackbarHostState
+import androidx.compose.material.Text
+import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.russhwolf.settings.Settings
-import getDeviceName
+import files.Res
+import files.pom_pom_failed_issue
+import getDeviceInfo
 import getTimeStamp
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
+import org.jetbrains.compose.resources.painterResource
+import types.AppInfo
+import types.DeviceInfo
 
-class LogExport {
-    enum class ErrorLevel() {
-        TEST, WARNING, DANGER, INTERRUPT
-    }
+@Serializable
+data class LogExportObj(
+    var className: String,
+    var functionName: String,
+    var errorTime: String,
+    var errorTimeMS: Long,
+    var deviceInfo: DeviceInfo,
+    var appInfo: AppInfo,
+    var exceptionMessage: String,
+    var exceptionStack: String,
+)
 
-    suspend fun raiseErrorMessageSnack(error: Exception, snackbarHostState: SnackbarHostState) {
-        snackbarHostState.showSnackbar(
-            message = (error.message) ?: "Unexpected Error",
-            actionLabel = "CLOSE",
-            duration = SnackbarDuration.Indefinite
+val emptyLogExportObj: LogExportObj = LogExportObj(
+    "empty",
+    "empty",
+    "getTimeStamp()",
+    getTimeStamp(),
+    getDeviceInfo(),
+    AppInfo("Beta 0.0.0 (0)", 0, getDeviceInfo().deviceOSName),
+    exceptionMessage = "empty",
+    exceptionStack = "empty"
+)
+
+val emptyLogExportObjJSON: String = Json.encodeToString(emptyLogExportObj)
+
+suspend fun raiseErrorMessageSnack(error: Exception, snackbarHostState: SnackbarHostState) {
+    snackbarHostState.showSnackbar(
+        message = (error.message) ?: "Unexpected Error",
+        actionLabel = "CLOSE",
+        duration = SnackbarDuration.Indefinite
+    )
+}
+
+suspend fun raiseErrorMessageSnack(errorString: String, snackbarHostState: SnackbarHostState) {
+    snackbarHostState.showSnackbar(message = errorString ?: "Undefined Error")
+
+}
+
+/**
+ *      try {
+ *         throw Exception("Testing Error")
+ *     }catch (e : Exception){
+ *         errorLogExport("CharacterInfoPageScreen", "CharacterInfoFullImgWithRare()", e)
+ *     }
+ */
+fun errorLogExport(className: String, functionName: String, error: Exception) {
+    //Prepare what will be export
+    val timeStamp = getTimeStamp();
+    val logExportObj: LogExportObj = LogExportObj(
+        className = className,
+        functionName = functionName,
+        errorTime = UtilTools().unixTimestampToFormattedString((timeStamp)),
+        errorTimeMS = timeStamp,
+        deviceInfo = getDeviceInfo(),
+        appInfo = AppInfo("Beta 2.4.0 (2888)", 2888, getDeviceInfo().deviceOSName),
+        exceptionMessage = (if (error.message === null) "Unspecified" else error.message!!),
+        exceptionStack = error.stackTraceToString()
+    )
+
+    //Error Log will save as Preference
+    Settings().putString("errorLogExportObj", Json.encodeToString(logExportObj));
+    Settings().putBoolean("errorLogDisplayed", false);
+}
+
+/**
+ * This function is aims to show the error log after restart app
+ * Which will ask user whether report or not
+ */
+@Composable
+fun checkHasErrorLogFromLastCrash() {
+    //Return if already shown to user
+    val errorLogExportObj: LogExportObj =
+        Json.decodeFromString<LogExportObj>(
+            Settings().getString(
+                "errorLogExportObj",
+                emptyLogExportObjJSON
+            )
+        )
+
+    val openAlertDialog = remember { mutableStateOf(true) }
+    openAlertDialog.value = !Settings().getBoolean("errorLogDisplayed",false);
+    Settings().putBoolean("errorLogDisplayed",true)
+
+    if (openAlertDialog.value) {
+        AlertDialog(
+            onDismissRequest = {
+                openAlertDialog.value = false;
+            },
+            confirmButton = {
+                TextButton(onClick = {
+                    openAlertDialog.value = false;
+                    sendLogToServer(errorLogExportObj);
+                }) {
+                    Text("Report")
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = {
+                    openAlertDialog.value = false;
+                }) {
+                    Text("Cancel")
+                }
+            },
+            title = {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Image(
+                        modifier = Modifier.size(24.dp).padding(end = 8.dp),
+                        painter = painterResource(Res.drawable.pom_pom_failed_issue),
+                        contentDescription = "Error Log Icon"
+                    )
+                    Text(
+                        text = "Error Log",
+                        fontSize = 24.sp
+                    )
+                }
+            },
+            text = {
+                Column {
+                    Text(
+                        "It seems there have some bugs caused crashes previously. Could you please sare the error log to us for bug-fixing?\n" +
+                                "We will only collect:\n" +
+                                "· Device's Model:\n" +
+                                "· Device's OS Version:\n"
+                    )
+
+                    //No need for app-translation!
+                    Box(
+                        modifier = Modifier.clip(
+                            RoundedCornerShape(
+                                topEnd = 8.dp,
+                                topStart = 8.dp,
+                                bottomEnd = 8.dp,
+                                bottomStart = 8.dp
+                            )
+                        ).background(Color(0xFF333333))
+                        //.verticalScroll(rememberScrollState())
+                    ) {
+                        Text(
+
+                            "Class : " + errorLogExportObj.className + "\n" +
+                                    "Function : " + errorLogExportObj.functionName + "\n" +
+                                    "Time : " + errorLogExportObj.errorTime + "\n" +
+                                    "TimeStamp : " + errorLogExportObj.errorTimeMS + "\n" +
+                                    "DeviceInfo :  ${errorLogExportObj.deviceInfo.deviceModel} (${errorLogExportObj.deviceInfo.deviceOSName} ${errorLogExportObj.deviceInfo.deviceOSVersion})\n" +
+                                    "AppInfo :  ${errorLogExportObj.appInfo.appVersionName})\n" +
+                                    "Error Message :  ${errorLogExportObj.exceptionMessage}",
+                            color = Color(0xFFFFFFFF),
+                            modifier = Modifier.padding(8.dp),
+                            fontSize = FontSizeNormalSmall().fontSize,
+                            maxLines = 10
+                        )
+                    }
+
+
+                }
+            }
+
         )
     }
+}
 
-    suspend fun raiseErrorMessageSnack(errorString: String, snackbarHostState: SnackbarHostState) {
-        snackbarHostState.showSnackbar(message = errorString ?: "Undefined Error")
-
-    }
-
-    /**
-     *      try {
-     *         throw Exception("Testing Error")
-     *     }catch (e : Exception){
-     *         LogExport().errorLogExport("CharacterInfoPageScreen", "CharacterInfoFullImgWithRare()", e)
-     *     }
-     */
-    fun errorLogExport(className: String, functionName: String, error: Exception) {
-        //Prepare what will be export
-        val logFinal = "[ERROR LOG]" + "\n" +
-                "Class : " + className + "\n" +
-                "Function : " + functionName + "\n" +
-                "Time : " + UtilTools().unixTimestampToFormattedString((getTimeStamp())) + "\n" +
-                "TimeStamp : " + getTimeStamp() + "\n" +
-                "Device Name : " + getDeviceName() + "\n" +
-                "App Version : " + "BETA 2.4.0 (1234)" + "\n\n" +
-                error.stackTraceToString()
-
-        //Error Log will save as Preference
-        Settings().putString("errorLogContent", logFinal);
-        Settings().putString("errorLogTimestamp", logFinal);
-    }
-
-    /**
-     * This function is aims to
-     */
-    @Composable
-    fun checkHasErrorLogFromLastCrash(){
-
-    }
-
+fun sendLogToServer(errorLogExportObj: LogExportObj) {
+//在資料庫完成接口後，添加對應功能
 }
