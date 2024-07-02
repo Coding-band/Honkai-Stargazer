@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class AppInfo(
-    val appVersionName: String = "Beta 2.3.9 (2999)",
+    val appProfile: String = "BETA",
+    val appVersionName: String = "2.3.9",
     val appVersionCode: Int = 2999,
-    val appPlatformOS: String = "DummyOS",
 )

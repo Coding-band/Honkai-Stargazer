@@ -1,26 +1,41 @@
+import com.codingfeline.buildkonfig.compiler.FieldSpec.Type.INT
+import com.codingfeline.buildkonfig.compiler.FieldSpec.Type.STRING
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import java.util.Properties
 
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        //classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0")
-        //classpath("com.codingfeline.buildkonfig:buildkonfig-gradle-plugin:latest_version")
-    }
-}
+/**
+ * VersionUpdateCheck
+ * Environment Area - App Version
+ */
+
+val appVersion = "2.3.2"
+val appVersionCodeName = "Dan Heng"
+
+val appVersionBeta = "2.4.0"
+val appVersionCodeNameBeta = "Echo"
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
+    id("com.codingfeline.buildkonfig").version("0.15.1")
     kotlin("plugin.serialization") version "2.0.0"
-    //id("com.codingfeline.buildkonfig")
 }
+
+/**
+ * tasks to gradle.properties
+ */
+val properties = Properties()
+file("../gradle.properties").inputStream().use { properties.load(it) }
+
+val versionCodeFinal = properties.getProperty("APP_VERSION_CODE").toInt() + 1
+initGradleProperties()
+
+//BETA | C.BETA | DEV | PRODUCTION
+var appProfile = "DEV"
 
 
 kotlin {
@@ -67,8 +82,6 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation("com.russhwolf:multiplatform-settings:1.1.1")
             implementation("com.russhwolf:multiplatform-settings-no-arg:1.1.1")
-            //https://github.com/yshrsmz/BuildKonfig
-            //implementation("com.codingfeline.buildkonfig:buildkonfig-gradle-plugin:0.15.1")
 
 
         }
@@ -86,24 +99,37 @@ android {
     sourceSets["main"].res.srcDirs("src/androidMain/res")
     sourceSets["main"].resources.srcDirs("src/commonMain/resources")
 
-
-    val properties = Properties()
-    file("../gradle.properties").inputStream().use { properties.load(it) }
-
-    val versionProfile = properties.getProperty("APP_PROFILE").uppercase()
-    val versionNameCommon = properties.getProperty(if (versionProfile === "RELEASE") "APP_VERSION" else "APP_VERSION_BETA")
-    val versionCodeCommon = properties.getProperty("APP_VERSION_CODE").toInt() + 1
-
-    properties["APP_VERSION_CODE"] = versionCodeCommon.toString()
-    properties.store(file("../gradle.properties").outputStream(),null)
-
     defaultConfig {
         applicationId = "com.voc.honkaistargazer"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
-        versionCode = versionCodeCommon
-        versionName = "$versionProfile $versionNameCommon ($versionCodeCommon)"
+        versionCode = versionCodeFinal
+        versionName = "1.0"
     }
+
+    flavorDimensions += "version"
+    productFlavors{
+        properties["APP_PLATFORM"] = "Android"
+
+        create("0dev"){
+            applicationId = "com.voc.honkai_stargazer_gp"
+            versionName = "DEV ${appVersionBeta} (${versionCodeFinal})"
+        }
+        create("beta"){
+            applicationId = "com.voc.honkai_stargazer_beta"
+            versionName = "BETA ${appVersionBeta} (${versionCodeFinal})"
+        }
+        create("closeBeta"){
+            applicationId = "com.voc.honkai_stargazer_cbeta"
+            versionName = "C.BETA ${appVersionBeta} (${versionCodeFinal})"
+        }
+        create("production"){
+            applicationId = "com.voc.honkai_stargazer_gp"
+            versionName = "${appVersion} (${versionCodeFinal})"
+        }
+        properties.store(file("../gradle.properties").outputStream(),null)
+    }
+
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -146,4 +172,27 @@ compose.resources {
     publicResClass = true
     packageOfResClass = "files"
     generateResClass = always
+}
+
+
+buildkonfig {
+    packageName = "com.voc.honkaistargazer"
+    //Read only
+    defaultConfigs {
+        buildConfigField(STRING, "appProfile", appProfile)
+        buildConfigField(STRING, "appVersionName", (if(appProfile === "BETA" || appProfile === "C.BETA" || appProfile === "DEV") appVersionBeta else appVersion))
+        buildConfigField(STRING, "appVersionCodeName", (if(appProfile === "BETA" || appProfile === "C.BETA" || appProfile === "DEV") appVersionCodeNameBeta else appVersionCodeName))
+        buildConfigField(INT, "appVersionCode", properties.getProperty("APP_VERSION_CODE"))
+    }
+}
+
+
+fun initGradleProperties(){
+    //Write only
+    properties["APP_VERSION"] = appVersion
+    properties["APP_VERSION_BETA"] = appVersionBeta
+    properties["APP_VERSION_CODENAME"] = appVersionCodeName
+    properties["APP_VERSION_CODENAME_BETA"] = appVersionCodeNameBeta
+    properties["APP_VERSION_CODE"] = versionCodeFinal.toString()
+    properties.store(file("../gradle.properties").outputStream(),null)
 }

@@ -23,6 +23,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.russhwolf.settings.Settings
+import com.voc.honkaistargazer.BuildKonfig
 import files.Res
 import files.pom_pom_failed_issue
 import getDeviceInfo
@@ -45,19 +46,6 @@ data class LogExportObj(
     var exceptionMessage: String,
     var exceptionStack: String,
 )
-
-val emptyLogExportObj: LogExportObj = LogExportObj(
-    "empty",
-    "empty",
-    "getTimeStamp()",
-    getTimeStamp(),
-    getDeviceInfo(),
-    AppInfo("Beta 0.0.0 (0)", 0, getDeviceInfo().deviceOSName),
-    exceptionMessage = "empty",
-    exceptionStack = "empty"
-)
-
-val emptyLogExportObjJSON: String = Json.encodeToString(emptyLogExportObj)
 
 suspend fun raiseErrorMessageSnack(error: Exception, snackbarHostState: SnackbarHostState) {
     snackbarHostState.showSnackbar(
@@ -88,7 +76,7 @@ fun errorLogExport(className: String, functionName: String, error: Exception) {
         errorTime = UtilTools().unixTimestampToFormattedString((timeStamp)),
         errorTimeMS = timeStamp,
         deviceInfo = getDeviceInfo(),
-        appInfo = AppInfo("Beta 2.4.0 (2888)", 2888, getDeviceInfo().deviceOSName),
+        appInfo = AppInfo(BuildKonfig.appProfile,BuildKonfig.appVersionName, BuildKonfig.appVersionCode),
         exceptionMessage = (if (error.message === null) "Unspecified" else error.message!!),
         exceptionStack = error.stackTraceToString()
     )
@@ -105,13 +93,17 @@ fun errorLogExport(className: String, functionName: String, error: Exception) {
 @Composable
 fun checkHasErrorLogFromLastCrash() {
     //Return if already shown to user
-    val errorLogExportObj: LogExportObj =
-        Json.decodeFromString<LogExportObj>(
+    val errorLogExportObj: LogExportObj
+    try {
+        errorLogExportObj = Json.decodeFromString<LogExportObj>(
             Settings().getString(
                 "errorLogExportObj",
-                emptyLogExportObjJSON
+                "{}"
             )
         )
+    }catch (_: Exception){
+        return
+    }
 
     val openAlertDialog = remember { mutableStateOf(true) }
     openAlertDialog.value = !Settings().getBoolean("errorLogDisplayed",false);
