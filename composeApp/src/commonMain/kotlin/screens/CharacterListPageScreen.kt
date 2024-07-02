@@ -120,8 +120,10 @@ fun CharacterListPage(
                         val fileName = charListItem.jsonObject["fileName"]?.jsonPrimitive?.content!!;
                         navController.navigate(
                             Screen.CharacterInfoPage.route
-                                  + "/${charName}"
+                                  + "/${charName.replace(" ","_")}"
                                   + "/${fileName}"
+                                  + "/${charListItem.jsonObject["element"]?.jsonPrimitive?.content!!}"
+                                  + "/${charListItem.jsonObject["path"]?.jsonPrimitive?.content!!}"
                         )
                     }
                 )

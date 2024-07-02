@@ -1,0 +1,5 @@
+package core
+
+
+class CharacterInfoPage{
+}

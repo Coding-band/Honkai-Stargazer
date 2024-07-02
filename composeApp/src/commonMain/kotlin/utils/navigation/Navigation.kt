@@ -23,8 +23,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import screens.LightconeListPage
-import screens.RelicListPage
 import components.HeaderData
 import components.defaultHeaderData
 import files.CharacterList
@@ -39,7 +37,9 @@ import files.phorphos_sword_fill
 import screens.CharacterInfoPage
 import screens.CharacterListPage
 import screens.HomePage
+import screens.LightconeListPage
 import screens.MakeBackground
+import screens.RelicListPage
 import screens.SplashPage
 
 sealed class Screen(val route: String, val headerData: HeaderData = defaultHeaderData) {
@@ -151,10 +151,13 @@ fun Navigation() {
                 })
         }
         composable(
-            route = "${Screen.CharacterInfoPage.route}/{charName}/{fileName}",
+            route = "${Screen.CharacterInfoPage.route}/{charName}/{fileName}/{combatType}/{path}/{rarity}",
             arguments = listOf(
                 (navArgument("fileName") { type = NavType.StringType }),
-                (navArgument("charName") { type = NavType.StringType })
+                (navArgument("charName") { type = NavType.StringType }),
+                (navArgument("combatType") { type = NavType.StringType }),
+                (navArgument("path") { type = NavType.StringType }),
+                (navArgument("rarity") { type = NavType.StringType })
             ),
             enterTransition = { defaultEnterTransition }, exitTransition = { defaultExitTransition }
         ) { backStackEntry ->
