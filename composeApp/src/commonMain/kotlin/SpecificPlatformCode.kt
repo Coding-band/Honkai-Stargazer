@@ -1,15 +1,13 @@
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.unit.Dp
+import types.DeviceInfo
 
 /**
  * This is the declaration kt file for specific-platform function
  * THIS IS COMMON-MAIN, so ONLY EXPECT
  */
 
-interface Platform {
-    val name: String
-}
 expect fun getImageBitmapByByteArray(byteArray: ByteArray): ImageBitmap;
 
 @Composable
@@ -24,4 +22,4 @@ expect fun getScreenSizeInfo(): ScreenSizeInfo
 @Composable
 expect fun getAppDataDir(): String
 expect fun getTimeStamp(): Long
-expect fun getDeviceName(): String
+expect fun getDeviceInfo(): DeviceInfo

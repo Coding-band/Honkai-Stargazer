@@ -9,6 +9,7 @@ import platform.UIKit.UIDevice
 import platform.UIKit.UIInterfaceOrientation
 import platform.UIKit.UIInterfaceOrientationLandscapeLeft
 import platform.UIKit.UIInterfaceOrientationLandscapeRight
+import types.DeviceInfo
 
 
 /**
@@ -51,4 +52,8 @@ actual fun getAppDataDir(): String {
 }
 
 actual fun getTimeStamp(): Long = NSDate().timeIntervalSince1970.toLong() * 1000
-actual fun getDeviceName(): String = UIDevice.currentDevice.systemName() + " " + UIDevice.currentDevice.systemVersion
+actual fun getDeviceInfo(): DeviceInfo = DeviceInfo(
+    deviceModel = UIDevice.currentDevice.model(),
+    deviceOSName = UIDevice.currentDevice.systemName(),
+    deviceOSVersion = UIDevice.currentDevice.systemVersion()
+)

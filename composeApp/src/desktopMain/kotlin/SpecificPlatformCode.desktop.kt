@@ -4,6 +4,7 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalWindowInfo
+import types.DeviceInfo
 
 /**
  * Ehm... yes... PC not support rn.
@@ -41,6 +42,6 @@ actual fun getAppDataDir(): String {
 }
 
 actual fun getTimeStamp(): Long = System.currentTimeMillis()
-actual fun getDeviceName(): String {
+actual fun getDeviceInfo(): DeviceInfo {
     TODO("Not yet implemented")
 }

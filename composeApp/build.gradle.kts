@@ -3,11 +3,23 @@ import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import java.util.Properties
 
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        //classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0")
+        //classpath("com.codingfeline.buildkonfig:buildkonfig-gradle-plugin:latest_version")
+    }
+}
+
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
+    kotlin("plugin.serialization") version "2.0.0"
+    //id("com.codingfeline.buildkonfig")
 }
 
 
@@ -135,34 +147,3 @@ compose.resources {
     packageOfResClass = "files"
     generateResClass = always
 }
-
-tasks.register("updateIosVersion") {
-    group = "versioning"
-    description = "Updates the iOS version and build number"
-
-    doLast {
-        val properties = Properties()
-        file("gradle.properties").inputStream().use { properties.load(it) }
-
-        val versionProfile = properties.getProperty("APP_PROFILE")
-        val versionName = properties.getProperty(if (versionProfile === "RELEASE") "APP_VERSION" else "APP_VERSION_BETA")
-        val versionCode = properties.getProperty("APP_VERSION_CODE")
-
-        val xcodeProjectPath = "iosApp/iosApp.xcodeproj/project.pbxproj"
-        val xcodeProjectFile = file(xcodeProjectPath)
-
-        if (!xcodeProjectFile.exists()) {
-            throw GradleException("Xcode project file not found: $xcodeProjectPath")
-        }
-
-        val updatedContent = xcodeProjectFile.readText()
-            .replace(Regex("MARKETING_VERSION = [^\n]+"), "MARKETING_VERSION = $versionProfile $versionName ($versionCode);")
-            .replace(Regex("CURRENT_PROJECT_VERSION = [^\n]+"), "CURRENT_PROJECT_VERSION = $versionName;")
-
-        xcodeProjectFile.writeText(updatedContent)
-
-        println("iOS version updated to $versionName ($versionCode)")
-    }
-}
-
-
