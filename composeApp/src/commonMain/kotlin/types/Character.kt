@@ -6,21 +6,27 @@
 
 package types
 
+import androidx.annotation.IntRange
 import androidx.compose.ui.graphics.ImageBitmap
+import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonElement
 import utils.UtilTools
 
 
-
+@Serializable
 open class Character(
     var officialId : Int? = 1006,
     var registName : String? = "Silver Wolf",
     var fileName : String? = "silverwolf",
-    var rarity : Int = 5,
+    var localName : String? = "銀狼",
+    @IntRange(3,5) var rarity : Int = 5,
     var path : Path = Path.Harmony,
     var combatType: CombatType = CombatType.Quantum,
     var gender : Gender = Gender.Female,
-    var releaseVersion : String = "1.0.0",
+
+    //For Character Status
+    var characterStatus: CharacterStatus? = null,
+
 ){
     enum class Gender{
         Male, Female

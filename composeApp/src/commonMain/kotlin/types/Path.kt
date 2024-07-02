@@ -6,6 +6,13 @@
 
 package types
 
+import files.Abundance
+import files.Destruction
+import files.Erudition
+import files.Harmony
+import files.Hunt
+import files.Nihility
+import files.Preservation
 import files.Res
 import files.app_name
 import files.path_the_abundance
@@ -26,17 +33,12 @@ import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 
 
-enum class Path (var chName : String,var iconWhite : DrawableResource, var iconAbyss : DrawableResource, localeStringId : StringResource = Res.string.app_name){
-    Abundance("豐饒", Res.drawable.path_the_abundance, Res.drawable.path_the_abundance_abyss),
-    Destruction("毀滅", Res.drawable.path_the_destruction, Res.drawable.path_the_destruction_abyss),
-    Erudition("智識", Res.drawable.path_the_erudition, Res.drawable.path_the_erudition_abyss),
-    Harmony("同諧", Res.drawable.path_the_harmony, Res.drawable.path_the_harmony_abyss),
-    Hunt("巡獵", Res.drawable.path_the_hunt, Res.drawable.path_the_hunt_abyss),
-    Nihility("虛無", Res.drawable.path_the_nihility, Res.drawable.path_the_nihility_abyss),
-    Preservation("存謢", Res.drawable.path_the_preservation, Res.drawable.path_the_preservation_abyss);
-
-    companion object {
-        fun getPathByName(registName : String) = Path.valueOf(registName);
-    }
-
+enum class Path (var chName : String,var resName : StringResource,var iconWhite : DrawableResource, var iconAbyss : DrawableResource, localeStringId : StringResource = Res.string.app_name){
+    Abundance("豐饒",Res.string.Abundance, Res.drawable.path_the_abundance, Res.drawable.path_the_abundance_abyss),
+    Destruction("毀滅",Res.string.Destruction, Res.drawable.path_the_destruction, Res.drawable.path_the_destruction_abyss),
+    Erudition("智識",Res.string.Erudition, Res.drawable.path_the_erudition, Res.drawable.path_the_erudition_abyss),
+    Harmony("同諧",Res.string.Harmony, Res.drawable.path_the_harmony, Res.drawable.path_the_harmony_abyss),
+    Hunt("巡獵",Res.string.Hunt, Res.drawable.path_the_hunt, Res.drawable.path_the_hunt_abyss),
+    Nihility("虛無",Res.string.Nihility, Res.drawable.path_the_nihility, Res.drawable.path_the_nihility_abyss),
+    Preservation("存謢",Res.string.Preservation, Res.drawable.path_the_preservation, Res.drawable.path_the_preservation_abyss);
 }

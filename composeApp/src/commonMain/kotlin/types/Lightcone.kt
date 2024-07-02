@@ -6,11 +6,14 @@
 
 package types
 
+import androidx.annotation.IntRange
 import androidx.compose.ui.graphics.ImageBitmap
+import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonElement
 import utils.UtilTools
 
 
+@Serializable
 open class Lightcone(
     var officialId : Int? = 21018,
     var registName : String? = "Dance! Dance! Dance!",
@@ -18,6 +21,8 @@ open class Lightcone(
     var rarity : Int = 4,
     var path : Path = Path.Harmony,
     var releaseVersion : String = "1.0.0",
+
+    @IntRange(1,5) var eidolon : Int = 1,
 ){
     companion object {
         fun getLightconeListFromJSON() : JsonElement {

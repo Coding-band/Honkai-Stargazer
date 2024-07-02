@@ -7,10 +7,12 @@
 package types
 
 import androidx.compose.ui.graphics.ImageBitmap
+import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonElement
 import utils.UtilTools
 
 
+@Serializable
 open class Relic(
     var officialId : Int? = 21018,
     var registName : String? = "Dance! Dance! Dance!",

@@ -6,7 +6,14 @@
 
 package types
 
+import files.Fire
+import files.Ice
+import files.Imaginary
+import files.Lightning
+import files.Physical
+import files.Quantum
 import files.Res
+import files.Wind
 import files.app_name
 import files.element_fire
 import files.element_ice
@@ -28,12 +35,12 @@ import org.jetbrains.compose.resources.StringResource
 /**
  * 屬性 CombatType
  */
-enum class CombatType (var chName : String, var iconWhite : DrawableResource, var iconColor : DrawableResource, localeStringId : StringResource = Res.string.app_name){
-    Imaginary("虛數", Res.drawable.ic_imaginary, Res.drawable.element_imaginary),
-    Quantum("毀滅", Res.drawable.ic_quatumn, Res.drawable.element_quantum),
-    Lightning("智識", Res.drawable.ic_lightning, Res.drawable.element_lightning),
-    Fire("同諧", Res.drawable.ic_fire, Res.drawable.element_fire),
-    Ice("巡獵", Res.drawable.ic_ice, Res.drawable.element_ice),
-    Wind("虛無", Res.drawable.icon_wind, Res.drawable.element_wind),
-    Physical("存謢", Res.drawable.ic_physical, Res.drawable.element_physical),
+enum class CombatType (var chName : String, var resName: StringResource, var iconWhite : DrawableResource, var iconColor : DrawableResource, localeStringId : StringResource = Res.string.app_name){
+    Imaginary("虛數", Res.string.Imaginary, Res.drawable.ic_imaginary, Res.drawable.element_imaginary),
+    Quantum("量子", Res.string.Quantum, Res.drawable.ic_quatumn, Res.drawable.element_quantum),
+    Lightning("雷", Res.string.Lightning, Res.drawable.ic_lightning, Res.drawable.element_lightning),
+    Fire("火", Res.string.Fire, Res.drawable.ic_fire, Res.drawable.element_fire),
+    Ice("冰", Res.string.Ice, Res.drawable.ic_ice, Res.drawable.element_ice),
+    Wind("風", Res.string.Wind, Res.drawable.icon_wind, Res.drawable.element_wind),
+    Physical("物理", Res.string.Physical, Res.drawable.ic_physical, Res.drawable.element_physical),
 }
