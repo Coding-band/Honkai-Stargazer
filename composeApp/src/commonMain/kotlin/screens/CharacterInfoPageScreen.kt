@@ -3,12 +3,17 @@ package screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.SnackbarHostState
@@ -35,6 +40,7 @@ import components.InfoNavigateItem
 import components.InfoNavigatorBar
 import components.PAGE_HEADER_HEIGHT
 import components.PageHeader
+import components.TitleHeader
 import components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
@@ -46,6 +52,12 @@ import files.CharacterStory
 import files.Eidolon
 import files.Res
 import files.TraceTree
+import files.ic_aggro
+import files.ic_atk
+import files.ic_def
+import files.ic_energy
+import files.ic_hp
+import files.ic_speed
 import files.phorphos_baseball_cap_regular
 import files.phorphos_chats_circle_regular
 import files.phorphos_info_regular
@@ -55,12 +67,17 @@ import files.phorphos_star_half_regular
 import files.phorphos_sword_regular
 import files.phorphos_tree_structure_regular
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import org.jetbrains.compose.resources.painterResource
 import types.Character
+import types.CharacterStatus
 import types.CombatType
+import utils.FontSizeNormal16
 import utils.UtilTools
 import kotlin.math.max
+import kotlin.math.roundToInt
 
 lateinit var localCoroutineScope: CoroutineScope;
 lateinit var localSnackbarHostState: SnackbarHostState;
@@ -117,9 +134,7 @@ fun CharacterInfoPage(
         LazyColumn(state = listState, modifier = Modifier.haze(hazeState)) {
             item {InfoBioColumn(charInfoJson, combatType, path, isUserOwned = false, isFullEidolon = false) }
             //Don't forget to add "StatusBarPadding" !
-            item {
-                Text("我是Index 1", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
-            }
+            item { charBasicStatusUI(charInfoJson) }
             item {
                 Text("我是Index 2", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
             }
@@ -177,5 +192,45 @@ fun CharacterInfoFullImgWithRare(
             ).align(Alignment.BottomCenter),
         )
 
+    }
+}
+
+@Composable
+fun charBasicStatusUI(charInfoJson : JsonElement){
+    var charStatusCal : CharacterStatus = remember { CharacterStatus() }
+    Column (modifier = Modifier.statusBarsPadding()){
+        TitleHeader(iconRId = Res.drawable.phorphos_info_regular, titleRId = Res.string.BasicStatus)
+        Row(modifier = Modifier.fillMaxWidth()){
+            Row(modifier = Modifier.weight(1f).wrapContentSize()){
+                Image(painter = painterResource(Res.drawable.ic_hp), contentDescription = "HP Icon", modifier = Modifier.size(24.dp))
+                Box(modifier = Modifier.width(4.dp))
+                Text(style = FontSizeNormal16(), text = (charStatusCal.hpAdd + charStatusCal.hpBase).roundToInt().toString())
+            }
+            Row(modifier = Modifier.weight(1f).wrapContentSize()){
+                Image(painter = painterResource(Res.drawable.ic_atk), contentDescription = "ATK Icon", modifier = Modifier.size(24.dp))
+                Box(modifier = Modifier.width(4.dp))
+                Text(style = FontSizeNormal16(), text = (charStatusCal.atkAdd + charStatusCal.atkBase).roundToInt().toString())
+            }
+            Row(modifier = Modifier.weight(1f).wrapContentSize()){
+                Image(painter = painterResource(Res.drawable.ic_def), contentDescription = "DEF Icon", modifier = Modifier.size(24.dp))
+                Box(modifier = Modifier.width(4.dp))
+                Text(style = FontSizeNormal16(), text = (charStatusCal.defAdd + charStatusCal.defBase).roundToInt().toString())
+            }
+            Row(modifier = Modifier.weight(1f).wrapContentSize()){
+                Image(painter = painterResource(Res.drawable.ic_speed), contentDescription = "SPEED Icon", modifier = Modifier.size(24.dp))
+                Box(modifier = Modifier.width(4.dp))
+                Text(style = FontSizeNormal16(), text = (charStatusCal.speedAdd + charStatusCal.speedBase).roundToInt().toString())
+            }
+            Row(modifier = Modifier.weight(1f).wrapContentSize()){
+                Image(painter = painterResource(Res.drawable.ic_energy), contentDescription = "ENERGY Icon", modifier = Modifier.size(24.dp))
+                Box(modifier = Modifier.width(4.dp))
+                Text(style = FontSizeNormal16(), text = (charStatusCal.ultimateEnergyRequire).toString())
+            }
+            Row(modifier = Modifier.weight(1f).wrapContentSize()){
+                Image(painter = painterResource(Res.drawable.ic_aggro), contentDescription = "AGGRO Icon", modifier = Modifier.size(24.dp))
+                Box(modifier = Modifier.width(4.dp))
+                Text(style = FontSizeNormal16(), text = (charStatusCal.aggro).toString())
+            }
+        }
     }
 }

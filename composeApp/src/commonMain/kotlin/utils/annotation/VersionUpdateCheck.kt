@@ -1,4 +1,4 @@
-package utils
+package utils.annotation
 
 /**
  * This is a class that reminding devs to do checking

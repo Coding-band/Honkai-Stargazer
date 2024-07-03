@@ -41,11 +41,14 @@ import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import utils.FontSizeNormal12
 import utils.UtilTools
+import utils.annotation.DoItLater
 
 data class InfoNavigateItem(
     val itemIcon: DrawableResource, val itemPosIndex: Int, val itemTitle: StringResource
 )
 
+
+@DoItLater("还有目录上面的名称只有滚动的时候显示，不滚动需要隐藏")
 @Preview
 @Composable
 fun InfoNavigatorBar(
@@ -60,7 +63,10 @@ fun InfoNavigatorBar(
     val coroutineScope = rememberCoroutineScope()
     var density = LocalDensity.current.density
 
-    if (alpha >= 0.25f) {
+    currChoiceIndex = listState.firstVisibleItemIndex
+
+
+    if (alpha >= 0.1f) {
 
         Column(modifier = modifier.wrapContentSize().alpha(alpha)) {
             //Text of your choice

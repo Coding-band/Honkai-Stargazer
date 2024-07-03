@@ -9,23 +9,18 @@ package components
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.OutlinedButton
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -37,7 +32,6 @@ import androidx.navigation.compose.rememberNavController
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.HazeStyle
 import dev.chrisbanes.haze.hazeChild
-import files.AppStatusLostConnect
 import files.Res
 import files.bg_transparent
 import files.phorphos_sun_fill
@@ -46,10 +40,7 @@ import files.ui_icon_close
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import utils.FontSizeNormal
-import utils.TextColorNormal
 
 val PAGE_HEADER_HEIGHT = 72.dp
 val defaultHeaderData = HeaderData(title = "?", titleIconId = Res.drawable.phorphos_sun_fill)
@@ -120,49 +111,8 @@ fun PageHeader(
 
                         )
                 }
-                Column(
-                    Modifier
-                        .weight(1f)
-                        .fillMaxSize(),
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center
-                ) {
-                    Image(
-                        painter = painterResource(resource = headerData.titleIconId),
-                        contentDescription = "Title Icon",
-                        modifier = Modifier.size(32.dp),
-                        colorFilter = ColorFilter.tint(Color.White)
-                    )
-                    Row {
-                        Spacer(
-                            modifier = Modifier
-                                .height(2.dp)
-                                .width(50.dp)
-                                .background(Color(0x66FFFFFF))
-                                .align(Alignment.CenterVertically),
-                        )
-                        Text(
-                            text =
-                            if (headerData.title === null) {
-                                if (headerData.titleRId === null)
-                                    stringResource(Res.string.AppStatusLostConnect).removePrefix("\"")
-                                        .removeSuffix("\"")
-                                else (stringResource((headerData.titleRId!!)).removePrefix("\"")
-                                    .removeSuffix("\""))
-                            } else headerData.title!!,
-                            color = TextColorNormal,
-                            style = FontSizeNormal(),
-                            modifier = Modifier.padding(start = 12.dp, end = 12.dp)
-                        )
-                        Spacer(
-                            modifier = Modifier
-                                .height(2.dp)
-                                .width(50.dp)
-                                .background(Color(0x66FFFFFF))
-                                .align(Alignment.CenterVertically),
-                        )
-                    }
-
+                Box(Modifier.weight(1f)){
+                    TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
                 }
                 OutlinedButton(
                     contentPadding = PaddingValues(0.dp),

@@ -16,6 +16,7 @@ import okio.IOException
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
+import utils.annotation.VersionUpdateCheck
 import kotlin.math.roundToInt
 
 class UtilTools {
