@@ -51,7 +51,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import utils.FontSizeNormal
 import utils.TextColorNormal
 
-val PAGE_HEADER_HEIGHT = 64.dp
+val PAGE_HEADER_HEIGHT = 72.dp
 val defaultHeaderData = HeaderData(title = "?", titleIconId = Res.drawable.phorphos_sun_fill)
 
 enum class BackIcon(var res: DrawableResource) {

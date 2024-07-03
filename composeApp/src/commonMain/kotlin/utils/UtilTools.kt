@@ -16,6 +16,7 @@ import okio.IOException
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
+import kotlin.math.roundToInt
 
 class UtilTools {
 
@@ -169,8 +170,11 @@ class UtilTools {
         return stringResource(stringResource).removePrefix("\"").removeSuffix("\"")
     }
 
-    fun pxIntToDp(px : Int, density: Float) : Dp {
+    fun pxToDp(px : Int, density: Float) : Dp {
         return Dp(px / density)
+    }
+    fun DpToPx(dp : Dp, density: Float) : Int {
+        return (dp.value * density).roundToInt()
     }
 
     fun unixTimestampToFormattedString(timestamp: Long): String {
