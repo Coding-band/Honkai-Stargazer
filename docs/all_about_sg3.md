@@ -143,9 +143,9 @@ EN:
 
 July 1 - July 7
 - [ ] Error Log Handler (1 day)
-- [ ] Character Info Page [Not include Comments] (3 days)
-- [ ] Lightcone Info Page (2 days)
-- [ ] Relic Info Page (1 day)
+- [ ] Character Info Page [Not include Comments] (5 days)
+- [ ] Lightcone Info Page (0.5 days)
+- [ ] Relic Info Page (0.5 day)
 
 July 8 - July 14
 - [ ] miHoYo API [DeviceFP will do at late August]
