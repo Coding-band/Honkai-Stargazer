@@ -66,6 +66,7 @@ Here's the major purpose we rewrite Stargazer
     - style : 格式化代碼 (Reformatting Codes) 
     - revert : 撤銷先前Commit (Revert previous commit)
     - struct : 更改代碼檔案結構 (Modify Code File Structure, E.g. Change ListHeader.kt to PageHeader.kt)
+    - rss : 數據/圖片更新 (Data/Image file update)
 - 應使用以下格式 (Must use the format below) :
   - `<type_of_commit>: <commit_describe_zh> (<commit_describe_en>)`
   - E.g. `feat: 角色介紹頁面添加角色全身圖 (add Character Full Image in Character Info Page)`
