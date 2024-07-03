@@ -1,6 +1,8 @@
 package utils
 
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.unit.Dp
 import files.Res
 import getImageBitmapByByteArray
 import kotlinx.coroutines.Dispatchers
@@ -12,6 +14,8 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import okio.IOException
 import org.jetbrains.compose.resources.ExperimentalResourceApi
+import org.jetbrains.compose.resources.StringResource
+import org.jetbrains.compose.resources.stringResource
 
 class UtilTools {
 
@@ -158,6 +162,15 @@ class UtilTools {
         }
 
         return registNameFinal
+    }
+
+    @Composable
+    fun removeStringResDoubleQuotes(stringResource: StringResource) : String{
+        return stringResource(stringResource).removePrefix("\"").removeSuffix("\"")
+    }
+
+    fun pxIntToDp(px : Int, density: Float) : Dp {
+        return Dp(px / density)
     }
 
     fun unixTimestampToFormattedString(timestamp: Long): String {

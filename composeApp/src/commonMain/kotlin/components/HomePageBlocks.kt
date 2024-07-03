@@ -51,6 +51,7 @@ import utils.FontSizeNormalLarge
 import utils.FontSizeNormalSmall
 import utils.Stargazer3Theme
 import utils.TextColorNormal
+import utils.UtilTools
 import utils.navigation.Screen
 
 class HomePageBlocks {
@@ -129,9 +130,9 @@ fun HomePageBlock1x1(
             Text(
                 text =
                 if (blockData.itemTitle === null && blockData.itemTitleRId === null) {
-                    stringResource(Res.string.AppStatusLostConnect).removePrefix("\"").removeSuffix("\"")
+                    UtilTools().removeStringResDoubleQuotes(Res.string.AppStatusLostConnect)
                 }else if(blockData.itemTitleRId !== null){
-                    stringResource(blockData.itemTitleRId!!).removePrefix("\"").removeSuffix("\"")
+                    UtilTools().removeStringResDoubleQuotes(blockData.itemTitleRId!!)
                 }else {
                     blockData.itemTitle!!
                 },
