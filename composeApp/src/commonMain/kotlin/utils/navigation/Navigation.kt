@@ -151,13 +151,12 @@ fun Navigation() {
                 })
         }
         composable(
-            route = "${Screen.CharacterInfoPage.route}/{charName}/{fileName}/{combatType}/{path}/{rarity}",
+            route = "${Screen.CharacterInfoPage.route}/{charName}/?fileName={fileName}&combatType={combatType}&path={path}",
             arguments = listOf(
                 (navArgument("fileName") { type = NavType.StringType }),
                 (navArgument("charName") { type = NavType.StringType }),
                 (navArgument("combatType") { type = NavType.StringType }),
-                (navArgument("path") { type = NavType.StringType }),
-                (navArgument("rarity") { type = NavType.StringType })
+                (navArgument("path") { type = NavType.StringType })
             ),
             enterTransition = { defaultEnterTransition }, exitTransition = { defaultExitTransition }
         ) { backStackEntry ->

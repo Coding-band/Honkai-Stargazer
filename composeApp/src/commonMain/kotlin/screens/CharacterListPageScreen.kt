@@ -121,9 +121,9 @@ fun CharacterListPage(
                         navController.navigate(
                             Screen.CharacterInfoPage.route
                                   + "/${charName.replace(" ","_")}"
-                                  + "/${fileName}"
-                                  + "/${charListItem.jsonObject["element"]?.jsonPrimitive?.content!!}"
-                                  + "/${charListItem.jsonObject["path"]?.jsonPrimitive?.content!!}"
+                                  + "/?fileName=${fileName}"
+                                  + "&combatType=${charListItem.jsonObject["element"]?.jsonPrimitive?.content!!}"
+                                  + "&path=${charListItem.jsonObject["path"]?.jsonPrimitive?.content!!}"
                         )
                     }
                 )
