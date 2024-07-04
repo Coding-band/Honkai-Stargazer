@@ -130,9 +130,10 @@ EN:
       - `files/data` : All json files
       - `files/images` : All Images that is dynamic read 
     - kotlin : Source Code Root
-      - `components` : All UI Components (Pack as able use selfly, so functions is allowed to include)
+      - `components` : All UI Components & UI functions (Which won't be reused in other pages)
       - `screens` : All Screens / Pages / Dialogs of the App
-      - `core` : All functions that support Screens and algorthm (E.g. List Sorting, Button onClick action)
+      ~~- `core` : All functions that support Screens and algorthm (E.g. List Sorting, Button onClick action)~~
+        - Reason : Since Calculation function are putting in utils. UI functions can really no need to put in there
       - `types` : Enums, Interfaces, Object Types, Constants
       - `utils` : All useful functions (Expect to use as high frequency)
       - `App.kt` : The Main Frame of the App, will handle Screen Display and Init function
