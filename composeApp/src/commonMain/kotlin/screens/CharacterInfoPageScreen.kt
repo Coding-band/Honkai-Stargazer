@@ -10,17 +10,20 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -72,12 +75,12 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
 import types.Character
-import types.CharacterStatus
 import types.CombatType
 import utils.FontSizeNormal16
 import utils.UtilTools
+import utils.calculator.CharacterAttrData
+import utils.calculator.getCharAttrData
 import kotlin.math.max
-import kotlin.math.roundToInt
 
 lateinit var localCoroutineScope: CoroutineScope;
 lateinit var localSnackbarHostState: SnackbarHostState;
@@ -197,40 +200,50 @@ fun CharacterInfoFullImgWithRare(
 
 @Composable
 fun charBasicStatusUI(charInfoJson : JsonElement){
-    var charStatusCal : CharacterStatus = remember { CharacterStatus() }
-    Column (modifier = Modifier.statusBarsPadding()){
+    var charStatusCal : CharacterAttrData by remember { mutableStateOf(CharacterAttrData(0f,0f,0f,0f,0,0)) }
+
+    charStatusCal = getCharAttrData(charInfoJson, 80)
+
+    Column (modifier = Modifier.statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
         TitleHeader(iconRId = Res.drawable.phorphos_info_regular, titleRId = Res.string.BasicStatus)
+
+        //Empty Blank
+        Box(modifier = Modifier.height(24.dp))
+
+        //Character Attr Data
         Row(modifier = Modifier.fillMaxWidth()){
-            Row(modifier = Modifier.weight(1f).wrapContentSize()){
+            Row(modifier = Modifier.weight(1f)){
                 Image(painter = painterResource(Res.drawable.ic_hp), contentDescription = "HP Icon", modifier = Modifier.size(24.dp))
                 Box(modifier = Modifier.width(4.dp))
-                Text(style = FontSizeNormal16(), text = (charStatusCal.hpAdd + charStatusCal.hpBase).roundToInt().toString())
+                Text(style = FontSizeNormal16(), text = (charStatusCal.hp).toInt().toString(), color = Color.White, modifier = Modifier.align(Alignment.CenterVertically))
             }
-            Row(modifier = Modifier.weight(1f).wrapContentSize()){
+            Row(modifier = Modifier.weight(1f)){
                 Image(painter = painterResource(Res.drawable.ic_atk), contentDescription = "ATK Icon", modifier = Modifier.size(24.dp))
                 Box(modifier = Modifier.width(4.dp))
-                Text(style = FontSizeNormal16(), text = (charStatusCal.atkAdd + charStatusCal.atkBase).roundToInt().toString())
+                Text(style = FontSizeNormal16(), text = (charStatusCal.atk).toInt().toString(), color = Color.White, modifier = Modifier.align(Alignment.CenterVertically))
             }
-            Row(modifier = Modifier.weight(1f).wrapContentSize()){
+            Row(modifier = Modifier.weight(1f)){
                 Image(painter = painterResource(Res.drawable.ic_def), contentDescription = "DEF Icon", modifier = Modifier.size(24.dp))
                 Box(modifier = Modifier.width(4.dp))
-                Text(style = FontSizeNormal16(), text = (charStatusCal.defAdd + charStatusCal.defBase).roundToInt().toString())
+                Text(style = FontSizeNormal16(), text = (charStatusCal.def).toInt().toString(),color = Color.White, modifier = Modifier.align(Alignment.CenterVertically))
             }
-            Row(modifier = Modifier.weight(1f).wrapContentSize()){
+            Row(modifier = Modifier.weight(1f)){
                 Image(painter = painterResource(Res.drawable.ic_speed), contentDescription = "SPEED Icon", modifier = Modifier.size(24.dp))
                 Box(modifier = Modifier.width(4.dp))
-                Text(style = FontSizeNormal16(), text = (charStatusCal.speedAdd + charStatusCal.speedBase).roundToInt().toString())
+                Text(style = FontSizeNormal16(), text = (charStatusCal.spd).toInt().toString(),color = Color.White, modifier = Modifier.align(Alignment.CenterVertically))
             }
-            Row(modifier = Modifier.weight(1f).wrapContentSize()){
+            Row(modifier = Modifier.weight(1f)){
                 Image(painter = painterResource(Res.drawable.ic_energy), contentDescription = "ENERGY Icon", modifier = Modifier.size(24.dp))
                 Box(modifier = Modifier.width(4.dp))
-                Text(style = FontSizeNormal16(), text = (charStatusCal.ultimateEnergyRequire).toString())
+                Text(style = FontSizeNormal16(), text = (charStatusCal.energy).toString(),color = Color.White, modifier = Modifier.align(Alignment.CenterVertically))
             }
-            Row(modifier = Modifier.weight(1f).wrapContentSize()){
+            Row(modifier = Modifier.weight(1f)){
                 Image(painter = painterResource(Res.drawable.ic_aggro), contentDescription = "AGGRO Icon", modifier = Modifier.size(24.dp))
                 Box(modifier = Modifier.width(4.dp))
-                Text(style = FontSizeNormal16(), text = (charStatusCal.aggro).toString())
+                Text(style = FontSizeNormal16(), text = (charStatusCal.aggro).toString(),color = Color.White, modifier = Modifier.align(Alignment.CenterVertically))
             }
         }
+
+
     }
 }
