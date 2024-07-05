@@ -91,7 +91,7 @@ class UtilTools {
                     val assetByte: ByteArray = Res.readBytes("files/images/${folderType.folderName}/${fileName}${folderType.suffix}")
                     return@async getImageBitmapByByteArray(assetByte)
                 } catch (e: IOException) {
-                    // Handle the exception, ErrorLogExporter Please!
+                    errorLogExport("UtilTools","getAssetsWebpByFileName()",e)
                     return@async getImageBitmapByByteArray(Res.readBytes("files/ico_lost_img.webp"))
                 }
             }

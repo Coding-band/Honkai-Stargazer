@@ -19,6 +19,11 @@ data class CharacterAttrData(
     var aggro: Int,
     var energy: Int,
 )
+data class LightconeAttrData(
+    var atk: Float,
+    var hp: Float,
+    var def: Float,
+)
 
 // 根據等級取得角色屬性數值
 fun getCharAttrData(charJsonElement: JsonElement, level: Int = 1) : CharacterAttrData{
@@ -45,3 +50,29 @@ fun getCharAttrData(charJsonElement: JsonElement, level: Int = 1) : CharacterAtt
 
     return tmpAttrData
 }
+
+
+
+// 根據等級取得光錐屬性數值
+fun getLcAttrData(charJsonElement: JsonElement, level: Int = 1) : LightconeAttrData{
+    val charLevelData = charJsonElement.jsonObject["levelData"]!!
+    var tmpAttrData : LightconeAttrData = LightconeAttrData(0f,0f,0f)
+
+    // 找到對應等級的數據
+    val dataFromLevel = charLevelData.jsonArray.find { data ->
+        if(level == 80) {
+            level <= data.jsonObject["maxLevel"]!!.jsonPrimitive.int
+        } else {
+            level < data.jsonObject["maxLevel"]!!.jsonPrimitive.int
+        }
+    }
+
+    if(dataFromLevel !== null){
+        tmpAttrData.atk = dataFromLevel.jsonObject["attackBase"]!!.jsonPrimitive.float + (dataFromLevel.jsonObject["attackAdd"]!!.jsonPrimitive.float) * (level - 1)
+        tmpAttrData.def = dataFromLevel.jsonObject["defenseBase"]!!.jsonPrimitive.float + (dataFromLevel.jsonObject["defenseAdd"]!!.jsonPrimitive.float) * (level - 1)
+        tmpAttrData.hp = dataFromLevel.jsonObject["hpBase"]!!.jsonPrimitive.float + (dataFromLevel.jsonObject["hpAdd"]!!.jsonPrimitive.float) * (level - 1)
+    }
+
+    return tmpAttrData
+}
+
