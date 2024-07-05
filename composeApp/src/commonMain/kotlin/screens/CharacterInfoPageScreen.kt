@@ -5,6 +5,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -43,6 +44,7 @@ import components.InfoNavigateItem
 import components.InfoNavigatorBar
 import components.PAGE_HEADER_HEIGHT
 import components.PageHeader
+import components.ThemedSlider
 import components.TitleHeader
 import components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
@@ -56,6 +58,7 @@ import files.Eidolon
 import files.Res
 import files.TraceTree
 import files.ic_aggro
+import files.ic_arrow_to_down
 import files.ic_atk
 import files.ic_def
 import files.ic_energy
@@ -78,6 +81,7 @@ import types.Character
 import types.CombatType
 import utils.FontSizeNormal16
 import utils.UtilTools
+import utils.annotation.DoItLater
 import utils.calculator.CharacterAttrData
 import utils.calculator.getCharAttrData
 import kotlin.math.max
@@ -203,47 +207,72 @@ fun charBasicStatusUI(charInfoJson : JsonElement){
     var charStatusCal : CharacterAttrData by remember { mutableStateOf(CharacterAttrData(0f,0f,0f,0f,0,0)) }
 
     charStatusCal = getCharAttrData(charInfoJson, 80)
+    var basicStatusLvBegin by remember { mutableStateOf(1f) }
+    var basicStatusLvEnd by remember { mutableStateOf(80f) }
+
+    if(basicStatusLvBegin > basicStatusLvEnd){
+        basicStatusLvBegin = basicStatusLvEnd
+    }else if(basicStatusLvEnd < basicStatusLvBegin){
+        basicStatusLvEnd = basicStatusLvBegin
+    }
 
     Column (modifier = Modifier.statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
         TitleHeader(iconRId = Res.drawable.phorphos_info_regular, titleRId = Res.string.BasicStatus)
 
         //Empty Blank
-        Box(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(24.dp))
 
         //Character Attr Data
-        Row(modifier = Modifier.fillMaxWidth()){
-            Row(modifier = Modifier.weight(1f)){
+        DoItLater("")
+        Row(modifier = Modifier.align(Alignment.CenterHorizontally)){
+            Row(modifier = Modifier.padding(2.dp)){
                 Image(painter = painterResource(Res.drawable.ic_hp), contentDescription = "HP Icon", modifier = Modifier.size(24.dp))
-                Box(modifier = Modifier.width(4.dp))
+                Box(modifier = Modifier.width(2.dp))
                 Text(style = FontSizeNormal16(), text = (charStatusCal.hp).toInt().toString(), color = Color.White, modifier = Modifier.align(Alignment.CenterVertically))
             }
-            Row(modifier = Modifier.weight(1f)){
+            Row(modifier = Modifier.padding(2.dp)){
                 Image(painter = painterResource(Res.drawable.ic_atk), contentDescription = "ATK Icon", modifier = Modifier.size(24.dp))
-                Box(modifier = Modifier.width(4.dp))
+                Box(modifier = Modifier.width(2.dp))
                 Text(style = FontSizeNormal16(), text = (charStatusCal.atk).toInt().toString(), color = Color.White, modifier = Modifier.align(Alignment.CenterVertically))
             }
-            Row(modifier = Modifier.weight(1f)){
+            Row(modifier = Modifier.padding(2.dp)){
                 Image(painter = painterResource(Res.drawable.ic_def), contentDescription = "DEF Icon", modifier = Modifier.size(24.dp))
-                Box(modifier = Modifier.width(4.dp))
+                Box(modifier = Modifier.width(2.dp))
                 Text(style = FontSizeNormal16(), text = (charStatusCal.def).toInt().toString(),color = Color.White, modifier = Modifier.align(Alignment.CenterVertically))
             }
-            Row(modifier = Modifier.weight(1f)){
+            Row(modifier = Modifier.padding(2.dp)){
                 Image(painter = painterResource(Res.drawable.ic_speed), contentDescription = "SPEED Icon", modifier = Modifier.size(24.dp))
-                Box(modifier = Modifier.width(4.dp))
+                Box(modifier = Modifier.width(2.dp))
                 Text(style = FontSizeNormal16(), text = (charStatusCal.spd).toInt().toString(),color = Color.White, modifier = Modifier.align(Alignment.CenterVertically))
             }
-            Row(modifier = Modifier.weight(1f)){
+            Row(modifier = Modifier.padding(2.dp)){
                 Image(painter = painterResource(Res.drawable.ic_energy), contentDescription = "ENERGY Icon", modifier = Modifier.size(24.dp))
-                Box(modifier = Modifier.width(4.dp))
+                Box(modifier = Modifier.width(2.dp))
                 Text(style = FontSizeNormal16(), text = (charStatusCal.energy).toString(),color = Color.White, modifier = Modifier.align(Alignment.CenterVertically))
             }
-            Row(modifier = Modifier.weight(1f)){
+            Row(modifier = Modifier.padding(2.dp)){
                 Image(painter = painterResource(Res.drawable.ic_aggro), contentDescription = "AGGRO Icon", modifier = Modifier.size(24.dp))
-                Box(modifier = Modifier.width(4.dp))
+                Box(modifier = Modifier.width(2.dp))
                 Text(style = FontSizeNormal16(), text = (charStatusCal.aggro).toString(),color = Color.White, modifier = Modifier.align(Alignment.CenterVertically))
             }
         }
 
+        Spacer(modifier = Modifier.height(16.dp))
+
+        //Level Slider
+        Column {
+            Row(Modifier.height(20.dp)){
+                Text("Lv.${basicStatusLvBegin.toInt()}", modifier = Modifier.width(60.dp).align(Alignment.CenterVertically), color = Color.White)
+                ThemedSlider(basicStatusLvBegin, { basicStatusLvBegin = it})
+            }
+
+            Image(painterResource(Res.drawable.ic_arrow_to_down), contentDescription = "Arrow Down", modifier = Modifier.padding(8.dp))
+
+            Row(Modifier.height(20.dp)){
+                Text("Lv.${basicStatusLvEnd.toInt()}", modifier = Modifier.width(60.dp).align(Alignment.CenterVertically), color = Color.White)
+                ThemedSlider(basicStatusLvEnd, { basicStatusLvEnd = it})
+            }
+        }
 
     }
 }
