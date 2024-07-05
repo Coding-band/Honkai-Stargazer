@@ -81,7 +81,6 @@ import types.Character
 import types.CombatType
 import utils.FontSizeNormal16
 import utils.UtilTools
-import utils.annotation.DoItLater
 import utils.calculator.CharacterAttrData
 import utils.calculator.getCharAttrData
 import kotlin.math.max
@@ -206,9 +205,9 @@ fun CharacterInfoFullImgWithRare(
 fun charBasicStatusUI(charInfoJson : JsonElement){
     var charStatusCal : CharacterAttrData by remember { mutableStateOf(CharacterAttrData(0f,0f,0f,0f,0,0)) }
 
-    charStatusCal = getCharAttrData(charInfoJson, 80)
     var basicStatusLvBegin by remember { mutableStateOf(1f) }
     var basicStatusLvEnd by remember { mutableStateOf(80f) }
+    charStatusCal = getCharAttrData(charInfoJson, basicStatusLvEnd.toInt())
 
     if(basicStatusLvBegin > basicStatusLvEnd){
         basicStatusLvBegin = basicStatusLvEnd
@@ -223,7 +222,6 @@ fun charBasicStatusUI(charInfoJson : JsonElement){
         Spacer(modifier = Modifier.height(24.dp))
 
         //Character Attr Data
-        DoItLater("")
         Row(modifier = Modifier.align(Alignment.CenterHorizontally)){
             Row(modifier = Modifier.padding(2.dp)){
                 Image(painter = painterResource(Res.drawable.ic_hp), contentDescription = "HP Icon", modifier = Modifier.size(24.dp))

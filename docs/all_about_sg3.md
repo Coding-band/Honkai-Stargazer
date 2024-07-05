@@ -143,10 +143,11 @@ EN:
 - [x] Finish This md's writting
 
 July 1 - July 7
-- [ ] Error Log Handler (1 day)
+- [x] Error Log Handler (1 day)
+- [x] Basic Util, Constants, types (1 day)
 - [ ] Character Info Page [Not include Comments] (5 days)
-- [ ] Lightcone Info Page (0.5 days)
-- [ ] Relic Info Page (0.5 day)
+- [ ] Lightcone Info Page (do together)
+- [ ] Relic Info Page (do together)
 
 July 8 - July 14
 - [ ] miHoYo API [DeviceFP will do at late August]
@@ -180,3 +181,7 @@ August 12 - August 18
 
 August 19 - August 31
 - [ ] Close Beta Testing
+
+September 1 - September 7
+- [ ] Final checking
+- [ ] Prepare to upload to different platform
