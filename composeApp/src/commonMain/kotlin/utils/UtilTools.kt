@@ -81,6 +81,18 @@ class UtilTools {
         RELIC_PC_ICON("relic_pcicon", ".webp"),
     }
 
+    @OptIn(ExperimentalCoroutinesApi::class, ExperimentalResourceApi::class)
+    fun getLostImgBitmap() : ImageBitmap {
+        return runBlocking {
+            val job = async(Dispatchers.IO) {
+                val assetByte: ByteArray = Res.readBytes("files/ico_lost_img.webp")
+                return@async getImageBitmapByByteArray(assetByte)
+            }
+            job.await()
+            job.getCompleted()
+        }
+    }
+
 
     @OptIn(ExperimentalCoroutinesApi::class, ExperimentalResourceApi::class)
     fun getAssetsWebpByFileName(folderType: ImageFolderType, fileName: String): ImageBitmap {
