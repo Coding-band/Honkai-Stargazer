@@ -54,7 +54,7 @@ fun InfoBioColumn(
     var columnHeightDp by remember { mutableStateOf(110.dp) }
     var density = LocalDensity.current.density
 
-    Box(modifier = Modifier.height(getScreenSizeInfo().hDP - columnHeightDp))
+    Box(modifier = Modifier.height(getScreenSizeInfo().hDP - columnHeightDp + 12.dp))
     Column(modifier = Modifier.padding(start = 28.dp, end = 28.dp)
         .onSizeChanged { item ->
             columnHeightDp = UtilTools().pxToDp(item.height, density)

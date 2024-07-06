@@ -60,8 +60,9 @@ fun CharacterCard(
     level: Int? = -1,
     ascensionPhase: Int? = -1, //Rank 突破等級
     displayName: String? = "?",
-    isMultiDisplay: Boolean? = false, //展示推薦隊伍
+    isMultiDisplay: Boolean = false, //展示推薦隊伍
     onClick: () -> Unit = {}, //按下後會做甚麼
+    isDisplayLevel: Boolean = false
 
 ) {
     val interactionSource = remember { MutableInteractionSource() }
@@ -111,7 +112,7 @@ fun CharacterCard(
                 horizontalArrangement = Arrangement.Center
             ) {
                 Text(
-                    text = displayName!!,
+                    text = if(isDisplayLevel) "Lv ${level.toString()}" else displayName!!,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.align(Alignment.CenterVertically),
                     color = TextColorNormalDim,
@@ -124,7 +125,7 @@ fun CharacterCard(
         Column (modifier = Modifier.padding(2.dp)){
             Image(
                 painter = painterResource(resource = character.combatType.iconColor),
-                contentDescription = "Character Icon",
+                contentDescription = "Character Combat Type Icon",
                 modifier = Modifier
                     .requiredWidth(20.dp)
                     .requiredHeight(20.dp)
@@ -134,7 +135,7 @@ fun CharacterCard(
             Spacer(modifier = Modifier.height(2.dp))
             Image(
                 painter = painterResource(resource = character.path.iconWhite),
-                contentDescription = "Character Icon",
+                contentDescription = "Character Path Icon",
                 modifier = Modifier
                     .requiredWidth(20.dp)
                     .requiredHeight(20.dp)
