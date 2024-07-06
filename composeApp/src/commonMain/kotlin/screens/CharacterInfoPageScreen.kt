@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import components.BackIcon
+import components.CharacterTraceTree.CharacterTraceTree
 import components.HeaderData
 import components.InfoBasicStatus
 import components.InfoBioColumn
@@ -120,9 +121,7 @@ fun CharacterInfoPage(
             item {InfoBioColumn(charInfoJson, combatType, path, isUserOwned = false, isFullEidolon = false) }
             //Don't forget to add "StatusBarPadding" !
             item { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
-            item {
-                Text("我是Index 2", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
-            }
+            item { CharacterTraceTree(charInfoJson, path) }
             item {
                 Text("我是Index 3", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
             }
