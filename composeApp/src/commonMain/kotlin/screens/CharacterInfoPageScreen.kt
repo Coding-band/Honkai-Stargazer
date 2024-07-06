@@ -3,28 +3,19 @@ package screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -39,13 +30,13 @@ import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import components.BackIcon
 import components.HeaderData
+import components.InfoBasicStatus
 import components.InfoBioColumn
 import components.InfoNavigateItem
 import components.InfoNavigatorBar
 import components.PAGE_HEADER_HEIGHT
 import components.PageHeader
-import components.ThemedSlider
-import components.TitleHeader
+import components.StatusType
 import components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
@@ -57,13 +48,6 @@ import files.CharacterStory
 import files.Eidolon
 import files.Res
 import files.TraceTree
-import files.ic_aggro
-import files.ic_arrow_to_down
-import files.ic_atk
-import files.ic_def
-import files.ic_energy
-import files.ic_hp
-import files.ic_speed
 import files.phorphos_baseball_cap_regular
 import files.phorphos_chats_circle_regular
 import files.phorphos_info_regular
@@ -73,16 +57,11 @@ import files.phorphos_star_half_regular
 import files.phorphos_sword_regular
 import files.phorphos_tree_structure_regular
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import org.jetbrains.compose.resources.painterResource
 import types.Character
 import types.CombatType
-import utils.FontSizeNormal16
 import utils.UtilTools
-import utils.calculator.CharacterAttrData
-import utils.calculator.getCharAttrData
 import kotlin.math.max
 
 lateinit var localCoroutineScope: CoroutineScope;
@@ -140,7 +119,7 @@ fun CharacterInfoPage(
         LazyColumn(state = listState, modifier = Modifier.haze(hazeState)) {
             item {InfoBioColumn(charInfoJson, combatType, path, isUserOwned = false, isFullEidolon = false) }
             //Don't forget to add "StatusBarPadding" !
-            item { charBasicStatusUI(charInfoJson) }
+            item { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
             item {
                 Text("我是Index 2", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
             }
@@ -197,80 +176,6 @@ fun CharacterInfoFullImgWithRare(
                 )
             ).align(Alignment.BottomCenter),
         )
-
-    }
-}
-
-@Composable
-fun charBasicStatusUI(charInfoJson : JsonElement){
-    var charStatusCal : CharacterAttrData by remember { mutableStateOf(CharacterAttrData(0f,0f,0f,0f,0,0)) }
-
-    var basicStatusLvBegin by remember { mutableStateOf(1f) }
-    var basicStatusLvEnd by remember { mutableStateOf(80f) }
-    charStatusCal = getCharAttrData(charInfoJson, basicStatusLvEnd.toInt())
-
-    if(basicStatusLvBegin > basicStatusLvEnd){
-        basicStatusLvBegin = basicStatusLvEnd
-    }else if(basicStatusLvEnd < basicStatusLvBegin){
-        basicStatusLvEnd = basicStatusLvBegin
-    }
-
-    Column (modifier = Modifier.statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
-        TitleHeader(iconRId = Res.drawable.phorphos_info_regular, titleRId = Res.string.BasicStatus)
-
-        //Empty Blank
-        Spacer(modifier = Modifier.height(24.dp))
-
-        //Character Attr Data
-        Row(modifier = Modifier.align(Alignment.CenterHorizontally)){
-            Row(modifier = Modifier.padding(2.dp)){
-                Image(painter = painterResource(Res.drawable.ic_hp), contentDescription = "HP Icon", modifier = Modifier.size(24.dp))
-                Box(modifier = Modifier.width(2.dp))
-                Text(style = FontSizeNormal16(), text = (charStatusCal.hp).toInt().toString(), color = Color.White, modifier = Modifier.align(Alignment.CenterVertically))
-            }
-            Row(modifier = Modifier.padding(2.dp)){
-                Image(painter = painterResource(Res.drawable.ic_atk), contentDescription = "ATK Icon", modifier = Modifier.size(24.dp))
-                Box(modifier = Modifier.width(2.dp))
-                Text(style = FontSizeNormal16(), text = (charStatusCal.atk).toInt().toString(), color = Color.White, modifier = Modifier.align(Alignment.CenterVertically))
-            }
-            Row(modifier = Modifier.padding(2.dp)){
-                Image(painter = painterResource(Res.drawable.ic_def), contentDescription = "DEF Icon", modifier = Modifier.size(24.dp))
-                Box(modifier = Modifier.width(2.dp))
-                Text(style = FontSizeNormal16(), text = (charStatusCal.def).toInt().toString(),color = Color.White, modifier = Modifier.align(Alignment.CenterVertically))
-            }
-            Row(modifier = Modifier.padding(2.dp)){
-                Image(painter = painterResource(Res.drawable.ic_speed), contentDescription = "SPEED Icon", modifier = Modifier.size(24.dp))
-                Box(modifier = Modifier.width(2.dp))
-                Text(style = FontSizeNormal16(), text = (charStatusCal.spd).toInt().toString(),color = Color.White, modifier = Modifier.align(Alignment.CenterVertically))
-            }
-            Row(modifier = Modifier.padding(2.dp)){
-                Image(painter = painterResource(Res.drawable.ic_energy), contentDescription = "ENERGY Icon", modifier = Modifier.size(24.dp))
-                Box(modifier = Modifier.width(2.dp))
-                Text(style = FontSizeNormal16(), text = (charStatusCal.energy).toString(),color = Color.White, modifier = Modifier.align(Alignment.CenterVertically))
-            }
-            Row(modifier = Modifier.padding(2.dp)){
-                Image(painter = painterResource(Res.drawable.ic_aggro), contentDescription = "AGGRO Icon", modifier = Modifier.size(24.dp))
-                Box(modifier = Modifier.width(2.dp))
-                Text(style = FontSizeNormal16(), text = (charStatusCal.aggro).toString(),color = Color.White, modifier = Modifier.align(Alignment.CenterVertically))
-            }
-        }
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        //Level Slider
-        Column {
-            Row(Modifier.height(20.dp)){
-                Text("Lv.${basicStatusLvBegin.toInt()}", modifier = Modifier.width(60.dp).align(Alignment.CenterVertically), color = Color.White)
-                ThemedSlider(basicStatusLvBegin, { basicStatusLvBegin = it})
-            }
-
-            Image(painterResource(Res.drawable.ic_arrow_to_down), contentDescription = "Arrow Down", modifier = Modifier.padding(8.dp))
-
-            Row(Modifier.height(20.dp)){
-                Text("Lv.${basicStatusLvEnd.toInt()}", modifier = Modifier.width(60.dp).align(Alignment.CenterVertically), color = Color.White)
-                ThemedSlider(basicStatusLvEnd, { basicStatusLvEnd = it})
-            }
-        }
 
     }
 }
