@@ -11,7 +11,7 @@ import kotlinx.serialization.json.jsonPrimitive
  * This file is ref from https://github.com/Coding-band/Honkai-Stargazer/blob/rn_branch/src/utils/calculator/getAttrData.ts
  * (寫算法係我自己吖嘛...拎嚟用返冇問題掛...)
  */
-data class CharacterAttrData(
+data class AttrData(
     var atk: Float,
     var hp: Float,
     var def: Float,
@@ -19,16 +19,10 @@ data class CharacterAttrData(
     var aggro: Int,
     var energy: Int,
 )
-data class LightconeAttrData(
-    var atk: Float,
-    var hp: Float,
-    var def: Float,
-)
-
 // 根據等級取得角色屬性數值
-fun getCharAttrData(charJsonElement: JsonElement, level: Int = 1) : CharacterAttrData{
-    val charLevelData = charJsonElement.jsonObject["levelData"]!!
-    var tmpAttrData : CharacterAttrData = CharacterAttrData(0f,0f,0f,0f,0,0)
+fun getCharAttrData(jsonElement: JsonElement, level: Int = 1) : AttrData{
+    val charLevelData = jsonElement.jsonObject["levelData"]!!
+    var tmpAttrData : AttrData = AttrData(0f,0f,0f,0f,0,0)
 
     // 找到對應等級的數據
     val dataFromLevel = charLevelData.jsonArray.find { data ->
@@ -45,7 +39,7 @@ fun getCharAttrData(charJsonElement: JsonElement, level: Int = 1) : CharacterAtt
         tmpAttrData.hp = dataFromLevel.jsonObject["hpBase"]!!.jsonPrimitive.float + (dataFromLevel.jsonObject["hpAdd"]!!.jsonPrimitive.float) * (level - 1)
         tmpAttrData.spd = dataFromLevel.jsonObject["speedBase"]!!.jsonPrimitive.float + (dataFromLevel.jsonObject["speedAdd"]!!.jsonPrimitive.float) * (level - 1)
         tmpAttrData.aggro = dataFromLevel.jsonObject["aggro"]!!.jsonPrimitive.int
-        tmpAttrData.energy = charJsonElement.jsonObject["spRequirement"]!!.jsonPrimitive.int
+        tmpAttrData.energy = jsonElement.jsonObject["spRequirement"]!!.jsonPrimitive.int
     }
 
     return tmpAttrData
@@ -54,9 +48,9 @@ fun getCharAttrData(charJsonElement: JsonElement, level: Int = 1) : CharacterAtt
 
 
 // 根據等級取得光錐屬性數值
-fun getLcAttrData(charJsonElement: JsonElement, level: Int = 1) : LightconeAttrData{
+fun getLcAttrData(charJsonElement: JsonElement, level: Int = 1) : AttrData{
     val charLevelData = charJsonElement.jsonObject["levelData"]!!
-    var tmpAttrData : LightconeAttrData = LightconeAttrData(0f,0f,0f)
+    var tmpAttrData : AttrData = AttrData(0f,0f,0f,0f,0,0)
 
     // 找到對應等級的數據
     val dataFromLevel = charLevelData.jsonArray.find { data ->
