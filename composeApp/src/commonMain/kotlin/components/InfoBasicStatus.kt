@@ -57,6 +57,9 @@ fun InfoBasicStatus(infoJson : JsonElement, statusType : StatusType = StatusType
         basicStatusLvEnd = basicStatusLvBegin
     }
 
+    val materialList = getCharMaterialData(infoJson, beginLv = basicStatusLvBegin.toInt(), endLv = basicStatusLvEnd.toInt())
+    val sortedMaterialKeyList = remember { materialList.keys.sorted() }
+
     Column (modifier = Modifier.statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
         TitleHeader(iconRId = Res.drawable.phorphos_info_regular, titleRId = Res.string.BasicStatus)
 
@@ -127,15 +130,17 @@ fun InfoBasicStatus(infoJson : JsonElement, statusType : StatusType = StatusType
         Spacer(modifier = Modifier.height(16.dp))
 
         //Material List
-        val materialList = getCharMaterialData(infoJson, beginLv = basicStatusLvBegin.toInt(), endLv = basicStatusLvEnd.toInt())
         LazyRow(modifier = Modifier.height(MATERIAL_CARD_HEIGHT).fillMaxWidth()) {
-            for((index, key) in (materialList.keys.sorted()).withIndex()){
-                item{
-                    if(index != 0){
-                        Spacer(modifier = Modifier.width(16.dp))
+            for((index, key) in (sortedMaterialKeyList).withIndex()){
+                if(materialList[key] !== null){
+                    item(key = key){
+                        if(index != 0){
+                            Spacer(modifier = Modifier.width(16.dp))
+                        }
+                        MaterialCard(materialList[key]!!)
                     }
-                    MaterialCard(materialList[key]!!)
                 }
+
             }
         }
 

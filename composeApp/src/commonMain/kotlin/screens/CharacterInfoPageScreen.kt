@@ -111,10 +111,13 @@ fun CharacterInfoPage(
     var scrollToAlpha = if(listState.firstVisibleItemIndex == 0) max(0f, (scrollPxTrigInvisible - listState.firstVisibleItemScrollOffset) / 200f) else 0f
     Box {
 
-        CharacterInfoFullImgWithRare(
-            fileName = characterName,
-            alpha = scrollToAlpha
-        )
+        if(scrollToAlpha > 0f){
+
+            CharacterInfoFullImgWithRare(
+                fileName = characterName,
+                alpha = scrollToAlpha
+            )
+        }
 
         //RecycleView
         LazyColumn(state = listState, modifier = Modifier.haze(hazeState)) {

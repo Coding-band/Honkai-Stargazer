@@ -18,7 +18,9 @@ import types.DeviceInfo
 
 
 actual fun getImageBitmapByByteArray(byteArray: ByteArray): ImageBitmap {
-    return BitmapFactory.decodeByteArray(byteArray,0,byteArray.size).asImageBitmap();
+    val bitmap : ImageBitmap = BitmapFactory.decodeByteArray(byteArray,0,byteArray.size).asImageBitmap()
+    bitmap.prepareToDraw()
+    return bitmap;
 }
 
 @Composable
