@@ -17,8 +17,10 @@ import androidx.compose.ui.unit.dp
 import files.HarmonyTraceTree
 import files.Res
 import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
 import types.Constants
 import types.Path
@@ -26,26 +28,26 @@ import types.Path
 //(x,y) base on Figma, no need to handly calculate
 val harmonyOffsetList = arrayListOf(
     (0 to 0),//Empty
-    (72 to 163),//普攻
-    (202 to 163),//戰技
-    (136 to 154),//終結技
-    (136 to 80),//天賦
-    (136 to 228),//祕技
-    (243 to 80),
+    (68 to 141),//普攻
+    (200 to 141),//戰技
+    (134 to 134),//終結技
+    (134 to 208),//天賦
+    (134 to 298),//祕技
+    (0 to 158),
 
-    (22 to 80),
-    (133 to 0),
-    (147 to 312),
-    (293 to 146),
-    (274 to 193),
-    (253 to 240),
+    (260 to 158),
+    (130 to 52),
+    (146 to 372),
+    (16 to 108),
+    (48 to 76),
+    (80 to 360),
 
-    (0 to 146),
-    (21 to 193),
-    (47 to 240),
-    (214 to 28),
-    (83 to 28),
-    (147 to 372),
+    (276 to 236),
+    (244 to 268),
+    (212 to 360),
+    (146 to 0),
+    (80 to 14),
+    (212 to 14),
 )
 
 @Composable
@@ -54,7 +56,7 @@ fun HarmonyTraceTree(infoJson: JsonElement, displayWidth: Dp, selectedId: Mutabl
 
     val selectedId = remember { mutableStateOf(0) }
 
-    val skillTreePointsArray = infoJson.jsonObject["skillTreePoints"]!!.jsonArray
+    val skillTreePointsArray = infoJson.jsonObject["skillTreePoints"]!!.jsonArray.sortedBy { it.jsonObject["anchor"]!!.jsonPrimitive.int }
     val skillTreeCoreArray = infoJson.jsonObject["skills"]!!.jsonArray
 
     val pointNormalATK = getDataFromSkills(skillTreeCoreArray[0].jsonObject, charFileName, 1) //普攻

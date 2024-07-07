@@ -17,8 +17,10 @@ import androidx.compose.ui.unit.dp
 import files.DestructionTraceTree
 import files.Res
 import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
 import types.Constants
 import types.Path
@@ -54,7 +56,7 @@ fun DestructionTraceTree(infoJson: JsonElement, displayWidth: Dp, selectedId: Mu
 
     val selectedId = remember { mutableStateOf(0) }
 
-    val skillTreePointsArray = infoJson.jsonObject["skillTreePoints"]!!.jsonArray
+    val skillTreePointsArray = infoJson.jsonObject["skillTreePoints"]!!.jsonArray.sortedBy { it.jsonObject["anchor"]!!.jsonPrimitive.int }
     val skillTreeCoreArray = infoJson.jsonObject["skills"]!!.jsonArray
 
     val pointNormalATK = getDataFromSkills(skillTreeCoreArray[0].jsonObject, charFileName, 1) //普攻

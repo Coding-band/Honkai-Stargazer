@@ -138,7 +138,7 @@ class UtilTools {
 
 
     @VersionUpdateCheck
-    fun getImageNameByRegistName(registName: String, isCharFullImg: Boolean = false) : String {
+    fun getImageNameByRegistName(registName: String, isCharFullImg: Boolean = false, isCharNoGen: Boolean = false) : String {
         var registNameFinal = registName
             .replace("Trailblazer Boy (Physical)","trailblazer_physical_male")
             .replace("Trailblazer Girl (Physical)","trailblazer_physical_female")
@@ -174,6 +174,11 @@ class UtilTools {
                 .replace("trailblazer_physical_female","trailblazer_girl")
                 .replace("trailblazer_fire_female","trailblazer_girl")
                 .replace("trailblazer_imaginary_female","trailblazer_girl")
+        }
+        if(isCharNoGen){
+            registNameFinal = registNameFinal
+                .replace("_male","")
+                .replace("_female","")
         }
 
         return registNameFinal

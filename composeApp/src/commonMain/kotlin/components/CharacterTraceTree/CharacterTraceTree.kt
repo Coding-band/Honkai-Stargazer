@@ -46,7 +46,7 @@ import types.TracecTreeLevelData
 import utils.UtilTools
 
 @Composable
-fun CharacterTraceTree(infoJson : JsonElement, path: Path, charFileName: String){
+fun CharacterTraceTree(infoJson : JsonElement, path: Path, charName: String){
     val displayWidth = getScreenSizeInfo().wDP - 36.dp;
     val selectedId = remember { mutableStateOf(0) }
     Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
@@ -56,13 +56,13 @@ fun CharacterTraceTree(infoJson : JsonElement, path: Path, charFileName: String)
         Spacer(modifier = Modifier.height(24.dp))
 
         when(path){
-            Path.Abundance -> AbundanceTraceTree(infoJson, displayWidth, selectedId, charFileName)
-            Path.Destruction -> DestructionTraceTree(infoJson, displayWidth, selectedId, charFileName)
-            Path.Erudition -> EruditionTraceTree(infoJson, displayWidth, selectedId, charFileName)
-            Path.Harmony -> HarmonyTraceTree(infoJson, displayWidth, selectedId, charFileName)
-            Path.Hunt -> HuntTraceTree(infoJson, displayWidth, selectedId, charFileName)
-            Path.Nihility -> NihilityTraceTree(infoJson, displayWidth, selectedId, charFileName)
-            Path.Preservation -> PreservationTraceTree(infoJson, displayWidth, selectedId, charFileName)
+            Path.Abundance -> AbundanceTraceTree(infoJson, displayWidth, selectedId, charName)
+            Path.Destruction -> DestructionTraceTree(infoJson, displayWidth, selectedId, charName)
+            Path.Erudition -> EruditionTraceTree(infoJson, displayWidth, selectedId, charName)
+            Path.Harmony -> HarmonyTraceTree(infoJson, displayWidth, selectedId, charName)
+            Path.Hunt -> HuntTraceTree(infoJson, displayWidth, selectedId, charName)
+            Path.Nihility -> NihilityTraceTree(infoJson, displayWidth, selectedId, charName)
+            Path.Preservation -> PreservationTraceTree(infoJson, displayWidth, selectedId, charName)
             else -> {}
         }
 
@@ -226,7 +226,7 @@ fun TraceTreeBtn(
             bitmap = if (selfId <= 5) {
                 UtilTools().getAssetsWebpByFileName(
                     UtilTools.ImageFolderType.CHAR_SKILL,
-                    UtilTools().getImageNameByRegistName(traceTreeItem.iconPath)
+                    UtilTools().getImageNameByRegistName(traceTreeItem.iconPath, isCharNoGen = true)
                 )
             } else {
                 UtilTools().getAssetsWebpByFileName(

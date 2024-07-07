@@ -133,7 +133,7 @@ fun CharacterInfoPage(
             item {InfoBioColumn(charInfoJson, combatType, path, isUserOwned = false, isFullEidolon = false) }
             //Don't forget to add "StatusBarPadding" !
             item { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
-            item { CharacterTraceTree(charInfoJson, path, characterFileName) }
+            item { CharacterTraceTree(charInfoJson, path, characterName) }
             item {
                 Text("我是Index 3", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
             }
