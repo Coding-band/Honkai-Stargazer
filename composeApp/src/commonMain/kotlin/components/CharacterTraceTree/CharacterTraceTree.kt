@@ -56,7 +56,13 @@ fun CharacterTraceTree(infoJson : JsonElement, path: Path, charFileName: String)
         Spacer(modifier = Modifier.height(24.dp))
 
         when(path){
+            Path.Abundance -> AbundanceTraceTree(infoJson, displayWidth, selectedId, charFileName)
             Path.Destruction -> DestructionTraceTree(infoJson, displayWidth, selectedId, charFileName)
+            Path.Erudition -> EruditionTraceTree(infoJson, displayWidth, selectedId, charFileName)
+            Path.Harmony -> HarmonyTraceTree(infoJson, displayWidth, selectedId, charFileName)
+            Path.Hunt -> HuntTraceTree(infoJson, displayWidth, selectedId, charFileName)
+            Path.Nihility -> NihilityTraceTree(infoJson, displayWidth, selectedId, charFileName)
+            Path.Preservation -> PreservationTraceTree(infoJson, displayWidth, selectedId, charFileName)
             else -> {}
         }
 
@@ -220,7 +226,7 @@ fun TraceTreeBtn(
             bitmap = if (selfId <= 5) {
                 UtilTools().getAssetsWebpByFileName(
                     UtilTools.ImageFolderType.CHAR_SKILL,
-                    traceTreeItem.iconPath
+                    UtilTools().getImageNameByRegistName(traceTreeItem.iconPath)
                 )
             } else {
                 UtilTools().getAssetsWebpByFileName(

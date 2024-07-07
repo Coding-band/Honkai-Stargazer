@@ -14,7 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import files.DestructionTraceTree
+import files.EruditionTraceTree
 import files.Res
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.jsonArray
@@ -24,32 +24,32 @@ import types.Constants
 import types.Path
 
 //(x,y) base on Figma, no need to handly calculate
-val dedstructionOffsetList = arrayListOf(
+val eruditionOffsetList = arrayListOf(
     (0 to 0),//Empty
-    (56 to 189),//普攻
-    (219 to 189),//戰技
-    (138 to 217),//終結技
-    (138 to 134),//天賦
-    (138 to 298),//祕技
-    (52 to 308),
+    (55 to 213),//普攻
+    (216 to 213),//戰技
+    (136 to 213),//終結技
+    (136 to 139),//天賦
+    (136 to 346),//祕技
+    (51 to 139),
 
-    (215 to 308),
-    (134 to 52),
-    (150 to 372),
-    (28 to 258),
-    (0 to 208),
-    (22 to 159),
+    (212 to 139),
+    (132 to 0),
+    (83 to 350),
+    (0 to 155),
+    (16 to 229),
+    (16 to 85),
 
-    (265 to 258),
-    (293 to 208),
-    (275 to 159),
-    (150 to 0),
-    (84 to 14),
-    (216 to 14),
+    (293 to 155),
+    (280 to 229),
+    (280 to 85),
+    (83 to 28),
+    (213 to 28),
+    (213 to 350),
 )
 
 @Composable
-fun DestructionTraceTree(infoJson: JsonElement, displayWidth: Dp, selectedId: MutableState<Int>, charFileName: String){
+fun EruditionTraceTree(infoJson: JsonElement, displayWidth: Dp, selectedId: MutableState<Int>, charFileName: String){
     val displayHeight = displayWidth.times(Constants.TRACE_TREE_BASE_HEIGHT / Constants.TRACE_TREE_BASE_WIDTH)
 
     val selectedId = remember { mutableStateOf(0) }
@@ -66,49 +66,49 @@ fun DestructionTraceTree(infoJson: JsonElement, displayWidth: Dp, selectedId: Mu
     val point6 = getDataFromSkillTreePoints(skillTreePointsArray[0].jsonObject)
     val point10 = getDataFromSkillTreePoints(skillTreePointsArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject)
     val point11 = getDataFromSkillTreePoints(skillTreePointsArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject)
-    val point12 = getDataFromSkillTreePoints(skillTreePointsArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject)
+    val point12 = getDataFromSkillTreePoints(skillTreePointsArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[1].jsonObject)
 
     val point7 = getDataFromSkillTreePoints(skillTreePointsArray[1].jsonObject)
     val point13 = getDataFromSkillTreePoints(skillTreePointsArray[1].jsonObject["children"]!!.jsonArray[0].jsonObject)
     val point14 = getDataFromSkillTreePoints(skillTreePointsArray[1].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject)
-    val point15 = getDataFromSkillTreePoints(skillTreePointsArray[1].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject)
+    val point15 = getDataFromSkillTreePoints(skillTreePointsArray[1].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[1].jsonObject)
 
     val point8 = getDataFromSkillTreePoints(skillTreePointsArray[2].jsonObject)
     val point16 = getDataFromSkillTreePoints(skillTreePointsArray[2].jsonObject["children"]!!.jsonArray[0].jsonObject)
-    val point17 = getDataFromSkillTreePoints(skillTreePointsArray[2].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject)
-    val point18 = getDataFromSkillTreePoints(skillTreePointsArray[2].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[1].jsonObject)
+    val point17 = getDataFromSkillTreePoints(skillTreePointsArray[2].jsonObject["children"]!!.jsonArray[1].jsonObject)
 
     val point9 = getDataFromSkillTreePoints(skillTreePointsArray[3].jsonObject)
+    val point18 = getDataFromSkillTreePoints(skillTreePointsArray[4].jsonObject)
 
     Box(modifier = Modifier.size(displayWidth,displayHeight)){
-        Image(painterResource(Path.Destruction.iconAbyss),
+        Image(painterResource(Path.Erudition.iconAbyss),
             modifier = Modifier.aspectRatio(1f).fillMaxSize().padding(start = 12.dp, end = 12.dp).align(
             Alignment.BottomCenter
         ), contentDescription = "Path's Icon", alpha = 0.2f)
-        Image(painterResource(Res.drawable.DestructionTraceTree),
-            contentDescription = "Destruction Trace Tree",
+        Image(painterResource(Res.drawable.EruditionTraceTree),
+            contentDescription = "Erudition Trace Tree",
             modifier = Modifier
                 .size(displayWidth,displayHeight)
         )
 
-        TraceTreeBtn(selectedId, 1, pointNormalATK, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 2, pointSkill, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 3, pointUltimate, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 4, pointTalent, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 5, pointSpecial, displayWidth, offset = dedstructionOffsetList)
+        TraceTreeBtn(selectedId, 1, pointNormalATK, displayWidth, offset = eruditionOffsetList)
+        TraceTreeBtn(selectedId, 2, pointSkill, displayWidth, offset = eruditionOffsetList)
+        TraceTreeBtn(selectedId, 3, pointUltimate, displayWidth, offset = eruditionOffsetList)
+        TraceTreeBtn(selectedId, 4, pointTalent, displayWidth, offset = eruditionOffsetList)
+        TraceTreeBtn(selectedId, 5, pointSpecial, displayWidth, offset = eruditionOffsetList)
 
-        TraceTreeBtn(selectedId, 6, point6, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 7, point7, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 8, point8, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 9, point9, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 10, point10, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 11, point11, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 12, point12, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 13, point13, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 14, point14, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 15, point15, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 16, point16, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 17, point17, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 18, point18, displayWidth, offset = dedstructionOffsetList)
+        TraceTreeBtn(selectedId, 6, point6, displayWidth, offset = eruditionOffsetList)
+        TraceTreeBtn(selectedId, 7, point7, displayWidth, offset = eruditionOffsetList)
+        TraceTreeBtn(selectedId, 8, point8, displayWidth, offset = eruditionOffsetList)
+        TraceTreeBtn(selectedId, 9, point9, displayWidth, offset = eruditionOffsetList)
+        TraceTreeBtn(selectedId, 10, point10, displayWidth, offset = eruditionOffsetList)
+        TraceTreeBtn(selectedId, 11, point11, displayWidth, offset = eruditionOffsetList)
+        TraceTreeBtn(selectedId, 12, point12, displayWidth, offset = eruditionOffsetList)
+        TraceTreeBtn(selectedId, 13, point13, displayWidth, offset = eruditionOffsetList)
+        TraceTreeBtn(selectedId, 14, point14, displayWidth, offset = eruditionOffsetList)
+        TraceTreeBtn(selectedId, 15, point15, displayWidth, offset = eruditionOffsetList)
+        TraceTreeBtn(selectedId, 16, point16, displayWidth, offset = eruditionOffsetList)
+        TraceTreeBtn(selectedId, 17, point17, displayWidth, offset = eruditionOffsetList)
+        TraceTreeBtn(selectedId, 18, point18, displayWidth, offset = eruditionOffsetList)
     }
 }

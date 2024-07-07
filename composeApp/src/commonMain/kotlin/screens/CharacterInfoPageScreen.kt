@@ -107,29 +107,26 @@ fun CharacterInfoPage(
     )
 
     val listState = rememberLazyListState()
-    val scrollToAlpha = 1f
     //(if(listState.firstVisibleItemIndex == 0) max(0f, (scrollPxTrigInvisible - listState.firstVisibleItemScrollOffset) / 200f) else 0f)
 
+    //val scrollToAlpha = 0f
+    //VERY LAGGY!
+    val coroutineScope : CoroutineScope = rememberCoroutineScope()
+    val scrollToAlpha = 1f
     /*
-     val scrollToAlpha by remember {
-        derivedStateOf {
-            val tempValue = (scrollPxTrigInvisible - listState.firstVisibleItemScrollOffset) / scrollPxTrigInvisible
-            tempValue.coerceIn(0f, 1f)
+        val scrollToAlpha by remember {
+            derivedStateOf {
+                ((scrollPxTrigInvisible - listState.firstVisibleItemScrollOffset) / scrollPxTrigInvisible).coerceIn(0f, 1f)
+            }
         }
-    }
      */
-
-
 
     Box {
 
-        if(scrollToAlpha > 0f){
-
-            CharacterInfoFullImgWithRare(
-                fileName = characterName,
-                alpha = 0.5f
-            )
-        }
+        CharacterInfoFullImgWithRare(
+            fileName = characterName,
+            alpha = 0.5f //alpha = scrollToAlpha
+        )
 
         //RecycleView
         LazyColumn(state = listState, modifier = Modifier.haze(hazeState).align(Alignment.Center)) {

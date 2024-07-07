@@ -127,7 +127,8 @@ class UtilTools {
                     return@async Json.parseToJsonElement(assetString)
                 } catch (e: IOException) {
                     // Handle the exception, ErrorLogExporter Please!
-                    throw e
+                    errorLogExport("UtilTools","getAssetsWebpByFileName()",e)
+                    return@async Json.parseToJsonElement("{}")
                 }
             }
             job.await()
@@ -151,7 +152,7 @@ class UtilTools {
 
             .lowercase()
 
-            .replace("sam",if (registName.lowercase() === "sam") "firefly" else "sam")
+            .replace("sam",if (registName.startsWith("sam") || registName.lowercase() === "sam") "firefly" else "sam")
 
             .replace("(","")
             .replace(")","")

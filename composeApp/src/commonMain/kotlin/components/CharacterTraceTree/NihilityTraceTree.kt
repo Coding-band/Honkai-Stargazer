@@ -14,7 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import files.DestructionTraceTree
+import files.NihilityTraceTree
 import files.Res
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.jsonArray
@@ -24,32 +24,32 @@ import types.Constants
 import types.Path
 
 //(x,y) base on Figma, no need to handly calculate
-val dedstructionOffsetList = arrayListOf(
+val nihilityOffsetList = arrayListOf(
     (0 to 0),//Empty
-    (56 to 189),//普攻
-    (219 to 189),//戰技
-    (138 to 217),//終結技
-    (138 to 134),//天賦
-    (138 to 298),//祕技
-    (52 to 308),
+    (72 to 163),//普攻
+    (202 to 163),//戰技
+    (136 to 154),//終結技
+    (136 to 80),//天賦
+    (136 to 228),//祕技
+    (243 to 80),
 
-    (215 to 308),
-    (134 to 52),
-    (150 to 372),
-    (28 to 258),
-    (0 to 208),
-    (22 to 159),
+    (22 to 80),
+    (133 to 0),
+    (147 to 312),
+    (293 to 146),
+    (274 to 193),
+    (253 to 240),
 
-    (265 to 258),
-    (293 to 208),
-    (275 to 159),
-    (150 to 0),
-    (84 to 14),
-    (216 to 14),
+    (0 to 146),
+    (21 to 193),
+    (47 to 240),
+    (214 to 28),
+    (83 to 28),
+    (147 to 372),
 )
 
 @Composable
-fun DestructionTraceTree(infoJson: JsonElement, displayWidth: Dp, selectedId: MutableState<Int>, charFileName: String){
+fun NihilityTraceTree(infoJson: JsonElement, displayWidth: Dp, selectedId: MutableState<Int>, charFileName: String){
     val displayHeight = displayWidth.times(Constants.TRACE_TREE_BASE_HEIGHT / Constants.TRACE_TREE_BASE_WIDTH)
 
     val selectedId = remember { mutableStateOf(0) }
@@ -75,40 +75,41 @@ fun DestructionTraceTree(infoJson: JsonElement, displayWidth: Dp, selectedId: Mu
 
     val point8 = getDataFromSkillTreePoints(skillTreePointsArray[2].jsonObject)
     val point16 = getDataFromSkillTreePoints(skillTreePointsArray[2].jsonObject["children"]!!.jsonArray[0].jsonObject)
-    val point17 = getDataFromSkillTreePoints(skillTreePointsArray[2].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject)
-    val point18 = getDataFromSkillTreePoints(skillTreePointsArray[2].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[1].jsonObject)
+    val point17 = getDataFromSkillTreePoints(skillTreePointsArray[2].jsonObject["children"]!!.jsonArray[1].jsonObject)
 
     val point9 = getDataFromSkillTreePoints(skillTreePointsArray[3].jsonObject)
+    val point18 = getDataFromSkillTreePoints(skillTreePointsArray[3].jsonObject["children"]!!.jsonArray[0].jsonObject)
+
 
     Box(modifier = Modifier.size(displayWidth,displayHeight)){
-        Image(painterResource(Path.Destruction.iconAbyss),
+        Image(painterResource(Path.Nihility.iconAbyss),
             modifier = Modifier.aspectRatio(1f).fillMaxSize().padding(start = 12.dp, end = 12.dp).align(
             Alignment.BottomCenter
         ), contentDescription = "Path's Icon", alpha = 0.2f)
-        Image(painterResource(Res.drawable.DestructionTraceTree),
-            contentDescription = "Destruction Trace Tree",
+        Image(painterResource(Res.drawable.NihilityTraceTree),
+            contentDescription = "Nihility Trace Tree",
             modifier = Modifier
                 .size(displayWidth,displayHeight)
         )
 
-        TraceTreeBtn(selectedId, 1, pointNormalATK, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 2, pointSkill, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 3, pointUltimate, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 4, pointTalent, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 5, pointSpecial, displayWidth, offset = dedstructionOffsetList)
+        TraceTreeBtn(selectedId, 1, pointNormalATK, displayWidth, offset = nihilityOffsetList)
+        TraceTreeBtn(selectedId, 2, pointSkill, displayWidth, offset = nihilityOffsetList)
+        TraceTreeBtn(selectedId, 3, pointUltimate, displayWidth, offset = nihilityOffsetList)
+        TraceTreeBtn(selectedId, 4, pointTalent, displayWidth, offset = nihilityOffsetList)
+        TraceTreeBtn(selectedId, 5, pointSpecial, displayWidth, offset = nihilityOffsetList)
 
-        TraceTreeBtn(selectedId, 6, point6, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 7, point7, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 8, point8, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 9, point9, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 10, point10, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 11, point11, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 12, point12, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 13, point13, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 14, point14, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 15, point15, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 16, point16, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 17, point17, displayWidth, offset = dedstructionOffsetList)
-        TraceTreeBtn(selectedId, 18, point18, displayWidth, offset = dedstructionOffsetList)
+        TraceTreeBtn(selectedId, 6, point6, displayWidth, offset = nihilityOffsetList)
+        TraceTreeBtn(selectedId, 7, point7, displayWidth, offset = nihilityOffsetList)
+        TraceTreeBtn(selectedId, 8, point8, displayWidth, offset = nihilityOffsetList)
+        TraceTreeBtn(selectedId, 9, point9, displayWidth, offset = nihilityOffsetList)
+        TraceTreeBtn(selectedId, 10, point10, displayWidth, offset = nihilityOffsetList)
+        TraceTreeBtn(selectedId, 11, point11, displayWidth, offset = nihilityOffsetList)
+        TraceTreeBtn(selectedId, 12, point12, displayWidth, offset = nihilityOffsetList)
+        TraceTreeBtn(selectedId, 13, point13, displayWidth, offset = nihilityOffsetList)
+        TraceTreeBtn(selectedId, 14, point14, displayWidth, offset = nihilityOffsetList)
+        TraceTreeBtn(selectedId, 15, point15, displayWidth, offset = nihilityOffsetList)
+        TraceTreeBtn(selectedId, 16, point16, displayWidth, offset = nihilityOffsetList)
+        TraceTreeBtn(selectedId, 17, point17, displayWidth, offset = nihilityOffsetList)
+        TraceTreeBtn(selectedId, 18, point18, displayWidth, offset = nihilityOffsetList)
     }
 }
