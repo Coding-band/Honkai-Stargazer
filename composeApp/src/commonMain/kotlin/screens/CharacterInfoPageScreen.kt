@@ -18,9 +18,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
@@ -63,7 +63,6 @@ import kotlinx.serialization.json.jsonPrimitive
 import types.Character
 import types.CombatType
 import utils.UtilTools
-import kotlin.math.max
 
 lateinit var localCoroutineScope: CoroutineScope;
 lateinit var localSnackbarHostState: SnackbarHostState;
@@ -108,23 +107,36 @@ fun CharacterInfoPage(
     )
 
     val listState = rememberLazyListState()
-    var scrollToAlpha = if(listState.firstVisibleItemIndex == 0) max(0f, (scrollPxTrigInvisible - listState.firstVisibleItemScrollOffset) / 200f) else 0f
+    val scrollToAlpha = 1f
+    //(if(listState.firstVisibleItemIndex == 0) max(0f, (scrollPxTrigInvisible - listState.firstVisibleItemScrollOffset) / 200f) else 0f)
+
+    /*
+     val scrollToAlpha by remember {
+        derivedStateOf {
+            val tempValue = (scrollPxTrigInvisible - listState.firstVisibleItemScrollOffset) / scrollPxTrigInvisible
+            tempValue.coerceIn(0f, 1f)
+        }
+    }
+     */
+
+
+
     Box {
 
         if(scrollToAlpha > 0f){
 
             CharacterInfoFullImgWithRare(
                 fileName = characterName,
-                alpha = scrollToAlpha
+                alpha = 0.5f
             )
         }
 
         //RecycleView
-        LazyColumn(state = listState, modifier = Modifier.haze(hazeState)) {
+        LazyColumn(state = listState, modifier = Modifier.haze(hazeState).align(Alignment.Center)) {
             item {InfoBioColumn(charInfoJson, combatType, path, isUserOwned = false, isFullEidolon = false) }
             //Don't forget to add "StatusBarPadding" !
             item { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
-            item { CharacterTraceTree(charInfoJson, path) }
+            item { CharacterTraceTree(charInfoJson, path, characterFileName) }
             item {
                 Text("我是Index 3", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
             }
@@ -161,14 +173,14 @@ fun CharacterInfoFullImgWithRare(
     fileName: String,
     alpha: Float = 1f
 ) {
-    Box(modifier = Modifier.fillMaxSize().alpha(alpha)) {
+    Box(modifier = Modifier.fillMaxSize()) {
         Image(
 
             bitmap = Character.getCharacterImageFromFileName(
                 UtilTools.ImageFolderType.CHAR_FULL, fileName
             ),
             contentDescription = "Character Full Image",
-            modifier = Modifier.fillMaxWidth().fillMaxHeight(0.8f).align(Alignment.BottomCenter),
+            modifier = Modifier.fillMaxWidth().fillMaxHeight(0.8f).align(Alignment.BottomCenter).graphicsLayer(alpha = alpha),
             contentScale = ContentScale.Fit,
         )
         Box(

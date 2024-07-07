@@ -25,9 +25,9 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -68,7 +68,7 @@ fun InfoNavigatorBar(
 
     if (alpha >= 0.1f) {
 
-        Column(modifier = modifier.wrapContentSize().alpha(alpha)) {
+        Column(modifier = modifier.wrapContentSize().graphicsLayer(alpha = alpha)) {
             //Text of your choice
             Box(
                 modifier = Modifier.fillMaxWidth()
