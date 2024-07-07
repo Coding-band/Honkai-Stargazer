@@ -1,6 +1,8 @@
 package types
 
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
 import components.HomePageBlocks
 import files.Character
 import files.Event
@@ -52,6 +54,16 @@ class Constants {
         val SPLASH_PAGE_DISPLAY_MILLSEC_DEFAULT = 1500L
         val SPLASH_PAGE_DISPLAY_MILLSEC_ADS = 5000L
 
+        val TRACE_TREE_BASE_WIDTH = 325.dp;
+        val TRACE_TREE_BASE_HEIGHT = 405.dp ;
+
+        val TRACE_TREE_BTN_CORE_BASE_SIZE = 56.dp;
+        val TRACE_TREE_BTN_SUBCORE_BASE_SIZE = 64.dp ;
+        val TRACE_TREE_BTN_EXTEND_BASE_SIZE = 32.dp ;
+
+        val TRACE_TREE_IMG_CORE_BASE_SIZE = 36.dp;
+        val TRACE_TREE_IMG_SUBCORE_BASE_SIZE = 48.dp ;
+        val TRACE_TREE_IMG_EXTEND_BASE_SIZE = 24.dp ;
         fun getCardBgColorByRare(rare: Int): List<Color> {
             when (rare) {
                 1 -> return CARD_BG_COLOR_RARE_1
@@ -61,6 +73,10 @@ class Constants {
                 5 -> return CARD_BG_COLOR_RARE_5
             }
             return CARD_BG_COLOR_RARE_UNKNOWN
+        }
+
+        fun getTraceTreeScale(newWidth: Dp) : Float{
+            return newWidth.div(TRACE_TREE_BASE_WIDTH)
         }
 
         var HOME_PAGE_ITEMS = arrayListOf<HomePageBlocks.HomePageBlockItem>(

@@ -52,7 +52,11 @@ fun InfoBioColumn(
     ) {
 
     var columnHeightDp by remember { mutableStateOf(110.dp) }
-    var density = LocalDensity.current.density
+    val density = LocalDensity.current.density
+
+    val itemName = remember { infoJson.jsonObject["name"]!!.jsonPrimitive.content }
+    val itemRarity = remember { infoJson.jsonObject["rarity"]!!.jsonPrimitive.int }
+    val itemLocation = remember { infoJson.jsonObject["archive"]!!.jsonObject["camp"]!!.jsonPrimitive.content }
 
     Box(modifier = Modifier.height(getScreenSizeInfo().hDP - columnHeightDp + 12.dp))
     Column(modifier = Modifier.padding(start = 18.dp, end = 18.dp)
@@ -62,7 +66,7 @@ fun InfoBioColumn(
         Row() {
             Text(
                 modifier = Modifier.padding(end = 8.dp),
-                text = infoJson.jsonObject["name"]!!.jsonPrimitive.content,
+                text = itemName,
                 style = FontSizeNormal(),
                 fontSize = 32.sp,
                 color = Color.White,
@@ -98,7 +102,7 @@ fun InfoBioColumn(
 
         Row {
             Row {
-                repeat(infoJson.jsonObject["rarity"]!!.jsonPrimitive.int) {
+                repeat(itemRarity) {
                     Image(
                         modifier = Modifier.size(24.dp,28.dp),
                         painter = painterResource(Res.drawable.ui_icon_star),
@@ -108,7 +112,7 @@ fun InfoBioColumn(
                 }
             }
             Text(
-                text = infoJson.jsonObject["archive"]!!.jsonObject["camp"]!!.jsonPrimitive.content,
+                text = itemLocation,
                 style = FontSizeNormal16(),
                 color = Color.White,
                 modifier = Modifier.weight(1f),
