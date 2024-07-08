@@ -5,6 +5,7 @@ data class TraceTreeItem(
     val anchor : Int = -1,
     val type : Int = -1,
     val name : String,
+    val tagHash : String? = null,
     //val levelReq: Int,
     //val promotionReq: Int,
     val iconPath: String,

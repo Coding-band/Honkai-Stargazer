@@ -63,7 +63,7 @@ fun AbundanceTraceTree(infoJson: JsonElement, displayWidth: Dp, selectedId: Muta
     val pointSkill = getDataFromSkills(skillTreeCoreArray[1].jsonObject, charFileName, 2) //戰技
     val pointUltimate = getDataFromSkills(skillTreeCoreArray[2].jsonObject, charFileName, 3) //終結技
     val pointTalent = getDataFromSkills(skillTreeCoreArray[3].jsonObject, charFileName, 4) //天賦
-    val pointSpecial = getDataFromSkills(skillTreeCoreArray[4].jsonObject, charFileName, 6) //祕技
+    val pointSpecial = getDataFromSkills(skillTreeCoreArray[5].jsonObject, charFileName, 6) //祕技
 
     val point6 = getDataFromSkillTreePoints(skillTreePointsArray[0].jsonObject)
     val point10 = getDataFromSkillTreePoints(skillTreePointsArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject)

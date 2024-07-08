@@ -19,6 +19,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
@@ -37,6 +38,7 @@ import components.CharacterTraceTree.CharacterTraceTree
 import components.HeaderData
 import components.InfoBasicStatus
 import components.InfoBioColumn
+import components.InfoDisplayDialog
 import components.InfoNavigateItem
 import components.InfoNavigatorBar
 import components.PAGE_HEADER_HEIGHT
@@ -121,6 +123,10 @@ fun CharacterInfoPage(
         }
     }
 
+    val dialogComponent = remember { mutableStateOf({}) }
+    val dialogDisplay = remember { mutableStateOf(false) }
+    val dialogTitle = remember { mutableStateOf("Nope") }
+
     Box {
 
         CharacterInfoFullImgWithRare(
@@ -133,7 +139,7 @@ fun CharacterInfoPage(
             item {InfoBioColumn(charInfoJson, combatType, path, isUserOwned = false, isFullEidolon = false) }
             //Don't forget to add "StatusBarPadding" !
             item { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
-            item { CharacterTraceTree(charInfoJson, path, characterName) }
+            item { CharacterTraceTree(charInfoJson, path, characterName, dialogTitle, dialogDisplay, dialogComponent) }
             item {
                 Text("我是Index 3", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
             }
@@ -159,7 +165,11 @@ fun CharacterInfoPage(
         )
 
         Box(modifier = Modifier.fillMaxSize().navigationBarsPadding()) {
-            InfoNavigatorBar(charInfoNavItemList, listState, Modifier.align(Alignment.BottomCenter), hazeState = hazeState, isVisible = (isNaviBarVisible), offSet = PAGE_HEADER_HEIGHT)
+            if(dialogDisplay.value){
+                InfoDisplayDialog(dialogTitle.value, dialogComponent.value, modifier = Modifier.align(Alignment.BottomCenter), hazeState, isVisible = (isNaviBarVisible))
+            } else {
+                InfoNavigatorBar(charInfoNavItemList, listState, Modifier.align(Alignment.BottomCenter), hazeState = hazeState, isVisible = (isNaviBarVisible), offSet = PAGE_HEADER_HEIGHT)
+            }
         }
     }
 }

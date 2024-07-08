@@ -1,6 +1,7 @@
 package components.CharacterTraceTree
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -13,6 +14,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
@@ -43,10 +46,26 @@ import types.TraceTreeItem
 import types.TracecTreeCost
 import types.TracecTreeKeyStatus
 import types.TracecTreeLevelData
+import utils.FontSizeNormal
 import utils.UtilTools
 
+lateinit var dialogTitleLocal : MutableState<String>
+lateinit var dialogDisplayLocal: MutableState<Boolean>
+lateinit var dialogComponentLocal: MutableState<() -> Unit>
+
 @Composable
-fun CharacterTraceTree(infoJson : JsonElement, path: Path, charName: String){
+fun CharacterTraceTree(
+    infoJson: JsonElement,
+    path: Path,
+    charName: String,
+    dialogTitle: MutableState<String>,
+    dialogDisplay: MutableState<Boolean>,
+    dialogComponent: MutableState<() -> Unit>
+){
+    dialogTitleLocal = dialogTitle
+    dialogDisplayLocal = dialogDisplay
+    dialogComponentLocal = dialogComponent
+
     val displayWidth = getScreenSizeInfo().wDP - 36.dp;
     val selectedId = remember { mutableStateOf(0) }
     Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
@@ -104,7 +123,8 @@ fun getDataFromSkills(skillObject: JsonObject, charFileName : String, skillIndex
         energy = skillObject.jsonObject["energy"]!!.jsonPrimitive.content.replace("/hit","").toInt(),
         iconPath = "${charFileName}_skill${skillIndex}",
         levelData = levelData,
-        statusList = null
+        statusList = null,
+        tagHash = skillObject.jsonObject["tagHash"]!!.jsonPrimitive.content
 
     )
 }
@@ -219,7 +239,11 @@ fun TraceTreeBtn(
                     if(selfId <= 5) Color(0xFF31B5FF) else Color(0x00000000)),
                 shape = CircleShape
             ).clickable(
-                onClick = { selectedId.value = if (selectedId.value == selfId) 0 else selfId },
+                onClick = {
+                    selectedId.value = if (selectedId.value == selfId) 0 else selfId
+                    dialogDisplayLocal.value = (selectedId.value != 0)
+                    dialogTitleLocal.value = traceTreeItem.name
+                },
             )
     ) {
         Image(
@@ -237,5 +261,16 @@ fun TraceTreeBtn(
             contentDescription = "Skill Icon",
             modifier = Modifier.size(imgWidth).align(Alignment.Center)
         )
+    }
+}
+
+@Composable
+fun TreePointDataComponent(treeItem: TraceTreeItem){
+    Column {
+        if(treeItem.tagHash !== null){
+            Box(Modifier.clip(RoundedCornerShape(41.dp)).background(Color(0xFF666666))){
+                Text(treeItem.tagHash, modifier = Modifier.padding(start = 20.dp, end = 20.dp), style = FontSizeNormal(), color = Color.White)
+            }
+        }
     }
 }

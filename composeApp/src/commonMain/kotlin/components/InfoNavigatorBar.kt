@@ -78,7 +78,7 @@ fun InfoNavigatorBar(
         Column(modifier = modifier.wrapContentSize()) {
             //Text of your choice
             Box(
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth().clickable(indication = null, onClick = {}, interactionSource = remember { MutableInteractionSource() })
             ) {
                 Box(
                     modifier = Modifier.align(Alignment.Center)
@@ -108,7 +108,7 @@ fun InfoNavigatorBar(
             Box(modifier = Modifier.height(10.dp))
 
             //Button choices
-            Box(modifier = Modifier.fillMaxWidth()) {
+            Box(modifier = Modifier.fillMaxWidth().clickable(indication = null, onClick = {}, interactionSource = remember { MutableInteractionSource() })) {
                 Box(
                     modifier = Modifier.align(Alignment.Center)
                         .background(Color(0xCC222222), shape = RoundedCornerShape(25.dp))
