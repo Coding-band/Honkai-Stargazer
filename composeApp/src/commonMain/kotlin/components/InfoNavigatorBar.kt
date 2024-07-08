@@ -1,5 +1,8 @@
 package components
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -10,6 +13,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
@@ -27,7 +31,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
-import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -56,7 +59,7 @@ fun InfoNavigatorBar(
     listState: LazyListState,
     modifier: Modifier = Modifier,
     hazeState: HazeState = remember { HazeState() },
-    alpha: Float,
+    isVisible: Boolean = false,
     offSet: Dp = 0.dp
 ) {
     var currChoiceIndex by remember { mutableStateOf(0) }
@@ -66,21 +69,28 @@ fun InfoNavigatorBar(
     currChoiceIndex = listState.firstVisibleItemIndex
 
 
-    if (alpha >= 0.1f) {
-
-        Column(modifier = modifier.wrapContentSize().graphicsLayer(alpha = alpha)) {
+    AnimatedVisibility(
+        visible = isVisible,
+        enter = fadeIn(),
+        exit = fadeOut(),
+        modifier = modifier.wrapContentSize().navigationBarsPadding().padding(bottom = 4.dp)
+    ) {
+        Column(modifier = modifier.wrapContentSize()) {
             //Text of your choice
             Box(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Box(
                     modifier = Modifier.align(Alignment.Center)
-                        .background(Color(0xCC222222), shape = RoundedCornerShape(25.dp)).border(
+                        .background(Color(0xCC222222), shape = RoundedCornerShape(25.dp))
+                        .border(
                             width = 2.dp,
                             color = Color(0xCC3C3C43),
                             shape = RoundedCornerShape(25.dp)
                         ).hazeChild(
-                            hazeState, style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE), shape = RoundedCornerShape(25.dp)
+                            hazeState,
+                            style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE),
+                            shape = RoundedCornerShape(25.dp)
                         )
                 ) {
                     Text(
@@ -101,7 +111,8 @@ fun InfoNavigatorBar(
             Box(modifier = Modifier.fillMaxWidth()) {
                 Box(
                     modifier = Modifier.align(Alignment.Center)
-                        .background(Color(0xCC222222), shape = RoundedCornerShape(25.dp)).border(
+                        .background(Color(0xCC222222), shape = RoundedCornerShape(25.dp))
+                        .border(
                             width = 2.dp,
                             color = Color(0xCC3C3C43),
                             shape = RoundedCornerShape(25.dp)
@@ -116,16 +127,25 @@ fun InfoNavigatorBar(
                             val startPadding = if (index == 0) 0.dp else 4.dp
                             val endPadding = if (index == infoItemList.size - 1) 0.dp else 4.dp
                             Box(
-                                modifier = Modifier.padding(start = startPadding, end = endPadding)
+                                modifier = Modifier.padding(
+                                    start = startPadding,
+                                    end = endPadding
+                                )
                                     .size(30.dp).background(
                                         Color(if (currChoiceIndex == index) 0x33FFFFFF else 0x00FFFFFF),
                                         shape = RoundedCornerShape(25.dp)
                                     ).clickable(
                                         onClick = {
                                             currChoiceIndex = index; coroutineScope.launch {
-                                                println(item.itemPosIndex)
-                                                listState.animateScrollToItem(index = item.itemPosIndex, scrollOffset = -UtilTools().DpToPx(offSet + 4.dp, density = density))
-                                            }
+                                            println(item.itemPosIndex)
+                                            listState.animateScrollToItem(
+                                                index = item.itemPosIndex,
+                                                scrollOffset = -UtilTools().DpToPx(
+                                                    offSet + 4.dp,
+                                                    density = density
+                                                )
+                                            )
+                                        }
                                         },
                                         indication = rememberRipple(),
                                         interactionSource = MutableInteractionSource()
@@ -142,7 +162,7 @@ fun InfoNavigatorBar(
                     }
                 }
             }
-
         }
+
     }
 }

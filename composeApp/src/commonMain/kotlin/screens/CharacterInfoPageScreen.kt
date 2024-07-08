@@ -1,5 +1,8 @@
 package screens
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -14,13 +17,14 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
@@ -58,6 +62,7 @@ import files.phorphos_star_half_regular
 import files.phorphos_sword_regular
 import files.phorphos_tree_structure_regular
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.FlowPreview
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import types.Character
@@ -79,6 +84,7 @@ val charInfoNavItemList = arrayOf<InfoNavigateItem>(
 
 const val scrollPxTrigInvisible = 250f
 
+@OptIn(FlowPreview::class)
 @Composable
 fun CharacterInfoPage(
     modifier: Modifier = Modifier,
@@ -107,25 +113,19 @@ fun CharacterInfoPage(
     )
 
     val listState = rememberLazyListState()
-    //(if(listState.firstVisibleItemIndex == 0) max(0f, (scrollPxTrigInvisible - listState.firstVisibleItemScrollOffset) / 200f) else 0f)
 
-    //val scrollToAlpha = 0f
-    //VERY LAGGY!
-    val coroutineScope : CoroutineScope = rememberCoroutineScope()
-    val scrollToAlpha = 1f
-    /*
-        val scrollToAlpha by remember {
-            derivedStateOf {
-                ((scrollPxTrigInvisible - listState.firstVisibleItemScrollOffset) / scrollPxTrigInvisible).coerceIn(0f, 1f)
-            }
+    val isNaviBarVisible by remember {
+        derivedStateOf {
+            // whatever logic you need
+            listState.canScrollBackward
         }
-     */
+    }
 
     Box {
 
         CharacterInfoFullImgWithRare(
             fileName = characterName,
-            alpha = 0.5f //alpha = scrollToAlpha
+            isVisible = !isNaviBarVisible //alpha = scrollToAlpha
         )
 
         //RecycleView
@@ -159,7 +159,7 @@ fun CharacterInfoPage(
         )
 
         Box(modifier = Modifier.fillMaxSize().navigationBarsPadding()) {
-            InfoNavigatorBar(charInfoNavItemList, listState, Modifier.align(Alignment.BottomCenter), hazeState = hazeState, alpha = (1 - scrollToAlpha), offSet = PAGE_HEADER_HEIGHT)
+            InfoNavigatorBar(charInfoNavItemList, listState, Modifier.align(Alignment.BottomCenter), hazeState = hazeState, isVisible = (isNaviBarVisible), offSet = PAGE_HEADER_HEIGHT)
         }
     }
 }
@@ -168,18 +168,23 @@ fun CharacterInfoPage(
 fun CharacterInfoFullImgWithRare(
     modifier: Modifier = Modifier,
     fileName: String,
-    alpha: Float = 1f
+    isVisible: Boolean = true
 ) {
     Box(modifier = Modifier.fillMaxSize()) {
-        Image(
-
-            bitmap = Character.getCharacterImageFromFileName(
-                UtilTools.ImageFolderType.CHAR_FULL, fileName
-            ),
-            contentDescription = "Character Full Image",
-            modifier = Modifier.fillMaxWidth().fillMaxHeight(0.8f).align(Alignment.BottomCenter).graphicsLayer(alpha = alpha),
-            contentScale = ContentScale.Fit,
-        )
+        AnimatedVisibility(
+            visible = isVisible,
+            enter = fadeIn(),
+            exit = fadeOut(),
+            modifier = Modifier.fillMaxWidth().fillMaxHeight(0.8f).align(Alignment.BottomCenter)
+        ) {
+            Image(
+                bitmap = Character.getCharacterImageFromFileName(
+                    UtilTools.ImageFolderType.CHAR_FULL, fileName
+                ),
+                contentDescription = "Character Full Image",
+                contentScale = ContentScale.Fit,
+            )
+        }
         Box(
             modifier = Modifier.fillMaxWidth().fillMaxHeight(0.5f).background(
                 Brush.verticalGradient(
