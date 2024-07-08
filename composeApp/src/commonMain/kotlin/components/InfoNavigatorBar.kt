@@ -37,6 +37,7 @@ import androidx.compose.ui.unit.dp
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.HazeStyle
 import dev.chrisbanes.haze.hazeChild
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
@@ -68,6 +69,7 @@ fun InfoNavigatorBar(
 
     currChoiceIndex = listState.firstVisibleItemIndex
 
+    var isHintVisible by remember { mutableStateOf(false) }
 
     AnimatedVisibility(
         visible = isVisible,
@@ -77,11 +79,14 @@ fun InfoNavigatorBar(
     ) {
         Column(modifier = modifier.wrapContentSize()) {
             //Text of your choice
-            Box(
-                modifier = Modifier.fillMaxWidth().clickable(indication = null, onClick = {}, interactionSource = remember { MutableInteractionSource() })
+            androidx.compose.animation.AnimatedVisibility(
+                visible = isHintVisible,
+                enter = fadeIn(),
+                exit = fadeOut(),
+                modifier = Modifier.fillMaxWidth()
             ) {
                 Box(
-                    modifier = Modifier.align(Alignment.Center)
+                    modifier = Modifier.wrapContentSize().align(Alignment.CenterHorizontally)
                         .background(Color(0xCC222222), shape = RoundedCornerShape(25.dp))
                         .border(
                             width = 2.dp,
@@ -91,7 +96,7 @@ fun InfoNavigatorBar(
                             hazeState,
                             style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE),
                             shape = RoundedCornerShape(25.dp)
-                        )
+                        ).clickable(indication = null, onClick = {}, interactionSource = remember { MutableInteractionSource() })
                 ) {
                     Text(
                         modifier = Modifier.padding(
@@ -136,16 +141,13 @@ fun InfoNavigatorBar(
                                         shape = RoundedCornerShape(25.dp)
                                     ).clickable(
                                         onClick = {
-                                            currChoiceIndex = index; coroutineScope.launch {
-                                            println(item.itemPosIndex)
-                                            listState.animateScrollToItem(
-                                                index = item.itemPosIndex,
-                                                scrollOffset = -UtilTools().DpToPx(
-                                                    offSet + 4.dp,
-                                                    density = density
-                                                )
-                                            )
-                                        }
+                                            currChoiceIndex = index;
+                                            isHintVisible = true
+                                            coroutineScope.launch {
+                                                listState.animateScrollToItem(index = item.itemPosIndex, scrollOffset = -UtilTools().DpToPx(offSet + 4.dp,density = density))
+                                                delay(3000)
+                                                isHintVisible = false
+                                            }
                                         },
                                         indication = rememberRipple(),
                                         interactionSource = MutableInteractionSource()
