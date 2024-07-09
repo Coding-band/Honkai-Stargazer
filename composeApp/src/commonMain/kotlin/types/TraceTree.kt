@@ -5,7 +5,8 @@ data class TraceTreeItem(
     val anchor : Int = -1,
     val type : Int = -1,
     val name : String,
-    val tagHash : String? = null,
+    val tagHash : String? = null, //Name of that atk tag
+    val typeDescHash : String? = null, //Describe the way of the atk type
     //val levelReq: Int,
     //val promotionReq: Int,
     val iconPath: String,
@@ -14,7 +15,7 @@ data class TraceTreeItem(
     val ultimateCost : Int = 0,
     val levelData: ArrayList<TracecTreeLevelData>? = null,
     val statusList: ArrayList<TracecTreeKeyStatus>? = null,
-    val trigCost: ArrayList<TracecTreeCost>? = null,
+    val trigCost: ArrayList<Material>? = null,
 )
 
 data class TracecTreeKeyStatus(
@@ -26,9 +27,5 @@ data class TracecTreeLevelData(
     val level : Int,
     //val levelReq : Int,
     //val promotionReq : Int,
-    val cost : ArrayList<TracecTreeCost>,
-)
-data class TracecTreeCost(
-    val id : Int,
-    val count : Int,
+    val cost : ArrayList<Material>,
 )

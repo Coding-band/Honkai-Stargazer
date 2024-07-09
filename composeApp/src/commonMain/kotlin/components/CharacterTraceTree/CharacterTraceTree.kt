@@ -6,6 +6,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -13,25 +14,37 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.mohamedrejeb.richeditor.model.rememberRichTextState
+import com.mohamedrejeb.richeditor.ui.material3.RichText
+import components.MATERIAL_CARD_HEIGHT
+import components.MaterialCard
+import components.ThemedSlider
 import components.TitleHeader
 import files.Res
+import files.TraceEnergyEarn
 import files.TraceTree
 import files.Upgrade
 import files.phorphos_tree_structure_fill
 import getScreenSizeInfo
+import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.float
@@ -41,17 +54,18 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import types.Constants
 import types.Constants.Companion.getTraceTreeScale
+import types.Material
 import types.Path
 import types.TraceTreeItem
-import types.TracecTreeCost
 import types.TracecTreeKeyStatus
 import types.TracecTreeLevelData
 import utils.FontSizeNormal
+import utils.FontSizeNormal16
 import utils.UtilTools
 
-lateinit var dialogTitleLocal : MutableState<String>
-lateinit var dialogDisplayLocal: MutableState<Boolean>
-lateinit var dialogComponentLocal: MutableState<() -> Unit>
+private lateinit var dialogTitleLocal : MutableState<String>
+private lateinit var dialogDisplayLocal: MutableState<Boolean>
+private lateinit var dialogComponentLocal: MutableState<@Composable () -> Unit>
 
 @Composable
 fun CharacterTraceTree(
@@ -60,7 +74,7 @@ fun CharacterTraceTree(
     charName: String,
     dialogTitle: MutableState<String>,
     dialogDisplay: MutableState<Boolean>,
-    dialogComponent: MutableState<() -> Unit>
+    dialogComponent: MutableState<@Composable () -> Unit>
 ){
     dialogTitleLocal = dialogTitle
     dialogDisplayLocal = dialogDisplay
@@ -90,60 +104,95 @@ fun CharacterTraceTree(
 }
 
 //skills[n]
-fun getDataFromSkills(skillObject: JsonObject, charFileName : String, skillIndex : Int) : TraceTreeItem {
-    //Init Level Data
-    val levelData : ArrayList<TracecTreeLevelData> = arrayListOf();
+fun getDataFromSkills(
+    skillObjectList: ArrayList<JsonElement>,
+    charFileName: String,
+    skillIndex: Int,
+    infoJson: JsonElement
+): ArrayList<TraceTreeItem> {
+    val itemReferences = infoJson.jsonObject["itemReferences"];
+    //Since the ObjectList store at least 1 data
+    val treeItemList = arrayListOf<TraceTreeItem>()
+    for (skillObject in skillObjectList) {
+        //Init Level Data
+        val levelData: ArrayList<TracecTreeLevelData> = arrayListOf();
 
-    for(data in skillObject.jsonObject["levelData"]!!.jsonArray){
-        //Init Cost Data
-        val costData : ArrayList<TracecTreeCost> = arrayListOf()
-        val paramData : ArrayList<Float> = arrayListOf()
+        for (data in skillObject.jsonObject["levelData"]!!.jsonArray) {
+            //Init Cost Data
+            val costData: ArrayList<Material> = arrayListOf()
+            val paramData: ArrayList<Float> = arrayListOf()
 
-        for(costItem in data.jsonObject["cost"]!!.jsonArray){
-            costData.add(TracecTreeCost(costItem.jsonObject["id"]!!.jsonPrimitive.int,costItem.jsonObject["count"]!!.jsonPrimitive.int))
+            for (costItem in data.jsonObject["cost"]!!.jsonArray) {
+                val id = costItem.jsonObject["id"]!!.jsonPrimitive.int
+                if(itemReferences == null) break
+                costData.add(
+                    Material(
+                        officialId = id,
+                        name = itemReferences.jsonObject[id.toString()]!!.jsonObject["name"]!!.jsonPrimitive.content,
+                        rarity = itemReferences.jsonObject[id.toString()]!!.jsonObject["rarity"]!!.jsonPrimitive.int,
+                        count = costItem.jsonObject["count"]!!.jsonPrimitive.int,
+                    ),
+                )
+            }
+
+            for (param in data.jsonObject["params"]!!.jsonArray) {
+                paramData.add(param.jsonPrimitive.float)
+            }
+
+            levelData.add(
+                TracecTreeLevelData(
+                    level = data.jsonObject["level"]!!.jsonPrimitive.int,
+                    cost = costData,
+                    params = paramData
+                )
+            )
         }
 
-        for(param in data.jsonObject["params"]!!.jsonArray){
-            paramData.add(param.jsonPrimitive.float)
-        }
-
-        levelData.add(
-            TracecTreeLevelData(
-            level = data.jsonObject["level"]!!.jsonPrimitive.int,
-            cost = costData,
-            params = paramData
+        treeItemList.add(
+            TraceTreeItem(
+                id = skillObject.jsonObject["id"]!!.jsonPrimitive.int,
+                desc = skillObject.jsonObject["descHash"]!!.jsonPrimitive.content,
+                name = skillObject.jsonObject["name"]!!.jsonPrimitive.content,
+                energy = skillObject.jsonObject["energy"]!!.jsonPrimitive.content.split("/")[0].toInt(),
+                iconPath = "${charFileName}_skill${skillIndex}",
+                levelData = levelData,
+                statusList = null,
+                tagHash = skillObject.jsonObject["tagHash"]!!.jsonPrimitive.content,
+                typeDescHash = skillObject.jsonObject["typeDescHash"]!!.jsonPrimitive.content,
+                )
         )
-        )
+        println(levelData)
     }
-
-    return TraceTreeItem(
-        id = skillObject.jsonObject["id"]!!.jsonPrimitive.int,
-        desc = skillObject.jsonObject["descHash"]!!.jsonPrimitive.content,
-        name = skillObject.jsonObject["name"]!!.jsonPrimitive.content,
-        energy = skillObject.jsonObject["energy"]!!.jsonPrimitive.content.replace("/hit","").toInt(),
-        iconPath = "${charFileName}_skill${skillIndex}",
-        levelData = levelData,
-        statusList = null,
-        tagHash = skillObject.jsonObject["tagHash"]!!.jsonPrimitive.content
-
-    )
+    return treeItemList
 }
 
+
 //skillTreePoints
-fun getDataFromSkillTreePoints(skillObject: JsonObject) : TraceTreeItem {
+@Composable
+fun getDataFromSkillTreePoints(skillObject: JsonObject, infoJson: JsonElement) : TraceTreeItem {
+    val itemReferences = infoJson.jsonObject["itemReferences"];
 //Init Level Data
     val levelData : ArrayList<TracecTreeLevelData> = arrayListOf();
     val statusList : ArrayList<TracecTreeKeyStatus> = arrayListOf();
-    val trigCostList : ArrayList<TracecTreeCost> = arrayListOf();
+    val trigCostList : ArrayList<Material> = arrayListOf();
 
     if(skillObject.jsonObject["embedBonusSkill"] !== null && skillObject.jsonObject["embedBonusSkill"]!!.jsonObject["levelData"] !== null){
         for(data in skillObject.jsonObject["embedBonusSkill"]!!.jsonObject["levelData"]!!.jsonArray){
             //Init Cost Data
-            val costData : ArrayList<TracecTreeCost> = arrayListOf()
+            val costData : ArrayList<Material> = arrayListOf()
             val paramData : ArrayList<Float> = arrayListOf()
 
-            for(costItem in data.jsonObject["cost"]!!.jsonArray){
-                costData.add(TracecTreeCost(costItem.jsonObject["id"]!!.jsonPrimitive.int,costItem.jsonObject["count"]!!.jsonPrimitive.int))
+            for (costItem in data.jsonObject["cost"]!!.jsonArray) {
+                val id = costItem.jsonObject["id"]!!.jsonPrimitive.int
+                if(itemReferences == null) break
+                costData.add(
+                    Material(
+                        officialId = id,
+                        name = itemReferences.jsonObject[id.toString()]!!.jsonObject["name"]!!.jsonPrimitive.content,
+                        rarity = itemReferences.jsonObject[id.toString()]!!.jsonObject["rarity"]!!.jsonPrimitive.int,
+                        count = costItem.jsonObject["count"]!!.jsonPrimitive.int,
+                    ),
+                )
             }
 
             for(param in data.jsonObject["params"]!!.jsonArray){
@@ -160,14 +209,24 @@ fun getDataFromSkillTreePoints(skillObject: JsonObject) : TraceTreeItem {
         }
     }
 
-    if(skillObject.jsonObject["statusList"] !== null){
-        for(status in skillObject.jsonObject["statusList"]!!.jsonArray){
+    val skillObjectExt = skillObject.jsonObject["embedBuff"] ?: skillObject.jsonObject["embedBonusSkill"]
+    if(skillObjectExt != null && skillObjectExt.jsonObject["statusList"] !== null){
+        for(status in skillObjectExt.jsonObject["statusList"]!!.jsonArray){
             statusList.add(TracecTreeKeyStatus(status.jsonObject["key"]!!.jsonPrimitive.content,status.jsonObject["value"]!!.jsonPrimitive.float))
         }
     }
-    if(skillObject.jsonObject["cost"] !== null){
-        for(cost in skillObject.jsonObject["cost"]!!.jsonArray){
-            trigCostList.add(TracecTreeCost(cost.jsonObject["id"]!!.jsonPrimitive.int,cost.jsonObject["count"]!!.jsonPrimitive.int))
+    if(skillObjectExt != null && skillObjectExt.jsonObject["cost"] !== null){
+        for (costItem in skillObjectExt.jsonObject["cost"]!!.jsonArray) {
+            val id = costItem.jsonObject["id"]!!.jsonPrimitive.int
+            if(itemReferences == null) break
+            trigCostList.add(
+                Material(
+                    officialId = id,
+                    name = itemReferences.jsonObject[id.toString()]!!.jsonObject["name"]!!.jsonPrimitive.content,
+                    rarity = itemReferences.jsonObject[id.toString()]!!.jsonObject["rarity"]!!.jsonPrimitive.int,
+                    count = costItem.jsonObject["count"]!!.jsonPrimitive.int,
+                ),
+            )
         }
     }
 
@@ -187,7 +246,7 @@ fun getDataFromSkillTreePoints(skillObject: JsonObject) : TraceTreeItem {
     return TraceTreeItem(
         id = skillObject.jsonObject["id"]!!.jsonPrimitive.int,
         anchor = skillObject.jsonObject["anchor"]!!.jsonPrimitive.int ,
-        desc = "{XPRKey}${Res.string.Upgrade}{XPRValue}",
+        desc = "",
         name = skillObject.jsonObject["embedBuff"]!!.jsonObject["name"]!!.jsonPrimitive.content,
         iconPath = skillObject.jsonObject["embedBuff"]!!.jsonObject["iconPath"]!!.jsonPrimitive.content,
         levelData = if(skillObject.jsonObject["embedBuff"]!!.jsonObject["levelData"] !== null) levelData else null,
@@ -200,12 +259,12 @@ fun getDataFromSkillTreePoints(skillObject: JsonObject) : TraceTreeItem {
 fun TraceTreeBtn(
     selectedId: MutableState<Int>,
     selfId: Int,
-    traceTreeItem: TraceTreeItem,
+    traceTreeItem: ArrayList<TraceTreeItem>,
     displayWidth: Dp,
     modifier: Modifier = Modifier,
     offset: ArrayList<Pair<Int, Int>>
 ) {
-    val isSelected = (selectedId.value == selfId)
+    val isSelected = (selectedId.value == selfId) && dialogDisplayLocal.value
 
     var btnBaseSize = Constants.TRACE_TREE_BTN_EXTEND_BASE_SIZE
     var imgBaseSize = Constants.TRACE_TREE_IMG_EXTEND_BASE_SIZE
@@ -242,7 +301,8 @@ fun TraceTreeBtn(
                 onClick = {
                     selectedId.value = if (selectedId.value == selfId) 0 else selfId
                     dialogDisplayLocal.value = (selectedId.value != 0)
-                    dialogTitleLocal.value = traceTreeItem.name
+                    dialogTitleLocal.value = traceTreeItem[0].name
+                    dialogComponentLocal.value = { TreePointDataComponent(traceTreeItem) }
                 },
             )
     ) {
@@ -250,12 +310,12 @@ fun TraceTreeBtn(
             bitmap = if (selfId <= 5) {
                 UtilTools().getAssetsWebpByFileName(
                     UtilTools.ImageFolderType.CHAR_SKILL,
-                    UtilTools().getImageNameByRegistName(traceTreeItem.iconPath, isCharNoGen = true)
+                    UtilTools().getImageNameByRegistName(traceTreeItem[0].iconPath, isCharNoGen = true)
                 )
             } else {
                 UtilTools().getAssetsWebpByFileName(
                     UtilTools.ImageFolderType.CHAR_SKILL_TREE,
-                    traceTreeItem.iconPath
+                    traceTreeItem[0].iconPath
                 )
             },
             contentDescription = "Skill Icon",
@@ -265,12 +325,109 @@ fun TraceTreeBtn(
 }
 
 @Composable
-fun TreePointDataComponent(treeItem: TraceTreeItem){
+fun TreePointDataComponent(treeItemArray: ArrayList<TraceTreeItem>){
+    var infoLevel by remember { mutableStateOf(1f) }
+    var richTextState = rememberRichTextState()
+
     Column {
-        if(treeItem.tagHash !== null){
+        if(treeItemArray[0].typeDescHash !== null){
             Box(Modifier.clip(RoundedCornerShape(41.dp)).background(Color(0xFF666666))){
-                Text(treeItem.tagHash, modifier = Modifier.padding(start = 20.dp, end = 20.dp), style = FontSizeNormal(), color = Color.White)
+                Text(treeItemArray[0].typeDescHash ?: "?", modifier = Modifier.padding(start = 20.dp, end = 20.dp, top = 8.dp, bottom = 8.dp), style = FontSizeNormal(), color = Color.White)
             }
         }
+
+        Spacer(Modifier.height(8.dp))
+
+        for((index, treeItem) in treeItemArray.withIndex()){
+            //Name Title of that Skill
+            if(index > 0){
+                Spacer(Modifier.height(12.dp))
+            }
+            if(treeItemArray.size > 1){
+                Text(treeItem.name, style = FontSizeNormal16(), fontStyle = FontStyle.Italic, color = Color(0xFF666666))
+            }
+
+            //TagHash & Energy Recharge
+            Row(Modifier.fillMaxWidth()){
+                Box(Modifier.weight(1f)) {
+                    if (treeItem.tagHash !== null) {
+                        Text(
+                            treeItem.tagHash,
+                            style = FontSizeNormal(),
+                            color = Color(0xFFDD8200),
+                        )
+                    }
+                }
+
+                if(treeItem.energy != -1){
+                    Text("${UtilTools().removeStringResDoubleQuotes(Res.string.TraceEnergyEarn)} ${treeItem.energy.toString()}",
+                        style = FontSizeNormal(),
+                        color = Color(0xFF666666)
+                    )
+                }
+            }
+
+            var params = arrayListOf<Float>()
+            //Slider
+            if(treeItem.levelData != null && treeItem.levelData.size > 0){
+                params = treeItem.levelData[infoLevel.toInt()-1].params
+                Spacer(Modifier.height(8.dp))
+                Row(Modifier.height(20.dp)){
+                    Text("Lv.${infoLevel.toInt()}/${treeItem.levelData.size}", modifier = Modifier.width(60.dp).align(
+                        Alignment.CenterVertically), color = Color.Black)
+                    ThemedSlider(infoLevel, { infoLevel = it}, valueRange = 1f .. treeItem.levelData.size.toFloat(), steps = 0)
+                }
+            }
+
+            Spacer(Modifier.height(8.dp))
+
+            //Description
+            var statusDesc = ""
+            if(treeItem.statusList != null) {
+                for ((index, status) in treeItem.statusList.withIndex()) {
+                    statusDesc = "$statusDesc${if(index > 0) "," else ""} " +
+                            "${status.key} ${UtilTools().removeStringResDoubleQuotes(Res.string.Upgrade)} " +
+                            if(status.value < 1){UtilTools().formatDecimal((status.value * 100))+"%"} else UtilTools().formatDecimal(status.value,0)
+                }
+            }
+            richTextState.setHtml(
+                if(statusDesc != ""){
+                    statusDesc
+                }else{
+                    UtilTools().htmlDescApplier(treeItem.desc, params)
+                }
+            )
+            RichText(state = richTextState, style = FontSizeNormal(), modifier = Modifier.fillMaxWidth(), color = Color(0xFF666666))
+
+            //Material Cost
+            if(treeItem.levelData != null && treeItem.levelData.size > 0) {
+                val sortedMaterialKeyList = treeItem.levelData[infoLevel.toInt() - 1].cost.sortedBy { cost -> cost.officialId }
+                LazyRow(modifier = Modifier.height(MATERIAL_CARD_HEIGHT).fillMaxWidth()) {
+                    for ((index, key) in sortedMaterialKeyList.withIndex()) {
+                        item(key = key.officialId) {
+                            if (index != 0) {
+                                Spacer(modifier = Modifier.width(16.dp))
+                            }
+                            MaterialCard(key)
+                        }
+
+                    }
+                }
+            }
+
+        }
+
     }
+
+}
+
+fun jsonArrayToIntArrayList(jsonArray: JsonArray? = null) : ArrayList<Int>{
+    val intArrayList : ArrayList<Int> = arrayListOf()
+    if(jsonArray != null){
+        for(value in jsonArray){
+            intArrayList.add(value.jsonPrimitive.int)
+        }
+    }
+    return intArrayList
+
 }

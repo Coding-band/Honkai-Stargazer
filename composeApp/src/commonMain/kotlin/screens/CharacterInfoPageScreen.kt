@@ -17,6 +17,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -123,7 +124,8 @@ fun CharacterInfoPage(
         }
     }
 
-    val dialogComponent = remember { mutableStateOf({}) }
+    //It will be transfer from CharacterTraceTree.kt !
+    val dialogComponent : MutableState<@Composable () -> Unit> = remember { mutableStateOf({}) }
     val dialogDisplay = remember { mutableStateOf(false) }
     val dialogTitle = remember { mutableStateOf("Nope") }
 
@@ -166,7 +168,7 @@ fun CharacterInfoPage(
 
         Box(modifier = Modifier.fillMaxSize().navigationBarsPadding()) {
             if(dialogDisplay.value){
-                InfoDisplayDialog(dialogTitle.value, dialogComponent.value, modifier = Modifier.align(Alignment.BottomCenter), hazeState, isVisible = (isNaviBarVisible))
+                InfoDisplayDialog(dialogTitle.value, dialogComponent.value, modifier = Modifier.align(Alignment.BottomCenter), hazeState, isNavBarVisible = (isNaviBarVisible), isDialogVisible = (dialogDisplay))
             } else {
                 InfoNavigatorBar(charInfoNavItemList, listState, Modifier.align(Alignment.BottomCenter), hazeState = hazeState, isVisible = (isNaviBarVisible), offSet = PAGE_HEADER_HEIGHT)
             }
