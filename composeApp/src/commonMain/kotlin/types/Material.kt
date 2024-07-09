@@ -5,6 +5,7 @@ import androidx.annotation.IntRange
 import androidx.compose.ui.graphics.ImageBitmap
 import kotlinx.serialization.Serializable
 import utils.UtilTools
+import utils.annotation.VersionUpdateCheck
 
 @Serializable
 open class Material(
@@ -17,6 +18,7 @@ open class Material(
 
 ) {
     companion object {
+        @VersionUpdateCheck
         fun getMaterialImageById(materialId : Int): ImageBitmap {
             when (materialId){
                 //add in 2.3.0

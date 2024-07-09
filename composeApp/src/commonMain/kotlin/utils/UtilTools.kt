@@ -12,7 +12,6 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
-import okio.IOException
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
@@ -103,7 +102,7 @@ class UtilTools {
                     //Ararar I spent 4hrs on there lol
                     val assetByte: ByteArray = Res.readBytes("files/images/${folderType.folderName}/${fileName}${folderType.suffix}")
                     return@async getImageBitmapByByteArray(assetByte)
-                } catch (e: IOException) {
+                } catch (e: Exception) {
                     errorLogExport("UtilTools","getAssetsWebpByFileName()",e)
                     return@async getImageBitmapByByteArray(Res.readBytes("files/ico_lost_img.webp"))
                 }
@@ -126,7 +125,7 @@ class UtilTools {
                     //Ararar I spent 4hrs on there lol
                     val assetString: String = Res.readBytes("files/data/${filePath}").decodeToString()
                     return@async Json.parseToJsonElement(assetString)
-                } catch (e: IOException) {
+                } catch (e: Exception) {
                     // Handle the exception, ErrorLogExporter Please!
                     errorLogExport("UtilTools","getAssetsWebpByFileName()",e)
                     return@async Json.parseToJsonElement("{}")
@@ -170,6 +169,7 @@ class UtilTools {
     }
 
 
+    //RegistName means the Official EN Name
     @VersionUpdateCheck
     fun getImageNameByRegistName(registName: String, isCharFullImg: Boolean = false, isCharNoGen: Boolean = false) : String {
         var registNameFinal = registName

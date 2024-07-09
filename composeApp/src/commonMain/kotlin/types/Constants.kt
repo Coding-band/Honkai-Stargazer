@@ -64,6 +64,10 @@ class Constants {
         val TRACE_TREE_IMG_CORE_BASE_SIZE = 36.dp;
         val TRACE_TREE_IMG_SUBCORE_BASE_SIZE = 48.dp ;
         val TRACE_TREE_IMG_EXTEND_BASE_SIZE = 24.dp ;
+
+        val EIDOLON_IMG_BASE_SIZE = 150.dp ;
+        val EIDOLON_FRAME_BASE_WIDTH = 352.dp ;
+        val EIDOLON_FRAME_BASE_HEIGHT = 290.dp ;
         fun getCardBgColorByRare(rare: Int): List<Color> {
             when (rare) {
                 1 -> return CARD_BG_COLOR_RARE_1
@@ -77,6 +81,10 @@ class Constants {
 
         fun getTraceTreeScale(newWidth: Dp) : Float{
             return newWidth.div(TRACE_TREE_BASE_WIDTH)
+        }
+
+        fun getEidolonScale(newWidth: Dp) : Float{
+            return newWidth.div(EIDOLON_FRAME_BASE_WIDTH)
         }
 
         var HOME_PAGE_ITEMS = arrayListOf<HomePageBlocks.HomePageBlockItem>(

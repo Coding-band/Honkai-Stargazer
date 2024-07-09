@@ -2,6 +2,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.unit.Dp
 import types.DeviceInfo
+import utils.annotation.DoItLater
 
 /**
  * This is the declaration kt file for specific-platform function
@@ -17,6 +18,7 @@ expect fun getIsLandscape(): Boolean;
 data class ScreenSizeInfo(val hPX: Int, val wPX: Int, val hDP: Dp, val wDP: Dp)
 
 @Composable
+@DoItLater("Remember to reduce home page width if u are using iPad")
 expect fun getScreenSizeInfo(): ScreenSizeInfo
 
 @Composable
