@@ -17,6 +17,7 @@ import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import utils.annotation.VersionUpdateCheck
+import kotlin.math.pow
 import kotlin.math.roundToInt
 
 class UtilTools {
@@ -135,6 +136,38 @@ class UtilTools {
             job.getCompleted()
         }
     }
+    fun htmlDescApplier(htmlText: String, levelDataParams: ArrayList<Float>) : String{
+        var htmlTextFinal = htmlText
+
+        //Apply all params
+        for((index, param) in levelDataParams.withIndex()){
+            htmlTextFinal = htmlTextFinal
+                .replace("#${(index+1)}[i]%","${UtilTools().formatDecimal((param * 100).toInt(),0)}%" )
+                .replace("#${(index+1)}[f1]%","${UtilTools().formatDecimal(param * 100)}%" )
+                .replace("#${(index+1)}[i]", UtilTools().formatDecimal(param.toInt(),0))
+                .replace("#${(index+1)}[f1]", UtilTools().formatDecimal(param))
+        }
+
+        //Imaginary Color Modify
+        htmlTextFinal = htmlTextFinal.replace("#F4D258","#D9A800")
+
+        //Sparkle Chinese Name Modify
+        htmlTextFinal = htmlTextFinal.replace("花<span style=\"color:#F84F36;\">火</span>","花火")
+
+        return htmlDescApplierImpl(htmlTextFinal)
+    }
+
+    fun htmlDescApplierImpl(htmlText: String) : String{
+        var htmlTextFinal = htmlText
+
+        //Imaginary Color Modify
+        htmlTextFinal = htmlTextFinal.replace("#F4D258","#D9A800")
+
+        //Sparkle Chinese Name Modify
+        htmlTextFinal = htmlTextFinal.replace("花<span style=\"color:#F84F36;\">火</span>","花火")
+
+        return htmlTextFinal
+    }
 
 
     @VersionUpdateCheck
@@ -252,6 +285,18 @@ class UtilTools {
         val secondStr = second.toString().padStart(2, '0')
 
         return "$yearStr-$monthStr-$dayStr $hourStr:$minuteStr:$secondStr"
+    }
+
+    /**
+     * Function that use for handling Dec's Format
+     */
+    fun formatDecimal(number: Number, decimalPlaces: Int = 2): String {
+        val multiplier = 10.0.pow(decimalPlaces)
+        val roundedNumber = kotlin.math.round(number.toDouble() * multiplier) / multiplier
+        val parts = roundedNumber.toString().split('.')
+        val integerPart = parts[0].reversed().chunked(3).joinToString(",").reversed()
+        val decimalPart = parts.getOrNull(1)?.padEnd(decimalPlaces, '0') ?: "0".repeat(decimalPlaces)
+        return "$integerPart.$decimalPart"
     }
 
 }
