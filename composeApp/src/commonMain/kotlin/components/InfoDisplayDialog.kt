@@ -3,23 +3,29 @@ package components
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Icon
+import androidx.compose.material.OutlinedButton
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -34,18 +40,20 @@ import files.ui_icon_close
 import org.jetbrains.compose.resources.painterResource
 import utils.FontSizeNormal20
 
-
+private lateinit var dialogDisplayLocal: MutableState<Boolean>
 
 @Composable
 fun InfoDisplayDialog(
     titleString: String,
-    components: () -> Unit,
+    components: @Composable () -> Unit,
     modifier: Modifier = Modifier,
     hazeState: HazeState,
-    isVisible: Boolean
+    isNavBarVisible: Boolean,
+    isDialogVisible: MutableState<Boolean>
 ){
+    dialogDisplayLocal = isDialogVisible
     AnimatedVisibility(
-        visible = isVisible,
+        visible = isNavBarVisible,
         enter = fadeIn(),
         exit = fadeOut(),
         modifier = modifier.wrapContentSize().navigationBarsPadding().padding(bottom = 4.dp)
@@ -90,15 +98,26 @@ fun InfoDisplayDialog(
                         maxLines = 1,
                         modifier = Modifier.align(Alignment.CenterVertically).weight(1f)
                     )
-                    Icon(
-                        painter = painterResource(Res.drawable.ui_icon_close),
-                        contentDescription = "Press to Close Dialog",
-                        modifier = Modifier.size(40.dp)
-                    )
+                    OutlinedButton(
+                        contentPadding = PaddingValues(0.dp),
+                        modifier = Modifier
+                            .size(40.dp)
+                            .align(Alignment.CenterVertically),
+                        onClick = { dialogDisplayLocal.value = false },
+                        colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent),
+                        border = BorderStroke(0.dp, Color(0x00FFFFFF)),
+                        shape = CircleShape,
+                    ){
+                        Icon(
+                            painter = painterResource(Res.drawable.ui_icon_close),
+                            contentDescription = "Press to Close Dialog",
+                            modifier = Modifier.size(40.dp),
+                        )
+                    }
                 }
 
                 Spacer(
-                    modifier = Modifier.wrapContentWidth().height(2.dp)
+                    modifier = Modifier.fillMaxWidth().height(2.dp)
                         .padding(top = 2.dp, bottom = 2.dp).background(Color(0x0F000000))
                 )
 
