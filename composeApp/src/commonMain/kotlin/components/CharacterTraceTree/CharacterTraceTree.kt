@@ -370,6 +370,9 @@ fun TreePointDataComponent(treeItemArray: ArrayList<TraceTreeItem>){
             var params = arrayListOf<Float>()
             //Slider
             if(treeItem.levelData != null && treeItem.levelData.size > 0){
+                if(infoLevel.toInt() >= treeItem.levelData.size){
+                    infoLevel = treeItem.levelData.size.toFloat()
+                }
                 params = treeItem.levelData[infoLevel.toInt()-1].params
                 Spacer(Modifier.height(8.dp))
                 Row(Modifier.height(20.dp)){
@@ -401,6 +404,9 @@ fun TreePointDataComponent(treeItemArray: ArrayList<TraceTreeItem>){
 
             //Material Cost
             if(treeItem.levelData != null && treeItem.levelData.size > 0) {
+                if(infoLevel.toInt() >= treeItem.levelData.size){
+                    infoLevel = treeItem.levelData.size.toFloat()
+                }
                 val sortedMaterialKeyList = treeItem.levelData[infoLevel.toInt() - 1].cost.sortedBy { cost -> cost.officialId }
                 LazyRow(modifier = Modifier.height(MATERIAL_CARD_HEIGHT).fillMaxWidth()) {
                     for ((index, key) in sortedMaterialKeyList.withIndex()) {
