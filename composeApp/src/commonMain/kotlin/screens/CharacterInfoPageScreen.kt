@@ -35,6 +35,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import components.BackIcon
+import components.CharacterEidolon
 import components.CharacterTraceTree.CharacterTraceTree
 import components.HeaderData
 import components.InfoBasicStatus
@@ -127,6 +128,7 @@ fun CharacterInfoPage(
     //It will be transfer from CharacterTraceTree.kt !
     val dialogComponent : MutableState<@Composable () -> Unit> = remember { mutableStateOf({}) }
     val dialogDisplay = remember { mutableStateOf(false) }
+    val dialogLastTrigType = remember { mutableStateOf("NONE") }
     val dialogTitle = remember { mutableStateOf("Nope") }
 
     Box {
@@ -141,10 +143,8 @@ fun CharacterInfoPage(
             item {InfoBioColumn(charInfoJson, combatType, path, isUserOwned = false, isFullEidolon = false) }
             //Don't forget to add "StatusBarPadding" !
             item { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
-            item { CharacterTraceTree(charInfoJson, path, characterName, dialogTitle, dialogDisplay, dialogComponent) }
-            item {
-                Text("我是Index 3", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
-            }
+            item { CharacterTraceTree(charInfoJson, path, characterName, dialogTitle, dialogDisplay,dialogLastTrigType,  dialogComponent) }
+            item { CharacterEidolon(charInfoJson, characterName, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
             item {
                 Text("我是Index 4", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
             }

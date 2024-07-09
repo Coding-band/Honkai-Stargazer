@@ -34,7 +34,6 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
-import components.MATERIAL_CARD_HEIGHT
 import components.MaterialCard
 import components.ThemedSlider
 import components.TitleHeader
@@ -65,7 +64,10 @@ import utils.UtilTools
 
 private lateinit var dialogTitleLocal : MutableState<String>
 private lateinit var dialogDisplayLocal: MutableState<Boolean>
+private lateinit var dialogLastTrigTypeLocal: MutableState<String>
 private lateinit var dialogComponentLocal: MutableState<@Composable () -> Unit>
+
+private const val lastTrigTypeTag = "TRACE_TREE"
 
 @Composable
 fun CharacterTraceTree(
@@ -74,11 +76,13 @@ fun CharacterTraceTree(
     charName: String,
     dialogTitle: MutableState<String>,
     dialogDisplay: MutableState<Boolean>,
+    dialogLastTrigType: MutableState<String>,
     dialogComponent: MutableState<@Composable () -> Unit>
 ){
     dialogTitleLocal = dialogTitle
     dialogDisplayLocal = dialogDisplay
     dialogComponentLocal = dialogComponent
+    dialogLastTrigTypeLocal = dialogLastTrigType
 
     val displayWidth = getScreenSizeInfo().wDP - 36.dp;
     val selectedId = remember { mutableStateOf(0) }
@@ -264,7 +268,7 @@ fun TraceTreeBtn(
     modifier: Modifier = Modifier,
     offset: ArrayList<Pair<Int, Int>>
 ) {
-    val isSelected = (selectedId.value == selfId) && dialogDisplayLocal.value
+    val isSelected = (selectedId.value == selfId) && dialogDisplayLocal.value && dialogLastTrigTypeLocal.value == lastTrigTypeTag
 
     var btnBaseSize = Constants.TRACE_TREE_BTN_EXTEND_BASE_SIZE
     var imgBaseSize = Constants.TRACE_TREE_IMG_EXTEND_BASE_SIZE
@@ -302,7 +306,8 @@ fun TraceTreeBtn(
                     selectedId.value = if (selectedId.value == selfId) 0 else selfId
                     dialogDisplayLocal.value = (selectedId.value != 0)
                     dialogTitleLocal.value = traceTreeItem[0].name
-                    dialogComponentLocal.value = { TreePointDataComponent(traceTreeItem) }
+                    dialogComponentLocal.value = { TreePointDialogComponent(traceTreeItem) }
+                    dialogLastTrigTypeLocal.value = lastTrigTypeTag
                 },
             )
     ) {
@@ -325,14 +330,14 @@ fun TraceTreeBtn(
 }
 
 @Composable
-fun TreePointDataComponent(treeItemArray: ArrayList<TraceTreeItem>){
+fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
     var infoLevel by remember { mutableStateOf(1f) }
     var richTextState = rememberRichTextState()
 
     Column {
         if(treeItemArray[0].typeDescHash !== null){
             Box(Modifier.clip(RoundedCornerShape(41.dp)).background(Color(0xFF666666))){
-                Text(treeItemArray[0].typeDescHash ?: "?", modifier = Modifier.padding(start = 20.dp, end = 20.dp, top = 8.dp, bottom = 8.dp), style = FontSizeNormal(), color = Color.White)
+                Text(treeItemArray[0].typeDescHash ?: "?", modifier = Modifier.padding(start = 12.dp, end = 12.dp, top = 6.dp, bottom = 6.dp), style = FontSizeNormal(), color = Color.White)
             }
         }
 
@@ -402,13 +407,15 @@ fun TreePointDataComponent(treeItemArray: ArrayList<TraceTreeItem>){
             )
             RichText(state = richTextState, style = FontSizeNormal(), modifier = Modifier.fillMaxWidth(), color = Color(0xFF666666))
 
+            Spacer(Modifier.height(8.dp))
+            
             //Material Cost
             if(treeItem.levelData != null && treeItem.levelData.size > 0) {
                 if(infoLevel.toInt() >= treeItem.levelData.size){
                     infoLevel = treeItem.levelData.size.toFloat()
                 }
                 val sortedMaterialKeyList = treeItem.levelData[infoLevel.toInt() - 1].cost.sortedBy { cost -> cost.officialId }
-                LazyRow(modifier = Modifier.height(MATERIAL_CARD_HEIGHT).fillMaxWidth()) {
+                LazyRow(modifier = Modifier.fillMaxWidth()) {
                     for ((index, key) in sortedMaterialKeyList.withIndex()) {
                         item(key = key.officialId) {
                             if (index != 0) {
