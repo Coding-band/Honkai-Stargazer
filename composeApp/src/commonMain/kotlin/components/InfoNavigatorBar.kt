@@ -22,6 +22,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -37,6 +38,7 @@ import androidx.compose.ui.unit.dp
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.HazeStyle
 import dev.chrisbanes.haze.hazeChild
+import getTimeStamp
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.DrawableResource
@@ -65,11 +67,26 @@ fun InfoNavigatorBar(
 ) {
     var currChoiceIndex by remember { mutableStateOf(0) }
     val coroutineScope = rememberCoroutineScope()
-    var density = LocalDensity.current.density
+    val density = LocalDensity.current.density
+    val animationDuration = 1000L
 
-    currChoiceIndex = listState.firstVisibleItemIndex
-
+    //不要忘了目录的提示默认应该是不显示的
+    //显示的情况：滚动页面时显示，点击目录图标时显示
     var isHintVisible by remember { mutableStateOf(false) }
+    var lastExpectInvisibleMS by remember { mutableStateOf(getTimeStamp()) }
+
+    LaunchedEffect(listState.firstVisibleItemIndex){
+        if(currChoiceIndex != listState.firstVisibleItemIndex){
+            isHintVisible = true
+            lastExpectInvisibleMS = getTimeStamp() + animationDuration
+            coroutineScope.launch {
+                delay(animationDuration)
+                isHintVisible = !(getTimeStamp() >= lastExpectInvisibleMS)
+            }
+        }
+        currChoiceIndex = listState.firstVisibleItemIndex
+    }
+
 
     AnimatedVisibility(
         visible = isVisible,
@@ -145,8 +162,8 @@ fun InfoNavigatorBar(
                                             isHintVisible = true
                                             coroutineScope.launch {
                                                 listState.animateScrollToItem(index = item.itemPosIndex, scrollOffset = -UtilTools().DpToPx(offSet + 4.dp,density = density))
-                                                delay(3000)
-                                                isHintVisible = false
+                                                delay(animationDuration)
+                                                isHintVisible = !(getTimeStamp() >= lastExpectInvisibleMS)
                                             }
                                         },
                                         indication = rememberRipple(),
