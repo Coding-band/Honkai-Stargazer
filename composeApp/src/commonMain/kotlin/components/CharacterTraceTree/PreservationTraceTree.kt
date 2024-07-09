@@ -59,27 +59,33 @@ fun PreservationTraceTree(infoJson: JsonElement, displayWidth: Dp, selectedId: M
     val skillTreePointsArray = infoJson.jsonObject["skillTreePoints"]!!.jsonArray.sortedBy { it.jsonObject["anchor"]!!.jsonPrimitive.int }
     val skillTreeCoreArray = infoJson.jsonObject["skills"]!!.jsonArray
 
-    val pointNormalATK = getDataFromSkills(skillTreeCoreArray[0].jsonObject, charFileName, 1) //普攻
-    val pointSkill = getDataFromSkills(skillTreeCoreArray[1].jsonObject, charFileName, 2) //戰技
-    val pointUltimate = getDataFromSkills(skillTreeCoreArray[2].jsonObject, charFileName, 3) //終結技
-    val pointTalent = getDataFromSkills(skillTreeCoreArray[3].jsonObject, charFileName, 4) //天賦
-    val pointSpecial = getDataFromSkills(skillTreeCoreArray[5].jsonObject, charFileName, 6) //祕技
+    val groupNormalATK = jsonArrayToIntArrayList(infoJson.jsonObject["skillGrouping"]!!.jsonArray[0].jsonArray)
+    val groupSkill = jsonArrayToIntArrayList(infoJson.jsonObject["skillGrouping"]!!.jsonArray[1].jsonArray)
+    val groupUltimate = jsonArrayToIntArrayList(infoJson.jsonObject["skillGrouping"]!!.jsonArray[2].jsonArray)
+    val groupTalent = jsonArrayToIntArrayList(infoJson.jsonObject["skillGrouping"]!!.jsonArray[3].jsonArray)
+    val groupSpecial = jsonArrayToIntArrayList(infoJson.jsonObject["skillGrouping"]!!.jsonArray[4].jsonArray)
 
-    val point8 = getDataFromSkillTreePoints(skillTreePointsArray[0].jsonObject)
-    val point16 = getDataFromSkillTreePoints(skillTreePointsArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject)
-    val point17 = getDataFromSkillTreePoints(skillTreePointsArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject)
-    val point18 = getDataFromSkillTreePoints(skillTreePointsArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[1].jsonObject)
+    val pointNormalATK = getDataFromSkills(skillTreeCoreArray.filter { obj -> groupNormalATK.indexOf(obj.jsonObject["id"]!!.jsonPrimitive.int) != -1 } as ArrayList<JsonElement>, charFileName, 1, infoJson) //普攻
+    val pointSkill = getDataFromSkills(skillTreeCoreArray.filter { obj -> groupSkill.indexOf(obj.jsonObject["id"]!!.jsonPrimitive.int) != -1 } as ArrayList<JsonElement>, charFileName, 2, infoJson) //戰技
+    val pointUltimate = getDataFromSkills(skillTreeCoreArray.filter { obj -> groupUltimate.indexOf(obj.jsonObject["id"]!!.jsonPrimitive.int) != -1 } as ArrayList<JsonElement>, charFileName, 3, infoJson) //終結技
+    val pointTalent = getDataFromSkills(skillTreeCoreArray.filter { obj -> groupTalent.indexOf(obj.jsonObject["id"]!!.jsonPrimitive.int) != -1 } as ArrayList<JsonElement>, charFileName, 4, infoJson) //天賦
+    val pointSpecial = getDataFromSkills(skillTreeCoreArray.filter { obj -> groupSpecial.indexOf(obj.jsonObject["id"]!!.jsonPrimitive.int) != -1 } as ArrayList<JsonElement>, charFileName, 6, infoJson) //祕技
+    
+    val point8 = getDataFromSkillTreePoints(skillTreePointsArray[0].jsonObject, infoJson)
+    val point16 = getDataFromSkillTreePoints(skillTreePointsArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject, infoJson)
+    val point17 = getDataFromSkillTreePoints(skillTreePointsArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject, infoJson)
+    val point18 = getDataFromSkillTreePoints(skillTreePointsArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[1].jsonObject, infoJson)
 
-    val point9 = getDataFromSkillTreePoints(skillTreePointsArray[1].jsonObject)
-    val point6 = getDataFromSkillTreePoints(skillTreePointsArray[1].jsonObject["children"]!!.jsonArray[0].jsonObject)
-    val point10 = getDataFromSkillTreePoints(skillTreePointsArray[1].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject)
-    val point11 = getDataFromSkillTreePoints(skillTreePointsArray[1].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject)
-    val point7 = getDataFromSkillTreePoints(skillTreePointsArray[1].jsonObject["children"]!!.jsonArray[1].jsonObject)
-    val point13 = getDataFromSkillTreePoints(skillTreePointsArray[1].jsonObject["children"]!!.jsonArray[1].jsonObject["children"]!!.jsonArray[0].jsonObject)
-    val point14 = getDataFromSkillTreePoints(skillTreePointsArray[1].jsonObject["children"]!!.jsonArray[1].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject)
+    val point9 = getDataFromSkillTreePoints(skillTreePointsArray[1].jsonObject, infoJson)
+    val point6 = getDataFromSkillTreePoints(skillTreePointsArray[1].jsonObject["children"]!!.jsonArray[0].jsonObject, infoJson)
+    val point10 = getDataFromSkillTreePoints(skillTreePointsArray[1].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject, infoJson)
+    val point11 = getDataFromSkillTreePoints(skillTreePointsArray[1].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject, infoJson)
+    val point7 = getDataFromSkillTreePoints(skillTreePointsArray[1].jsonObject["children"]!!.jsonArray[1].jsonObject, infoJson)
+    val point13 = getDataFromSkillTreePoints(skillTreePointsArray[1].jsonObject["children"]!!.jsonArray[1].jsonObject["children"]!!.jsonArray[0].jsonObject, infoJson)
+    val point14 = getDataFromSkillTreePoints(skillTreePointsArray[1].jsonObject["children"]!!.jsonArray[1].jsonObject["children"]!!.jsonArray[0].jsonObject["children"]!!.jsonArray[0].jsonObject, infoJson)
 
-    val point12 = getDataFromSkillTreePoints(skillTreePointsArray[2].jsonObject)
-    val point15 = getDataFromSkillTreePoints(skillTreePointsArray[3].jsonObject)
+    val point12 = getDataFromSkillTreePoints(skillTreePointsArray[2].jsonObject, infoJson)
+    val point15 = getDataFromSkillTreePoints(skillTreePointsArray[3].jsonObject, infoJson)
 
 
     Box(modifier = Modifier.size(displayWidth,displayHeight)){
@@ -99,18 +105,18 @@ fun PreservationTraceTree(infoJson: JsonElement, displayWidth: Dp, selectedId: M
         TraceTreeBtn(selectedId, 4, pointTalent, displayWidth, offset = preservationOffsetList)
         TraceTreeBtn(selectedId, 5, pointSpecial, displayWidth, offset = preservationOffsetList)
 
-        TraceTreeBtn(selectedId, 6, point6, displayWidth, offset = preservationOffsetList)
-        TraceTreeBtn(selectedId, 7, point7, displayWidth, offset = preservationOffsetList)
-        TraceTreeBtn(selectedId, 8, point8, displayWidth, offset = preservationOffsetList)
-        TraceTreeBtn(selectedId, 9, point9, displayWidth, offset = preservationOffsetList)
-        TraceTreeBtn(selectedId, 10, point10, displayWidth, offset = preservationOffsetList)
-        TraceTreeBtn(selectedId, 11, point11, displayWidth, offset = preservationOffsetList)
-        TraceTreeBtn(selectedId, 12, point12, displayWidth, offset = preservationOffsetList)
-        TraceTreeBtn(selectedId, 13, point13, displayWidth, offset = preservationOffsetList)
-        TraceTreeBtn(selectedId, 14, point14, displayWidth, offset = preservationOffsetList)
-        TraceTreeBtn(selectedId, 15, point15, displayWidth, offset = preservationOffsetList)
-        TraceTreeBtn(selectedId, 16, point16, displayWidth, offset = preservationOffsetList)
-        TraceTreeBtn(selectedId, 17, point17, displayWidth, offset = preservationOffsetList)
-        TraceTreeBtn(selectedId, 18, point18, displayWidth, offset = preservationOffsetList)
+        TraceTreeBtn(selectedId, 6, arrayListOf(point6), displayWidth, offset = preservationOffsetList)
+        TraceTreeBtn(selectedId, 7, arrayListOf(point7), displayWidth, offset = preservationOffsetList)
+        TraceTreeBtn(selectedId, 8, arrayListOf(point8), displayWidth, offset = preservationOffsetList)
+        TraceTreeBtn(selectedId, 9, arrayListOf(point9), displayWidth, offset = preservationOffsetList)
+        TraceTreeBtn(selectedId, 10, arrayListOf(point10), displayWidth, offset = preservationOffsetList)
+        TraceTreeBtn(selectedId, 11, arrayListOf(point11), displayWidth, offset = preservationOffsetList)
+        TraceTreeBtn(selectedId, 12, arrayListOf(point12), displayWidth, offset = preservationOffsetList)
+        TraceTreeBtn(selectedId, 13, arrayListOf(point13), displayWidth, offset = preservationOffsetList)
+        TraceTreeBtn(selectedId, 14, arrayListOf(point14), displayWidth, offset = preservationOffsetList)
+        TraceTreeBtn(selectedId, 15, arrayListOf(point15), displayWidth, offset = preservationOffsetList)
+        TraceTreeBtn(selectedId, 16, arrayListOf(point16), displayWidth, offset = preservationOffsetList)
+        TraceTreeBtn(selectedId, 17, arrayListOf(point17), displayWidth, offset = preservationOffsetList)
+        TraceTreeBtn(selectedId, 18, arrayListOf(point18), displayWidth, offset = preservationOffsetList)
     }
 }
