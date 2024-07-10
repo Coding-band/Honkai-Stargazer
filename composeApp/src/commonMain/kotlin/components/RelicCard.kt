@@ -19,6 +19,8 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -32,18 +34,16 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import types.Constants.Companion.RELIC_CARD_HEIGHT
+import types.Constants.Companion.RELIC_CARD_WIDTH
 import types.Constants.Companion.getCardBgColorByRare
 import types.Relic
 import utils.FontSizeNormal12
 import utils.TextColorNormalDim
 import utils.UtilTools
-
-//Start to End, Top to Bottom
-val RELIC_CARD_HEIGHT = 102.dp
-val RELIC_CARD_WIDTH = 80.dp
-val RELIC_CARD_TITLE_HEIGHT = 20.dp
 
 @Composable
 fun RelicCard(
@@ -81,9 +81,12 @@ fun RelicCard(
                             bottomEnd = 4.dp,
                             bottomStart = 4.dp
                         )
+                    ).clickable(
+                        onClick = { /* Ignoring onClick */ },
+                        indication = rememberRipple(),
+                        interactionSource = interactionSource
                     )
             ) {
-                println(relic.registName+" | "+relic.officialId)
                 Image(
                     bitmap = Relic.getRelicImageFromJSON(
                         if(relic.officialId!! < 300) UtilTools.ImageFolderType.RELIC_PC_ICON else UtilTools.ImageFolderType.ORMANENT_PC_ICON,
@@ -103,18 +106,18 @@ fun RelicCard(
                 )
             }
             Row(
-                Modifier
-                    .height(RELIC_CARD_TITLE_HEIGHT)
-                    .fillMaxWidth(),
+                Modifier.fillMaxWidth().wrapContentHeight(),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center
             ) {
                 Text(
                     text = displayName!!,
                     textAlign = TextAlign.Center,
+                    style = FontSizeNormal12(),
                     color = TextColorNormalDim,
-                    fontSize = FontSizeNormal12().fontSize,
-                    maxLines = 2
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.wrapContentWidth()
                 )
             }
             Spacer(modifier = Modifier.height(2.dp))

@@ -4,8 +4,10 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.defaultMinSize
@@ -26,13 +28,11 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import types.Constants
+import types.Constants.Companion.MATERIAL_CARD_HEIGHT
+import types.Constants.Companion.MATERIAL_CARD_WIDTH
 import types.Material
 import utils.FontSizeNormal12
 import utils.TextColorNormalDim
-
-val MATERIAL_CARD_HEIGHT = 80.dp
-val MATERIAL_CARD_WIDTH = 58.dp
-val MATERIAL_CARD_TITLE_HEIGHT = 20.dp
 
 @Composable
 fun MaterialCard(
@@ -64,9 +64,11 @@ fun MaterialCard(
                 interactionSource = interactionSource
             )
     ) {
-        Column(modifier = Modifier.matchParentSize()) {
-
-            Box(modifier = Modifier.fillMaxWidth()){
+        Column(modifier = Modifier.matchParentSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Box(modifier = Modifier.fillMaxWidth().weight(1f)){
                 Image(
                     bitmap = Material.getMaterialImageById(material.officialId),
                     contentDescription = "Material Icon",
@@ -77,15 +79,19 @@ fun MaterialCard(
                     contentScale = ContentScale.Crop
                 )
             }
-            Text(
-                text = if (isDisplayCount) material.count.toString() else material.name!!,
-                textAlign = TextAlign.Center,
-                modifier = Modifier.fillMaxWidth().align(Alignment.CenterHorizontally)
-                    .background(Color(0xFF222222)),
-                color = TextColorNormalDim,
-                fontSize = FontSizeNormal12().fontSize,
-                maxLines = 1
-            )
+            Row(
+                modifier = Modifier.fillMaxWidth().background(Color(0xFF222222)),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Text(
+                    text = if (isDisplayCount) material.count.toString() else material.name!!,
+                    textAlign = TextAlign.Center,
+                    color = TextColorNormalDim,
+                    fontSize = FontSizeNormal12().fontSize,
+                    maxLines = 1
+                )
+            }
             Spacer(modifier = Modifier.height(2.dp))
         }
     }

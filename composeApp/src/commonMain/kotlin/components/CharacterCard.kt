@@ -43,16 +43,13 @@ import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.Character
 import types.CombatType
+import types.Constants.Companion.CHAR_CARD_HEIGHT
+import types.Constants.Companion.CHAR_CARD_WIDTH
 import types.Constants.Companion.getCardBgColorByRare
 import types.Path
 import utils.FontSizeNormal12
 import utils.TextColorNormalDim
 import utils.UtilTools
-
-//Start to End, Top to Bottom
-val CHAR_CARD_HEIGHT = 102.dp
-val CHAR_CARD_WIDTH = 80.dp
-val CHAR_CARD_TITLE_HEIGHT = 20.dp
 
 @Composable
 fun CharacterCard(
@@ -104,17 +101,13 @@ fun CharacterCard(
                 contentScale = ContentScale.Crop
             )
             Row(
-                Modifier
-                    .height(CHAR_CARD_TITLE_HEIGHT)
-                    .fillMaxWidth()
-                    .background(Color(0xFF222222)),
+                Modifier.fillMaxWidth().background(Color(0xFF222222)),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center
             ) {
                 Text(
                     text = if(isDisplayLevel) "Lv ${level.toString()}" else displayName!!,
                     textAlign = TextAlign.Center,
-                    modifier = Modifier.align(Alignment.CenterVertically),
                     color = TextColorNormalDim,
                     fontSize = FontSizeNormal12().fontSize,
                     maxLines = 1

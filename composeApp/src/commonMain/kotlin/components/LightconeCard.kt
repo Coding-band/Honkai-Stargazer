@@ -22,6 +22,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredWidth
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.CircleShape
@@ -41,17 +43,14 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import types.Constants.Companion.LC_CARD_HEIGHT
+import types.Constants.Companion.LC_CARD_WIDTH
 import types.Constants.Companion.getCardBgColorByRare
 import types.Lightcone
 import types.Path
 import utils.FontSizeNormal12
 import utils.TextColorNormalDim
 import utils.UtilTools
-
-//Start to End, Top to Bottom
-val LC_CARD_HEIGHT = 120.dp
-val LC_CARD_WIDTH = 80.dp
-val LC_CARD_TITLE_HEIGHT = 20.dp
 
 @Composable
 fun LightconeCard(
@@ -109,19 +108,18 @@ fun LightconeCard(
                 )
             }
             Row(
-                Modifier
-                    .height(LC_CARD_TITLE_HEIGHT)
-                    .fillMaxWidth(),
+                Modifier.fillMaxWidth().wrapContentHeight(),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center
             ) {
                 Text(
                     text = displayName!!,
                     textAlign = TextAlign.Center,
+                    style = FontSizeNormal12(),
                     color = TextColorNormalDim,
-                    fontSize = FontSizeNormal12().fontSize,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.wrapContentWidth()
                 )
             }
             Spacer(modifier = Modifier.height(2.dp))
