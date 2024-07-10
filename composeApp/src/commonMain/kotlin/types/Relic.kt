@@ -9,16 +9,20 @@ package types
 import androidx.compose.ui.graphics.ImageBitmap
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.int
+import kotlinx.serialization.json.jsonArray
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 import utils.UtilTools
 
 
 @Serializable
 open class Relic(
-    var officialId : Int? = 21018,
-    var registName : String? = "Dance! Dance! Dance!",
-    var fileName : String? = "21018",
+    var officialId : Int? = 101,
+    var registName : String? = "Dance! Dance! Dance!", //EN Official Name
+    var fileName : String? = "101",
     var rarity : Int? = 5, //其實沒甚麼用 因爲肯定是五星的
-    var releaseVersion : String = "1.0.0",
+    var displayName : String? = "遺器", //Localed Name
 ){
     companion object {
         fun getRelicListFromJSON() : JsonElement {
@@ -31,6 +35,19 @@ open class Relic(
 
         fun getRelicImageFromJSON(imageFolderType: UtilTools.ImageFolderType, imageFileName : String) : ImageBitmap {
             return UtilTools().getAssetsWebpByFileName(imageFolderType, UtilTools().getImageNameByRegistName(imageFileName))
+        }
+
+        fun getRelicItemFromJSON(relicFileName : String, textLanguage: UtilTools.TextLanguage = UtilTools.TextLanguage.EN) : Relic {
+            val dataJson = getRelicDataFromJSON(relicFileName, textLanguage)
+            val listDataJson = getRelicListFromJSON().jsonArray.find { lcData -> lcData.jsonObject["fileName"]!!.jsonPrimitive.content == relicFileName }
+
+            return Relic(
+                officialId = relicFileName.toInt(),
+                fileName = relicFileName,
+                registName = (if(listDataJson != null) listDataJson.jsonObject["name"]!!.jsonPrimitive.content else "None"),
+                rarity = dataJson.jsonObject["rarity"]!!.jsonPrimitive.int,
+                displayName = dataJson.jsonObject["name"]!!.jsonPrimitive.content,
+            )
         }
     }
 }

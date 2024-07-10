@@ -85,6 +85,11 @@ class Constants {
         val MATERIAL_CARD_WIDTH = 58.dp
         val MATERIAL_CARD_TITLE_HEIGHT = 20.dp
 
+        val ADVICE_RELIC_SELECTED_BAR_WIDTH = 40.dp
+        val ADVICE_RELIC_UNSELECT_BAR_WIDTH = 10.dp
+        val ADVICE_RELIC_BAR_HEIGHT = 4.dp
+
+
         fun getCardBgColorByRare(rare: Int): List<Color> {
             when (rare) {
                 1 -> return CARD_BG_COLOR_RARE_1

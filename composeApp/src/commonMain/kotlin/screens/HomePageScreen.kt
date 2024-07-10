@@ -25,6 +25,7 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -53,12 +54,15 @@ import components.defaultHeaderData
 import files.Res
 import files.donate_ad_bg
 import files.ic_rounded_option_btn
-import files.test_avatar
 import files.test_char_1
 import files.test_char_2
 import files.test_char_3
 import files.test_char_4
 import files.test_char_5
+import files.test_char_6
+import files.test_char_7
+import files.test_char_8
+import files.vocchi
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.Constants.Companion.HOME_PAGE_ITEMS
@@ -123,7 +127,7 @@ fun HomePageHeader(modifier: Modifier = Modifier, navController: NavController) 
                 Row(Modifier.height(72.dp)) {
                     // User Avatar
                     Image(
-                        painterResource(Res.drawable.test_avatar),
+                        painterResource(Res.drawable.vocchi),
                         contentDescription = "",
                         contentScale = ContentScale.Crop,
                         modifier = Modifier
@@ -151,16 +155,21 @@ fun HomePageHeader(modifier: Modifier = Modifier, navController: NavController) 
                             overflow = TextOverflow.Ellipsis,
                         )
                         //Helping Team
-                        Row(
+                        LazyRow(
                             modifier = Modifier
                                 .height(30.dp)
                                 .fillMaxWidth()
                         ) {
-                            UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_1), navController = navController)
-                            UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_2), navController = navController)
-                            UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_3), navController = navController)
-                            UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_4), navController = navController)
-                            UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_5), navController = navController)
+                            item {
+                                UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_1), navController = navController)
+                                UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_2), navController = navController)
+                                UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_3), navController = navController)
+                                UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_4), navController = navController)
+                                UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_5), navController = navController)
+                                UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_6), navController = navController)
+                                UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_7), navController = navController)
+                                UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_8), navController = navController)
+                            }
                         }
                     }
                     Column(
