@@ -38,6 +38,7 @@ import components.CharacterEidolon
 import components.CharacterTraceTree.CharacterTraceTree
 import components.HeaderData
 import components.InfoAdviceLightcone
+import components.InfoAdviceRelic
 import components.InfoBasicStatus
 import components.InfoBioColumn
 import components.InfoDisplayDialog
@@ -58,6 +59,7 @@ import files.CharacterStory
 import files.Eidolon
 import files.Res
 import files.TraceTree
+import files.ic_favourite_btn
 import files.phorphos_baseball_cap_regular
 import files.phorphos_chats_circle_regular
 import files.phorphos_info_regular
@@ -68,6 +70,8 @@ import files.phorphos_sword_regular
 import files.phorphos_tree_structure_regular
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.FlowPreview
+import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import types.Character
@@ -131,6 +135,14 @@ fun CharacterInfoPage(
     val dialogDisplay = remember { mutableStateOf(false) }
     val dialogLastTrigType = remember { mutableStateOf("NONE") }
     val dialogTitle = remember { mutableStateOf("Nope") }
+    val selectedSectIndex = remember { mutableStateOf(0) } //流派
+
+    val singleCharWeightJsonElement = UtilTools.TemporaryFunction().getCharWeightListJson().jsonObject[characterId]
+    var charWeightJsonObject : JsonObject? = null
+
+    if(singleCharWeightJsonElement != null && singleCharWeightJsonElement.jsonArray.size > 0){
+        charWeightJsonObject = singleCharWeightJsonElement.jsonArray[selectedSectIndex.value].jsonObject
+    }
 
     Box {
 
@@ -146,10 +158,8 @@ fun CharacterInfoPage(
             item { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
             item { CharacterTraceTree(charInfoJson, path, characterName, dialogTitle, dialogDisplay,dialogLastTrigType,  dialogComponent) }
             item { CharacterEidolon(charInfoJson, characterName, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
-            item { InfoAdviceLightcone(characterId) }
-            item {
-                Text("我是Index 5", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
-            }
+            item { InfoAdviceLightcone(charWeightJsonObject) }
+            item { InfoAdviceRelic(charWeightJsonObject) }
             item {
                 Text("我是Index 6", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
             }
@@ -161,7 +171,9 @@ fun CharacterInfoPage(
             navController = navController,
             headerData = headerDataPage,
             hazeState = hazeState,
-            backIconId = BackIcon.CANCEL
+            backIconId = BackIcon.CANCEL,
+            forwardIconId = Res.drawable.ic_favourite_btn,
+            onForward = {}
         )
 
         Box(modifier = Modifier.fillMaxSize()) {
