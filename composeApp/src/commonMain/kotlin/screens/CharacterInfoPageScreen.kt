@@ -37,6 +37,7 @@ import components.BackIcon
 import components.CharacterEidolon
 import components.CharacterTraceTree.CharacterTraceTree
 import components.HeaderData
+import components.InfoAdviceLightcone
 import components.InfoBasicStatus
 import components.InfoBioColumn
 import components.InfoDisplayDialog
@@ -101,12 +102,12 @@ fun CharacterInfoPage(
     var density = LocalDensity.current.density
     val characterFileName = backStackEntry!!.arguments?.getString("fileName")!!
     val characterName = backStackEntry.arguments?.getString("charName")!!.replace("_", " ")
+    val characterId = backStackEntry.arguments?.getString("charId")!!
     val combatType = CombatType.valueOf(backStackEntry.arguments?.getString("combatType")!!)
     val path = types.Path.valueOf(backStackEntry.arguments?.getString("path")!!)
 
     val hazeState = remember { HazeState() }
-    val textLanguage = UtilTools.TextLanguage.ZH_HK //Later edit
-    val charInfoJson = Character.getCharacterDataFromFileName(characterFileName, textLanguage)
+    val charInfoJson = Character.getCharacterDataFromFileName(characterFileName, UtilTools.TextLanguage.ZH_HK)
 
     localCoroutineScope = rememberCoroutineScope();
     localSnackbarHostState = snackbarHostState!!;
@@ -145,18 +146,14 @@ fun CharacterInfoPage(
             item { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
             item { CharacterTraceTree(charInfoJson, path, characterName, dialogTitle, dialogDisplay,dialogLastTrigType,  dialogComponent) }
             item { CharacterEidolon(charInfoJson, characterName, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
-            item {
-                Text("我是Index 4", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
-            }
+            item { InfoAdviceLightcone(characterId) }
             item {
                 Text("我是Index 5", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
             }
             item {
                 Text("我是Index 6", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
             }
-            item {
-                InfoStory(charInfoJson)
-            }
+            item { InfoStory(charInfoJson) }
 
         }
 
