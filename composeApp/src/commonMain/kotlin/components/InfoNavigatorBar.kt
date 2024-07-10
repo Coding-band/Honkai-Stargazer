@@ -48,6 +48,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import utils.FontSizeNormal12
 import utils.UtilTools
 import utils.annotation.DoItLater
+import kotlin.math.min
 
 data class InfoNavigateItem(
     val itemIcon: DrawableResource, val itemPosIndex: Int, val itemTitle: StringResource
@@ -84,7 +85,7 @@ fun InfoNavigatorBar(
                 isHintVisible = !(getTimeStamp() >= lastExpectInvisibleMS)
             }
         }
-        currChoiceIndex = listState.firstVisibleItemIndex
+        currChoiceIndex = min(listState.firstVisibleItemIndex, infoItemList.size-1)
     }
 
 

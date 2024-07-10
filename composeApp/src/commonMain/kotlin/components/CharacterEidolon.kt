@@ -49,6 +49,7 @@ import org.jetbrains.compose.resources.painterResource
 import types.Constants
 import types.Constants.Companion.getEidolonScale
 import types.Eidolon
+import utils.FontSizeNormal
 import utils.UtilTools
 
 private lateinit var dialogTitleLocal : MutableState<String>
@@ -96,8 +97,8 @@ fun CharacterEidolon(
                     eidolonJsonItem.jsonObject["name"]!!.jsonPrimitive.content,
                     eidolonJsonItem.jsonObject["descHash"]!!.jsonPrimitive.content,
                     jsonArrayToFloatArrayList(eidolonJsonItem.jsonObject["params"]!!.jsonArray),
-                    "${UtilTools().getImageNameByRegistName(charName)}_eidolon${index+1}",
-                    "${UtilTools().getImageNameByRegistName(charName)}_soul${index+1}",
+                    "${UtilTools().getImageNameByRegistName(charName, isCharNoElement = true)}_eidolon${index+1}",
+                    "${UtilTools().getImageNameByRegistName(charName, isCharNoGen = true)}_soul${index+1}",
                 )
             )
         }
@@ -143,7 +144,7 @@ fun CharacterEidolonBox(eidolonList: ArrayList<Eidolon>, selectIndex : MutableSt
                     })
             ){
                 Image(
-                    bitmap = UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.CHAR_EIDOLON, UtilTools().getImageNameByRegistName(eidolon.eidolonImgName, isCharNoGen = true)),
+                    bitmap = UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.CHAR_EIDOLON, eidolon.eidolonImgName),
                     modifier = Modifier.size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale),
                     contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Image"
                 )
@@ -202,7 +203,7 @@ fun EidolonDialogComponent(eidolon: Eidolon){
 
         Column {
             Text(UtilTools().removeStringResDoubleQuotes(Res.string.CharSoul).replace("$"+"{1}",""), color = Color(0xFF333333))
-            RichText(richTextState, color = Color(0xFF666666))
+            RichText(richTextState, color = Color(0xFF666666),style = FontSizeNormal(),)
         }
     }
 }

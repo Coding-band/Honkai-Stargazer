@@ -4,6 +4,7 @@ import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -21,7 +22,6 @@ import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.Icon
 import androidx.compose.material.OutlinedButton
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -108,7 +108,7 @@ fun InfoDisplayDialog(
                         border = BorderStroke(0.dp, Color(0x00FFFFFF)),
                         shape = CircleShape,
                     ){
-                        Icon(
+                        Image(
                             painter = painterResource(Res.drawable.ui_icon_close),
                             contentDescription = "Press to Close Dialog",
                             modifier = Modifier.size(40.dp),

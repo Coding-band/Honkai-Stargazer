@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
@@ -43,6 +42,7 @@ import components.InfoBioColumn
 import components.InfoDisplayDialog
 import components.InfoNavigateItem
 import components.InfoNavigatorBar
+import components.InfoStory
 import components.PAGE_HEADER_HEIGHT
 import components.PageHeader
 import components.StatusType
@@ -155,8 +155,9 @@ fun CharacterInfoPage(
                 Text("我是Index 6", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
             }
             item {
-                Text("我是Index 7", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
+                InfoStory(charInfoJson)
             }
+
         }
 
         PageHeader(
@@ -166,7 +167,7 @@ fun CharacterInfoPage(
             backIconId = BackIcon.CANCEL
         )
 
-        Box(modifier = Modifier.fillMaxSize().navigationBarsPadding()) {
+        Box(modifier = Modifier.fillMaxSize()) {
             if(dialogDisplay.value){
                 InfoDisplayDialog(dialogTitle.value, dialogComponent.value, modifier = Modifier.align(Alignment.BottomCenter), hazeState, isNavBarVisible = (isNaviBarVisible), isDialogVisible = (dialogDisplay))
             } else {
