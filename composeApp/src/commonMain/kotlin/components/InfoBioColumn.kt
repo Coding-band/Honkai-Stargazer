@@ -58,107 +58,110 @@ fun InfoBioColumn(
     val itemRarity = remember { infoJson.jsonObject["rarity"]!!.jsonPrimitive.int }
     val itemLocation = remember { infoJson.jsonObject["archive"]!!.jsonObject["camp"]!!.jsonPrimitive.content }
 
-    Box(modifier = Modifier.height(getScreenSizeInfo().hDP - columnHeightDp + 12.dp))
-    Column(modifier = Modifier.padding(start = 18.dp, end = 18.dp)
-        .onSizeChanged { item ->
-            columnHeightDp = UtilTools().pxToDp(item.height, density)
-        }) {
-        Row() {
-            Text(
-                modifier = Modifier.padding(end = 8.dp),
-                text = itemName,
-                style = FontSizeNormal(),
-                fontSize = 32.sp,
-                color = Color.White,
-            )
+    Column {
+        Box(modifier = Modifier.height(getScreenSizeInfo().hDP - columnHeightDp))
 
-            //Database Required
-            //UserOwned || FullEidolon
+        Column(modifier = Modifier.padding(start = 18.dp, end = 18.dp)
+            .onSizeChanged { item ->
+                columnHeightDp = UtilTools().pxToDp(item.height, density)
+            }) {
+            Row() {
+                Text(
+                    modifier = Modifier.padding(end = 8.dp),
+                    text = itemName,
+                    style = FontSizeNormal(),
+                    fontSize = 32.sp,
+                    color = Color.White,
+                )
 
-            if (isUserOwned || isFullEidolon) {
-                Box(
-                    Modifier.padding(start = 6.dp, top = 6.dp).clip(RoundedCornerShape(34.dp))
-                        .background(
-                            Color(0xFFF3F9FF)
+                //Database Required
+                //UserOwned || FullEidolon
+
+                if (isUserOwned || isFullEidolon) {
+                    Box(
+                        Modifier.padding(start = 6.dp, top = 6.dp).clip(RoundedCornerShape(34.dp))
+                            .background(
+                                Color(0xFFF3F9FF)
+                            )
+                    ) {
+                        Text(
+                            modifier = Modifier.padding(
+                                start = 6.dp, end = 6.dp, top = 4.dp, bottom = 4.dp
+                            ),
+                            text = UtilTools().removeStringResDoubleQuotes(
+                                if (isUserOwned) {
+                                    Res.string.UserOwned
+                                } else Res.string.UserOwned
+                            ),
+                            style = FontSizeNormal12(),
+                            color = Color(0xFF393A5C),
                         )
-                ) {
-                    Text(
-                        modifier = Modifier.padding(
-                            start = 6.dp, end = 6.dp, top = 4.dp, bottom = 4.dp
-                        ),
-                        text = UtilTools().removeStringResDoubleQuotes(
-                            if (isUserOwned) {
-                                Res.string.UserOwned
-                            } else Res.string.UserOwned
-                        ),
-                        style = FontSizeNormal12(),
-                        color = Color(0xFF393A5C),
-                    )
+                    }
                 }
             }
-        }
 
-        Box(Modifier.height(8.dp))
+            Box(Modifier.height(8.dp))
 
-        Row {
             Row {
-                repeat(itemRarity) {
+                Row {
+                    repeat(itemRarity) {
+                        Image(
+                            modifier = Modifier.size(24.dp,28.dp),
+                            painter = painterResource(Res.drawable.ui_icon_star),
+                            contentScale = ContentScale.FillHeight,
+                            contentDescription = "Stars to represent Rarity"
+                        )
+                    }
+                }
+                Text(
+                    text = itemLocation,
+                    style = FontSizeNormal16(),
+                    color = Color.White,
+                    modifier = Modifier.weight(1f),
+                    textAlign = TextAlign.End
+                )
+            }
+
+
+            Box(Modifier.height(6.dp))
+
+            Row {
+                if (path !== null) {
                     Image(
-                        modifier = Modifier.size(24.dp,28.dp),
-                        painter = painterResource(Res.drawable.ui_icon_star),
-                        contentScale = ContentScale.FillHeight,
-                        contentDescription = "Stars to represent Rarity"
+                        painter = painterResource(path.iconWhite),
+                        modifier = Modifier.size(24.dp).padding(end = 6.dp).align(Alignment.CenterVertically),
+                        contentDescription = "CombatType Icon"
+                    )
+                    Text(
+                        text = UtilTools().removeStringResDoubleQuotes(path.resName),
+                        style = FontSizeNormal16(),
+                        color = Color.White,
+                        textAlign = TextAlign.End,
+                        modifier = Modifier.align(Alignment.CenterVertically)
                     )
                 }
-            }
-            Text(
-                text = itemLocation,
-                style = FontSizeNormal16(),
-                color = Color.White,
-                modifier = Modifier.weight(1f),
-                textAlign = TextAlign.End
-            )
-        }
 
+                if (combatType !== null && path !== null) {
+                    Box(modifier = Modifier.width(24.dp))
+                }
 
-        Box(Modifier.height(6.dp))
+                if (combatType !== null) {
+                    Image(
+                        painter = painterResource(combatType.iconColor),
+                        modifier = Modifier.size(24.dp).padding(end = 6.dp).align(Alignment.CenterVertically),
+                        contentDescription = "CombatType Icon"
+                    )
+                    Text(
+                        text = UtilTools().removeStringResDoubleQuotes(combatType.resName),
+                        style = FontSizeNormal16(),
+                        color = Color.White,
+                        textAlign = TextAlign.End,
+                        modifier = Modifier.align(Alignment.CenterVertically)
+                    )
+                }
 
-        Row {
-            if (path !== null) {
-                Image(
-                    painter = painterResource(path.iconWhite),
-                    modifier = Modifier.size(24.dp).padding(end = 6.dp).align(Alignment.CenterVertically),
-                    contentDescription = "CombatType Icon"
-                )
-                Text(
-                    text = UtilTools().removeStringResDoubleQuotes(path.resName),
-                    style = FontSizeNormal16(),
-                    color = Color.White,
-                    textAlign = TextAlign.End,
-                    modifier = Modifier.align(Alignment.CenterVertically)
-                )
-            }
-
-            if (combatType !== null && path !== null) {
-                Box(modifier = Modifier.width(24.dp))
-            }
-
-            if (combatType !== null) {
-                Image(
-                    painter = painterResource(combatType.iconColor),
-                    modifier = Modifier.size(24.dp).padding(end = 6.dp).align(Alignment.CenterVertically),
-                    contentDescription = "CombatType Icon"
-                )
-                Text(
-                    text = UtilTools().removeStringResDoubleQuotes(combatType.resName),
-                    style = FontSizeNormal16(),
-                    color = Color.White,
-                    textAlign = TextAlign.End,
-                    modifier = Modifier.align(Alignment.CenterVertically)
-                )
             }
 
         }
-
     }
 }
