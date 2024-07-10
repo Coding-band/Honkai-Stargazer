@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
@@ -23,6 +24,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.min
 import androidx.compose.ui.zIndex
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
@@ -47,6 +49,7 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
 import types.Constants
+import types.Constants.Companion.EIDOLON_FRAME_BASE_WIDTH
 import types.Constants.Companion.getEidolonScale
 import types.Eidolon
 import utils.FontSizeNormal
@@ -109,14 +112,16 @@ fun CharacterEidolon(
             //Empty Blank
             Spacer(modifier = Modifier.height(24.dp))
 
-            CharacterEidolonBox(eidolonList, selectIndex)
+            Column(modifier = Modifier.fillMaxWidth().wrapContentHeight(), horizontalAlignment = Alignment.CenterHorizontally) {
+                CharacterEidolonBox(eidolonList, selectIndex)
+            }
         }
     }
 }
 
 @Composable
 fun CharacterEidolonBox(eidolonList: ArrayList<Eidolon>, selectIndex : MutableState<Int>) {
-    val eidolonScale = getEidolonScale(getScreenSizeInfo().wDP - 36.dp)
+    val eidolonScale = getEidolonScale(min(getScreenSizeInfo().wDP - 36.dp, EIDOLON_FRAME_BASE_WIDTH * 1.5f))
 
     Box(modifier = Modifier.fillMaxWidth().height(Constants.EIDOLON_FRAME_BASE_HEIGHT * eidolonScale)){
         //Box for Padding

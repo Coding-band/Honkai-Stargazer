@@ -23,7 +23,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.voc.honkai_stargazer.component.CHAR_CARD_WIDTH
 import com.voc.honkai_stargazer.component.CharacterCard
 import components.BackIcon
 import components.HeaderData
@@ -40,6 +39,7 @@ import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.Character
 import types.CombatType
+import types.Constants.Companion.CHAR_CARD_WIDTH
 import types.Path
 import utils.UtilTools
 import utils.navigation.RootContent
@@ -124,6 +124,7 @@ fun CharacterListPage(
                                   + "/?fileName=${fileName}"
                                   + "&combatType=${charListItem.jsonObject["element"]?.jsonPrimitive?.content!!}"
                                   + "&path=${charListItem.jsonObject["path"]?.jsonPrimitive?.content!!}"
+                                  + "&charId=${charListItem.jsonObject["charId"]?.jsonPrimitive?.content!!}"
                         )
                     }
                 )

@@ -34,6 +34,7 @@ import files.ic_speed
 import files.phorphos_info_regular
 import kotlinx.serialization.json.JsonElement
 import org.jetbrains.compose.resources.painterResource
+import types.Constants.Companion.MATERIAL_CARD_HEIGHT
 import utils.FontSizeNormal16
 import utils.calculator.AttrData
 import utils.calculator.getCharAttrData

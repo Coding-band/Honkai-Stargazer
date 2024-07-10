@@ -23,7 +23,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.voc.honkai_stargazer.component.CHAR_CARD_WIDTH
 import com.voc.honkai_stargazer.component.LightconeCard
 import components.BackIcon
 import components.HeaderData
@@ -38,6 +37,7 @@ import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import types.Constants.Companion.CHAR_CARD_WIDTH
 import types.Lightcone
 import types.Path
 import utils.UtilTools

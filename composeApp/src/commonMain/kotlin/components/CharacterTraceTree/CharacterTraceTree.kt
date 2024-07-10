@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -32,6 +33,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.min
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
 import components.MaterialCard
@@ -52,6 +54,7 @@ import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import types.Constants
+import types.Constants.Companion.TRACE_TREE_BASE_WIDTH
 import types.Constants.Companion.getTraceTreeScale
 import types.Material
 import types.Path
@@ -84,7 +87,7 @@ fun CharacterTraceTree(
     dialogComponentLocal = dialogComponent
     dialogLastTrigTypeLocal = dialogLastTrigType
 
-    val displayWidth = getScreenSizeInfo().wDP - 36.dp;
+    val displayWidth = min(getScreenSizeInfo().wDP - 36.dp, (TRACE_TREE_BASE_WIDTH*1.5f));
     val selectedId = remember { mutableStateOf(0) }
     Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
         TitleHeader(iconRId = Res.drawable.phorphos_tree_structure_fill, titleRId = Res.string.TraceTree)
@@ -92,15 +95,17 @@ fun CharacterTraceTree(
         //Empty Blank
         Spacer(modifier = Modifier.height(24.dp))
 
-        when(path){
-            Path.Abundance -> AbundanceTraceTree(infoJson, displayWidth, selectedId, charName)
-            Path.Destruction -> DestructionTraceTree(infoJson, displayWidth, selectedId, charName)
-            Path.Erudition -> EruditionTraceTree(infoJson, displayWidth, selectedId, charName)
-            Path.Harmony -> HarmonyTraceTree(infoJson, displayWidth, selectedId, charName)
-            Path.Hunt -> HuntTraceTree(infoJson, displayWidth, selectedId, charName)
-            Path.Nihility -> NihilityTraceTree(infoJson, displayWidth, selectedId, charName)
-            Path.Preservation -> PreservationTraceTree(infoJson, displayWidth, selectedId, charName)
-            else -> {}
+        Column(modifier = Modifier.fillMaxWidth().wrapContentHeight(), horizontalAlignment = Alignment.CenterHorizontally) {
+            when(path){
+                Path.Abundance -> AbundanceTraceTree(infoJson, displayWidth, selectedId, charName)
+                Path.Destruction -> DestructionTraceTree(infoJson, displayWidth, selectedId, charName)
+                Path.Erudition -> EruditionTraceTree(infoJson, displayWidth, selectedId, charName)
+                Path.Harmony -> HarmonyTraceTree(infoJson, displayWidth, selectedId, charName)
+                Path.Hunt -> HuntTraceTree(infoJson, displayWidth, selectedId, charName)
+                Path.Nihility -> NihilityTraceTree(infoJson, displayWidth, selectedId, charName)
+                Path.Preservation -> PreservationTraceTree(infoJson, displayWidth, selectedId, charName)
+                else -> {}
+            }
         }
 
 
