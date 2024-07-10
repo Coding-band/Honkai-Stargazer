@@ -165,7 +165,6 @@ fun getDataFromSkills(
                 typeDescHash = skillObject.jsonObject["typeDescHash"]!!.jsonPrimitive.content,
             )
         )
-        println(levelData)
     }
     return treeItemList
 }
