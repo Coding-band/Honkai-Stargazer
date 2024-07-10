@@ -68,6 +68,23 @@ class Constants {
         val EIDOLON_IMG_BASE_SIZE = 150.dp ;
         val EIDOLON_FRAME_BASE_WIDTH = 352.dp ;
         val EIDOLON_FRAME_BASE_HEIGHT = 290.dp ;
+
+        val CHAR_CARD_HEIGHT = 102.dp
+        val CHAR_CARD_WIDTH = 80.dp
+        val CHAR_CARD_TITLE_HEIGHT = 20.dp
+
+        val LC_CARD_HEIGHT = 102.dp
+        val LC_CARD_WIDTH = 80.dp
+        val LC_CARD_TITLE_HEIGHT = 20.dp
+
+        val RELIC_CARD_HEIGHT = 102.dp
+        val RELIC_CARD_WIDTH = 80.dp
+        val RELIC_CARD_TITLE_HEIGHT = 20.dp
+
+        val MATERIAL_CARD_HEIGHT = 80.dp
+        val MATERIAL_CARD_WIDTH = 58.dp
+        val MATERIAL_CARD_TITLE_HEIGHT = 20.dp
+
         fun getCardBgColorByRare(rare: Int): List<Color> {
             when (rare) {
                 1 -> return CARD_BG_COLOR_RARE_1

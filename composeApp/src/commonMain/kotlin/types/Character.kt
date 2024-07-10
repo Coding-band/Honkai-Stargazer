@@ -36,7 +36,7 @@ open class Character(
             return UtilTools().getAssetsJsonByFilePath("character_data/character_list.json")
         }
 
-        fun getCharacterDataFromFileName(characterFileName : String, textLanguage: UtilTools.TextLanguage) : JsonElement {
+        fun getCharacterDataFromFileName(characterFileName : String, textLanguage: UtilTools.TextLanguage = UtilTools.TextLanguage.EN) : JsonElement {
             return UtilTools().getAssetsJsonByFilePath("character_data/${textLanguage.folderName}/${characterFileName}.json")
         }
 

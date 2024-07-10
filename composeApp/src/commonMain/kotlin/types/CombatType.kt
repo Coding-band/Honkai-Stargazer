@@ -7,6 +7,7 @@
 package types
 
 import files.Fire
+import files.HaveNotUsed
 import files.Ice
 import files.Imaginary
 import files.Lightning
@@ -29,6 +30,7 @@ import files.ic_lightning
 import files.ic_physical
 import files.ic_quatumn
 import files.icon_wind
+import files.pom_pom_failed_issue
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 
@@ -43,4 +45,5 @@ enum class CombatType (var chName : String, var resName: StringResource, var ico
     Ice("冰", Res.string.Ice, Res.drawable.ic_ice, Res.drawable.element_ice),
     Wind("風", Res.string.Wind, Res.drawable.icon_wind, Res.drawable.element_wind),
     Physical("物理", Res.string.Physical, Res.drawable.ic_physical, Res.drawable.element_physical),
+    Unspecified("未知",Res.string.HaveNotUsed, Res.drawable.pom_pom_failed_issue, Res.drawable.pom_pom_failed_issue);
 }

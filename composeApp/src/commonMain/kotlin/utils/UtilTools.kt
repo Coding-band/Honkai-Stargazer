@@ -15,6 +15,7 @@ import kotlinx.serialization.json.JsonElement
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
+import utils.annotation.DoItLater
 import utils.annotation.VersionUpdateCheck
 import kotlin.math.pow
 import kotlin.math.roundToInt
@@ -306,6 +307,14 @@ class UtilTools {
         val integerPart = parts[0].reversed().chunked(3).joinToString(",").reversed()
         val decimalPart = parts.getOrNull(1)?.padEnd(decimalPlaces, '0') ?: "0".repeat(decimalPlaces)
         return "$integerPart.$decimalPart"
+    }
+
+    @VersionUpdateCheck
+    @DoItLater("Remember to remove if already implemented!")
+    class TemporaryFunction(){
+        fun getCharWeightListJson() : JsonElement{
+            return UtilTools().getAssetsJsonByFilePath("charWeightList.json")
+        }
     }
 
 }

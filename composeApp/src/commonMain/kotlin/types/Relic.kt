@@ -25,7 +25,7 @@ open class Relic(
             return UtilTools().getAssetsJsonByFilePath("relic_data/relic_list.json")
         }
 
-        fun getRelicDataFromJSON(relicFileName : String, textLanguage: UtilTools.TextLanguage) : JsonElement {
+        fun getRelicDataFromJSON(relicFileName : String, textLanguage: UtilTools.TextLanguage = UtilTools.TextLanguage.EN) : JsonElement {
             return UtilTools().getAssetsJsonByFilePath("relic_data/${textLanguage.folderName}/${relicFileName}.json")
         }
 

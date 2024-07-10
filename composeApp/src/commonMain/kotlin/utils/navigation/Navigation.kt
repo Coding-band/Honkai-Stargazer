@@ -151,12 +151,13 @@ fun Navigation() {
                 })
         }
         composable(
-            route = "${Screen.CharacterInfoPage.route}/{charName}/?fileName={fileName}&combatType={combatType}&path={path}",
+            route = "${Screen.CharacterInfoPage.route}/{charName}/?fileName={fileName}&combatType={combatType}&path={path}&charId={charId}",
             arguments = listOf(
                 (navArgument("fileName") { type = NavType.StringType }),
                 (navArgument("charName") { type = NavType.StringType }),
                 (navArgument("combatType") { type = NavType.StringType }),
-                (navArgument("path") { type = NavType.StringType })
+                (navArgument("path") { type = NavType.StringType }),
+                (navArgument("charId") { type = NavType.StringType }),
             ),
             enterTransition = { defaultEnterTransition }, exitTransition = { defaultExitTransition }
         ) { backStackEntry ->
