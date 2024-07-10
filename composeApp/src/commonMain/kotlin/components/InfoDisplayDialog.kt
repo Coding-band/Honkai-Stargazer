@@ -56,7 +56,7 @@ fun InfoDisplayDialog(
         visible = isNavBarVisible,
         enter = fadeIn(),
         exit = fadeOut(),
-        modifier = modifier.wrapContentSize().navigationBarsPadding().padding(bottom = 4.dp)
+        modifier = modifier.wrapContentSize().navigationBarsPadding()
     ) {
         //Dialog
         Box(modifier = modifier

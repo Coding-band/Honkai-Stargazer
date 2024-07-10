@@ -75,7 +75,7 @@ fun PageHeader(
                 style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE)
             )
             //.shadow(8.dp)
-            .background(Color(0x66FFFFFF))
+            .background(Color(0x33FFFFFF))
             //.clippedShadow(elevation = 2.dp)
             .statusBarsPadding()
             .requiredHeight(PAGE_HEADER_HEIGHT)

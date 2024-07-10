@@ -171,7 +171,7 @@ class UtilTools {
 
     //RegistName means the Official EN Name
     @VersionUpdateCheck
-    fun getImageNameByRegistName(registName: String, isCharFullImg: Boolean = false, isCharNoGen: Boolean = false) : String {
+    fun getImageNameByRegistName(registName: String, isCharFullImg: Boolean = false, isCharNoElement : Boolean = false, isCharNoGen: Boolean = false) : String {
         var registNameFinal = registName
             .replace("Trailblazer Boy (Physical)","trailblazer_physical_male")
             .replace("Trailblazer Girl (Physical)","trailblazer_physical_female")
@@ -207,6 +207,15 @@ class UtilTools {
                 .replace("trailblazer_physical_female","trailblazer_girl")
                 .replace("trailblazer_fire_female","trailblazer_girl")
                 .replace("trailblazer_imaginary_female","trailblazer_girl")
+        }
+        if(isCharNoElement){
+            registNameFinal = registNameFinal
+                .replace("trailblazer_physical_male","trailblazer_male")
+                .replace("trailblazer_fire_male","trailblazer_male")
+                .replace("trailblazer_imaginary_male","trailblazer_male")
+                .replace("trailblazer_physical_female","trailblazer_female")
+                .replace("trailblazer_fire_female","trailblazer_female")
+                .replace("trailblazer_imaginary_female","trailblazer_female")
         }
         if(isCharNoGen){
             registNameFinal = registNameFinal

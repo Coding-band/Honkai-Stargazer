@@ -92,7 +92,7 @@ fun InfoNavigatorBar(
         visible = isVisible,
         enter = fadeIn(),
         exit = fadeOut(),
-        modifier = modifier.wrapContentSize().navigationBarsPadding().padding(bottom = 4.dp)
+        modifier = modifier.wrapContentSize().navigationBarsPadding()
     ) {
         Column(modifier = modifier.wrapContentSize()) {
             //Text of your choice
