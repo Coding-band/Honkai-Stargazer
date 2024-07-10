@@ -58,7 +58,7 @@ fun InfoBasicStatus(infoJson : JsonElement, statusType : StatusType = StatusType
         basicStatusLvEnd = basicStatusLvBegin
     }
 
-    val materialList = remember { getCharMaterialData(infoJson, beginLv = basicStatusLvBegin.toInt(), endLv = basicStatusLvEnd.toInt()) }
+    val materialList = getCharMaterialData(infoJson, beginLv = basicStatusLvBegin.toInt(), endLv = basicStatusLvEnd.toInt())
     val sortedMaterialKeyList = remember { materialList.keys.sorted() }
 
     Column (modifier = Modifier.statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
