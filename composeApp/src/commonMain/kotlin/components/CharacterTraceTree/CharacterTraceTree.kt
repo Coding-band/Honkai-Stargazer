@@ -163,7 +163,7 @@ fun getDataFromSkills(
                 statusList = null,
                 tagHash = skillObject.jsonObject["tagHash"]!!.jsonPrimitive.content,
                 typeDescHash = skillObject.jsonObject["typeDescHash"]!!.jsonPrimitive.content,
-                )
+            )
         )
         println(levelData)
     }
@@ -205,10 +205,10 @@ fun getDataFromSkillTreePoints(skillObject: JsonObject, infoJson: JsonElement) :
 
             levelData.add(
                 TracecTreeLevelData(
-                level = data.jsonObject["level"]!!.jsonPrimitive.int,
-                cost = costData,
-                params = paramData
-            )
+                    level = data.jsonObject["level"]!!.jsonPrimitive.int,
+                    cost = costData,
+                    params = paramData
+                )
             )
         }
     }
@@ -330,6 +330,17 @@ fun TraceTreeBtn(
 }
 
 @Composable
+fun justTesting(){
+    Box(modifier = Modifier.size(50.dp)){
+        Text("OK")
+    }
+}
+
+/*
+
+Task :composeApp:linkDebugFrameworkIosSimulatorArm64 FAILED
+ */
+@Composable
 fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
     var infoLevel by remember { mutableStateOf(1f) }
     var richTextState = rememberRichTextState()
@@ -408,7 +419,7 @@ fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
             RichText(state = richTextState, style = FontSizeNormal(), modifier = Modifier.fillMaxWidth(), color = Color(0xFF666666))
 
             Spacer(Modifier.height(8.dp))
-            
+
             //Material Cost
             if(treeItem.levelData != null && treeItem.levelData.size > 0) {
                 if(infoLevel.toInt() >= treeItem.levelData.size){

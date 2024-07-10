@@ -5,6 +5,12 @@ import androidx.compose.ui.graphics.toComposeImageBitmap
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalWindowInfo
 import org.jetbrains.skia.Image
+import platform.Foundation.NSApplicationSupportDirectory
+import platform.Foundation.NSDate
+import platform.Foundation.NSFileManager
+import platform.Foundation.NSURL
+import platform.Foundation.NSUserDomainMask
+import platform.Foundation.timeIntervalSince1970
 import platform.UIKit.UIDevice
 import platform.UIKit.UIInterfaceOrientation
 import platform.UIKit.UIInterfaceOrientationLandscapeLeft
@@ -47,7 +53,7 @@ actual fun getScreenSizeInfo(): ScreenSizeInfo {
 actual fun getAppDataDir(): String {
     val fileManager = NSFileManager.defaultManager()
     val urls = fileManager.URLsForDirectory(NSApplicationSupportDirectory, NSUserDomainMask)
-    val appSupportDir = urls.lastObject() as NSURL
+    val appSupportDir = urls.last() as NSURL
     return appSupportDir.path ?: throw IllegalStateException("Could not get the path for app support directory")
 }
 

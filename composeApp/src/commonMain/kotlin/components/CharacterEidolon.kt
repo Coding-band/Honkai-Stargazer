@@ -119,57 +119,62 @@ fun CharacterEidolonBox(eidolonList: ArrayList<Eidolon>, selectIndex : MutableSt
 
     Box(modifier = Modifier.fillMaxWidth().height(Constants.EIDOLON_FRAME_BASE_HEIGHT * eidolonScale)){
         //Box for Padding
-       for(eidolon in eidolonList){
-           //Box for Eidolon Image & Stroke
-           Box(
-               modifier = Modifier
-                   .size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale)
-                   .zIndex(if(selectIndex.value == eidolon.eidolonIndex) 10f else eidolon.eidolonIndex.toFloat())
-                   .offset(
-                       eidolonOffSet[eidolon.eidolonIndex].first.dp.times(eidolonScale),
-                       eidolonOffSet[eidolon.eidolonIndex].second.dp.times(eidolonScale),
-                   )
-                   .clickable(enabled = true, indication = null, interactionSource = remember { MutableInteractionSource() }, onClick = {
-                       if(selectIndex.value == eidolon.eidolonIndex && dialogLastTrigTypeLocal.value == lastTrigTypeTag){
-                           selectIndex.value = 0
-                           dialogDisplayLocal.value = false
-                       }else {
-                           selectIndex.value = eidolon.eidolonIndex
-                           dialogTitleLocal.value = eidolon.name
-                           dialogDisplayLocal.value = true
-                           dialogComponentLocal.value = { EidolonDialogComponent(eidolon) }
-                       }
-                       dialogLastTrigTypeLocal.value = lastTrigTypeTag
-                   })
-           ){
-               Image(
-                   bitmap = UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.CHAR_EIDOLON, UtilTools().getImageNameByRegistName(eidolon.eidolonImgName, isCharNoGen = true)),
-                   modifier = Modifier.size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale),
-                   contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Image"
-               )
+        for(eidolon in eidolonList){
+            //Box for Eidolon Image & Stroke
+            Box(
+                modifier = Modifier
+                    .size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale)
+                    .zIndex(if(selectIndex.value == eidolon.eidolonIndex) 10f else eidolon.eidolonIndex.toFloat())
+                    .offset(
+                        eidolonOffSet[eidolon.eidolonIndex].first.dp.times(eidolonScale),
+                        eidolonOffSet[eidolon.eidolonIndex].second.dp.times(eidolonScale),
+                    )
+                    .clickable(enabled = true, indication = null, interactionSource = remember { MutableInteractionSource() }, onClick = {
+                        if(selectIndex.value == eidolon.eidolonIndex && dialogLastTrigTypeLocal.value == lastTrigTypeTag){
+                            selectIndex.value = 0
+                            dialogDisplayLocal.value = false
+                        }else {
+                            selectIndex.value = eidolon.eidolonIndex
+                            dialogTitleLocal.value = eidolon.name
+                            dialogDisplayLocal.value = true
+                            dialogComponentLocal.value = { EidolonDialogComponent(eidolon) }
+                        }
+                        dialogLastTrigTypeLocal.value = lastTrigTypeTag
+                    })
+            ){
+                Image(
+                    bitmap = UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.CHAR_EIDOLON, UtilTools().getImageNameByRegistName(eidolon.eidolonImgName, isCharNoGen = true)),
+                    modifier = Modifier.size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale),
+                    contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Image"
+                )
 
-               if((selectIndex.value == eidolon.eidolonIndex) && dialogLastTrigTypeLocal.value == lastTrigTypeTag) {
-                   Image(
-                       painter = painterResource(
-                           when (eidolon.eidolonIndex) {
-                               1 -> Res.drawable.EidolonFrame1
-                               2 -> Res.drawable.EidolonFrame2
-                               3 -> Res.drawable.EidolonFrame3
-                               4 -> Res.drawable.EidolonFrame4
-                               5 -> Res.drawable.EidolonFrame5
-                               6 -> Res.drawable.EidolonFrame6
-                               else -> Res.drawable.EidolonFrame1
-                           }
-                       ),
-                       modifier = Modifier.size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale)
-                       ,
-                       contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Frame"
-                   )
-               }
-           }
-       }
+                if((selectIndex.value == eidolon.eidolonIndex) && dialogLastTrigTypeLocal.value == lastTrigTypeTag) {
+                    Image(
+                        painter = painterResource(
+                            when (eidolon.eidolonIndex) {
+                                1 -> Res.drawable.EidolonFrame1
+                                2 -> Res.drawable.EidolonFrame2
+                                3 -> Res.drawable.EidolonFrame3
+                                4 -> Res.drawable.EidolonFrame4
+                                5 -> Res.drawable.EidolonFrame5
+                                6 -> Res.drawable.EidolonFrame6
+                                else -> Res.drawable.EidolonFrame1
+                            }
+                        ),
+                        modifier = Modifier.size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale)
+                        ,
+                        contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Frame"
+                    )
+                }
+            }
+        }
     }
 }
+/*
+Task :composeApp:linkDebugFrameworkIosSimulatorArm64 FAILED
+Task :composeApp:linkReleaseFrameworkIosSimulatorArm64 FAILED
+Please use K1 instead of K2 version of RichText
+*/
 
 @Composable
 fun EidolonDialogComponent(eidolon: Eidolon){

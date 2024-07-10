@@ -83,7 +83,7 @@ kotlin {
             implementation("com.russhwolf:multiplatform-settings:1.1.1")
             implementation("com.russhwolf:multiplatform-settings-no-arg:1.1.1")
             implementation("io.coil-kt.coil3:coil:3.0.0-alpha07")
-            implementation("com.mohamedrejeb.richeditor:richeditor-compose:1.0.0-rc05-k2")
+            implementation("com.mohamedrejeb.richeditor:richeditor-compose:1.0.0-rc05")
 
         }
         desktopMain.dependencies {
