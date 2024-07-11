@@ -42,7 +42,7 @@ open class Lightcone(
             return UtilTools().getAssetsWebpByFileName(imageFolderType, UtilTools().getImageNameByRegistName(lightconeName))
         }
 
-        fun getLightconeItemFromJSON(lightconeFileName : String, textLanguage: UtilTools.TextLanguage) : Lightcone {
+        fun getLightconeItemFromJSON(lightconeFileName : String, textLanguage: UtilTools.TextLanguage = UtilTools.TextLanguage.EN) : Lightcone {
             val dataJson = getLightconeDataFromJSON(lightconeFileName, textLanguage)
             val listDataJson = getLightconeListFromJSON().jsonArray.find { lcData -> lcData.jsonObject["fileName"]!!.jsonPrimitive.content == lightconeFileName }
 
