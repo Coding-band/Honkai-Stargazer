@@ -23,6 +23,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -33,10 +34,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.voc.honkai_stargazer.component.CharacterCard
 import com.voc.honkai_stargazer.component.LightconeCard
 import com.voc.honkai_stargazer.component.RelicCard
 import files.AdviceLightcones
 import files.AdviceRelics
+import files.AdviceTeams
 import files.MainAffix
 import files.NoDataYet
 import files.RelicPropBody
@@ -49,6 +52,7 @@ import files.ic_add_icon
 import files.ic_arrow_left_page
 import files.ic_arrow_right_page
 import files.phorphos_baseball_cap_regular
+import files.phorphos_person_regular
 import files.phorphos_sword_regular
 import files.pom_pom_failed_issue
 import kotlinx.serialization.json.JsonObject
@@ -58,12 +62,14 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
 import types.Attribute
+import types.Character
 import types.Constants
 import types.Lightcone
 import types.Relic
 import utils.FontSizeNormal
 import utils.FontSizeNormal16
 import utils.UtilTools
+import utils.annotation.YouMustKiddingMe
 
 @Composable
 fun InfoAdviceLightcone(charWeightData : JsonObject? = null) {
@@ -112,6 +118,7 @@ fun InfoAdviceLightcone(charWeightData : JsonObject? = null) {
 }
 
 
+@YouMustKiddingMe
 @Composable
 fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
     val relicPart = arrayListOf(Res.string.RelicPropBody,Res.string.RelicPropFeet,Res.string.RelicPropPlanarSphere, Res.string.RelicPropLinkRope)
@@ -418,42 +425,50 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
 
 
 @Composable
-fun InfoAdviceTeammate(charWeightData : JsonObject? = null) {
+fun InfoAdviceTeammate(
+    charWeightData: JsonObject? = null,
+    characterId: String,
+
+    dialogTitle: MutableState<String>,
+    dialogDisplay: MutableState<Boolean>,
+    dialogLastTrigType: MutableState<String>,
+    dialogComponent: MutableState<@Composable () -> Unit>
+
+) {
+
+    val leaderInfo = Character.getCharacterItemFromJSON(characterId, UtilTools.TextLanguage.ZH_HK)
     Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
-        TitleHeader(iconRId = Res.drawable.phorphos_sword_regular, titleRId = Res.string.AdviceLightcones)
+        TitleHeader(iconRId = Res.drawable.phorphos_person_regular, titleRId = Res.string.AdviceTeams)
 
         //Empty Blank
         Spacer(modifier = Modifier.height(24.dp))
 
         //Content
         if(charWeightData != null){
-            //Show of recommend Lightcones
-            LazyRow(
-                state = rememberLazyListState(),
-                horizontalArrangement = Arrangement.spacedBy(12.dp),
-            ) {
-                //Most Advice To Equip
-                for(lcItem in charWeightData.jsonObject["advice_lightcone"]!!.jsonArray){
-                    val officialLcId = lcItem.jsonPrimitive.int
-                    val lightcone = Lightcone.getLightconeItemFromJSON(officialLcId.toString(), textLanguage = UtilTools.TextLanguage.ZH_HK)
+            val teamList = charWeightData.jsonObject["team"]!!.jsonArray
+            //Show of recommend Teams
+            Column {
+                for(team in teamList){
+                    Row(modifier = Modifier.fillMaxWidth()) {
+                        //Team Leader
+                        Box(Modifier.weight(1f)){
+                            CharacterCard(leaderInfo)
+                        }
+                        for(teamChoice in team.jsonArray){
+                            Spacer(modifier = Modifier.width(12.dp))
 
-                    item{
-                        Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+Constants.LC_CARD_TITLE_HEIGHT))){
-                            LightconeCard(lightcone, displayName = lightcone.displayName)
+                            val teamChoiceString = teamChoice.jsonPrimitive.content
+                            Box(Modifier.weight(1f)){
+                                if(teamChoiceString.toIntOrNull() != null && teamChoiceString.toIntOrNull()!! in 1000 .. 9999){
+                                    CharacterCard(Character.getCharacterItemFromJSON(teamChoiceString, UtilTools.TextLanguage.ZH_HK))
+                                }else{
+                                    MultiChoiceCard(teamChoiceString,leaderInfo, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent)
+                                }
+                            }
                         }
                     }
 
-                }
-                //Still Can Use If Only Have
-                for(lcItem in charWeightData.jsonObject["normal_lightcone"]!!.jsonArray){
-                    val officialLcId = lcItem.jsonPrimitive.int
-                    val lightcone = Lightcone.getLightconeItemFromJSON(officialLcId.toString(), textLanguage = UtilTools.TextLanguage.ZH_HK)
-
-                    item{
-                        Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+Constants.LC_CARD_TITLE_HEIGHT))){
-                            LightconeCard(lightcone, displayName = lightcone.displayName)
-                        }
-                    }
+                    Spacer(modifier = Modifier.height(12.dp))
                 }
             }
         }else{

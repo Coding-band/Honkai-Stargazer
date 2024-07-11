@@ -110,9 +110,10 @@ fun CharacterListPage(
                     character = Character(
                         registName = charListItem.jsonObject["name"]?.jsonPrimitive?.content,
                         fileName = charListItem.jsonObject["fileName"]?.jsonPrimitive?.content,
-                        combatType = CombatType.valueOf(charListItem.jsonObject["element"]?.jsonPrimitive?.content!!),
                         rarity = charListItem.jsonObject["rare"]?.jsonPrimitive?.int!!,
                         path = Path.valueOf(charListItem.jsonObject["path"]?.jsonPrimitive?.content!!),
+                        combatType = CombatType.valueOf(charListItem.jsonObject["element"]?.jsonPrimitive?.content!!),
+                        officialId = charListItem.jsonObject["charId"]?.jsonPrimitive?.int!!,
                     ),
                     displayName = charNameList[index],
                     onClick = {

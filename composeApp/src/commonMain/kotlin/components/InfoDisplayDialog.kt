@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -32,11 +33,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.min
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.HazeStyle
 import dev.chrisbanes.haze.hazeChild
 import files.Res
 import files.ui_icon_close
+import getScreenSizeInfo
 import org.jetbrains.compose.resources.painterResource
 import utils.FontSizeNormal20
 
@@ -61,6 +64,7 @@ fun InfoDisplayDialog(
         //Dialog
         Box(modifier = modifier
             .padding(20.dp)
+            .heightIn(min(160.dp, getScreenSizeInfo().hDP), getScreenSizeInfo().hDP / 3)
             .clip(
                 RoundedCornerShape(
                     topStart = 4.dp,

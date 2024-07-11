@@ -9,12 +9,9 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.SnackbarHostState
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.derivedStateOf
@@ -28,9 +25,6 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import components.BackIcon
@@ -39,6 +33,7 @@ import components.CharacterTraceTree.CharacterTraceTree
 import components.HeaderData
 import components.InfoAdviceLightcone
 import components.InfoAdviceRelic
+import components.InfoAdviceTeammate
 import components.InfoBasicStatus
 import components.InfoBioColumn
 import components.InfoDisplayDialog
@@ -153,16 +148,14 @@ fun CharacterInfoPage(
 
         //RecycleView
         LazyColumn(state = listState, modifier = Modifier.haze(hazeState).align(Alignment.Center)) {
-            item {InfoBioColumn(charInfoJson, combatType, path, isUserOwned = false, isFullEidolon = false) }
+            item { InfoBioColumn(charInfoJson, combatType, path, isUserOwned = false, isFullEidolon = false) }
             //Don't forget to add "StatusBarPadding" !
             item { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
             item { CharacterTraceTree(charInfoJson, path, characterName, dialogTitle, dialogDisplay,dialogLastTrigType,  dialogComponent) }
             item { CharacterEidolon(charInfoJson, characterName, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
             item { InfoAdviceLightcone(charWeightJsonObject) }
             item { InfoAdviceRelic(charWeightJsonObject) }
-            item {
-                Text("我是Index 6", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
-            }
+            item { InfoAdviceTeammate(charWeightJsonObject, characterId, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
             item { InfoStory(charInfoJson) }
 
         }
