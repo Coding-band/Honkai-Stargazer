@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.rememberLazyListState
@@ -29,14 +30,21 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.voc.honkai_stargazer.component.LightconeCard
 import com.voc.honkai_stargazer.component.RelicCard
 import files.AdviceLightcones
 import files.AdviceRelics
+import files.MainAffix
 import files.NoDataYet
+import files.RelicPropBody
+import files.RelicPropFeet
+import files.RelicPropLinkRope
+import files.RelicPropPlanarSphere
 import files.Res
+import files.SubAffix
 import files.ic_add_icon
 import files.ic_arrow_left_page
 import files.ic_arrow_right_page
@@ -49,10 +57,12 @@ import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
+import types.Attribute
 import types.Constants
 import types.Lightcone
 import types.Relic
 import utils.FontSizeNormal
+import utils.FontSizeNormal16
 import utils.UtilTools
 
 @Composable
@@ -104,6 +114,46 @@ fun InfoAdviceLightcone(charWeightData : JsonObject? = null) {
 
 @Composable
 fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
+    val relicPart = arrayListOf(Res.string.RelicPropBody,Res.string.RelicPropFeet,Res.string.RelicPropPlanarSphere, Res.string.RelicPropLinkRope)
+    //val relicPartShort = arrayListOf(Res.string.RelicPropBodyShort, Res.string.RelicPropFeetShort,Res.string.RelicPropPlanarSphereShort, Res.string.RelicPropLinkRopeShort)
+    val relicList : ArrayList<Pair<Relic,Relic>> = arrayListOf()
+    val ornamentList : ArrayList<Relic> = arrayListOf()
+    val relicSelectIndex = remember { mutableStateOf(0) }
+    val ornamentSelectIndex = remember { mutableStateOf(0) }
+
+    val adviceAttrList : ArrayList<Pair<String, Attribute>> = arrayListOf() //["ATTR_DEF","ATTR_SPD", "ATTR_SPD", "ATTR_SPD"] //must be 4 since 1 option for that index's relic/ornament
+    val adviceAttrSubList : ArrayList<Attribute> = arrayListOf() //As much as it provide, mostly 2-4
+
+    if(charWeightData != null){
+        for(relicSets in charWeightData.jsonObject["advice_relic"]!!.jsonArray){
+            if(relicSets.jsonArray.size >= 2) {
+                val relicId1 = relicSets.jsonArray[0].jsonPrimitive.int
+                val relicId2 = relicSets.jsonArray[1].jsonPrimitive.int
+
+                if (relicId1 == -1 || relicId2 == -1) continue
+
+                val relic1 = Relic.getRelicItemFromJSON(relicId1.toString(), UtilTools.TextLanguage.ZH_HK)
+                val relic2 = Relic.getRelicItemFromJSON(relicId2.toString(), UtilTools.TextLanguage.ZH_HK)
+
+                relicList.add(relic1 to relic2)
+            }
+        }
+
+        for(ornament in charWeightData.jsonObject["advice_ornament"]!!.jsonArray){
+            if (ornament.jsonPrimitive.int == -1) continue
+            ornamentList.add(Relic.getRelicItemFromJSON(ornament.jsonPrimitive.int.toString(), UtilTools.TextLanguage.ZH_HK))
+        }
+
+        //Must rewrite if later extend to multi choices of one relic index
+        for(adviceAttr in charWeightData.jsonObject["advice_relic_attr"]!!.jsonArray){
+            if (adviceAttr.jsonObject["propertyName"] == null || adviceAttr.jsonObject["propertyName"]!!.jsonPrimitive.content == "") continue
+            adviceAttrList.add(adviceAttr.jsonObject["relicType"]!!.jsonPrimitive.content to Attribute.valueOf(adviceAttr.jsonObject["propertyName"]!!.jsonPrimitive.content))
+        }
+        for(adviceAttr in charWeightData.jsonObject["advice_relic_sub"]!!.jsonArray){
+            adviceAttrSubList.add(Attribute.valueOf(adviceAttr.jsonPrimitive.content))
+        }
+    }
+
     Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
         TitleHeader(iconRId = Res.drawable.phorphos_baseball_cap_regular, titleRId = Res.string.AdviceRelics)
 
@@ -112,30 +162,6 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
 
         //Content
         if(charWeightData != null){
-            val relicList : ArrayList<Pair<Relic,Relic>> = arrayListOf()
-            val ornamentList : ArrayList<Relic> = arrayListOf()
-            val relicSelectIndex = remember { mutableStateOf(0) }
-            val ornamentSelectIndex = remember { mutableStateOf(0) }
-
-            for(relicSets in charWeightData.jsonObject["advice_relic"]!!.jsonArray){
-                if(relicSets.jsonArray.size >= 2) {
-                    val relicId1 = relicSets.jsonArray[0].jsonPrimitive.int
-                    val relicId2 = relicSets.jsonArray[1].jsonPrimitive.int
-
-                    if (relicId1 == -1 || relicId2 == -1) continue
-
-                    val relic1 = Relic.getRelicItemFromJSON(relicId1.toString(), UtilTools.TextLanguage.ZH_HK)
-                    val relic2 = Relic.getRelicItemFromJSON(relicId2.toString(), UtilTools.TextLanguage.ZH_HK)
-
-                    relicList.add(relic1 to relic2)
-                }
-            }
-
-            for(ornament in charWeightData.jsonObject["advice_ornament"]!!.jsonArray){
-                if (ornament.jsonPrimitive.int == -1) continue
-                ornamentList.add(Relic.getRelicItemFromJSON(ornament.jsonPrimitive.int.toString(), UtilTools.TextLanguage.ZH_HK))
-            }
-
             Row(
                 Modifier.wrapContentWidth().widthIn(320.dp, 450.dp),
                 verticalAlignment = Alignment.CenterVertically
@@ -288,11 +314,156 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
                 )
 
             }
+
+            //Attr Suggestion
+            Column {
+                Text(UtilTools().removeStringResDoubleQuotes(Res.string.MainAffix),fontWeight = FontWeight.Bold, style = FontSizeNormal16(), color = Color(0xFFDDDDDD))
+
+                Spacer(Modifier.height(10.dp))
+
+                Row(modifier = Modifier.fillMaxWidth().widthIn(200.dp, 450.dp).wrapContentHeight()) {
+                    Row(Modifier.weight(1f)){
+                        Text(
+                            UtilTools().removeStringResDoubleQuotes(relicPart[0]),
+                            style = FontSizeNormal(),
+                            fontWeight = FontWeight.Bold,
+                            color = Color(0xFFDDDDDD)
+                        )
+                        Text(
+                            text = UtilTools().removeStringResDoubleQuotes(adviceAttrList[0].second.resName),
+                            style = FontSizeNormal(),
+                            textAlign = TextAlign.End,
+                            color = Color(0xCCDDDDDD),
+                            modifier = Modifier.weight(1f)
+                        )
+                    }
+                    Spacer(Modifier.width(10.dp))
+                    Row(Modifier.weight(1f)){
+                        Text(
+                            UtilTools().removeStringResDoubleQuotes(relicPart[1]),
+                            style = FontSizeNormal(),
+                            fontWeight = FontWeight.Bold,
+                            color = Color(0xFFDDDDDD)
+                        )
+                        Text(
+                            text = UtilTools().removeStringResDoubleQuotes(adviceAttrList[1].second.resName),
+                            style = FontSizeNormal(),
+                            textAlign = TextAlign.End,
+                            color = Color(0xCCDDDDDD),
+                            modifier = Modifier.weight(1f)
+                        )
+                    }
+                }
+
+                Spacer(Modifier.height(10.dp))
+
+                Row(modifier = Modifier.fillMaxWidth().widthIn(200.dp, 450.dp).wrapContentHeight()) {
+                    Row(Modifier.weight(1f)){
+                        Text(
+                            UtilTools().removeStringResDoubleQuotes(relicPart[2]),
+                            style = FontSizeNormal(),
+                            fontWeight = FontWeight.Bold,
+                            color = Color(0xFFDDDDDD)
+                        )
+                        Text(
+                            text = UtilTools().removeStringResDoubleQuotes(adviceAttrList[2].second.resName),
+                            style = FontSizeNormal(),
+                            textAlign = TextAlign.End,
+                            color = Color(0xCCDDDDDD),
+                            modifier = Modifier.weight(1f)
+                        )
+                    }
+                    Spacer(Modifier.width(10.dp))
+                    Row(Modifier.weight(1f)){
+                        Text(
+                            UtilTools().removeStringResDoubleQuotes(relicPart[3]),
+                            style = FontSizeNormal(),
+                            fontWeight = FontWeight.Bold,
+                            color = Color(0xFFDDDDDD)
+                        )
+                        Text(
+                            text = UtilTools().removeStringResDoubleQuotes(adviceAttrList[3].second.resName),
+                            style = FontSizeNormal(),
+                            textAlign = TextAlign.End,
+                            color = Color(0xCCDDDDDD),
+                            modifier = Modifier.weight(1f)
+                        )
+                    }
+                }
+
+                Spacer(Modifier.height(10.dp))
+
+                var subAttrString = ""
+                for((index, subAttr) in adviceAttrSubList.withIndex()){
+                    subAttrString += UtilTools().removeStringResDoubleQuotes(subAttr.resName) + if(index < adviceAttrSubList.size-1){","} else ""
+                }
+                Row {
+                    Text(UtilTools().removeStringResDoubleQuotes(Res.string.SubAffix), fontWeight = FontWeight.Bold,style = FontSizeNormal16(), color = Color(0xFFDDDDDD))
+
+                    Text(
+                        text = subAttrString,
+                        style = FontSizeNormal(),
+                        color = Color(0xCCDDDDDD),
+                        textAlign = TextAlign.End,
+                        modifier = Modifier.weight(1f)
+                    )
+                }
+            }
+
         }else{
             InfoCannotFind()
         }
     }
 }
+
+
+@Composable
+fun InfoAdviceTeammate(charWeightData : JsonObject? = null) {
+    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
+        TitleHeader(iconRId = Res.drawable.phorphos_sword_regular, titleRId = Res.string.AdviceLightcones)
+
+        //Empty Blank
+        Spacer(modifier = Modifier.height(24.dp))
+
+        //Content
+        if(charWeightData != null){
+            //Show of recommend Lightcones
+            LazyRow(
+                state = rememberLazyListState(),
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                //Most Advice To Equip
+                for(lcItem in charWeightData.jsonObject["advice_lightcone"]!!.jsonArray){
+                    val officialLcId = lcItem.jsonPrimitive.int
+                    val lightcone = Lightcone.getLightconeItemFromJSON(officialLcId.toString(), textLanguage = UtilTools.TextLanguage.ZH_HK)
+
+                    item{
+                        Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+Constants.LC_CARD_TITLE_HEIGHT))){
+                            LightconeCard(lightcone, displayName = lightcone.displayName)
+                        }
+                    }
+
+                }
+                //Still Can Use If Only Have
+                for(lcItem in charWeightData.jsonObject["normal_lightcone"]!!.jsonArray){
+                    val officialLcId = lcItem.jsonPrimitive.int
+                    val lightcone = Lightcone.getLightconeItemFromJSON(officialLcId.toString(), textLanguage = UtilTools.TextLanguage.ZH_HK)
+
+                    item{
+                        Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+Constants.LC_CARD_TITLE_HEIGHT))){
+                            LightconeCard(lightcone, displayName = lightcone.displayName)
+                        }
+                    }
+                }
+            }
+        }else{
+            InfoCannotFind()
+        }
+    }
+
+}
+
+
 
 @Composable
 fun InfoCannotFind(){
