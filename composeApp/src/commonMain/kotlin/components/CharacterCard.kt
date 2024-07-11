@@ -50,15 +50,25 @@ import types.Path
 import utils.FontSizeNormal12
 import utils.TextColorNormalDim
 import utils.UtilTools
+import utils.navigation.Screen
+import utils.navigation.navControllerInstance
 
 @Composable
 fun CharacterCard(
     character: Character,
     level: Int? = -1,
     ascensionPhase: Int? = -1, //Rank 突破等級
-    displayName: String? = "?",
+    displayName: String? = character.displayName,
     isMultiDisplay: Boolean = false, //展示推薦隊伍
-    onClick: () -> Unit = {}, //按下後會做甚麼
+    onClick: () -> Unit = { navControllerInstance.navigate(
+        Screen.CharacterInfoPage.route
+                + "/${character.registName!!.replace(" ","_")}"
+                + "/?fileName=${character.fileName}"
+                + "&combatType=${character.combatType}"
+                + "&path=${character.path}"
+                + "&charId=${character.officialId}"
+
+    ) }, //按下後會做甚麼
     isDisplayLevel: Boolean = false
 
 ) {
@@ -152,11 +162,11 @@ fun CharacterCardPreview() {
                 CharacterCard(
                     character = Character(
                         officialId = 1006,
-                        fileName = "silverwolf",
                         registName = "Silver Wolf",
+                        fileName = "silverwolf",
                         rarity = 5,
-                        combatType = CombatType.valueOf("Quantum"),
                         path = Path.Nihility,
+                        combatType = CombatType.valueOf("Quantum"),
                         gender = Character.Gender.Female,
                     ),
                     displayName = "銀狼",

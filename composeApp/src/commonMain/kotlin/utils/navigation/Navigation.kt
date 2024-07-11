@@ -18,6 +18,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -42,6 +43,8 @@ import screens.MakeBackground
 import screens.RelicListPage
 import screens.SplashPage
 
+//This should not be there, but CharacterCard need it in clickable, without using @Composable ...
+lateinit var navControllerInstance : NavController
 sealed class Screen(val route: String, val headerData: HeaderData = defaultHeaderData) {
     object SplashPage :
         Screen("SplashPage", HeaderData(titleIconId = Res.drawable.phorphos_house_fill))
@@ -87,6 +90,7 @@ fun Navigation() {
     //val defaultExitTransition = ExitTransition.None
     val defaultEnterTransition = EnterTransition.None
     val defaultExitTransition = ExitTransition.None
+    navControllerInstance = navController
     NavHost(navController = navController, startDestination = Screen.SplashPage.route) {
         composable(
             route = Screen.SplashPage.route,
