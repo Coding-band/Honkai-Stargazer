@@ -221,7 +221,7 @@ fun InfoLcMetamorphosis(lcInfo: JsonElement){
                             Alignment.CenterVertically
                         ), color = Color.White
                     )
-                    ThemedSlider(metaLv, { metaLv = it })
+                    ThemedSlider(metaLv, { metaLv = it }, steps = 0, valueRange = 1f..5f)
                 }
 
                 Spacer(modifier = Modifier.height(16.dp))
@@ -229,9 +229,9 @@ fun InfoLcMetamorphosis(lcInfo: JsonElement){
                 Column {
                     Text(
                         UtilTools().removeStringResDoubleQuotes(Res.string.CharSoul)
-                            .replace("$" + "{1}", ""), color = Color(0xFF333333)
+                            .replace("$" + "{1}", ""), color = Color(0xFFFFFFFF)
                     )
-                    RichText(richTextState, color = Color(0xFF666666), style = FontSizeNormal())
+                    RichText(richTextState, color = Color(0xFFFFFFFF), style = FontSizeNormal())
                 }
             }
 

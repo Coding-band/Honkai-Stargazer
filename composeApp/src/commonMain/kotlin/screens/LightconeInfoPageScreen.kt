@@ -35,6 +35,7 @@ import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import components.BackIcon
 import components.HeaderData
+import components.InfoAdviceCharacter
 import components.InfoBasicStatus
 import components.InfoBioColumn
 import components.InfoDisplayDialog
@@ -50,6 +51,7 @@ import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.AdviceCharacters
 import files.BasicStatus
+import files.LightconeEffect
 import files.LightconeStory
 import files.Res
 import files.ic_favourite_btn
@@ -69,7 +71,7 @@ private lateinit var localSnackbarHostState: SnackbarHostState;
 
 val lcInfoNavItemList = arrayOf<InfoNavigateItem>(
     InfoNavigateItem(Res.drawable.phorphos_info_regular, 1, Res.string.BasicStatus),
-    InfoNavigateItem(Res.drawable.phorphos_info_regular, 2, Res.string.BasicStatus),
+    InfoNavigateItem(Res.drawable.phorphos_info_regular, 2, Res.string.LightconeEffect),
     InfoNavigateItem(Res.drawable.phorphos_person_regular, 3, Res.string.AdviceCharacters),
     InfoNavigateItem(Res.drawable.phorphos_chats_circle_regular, 4, Res.string.LightconeStory),
 )
@@ -130,10 +132,7 @@ fun LightconeInfoPage(
             //Don't forget to add "StatusBarPadding" !
             item { InfoBasicStatus(lcInfoJson, StatusType.LIGHTCONE) }
             item { InfoLcMetamorphosis(lcInfoJson) }
-            item {
-                Text("我是Index 3", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
-                //InfoAdviceCharacter(lcWeightJsonObject, lightconeId, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent)
-            }
+            item { InfoAdviceCharacter(lightconeFileName) }
             item { InfoStory(lcInfoJson, isLcStory = true) }
 
         }

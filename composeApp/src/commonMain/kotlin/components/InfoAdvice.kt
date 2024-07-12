@@ -37,6 +37,7 @@ import androidx.compose.ui.unit.dp
 import com.voc.honkai_stargazer.component.CharacterCard
 import com.voc.honkai_stargazer.component.LightconeCard
 import com.voc.honkai_stargazer.component.RelicCard
+import files.AdviceCharacters
 import files.AdviceLightcones
 import files.AdviceRelics
 import files.AdviceTeams
@@ -480,7 +481,55 @@ fun InfoAdviceTeammate(
 
 }
 
+@Composable
+fun InfoAdviceCharacter(
+    lightconeId: String,
+){
+    val charWeightList = UtilTools.TemporaryFunction().getCharWeightListJson()
+    val adviceChar : ArrayList<Character> = arrayListOf()
+    for(char in charWeightList.jsonObject.keys){
+        for(lcId in charWeightList.jsonObject[char]!!.jsonArray[0].jsonObject["advice_lightcone"]!!.jsonArray){
+            if(lcId.jsonPrimitive.content == lightconeId){
+                if(adviceChar.none { charAdvice -> charAdvice.officialId.toString() == char }){
+                    adviceChar.add(Character.getCharacterItemFromJSON(char, UtilTools.TextLanguage.ZH_HK))
+                    break
+                }
+            }
+        }
 
+        for(lcId in charWeightList.jsonObject[char]!!.jsonArray[0].jsonObject["normal_lightcone"]!!.jsonArray){
+            if(lcId.jsonPrimitive.content == lightconeId){
+                if(adviceChar.none { charAdvice -> charAdvice.officialId.toString() == char }){
+                    adviceChar.add(Character.getCharacterItemFromJSON(char, UtilTools.TextLanguage.ZH_HK))
+                    break
+                }
+            }
+        }
+    }
+
+    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = 18.dp, end = 18.dp)) {
+        TitleHeader(
+            iconRId = Res.drawable.phorphos_person_regular,
+            titleRId = Res.string.AdviceCharacters
+        )
+
+        //Empty Blank
+        Spacer(modifier = Modifier.height(24.dp))
+        LazyRow(
+            state = rememberLazyListState(),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
+            for (char in adviceChar) {
+                item {
+                    Box(Modifier.width(Constants.CHAR_CARD_WIDTH).wrapContentHeight()) {
+                        CharacterCard(char)
+                    }
+                }
+            }
+        }
+    }
+
+}
 
 @Composable
 fun InfoCannotFind(){
