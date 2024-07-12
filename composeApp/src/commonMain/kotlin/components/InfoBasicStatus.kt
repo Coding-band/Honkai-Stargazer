@@ -22,7 +22,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.mohamedrejeb.richeditor.model.rememberRichTextState
+import com.mohamedrejeb.richeditor.ui.material3.RichText
 import files.BasicStatus
+import files.CharSoul
+import files.LightconeEffect
 import files.Res
 import files.ic_aggro
 import files.ic_arrow_to_down
@@ -33,12 +37,22 @@ import files.ic_hp
 import files.ic_speed
 import files.phorphos_info_regular
 import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.float
+import kotlinx.serialization.json.jsonArray
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
 import types.Constants.Companion.MATERIAL_CARD_HEIGHT
+import utils.FontSizeNormal
 import utils.FontSizeNormal16
+import utils.FontSizeNormal20
+import utils.TextColorNormalDim
+import utils.UtilTools
 import utils.calculator.AttrData
 import utils.calculator.getCharAttrData
 import utils.calculator.getCharMaterialData
+import utils.calculator.getLcAttrData
+import utils.calculator.getLcMaterialData
 
 enum class StatusType{
     CHARACTER, LIGHTCONE
@@ -50,7 +64,7 @@ fun InfoBasicStatus(infoJson : JsonElement, statusType : StatusType = StatusType
 
     var basicStatusLvBegin by remember { mutableStateOf(1f) }
     var basicStatusLvEnd by remember { mutableStateOf(80f) }
-    statusCal = getCharAttrData(infoJson, basicStatusLvEnd.toInt())
+    statusCal = if(statusType == StatusType.CHARACTER) getCharAttrData(infoJson, basicStatusLvEnd.toInt()) else getLcAttrData(infoJson, basicStatusLvEnd.toInt())
 
     if(basicStatusLvBegin > basicStatusLvEnd){
         basicStatusLvBegin = basicStatusLvEnd
@@ -58,7 +72,19 @@ fun InfoBasicStatus(infoJson : JsonElement, statusType : StatusType = StatusType
         basicStatusLvEnd = basicStatusLvBegin
     }
 
-    val materialList = getCharMaterialData(infoJson, beginLv = basicStatusLvBegin.toInt(), endLv = basicStatusLvEnd.toInt())
+    val materialList = if(statusType == StatusType.CHARACTER) {
+        getCharMaterialData(
+            infoJson,
+            beginLv = basicStatusLvBegin.toInt(),
+            endLv = basicStatusLvEnd.toInt()
+        )
+    }else {
+        getLcMaterialData(
+            infoJson,
+            beginLv = basicStatusLvBegin.toInt(),
+            endLv = basicStatusLvEnd.toInt()
+        )
+    }
     val sortedMaterialKeyList = remember { materialList.keys.sorted() }
 
     Column (modifier = Modifier.statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
@@ -145,5 +171,72 @@ fun InfoBasicStatus(infoJson : JsonElement, statusType : StatusType = StatusType
             }
         }
 
+    }
+}
+
+@Composable
+fun InfoLcMetamorphosis(lcInfo: JsonElement){
+    var metaLv by remember { mutableStateOf(1f) }
+
+    if(lcInfo.jsonObject["skill"] != null) {
+
+        val paramsList : ArrayList<Float> = arrayListOf()
+        val levelData = lcInfo.jsonObject["skill"]!!.jsonObject["levelData"]
+        if (levelData != null && levelData.jsonArray.size >= (metaLv.toInt())){
+            for(param in levelData.jsonArray[metaLv.toInt()-1].jsonObject["params"]!!.jsonArray){
+                paramsList.add(param.jsonPrimitive.float)
+            }
+        }
+
+        val richTextState = rememberRichTextState()
+        richTextState.setHtml(
+            UtilTools().htmlDescApplier(
+                lcInfo.jsonObject["skill"]!!.jsonObject["descHash"]!!.jsonPrimitive.content,
+                paramsList
+            )
+        )
+
+        Column(modifier = Modifier.statusBarsPadding().padding(start = 18.dp, end = 18.dp)) {
+            TitleHeader(
+                iconRId = Res.drawable.phorphos_info_regular,
+                titleRId = Res.string.LightconeEffect
+            )
+
+            //Empty Blank
+            Spacer(modifier = Modifier.height(24.dp))
+
+            Column {
+                Text(
+                    text = lcInfo.jsonObject["name"]!!.jsonPrimitive.content,
+                    style = FontSizeNormal20(),
+                    color = TextColorNormalDim
+                )
+
+                Spacer(modifier = Modifier.height(16.dp))
+
+                //Level Slider
+                Row(Modifier.height(20.dp)) {
+                    Text(
+                        "Lv.${metaLv.toInt()}", modifier = Modifier.width(60.dp).align(
+                            Alignment.CenterVertically
+                        ), color = Color.White
+                    )
+                    ThemedSlider(metaLv, { metaLv = it })
+                }
+
+                Spacer(modifier = Modifier.height(16.dp))
+
+                Column {
+                    Text(
+                        UtilTools().removeStringResDoubleQuotes(Res.string.CharSoul)
+                            .replace("$" + "{1}", ""), color = Color(0xFF333333)
+                    )
+                    RichText(richTextState, color = Color(0xFF666666), style = FontSizeNormal())
+                }
+            }
+
+        }
+    }else {
+        InfoCannotFind()
     }
 }

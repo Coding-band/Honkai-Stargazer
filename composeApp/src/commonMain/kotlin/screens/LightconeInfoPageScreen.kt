@@ -9,9 +9,12 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.SnackbarHostState
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.derivedStateOf
@@ -25,18 +28,17 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import components.BackIcon
-import components.CharacterEidolon
-import components.CharacterTraceTree.CharacterTraceTree
 import components.HeaderData
-import components.InfoAdviceLightcone
-import components.InfoAdviceRelic
-import components.InfoAdviceTeammate
 import components.InfoBasicStatus
 import components.InfoBioColumn
 import components.InfoDisplayDialog
+import components.InfoLcMetamorphosis
 import components.InfoNavigateItem
 import components.InfoNavigatorBar
 import components.InfoStory
@@ -46,51 +48,37 @@ import components.StatusType
 import components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
-import files.AdviceLightcones
-import files.AdviceRelics
-import files.AdviceTeams
+import files.AdviceCharacters
 import files.BasicStatus
-import files.CharacterStory
-import files.Eidolon
+import files.LightconeStory
 import files.Res
-import files.TraceTree
 import files.ic_favourite_btn
-import files.phorphos_baseball_cap_regular
 import files.phorphos_chats_circle_regular
 import files.phorphos_info_regular
 import files.phorphos_person_fill
 import files.phorphos_person_regular
-import files.phorphos_star_half_regular
-import files.phorphos_sword_regular
-import files.phorphos_tree_structure_regular
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.FlowPreview
-import kotlinx.serialization.json.JsonObject
-import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import types.Character
-import types.CombatType
+import types.Lightcone
 import utils.UtilTools
 
 private lateinit var localCoroutineScope: CoroutineScope;
 private lateinit var localSnackbarHostState: SnackbarHostState;
 
-val charInfoNavItemList = arrayOf<InfoNavigateItem>(
+val lcInfoNavItemList = arrayOf<InfoNavigateItem>(
     InfoNavigateItem(Res.drawable.phorphos_info_regular, 1, Res.string.BasicStatus),
-    InfoNavigateItem(Res.drawable.phorphos_tree_structure_regular, 2, Res.string.TraceTree),
-    InfoNavigateItem(Res.drawable.phorphos_star_half_regular, 3, Res.string.Eidolon),
-    InfoNavigateItem(Res.drawable.phorphos_sword_regular, 4, Res.string.AdviceLightcones),
-    InfoNavigateItem(Res.drawable.phorphos_baseball_cap_regular, 5, Res.string.AdviceRelics),
-    InfoNavigateItem(Res.drawable.phorphos_chats_circle_regular, 6, Res.string.AdviceTeams),
-    InfoNavigateItem(Res.drawable.phorphos_person_regular, 7, Res.string.CharacterStory),
+    InfoNavigateItem(Res.drawable.phorphos_info_regular, 2, Res.string.BasicStatus),
+    InfoNavigateItem(Res.drawable.phorphos_person_regular, 3, Res.string.AdviceCharacters),
+    InfoNavigateItem(Res.drawable.phorphos_chats_circle_regular, 4, Res.string.LightconeStory),
 )
 
 private const val scrollPxTrigInvisible = 250f
 
 @OptIn(FlowPreview::class)
 @Composable
-fun CharacterInfoPage(
+fun LightconeInfoPage(
     modifier: Modifier = Modifier,
     navController: NavController,
     headerData: HeaderData = defaultHeaderData,
@@ -99,20 +87,18 @@ fun CharacterInfoPage(
 ) {
 
     var density = LocalDensity.current.density
-    val characterFileName = backStackEntry!!.arguments?.getString("fileName")!!
-    val characterName = backStackEntry.arguments?.getString("charName")!!.replace("_", " ")
-    val characterId = backStackEntry.arguments?.getString("charId")!!
-    val combatType = CombatType.valueOf(backStackEntry.arguments?.getString("combatType")!!)
+    val lightconeFileName = backStackEntry!!.arguments?.getString("fileName")!!
+    val lightconeName = backStackEntry.arguments?.getString("lcName")!!.replace("_", " ")
     val path = types.Path.valueOf(backStackEntry.arguments?.getString("path")!!)
 
     val hazeState = remember { HazeState() }
-    val charInfoJson = Character.getCharacterDataFromFileName(characterFileName, UtilTools.TextLanguage.ZH_HK)
+    val lcInfoJson = Lightcone.getLightconeDataFromJSON(lightconeFileName, UtilTools.TextLanguage.ZH_HK)
 
     localCoroutineScope = rememberCoroutineScope();
     localSnackbarHostState = snackbarHostState!!;
 
     val headerDataPage = HeaderData(
-        charInfoJson.jsonObject["name"]!!.jsonPrimitive.content,
+        lcInfoJson.jsonObject["name"]!!.jsonPrimitive.content,
         titleIconId = Res.drawable.phorphos_person_fill
     )
 
@@ -125,38 +111,30 @@ fun CharacterInfoPage(
         }
     }
 
-    //It will be transfer from CharacterTraceTree.kt !
+    //It will be transfer from LightconeTraceTree.kt !
     val dialogComponent : MutableState<@Composable () -> Unit> = remember { mutableStateOf({}) }
     val dialogDisplay = remember { mutableStateOf(false) }
     val dialogLastTrigType = remember { mutableStateOf("NONE") }
     val dialogTitle = remember { mutableStateOf("Nope") }
-    val selectedSectIndex = remember { mutableStateOf(0) } //流派
-
-    val singleCharWeightJsonElement = UtilTools.TemporaryFunction().getCharWeightListJson().jsonObject[characterId]
-    var charWeightJsonObject : JsonObject? = null
-
-    if(singleCharWeightJsonElement != null && singleCharWeightJsonElement.jsonArray.size > 0){
-        charWeightJsonObject = singleCharWeightJsonElement.jsonArray[selectedSectIndex.value].jsonObject
-    }
 
     Box {
 
-        CharacterInfoFullImgWithRare(
-            fileName = characterName,
+        LightconeInfoFullImgWithRare(
+            fileName = lightconeName,
             isVisible = !isNaviBarVisible //alpha = scrollToAlpha
         )
 
         //RecycleView
         LazyColumn(state = listState, modifier = Modifier.haze(hazeState).align(Alignment.Center)) {
-            item { InfoBioColumn(charInfoJson, combatType, path, isUserOwned = false, isFullEidolon = false) }
+            item { InfoBioColumn(lcInfoJson, combatType = null, path, isUserOwned = false, isFullEidolon = false) }
             //Don't forget to add "StatusBarPadding" !
-            item { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
-            item { CharacterTraceTree(charInfoJson, path, characterName, dialogTitle, dialogDisplay,dialogLastTrigType,  dialogComponent) }
-            item { CharacterEidolon(charInfoJson, characterName, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
-            item { InfoAdviceLightcone(charWeightJsonObject) }
-            item { InfoAdviceRelic(charWeightJsonObject) }
-            item { InfoAdviceTeammate(charWeightJsonObject, characterId, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
-            item { InfoStory(charInfoJson) }
+            item { InfoBasicStatus(lcInfoJson, StatusType.LIGHTCONE) }
+            item { InfoLcMetamorphosis(lcInfoJson) }
+            item {
+                Text("我是Index 3", fontSize = 32.sp, color = Color.White, textAlign = TextAlign.Center, modifier = Modifier.align(Alignment.Center).fillMaxWidth().height(600.dp).statusBarsPadding())
+                //InfoAdviceCharacter(lcWeightJsonObject, lightconeId, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent)
+            }
+            item { InfoStory(lcInfoJson, isLcStory = true) }
 
         }
 
@@ -173,14 +151,14 @@ fun CharacterInfoPage(
             if(dialogDisplay.value){
                 InfoDisplayDialog(dialogTitle.value, dialogComponent.value, modifier = Modifier.align(Alignment.BottomCenter), hazeState, isNavBarVisible = (isNaviBarVisible), isDialogVisible = (dialogDisplay))
             } else {
-                InfoNavigatorBar(charInfoNavItemList, listState, Modifier.align(Alignment.BottomCenter), hazeState = hazeState, isVisible = (isNaviBarVisible), offSet = PAGE_HEADER_HEIGHT)
+                InfoNavigatorBar(lcInfoNavItemList, listState, Modifier.align(Alignment.BottomCenter), hazeState = hazeState, isVisible = (isNaviBarVisible), offSet = PAGE_HEADER_HEIGHT)
             }
         }
     }
 }
 
 @Composable
-fun CharacterInfoFullImgWithRare(
+fun LightconeInfoFullImgWithRare(
     modifier: Modifier = Modifier,
     fileName: String,
     isVisible: Boolean = true
@@ -193,10 +171,10 @@ fun CharacterInfoFullImgWithRare(
             modifier = Modifier.fillMaxWidth().fillMaxHeight(0.8f).align(Alignment.BottomCenter)
         ) {
             Image(
-                bitmap = Character.getCharacterImageFromFileName(
-                    UtilTools.ImageFolderType.CHAR_FULL, fileName
+                bitmap = Lightcone.getLightconeImageFromJSON(
+                    UtilTools.ImageFolderType.LC_ARTWORK, fileName
                 ),
-                contentDescription = "Character Full Image",
+                contentDescription = "Lightcone Full Image",
                 contentScale = ContentScale.Fit,
             )
         }

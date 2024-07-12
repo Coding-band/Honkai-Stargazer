@@ -85,8 +85,18 @@ fun LightconeListPage(modifier: Modifier = Modifier, navController: NavControlle
                         fileName = lcListItem.jsonObject["fileName"]?.jsonPrimitive?.content,
                         rarity = lcListItem.jsonObject["rare"]?.jsonPrimitive?.int!!,
                         path = Path.valueOf(lcListItem.jsonObject["path"]?.jsonPrimitive?.content!!),
-                    ),
-                    displayName = lcNameList[index]
+                        displayName = lcNameList[index]
+                        ),
+                    onClick = {
+                        val lcName = lcListItem.jsonObject["name"]?.jsonPrimitive?.content!!;
+                        val fileName = lcListItem.jsonObject["fileName"]?.jsonPrimitive?.content!!;
+                        navController.navigate(
+                            Screen.LightconeInfoPage.route
+                                    + "/${lcName}"
+                                    + "/?fileName=${fileName}"
+                                    + "&path=${lcListItem.jsonObject["path"]?.jsonPrimitive?.content!!}"
+                        )
+                    }
                 )
             }
             item(span = { GridItemSpan(maxLineSpan) }) {

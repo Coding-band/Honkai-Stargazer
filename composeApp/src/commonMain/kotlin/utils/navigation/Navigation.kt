@@ -38,6 +38,7 @@ import files.phorphos_sword_fill
 import screens.CharacterInfoPage
 import screens.CharacterListPage
 import screens.HomePage
+import screens.LightconeInfoPage
 import screens.LightconeListPage
 import screens.MakeBackground
 import screens.RelicListPage
@@ -77,6 +78,10 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     object CharacterInfoPage : Screen(
         "CharacterInfoPage",
         HeaderData(titleRId = Res.string.europe, titleIconId = Res.drawable.phorphos_person_fill)
+    )
+    object LightconeInfoPage : Screen(
+        "LightconeInfoPage",
+        HeaderData(titleRId = Res.string.europe, titleIconId = Res.drawable.phorphos_sword_fill)
     )
 }
 
@@ -172,6 +177,27 @@ fun Navigation() {
                     CharacterInfoPage(
                         navController = navController,
                         headerData = Screen.CharacterInfoPage.headerData,
+                        backStackEntry = backStackEntry,
+                        snackbarHostState = snackbarHostState
+                    )
+                })
+        }
+        composable(
+            route = "${Screen.LightconeInfoPage.route}/{lcName}/?fileName={fileName}&path={path}",
+            arguments = listOf(
+                (navArgument("fileName") { type = NavType.StringType }),
+                (navArgument("lcName") { type = NavType.StringType }),
+                (navArgument("path") { type = NavType.StringType }),
+            ),
+            enterTransition = { defaultEnterTransition }, exitTransition = { defaultExitTransition }
+        ) { backStackEntry ->
+            RootContent(
+                screen = Screen.LightconeInfoPage,
+                snackbarHostState = snackbarHostState,
+                page = {
+                    LightconeInfoPage(
+                        navController = navController,
+                        headerData = Screen.LightconeInfoPage.headerData,
                         backStackEntry = backStackEntry,
                         snackbarHostState = snackbarHostState
                     )

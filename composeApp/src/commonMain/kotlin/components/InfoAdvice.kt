@@ -68,6 +68,8 @@ import types.Lightcone
 import types.Relic
 import utils.FontSizeNormal
 import utils.FontSizeNormal16
+import utils.TextColorNormalDim
+import utils.TextColorNormalDimCC
 import utils.UtilTools
 import utils.annotation.YouMustKiddingMe
 
@@ -93,7 +95,7 @@ fun InfoAdviceLightcone(charWeightData : JsonObject? = null) {
 
                     item{
                         Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+Constants.LC_CARD_TITLE_HEIGHT))){
-                            LightconeCard(lightcone, displayName = lightcone.displayName)
+                            LightconeCard(lightcone)
                         }
                     }
 
@@ -105,7 +107,7 @@ fun InfoAdviceLightcone(charWeightData : JsonObject? = null) {
 
                     item{
                         Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+Constants.LC_CARD_TITLE_HEIGHT))){
-                            LightconeCard(lightcone, displayName = lightcone.displayName)
+                            LightconeCard(lightcone)
                         }
                     }
                 }
@@ -324,7 +326,7 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
 
             //Attr Suggestion
             Column {
-                Text(UtilTools().removeStringResDoubleQuotes(Res.string.MainAffix),fontWeight = FontWeight.Bold, style = FontSizeNormal16(), color = Color(0xFFDDDDDD))
+                Text(UtilTools().removeStringResDoubleQuotes(Res.string.MainAffix),fontWeight = FontWeight.Bold, style = FontSizeNormal16(), color = TextColorNormalDim)
 
                 Spacer(Modifier.height(10.dp))
 
@@ -334,13 +336,13 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
                             UtilTools().removeStringResDoubleQuotes(relicPart[0]),
                             style = FontSizeNormal(),
                             fontWeight = FontWeight.Bold,
-                            color = Color(0xFFDDDDDD)
+                            color = TextColorNormalDim
                         )
                         Text(
                             text = UtilTools().removeStringResDoubleQuotes(adviceAttrList[0].second.resName),
                             style = FontSizeNormal(),
                             textAlign = TextAlign.End,
-                            color = Color(0xCCDDDDDD),
+                            color = TextColorNormalDimCC,
                             modifier = Modifier.weight(1f)
                         )
                     }
@@ -350,13 +352,13 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
                             UtilTools().removeStringResDoubleQuotes(relicPart[1]),
                             style = FontSizeNormal(),
                             fontWeight = FontWeight.Bold,
-                            color = Color(0xFFDDDDDD)
+                            color = TextColorNormalDim
                         )
                         Text(
                             text = UtilTools().removeStringResDoubleQuotes(adviceAttrList[1].second.resName),
                             style = FontSizeNormal(),
                             textAlign = TextAlign.End,
-                            color = Color(0xCCDDDDDD),
+                            color = TextColorNormalDimCC,
                             modifier = Modifier.weight(1f)
                         )
                     }
@@ -370,13 +372,13 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
                             UtilTools().removeStringResDoubleQuotes(relicPart[2]),
                             style = FontSizeNormal(),
                             fontWeight = FontWeight.Bold,
-                            color = Color(0xFFDDDDDD)
+                            color = TextColorNormalDim
                         )
                         Text(
                             text = UtilTools().removeStringResDoubleQuotes(adviceAttrList[2].second.resName),
                             style = FontSizeNormal(),
                             textAlign = TextAlign.End,
-                            color = Color(0xCCDDDDDD),
+                            color = TextColorNormalDimCC,
                             modifier = Modifier.weight(1f)
                         )
                     }
@@ -386,13 +388,13 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
                             UtilTools().removeStringResDoubleQuotes(relicPart[3]),
                             style = FontSizeNormal(),
                             fontWeight = FontWeight.Bold,
-                            color = Color(0xFFDDDDDD)
+                            color = TextColorNormalDim
                         )
                         Text(
                             text = UtilTools().removeStringResDoubleQuotes(adviceAttrList[3].second.resName),
                             style = FontSizeNormal(),
                             textAlign = TextAlign.End,
-                            color = Color(0xCCDDDDDD),
+                            color = TextColorNormalDimCC,
                             modifier = Modifier.weight(1f)
                         )
                     }
@@ -405,12 +407,12 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
                     subAttrString += UtilTools().removeStringResDoubleQuotes(subAttr.resName) + if(index < adviceAttrSubList.size-1){","} else ""
                 }
                 Row {
-                    Text(UtilTools().removeStringResDoubleQuotes(Res.string.SubAffix), fontWeight = FontWeight.Bold,style = FontSizeNormal16(), color = Color(0xFFDDDDDD))
+                    Text(UtilTools().removeStringResDoubleQuotes(Res.string.SubAffix), fontWeight = FontWeight.Bold,style = FontSizeNormal16(), color = TextColorNormalDim)
 
                     Text(
                         text = subAttrString,
                         style = FontSizeNormal(),
-                        color = Color(0xCCDDDDDD),
+                        color = TextColorNormalDimCC,
                         textAlign = TextAlign.End,
                         modifier = Modifier.weight(1f)
                     )

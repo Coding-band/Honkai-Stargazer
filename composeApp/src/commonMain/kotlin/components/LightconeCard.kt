@@ -51,13 +51,21 @@ import types.Path
 import utils.FontSizeNormal12
 import utils.TextColorNormalDim
 import utils.UtilTools
+import utils.navigation.Screen
+import utils.navigation.navControllerInstance
 
 @Composable
 fun LightconeCard(
     lightcone: Lightcone,
     level: Int? = -1,
     ascensionPhase: Int? = -1, //Rank 突破等級
-    displayName: String? = "?",
+    onClick: () -> Unit = { navControllerInstance.navigate(
+        Screen.LightconeInfoPage.route
+                + "/${lightcone.registName!!.replace(" ","_")}"
+                + "/?fileName=${lightcone.fileName}"
+                + "&path=${lightcone.path}"
+
+    ) }, //按下後會做甚麼
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     Box(
@@ -84,7 +92,7 @@ fun LightconeCard(
                             bottomStart = 4.dp
                         )
                     ).clickable(
-                        onClick = { /* Ignoring onClick */ },
+                        onClick = { onClick() },
                         indication = rememberRipple(),
                         interactionSource = interactionSource
                     )
@@ -113,7 +121,7 @@ fun LightconeCard(
                 horizontalArrangement = Arrangement.Center
             ) {
                 Text(
-                    text = displayName!!,
+                    text = lightcone.displayName!!,
                     textAlign = TextAlign.Center,
                     style = FontSizeNormal12(),
                     color = TextColorNormalDim,
@@ -155,7 +163,6 @@ fun LightconeCardPreview() {
                     rarity = 4,
                     path = Path.Harmony,
                 ),
-                displayName = "舞！舞！舞！",
             )
         }
     }

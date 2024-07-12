@@ -40,6 +40,7 @@ import utils.FontSizeNormal
 import utils.FontSizeNormal12
 import utils.FontSizeNormal16
 import utils.UtilTools
+import utils.annotation.DoItLater
 
 @Composable
 fun InfoBioColumn(
@@ -56,7 +57,14 @@ fun InfoBioColumn(
 
     val itemName = remember { infoJson.jsonObject["name"]!!.jsonPrimitive.content }
     val itemRarity = remember { infoJson.jsonObject["rarity"]!!.jsonPrimitive.int }
-    val itemLocation = remember { infoJson.jsonObject["archive"]!!.jsonObject["camp"]!!.jsonPrimitive.content }
+    val itemLocation = remember {
+        if(infoJson.jsonObject["archive"] != null && infoJson.jsonObject["archive"]!!.jsonObject["camp"] != null) {
+            infoJson.jsonObject["archive"]!!.jsonObject["camp"]!!.jsonPrimitive.content
+        } else {
+            DoItLater("Please fullfill the case of Lightcone & Relic")
+            ""
+        }
+    }
 
     Column {
         Box(modifier = Modifier.height(getScreenSizeInfo().hDP - columnHeightDp))
