@@ -33,8 +33,8 @@ open class Relic(
             return UtilTools().getAssetsJsonByFilePath("relic_data/${textLanguage.folderName}/${relicFileName}.json")
         }
 
-        fun getRelicImageFromJSON(imageFolderType: UtilTools.ImageFolderType, imageFileName : String) : ImageBitmap {
-            return UtilTools().getAssetsWebpByFileName(imageFolderType, UtilTools().getImageNameByRegistName(imageFileName))
+        fun getRelicImageFromJSON(imageFolderType: UtilTools.ImageFolderType, imageFileName : String, index: Int = 1) : ImageBitmap {
+            return UtilTools().getAssetsWebpByFileName(imageFolderType, UtilTools().getImageNameByRegistName("${imageFileName}_${index}"))
         }
 
         fun getRelicItemFromJSON(relicFileName : String, textLanguage: UtilTools.TextLanguage = UtilTools.TextLanguage.EN) : Relic {
