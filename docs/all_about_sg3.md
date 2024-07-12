@@ -143,7 +143,8 @@ EN:
 ## Known-Issue 已知問題
 - CharacterInfoPage -> InfoAdviceTeam 造成卡頓 (Laggy)
 - CharacterInfoPage -> 從其他角色頁面跳回會顯示角色全身圖 (Char Full Img will display when back from other char info page)
-
+- RelicInfoPage & LightconeInfoPage -> 細節未完善 (Not finished details improvements)
+ 
 ## Todo-List
 - [x] Finish This md's writting
 
@@ -151,8 +152,8 @@ July 1 - July 14
 - [x] Error Log Handler (1 day)
 - [x] Basic Util, Constants, types (2 day)
 - [x] Character Info Page [Not include Comments] (8 days)
-- [ ] Lightcone Info Page (1 day do together)
-- [ ] Relic Info Page (1 day do together)
+- [x] Lightcone Info Page (1 day do together)
+- [x] Relic Info Page (1 day do together)
 - [ ] Database Structure Design (2 days)
 
 July 15 - July 21
