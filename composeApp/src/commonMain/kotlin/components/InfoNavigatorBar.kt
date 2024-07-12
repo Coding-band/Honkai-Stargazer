@@ -47,7 +47,6 @@ import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import utils.FontSizeNormal12
 import utils.UtilTools
-import utils.annotation.DoItLater
 import kotlin.math.min
 
 data class InfoNavigateItem(
@@ -55,7 +54,6 @@ data class InfoNavigateItem(
 )
 
 
-@DoItLater("还有目录上面的名称只有滚动的时候显示，不滚动需要隐藏")
 @Preview
 @Composable
 fun InfoNavigatorBar(

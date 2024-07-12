@@ -32,6 +32,7 @@ import files.RelicList
 import files.Res
 import files.europe
 import files.phorphos_baseball_cap_fill
+import files.phorphos_baseball_cap_regular
 import files.phorphos_house_fill
 import files.phorphos_person_fill
 import files.phorphos_sword_fill
@@ -41,6 +42,7 @@ import screens.HomePage
 import screens.LightconeInfoPage
 import screens.LightconeListPage
 import screens.MakeBackground
+import screens.RelicInfoPage
 import screens.RelicListPage
 import screens.SplashPage
 
@@ -82,6 +84,10 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     object LightconeInfoPage : Screen(
         "LightconeInfoPage",
         HeaderData(titleRId = Res.string.europe, titleIconId = Res.drawable.phorphos_sword_fill)
+    )
+    object RelicInfoPage : Screen(
+        "RelicInfoPage",
+        HeaderData(titleRId = Res.string.europe, titleIconId = Res.drawable.phorphos_baseball_cap_regular)
     )
 }
 
@@ -198,6 +204,26 @@ fun Navigation() {
                     LightconeInfoPage(
                         navController = navController,
                         headerData = Screen.LightconeInfoPage.headerData,
+                        backStackEntry = backStackEntry,
+                        snackbarHostState = snackbarHostState
+                    )
+                })
+        }
+        composable(
+            route = "${Screen.RelicInfoPage.route}/{relicName}/?fileName={fileName}",
+            arguments = listOf(
+                (navArgument("fileName") { type = NavType.StringType }),
+                (navArgument("relicName") { type = NavType.StringType }),
+            ),
+            enterTransition = { defaultEnterTransition }, exitTransition = { defaultExitTransition }
+        ) { backStackEntry ->
+            RootContent(
+                screen = Screen.RelicInfoPage,
+                snackbarHostState = snackbarHostState,
+                page = {
+                    RelicInfoPage(
+                        navController = navController,
+                        headerData = Screen.RelicInfoPage.headerData,
                         backStackEntry = backStackEntry,
                         snackbarHostState = snackbarHostState
                     )

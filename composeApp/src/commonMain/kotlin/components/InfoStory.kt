@@ -3,12 +3,10 @@ package components
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.PressInteraction
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.wrapContentHeight
@@ -84,7 +82,5 @@ fun InfoStory(infoJson : JsonElement, isLcStory : Boolean = false){
             style = FontSizeNormal16(),
             modifier = Modifier.fillMaxWidth().wrapContentHeight().clickable(enabled = true, indication = null, interactionSource = interactionSource, onClick = {})
         )
-
-        Box(modifier = Modifier.height(72.dp).navigationBarsPadding())
     }
 }

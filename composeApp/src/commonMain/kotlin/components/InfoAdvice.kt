@@ -88,6 +88,7 @@ fun InfoAdviceLightcone(charWeightData : JsonObject? = null) {
             LazyRow(
                 state = rememberLazyListState(),
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
+                verticalAlignment = Alignment.CenterVertically
             ) {
                 //Most Advice To Equip
                 for(lcItem in charWeightData.jsonObject["advice_lightcone"]!!.jsonArray){
@@ -223,7 +224,6 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
                         ) {
                             RelicCard(
                                 relicList[relicSelectIndex.value].first,
-                                displayName = relicList[relicSelectIndex.value].first.displayName
                             )
                         }
                         Spacer(modifier = Modifier.width(10.dp))
@@ -235,7 +235,6 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
                         ) {
                             RelicCard(
                                 relicList[relicSelectIndex.value].second,
-                                displayName = relicList[relicSelectIndex.value].second.displayName
                             )
                         }
                     }
@@ -304,7 +303,6 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
                     ) {
                         RelicCard(
                             ornamentList[ornamentSelectIndex.value],
-                            displayName = ornamentList[ornamentSelectIndex.value].displayName
                         )
                     }
 

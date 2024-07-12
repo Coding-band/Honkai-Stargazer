@@ -82,9 +82,8 @@ fun RelicListPage(modifier: Modifier = Modifier, navController: NavController, h
                         registName = relicListItem.jsonObject["name"]?.jsonPrimitive?.content,
                         fileName = relicListItem.jsonObject["fileName"]?.jsonPrimitive?.content,
                         officialId = relicListItem.jsonObject["fileName"]?.jsonPrimitive?.int,
-
+                        displayName = relicNameList[index]
                         ),
-                    displayName = relicNameList[index]
                 )
             }
             item(span = { GridItemSpan(maxLineSpan) }) {

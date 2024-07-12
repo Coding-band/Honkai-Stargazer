@@ -21,8 +21,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.material.ripple.rememberRipple
@@ -36,7 +34,6 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.Constants.Companion.RELIC_CARD_HEIGHT
 import types.Constants.Companion.RELIC_CARD_WIDTH
 import types.Constants.Companion.getCardBgColorByRare
@@ -44,23 +41,25 @@ import types.Relic
 import utils.FontSizeNormal12
 import utils.TextColorNormalDim
 import utils.UtilTools
+import utils.navigation.Screen
+import utils.navigation.navControllerInstance
 
 @Composable
 fun RelicCard(
     relic: Relic,
     level: Int? = -1,
     ascensionPhase: Int? = -1, //Rank 突破等級
-    displayName: String? = "?",
+    onClick: () -> Unit = { navControllerInstance.navigate(
+        Screen.RelicInfoPage.route
+                + "/${relic.registName!!.replace(" ","_")}"
+                + "/?fileName=${relic.fileName}"
+
+    ) }, //按下後會做甚麼
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     Box(
         modifier = Modifier
             .defaultMinSize(RELIC_CARD_WIDTH, RELIC_CARD_HEIGHT)
-            .clickable(
-                onClick = { /* Ignoring onClick */ },
-                indication = rememberRipple(),
-                interactionSource = interactionSource
-            )
             .clip(
                 RoundedCornerShape(
                     topEnd = 15.dp,
@@ -82,7 +81,7 @@ fun RelicCard(
                             bottomStart = 4.dp
                         )
                     ).clickable(
-                        onClick = { /* Ignoring onClick */ },
+                        onClick = { onClick() },
                         indication = rememberRipple(),
                         interactionSource = interactionSource
                     )
@@ -111,7 +110,7 @@ fun RelicCard(
                 horizontalArrangement = Arrangement.Center
             ) {
                 Text(
-                    text = displayName!!,
+                    text = relic.displayName!!,
                     textAlign = TextAlign.Center,
                     style = FontSizeNormal12(),
                     color = TextColorNormalDim,
@@ -124,25 +123,3 @@ fun RelicCard(
         }
     }
 }
-
-@Preview
-@Composable
-fun RelicCardPreview() {
-    LazyVerticalGrid(
-        columns = GridCells.Adaptive(80.dp),
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp),
-    ) {
-        items(count = 4) {
-            RelicCard(
-                relic = Relic(
-                    officialId = 312,
-                    registName = "Penacony, Land of the Dreams",
-                    fileName = "312",
-                ),
-                displayName = "夢想之地匹諾康尼",
-            )
-        }
-    }
-}
-
