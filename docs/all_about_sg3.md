@@ -17,6 +17,7 @@
     - [Close BETA](#close-beta)
     - [不定期補充](#不定期補充)
   - [專案結構 Project Structure](#專案結構-project-structure)
+  - [Known-Issue 已知問題](#known-issue-已知問題)
   - [Todo-List](#todo-list)
 
 ## 重寫的目標 Purpose in Rewrite
@@ -139,49 +140,60 @@ EN:
       - `App.kt` : The Main Frame of the App, will handle Screen Display and Init function
       - `SpecificPlatformCode.kt` : The only file to handle `expect` functions
 
+## Known-Issue 已知問題
+- CharacterInfoPage -> InfoAdviceTeam 造成卡頓 (Laggy)
+- CharacterInfoPage -> 從其他角色頁面跳回會顯示角色全身圖 (Char Full Img will display when back from other char info page)
+
 ## Todo-List
 - [x] Finish This md's writting
 
-July 1 - July 7
+July 1 - July 14
 - [x] Error Log Handler (1 day)
-- [x] Basic Util, Constants, types (1 day)
-- [ ] Character Info Page [Not include Comments] (5 days)
-- [ ] Lightcone Info Page (do together)
-- [ ] Relic Info Page (do together)
-
-July 8 - July 14
-- [ ] miHoYo API [DeviceFP will do at late August]
+- [x] Basic Util, Constants, types (2 day)
+- [x] Character Info Page [Not include Comments] (8 days)
+- [ ] Lightcone Info Page (1 day do together)
+- [ ] Relic Info Page (1 day do together)
 - [ ] Database Structure Design (2 days)
+
+July 15 - July 21
+- [ ] miHoYo API [DeviceFP will do after Release]
+- [ ] Setting Page (2 days) [Including Language Setting]
 - [ ] Event List, Interaction Map Redirect (1 day)
 - [ ] User Login & Home Page Info (2 days)
 - [ ] User Info Page & UID Search (2 days)
 
-July 15 - July 21
+July 22 - July 28
 - [ ] MOC & PF Leaderboard (7 days)
   - Team Usage Ranking
 
-July 22 - July 28
+July 29 - August 4
 - [ ] Proficient Calculation (2 days)
 - [ ] Relic Score Algorthm (2 days)
 - [ ] Proficient Leaderboard (3 days)
 
-July 29 - August 4
+August 5 - August 11
 - [ ] Wrap Simulator (3 days)
 - [ ] Wrap Analysis (4 days)
 
-August 5 - August 11
+August 12 - August 18
 - [ ] Customize Home Page Function (2 days)
 - [ ] Ads Function (2 days)
 - [ ] In-app Purchase Function (2 days)
 - [ ] Prepare for Close BETA Testing (1 day)
 
-August 12 - August 18
+August 19 - August 25
 - [ ] Action Order Function (5 days)
 - [ ] Notification Initize (2 days)
 
-August 19 - August 31
+August 25 - August 31
+- [ ] Prepare for Beta (Flexible time)
+
+September 1 - September 14
 - [ ] Close Beta Testing
 
-September 1 - September 7
+September 15 - September 21
 - [ ] Final checking
+- [ ] Prepare to upload to different platform
+
+September 21
 - [ ] Prepare to upload to different platform
