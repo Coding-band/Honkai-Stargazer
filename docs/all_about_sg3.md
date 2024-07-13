@@ -16,6 +16,16 @@
     - [通知功能 Notifications](#通知功能-notifications)
     - [Close BETA](#close-beta)
     - [不定期補充](#不定期補充)
+  - [資料庫結構 Database Structure](#資料庫結構-database-structure)
+    - [API](#api)
+    - [帳戶基本資料](#帳戶基本資料)
+    - [邀請碼](#邀請碼)
+    - [使用量統計](#使用量統計)
+    - [用戶角色數據](#用戶角色數據)
+    - [練度排行](#練度排行)
+    - [混沌回憶](#混沌回憶)
+    - [虛構敘事](#虛構敘事)
+    - [躍遷 (單獨開一個模組)](#躍遷-單獨開一個模組)
   - [專案結構 Project Structure](#專案結構-project-structure)
   - [Known-Issue 已知問題](#known-issue-已知問題)
   - [Todo-List](#todo-list)
@@ -61,13 +71,13 @@ Here's the major purpose we rewrite Stargazer
 - 每次Commit請盡量只專注於一個功能 (Please try to focus ONE function in each commits)
 ### Commit Summary
 - 僅允許以下類型 (Only allow commit type below)
-    - feat : 有關非Bug的所有功能/頁面更新 (For non-bug-fix's function/UI update)
-    - fix : Bug、算法邏輯錯誤相關修正 (fixing Bug and algorthm logic mistakes)
-    - docs : 文檔相關的更新 (Updates that about documents)
-    - style : 格式化代碼 (Reformatting Codes) 
-    - revert : 撤銷先前Commit (Revert previous commit)
-    - struct : 更改代碼檔案結構 (Modify Code File Structure, E.g. Change ListHeader.kt to PageHeader.kt)
-    - rss : 數據/圖片更新 (Data/Image file update)
+    - `feat` : 有關非Bug的所有功能/頁面更新 (For non-bug-fix's function/UI update)
+    - `fix` : Bug、算法邏輯錯誤相關修正 (fixing Bug and algorthm logic mistakes)
+    - `docs` : 文檔相關的更新 (Updates that about documents)
+    - `style` : 格式化代碼 (Reformatting Codes) 
+    - `revert` : 撤銷先前Commit (Revert previous commit)
+    - `struct` : 更改代碼檔案結構 (Modify Code File Structure, E.g. Change ListHeader.kt to PageHeader.kt)
+    - `rss` : 數據/圖片更新 (Data/Image file update)
 - 應使用以下格式 (Must use the format below) :
   - `<type_of_commit>: <commit_describe_zh> (<commit_describe_en>)`
   - E.g. `feat: 角色介紹頁面添加角色全身圖 (add Character Full Image in Character Info Page)`
@@ -81,7 +91,7 @@ Here's the major purpose we rewrite Stargazer
   - 否則，會向伺服器申請讀取數據，並在本地存放
 - 用戶在啟動app時，若果混沌回憶/虛構敘事數據和上次啟動app一樣
   - 則不會向伺服器更新這部分的數據
-
+- 只展示前100就够
 EN:
 - When the user opens the leaderboards, first check whether the database data has been read in the last hour
   - If there is, temporary data stored locally will be read.
@@ -114,6 +124,74 @@ EN:
 - 稍後更新
 
 ### 不定期補充
+
+## 資料庫結構 Database Structure
+### API
+- 獲取伺服器時間
+### 帳戶基本資料
+- 基礎資料
+  - UID
+  - 用戶名稱
+  - 是否展示所有角色
+  - 上次登入時間
+  - 身份組 (`user` / `mod` / `mascot`)
+  - 廣告計劃  (`normal` / `gift_20xxxxxx` / `donor` / `beta` / `mascot`)
+  
+- 用戶裝置相關
+  - App 版本 (`BETA 2.4.0` / `Release 2.3.2`)
+  - App 版本號 (`3840`)
+  - 裝置平台 (`Android` / `iOS` ...)
+  - 裝置版本 (`Android 34` / `iOS 17.1.2` / `iPad OS 16.0.0`)
+
+- 遊戲相關
+  - 遊玩的伺服器
+  - 頭像URL
+  - 開啟箱子數目
+  - 成就完成數目
+  - 活躍日數
+  - 混沌回憶層數
+
+### 邀請碼
+  - 該用戶邀請代碼
+  - 該使用了的邀請代碼
+
+### 使用量統計
+  - 該日使用者數量
+  - 該日功能使用量
+  - 本月不重複用戶量
+
+### 用戶角色數據
+> 角色UID作資料表
+  - 該角色4個天賦的等級
+  - 該角色穿戴的光錐 (等級、疊形)
+  - 該角色穿戴的遺器 (各自的等級、詞條名和值`[JSON]`)
+  - 該角色屬性值 (名和值`[JSON]`)
+
+### 練度排行
+- 角色UID作資料表
+  - 該角色的角色分數
+  - 該角色的星魂數
+  - 該角色穿戴的遺器，各自的分數
+  - 該角色穿戴的遺器，合共的分數
+
+### 混沌回憶
+- 按混沌回憶的版本+層數作資料表
+  - 該用戶使用的4個角色(名字&光錐ID)
+  - 上半還是下半
+  - 紀錄時間
+  - 回合數
+
+### 虛構敘事
+- 按虛構敘事的版本+層數作資料表
+  - 該用戶使用的4個角色(名字&光錐ID)
+  - 紀錄時間
+  - 回合數
+
+### 躍遷 (單獨開一個模組)
+- 躍遷紀錄 按用戶UID作資料表
+  - 稍後添加
+- 躍遷總覽
+  - 稍後添加
 
 ## 專案結構 Project Structure
 - composeApp/src
