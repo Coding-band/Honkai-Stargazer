@@ -42,22 +42,26 @@ class UtilTools {
     }
 
     //文本語言 Language for Text (assets/data)
-    enum class TextLanguage(var localeName: String, var folderName: String) {
-        EN("English", "en"),
-        ZH_CN("简体中文", "zh_cn"),
-        ZH_HK("繁體中文", "zh_hk"),
-        JP("日本語", "jp"),
-        FR("Français", "fr"),
-        RU("Русский", "ru"),
-        DE("Deutsch", "de"),
-        PT("Português", "pt-PT"),
-        VI("tiếng Việt", "vi"),
-        ES("Español", "es-ES"),
-        KR("한국어", "kr"),
-        TH("ภาษาไทย", "th"),
+    enum class TextLanguage(val localeName: String, val folderName: String, val hoyolabName: String) {
+        EN("English", "en", "en-us"),
+        ZH_CN("简体中文", "zh_cn", "zh-cn"),
+        ZH_HK("繁體中文", "zh_hk", "zh-tw"),
+        JP("日本語", "jp", "ja-jp"),
+        FR("Français", "fr", "fr-fr"),
+        RU("Русский", "ru", "ru-ru"),
+        DE("Deutsch", "de", "de-de"),
+        PT("Português", "pt-PT", "pt-pt"),
+        VI("tiếng Việt", "vi", "vi-vn"),
+        ES("Español", "es-ES", "es-es"),
+        KR("한국어", "kr", "ko-kr"),
+        TH("ภาษาไทย", "th", "th-th"),
+
+        @DoItLater("Add support to ITALIAN") IT("ITALIAN", "it", "it-it"),
+        @DoItLater("Add support to TURKISH") TR("TURKISH", "tr", "tr-tr"),
+        @DoItLater("Add support to INDONESIAN") ID("INDONESIAN", "id", "id-id"),
     }
 
-    enum class ImageFolderType(var folderName: String, var suffix: String) {
+    enum class ImageFolderType(val folderName: String, val suffix: String) {
         AVATAR_ICON("avatar_icon", ".webp"),
         BGS("bgs", ".webp"),
 
