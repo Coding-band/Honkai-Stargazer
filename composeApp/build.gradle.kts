@@ -85,6 +85,13 @@ kotlin {
             implementation("io.coil-kt.coil3:coil:3.0.0-alpha07")
             implementation("com.mohamedrejeb.richeditor:richeditor-compose:1.0.0-rc05")
 
+            implementation("com.squareup.okio:okio:3.9.0")
+            
+            implementation("io.ktor:ktor-client-core:2.0.0")
+            implementation("io.ktor:ktor-client-cio:2.0.0")
+            implementation("io.ktor:ktor-serialization-kotlinx-json:2.0.0")
+            implementation("io.ktor:ktor-client-content-negotiation:2.0.0")
+            implementation("io.ktor:ktor-client-serialization:2.0.0")
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
