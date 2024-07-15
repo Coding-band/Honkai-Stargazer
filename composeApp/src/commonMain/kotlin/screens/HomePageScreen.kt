@@ -30,6 +30,7 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.IconButton
 import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.material.Text
@@ -37,6 +38,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
@@ -46,6 +48,7 @@ import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.voc.honkaistargazer.BuildKonfig
 import components.HeaderData
 import components.HomePageBlock1x1
 import components.HomePageBlock2x1
@@ -64,25 +67,28 @@ import files.test_char_7
 import files.test_char_8
 import files.vocchi
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.Constants.Companion.HOME_PAGE_ITEMS
 import utils.BlackAlpha30
 import utils.FontSizeNormal
+import utils.FontSizeNormal12
 import utils.FontSizeNormalLarge
 import utils.ProgressLevelBackground
 import utils.ProgressLevelPrimary
 import utils.TextColorLevel
 import utils.TextColorNormal
+import utils.TextColorNormalDim
 import utils.checkHasErrorLogFromLastCrash
 
 
 @Composable
 fun HomePage(modifier: Modifier = Modifier, navController: NavController, headerData: HeaderData = defaultHeaderData) {
+    checkHasErrorLogFromLastCrash()
+    if(!arrayListOf("PRODUCTION", "RELEASE").contains(BuildKonfig.appProfile) ){
+        BetaVersionBox(BuildKonfig.appProfile)
+    }
     Box(modifier = Modifier
         .statusBarsPadding()
     ) {
-        checkHasErrorLogFromLastCrash()
-
         Column {
             HomePageHeader(navController = navController)
             HomePageMenuScrollView(navController = navController)
@@ -263,8 +269,22 @@ fun BottomView(modifier: Modifier = Modifier){
     }
 }
 
-@Preview
 @Composable
-fun HomePagePreview() {
-    //RootContent(screen = Screen.HomePage, navController = rememberNavController(), page = { HomePage(navController = rememberNavController())})
+fun BetaVersionBox(appProfile : String){
+    Box(modifier = Modifier.fillMaxSize()){
+        Box(modifier = Modifier.wrapContentSize().background(Color.Black).padding(start = 2.dp, end = 2.dp, top = 12.dp, bottom = 12.dp).rotate(-90f).align(Alignment.TopEnd)){
+            Text(appProfile, style = FontSizeNormal12(), color = TextColorNormalDim, modifier = Modifier.align(Alignment.Center))
+        }
+    }
+}
+
+@Composable
+fun ThreeDotsDialog(modifier: Modifier){
+    Box {
+        Box(modifier = Modifier.background(Color(0x96000000), shape = RoundedCornerShape(10.dp))){
+            Column(modifier = Modifier.padding(15.dp)) {
+
+            }
+        }
+    }
 }

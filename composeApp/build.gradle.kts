@@ -35,6 +35,7 @@ val versionCodeFinal = properties.getProperty("APP_VERSION_CODE").toInt() + 1
 initGradleProperties()
 
 //BETA | C.BETA | DEV | PRODUCTION
+//VersionUpdateCheck
 var appProfile = "DEV"
 
 
