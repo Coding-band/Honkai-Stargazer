@@ -232,10 +232,10 @@ July 1 - July 14
 - [x] Character Info Page [Not include Comments] (8 days)
 - [x] Lightcone Info Page (1 day do together)
 - [x] Relic Info Page (1 day do together)
-- [ ] Database Structure Design (2 days)
+- [x] Database Structure Design (2 days)
 
 July 15 - July 21
-- [ ] miHoYo API [DeviceFP will do after Release]
+- [x] miHoYo API [DeviceFP will do after Release]
 - [ ] Setting Page (2 days) [Including Language Setting]
 - [ ] Event List, Interaction Map Redirect (1 day)
 - [ ] User Login & Home Page Info (2 days)
