@@ -1,14 +1,14 @@
 package utils.hoyolab
 
 import androidx.annotation.IntRange
-import utils.UtilTools
+import utils.Language
 import utils.annotation.DoItLater
 
 class HoyolabAPI(platform: HoyolabRequest.PLATFORM = HoyolabRequest.PLATFORM.HOYOLAB, cookies : String) {
     private val hoyolabRequest = HoyolabRequest(platform, cookies)
     private val platformLocale = platform
     @DoItLater("TextLanguage need to make a instance!")
-    private val language = UtilTools.TextLanguage.ZH_HK
+    private val language = Language.TextLanguage.EN
 
     companion object Instance{
 

@@ -14,6 +14,7 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import utils.Language
 import utils.UtilTools
 
 
@@ -34,7 +35,7 @@ open class Lightcone(
             return UtilTools().getAssetsJsonByFilePath("lightcone_data/lightcone_list.json")
         }
 
-        fun getLightconeDataFromJSON(lightconeFileName : String, textLanguage: UtilTools.TextLanguage = UtilTools.TextLanguage.EN) : JsonElement {
+        fun getLightconeDataFromJSON(lightconeFileName : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance) : JsonElement {
             return UtilTools().getAssetsJsonByFilePath("lightcone_data/${textLanguage.folderName}/${lightconeFileName}.json")
         }
 
@@ -42,7 +43,7 @@ open class Lightcone(
             return UtilTools().getAssetsWebpByFileName(imageFolderType, UtilTools().getImageNameByRegistName(lightconeName))
         }
 
-        fun getLightconeItemFromJSON(lightconeFileName : String, textLanguage: UtilTools.TextLanguage = UtilTools.TextLanguage.EN) : Lightcone {
+        fun getLightconeItemFromJSON(lightconeFileName : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance) : Lightcone {
             val dataJson = getLightconeDataFromJSON(lightconeFileName, textLanguage)
             val listDataJson = getLightconeListFromJSON().jsonArray.find { lcData -> lcData.jsonObject["fileName"]!!.jsonPrimitive.content == lightconeFileName }
 

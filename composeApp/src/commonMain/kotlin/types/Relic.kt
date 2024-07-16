@@ -13,6 +13,7 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import utils.Language
 import utils.UtilTools
 
 
@@ -29,7 +30,7 @@ open class Relic(
             return UtilTools().getAssetsJsonByFilePath("relic_data/relic_list.json")
         }
 
-        fun getRelicDataFromJSON(relicFileName : String, textLanguage: UtilTools.TextLanguage = UtilTools.TextLanguage.EN) : JsonElement {
+        fun getRelicDataFromJSON(relicFileName : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance) : JsonElement {
             return UtilTools().getAssetsJsonByFilePath("relic_data/${textLanguage.folderName}/${relicFileName}.json")
         }
 
@@ -37,7 +38,7 @@ open class Relic(
             return UtilTools().getAssetsWebpByFileName(imageFolderType, UtilTools().getImageNameByRegistName("${imageFileName}${if(index > 0) {"_${index}"} else ""}"))
         }
 
-        fun getRelicItemFromJSON(relicFileName : String, textLanguage: UtilTools.TextLanguage = UtilTools.TextLanguage.EN) : Relic {
+        fun getRelicItemFromJSON(relicFileName : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance) : Relic {
             val dataJson = getRelicDataFromJSON(relicFileName, textLanguage)
             val listDataJson = getRelicListFromJSON().jsonArray.find { lcData -> lcData.jsonObject["fileName"]!!.jsonPrimitive.content == relicFileName }
 

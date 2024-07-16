@@ -30,11 +30,12 @@ import files.CharacterList
 import files.LightconeList
 import files.RelicList
 import files.Res
+import files.Setting
 import files.europe
 import files.phorphos_baseball_cap_fill
-import files.phorphos_baseball_cap_regular
 import files.phorphos_house_fill
 import files.phorphos_person_fill
+import files.phorphos_sliders_horizontal_fill
 import files.phorphos_sword_fill
 import screens.CharacterInfoPage
 import screens.CharacterListPage
@@ -44,16 +45,17 @@ import screens.LightconeListPage
 import screens.MakeBackground
 import screens.RelicInfoPage
 import screens.RelicListPage
+import screens.SettingScreen
 import screens.SplashPage
 
 //This should not be there, but CharacterCard need it in clickable, without using @Composable ...
 lateinit var navControllerInstance : NavController
 sealed class Screen(val route: String, val headerData: HeaderData = defaultHeaderData) {
-    object SplashPage :
+    data object SplashPage :
         Screen("SplashPage", HeaderData(titleIconId = Res.drawable.phorphos_house_fill))
 
-    object HomePage : Screen("HomePage", HeaderData(titleIconId = Res.drawable.phorphos_house_fill))
-    object CharacterListPage : Screen(
+    data object HomePage : Screen("HomePage", HeaderData(titleIconId = Res.drawable.phorphos_house_fill))
+    data object CharacterListPage : Screen(
         "CharacterListPage",
         HeaderData(
             titleRId = Res.string.CharacterList,
@@ -61,7 +63,7 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
         )
     )
 
-    object LightconeListPage : Screen(
+    data object LightconeListPage : Screen(
         "LightconeListPage",
         HeaderData(
             titleRId = Res.string.LightconeList,
@@ -69,7 +71,7 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
         )
     )
 
-    object RelicListPage : Screen(
+    data object RelicListPage : Screen(
         "RelicListPage",
         HeaderData(
             titleRId = Res.string.RelicList,
@@ -77,17 +79,21 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
         )
     )
 
-    object CharacterInfoPage : Screen(
+    data object CharacterInfoPage : Screen(
         "CharacterInfoPage",
         HeaderData(titleRId = Res.string.europe, titleIconId = Res.drawable.phorphos_person_fill)
     )
-    object LightconeInfoPage : Screen(
+    data object LightconeInfoPage : Screen(
         "LightconeInfoPage",
         HeaderData(titleRId = Res.string.europe, titleIconId = Res.drawable.phorphos_sword_fill)
     )
-    object RelicInfoPage : Screen(
+    data object RelicInfoPage : Screen(
         "RelicInfoPage",
-        HeaderData(titleRId = Res.string.europe, titleIconId = Res.drawable.phorphos_baseball_cap_regular)
+        HeaderData(titleRId = Res.string.europe, titleIconId = Res.drawable.phorphos_baseball_cap_fill)
+    )
+    data object SettingScreen : Screen(
+        "SettingScreen",
+        HeaderData(titleRId = Res.string.Setting, titleIconId = Res.drawable.phorphos_sliders_horizontal_fill)
     )
 }
 
@@ -226,6 +232,21 @@ fun Navigation() {
                         headerData = Screen.RelicInfoPage.headerData,
                         backStackEntry = backStackEntry,
                         snackbarHostState = snackbarHostState
+                    )
+                })
+        }
+
+        composable(
+            route = Screen.SettingScreen.route,
+            enterTransition = { defaultEnterTransition },
+            exitTransition = { defaultExitTransition }) {
+            RootContent(
+                screen = Screen.SettingScreen,
+                snackbarHostState = snackbarHostState,
+                page = {
+                    SettingScreen(
+                        navController = navController,
+                        headerData = Screen.SettingScreen.headerData
                     )
                 })
         }

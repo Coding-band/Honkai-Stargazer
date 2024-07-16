@@ -74,6 +74,7 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import types.Character
 import types.CombatType
+import utils.Language
 import utils.UtilTools
 
 private lateinit var localCoroutineScope: CoroutineScope;
@@ -109,7 +110,7 @@ fun CharacterInfoPage(
     val path = types.Path.valueOf(backStackEntry.arguments?.getString("path")!!)
 
     val hazeState = remember { HazeState() }
-    val charInfoJson = Character.getCharacterDataFromFileName(characterFileName, UtilTools.TextLanguage.ZH_HK)
+    val charInfoJson = Character.getCharacterDataFromFileName(characterFileName, Language.TextLanguageInstance)
 
     localCoroutineScope = rememberCoroutineScope();
     localSnackbarHostState = snackbarHostState!!;

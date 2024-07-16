@@ -41,6 +41,10 @@ enum class BackgroundDisplayEnum{
     PF,         //虛構敘事的背景
 }
 
+enum class WallpaperList{
+    CHAR_
+}
+
 @OptIn(ExperimentalResourceApi::class)
 @Composable
 fun MakeBackground(modifier: Modifier = Modifier, screen: Screen) {

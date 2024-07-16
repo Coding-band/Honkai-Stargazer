@@ -41,7 +41,7 @@ import types.Character
 import types.CombatType
 import types.Constants.Companion.CHAR_CARD_WIDTH
 import types.Path
-import utils.UtilTools
+import utils.Language
 import utils.navigation.RootContent
 import utils.navigation.Screen
 
@@ -56,7 +56,7 @@ fun CharacterListPage(
     val charNameList: ArrayList<String> = arrayListOf()
     charListJSON.forEach { jsonElement ->
         val localeName : String? = Character.getCharacterDataFromFileName(
-            jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!, UtilTools.TextLanguage.ZH_HK
+            jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!, Language.TextLanguageInstance
         ).jsonObject["name"]?.jsonPrimitive?.content
 
         if(localeName !== null){

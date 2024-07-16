@@ -96,8 +96,9 @@ import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.Constants
 import types.Relic
-import utils.FontSizeNormal14
 import utils.FontSizeNormal12
+import utils.FontSizeNormal14
+import utils.Language
 import utils.TextColorNormalDim
 import utils.UtilTools
 
@@ -127,7 +128,7 @@ fun RelicInfoPage(
     val relicName = backStackEntry.arguments?.getString("relicName")!!.replace("_", " ")
 
     val hazeState = remember { HazeState() }
-    val relicInfoJson = Relic.getRelicDataFromJSON(relicFileName, UtilTools.TextLanguage.ZH_HK)
+    val relicInfoJson = Relic.getRelicDataFromJSON(relicFileName, Language.TextLanguageInstance)
 
     localCoroutineScope = rememberCoroutineScope();
     localSnackbarHostState = snackbarHostState!!;

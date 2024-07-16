@@ -57,6 +57,7 @@ import types.Constants.Companion.CHAR_CARD_HEIGHT
 import types.Constants.Companion.CHAR_CARD_WIDTH
 import types.getTeamAdviceById
 import utils.FontSizeNormal12
+import utils.Language
 import utils.TextColorNormalDim
 import utils.UtilTools
 import utils.annotation.YouMustKiddingMe
@@ -113,7 +114,7 @@ fun MultiChoiceCard(
     requirePair.first.withIndex().forEach { (index, choice) ->
         dialogTitleProgress +=
             if(choice.toIntOrNull() != null && choice.toInt() in 1000 .. 10000){
-                Character.getCharacterItemFromJSON(choice, UtilTools.TextLanguage.ZH_HK).displayName ?: ""
+                Character.getCharacterItemFromJSON(choice, Language.TextLanguageInstance).displayName ?: ""
             } else choice.toIntOrNull()?.let { getTeamAdviceById(it).cnName } //Edit when translation done
 
         dialogTitleProgress += if(index + 1 < requirePair.first.size){
@@ -201,7 +202,7 @@ fun getMatchRequireCharList(requirePair: Pair<ArrayList<String>, Boolean>, leade
     val matchList: ArrayList<Character> = arrayListOf()
     val charWeightList = UtilTools.TemporaryFunction().getCharWeightListJson().jsonObject
     charWeightList.keys.filter { officialId -> forLoopOfMRCL(requirePair,leaderInfo, charWeightList, officialId)}.forEach { charId ->
-        val char = Character.getCharacterItemFromJSON(charId, UtilTools.TextLanguage.ZH_HK)
+        val char = Character.getCharacterItemFromJSON(charId, Language.TextLanguageInstance)
         matchList.add(char)
     }
     return matchList

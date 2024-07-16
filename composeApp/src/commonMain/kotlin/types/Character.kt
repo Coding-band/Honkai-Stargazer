@@ -14,6 +14,7 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import utils.Language
 import utils.UtilTools
 
 
@@ -42,7 +43,7 @@ open class Character(
             return UtilTools().getAssetsJsonByFilePath("character_data/character_list.json")
         }
 
-        fun getCharacterDataFromFileName(characterFileName : String, textLanguage: UtilTools.TextLanguage = UtilTools.TextLanguage.EN) : JsonElement {
+        fun getCharacterDataFromFileName(characterFileName : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance) : JsonElement {
             return UtilTools().getAssetsJsonByFilePath("character_data/${textLanguage.folderName}/${characterFileName}.json")
         }
 
@@ -54,7 +55,7 @@ open class Character(
         }
 
 
-        fun getCharacterItemFromJSON(charId : String, textLanguage: UtilTools.TextLanguage = UtilTools.TextLanguage.EN) : Character {
+        fun getCharacterItemFromJSON(charId : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance) : Character {
             val listDataJson = getCharacterListFromJSON().jsonArray.find { lcData -> lcData.jsonObject["charId"]!!.jsonPrimitive.content == charId } ?: return Character(path = Path.Unspecified, )
 
             val dataJson = getCharacterDataFromFileName(listDataJson.jsonObject["fileName"]!!.jsonPrimitive.content, textLanguage)

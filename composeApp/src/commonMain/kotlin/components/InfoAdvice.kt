@@ -69,6 +69,7 @@ import types.Lightcone
 import types.Relic
 import utils.FontSizeNormal14
 import utils.FontSizeNormal16
+import utils.Language
 import utils.TextColorNormalDim
 import utils.TextColorNormalDimCC
 import utils.UtilTools
@@ -93,7 +94,7 @@ fun InfoAdviceLightcone(charWeightData : JsonObject? = null) {
                 //Most Advice To Equip
                 for(lcItem in charWeightData.jsonObject["advice_lightcone"]!!.jsonArray){
                     val officialLcId = lcItem.jsonPrimitive.int
-                    val lightcone = Lightcone.getLightconeItemFromJSON(officialLcId.toString(), textLanguage = UtilTools.TextLanguage.ZH_HK)
+                    val lightcone = Lightcone.getLightconeItemFromJSON(officialLcId.toString(), textLanguage = Language.TextLanguageInstance)
 
                     item{
                         Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+Constants.LC_CARD_TITLE_HEIGHT))){
@@ -105,7 +106,7 @@ fun InfoAdviceLightcone(charWeightData : JsonObject? = null) {
                 //Still Can Use If Only Have
                 for(lcItem in charWeightData.jsonObject["normal_lightcone"]!!.jsonArray){
                     val officialLcId = lcItem.jsonPrimitive.int
-                    val lightcone = Lightcone.getLightconeItemFromJSON(officialLcId.toString(), textLanguage = UtilTools.TextLanguage.ZH_HK)
+                    val lightcone = Lightcone.getLightconeItemFromJSON(officialLcId.toString(), textLanguage = Language.TextLanguageInstance)
 
                     item{
                         Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+Constants.LC_CARD_TITLE_HEIGHT))){
@@ -143,8 +144,8 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
 
                 if (relicId1 == -1 || relicId2 == -1) continue
 
-                val relic1 = Relic.getRelicItemFromJSON(relicId1.toString(), UtilTools.TextLanguage.ZH_HK)
-                val relic2 = Relic.getRelicItemFromJSON(relicId2.toString(), UtilTools.TextLanguage.ZH_HK)
+                val relic1 = Relic.getRelicItemFromJSON(relicId1.toString(), Language.TextLanguageInstance)
+                val relic2 = Relic.getRelicItemFromJSON(relicId2.toString(), Language.TextLanguageInstance)
 
                 relicList.add(relic1 to relic2)
             }
@@ -152,7 +153,7 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
 
         for(ornament in charWeightData.jsonObject["advice_ornament"]!!.jsonArray){
             if (ornament.jsonPrimitive.int == -1) continue
-            ornamentList.add(Relic.getRelicItemFromJSON(ornament.jsonPrimitive.int.toString(), UtilTools.TextLanguage.ZH_HK))
+            ornamentList.add(Relic.getRelicItemFromJSON(ornament.jsonPrimitive.int.toString(), Language.TextLanguageInstance))
         }
 
         //Must rewrite if later extend to multi choices of one relic index
@@ -437,7 +438,7 @@ fun InfoAdviceTeammate(
 
 ) {
 
-    val leaderInfo = Character.getCharacterItemFromJSON(characterId, UtilTools.TextLanguage.ZH_HK)
+    val leaderInfo = Character.getCharacterItemFromJSON(characterId, Language.TextLanguageInstance)
     Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
         TitleHeader(iconRId = Res.drawable.phorphos_person_regular, titleRId = Res.string.AdviceTeams)
 
@@ -461,7 +462,7 @@ fun InfoAdviceTeammate(
                             val teamChoiceString = teamChoice.jsonPrimitive.content
                             Box(Modifier.weight(1f)){
                                 if(teamChoiceString.toIntOrNull() != null && teamChoiceString.toIntOrNull()!! in 1000 .. 9999){
-                                    CharacterCard(Character.getCharacterItemFromJSON(teamChoiceString, UtilTools.TextLanguage.ZH_HK))
+                                    CharacterCard(Character.getCharacterItemFromJSON(teamChoiceString, Language.TextLanguageInstance))
                                 }else{
                                     MultiChoiceCard(teamChoiceString,leaderInfo, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent)
                                 }
@@ -489,7 +490,7 @@ fun InfoAdviceCharacter(
         for(lcId in charWeightList.jsonObject[char]!!.jsonArray[0].jsonObject["advice_lightcone"]!!.jsonArray){
             if(lcId.jsonPrimitive.content == lightconeId){
                 if(adviceChar.none { charAdvice -> charAdvice.officialId.toString() == char }){
-                    adviceChar.add(Character.getCharacterItemFromJSON(char, UtilTools.TextLanguage.ZH_HK))
+                    adviceChar.add(Character.getCharacterItemFromJSON(char, Language.TextLanguageInstance))
                     break
                 }
             }
@@ -498,7 +499,7 @@ fun InfoAdviceCharacter(
         for(lcId in charWeightList.jsonObject[char]!!.jsonArray[0].jsonObject["normal_lightcone"]!!.jsonArray){
             if(lcId.jsonPrimitive.content == lightconeId){
                 if(adviceChar.none { charAdvice -> charAdvice.officialId.toString() == char }){
-                    adviceChar.add(Character.getCharacterItemFromJSON(char, UtilTools.TextLanguage.ZH_HK))
+                    adviceChar.add(Character.getCharacterItemFromJSON(char, Language.TextLanguageInstance))
                     break
                 }
             }

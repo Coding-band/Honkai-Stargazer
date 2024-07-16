@@ -40,7 +40,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.Constants.Companion.CHAR_CARD_WIDTH
 import types.Lightcone
 import types.Path
-import utils.UtilTools
+import utils.Language
 import utils.navigation.RootContent
 import utils.navigation.Screen
 
@@ -51,7 +51,7 @@ fun LightconeListPage(modifier: Modifier = Modifier, navController: NavControlle
     val lcNameList: ArrayList<String> = arrayListOf()
     lcListJSON.forEach { jsonElement ->
         val localeName : String? = Lightcone.getLightconeDataFromJSON(
-            jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!, UtilTools.TextLanguage.ZH_HK
+            jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!, Language.TextLanguageInstance
         ).jsonObject["name"]?.jsonPrimitive?.content
 
         if(localeName !== null){

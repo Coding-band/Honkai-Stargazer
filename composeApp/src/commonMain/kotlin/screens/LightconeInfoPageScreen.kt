@@ -61,6 +61,7 @@ import kotlinx.coroutines.FlowPreview
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import types.Lightcone
+import utils.Language
 import utils.UtilTools
 
 private lateinit var localCoroutineScope: CoroutineScope;
@@ -91,7 +92,7 @@ fun LightconeInfoPage(
     val path = types.Path.valueOf(backStackEntry.arguments?.getString("path")!!)
 
     val hazeState = remember { HazeState() }
-    val lcInfoJson = Lightcone.getLightconeDataFromJSON(lightconeFileName, UtilTools.TextLanguage.ZH_HK)
+    val lcInfoJson = Lightcone.getLightconeDataFromJSON(lightconeFileName, Language.TextLanguageInstance)
 
     localCoroutineScope = rememberCoroutineScope();
     localSnackbarHostState = snackbarHostState!!;
