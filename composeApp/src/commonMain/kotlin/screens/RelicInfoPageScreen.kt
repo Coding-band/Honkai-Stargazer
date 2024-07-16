@@ -96,7 +96,7 @@ import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.Constants
 import types.Relic
-import utils.FontSizeNormal
+import utils.FontSizeNormal14
 import utils.FontSizeNormal12
 import utils.TextColorNormalDim
 import utils.UtilTools
@@ -208,7 +208,7 @@ fun RelicBasicInfo(infoJson: JsonElement){
                 Text(
                     modifier = Modifier.padding(end = 8.dp),
                     text = itemName,
-                    style = FontSizeNormal(),
+                    style = FontSizeNormal14(),
                     fontSize = 32.sp,
                     color = Color.White,
                 )
@@ -262,7 +262,7 @@ fun RelicSetInfo(infoJson: JsonElement, isShowing4Set: Boolean){
             RichText(
                 state = richTextState.setHtml(descHTML),
                 color = Color.White,
-                style = FontSizeNormal(),
+                style = FontSizeNormal14(),
                 modifier = Modifier.fillMaxWidth().wrapContentHeight()
             )
         }

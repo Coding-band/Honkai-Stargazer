@@ -43,7 +43,7 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
 import types.Constants.Companion.MATERIAL_CARD_HEIGHT
-import utils.FontSizeNormal
+import utils.FontSizeNormal14
 import utils.FontSizeNormal16
 import utils.FontSizeNormal20
 import utils.TextColorNormalDim
@@ -231,7 +231,7 @@ fun InfoLcMetamorphosis(lcInfo: JsonElement){
                         UtilTools().removeStringResDoubleQuotes(Res.string.CharSoul)
                             .replace("$" + "{1}", ""), color = Color(0xFFFFFFFF)
                     )
-                    RichText(richTextState, color = Color(0xFFFFFFFF), style = FontSizeNormal())
+                    RichText(richTextState, color = Color(0xFFFFFFFF), style = FontSizeNormal14())
                 }
             }
 

@@ -67,7 +67,7 @@ import types.Character
 import types.Constants
 import types.Lightcone
 import types.Relic
-import utils.FontSizeNormal
+import utils.FontSizeNormal14
 import utils.FontSizeNormal16
 import utils.TextColorNormalDim
 import utils.TextColorNormalDimCC
@@ -333,13 +333,13 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
                     Row(Modifier.weight(1f)){
                         Text(
                             UtilTools().removeStringResDoubleQuotes(relicPart[0]),
-                            style = FontSizeNormal(),
+                            style = FontSizeNormal14(),
                             fontWeight = FontWeight.Bold,
                             color = TextColorNormalDim
                         )
                         Text(
                             text = UtilTools().removeStringResDoubleQuotes(adviceAttrList[0].second.resName),
-                            style = FontSizeNormal(),
+                            style = FontSizeNormal14(),
                             textAlign = TextAlign.End,
                             color = TextColorNormalDimCC,
                             modifier = Modifier.weight(1f)
@@ -349,13 +349,13 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
                     Row(Modifier.weight(1f)){
                         Text(
                             UtilTools().removeStringResDoubleQuotes(relicPart[1]),
-                            style = FontSizeNormal(),
+                            style = FontSizeNormal14(),
                             fontWeight = FontWeight.Bold,
                             color = TextColorNormalDim
                         )
                         Text(
                             text = UtilTools().removeStringResDoubleQuotes(adviceAttrList[1].second.resName),
-                            style = FontSizeNormal(),
+                            style = FontSizeNormal14(),
                             textAlign = TextAlign.End,
                             color = TextColorNormalDimCC,
                             modifier = Modifier.weight(1f)
@@ -369,13 +369,13 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
                     Row(Modifier.weight(1f)){
                         Text(
                             UtilTools().removeStringResDoubleQuotes(relicPart[2]),
-                            style = FontSizeNormal(),
+                            style = FontSizeNormal14(),
                             fontWeight = FontWeight.Bold,
                             color = TextColorNormalDim
                         )
                         Text(
                             text = UtilTools().removeStringResDoubleQuotes(adviceAttrList[2].second.resName),
-                            style = FontSizeNormal(),
+                            style = FontSizeNormal14(),
                             textAlign = TextAlign.End,
                             color = TextColorNormalDimCC,
                             modifier = Modifier.weight(1f)
@@ -385,13 +385,13 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
                     Row(Modifier.weight(1f)){
                         Text(
                             UtilTools().removeStringResDoubleQuotes(relicPart[3]),
-                            style = FontSizeNormal(),
+                            style = FontSizeNormal14(),
                             fontWeight = FontWeight.Bold,
                             color = TextColorNormalDim
                         )
                         Text(
                             text = UtilTools().removeStringResDoubleQuotes(adviceAttrList[3].second.resName),
-                            style = FontSizeNormal(),
+                            style = FontSizeNormal14(),
                             textAlign = TextAlign.End,
                             color = TextColorNormalDimCC,
                             modifier = Modifier.weight(1f)
@@ -410,7 +410,7 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
 
                     Text(
                         text = subAttrString,
-                        style = FontSizeNormal(),
+                        style = FontSizeNormal14(),
                         color = TextColorNormalDimCC,
                         textAlign = TextAlign.End,
                         modifier = Modifier.weight(1f)
@@ -540,7 +540,7 @@ fun InfoCannotFind(){
         )
         Text(
             UtilTools().removeStringResDoubleQuotes(Res.string.NoDataYet),
-            style = FontSizeNormal(),
+            style = FontSizeNormal14(),
             color = Color.White,
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth().align(Alignment.CenterHorizontally)

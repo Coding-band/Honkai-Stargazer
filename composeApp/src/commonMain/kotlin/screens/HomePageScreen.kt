@@ -9,6 +9,8 @@ package screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -19,6 +21,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
@@ -35,16 +38,23 @@ import androidx.compose.material.IconButton
 import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.layoutId
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.positionInRoot
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -53,8 +63,12 @@ import components.HeaderData
 import components.HomePageBlock1x1
 import components.HomePageBlock2x1
 import components.HomePageBlocks
+import components.UIButton
 import components.defaultHeaderData
+import files.AccountLogin
+import files.ModifyHomePage
 import files.Res
+import files.Setting
 import files.donate_ad_bg
 import files.ic_rounded_option_btn
 import files.test_char_1
@@ -69,19 +83,24 @@ import files.vocchi
 import org.jetbrains.compose.resources.painterResource
 import types.Constants.Companion.HOME_PAGE_ITEMS
 import utils.BlackAlpha30
-import utils.FontSizeNormal
 import utils.FontSizeNormal12
-import utils.FontSizeNormalLarge
+import utils.FontSizeNormal14
+import utils.FontSizeNormalLarge24
 import utils.ProgressLevelBackground
 import utils.ProgressLevelPrimary
 import utils.TextColorLevel
 import utils.TextColorNormal
 import utils.TextColorNormalDim
+import utils.UtilTools
 import utils.checkHasErrorLogFromLastCrash
-
+import utils.navigation.Screen
+import utils.navigation.navControllerInstance
 
 @Composable
 fun HomePage(modifier: Modifier = Modifier, navController: NavController, headerData: HeaderData = defaultHeaderData) {
+    val threeDotDialogDisplay = remember { mutableStateOf(false) }
+    val threeDotDialogPos = remember { mutableStateOf<Offset>(Offset(0f, 0f)) }
+
     checkHasErrorLogFromLastCrash()
     if(!arrayListOf("PRODUCTION", "RELEASE").contains(BuildKonfig.appProfile) ){
         BetaVersionBox(BuildKonfig.appProfile)
@@ -90,10 +109,15 @@ fun HomePage(modifier: Modifier = Modifier, navController: NavController, header
         .statusBarsPadding()
     ) {
         Column {
-            HomePageHeader(navController = navController)
+            HomePageHeader(navController = navController, threeDotDialogPos = threeDotDialogPos, threeDotDialogDisplay = threeDotDialogDisplay)
             HomePageMenuScrollView(navController = navController)
         }
     }
+
+    if(threeDotDialogDisplay.value){
+        ThreeDotsDialog(navController = navController, threeDotDialogPos = threeDotDialogPos)
+    }
+
 }
 
 @Composable
@@ -111,7 +135,12 @@ fun UserHelpTeamIcon(icon: Painter, modifier: Modifier = Modifier,navController:
 }
 
 @Composable
-fun HomePageHeader(modifier: Modifier = Modifier, navController: NavController) {
+fun HomePageHeader(
+    modifier: Modifier = Modifier,
+    navController: NavController,
+    threeDotDialogPos: MutableState<Offset>,
+    threeDotDialogDisplay: MutableState<Boolean>,
+) {
     Box(
         modifier = Modifier
             .padding(start = 16.dp, end = 16.dp, top = 4.dp)
@@ -126,7 +155,7 @@ fun HomePageHeader(modifier: Modifier = Modifier, navController: NavController) 
                     .padding(all = 8.dp)
                     .wrapContentSize(),
                 color = TextColorNormal,
-                style = FontSizeNormal(),
+                style = FontSizeNormal14(),
             )
             Spacer(modifier = Modifier.height(12.dp))
             Box {
@@ -156,7 +185,7 @@ fun HomePageHeader(modifier: Modifier = Modifier, navController: NavController) 
                                 .fillMaxSize()
                                 .wrapContentHeight(align = Alignment.CenterVertically),
                             color = TextColorNormal,
-                            style = FontSizeNormalLarge(),
+                            style = FontSizeNormalLarge24(),
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis,
                         )
@@ -183,12 +212,16 @@ fun HomePageHeader(modifier: Modifier = Modifier, navController: NavController) 
                             .padding(top = 12.dp)
                             .fillMaxHeight(), horizontalAlignment = Alignment.End
                     ) {
+                        //Three Dots
                         IconButton(
                             modifier = Modifier
                                 .height(23.dp)
-                                .width(45.dp),
+                                .width(45.dp)
+                                .onGloballyPositioned {
+                                    threeDotDialogPos.value = it.positionInRoot()
+                                },
                             onClick = {
-
+                                threeDotDialogDisplay.value = !threeDotDialogDisplay.value
                             }
                         ) {
                             Image(painterResource(resource = Res.drawable.ic_rounded_option_btn), "")
@@ -199,7 +232,7 @@ fun HomePageHeader(modifier: Modifier = Modifier, navController: NavController) 
                         Text(
                             text = "開拓等級 58",
                             color = TextColorLevel,
-                            style = FontSizeNormal(),
+                            style = FontSizeNormal14(),
                             //fontWeight = FontWeight.Bold
                         )
                     }
@@ -279,11 +312,35 @@ fun BetaVersionBox(appProfile : String){
 }
 
 @Composable
-fun ThreeDotsDialog(modifier: Modifier){
-    Box {
-        Box(modifier = Modifier.background(Color(0x96000000), shape = RoundedCornerShape(10.dp))){
-            Column(modifier = Modifier.padding(15.dp)) {
-
+fun ThreeDotsDialog(
+    modifier: Modifier = Modifier,
+    navController: NavController = navControllerInstance,
+    threeDotDialogPos: MutableState<Offset>
+){
+    val density = LocalDensity.current.density
+    Row {
+        Spacer(modifier = Modifier.weight(1f).fillMaxWidth().width(1.dp))
+        Box(
+            modifier = Modifier
+                .width(170.dp)
+                .wrapContentHeight()
+                .offset(y = UtilTools().pxToDp(threeDotDialogPos.value.y.toInt(), density = density) + 32.dp)
+                .clickable(indication = null, interactionSource = remember { MutableInteractionSource() }, onClick = {})
+        ) {
+            Box(
+                modifier = Modifier.padding(8.dp)
+                    .background(Color(0x96000000), shape = RoundedCornerShape(10.dp)).fillMaxWidth()
+                    .wrapContentHeight()
+            ) {
+                Column(modifier = Modifier.padding(15.dp)) {
+                    UIButton(textRes = Res.string.AccountLogin, onClick = { })
+                    Spacer(Modifier.height(10.dp))
+                    UIButton(textRes = Res.string.ModifyHomePage, onClick = { })
+                    Spacer(Modifier.height(10.dp))
+                    UIButton(
+                        textRes = Res.string.Setting,
+                        onClick = { navController.navigate(Screen.SettingScreen.route) })
+                }
             }
         }
     }

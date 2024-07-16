@@ -36,7 +36,7 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
 import types.CombatType
-import utils.FontSizeNormal
+import utils.FontSizeNormal14
 import utils.FontSizeNormal12
 import utils.FontSizeNormal16
 import utils.UtilTools
@@ -77,7 +77,7 @@ fun InfoBioColumn(
                 Text(
                     modifier = Modifier.padding(end = 8.dp),
                     text = itemName,
-                    style = FontSizeNormal(),
+                    style = FontSizeNormal14(),
                     fontSize = 32.sp,
                     color = Color.White,
                 )

@@ -47,7 +47,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import utils.BlackAlpha20
 import utils.BlackAlpha80
 import utils.FontSizeNormal16
-import utils.FontSizeNormalLarge
+import utils.FontSizeNormalLarge24
 import utils.FontSizeNormalSmall
 import utils.Stargazer3Theme
 import utils.TextColorNormal
@@ -215,7 +215,7 @@ fun HomePageBlock2x1(
                         text = blockData.itemTopHighlight!!,
                         Modifier.height(IntrinsicSize.Max),
                         color = TextColorNormal,
-                        style = FontSizeNormalLarge(),
+                        style = FontSizeNormalLarge24(),
                         textAlign = TextAlign.Center,
                     )
                     Text(

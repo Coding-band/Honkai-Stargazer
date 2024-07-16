@@ -61,7 +61,7 @@ import types.Path
 import types.TraceTreeItem
 import types.TracecTreeKeyStatus
 import types.TracecTreeLevelData
-import utils.FontSizeNormal
+import utils.FontSizeNormal14
 import utils.FontSizeNormal16
 import utils.UtilTools
 
@@ -352,7 +352,7 @@ fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
     Column {
         if(treeItemArray[0].typeDescHash !== null){
             Box(Modifier.clip(RoundedCornerShape(41.dp)).background(Color(0xFF666666))){
-                Text(treeItemArray[0].typeDescHash ?: "?", modifier = Modifier.padding(start = 12.dp, end = 12.dp, top = 6.dp, bottom = 6.dp), style = FontSizeNormal(), color = Color.White)
+                Text(treeItemArray[0].typeDescHash ?: "?", modifier = Modifier.padding(start = 12.dp, end = 12.dp, top = 6.dp, bottom = 6.dp), style = FontSizeNormal14(), color = Color.White)
             }
         }
 
@@ -373,7 +373,7 @@ fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
                     if (treeItem.tagHash !== null) {
                         Text(
                             treeItem.tagHash,
-                            style = FontSizeNormal(),
+                            style = FontSizeNormal14(),
                             color = Color(0xFFDD8200),
                         )
                     }
@@ -381,7 +381,7 @@ fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
 
                 if(treeItem.energy != -1){
                     Text("${UtilTools().removeStringResDoubleQuotes(Res.string.TraceEnergyEarn)} ${treeItem.energy.toString()}",
-                        style = FontSizeNormal(),
+                        style = FontSizeNormal14(),
                         color = Color(0xFF666666)
                     )
                 }
@@ -420,7 +420,7 @@ fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
                     UtilTools().htmlDescApplier(treeItem.desc, params)
                 }
             )
-            RichText(state = richTextState, style = FontSizeNormal(), modifier = Modifier.fillMaxWidth(), color = Color(0xFF666666))
+            RichText(state = richTextState, style = FontSizeNormal14(), modifier = Modifier.fillMaxWidth(), color = Color(0xFF666666))
 
             Spacer(Modifier.height(8.dp))
 

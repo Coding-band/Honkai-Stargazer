@@ -52,7 +52,7 @@ import types.Constants
 import types.Constants.Companion.EIDOLON_FRAME_BASE_WIDTH
 import types.Constants.Companion.getEidolonScale
 import types.Eidolon
-import utils.FontSizeNormal
+import utils.FontSizeNormal14
 import utils.UtilTools
 
 private lateinit var dialogTitleLocal : MutableState<String>
@@ -208,7 +208,7 @@ fun EidolonDialogComponent(eidolon: Eidolon){
 
         Column {
             Text(UtilTools().removeStringResDoubleQuotes(Res.string.CharSoul).replace("$"+"{1}",""), color = Color(0xFF333333))
-            RichText(richTextState, color = Color(0xFF666666),style = FontSizeNormal(),)
+            RichText(richTextState, color = Color(0xFF666666),style = FontSizeNormal14(),)
         }
     }
 }

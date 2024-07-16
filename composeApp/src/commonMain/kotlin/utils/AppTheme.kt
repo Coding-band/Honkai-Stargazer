@@ -94,7 +94,7 @@ fun FontSizeNormal12() = TextStyle(
     fontSize = 12.sp
 )
 @Composable
-fun FontSizeNormal() = TextStyle(
+fun FontSizeNormal14() = TextStyle(
     fontFamily = AppFont(),
     fontWeight = FontWeight.Medium,
     fontSize = 14.sp
@@ -112,7 +112,7 @@ fun FontSizeNormal20() = TextStyle(
     fontSize = 20.sp
 )
 @Composable
-fun FontSizeNormalLarge() = TextStyle(
+fun FontSizeNormalLarge24() = TextStyle(
     fontFamily = AppFont(),
     fontWeight = FontWeight.Medium,
     fontSize = 24.sp

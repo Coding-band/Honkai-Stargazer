@@ -23,7 +23,7 @@ import files.Res
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
-import utils.FontSizeNormal
+import utils.FontSizeNormal14
 import utils.TextColorNormal
 import utils.UtilTools
 
@@ -58,7 +58,7 @@ fun TitleHeader(iconRId : DrawableResource, titleString: String? = null, titleRI
                         UtilTools().removeStringResDoubleQuotes(titleRId)
                 } else titleString,
                 color = TextColorNormal,
-                style = FontSizeNormal(),
+                style = FontSizeNormal14(),
                 modifier = Modifier.padding(start = 12.dp, end = 12.dp)
             )
             Spacer(

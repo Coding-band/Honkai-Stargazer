@@ -29,7 +29,7 @@ import getScreenSizeInfo
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import utils.FontSizeNormalLarge
+import utils.FontSizeNormalLarge24
 import utils.FontSizeNormalSmall
 import utils.navigation.Screen
 
@@ -154,7 +154,7 @@ fun SplashPage(
                 )
                 Text(
                     text = "starpeace",
-                    style = FontSizeNormalLarge(),
+                    style = FontSizeNormalLarge24(),
                     fontFamily = FontFamily(
                         Font(
                             Res.font.euclid_circular_a_medium,
