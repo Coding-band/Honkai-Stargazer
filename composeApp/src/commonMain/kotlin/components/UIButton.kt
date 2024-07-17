@@ -28,12 +28,12 @@ import utils.FontSizeNormal16
 import utils.UtilTools
 
 @Composable
-fun UIButton(textRes: StringResource? = null, text: String? = null, icon: DrawableResource? = null, onClick : () -> Unit = {}) {
-
-    val modifier: Modifier = if(textRes == null && text == null && icon != null){
-        Modifier.size(46.dp).background(Color(0xFFDDDDDD), shape = RoundedCornerShape(23.dp))
+fun UIButton(modifierTmp: Modifier = Modifier, textRes: StringResource? = null, text: String? = null, icon: DrawableResource? = null, onClick : () -> Unit = {}) {
+    var modifier = modifierTmp
+    modifier = if(textRes == null && text == null && icon != null){
+        modifier.size(46.dp).background(Color(0xFFDDDDDD), shape = RoundedCornerShape(23.dp))
     }else{
-        Modifier.fillMaxWidth().wrapContentHeight().background(Color(0xFFDDDDDD), shape = RoundedCornerShape(23.dp))
+        modifier.fillMaxWidth().wrapContentHeight().background(Color(0xFFDDDDDD), shape = RoundedCornerShape(23.dp))
     }
 
     Box(
