@@ -37,6 +37,7 @@ import files.phorphos_star_of_david_fill
 import files.phorphos_sword_fill
 import files.phorphos_trophy_fill
 import files.phorphos_users_fill
+import utils.annotation.DoItLater
 import utils.navigation.Screen
 
 
@@ -89,6 +90,15 @@ class Constants {
         val ADVICE_RELIC_UNSELECT_BAR_WIDTH = 10.dp
         val ADVICE_RELIC_BAR_HEIGHT = 4.dp
 
+        val INFO_MIN_WIDTH = 320.dp
+        val INFO_MAX_WIDTH = 450.dp
+
+        @DoItLater("Declare when handling pad layout")
+        val SCREEN_MIN_WIDTH = 320.dp
+        val SCREEN_MAX_WIDTH = 480.dp
+        val SCREEN_HOME_PAGE_PAD_WIDTH = 412.dp
+        val SCREEN_PAD_REQUIRE_WIDTH = 600.dp
+        val SCREEN_SAVE_PADDING = 18.dp
 
         fun getCardBgColorByRare(rare: Int): List<Color> {
             when (rare) {

@@ -77,7 +77,7 @@ import utils.annotation.YouMustKiddingMe
 
 @Composable
 fun InfoAdviceLightcone(charWeightData : JsonObject? = null) {
-    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
+    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)){
         TitleHeader(iconRId = Res.drawable.phorphos_sword_regular, titleRId = Res.string.AdviceLightcones)
 
         //Empty Blank
@@ -166,7 +166,7 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
         }
     }
 
-    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
+    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)){
         TitleHeader(iconRId = Res.drawable.phorphos_baseball_cap_regular, titleRId = Res.string.AdviceRelics)
 
         //Empty Blank
@@ -175,7 +175,7 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
         //Content
         if(charWeightData != null){
             Row(
-                Modifier.wrapContentWidth().widthIn(320.dp, 450.dp),
+                Modifier.wrapContentWidth().widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 //Relic
@@ -330,7 +330,7 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
 
                 Spacer(Modifier.height(10.dp))
 
-                Row(modifier = Modifier.fillMaxWidth().widthIn(200.dp, 450.dp).wrapContentHeight()) {
+                Row(modifier = Modifier.fillMaxWidth().widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).wrapContentHeight()) {
                     Row(Modifier.weight(1f)){
                         Text(
                             UtilTools().removeStringResDoubleQuotes(relicPart[0]),
@@ -366,7 +366,7 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
 
                 Spacer(Modifier.height(10.dp))
 
-                Row(modifier = Modifier.fillMaxWidth().widthIn(200.dp, 450.dp).wrapContentHeight()) {
+                Row(modifier = Modifier.fillMaxWidth().widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).wrapContentHeight()) {
                     Row(Modifier.weight(1f)){
                         Text(
                             UtilTools().removeStringResDoubleQuotes(relicPart[2]),
@@ -439,7 +439,7 @@ fun InfoAdviceTeammate(
 ) {
 
     val leaderInfo = Character.getCharacterItemFromJSON(characterId, Language.TextLanguageInstance)
-    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
+    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)){
         TitleHeader(iconRId = Res.drawable.phorphos_person_regular, titleRId = Res.string.AdviceTeams)
 
         //Empty Blank
@@ -506,7 +506,7 @@ fun InfoAdviceCharacter(
         }
     }
 
-    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = 18.dp, end = 18.dp)) {
+    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)) {
         TitleHeader(
             iconRId = Res.drawable.phorphos_person_regular,
             titleRId = Res.string.AdviceCharacters

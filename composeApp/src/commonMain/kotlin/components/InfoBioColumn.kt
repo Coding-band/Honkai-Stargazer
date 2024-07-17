@@ -36,8 +36,9 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
 import types.CombatType
-import utils.FontSizeNormal14
+import types.Constants
 import utils.FontSizeNormal12
+import utils.FontSizeNormal14
 import utils.FontSizeNormal16
 import utils.UtilTools
 import utils.annotation.DoItLater
@@ -69,7 +70,7 @@ fun InfoBioColumn(
     Column {
         Box(modifier = Modifier.height(getScreenSizeInfo().hDP - columnHeightDp))
 
-        Column(modifier = Modifier.padding(start = 18.dp, end = 18.dp)
+        Column(modifier = Modifier.padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
             .onSizeChanged { item ->
                 columnHeightDp = UtilTools().pxToDp(item.height, density)
             }) {

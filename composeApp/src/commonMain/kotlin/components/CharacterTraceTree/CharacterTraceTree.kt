@@ -89,7 +89,7 @@ fun CharacterTraceTree(
 
     val displayWidth = min(getScreenSizeInfo().wDP - 36.dp, (TRACE_TREE_BASE_WIDTH*1.5f));
     val selectedId = remember { mutableStateOf(0) }
-    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
+    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)){
         TitleHeader(iconRId = Res.drawable.phorphos_tree_structure_fill, titleRId = Res.string.TraceTree)
 
         //Empty Blank

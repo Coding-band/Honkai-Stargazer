@@ -42,6 +42,7 @@ import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
+import types.Constants
 import types.Constants.Companion.MATERIAL_CARD_HEIGHT
 import utils.FontSizeNormal14
 import utils.FontSizeNormal16
@@ -87,7 +88,7 @@ fun InfoBasicStatus(infoJson : JsonElement, statusType : StatusType = StatusType
     }
     val sortedMaterialKeyList = remember { materialList.keys.sorted() }
 
-    Column (modifier = Modifier.statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
+    Column (modifier = Modifier.statusBarsPadding().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)){
         TitleHeader(iconRId = Res.drawable.phorphos_info_regular, titleRId = Res.string.BasicStatus)
 
         //Empty Blank
@@ -196,7 +197,7 @@ fun InfoLcMetamorphosis(lcInfo: JsonElement){
             )
         )
 
-        Column(modifier = Modifier.statusBarsPadding().padding(start = 18.dp, end = 18.dp)) {
+        Column(modifier = Modifier.statusBarsPadding().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)) {
             TitleHeader(
                 iconRId = Res.drawable.phorphos_info_regular,
                 titleRId = Res.string.LightconeEffect

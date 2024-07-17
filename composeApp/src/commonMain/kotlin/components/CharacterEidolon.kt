@@ -50,6 +50,7 @@ import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
 import types.Constants
 import types.Constants.Companion.EIDOLON_FRAME_BASE_WIDTH
+import types.Constants.Companion.SCREEN_SAVE_PADDING
 import types.Constants.Companion.getEidolonScale
 import types.Eidolon
 import utils.FontSizeNormal14
@@ -106,7 +107,7 @@ fun CharacterEidolon(
             )
         }
 
-        Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
+        Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)){
             TitleHeader(iconRId = Res.drawable.phorphos_star_half_regular, titleRId = Res.string.Eidolon)
 
             //Empty Blank

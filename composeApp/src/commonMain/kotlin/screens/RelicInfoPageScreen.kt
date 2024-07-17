@@ -201,7 +201,7 @@ fun RelicBasicInfo(infoJson: JsonElement){
     Column {
         Box(modifier = Modifier.height(getScreenSizeInfo().hDP - columnHeightDp))
 
-        Column(modifier = Modifier.padding(start = 18.dp, end = 18.dp)
+        Column(modifier = Modifier.padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
             .onSizeChanged { item ->
                 columnHeightDp = UtilTools().pxToDp(item.height, density)
             }) {
@@ -249,7 +249,7 @@ fun RelicSetInfo(infoJson: JsonElement, isShowing4Set: Boolean){
         UtilTools().htmlDescApplier(skill[0].jsonObject["desc"]!!.jsonPrimitive.content,paramList )
     }
 
-    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
+    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)){
         if (isShowing4Set){
             TitleHeader(iconRId = Res.drawable.phorphos_dice_four_regular, titleRId = Res.string.RelicStatus4Pcs)
         }else{
@@ -286,7 +286,7 @@ fun RelicInfoFullImgWithRare(
             exit = fadeOut(),
             modifier = Modifier.fillMaxWidth().wrapContentHeight().align(Alignment.Center)
         ) {
-            Column(modifier = Modifier.width(getScreenSizeInfo().wDP - 36.dp).aspectRatio(1f).sizeIn(200.dp, 450.dp).padding(start = 18.dp, end = 18.dp)) {
+            Column(modifier = Modifier.width(getScreenSizeInfo().wDP - 36.dp).aspectRatio(1f).sizeIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)) {
                 Row{
                     Image(
                         bitmap = Relic.getRelicImageFromJSON(if(isRelic) UtilTools.ImageFolderType.RELIC_ICON else UtilTools.ImageFolderType.ORMANENT_ICON, fileName, if(isRelic) 1 else 5),
@@ -338,7 +338,7 @@ fun RelicSetsCardDisplay(
     isRelic: Boolean = true,
 ) {
     Column(
-        modifier = Modifier.widthIn(200.dp, 450.dp).fillMaxWidth().statusBarsPadding().padding(start = 18.dp, end = 18.dp)
+        modifier = Modifier.widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).fillMaxWidth().statusBarsPadding().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
     ) {
         TitleHeader(
             iconRId = Res.drawable.phorphos_chats_circle_regular, titleRId = Res.string.RelicDetail

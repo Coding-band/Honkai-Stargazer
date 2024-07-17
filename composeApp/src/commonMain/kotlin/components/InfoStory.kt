@@ -29,6 +29,7 @@ import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import types.Constants
 import utils.FontSizeNormal16
 import utils.UtilTools
 
@@ -70,7 +71,7 @@ fun InfoStory(infoJson : JsonElement, isLcStory : Boolean = false){
         }
     }
 
-    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = 18.dp, end = 18.dp)){
+    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)){
         TitleHeader(iconRId = Res.drawable.phorphos_chats_circle_regular, titleString = storyTitleList[currStoryIndex.value])
 
         //Empty Blank
