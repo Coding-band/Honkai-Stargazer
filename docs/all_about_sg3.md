@@ -219,10 +219,20 @@ EN:
       - `SpecificPlatformCode.kt` : The only file to handle `expect` functions
 
 ## Known-Issue 已知問題
+- **做不及呀 真做不及呀！ (Can't finish all)**
 - CharacterInfoPage -> InfoAdviceTeam 造成卡頓 (Laggy)
 - CharacterInfoPage -> 從其他角色頁面跳回會顯示角色全身圖 (Char Full Img will display when back from other char info page)
 - RelicInfoPage & LightconeInfoPage -> 細節未完善 (Not finished details improvements)
+- BackgroundSettingScreen -> 細節未完善 (Not finished details improvements)
+- BackgroundSettingScreen -> 沒法做到無縫輪播、按鈕功能未完善 (Can't do seamless loop, Button function not finished)
  
+## Close BETA Testing
+### 目前(2024/07/17)暫定如下：
+- 階段一（8月7號開始）：基礎角色資料、排行榜、評分、用戶登入
+- 階段二（8月21號開始）：躍遷分析、廣告功能
+- 階段三（8月28號開始）：排軸功能，最終封測
+- 將於9月9號完結，9月15號推出正式版
+
 ## Todo-List
 - [x] Finish This md's writting
 
@@ -247,33 +257,30 @@ July 22 - July 28
   - Team Usage Ranking
 
 July 29 - August 4
+- [ ] Prepare for Close BETA Testing (1 day)
 - [ ] Proficient Calculation (2 days)
-- [ ] Relic Score Algorthm (2 days)
-- [ ] Proficient Leaderboard (3 days)
+- [ ] Relic Score Algorthm (2 days) [With Reset]
+- [ ] Proficient Leaderboard (2 days)
 
 August 5 - August 11
 - [ ] Wrap Simulator (3 days)
+- [ ] First Phase Of Close Beta (August 7 - August 20)
 - [ ] Wrap Analysis (4 days)
 
 August 12 - August 18
 - [ ] Customize Home Page Function (2 days)
 - [ ] Ads Function (2 days)
 - [ ] In-app Purchase Function (2 days)
-- [ ] Prepare for Close BETA Testing (1 day)
 
 August 19 - August 25
 - [ ] Action Order Function (5 days)
+- [ ] Second Phase Of Close Beta (August 21 - August 27)
 - [ ] Notification Initize (2 days)
 
-August 25 - August 31
-- [ ] Prepare for Beta (Flexible time)
+August 25 - September 9
+- [ ] Prepare for Release (Flexible time)
+- [ ] Last Phase Of Close Beta (August 28 - September 9)
 
-September 1 - September 14
-- [ ] Close Beta Testing
-
-September 15 - September 21
+September 10 - September 15
 - [ ] Final checking
-- [ ] Prepare to upload to different platform
-
-September 21
-- [ ] Prepare to upload to different platform
+- [ ] Submit to Google Play Store & App Store (September 10)

@@ -80,7 +80,7 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navController: NavCon
         )
     }
 
-    val listState = rememberLazyListState(wallpaperIndex.value, UtilTools().DpToPx(32.dp, density))
+    val listState = rememberLazyListState(wallpaperIndex.value, -UtilTools().DpToPx(32.dp, density))
 
     Box(modifier = Modifier.navigationBarsPadding()){
         Column(modifier = Modifier.fillMaxSize()) {
