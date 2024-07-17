@@ -77,12 +77,15 @@ import files.phorphos_caret_right_regular
 import getDeviceInfo
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
+import types.Character
+import types.Wallpaper
 import utils.FontSizeNormal14
 import utils.FontSizeNormal16
 import utils.FontSizeNormalLarge24
 import utils.Language
 import utils.UtilTools
 import utils.annotation.DoItLater
+import utils.navigation.Screen
 import kotlin.math.max
 
 
@@ -90,7 +93,7 @@ import kotlin.math.max
 fun SettingScreen(modifier: Modifier = Modifier, navController: NavController, headerData: HeaderData = defaultHeaderData
 ){
     val hazeState = remember { HazeState() }
-
+    val wallpaper = Wallpaper.wallpaperList.find { it.id == Settings().getString("backgroundImage", "221000") } ?: Wallpaper.wallpaperList[0]
     Box {
 
         LazyColumn (
@@ -149,8 +152,8 @@ fun SettingScreen(modifier: Modifier = Modifier, navController: NavController, h
                     //更換桌布 Change Wallpaper
                     SettingOptionNavigateBar(
                         titleRes = Res.string.ChangeWallPaper,
-                        navigateDesc = "鏡流", //@DoItLater("Add the function of change wallpaper"),
-                        navigateClick = { }//navController.navigate("ChangeWallPaper") }
+                        navigateDesc = wallpaper.cnName ?: Character.getCharacterItemFromJSON(wallpaper.id).displayName ?: "?",
+                        navigateClick = { navController.navigate(Screen.BackgroundSettingScreen.route) }
                     )
 
                     //啟用模糊效果

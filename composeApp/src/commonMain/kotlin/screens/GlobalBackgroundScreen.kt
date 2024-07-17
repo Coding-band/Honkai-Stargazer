@@ -17,6 +17,7 @@ import androidx.compose.ui.draw.blur
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
+import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -34,31 +35,27 @@ val gradient = Brush.verticalGradient(
     )
 )
 
-enum class BackgroundDisplayEnum{
-    DEFAULT,    //用戶選擇的背景（原圖）
-    BLUR,       //用戶選擇的背景（模糊化）
-    MOC,        //混沌回憶的背景
-    PF,         //虛構敘事的背景
-}
-
-enum class WallpaperList{
-    CHAR_
-}
-
 @OptIn(ExperimentalResourceApi::class)
 @Composable
 fun MakeBackground(modifier: Modifier = Modifier, screen: Screen) {
     val hazeState = remember { HazeState() }
     var isBlur = true;
-    val backgroundImageBitmap = UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.BGS,"1006");
+    val backgroundImageBitmap = UtilTools().getAssetsWebpByFileName(
+        UtilTools.ImageFolderType.BGS,
+        Settings().getString("backgroundImage", "221000")
+    );
     //var backgroundBitmap = UtilTools().getAssetsWebpByContext(context = LocalContext.current, "images/${UtilTools.ImageFolderType.BGS.folderPath}1006.webp")
     when(screen){
         Screen.HomePage -> {isBlur = false;}
+        Screen.BackgroundSettingScreen -> {isBlur = false;}
         else -> {}
     }
     Box{
         Image(
-            bitmap = backgroundImageBitmap,
+            bitmap = when(screen){
+                Screen.BackgroundSettingScreen -> UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.BGS, "bg_light")
+                else -> backgroundImageBitmap
+            },
             contentDescription = "",
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize().blur(if (isBlur) 20.dp else 0.dp)

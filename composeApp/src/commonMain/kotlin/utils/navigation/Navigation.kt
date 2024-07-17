@@ -26,6 +26,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import components.HeaderData
 import components.defaultHeaderData
+import files.ChangeWallPaper
 import files.CharacterList
 import files.LightconeList
 import files.RelicList
@@ -37,6 +38,7 @@ import files.phorphos_house_fill
 import files.phorphos_person_fill
 import files.phorphos_sliders_horizontal_fill
 import files.phorphos_sword_fill
+import screens.BackgroundSettingScreen
 import screens.CharacterInfoPage
 import screens.CharacterListPage
 import screens.HomePage
@@ -94,6 +96,10 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     data object SettingScreen : Screen(
         "SettingScreen",
         HeaderData(titleRId = Res.string.Setting, titleIconId = Res.drawable.phorphos_sliders_horizontal_fill)
+    )
+    data object BackgroundSettingScreen : Screen(
+        "BackgroundSettingScreen",
+        HeaderData(titleRId = Res.string.ChangeWallPaper, titleIconId = Res.drawable.phorphos_sliders_horizontal_fill)
     )
 }
 
@@ -247,6 +253,21 @@ fun Navigation() {
                     SettingScreen(
                         navController = navController,
                         headerData = Screen.SettingScreen.headerData
+                    )
+                })
+        }
+
+        composable(
+            route = Screen.BackgroundSettingScreen.route,
+            enterTransition = { defaultEnterTransition },
+            exitTransition = { defaultExitTransition }) {
+            RootContent(
+                screen = Screen.BackgroundSettingScreen,
+                snackbarHostState = snackbarHostState,
+                page = {
+                    BackgroundSettingScreen(
+                        navController = navController,
+                        headerData = Screen.BackgroundSettingScreen.headerData
                     )
                 })
         }
