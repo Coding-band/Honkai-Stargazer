@@ -236,13 +236,14 @@ July 1 - July 14
 
 July 15 - July 21
 - [x] miHoYo API [DeviceFP will do after Release]
-- [ ] Setting Page (2 days) [Including Language Setting]
-- [ ] Event List, Interaction Map Redirect (1 day)
+- [x] Setting Page (2 days) [Including Language Setting]
+- [x] Background Setting Page (1 day)
 - [ ] User Login & Home Page Info (2 days)
 - [ ] User Info Page & UID Search (2 days)
 
 July 22 - July 28
-- [ ] MOC & PF Leaderboard (7 days)
+- [ ] Event List, Interaction Map Redirect (1 day)
+- [ ] MOC & PF Leaderboard (6 days)
   - Team Usage Ranking
 
 July 29 - August 4
