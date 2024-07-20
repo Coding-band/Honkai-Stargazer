@@ -29,6 +29,7 @@ import components.defaultHeaderData
 import files.ChangeWallPaper
 import files.CharacterList
 import files.LightconeList
+import files.Login
 import files.RelicList
 import files.Res
 import files.Setting
@@ -42,6 +43,7 @@ import screens.BackgroundSettingScreen
 import screens.CharacterInfoPage
 import screens.CharacterListPage
 import screens.HomePage
+import screens.HoyolabLoginPageScreen
 import screens.LightconeInfoPage
 import screens.LightconeListPage
 import screens.MakeBackground
@@ -100,6 +102,10 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     data object BackgroundSettingScreen : Screen(
         "BackgroundSettingScreen",
         HeaderData(titleRId = Res.string.ChangeWallPaper, titleIconId = Res.drawable.phorphos_sliders_horizontal_fill)
+    )
+    data object HoyolabLoginPageScreen : Screen(
+        "HoyolabLoginPageScreen",
+        HeaderData(titleRId = Res.string.Login, titleIconId = Res.drawable.phorphos_person_fill)
     )
 }
 
@@ -271,7 +277,25 @@ fun Navigation() {
                     )
                 })
         }
-
+        composable(
+            route = "${Screen.HoyolabLoginPageScreen.route}/?serverId={serverId}",
+            arguments = listOf(
+                (navArgument("serverId") { type = NavType.StringType }),
+            ),
+            enterTransition = { defaultEnterTransition }, exitTransition = { defaultExitTransition }
+        ) { backStackEntry ->
+            RootContent(
+                screen = Screen.HoyolabLoginPageScreen,
+                snackbarHostState = snackbarHostState,
+                page = {
+                    HoyolabLoginPageScreen(
+                        navController = navController,
+                        headerData = Screen.HoyolabLoginPageScreen.headerData,
+                        backStackEntry = backStackEntry,
+                        snackbarHostState = snackbarHostState
+                    )
+                })
+        }
     }
 }
 

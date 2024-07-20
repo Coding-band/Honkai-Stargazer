@@ -87,12 +87,16 @@ kotlin {
             implementation("com.mohamedrejeb.richeditor:richeditor-compose:1.0.0-rc05")
 
             implementation("com.squareup.okio:okio:3.9.0")
-            
+
+            //Ktor - Web Request I/O
             implementation("io.ktor:ktor-client-core:2.0.0")
             implementation("io.ktor:ktor-client-cio:2.0.0")
             implementation("io.ktor:ktor-serialization-kotlinx-json:2.0.0")
             implementation("io.ktor:ktor-client-content-negotiation:2.0.0")
             implementation("io.ktor:ktor-client-serialization:2.0.0")
+
+            // use api since the desktop app need to access the Cef to initialize it.
+            api("io.github.kevinnzou:compose-webview-multiplatform:1.9.20")
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
