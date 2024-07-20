@@ -64,7 +64,10 @@ import components.HomePageBlock1x1
 import components.HomePageBlock2x1
 import components.HomePageBlocks
 import components.UIButton
+import components.UIButtonSize
 import components.defaultHeaderData
+import dev.chrisbanes.haze.HazeState
+import dev.chrisbanes.haze.haze
 import files.AccountLogin
 import files.ModifyHomePage
 import files.Res
@@ -100,6 +103,7 @@ import utils.navigation.navControllerInstance
 fun HomePage(modifier: Modifier = Modifier, navController: NavController, headerData: HeaderData = defaultHeaderData) {
     val threeDotDialogDisplay = remember { mutableStateOf(false) }
     val threeDotDialogPos = remember { mutableStateOf<Offset>(Offset(0f, 0f)) }
+    val hazeState = remember { HazeState() }
 
     checkHasErrorLogFromLastCrash()
     if(!arrayListOf("PRODUCTION", "RELEASE").contains(BuildKonfig.appProfile) ){
@@ -107,6 +111,7 @@ fun HomePage(modifier: Modifier = Modifier, navController: NavController, header
     }
     Box(modifier = Modifier
         .statusBarsPadding()
+        .haze(hazeState)
     ) {
         Column {
             HomePageHeader(navController = navController, threeDotDialogPos = threeDotDialogPos, threeDotDialogDisplay = threeDotDialogDisplay)
@@ -114,9 +119,7 @@ fun HomePage(modifier: Modifier = Modifier, navController: NavController, header
         }
     }
 
-    if(threeDotDialogDisplay.value){
-        ThreeDotsDialog(navController = navController, threeDotDialogPos = threeDotDialogPos)
-    }
+    ThreeDotsDialog(navController = navController, threeDotDialogPos = threeDotDialogPos, hazeState = hazeState, threeDotDialogDisplay = threeDotDialogDisplay)
 
 }
 
@@ -315,33 +318,39 @@ fun BetaVersionBox(appProfile : String){
 fun ThreeDotsDialog(
     modifier: Modifier = Modifier,
     navController: NavController = navControllerInstance,
-    threeDotDialogPos: MutableState<Offset>
+    threeDotDialogPos: MutableState<Offset>,
+    hazeState: HazeState = remember { HazeState() },
+    threeDotDialogDisplay: MutableState<Boolean>
 ){
     val density = LocalDensity.current.density
-    Row {
-        Spacer(modifier = Modifier.weight(1f).fillMaxWidth().width(1.dp))
-        Box(
-            modifier = Modifier
-                .width(170.dp)
-                .wrapContentHeight()
-                .offset(y = UtilTools().pxToDp(threeDotDialogPos.value.y.toInt(), density = density) + 32.dp)
-                .clickable(indication = null, interactionSource = remember { MutableInteractionSource() }, onClick = {})
-        ) {
+    val showLoginPopUp = remember { mutableStateOf(false) }
+
+    if(threeDotDialogDisplay.value){
+        Row {
+            Spacer(modifier = Modifier.weight(1f).fillMaxWidth().width(1.dp))
             Box(
-                modifier = Modifier.padding(8.dp)
-                    .background(Color(0x96000000), shape = RoundedCornerShape(10.dp)).fillMaxWidth()
+                modifier = Modifier
+                    .width(170.dp)
                     .wrapContentHeight()
+                    .offset(y = UtilTools().pxToDp(threeDotDialogPos.value.y.toInt(), density = density) + 32.dp)
+                    .clickable(indication = null, interactionSource = remember { MutableInteractionSource() }, onClick = {})
             ) {
-                Column(modifier = Modifier.padding(15.dp)) {
-                    UIButton(textRes = Res.string.AccountLogin, onClick = { })
-                    Spacer(Modifier.height(10.dp))
-                    UIButton(textRes = Res.string.ModifyHomePage, onClick = { })
-                    Spacer(Modifier.height(10.dp))
-                    UIButton(
-                        textRes = Res.string.Setting,
-                        onClick = { navController.navigate(Screen.SettingScreen.route) })
+                Box(
+                    modifier = Modifier.padding(8.dp)
+                        .background(Color(0x96000000), shape = RoundedCornerShape(10.dp)).fillMaxWidth()
+                        .wrapContentHeight()
+                ) {
+                    Column(modifier = Modifier.padding(15.dp)) {
+                        UIButton(textRes = Res.string.AccountLogin, onClick = { threeDotDialogDisplay.value = false; showLoginPopUp.value = true }, buttonSize = UIButtonSize.SmallChoice)
+                        Spacer(Modifier.height(10.dp))
+                        UIButton(textRes = Res.string.ModifyHomePage, onClick = {  }, buttonSize = UIButtonSize.SmallChoice)
+                        Spacer(Modifier.height(10.dp))
+                        UIButton(textRes = Res.string.Setting, onClick = { threeDotDialogDisplay.value = false; navController.navigate(Screen.SettingScreen.route) }, buttonSize = UIButtonSize.SmallChoice)
+                    }
                 }
             }
         }
     }
+
+    HoyolabServerRemarksPopup(showPopup = showLoginPopUp, hazeState = hazeState)
 }
