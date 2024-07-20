@@ -25,10 +25,16 @@ import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import utils.FontSizeNormal16
+import utils.FontSizeNormal20
 import utils.UtilTools
 
+public enum class UIButtonSize {
+    Normal,
+    NormalLargeText,
+    SmallChoice
+}
 @Composable
-fun UIButton(modifierTmp: Modifier = Modifier, textRes: StringResource? = null, text: String? = null, icon: DrawableResource? = null, onClick : () -> Unit = {}) {
+fun UIButton(modifierTmp: Modifier = Modifier, textRes: StringResource? = null, text: String? = null, icon: DrawableResource? = null, isAvailable : Boolean = true, buttonSize : UIButtonSize = UIButtonSize.Normal, onClick : () -> Unit = {}) {
     var modifier = modifierTmp
     modifier = if(textRes == null && text == null && icon != null){
         modifier.size(46.dp).background(Color(0xFFDDDDDD), shape = RoundedCornerShape(23.dp))
@@ -37,7 +43,7 @@ fun UIButton(modifierTmp: Modifier = Modifier, textRes: StringResource? = null, 
     }
 
     Box(
-        modifier = modifier.clip(shape = RoundedCornerShape(23.dp)).clickable { onClick() }
+        modifier = modifier.clip(shape = RoundedCornerShape(23.dp)).clickable { if(isAvailable) onClick() }
     ) {
         Box(
             modifier = Modifier.padding(5.dp).border(width = 1.dp, color = Color(0x0F000000), shape = RoundedCornerShape(23.dp))
@@ -48,11 +54,11 @@ fun UIButton(modifierTmp: Modifier = Modifier, textRes: StringResource? = null, 
                 Row {
                     Text(
                         if (textRes == null) { text ?: "?" } else UtilTools().removeStringResDoubleQuotes(textRes),
-                        style = FontSizeNormal16(),
-                        color = Color(0xFF222222),
+                        style = if(buttonSize == UIButtonSize.NormalLargeText) FontSizeNormal20() else  FontSizeNormal16(),
+                        color = if(isAvailable) Color(0xFF222222) else Color(0x4D222222),
                         textAlign = if(icon != null) TextAlign.Left else TextAlign.Center,
                         maxLines = 1,
-                        modifier = Modifier.align(Alignment.CenterVertically).weight(1f).padding(top = 2.dp, bottom = 2.dp, start = 8.dp, end = 8.dp)
+                        modifier = Modifier.align(Alignment.CenterVertically).weight(1f).padding(top = if(buttonSize == UIButtonSize.SmallChoice) (2.dp) else 6.dp, bottom = if(buttonSize == UIButtonSize.SmallChoice) (2.dp) else 6.dp, start = 8.dp, end = 8.dp)
                     )
                     if(icon != null){
                         Box(Modifier.width(2.dp).fillMaxHeight().padding(top = 8.dp, bottom =  8.dp))
