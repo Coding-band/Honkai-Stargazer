@@ -69,7 +69,9 @@ import components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.AccountLogin
+import files.Logout
 import files.ModifyHomePage
+import files.PlayerLevel
 import files.Res
 import files.Setting
 import files.donate_ad_bg
@@ -85,6 +87,7 @@ import files.test_char_8
 import files.vocchi
 import org.jetbrains.compose.resources.painterResource
 import types.Constants.Companion.HOME_PAGE_ITEMS
+import types.UserAccount
 import utils.BlackAlpha30
 import utils.FontSizeNormal12
 import utils.FontSizeNormal14
@@ -152,7 +155,7 @@ fun HomePageHeader(
     ) {
         Column {
             Text(
-                text = "900033852",
+                text = UserAccount.INSTANCE.uid,
                 modifier = Modifier
                     .background(BlackAlpha30, CircleShape)
                     .padding(all = 8.dp)
@@ -182,7 +185,7 @@ fun HomePageHeader(
                     ) {
                         //User Name - Hmm interesting Kt
                         Text(
-                            text = "Vocaloid2048",
+                            text = UserAccount.INSTANCE.username,
                             modifier = Modifier
                                 .weight(1f)
                                 .fillMaxSize()
@@ -233,7 +236,7 @@ fun HomePageHeader(
                         Spacer(Modifier.weight(1f))
 
                         Text(
-                            text = "開拓等級 58",
+                            text = "${UtilTools().removeStringResDoubleQuotes(Res.string.PlayerLevel)} ${UserAccount.INSTANCE.level}",
                             color = TextColorLevel,
                             style = FontSizeNormal14(),
                             //fontWeight = FontWeight.Bold
@@ -243,7 +246,7 @@ fun HomePageHeader(
 
             }
             LinearProgressIndicator(
-                progress = (58f / 60f),
+                progress = (UserAccount.INSTANCE.level / 60f),
                 Modifier
                     .padding(top = 12.dp, bottom = 12.dp)
                     .fillMaxWidth(),
@@ -341,7 +344,7 @@ fun ThreeDotsDialog(
                         .wrapContentHeight()
                 ) {
                     Column(modifier = Modifier.padding(15.dp)) {
-                        UIButton(textRes = Res.string.AccountLogin, onClick = { threeDotDialogDisplay.value = false; showLoginPopUp.value = true }, buttonSize = UIButtonSize.SmallChoice)
+                        UIButton(textRes = if(UserAccount.INSTANCE.isLogin) Res.string.Logout else Res.string.AccountLogin, onClick = { threeDotDialogDisplay.value = false; if(UserAccount.INSTANCE.isLogin) UserAccount.resetUserAccount() else showLoginPopUp.value = true }, buttonSize = UIButtonSize.SmallChoice)
                         Spacer(Modifier.height(10.dp))
                         UIButton(textRes = Res.string.ModifyHomePage, onClick = {  }, buttonSize = UIButtonSize.SmallChoice)
                         Spacer(Modifier.height(10.dp))

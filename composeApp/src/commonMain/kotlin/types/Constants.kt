@@ -119,6 +119,7 @@ class Constants {
             return newWidth.div(EIDOLON_FRAME_BASE_WIDTH)
         }
 
+
         var HOME_PAGE_ITEMS = arrayListOf<HomePageBlocks.HomePageBlockItem>(
             HomePageBlocks.HomePageBlockItem(
                 itemTitleRId = Res.string.Character,
@@ -139,29 +140,36 @@ class Constants {
                 itemTitleRId = Res.string.UIDSearch,
                 itemIconId = Res.drawable.phorphos_alien_fill
             ),
+            @DoItLater("Add Time Count Down later")
             HomePageBlocks.HomePageBlockItem(
                 itemTitleRId = Res.string.Stamina,
                 itemIconId = Res.drawable.phorphos_moon_fill,
                 itemType = HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1,
-                itemTopHighlight = "116",
+                itemTopHighlight = "${UserAccount.INSTANCE.userNote.currStamina}",
                 itemTop = "/240",
                 itemBottom = "今天18:16"
             ),
             HomePageBlocks.HomePageBlockItem(
-                itemTitle = "100/500",
+                itemTitle = "${UserAccount.INSTANCE.userNote.currTrainScore}/${UserAccount.INSTANCE.userNote.maxTrainScore}",
                 itemIconId = Res.drawable.phorphos_calendar_fill
             ),
+
+            @DoItLater("Add Pretty Count of KMGB later")
             HomePageBlocks.HomePageBlockItem(
                 itemTitle = "2.4K/14K",
                 itemIconId = Res.drawable.phorphos_planet_fill
             ),
+
+            @DoItLater("Add Time Count Down later")
             HomePageBlocks.HomePageBlockItem(
                 itemTitleRId = Res.string.Expedition,
                 itemIconId = Res.drawable.phorphos_users_fill,
                 itemType = HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1,
-                itemTopHighlight = "4",
-                itemTop = "/4",
-                itemBottom = "已完成"
+                itemTopHighlight = "${UserAccount.INSTANCE.userNote.expedition.filter { it.status == "Finished" }.size}",
+                itemTop = "${UserAccount.INSTANCE.userNote.expedition.size}",
+                itemBottom = if(UserAccount.INSTANCE.userNote.expedition.filter { it.status == "Finished" }.size == UserAccount.INSTANCE.userNote.expedition.size){
+                    "Done"
+                }else "In Progress"
             ),
             HomePageBlocks.HomePageBlockItem(
                 itemTitleRId = Res.string.MemoryOfChaos,
