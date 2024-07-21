@@ -225,7 +225,12 @@ EN:
 - RelicInfoPage & LightconeInfoPage -> 細節未完善 (Not finished details improvements)
 - BackgroundSettingScreen -> 細節未完善 (Not finished details improvements)
 - BackgroundSettingScreen -> 沒法做到無縫輪播、按鈕功能未完善 (Can't do seamless loop, Button function not finished)
- 
+- Language -> App語言因為框架未支援而沒法更改 (Can't change apps' language natively since the framework not supported)
+- SettingPage -> 設定頁面通知部分未完成 ( Setting Page Notification part not finished)
+- UserAccount -> 用戶登入對接資料庫伺服器未完成 (User Login's function still not done adapt Database Server API)
+- UserAccount -> 詳細角色未紀錄 (User Account's Character Info not recorded)
+- HoyolabLoginPage -> Popup細節未完善 (Not finished details improvements of Popups)
+
 ## Close BETA Testing
 ### 目前(2024/07/17)暫定如下：
 - 階段一（8月7號開始）：基礎角色資料、排行榜、評分、用戶登入
@@ -249,11 +254,12 @@ July 15 - July 21
 - [x] Setting Page (2 days) [Including Language Setting]
 - [x] Background Setting Page (1 day)
 - [x] Break in July 18 - 19
-- [ ] User Login & Home Page Info (2 days) [With Database API]
+- [x] User Login & Home Page Info (2 days) [Without Database API]
 
 July 22 - July 28
 - [ ] Event List, Interaction Map Redirect (0 day) [Do together with lower choice],
 - [ ] User Info Page & UID Search (2 days) [With Database API]
+- [ ] Prepare for SG2 2.4 RSS + Offline Update (HOW ???)
 - [ ] MOC & PF Leaderboard (5 days)
   - Team Usage Ranking
 
