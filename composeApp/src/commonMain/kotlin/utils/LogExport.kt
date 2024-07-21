@@ -34,6 +34,7 @@ import kotlinx.serialization.json.Json
 import org.jetbrains.compose.resources.painterResource
 import types.AppInfo
 import types.DeviceInfo
+import utils.LogExportObj.Companion.SnackbarHostStateInstance
 
 @Serializable
 data class LogExportObj(
@@ -45,18 +46,22 @@ data class LogExportObj(
     var appInfo: AppInfo,
     var exceptionMessage: String,
     var exceptionStack: String,
-)
+){
+    companion object{
+        var SnackbarHostStateInstance = SnackbarHostState()
+    }
+}
 
-suspend fun raiseErrorMessageSnack(error: Exception, snackbarHostState: SnackbarHostState) {
-    snackbarHostState.showSnackbar(
+suspend fun raiseErrorMessageSnack(error: Exception) {
+    SnackbarHostStateInstance.showSnackbar(
         message = (error.message) ?: "Unexpected Error",
         actionLabel = "CLOSE",
         duration = SnackbarDuration.Indefinite
     )
 }
 
-suspend fun raiseErrorMessageSnack(errorString: String, snackbarHostState: SnackbarHostState) {
-    snackbarHostState.showSnackbar(message = errorString ?: "Undefined Error")
+suspend fun raiseErrorMessageSnack(errorString: String, snackbarHostState: SnackbarHostState?) {
+    snackbarHostState?.showSnackbar(message = errorString ?: "Undefined Error")
 
 }
 
@@ -77,13 +82,17 @@ fun errorLogExport(className: String, functionName: String, error: Exception) {
         errorTimeMS = timeStamp,
         deviceInfo = getDeviceInfo(),
         appInfo = AppInfo(BuildKonfig.appProfile,BuildKonfig.appVersionName, BuildKonfig.appVersionCode),
-        exceptionMessage = (if (error.message === null) "Unspecified" else error.message!!),
+        exceptionMessage = (if (error.message === null) error.stackTraceToString().split("\n")[0] else error.message!!),
         exceptionStack = error.stackTraceToString()
     )
 
     //Error Log will save as Preference
     Settings().putString("errorLogExportObj", Json.encodeToString(logExportObj));
     Settings().putBoolean("errorLogDisplayed", false);
+
+    if(BuildKonfig.appProfile == "DEV"){
+        error.printStackTrace()
+    }
 }
 
 /**
