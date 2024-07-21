@@ -8,7 +8,7 @@ class HoyolabAPI(platform: HoyolabRequest.PLATFORM = HoyolabRequest.PLATFORM.HOY
     private val hoyolabRequest = HoyolabRequest(platform, cookies)
     private val platformLocale = platform
     @DoItLater("TextLanguage need to make a instance!")
-    private val language = Language.TextLanguage.EN
+    private val language = Language.TextLanguageInstance
 
     companion object Instance{
 
@@ -30,6 +30,18 @@ class HoyolabAPI(platform: HoyolabRequest.PLATFORM = HoyolabRequest.PLATFORM.HOY
      * 獲取星鐵完整用戶資料
      */
     fun getHsrFullData(uid: String, server: HoyolabConst.SERVER = HoyolabConst.SERVER.ASIA) : HoyolabResponse {
+        return hoyolabRequest.send(
+            when(platformLocale){
+                HoyolabRequest.PLATFORM.HOYOLAB -> "https://bbs-api-os.hoyolab.com/game_record/hkrpg/api/avatar/info?server=${server.serverId}&role_id=${uid}"
+                HoyolabRequest.PLATFORM.MIYOUSHE -> "https://api-takumi-record.mihoyo.com/game_record/app/hkrpg/api/avatar/info?server=${server.serverId}&role_id=${uid}"
+            }
+        )
+    }
+
+    /**
+     * 獲取星鐵用戶基礎資料
+     */
+    fun getHsrIndexData(uid: String, server: HoyolabConst.SERVER = HoyolabConst.SERVER.ASIA) : HoyolabResponse {
         return hoyolabRequest.send(
             when(platformLocale){
                 HoyolabRequest.PLATFORM.HOYOLAB -> "https://bbs-api-os.hoyolab.com/game_record/hkrpg/api/index?server=${server.serverId}&role_id=${uid}"
