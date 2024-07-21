@@ -5,9 +5,12 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -21,9 +24,12 @@ import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
+import com.multiplatform.webview.web.WebView
+import com.multiplatform.webview.web.rememberWebViewState
 import components.AppDialog
 import components.BackIcon
 import components.HeaderData
+import components.PAGE_HEADER_HEIGHT
 import components.PageHeader
 import components.UIButton
 import components.UIButtonSize
@@ -38,6 +44,7 @@ import files.SelectServerTitle
 import files.UseCookiesToLogin
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import types.UserAccount
 import utils.FontSizeNormal14
 import utils.FontSizeNormal16
 import utils.Language
@@ -45,6 +52,8 @@ import utils.LongStringXML
 import utils.UtilTools
 import utils.annotation.DoItLater
 import utils.hoyolab.HoyolabConst
+import utils.navigation.Screen
+import utils.navigation.navControllerInstance
 
 @DoItLater("Implement the HoyolabLoginPageScreen Webview later")
 @Composable
@@ -55,17 +64,43 @@ fun HoyolabLoginPageScreen(
     backStackEntry: NavBackStackEntry? = null,
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ){
-    val serverId = backStackEntry!!.arguments?.getString("relicName")!!.replace("_", " ")
+    val serverId = backStackEntry!!.arguments?.getString("serverId")!!
+    val serverSelected = HoyolabConst().getServerById(serverId)
+    val url = HoyolabConst().getLoginURL(serverSelected)
     val hazeState = remember { HazeState() }
+    val coroutineScope = rememberCoroutineScope()
+    val webviewState = rememberWebViewState(url = url)
+
+    //Clean All Cookies first
+    coroutineScope.launch {
+        webviewState.cookieManager.removeAllCookies()
+    }
+
+    DisposableEffect(Unit) {
+        webviewState.webSettings.apply {
+            androidWebSettings.domStorageEnabled = true
+            desktopWebSettings.disablePopupWindows = true
+            allowFileAccessFromFileURLs = true
+        }
+
+        onDispose {  }
+    }
 
     Box(modifier = modifier.fillMaxSize()) {
-
+        WebView(webviewState, modifier = Modifier.statusBarsPadding().padding(top = PAGE_HEADER_HEIGHT).matchParentSize())
 
         PageHeader(
             navController = navController,
             headerData = headerData,
             hazeState = hazeState,
             backIconId = BackIcon.CANCEL,
+            onBack = {
+                coroutineScope.launch {
+                    UserAccount.pasteCookies(webviewState.cookieManager.getCookies(url), serverSelected, snackbarHostState)
+                }
+
+                navController.popBackStack()
+            }
         )
     }
 }
@@ -176,6 +211,7 @@ fun HoyolabServerSelectPopup(modifier: Modifier = Modifier, showPopup : MutableS
                             UIButton(
                                 text = UtilTools().removeStringResDoubleQuotes(server.localeName),
                                 onClick = {
+                                    navControllerInstance.navigate("${Screen.HoyolabLoginPageScreen.route}/?serverId=${server.serverId}")
                                     showPopup.value = false
                                 }
                             )
