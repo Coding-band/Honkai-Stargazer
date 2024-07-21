@@ -9,6 +9,7 @@ import files.cn2
 import files.europe
 import files.twhkmo
 import org.jetbrains.compose.resources.StringResource
+import utils.annotation.DoItLater
 
 class HoyolabConst {
     /**
@@ -16,16 +17,19 @@ class HoyolabConst {
      * @param devName 方便我對照的...
      * @param localeName hoyolabGameRecord() 獲取 JSON data => data.list[x].region
      * @param serverId 伺服器的ID
-     * @param serverLocation 分辨 國服 (CN) 和 國際服 (OS)
+     * @param platform 分辨 國服 (CN) 和 國際服 (OS)
      */
-    enum class SERVER(val devName: String, val localeName: StringResource, val serverId: String, val serverLocation: String) {
-        MIHOYO("天空島服", Res.string.cn1, "prod_gf_cn", "CN"),
-        BILIBILI("世界樹服", Res.string.cn2, "prod_qd_cn", "CN"),
-        ASIA("Asia", Res.string.asia, "prod_official_asia", "OS"),
-        EUROPE("Europe", Res.string.europe, "prod_official_eur", "OS"),
-        AMERICA("America", Res.string.america, "prod_official_usa", "OS"),
-        TW_HK_MO("TW,HK,MO", Res.string.twhkmo, "prod_official_cht", "OS"),
-        UNKNOWN("UNKNOWN", Res.string.HaveNotUsed, "UNKNOWN", "UNKNOWN");
+    enum class SERVER(val devName: String, val localeName: StringResource, val serverId: String, val platform: HoyolabRequest.PLATFORM) {
+        MIHOYO("天空島服", Res.string.cn1, "prod_gf_cn", HoyolabRequest.PLATFORM.MIYOUSHE),
+        BILIBILI("世界樹服", Res.string.cn2, "prod_qd_cn", HoyolabRequest.PLATFORM.MIYOUSHE),
+        ASIA("Asia", Res.string.asia, "prod_official_asia", HoyolabRequest.PLATFORM.HOYOLAB),
+        EUROPE("Europe", Res.string.europe, "prod_official_eur", HoyolabRequest.PLATFORM.HOYOLAB),
+        AMERICA("America", Res.string.america, "prod_official_usa", HoyolabRequest.PLATFORM.HOYOLAB),
+        TW_HK_MO("TW,HK,MO", Res.string.twhkmo, "prod_official_cht", HoyolabRequest.PLATFORM.HOYOLAB),
+        UNKNOWN("UNKNOWN", Res.string.HaveNotUsed, "UNKNOWN", HoyolabRequest.PLATFORM.HOYOLAB);
+    }
+    fun getServerById(serverId : String): SERVER {
+        return SERVER.entries.filter { server -> server.serverId == serverId }[0] ?: SERVER.UNKNOWN
     }
 
     /**
@@ -41,6 +45,34 @@ class HoyolabConst {
         DA_BIE_YE("大别野", 5),
         HONKAI_STAR_RAIL("崩壞．星穹鐵道", 6),
         ZZZ("絕區零", 8);
+    }
+
+    /**
+     * 登入URL
+     */
+    fun getLoginURL(serverSelected : HoyolabConst.SERVER): String {
+        return when (serverSelected.platform) {
+            HoyolabRequest.PLATFORM.MIYOUSHE -> "https://user.miyoushe.com/login-platform/mobile.html?app_id=bll8iq97cem8&theme=&token_type=4&game_biz=bbs_cn&redirect_url=https%253A%252F%252Fuser.miyoushe.com%252Fsingle-page%252Fcommunity-init.html%253Fapp_id%253Dbll8iq97cem8%2526ux_mode%253Dredirect%2526st%253Dhttps%25253A%25252F%25252Fm.miyoushe.com%25252Fsr%25252F%252523%25252Fhome%25252F0%2526dest%253Dhttps%25253A%25252F%25252Fpassport-api.miyoushe.com%25252Faccount%25252Fma-cn-session%25252Fweb%25252FcrossLoginStart%25253Fdest%25253Dhttps%2525253A%2525252F%2525252Fm.miyoushe.com%2525252Fsr%2525252F%25252523%2525252Fhome%2525252F0&st=https%253A%252F%252Fm.miyoushe.com%252Fsr%252F%2523%252Fhome%252F0&succ_back_type=redirect&fail_back_type=&ux_mode=redirect#/login/captcha"
+            else -> "https://act.hoyolab.com/app/community-game-records-sea/rpg/index.html"
+        }
+    }
+    fun getLoginDomain(serverSelected : HoyolabConst.SERVER): String {
+        return when (serverSelected.platform) {
+            HoyolabRequest.PLATFORM.MIYOUSHE -> "https://user.miyoushe.com"
+            else -> "https://act.hoyolab.com"
+        }
+    }
+
+    /**
+     * 地圖
+     */
+    @DoItLater("Check whether is MIYOUSHE's URL correct")
+    fun getHsrMapURL(serverSelected : HoyolabConst.SERVER) : String {
+        return when(serverSelected.platform){
+            HoyolabRequest.PLATFORM.HOYOLAB -> "https://act.hoyolab.com/sr/app/interactive-map/index.html"
+            HoyolabRequest.PLATFORM.MIYOUSHE -> "https://act.hoyolab.com/sr/app/interactive-map/index.html"
+        }
+
     }
 
     val HOYOLAB_V2_KEY_GROUP = arrayOf(
