@@ -3,6 +3,9 @@ package utils
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.unit.Dp
+import coil3.ImageLoader
+import coil3.PlatformContext
+import coil3.request.CachePolicy
 import files.Res
 import getImageBitmapByByteArray
 import kotlinx.coroutines.Dispatchers
@@ -203,6 +206,11 @@ class UtilTools {
         return (dp.value * density).roundToInt()
     }
 
+    @Deprecated("Replaced by Kotlinx-DateTime")
+            /**
+             *     val dateFormat = LocalDateTime.Format { byUnicodePattern("yyyy-MM-dd'T'HH:mm:ss[.SSS]") }
+             *     dateFormat.format(timeStamp.toLocalDateTime(TimeZone.currentSystemDefault()))
+             */
     fun unixTimestampToFormattedString(timestamp: Long): String {
         // 計算時間各部分
         val secondsInMinute = 60
@@ -280,5 +288,11 @@ class UtilTools {
             return UtilTools().getAssetsJsonByFilePath("charWeightList.json")
         }
     }
+
+    fun newImageLoader(context : PlatformContext): ImageLoader = ImageLoader.Builder(context)
+        .networkCachePolicy(CachePolicy.ENABLED)
+        .diskCachePolicy(CachePolicy.ENABLED)
+        .build()
+
 
 }

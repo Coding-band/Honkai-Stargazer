@@ -23,5 +23,7 @@ expect fun getScreenSizeInfo(): ScreenSizeInfo
 
 @Composable
 expect fun getAppDataDir(): String
+
+@Deprecated("Use Kotlinx-DateTime instead")
 expect fun getTimeStamp(): Long
 expect fun getDeviceInfo(): DeviceInfo

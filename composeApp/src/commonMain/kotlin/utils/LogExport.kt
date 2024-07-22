@@ -27,7 +27,12 @@ import com.voc.honkaistargazer.BuildKonfig
 import files.Res
 import files.pom_pom_failed_issue
 import getDeviceInfo
-import getTimeStamp
+import kotlinx.datetime.Clock
+import kotlinx.datetime.LocalDateTime
+import kotlinx.datetime.TimeZone
+import kotlinx.datetime.format.FormatStringsInDatetimeFormats
+import kotlinx.datetime.format.byUnicodePattern
+import kotlinx.datetime.toLocalDateTime
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
@@ -72,14 +77,16 @@ suspend fun raiseErrorMessageSnack(errorString: String, snackbarHostState: Snack
  *         errorLogExport("CharacterInfoPageScreen", "CharacterInfoFullImgWithRare()", e)
  *     }
  */
+@OptIn(FormatStringsInDatetimeFormats::class)
 fun errorLogExport(className: String, functionName: String, error: Exception) {
     //Prepare what will be export
-    val timeStamp = getTimeStamp();
-    val logExportObj: LogExportObj = LogExportObj(
+    val timeStamp = Clock.System.now();
+    val dateFormat = LocalDateTime.Format { byUnicodePattern("yyyy-MM-dd'T'HH:mm:ss[.SSS]") }
+    val logExportObj = LogExportObj(
         className = className,
         functionName = functionName,
-        errorTime = UtilTools().unixTimestampToFormattedString((timeStamp)),
-        errorTimeMS = timeStamp,
+        errorTime = dateFormat.format(timeStamp.toLocalDateTime(TimeZone.currentSystemDefault())),
+        errorTimeMS = timeStamp.toEpochMilliseconds(),
         deviceInfo = getDeviceInfo(),
         appInfo = AppInfo(BuildKonfig.appProfile,BuildKonfig.appVersionName, BuildKonfig.appVersionCode),
         exceptionMessage = (if (error.message === null) error.stackTraceToString().split("\n")[0] else error.message!!),
