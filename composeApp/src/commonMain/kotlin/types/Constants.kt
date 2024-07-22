@@ -181,7 +181,8 @@ class Constants {
             ),
             HomePageBlocks.HomePageBlockItem(
                 itemTitleRId = Res.string.Event,
-                itemIconId = Res.drawable.phorphos_film_slate_fill
+                itemIconId = Res.drawable.phorphos_film_slate_fill,
+                itemOnClickToNavigate = Screen.EventListPageScreen
             ),
             HomePageBlocks.HomePageBlockItem(
                 itemTitleRId = Res.string.ScoreLevelLeaderboard,

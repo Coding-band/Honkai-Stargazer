@@ -3,6 +3,7 @@ package utils.hoyolab
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.engine.cio.CIO
+import io.ktor.client.plugins.BrowserUserAgent
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.defaultRequest
@@ -99,5 +100,51 @@ class HoyolabRequest(
 
         return HoyolabResponse(-9999,"NOPE", Json.parseToJsonElement("{}"))
     }
+
+    fun getPlainTxt(
+        url: String
+    ) : HoyolabResponse {
+        val client = HttpClient(CIO) {
+            install(HttpTimeout){
+                requestTimeoutMillis = 5000
+            }
+            install(ContentNegotiation){
+                json()
+            }
+
+            expectSuccess = true
+            BrowserUserAgent()
+        }
+
+        try {
+            return runBlocking {
+                val response: HttpResponse = client.get(url)
+
+                //Check whether it is having any errors
+                if (!arrayListOf(200,201).contains(response.status.value)){
+                    errorLogExport("HoyolabRequest", "send(url = ${url}",Exception("HTTP Error Code ${response.status.value} : ${response.status.description}"))
+                    return@runBlocking HoyolabResponse(
+                        -9800,
+                        "HTTP Error Code ${response.status.value} : ${response.status.description}",
+                        Json.parseToJsonElement("{}")
+                    )
+
+                }else{
+                    return@runBlocking response.body<HoyolabResponse>()
+                }
+            }
+
+        }catch (e : UnresolvedAddressException){
+            //Cannot find the Address, maybe bcz of u are offline
+            //errorLogExport("HoyolabRequest", "send(url = ${url}, body = ${body})",e)
+            e.printStackTrace()
+        }catch (e : Exception){
+            // All response
+            errorLogExport("HoyolabRequest", "getPlainTxt(url = ${url})",e)
+        }
+        return HoyolabResponse(-9999,"NOPE", Json.parseToJsonElement("{}"))
+
+    }
 }
+
 

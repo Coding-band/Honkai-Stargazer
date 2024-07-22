@@ -83,10 +83,13 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation("com.russhwolf:multiplatform-settings:1.1.1")
             implementation("com.russhwolf:multiplatform-settings-no-arg:1.1.1")
-            implementation("io.coil-kt.coil3:coil:3.0.0-alpha07")
             implementation("com.mohamedrejeb.richeditor:richeditor-compose:1.0.0-rc05")
 
             implementation("com.squareup.okio:okio:3.9.0")
+
+            implementation("io.coil-kt.coil3:coil:3.0.0-alpha08")
+            implementation("io.coil-kt.coil3:coil-network-ktor:3.0.0-alpha08")
+            implementation("io.coil-kt.coil3:coil-compose-core:3.0.0-alpha08")
 
             //Ktor - Web Request I/O
             implementation("io.ktor:ktor-client-core:2.0.0")
@@ -97,6 +100,10 @@ kotlin {
 
             // use api since the desktop app need to access the Cef to initialize it.
             api("io.github.kevinnzou:compose-webview-multiplatform:1.9.20")
+
+            //Kotlinx DateTime
+            implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.0")
+
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)

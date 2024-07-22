@@ -91,7 +91,7 @@ class HoyolabAPI(platform: HoyolabRequest.PLATFORM = HoyolabRequest.PLATFORM.HOY
      */
     @DoItLater("Check whether is MIYOUSHE's URL correct")
     fun getHsrEventList() : HoyolabResponse {
-        return hoyolabRequest.send(
+        return hoyolabRequest.getPlainTxt(
             when(platformLocale){
                 HoyolabRequest.PLATFORM.HOYOLAB -> "https://sg-hkrpg-api.hoyoverse.com/common/hkrpg_global/announcement/api/getAnnList?game=hkrpg&game_biz=hkrpg_global&lang=${language.hoyolabName}&bundle_id=hkrpg_global&level=55&platform=pc&region=prod_official_cht&uid=900000000"
                 HoyolabRequest.PLATFORM.MIYOUSHE -> "https://sg-hkrpg-api.hoyoverse.com/common/hkrpg_global/announcement/api/getAnnList?game=hkrpg&game_biz=hkrpg_global&lang=${language.hoyolabName}&bundle_id=hkrpg_global&level=55&platform=pc&region=prod_official_cht&uid=900000000"
@@ -105,11 +105,12 @@ class HoyolabAPI(platform: HoyolabRequest.PLATFORM = HoyolabRequest.PLATFORM.HOY
      */
     @DoItLater("Check whether is MIYOUSHE's URL correct")
     fun getHsrEventContent() : HoyolabResponse {
-        return hoyolabRequest.send(
+        return hoyolabRequest.getPlainTxt(
             when(platformLocale){
                 HoyolabRequest.PLATFORM.HOYOLAB -> "https://sg-hkrpg-api.hoyoverse.com/common/hkrpg_global/announcement/api/getAnnContent?game=hkrpg&game_biz=hkrpg_global&lang=${language.hoyolabName}&bundle_id=hkrpg_global&level=55&platform=pc&region=prod_official_cht&uid=900000000"
                 HoyolabRequest.PLATFORM.MIYOUSHE -> "https://sg-hkrpg-api.hoyoverse.com/common/hkrpg_global/announcement/api/getAnnList?game=hkrpg&game_biz=hkrpg_global&lang=${language.hoyolabName}&bundle_id=hkrpg_global&level=55&platform=pc&region=prod_official_cht&uid=900000000"
             }
+
         )
     }
 }
