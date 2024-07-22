@@ -28,6 +28,7 @@ import components.HeaderData
 import components.defaultHeaderData
 import files.ChangeWallPaper
 import files.CharacterList
+import files.Event
 import files.LightconeList
 import files.Login
 import files.RelicList
@@ -35,6 +36,7 @@ import files.Res
 import files.Setting
 import files.europe
 import files.phorphos_baseball_cap_fill
+import files.phorphos_film_slate_fill
 import files.phorphos_house_fill
 import files.phorphos_person_fill
 import files.phorphos_sliders_horizontal_fill
@@ -42,6 +44,8 @@ import files.phorphos_sword_fill
 import screens.BackgroundSettingScreen
 import screens.CharacterInfoPage
 import screens.CharacterListPage
+import screens.EventContentPageScreen
+import screens.EventListPageScreen
 import screens.HomePage
 import screens.HoyolabLoginPageScreen
 import screens.LightconeInfoPage
@@ -106,6 +110,14 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     data object HoyolabLoginPageScreen : Screen(
         "HoyolabLoginPageScreen",
         HeaderData(titleRId = Res.string.Login, titleIconId = Res.drawable.phorphos_person_fill)
+    )
+    data object EventListPageScreen : Screen(
+        "EventListPageScreen",
+        HeaderData(titleRId = Res.string.Event, titleIconId = Res.drawable.phorphos_film_slate_fill)
+    )
+    data object EventContentPageScreen : Screen(
+        "EventContentPageScreen",
+        HeaderData(titleRId = Res.string.Event, titleIconId = Res.drawable.phorphos_film_slate_fill)
     )
 }
 
@@ -278,7 +290,7 @@ fun Navigation() {
                 })
         }
         composable(
-            route = "${Screen.HoyolabLoginPageScreen.route}/?serverId={serverId}",
+            route = "${Screen.HoyolabLoginPageScreen.route}?serverId={serverId}",
             arguments = listOf(
                 (navArgument("serverId") { type = NavType.StringType }),
             ),
@@ -293,6 +305,41 @@ fun Navigation() {
                         headerData = Screen.HoyolabLoginPageScreen.headerData,
                         backStackEntry = backStackEntry,
                         snackbarHostState = snackbarHostState
+                    )
+                })
+        }
+
+
+        composable(
+            route = Screen.EventListPageScreen.route,
+            enterTransition = { defaultEnterTransition },
+            exitTransition = { defaultExitTransition }) {
+            RootContent(
+                screen = Screen.EventListPageScreen,
+                snackbarHostState = snackbarHostState,
+                page = {
+                    EventListPageScreen(
+                        navController = navController,
+                        headerData = Screen.EventListPageScreen.headerData
+                    )
+                })
+        }
+
+        composable(
+            route = "${Screen.EventContentPageScreen.route}?eventId={eventId}",
+            arguments = listOf(
+                (navArgument("eventId") { type = NavType.IntType }),
+            ),
+            enterTransition = { defaultEnterTransition }, exitTransition = { defaultExitTransition }
+        ) { backStackEntry ->
+            RootContent(
+                screen = Screen.EventContentPageScreen,
+                snackbarHostState = snackbarHostState,
+                page = {
+                    EventContentPageScreen(
+                        navController = navController,
+                        headerData = Screen.EventContentPageScreen.headerData,
+                        backStackEntry = backStackEntry,
                     )
                 })
         }
