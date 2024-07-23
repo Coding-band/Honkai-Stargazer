@@ -5,6 +5,9 @@ import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.unit.Dp
 import coil3.ImageLoader
 import coil3.PlatformContext
+import coil3.addLastModifiedToFileCacheKey
+import coil3.disk.DiskCache
+import coil3.memory.MemoryCache
 import coil3.request.CachePolicy
 import files.Res
 import getImageBitmapByByteArray
@@ -15,6 +18,7 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
+import okio.FileSystem
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
@@ -291,7 +295,22 @@ class UtilTools {
 
     fun newImageLoader(context : PlatformContext): ImageLoader = ImageLoader.Builder(context)
         .networkCachePolicy(CachePolicy.ENABLED)
+        .memoryCachePolicy(CachePolicy.ENABLED)
+        .memoryCache {
+            MemoryCache.Builder()
+                .maxSizePercent(context, 0.1)
+                .strongReferencesEnabled(true)
+                .build()
+        }
         .diskCachePolicy(CachePolicy.ENABLED)
+        .diskCache {
+            DiskCache.Builder()
+                .maxSizePercent(0.03)
+                .directory(FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("image_cache"))
+                .build()
+        }
+        //.logger(DebugLogger())
+        .addLastModifiedToFileCacheKey(true)
         .build()
 
 
