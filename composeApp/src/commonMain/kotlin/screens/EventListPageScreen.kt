@@ -30,7 +30,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
-import coil3.ImageLoader
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import coil3.request.CachePolicy
@@ -108,6 +107,20 @@ fun EventItemCard(eventItem: EventItem, isDateOutside: MutableState<Boolean>, na
     ).toInstant(TimeZone.of("UTC+8"))
     val duration = currentTime.periodUntil(endTime, TimeZone.of("UTC+8"))
 
+    val context = LocalPlatformContext.current
+    val imageLoader = remember {
+        UtilTools().newImageLoader(context = context)
+    }
+    val imageRequest =  remember {
+        ImageRequest.Builder(context)
+            .data(eventItem.banner)
+            .networkCachePolicy(CachePolicy.ENABLED)
+            .crossfade(true)
+            .diskCachePolicy(CachePolicy.ENABLED)
+            .build()
+
+    }
+
     val interactionSource = remember { MutableInteractionSource() }
     LaunchedEffect(interactionSource) {
         var isLongClick = false
@@ -119,11 +132,11 @@ fun EventItemCard(eventItem: EventItem, isDateOutside: MutableState<Boolean>, na
                     delay(1000)
                     isLongClick = true
                     isDateOutside.value = isDateOutside.value.not()
-                    }
+                }
 
                 is PressInteraction.Release -> {
-                    if (isLongClick.not()) {navController.navigate("${Screen.EventContentPageScreen.route}?eventId=${eventItem.ann_id}")
-
+                    if (isLongClick.not()) {
+                        navController.navigate("${Screen.EventContentPageScreen.route}?eventId=${eventItem.ann_id}")
                     }
 
                 }
@@ -157,15 +170,10 @@ fun EventItemCard(eventItem: EventItem, isDateOutside: MutableState<Boolean>, na
             .clickable(interactionSource = interactionSource, indication = rememberRipple(), onClick = {})
         ) {
             AsyncImage(
-                model = ImageRequest.Builder(LocalPlatformContext.current)
-                    .data(eventItem.banner)
-                    .networkCachePolicy(CachePolicy.ENABLED)
-                    .crossfade(true)
-                    .diskCachePolicy(CachePolicy.ENABLED)
-                    .build(),
+                model = imageRequest,
                 contentDescription = eventItem.title,
                 modifier = Modifier.fillMaxWidth().wrapContentHeight(),
-                imageLoader = ImageLoader(context = LocalPlatformContext.current)
+                imageLoader = imageLoader
             )
 
             if (!isDateOutside.value) {

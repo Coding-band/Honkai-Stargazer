@@ -36,7 +36,7 @@ import files.Res
 import files.Setting
 import files.europe
 import files.phorphos_baseball_cap_fill
-import files.phorphos_film_slate_fill
+import files.phorphos_film_slate_regular
 import files.phorphos_house_fill
 import files.phorphos_person_fill
 import files.phorphos_sliders_horizontal_fill
@@ -113,11 +113,11 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     )
     data object EventListPageScreen : Screen(
         "EventListPageScreen",
-        HeaderData(titleRId = Res.string.Event, titleIconId = Res.drawable.phorphos_film_slate_fill)
+        HeaderData(titleRId = Res.string.Event, titleIconId = Res.drawable.phorphos_film_slate_regular)
     )
     data object EventContentPageScreen : Screen(
         "EventContentPageScreen",
-        HeaderData(titleRId = Res.string.Event, titleIconId = Res.drawable.phorphos_film_slate_fill)
+        HeaderData(titleRId = Res.string.Event, titleIconId = Res.drawable.phorphos_film_slate_regular)
     )
 }
 
