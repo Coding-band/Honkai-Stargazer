@@ -26,7 +26,6 @@ open class Wallpaper(
             Wallpaper(id = "1006", fileName = "1006"),
             Wallpaper(id = "1008", fileName = "1008"),
             Wallpaper(id = "1009", fileName = "1009"),
-            /*
             Wallpaper(id = "1013", fileName = "1013"),
             Wallpaper(id = "1101", fileName = "1101"),
             Wallpaper(id = "1102", fileName = "1102"),
@@ -62,7 +61,6 @@ open class Wallpaper(
             Wallpaper(id = "1306", fileName = "1306"),
             Wallpaper(id = "1307", fileName = "1307"),
             Wallpaper(id = "1312", fileName = "1312"),
-             */
         )
 
         fun getWallpaperByFileName(bgName : String): ImageBitmap {

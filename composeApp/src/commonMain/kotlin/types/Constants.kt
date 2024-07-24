@@ -198,7 +198,8 @@ class Constants {
             ),
             HomePageBlocks.HomePageBlockItem(
                 itemTitleRId = Res.string.Map,
-                itemIconId = Res.drawable.phorphos_map_trifold_fill
+                itemIconId = Res.drawable.phorphos_map_trifold_fill,
+                itemOnClickToNavigate = Screen.MapPageScreen
             ),
             HomePageBlocks.HomePageBlockItem(
                 itemTitleRId = Res.string.LotterySimulator,
