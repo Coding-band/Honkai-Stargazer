@@ -211,7 +211,7 @@ fun HoyolabServerSelectPopup(modifier: Modifier = Modifier, showPopup : MutableS
                             UIButton(
                                 text = UtilTools().removeStringResDoubleQuotes(server.localeName),
                                 onClick = {
-                                    navControllerInstance.navigate("${Screen.HoyolabLoginPageScreen.route}/?serverId=${server.serverId}")
+                                    navControllerInstance.navigate("${Screen.HoyolabLoginPageScreen.route}?serverId=${server.serverId}")
                                     showPopup.value = false
                                 }
                             )
@@ -227,3 +227,4 @@ fun HoyolabServerSelectPopup(modifier: Modifier = Modifier, showPopup : MutableS
         }
     }
 }
+

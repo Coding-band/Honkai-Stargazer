@@ -58,6 +58,11 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
+import coil3.request.CachePolicy
+import coil3.request.ImageRequest
+import coil3.request.crossfade
 import com.voc.honkaistargazer.BuildKonfig
 import components.HeaderData
 import components.HomePageBlock1x1
@@ -84,7 +89,6 @@ import files.test_char_5
 import files.test_char_6
 import files.test_char_7
 import files.test_char_8
-import files.vocchi
 import org.jetbrains.compose.resources.painterResource
 import types.Constants.Companion.HOME_PAGE_ITEMS
 import types.UserAccount
@@ -166,9 +170,23 @@ fun HomePageHeader(
             Spacer(modifier = Modifier.height(12.dp))
             Box {
                 Row(Modifier.height(72.dp)) {
+                    val context = LocalPlatformContext.current
+                    val imageRequest =  remember {
+                        ImageRequest.Builder(context)
+                            .data(UserAccount.INSTANCE.icon)
+                            .networkCachePolicy(CachePolicy.ENABLED)
+                            .crossfade(true)
+                            .diskCachePolicy(CachePolicy.ENABLED)
+                            .build()
+                    }
+                    val imageLoader = remember {
+                        UtilTools().newImageLoader(context = context)
+                    }
+
                     // User Avatar
-                    Image(
-                        painterResource(Res.drawable.vocchi),
+                    AsyncImage(
+                        model = imageRequest,
+                        imageLoader = imageLoader,
                         contentDescription = "",
                         contentScale = ContentScale.Crop,
                         modifier = Modifier
@@ -176,6 +194,11 @@ fun HomePageHeader(
                             .background(Color(0xFFCAB89E), CircleShape)
                             .clip(CircleShape)
                             .border(1.dp, Color(0x66907C54), CircleShape)
+                            .clickable {
+                                if(UserAccount.INSTANCE.isLogin){
+                                    navController.navigate(Screen.UserInfoPageScreen.route)
+                                }
+                            }
                     )
                     // User Name & Helping Team
                     Column(

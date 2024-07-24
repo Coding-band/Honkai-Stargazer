@@ -29,18 +29,19 @@ import components.defaultHeaderData
 import files.ChangeWallPaper
 import files.CharacterList
 import files.Event
+import files.HaveNotUsed
 import files.LightconeList
 import files.Login
 import files.Map
 import files.RelicList
 import files.Res
 import files.Setting
-import files.europe
 import files.phorphos_baseball_cap_fill
 import files.phorphos_film_slate_regular
 import files.phorphos_house_fill
 import files.phorphos_map_trifold_fill
 import files.phorphos_person_fill
+import files.phorphos_person_regular
 import files.phorphos_sliders_horizontal_fill
 import files.phorphos_sword_fill
 import screens.BackgroundSettingScreen
@@ -58,6 +59,7 @@ import screens.RelicInfoPage
 import screens.RelicListPage
 import screens.SettingScreen
 import screens.SplashPage
+import screens.UserInfoPageScreen
 
 //This should not be there, but CharacterCard need it in clickable, without using @Composable ...
 lateinit var navControllerInstance : NavController
@@ -92,15 +94,15 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
 
     data object CharacterInfoPage : Screen(
         "CharacterInfoPage",
-        HeaderData(titleRId = Res.string.europe, titleIconId = Res.drawable.phorphos_person_fill)
+        HeaderData(titleRId = Res.string.HaveNotUsed, titleIconId = Res.drawable.phorphos_person_fill)
     )
     data object LightconeInfoPage : Screen(
         "LightconeInfoPage",
-        HeaderData(titleRId = Res.string.europe, titleIconId = Res.drawable.phorphos_sword_fill)
+        HeaderData(titleRId = Res.string.HaveNotUsed, titleIconId = Res.drawable.phorphos_sword_fill)
     )
     data object RelicInfoPage : Screen(
         "RelicInfoPage",
-        HeaderData(titleRId = Res.string.europe, titleIconId = Res.drawable.phorphos_baseball_cap_fill)
+        HeaderData(titleRId = Res.string.HaveNotUsed, titleIconId = Res.drawable.phorphos_baseball_cap_fill)
     )
     data object SettingScreen : Screen(
         "SettingScreen",
@@ -125,6 +127,10 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     data object MapPageScreen : Screen(
         "MapPageScreen",
         HeaderData(titleRId = Res.string.Map, titleIconId = Res.drawable.phorphos_map_trifold_fill)
+    )
+    data object UserInfoPageScreen : Screen(
+        "UserInfoPageScreen",
+        HeaderData(titleRId = Res.string.HaveNotUsed, titleIconId = Res.drawable.phorphos_person_regular)
     )
 }
 
@@ -361,6 +367,20 @@ fun Navigation() {
                     MapPageScreen(
                         navController = navController,
                         headerData = Screen.MapPageScreen.headerData
+                    )
+                })
+        }
+        composable(
+            route = Screen.UserInfoPageScreen.route,
+            enterTransition = { defaultEnterTransition },
+            exitTransition = { defaultExitTransition }) {
+            RootContent(
+                screen = Screen.UserInfoPageScreen,
+                snackbarHostState = snackbarHostState,
+                page = {
+                    UserInfoPageScreen(
+                        navController = navController,
+                        headerData = Screen.UserInfoPageScreen.headerData
                     )
                 })
         }
