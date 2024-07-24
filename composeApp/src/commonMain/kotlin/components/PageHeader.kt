@@ -37,17 +37,19 @@ import files.bg_transparent
 import files.phorphos_sun_fill
 import files.ui_icon_back
 import files.ui_icon_close
+import files.ui_icon_share
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
 
 val PAGE_HEADER_HEIGHT = 72.dp
+val PAGE_HEADER_ALPHA_HEIGHT = 64.dp
 val defaultHeaderData = HeaderData(title = "?", titleIconId = Res.drawable.phorphos_sun_fill)
 
 enum class BackIcon(var res: DrawableResource) {
     BACK(res = Res.drawable.ui_icon_back),
-    CANCEL(res = Res.drawable.ui_icon_close)
+    CANCEL(res = Res.drawable.ui_icon_close),
+    //... More Icon will be added later
 }
 
 class HeaderData(
@@ -140,9 +142,73 @@ fun PageHeader(
     }
 }
 
-
-@Preview()
 @Composable
-fun PageHeaderPreview() {
-    PageHeader(rememberNavController())
+fun PageHeaderAlpha(
+    navController: NavController = rememberNavController(),
+    onBack: ((navController: NavController) -> Unit) = { navController: NavController -> navController.popBackStack() },
+    backIconId: BackIcon = BackIcon.CANCEL,
+    onForward: (() -> Unit) = {},
+    forwardIconId: DrawableResource = Res.drawable.ui_icon_share,
+    components: @Composable () -> Unit = {}
+){
+    //Background
+    Box(
+        Modifier
+            .statusBarsPadding()
+            .requiredHeight(PAGE_HEADER_ALPHA_HEIGHT)
+    ) {
+        Column {
+            Row(
+                Modifier
+                    .padding(start = 16.dp, end = 16.dp)
+                    .fillMaxSize()
+                    .weight(1f)
+            ) {
+                OutlinedButton(
+                    contentPadding = PaddingValues(0.dp),
+                    colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color(0x33FFFFFF)),
+                    border = BorderStroke(0.dp, Color(0x00FFFFFF)),
+                    shape = CircleShape,
+                    modifier = Modifier
+                        .size(40.dp)
+                        .align(Alignment.CenterVertically),
+                    onClick = { onBack(navController) },
+                ) {
+                    Image(
+                        painter = painterResource(resource = backIconId.res),
+                        contentDescription = "Back Icon",
+                        modifier = Modifier
+                            .size(40.dp)
+                            .align(Alignment.CenterVertically),
+                        colorFilter = ColorFilter.tint(Color.White),
+
+                        )
+                }
+                Box(Modifier.weight(1f)){
+                    components()
+                }
+                OutlinedButton(
+                    contentPadding = PaddingValues(0.dp),
+                    modifier = Modifier
+                        .size(40.dp)
+                        .align(Alignment.CenterVertically),
+                    onClick = { onForward },
+                    colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color(0x33FFFFFF)),
+                    border = BorderStroke(0.dp, Color(0x00FFFFFF)),
+                    shape = CircleShape,
+                ) {
+                    Image(
+                        painter = painterResource(resource = forwardIconId),
+                        contentDescription = "Forward Icon",
+                        modifier = Modifier
+                            .size(40.dp)
+                            .align(Alignment.CenterVertically),
+                        colorFilter = ColorFilter.tint(Color.White),
+
+                        )
+                }
+            }
+        }
+
+    }
 }
