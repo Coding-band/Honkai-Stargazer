@@ -86,6 +86,23 @@ class UtilTools {
 
 
     @OptIn(ExperimentalCoroutinesApi::class, ExperimentalResourceApi::class)
+    fun getAssetsWebpByteArrayByFileName(folderType: ImageFolderType, fileName: String): ByteArray {
+        return runBlocking {
+            val job = async(Dispatchers.IO) {
+                try {
+                    return@async (Res.readBytes("files/images/${folderType.folderName}/${fileName}${folderType.suffix}"))
+                } catch (e: Exception) {
+                    errorLogExport("UtilTools","getAssetsWebpByFileName()",e)
+                    return@async (Res.readBytes("files/ico_lost_img.webp"))
+                }
+            }
+            job.await()
+            job.getCompleted()
+        }
+    }
+
+
+    @OptIn(ExperimentalCoroutinesApi::class, ExperimentalResourceApi::class)
             /**
              * You must know the basic structure it is, JsonArray or JsonObject
              * E.g. getAssetsJsonByContext("character_data/character_list.json").jsonArray[0]

@@ -39,6 +39,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
+import coil3.request.CachePolicy
+import coil3.request.ImageRequest
+import coil3.request.crossfade
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.Character
@@ -73,6 +78,25 @@ fun CharacterCard(
 
 ) {
     val interactionSource = remember { MutableInteractionSource() }
+
+    /* AsyncImage */
+    val context = LocalPlatformContext.current
+    val imageRequest =  remember {
+        ImageRequest.Builder(context)
+            .data((Character.getCharacterImageByteArrayFromFileName(
+                UtilTools.ImageFolderType.CHAR_ICON,
+                character.registName!!
+            )))
+            .networkCachePolicy(CachePolicy.ENABLED)
+            .crossfade(true)
+            .diskCachePolicy(CachePolicy.ENABLED)
+            .build()
+    }
+    val imageLoader = remember {
+        UtilTools().newImageLoader(context = context)
+    }
+
+
     Box(
         modifier = Modifier
             .defaultMinSize(CHAR_CARD_WIDTH, CHAR_CARD_HEIGHT)
@@ -98,7 +122,7 @@ fun CharacterCard(
         //val path = LocalContext.current.assets.open("images/character_icon/${Character.getCharacterImageNameByRegistName(character.registName!!)}.webp")
         //val painter = rememberAsyncImagePainter(model = path)
         Column(modifier = Modifier.fillMaxSize()) {
-
+            /*
             Image(
                 bitmap = Character.getCharacterImageFromFileName(
                     UtilTools.ImageFolderType.CHAR_ICON,
@@ -108,7 +132,16 @@ fun CharacterCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .aspectRatio(1f),
-                contentScale = ContentScale.Crop
+            )
+             */
+            AsyncImage(
+                model = imageRequest,
+                contentDescription = "Character Icon",
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .aspectRatio(1f),
+                contentScale = ContentScale.Crop,
+                imageLoader = imageLoader
             )
             Row(
                 Modifier.fillMaxWidth().background(Color(0xFF222222)),
