@@ -31,6 +31,7 @@ import files.CharacterList
 import files.Event
 import files.LightconeList
 import files.Login
+import files.Map
 import files.RelicList
 import files.Res
 import files.Setting
@@ -38,6 +39,7 @@ import files.europe
 import files.phorphos_baseball_cap_fill
 import files.phorphos_film_slate_regular
 import files.phorphos_house_fill
+import files.phorphos_map_trifold_fill
 import files.phorphos_person_fill
 import files.phorphos_sliders_horizontal_fill
 import files.phorphos_sword_fill
@@ -51,6 +53,7 @@ import screens.HoyolabLoginPageScreen
 import screens.LightconeInfoPage
 import screens.LightconeListPage
 import screens.MakeBackground
+import screens.MapPageScreen
 import screens.RelicInfoPage
 import screens.RelicListPage
 import screens.SettingScreen
@@ -118,6 +121,10 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     data object EventContentPageScreen : Screen(
         "EventContentPageScreen",
         HeaderData(titleRId = Res.string.Event, titleIconId = Res.drawable.phorphos_film_slate_regular)
+    )
+    data object MapPageScreen : Screen(
+        "MapPageScreen",
+        HeaderData(titleRId = Res.string.Map, titleIconId = Res.drawable.phorphos_map_trifold_fill)
     )
 }
 
@@ -340,6 +347,20 @@ fun Navigation() {
                         navController = navController,
                         headerData = Screen.EventContentPageScreen.headerData,
                         backStackEntry = backStackEntry,
+                    )
+                })
+        }
+        composable(
+            route = Screen.MapPageScreen.route,
+            enterTransition = { defaultEnterTransition },
+            exitTransition = { defaultExitTransition }) {
+            RootContent(
+                screen = Screen.MapPageScreen,
+                snackbarHostState = snackbarHostState,
+                page = {
+                    MapPageScreen(
+                        navController = navController,
+                        headerData = Screen.MapPageScreen.headerData
                     )
                 })
         }
