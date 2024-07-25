@@ -61,10 +61,7 @@ import utils.navigation.navControllerInstance
 @Composable
 fun CharacterCard(
     character: Character,
-    level: Int? = -1,
-    ascensionPhase: Int? = -1, //Rank 突破等級
     displayName: String? = character.displayName,
-    isMultiDisplay: Boolean = false, //展示推薦隊伍
     onClick: () -> Unit = { navControllerInstance.navigate(
         Screen.CharacterInfoPage.route
                 + "/${character.registName!!.replace(" ","_")}"
@@ -74,7 +71,7 @@ fun CharacterCard(
                 + "&charId=${character.officialId}"
 
     ) }, //按下後會做甚麼
-    isDisplayLevel: Boolean = false
+    overrideNameComponent: @Composable (() -> Unit)? = null,
 
 ) {
     val interactionSource = remember { MutableInteractionSource() }
@@ -95,7 +92,6 @@ fun CharacterCard(
     val imageLoader = remember {
         UtilTools().newImageLoader(context = context)
     }
-
 
     Box(
         modifier = Modifier
@@ -119,10 +115,9 @@ fun CharacterCard(
                 interactionSource = interactionSource
             )
     ) {
-        //val path = LocalContext.current.assets.open("images/character_icon/${Character.getCharacterImageNameByRegistName(character.registName!!)}.webp")
-        //val painter = rememberAsyncImagePainter(model = path)
+
         Column(modifier = Modifier.fillMaxSize()) {
-            /*
+            /* KEEP FOR FUTURE USE
             Image(
                 bitmap = Character.getCharacterImageFromFileName(
                     UtilTools.ImageFolderType.CHAR_ICON,
@@ -134,22 +129,37 @@ fun CharacterCard(
                     .aspectRatio(1f),
             )
              */
-            AsyncImage(
-                model = imageRequest,
-                contentDescription = "Character Icon",
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .aspectRatio(1f),
-                contentScale = ContentScale.Crop,
-                imageLoader = imageLoader
-            )
+            Box {
+                AsyncImage(
+                    model = imageRequest,
+                    contentDescription = "Character Icon",
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .aspectRatio(1f),
+                    contentScale = ContentScale.Crop,
+                    imageLoader = imageLoader
+                )
+
+                if(character.characterStatus != null && character.characterStatus!!.characterLevel != -1){
+                    Text(
+                        text = "Lv ${character.characterStatus!!.characterLevel}",
+                        color = TextColorNormalDim,
+                        style = FontSizeNormal12(),
+                        modifier = Modifier
+                            .align(Alignment.BottomCenter)
+                            .padding(bottom = 4.dp)
+                            .background(Color(0xCC222222), RoundedCornerShape(42.dp))
+                            .padding(start = 8.dp, end = 8.dp, top = 4.dp, bottom = 4.dp)
+                    )
+                }
+            }
             Row(
                 Modifier.fillMaxWidth().background(Color(0xFF222222)),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center
             ) {
-                Text(
-                    text = if(isDisplayLevel) "Lv ${level.toString()}" else displayName!!,
+                overrideNameComponent ?: Text(
+                    text = displayName!!,
                     textAlign = TextAlign.Center,
                     color = TextColorNormalDim,
                     fontSize = FontSizeNormal12().fontSize,
@@ -158,6 +168,7 @@ fun CharacterCard(
             }
             Spacer(modifier = Modifier.height(2.dp))
         }
+
         Column (modifier = Modifier.padding(2.dp)){
             Image(
                 painter = painterResource(resource = character.combatType.iconColor),
@@ -178,6 +189,21 @@ fun CharacterCard(
                     .background(Color(0x66000000), CircleShape)
                     .padding(2.dp)
             )
+        }
+
+        if(character.characterStatus != null){
+            Column (modifier = Modifier.padding(2.dp).align(Alignment.TopEnd)){
+                Text(
+                    text = "${character.characterStatus!!.eidolon}",
+                    color = Color(0xFF393A5C),
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier
+                        .requiredWidth(20.dp)
+                        .requiredHeight(20.dp)
+                        .background(Color(0xFFF3F9FF), CircleShape)
+                        .padding(4.dp)
+                )
+            }
         }
     }
 }
