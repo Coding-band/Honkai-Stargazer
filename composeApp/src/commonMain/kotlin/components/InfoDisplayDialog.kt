@@ -138,10 +138,11 @@ fun AppDialog(
                     }
                 }
 
-                Spacer(
-                    modifier = Modifier.fillMaxWidth().height(2.dp)
-                        .padding(top = 2.dp, bottom = 2.dp).background(Color(0x0F000000))
+                Spacer(modifier = Modifier.height(2.dp))
+                Box(
+                    modifier = Modifier.fillMaxWidth().height(2.dp).background(Color(0x0F000000))
                 )
+                Spacer(modifier = Modifier.height(6.dp))
 
                 components()
             }

@@ -151,7 +151,7 @@ fun CharacterInfoPage(
         )
 
         //RecycleView
-        LazyColumn(state = listState, modifier = Modifier.haze(hazeState).align(Alignment.Center)) {
+        LazyColumn(horizontalAlignment = Alignment.CenterHorizontally, state = listState, modifier = Modifier.haze(hazeState).align(Alignment.Center)) {
             item { InfoBioColumn(charInfoJson, combatType, path, isUserOwned = false, isFullEidolon = false) }
             //Don't forget to add "StatusBarPadding" !
             item { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
