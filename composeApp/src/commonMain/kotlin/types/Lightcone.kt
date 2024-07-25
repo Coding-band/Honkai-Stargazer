@@ -29,6 +29,7 @@ open class Lightcone(
     var displayName : String? = "舞！舞！舞！",
 
     @IntRange(1,5) var eidolon : Int = 1,
+    var level : Int = -1,
 ){
     companion object {
         fun getLightconeListFromJSON() : JsonElement {
