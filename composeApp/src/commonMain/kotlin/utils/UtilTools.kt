@@ -9,6 +9,8 @@ import coil3.addLastModifiedToFileCacheKey
 import coil3.disk.DiskCache
 import coil3.memory.MemoryCache
 import coil3.request.CachePolicy
+import coil3.request.ImageRequest
+import coil3.request.crossfade
 import files.Res
 import getImageBitmapByByteArray
 import kotlinx.coroutines.Dispatchers
@@ -330,5 +332,10 @@ class UtilTools {
         .addLastModifiedToFileCacheKey(true)
         .build()
 
-
+    fun newImageRequest(context: PlatformContext, data: Any) = ImageRequest.Builder(context)
+        .data(data)
+        .networkCachePolicy(CachePolicy.ENABLED)
+        .crossfade(true)
+        .diskCachePolicy(CachePolicy.ENABLED)
+        .build()
 }
