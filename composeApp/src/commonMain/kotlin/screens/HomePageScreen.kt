@@ -23,6 +23,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
@@ -49,7 +50,6 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
-import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.layout.onGloballyPositioned
@@ -81,15 +81,8 @@ import files.Res
 import files.Setting
 import files.donate_ad_bg
 import files.ic_rounded_option_btn
-import files.test_char_1
-import files.test_char_2
-import files.test_char_3
-import files.test_char_4
-import files.test_char_5
-import files.test_char_6
-import files.test_char_7
-import files.test_char_8
 import org.jetbrains.compose.resources.painterResource
+import types.Character
 import types.Constants.Companion.HOME_PAGE_ITEMS
 import types.UserAccount
 import utils.BlackAlpha30
@@ -105,12 +98,14 @@ import utils.UtilTools
 import utils.checkHasErrorLogFromLastCrash
 import utils.navigation.Screen
 import utils.navigation.navControllerInstance
+import kotlin.math.min
 
 @Composable
 fun HomePage(modifier: Modifier = Modifier, navController: NavController, headerData: HeaderData = defaultHeaderData) {
     val threeDotDialogDisplay = remember { mutableStateOf(false) }
     val threeDotDialogPos = remember { mutableStateOf<Offset>(Offset(0f, 0f)) }
     val hazeState = remember { HazeState() }
+    val userAccount = remember { mutableStateOf(UserAccount.INSTANCE) }
 
     checkHasErrorLogFromLastCrash()
     if(!arrayListOf("PRODUCTION", "RELEASE").contains(BuildKonfig.appProfile) ){
@@ -121,19 +116,21 @@ fun HomePage(modifier: Modifier = Modifier, navController: NavController, header
         .haze(hazeState)
     ) {
         Column {
-            HomePageHeader(navController = navController, threeDotDialogPos = threeDotDialogPos, threeDotDialogDisplay = threeDotDialogDisplay)
-            HomePageMenuScrollView(navController = navController)
+            HomePageHeader(navController = navController, threeDotDialogPos = threeDotDialogPos, threeDotDialogDisplay = threeDotDialogDisplay, userAccount = userAccount.value)
+            HomePageMenuScrollView(navController = navController,userAccount = userAccount.value)
         }
     }
 
-    ThreeDotsDialog(navController = navController, threeDotDialogPos = threeDotDialogPos, hazeState = hazeState, threeDotDialogDisplay = threeDotDialogDisplay)
+    ThreeDotsDialog(navController = navController, threeDotDialogPos = threeDotDialogPos, hazeState = hazeState, threeDotDialogDisplay = threeDotDialogDisplay, userAccount = userAccount)
 
 }
 
 @Composable
-fun UserHelpTeamIcon(icon: Painter, modifier: Modifier = Modifier,navController: NavController) {
-    Image(
-        painter = icon, contentDescription = "", contentScale = ContentScale.Crop,
+fun UserHelpTeamIcon(modifier: Modifier = Modifier, character: Character, navController: NavController) {
+    AsyncImage(
+        model = UtilTools().newImageRequest(LocalPlatformContext.current, Character.getCharacterImageByteArrayFromFileName(UtilTools.ImageFolderType.CHAR_ICON, character.registName!!)),
+        contentDescription = "Character Helper Icon",
+        imageLoader = UtilTools().newImageLoader(LocalPlatformContext.current),
         modifier = Modifier
             .size(30.dp)
             .background(Color(0xFFD9D9D9), CircleShape)
@@ -150,6 +147,7 @@ fun HomePageHeader(
     navController: NavController,
     threeDotDialogPos: MutableState<Offset>,
     threeDotDialogDisplay: MutableState<Boolean>,
+    userAccount : UserAccount,
 ) {
     Box(
         modifier = Modifier
@@ -159,7 +157,7 @@ fun HomePageHeader(
     ) {
         Column {
             Text(
-                text = UserAccount.INSTANCE.uid,
+                text = userAccount.uid,
                 modifier = Modifier
                     .background(BlackAlpha30, CircleShape)
                     .padding(all = 8.dp)
@@ -173,7 +171,21 @@ fun HomePageHeader(
                     val context = LocalPlatformContext.current
                     val imageRequest =  remember {
                         ImageRequest.Builder(context)
-                            .data(UserAccount.INSTANCE.icon)
+                            .data(
+                                if(userAccount.icon == "") {
+                                    UtilTools().getAssetsWebpByteArrayByFileName(
+                                        folderType = UtilTools.ImageFolderType.AVATAR_ICON,
+                                        "Anonymous"
+                                    )
+                                } else if(userAccount.icon.startsWith("http")){
+                                    userAccount.icon
+                                } else {
+                                    UtilTools().getAssetsWebpByteArrayByFileName(
+                                        folderType = UtilTools.ImageFolderType.AVATAR_ICON,
+                                        userAccount.icon
+                                    )
+                                }
+                            )
                             .networkCachePolicy(CachePolicy.ENABLED)
                             .crossfade(true)
                             .diskCachePolicy(CachePolicy.ENABLED)
@@ -183,23 +195,29 @@ fun HomePageHeader(
                         UtilTools().newImageLoader(context = context)
                     }
 
-                    // User Avatar
-                    AsyncImage(
-                        model = imageRequest,
-                        imageLoader = imageLoader,
-                        contentDescription = "",
-                        contentScale = ContentScale.Crop,
-                        modifier = Modifier
-                            .size(72.dp)
-                            .background(Color(0xFFCAB89E), CircleShape)
-                            .clip(CircleShape)
-                            .border(1.dp, Color(0x66907C54), CircleShape)
-                            .clickable {
-                                if(UserAccount.INSTANCE.isLogin){
-                                    navController.navigate(Screen.UserInfoPageScreen.route)
-                                }
+                    //User Avatar (With Reducing Padding's Scale)
+                    Box(Modifier.requiredSize(72.dp)
+                        .background(Color(0xFFCAB89E), CircleShape)
+                        .clip(CircleShape)
+                        .border(1.dp, Color(0x66907C54), CircleShape)
+                        .clickable {
+                            if (userAccount.isLogin) {
+                                navController.navigate(Screen.UserInfoPageScreen.route)
                             }
-                    )
+                        }, contentAlignment = Alignment.Center
+                    ) {
+
+                        val scale = if(userAccount.icon.startsWith("http")) 1.142857f else 1f
+                        Box(Modifier.requiredSize(72.dp * scale)) {
+                            // User Avatar
+                            AsyncImage(
+                                modifier = Modifier.size(72.dp * scale),
+                                model = imageRequest,
+                                imageLoader = imageLoader,
+                                contentDescription = "",
+                            )
+                        }
+                    }
                     // User Name & Helping Team
                     Column(
                         modifier = Modifier
@@ -208,7 +226,7 @@ fun HomePageHeader(
                     ) {
                         //User Name - Hmm interesting Kt
                         Text(
-                            text = UserAccount.INSTANCE.username,
+                            text = userAccount.username,
                             modifier = Modifier
                                 .weight(1f)
                                 .fillMaxSize()
@@ -225,14 +243,22 @@ fun HomePageHeader(
                                 .fillMaxWidth()
                         ) {
                             item {
-                                UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_1), navController = navController)
-                                UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_2), navController = navController)
-                                UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_3), navController = navController)
-                                UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_4), navController = navController)
-                                UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_5), navController = navController)
-                                UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_6), navController = navController)
-                                UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_7), navController = navController)
-                                UserHelpTeamIcon(painterResource(resource = Res.drawable.test_char_8), navController = navController)
+                                val filterResult = userAccount.characterList.filter { it.characterStatus != null && it.characterStatus!!.isHelper }
+                                if (filterResult.isNotEmpty()) {
+                                    filterResult.forEach { UserHelpTeamIcon(character = it, navController = navController) }
+                                }else if(userAccount.characterList.size > 0){
+                                    for (i in 0..min(userAccount.characterList.size, 6)) {
+                                        UserHelpTeamIcon(character = userAccount.characterList[i], navController = navController)
+                                    }
+                                }else{
+                                    Box(modifier = Modifier
+                                        .size(30.dp)
+                                        .background(Color(0xFFD9D9D9), CircleShape)
+                                        .clip(CircleShape)
+                                        .border(1.5.dp, Color(0xFFD3D3D3), CircleShape)
+                                        .padding()
+                                    )
+                                }
                             }
                         }
                     }
@@ -259,7 +285,7 @@ fun HomePageHeader(
                         Spacer(Modifier.weight(1f))
 
                         Text(
-                            text = "${UtilTools().removeStringResDoubleQuotes(Res.string.PlayerLevel)} ${UserAccount.INSTANCE.level}",
+                            text = "${UtilTools().removeStringResDoubleQuotes(Res.string.PlayerLevel)} ${userAccount.level}",
                             color = TextColorLevel,
                             style = FontSizeNormal14(),
                             //fontWeight = FontWeight.Bold
@@ -269,7 +295,7 @@ fun HomePageHeader(
 
             }
             LinearProgressIndicator(
-                progress = (UserAccount.INSTANCE.level / 60f),
+                progress = (userAccount.level / 60f),
                 Modifier
                     .padding(top = 12.dp, bottom = 12.dp)
                     .fillMaxWidth(),
@@ -282,7 +308,7 @@ fun HomePageHeader(
 
 
 @Composable
-fun HomePageMenuScrollView(modifier: Modifier = Modifier, navController: NavController) {
+fun HomePageMenuScrollView(modifier: Modifier = Modifier, navController: NavController, userAccount: UserAccount) {
     Column {
         LazyVerticalGrid(
             modifier = Modifier
@@ -346,7 +372,8 @@ fun ThreeDotsDialog(
     navController: NavController = navControllerInstance,
     threeDotDialogPos: MutableState<Offset>,
     hazeState: HazeState = remember { HazeState() },
-    threeDotDialogDisplay: MutableState<Boolean>
+    threeDotDialogDisplay: MutableState<Boolean>,
+    userAccount: MutableState<UserAccount>,
 ){
     val density = LocalDensity.current.density
     val showLoginPopUp = remember { mutableStateOf(false) }
@@ -367,11 +394,46 @@ fun ThreeDotsDialog(
                         .wrapContentHeight()
                 ) {
                     Column(modifier = Modifier.padding(15.dp)) {
-                        UIButton(textRes = if(UserAccount.INSTANCE.isLogin) Res.string.Logout else Res.string.AccountLogin, onClick = { threeDotDialogDisplay.value = false; if(UserAccount.INSTANCE.isLogin) UserAccount.resetUserAccount() else showLoginPopUp.value = true }, buttonSize = UIButtonSize.SmallChoice)
+                        UIButton(
+                            textRes = if (userAccount.value.isLogin) Res.string.Logout else Res.string.AccountLogin,
+                            onClick = {
+                                threeDotDialogDisplay.value = false;
+                                if (userAccount.value.isLogin) {
+                                    UserAccount.resetUserAccount()
+                                    userAccount.value = UserAccount.INSTANCE
+                                } else {
+                                    showLoginPopUp.value = true
+                                }
+                            },
+                            buttonSize = UIButtonSize.SmallChoice
+                        )
                         Spacer(Modifier.height(10.dp))
-                        UIButton(textRes = Res.string.ModifyHomePage, onClick = {  }, buttonSize = UIButtonSize.SmallChoice)
+                        UIButton(
+                            textRes = Res.string.ModifyHomePage,
+                            onClick = { },
+                            buttonSize = UIButtonSize.SmallChoice
+                        )
                         Spacer(Modifier.height(10.dp))
-                        UIButton(textRes = Res.string.Setting, onClick = { threeDotDialogDisplay.value = false; navController.navigate(Screen.SettingScreen.route) }, buttonSize = UIButtonSize.SmallChoice)
+                        UIButton(
+                            textRes = Res.string.Setting,
+                            onClick = {
+                                threeDotDialogDisplay.value =
+                                    false; navController.navigate(Screen.SettingScreen.route)
+                            },
+                            buttonSize = UIButtonSize.SmallChoice
+                        )
+
+                        if(BuildKonfig.appProfile != "RELEASE" && BuildKonfig.appProfile != "PRODUCTION"){
+                            Spacer(Modifier.height(10.dp))
+                            UIButton(
+                                text = "Print API Results",
+                                onClick = {
+                                    threeDotDialogDisplay.value = false;
+                                    UserAccount.printUserAPIResults()
+                                },
+                                buttonSize = UIButtonSize.SmallChoice
+                            )
+                        }
                     }
                 }
             }

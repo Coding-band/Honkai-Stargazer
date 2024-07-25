@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -26,12 +25,18 @@ import files.app_icon_black_bg
 import files.euclid_circular_a_medium
 import files.star_peace_icon
 import getScreenSizeInfo
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import types.UserAccount.Companion.refreshCharacterListHoyolab
+import types.UserAccount.Companion.refreshNoteData
 import utils.FontSizeNormalLarge24
 import utils.FontSizeNormalSmall
 import utils.navigation.Screen
+
 
 @Preview
 @Composable
@@ -41,9 +46,9 @@ fun SplashPage(
     headerData: HeaderData = defaultHeaderData
 ) {
 
-    //This will be use when finishing initize user data
-    LaunchedEffect(Unit){
-        //delay(SPLASH_PAGE_DISPLAY_MILLSEC_DEFAULT)
+    CoroutineScope(Dispatchers.Main).launch {
+        refreshCharacterListHoyolab()
+        refreshNoteData()
         navController.navigate(Screen.HomePage.route)
     }
 

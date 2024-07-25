@@ -231,6 +231,7 @@ EN:
 - UserAccount -> 詳細角色未紀錄 (User Account's Character Info not recorded)
 - HoyolabLoginPage -> Popup細節未完善 (Not finished details improvements of Popups)
 - Character/Lc/RelicListPage -> 排序選單未完成 (Sort Menu not finished)
+- UserAccount -> 加載用戶數據大卡頓 (VERY Laggy when loading user data)
 
 ## Close BETA Testing
 ### 目前(2024/07/17)暫定如下：
