@@ -3,14 +3,19 @@ package types
 import androidx.compose.material.SnackbarHostState
 import com.multiplatform.webview.cookie.Cookie
 import com.russhwolf.settings.Settings
+import com.voc.honkaistargazer.BuildKonfig
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonArray
+import kotlinx.serialization.json.JsonNull
+import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import utils.errorLogExport
+import utils.hoyolab.AttributeExchange
 import utils.hoyolab.HoyolabAPI
 import utils.hoyolab.HoyolabConst
 import utils.hoyolab.HoyolabRequest
@@ -20,6 +25,8 @@ class UserAccount(
     var uid: String = "000000000",
     var username: String = "Unknown",
     var level: Int = 0,
+    var ascLevel: Int = 0,
+    var nickname: String = "",
     var icon: String = "",
     var activeDays: Int = 0,
     var unlockedCharCount: Int = 0,
@@ -87,14 +94,150 @@ class UserAccount(
                 }
 
                 val userIndexData = api.getHsrIndexData(INSTANCE.uid, INSTANCE.server).data
+
                 if(!userIndexData.jsonObject.isEmpty()){
                     INSTANCE.icon = userIndexData.jsonObject["cur_head_icon_url"]!!.jsonPrimitive.content
                 }
 
-                val userFullData = api.getHsrFullData(INSTANCE.uid, INSTANCE.server).data
+                refreshCharacterListHoyolab()
 
+                refreshNoteData()
+
+                Settings().putString("userAccount", Json.encodeToString(INSTANCE))
+
+            }catch (e : Exception){
+                resetUserAccount()
+                errorLogExport("UserAccount", "refreshUserAccount()", e)
+            }
+        }
+
+        fun printUserAPIResults(){
+            if(BuildKonfig.appProfile == "RELEASE" || BuildKonfig.appProfile == "PRODUCTION"){ return }
+            val api = HoyolabAPI(INSTANCE.server.platform, INSTANCE.cookies)
+            val userCards = api.getGameRecordCard(INSTANCE.hoyolabId).data
+            val userIndexData = api.getHsrIndexData(INSTANCE.uid, INSTANCE.server).data
+            val userFullData = api.getHsrFullData(INSTANCE.uid, INSTANCE.server).data
+            val userNoteData = api.getHsrNote(INSTANCE.uid, INSTANCE.server).data
+            val userMemoryOfChaos = api.getHsrMemoryOfChaos(INSTANCE.uid, INSTANCE.server).data
+
+            println(userCards)
+            println(userIndexData)
+            println(userFullData)
+            println(userNoteData)
+            println(userMemoryOfChaos)
+
+        }
+
+        fun refreshCharacterListHoyolab() {
+            try {
+                val api = HoyolabAPI(INSTANCE.server.platform, INSTANCE.cookies)
+                val userFullData = api.getHsrFullData(INSTANCE.uid, INSTANCE.server).data
+                val characterList = arrayListOf<Character>()
+
+                if(userFullData !is JsonNull && userFullData.jsonObject["avatar_list"] != null) {
+                    for (data in userFullData.jsonObject["avatar_list"]!!.jsonArray) {
+                        val characterData = data.jsonObject
+                        var character = Character.getCharacterItemFromJSON(characterData["id"]!!.jsonPrimitive.int.toString())
+
+                        val lcData = if(characterData["equip"] != null && characterData["equip"] is JsonObject) characterData["equip"]!!.jsonObject else null
+                        val relicData = if(characterData["relics"] != null && characterData["relics"] is JsonArray) characterData["relics"]!!.jsonArray else null
+                        val ornamentData = if(characterData["ornaments"] != null && characterData["ornaments"] is JsonArray) characterData["ornaments"]!!.jsonArray else null
+                        val skillData = if(characterData["skills"] != null && characterData["skills"] is JsonArray) characterData["skills"]!!.jsonArray else null
+
+                        character.characterStatus = CharacterStatus(
+                            // Check if "equip" is not null and is a JsonObject
+                            equippingLightcone = if (lcData != null) {
+                                val lc = Lightcone.getLightconeItemFromJSON(lcData["id"]!!.jsonPrimitive.content)
+                                lc.level = lcData["level"]!!.jsonPrimitive.int
+                                lc.eidolon = lcData["rank"]!!.jsonPrimitive.int
+                                lc
+                            } else null,
+                            characterLevel = characterData["level"]!!.jsonPrimitive.int,
+                            equippingRelicHead = readRelicHoyolabData(relicData, 1),
+                            equippingRelicHands = readRelicHoyolabData(relicData, 2),
+                            equippingRelicBody = readRelicHoyolabData(relicData, 3),
+                            equippingRelicFeet = readRelicHoyolabData(relicData, 4),
+                            equippingRelicPlanar = readRelicHoyolabData(ornamentData, 5),
+                            equippingRelicLinkRope = readRelicHoyolabData(ornamentData, 6),
+
+                            characterProperties = readCharHoyolabProperties(characterData["properties"]!!.jsonArray),
+
+                            traceBasicAtkLevel = if(skillData != null && skillData.size > 0) skillData[0].jsonObject["level"]!!.jsonPrimitive.int else -1,
+                            traceSkillLevel = if(skillData != null && skillData.size > 1) skillData[1].jsonObject["level"]!!.jsonPrimitive.int else -1,
+                            traceUltimateLevel = if(skillData != null && skillData.size > 2) skillData[2].jsonObject["level"]!!.jsonPrimitive.int else -1,
+                            traceTalentLevel = if(skillData != null && skillData.size > 3) skillData[3].jsonObject["level"]!!.jsonPrimitive.int else -1,
+                        )
+
+                        characterList.add(character)
+                    }
+                }
+                INSTANCE.characterList.clear()
+                INSTANCE.characterList = characterList
+            } catch (e: Exception) {
+                errorLogExport("UserAccount", "refreshCharacterListHoyolab()", e)
+            }
+        }
+
+        fun readRelicHoyolabData(relicData : JsonArray?, pos: Int) : Relic?{
+            if(relicData == null) return null
+
+            val relicAny = relicData.filter { it.jsonObject["pos"] != null && it.jsonObject["pos"]!!.jsonPrimitive.int == pos }
+            if(relicAny.isEmpty()){
+                return null
+            }else{
+                val relic = Relic.getRelicItemFromJSON(Relic.getRelicIdFromHoyoRelicId(relicData[0].jsonObject["id"]!!.jsonPrimitive.int).toString())
+                val mainProperties = relicData[0].jsonObject["main_property"]!!.jsonObject
+                val subProperties = relicData[0].jsonObject["properties"]!!.jsonArray
+                relic.level = relicData[0].jsonObject["level"]!!.jsonPrimitive.int
+                relic.rarity = relicData[0].jsonObject["rarity"]!!.jsonPrimitive.int
+                relic.properties.clear()
+                relic.properties.add(
+                    HsrProperties(
+                        attributeExchange = AttributeExchange.getAttrKeyByPropertyType(mainProperties["property_type"]!!.jsonPrimitive.int),
+                        valueFinal = HsrProperties.turnStrToValue(mainProperties["value"]!!.jsonPrimitive.content),
+                        times = mainProperties["times"]!!.jsonPrimitive.int
+                    )
+                )
+
+                for (prop in subProperties){
+                    val subProp = prop.jsonObject
+                    relic.properties.add(
+                        HsrProperties(
+                            attributeExchange = AttributeExchange.getAttrKeyByPropertyType(subProp["property_type"]!!.jsonPrimitive.int),
+                            valueFinal = HsrProperties.turnStrToValue(subProp["value"]!!.jsonPrimitive.content),
+                            times = subProp["times"]!!.jsonPrimitive.int
+                        )
+                    )
+                }
+                return relic
+            }
+        }
+
+        fun readCharHoyolabProperties(propList: JsonArray?) : ArrayList<HsrProperties>? {
+            if(propList.isNullOrEmpty()) {
+                return null
+            }else{
+                val properties = arrayListOf<HsrProperties>()
+                for(prop in propList){
+                    properties.add(
+                        HsrProperties(
+                            attributeExchange = AttributeExchange.getAttrKeyByPropertyType(prop.jsonObject["property_type"]!!.jsonPrimitive.int),
+                            valueBase = HsrProperties.turnStrToValue(prop.jsonObject["base"]!!.jsonPrimitive.content),
+                            valueAdd = HsrProperties.turnStrToValue(prop.jsonObject["add"]!!.jsonPrimitive.content),
+                            valueFinal = HsrProperties.turnStrToValue(prop.jsonObject["final"]!!.jsonPrimitive.content),
+                        )
+                    )
+                }
+                return properties
+            }
+        }
+
+        fun refreshNoteData(){
+            try{
+                val api = HoyolabAPI(INSTANCE.server.platform, INSTANCE.cookies)
                 val userNoteData = api.getHsrNote(INSTANCE.uid, INSTANCE.server).data
-                if(!userNoteData.jsonObject.isEmpty()){
+
+                if(userNoteData !is JsonNull && !userNoteData.jsonObject.isEmpty()){
                     val userNoteJson = userNoteData.jsonObject
                     INSTANCE.userNote.currStamina = userNoteJson["current_stamina"]!!.jsonPrimitive.int
                     INSTANCE.userNote.staminaRecoverTime = userNoteJson["stamina_recover_time"]!!.jsonPrimitive.int
@@ -121,18 +264,14 @@ class UserAccount(
                         ))
                     }
                 }
-
-                println(userFullData)
-
-                Settings().putString("userAccount", Json.encodeToString(INSTANCE))
-
             }catch (e : Exception){
-                resetUserAccount()
-                errorLogExport("UserAccount", "refreshUserAccount()", e)
+                errorLogExport("UserAccount", "refreshCharacterList()", e)
             }
         }
     }
 }
+
+
 
 
 @Serializable
