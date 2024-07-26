@@ -53,14 +53,13 @@ import coil3.compose.LocalPlatformContext
 import com.voc.honkai_stargazer.component.CharacterCard
 import com.voc.honkai_stargazer.component.CharacterLcInfoDisplay
 import components.AppDialog
+import components.BackIcon
 import components.HeaderData
 import components.PAGE_HEADER_HEIGHT
-import components.PageHeaderAlpha
+import components.PageHeader
 import components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.HazeStyle
 import dev.chrisbanes.haze.haze
-import dev.chrisbanes.haze.hazeChild
 import files.PlayerLevel
 import files.ProducedByStargazer
 import files.PublicChars
@@ -68,7 +67,6 @@ import files.Res
 import files.Switch
 import files.UserInfoGameAchievements
 import files.UserInfoGameActiveDays
-import files.UserInfoGameData
 import files.UserInfoGameOpenedChests
 import files.UserInfoGameWorldLevel
 import files.UserInfoLastOnlineTime
@@ -124,7 +122,7 @@ fun UserInfoPageScreen(
                 end = Constants.SCREEN_SAVE_PADDING
             ).haze(hazeState).navigationBarsPadding()
         ) {
-            item(span = { GridItemSpan(maxLineSpan) }) { Spacer(Modifier.height(PAGE_HEADER_HEIGHT + 8.dp)) }
+            item(span = { GridItemSpan(maxLineSpan) }) { Spacer(Modifier.height(PAGE_HEADER_HEIGHT + 24.dp)) }
             item(span = { GridItemSpan(maxLineSpan) }) { UserInfoBioUI(context, userAccount) }
             item(span = { GridItemSpan(maxLineSpan) }) {
                 Column(Modifier.fillMaxWidth()) {
@@ -216,6 +214,17 @@ fun UserInfoPageScreen(
             }
         }
 
+        PageHeader(
+            headerData = headerData,
+            navController = navController,
+            forwardIconId = Res.drawable.ui_icon_share,
+            onForward = { /* TODO : Share Function*/ },
+            hazeState = hazeState,
+            backIconId = BackIcon.CANCEL
+        )
+
+        /*
+
         PageHeaderAlpha(
             navController = navController,
             forwardIconId = Res.drawable.ui_icon_share,
@@ -243,6 +252,7 @@ fun UserInfoPageScreen(
                 )
             }
         }
+         */
     }
 
     if(showPopup.value){

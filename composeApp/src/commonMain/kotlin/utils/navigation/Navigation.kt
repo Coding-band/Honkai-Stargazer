@@ -36,12 +36,14 @@ import files.Map
 import files.RelicList
 import files.Res
 import files.Setting
+import files.UserInfoGameData
 import files.phorphos_baseball_cap_fill
+import files.phorphos_chats_circle_regular
 import files.phorphos_film_slate_regular
+import files.phorphos_game_controller_regular
 import files.phorphos_house_fill
 import files.phorphos_map_trifold_fill
 import files.phorphos_person_fill
-import files.phorphos_person_regular
 import files.phorphos_sliders_horizontal_fill
 import files.phorphos_sword_fill
 import screens.BackgroundSettingScreen
@@ -130,7 +132,7 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     )
     data object UserInfoPageScreen : Screen(
         "UserInfoPageScreen",
-        HeaderData(titleRId = Res.string.HaveNotUsed, titleIconId = Res.drawable.phorphos_person_regular)
+        HeaderData(titleRId = Res.string.UserInfoGameData, titleIconId = Res.drawable.phorphos_game_controller_regular)
     )
 }
 
