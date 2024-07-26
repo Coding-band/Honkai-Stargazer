@@ -28,7 +28,7 @@ open class Lightcone(
     var releaseVersion : String = "1.0.0",
     var displayName : String? = "舞！舞！舞！",
 
-    @IntRange(1,5) var eidolon : Int = 1,
+    @IntRange(1,5) var superimposition : Int = -1,
     var level : Int = -1,
 ){
     companion object {

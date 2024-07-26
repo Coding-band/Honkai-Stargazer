@@ -149,7 +149,7 @@ class UserAccount(
                             equippingLightcone = if (lcData != null) {
                                 val lc = Lightcone.getLightconeItemFromJSON(lcData["id"]!!.jsonPrimitive.content)
                                 lc.level = lcData["level"]!!.jsonPrimitive.int
-                                lc.eidolon = lcData["rank"]!!.jsonPrimitive.int
+                                lc.superimposition = lcData["rank"]!!.jsonPrimitive.int
                                 lc
                             } else null,
                             characterLevel = characterData["level"]!!.jsonPrimitive.int,
