@@ -6,6 +6,8 @@
 
 package components
 
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -24,6 +26,7 @@ import androidx.compose.material.OutlinedButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.unit.dp
@@ -148,7 +151,9 @@ fun PageHeaderAlpha(
     onBack: ((navController: NavController) -> Unit) = { navController: NavController -> navController.popBackStack() },
     backIconId: BackIcon = BackIcon.CANCEL,
     onForward: (() -> Unit) = {},
+    hazeState: HazeState? = HazeState(),
     forwardIconId: DrawableResource = Res.drawable.ui_icon_share,
+    isListScrolling: Boolean = false,
     components: @Composable () -> Unit = {}
 ){
     //Background
@@ -179,13 +184,25 @@ fun PageHeaderAlpha(
                         contentDescription = "Back Icon",
                         modifier = Modifier
                             .size(40.dp)
+                            .clip(CircleShape)
+                            .hazeChild(
+                                shape = CircleShape,
+                                state = hazeState!!,
+                                style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE)
+                            )
                             .align(Alignment.CenterVertically),
                         colorFilter = ColorFilter.tint(Color.White),
 
                         )
                 }
                 Box(Modifier.weight(1f)){
-                    components()
+                    androidx.compose.animation.AnimatedVisibility(
+                        visible = !isListScrolling,
+                        enter = fadeIn(),
+                        exit = fadeOut(),
+                    ) {
+                        components()
+                    }
                 }
                 OutlinedButton(
                     contentPadding = PaddingValues(0.dp),
@@ -202,7 +219,12 @@ fun PageHeaderAlpha(
                         contentDescription = "Forward Icon",
                         modifier = Modifier
                             .size(40.dp)
-                            .align(Alignment.CenterVertically),
+                            .align(Alignment.CenterVertically)
+                            .hazeChild(
+                                shape = CircleShape,
+                                state = hazeState!!,
+                                style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE)
+                            ),
                         colorFilter = ColorFilter.tint(Color.White),
 
                         )
