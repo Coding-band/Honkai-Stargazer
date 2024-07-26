@@ -133,7 +133,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navController: NavController, h
                         titleRes = Res.string.DocumentLanguage,
                         optionSavedChoice = Language.TextLanguageInstance.localeName,
                         optionList = Language().getTextLangLocaleNameList(),
-                        optionAction = { index: Int -> Language().setTextLanguage(Language().getTextLangEnumList()[index]) }
+                        optionAction = { index: Int -> Language().setTextLanguage(Language().getTextLangEnumList()[index]) ; Language.TextLanguageInstance = Language().getTextLangEnumList()[index] }
                     )
 
                     //App語言 App Language
@@ -141,7 +141,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navController: NavController, h
                         titleRes = Res.string.AppLanguage,
                         optionSavedChoice = Language.AppLanguageInstance.localeName,
                         optionList = Language().getAppLangLocaleNameList(),
-                        optionAction = { index: Int -> Language().setAppLanguage(Language().getAppLangEnumList()[index]) }
+                        optionAction = { index: Int -> Language().setAppLanguage(Language().getAppLangEnumList()[index]) ; Language.AppLanguageInstance = Language().getAppLangEnumList()[index] }
                     )
                 }
             }
@@ -152,7 +152,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navController: NavController, h
                     //更換桌布 Change Wallpaper
                     SettingOptionNavigateBar(
                         titleRes = Res.string.ChangeWallPaper,
-                        navigateDesc = wallpaper.cnName ?: Character.getCharacterItemFromJSON(wallpaper.id).displayName ?: "?",
+                        navigateDesc = wallpaper.localeName ?: Character.getCharacterItemFromJSON(wallpaper.id).displayName ?: "?",
                         navigateClick = { navController.navigate(Screen.BackgroundSettingScreen.route) }
                     )
 
