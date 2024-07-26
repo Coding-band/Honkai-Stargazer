@@ -149,7 +149,7 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navController: NavCon
             Spacer(modifier = Modifier.height(14.dp))
 
             Text(
-                text = extendedItems[wallpaperIndex.value].cnName
+                text = extendedItems[wallpaperIndex.value].localeName
                     ?: Character.getCharacterItemFromJSON(
                         extendedItems[wallpaperIndex.value].fileName.split(
                             "-"

@@ -56,11 +56,11 @@ class UtilTools {
     }
 
     @OptIn(ExperimentalCoroutinesApi::class, ExperimentalResourceApi::class)
-    fun getLostImgBitmap() : ImageBitmap {
+    fun getLostImgByteArray() : ByteArray {
         return runBlocking {
             val job = async(Dispatchers.IO) {
                 val assetByte: ByteArray = Res.readBytes("files/ico_lost_img.webp")
-                return@async getImageBitmapByByteArray(assetByte)
+                return@async (assetByte)
             }
             job.await()
             job.getCompleted()
