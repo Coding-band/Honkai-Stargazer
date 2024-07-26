@@ -232,6 +232,7 @@ EN:
 - HoyolabLoginPage -> Popup細節未完善 (Not finished details improvements of Popups)
 - Character/Lc/RelicListPage -> 排序選單未完成 (Sort Menu not finished)
 - UserAccount -> 加載用戶數據大卡頓 (VERY Laggy when loading user data)
+- Comment Function -> 同意添回純留言功能，須確保有擴展性 (Only agree to add pure comment function, need to ensure extensibility)
 
 ## Close BETA Testing
 ### 目前(2024/07/17)暫定如下：
@@ -262,10 +263,9 @@ July 22 - July 28
 - [x] Event List, Interaction Map Redirect (2 day) [Do together with lower choice],
 - [ ] User Info Page & UID Search & Proficient Calculation (4 days) [With Database API]
 - [ ] Relic Score Algorthm (1 days) [With Reset]
-- [ ] Prepare for SG2 2.4 RSS + Offline Update (HOW ???)
-
 
 July 29 - August 4
+- [ ] Prepare for SG2 2.4 RSS + Offline Update (July 29 - 30)
 - [ ] MOC & PF Leaderboard (4 days)
   - Team Usage Ranking
 - [ ] Prepare for Close BETA Testing (1 day)
