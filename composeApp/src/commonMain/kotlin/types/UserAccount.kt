@@ -166,6 +166,9 @@ class UserAccount(
                             traceSkillLevel = if(skillData != null && skillData.size > 1) skillData[1].jsonObject["level"]!!.jsonPrimitive.int else -1,
                             traceUltimateLevel = if(skillData != null && skillData.size > 2) skillData[2].jsonObject["level"]!!.jsonPrimitive.int else -1,
                             traceTalentLevel = if(skillData != null && skillData.size > 3) skillData[3].jsonObject["level"]!!.jsonPrimitive.int else -1,
+
+                            eidolon = characterData["rank"]!!.jsonPrimitive.int,
+                            //ascension = characterData["ascend"]!!.jsonPrimitive.int,
                         )
 
                         characterList.add(character)
