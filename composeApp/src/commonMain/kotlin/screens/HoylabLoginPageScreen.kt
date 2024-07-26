@@ -47,7 +47,6 @@ import kotlinx.coroutines.launch
 import types.UserAccount
 import utils.FontSizeNormal14
 import utils.FontSizeNormal16
-import utils.Language
 import utils.LongStringXML
 import utils.UtilTools
 import utils.annotation.DoItLater
@@ -129,7 +128,7 @@ fun HoyolabServerRemarksPopup(modifier: Modifier = Modifier, showPopup : Mutable
                 hazeState = hazeState,
                 components = {
                     val richTextState = rememberRichTextState()
-                    richTextState.setHtml(LongStringXML().LoginPolicy(Language.AppLanguageInstance))
+                    richTextState.setHtml(LongStringXML().LoginPolicy())
                     Column {
                         //Remarks Text
                         RichText(
@@ -188,7 +187,7 @@ fun HoyolabServerSelectPopup(modifier: Modifier = Modifier, showPopup : MutableS
 
                         //Remarks that not support 3rd-party login
                         Text(
-                            text = LongStringXML().LoginHint(Language.AppLanguageInstance),
+                            text = LongStringXML().LoginHint(),
                             color = Color.Black,
                             style = FontSizeNormal16(),
                         )

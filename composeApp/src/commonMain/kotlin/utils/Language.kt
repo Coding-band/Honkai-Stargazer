@@ -16,9 +16,9 @@ class Language() {
         FR("Français", "fr"),
         RU("Русский", "ru"),
         DE("Deutsch", "de"),
-        PT("Português", "pt-PT"),
+        PT("Português", "pt_pt"),
         VI("tiếng Việt", "vi"),
-        ES("Español", "es-ES"),
+        ES("Español", "es_es"),
         KR("한국어", "kr"),
         TH("ภาษาไทย", "th"),
         JYU_YAM("ㄓㄨˋ ㄧㄣ", "zh"),
@@ -32,9 +32,9 @@ class Language() {
         FR("Français", "fr", "fr-fr"),
         RU("Русский", "ru", "ru-ru"),
         DE("Deutsch", "de", "de-de"),
-        PT("Português", "pt-PT", "pt-pt"),
+        PT("Português", "pt_pt", "pt-pt"),
         VI("tiếng Việt", "vi", "vi-vn"),
-        ES("Español", "es-ES", "es-es"),
+        ES("Español", "es_es", "es-es"),
         KR("한국어", "kr", "ko-kr"),
         TH("ภาษาไทย", "th", "th-th"),
 
@@ -44,8 +44,8 @@ class Language() {
     }
 
     companion object{
-        val TextLanguageInstance = TextLanguage.valueOf(Settings().getString("textLanguage", TextLanguage.EN.name))
-        val AppLanguageInstance = AppLanguage.valueOf(Settings().getString("appLanguage", AppLanguage.EN.name))
+        var TextLanguageInstance = TextLanguage.valueOf(Settings().getString("textLanguage", TextLanguage.EN.name))
+        var AppLanguageInstance = AppLanguage.valueOf(Settings().getString("appLanguage", AppLanguage.EN.name))
     }
 
     @Composable
