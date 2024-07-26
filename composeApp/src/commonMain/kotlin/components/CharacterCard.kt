@@ -22,7 +22,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
+import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.requiredWidth
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.CircleShape
@@ -44,6 +46,9 @@ import coil3.compose.LocalPlatformContext
 import coil3.request.CachePolicy
 import coil3.request.ImageRequest
 import coil3.request.crossfade
+import files.Res
+import files.SuperimposeLvl
+import files.SuperimposeNotEquipped
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.Character
@@ -71,8 +76,9 @@ fun CharacterCard(
                 + "&charId=${character.officialId}"
 
     ) }, //按下後會做甚麼
-    overrideNameComponent: @Composable (() -> Unit)? = null,
-
+    overrideNameComponent: @Composable (() -> Unit) = { },
+    isDisplayCombatPath: Boolean = true,
+    isDisplayName : Boolean = true,
 ) {
     val interactionSource = remember { MutableInteractionSource() }
 
@@ -158,52 +164,113 @@ fun CharacterCard(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center
             ) {
-                overrideNameComponent ?: Text(
-                    text = displayName!!,
-                    textAlign = TextAlign.Center,
-                    color = TextColorNormalDim,
-                    fontSize = FontSizeNormal12().fontSize,
-                    maxLines = 1
-                )
+                if(!isDisplayName && overrideNameComponent != null){
+                    overrideNameComponent()
+                }else {
+                    Text(
+                        text = displayName!!,
+                        textAlign = TextAlign.Center,
+                        color = TextColorNormalDim,
+                        fontSize = FontSizeNormal12().fontSize,
+                        maxLines = 1
+                    )
+                }
             }
             Spacer(modifier = Modifier.height(2.dp))
         }
 
-        Column (modifier = Modifier.padding(2.dp)){
-            Image(
-                painter = painterResource(resource = character.combatType.iconColor),
-                contentDescription = "Character Combat Type Icon",
-                modifier = Modifier
-                    .requiredWidth(20.dp)
-                    .requiredHeight(20.dp)
-                    .background(Color(0x66000000), CircleShape)
-                    .padding(2.dp)
-            )
-            Spacer(modifier = Modifier.height(2.dp))
-            Image(
-                painter = painterResource(resource = character.path.iconWhite),
-                contentDescription = "Character Path Icon",
-                modifier = Modifier
-                    .requiredWidth(20.dp)
-                    .requiredHeight(20.dp)
-                    .background(Color(0x66000000), CircleShape)
-                    .padding(2.dp)
-            )
+        if(isDisplayCombatPath){
+            Column (modifier = Modifier.padding(2.dp)){
+                Image(
+                    painter = painterResource(resource = character.combatType.iconColor),
+                    contentDescription = "Character Combat Type Icon",
+                    modifier = Modifier
+                        .requiredWidth(20.dp)
+                        .requiredHeight(20.dp)
+                        .background(Color(0x66000000), CircleShape)
+                        .padding(2.dp)
+                )
+                Spacer(modifier = Modifier.height(2.dp))
+                Image(
+                    painter = painterResource(resource = character.path.iconWhite),
+                    contentDescription = "Character Path Icon",
+                    modifier = Modifier
+                        .requiredWidth(20.dp)
+                        .requiredHeight(20.dp)
+                        .background(Color(0x66000000), CircleShape)
+                        .padding(2.dp)
+                )
+            }
         }
 
         if(character.characterStatus != null){
-            Column (modifier = Modifier.padding(2.dp).align(Alignment.TopEnd)){
+            Column(
+                modifier = Modifier.padding(6.dp)
+                    .align(Alignment.TopEnd)
+                    .background(Color(0xFFF3F9FF), CircleShape)
+                    .requiredSize(16.dp)
+            ) {
                 Text(
                     text = "${character.characterStatus!!.eidolon}",
                     color = Color(0xFF393A5C),
                     textAlign = TextAlign.Center,
-                    modifier = Modifier
-                        .requiredWidth(20.dp)
-                        .requiredHeight(20.dp)
-                        .background(Color(0xFFF3F9FF), CircleShape)
-                        .padding(4.dp)
+                    style = FontSizeNormal12(),
+                    modifier = Modifier.align(Alignment.CenterHorizontally)
                 )
             }
+        }
+    }
+}
+
+@Composable
+fun CharacterLcInfoDisplay(character: Character){
+    Row(Modifier.fillMaxWidth().wrapContentHeight().background(Color(0xFF413A31))) {
+        Column(Modifier.weight(1f)) {
+            AsyncImage(
+                model = UtilTools().newImageRequest(
+                    LocalPlatformContext.current,
+                    if(character.characterStatus != null && character.characterStatus!!.equippingLightcone != null){
+                        UtilTools().getAssetsWebpByteArrayByFileName(
+                            UtilTools.ImageFolderType.LC_ICON,
+                            UtilTools().getImageNameByRegistName(character.characterStatus!!.equippingLightcone!!.registName!!)
+                        )
+                    } else {
+                        UtilTools().getLostImgByteArray()
+                    }
+                ),
+                imageLoader = UtilTools().newImageLoader(LocalPlatformContext.current),
+                contentDescription = "Lightcone Icon",
+                modifier = Modifier
+                    .requiredWidth(36.dp)
+                    .requiredHeight(36.dp)
+                    .padding(2.dp)
+            )
+        }
+        Column(Modifier.weight(1f).align(Alignment.CenterVertically).padding(end = 4.dp)) {
+            val level = character.characterStatus?.equippingLightcone?.level
+            val superimposition = character.characterStatus?.equippingLightcone?.superimposition
+            Text(
+                text = "${if(level == null) "" else "Lv "}${level ?: UtilTools().removeStringResDoubleQuotes(Res.string.SuperimposeNotEquipped)}",
+                color = TextColorNormalDim,
+                style = FontSizeNormal12(),
+                textAlign = TextAlign.End,
+                maxLines = 1,
+                modifier = Modifier.fillMaxWidth()
+            )
+
+            if(superimposition != null && superimposition > 0){
+                Text(
+                    text = UtilTools().removeStringResDoubleQuotes(Res.string.SuperimposeLvl).replace("$"+"{1}", "$superimposition"),
+                    color = TextColorNormalDim,
+                    style = FontSizeNormal12(),
+                    textAlign = TextAlign.End,
+                    maxLines = 1,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+
+
+
         }
     }
 }
