@@ -332,10 +332,10 @@ class UtilTools {
         .addLastModifiedToFileCacheKey(true)
         .build()
 
-    fun newImageRequest(context: PlatformContext, data: Any) = ImageRequest.Builder(context)
+    fun newImageRequest(context: PlatformContext, data: Any, crossFade : Boolean = true) = ImageRequest.Builder(context)
         .data(data)
         .networkCachePolicy(CachePolicy.ENABLED)
-        .crossfade(true)
+        .crossfade(crossFade)
         .diskCachePolicy(CachePolicy.ENABLED)
         .build()
 }

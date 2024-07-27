@@ -197,6 +197,17 @@ fun CharacterInfoFullImgWithRare(
             exit = fadeOut(),
             modifier = Modifier.fillMaxWidth().fillMaxHeight(0.8f).align(Alignment.BottomCenter)
         ) {
+            /*
+
+            AsyncImage(
+                model = UtilTools().newImageRequest(context = LocalPlatformContext.current, data = Character.getCharacterImageByteArrayFromFileName(
+                    UtilTools.ImageFolderType.CHAR_FULL, fileName
+                ), crossFade = false),
+                contentDescription = "Character Full Image",
+                contentScale = ContentScale.Fit,
+                imageLoader = UtilTools().newImageLoader(LocalPlatformContext.current)
+            )
+             */
             Image(
                 bitmap = Character.getCharacterImageFromFileName(
                     UtilTools.ImageFolderType.CHAR_FULL, fileName
@@ -204,6 +215,7 @@ fun CharacterInfoFullImgWithRare(
                 contentDescription = "Character Full Image",
                 contentScale = ContentScale.Fit,
             )
+
         }
         Box(
             modifier = Modifier.fillMaxWidth().fillMaxHeight(0.5f).background(
