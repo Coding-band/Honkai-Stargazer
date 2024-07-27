@@ -115,7 +115,7 @@ fun InfoBioColumn(
                 Row {
                     repeat(itemRarity) {
                         Image(
-                            modifier = Modifier.size(24.dp,28.dp),
+                            modifier = Modifier.size(28.dp,28.dp),
                             painter = painterResource(Res.drawable.ui_icon_star),
                             contentScale = ContentScale.FillHeight,
                             contentDescription = "Stars to represent Rarity"
