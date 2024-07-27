@@ -46,6 +46,7 @@ import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Popup
+import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import coil3.PlatformContext
 import coil3.compose.AsyncImage
@@ -84,16 +85,31 @@ import utils.FontSizeNormal16
 import utils.FontSizeNormalLarge24
 import utils.LongStringXML
 import utils.UtilTools
+import utils.annotation.DoItLater
+import utils.navigation.Screen
 
+@DoItLater("Get User Data from Database / API")
 @Composable
 fun UserInfoPageScreen(
     modifier: Modifier = Modifier,
     navController: NavController,
     headerData: HeaderData = defaultHeaderData,
+    backStackEntry: NavBackStackEntry? = null,
 ) {
     val hazeState = remember { HazeState() }
     val context = LocalPlatformContext.current
-    val userAccount by remember { mutableStateOf(UserAccount.INSTANCE) }
+    val uid = backStackEntry!!.arguments?.getString("uid")!!
+
+    val userAccount by remember { mutableStateOf(
+        if(UserAccount.INSTANCE.uid != uid){
+            UserAccount.INSTANCE
+        } else {
+            //TODO : Get User
+            UserAccount.INSTANCE
+        }
+    ) }
+
+
     val lazyGridState = rememberLazyGridState()
     val isListScrolling  by remember {
         derivedStateOf {
@@ -107,7 +123,7 @@ fun UserInfoPageScreen(
 
     val helperListOrigin = userAccount.characterList.filter { it.characterStatus?.isHelper == true }
 
-    val helperList = if(helperListOrigin.isEmpty()) userAccount.characterList.slice(0..7) else helperListOrigin
+    val helperList = helperListOrigin.ifEmpty { userAccount.characterList.slice(0..7) }
     val finalCharList = userAccount.characterList.filter { it !in helperList }
 
     Box(modifier = modifier.fillMaxSize()) {
@@ -158,7 +174,8 @@ fun UserInfoPageScreen(
                         character = character,
                         overrideNameComponent = { CharacterLcInfoDisplay(character) },
                         isDisplayName = !isDisplayLcInfo.value,
-                        isDisplayCombatPath = false
+                        isDisplayCombatPath = false,
+                        onClick = { navController.navigate("${Screen.UserCharacterPageScreen.route}?uid=${uid}&charId=${character.officialId}") }
                     )
                 }
             }
@@ -179,7 +196,8 @@ fun UserInfoPageScreen(
                             character = character,
                             overrideNameComponent = { CharacterLcInfoDisplay(character) },
                             isDisplayName = !isDisplayLcInfo.value,
-                            isDisplayCombatPath = false
+                            isDisplayCombatPath = false ,
+                            onClick = { navController.navigate("${Screen.UserCharacterPageScreen.route}?uid=${uid}&charId=${character.officialId}") }
                         )
                     }
                 }

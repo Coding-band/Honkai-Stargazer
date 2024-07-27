@@ -38,7 +38,6 @@ import files.Res
 import files.Setting
 import files.UserInfoGameData
 import files.phorphos_baseball_cap_fill
-import files.phorphos_chats_circle_regular
 import files.phorphos_film_slate_regular
 import files.phorphos_game_controller_regular
 import files.phorphos_house_fill
@@ -61,6 +60,7 @@ import screens.RelicInfoPage
 import screens.RelicListPage
 import screens.SettingScreen
 import screens.SplashPage
+import screens.UserCharacterPageScreen
 import screens.UserInfoPageScreen
 
 //This should not be there, but CharacterCard need it in clickable, without using @Composable ...
@@ -132,6 +132,10 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     )
     data object UserInfoPageScreen : Screen(
         "UserInfoPageScreen",
+        HeaderData(titleRId = Res.string.UserInfoGameData, titleIconId = Res.drawable.phorphos_game_controller_regular)
+    )
+    data object UserCharacterPageScreen : Screen(
+        "UserCharacterPageScreen",
         HeaderData(titleRId = Res.string.UserInfoGameData, titleIconId = Res.drawable.phorphos_game_controller_regular)
     )
 }
@@ -324,7 +328,6 @@ fun Navigation() {
                 })
         }
 
-
         composable(
             route = Screen.EventListPageScreen.route,
             enterTransition = { defaultEnterTransition },
@@ -372,17 +375,42 @@ fun Navigation() {
                     )
                 })
         }
+
         composable(
-            route = Screen.UserInfoPageScreen.route,
-            enterTransition = { defaultEnterTransition },
-            exitTransition = { defaultExitTransition }) {
+            route = "${Screen.UserInfoPageScreen.route}?uid={uid}",
+            arguments = listOf(
+                (navArgument("uid") { type = NavType.StringType }),
+            ),
+            enterTransition = { defaultEnterTransition }, exitTransition = { defaultExitTransition }
+        ) { backStackEntry ->
             RootContent(
                 screen = Screen.UserInfoPageScreen,
                 snackbarHostState = snackbarHostState,
                 page = {
                     UserInfoPageScreen(
                         navController = navController,
-                        headerData = Screen.UserInfoPageScreen.headerData
+                        headerData = Screen.UserInfoPageScreen.headerData,
+                        backStackEntry = backStackEntry,
+                    )
+                })
+        }
+
+        composable(
+            route = "${Screen.UserCharacterPageScreen.route}?uid={uid}&charId={charId}",
+            arguments = listOf(
+                (navArgument("uid") { type = NavType.StringType }),
+                (navArgument("charId") { type = NavType.IntType }),
+            ),
+            enterTransition = { defaultEnterTransition }, exitTransition = { defaultExitTransition }
+        ) { backStackEntry ->
+            RootContent(
+                screen = Screen.UserCharacterPageScreen,
+                snackbarHostState = snackbarHostState,
+                page = {
+                    UserCharacterPageScreen(
+                        navController = navController,
+                        headerData = Screen.UserCharacterPageScreen.headerData,
+                        backStackEntry = backStackEntry,
                     )
                 })
         }

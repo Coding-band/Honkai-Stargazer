@@ -202,7 +202,7 @@ fun HomePageHeader(
                         .border(1.dp, Color(0x66907C54), CircleShape)
                         .clickable {
                             if (userAccount.isLogin) {
-                                navController.navigate(Screen.UserInfoPageScreen.route)
+                                navController.navigate("${Screen.UserInfoPageScreen.route}?uid=${userAccount.uid}")
                             }
                         }, contentAlignment = Alignment.Center
                     ) {
