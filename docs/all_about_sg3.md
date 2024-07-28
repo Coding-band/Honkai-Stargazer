@@ -261,8 +261,12 @@ July 15 - July 21
 
 July 22 - July 28
 - [x] Event List, Interaction Map Redirect (2 day) [Do together with lower choice],
-- [ ] User Info Page & UID Search & Proficient Calculation (4 days) [With Database API]
-- [ ] Relic Score Algorthm (1 days) [With Reset]
+- [x] User Info Page (2 days)
+- [ ] User Character Page (2 days)
+- [ ] UID Search (0.5 days)
+- [ ] Proficient Calculation (Transfer) (1 days)
+- [x] Backend API design (1 days)
+- [ ] Relic Score Algorthm (0.5 days) [Without Reset]
 
 July 29 - August 4
 - [ ] Prepare for SG2 2.4 RSS + Offline Update (July 29 - 30)
