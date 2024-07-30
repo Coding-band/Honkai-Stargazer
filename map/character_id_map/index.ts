@@ -55,6 +55,10 @@ const charId: any = {
   "Misha": 1312,
   "Jade": 1314,
   "Boothill": 1315,
+
+  "Jiaoqiu": 1218,
+  "Yunli": 1221,
+  "March 7th (Imaginary)": 1224,
 };
 
 export default charId;

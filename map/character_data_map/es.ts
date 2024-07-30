@@ -65,7 +65,16 @@ import PlayerGirl3 from "../../data/character_data/es/playergirl3.json";
 import Jade from "../../data/character_data/es/jade.json";
 import Firefly from "../../data/character_data/es/sam.json";
 
+//add in 2.4.0
+import Jiaoqiu from "../../data/character_data/es/jiaoqiu.json";
+import Yunli from "../../data/character_data/es/yunli.json";
+import March7thImaginary from "../../data/character_data/es/mar7th2.json";
+
 const ES = {
+  //add in 2.4.0
+  Jiaoqiu,
+  Yunli,
+  March7thImaginary,
   //add in 2.3.0
   Jade,
   Firefly,

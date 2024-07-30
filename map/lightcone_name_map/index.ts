@@ -1,4 +1,8 @@
 const LightconeName = {
+  //Add in 2.4.0
+  "dance-at-sunset":"Dance at Sunset",
+  "poised-to-bloom":"Poised to Bloom",
+  "those-many-springs":"Those Many Springs",
   //Add in 2.3.0
   "eternal-calculus":"Eternal Calculus",
   "whereabouts-should-dreams-rest":"Whereabouts Should Dreams Rest",

@@ -1,4 +1,11 @@
 const CharacterName = {
+  //add in 2.4.0
+  "jiaoqiu": "Jiaoqiu",
+  "yunli": "Yunli",
+  "march7th2": "March 7th (Imaginary)",
+  "march-7th2": "March 7th (Imaginary)",
+  "march-7th-imaginary": "March 7th (Imaginary)",
+
   //add in 2.3.0
   "jade": "Jade",
   "sam": "Firefly",

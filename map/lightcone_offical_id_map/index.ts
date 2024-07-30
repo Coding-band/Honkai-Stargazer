@@ -1,4 +1,9 @@
 const officalLightconeId: any = {
+  //Add in 2.4.0
+  23030: "Dance at Sunset",
+  23029: "Those Many Springs",
+  21046: "Whereabouts Should Dreams Rest",
+
   //Add in 2.3.0
   24004: "Eternal Calculus",
   23028: "Yet Hope Is Priceless",

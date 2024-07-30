@@ -113,7 +113,16 @@ import WhereaboutsShouldDreamsRest from "../../data/lightcone_data/de/23025.json
 import YetHopeIsPriceless from "../../data/lightcone_data/de/23028.json";
 import AfterTheCharmonyFall from "../../data/lightcone_data/de/21045.json";
 
+//add in 2.4.0
+import DanceAtSunSet from "../../data/lightcone_data/de/23030.json";
+import ThoseManySpirings from "../../data/lightcone_data/de/23029.json";
+import PoisedToBloom from "../../data/lightcone_data/de/21046.json";
+
 const DE = {
+  //add in 2.4.0
+  "Dance at Sun Set": DanceAtSunSet,
+  "Those Many Springs": ThoseManySpirings,
+  "Poised to Bloom": PoisedToBloom,
   //add in 2.3.0
   "Eternal Calculus": EternalCalculus,
   "Whereabouts Should Dreams Rest": WhereaboutsShouldDreamsRest,

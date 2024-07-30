@@ -65,7 +65,16 @@ import PlayerGirl3 from "../../data/character_data/zh_cn/playergirl3.json";
 import Jade from "../../data/character_data/zh_cn/jade.json";
 import Firefly from "../../data/character_data/zh_cn/sam.json";
 
+//add in 2.4.0
+import Jiaoqiu from "../../data/character_data/zh_cn/jiaoqiu.json";
+import Yunli from "../../data/character_data/zh_cn/yunli.json";
+import March7thImaginary from "../../data/character_data/zh_cn/mar7th2.json";
+
 const ZH_CN = {
+  //add in 2.4.0
+  Jiaoqiu,
+  Yunli,
+  March7thImaginary,
   //add in 2.3.0
   Jade,
   Firefly,
