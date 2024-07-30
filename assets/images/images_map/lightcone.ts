@@ -1,4 +1,17 @@
 const Lightcone: any = {
+  //add in 2.4.0
+  "Those Many Springs": {
+    icon: require("../../images/lightcone_icon/those_many_springs.webp"),
+    imageFull: require("../../images/lightcone_artwork/those_many_springs_artwork.webp"),
+  },
+  "Dance at Sunset": {
+    icon: require("../../images/lightcone_icon/dance_at_sunset.webp"),
+    imageFull: require("../../images/lightcone_artwork/dance_at_sunset_artwork.webp"),
+  },
+  "Poised to Bloom": {
+    icon: require("../../images/lightcone_icon/poised_to_bloom.webp"),
+    imageFull: require("../../images/lightcone_artwork/poised_to_bloom_artwork.webp"),
+  },
   //add in 2.3.0
   "Yet Hope Is Priceless": {
     icon: require("../../images/lightcone_icon/yet_hope_is_priceless.webp"),

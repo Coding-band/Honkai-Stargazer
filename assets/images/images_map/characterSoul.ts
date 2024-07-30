@@ -4,6 +4,49 @@
  */
 
 const CharacterSoul: any = {
+  //add in 2.4.0
+  "Jiaoqiu": {
+    eidolon1: require("../../images/character_eidolon/jiaoqiu_eidolon1.webp"),
+    eidolon2: require("../../images/character_eidolon/jiaoqiu_eidolon2.webp"),
+    eidolon3: require("../../images/character_eidolon/jiaoqiu_eidolon3.webp"),
+    eidolon4: require("../../images/character_eidolon/jiaoqiu_eidolon4.webp"),
+    eidolon5: require("../../images/character_eidolon/jiaoqiu_eidolon5.webp"),
+    eidolon6: require("../../images/character_eidolon/jiaoqiu_eidolon6.webp"),
+    soul1: require("../../images/character_soul/jiaoqiu_soul1.webp"),
+    soul2: require("../../images/character_soul/jiaoqiu_soul2.webp"),
+    soul3: require("../../images/character_soul/jiaoqiu_soul3.webp"),
+    soul4: require("../../images/character_soul/jiaoqiu_soul4.webp"),
+    soul5: require("../../images/character_soul/jiaoqiu_soul5.webp"),
+    soul6: require("../../images/character_soul/jiaoqiu_soul6.webp"),
+  },
+  "Yunli": {
+    eidolon1: require("../../images/character_eidolon/yunli_eidolon1.webp"),
+    eidolon2: require("../../images/character_eidolon/yunli_eidolon2.webp"),
+    eidolon3: require("../../images/character_eidolon/yunli_eidolon3.webp"),
+    eidolon4: require("../../images/character_eidolon/yunli_eidolon4.webp"),
+    eidolon5: require("../../images/character_eidolon/yunli_eidolon5.webp"),
+    eidolon6: require("../../images/character_eidolon/yunli_eidolon6.webp"),
+    soul1: require("../../images/character_soul/yunli_soul1.webp"),
+    soul2: require("../../images/character_soul/yunli_soul2.webp"),
+    soul3: require("../../images/character_soul/yunli_soul3.webp"),
+    soul4: require("../../images/character_soul/yunli_soul4.webp"),
+    soul5: require("../../images/character_soul/yunli_soul5.webp"),
+    soul6: require("../../images/character_soul/yunli_soul6.webp"),
+  },
+  "March 7th (Imaginary)": {
+    eidolon1: require("../../images/character_eidolon/march_7th_imaginary_eidolon1.webp"),
+    eidolon2: require("../../images/character_eidolon/march_7th_imaginary_eidolon2.webp"),
+    eidolon3: require("../../images/character_eidolon/march_7th_imaginary_eidolon3.webp"),
+    eidolon4: require("../../images/character_eidolon/march_7th_imaginary_eidolon4.webp"),
+    eidolon5: require("../../images/character_eidolon/march_7th_imaginary_eidolon5.webp"),
+    eidolon6: require("../../images/character_eidolon/march_7th_imaginary_eidolon6.webp"),
+    soul1: require("../../images/character_soul/march_7th_imaginary_soul1.webp"),
+    soul2: require("../../images/character_soul/march_7th_imaginary_soul2.webp"),
+    soul3: require("../../images/character_soul/march_7th_imaginary_soul3.webp"),
+    soul4: require("../../images/character_soul/march_7th_imaginary_soul4.webp"),
+    soul5: require("../../images/character_soul/march_7th_imaginary_soul5.webp"),
+    soul6: require("../../images/character_soul/march_7th_imaginary_soul6.webp"),
+  },
   //add in 2.3.0
   "Jade": {
     eidolon1: require("../../images/character_eidolon/jade_eidolon1.webp"),

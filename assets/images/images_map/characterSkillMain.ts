@@ -5,6 +5,28 @@
 
 const CharacterSkillMain: any = {
   //add in 2.3.0
+  "Jiaoqiu": {
+    skill1: require("../../images/character_skill/jiaoqiu_skill1.webp"),
+    skill2: require("../../images/character_skill/jiaoqiu_skill2.webp"),
+    skill3: require("../../images/character_skill/jiaoqiu_skill3.webp"),
+    skill4: require("../../images/character_skill/jiaoqiu_skill4.webp"),
+    skill6: require("../../images/character_skill/jiaoqiu_skill6.webp"),
+  },
+  "Yunli": {
+    skill1: require("../../images/character_skill/yunli_skill1.webp"),
+    skill2: require("../../images/character_skill/yunli_skill2.webp"),
+    skill3: require("../../images/character_skill/yunli_skill3.webp"),
+    skill4: require("../../images/character_skill/yunli_skill4.webp"),
+    skill6: require("../../images/character_skill/yunli_skill6.webp"),
+  },
+  "March 7th (Imaginary)": {
+    skill1: require("../../images/character_skill/march_7th_imaginary_skill1.webp"),
+    skill2: require("../../images/character_skill/march_7th_imaginary_skill2.webp"),
+    skill3: require("../../images/character_skill/march_7th_imaginary_skill3.webp"),
+    skill4: require("../../images/character_skill/march_7th_imaginary_skill4.webp"),
+    skill6: require("../../images/character_skill/march_7th_imaginary_skill6.webp"),
+  },
+  //add in 2.3.0
   "Jade": {
     skill1: require("../../images/character_skill/jade_skill1.webp"),
     skill2: require("../../images/character_skill/jade_skill2.webp"),

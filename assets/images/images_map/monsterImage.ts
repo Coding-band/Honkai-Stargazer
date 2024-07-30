@@ -1,4 +1,23 @@
 const Monsterimages: any = {
+  //Add in 2.4.0
+  "\"Howling Casket\"": {
+    icon: require("../../images/monster_icon/monster_howling_casket_icon.webp"),
+  },
+  "\"Sableclaw Wolftrooper\"": {
+    icon: require("../../images/monster_icon/monster_sableclaw_wolftrooper_icon.webp"),
+  },
+  "\"Eclipse Wolftrooper\"": {
+    icon: require("../../images/monster_icon/monster_eclipse_wolftrooper_icon.webp"),
+  },
+  "\"Disaster's Right Hand\"": {
+    icon: require("../../images/monster_icon/monster_disasters_right_hand_icon.webp"),
+  },
+  "\"Dawn's Left Hand\"": {
+    icon: require("../../images/monster_icon/monster_dawns_left_hand_icon.webp"),
+  },
+  "\"Antimatter Engine\"": {
+    icon: require("../../images/monster_icon/monster_antimatter_engine_icon.webp"),
+  },
   //Add in 2.2.0
   "\"Tomorrow in Harmonious Chords\"": {
     icon: require("../../images/monster_icon/monster_tomorrow_in_harmonious_chords_icon.webp"),

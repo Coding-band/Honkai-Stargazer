@@ -1,4 +1,23 @@
 const CharacterImage: any = {
+  //add in 2.4.0
+  "Jiaoqiu": {
+    icon: require("../../images/character_icon/jiaoqiu_icon.webp"),
+    imageSplash: require("../../images/character_splash/jiaoqiu_splash.webp"),
+    imageFull: require("../../images/character_full/jiaoqiu_full.webp"),
+    fade: require("../../images/character_fade/jiaoqiu_fade.webp"),
+  },
+  "Yunli": {
+    icon: require("../../images/character_icon/yunli_icon.webp"),
+    imageSplash: require("../../images/character_splash/yunli_splash.webp"),
+    imageFull: require("../../images/character_full/yunli_full.webp"),
+    fade: require("../../images/character_fade/yunli_fade.webp"),
+  },
+  "March 7th (Imaginary)": {
+    icon: require("../../images/character_icon/march_7th_imaginary_icon.webp"),
+    imageSplash: require("../../images/character_splash/march_7th_imaginary_splash.webp"),
+    imageFull: require("../../images/character_full/march_7th_imaginary_full.webp"),
+    fade: require("../../images/character_fade/march_7th_imaginary_fade.webp"),
+  },
   //add in 2.3.0
   "Jade": {
     icon: require("../../images/character_icon/jade_icon.webp"),
