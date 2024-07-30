@@ -1,0 +1,1381 @@
+/*
+ * Project Honkai Stargazer (崩壞•星穹觀星者) was
+ * Created & Develop by Voc-夜芷冰 , Programmer of Xectorda
+ * Copyright © 2023 Xectorda 版權所有
+ */
+
+package com.voc.honkaistargazer;
+
+import static com.voc.honkai_stargazer.util.ItemRSS.LoadAssestData;
+
+import android.content.Context;
+import android.os.AsyncTask;
+import android.os.Handler;
+import android.util.Log;
+import android.widget.Toast;
+
+import com.voc.honkai_stargazer.R;
+import com.voc.honkai_stargazer.util.ItemRSS;
+import com.voc.honkai_stargazer.util.LangUtil;
+import com.voc.honkai_stargazer.util.LogExport;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.lang.reflect.Array;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Locale;
+import java.util.TimeZone;
+
+public class HelpTool {
+
+    /*
+    Help Tool, for dev only
+     */
+
+    Context context = null;
+
+    ArrayList<String> skillTreePointList = new ArrayList<>();
+    public static final String VERSION_CHECK = "VERSION_CHECK";
+    public ArrayList<String> skillTreePointArray = new ArrayList<>();
+
+    public void trigger_help_tool(Context context) {
+
+        String json_base2 = LoadAssestData(context, "character_data/character_list.json");
+        /*
+        try {
+            help_tool_export_relic_pc_run(context);
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
+         */
+
+        //String json_base2 = LoadAssestData(context, "test_data/light_cones.json");
+        //String json_base3 = LoadAssestData(context, "test_data/relics.json");
+        //String json_baseX = LoadAssestData(context, "test_data/characters.json");
+        //String json_base2 = LoadAssestData(context, "relic_data/relic_list.json");
+        //help_tool_export_locale_advice(context);
+
+        /*材料列表 MATERIAL*/
+        //getMaterialList(context);
+
+        //readDumbThings(json_base2,context);
+        //readDumbThings(json_base3,context);
+        //yingse_sg_id(json_baseX, context);
+        //getSkillTreePartsIcons(context);
+        getSingWan(context);
+
+        //獲取RELIC PC ICON - DEPRECATED
+            /*
+            String json_baseR = LoadAssestData(context, "test_data/relicTest/light_cones.json");
+            JSONArray array = new JSONArray(json_baseR);
+            for (int x =  0 ;x < array.length() ; x++){
+                String data = LoadAssestData(context,"relic_data/en/"+array.getJSONObject(x).getString("fileName")+".json");
+                String name = (array.getJSONObject(x).getString("name"));
+                String iconPath = new JSONObject(data).getString("iconPath");
+                LogExport.bugLog("trigger_help_tool","獲取RELIC PC ICON","https://cdn.starrailstation.com/assets/"+iconPath+".webp\t"+name.toLowerCase().replace(" • ","_").replace(":","").replace("(","").replace(")","").replace(" ","_").replace("_&_numby","").replace("imbibitor_lunae","il").replace(",","")+".webp\n", "Vocchi Approved",context, LogExport.BETA_TESTING);
+            }
+
+             */
+
+            /*
+            EXPORT RELIC EACH PIECE ICON
+            for (int x =  0 ;x < array.length() ; x++){
+                String data = LoadAssestData(context,"relic_data/en/"+array.getJSONObject(x).getString("fileName")+".json");
+                String name = (array.getJSONObject(x).getString("name"));
+                JSONObject pieces = new JSONObject(data).getJSONObject("pieces");
+                for (int y = 0  ;y < 7  ;y++){
+                    if (pieces.has(String.valueOf(y))){
+                        LogExport.special("https://cdn.starrailstation.com/assets/"+pieces.getJSONObject(String.valueOf(y)).getString("iconPath")+".webp\t"+name.toLowerCase().replace("-","_").replace(" • ","_").replace(":","").replace("(","").replace(")","").replace(" ","_").replace("_&_numby","").replace(",","").replace("!","").replace("imbibitor_lunae","il").replace(",","")+"_"+String.valueOf(y)+".webp\n", context, LogExport.BETA_TESTING);
+                    }
+                }
+            }
+
+             */
+            /*
+            獲取怪物映射表
+             */
+        //getMonsterYingSe(context);
+
+            /*
+            獲取混沌回憶列表
+             */
+        //getMemoryOfChaosList(context,"27","1.5","1.6");
+        //getMemoryOfChaosList(context,"28","1.6","2.0");
+        //getMemoryOfChaosList(context,"29","1.6","2.0");
+        //getMemoryOfChaosList(context,"30","2.0","2.1");
+        //getMemoryOfChaosList(context,"31","2.0","2.1");
+
+
+/*
+
+        try {
+            //getMemoryOfChaosList(context,"36","2.3","2.4");
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+
+ */
+
+
+            /*
+            獲取虛構敘事列表
+             */
+        //2001 - 遊辭漫說 (20011 - 20014)
+        //2002 - 羈鳥奇譚 (20021 - 20024)
+        //2003 - 羈鳥奇譚 (20031 - 20034)
+
+        /*
+
+        try{
+            getPureFictionList(context,"2007");
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+         */
+/*
+        try {
+            getGachaList(context);
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+
+*/
+
+        /**
+         *
+         "props": [
+         {
+         "relicTypeHash": "軀幹",
+         "relicTypeIcon": "7cdd73c69d57cff12ca459e477351d1ec645014fa575a833c1fb951817406ded",
+         "propertyName": "暴擊率",
+         "propertyIconPath": "97553a857187ab8a25e65909410dc29a20eaab31f016af86419a971c0887e5b8"
+         },
+         {
+         "relicTypeHash": "腳部",
+         "relicTypeIcon": "6c3a335a5f0dd4656c1ce0372050b402c9f976ad41c3fb2081c32cf4d9fe62fd",
+         "propertyName": "速度",
+         "propertyIconPath": "d2b176adeb8097fc3f01d478f82fff261dad429779f39f086ef41d70055b1079"
+         },
+         {
+         "relicTypeHash": "位面球",
+         "relicTypeIcon": "209a5985c2f388410b60f750db551f9989b98ede3ff461400699529ea782d7bf",
+         "propertyName": "物理屬性傷害提高",
+         "propertyIconPath": "17a936e642ddc644dbb666c4a1279dd2386321a74cf73b0332a33c7f209c2176"
+         },
+         {
+         "relicTypeHash": "連結繩",
+         "relicTypeIcon": "90b4e54c05e72419429deb45cee82a6a39f3ac5eb45cc98b4684c9ea262bb578",
+         "propertyName": "攻擊力",
+         "propertyIconPath": "f98c343064155d89d324fd80f64152aa2c08db8bce64460cb81fd2322458bb9c"
+         }
+         ]
+         */
+
+            /* advice relic
+
+
+            JSONArray charList = new JSONArray(json_base2);
+            for(int x = 0 ; x < charList.length() ; x++){
+                JSONObject charZH = new JSONObject(LoadAssestData(context, "character_data/zh_hk/"+charList.getJSONObject(x).getString("fileName")+".json"));
+                JSONArray zhProp = charZH.getJSONObject("relicRecommend").getJSONArray("props");
+                JSONArray finalProp = new JSONArray();
+
+                for (int y = 0  ;y < zhProp.length() ; y++){
+                    JSONObject finalObj = new JSONObject();
+                    finalObj.put("relicType",getRelicPartNameByZHName(zhProp.getJSONObject(y).getString("relicTypeHash")));
+                    finalObj.put("propertyName",getRelicPartNameByZHName(zhProp.getJSONObject(y).getString("propertyName")));
+                    finalProp.put(finalObj);
+                }
+
+                File ext = context.getExternalMediaDirs()[0];
+                File file = new File(ext + "/" + "honkai_stargazer/tmpData/"+"advice_relic"+"/" +charList.getJSONObject(x).getString("fileName")+".json");
+                if (!file.exists()) {
+                    file.getParentFile().mkdirs();
+                    file.createNewFile();
+                }
+
+                Files.write(Paths.get(file.getPath()), finalProp.toString().getBytes(), new StandardOpenOption[]{StandardOpenOption.WRITE});
+
+            }
+             */
+
+
+
+            /*
+            for (int i = 0; i < array.length(); i++) {
+                JSONObject object = array.getJSONObject(i);
+                //Special requirements
+                //if (!object.getString("fileName").contains("player")) {return;}
+                if (!matchRequirement(object,VERSION_CHECK)){return;}
+
+                String json_base = LoadAssestData(context, "character_data/" + "en" + "/" + object.getString("fileName") + ".json");
+                if (!json_base.equals("")) {
+                    JSONObject jsonObject = new JSONObject(json_base);
+                    HelpTool.help_tool_eidolon(jsonObject, context);
+                    HelpTool.help_tool_skill(jsonObject, context);
+                }
+            }
+             */
+
+        /**/
+        //help_tool_export_lightcone_icon(context);
+
+            /*
+            for (int i = 0; i < array.length(); i++) {
+                JSONObject object = array.getJSONObject(i);
+                //Special requirements
+                //if (object.getString("fileName").contains("player")) {
+
+                String json_base = LoadAssestData(context, "character_data/" + "en" + "/" + object.getString("fileName") + ".json");
+                if (!json_base.equals("")) {
+                    JSONObject jsonObject = new JSONObject(json_base);
+                    if (jsonObject.has("ranks") && !jsonObject.isNull("ranks") && jsonObject.getJSONArray("ranks").length() > 0){
+                        singwan(jsonObject.getJSONArray("ranks"),object.getString("name").toLowerCase().replace(" • ","_").replace("(","").replace(")","").replace(" ","_").replace("_&_numby","").replace("imbibitor_lunae","il"),context);
+                    }else {
+                        Toast.makeText(context, "ranksIsNull in "+object.getString("fileName"), Toast.LENGTH_SHORT).show();
+                    }
+                }
+                //}
+            }
+             */
+
+
+    }
+
+    private void getMaterialList(Context context){
+        try{
+            ArrayList<String> materialList = new ArrayList<>();
+            String json_baseX = LoadAssestData(context, "character_data/character_list.json");
+            JSONArray array = new JSONArray(json_baseX);
+            for (int i = 0; i < array.length(); i++) {
+                JSONObject object = array.getJSONObject(i);
+                //Special requirements
+                //if (object.getString("fileName").contains("player")) {
+
+                String json_base = LoadAssestData(context, "character_data/" + "en" + "/" + object.getString("fileName") + ".json");
+                if (!json_base.equals("")) {
+                    JSONObject jsonObject = new JSONObject(json_base);
+                    materialList = HelpTool.help_tool_material(jsonObject,context,materialList);
+                    HelpTool.help_tool_material_id(jsonObject,context,materialList);
+                }
+                //}
+            }
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    private String getRelicPartNameByZHName(String name) {
+        switch (name) {
+            case "軀幹":
+                return "ATTR_BODY";
+            case "腳部":
+                return "ATTR_SHOES";
+            case "位面球":
+                return "ATTR_BALL";
+            case "連結繩":
+                return "ATTR_LINK";
+            case "生命值":
+                return "ATTR_HP";
+            case "生命值%":
+                return "ATTR_HPP";
+            case "攻擊力":
+                return "ATTR_ATK";
+            case "攻擊力%":
+                return "ATTR_ATKP";
+            case "防禦力":
+                return "ATTR_DEF";
+            case "防禦力%":
+                return "ATTR_DEFP";
+            case "速度":
+                return "ATTR_SPD";
+            case "擊破特攻":
+                return "ATTR_BREAK_DMG";
+            case "效果命中":
+                return "ATTR_EFFECT_HIT";
+            case "效果抵抗":
+                return "ATTR_EFFECT_RES";
+            case "量子屬性傷害提高":
+                return "ATTR_QUANTUM_DMG";
+            case "火屬性傷害提高":
+                return "ATTR_FIRE_DMG";
+            case "冰屬性傷害提高":
+                return "ATTR_ICE_DMG";
+            case "虛數屬性傷害提高":
+                return "ATTR_IMAGINARY_DMG";
+            case "風屬性傷害提高":
+                return "ATTR_WIND_DMG";
+            case "雷屬性傷害提高":
+                return "ATTR_THUNDER_DMG";
+            case "物理屬性傷害提高":
+                return "ATTR_PHYSICAL_DMG";
+            case "暴擊率":
+                return "ATTR_CRIT_RATE";
+            case "暴擊傷害":
+                return "ATTR_CRIT_DMG";
+            case "治療量加成":
+                return "ATTR_HEAL_RATE";
+            case "能量恢復效率":
+                return "ATTR_SP_RATE";
+            default:
+                System.out.println("UNKNOW IN " + name);
+                return "ATTR_UNKNOWN";
+        }
+    }
+
+    private void getMemoryOfChaosList(Context context, final String memoryOfChaosCode, final String startVersion, final String endVersion) throws JSONException, ParseException {
+        JSONObject scheduleDataJSON = new JSONObject(LoadAssestData(context, "test_data/ScheduleDataChallengeMaze.json"));
+        JSONObject mazeBuffJSON = new JSONObject(LoadAssestData(context, "test_data/MazeBuff.json"));
+        JSONObject challengeGroupJSON = new JSONObject(LoadAssestData(context, "test_data/ChallengeGroupConfig.json"));
+        JSONObject monsterJSON = new JSONObject(LoadAssestData(context, "test_data/MonsterConfig.json"));
+        JSONObject monsterTempJSON = new JSONObject(LoadAssestData(context, "test_data/MonsterTemplateConfig.json"));
+        JSONObject abyssListJSON = new JSONObject(LoadAssestData(context, "test_data/ChallengeMazeConfig.json"));
+        JSONObject abyssDataJSON = new JSONObject(LoadAssestData(context, "test_data/StageConfig.json"));
+        JSONObject chsJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapCHS.json"));
+        JSONObject chtJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapCHT.json"));
+        JSONObject deJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapDE.json"));
+        JSONObject enJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapEN.json"));
+        JSONObject esJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapES.json"));
+        JSONObject frJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapFR.json"));
+        //JSONObject idJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapID.json"));
+        JSONObject jpJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapJP.json"));
+        //JSONObject krJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapKR.json"));
+        JSONObject ptJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapPT.json"));
+        JSONObject ruJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapRU.json"));
+        //JSONObject thJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapTH.json"));
+        //JSONObject viJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapVI.json"));
+
+        //JSONObject[] languageJSONArr = new JSONObject[]{chsJSON, chtJSON, deJSON, enJSON, esJSON, frJSON, idJSON, jpJSON, krJSON, ptJSON, ruJSON, thJSON,viJSON};
+        JSONObject[] languageJSONArr = new JSONObject[]{chsJSON, chtJSON, deJSON, enJSON, esJSON, frJSON, jpJSON, ptJSON, ruJSON};
+        //String[] languageSTRArr = new String[]{"zh_cn", "zh_hk", "de", "en", "es", "fr", "id", "jp", "kr", "pt", "ru", "th","vi"};
+        String[] languageSTRArr = new String[]{"zh_cn", "zh_hk", "de", "en", "es", "fr", "jp","pt", "ru"};
+        String tmpRecord = "";
+        // being from 2801 , end from 2812
+        JSONArray stageFinal = new JSONArray();
+
+        for (int x = 1; x < 12 + 1; x++) {
+            JSONObject stagePreFinal = new JSONObject(); //其x的紀錄
+            String abyssId = memoryOfChaosCode + (x < 10 ? "0" : "") + String.valueOf(x);
+            if (!abyssListJSON.has(abyssId)) {
+                System.out.println("無 Stage " + abyssId);
+                continue;
+            }
+
+            //本次混沌回憶名字
+            JSONObject abyssIdIntro = abyssListJSON.getJSONObject(abyssId);
+            JSONObject abyssFinalName = new JSONObject();
+            String nameHash = abyssIdIntro.getJSONObject("Name").getString("Hash");
+            for (int langIndex = 0; langIndex < languageSTRArr.length; langIndex++) {
+                System.out.println(languageSTRArr[langIndex] + " || " + languageJSONArr[langIndex].getString(nameHash));
+                abyssFinalName.put(languageSTRArr[langIndex], languageJSONArr[langIndex].getString(nameHash));
+            }
+            stagePreFinal.put("name", abyssFinalName);
+
+            //其x第一部分的紀錄
+            JSONObject abyssStagePart1 = new JSONObject();
+            //其x第二部分的紀錄
+            JSONObject abyssStagePart2 = new JSONObject();
+
+            //弱點建議
+            abyssStagePart1.put("weakness_suggest", abyssIdIntro.getJSONArray("DamageType1"));
+            abyssStagePart2.put("weakness_suggest", abyssIdIntro.getJSONArray("DamageType2"));
+
+            //其x第一部分的敵人
+
+            //StageConfig
+            JSONObject stageConfigMonsterConfig1 = abyssDataJSON.getJSONObject(abyssIdIntro.getJSONArray("EventIDList1").getString(0));
+            JSONArray stageConfigMonsterList1 = stageConfigMonsterConfig1.getJSONArray("MonsterList");
+
+            //Wave 1 & 2
+            abyssStagePart1.put("totalWaves", stageConfigMonsterList1.length());
+            for (int wave = 0; wave < stageConfigMonsterList1.length(); wave++) {
+                ArrayList<Monster> enemyList1 = new ArrayList<>();
+                ArrayList<Long> monsterIdTMP1 = new ArrayList<>();
+                JSONObject stageConfigMonsterListPart1 = stageConfigMonsterList1.getJSONObject(wave);
+                for (int y = 0; y < 100; y++) {
+                    if (!stageConfigMonsterListPart1.has("Monster" + String.valueOf(y))) {
+                        break;
+                    }
+                    long monsterId = stageConfigMonsterListPart1.getLong("Monster" + String.valueOf(y));
+                    if (monsterIdTMP1.contains(monsterId)) {
+                        continue;
+                    }
+
+                    JSONObject mosterInfo = monsterJSON.getJSONObject(String.valueOf(monsterId));
+                    JSONObject mosterInfoTemp = (monsterTempJSON.has(String.valueOf(monsterId)) ? monsterTempJSON.getJSONObject(String.valueOf(monsterId)) : null);
+
+
+                    enemyList1.add(
+                            new Monster(
+                                    enJSON.getString(mosterInfo.getJSONObject("MonsterName").getString("Hash")),
+                                    Rank.findRankByName(
+                                            //Once can't I find it in Template ?
+                                            (mosterInfoTemp == null ?
+                                                    // I did can't find it in Template, So I check MonsterConfig CustomValueTags is [] or not
+                                                    ((!mosterInfo.isNull("CustomValueTags") && mosterInfo.getJSONArray("CustomValueTags").length() > 0) ?
+                                                            "CustomValueTags" : "UNKNOWN" //CustomValueTags -> 劇情=-1
+                                                    ) : mosterInfoTemp.getString("Rank"))),  //直接係Template 囉 Rank
+                                    mosterInfo.getJSONArray("StanceWeakList")
+                            )
+                    );
+                    monsterIdTMP1.add(monsterId);
+                }
+                Collections.sort(enemyList1, (a, b) -> b.monsterRank.code - a.monsterRank.code); //降序排列
+                JSONArray enemyListFinal1 = new JSONArray();
+                for (int k = 0; k < enemyList1.size(); k++) {
+                    JSONObject enemyObj1 = new JSONObject();
+                    enemyObj1.put("monster_name", enemyList1.get(k).monsterName);
+                    enemyObj1.put("monster_code", enemyList1.get(k).monsterRank.code);
+                    enemyObj1.put("monster_weakness", enemyList1.get(k).monsterWeakness);
+                    enemyListFinal1.put(enemyObj1);
+                }
+                abyssStagePart1.put("wave" + String.valueOf(wave + 1), enemyListFinal1);
+            }
+
+            //其x第二部分的敵人
+            //StageConfig
+            JSONObject stageConfigMonsterConfig2 = abyssDataJSON.getJSONObject(abyssIdIntro.getJSONArray("EventIDList2").getString(0));
+            JSONArray stageConfigMonsterList2 = stageConfigMonsterConfig2.getJSONArray("MonsterList");
+            //Wave 1 & 2
+            abyssStagePart2.put("totalWaves", stageConfigMonsterList2.length());
+            for (int wave = 0; wave < stageConfigMonsterList2.length(); wave++) {
+                ArrayList<Monster> enemyList2 = new ArrayList<>();
+                ArrayList<Long> monsterIdTMP2 = new ArrayList<>();
+                JSONObject stageConfigMonsterListPart2 = stageConfigMonsterList2.getJSONObject(wave);
+                for (int y = 0; y < 100; y++) {
+                    if (!stageConfigMonsterListPart2.has("Monster" + String.valueOf(y))) {
+                        break;
+                    }
+                    long monsterId = stageConfigMonsterListPart2.getLong("Monster" + String.valueOf(y));
+                    if (monsterIdTMP2.contains(monsterId)) {
+                        continue;
+                    }
+
+                    JSONObject mosterInfo = monsterJSON.getJSONObject(String.valueOf(monsterId));
+                    JSONObject mosterInfoTemp = (monsterTempJSON.has(String.valueOf(monsterId)) ? monsterTempJSON.getJSONObject(String.valueOf(monsterId)) : null);
+
+                    enemyList2.add(
+                            new Monster(
+                                    enJSON.getString(mosterInfo.getJSONObject("MonsterName").getString("Hash")),
+                                    Rank.findRankByName(
+                                            //Once can't I find it in Template ?
+                                            (mosterInfoTemp == null ?
+                                                    // I did can't find it in Template, So I check MonsterConfig CustomValueTags is [] or not
+                                                    ((!mosterInfo.isNull("CustomValueTags") && mosterInfo.getJSONArray("CustomValueTags").length() > 0) ?
+                                                            "CustomValueTags" : "UNKNOWN" //CustomValueTags -> 劇情=-1
+                                                    ) : mosterInfoTemp.getString("Rank"))),  //直接係Template 囉 Rank
+                                    mosterInfo.getJSONArray("StanceWeakList")
+                            )
+                    );
+                    monsterIdTMP2.add(monsterId);
+                }
+                Collections.sort(enemyList2, (a, b) -> b.monsterRank.code - a.monsterRank.code); //降序排列
+
+                JSONArray enemyListFinal2 = new JSONArray();
+                for (int k = 0; k < enemyList2.size(); k++) {
+                    JSONObject enemyObj2 = new JSONObject();
+                    enemyObj2.put("monster_name", enemyList2.get(k).monsterName);
+                    enemyObj2.put("monster_code", enemyList2.get(k).monsterRank.code);
+                    enemyObj2.put("monster_weakness", enemyList2.get(k).monsterWeakness);
+                    enemyListFinal2.put(enemyObj2);
+                }
+                abyssStagePart2.put("wave" + String.valueOf(wave + 1), enemyListFinal2);
+            }
+
+            //最後合拼Parts
+            stagePreFinal.put("part1", abyssStagePart1);
+            stagePreFinal.put("part2", abyssStagePart2);
+
+            stageFinal.put(stagePreFinal);
+
+        }
+
+        JSONObject stageWithDescName = new JSONObject();
+        stageWithDescName.put("info", stageFinal);
+
+        //深淵名字
+        JSONObject nameFinal = new JSONObject();
+        String nameHash = challengeGroupJSON.getJSONObject(abyssListJSON.getJSONObject(memoryOfChaosCode + "01").getString("GroupID")).getJSONObject("GroupName").getString("Hash");
+        for (int langIndex = 0; langIndex < languageSTRArr.length; langIndex++) {
+            nameFinal.put(languageSTRArr[langIndex], languageJSONArr[langIndex].getString(nameHash));
+        }
+        stageWithDescName.put("name", nameFinal);
+
+        //深淵效果描述嗎
+        JSONObject descFinal = new JSONObject();
+        JSONArray params = mazeBuffJSON.getJSONObject(abyssListJSON.getJSONObject(memoryOfChaosCode + "01").getString("MazeBuffID")).getJSONObject("1").getJSONArray("ParamList");
+        String descHash = mazeBuffJSON.getJSONObject(abyssListJSON.getJSONObject(memoryOfChaosCode + "01").getString("MazeBuffID")).getJSONObject("1").getJSONObject("BuffDesc").getString("Hash");
+        for (int langIndex = 0; langIndex < languageSTRArr.length; langIndex++) {
+            String desc = languageJSONArr[langIndex].getString(descHash);
+            for (int e = 0; e < params.length(); e++) {
+                double value = params.getJSONObject(e).getDouble("Value");
+                desc = desc.replace("#" + (e + 1) + "[i]", ((int) value != value ? ItemRSS.prettyCount(value, 1) : ItemRSS.prettyCount(value, 0)));
+            }
+            descFinal.put(languageSTRArr[langIndex], desc);
+        }
+        stageWithDescName.put("desc", descFinal);
+
+        //添加時間
+        JSONObject stageTime = new JSONObject();
+        JSONObject schedule = scheduleDataJSON.getJSONObject(challengeGroupJSON.getJSONObject(abyssListJSON.getJSONObject(memoryOfChaosCode + "01").getString("GroupID")).getString("ScheduleDataID"));
+
+        //2023-11-27 04:00:00
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        dateFormat.setTimeZone(TimeZone.getTimeZone("GMT+8"));
+
+        stageTime.put("begin", (dateFormat.parse(schedule.getString("BeginTime")).getTime()));
+        stageTime.put("end", (dateFormat.parse(schedule.getString("EndTime")).getTime()));
+        stageTime.put("versionBegin", (startVersion));
+        stageTime.put("versionEnd", (endVersion));
+
+        stageWithDescName.put("time", stageTime);
+
+        LogExport.bugLog("HelpTool.java", "getMemoryOfChaosList()", stageWithDescName.toString()
+                        .replace("<color=#f29e38ff>", "<span style='color:#f29e38ff'>")
+                        .replace("\\n", "<br>")
+                        .replace("<\\/color>", "<\\/span>")
+                        .replace("<unbreak>", "")
+                        .replace("<\\/unbreak>", "")
+                , "Vocchi Approved", context, LogExport.BETA_TESTING);
+
+    }
+
+    private void getPureFictionList(Context context, String fictionID) throws JSONException, ParseException {
+        //虛構敘事活動列表
+        JSONObject StoryGroupConfigJSON = new JSONObject(LoadAssestData(context, "test_data/ChallengeStoryGroupConfig.json"));
+        //虛構敘事活動細節
+        JSONObject ChallengeStoryMazeConfigJSON = new JSONObject(LoadAssestData(context, "test_data/ChallengeStoryMazeConfig.json"));
+        //虛構敘事活動時間
+        JSONObject ScheduleDataStoryJSON = new JSONObject(LoadAssestData(context, "test_data/ScheduleDataChallengeStory.json"));
+        //BUFF詳情
+        JSONObject mazeBuffJSON = new JSONObject(LoadAssestData(context, "test_data/MazeBuff.json"));
+        //虛構敘事波次列表
+        JSONObject StageInfiniteGroupJSON = new JSONObject(LoadAssestData(context, "test_data/StageInfiniteGroup.json"));
+        //虛構敘事波次細節
+        JSONObject StageInfiniteWaveConfigJSON = new JSONObject(LoadAssestData(context, "test_data/StageInfiniteWaveConfig.json"));
+        //虛構敘事怪物清單
+        JSONObject StageInfiniteMonsterGroupJSON = new JSONObject(LoadAssestData(context, "test_data/StageInfiniteMonsterGroup.json"));
+        //虛構敘事怪物資料
+        JSONObject monsterJSON = new JSONObject(LoadAssestData(context, "test_data/MonsterConfig.json"));
+        JSONObject monsterTempJSON = new JSONObject(LoadAssestData(context, "test_data/MonsterTemplateConfig.json"));
+
+        //語言
+        JSONObject chsJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapCHS.json"));
+        JSONObject chtJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapCHT.json"));
+        JSONObject deJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapDE.json"));
+        JSONObject enJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapEN.json"));
+        JSONObject esJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapES.json"));
+        JSONObject frJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapFR.json"));
+        //JSONObject idJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapID.json"));
+        JSONObject jpJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapJP.json"));
+        JSONObject krJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapKR.json"));
+        JSONObject ptJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapPT.json"));
+        JSONObject ruJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapRU.json"));
+//        JSONObject thJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapTH.json"));
+       // JSONObject viJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapVI.json"));
+
+        //JSONObject[] languageJSONArr = new JSONObject[]{chsJSON, chtJSON, deJSON, enJSON, esJSON, frJSON, idJSON, jpJSON, krJSON, ptJSON, ruJSON, thJSON, viJSON};
+        //String[] languageSTRArr = new String[]{"zh_cn", "zh_hk", "de", "en", "es", "fr", "id", "jp", "kr", "pt", "ru", "th", "vi"};
+        JSONObject[] languageJSONArr = new JSONObject[]{chsJSON, chtJSON, deJSON, enJSON, esJSON, frJSON, jpJSON, krJSON, ptJSON, ruJSON};
+        String[] languageSTRArr = new String[]{"zh_cn", "zh_hk", "de", "en", "es", "fr", "jp", "kr", "pt", "ru"};
+        String tmpRecord = "";
+        // being from 2801 , end from 2812
+        JSONArray stageFinal = new JSONArray();
+
+        //波次内容
+        for (int x = 1; x < 5; x++) {
+            JSONObject stagePreFinal = new JSONObject(); //其x的紀錄
+            String abyssId = fictionID + String.valueOf(x);
+            if (!ChallengeStoryMazeConfigJSON.has(abyssId)) {
+                System.out.println("無 Stage " + abyssId);
+                continue;
+            }
+
+            //本次混沌回憶名字
+            JSONObject abyssIdIntro = ChallengeStoryMazeConfigJSON.getJSONObject(abyssId);
+            JSONObject abyssFinalName = new JSONObject();
+            String nameHash = abyssIdIntro.getJSONObject("Name").getString("Hash");
+            for (int langIndex = 0; langIndex < languageSTRArr.length; langIndex++) {
+                System.out.println(languageSTRArr[langIndex] + " || " + languageJSONArr[langIndex].getString(nameHash));
+                abyssFinalName.put(languageSTRArr[langIndex], languageJSONArr[langIndex].getString(nameHash));
+            }
+            stagePreFinal.put("name", abyssFinalName);
+
+            //其x節點一的紀錄
+            JSONObject abyssStagePart1 = new JSONObject();
+            //其x節點二的紀錄
+            JSONObject abyssStagePart2 = new JSONObject();
+
+            //弱點建議
+            abyssStagePart1.put("weakness_suggest", abyssIdIntro.getJSONArray("DamageType1"));
+            abyssStagePart2.put("weakness_suggest", abyssIdIntro.getJSONArray("DamageType2"));
+
+            //其x第一部分的敵人
+
+            //StageInfiniteGroup
+            JSONObject stageConfigMonsterConfig1 = StageInfiniteGroupJSON.getJSONObject(abyssIdIntro.getJSONArray("EventIDList1").getString(0));
+            JSONArray stageConfigMonsterList1 = stageConfigMonsterConfig1.getJSONArray("WaveIDList");
+
+            //節點一 Wave 1 & 2 & 3
+            abyssStagePart1.put("totalWaves", stageConfigMonsterList1.length());
+            for (int wave = 0; wave < stageConfigMonsterList1.length(); wave++) {
+                ArrayList<Monster> enemyList1 = new ArrayList<>();
+                ArrayList<Long> monsterIdTMP1 = new ArrayList<>();
+                JSONArray stageMonsterList = StageInfiniteMonsterGroupJSON.getJSONObject(stageConfigMonsterList1.getString(wave)).getJSONArray("MonsterList");
+                for (int y = 0; y < stageMonsterList.length(); y++) {
+                    long monsterId = stageMonsterList.getLong(y);
+                    if (monsterIdTMP1.contains(monsterId)) {
+                        continue;
+                    }
+
+                    JSONObject mosterInfo = monsterJSON.getJSONObject(String.valueOf(monsterId));
+                    JSONObject mosterInfoTemp = (monsterTempJSON.has(String.valueOf(monsterId)) ? monsterTempJSON.getJSONObject(String.valueOf(monsterId)) : null);
+
+                    enemyList1.add(
+                            new Monster(
+                                    enJSON.getString(mosterInfo.getJSONObject("MonsterName").getString("Hash")),
+                                    Rank.findRankByName(
+                                            //Once can't I find it in Template ?
+                                            (mosterInfoTemp == null ?
+                                                    // I did can't find it in Template, So I check MonsterConfig CustomValueTags is [] or not
+                                                    ((!mosterInfo.isNull("CustomValueTags") && mosterInfo.getJSONArray("CustomValueTags").length() > 0) ?
+                                                            "CustomValueTags" : "UNKNOWN" //CustomValueTags -> 劇情=-1
+                                                    ) : mosterInfoTemp.getString("Rank"))),  //直接係Template 囉 Rank
+                                    mosterInfo.getJSONArray("StanceWeakList")
+                            )
+                    );
+                    monsterIdTMP1.add(monsterId);
+                }
+                Collections.sort(enemyList1, (a, b) -> b.monsterRank.code - a.monsterRank.code); //降序排列
+                JSONArray enemyListFinal1 = new JSONArray();
+                for (int k = 0; k < enemyList1.size(); k++) {
+                    JSONObject enemyObj1 = new JSONObject();
+                    enemyObj1.put("monster_name", enemyList1.get(k).monsterName);
+                    enemyObj1.put("monster_code", enemyList1.get(k).monsterRank.code);
+                    enemyObj1.put("monster_weakness", enemyList1.get(k).monsterWeakness);
+                    enemyListFinal1.put(enemyObj1);
+                }
+                abyssStagePart1.put("wave" + String.valueOf(wave + 1), enemyListFinal1);
+            }
+
+            //StageInfiniteGroup
+            JSONObject stageConfigMonsterConfig2 = StageInfiniteGroupJSON.getJSONObject(abyssIdIntro.getJSONArray("EventIDList2").getString(0));
+            JSONArray stageConfigMonsterList2 = stageConfigMonsterConfig2.getJSONArray("WaveIDList");
+
+            //節點二 Wave 1 & 2 & 3
+            abyssStagePart2.put("totalWaves", stageConfigMonsterList2.length());
+            for (int wave = 0; wave < stageConfigMonsterList2.length(); wave++) {
+                ArrayList<Monster> enemyList2 = new ArrayList<>();
+                ArrayList<Long> monsterIdTMP2 = new ArrayList<>();
+                JSONArray stageMonsterList = StageInfiniteMonsterGroupJSON.getJSONObject(stageConfigMonsterList2.getString(wave)).getJSONArray("MonsterList");
+                for (int y = 0; y < stageMonsterList.length(); y++) {
+                    long monsterId = stageMonsterList.getLong(y);
+                    if (monsterIdTMP2.contains(monsterId)) {
+                        continue;
+                    }
+
+                    JSONObject mosterInfo = monsterJSON.getJSONObject(String.valueOf(monsterId));
+                    JSONObject mosterInfoTemp = (monsterTempJSON.has(String.valueOf(monsterId)) ? monsterTempJSON.getJSONObject(String.valueOf(monsterId)) : null);
+
+                    enemyList2.add(
+                            new Monster(
+                                    enJSON.getString(mosterInfo.getJSONObject("MonsterName").getString("Hash")),
+                                    Rank.findRankByName(
+                                            //Once can't I find it in Template ?
+                                            (mosterInfoTemp == null ?
+                                                    // I did can't find it in Template, So I check MonsterConfig CustomValueTags is [] or not
+                                                    ((!mosterInfo.isNull("CustomValueTags") && mosterInfo.getJSONArray("CustomValueTags").length() > 0) ?
+                                                            "CustomValueTags" : "UNKNOWN" //CustomValueTags -> 劇情=-1
+                                                    ) : mosterInfoTemp.getString("Rank"))),  //直接係Template 囉 Rank
+                                    mosterInfo.getJSONArray("StanceWeakList")
+                            )
+                    );
+                    monsterIdTMP2.add(monsterId);
+                }
+                Collections.sort(enemyList2, (a, b) -> b.monsterRank.code - a.monsterRank.code); //降序排列
+                JSONArray enemyListFinal2 = new JSONArray();
+                for (int k = 0; k < enemyList2.size(); k++) {
+                    JSONObject enemyObj2 = new JSONObject();
+                    enemyObj2.put("monster_name", enemyList2.get(k).monsterName);
+                    enemyObj2.put("monster_code", enemyList2.get(k).monsterRank.code);
+                    enemyObj2.put("monster_weakness", enemyList2.get(k).monsterWeakness);
+                    enemyListFinal2.put(enemyObj2);
+                }
+                abyssStagePart2.put("wave" + String.valueOf(wave + 1), enemyListFinal2);
+            }
+
+            //其x第二部分的敵人
+
+            //最後合拼Parts
+            stagePreFinal.put("part1", abyssStagePart1);
+            stagePreFinal.put("part2", abyssStagePart2);
+
+            stageFinal.put(stagePreFinal);
+
+        }
+
+        JSONObject stageWithDescName = new JSONObject();
+        stageWithDescName.put("info", stageFinal);
+
+        //名字
+        JSONObject nameFinal = new JSONObject();
+        String nameHash = StoryGroupConfigJSON.getJSONObject(fictionID).getJSONObject("GroupName").getString("Hash");
+        for (int langIndex = 0; langIndex < languageSTRArr.length; langIndex++) {
+            nameFinal.put(languageSTRArr[langIndex], languageJSONArr[langIndex].getString(nameHash));
+        }
+        stageWithDescName.put("name", nameFinal);
+
+        //效果描述
+        JSONObject descFinal = new JSONObject();
+        JSONArray params = mazeBuffJSON.getJSONObject(StoryGroupConfigJSON.getJSONObject(fictionID).getString("MazeBuffID")).getJSONObject("1").getJSONArray("ParamList");
+        String descHash = mazeBuffJSON.getJSONObject(StoryGroupConfigJSON.getJSONObject(fictionID).getString("MazeBuffID")).getJSONObject("1").getJSONObject("BuffDesc").getString("Hash");
+        for (int langIndex = 0; langIndex < languageSTRArr.length; langIndex++) {
+            String desc = languageJSONArr[langIndex].getString(descHash);
+            for (int e = 0; e < params.length(); e++) {
+                double value = params.getJSONObject(e).getDouble("Value");
+                desc = desc.replace("#" + (e + 1) + "[i]", ((int) value != value ? ItemRSS.prettyCount(value, 1) : ItemRSS.prettyCount(value, 0)));
+            }
+            descFinal.put(languageSTRArr[langIndex], desc);
+        }
+        stageWithDescName.put("desc", descFinal);
+
+        //添加時間
+        JSONObject stageTime = new JSONObject();
+        JSONObject schedule = ScheduleDataStoryJSON.getJSONObject(StoryGroupConfigJSON.getJSONObject(fictionID).getString("ScheduleDataID"));
+
+        //2023-11-27 04:00:00
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        dateFormat.setTimeZone(TimeZone.getTimeZone("GMT+8"));
+
+        stageTime.put("begin", (dateFormat.parse(schedule.getString("BeginTime")).getTime()));
+        stageTime.put("end", (dateFormat.parse(schedule.getString("EndTime")).getTime()));
+
+        stageWithDescName.put("time", stageTime);
+
+        LogExport.bugLog("HelpTool.java", "getMemoryOfChaosList()", stageWithDescName.toString()
+                        .replace("<color=#f29e38ff>", "<span style='color:#f29e38ff'>")
+                        .replace("\\n", "<br>")
+                        .replace("<\\/color>", "<\\/span>")
+                        .replace("<unbreak>", "")
+                        .replace("<\\/unbreak>", "")
+                , "Vocchi Approved", context, LogExport.BETA_TESTING);
+
+    }
+
+    private void getGachaList(Context context) throws JSONException, ParseException {
+        //卡池名稱列表
+        JSONObject GachaBasicInfo = new JSONObject(LoadAssestData(context, "test_data/GachaBasicInfo.json"));
+
+        //語言
+        JSONObject chsJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapCHS.json"));
+        JSONObject chtJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapCHT.json"));
+        JSONObject deJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapDE.json"));
+        JSONObject enJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapEN.json"));
+        JSONObject esJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapES.json"));
+        JSONObject frJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapFR.json"));
+        JSONObject idJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapID.json"));
+        JSONObject jpJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapJP.json"));
+        JSONObject krJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapKR.json"));
+        JSONObject ptJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapPT.json"));
+        JSONObject ruJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapRU.json"));
+//        JSONObject thJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapTH.json"));
+//        JSONObject viJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapVI.json"));
+
+        JSONObject[] languageJSONArr = new JSONObject[]{chsJSON, chtJSON, deJSON, enJSON, esJSON, frJSON, idJSON, jpJSON, krJSON, ptJSON, ruJSON};
+        String[] languageSTRArr = new String[]{"zh_cn", "zh_hk", "de", "en", "es", "fr", "id", "jp", "kr", "pt", "ru"};
+        String tmpRecord = "";
+
+        JSONObject gachaInfoMain = new JSONObject();
+        Iterator<String> keys = GachaBasicInfo.keys();
+        while (keys.hasNext()) {
+            String key = keys.next();
+            if (GachaBasicInfo.get(key) instanceof JSONObject) {
+                JSONObject gachaBasicData = GachaBasicInfo.getJSONObject(key);
+                JSONObject gachaInfoTMP = new JSONObject();
+                JSONObject gachaInfoTitle = new JSONObject();
+
+                gachaInfoTMP.put("poolCode", key);
+                gachaInfoTMP.put("type",
+                        gachaBasicData.getString("GachaType").equals("AvatarUp") ? "CHAR"
+                                : gachaBasicData.getString("GachaType").equals("WeaponUp") ? "LIGHTCONE"
+                                : "STATIC"
+                );
+                String nameHash = String.valueOf(gachaBasicData.getJSONObject("PoolName").getLong("Hash"));
+                for (int langIndex = 0; langIndex < languageSTRArr.length; langIndex++) {
+                    System.out.println(languageSTRArr[langIndex] + " || " + languageJSONArr[langIndex].getString(nameHash));
+                    gachaInfoTitle.put(languageSTRArr[langIndex], languageJSONArr[langIndex].getString(nameHash)
+                            .replaceAll("\\{RUBY_B#.*?\\}(.*?)", "$1")
+                            .replace("{RUBY_E#}", "")
+                    );
+                }
+                gachaInfoTMP.put("title", gachaInfoTitle);
+
+                gachaInfoMain.put(key, gachaInfoTMP);
+            }
+        }
+
+        LogExport.bugLog("HelpTool.java", "getGachaList()", gachaInfoMain.toString()
+                        .replace("<color=#f29e38ff>", "<span style='color:#f29e38ff'>")
+                        .replace("\\n", "<br>")
+                        .replace("<\\/color>", "<\\/span>")
+                        .replace("<unbreak>", "")
+                        .replace("<\\/unbreak>", "")
+                , "Vocchi Approved", context, LogExport.BETA_TESTING);
+
+    }
+
+    public class Monster {
+        String monsterName;
+        Rank monsterRank;
+        JSONArray monsterWeakness;
+
+        public Monster(String monsterName, Rank monsterRank, JSONArray monsterWeakness) {
+            this.monsterName = monsterName;
+            this.monsterRank = monsterRank;
+            this.monsterWeakness = monsterWeakness;
+        }
+    }
+
+    public enum Rank {
+        CustomValueTags("CustomValueTags", -1),
+        BIGBOSS("BigBoss", 5),
+        LITTLEBOSS("LittleBoss", 4),
+        ELITE("Elite", 3),
+        MINIONLV2("MinionLv2", 2),
+        MINIONLV1("MinionLv1", 1),
+        UNKNOWN("UNKNOWN", 0);
+
+        private String name = "N/A";
+        private int code = -1;
+
+        Rank(String name, int code) {
+            this.name = name;
+            this.code = code;
+        }
+
+        public static Rank findRankByName(String name) {
+            for (Rank rank : Rank.values()) {
+                if (name.equals(rank.name)) {
+                    return rank;
+                }
+            }
+            return UNKNOWN;
+        }
+    }
+
+    public void getMonsterYingSe(Context context) throws JSONException {
+        JSONObject monsterJSON = new JSONObject(LoadAssestData(context, "test_data/MonsterConfig.json"));
+        JSONObject cnJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapCHT.json"));
+        JSONObject enJSON = new JSONObject(LoadAssestData(context, "test_data/text_map/TextMapEN.json"));
+
+        String[] monsterList = new String[]{"1002030", "1002040", "1002050", "1003010", "1004010", "1004020", "1004030", "1005010", "1012010", "1012020", "1012030", "1012040", "1013010", "1013020", "1014010", "1022020", "1023010", "1023020", "2002010", "2002020", "2002030", "2004010", "2004020", "2011010", "2011020", "2012010", "2013010", "2013020", "2022010", "2022020", "2022040", "2022050", "2022051", "2022060", "2022070", "2022080", "2022090", "2022100", "2022110", "2023010", "2023020", "2023030", "2024010", "2024020", "3021020", "3021030", "3021040", "3024010", "7002140", "8001010", "8001020", "8001030", "8001040", "8001050", "8002010", "8002040", "8002050", "8003010", "8003020", "8003030", "8003040", "8003050", "8011010", "8011020", "8012010", "8012020", "8012030", "8012140", "8012142", "8012200", "8012201", "8012210", "8012211", "8013010", "8013141", "8015010", "8015020", "8015021", "8022010", "8022020", "8022030", "8024010", "8025010", "8032010", "8032020", "8033010", "9003020"};
+        String tmpRecord = "";
+
+        for (String id : monsterList) {
+            if (!monsterJSON.has(id)) {
+                System.out.println("NO ID " + id);
+                continue;
+            }
+            JSONObject monsterObj = monsterJSON.getJSONObject(id);
+            String nameHash = String.valueOf(monsterObj.getJSONObject("MonsterName").getLong("Hash"));
+            String chName = cnJSON.getString(nameHash);
+            String enName = enJSON.getString(nameHash);
+
+            tmpRecord += id + "\t" + chName + "\t" + enName + "\t" + enName.toLowerCase().replace(" ", "_").toLowerCase().replace("-", "_").replace(",", "").replace("!", "").replace(":", "").replace("'", "").replace("(", "").replace(")", "") + "\n";
+        }
+
+        System.out.println(tmpRecord);
+        LogExport.bugLog("HelpTool.java", "getMonsterYingSe()", tmpRecord, "Vocchi Approved", context, LogExport.BETA_TESTING);
+    }
+
+    public void readDumbThings(String jsonBaseX, Context context) {
+        try {
+            String tmp = "";
+            JSONObject json = new JSONObject(jsonBaseX);
+            for (Iterator<String> it = json.keys(); it.hasNext(); ) {
+                String key = it.next();
+                tmp += key + "\t" + json.getJSONObject(key).getString("name") + (json.getJSONObject(key).has("set_id") ? "\t" + json.getJSONObject(key).getString("set_id") : "") + "\n";
+            }
+            tmp += "THIS IS THE END LA\n";
+            LogExport.export("HelpTool", "TMP_id", tmp, context, LogExport.BETA_TESTING);
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void yingse_sg_id(String jsonBaseX, Context context) {
+        try {
+            String tmp = "";
+            JSONObject json = new JSONObject(jsonBaseX);
+            for (Iterator<String> it = json.keys(); it.hasNext(); ) {
+                String key = it.next();
+                tmp += key + "\t" + json.getJSONObject(key).getString("name") + "\n";
+            }
+            LogExport.export("HelpTool", "yingse_sg_id", tmp, context, LogExport.BETA_TESTING);
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void getSingWan(Context context) {
+        String json_base2 = LoadAssestData(context, "character_data/character_list.json");
+        skillTreePointArray = new ArrayList<>();
+        try {
+            JSONArray array = new JSONArray(json_base2);
+            for (int i = 0; i < array.length(); i++) {
+                JSONObject object = array.getJSONObject(i);
+                //Special requirements
+                //if (object.getString("fileName").contains("player")) {
+
+                String json_base = LoadAssestData(context, "character_data/" + "en" + "/" + object.getString("fileName") + ".json");
+                if (!json_base.equals("")) {
+                    JSONObject jsonObject = new JSONObject(json_base);
+                    if (jsonObject.has("ranks") && !jsonObject.isNull("ranks") && jsonObject.getJSONArray("ranks").length() > 0) {
+                        singwan(jsonObject.getJSONArray("ranks"), object.getString("name").toLowerCase().replace(" • ", "_").replace("(", "").replace(")", "").replace(" ", "_").replace("_&_numby", "").replace("imbibitor_lunae", "il").replace(".", ""), context);
+                    } else {
+                        Toast.makeText(context, "ranksIsNull in " + object.getString("fileName"), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void getSkillTreePartsIcons(Context context) {
+        //獲取技能樹
+
+        String json_base2 = LoadAssestData(context, "character_data/character_list.json");
+        skillTreePointArray = new ArrayList<>();
+        try {
+            JSONArray array = new JSONArray(json_base2);
+            for (int i = 0; i < array.length(); i++) {
+                JSONObject object = array.getJSONObject(i);
+                //Special requirements
+                //if (object.getString("fileName").contains("player")) {
+
+                String json_base = LoadAssestData(context, "character_data/" + "en" + "/" + object.getString("fileName") + ".json");
+                if (!json_base.equals("")) {
+                    JSONObject jsonObject = new JSONObject(json_base);
+                    if (jsonObject.has("skillTreePoints") && !jsonObject.isNull("skillTreePoints") && jsonObject.getJSONArray("skillTreePoints").length() > 0) {
+                        skillTree(jsonObject.getJSONArray("skillTreePoints"), object.getString("fileName"), 0);
+                    } else {
+                        Toast.makeText(context, "SkillTreeIsNull in " + object.getString("fileName"), Toast.LENGTH_SHORT).show();
+                    }
+                }
+                //}
+            }
+            new Handler().postDelayed(() -> {
+                String str_final = "";
+
+                for (String value : skillTreePointArray) {
+                    str_final += value + "\n";
+                }
+                LogExport.special(str_final, context, LogExport.BETA_TESTING);
+            }, 10000);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void singwan(JSONArray ranks, String charName, Context context) {
+        String str_final = "";
+        for (int x = 0; x < ranks.length(); x++) {
+            try {
+                if (ranks.getJSONObject(x).has("iconPath")) {
+                    str_final += "ren\thttps://cdn.starrailstation.com/assets/" + ranks.getJSONObject(x).getString("iconPath") + ".webp\t" + charName + "_soul" + String.valueOf(x + 1) + ".webp\n";
+                }
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        LogExport.special(str_final, context, LogExport.BETA_TESTING);
+    }
+
+    public void skillTree(JSONArray skillTreePoints, String charName, int level) {
+        for (int x = 0; x < skillTreePoints.length(); x++) {
+            try {
+                JSONObject jsonObject = skillTreePoints.getJSONObject(x);
+                if (jsonObject.has("embedBonusSkill") && jsonObject.getJSONObject("embedBonusSkill").has("iconPath")) {
+                    String iconPath = jsonObject.getJSONObject("embedBonusSkill").getString("iconPath");
+                    boolean isExist = true;
+                    if (!skillTreePointArray.contains(iconPath)) {
+                        skillTreePointArray.add(iconPath);
+                        isExist = false;
+                    }
+                    System.out.println("skillTree [" + charName + "] - LVL" + level + " || " + "[" + isExist + "] : " + iconPath);
+
+                }
+
+                if (jsonObject.has("embedBuff") && jsonObject.getJSONObject("embedBuff").has("iconPath")) {
+                    String iconPath = jsonObject.getJSONObject("embedBuff").getString("iconPath");
+                    boolean isExist = true;
+                    if (!skillTreePointArray.contains(iconPath)) {
+                        skillTreePointArray.add(iconPath);
+                        isExist = false;
+                    }
+                    System.out.println("skillTree [" + charName + "] - LVL" + level + " || " + "[" + isExist + "] : " + iconPath);
+
+                }
+
+                if (jsonObject.has("children")) {
+                    skillTree(jsonObject.getJSONArray("children"), charName, level + 1);
+                }
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    public static void help_tool_eidolon(JSONObject jsonObject, Context context) throws JSONException {
+        String str_final = "";//""-----------"+jsonObject.getString("name")+"-----------"+"\n";
+        JSONArray ranks = jsonObject.getJSONArray("ranks");
+        for (int x = 0; x < ranks.length(); x++) {
+            str_final = str_final + "ren https://starrailstation.com/assets/" + ranks.getJSONObject(x).getString("artPath") + ".webp \"" + jsonObject.getString("name").toLowerCase().replace(" ", "_").replace("'", "").replace("trailblazer", playerCustomSex(jsonObject)) + "_eidolon" + String.valueOf(x + 1) + ".webp\"" + "\n";
+        }
+
+        LogExport.special(str_final, context, LogExport.BETA_TESTING);
+    }
+
+    private static String playerCustomElement(JSONObject jsonObject) {
+        if (jsonObject != null && !jsonObject.equals("")) {
+            try {
+                if (jsonObject.has("damageType") && jsonObject.getJSONObject("damageType").has("name")) {
+                    return "trailblazer_" + jsonObject.getJSONObject("damageType").getString("name").toLowerCase();
+                }
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return "trailblazer";
+    }
+
+    private static String playerCustomSex(JSONObject jsonObject) {
+        if (jsonObject != null && !jsonObject.equals("")) {
+            try {
+                if (jsonObject.has("pageId")) {
+                    if (jsonObject.getString("pageId").contains("playerboy")) {
+                        return "trailblazer_male";
+                    }
+                    if (jsonObject.getString("pageId").contains("playergirl")) {
+                        return "trailblazer_female";
+                    }
+                }
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return "trailblazer";
+    }
+
+    private static String playerCustomSpecific(JSONObject jsonObject) {
+        if (jsonObject != null && !jsonObject.equals("")) {
+            try {
+                if (jsonObject.has("pageId")) {
+                    switch (jsonObject.getString("pageId")) {
+                        case "playerboy":
+                            return "trailblazer_physical_male";
+                        case "playerboy2":
+                            return "trailblazer_fire_male";
+
+                        case "playergirl":
+                            return "trailblazer_physical_female";
+                        case "playergirl2":
+                            return "trailblazer_fire_female";
+
+                        default:
+                            return "trailblazer_";
+                    }
+                }
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return "trailblazer_";
+    }
+
+    public static ArrayList<String> help_tool_material(JSONObject jsonObject, Context context, ArrayList<String> materialList) throws JSONException {
+        String str_final = "";//""-----------"+jsonObject.getString("name")+"-----------"+"\n";
+        JSONObject ranks = jsonObject.getJSONObject("itemReferences");
+        Iterator<String> iter = ranks.keys();
+        for (int x = 0; x < ranks.length(); x++) {
+            String key = iter.next();
+            if (!materialList.contains(ranks.getJSONObject(key).getString("iconPath") + ".webp")) {
+                str_final = str_final + "ren https://starrailstation.com/assets/" + ranks.getJSONObject(key).getString("iconPath") + ".webp \"material_" + ranks.getJSONObject(key).getString("name").toLowerCase().replace(" ", "_").replace("'", "") + ".webp\"" + "\n";
+                materialList.add(ranks.getJSONObject(key).getString("iconPath") + ".webp");
+            }
+        }
+
+        LogExport.special(str_final, context, LogExport.BETA_TESTING);
+        return materialList;
+    }
+
+    public static void help_tool_material_id(JSONObject jsonObject, Context context, ArrayList<String> materialList) throws JSONException {
+        String str_final = "";//""-----------"+jsonObject.getString("name")+"-----------"+"\n";
+        JSONObject ranks = jsonObject.getJSONObject("itemReferences");
+        Iterator<String> iter = ranks.keys();
+        for (int x = 0; x < ranks.length(); x++) {
+            String key = iter.next();
+            if (!materialList.contains(String.valueOf(ranks.getJSONObject(key).getInt("id")))) {
+                str_final = str_final + "ID: " + String.valueOf(ranks.getJSONObject(key).getInt("id")) + " || material_" + ranks.getJSONObject(key).getString("name").toLowerCase().replace(" ", "_").replace("'", "") + "\"" + "\n";
+                materialList.add(String.valueOf(ranks.getJSONObject(key).getInt("id")));
+            }
+        }
+
+        LogExport.specific(str_final, context, "material_list");
+    }
+
+    public static void help_tool_skill(JSONObject jsonObject, Context context) throws JSONException {
+        String str_final = "";//""-----------"+jsonObject.getString("name")+"-----------"+"\n";
+        JSONArray ranks = jsonObject.getJSONArray("skills");
+        for (int x = 0; x < ranks.length(); x++) {
+            if (x != 4) {
+                str_final = str_final + "ren https://starrailstation.com/assets/" + ranks.getJSONObject(x).getString("iconPath") + ".webp \"" + jsonObject.getString("name").toLowerCase().replace(" ", "_").replace("'", "").replace("trailblazer", playerCustomElement(jsonObject)) + "_skill" + String.valueOf(x + 1) + ".webp\"" + "\n";
+            }
+        }
+
+        LogExport.special(str_final, context, LogExport.BETA_TESTING);
+    }
+
+    public void help_tool_export_relic_pc_run(Context context) throws JSONException {
+        help_tool_export_relic_pc(LangUtil.LangType.DE, context);
+        help_tool_export_relic_pc(LangUtil.LangType.EN, context);
+        help_tool_export_relic_pc(LangUtil.LangType.FR, context);
+        help_tool_export_relic_pc(LangUtil.LangType.ID, context);
+        help_tool_export_relic_pc(LangUtil.LangType.JP, context);
+        help_tool_export_relic_pc(LangUtil.LangType.KR, context);
+        help_tool_export_relic_pc(LangUtil.LangType.PT, context);
+        help_tool_export_relic_pc(LangUtil.LangType.RU, context);
+        help_tool_export_relic_pc(LangUtil.LangType.ES, context);
+        help_tool_export_relic_pc(LangUtil.LangType.TH, context);
+        help_tool_export_relic_pc(LangUtil.LangType.VI, context);
+        help_tool_export_relic_pc(LangUtil.LangType.ZH_HK, context);
+        help_tool_export_relic_pc(LangUtil.LangType.ZH_CN, context);
+    }
+
+    public void help_tool_export_relic_pc(LangUtil.LangType langType, Context context) throws JSONException {
+        String dataInList = LoadAssestData(context, "relic_data/relic_list.json");
+        if (!dataInList.equals("")) {
+            JSONArray array = new JSONArray(dataInList);
+            String dataRelease = "{\n";
+            for (int x = 0; x < array.length(); x++) {
+                if (!array.getJSONObject(x).getString("fileName").isEmpty() && !array.getJSONObject(x).getString("fileName").contains("N/A")) {
+                    String dataInRelic = LoadAssestData(context, "relic_data/" + langType.getCode() + "/" + array.getJSONObject(x).getString("fileName") + ".json");
+                    if (dataInRelic == "") return;
+                    JSONArray skills = new JSONObject(dataInRelic).getJSONArray("skills");
+                    dataRelease = dataRelease + "\t\"" + array.getJSONObject(x).getString("name") + "\" : " + skills.toString() + (x + 1 < array.length() ? ",\n" : "\n}");
+                }
+            }
+
+            try {
+                File ext = context.getFilesDir();
+                if (!Files.exists(Paths.get(ext + "/" + "relic_pc_" + langType.getCode() + ".json"))) {
+                    Files.createFile(Paths.get(ext + "/" + "relic_pc_" + langType.getCode() + ".json"));
+                    Files.write(Paths.get(ext + "/" + "relic_pc_" + langType.getCode() + ".json"), dataRelease.getBytes(), new StandardOpenOption[]{StandardOpenOption.WRITE});
+                } else {
+                    Files.write(Paths.get(ext + "/" + "relic_pc_" + langType.getCode() + ".json"), dataRelease.getBytes(), new StandardOpenOption[]{StandardOpenOption.WRITE});
+                }
+            } catch (IOException e) {
+                Log.i("LogExport -> HelpTool", e.getMessage());
+            }
+        }
+    }
+
+    public void help_tool_export_lightcone_icon(Context context) throws JSONException {
+        LangUtil.LangType langType = LangUtil.LangType.ZH_HK;
+        String dataInList = LoadAssestData(context, "lightcone_data/lightcone_list.json");
+        if (!dataInList.equals("")) {
+            JSONArray array = new JSONArray(dataInList);
+            String dataRelease = "";
+            for (int x = 0; x < array.length(); x++) {
+                if (!array.getJSONObject(x).getString("fileName").isEmpty() && !array.getJSONObject(x).getString("fileName").contains("N/A")) {
+                    String dataInRelic = LoadAssestData(context, "lightcone_data/" + langType.getCode() + "/" + array.getJSONObject(x).getString("fileName") + ".json");
+                    if (dataInRelic == "") return;
+                    dataRelease += "ren https://cdn.starrailstation.com/assets/" + new JSONObject(dataInRelic).getString("iconPath") + ".webp " + array.getJSONObject(x).getString("name").toLowerCase().replace(" ", "_").toLowerCase().replace("-", "_").replace(",", "").replace("!", "").replace(":", "").replace("'", "") + ".webp\n";
+                }
+            }
+            LogExport.special(dataRelease, context, LogExport.BETA_TESTING);
+        }
+    }
+
+    /*
+    https://www.prydwen.gg/page-data/star-rail/characters/bailu/page-data.json
+    only need
+    buildData in ./result/data/currentUnit/nodes/[x]/
+    teams in ./result/data/currentUnit/nodes/[x]/
+     */
+
+    public void help_tool_export_locale_advice(Context context) {
+        String json_base2 = LoadAssestData(context, "character_data/character_list.json");
+        try {
+            this.context = context;
+            JSONArray array = new JSONArray(json_base2);
+            for (int i = 0; i < array.length(); i++) {
+                JSONObject object = array.getJSONObject(i);
+                String urlName = object.getString("name").replace("Dan Heng • ", "").replace(".", "").replace(" & Numby", "").toLowerCase().replace(" ", "-").replace("(", "").replace(")", "");
+                //if (!matchRequirement(object,VERSION_CHECK)){return;}
+                new JsonTask().execute("https://www.prydwen.gg/page-data/star-rail/characters/" + urlName + "/page-data.json", object.getString("name"), object.getString("fileName"));
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static boolean matchRequirement(JSONObject object, String requirement) {
+        try {
+            switch (requirement) {
+                case VERSION_CHECK:
+                    return (object.getString("version").equals("VERSION_1_2_0"));
+            }
+        } catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
+        return false;
+    }
+
+    private class JsonTask extends AsyncTask<String, String, String> {
+
+        String charName = "N/A";
+        String fileName = "N/A";
+
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        protected String doInBackground(String... params) {
+            charName = params[1];
+            fileName = params[2];
+
+            HttpURLConnection connection = null;
+            BufferedReader reader = null;
+
+            try {
+                URL url = new URL(params[0]);
+                connection = (HttpURLConnection) url.openConnection();
+                connection.connect();
+
+
+                InputStream stream = connection.getInputStream();
+
+                reader = new BufferedReader(new InputStreamReader(stream));
+
+                StringBuffer buffer = new StringBuffer();
+                String line = "";
+
+                while ((line = reader.readLine()) != null) {
+                    buffer.append(line + "\n");
+                }
+
+                return buffer.toString();
+
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                if (connection != null) {
+                    connection.disconnect();
+                }
+                try {
+                    if (reader != null) {
+                        reader.close();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String jsonData) {
+            String resultData = "NULL";
+            try {
+                if (jsonData != null) {
+                    JSONObject jsonObject = new JSONObject(jsonData);
+                    JSONObject jsonTMP = null;
+                    JSONArray jsonARR = null;
+                    JSONArray buildData = null;
+                    JSONObject buildDataOBJ = null;
+                    JSONArray teams = null;
+                    JSONArray conesNew = new JSONArray();
+                    JSONArray conesNewFAKE = new JSONArray();
+                    if (jsonObject.has("result")) jsonTMP = jsonObject.getJSONObject("result");
+                    if (jsonTMP.has("data")) jsonTMP = jsonTMP.getJSONObject("data");
+                    if (jsonTMP.has("currentUnit")) jsonTMP = jsonTMP.getJSONObject("currentUnit");
+                    if (jsonTMP.has("nodes")) jsonARR = jsonTMP.getJSONArray("nodes");
+                    if (jsonARR.getJSONObject(0).has("buildData"))
+                        buildData = jsonARR.getJSONObject(0).getJSONArray("buildData");
+                    buildDataOBJ = buildData.getJSONObject(0);
+                    if (buildDataOBJ.has("comments")) buildDataOBJ.remove("comments");
+                    if (buildDataOBJ.has("name")) buildDataOBJ.remove("name");
+                    if (jsonARR.getJSONObject(0).has("teams") && !jsonARR.getJSONObject(0).isNull("teams")) {
+                        teams = jsonARR.getJSONObject(0).getJSONArray("teams");
+                        buildDataOBJ = (teams == null ? buildDataOBJ : buildDataOBJ.put("teams", teams));
+                    }
+                    if (jsonARR.getJSONObject(0).has("conesNew") && !jsonARR.getJSONObject(0).isNull("conesNew")) {
+                        conesNewFAKE = jsonARR.getJSONObject(0).getJSONArray("conesNew");
+                        ArrayList<String> conesNewX = new ArrayList<>();
+                        for (int y = 0; y < conesNewFAKE.length(); y++) {
+                            if (!conesNewFAKE.getJSONObject(y).has("cone") || conesNewFAKE.getJSONObject(y).isNull("cone"))
+                                continue;
+                            if (!conesNewX.contains(conesNewFAKE.getJSONObject(y).getString("cone"))) {
+                                JSONObject tmp = new JSONObject().put("cone", conesNewFAKE.getJSONObject(y).getString("cone"));
+                                conesNew.put(tmp);
+                                conesNewX.add(conesNewFAKE.getJSONObject(y).getString("cone"));
+                            }
+                        }
+                        buildDataOBJ = (conesNew.length() <= 0 ? buildDataOBJ : buildDataOBJ.put("conesNew", conesNew));
+                    } else if (buildDataOBJ.has("cones") && !buildDataOBJ.isNull("cones")) {
+                        buildDataOBJ = (buildDataOBJ.getJSONArray("cones").length() <= 0 ? buildDataOBJ : buildDataOBJ.put("conesNew", buildDataOBJ.getJSONArray("cones")));
+                    }
+                    resultData = (buildDataOBJ != null ? buildDataOBJ.toString() : null);
+
+                    System.out.println(charName + " [XPRR] : " + resultData);
+
+                    File ext = context.getFilesDir();
+                    System.out.println(ext + "/" + fileName + ".json");
+                    if (!Files.exists(Paths.get(ext + "/" + fileName + ".json"))) {
+                        Files.createFile(Paths.get(ext + "/" + fileName + ".json"));
+                        Files.write(Paths.get(ext + "/" + fileName + ".json"), resultData.getBytes(), new StandardOpenOption[]{StandardOpenOption.APPEND});
+                    } else {
+                        Files.write(Paths.get(ext + "/" + resultData + ".json"), resultData.getBytes(), new StandardOpenOption[]{StandardOpenOption.APPEND});
+                    }
+
+                }
+            } catch (JSONException e) {
+                System.out.println(charName + " : " + e.getMessage());
+            } catch (IOException e) {
+                System.out.println(charName + " : I/O ERROR");
+            }
+            super.onPostExecute(jsonData);
+        }
+    }
+}
