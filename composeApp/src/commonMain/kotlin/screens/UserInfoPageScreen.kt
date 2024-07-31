@@ -69,7 +69,6 @@ import files.Switch
 import files.UserInfoGameAchievements
 import files.UserInfoGameActiveDays
 import files.UserInfoGameOpenedChests
-import files.UserInfoGameWorldLevel
 import files.UserInfoLastOnlineTime
 import files.UserInfoOwnedCharacters
 import files.ic_arrow_to_down
@@ -339,7 +338,7 @@ fun UserInfoBioUI(context: PlatformContext, userAccount: UserAccount) {
         Row(Modifier.fillMaxWidth().wrapContentHeight(), horizontalArrangement = Arrangement.Center) {
             val rowData = arrayListOf(
                 "${userAccount.level}" to Res.string.PlayerLevel,
-                "${userAccount.ascLevel}" to Res.string.UserInfoGameWorldLevel,
+                //"${userAccount.ascLevel}" to Res.string.UserInfoGameWorldLevel,
                 "${userAccount.unlockedCharCount}" to Res.string.UserInfoOwnedCharacters,
             )
 

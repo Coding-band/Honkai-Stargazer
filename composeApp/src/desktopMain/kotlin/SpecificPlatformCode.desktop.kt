@@ -1,9 +1,12 @@
+
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.toComposeImageBitmap
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalWindowInfo
+import org.jetbrains.skia.Image
 import types.DeviceInfo
 
 /**
@@ -11,13 +14,16 @@ import types.DeviceInfo
  */
 
 actual fun getImageBitmapByByteArray(byteArray: ByteArray): ImageBitmap {
-    TODO("Not yet implemented")
+    val skiaImage = Image.makeFromEncoded(byteArray)
+    return skiaImage.toComposeImageBitmap()
 }
 
 
+@OptIn(ExperimentalComposeUiApi::class)
 @Composable
 actual fun getIsLandscape(): Boolean {
-    TODO("Not yet implemented")
+    val windowInfo = LocalWindowInfo.current
+    return windowInfo.containerSize.width > windowInfo.containerSize.height
 }
 
 @OptIn(ExperimentalComposeUiApi::class)
@@ -43,5 +49,6 @@ actual fun getAppDataDir(): String {
 
 actual fun getTimeStamp(): Long = System.currentTimeMillis()
 actual fun getDeviceInfo(): DeviceInfo {
-    TODO("Not yet implemented")
+    //Return a DeviceInfo object that contains suitable OS version, device name data
+    return DeviceInfo("Unspecified", System.getProperty("os.name"), System.getProperty("os.version"))
 }

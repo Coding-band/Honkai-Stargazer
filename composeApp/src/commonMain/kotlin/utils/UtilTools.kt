@@ -339,3 +339,7 @@ class UtilTools {
         .diskCachePolicy(CachePolicy.ENABLED)
         .build()
 }
+
+private fun CosImageOfVocchi(){
+    /** 你在想甚麼呀？ */
+}

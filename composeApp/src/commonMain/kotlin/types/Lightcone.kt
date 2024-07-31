@@ -45,6 +45,7 @@ open class Lightcone(
         }
 
         fun getLightconeItemFromJSON(lightconeFileName : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance) : Lightcone {
+            if(lightconeFileName == "-1") return Lightcone()
             val dataJson = getLightconeDataFromJSON(lightconeFileName, textLanguage)
             val listDataJson = getLightconeListFromJSON().jsonArray.find { lcData -> lcData.jsonObject["fileName"]!!.jsonPrimitive.content == lightconeFileName }
 
