@@ -3,6 +3,7 @@ const CharacterName = {
   "jiaoqiu": "Jiaoqiu",
   "yunli": "Yunli",
   "march7th2": "March 7th (Imaginary)",
+  "mar7th2": "March 7th (Imaginary)",
   "march-7th2": "March 7th (Imaginary)",
   "march-7th-imaginary": "March 7th (Imaginary)",
 

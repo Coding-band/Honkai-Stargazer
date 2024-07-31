@@ -120,7 +120,7 @@ import PoisedToBloom from "../../data/lightcone_data/kr/21046.json";
 
 const KR = {
   //add in 2.4.0
-  "Dance at Sun Set": DanceAtSunSet,
+  "Dance at Sunset": DanceAtSunSet,
   "Those Many Springs": ThoseManySpirings,
   "Poised to Bloom": PoisedToBloom,
   //add in 2.3.0

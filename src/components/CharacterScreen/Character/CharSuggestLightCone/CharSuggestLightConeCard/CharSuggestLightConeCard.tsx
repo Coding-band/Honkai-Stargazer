@@ -23,6 +23,7 @@ type Props = {
 };
 
 export default React.memo(function CharSuggestLightConeCard(props: Props) {
+  console.log(props)
   const navigation = useNavigation();
 
   const [isSelected, setIsSelected] = useState(false);

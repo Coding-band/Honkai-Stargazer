@@ -76,8 +76,8 @@ export default function Menu() {
       name: SCREENS.CharacterListPage.getShortName(language),
       icon: SCREENS.CharacterListPage.icon,
       onPress: async () => {
-        const value = (await db.UserFunctionUsage.doc("CharacterListPage").get()).data() as UserFunctionUsage
-        db.UserFunctionUsage.doc("CharacterListPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
+        //const value = (await db.UserFunctionUsage.doc("CharacterListPage").get()).data() as UserFunctionUsage
+        //db.UserFunctionUsage.doc("CharacterListPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
         // @ts-ignore
         navigation.navigate(SCREENS.CharacterListPage.id);
       },
@@ -88,8 +88,8 @@ export default function Menu() {
       name: SCREENS.LightconeListPage.getShortName(language),
       icon: SCREENS.LightconeListPage.icon,
       onPress: async () => {
-        const value = (await db.UserFunctionUsage.doc("LightconeListPage").get()).data() as UserFunctionUsage
-        db.UserFunctionUsage.doc("LightconeListPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
+        //const value = (await db.UserFunctionUsage.doc("LightconeListPage").get()).data() as UserFunctionUsage
+        //db.UserFunctionUsage.doc("LightconeListPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
         // @ts-ignore
         navigation.navigate(SCREENS.LightconeListPage.id);
       },
@@ -100,8 +100,8 @@ export default function Menu() {
       name: SCREENS.RelicListPage.getShortName(language),
       icon: SCREENS.RelicListPage.icon,
       onPress: async () => {
-        const value = (await db.UserFunctionUsage.doc("RelicListPage").get()).data() as UserFunctionUsage
-        db.UserFunctionUsage.doc("RelicListPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
+        //const value = (await db.UserFunctionUsage.doc("RelicListPage").get()).data() as UserFunctionUsage
+        //db.UserFunctionUsage.doc("RelicListPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
         // @ts-ignore
         navigation.navigate(SCREENS.RelicListPage.id);
       },
@@ -112,8 +112,8 @@ export default function Menu() {
       name: SCREENS.UIDSearchPage.getShortName(language),
       icon: SCREENS.UIDSearchPage.icon,
       onPress: async () => {
-        const value = (await db.UserFunctionUsage.doc("UIDSearchPage").get()).data() as UserFunctionUsage
-        db.UserFunctionUsage.doc("UIDSearchPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
+        //const value = (await db.UserFunctionUsage.doc("UIDSearchPage").get()).data() as UserFunctionUsage
+        //db.UserFunctionUsage.doc("UIDSearchPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
         // @ts-ignore
         navigation.navigate(SCREENS.UIDSearchPage.id);
       },
@@ -221,8 +221,8 @@ export default function Menu() {
         if(playerNote.data === undefined || playerNote.data === null){
           Toast.LoginFirst(language);
         }else{
-          const value = (await db.UserFunctionUsage.doc("ExpeditionPage").get()).data() as UserFunctionUsage
-          db.UserFunctionUsage.doc("ExpeditionPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
+          //const value = (await db.UserFunctionUsage.doc("ExpeditionPage").get()).data() as UserFunctionUsage
+          //db.UserFunctionUsage.doc("ExpeditionPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
           // @ts-ignore
           navigation.navigate(SCREENS.ExpeditionPage.id);
           setEpeditionIsCheck(true);
@@ -239,8 +239,8 @@ export default function Menu() {
       name: SCREENS.MemoryOfChaosPage.getShortName(language),
       icon: SCREENS.MemoryOfChaosPage.icon,
       onPress: async () => {
-        const value = (await db.UserFunctionUsage.doc("MemoryOfChaosPage").get()).data() as UserFunctionUsage
-        db.UserFunctionUsage.doc("MemoryOfChaosPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
+        //const value = (await db.UserFunctionUsage.doc("MemoryOfChaosPage").get()).data() as UserFunctionUsage
+        //db.UserFunctionUsage.doc("MemoryOfChaosPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
         // @ts-ignore
         navigation.navigate(SCREENS.MemoryOfChaosPage.id);
       },
@@ -251,8 +251,8 @@ export default function Menu() {
       name: SCREENS.PureFictionPage.getShortName(language),
       icon: SCREENS.PureFictionPage.icon,
       onPress: async () => {
-        const value = (await db.UserFunctionUsage.doc("PureFictionPage").get()).data() as UserFunctionUsage
-        db.UserFunctionUsage.doc("PureFictionPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
+        //const value = (await db.UserFunctionUsage.doc("PureFictionPage").get()).data() as UserFunctionUsage
+        //db.UserFunctionUsage.doc("PureFictionPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
         // @ts-ignore
         navigation.navigate(SCREENS.PureFictionPage.id);
       },
@@ -264,8 +264,8 @@ export default function Menu() {
       name: SCREENS.EventListPage.getShortName(language),
       icon: SCREENS.EventListPage.icon,
       onPress: async () => {
-        const value = (await db.UserFunctionUsage.doc("EventListPage").get()).data() as UserFunctionUsage
-        db.UserFunctionUsage.doc("EventListPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
+        //const value = (await db.UserFunctionUsage.doc("EventListPage").get()).data() as UserFunctionUsage
+        //db.UserFunctionUsage.doc("EventListPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
         // @ts-ignore
         navigation.navigate(SCREENS.EventListPage.id);
       },
@@ -276,8 +276,8 @@ export default function Menu() {
       name: SCREENS.ScoreLeaderboardPage.getShortName(language),
       icon: SCREENS.ScoreLeaderboardPage.icon,
       onPress: async () => {
-        const value = (await db.UserFunctionUsage.doc("ScoreLeaderboardPage").get()).data() as UserFunctionUsage
-        db.UserFunctionUsage.doc("ScoreLeaderboardPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
+        //const value = (await db.UserFunctionUsage.doc("ScoreLeaderboardPage").get()).data() as UserFunctionUsage
+        //db.UserFunctionUsage.doc("ScoreLeaderboardPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
         // @ts-ignore
         navigation.navigate(SCREENS.ScoreLeaderboardPage.id);
       },
@@ -288,8 +288,8 @@ export default function Menu() {
       name: SCREENS.MemoryOfChaosLeaderboardPage.getShortName(language),
       icon: SCREENS.MemoryOfChaosLeaderboardPage.icon,
       onPress: async () => {
-        const value = (await db.UserFunctionUsage.doc("MemoryOFCHaosLeaderboardPage").get()).data() as UserFunctionUsage
-        db.UserFunctionUsage.doc("MemoryOfChaosLeaderboardPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
+        //const value = (await db.UserFunctionUsage.doc("MemoryOFCHaosLeaderboardPage").get()).data() as UserFunctionUsage
+        //db.UserFunctionUsage.doc("MemoryOfChaosLeaderboardPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
         // @ts-ignore
         navigation.navigate(SCREENS.MemoryOfChaosLeaderboardPage.id);
       },
@@ -299,8 +299,8 @@ export default function Menu() {
       name: SCREENS.PureFictionLeaderboardPage.getShortName(language),
       icon: SCREENS.PureFictionLeaderboardPage.icon,
       onPress: async () => {
-        const value = (await db.UserFunctionUsage.doc("PureFictionLeaderboardPage").get()).data() as UserFunctionUsage
-        db.UserFunctionUsage.doc("PureFictionLeaderboardPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
+        //const value = (await db.UserFunctionUsage.doc("PureFictionLeaderboardPage").get()).data() as UserFunctionUsage
+        //db.UserFunctionUsage.doc("PureFictionLeaderboardPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
         // @ts-ignore
         navigation.navigate(SCREENS.PureFictionLeaderboardPage.id);
       },
@@ -312,7 +312,7 @@ export default function Menu() {
        name: SCREENS.CodePage.getShortName(language),
        icon: SCREENS.CodePage.icon,
        onPress: () => {
-         // const value = (await db.UserFunctionUsage.doc("CodePage").get()).data() as UserFunctionUsage
+         // //const value = (await db.UserFunctionUsage.doc("CodePage").get()).data() as UserFunctionUsage
          // db.UserFunctionUsage.doc("CodePage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
          // @ts-ignore
          navigation.navigate(SCREENS.CodePage.id);
@@ -327,8 +327,8 @@ export default function Menu() {
       name: SCREENS.ActionOrderListPage.getShortName(language)+"(PREVIEW)",
       icon: SCREENS.ActionOrderListPage.icon,
       onPress: async () => {
-        const value = (await db.UserFunctionUsage.doc("ActionOrderListPage").get()).data() as UserFunctionUsage
-        db.UserFunctionUsage.doc("ActionOrderListPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
+        //const value = (await db.UserFunctionUsage.doc("ActionOrderListPage").get()).data() as UserFunctionUsage
+        //db.UserFunctionUsage.doc("ActionOrderListPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
         // @ts-ignore
         navigation.navigate(SCREENS.ActionOrderListPage.id, {
           title: LOCALES[language].ActionOrderListPage,
@@ -345,8 +345,8 @@ export default function Menu() {
       name: LOCALES[language].SurveyButton,
       icon: ListChecks,
       onPress: async () => {
-        const value = (await db.UserFunctionUsage.doc("SurveyButton").get()).data() as UserFunctionUsage
-        db.UserFunctionUsage.doc("SurveyButton").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});    
+        //const value = (await db.UserFunctionUsage.doc("SurveyButton").get()).data() as UserFunctionUsage
+        //db.UserFunctionUsage.doc("SurveyButton").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});    
         AsyncStorage.getItem(SURVEY_URL_JSON_KEY).then(async(dataGet) => {
           const json = JSON.parse(dataGet as string)
           const currUnix = Date.now()/1000
@@ -366,8 +366,8 @@ export default function Menu() {
       name: SCREENS.LotteryPage.getShortName(language),
       icon: SCREENS.LotteryPage.icon,
       onPress: async () => {
-        const value = (await db.UserFunctionUsage.doc("LotteryPage").get()).data() as UserFunctionUsage
-        db.UserFunctionUsage.doc("LotteryPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
+        //const value = (await db.UserFunctionUsage.doc("LotteryPage").get()).data() as UserFunctionUsage
+        //db.UserFunctionUsage.doc("LotteryPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
         // @ts-ignore
         navigation.navigate(SCREENS.LotteryPage.id, {
           title: LOCALES[language].LotteryPage,
@@ -382,8 +382,8 @@ export default function Menu() {
       name: SCREENS.WrapAnalysisPage.getShortName(language),
       icon: SCREENS.WrapAnalysisPage.icon,
       onPress: async () => {
-        const value = (await db.UserFunctionUsage.doc("WrapAnalysisPage").get()).data() as UserFunctionUsage
-        db.UserFunctionUsage.doc("WrapAnalysisPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
+        //const value = (await db.UserFunctionUsage.doc("WrapAnalysisPage").get()).data() as UserFunctionUsage
+        //db.UserFunctionUsage.doc("WrapAnalysisPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
         // @ts-ignore
         navigation.navigate(SCREENS.WrapAnalysisPage.id, {
           title: LOCALES[language].WrapAnalysisPage,
@@ -399,8 +399,8 @@ export default function Menu() {
       name: SCREENS.MapPage.getShortName(language),
       icon: SCREENS.MapPage.icon,
       onPress: async () => {
-        const value = (await db.UserFunctionUsage.doc("MapPage").get()).data() as UserFunctionUsage
-        db.UserFunctionUsage.doc("MapPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
+        //const value = (await db.UserFunctionUsage.doc("MapPage").get()).data() as UserFunctionUsage
+        //db.UserFunctionUsage.doc("MapPage").set({"count" : (isNaN(value?.count) ? 0 : value?.count)+1});
         // @ts-ignore
         navigation.navigate(SCREENS.MapPage.id);
       },

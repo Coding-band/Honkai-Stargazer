@@ -30,9 +30,10 @@ export default React.memo(function CharStory() {
   };
 
   return (
+    charFullData.storyItems[currentStoryIndex] && 
     <View className="px-6">
       <CharPageHeading Icon={ChatsCircle}>
-        {charFullData.storyItems[currentStoryIndex].title}
+        {charFullData.storyItems[currentStoryIndex].title || ""}
       </CharPageHeading>
       <TouchableOpacity
         activeOpacity={0.35}

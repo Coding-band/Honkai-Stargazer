@@ -74,7 +74,7 @@ const JP = {
   //add in 2.4.0
   Jiaoqiu,
   Yunli,
-  March7thImaginary,
+  "March 7th (Imaginary)" : March7thImaginary,
   //add in 2.3.0
   Jade,
   Firefly,
