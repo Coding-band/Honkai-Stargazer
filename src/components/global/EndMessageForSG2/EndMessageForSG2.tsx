@@ -28,8 +28,8 @@ export default function EndMessageForSG2() {
 
 · We have shut down the database server of Stargazer 2 on July 31, so some functions (such as rankings) will not be available.
 · Maintenance on Stargazer 2 is expected to end at the end of September.
-· In addition, Stargazer 3 is currently recruiting testers for closed beta testing. Please pay attention to our Discord channel for details.
-· Thanks to the support of all users, we will continue to carry forward the spirit of [pioneering]! Goodbye Stargazer 3!`;
+· In addition, Stargazer 3 is currently recruiting testers for close beta testing. Please pay attention to our Discord channel for details.
+· Thanks to the support of all users, we will continue to carry forward the spirit of [pioneering]! See you in Stargazer 3!`;
   const title = 
   `有關Stargazer 2後續安排
 Regarding the follow-up arrangements for Stargazer 2`
