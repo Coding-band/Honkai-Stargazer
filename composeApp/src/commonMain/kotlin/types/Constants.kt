@@ -166,7 +166,7 @@ class Constants {
                 itemIconId = Res.drawable.phorphos_users_fill,
                 itemType = HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1,
                 itemTopHighlight = "${UserAccount.INSTANCE.userNote.expedition.filter { it.status == "Finished" }.size}",
-                itemTop = "${UserAccount.INSTANCE.userNote.expedition.size}",
+                itemTop = "/${UserAccount.INSTANCE.userNote.expedition.size}",
                 itemBottom = if(UserAccount.INSTANCE.userNote.expedition.filter { it.status == "Finished" }.size == UserAccount.INSTANCE.userNote.expedition.size){
                     "Done"
                 }else "In Progress"

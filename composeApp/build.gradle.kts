@@ -106,7 +106,13 @@ kotlin {
 
         }
         desktopMain.dependencies {
-            implementation(compose.desktop.currentOs)
+            implementation(compose.material3)
+            implementation(compose.desktop.currentOs) {
+                exclude("org.jetbrains.compose.material")
+            }
+            // Explicitly include this is required to fix Proguard warnings coming from Kotlinx.DateTime
+            implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.7.0")
+
         }
     }
 }
@@ -157,7 +163,7 @@ android {
     }
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
         }
     }
     compileOptions {
@@ -169,10 +175,8 @@ android {
     }
     dependencies {
         debugImplementation(compose.uiTooling)
+        implementation(libs.androidx.material3.android)
     }
-}
-dependencies {
-    implementation(libs.androidx.material3.android)
 }
 
 
@@ -184,6 +188,12 @@ compose.desktop {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "com.voc.honkaistargazer"
             packageVersion = "1.0.0"
+        }
+
+        buildTypes.release.proguard {
+            isEnabled = false
+            version.set("7.5.0")
+            configurationFiles.from(project.file("proguard.pro"))
         }
     }
 }
