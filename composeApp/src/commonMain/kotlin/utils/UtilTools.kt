@@ -77,8 +77,13 @@ class UtilTools {
                     val assetByte: ByteArray = Res.readBytes("files/images/${folderType.folderName}/${fileName}${folderType.suffix}")
                     return@async getImageBitmapByByteArray(assetByte)
                 } catch (e: Exception) {
-                    errorLogExport("UtilTools","getAssetsWebpByFileName()",e)
-                    return@async getImageBitmapByByteArray(Res.readBytes("files/ico_lost_img.webp"))
+                    if(ImageFolderType.CHAR_FULL == folderType){
+                        return@async getAssetsWebpByFileName(ImageFolderType.CHAR_SPLASH, fileName)
+                    }else{
+                        errorLogExport("UtilTools","getAssetsWebpByFileName()",e)
+                        return@async getImageBitmapByByteArray(Res.readBytes("files/ico_lost_img.webp"))
+                    }
+
                 }
             }
             job.await()
@@ -94,8 +99,12 @@ class UtilTools {
                 try {
                     return@async (Res.readBytes("files/images/${folderType.folderName}/${fileName}${folderType.suffix}"))
                 } catch (e: Exception) {
-                    errorLogExport("UtilTools","getAssetsWebpByFileName()",e)
-                    return@async (Res.readBytes("files/ico_lost_img.webp"))
+                    if(ImageFolderType.CHAR_FULL == folderType){
+                        return@async getAssetsWebpByteArrayByFileName(ImageFolderType.CHAR_SPLASH, fileName)
+                    }else {
+                        errorLogExport("UtilTools", "getAssetsWebpByFileName()", e)
+                        return@async (Res.readBytes("files/ico_lost_img.webp"))
+                    }
                 }
             }
             job.await()
