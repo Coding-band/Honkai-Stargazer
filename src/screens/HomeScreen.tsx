@@ -46,6 +46,7 @@ import { getLcAttrData, getLcAttrDataJSON } from "../utils/calculator/getAttrDat
 import { getAttrKeyByPropertyType } from "../utils/hoyolab/exchange/exchange";
 import AvatarIcon from "../../assets/images/images_map/avatarIcon";
 import useCharWeightList from "../hooks/charWeightList/useCharWeightList";
+import EndMessageForSG2 from "../components/global/EndMessageForSG2/EndMessageForSG2";
 
 export default function HomeScreen() {
   const uid = useMyFirebaseUid();
@@ -806,6 +807,7 @@ export default function HomeScreen() {
         </View>
       </Pressable>
       <SelectLanguageAtFirstTime key={"selectLanguageAtFirstTime"} />
+      <EndMessageForSG2 key={"endMessageForSG2"} />
     </>
   );
 }
