@@ -16,6 +16,12 @@ import platform.UIKit.UIInterfaceOrientation
 import platform.UIKit.UIInterfaceOrientationLandscapeLeft
 import platform.UIKit.UIInterfaceOrientationLandscapeRight
 import types.DeviceInfo
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.runtime.SideEffect
+import platform.UIKit.UIApplication
+import platform.UIKit.UIKeyboardAppearance
+import platform.UIKit.UITextField
+import utils.annotation.DoItLater
 
 
 /**
@@ -63,3 +69,16 @@ actual fun getDeviceInfo(): DeviceInfo = DeviceInfo(
     deviceOSName = UIDevice.currentDevice.systemName(),
     deviceOSVersion = UIDevice.currentDevice.systemVersion()
 )
+
+@DoItLater("iOS testing")
+@Composable
+actual fun setKeyboardDarkMode() {
+    val context = LocalContext.current
+
+    SideEffect {
+        val textField = UITextField()
+        textField.keyboardAppearance = UIKeyboardAppearance.UIKeyboardAppearanceDark
+        textField.becomeFirstResponder()
+        textField.resignFirstResponder()
+    }
+}

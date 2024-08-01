@@ -13,6 +13,7 @@ import androidx.compose.ui.unit.sp
 import files.Res
 import files.misans_regular
 import org.jetbrains.compose.resources.Font
+import setKeyboardDarkMode
 
 val Purple80 = Color(0xFFD0BCFF)
 val PurpleGrey80 = Color(0xFFCCC2DC)
@@ -62,7 +63,7 @@ fun Stargazer3Theme(
         darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }
-
+    if(darkTheme) setKeyboardDarkMode()
     MaterialTheme(
         colors = colorScheme,
         typography = AppTypography(),

@@ -52,3 +52,8 @@ actual fun getDeviceInfo(): DeviceInfo {
     //Return a DeviceInfo object that contains suitable OS version, device name data
     return DeviceInfo("Unspecified", System.getProperty("os.name"), System.getProperty("os.version"))
 }
+
+@Composable
+actual fun setKeyboardDarkMode() {
+    //Nothing will do since it even don't have virtual keyboard!
+}

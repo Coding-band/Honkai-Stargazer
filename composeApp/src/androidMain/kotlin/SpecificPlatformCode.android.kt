@@ -1,13 +1,18 @@
+
+import android.app.Activity
 import android.content.res.Configuration
 import android.graphics.BitmapFactory
 import android.os.Build
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.unit.dp
+import androidx.core.view.WindowInsetsControllerCompat
 import types.DeviceInfo
 
 /**
@@ -55,3 +60,22 @@ actual fun getDeviceInfo(): DeviceInfo = DeviceInfo(
     deviceOSName = "Android",
     deviceOSVersion = Build.VERSION.SDK_INT.toString()
 )
+
+@Composable
+actual fun setKeyboardDarkMode() {
+    val context = LocalContext.current
+    val keyboardController = LocalSoftwareKeyboardController.current
+
+    SideEffect {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            val activity = context as? Activity
+            val window = activity?.window
+            if (window != null) {
+                val windowInsetsController = WindowInsetsControllerCompat(window, window.decorView)
+                windowInsetsController.isAppearanceLightNavigationBars = false
+            }
+        } else {
+            //Nothing will do
+        }
+    }
+}

@@ -13,7 +13,9 @@ import utils.navigation.Navigation
          * - Display specific screen as the login in Figma Design expect
          */
 fun App() {
-    Stargazer3Theme{
+    Stargazer3Theme(
+        darkTheme = true
+    ){
         Navigation()
     }
 }
