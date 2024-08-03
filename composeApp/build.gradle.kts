@@ -163,7 +163,7 @@ android {
     }
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
         }
     }
     compileOptions {
@@ -193,7 +193,6 @@ compose.desktop {
         buildTypes.release.proguard {
             isEnabled = false
             version.set("7.5.0")
-            configurationFiles.from(project.file("proguard.pro"))
         }
     }
 }
