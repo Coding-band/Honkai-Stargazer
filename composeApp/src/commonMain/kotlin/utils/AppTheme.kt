@@ -35,6 +35,7 @@ val TextColorLevel = Color(0xFFDBC291)
 val Transparent = Color(0x00000000)
 val ProgressLevelBackground = Color(0xFF666666)
 val ProgressLevelPrimary = Color(0xFFDBC291)
+val AdditionalGreen = Color(0xFF43A047)
 
 private val DarkColorScheme = darkColors(
     primary = Purple80,

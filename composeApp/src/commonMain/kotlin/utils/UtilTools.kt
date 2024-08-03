@@ -310,7 +310,7 @@ class UtilTools {
         val parts = roundedNumber.toString().split('.')
         val integerPart = parts[0].reversed().chunked(3).joinToString(",").reversed()
         val decimalPart = parts.getOrNull(1)?.padEnd(decimalPlaces, '0') ?: "0".repeat(decimalPlaces)
-        return "$integerPart.$decimalPart"
+        return "$integerPart${if(decimalPlaces > 0) {".$decimalPart"} else {""}}"
     }
 
     @VersionUpdateCheck
