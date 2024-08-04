@@ -12,6 +12,8 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -23,10 +25,13 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.DropdownMenuItem
+import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.derivedStateOf
@@ -39,9 +44,15 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
@@ -50,6 +61,7 @@ import coil3.compose.LocalPlatformContext
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
 import com.voc.honkai_stargazer.component.RelicSmallCard
+import components.DropdownMenuNoPadding
 import components.HeaderData
 import components.NonLazyGrid
 import components.PAGE_HEADER_ALPHA_HEIGHT
@@ -57,17 +69,28 @@ import components.PageHeaderAlpha
 import components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import files.CharRank
+import files.CharScore
 import files.Eidolon
+import files.LeaderboardDataFrom
+import files.OverWholeServerUser
+import files.ProducedByStargazer
+import files.RelicRank
+import files.RelicScore
 import files.Res
+import files.ScoreLevel
 import files.Superimpose
 import files.TraceNormalATK
 import files.TraceSkill
 import files.TraceTalent
 import files.TraceTechnique
 import files.TraceUltimate
+import files.bg_transparent
 import files.ic_atk
 import files.ic_def
 import files.ic_hp
+import files.ic_selected_orange_circle
+import files.phorphos_caret_down_regular
 import files.ui_icon_share
 import files.ui_icon_star
 import kotlinx.serialization.json.JsonElement
@@ -86,10 +109,14 @@ import utils.FontSizeNormal12
 import utils.FontSizeNormal14
 import utils.FontSizeNormal16
 import utils.FontSizeNormal20
+import utils.FontSizeNormalLarge24
 import utils.FontSizeNormalLarge32
+import utils.FontSizeNormalSmall
+import utils.GradReachYellow
 import utils.UtilTools
 import utils.annotation.DoItLater
 import utils.calculator.getLcAttrData
+import utils.hoyolab.AttributeExchange
 
 @DoItLater("Get User Data from Database / API")
 @DoItLater("Confirm that work when charStatus is null")
@@ -132,12 +159,15 @@ fun UserCharacterPageScreen(
                 modifier = Modifier.padding(
                     start = Constants.SCREEN_SAVE_PADDING,
                     end = Constants.SCREEN_SAVE_PADDING
-                ).haze(hazeState).navigationBarsPadding()
+                ).haze(hazeState).navigationBarsPadding().statusBarsPadding()
             ) {
                 item { Spacer(Modifier.statusBarsPadding().height(PAGE_HEADER_ALPHA_HEIGHT + 240.dp)) }
                 item { CharBioSkillInfo(character) }
                 item { LightconeInfo(character) }
                 item { RelicInfo(character) }
+                item { ProficientScoreInfo(character) }
+
+                item { Spacer(Modifier.statusBarsPadding()) }
             }
 
 
@@ -175,6 +205,225 @@ fun UserCharacterPageScreen(
 }
 
 @Composable
+fun ProficientScoreInfo(character: Character) {
+
+    //Divider
+    UserCharPageDivider()
+
+    val isExpandSchoolDropdown = remember { mutableStateOf(false) }
+    val schoolDataNameArray = arrayListOf("默認流派")
+    val schoolIndex = remember { mutableStateOf(0) }
+    val optionTextViewSize = remember { mutableStateOf(IntSize.Zero) }
+    val density = LocalDensity.current.density
+
+    val scoreInfoList = arrayListOf(
+        Res.string.CharScore to 94.9f,
+        Res.string.CharRank to "A",
+        Res.string.RelicScore to 123.4f,
+        Res.string.RelicRank to "B",
+    )
+
+    val gradRequirement = arrayListOf(
+        AttributeExchange.getAttrKeyByPropertyType(1) to 3000,
+        AttributeExchange.getAttrKeyByPropertyType(2) to 1800,
+        AttributeExchange.getAttrKeyByPropertyType(3) to 1100,
+        AttributeExchange.getAttrKeyByPropertyType(4) to 120,
+        AttributeExchange.getAttrKeyByPropertyType(5) to 0.8f,
+    )
+
+    Column {
+        //Title and Spinner
+        Row {
+            Text(
+                text = UtilTools().removeStringResDoubleQuotes(Res.string.ScoreLevel),
+                style = FontSizeNormal20(),
+                color = Color.White,
+                modifier = Modifier.align(Alignment.CenterVertically)
+            )
+
+            Spacer(Modifier.weight(1f))
+
+            Box(
+                contentAlignment = Alignment.BottomCenter,
+                modifier = Modifier
+                    .defaultMinSize(100.dp, 30.dp)
+                    .wrapContentSize()
+                    .clickable { isExpandSchoolDropdown.value = !isExpandSchoolDropdown.value }
+            ) {
+                Row(
+                    modifier = Modifier.background(Color(0x66000000), RoundedCornerShape(43.dp))
+                        .wrapContentWidth()
+                        .onSizeChanged { optionTextViewSize.value = it },
+                ){
+                    Text(
+                        color = Color.White,
+                        text = schoolDataNameArray[schoolIndex.value],
+                        style = FontSizeNormal14(),
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(12.dp).align(Alignment.CenterVertically)
+                    )
+                    Image(
+                        painter = painterResource(Res.drawable.phorphos_caret_down_regular),
+                        contentDescription = null,
+                        modifier = Modifier.padding(12.dp).size(16.dp).align(Alignment.CenterVertically),
+                        colorFilter = ColorFilter.tint(Color.White)
+                    )
+                }
+                //對於DropdownItem沒法按照設計稿展示，暫時無解
+                DropdownMenuNoPadding(
+                    expanded = isExpandSchoolDropdown.value,
+                    onDismissRequest = { isExpandSchoolDropdown.value = false },
+                    modifier = Modifier
+                        .background(Color(0xFF3E3E47))
+                        .width(UtilTools().pxToDp(optionTextViewSize.value.width, density)),
+                ) {
+                    schoolDataNameArray.forEachIndexed { index, option ->
+                        DropdownMenuItem(
+                            onClick = {
+                                schoolIndex.value = index
+                                isExpandSchoolDropdown.value = false
+                                //optionAction(schoolIndex.value)
+                            },
+                            modifier = Modifier.background(if(schoolIndex.value == index) Color(0x0F000000) else Color(0x00000000))
+                        ) {
+                            Row{
+                                Text(
+                                    text = option,
+                                    style = FontSizeNormal14(),
+                                    color = Color(0xFFFFFFFF),
+                                    modifier = Modifier.weight(1f)
+                                )
+                                Image(
+                                    painterResource(if (schoolIndex.value == index) Res.drawable.ic_selected_orange_circle else Res.drawable.bg_transparent),
+                                    contentDescription = null
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        Spacer(Modifier.height(8.dp))
+
+        //Scores
+        val txt24Height = remember { mutableStateOf(30.dp) }
+        Row(Modifier.fillMaxWidth().wrapContentHeight()) {
+            for (scoreInfo in scoreInfoList){
+                Column(Modifier.weight(1f).wrapContentHeight().align(Alignment.CenterVertically), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
+
+                    if(scoreInfo.second is String){
+                        Image(
+                            painter = painterResource(Constants.getScoreRankingFont(scoreInfo.second as String)),
+                            contentDescription = "Ranking Icon",
+                            modifier = Modifier.height(txt24Height.value).aspectRatio(1f).align(Alignment.CenterHorizontally),
+                        )
+                    }else{
+                        Text(
+                            text = if(scoreInfo.second is String) {Constants.getScoreRankingFont(scoreInfo.second as String).toString()} else UtilTools().formatDecimal(scoreInfo.second as Number, 1),
+                            style = FontSizeNormalLarge24(),
+                            color = Color.White,
+                            maxLines = 1,
+                            modifier = Modifier.align(Alignment.CenterHorizontally).onSizeChanged {
+                                txt24Height.value = UtilTools().pxToDp(it.height, density)
+                            },
+                        )
+                    }
+
+                    Spacer(Modifier.height(6.dp))
+
+                    Text(
+                        text = UtilTools().removeStringResDoubleQuotes(scoreInfo.first),
+                        style = FontSizeNormal12(),
+                        color = Color.White,
+                        modifier = Modifier.align(Alignment.CenterHorizontally),
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                }
+            }
+        }
+
+        Spacer(Modifier.height(8.dp))
+
+        Column {
+            for (req in gradRequirement){
+                val charHsrProperties = character.characterStatus!!.characterProperties!!.find { it.attributeExchange == req.first }!!
+                val charValue = charHsrProperties.valueFinal
+
+                Row(Modifier.padding(top = 4.dp, bottom = 4.dp)) {
+                    Image(
+                        painter = painterResource(req.first.attribute.iconWhite),
+                        contentDescription = "Attribute Icon",
+                        modifier = Modifier.size(24.dp).align(Alignment.CenterVertically)
+                    )
+
+                    Spacer(Modifier.width(8.dp))
+
+                    Column {
+                        //Grad Name and Value
+                        Row(Modifier.fillMaxWidth().wrapContentHeight()) {
+                            Text(
+                                text = UtilTools().removeStringResDoubleQuotes(req.first.attribute.resName),
+                                style = FontSizeNormal12(),
+                                color = Color.White
+                            )
+                            Spacer(Modifier.weight(1f))
+                            Text(
+                                text = "${getDataDecimalsByAttrExchange(req.first, charValue)} / ${getDataDecimalsByAttrExchange(req.first, (req.second as Number).toFloat())}",
+                                style = FontSizeNormal12(),
+                                color = if(charValue >= (req.second as Number).toFloat()) GradReachYellow else Color.White
+                            )
+                        }
+                        LinearProgressIndicator(
+                            progress = charValue / (req.second as Number).toFloat(),
+                            color = Color(0xCCFFFFFF),
+                            backgroundColor = Color(0x66FFFFFF),
+                            modifier = Modifier.fillMaxWidth().height(4.dp)
+                        )
+                    }
+                }
+            }
+        }
+
+        Spacer(Modifier.height(8.dp))
+
+        //Leaderboard Overview - 100 is example
+        Text(
+            text = UtilTools().removeStringResDoubleQuotes(Res.string.OverWholeServerUser).replace("$"+"{1}", "-100.0%"),
+            style = FontSizeNormal16(),
+            color = Color.White,
+            modifier = Modifier.align(Alignment.CenterHorizontally)
+        )
+        Text(
+            text = UtilTools().removeStringResDoubleQuotes(Res.string.LeaderboardDataFrom),
+            style = FontSizeNormalSmall(),
+            color = Color(0x99FFFFFF),
+            modifier = Modifier.align(Alignment.CenterHorizontally)
+        )
+
+        Spacer(Modifier.height(8.dp))
+
+        //Make by Stargazer
+        Text(
+            text = UtilTools().removeStringResDoubleQuotes(Res.string.ProducedByStargazer),
+            style = FontSizeNormal12(),
+            color = Color.White,
+            modifier = Modifier.align(Alignment.CenterHorizontally)
+        )
+
+    }
+}
+
+@Composable
+fun getDataDecimalsByAttrExchange(attrExchange: AttributeExchange, value: Float): String {
+    return UtilTools().formatDecimal(
+        value * if (attrExchange.isPercent) 100 else 1,
+        if (attrExchange.key == "spd") 1 else if (attrExchange.isPercent) 1 else 0
+    ) + if (attrExchange.isPercent) "%" else ""
+}
+
+@Composable
 fun RelicInfo(character: Character) {
     val relics = arrayOf(
         character.characterStatus!!.equippingRelicHead to 1,
@@ -187,21 +436,62 @@ fun RelicInfo(character: Character) {
 
     if(!relics.all { it.first == null }){
         val relicValidList = relics.filter { it.first != null }
+        val selectedRelicIndex = remember { mutableStateOf(-1) }
         //Divider
         UserCharPageDivider()
-        NonLazyGrid(
-            columns = 2,
-            modifier = Modifier.fillMaxWidth().wrapContentHeight(),
-            itemCount = relicValidList.size
-        ) {
-            val relic = relicValidList[it].first!!
-            val index = relicValidList[it].second
-            Row(Modifier.fillMaxWidth().wrapContentHeight().padding(8.dp)) {
-                RelicSmallCard(relic, index)
+
+        if(selectedRelicIndex.value == -1){
+            NonLazyGrid(
+                columns = 2,
+                modifier = Modifier.fillMaxWidth().wrapContentHeight(),
+                itemCount = relicValidList.size
+            ) {
+                val relic = relicValidList[it].first!!
+                val index = relicValidList[it].second
+
+                println("Relic: $relic, Index: $index")
+
+                val score = remember { mutableStateOf(0f) }
+                val relicSubAttr = relic.properties.subList(1, relic.properties.size)
+                Row(Modifier.fillMaxWidth().wrapContentHeight().padding(8.dp)) {
+                    Box(Modifier.width(48.dp).wrapContentHeight()) {
+                        RelicSmallCard(relic, index, onClick = { selectedRelicIndex.value = it })
+                    }
+                    Column(Modifier.weight(1f)) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            StatusShortUI(relic.properties[0], FontSizeNormal12(), isRelic = true)
+                            Spacer(Modifier.width(8.dp).weight(1f))
+                            Text(
+                                text = UtilTools().formatDecimal(score.value,1),
+                                style = FontSizeNormal14(),
+                                color = Color.White
+                            )
+                        }
+                        NonLazyGrid(columns = 2, itemCount = relicSubAttr.size){
+                                subAttrIndex -> StatusShortUI(relicSubAttr[subAttrIndex], FontSizeNormalSmall(), isRelic = true)
+                        }
+                    }
+                }
+            }
+        }else{
+            Box(Modifier.fillMaxWidth()) {
+                val relicPair = relicValidList[selectedRelicIndex.value]
+                val relic = relicValidList[selectedRelicIndex.value].first!!
+
+                Column(modifier = Modifier.fillMaxWidth(0.5f).wrapContentHeight().align(Alignment.Center), verticalArrangement = Arrangement.Center) {
+                    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.Center) {
+                        Box(Modifier.width(48.dp).wrapContentHeight().align(Alignment.CenterVertically)) {
+                            RelicSmallCard(relic, relicPair.second, onClick = { selectedRelicIndex.value = -1 })
+                        }
+                    }
+
+                    for (status in relic.properties){
+                        StatusFullUI(status)
+                    }
+                }
             }
         }
     }
-
 }
 
 @Composable
@@ -504,9 +794,13 @@ fun UserCharPageDivider() {
 }
 
 @Composable
-fun StatusShortUI(status : HsrProperties){
+fun StatusShortUI(
+    status: HsrProperties,
+    textStyle: TextStyle = FontSizeNormal14(),
+    isRelic: Boolean = false,
+){
     Row(
-        Modifier.wrapContentWidth().padding(4.dp),
+        Modifier.wrapContentWidth().padding(if(isRelic) 0.dp else 4.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Center
     ) {
@@ -516,11 +810,11 @@ fun StatusShortUI(status : HsrProperties){
             modifier = Modifier.size(24.dp)
         )
         Text(
-            text = UtilTools().formatDecimal(
+            text = (if(isRelic) "+" else "") + UtilTools().formatDecimal(
                 status.valueFinal * if (status.attributeExchange.isPercent) 100 else 1,
                 if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent) 1 else 0
             ) + if (status.attributeExchange.isPercent) "%" else "",
-            style = FontSizeNormal14(),
+            style = textStyle,
             color = Color.White,
             maxLines = 1
         )
@@ -544,38 +838,50 @@ fun StatusFullUI(status : HsrProperties){
 
         Spacer(Modifier.weight(1f))
 
-        if(status.valueBase > 0f){
+        if(status.valueBase == 0f && status.valueAdd == 0f){
             Text(
-                text = UtilTools().formatDecimal(
-                    status.valueBase * if (status.attributeExchange.isPercent) 100 else 1,
+                text = "+" + UtilTools().formatDecimal(
+                    status.valueFinal * if (status.attributeExchange.isPercent) 100 else 1,
                     if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent) 1 else 0
                 ) + if (status.attributeExchange.isPercent) "%" else "",
                 style = FontSizeNormal14(),
                 color = Color.White,
                 maxLines = 1
             )
-        }
+        }else{
+            if(status.valueBase > 0f){
+                Text(
+                    text = UtilTools().formatDecimal(
+                        status.valueBase * if (status.attributeExchange.isPercent) 100 else 1,
+                        if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent) 1 else 0
+                    ) + if (status.attributeExchange.isPercent) "%" else "",
+                    style = FontSizeNormal14(),
+                    color = Color.White,
+                    maxLines = 1
+                )
+            }
 
-        if(status.valueAdd > 0f && status.valueBase > 0f){
-            Text(
-                text = "+",
-                style = FontSizeNormal14(),
-                color = Color.White,
-                maxLines = 1,
-                modifier = Modifier.padding(end = 4.dp, start = 4.dp)
-            )
-        }
+            if(status.valueAdd > 0f && status.valueBase > 0f){
+                Text(
+                    text = "+",
+                    style = FontSizeNormal14(),
+                    color = Color.White,
+                    maxLines = 1,
+                    modifier = Modifier.padding(end = 4.dp, start = 4.dp)
+                )
+            }
 
-        if(status.valueAdd > 0f){
-            Text(
-                text = UtilTools().formatDecimal(
-                    status.valueAdd * if (status.attributeExchange.isPercent) 100 else 1,
-                    if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent) 1 else 0
-                ) + if (status.attributeExchange.isPercent) "%" else "",
-                style = FontSizeNormal14(),
-                color = AdditionalGreen,
-                maxLines = 1
-            )
+            if(status.valueAdd > 0f){
+                Text(
+                    text = UtilTools().formatDecimal(
+                        status.valueAdd * if (status.attributeExchange.isPercent) 100 else 1,
+                        if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent) 1 else 0
+                    ) + if (status.attributeExchange.isPercent) "%" else "",
+                    style = FontSizeNormal14(),
+                    color = AdditionalGreen,
+                    maxLines = 1
+                )
+            }
         }
     }
 }

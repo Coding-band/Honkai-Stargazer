@@ -20,6 +20,7 @@ import files.ScoreLevelLeaderboard
 import files.Stamina
 import files.UIDSearch
 import files.WrapAnalysis
+import files.ico_lost_img
 import files.phorphos_alien_fill
 import files.phorphos_atom_fill
 import files.phorphos_baseball_cap_fill
@@ -37,6 +38,13 @@ import files.phorphos_star_of_david_fill
 import files.phorphos_sword_fill
 import files.phorphos_trophy_fill
 import files.phorphos_users_fill
+import files.ranking_a_text
+import files.ranking_b_text
+import files.ranking_c_text
+import files.ranking_d_text
+import files.ranking_s_text
+import files.ranking_ss_text
+import org.jetbrains.compose.resources.DrawableResource
 import utils.annotation.DoItLater
 import utils.navigation.Screen
 
@@ -117,6 +125,18 @@ class Constants {
 
         fun getEidolonScale(newWidth: Dp) : Float{
             return newWidth.div(EIDOLON_FRAME_BASE_WIDTH)
+        }
+
+        fun getScoreRankingFont(ranking: String): DrawableResource {
+            return when(ranking){
+                "SS" -> Res.drawable.ranking_ss_text
+                "S" -> Res.drawable.ranking_s_text
+                "A" -> Res.drawable.ranking_a_text
+                "B" -> Res.drawable.ranking_b_text
+                "C" -> Res.drawable.ranking_c_text
+                "D" -> Res.drawable.ranking_d_text
+                else -> Res.drawable.ico_lost_img
+            }
         }
 
 
