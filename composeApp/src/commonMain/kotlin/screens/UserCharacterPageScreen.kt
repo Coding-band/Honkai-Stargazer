@@ -19,7 +19,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
-import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
@@ -50,7 +49,9 @@ import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
+import com.voc.honkai_stargazer.component.RelicSmallCard
 import components.HeaderData
+import components.NonLazyGrid
 import components.PAGE_HEADER_ALPHA_HEIGHT
 import components.PageHeaderAlpha
 import components.defaultHeaderData
@@ -91,6 +92,7 @@ import utils.annotation.DoItLater
 import utils.calculator.getLcAttrData
 
 @DoItLater("Get User Data from Database / API")
+@DoItLater("Confirm that work when charStatus is null")
 @Composable
 fun UserCharacterPageScreen(
     modifier: Modifier = Modifier,
@@ -134,9 +136,8 @@ fun UserCharacterPageScreen(
             ) {
                 item { Spacer(Modifier.statusBarsPadding().height(PAGE_HEADER_ALPHA_HEIGHT + 240.dp)) }
                 item { CharBioSkillInfo(character) }
-                item { UserCharPageDivider() }
                 item { LightconeInfo(character) }
-                item { UserCharPageDivider() }
+                item { RelicInfo(character) }
             }
 
 
@@ -170,6 +171,36 @@ fun UserCharacterPageScreen(
         }
     }
 
+
+}
+
+@Composable
+fun RelicInfo(character: Character) {
+    val relics = arrayOf(
+        character.characterStatus!!.equippingRelicHead to 1,
+        character.characterStatus!!.equippingRelicHands to 2,
+        character.characterStatus!!.equippingRelicBody to 3,
+        character.characterStatus!!.equippingRelicFeet to 4,
+        character.characterStatus!!.equippingRelicPlanar to 5,
+        character.characterStatus!!.equippingRelicLinkRope to 6
+    )
+
+    if(!relics.all { it.first == null }){
+        val relicValidList = relics.filter { it.first != null }
+        //Divider
+        UserCharPageDivider()
+        NonLazyGrid(
+            columns = 2,
+            modifier = Modifier.fillMaxWidth().wrapContentHeight(),
+            itemCount = relicValidList.size
+        ) {
+            val relic = relicValidList[it].first!!
+            val index = relicValidList[it].second
+            Row(Modifier.fillMaxWidth().wrapContentHeight().padding(8.dp)) {
+                RelicSmallCard(relic, index)
+            }
+        }
+    }
 
 }
 
@@ -331,11 +362,13 @@ fun LightconeInfo(character: Character){
     val charStatus = character.characterStatus!!
     val isLightconeShowDesc = remember { mutableStateOf(false) }
     if (charStatus.equippingLightcone != null && charStatus.equippingLightcone!!.registName != null) {
+        //Divider
+        UserCharPageDivider()
+
         val lightcone = charStatus.equippingLightcone!!
         val lcInfoJson = Lightcone.getLightconeDataFromJSON(lightcone.fileName!!)
         Row(Modifier.fillMaxWidth().wrapContentHeight().clickable { isLightconeShowDesc.value = !isLightconeShowDesc.value }) {
             Box(Modifier.requiredHeight(120.dp).weight(0.4f), contentAlignment = Alignment.Center) {
-                Box(Modifier.rotate(if (isLightconeShowDesc.value) 0f else 5f).padding(start = 8.dp , end = 8.dp)) {
                     val context = LocalPlatformContext.current
                     val imageRequest = remember { UtilTools().newImageRequest(
                         context = context,
@@ -348,14 +381,13 @@ fun LightconeInfo(character: Character){
                     AsyncImage(
                         model = imageRequest,
                         contentDescription = "Lightcone Image",
-                        modifier = Modifier.height(if (isLightconeShowDesc.value) 100.dp else 112.dp).requiredWidth(72.dp).wrapContentWidth()
+                        modifier = Modifier.height(if (isLightconeShowDesc.value) 100.dp else 112.dp).wrapContentWidth().rotate(if (isLightconeShowDesc.value) 0f else 5f)
                             .border(4.dp, Color.White, RectangleShape).align(
-                            Alignment.Center
-                        ),
+                                Alignment.Center
+                            ),
                         contentScale = ContentScale.Fit,
                         imageLoader = imageLoader
                     )
-                }
             }
 
             Spacer(Modifier.width(16.dp))
@@ -467,7 +499,7 @@ fun getLightconeMetaInfo(lightcone: Lightcone, lcInfoJson: JsonElement, metaLv: 
 @Composable
 fun UserCharPageDivider() {
     Box(Modifier.fillMaxWidth().padding(top = 12.dp, bottom = 12.dp), contentAlignment = Alignment.Center) {
-        Box(modifier = Modifier.fillMaxWidth(0.33f).height(2.dp).background(Color(0x66F3F9FF)),)
+        Box(modifier = Modifier.fillMaxWidth(0.33f).height(1.dp).background(Color(0x66F3F9FF)),)
     }
 }
 
