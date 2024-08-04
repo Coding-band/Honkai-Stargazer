@@ -6,5 +6,6 @@ package utils.annotation
     AnnotationTarget.FUNCTION,
     AnnotationTarget.EXPRESSION
 )
+@Repeatable
 @Retention(AnnotationRetention.SOURCE)
 annotation class DoItLater(val whatHaveToDo : String)

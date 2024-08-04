@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -30,10 +31,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import types.Constants
 import types.Constants.Companion.RELIC_CARD_HEIGHT
 import types.Constants.Companion.RELIC_CARD_WIDTH
 import types.Constants.Companion.getCardBgColorByRare
@@ -120,6 +123,59 @@ fun RelicCard(
                 )
             }
             Spacer(modifier = Modifier.height(2.dp))
+        }
+    }
+}
+
+@Composable
+fun RelicSmallCard(
+    relic: Relic,
+    pieceIndex : Int = 1,
+    onClick: () -> Unit = { navControllerInstance.navigate(
+        Screen.RelicInfoPage.route
+                + "/${relic.registName!!.replace(" ","_")}"
+                + "/?fileName=${relic.fileName}"
+
+    ) }, //按下後會做甚麼
+){
+    Box(
+        modifier = Modifier.defaultMinSize(
+            Constants.RELIC_CARD_WIDTH, Constants.RELIC_CARD_WIDTH
+        ).clip(
+            RoundedCornerShape(
+                topEnd = 15.dp,
+                topStart = 4.dp,
+                bottomEnd = 4.dp,
+                bottomStart = 4.dp
+            )
+        ).clickable(
+            onClick = { },
+            indication = rememberRipple(),
+            interactionSource = remember { MutableInteractionSource() }
+        )
+    ) {
+        Image(
+            bitmap = Relic.getRelicImageFromJSON(
+                if (pieceIndex < 5) UtilTools.ImageFolderType.RELIC_ICON else UtilTools.ImageFolderType.ORMANENT_ICON,
+                UtilTools().getImageNameByRegistName(relic.registName!!), pieceIndex
+            ),
+            contentDescription = "Relic Icon",
+            modifier = Modifier.fillMaxWidth().aspectRatio(1f).background(
+                Brush.verticalGradient(
+                    colors = getCardBgColorByRare(relic.rarity!!)
+                )
+            ).padding(bottom = if(relic.level > -1) 12.dp else 0.dp),
+            contentScale = ContentScale.Crop
+        )
+
+        if(relic.level > -1){
+            Text(
+                text = relic.level.toString(),
+                modifier = Modifier.align(Alignment.BottomCenter)
+                    .background(Color(0x4D000000), RoundedCornerShape(49.dp))
+                    .clip(RoundedCornerShape(49.dp)).padding(top = 4.dp, bottom = 4.dp, start = 8.dp, end = 8.dp),
+
+                )
         }
     }
 }
