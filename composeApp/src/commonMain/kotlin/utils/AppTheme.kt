@@ -36,6 +36,7 @@ val Transparent = Color(0x00000000)
 val ProgressLevelBackground = Color(0xFF666666)
 val ProgressLevelPrimary = Color(0xFFDBC291)
 val AdditionalGreen = Color(0xFF43A047)
+val GradReachYellow = Color(0xFFFFD070)
 
 private val DarkColorScheme = darkColors(
     primary = Purple80,
@@ -83,6 +84,12 @@ fun AppTypography() = androidx.compose.material.Typography(
     defaultFontFamily = AppFont()
 )
 
+@Composable
+fun FontSizeNormal8() = TextStyle(
+    fontFamily = AppFont(),
+    fontWeight = FontWeight.Medium,
+    fontSize = 8.sp
+)
 @Composable
 fun FontSizeNormalSmall() = TextStyle(
     fontFamily = AppFont(),
