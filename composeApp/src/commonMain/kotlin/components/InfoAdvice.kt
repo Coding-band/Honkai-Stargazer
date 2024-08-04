@@ -56,6 +56,7 @@ import files.phorphos_baseball_cap_regular
 import files.phorphos_person_regular
 import files.phorphos_sword_regular
 import files.pom_pom_failed_issue
+import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
@@ -138,7 +139,7 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
 
     if(charWeightData != null){
         for(relicSets in charWeightData.jsonObject["advice_relic"]!!.jsonArray){
-            if(relicSets.jsonArray.size >= 2) {
+            if(relicSets is JsonArray && relicSets.jsonArray.size >= 2) {
                 val relicId1 = relicSets.jsonArray[0].jsonPrimitive.int
                 val relicId2 = relicSets.jsonArray[1].jsonPrimitive.int
 
@@ -158,7 +159,7 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
 
         //Must rewrite if later extend to multi choices of one relic index
         for(adviceAttr in charWeightData.jsonObject["advice_relic_attr"]!!.jsonArray){
-            if (adviceAttr.jsonObject["propertyName"] == null || adviceAttr.jsonObject["propertyName"]!!.jsonPrimitive.content == "") continue
+            if (adviceAttr is JsonObject && adviceAttr.jsonObject["propertyName"] == null || adviceAttr.jsonObject["propertyName"]!!.jsonPrimitive.content == "") continue
             adviceAttrList.add(adviceAttr.jsonObject["relicType"]!!.jsonPrimitive.content to Attribute.valueOf(adviceAttr.jsonObject["propertyName"]!!.jsonPrimitive.content))
         }
         for(adviceAttr in charWeightData.jsonObject["advice_relic_sub"]!!.jsonArray){
