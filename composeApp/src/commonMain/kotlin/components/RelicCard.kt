@@ -21,6 +21,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
@@ -33,6 +34,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -140,40 +142,48 @@ fun RelicSmallCard(
 ){
     Box(
         modifier = Modifier.defaultMinSize(
-            Constants.RELIC_CARD_WIDTH, Constants.RELIC_CARD_WIDTH
-        ).clip(
-            RoundedCornerShape(
-                topEnd = 15.dp,
-                topStart = 4.dp,
-                bottomEnd = 4.dp,
-                bottomStart = 4.dp
-            )
-        ).clickable(
-            onClick = { },
-            indication = rememberRipple(),
-            interactionSource = remember { MutableInteractionSource() }
-        )
+            Constants.RELIC_CARD_WIDTH, Constants.RELIC_CARD_WIDTH + 8.dp
+        ).wrapContentSize()
     ) {
-        Image(
-            bitmap = Relic.getRelicImageFromJSON(
-                if (pieceIndex < 5) UtilTools.ImageFolderType.RELIC_ICON else UtilTools.ImageFolderType.ORMANENT_ICON,
-                UtilTools().getImageNameByRegistName(relic.registName!!), pieceIndex
-            ),
-            contentDescription = "Relic Icon",
-            modifier = Modifier.fillMaxWidth().aspectRatio(1f).background(
-                Brush.verticalGradient(
-                    colors = getCardBgColorByRare(relic.rarity!!)
+        Column{
+            Box(Modifier.clip(
+                RoundedCornerShape(
+                    topEnd = 15.dp,
+                    topStart = 4.dp,
+                    bottomEnd = 4.dp,
+                    bottomStart = 4.dp
+                ))
+                .clickable(
+                    onClick = { onClick() },
+                    indication = rememberRipple(),
+                    interactionSource = remember { MutableInteractionSource() }
                 )
-            ).padding(bottom = if(relic.level > -1) 12.dp else 0.dp),
-            contentScale = ContentScale.Crop
-        )
+            ){
+                Image(
+                    bitmap = Relic.getRelicImageFromJSON(
+                        if (pieceIndex < 5) UtilTools.ImageFolderType.RELIC_ICON else UtilTools.ImageFolderType.ORMANENT_ICON,
+                        UtilTools().getImageNameByRegistName(relic.registName!!), pieceIndex
+                    ),
+                    contentDescription = "Relic Icon",
+                    modifier = Modifier.fillMaxWidth().aspectRatio(1f).background(
+                        Brush.verticalGradient(
+                            colors = getCardBgColorByRare(relic.rarity!!)
+                        )
+                    ).padding(8.dp).aspectRatio(1f),
+                    contentScale = ContentScale.Crop
+                )
+            }
+            Spacer(modifier = Modifier.height(8.dp))
+        }
 
         if(relic.level > -1){
             Text(
                 text = relic.level.toString(),
+                style = FontSizeNormal12(),
+                fontWeight = FontWeight.Bold,
                 modifier = Modifier.align(Alignment.BottomCenter)
-                    .background(Color(0x4D000000), RoundedCornerShape(49.dp))
-                    .clip(RoundedCornerShape(49.dp)).padding(top = 4.dp, bottom = 4.dp, start = 8.dp, end = 8.dp),
+                    .background(Color(0x66000000), RoundedCornerShape(49.dp))
+                    .clip(RoundedCornerShape(49.dp)).padding(start = 6.dp, end = 6.dp, top = 2.dp, bottom = 2.dp),
 
                 )
         }
