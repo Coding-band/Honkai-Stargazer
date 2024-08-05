@@ -98,13 +98,10 @@ fun HomePageBlock1x1(
     OutlinedButton(
         contentPadding = PaddingValues(10.dp),
         colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent),
-        onClick = {
+        onClick = blockData.itemOnClickAction ?: {
             if (blockData.itemOnClickToNavigate !== null) {
                 println("Ok I'm Navigating to " + blockData.itemOnClickToNavigate)
                 navController.navigate(blockData.itemOnClickToNavigate!!.route)
-            } else {
-                println("Ok I'm OnClick la")
-                blockData.itemOnClickAction;
             }
         },
         shape = RoundedCornerShape(8.dp),
