@@ -126,7 +126,12 @@ fun HomePage(modifier: Modifier = Modifier, navController: NavController, header
 }
 
 @Composable
-fun UserHelpTeamIcon(modifier: Modifier = Modifier, character: Character, navController: NavController) {
+fun UserHelpTeamIcon(
+    modifier: Modifier = Modifier,
+    character: Character,
+    navController: NavController,
+    uid: String
+) {
     AsyncImage(
         model = UtilTools().newImageRequest(LocalPlatformContext.current, Character.getCharacterImageByteArrayFromFileName(UtilTools.ImageFolderType.CHAR_ICON, character.registName!!)),
         contentDescription = "Character Helper Icon",
@@ -136,7 +141,11 @@ fun UserHelpTeamIcon(modifier: Modifier = Modifier, character: Character, navCon
             .background(Color(0xFFD9D9D9), CircleShape)
             .clip(CircleShape)
             .border(1.5.dp, Color(0xFFD3D3D3), CircleShape)
-            .padding()
+            .clickable {
+                if (uid != "") {
+                    navController.navigate("${Screen.UserCharacterPageScreen.route}?uid=${uid}&charId=${character.officialId}")
+                }
+            }
     )
     Spacer(modifier = Modifier.width(4.dp))
 }
@@ -245,10 +254,14 @@ fun HomePageHeader(
                             item {
                                 val filterResult = userAccount.characterList.filter { it.characterStatus != null && it.characterStatus!!.isHelper }
                                 if (filterResult.isNotEmpty()) {
-                                    filterResult.forEach { UserHelpTeamIcon(character = it, navController = navController) }
+                                    filterResult.forEach { UserHelpTeamIcon(character = it, navController = navController, uid = userAccount.uid) }
                                 }else if(userAccount.characterList.size > 0){
                                     for (i in 0..min(userAccount.characterList.size, 6)) {
-                                        UserHelpTeamIcon(character = userAccount.characterList[i], navController = navController)
+                                        UserHelpTeamIcon(
+                                            character = userAccount.characterList[i],
+                                            navController = navController,
+                                            uid = userAccount.uid
+                                        )
                                     }
                                 }else{
                                     Box(modifier = Modifier

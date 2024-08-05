@@ -28,6 +28,7 @@ import getScreenSizeInfo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -46,10 +47,12 @@ fun SplashPage(
     headerData: HeaderData = defaultHeaderData
 ) {
 
-    CoroutineScope(Dispatchers.Main).launch {
+    CoroutineScope(Dispatchers.Default).launch {
         refreshCharacterListHoyolab()
         refreshNoteData()
-        navController.navigate(Screen.HomePage.route)
+        withContext(Dispatchers.Main) {
+            navController.navigate(Screen.HomePage.route)
+        }
     }
 
     //Root Container of this page
