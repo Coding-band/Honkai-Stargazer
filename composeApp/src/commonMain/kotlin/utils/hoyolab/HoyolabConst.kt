@@ -29,7 +29,20 @@ class HoyolabConst {
         UNKNOWN("UNKNOWN", Res.string.HaveNotUsed, "UNKNOWN", HoyolabRequest.PLATFORM.HOYOLAB);
     }
     fun getServerById(serverId : String): SERVER {
-        return SERVER.entries.filter { server -> server.serverId == serverId }[0] ?: SERVER.UNKNOWN
+        return SERVER.entries.filter { server -> server.serverId == serverId }.firstOrNull() ?: SERVER.UNKNOWN
+    }
+    fun getServerByUID(uid : String): SERVER {
+        return when(uid.first()){
+            '1' -> SERVER.MIHOYO
+            '2' -> SERVER.MIHOYO
+            '5' -> SERVER.BILIBILI
+            '6' -> SERVER.AMERICA
+            '7' -> SERVER.EUROPE
+            '8' -> SERVER.ASIA
+            '9' -> SERVER.TW_HK_MO
+            else -> SERVER.UNKNOWN
+        }
+
     }
 
     /**

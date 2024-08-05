@@ -304,9 +304,14 @@ class UtilTools {
     /**
      * Function that use for handling Dec's Format
      */
-    fun formatDecimal(number: Number, decimalPlaces: Int = 2): String {
+    fun formatDecimal(number: Number, decimalPlaces: Int = 2, isRoundDown: Boolean = false): String {
         val multiplier = 10.0.pow(decimalPlaces)
-        val roundedNumber = kotlin.math.round(number.toDouble() * multiplier) / multiplier
+        val roundedNumber = if(isRoundDown){
+            kotlin.math.floor(number.toDouble() * multiplier)
+        } else {
+            kotlin.math.round(number.toDouble() * multiplier)
+        } / multiplier
+
         val parts = roundedNumber.toString().split('.')
         val integerPart = parts[0].reversed().chunked(3).joinToString(",").reversed()
         val decimalPart = parts.getOrNull(1)?.padEnd(decimalPlaces, '0') ?: "0".repeat(decimalPlaces)
