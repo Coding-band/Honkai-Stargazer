@@ -26,7 +26,7 @@ class UserAccount(
     var username: String = "Unknown",
     var level: Int = 0,
     var ascLevel: Int = 0,
-    var nickname: String = "",
+    var signature: String = "",
     var icon: String = "",
     var activeDays: Int = 0,
     var unlockedCharCount: Int = 0,
@@ -45,6 +45,7 @@ class UserAccount(
 ){
     companion object{
         var INSTANCE = Json.decodeFromString<UserAccount>(Settings().getString("userAccount", Json.encodeToString(UserAccount())))
+        var UIDSEARCH : UserAccount = UserAccount()
 
         fun pasteCookies(
             cookieList: List<Cookie>,
@@ -242,6 +243,7 @@ class UserAccount(
 
                 if(userNoteData !is JsonNull && !userNoteData.jsonObject.isEmpty()){
                     val userNoteJson = userNoteData.jsonObject
+                    INSTANCE.userNote = UserNote()
                     INSTANCE.userNote.currStamina = userNoteJson["current_stamina"]!!.jsonPrimitive.int
                     INSTANCE.userNote.staminaRecoverTime = userNoteJson["stamina_recover_time"]!!.jsonPrimitive.int
                     INSTANCE.userNote.currReserveStamina = userNoteJson["current_reserve_stamina"]!!.jsonPrimitive.int
@@ -252,6 +254,7 @@ class UserAccount(
                     INSTANCE.userNote.weeklyBossChances = userNoteJson["weekly_cocoon_cnt"]!!.jsonPrimitive.int
 
                     val expeditionJson = userNoteJson["expeditions"]!!.jsonArray
+                    println("expeditionJson : ${Json.encodeToString(expeditionJson)}, size = ${expeditionJson.size}")
                     for (expedition in expeditionJson){
                         val expeditionObj = expedition.jsonObject
                         val expeditionCharacterIcon = arrayListOf<String>()
@@ -270,6 +273,15 @@ class UserAccount(
             }catch (e : Exception){
                 errorLogExport("UserAccount", "refreshCharacterList()", e)
             }
+        }
+
+        //Reaction between UserAccount and Database Server
+
+        fun getUserInfoFromServer(uid: String){
+
+        }
+        fun saveMyUserInfoToServer(uid: String){
+
         }
     }
 }
