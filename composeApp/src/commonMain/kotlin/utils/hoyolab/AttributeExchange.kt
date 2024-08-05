@@ -53,7 +53,7 @@ data class AttributeExchange(
                 32 -> return AttributeExchange(key = "hp", attribute = Attribute.ATTR_HP,type = "HPAddedRatio", isPercent = true, isForRelic = true) //Using, for relics
                 33 -> return AttributeExchange(key = "atk", attribute = Attribute.ATTR_ATK,type = "AttackAddedRatio", isPercent = true, isForRelic = true) //Using, for relics
                 34 -> return AttributeExchange(key = "def", attribute = Attribute.ATTR_DEF,type = "DefenceAddedRatio", isPercent = true, isForRelic = true) //Using, for relics
-                35 -> return AttributeExchange(key = "spd", attribute = Attribute.ATTR_SPD,type = "SpeedDelta", isPercent = true, isForRelic = true) //Using, for relics
+                35 -> return AttributeExchange(key = "spd", attribute = Attribute.ATTR_SPD,type = "SpeedDelta", isPercent = false, isForRelic = true) //Using, for relics, SPEED SHOULD ALWAYS BE NON-PERCENT
                 36 -> return AttributeExchange(key = "get_heal_rate", isPercent = true)
                 37 -> return AttributeExchange(key = "physical_res", isPercent = true)
                 38 -> return AttributeExchange(key = "fire_res", isPercent = true)
@@ -69,7 +69,7 @@ data class AttributeExchange(
                 // 48 -> return AttributeExchange(key = "wind_res", isPercent = true)
                 // 49 -> return AttributeExchange(key = "wind_res", isPercent = true)
                 // 50 -> return AttributeExchange(key = "wind_res", isPercent = true)
-                51 -> return AttributeExchange(key = "spd", attribute = Attribute.ATTR_SPD,type = "SpeedDelta", isPercent = true, isForRelic = true) //Using, for relics
+                51 -> return AttributeExchange(key = "spd", attribute = Attribute.ATTR_SPD,type = "SpeedDelta", isPercent = false, isForRelic = true) //Using, for relics - SPEED SHOULD ALWAYS BE NON-PERCENT
                 52 -> return AttributeExchange(key = "crit_rate", attribute = Attribute.ATTR_CRIT_RATE,type = "CriticalChanceBase", isPercent = true, isForRelic = true) //Using, for relics
                 53 -> return AttributeExchange(key = "crit_dmg", attribute = Attribute.ATTR_CRIT_DMG,type = "CriticalDamageBase", isPercent = true, isForRelic = true) //Using, for relics
                 54 -> return AttributeExchange(key = "sp_rate", attribute = Attribute.ATTR_SP_RATE,type = "SPRatioBase", isPercent = true, isForRelic = true) //Using, for relics
