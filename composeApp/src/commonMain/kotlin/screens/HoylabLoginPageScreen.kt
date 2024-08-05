@@ -42,6 +42,8 @@ import files.Res
 import files.SelectAccountInServer
 import files.SelectServerTitle
 import files.UseCookiesToLogin
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import types.UserAccount
@@ -94,7 +96,7 @@ fun HoyolabLoginPageScreen(
             hazeState = hazeState,
             backIconId = BackIcon.CANCEL,
             onBack = {
-                coroutineScope.launch {
+                CoroutineScope(Dispatchers.Default).launch{
                     UserAccount.pasteCookies(webviewState.cookieManager.getCookies(url), serverSelected, snackbarHostState)
                 }
 
