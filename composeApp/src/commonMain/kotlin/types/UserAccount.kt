@@ -188,11 +188,11 @@ class UserAccount(
             if(relicAny.isEmpty()){
                 return null
             }else{
-                val relic = Relic.getRelicItemFromJSON(Relic.getRelicIdFromHoyoRelicId(relicData[0].jsonObject["id"]!!.jsonPrimitive.int).toString())
-                val mainProperties = relicData[0].jsonObject["main_property"]!!.jsonObject
-                val subProperties = relicData[0].jsonObject["properties"]!!.jsonArray
-                relic.level = relicData[0].jsonObject["level"]!!.jsonPrimitive.int
-                relic.rarity = relicData[0].jsonObject["rarity"]!!.jsonPrimitive.int
+                val relic = Relic.getRelicItemFromJSON(Relic.getRelicIdFromHoyoRelicId(relicAny[0].jsonObject["id"]!!.jsonPrimitive.int).toString())
+                val mainProperties = relicAny[0].jsonObject["main_property"]!!.jsonObject
+                val subProperties = relicAny[0].jsonObject["properties"]!!.jsonArray
+                relic.level = relicAny[0].jsonObject["level"]!!.jsonPrimitive.int
+                relic.rarity = relicAny[0].jsonObject["rarity"]!!.jsonPrimitive.int
                 relic.properties.clear()
                 relic.properties.add(
                     HsrProperties(
