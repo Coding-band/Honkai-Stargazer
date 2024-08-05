@@ -24,19 +24,19 @@ class Language() {
         JYU_YAM("ㄓㄨˋ ㄧㄣ", "zh"),
         UK("Українська", "uk");
     }
-    enum class TextLanguage(val localeName: String, val folderName: String, val hoyolabName: String) {
-        EN("English", "en", "en-us"),
-        ZH_CN("简体中文", "zh_cn", "zh-cn"),
-        ZH_HK("繁體中文", "zh_hk", "zh-tw"),
-        JP("日本語", "jp", "ja-jp"),
-        FR("Français", "fr", "fr-fr"),
-        RU("Русский", "ru", "ru-ru"),
-        DE("Deutsch", "de", "de-de"),
-        PT("Português", "pt_pt", "pt-pt"),
-        VI("tiếng Việt", "vi", "vi-vn"),
-        ES("Español", "es_es", "es-es"),
-        KR("한국어", "kr", "ko-kr"),
-        TH("ภาษาไทย", "th", "th-th"),
+    enum class TextLanguage(val localeName: String, val folderName: String, val hoyolabName: String, val langCode: String) {
+        EN("English", "en", "en-us", "en"),
+        ZH_CN("简体中文", "zh_cn", "zh-cn", "cn"),
+        ZH_HK("繁體中文", "zh_hk", "zh-tw", "cht"),
+        JP("日本語", "jp", "ja-jp", "jp"),
+        FR("Français", "fr", "fr-fr", "fr"),
+        RU("Русский", "ru", "ru-ru", "ru"),
+        DE("Deutsch", "de", "de-de", "de"),
+        PT("Português", "pt_pt", "pt-pt", "pt"),
+        VI("tiếng Việt", "vi", "vi-vn", "vi"),
+        ES("Español", "es_es", "es-es", "es"),
+        KR("한국어", "kr", "ko-kr", "kr"),
+        TH("ภาษาไทย", "th", "th-th", "th"),
 
         //@DoItLater("Add support to ITALIAN") IT("ITALIAN", "it", "it-it"),
         //@DoItLater("Add support to TURKISH") TR("TURKISH", "tr", "tr-tr"),
