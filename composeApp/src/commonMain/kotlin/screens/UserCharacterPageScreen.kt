@@ -176,26 +176,36 @@ fun UserCharacterPageScreen(
                 onForward = {
                     //TODO : Remember to add the Share Function
                 },
-                forwardIconId = Res.drawable.ui_icon_share
-            ) {
-                Column(Modifier.fillMaxSize()) {
-                    Text(
-                        userAccount.username,
-                        modifier = Modifier.align(Alignment.CenterHorizontally).padding(2.dp),
-                        style = FontSizeNormal16(),
-                        color = Color.White
-                    )
+                forwardIconId = Res.drawable.ui_icon_share,
 
-                    Text(
-                        text = "${userAccount.uid}·${
-                            UtilTools().removeStringResDoubleQuotes(
-                                userAccount.server.localeName)}",
-                        modifier = Modifier.align(Alignment.CenterHorizontally).padding(2.dp)
-                            .background(Color(0x4D000000), RoundedCornerShape(49.dp))
-                            .clip(RoundedCornerShape(49.dp)).padding(8.dp),
-                        style = FontSizeNormal14(),
-                        color = Color.White
-                    )
+            ) {
+                AnimatedVisibility(
+                    visible = !isScrolling,
+                    enter = fadeIn(),
+                    exit = fadeOut(),
+                    modifier = Modifier.fillMaxWidth().wrapContentHeight().align(Alignment.TopCenter)
+                ) {
+                    Column(Modifier.fillMaxSize()) {
+                        Text(
+                            userAccount.username,
+                            modifier = Modifier.align(Alignment.CenterHorizontally).padding(2.dp),
+                            style = FontSizeNormal16(),
+                            color = Color.White
+                        )
+
+                        Text(
+                            text = "${userAccount.uid}·${
+                                UtilTools().removeStringResDoubleQuotes(
+                                    userAccount.server.localeName
+                                )
+                            }",
+                            modifier = Modifier.align(Alignment.CenterHorizontally).padding(2.dp)
+                                .background(Color(0x4D000000), RoundedCornerShape(49.dp))
+                                .clip(RoundedCornerShape(49.dp)).padding(8.dp),
+                            style = FontSizeNormal14(),
+                            color = Color.White
+                        )
+                    }
                 }
             }
         }
@@ -248,6 +258,7 @@ fun ProficientScoreInfo(character: Character) {
                 modifier = Modifier
                     .defaultMinSize(100.dp, 30.dp)
                     .wrapContentSize()
+                    .clip(RoundedCornerShape(43.dp))
                     .clickable { isExpandSchoolDropdown.value = !isExpandSchoolDropdown.value }
             ) {
                 Row(
@@ -316,7 +327,7 @@ fun ProficientScoreInfo(character: Character) {
                         Image(
                             painter = painterResource(Constants.getScoreRankingFont(scoreInfo.second as String)),
                             contentDescription = "Ranking Icon",
-                            modifier = Modifier.height(txt24Height.value).aspectRatio(1f).align(Alignment.CenterHorizontally),
+                            modifier = Modifier.height(txt24Height.value - 8.dp).aspectRatio(1f).align(Alignment.CenterHorizontally),
                         )
                     }else{
                         Text(
@@ -448,8 +459,6 @@ fun RelicInfo(character: Character) {
             ) {
                 val relic = relicValidList[it].first!!
                 val index = relicValidList[it].second
-
-                println("Relic: $relic, Index: $index")
 
                 val score = remember { mutableStateOf(0f) }
                 val relicSubAttr = relic.properties.subList(1, relic.properties.size)
@@ -697,7 +706,7 @@ fun LightconeInfo(character: Character){
                             Res.string.Superimpose
                         ).replace("$"+"{1}",lightcone.superimposition.toString())
                     }",
-                    modifier = Modifier.padding(2.dp)
+                    modifier = Modifier.padding(top = 2.dp, bottom = 2.dp, start = 8.dp, end = 8.dp)
                         .background(Color(0x4D000000), RoundedCornerShape(49.dp))
                         .clip(RoundedCornerShape(49.dp)).padding(4.dp),
                     style = FontSizeNormal12(),
@@ -899,13 +908,18 @@ fun CharacterInfoFadeImg(
             exit = fadeOut(),
             modifier = Modifier.fillMaxWidth().wrapContentHeight().align(Alignment.TopCenter)
         ) {
-            AsyncImage(
+            Image(
+                /*
                 model = UtilTools().newImageRequest(context = LocalPlatformContext.current, data = Character.getCharacterImageByteArrayFromFileName(
                     UtilTools.ImageFolderType.CHAR_FADE, fileName
                 )),
+                 */
+                bitmap = Character.getCharacterImageFromFileName(
+                    UtilTools.ImageFolderType.CHAR_FADE, fileName
+                ),
                 contentDescription = "Character Full Image",
                 contentScale = ContentScale.Fit,
-                imageLoader = UtilTools().newImageLoader(LocalPlatformContext.current)
+                //imageLoader = UtilTools().newImageLoader(LocalPlatformContext.current)
             )
         }
         Box(
