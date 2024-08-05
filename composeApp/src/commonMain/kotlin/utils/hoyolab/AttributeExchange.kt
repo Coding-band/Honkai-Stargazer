@@ -12,75 +12,89 @@ data class AttributeExchange(
     val attribute: Attribute = Attribute.ATTR_UNKNOWN,
     val isPercent: Boolean = false,
     val isForRelic: Boolean = false,
+    val id: Int = -1
 ){
     companion object{
         val ATTREX_UNKNOWN = AttributeExchange(key = "unknown")
 
         @VersionUpdateCheck
-        fun getAttrKeyByPropertyType(property_type: Int): AttributeExchange {
-            when (property_type) {
-                1 -> return AttributeExchange(key = "hp", attribute = Attribute.ATTR_HP, type = "HPDelta", isPercent = false) //Using
-                2 -> return AttributeExchange(key = "atk", attribute = Attribute.ATTR_ATK, type = "AttackDelta", isPercent = false) //Using
-                3 -> return AttributeExchange(key = "def", attribute = Attribute.ATTR_DEF,type = "DefenceDelta", isPercent = false) //Using
-                4 -> return AttributeExchange(key = "spd", attribute = Attribute.ATTR_SPD,type = "SpeedDelta", isPercent = false) //Using
-                5 -> return AttributeExchange(key = "crit_rate",attribute = Attribute.ATTR_CRIT_RATE, type = "CriticalChanceBase", isPercent = true) //Using
-                6 -> return AttributeExchange(key = "crit_dmg", attribute = Attribute.ATTR_CRIT_DMG,type = "CriticalDamageBase", isPercent = true) //Using
-                7 -> return AttributeExchange(key = "heal_rate", attribute = Attribute.ATTR_HEAL_RATE,type = "HealRatioBase", isPercent = true) //Using
-                // 8  = return {key  = "?", isPercent  = false};
-                9 -> return AttributeExchange(key = "sp_rate", attribute = Attribute.ATTR_SP_RATE,type = "SPRatioBase", isPercent = true) //Using
-                10 -> return AttributeExchange(key = "effect_hit", attribute = Attribute.ATTR_EFFECT_HIT,type = "StatusProbabilityBase", isPercent = true) //Using
-                11 -> return AttributeExchange(key = "effect_res", attribute = Attribute.ATTR_EFFECT_RES,type = "StatusResistanceBase", isPercent = true) //Using
-                12 -> return AttributeExchange(key = "physical_dmg", attribute = Attribute.ATTR_PHYSICAL_DMG,type = "PhysicalAddedRatio", isPercent = true)  //Using
-                13 -> return AttributeExchange(key = "physical_res", isPercent = true)
-                14 -> return AttributeExchange(key = "fire_dmg", attribute = Attribute.ATTR_FIRE_DMG, type = "FireAddedRatio", isPercent = true) //Using
-                15 -> return AttributeExchange(key = "fire_res", isPercent = true)
-                16 -> return AttributeExchange(key = "ice_dmg", attribute = Attribute.ATTR_ICE_DMG, type = "IceAddedRatio", isPercent = true) //Using
-                17 -> return AttributeExchange(key = "ice_res", isPercent = true)
-                18 -> return AttributeExchange(key = "lightning_dmg", attribute = Attribute.ATTR_LIGHTNING_DMG, type = "ThunderAddedRatio", isPercent = true) //Using
-                19 -> return AttributeExchange(key = "lightning_res", isPercent = true)
-                20 -> return AttributeExchange(key = "wind_dmg", attribute = Attribute.ATTR_WIND_DMG, type = "WindAddedRatio", isPercent = true) //Using
-                21 -> return AttributeExchange(key = "wind_res", isPercent = true)
-                22 -> return AttributeExchange(key = "quantum_dmg", attribute = Attribute.ATTR_QUANTUM_DMG, type = "QuantumAddedRatio", isPercent = true) //Using
-                23 -> return AttributeExchange(key = "quantum_res", isPercent = true)
-                24 -> return AttributeExchange(key = "imaginary_dmg", attribute = Attribute.ATTR_IMAGINARY_DMG, type = "ImaginaryAddedRatio", isPercent = true) //Using
-                25 -> return AttributeExchange(key = "imaginary_res", isPercent = true)
-                26 -> return AttributeExchange(key = "hp_base", attribute = Attribute.ATTR_HP, isPercent = false)
-                27 -> return AttributeExchange(key = "hp", attribute = Attribute.ATTR_HP, type = "HPDelta", isPercent = false, isForRelic = true) //Using, for relics
-                28 -> return AttributeExchange(key = "atk_base", attribute = Attribute.ATTR_ATK, isPercent = false)
-                29 -> return AttributeExchange(key = "atk", attribute = Attribute.ATTR_ATK,type = "AttackDelta", isPercent = false, isForRelic = true) //Using, for relics
-                30 -> return AttributeExchange(key = "def_base", attribute = Attribute.ATTR_DEF,isPercent = false)
-                31 -> return AttributeExchange(key = "def", attribute = Attribute.ATTR_DEF,type = "DefenceDelta", isPercent = false, isForRelic = true) //Using, for relics
-                32 -> return AttributeExchange(key = "hp", attribute = Attribute.ATTR_HP,type = "HPAddedRatio", isPercent = true, isForRelic = true) //Using, for relics
-                33 -> return AttributeExchange(key = "atk", attribute = Attribute.ATTR_ATK,type = "AttackAddedRatio", isPercent = true, isForRelic = true) //Using, for relics
-                34 -> return AttributeExchange(key = "def", attribute = Attribute.ATTR_DEF,type = "DefenceAddedRatio", isPercent = true, isForRelic = true) //Using, for relics
-                35 -> return AttributeExchange(key = "spd", attribute = Attribute.ATTR_SPD,type = "SpeedDelta", isPercent = false, isForRelic = true) //Using, for relics, SPEED SHOULD ALWAYS BE NON-PERCENT
-                36 -> return AttributeExchange(key = "get_heal_rate", isPercent = true)
-                37 -> return AttributeExchange(key = "physical_res", isPercent = true)
-                38 -> return AttributeExchange(key = "fire_res", isPercent = true)
-                39 -> return AttributeExchange(key = "ice_res", isPercent = true)
-                40 -> return AttributeExchange(key = "lightning_res", isPercent = true)
-                41 -> return AttributeExchange(key = "wind_res", isPercent = true)
-                42 -> return AttributeExchange(key = "quantum_res", isPercent = true)
-                43 -> return AttributeExchange(key = "imaginary_res", isPercent = true)
-                // 44 -> return AttributeExchange(key = "wind_res", isPercent = true)
-                // 45 -> return AttributeExchange(key = "wind_res", isPercent = true)
-                // 46 -> return AttributeExchange(key = "wind_res", isPercent = true)
-                // 47 -> return AttributeExchange(key = "wind_res", isPercent = true)
-                // 48 -> return AttributeExchange(key = "wind_res", isPercent = true)
-                // 49 -> return AttributeExchange(key = "wind_res", isPercent = true)
-                // 50 -> return AttributeExchange(key = "wind_res", isPercent = true)
-                51 -> return AttributeExchange(key = "spd", attribute = Attribute.ATTR_SPD,type = "SpeedDelta", isPercent = false, isForRelic = true) //Using, for relics - SPEED SHOULD ALWAYS BE NON-PERCENT
-                52 -> return AttributeExchange(key = "crit_rate", attribute = Attribute.ATTR_CRIT_RATE,type = "CriticalChanceBase", isPercent = true, isForRelic = true) //Using, for relics
-                53 -> return AttributeExchange(key = "crit_dmg", attribute = Attribute.ATTR_CRIT_DMG,type = "CriticalDamageBase", isPercent = true, isForRelic = true) //Using, for relics
-                54 -> return AttributeExchange(key = "sp_rate", attribute = Attribute.ATTR_SP_RATE,type = "SPRatioBase", isPercent = true, isForRelic = true) //Using, for relics
-                55 -> return AttributeExchange(key = "heal_rate", attribute = Attribute.ATTR_HEAL_RATE,type = "HealRatioBase", isPercent = true, isForRelic = true) //Using, for relics
-                56 -> return AttributeExchange(key = "effect_hit", attribute = Attribute.ATTR_EFFECT_HIT,type = "StatusProbabilityBase", isPercent = true, isForRelic = true) //Using, for relics
-                57 -> return AttributeExchange(key = "effect_res", attribute = Attribute.ATTR_EFFECT_RES,type = "StatusResistanceBase", isPercent = true, isForRelic = true) //Using, for relics
-                58 -> return AttributeExchange(key = "break_dmg", attribute = Attribute.ATTR_BREAK_DMG,type = "BreakDamageAddedRatioBase", isPercent = true, isForRelic = true) //Using, for relics
-                59 -> return AttributeExchange(key = "break_dmg", attribute = Attribute.ATTR_BREAK_DMG, type = "BreakDamageAddedRatioBase", isPercent = true, isForRelic = true) //Using, for relics
-                60 -> return AttributeExchange(key = "sp", isPercent = false) //Using, for relics?
-                else -> return AttributeExchange(key = property_type.toString(), isPercent = false)
-            }
+        val AttrExchangeList = arrayListOf<AttributeExchange>(
+            AttributeExchange(id = 1,key = "hp", attribute = Attribute.ATTR_HP, type = "HPDelta", isPercent = false), //Using
+            AttributeExchange(id = 2,key = "atk", attribute = Attribute.ATTR_ATK, type = "AttackDelta", isPercent = false), //Using
+            AttributeExchange(id = 3,key = "def", attribute = Attribute.ATTR_DEF,type = "DefenceDelta", isPercent = false), //Using
+            AttributeExchange(id = 4,key = "spd", attribute = Attribute.ATTR_SPD,type = "SpeedDelta", isPercent = false), //Using
+            AttributeExchange(id = 5,key = "crit_rate",attribute = Attribute.ATTR_CRIT_RATE, type = "CriticalChanceBase", isPercent = true), //Using
+            AttributeExchange(id = 6,key = "crit_dmg", attribute = Attribute.ATTR_CRIT_DMG,type = "CriticalDamageBase", isPercent = true), //Using
+            AttributeExchange(id = 7,key = "heal_rate", attribute = Attribute.ATTR_HEAL_RATE,type = "HealRatioBase", isPercent = true), //Using
+
+            AttributeExchange(id = 9,key = "sp_rate", attribute = Attribute.ATTR_SP_RATE,type = "SPRatioBase", isPercent = true), //Using
+            AttributeExchange(id = 10,key = "effect_hit", attribute = Attribute.ATTR_EFFECT_HIT,type = "StatusProbabilityBase", isPercent = true), //Using
+            AttributeExchange(id = 11,key = "effect_res", attribute = Attribute.ATTR_EFFECT_RES,type = "StatusResistanceBase", isPercent = true), //Using
+            AttributeExchange(id = 12,key = "physical_dmg", attribute = Attribute.ATTR_PHYSICAL_DMG,type = "PhysicalAddedRatio", isPercent = true),  //Using
+            AttributeExchange(id = 13,key = "physical_res", isPercent = true),
+            AttributeExchange(id = 14,key = "fire_dmg", attribute = Attribute.ATTR_FIRE_DMG, type = "FireAddedRatio", isPercent = true), //Using
+            AttributeExchange(id = 15,key = "fire_res", isPercent = true),
+            AttributeExchange(id = 16,key = "ice_dmg", attribute = Attribute.ATTR_ICE_DMG, type = "IceAddedRatio", isPercent = true), //Using
+            AttributeExchange(id = 17,key = "ice_res", isPercent = true),
+            AttributeExchange(id = 18,key = "lightning_dmg", attribute = Attribute.ATTR_LIGHTNING_DMG, type = "ThunderAddedRatio", isPercent = true), //Using
+            AttributeExchange(id = 19,key = "lightning_res", isPercent = true),
+            AttributeExchange(id = 20,key = "wind_dmg", attribute = Attribute.ATTR_WIND_DMG, type = "WindAddedRatio", isPercent = true), //Using
+            AttributeExchange(id = 21,key = "wind_res", isPercent = true),
+            AttributeExchange(id = 22,key = "quantum_dmg", attribute = Attribute.ATTR_QUANTUM_DMG, type = "QuantumAddedRatio", isPercent = true), //Using
+            AttributeExchange(id = 23,key = "quantum_res", isPercent = true),
+            AttributeExchange(id = 24,key = "imaginary_dmg", attribute = Attribute.ATTR_IMAGINARY_DMG, type = "ImaginaryAddedRatio", isPercent = true), //Using
+            AttributeExchange(id = 25,key = "imaginary_res", isPercent = true),
+            AttributeExchange(id = 26,key = "hp_base", attribute = Attribute.ATTR_HP, isPercent = false),
+            AttributeExchange(id = 27,key = "hp", attribute = Attribute.ATTR_HP, type = "HPDelta", isPercent = false, isForRelic = true), //Using, for relics
+            AttributeExchange(id = 28,key = "atk_base", attribute = Attribute.ATTR_ATK, isPercent = false),
+            AttributeExchange(id = 29,key = "atk", attribute = Attribute.ATTR_ATK,type = "AttackDelta", isPercent = false, isForRelic = true), //Using, for relics
+            AttributeExchange(id = 30,key = "def_base", attribute = Attribute.ATTR_DEF,isPercent = false),
+            AttributeExchange(id = 31,key = "def", attribute = Attribute.ATTR_DEF,type = "DefenceDelta", isPercent = false, isForRelic = true), //Using, for relics
+            AttributeExchange(id = 32,key = "hp", attribute = Attribute.ATTR_HP,type = "HPAddedRatio", isPercent = true, isForRelic = true), //Using, for relics
+            AttributeExchange(id = 33,key = "atk", attribute = Attribute.ATTR_ATK,type = "AttackAddedRatio", isPercent = true, isForRelic = true), //Using, for relics
+            AttributeExchange(id = 34,key = "def", attribute = Attribute.ATTR_DEF,type = "DefenceAddedRatio", isPercent = true, isForRelic = true), //Using, for relics
+            AttributeExchange(id = 35,key = "spd", attribute = Attribute.ATTR_SPD,type = "SpeedDelta", isPercent = false, isForRelic = true), //Using, for relics, SPEED SHOULD ALWAYS BE NON-PERCENT
+            AttributeExchange(id = 36,key = "get_heal_rate", isPercent = true),
+            AttributeExchange(id = 37,key = "physical_res", isPercent = true),
+            AttributeExchange(id = 38,key = "fire_res", isPercent = true),
+            AttributeExchange(id = 39,key = "ice_res", isPercent = true),
+            AttributeExchange(id = 40,key = "lightning_res", isPercent = true),
+            AttributeExchange(id = 41,key = "wind_res", isPercent = true),
+            AttributeExchange(id = 42,key = "quantum_res", isPercent = true),
+            AttributeExchange(id = 43,key = "imaginary_res", isPercent = true),
+
+            AttributeExchange(id = 51,key = "spd", attribute = Attribute.ATTR_SPD,type = "SpeedDelta", isPercent = false, isForRelic = true), //Using, for relics - SPEED SHOULD ALWAYS BE NON-PERCENT
+            AttributeExchange(id = 52,key = "crit_rate", attribute = Attribute.ATTR_CRIT_RATE,type = "CriticalChanceBase", isPercent = true, isForRelic = true), //Using, for relics
+            AttributeExchange(id = 53,key = "crit_dmg", attribute = Attribute.ATTR_CRIT_DMG,type = "CriticalDamageBase", isPercent = true, isForRelic = true), //Using, for relics
+            AttributeExchange(id = 54,key = "sp_rate", attribute = Attribute.ATTR_SP_RATE,type = "SPRatioBase", isPercent = true, isForRelic = true), //Using, for relics
+            AttributeExchange(id = 55,key = "heal_rate", attribute = Attribute.ATTR_HEAL_RATE,type = "HealRatioBase", isPercent = true, isForRelic = true), //Using, for relics
+            AttributeExchange(id = 56,key = "effect_hit", attribute = Attribute.ATTR_EFFECT_HIT,type = "StatusProbabilityBase", isPercent = true, isForRelic = true), //Using, for relics
+            AttributeExchange(id = 57,key = "effect_res", attribute = Attribute.ATTR_EFFECT_RES,type = "StatusResistanceBase", isPercent = true, isForRelic = true), //Using, for relics
+            AttributeExchange(id = 58,key = "break_dmg", attribute = Attribute.ATTR_BREAK_DMG,type = "BreakDamageAddedRatioBase", isPercent = true, isForRelic = false), //Using, for relics
+            AttributeExchange(id = 59,key = "break_dmg", attribute = Attribute.ATTR_BREAK_DMG, type = "BreakDamageAddedRatioBase", isPercent = true, isForRelic = true), //Using, for relics
+            AttributeExchange(id = 60,key = "sp", isPercent = false), //Using, for relics?
+        )
+
+        fun getAttrKeyByPropertyType(property_type: Int, isPercent: Boolean? = null, isForRelic: Boolean? = null): AttributeExchange {
+            return AttrExchangeList.find {
+                it.id == property_type
+                        && (if (isPercent != null) it.isPercent == isPercent else true)
+                        && (if (isForRelic != null) it.isForRelic == isForRelic else true)
+            } ?: ATTREX_UNKNOWN
+        }
+        fun getAttrKeyByMihomoType(type: String, isPercent: Boolean? = null, isForRelic: Boolean? = null): AttributeExchange {
+            return AttrExchangeList.find {
+                it.type == type
+                        && (if (isPercent != null) it.isPercent == isPercent else true)
+                        && (if (isForRelic != null) it.isForRelic == isForRelic else true)
+            } ?: ATTREX_UNKNOWN
+        }
+        fun getAttrKeyByMihomoKey(key: String, isPercent: Boolean? = null, isForRelic: Boolean? = null): AttributeExchange {
+            return AttrExchangeList.find {
+                it.key == key
+                        && (if (isPercent != null) it.isPercent == isPercent else true)
+                        && (if (isForRelic != null) it.isForRelic == isForRelic else true)
+            } ?: ATTREX_UNKNOWN
         }
 
         /**

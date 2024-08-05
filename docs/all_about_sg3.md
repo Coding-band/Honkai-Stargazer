@@ -262,17 +262,17 @@ July 15 - July 21
 July 22 - July 28
 - [x] Event List, Interaction Map Redirect (2 day) [Do together with lower choice],
 - [x] User Info Page (2 days)
-- [ ] User Character Page (2 days)
+- [x] User Character Page (2 days)
 - [ ] UID Search (0.5 days)
 - [ ] Proficient Calculation (Transfer) (1 days)
 - [x] Backend API design (1 days)
 - [ ] Relic Score Algorthm (0.5 days) [Without Reset]
 
 July 29 - August 4
-- [ ] Prepare for SG2 2.4 RSS + Offline Update (July 29 - 30)
+- [x] Prepare for SG2 2.4 RSS + Offline Update (July 29 - 30)
 - [ ] MOC & PF Leaderboard (4 days)
   - Team Usage Ranking
-- [ ] Prepare for Close BETA Testing (1 day)
+- [x] Prepare for Close BETA Testing (1 day)
 - [ ] Proficient Leaderboard (2 days)
 
 August 5 - August 11

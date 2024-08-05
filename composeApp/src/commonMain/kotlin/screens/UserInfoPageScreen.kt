@@ -75,6 +75,8 @@ import files.ic_arrow_to_down
 import files.ic_list_isolate_pretty
 import files.phorphos_question_fill
 import files.ui_icon_share
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 import org.jetbrains.compose.resources.painterResource
 import types.Constants
 import types.Constants.Companion.CHAR_CARD_WIDTH
@@ -86,6 +88,7 @@ import utils.LongStringXML
 import utils.UtilTools
 import utils.annotation.DoItLater
 import utils.navigation.Screen
+import kotlin.math.min
 
 @DoItLater("Get User Data from Database / API")
 @Composable
@@ -100,13 +103,14 @@ fun UserInfoPageScreen(
     val uid = backStackEntry!!.arguments?.getString("uid")!!
 
     val userAccount by remember { mutableStateOf(
-        if(UserAccount.INSTANCE.uid != uid){
+        if(UserAccount.INSTANCE.uid == uid){
             UserAccount.INSTANCE
         } else {
-            //TODO : Get User
-            UserAccount.INSTANCE
+            UserAccount.UIDSEARCH
         }
     ) }
+
+    println(Json.encodeToString(userAccount))
 
 
     val lazyGridState = rememberLazyGridState()
@@ -122,7 +126,7 @@ fun UserInfoPageScreen(
 
     val helperListOrigin = userAccount.characterList.filter { it.characterStatus?.isHelper == true }
 
-    val helperList = helperListOrigin.ifEmpty { userAccount.characterList.slice(0..7) }
+    val helperList = helperListOrigin.ifEmpty { userAccount.characterList.slice(0..min(7, userAccount.characterList.size-1)) }
     val finalCharList = userAccount.characterList.filter { it !in helperList }
 
     Box(modifier = modifier.fillMaxSize()) {
@@ -300,7 +304,7 @@ fun UserInfoBioUI(context: PlatformContext, userAccount: UserAccount) {
             .clip(CircleShape)
             .border(1.dp, Color(0x66907C54), CircleShape)
             .clickable {
-                if (userAccount.nickname != "") {
+                if (userAccount.signature != "") {
                     //Print Nickname
                 }
             }, contentAlignment = Alignment.Center

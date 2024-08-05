@@ -178,6 +178,9 @@ android {
         implementation(libs.androidx.material3.android)
     }
 }
+dependencies {
+    implementation(libs.firebase.crashlytics.buildtools)
+}
 
 
 compose.desktop {

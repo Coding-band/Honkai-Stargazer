@@ -132,7 +132,7 @@ fun UserCharacterPageScreen(
         if (UserAccount.INSTANCE.uid == uid) {
             UserAccount.INSTANCE
         } else {
-            UserAccount.INSTANCE
+            UserAccount.UIDSEARCH
         }
     ) }
     val characterId = backStackEntry.arguments?.getInt("charId")!!
@@ -331,7 +331,8 @@ fun ProficientScoreInfo(character: Character) {
                         )
                     }else{
                         Text(
-                            text = if(scoreInfo.second is String) {Constants.getScoreRankingFont(scoreInfo.second as String).toString()} else UtilTools().formatDecimal(scoreInfo.second as Number, 1),
+                            text = if(scoreInfo.second is String) {Constants.getScoreRankingFont(scoreInfo.second as String).toString()} else UtilTools().formatDecimal(scoreInfo.second as Number, 1 ,
+                                isRoundDown = true),
                             style = FontSizeNormalLarge24(),
                             color = Color.White,
                             maxLines = 1,
@@ -359,8 +360,8 @@ fun ProficientScoreInfo(character: Character) {
 
         Column {
             for (req in gradRequirement){
-                val charHsrProperties = character.characterStatus!!.characterProperties!!.find { it.attributeExchange == req.first }!!
-                val charValue = charHsrProperties.valueFinal
+                val charHsrProperties = character.characterStatus!!.characterProperties!!.find { it.attributeExchange == req.first }
+                val charValue = charHsrProperties?.valueFinal ?: 0f
 
                 Row(Modifier.padding(top = 4.dp, bottom = 4.dp)) {
                     Image(
@@ -430,7 +431,8 @@ fun ProficientScoreInfo(character: Character) {
 fun getDataDecimalsByAttrExchange(attrExchange: AttributeExchange, value: Float): String {
     return UtilTools().formatDecimal(
         value * if (attrExchange.isPercent) 100 else 1,
-        if (attrExchange.key == "spd") 1 else if (attrExchange.isPercent) 1 else 0
+        if (attrExchange.key == "spd") 1 else if (attrExchange.isPercent) 1 else 0,
+        isRoundDown = true
     ) + if (attrExchange.isPercent) "%" else ""
 }
 
@@ -466,12 +468,14 @@ fun RelicInfo(character: Character) {
                     Box(Modifier.width(48.dp).wrapContentHeight()) {
                         RelicSmallCard(relic, index, onClick = { selectedRelicIndex.value = it })
                     }
-                    Column(Modifier.weight(1f)) {
+                    Spacer(Modifier.width(4.dp))
+                    Column(Modifier.weight(1f).wrapContentHeight()) {
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             StatusShortUI(relic.properties[0], FontSizeNormal12(), isRelic = true)
                             Spacer(Modifier.width(8.dp).weight(1f))
                             Text(
-                                text = UtilTools().formatDecimal(score.value,1),
+                                text = UtilTools().formatDecimal(score.value,1,
+                                    isRoundDown = true),
                                 style = FontSizeNormal14(),
                                 color = Color.White
                             )
@@ -762,7 +766,8 @@ fun LightconeInfo(character: Character){
                                     modifier = Modifier.size(24.dp)
                                 )
                                 Text(
-                                    text = UtilTools().formatDecimal(attr.second, 0),
+                                    text = UtilTools().formatDecimal(attr.second, 0,
+                                        isRoundDown = true),
                                     style = FontSizeNormal14(),
                                     color = Color.White,
                                     maxLines = 1
@@ -821,7 +826,8 @@ fun StatusShortUI(
         Text(
             text = (if(isRelic) "+" else "") + UtilTools().formatDecimal(
                 status.valueFinal * if (status.attributeExchange.isPercent) 100 else 1,
-                if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent) 1 else 0
+                if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent) 1 else 0,
+                isRoundDown = true
             ) + if (status.attributeExchange.isPercent) "%" else "",
             style = textStyle,
             color = Color.White,
@@ -851,7 +857,8 @@ fun StatusFullUI(status : HsrProperties){
             Text(
                 text = "+" + UtilTools().formatDecimal(
                     status.valueFinal * if (status.attributeExchange.isPercent) 100 else 1,
-                    if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent) 1 else 0
+                    if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent) 1 else 0,
+                    isRoundDown = true
                 ) + if (status.attributeExchange.isPercent) "%" else "",
                 style = FontSizeNormal14(),
                 color = Color.White,
@@ -862,7 +869,8 @@ fun StatusFullUI(status : HsrProperties){
                 Text(
                     text = UtilTools().formatDecimal(
                         status.valueBase * if (status.attributeExchange.isPercent) 100 else 1,
-                        if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent) 1 else 0
+                        if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent) 1 else 0,
+                        isRoundDown = true
                     ) + if (status.attributeExchange.isPercent) "%" else "",
                     style = FontSizeNormal14(),
                     color = Color.White,
@@ -884,7 +892,8 @@ fun StatusFullUI(status : HsrProperties){
                 Text(
                     text = UtilTools().formatDecimal(
                         status.valueAdd * if (status.attributeExchange.isPercent) 100 else 1,
-                        if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent) 1 else 0
+                        if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent) 1 else 0,
+                        isRoundDown = true
                     ) + if (status.attributeExchange.isPercent) "%" else "",
                     style = FontSizeNormal14(),
                     color = AdditionalGreen,
