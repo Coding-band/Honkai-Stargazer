@@ -14,6 +14,7 @@ import io.ktor.serialization.kotlinx.json.json
 import io.ktor.util.network.UnresolvedAddressException
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
@@ -27,7 +28,7 @@ class CharWeightList(){
     companion object{
         const val prefKeyJson = "charWeightListJson"
         const val prefKeyLastUpdate = "charWeightListLastUpdate"
-        var INSTANCE = Json.parseToJsonElement(Settings().getString(prefKeyJson, "{}"))
+        var INSTANCE = Json.parseToJsonElement(Settings().getString(prefKeyJson, Json.encodeToString(getWeightListJson())))
 
         fun update(){
             val json = getWeightListJson()

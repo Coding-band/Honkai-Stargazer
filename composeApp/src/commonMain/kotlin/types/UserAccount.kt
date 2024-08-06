@@ -135,6 +135,8 @@ class UserAccount(
                 val userFullData = api.getHsrFullData(INSTANCE.uid, INSTANCE.server).data
                 val characterList = arrayListOf<Character>()
 
+                println("userFullData : $userFullData")
+
                 if(userFullData !is JsonNull && userFullData.jsonObject["avatar_list"] != null) {
                     for (data in userFullData.jsonObject["avatar_list"]!!.jsonArray) {
                         val characterData = data.jsonObject
@@ -174,9 +176,10 @@ class UserAccount(
 
                         characterList.add(character)
                     }
+                    INSTANCE.characterList.clear()
+                    INSTANCE.characterList = characterList
+                    println("characterList : $characterList")
                 }
-                INSTANCE.characterList.clear()
-                INSTANCE.characterList = characterList
             } catch (e: Exception) {
                 errorLogExport("UserAccount", "refreshCharacterListHoyolab()", e)
             }
