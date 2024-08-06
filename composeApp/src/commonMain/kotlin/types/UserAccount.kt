@@ -96,7 +96,7 @@ class UserAccount(
 
                 val userIndexData = api.getHsrIndexData(INSTANCE.uid, INSTANCE.server).data
 
-                if(!userIndexData.jsonObject.isEmpty()){
+                if(userIndexData is JsonObject && !userIndexData.jsonObject.isEmpty()){
                     INSTANCE.icon = userIndexData.jsonObject["cur_head_icon_url"]!!.jsonPrimitive.content
                 }
 
