@@ -104,6 +104,9 @@ kotlin {
             //Kotlinx DateTime
             implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.0")
 
+            //Sonner - Toast
+            implementation("io.github.dokar3:sonner:0.3.8")
+
         }
         desktopMain.dependencies {
             implementation(compose.material3)

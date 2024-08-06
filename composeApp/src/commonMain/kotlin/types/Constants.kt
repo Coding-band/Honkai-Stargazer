@@ -45,11 +45,8 @@ import files.ranking_d_text
 import files.ranking_s_text
 import files.ranking_ss_text
 import org.jetbrains.compose.resources.DrawableResource
-import types.UserAccount.Companion.UIDSEARCH
 import utils.annotation.DoItLater
-import utils.hoyolab.MihomoRequest
 import utils.navigation.Screen
-import utils.navigation.navControllerInstance
 
 
 class Constants {
@@ -162,10 +159,7 @@ class Constants {
             HomePageBlocks.HomePageBlockItem(
                 itemTitleRId = Res.string.UIDSearch,
                 itemIconId = Res.drawable.phorphos_alien_fill,
-                itemOnClickAction = {
-                    UIDSEARCH = MihomoRequest("800333171").getUserAccountByMiHomo()
-                    navControllerInstance.navigate("${Screen.UserInfoPageScreen.route}?uid=800333171")
-                },
+                itemOnClickToNavigate = Screen.UIDSearchPageScreen,
             ),
             @DoItLater("Add Time Count Down later")
             HomePageBlocks.HomePageBlockItem(

@@ -36,7 +36,9 @@ import files.Map
 import files.RelicList
 import files.Res
 import files.Setting
+import files.UIDSearch
 import files.UserInfoGameData
+import files.phorphos_alien_regular
 import files.phorphos_baseball_cap_fill
 import files.phorphos_film_slate_regular
 import files.phorphos_game_controller_regular
@@ -60,6 +62,7 @@ import screens.RelicInfoPage
 import screens.RelicListPage
 import screens.SettingScreen
 import screens.SplashPage
+import screens.UIDSearchPageScreen
 import screens.UserCharacterPageScreen
 import screens.UserInfoPageScreen
 
@@ -137,6 +140,10 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     data object UserCharacterPageScreen : Screen(
         "UserCharacterPageScreen",
         HeaderData(titleRId = Res.string.UserInfoGameData, titleIconId = Res.drawable.phorphos_game_controller_regular)
+    )
+    data object UIDSearchPageScreen : Screen(
+        "UIDSearchPageScreen",
+        HeaderData(titleRId = Res.string.UIDSearch, titleIconId = Res.drawable.phorphos_alien_regular)
     )
 }
 
@@ -411,6 +418,20 @@ fun Navigation() {
                         navController = navController,
                         headerData = Screen.UserCharacterPageScreen.headerData,
                         backStackEntry = backStackEntry,
+                    )
+                })
+        }
+        composable(
+            route = Screen.UIDSearchPageScreen.route,
+            enterTransition = { defaultEnterTransition },
+            exitTransition = { defaultExitTransition }) {
+            RootContent(
+                screen = Screen.UIDSearchPageScreen,
+                snackbarHostState = snackbarHostState,
+                page = {
+                    UIDSearchPageScreen(
+                        navController = navController,
+                        headerData = Screen.UIDSearchPageScreen.headerData
                     )
                 })
         }
