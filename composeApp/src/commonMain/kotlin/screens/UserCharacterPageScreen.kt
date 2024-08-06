@@ -75,8 +75,6 @@ import files.Eidolon
 import files.LeaderboardDataFrom
 import files.OverWholeServerUser
 import files.ProducedByStargazer
-import files.RelicRank
-import files.RelicScore
 import files.Res
 import files.ScoreLevel
 import files.Superimpose
@@ -115,6 +113,9 @@ import utils.FontSizeNormalSmall
 import utils.GradReachYellow
 import utils.UtilTools
 import utils.annotation.DoItLater
+import utils.calculator.getCharRange
+import utils.calculator.getCharScore
+import utils.calculator.getGradAttrAndValue
 import utils.calculator.getLcAttrData
 import utils.hoyolab.AttributeExchange
 
@@ -145,10 +146,13 @@ fun UserCharacterPageScreen(
             listState.canScrollBackward
         }
     }
-    var character = if(characterFilter.isEmpty()) null else characterFilter[0]
+    val character = if(characterFilter.isEmpty()) null else characterFilter[0]
+    val isShare = remember { mutableStateOf(false) }
 
     if(character == null){ navController.popBackStack() }else{
-        Box(modifier = modifier.fillMaxSize()){
+        Box(modifier = modifier
+            .fillMaxSize()
+        ){
             CharacterInfoFadeImg(
                 fileName = character.registName!!,
                 isVisible = !isScrolling //alpha = scrollToAlpha
@@ -177,6 +181,7 @@ fun UserCharacterPageScreen(
                     //TODO : Remember to add the Share Function
                 },
                 forwardIconId = Res.drawable.ui_icon_share,
+                hazeState = hazeState,
 
             ) {
                 AnimatedVisibility(
@@ -226,20 +231,15 @@ fun ProficientScoreInfo(character: Character) {
     val optionTextViewSize = remember { mutableStateOf(IntSize.Zero) }
     val density = LocalDensity.current.density
 
+    val charScore = getCharScore(character, schoolIndex.value)
     val scoreInfoList = arrayListOf(
-        Res.string.CharScore to 94.9f,
-        Res.string.CharRank to "A",
-        Res.string.RelicScore to 123.4f,
-        Res.string.RelicRank to "B",
+        Res.string.CharScore to charScore,
+        Res.string.CharRank to getCharRange(charScore),
+        //Res.string.RelicScore to 123.4f,
+        //Res.string.RelicRank to "B",
     )
 
-    val gradRequirement = arrayListOf(
-        AttributeExchange.getAttrKeyByPropertyType(1) to 3000,
-        AttributeExchange.getAttrKeyByPropertyType(2) to 1800,
-        AttributeExchange.getAttrKeyByPropertyType(3) to 1100,
-        AttributeExchange.getAttrKeyByPropertyType(4) to 120,
-        AttributeExchange.getAttrKeyByPropertyType(5) to 0.8f,
-    )
+    val gradRequirement = getGradAttrAndValue(character, schoolIndex.value)
 
     Column {
         //Title and Spinner
@@ -398,11 +398,13 @@ fun ProficientScoreInfo(character: Character) {
             }
         }
 
+
+
         Spacer(Modifier.height(8.dp))
 
         //Leaderboard Overview - 100 is example
         Text(
-            text = UtilTools().removeStringResDoubleQuotes(Res.string.OverWholeServerUser).replace("$"+"{1}", "-100.0%"),
+            text = UtilTools().removeStringResDoubleQuotes(Res.string.OverWholeServerUser).replace("$"+"{1}", "-100.0"),
             style = FontSizeNormal16(),
             color = Color.White,
             modifier = Modifier.align(Alignment.CenterHorizontally)

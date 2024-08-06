@@ -107,6 +107,9 @@ kotlin {
             //Sonner - Toast
             implementation("io.github.dokar3:sonner:0.3.8")
 
+            //Screen Capture
+            implementation("network.chaintech:compose-multiplatform-screen-capture:1.0.1")
+
         }
         desktopMain.dependencies {
             implementation(compose.material3)
