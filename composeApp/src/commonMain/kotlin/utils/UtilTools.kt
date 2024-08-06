@@ -352,6 +352,12 @@ class UtilTools {
         .crossfade(crossFade)
         .diskCachePolicy(CachePolicy.ENABLED)
         .build()
+
+    fun <T> swapItemsInArray(array: ArrayList<T>, fromIndex: Int, toIndex: Int) {
+        val temp = array[fromIndex]
+        array[fromIndex] = array[toIndex]
+        array[toIndex] = temp
+    }
 }
 
 private fun CosImageOfVocchi(){
