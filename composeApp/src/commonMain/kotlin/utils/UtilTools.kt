@@ -363,3 +363,6 @@ class UtilTools {
 private fun CosImageOfVocchi(){
     /** 你在想甚麼呀？ */
 }
+
+fun Boolean.toInt() = if (this) 1 else 0
+fun Int.toBoolean() = this != 0

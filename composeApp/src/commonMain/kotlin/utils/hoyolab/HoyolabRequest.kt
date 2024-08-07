@@ -48,11 +48,13 @@ class HoyolabRequest(
                 json()
             }
 
+
             expectSuccess = true
 
             //BrowserUserAgent()
             defaultRequest {
                 url(url)
+
                 headers {
                     append(HttpHeaders.Origin, if(platform == PLATFORM.MIYOUSHE) "https://webstatic.mihoyo.com" else "https://act.hoyolab.com")
                     append(HttpHeaders.Referrer, if(platform == PLATFORM.MIYOUSHE) "https://webstatic.mihoyo.com" else "https://webstatic-sea.hoyolab.com")
@@ -71,7 +73,7 @@ class HoyolabRequest(
                 val response: HttpResponse = when(method){
                     Method.GET -> client.get(url)
                     Method.POST -> client.post(url){
-                        if(body != null) setBody(body)
+                        if(body != null) setBody(Json.parseToJsonElement(body))
                     }
                 }
 

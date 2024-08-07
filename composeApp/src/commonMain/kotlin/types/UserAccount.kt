@@ -42,6 +42,9 @@ class UserAccount(
     var characterList: ArrayList<Character> = arrayListOf(),
 
     var userNote: UserNote = UserNote(),
+
+    var adPlan : AdPlan = AdPlan.NORMAL,
+    var role: Role = Role.USER,
 ){
     companion object{
         var INSTANCE = Json.decodeFromString<UserAccount>(Settings().getString("userAccount", Json.encodeToString(UserAccount())))
@@ -315,4 +318,13 @@ data class UserExpedition(
     var materialUrl: String = "Unknown",
     var expeditionCharacterIcon : ArrayList<String> = arrayListOf()
 )
+
+@Serializable
+enum class AdPlan(){
+    NORMAL, SPONSOR, INVITER, EVENT, BETATESTER,DEV
+}
+@Serializable
+enum class Role(){
+    USER, BETATESTER,DEV
+}
 

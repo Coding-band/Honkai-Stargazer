@@ -37,6 +37,7 @@ import types.UserAccount.Companion.refreshNoteData
 import utils.FontSizeNormalLarge24
 import utils.FontSizeNormalSmall
 import utils.navigation.Screen
+import utils.starbase.StarbaseAPI
 
 
 @Preview
@@ -50,6 +51,7 @@ fun SplashPage(
     CoroutineScope(Dispatchers.Default).launch {
         refreshCharacterListHoyolab()
         refreshNoteData()
+        StarbaseAPI().updateUserAccountInfo()
         withContext(Dispatchers.Main) {
             navController.navigate(Screen.HomePage.route)
         }

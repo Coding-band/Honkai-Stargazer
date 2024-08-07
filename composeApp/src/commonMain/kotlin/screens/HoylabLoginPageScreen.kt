@@ -55,6 +55,7 @@ import utils.annotation.DoItLater
 import utils.hoyolab.HoyolabConst
 import utils.navigation.Screen
 import utils.navigation.navControllerInstance
+import utils.starbase.StarbaseAPI
 
 @DoItLater("Implement the HoyolabLoginPageScreen Webview later")
 @Composable
@@ -98,6 +99,7 @@ fun HoyolabLoginPageScreen(
             onBack = {
                 CoroutineScope(Dispatchers.Default).launch{
                     UserAccount.pasteCookies(webviewState.cookieManager.getCookies(url), serverSelected, snackbarHostState)
+                    StarbaseAPI().updateUserAccountInfo()
                 }
 
                 navController.popBackStack()
