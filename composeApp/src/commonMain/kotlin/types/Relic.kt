@@ -19,11 +19,11 @@ import utils.hoyolab.AttributeExchange
 
 @Serializable
 open class Relic(
-    var officialId : Int? = 101,
-    var registName : String? = "Dance! Dance! Dance!", //EN Official Name
-    var fileName : String? = "101",
+    var officialId : Int? = -1,
+    var registName : String? = "Unknown", //EN Official Name
+    var fileName : String? = "",
     var rarity : Int? = 5, //其實沒甚麼用 因爲肯定是五星的
-    var displayName : String? = "遺器", //Localed Name,
+    var displayName : String? = "未知", //Localed Name,
 
     var level: Int = -1,
     var properties: ArrayList<HsrProperties> = arrayListOf(),

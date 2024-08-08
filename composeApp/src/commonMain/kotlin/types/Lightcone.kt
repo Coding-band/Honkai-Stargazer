@@ -20,13 +20,13 @@ import utils.UtilTools
 
 @Serializable
 open class Lightcone(
-    var officialId : Int? = 21018,
-    var registName : String? = "Dance! Dance! Dance!", //EN Name Allow, for Image
-    var fileName : String? = "21018",
+    var officialId : Int? = -1,
+    var registName : String? = "Unknown", //EN Name Allow, for Image
+    var fileName : String? = "",
     var rarity : Int = 4,
-    var path : Path = Path.Harmony,
+    var path : Path = Path.Unspecified,
     var releaseVersion : String = "1.0.0",
-    var displayName : String? = "舞！舞！舞！",
+    var displayName : String? = "未知",
 
     @IntRange(1,5) var superimposition : Int = -1,
     var level : Int = -1,
