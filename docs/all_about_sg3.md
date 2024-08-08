@@ -259,42 +259,35 @@ July 15 - July 21
 - [x] Break in July 18 - 19
 - [x] User Login & Home Page Info (2 days) [Without Database API]
 
-July 22 - July 28
+July 22 - August 7
 - [x] Event List, Interaction Map Redirect (2 day) [Do together with lower choice],
 - [x] User Info Page (2 days)
 - [x] User Character Page (2 days)
-- [ ] UID Search (0.5 days)
-- [ ] Proficient Calculation (Transfer) (1 days)
+- [x] UID Search (0.5 days)
+- [x] Proficient Calculation (Transfer) (1 days)
 - [x] Backend API design (1 days)
-- [ ] Relic Score Algorthm (0.5 days) [Without Reset]
-
-July 29 - August 4
-- [x] Prepare for SG2 2.4 RSS + Offline Update (July 29 - 30)
-- [ ] MOC & PF Leaderboard (4 days)
-  - Team Usage Ranking
+- [x] Prepare for SG2 2.4 RSS + Offline Update (July 29 - 30)![img.png](img.png)
 - [x] Prepare for Close BETA Testing (1 day)
+
+August 8 - August 11
+- [ ] Bug Fixing (1 + n days)
+- [ ] MOC & PF Leaderboard (3 days)
+  - Team Usage Ranking
 - [ ] Proficient Leaderboard (2 days)
 
-August 5 - August 11
+August 12 - August 18
 - [ ] Wrap Simulator (3 days)
-- [ ] First Phase Of Close Beta (August 7 - August 20)
 - [ ] Wrap Analysis (4 days)
 
-August 12 - August 18
-- [ ] Flexible Time (1 day)
-- [ ] Customize Home Page Function (2 days)
-- [ ] Ads Function (2 days)
-- [ ] In-app Purchase Function (2 days)
-
 August 19 - August 25
-- [ ] Action Order Function (5 days)
-- [ ] Second Phase Of Close Beta (August 21 - August 27)
 - [ ] Notification Initize (2 days)
+- [ ] Customize Home Page Function (2 days)
+- [ ] Ads Function, In-app Purchase Function (3 days)
 
-August 25 - September 9
-- [ ] Prepare for Release (Flexible time)
-- [ ] Last Phase Of Close Beta (August 28 - September 9)
+August 25 - September 1
+- [ ] Action Order Function (5 days)
+- [ ] Relic Score Algorthm (0.5 days) [Without Reset]
 
 September 10 - September 15
 - [ ] Final checking
-- [ ] Submit to Google Play Store & App Store (September 10)
+- [ ] Submit to Google Play Store & App Store (September 11)
