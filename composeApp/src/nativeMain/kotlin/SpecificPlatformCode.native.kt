@@ -12,17 +12,16 @@ import platform.Foundation.NSURL
 import platform.Foundation.NSUserDomainMask
 import platform.Foundation.timeIntervalSince1970
 import platform.UIKit.UIDevice
-import platform.UIKit.UIInterfaceOrientation
 import platform.UIKit.UIInterfaceOrientationLandscapeLeft
 import platform.UIKit.UIInterfaceOrientationLandscapeRight
 import types.DeviceInfo
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.runtime.SideEffect
-import platform.UIKit.UIApplication
-import platform.UIKit.UIKeyboardAppearance
+import io.ktor.client.HttpClient
+import io.ktor.client.HttpClientConfig
+import io.ktor.client.engine.darwin.Darwin
+import platform.UIKit.UIKeyboardAppearanceDark
 import platform.UIKit.UITextField
 import utils.annotation.DoItLater
-
 
 /**
  * This is the declaration kt file for specific-platform function
@@ -73,12 +72,14 @@ actual fun getDeviceInfo(): DeviceInfo = DeviceInfo(
 @DoItLater("iOS testing")
 @Composable
 actual fun setKeyboardDarkMode() {
-    val context = LocalContext.current
-
     SideEffect {
         val textField = UITextField()
-        textField.keyboardAppearance = UIKeyboardAppearance.UIKeyboardAppearanceDark
+        textField.keyboardAppearance = UIKeyboardAppearanceDark
         textField.becomeFirstResponder()
         textField.resignFirstResponder()
     }
+}
+
+actual fun getLocalHttpClient(function: HttpClientConfig<*>.() -> Unit): HttpClient{
+    return HttpClient(engineFactory = Darwin, block = function)
 }

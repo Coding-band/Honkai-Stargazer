@@ -6,6 +6,9 @@ import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.toComposeImageBitmap
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalWindowInfo
+import io.ktor.client.HttpClient
+import io.ktor.client.HttpClientConfig
+import io.ktor.client.engine.cio.CIO
 import org.jetbrains.skia.Image
 import types.DeviceInfo
 
@@ -56,4 +59,8 @@ actual fun getDeviceInfo(): DeviceInfo {
 @Composable
 actual fun setKeyboardDarkMode() {
     //Nothing will do since it even don't have virtual keyboard!
+}
+
+actual fun getLocalHttpClient(function: HttpClientConfig<*>.() -> Unit): HttpClient{
+    return HttpClient(engineFactory = CIO, block = function)
 }

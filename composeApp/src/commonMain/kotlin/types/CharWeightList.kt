@@ -1,9 +1,8 @@
 package types
 
 import com.russhwolf.settings.Settings
-import io.ktor.client.HttpClient
+import getLocalHttpClient
 import io.ktor.client.call.body
-import io.ktor.client.engine.cio.CIO
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.UserAgent
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
@@ -40,7 +39,7 @@ class CharWeightList(){
 
         private fun getWeightListJson(): JsonElement{
             val jsonUrl = "https://voc2048.com/stargazer/charWeightList.json"
-            val client = HttpClient(CIO) {
+            val client = getLocalHttpClient {
                 install(HttpTimeout){
                     requestTimeoutMillis = 5000
                 }

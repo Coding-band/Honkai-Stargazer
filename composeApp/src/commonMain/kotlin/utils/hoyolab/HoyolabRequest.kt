@@ -1,5 +1,6 @@
 package utils.hoyolab
 
+import getLocalHttpClient
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.engine.cio.CIO
@@ -40,7 +41,7 @@ class HoyolabRequest(
         method: Method = Method.GET,
         body: String? = null
     ) : HoyolabResponse {
-        val client = HttpClient(CIO) {
+        val client = getLocalHttpClient {
             install(HttpTimeout){
                 requestTimeoutMillis = 3000
             }
@@ -106,7 +107,7 @@ class HoyolabRequest(
     fun getPlainTxt(
         url: String
     ) : HoyolabResponse {
-        val client = HttpClient(CIO) {
+        val client = getLocalHttpClient {
             install(HttpTimeout){
                 requestTimeoutMillis = 5000
             }

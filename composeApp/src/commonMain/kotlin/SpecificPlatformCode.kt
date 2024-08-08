@@ -1,6 +1,8 @@
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.unit.Dp
+import io.ktor.client.HttpClient
+import io.ktor.client.HttpClientConfig
 import types.DeviceInfo
 import utils.annotation.DoItLater
 
@@ -30,3 +32,4 @@ expect fun getDeviceInfo(): DeviceInfo
 
 @Composable
 expect fun setKeyboardDarkMode()
+expect fun getLocalHttpClient(function: HttpClientConfig<*>.() -> Unit): HttpClient

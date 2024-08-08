@@ -3,6 +3,7 @@ import com.codingfeline.buildkonfig.compiler.FieldSpec.Type.STRING
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
 import java.util.Properties
 
 /**
@@ -36,7 +37,7 @@ initGradleProperties()
 
 //BETA | C.BETA | DEV | PRODUCTION
 //VersionUpdateCheck
-var appProfile = "DEV"
+var appProfile = "C.BETA"
 
 
 kotlin {
@@ -48,17 +49,23 @@ kotlin {
     }
     
     jvm("desktop")
-    
+
+    val xcf = XCFramework()
+
     listOf(
         iosX64(),
         iosArm64(),
         iosSimulatorArm64()
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
-            baseName = "ComposeApp"
+            baseName = "composeApp"
             isStatic = true
+            binaryOption("bundleVersion", versionCodeFinal.toString())
+            binaryOption("bundleShortVersionString", if(appProfile === "BETA" || appProfile === "C.BETA" || appProfile === "DEV") appVersionBeta else appVersion)
+            xcf.add(this)
         }
     }
+
 
     applyDefaultHierarchyTemplate()
 
@@ -120,7 +127,12 @@ kotlin {
             implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.7.0")
 
         }
+        nativeMain.dependencies {
+            implementation("io.ktor:ktor-client-darwin:2.0.0")
+        }
     }
+
+
 }
 
 android {
@@ -184,9 +196,6 @@ android {
         implementation(libs.androidx.material3.android)
     }
 }
-dependencies {
-    implementation(libs.firebase.crashlytics.buildtools)
-}
 
 
 compose.desktop {
@@ -211,6 +220,8 @@ compose.resources {
     packageOfResClass = "files"
     generateResClass = always
 }
+
+
 
 
 buildkonfig {

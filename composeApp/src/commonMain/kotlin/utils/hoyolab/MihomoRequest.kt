@@ -1,5 +1,6 @@
 package utils.hoyolab
 
+import getLocalHttpClient
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.engine.cio.CIO
@@ -43,7 +44,7 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
         }
 
         val mihomoUrl = "https://api.mihomo.me/sr_info_parsed/${uid}?lang=${language.langCode}"
-        val client = HttpClient(CIO) {
+        val client = getLocalHttpClient {
             install(HttpTimeout){
                 requestTimeoutMillis = 5000
             }

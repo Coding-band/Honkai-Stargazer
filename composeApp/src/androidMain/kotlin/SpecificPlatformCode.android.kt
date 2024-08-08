@@ -13,6 +13,9 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.unit.dp
 import androidx.core.view.WindowInsetsControllerCompat
+import io.ktor.client.HttpClient
+import io.ktor.client.HttpClientConfig
+import io.ktor.client.engine.cio.CIO
 import types.DeviceInfo
 
 /**
@@ -78,4 +81,8 @@ actual fun setKeyboardDarkMode() {
             //Nothing will do
         }
     }
+}
+
+actual fun getLocalHttpClient(function: HttpClientConfig<*>.() -> Unit): HttpClient{
+    return HttpClient(engineFactory = CIO, block = function)
 }
