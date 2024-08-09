@@ -52,6 +52,7 @@ fun SplashPage(
         refreshCharacterListHoyolab()
         refreshNoteData()
         StarbaseAPI().updateUserAccountInfo()
+        StarbaseAPI().updateCharData()
         withContext(Dispatchers.Main) {
             navController.navigate(Screen.HomePage.route)
         }
