@@ -22,6 +22,9 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.dokar.sonner.Toast
+import com.dokar.sonner.ToastType
+import com.dokar.sonner.ToasterState
 import com.russhwolf.settings.Settings
 import com.voc.honkaistargazer.BuildKonfig
 import files.Res
@@ -33,6 +36,7 @@ import kotlinx.datetime.TimeZone
 import kotlinx.datetime.format.FormatStringsInDatetimeFormats
 import kotlinx.datetime.format.byUnicodePattern
 import kotlinx.datetime.toLocalDateTime
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
@@ -40,16 +44,37 @@ import org.jetbrains.compose.resources.painterResource
 import types.AppInfo
 import types.DeviceInfo
 import utils.LogExportObj.Companion.SnackbarHostStateInstance
+import utils.navigation.toastInstance
+import utils.starbase.StarbaseAPI
+
+
+@OptIn(FormatStringsInDatetimeFormats::class)
+val dateFormat = LocalDateTime.Format { byUnicodePattern("yyyy-MM-dd'T'HH:mm:ss[.SSS]") }
 
 @Serializable
 data class LogExportObj(
+    @SerialName("class_name")
     var className: String,
+
+    @SerialName("function_name")
     var functionName: String,
-    var errorTime: String,
-    var errorTimeMS: Long,
-    var deviceInfo: DeviceInfo,
-    var appInfo: AppInfo,
+
+    @SerialName("error_time")
+    var errorTime: String = dateFormat.format(Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault())),
+
+    @SerialName("error_time_ms")
+    var errorTimeMS: Long = Clock.System.now().toEpochMilliseconds(),
+
+    @SerialName("device_info")
+    var deviceInfo: DeviceInfo = getDeviceInfo(),
+
+    @SerialName("app_info")
+    var appInfo: AppInfo = AppInfo(BuildKonfig.appProfile,BuildKonfig.appVersionName, BuildKonfig.appVersionCode),
+
+    @SerialName("exception_message")
     var exceptionMessage: String,
+
+    @SerialName("exception_stack")
     var exceptionStack: String,
 ){
     companion object{
@@ -68,6 +93,14 @@ suspend fun raiseErrorMessageSnack(error: Exception) {
 suspend fun raiseErrorMessageSnack(errorString: String, snackbarHostState: SnackbarHostState?) {
     snackbarHostState?.showSnackbar(message = errorString ?: "Undefined Error")
 
+}
+
+fun showErrorToast(errorLogExportObj: LogExportObj) {
+    toastInstance.show(Toast("${errorLogExportObj.className} - ${errorLogExportObj.functionName} : ${errorLogExportObj.exceptionMessage}", ToastType.Error))
+}
+
+fun showToast(toasterState: ToasterState = toastInstance, toastData : Toast) {
+    toasterState.show(toastData)
 }
 
 /**
@@ -206,5 +239,5 @@ fun checkHasErrorLogFromLastCrash() {
 }
 
 fun sendLogToServer(errorLogExportObj: LogExportObj) {
-//在資料庫完成接口後，添加對應功能
+    StarbaseAPI().sendErrorLogs(errorLogExportObj)
 }

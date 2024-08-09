@@ -24,6 +24,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.dokar.sonner.ToasterState
+import com.dokar.sonner.rememberToasterState
 import components.HeaderData
 import components.defaultHeaderData
 import files.ChangeWallPaper
@@ -68,6 +70,7 @@ import screens.UserInfoPageScreen
 
 //This should not be there, but CharacterCard need it in clickable, without using @Composable ...
 lateinit var navControllerInstance : NavController
+lateinit var toastInstance : ToasterState
 sealed class Screen(val route: String, val headerData: HeaderData = defaultHeaderData) {
     data object SplashPage :
         Screen("SplashPage", HeaderData(titleIconId = Res.drawable.phorphos_house_fill))
@@ -158,6 +161,7 @@ fun Navigation() {
     val defaultEnterTransition = EnterTransition.None
     val defaultExitTransition = ExitTransition.None
     navControllerInstance = navController
+    toastInstance = rememberToasterState()
     NavHost(navController = navController, startDestination = Screen.SplashPage.route) {
         composable(
             route = Screen.SplashPage.route,
