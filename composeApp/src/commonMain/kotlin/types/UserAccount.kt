@@ -14,6 +14,7 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import utils.Preferences
 import utils.errorLogExport
 import utils.hoyolab.AttributeExchange
 import utils.hoyolab.HoyolabAPI
@@ -134,11 +135,12 @@ class UserAccount(
 
         fun refreshCharacterListHoyolab() {
             try {
-                val api = HoyolabAPI(INSTANCE.server.platform, INSTANCE.cookies)
-                val userFullData = api.getHsrFullData(INSTANCE.uid, INSTANCE.server).data
-                val characterList = arrayListOf<Character>()
+                if(!Preferences().isUpdateCharListNow()){ return }
 
-                println("userFullData : $userFullData")
+                val api = HoyolabAPI(INSTANCE.server.platform, INSTANCE.cookies)
+                val userFull = api.getHsrFullData(INSTANCE.uid, INSTANCE.server)
+                val userFullData = userFull.data
+                val characterList = arrayListOf<Character>()
 
                 if(userFullData !is JsonNull && userFullData.jsonObject["avatar_list"] != null) {
                     for (data in userFullData.jsonObject["avatar_list"]!!.jsonArray) {
@@ -179,9 +181,13 @@ class UserAccount(
 
                         characterList.add(character)
                     }
-                    INSTANCE.characterList.clear()
-                    INSTANCE.characterList = characterList
-                    println("characterList : $characterList")
+
+                    if(characterList.size > 0 || INSTANCE.unlockedCharCount == 0){
+                        INSTANCE.characterList.clear()
+                        INSTANCE.characterList = characterList
+                        Preferences().updatedCharList()
+                        println("characterList : $characterList")
+                    }
                 }
             } catch (e: Exception) {
                 errorLogExport("UserAccount", "refreshCharacterListHoyolab()", e)

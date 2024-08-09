@@ -18,6 +18,7 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import types.AppInfo.Companion.AppInfoInstance
+import utils.Preferences
 import utils.annotation.DoItLater
 import utils.errorLogExport
 
@@ -26,14 +27,15 @@ import utils.errorLogExport
 class CharWeightList(){
     companion object{
         const val prefKeyJson = "charWeightListJson"
-        const val prefKeyLastUpdate = "charWeightListLastUpdate"
         var INSTANCE = Json.parseToJsonElement(Settings().getString(prefKeyJson, Json.encodeToString(getWeightListJson())))
 
-        fun update(){
+        fun update(force : Boolean = false){
+            if(!Preferences().isUpdateCharWeightListNow() && !force) return
             val json = getWeightListJson()
             if(json is JsonObject && json.isNotEmpty()){
                 INSTANCE = json
                 Settings().putString(prefKeyJson, json.toString())
+                Preferences().updatedCharWeightList()
             }
         }
 
@@ -41,7 +43,7 @@ class CharWeightList(){
             val jsonUrl = "https://voc2048.com/stargazer/charWeightList.json"
             val client = getLocalHttpClient {
                 install(HttpTimeout){
-                    requestTimeoutMillis = 5000
+                    requestTimeoutMillis = 3000
                 }
                 install(ContentNegotiation){
                     json()

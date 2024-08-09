@@ -46,6 +46,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import types.UserAccount
 import utils.FontSizeNormal14
 import utils.FontSizeNormal16
@@ -100,9 +101,11 @@ fun HoyolabLoginPageScreen(
                 CoroutineScope(Dispatchers.Default).launch{
                     UserAccount.pasteCookies(webviewState.cookieManager.getCookies(url), serverSelected, snackbarHostState)
                     StarbaseAPI().updateUserAccountInfo()
+                    StarbaseAPI().updateCharData()
+                    withContext(Dispatchers.Main){
+                        navController.popBackStack()
+                    }
                 }
-
-                navController.popBackStack()
             }
         )
     }
