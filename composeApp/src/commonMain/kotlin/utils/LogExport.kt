@@ -36,6 +36,8 @@ import kotlinx.datetime.TimeZone
 import kotlinx.datetime.format.FormatStringsInDatetimeFormats
 import kotlinx.datetime.format.byUnicodePattern
 import kotlinx.datetime.toLocalDateTime
+import kotlinx.serialization.EncodeDefault
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
@@ -46,13 +48,14 @@ import types.DeviceInfo
 import utils.LogExportObj.Companion.SnackbarHostStateInstance
 import utils.navigation.toastInstance
 import utils.starbase.StarbaseAPI
+import kotlin.time.Duration.Companion.milliseconds
 
 
 @OptIn(FormatStringsInDatetimeFormats::class)
 val dateFormat = LocalDateTime.Format { byUnicodePattern("yyyy-MM-dd'T'HH:mm:ss[.SSS]") }
 
 @Serializable
-data class LogExportObj(
+data class LogExportObj @OptIn(ExperimentalSerializationApi::class) constructor(
     @SerialName("class_name")
     var className: String,
 
@@ -66,9 +69,11 @@ data class LogExportObj(
     var errorTimeMS: Long = Clock.System.now().toEpochMilliseconds(),
 
     @SerialName("device_info")
+    @EncodeDefault
     var deviceInfo: DeviceInfo = getDeviceInfo(),
 
     @SerialName("app_info")
+    @EncodeDefault
     var appInfo: AppInfo = AppInfo(BuildKonfig.appProfile,BuildKonfig.appVersionName, BuildKonfig.appVersionCode),
 
     @SerialName("exception_message")
@@ -96,7 +101,11 @@ suspend fun raiseErrorMessageSnack(errorString: String, snackbarHostState: Snack
 }
 
 fun showErrorToast(errorLogExportObj: LogExportObj) {
-    toastInstance.show(Toast("${errorLogExportObj.className} - ${errorLogExportObj.functionName} : ${errorLogExportObj.exceptionMessage}", ToastType.Error))
+    toastInstance.show(
+        message = "${errorLogExportObj.className} - ${errorLogExportObj.functionName} : ${errorLogExportObj.exceptionMessage}",
+        type = ToastType.Error,
+        duration = 30000.milliseconds,
+    )
 }
 
 fun showToast(toasterState: ToasterState = toastInstance, toastData : Toast) {
@@ -130,6 +139,8 @@ fun errorLogExport(className: String, functionName: String, error: Exception) {
     Settings().putString("errorLogExportObj", Json.encodeToString(logExportObj));
     Settings().putBoolean("errorLogDisplayed", false);
 
+    showErrorToast(logExportObj)
+
     if(BuildKonfig.appProfile == "DEV"){
         error.printStackTrace()
     }
@@ -153,6 +164,11 @@ fun checkHasErrorLogFromLastCrash() {
     }catch (_: Exception){
         return
     }
+
+    println("errorLogExportObj : ${Settings().getString(
+        "errorLogExportObj",
+        "{}"
+    )}")
 
     val openAlertDialog = remember { mutableStateOf(true) }
     openAlertDialog.value = !Settings().getBoolean("errorLogDisplayed",false);

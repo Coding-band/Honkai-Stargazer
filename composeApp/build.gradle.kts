@@ -37,7 +37,7 @@ initGradleProperties()
 
 //BETA | C.BETA | DEV | PRODUCTION
 //VersionUpdateCheck
-var appProfile = "C.BETA"
+var appProfile = "DEV"
 
 
 kotlin {
