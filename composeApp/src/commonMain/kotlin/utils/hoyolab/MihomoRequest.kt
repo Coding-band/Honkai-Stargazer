@@ -46,7 +46,7 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
         val mihomoUrl = "https://api.mihomo.me/sr_info_parsed/${uid}?lang=${language.langCode}"
         val client = getLocalHttpClient {
             install(HttpTimeout){
-                requestTimeoutMillis = 5000
+                requestTimeoutMillis = 15000
             }
             install(ContentNegotiation){
                 json()

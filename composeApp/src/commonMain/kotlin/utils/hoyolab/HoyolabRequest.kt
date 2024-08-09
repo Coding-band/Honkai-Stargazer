@@ -1,9 +1,7 @@
 package utils.hoyolab
 
 import getLocalHttpClient
-import io.ktor.client.HttpClient
 import io.ktor.client.call.body
-import io.ktor.client.engine.cio.CIO
 import io.ktor.client.plugins.BrowserUserAgent
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
@@ -109,7 +107,7 @@ class HoyolabRequest(
     ) : HoyolabResponse {
         val client = getLocalHttpClient {
             install(HttpTimeout){
-                requestTimeoutMillis = 5000
+                requestTimeoutMillis = 15000
             }
             install(ContentNegotiation){
                 json()
