@@ -256,7 +256,7 @@ fun HomePageHeader(
                                 if (filterResult.isNotEmpty()) {
                                     filterResult.forEach { UserHelpTeamIcon(character = it, navController = navController, uid = userAccount.uid) }
                                 }else if(userAccount.characterList.size > 0){
-                                    for (i in 0..min(userAccount.characterList.size, 6)) {
+                                    for (i in 0 until min(userAccount.characterList.size, 6)) {
                                         UserHelpTeamIcon(
                                             character = userAccount.characterList[i],
                                             navController = navController,

@@ -20,6 +20,7 @@ import utils.hoyolab.AttributeExchange
 import utils.hoyolab.HoyolabAPI
 import utils.hoyolab.HoyolabConst
 import utils.hoyolab.HoyolabRequest
+import utils.starbase.StarbaseAPI
 
 @Serializable
 class UserAccount(
@@ -46,6 +47,7 @@ class UserAccount(
 
     var adPlan : AdPlan = AdPlan.NORMAL,
     var role: Role = Role.USER,
+    var lastLoginTime: Long = 0,
 ){
     companion object{
         var INSTANCE = Json.decodeFromString<UserAccount>(Settings().getString("userAccount", Json.encodeToString(UserAccount())))
@@ -135,12 +137,35 @@ class UserAccount(
 
         fun refreshCharacterListHoyolab() {
             try {
-                if(!Preferences().isUpdateCharListNow()){ return }
+                if(INSTANCE.uid == "000000000"){ return}
+                if(!Preferences().isUpdateCharListNow()){
+                    val characterList = StarbaseAPI().getCharData(INSTANCE.uid)
+                    println("characterListY : $characterList")
+                    if(characterList.size > 0 || INSTANCE.unlockedCharCount == 0){
+                        INSTANCE.characterList.clear()
+                        INSTANCE.characterList = characterList
+                        Preferences().updatedCharList()
+                    }
+                    return
+                }
 
                 val api = HoyolabAPI(INSTANCE.server.platform, INSTANCE.cookies)
                 val userFull = api.getHsrFullData(INSTANCE.uid, INSTANCE.server)
+
+                println("userFull : $userFull")
                 val userFullData = userFull.data
-                val characterList = arrayListOf<Character>()
+                var characterList = arrayListOf<Character>()
+
+                if(userFullData is JsonNull || userFullData.jsonObject.isEmpty()){
+                    characterList = StarbaseAPI().getCharData(INSTANCE.uid)
+                    println("characterListX : $characterList")
+                    if(characterList.size > 0 || INSTANCE.unlockedCharCount == 0){
+                        INSTANCE.characterList.clear()
+                        INSTANCE.characterList = characterList
+                        Preferences().updatedCharList()
+                    }
+                    return
+                }
 
                 if(userFullData !is JsonNull && userFullData.jsonObject["avatar_list"] != null) {
                     for (data in userFullData.jsonObject["avatar_list"]!!.jsonArray) {

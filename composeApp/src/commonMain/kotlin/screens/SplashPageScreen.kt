@@ -37,7 +37,6 @@ import types.UserAccount.Companion.refreshNoteData
 import utils.FontSizeNormalLarge24
 import utils.FontSizeNormalSmall
 import utils.navigation.Screen
-import utils.navigation.isHomePaged
 import utils.starbase.StarbaseAPI
 
 
@@ -50,17 +49,14 @@ fun SplashPage(
 ) {
 
     CoroutineScope(Dispatchers.Default).launch {
-        if (!isHomePaged) {
-            isHomePaged = true
-            refreshCharacterListHoyolab()
-            refreshNoteData()
-            StarbaseAPI().updateUserAccountInfo()
-            StarbaseAPI().updateCharData()
+        refreshCharacterListHoyolab()
+        refreshNoteData()
+        StarbaseAPI().updateUserAccountInfo()
+        StarbaseAPI().updateCharData()
 
 
-            withContext(Dispatchers.Main) {
-                navController.navigate(Screen.HomePage.route)
-            }
+        withContext(Dispatchers.Main) {
+            navController.navigate(Screen.HomePage.route)
         }
     }
 

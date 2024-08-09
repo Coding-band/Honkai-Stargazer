@@ -402,14 +402,15 @@ fun UserInfoBioUI(context: PlatformContext, userAccount: UserAccount) {
 fun UserInfoBioUI2(context: PlatformContext, userAccount: UserAccount) {
     Row(Modifier.fillMaxWidth().wrapContentHeight(), horizontalArrangement = Arrangement.Center) {
         val rowData = arrayListOf(
-            "${userAccount.activeDays}" to Res.string.UserInfoGameActiveDays,
-            "${userAccount.achievements}" to Res.string.UserInfoGameAchievements,
-            "${userAccount.chestOpened}" to Res.string.UserInfoGameOpenedChests,
+            userAccount.activeDays to Res.string.UserInfoGameActiveDays,
+            userAccount.achievements to Res.string.UserInfoGameAchievements,
+            userAccount.chestOpened to Res.string.UserInfoGameOpenedChests,
             //"${userAccount.mocProgress}/12" to Res.string.UserInfoGameForgottenHall,
-            "上線中" to Res.string.UserInfoLastOnlineTime,
+            userAccount.lastLoginTime to Res.string.UserInfoLastOnlineTime,
         )
 
         for (data in rowData){
+            if(data.first == 0) { continue }
             var textSize by remember { mutableStateOf(24.sp) }
             Column(
                 Modifier.wrapContentHeight()
@@ -419,7 +420,8 @@ fun UserInfoBioUI2(context: PlatformContext, userAccount: UserAccount) {
                 textSize = TextUnit(size.width / 10f, TextUnitType.Sp)
             }) {
                 Text(
-                    data.first,
+                    //DoItLater("LastLoginTime")
+                    "${data.first}",
                     modifier = Modifier.align(Alignment.CenterHorizontally).padding(2.dp),
                     style = FontSizeNormalLarge24(),
                     fontSize = textSize,
