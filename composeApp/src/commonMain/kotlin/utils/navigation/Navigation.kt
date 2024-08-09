@@ -17,6 +17,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import androidx.navigation.NavType
@@ -24,6 +25,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.dokar.sonner.Toaster
 import com.dokar.sonner.ToasterState
 import com.dokar.sonner.rememberToasterState
 import components.HeaderData
@@ -71,6 +73,7 @@ import screens.UserInfoPageScreen
 //This should not be there, but CharacterCard need it in clickable, without using @Composable ...
 lateinit var navControllerInstance : NavController
 lateinit var toastInstance : ToasterState
+var isHomePaged = false
 sealed class Screen(val route: String, val headerData: HeaderData = defaultHeaderData) {
     data object SplashPage :
         Screen("SplashPage", HeaderData(titleIconId = Res.drawable.phorphos_house_fill))
@@ -152,6 +155,7 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
 
 @Composable
 fun Navigation() {
+    println("HI IS FROM APP.KT")
     val navController = rememberNavController()
     val snackbarHostState = remember { SnackbarHostState() }
     val coroutineScope = rememberCoroutineScope()
@@ -449,6 +453,7 @@ fun RootContent(
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
     page: @Composable () -> Unit
 ) {
+    println("I'm going to show ${screen.route}")
     Scaffold(
         snackbarHost = {
             SnackbarHost(snackbarHostState!!)
@@ -461,5 +466,15 @@ fun RootContent(
         ) {
             page()
         }
+
+        Toaster(
+            state = toastInstance,
+            richColors = true,
+            maxVisibleToasts = 10,
+            alignment = Alignment.BottomCenter,
+            showCloseButton = true,
+            darkTheme = true,
+
+        )
     }
 }
