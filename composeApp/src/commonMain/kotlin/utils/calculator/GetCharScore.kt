@@ -18,11 +18,6 @@ fun getCharScore(character: Character, schoolIndex: Int): Float {
     val charId = character.officialId
     val charStatus = character.characterStatus
 
-    println("scoreWeight !is JsonObject: ${scoreWeight !is JsonObject}")
-    println("scoreWeight.isEmpty(): ${scoreWeight.jsonObject.isEmpty()}")
-    println("scoreWeight.jsonObject[charId.toString()] == null: ${scoreWeight.jsonObject[charId.toString()] == null}")
-    println("scoreWeight.jsonObject[charId.toString()]!!.jsonObject[schoolIndex.toString()] !is JsonObject: ${scoreWeight.jsonObject[charId.toString()]!!.jsonArray[schoolIndex] !is JsonObject}")
-
     //若果暫時沒有權重 必須返回空值
     if (scoreWeight !is JsonObject) { return -2f }
     if(scoreWeight.jsonObject.isEmpty()){ return -3f}
@@ -37,7 +32,7 @@ fun getCharScore(character: Character, schoolIndex: Int): Float {
     val charScoreWeight = scoreWeight.jsonObject[charId.toString()]!!.jsonArray[schoolIndex]; //對應角色流派内，該角色評分權重
     val charLightconeID = charStatus?.equippingLightcone?.officialId; //角色使用中的光錐
     val charLightconeSuper = charStatus?.equippingLightcone?.superimposition ?: 0; //角色使用中的光錐疊影
-    val charPromotion = charStatus?.ascension; //角色突破等級
+
     val charLevel = charStatus?.characterLevel ?: 0; //角色等級
     val charSoulLvl = charStatus?.eidolon; //角色的星魂等級
     val charHsrProperties = charStatus?.characterProperties; //角色的Attr & Addi
@@ -96,7 +91,7 @@ fun getCharScore(character: Character, schoolIndex: Int): Float {
 
     val attrGradKeys = charScoreWeight.jsonObject["grad"]!!.jsonObject.keys //獲取所有有畢業值的屬性
     val attrWeightValidKeys = charScoreWeight.jsonObject["attr"]!!.jsonObject.keys //獲取所有有畢業值的屬性
-    println("attrGradKeys: $attrGradKeys, attrWeightValidKeys: $attrWeightValidKeys")
+    //println("attrGradKeys: $attrGradKeys, attrWeightValidKeys: $attrWeightValidKeys")
     for (key in attrWeightValidKeys) {
         if (attrGradKeys.contains(key)){
             attrWeightSum += charScoreWeight.jsonObject["attr"]!!.jsonObject[key]!!.jsonPrimitive.float
@@ -112,7 +107,7 @@ fun getCharScore(character: Character, schoolIndex: Int): Float {
         val weightValue = charScoreWeight.jsonObject["attr"]!!.jsonObject[name]
         val gradValue = charScoreWeight.jsonObject["grad"]!!.jsonObject[name]
 
-        println("attrValue: $attrValue, attrWeightSum: $attrWeightSum, charLevel : $charLevel, weightValue: $weightValue, gradValue: $gradValue")
+        //println("attrValue: $attrValue, attrWeightSum: $attrWeightSum, charLevel : $charLevel, weightValue: $weightValue, gradValue: $gradValue")
 
         if (gradValue == null || weightValue == null) {
             //...如果沒有畢業分，做甚麼？只能不算

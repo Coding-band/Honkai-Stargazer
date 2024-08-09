@@ -84,8 +84,12 @@ fun InfoAdviceLightcone(charWeightData : JsonObject? = null) {
         //Empty Blank
         Spacer(modifier = Modifier.height(24.dp))
 
+        if(charWeightData == null) return@Column
+        val adviceList = charWeightData.jsonObject["advice_lightcone"]?.jsonArray?.filter { lc -> lc.jsonPrimitive.int != -1 }
+        val normalList = charWeightData.jsonObject["normal_lightcone"]?.jsonArray?.filter { lc -> lc.jsonPrimitive.int != -1 }
+
         //Content
-        if(charWeightData != null){
+        if(!(adviceList.isNullOrEmpty() || normalList.isNullOrEmpty())){
             //Show of recommend Lightcones
             LazyRow(
                 state = rememberLazyListState(),
@@ -93,25 +97,30 @@ fun InfoAdviceLightcone(charWeightData : JsonObject? = null) {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 //Most Advice To Equip
-                for(lcItem in charWeightData.jsonObject["advice_lightcone"]!!.jsonArray){
-                    val officialLcId = lcItem.jsonPrimitive.int
-                    val lightcone = Lightcone.getLightconeItemFromJSON(officialLcId.toString(), textLanguage = Language.TextLanguageInstance)
+                if(adviceList.isNotEmpty()){
+                    for(lcItem in adviceList){
+                        val officialLcId = lcItem.jsonPrimitive.int
+                        if (officialLcId == -1) continue
+                        val lightcone = Lightcone.getLightconeItemFromJSON(officialLcId.toString(), textLanguage = Language.TextLanguageInstance)
 
-                    item{
-                        Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+Constants.LC_CARD_TITLE_HEIGHT))){
-                            LightconeCard(lightcone)
+                        item{
+                            Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+Constants.LC_CARD_TITLE_HEIGHT))){
+                                LightconeCard(lightcone)
+                            }
                         }
                     }
-
                 }
                 //Still Can Use If Only Have
-                for(lcItem in charWeightData.jsonObject["normal_lightcone"]!!.jsonArray){
-                    val officialLcId = lcItem.jsonPrimitive.int
-                    val lightcone = Lightcone.getLightconeItemFromJSON(officialLcId.toString(), textLanguage = Language.TextLanguageInstance)
+                if (normalList.isNotEmpty()){
+                    for(lcItem in normalList){
+                        val officialLcId = lcItem.jsonPrimitive.int
+                        if (officialLcId == -1) continue
+                        val lightcone = Lightcone.getLightconeItemFromJSON(officialLcId.toString(), textLanguage = Language.TextLanguageInstance)
 
-                    item{
-                        Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+Constants.LC_CARD_TITLE_HEIGHT))){
-                            LightconeCard(lightcone)
+                        item{
+                            Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+Constants.LC_CARD_TITLE_HEIGHT))){
+                                LightconeCard(lightcone)
+                            }
                         }
                     }
                 }
@@ -159,11 +168,28 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
 
         //Must rewrite if later extend to multi choices of one relic index
         for(adviceAttr in charWeightData.jsonObject["advice_relic_attr"]!!.jsonArray){
-            if (adviceAttr is JsonObject && adviceAttr.jsonObject["propertyName"] == null || adviceAttr.jsonObject["propertyName"]!!.jsonPrimitive.content == "") continue
-            adviceAttrList.add(adviceAttr.jsonObject["relicType"]!!.jsonPrimitive.content to Attribute.valueOf(adviceAttr.jsonObject["propertyName"]!!.jsonPrimitive.content))
+
+            if (adviceAttr !is JsonObject
+                || adviceAttr.jsonObject["propertyName"] == null
+                || adviceAttr.jsonObject["propertyName"]!!.jsonPrimitive.content == ""
+                || adviceAttr.jsonObject["relicType"] == null
+                || adviceAttr.jsonObject["relicType"]!!.jsonPrimitive.content == "") {
+                continue
+            } else {
+                adviceAttrList.add(
+                    adviceAttr.jsonObject["relicType"]!!.jsonPrimitive.content
+                            to Attribute.valueOf(adviceAttr.jsonObject["propertyName"]!!.jsonPrimitive.content))
+
+            }
         }
         for(adviceAttr in charWeightData.jsonObject["advice_relic_sub"]!!.jsonArray){
-            adviceAttrSubList.add(Attribute.valueOf(adviceAttr.jsonPrimitive.content))
+            if (adviceAttr !is JsonObject
+                || adviceAttr.jsonObject["propertyName"] == null
+                || adviceAttr.jsonObject["propertyName"]!!.jsonPrimitive.content == "") {
+                continue
+            } else {
+                adviceAttrSubList.add(Attribute.valueOf(adviceAttr.jsonPrimitive.content))
+            }
         }
     }
 
@@ -174,7 +200,7 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
         Spacer(modifier = Modifier.height(24.dp))
 
         //Content
-        if(charWeightData != null){
+        if(charWeightData != null && relicList.size > 0){
             Row(
                 Modifier.wrapContentWidth().widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH),
                 verticalAlignment = Alignment.CenterVertically
