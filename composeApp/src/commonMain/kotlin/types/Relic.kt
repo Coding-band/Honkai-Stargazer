@@ -54,10 +54,17 @@ open class Relic(
         }
 
         fun getRelicIdFromHoyoRelicId(hoyoRelicId: Int) : Int {
-            return if(hoyoRelicId >= 10000){
-                (hoyoRelicId % 10000) / 10
-            } else {
-                hoyoRelicId
+            return when(hoyoRelicId){
+                55001 -> 101
+                55002 -> 101
+                55003 -> 102
+                55004 -> 103
+                55005 -> 103
+                else -> if(hoyoRelicId >= 10000){
+                    (hoyoRelicId % 10000) / 10
+                } else {
+                    hoyoRelicId
+                }
             }
         }
     }
