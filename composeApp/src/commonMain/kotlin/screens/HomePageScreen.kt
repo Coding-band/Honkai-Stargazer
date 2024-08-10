@@ -109,7 +109,7 @@ fun HomePage(modifier: Modifier = Modifier, navController: NavController, header
 
     checkHasErrorLogFromLastCrash()
     if(!arrayListOf("PRODUCTION", "RELEASE").contains(BuildKonfig.appProfile) ){
-        BetaVersionBox(BuildKonfig.appProfile)
+        BetaVersionBox()
     }
     Box(modifier = Modifier
         .statusBarsPadding()
@@ -371,10 +371,10 @@ fun BottomView(modifier: Modifier = Modifier){
 }
 
 @Composable
-fun BetaVersionBox(appProfile : String){
+fun BetaVersionBox(){
     Box(modifier = Modifier.fillMaxSize()){
         Box(modifier = Modifier.wrapContentSize().background(Color.Black).padding(start = 2.dp, end = 2.dp, top = 12.dp, bottom = 12.dp).rotate(-90f).align(Alignment.TopEnd)){
-            Text(appProfile, style = FontSizeNormal12(), color = TextColorNormalDim, modifier = Modifier.align(Alignment.Center))
+            Text(text = if(BuildKonfig.appProfile == "DEV") {"DEV"} else BuildKonfig.appVersionName, style = FontSizeNormal12(), color = TextColorNormalDim, modifier = Modifier.align(Alignment.Center))
         }
     }
 }
