@@ -31,6 +31,7 @@ import components.BackIcon
 import components.HeaderData
 import components.PAGE_HEADER_HEIGHT
 import components.PageHeader
+import components.PomPomPopup
 import components.UIButton
 import components.UIButtonSize
 import components.defaultHeaderData
@@ -56,6 +57,7 @@ import utils.annotation.DoItLater
 import utils.hoyolab.HoyolabConst
 import utils.navigation.Screen
 import utils.navigation.navControllerInstance
+import utils.navigation.pomPomPopupInstance
 import utils.starbase.StarbaseAPI
 
 @DoItLater("Implement the HoyolabLoginPageScreen Webview later")
@@ -99,10 +101,15 @@ fun HoyolabLoginPageScreen(
             backIconId = BackIcon.CANCEL,
             onBack = {
                 CoroutineScope(Dispatchers.Default).launch{
+                    withContext(Dispatchers.Main){
+                        pomPomPopupInstance.value = PomPomPopup(isDisplay = true)
+
+                    }
                     UserAccount.pasteCookies(webviewState.cookieManager.getCookies(url), serverSelected, snackbarHostState)
                     StarbaseAPI().updateUserAccountInfo()
                     StarbaseAPI().updateCharData()
                     withContext(Dispatchers.Main){
+                        pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
                         navController.popBackStack()
                     }
                 }

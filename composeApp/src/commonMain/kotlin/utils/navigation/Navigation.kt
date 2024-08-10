@@ -13,6 +13,7 @@ import androidx.compose.material.Scaffold
 import androidx.compose.material.SnackbarHost
 import androidx.compose.material.SnackbarHostState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -29,7 +30,12 @@ import com.dokar.sonner.Toaster
 import com.dokar.sonner.ToasterState
 import com.dokar.sonner.rememberToasterState
 import components.HeaderData
+import components.PomPomPopup
+import components.PomPomPopupUI
 import components.defaultHeaderData
+import components.docCountDown
+import dev.chrisbanes.haze.HazeState
+import dev.chrisbanes.haze.haze
 import files.ChangeWallPaper
 import files.CharacterList
 import files.Event
@@ -73,6 +79,8 @@ import screens.UserInfoPageScreen
 //This should not be there, but CharacterCard need it in clickable, without using @Composable ...
 lateinit var navControllerInstance : NavController
 lateinit var toastInstance : ToasterState
+lateinit var pomPomPopupInstance: MutableState<PomPomPopup>
+
 var isHomePaged = false
 sealed class Screen(val route: String, val headerData: HeaderData = defaultHeaderData) {
     data object SplashPage :
@@ -166,6 +174,8 @@ fun Navigation() {
     val defaultExitTransition = ExitTransition.None
     navControllerInstance = navController
     toastInstance = rememberToasterState()
+    pomPomPopupInstance = remember { mutableStateOf(PomPomPopup()) }
+    docCountDown = remember { mutableStateOf(0) }
     NavHost(navController = navController, startDestination = Screen.SplashPage.route) {
         composable(
             route = Screen.SplashPage.route,
@@ -454,6 +464,7 @@ fun RootContent(
     page: @Composable () -> Unit
 ) {
     println("I'm going to show ${screen.route}")
+    val hazeStateRoot = remember { HazeState() }
     Scaffold(
         snackbarHost = {
             SnackbarHost(snackbarHostState!!)
@@ -462,10 +473,12 @@ fun RootContent(
         MakeBackground(screen = screen)
         //Landscape can do ... ?
         Box(
-            modifier = Modifier
+            modifier = Modifier.haze(hazeStateRoot)
         ) {
             page()
         }
+
+        PomPomPopupUI(hazeState = hazeStateRoot)
 
         Toaster(
             state = toastInstance,
@@ -474,7 +487,6 @@ fun RootContent(
             alignment = Alignment.BottomCenter,
             showCloseButton = true,
             darkTheme = true,
-
         )
     }
 }

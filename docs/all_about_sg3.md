@@ -270,7 +270,7 @@ July 22 - August 7
 - [x] Prepare for Close BETA Testing (1 day)
 
 August 8 - August 11
-- [ ] Bug Fixing (1 + n days)
+- [x] Bug Fixing (1 + n days)
 - [ ] MOC & PF Leaderboard (3 days)
   - Team Usage Ranking
 - [ ] Proficient Leaderboard (2 days)
