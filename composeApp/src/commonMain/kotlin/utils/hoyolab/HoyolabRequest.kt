@@ -15,6 +15,7 @@ import io.ktor.http.HttpHeaders
 import io.ktor.serialization.kotlinx.json.json
 import io.ktor.util.network.UnresolvedAddressException
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withTimeout
 import kotlinx.serialization.json.Json
 import utils.annotation.DoItLater
 import utils.errorLogExport
@@ -107,7 +108,7 @@ class HoyolabRequest(
     ) : HoyolabResponse {
         val client = getLocalHttpClient {
             install(HttpTimeout){
-                requestTimeoutMillis = 15000
+                requestTimeoutMillis = 4000
             }
             install(ContentNegotiation){
                 json()
@@ -119,19 +120,25 @@ class HoyolabRequest(
 
         try {
             return runBlocking {
-                val response: HttpResponse = client.get(url)
+                return@runBlocking withTimeout(4000) {
+                    val response: HttpResponse = client.get(url)
 
-                //Check whether it is having any errors
-                if (!arrayListOf(200,201).contains(response.status.value)){
-                    errorLogExport("HoyolabRequest", "send(url = ${url}",Exception("HTTP Error Code ${response.status.value} : ${response.status.description}"))
-                    return@runBlocking HoyolabResponse(
-                        -9800,
-                        "HTTP Error Code ${response.status.value} : ${response.status.description}",
-                        Json.parseToJsonElement("{}")
-                    )
+                    //Check whether it is having any errors
+                    if (!arrayListOf(200, 201).contains(response.status.value)) {
+                        errorLogExport(
+                            "HoyolabRequest",
+                            "send(url = ${url}",
+                            Exception("HTTP Error Code ${response.status.value} : ${response.status.description}")
+                        )
+                        return@withTimeout HoyolabResponse(
+                            -9800,
+                            "HTTP Error Code ${response.status.value} : ${response.status.description}",
+                            Json.parseToJsonElement("{}")
+                        )
 
-                }else{
-                    return@runBlocking response.body<HoyolabResponse>()
+                    } else {
+                        return@withTimeout response.body<HoyolabResponse>()
+                    }
                 }
             }
 

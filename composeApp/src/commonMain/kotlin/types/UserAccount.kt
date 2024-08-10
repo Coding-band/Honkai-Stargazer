@@ -15,11 +15,13 @@ import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import utils.Preferences
+import utils.annotation.DoItLater
 import utils.errorLogExport
 import utils.hoyolab.AttributeExchange
 import utils.hoyolab.HoyolabAPI
 import utils.hoyolab.HoyolabConst
 import utils.hoyolab.HoyolabRequest
+import utils.showWarningToast
 import utils.starbase.StarbaseAPI
 
 @Serializable
@@ -74,30 +76,41 @@ class UserAccount(
         fun resetUserAccount(){
             INSTANCE = UserAccount()
             Settings().putString("userAccount", Json.encodeToString(INSTANCE))
+            Preferences().resetCharList()
         }
 
         fun refreshUserAccount() {
             try {
-                INSTANCE.isLogin = true
                 val api = HoyolabAPI(INSTANCE.server.platform, INSTANCE.cookies)
 
                 if(INSTANCE.cookies == "" || INSTANCE.hoyolabId == ""){ return }
                 //Get User UID & Account Info
                 val userCards = api.getGameRecordCard(INSTANCE.hoyolabId).data
-                if (userCards.jsonObject.isEmpty()) {
-                    //Load data from Database
-                    //...
 
+                @DoItLater("Provide Missing Logic")
+                if (userCards.jsonObject.isEmpty()) {
+                    showWarningToast(message = "Cannot find any Star Rail accounts in there, please check your account and try again.")
                     return
                 } else {
-                    val userInfo = userCards.jsonObject["list"]!!.jsonArray.filter { it.jsonObject["game_id"]!!.jsonPrimitive.int == HoyolabConst.GAME.HONKAI_STAR_RAIL.gameId }[0]
-                    INSTANCE.uid = userInfo.jsonObject["game_role_id"]!!.jsonPrimitive.content
-                    INSTANCE.username = userInfo.jsonObject["nickname"]!!.jsonPrimitive.content
-                    INSTANCE.level = userInfo.jsonObject["level"]!!.jsonPrimitive.int
-                    INSTANCE.activeDays = userInfo.jsonObject["data"]!!.jsonArray[0].jsonObject["value"]!!.jsonPrimitive.int
-                    INSTANCE.unlockedCharCount = userInfo.jsonObject["data"]!!.jsonArray[1].jsonObject["value"]!!.jsonPrimitive.int
-                    INSTANCE.achievements = userInfo.jsonObject["data"]!!.jsonArray[2].jsonObject["value"]!!.jsonPrimitive.int
-                    INSTANCE.chestOpened = userInfo.jsonObject["data"]!!.jsonArray[3].jsonObject["value"]!!.jsonPrimitive.int
+                    val userInfoN = userCards.jsonObject["list"]!!.jsonArray.filter {
+                        it.jsonObject["game_id"]!!.jsonPrimitive.int == HoyolabConst.GAME.HONKAI_STAR_RAIL.gameId
+                                && it.jsonObject["region"]!!.jsonPrimitive.content == INSTANCE.server.serverId
+                    }
+
+                    if(userInfoN.isEmpty()){
+                        showWarningToast(message = "Seems you chose the incorrect server, please choose the correct server and try again.")
+                        return
+                    }else{
+                        val userInfo = userInfoN[0].jsonObject
+                        INSTANCE.uid = userInfo.jsonObject["game_role_id"]!!.jsonPrimitive.content
+                        INSTANCE.username = userInfo.jsonObject["nickname"]!!.jsonPrimitive.content
+                        INSTANCE.level = userInfo.jsonObject["level"]!!.jsonPrimitive.int
+                        INSTANCE.activeDays = userInfo.jsonObject["data"]!!.jsonArray[0].jsonObject["value"]!!.jsonPrimitive.int
+                        INSTANCE.unlockedCharCount = userInfo.jsonObject["data"]!!.jsonArray[1].jsonObject["value"]!!.jsonPrimitive.int
+                        INSTANCE.achievements = userInfo.jsonObject["data"]!!.jsonArray[2].jsonObject["value"]!!.jsonPrimitive.int
+                        INSTANCE.chestOpened = userInfo.jsonObject["data"]!!.jsonArray[3].jsonObject["value"]!!.jsonPrimitive.int
+                        INSTANCE.isLogin = true
+                    }
                 }
 
                 val userIndexData = api.getHsrIndexData(INSTANCE.uid, INSTANCE.server).data
@@ -106,7 +119,7 @@ class UserAccount(
                     INSTANCE.icon = userIndexData.jsonObject["cur_head_icon_url"]!!.jsonPrimitive.content
                 }
 
-                refreshCharacterListHoyolab()
+                refreshCharacterList()
 
                 refreshNoteData()
 
@@ -135,34 +148,44 @@ class UserAccount(
 
         }
 
+        fun refreshCharacterList(){
+            if(INSTANCE.uid == "000000000"){ return }
+
+            //if it's not the moment to grab data from hoyolab, then grab data from starbase
+            if(!Preferences().isUpdateHoYoLabCharListNow()){
+                //If there is no character data in local, but expected to have, then grab data from starbase
+                if(INSTANCE.unlockedCharCount > 0 && INSTANCE.characterList.size == 0){
+                    val result = StarbaseAPI().getCharData(INSTANCE.uid)
+                    println("[Starbaze] since it's not the moment to grab CharList data from Hoyolab : $result")
+                    INSTANCE.characterList.clear()
+                    INSTANCE.characterList = result
+                    Preferences().setLocalCharListString(Json.encodeToString(result))
+                }
+                return
+            }else{
+                refreshCharacterListHoyolab()
+            }
+        }
+
         fun refreshCharacterListHoyolab() {
             try {
-                if(INSTANCE.uid == "000000000"){ return}
-                if(!Preferences().isUpdateCharListNow()){
-                    val characterList = StarbaseAPI().getCharData(INSTANCE.uid)
-                    println("characterListY : $characterList")
-                    if(characterList.size > 0 || INSTANCE.unlockedCharCount == 0){
-                        INSTANCE.characterList.clear()
-                        INSTANCE.characterList = characterList
-                        Preferences().updatedCharList()
-                    }
-                    return
-                }
-
                 val api = HoyolabAPI(INSTANCE.server.platform, INSTANCE.cookies)
                 val userFull = api.getHsrFullData(INSTANCE.uid, INSTANCE.server)
 
-                println("userFull : $userFull")
                 val userFullData = userFull.data
                 var characterList = arrayListOf<Character>()
 
+                println("userFullData : $userFullData")
+
+                //If cannot get data from hoyolab (Either 10035 or server maintaining), then grab data from starbase
                 if(userFullData is JsonNull || userFullData.jsonObject.isEmpty()){
                     characterList = StarbaseAPI().getCharData(INSTANCE.uid)
-                    println("characterListX : $characterList")
+                    println("[Starbaze] Since Hoyolab cannot grab CharList data, get from Starbaze : $characterList")
                     if(characterList.size > 0 || INSTANCE.unlockedCharCount == 0){
                         INSTANCE.characterList.clear()
                         INSTANCE.characterList = characterList
-                        Preferences().updatedCharList()
+                        Preferences().updatedHoYoLabCharList()
+                        //No need to do other action, since upload to Starbase will be done in the next step of caller
                     }
                     return
                 }
@@ -207,11 +230,12 @@ class UserAccount(
                         characterList.add(character)
                     }
 
+                    //If characterList is not empty, or if INSTANCE's unlockedCharCount is 0 (Force update), then update the local data
                     if(characterList.size > 0 || INSTANCE.unlockedCharCount == 0){
                         INSTANCE.characterList.clear()
                         INSTANCE.characterList = characterList
-                        Preferences().updatedCharList()
-                        println("characterList : $characterList")
+                        Preferences().updatedHoYoLabCharList()
+                        println("[HoYoLab] Update CharList from Hoyolab : $characterList")
                     }
                 }
             } catch (e: Exception) {
@@ -275,6 +299,8 @@ class UserAccount(
 
         fun refreshNoteData(){
             try{
+                if(INSTANCE.uid == "000000000"){ return }
+
                 val api = HoyolabAPI(INSTANCE.server.platform, INSTANCE.cookies)
                 val userNoteData = api.getHsrNote(INSTANCE.uid, INSTANCE.server).data
 
@@ -291,7 +317,8 @@ class UserAccount(
                     INSTANCE.userNote.weeklyBossChances = userNoteJson["weekly_cocoon_cnt"]!!.jsonPrimitive.int
 
                     val expeditionJson = userNoteJson["expeditions"]!!.jsonArray
-                    println("expeditionJson : ${Json.encodeToString(expeditionJson)}, size = ${expeditionJson.size}")
+                    println("[HoYoLab] Updated Note Data: size = ${expeditionJson.size}, ${Json.encodeToString(expeditionJson)}")
+
                     for (expedition in expeditionJson){
                         val expeditionObj = expedition.jsonObject
                         val expeditionCharacterIcon = arrayListOf<String>()

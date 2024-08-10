@@ -1,9 +1,7 @@
 package utils.hoyolab
 
 import getLocalHttpClient
-import io.ktor.client.HttpClient
 import io.ktor.client.call.body
-import io.ktor.client.engine.cio.CIO
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.UserAgent
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
@@ -16,6 +14,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withTimeout
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
@@ -46,7 +45,7 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
         val mihomoUrl = "https://api.mihomo.me/sr_info_parsed/${uid}?lang=${language.langCode}"
         val client = getLocalHttpClient {
             install(HttpTimeout){
-                requestTimeoutMillis = 15000
+                requestTimeoutMillis = 4000
             }
             install(ContentNegotiation){
                 json()
@@ -63,14 +62,20 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
 
         try {
             return runBlocking {
-                val response: HttpResponse = client.get(mihomoUrl)
-                //Check whether it is having any errors
-                if (!arrayListOf(200,201).contains(response.status.value)){
-                    errorLogExport("MihomoRequest", "getSRInfoParsed(uid = ${uid}, lang = ${language})",Exception("HTTP Error Code ${response.status.value} : ${response.status.description}"))
-                    return@runBlocking Json.parseToJsonElement("{}")
+                return@runBlocking withTimeout(4000) {
+                    val response: HttpResponse = client.get(mihomoUrl)
+                    //Check whether it is having any errors
+                    if (!arrayListOf(200, 201).contains(response.status.value)) {
+                        errorLogExport(
+                            "MihomoRequest",
+                            "getSRInfoParsed(uid = ${uid}, lang = ${language})",
+                            Exception("HTTP Error Code ${response.status.value} : ${response.status.description}")
+                        )
+                        return@withTimeout Json.parseToJsonElement("{}")
 
-                }else{
-                    return@runBlocking response.body()
+                    } else {
+                        return@withTimeout response.body()
+                    }
                 }
             }
 

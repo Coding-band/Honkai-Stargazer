@@ -36,6 +36,7 @@ class CharWeightList(){
                 INSTANCE = json
                 Settings().putString(prefKeyJson, json.toString())
                 Preferences().updatedCharWeightList()
+                println("CharWeightList Updated")
             }
         }
 

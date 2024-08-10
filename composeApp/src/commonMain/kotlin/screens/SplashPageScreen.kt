@@ -32,7 +32,8 @@ import kotlinx.coroutines.withContext
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import types.UserAccount.Companion.refreshCharacterListHoyolab
+import types.UserAccount.Companion.INSTANCE
+import types.UserAccount.Companion.refreshCharacterList
 import types.UserAccount.Companion.refreshNoteData
 import utils.FontSizeNormalLarge24
 import utils.FontSizeNormalSmall
@@ -49,11 +50,13 @@ fun SplashPage(
 ) {
 
     CoroutineScope(Dispatchers.Default).launch {
-        refreshCharacterListHoyolab()
-        refreshNoteData()
-        StarbaseAPI().updateUserAccountInfo()
-        StarbaseAPI().updateCharData()
 
+        if(INSTANCE.uid != "000000000"){
+            refreshCharacterList()
+            refreshNoteData()
+            StarbaseAPI().updateUserAccountInfo()
+            StarbaseAPI().updateCharData()
+        }
 
         withContext(Dispatchers.Main) {
             navController.navigate(Screen.HomePage.route)

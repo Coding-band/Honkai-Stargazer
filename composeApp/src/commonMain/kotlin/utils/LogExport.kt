@@ -22,7 +22,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.dokar.sonner.Toast
 import com.dokar.sonner.ToastType
 import com.dokar.sonner.ToasterState
 import com.russhwolf.settings.Settings
@@ -108,8 +107,19 @@ fun showErrorToast(errorLogExportObj: LogExportObj) {
     )
 }
 
-fun showToast(toasterState: ToasterState = toastInstance, toastData : Toast) {
-    toasterState.show(toastData)
+fun showSuccessToast(toasterState: ToasterState = toastInstance, message: String) {
+    toasterState.show(
+        message = message,
+        type = ToastType.Success,
+        duration = 10000.milliseconds,
+    )
+}
+fun showWarningToast(toasterState: ToasterState = toastInstance, message: String) {
+    toasterState.show(
+        message = message,
+        type = ToastType.Warning,
+        duration = 10000.milliseconds,
+    )
 }
 
 /**
