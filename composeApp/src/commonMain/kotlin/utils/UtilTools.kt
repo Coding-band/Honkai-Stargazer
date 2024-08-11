@@ -168,6 +168,27 @@ class UtilTools {
         return htmlTextFinal
     }
 
+    fun getIconByUserAccountIconValue(icon : String): Any {
+        val iconSplit = icon.split("")
+        if(icon == ""){
+            return UtilTools().getAssetsWebpByteArrayByFileName(
+                folderType = UtilTools.ImageFolderType.CHAR_ICON,
+                "Anonymous"
+            )
+        }else if(icon.startsWith("http")){
+            return icon
+        }else if (icon.length == 4 || icon.length == 6 && iconSplit[2] == "1"){
+            return UtilTools().getAssetsWebpByteArrayByFileName(
+                folderType = UtilTools.ImageFolderType.CHAR_ICON,
+                icon.substring(2)
+            )
+        }else {
+            return UtilTools().getAssetsWebpByteArrayByFileName(
+                folderType = UtilTools.ImageFolderType.AVATAR_ICON,
+                icon
+            )
+        }
+    }
 
     //RegistName means the Official EN Name
     @VersionUpdateCheck

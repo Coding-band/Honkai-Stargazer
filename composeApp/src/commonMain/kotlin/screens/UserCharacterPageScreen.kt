@@ -603,7 +603,7 @@ fun CharBioSkillInfo(character: Character) {
                     Image(
                         bitmap = UtilTools().getAssetsWebpByFileName(
                             UtilTools.ImageFolderType.CHAR_SKILL,
-                            "${UtilTools().getImageNameByRegistName(character.registName!!)}_skill" + when(skill.first) {
+                            "${UtilTools().getImageNameByRegistName(character.registName!!, isCharNoGen = true)}_skill" + when(skill.first) {
                                 Res.string.TraceNormalATK -> "1"
                                 Res.string.TraceSkill -> "2"
                                 Res.string.TraceUltimate -> "3"

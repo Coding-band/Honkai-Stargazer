@@ -316,19 +316,7 @@ fun UserInfoBioUI(context: PlatformContext, userAccount: UserAccount) {
                 AsyncImage(
                     modifier = Modifier.size(72.dp * scale),
                     model = UtilTools().newImageRequest(context,
-                        if(userAccount.icon == "") {
-                            UtilTools().getAssetsWebpByteArrayByFileName(
-                                folderType = UtilTools.ImageFolderType.AVATAR_ICON,
-                                "Anonymous"
-                            )
-                        } else if(userAccount.icon.startsWith("http")){
-                            userAccount.icon
-                        } else {
-                            UtilTools().getAssetsWebpByteArrayByFileName(
-                                folderType = UtilTools.ImageFolderType.AVATAR_ICON,
-                                userAccount.icon
-                            )
-                        }
+                        UtilTools().getIconByUserAccountIconValue(userAccount.icon)
                         ),
                     imageLoader = UtilTools().newImageLoader(context),
                     contentDescription = "",

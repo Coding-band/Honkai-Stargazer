@@ -181,19 +181,7 @@ fun HomePageHeader(
                     val imageRequest =  remember {
                         ImageRequest.Builder(context)
                             .data(
-                                if(userAccount.icon == "") {
-                                    UtilTools().getAssetsWebpByteArrayByFileName(
-                                        folderType = UtilTools.ImageFolderType.AVATAR_ICON,
-                                        "Anonymous"
-                                    )
-                                } else if(userAccount.icon.startsWith("http")){
-                                    userAccount.icon
-                                } else {
-                                    UtilTools().getAssetsWebpByteArrayByFileName(
-                                        folderType = UtilTools.ImageFolderType.AVATAR_ICON,
-                                        userAccount.icon
-                                    )
-                                }
+                                UtilTools().getIconByUserAccountIconValue(userAccount.icon)
                             )
                             .networkCachePolicy(CachePolicy.ENABLED)
                             .crossfade(true)

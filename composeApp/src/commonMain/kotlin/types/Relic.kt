@@ -48,8 +48,8 @@ open class Relic(
             return Relic(
                 officialId = relicFileName.toInt(),
                 fileName = relicFileName,
-                registName = (if(listDataJson != null) listDataJson.jsonObject["name"]!!.jsonPrimitive.content else "None"),
-                displayName = dataJson.jsonObject["name"]!!.jsonPrimitive.content,
+                registName = (if(listDataJson != null) listDataJson.jsonObject["name"]?.jsonPrimitive?.content else "None"),
+                displayName = dataJson.jsonObject["name"]?.jsonPrimitive?.content,
             )
         }
 
