@@ -266,27 +266,27 @@ July 22 - August 7
 - [x] UID Search (0.5 days)
 - [x] Proficient Calculation (Transfer) (1 days)
 - [x] Backend API design (1 days)
-- [x] Prepare for SG2 2.4 RSS + Offline Update (July 29 - 30)![img.png](img.png)
+- [x] Prepare for SG2 2.4 RSS + Offline Update (July 29 - 30)
 - [x] Prepare for Close BETA Testing (1 day)
 
 August 8 - August 11
 - [x] Bug Fixing (1 + n days)
+
+August 12 - August 21 (before Part 2 of Close BETA)
 - [ ] MOC & PF Leaderboard (3 days)
   - Team Usage Ranking
 - [ ] Proficient Leaderboard (2 days)
+- [ ] Action Order Function (5 days)
 
-August 12 - August 18
-- [ ] Wrap Simulator (3 days)
-- [ ] Wrap Analysis (4 days)
-
-August 19 - August 25
+August 22 - August 27
 - [ ] Notification Initize (2 days)
 - [ ] Customize Home Page Function (2 days)
-- [ ] Ads Function, In-app Purchase Function (3 days)
+- [ ] Ads Function, In-app Purchase Function (2 days)
 
-August 25 - September 1
-- [ ] Action Order Function (5 days)
-- [ ] Relic Score Algorthm (0.5 days) [Without Reset]
+August 28 - September 7
+- [ ] Relic Score Algorthm (? days) [With Reset]
+- [ ] Wrap Simulator (3 days)
+- [ ] Wrap Analysis (4 days)
 
 September 10 - September 15
 - [ ] Final checking
