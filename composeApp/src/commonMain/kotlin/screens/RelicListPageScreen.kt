@@ -18,7 +18,11 @@ import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.voc.honkai_stargazer.component.RelicCard
@@ -42,15 +46,21 @@ import utils.Language
 @Composable
 fun RelicListPage(modifier: Modifier = Modifier, navigator: Navigator, headerData: HeaderData = defaultHeaderData) {
     val hazeState = remember { HazeState() }
-    val relicListJSON: JsonArray = Relic.getRelicListFromJSON() as JsonArray
-    val relicNameList: ArrayList<String> = arrayListOf()
-    relicListJSON.forEach { jsonElement ->
-        val localeName : String? = Relic.getRelicDataFromJSON(
-            jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!, Language.TextLanguageInstance
-        ).jsonObject["name"]?.jsonPrimitive?.content
+    val relicListJSON: JsonArray by rememberSaveable { mutableStateOf(Relic.getRelicListFromJSON() as JsonArray) }
+    val relicNameList: ArrayList<String> = rememberSaveable { arrayListOf() }
+    var isInited by rememberSaveable { mutableStateOf(false) }
 
-        if(localeName !== null){
-            relicNameList.add(localeName)
+    if(!isInited) {
+        isInited = true
+        relicListJSON.forEach { jsonElement ->
+            val localeName: String? = Relic.getRelicDataFromJSON(
+                jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!,
+                Language.TextLanguageInstance
+            ).jsonObject["name"]?.jsonPrimitive?.content
+
+            if (localeName !== null) {
+                relicNameList.add(localeName)
+            }
         }
     }
 

@@ -1,6 +1,8 @@
 package utils
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.saveable.Saver
+import androidx.compose.runtime.saveable.listSaver
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.unit.Dp
 import coil3.ImageLoader
@@ -19,7 +21,9 @@ import kotlinx.coroutines.IO
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.jsonArray
 import okio.FileSystem
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.StringResource
@@ -385,7 +389,14 @@ class UtilTools {
         array[fromIndex] = array[toIndex]
         array[toIndex] = temp
     }
+
+
 }
+
+val JsonArraySaver: Saver<JsonArray, Any> = listSaver(
+    save = { listOf(it.toString()) },
+    restore = { Json.parseToJsonElement(it[0]).jsonArray }
+)
 
 private fun CosImageOfVocchi(){
     /** 你在想甚麼呀？ */

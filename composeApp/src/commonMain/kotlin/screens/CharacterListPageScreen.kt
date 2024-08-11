@@ -18,7 +18,11 @@ import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.voc.honkai_stargazer.component.CharacterCard
@@ -39,6 +43,7 @@ import types.Character
 import types.CombatType
 import types.Constants.Companion.CHAR_CARD_WIDTH
 import types.Path
+import utils.JsonArraySaver
 import utils.Language
 import utils.navigation.Screen
 
@@ -49,18 +54,23 @@ fun CharacterListPage(
     headerData: HeaderData = defaultHeaderData
 ) {
     val hazeState = remember { HazeState() }
-    val charListJSON: JsonArray = Character.getCharacterListFromJSON() as JsonArray
-    val charNameList: ArrayList<String> = arrayListOf()
-    charListJSON.forEach { jsonElement ->
-        val localeName : String? = Character.getCharacterDataFromFileName(
-            jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!, Language.TextLanguageInstance
-        ).jsonObject["name"]?.jsonPrimitive?.content
+    val charListJSON: JsonArray by rememberSaveable(stateSaver = JsonArraySaver) { mutableStateOf(Character.getCharacterListFromJSON() as JsonArray) }
+    val charNameList: ArrayList<String> = rememberSaveable { arrayListOf<String>() }
+    var isInited by rememberSaveable { mutableStateOf(false) }
 
-        if(localeName !== null){
-            charNameList.add(localeName)
+    if(!isInited){
+        isInited = true
+        charListJSON.forEach { jsonElement ->
+            val localeName : String? = Character.getCharacterDataFromFileName(
+                jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!, Language.TextLanguageInstance
+            ).jsonObject["name"]?.jsonPrimitive?.content
+
+            if(localeName !== null){
+                charNameList.add(localeName)
+            }
         }
-
     }
+
     /*
        val charList = arrayListOf<Character>()
     val charBitmaps : ArrayList<Bitmap> = arrayListOf<Bitmap>()

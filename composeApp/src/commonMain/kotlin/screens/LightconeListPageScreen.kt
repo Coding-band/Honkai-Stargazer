@@ -18,7 +18,11 @@ import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.voc.honkai_stargazer.component.LightconeCard
@@ -38,23 +42,30 @@ import moe.tlaster.precompose.navigation.Navigator
 import types.Constants.Companion.CHAR_CARD_WIDTH
 import types.Lightcone
 import types.Path
+import utils.JsonArraySaver
 import utils.Language
 import utils.navigation.Screen
 
 @Composable
 fun LightconeListPage(modifier: Modifier = Modifier, navigator: Navigator, headerData: HeaderData = defaultHeaderData) {
     val hazeState = remember { HazeState() }
-    val lcListJSON: JsonArray = Lightcone.getLightconeListFromJSON() as JsonArray
-    val lcNameList: ArrayList<String> = arrayListOf()
-    lcListJSON.forEach { jsonElement ->
-        val localeName : String? = Lightcone.getLightconeDataFromJSON(
-            jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!, Language.TextLanguageInstance
-        ).jsonObject["name"]?.jsonPrimitive?.content
+    val lcListJSON: JsonArray by rememberSaveable(stateSaver = JsonArraySaver) { mutableStateOf(Lightcone.getLightconeListFromJSON() as JsonArray) }
+    val lcNameList: ArrayList<String> = rememberSaveable { arrayListOf() }
+    var isInited by rememberSaveable { mutableStateOf(false) }
 
-        if(localeName !== null){
-            lcNameList.add(localeName)
+    if(!isInited) {
+        isInited = true
+        lcListJSON.forEach { jsonElement ->
+            val localeName: String? = Lightcone.getLightconeDataFromJSON(
+                jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!,
+                Language.TextLanguageInstance
+            ).jsonObject["name"]?.jsonPrimitive?.content
+
+            if (localeName !== null) {
+                lcNameList.add(localeName)
+            }
+
         }
-
     }
 
     Box {
