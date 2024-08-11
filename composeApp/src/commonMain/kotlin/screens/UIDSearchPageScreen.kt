@@ -160,19 +160,7 @@ fun UIDSearchPageScreen(
                                     modifier = Modifier.size(40.dp * scale),
                                     model = UtilTools().newImageRequest(
                                         context,
-                                        if (item.icon == "") {
-                                            UtilTools().getAssetsWebpByteArrayByFileName(
-                                                folderType = UtilTools.ImageFolderType.AVATAR_ICON,
-                                                "Anonymous"
-                                            )
-                                        } else if (item.icon.startsWith("http")) {
-                                            item.icon
-                                        } else {
-                                            UtilTools().getAssetsWebpByteArrayByFileName(
-                                                folderType = UtilTools.ImageFolderType.AVATAR_ICON,
-                                                item.icon
-                                            )
-                                        }
+                                        UtilTools().getIconByUserAccountIconValue(item.icon)
                                     ),
                                     imageLoader = UtilTools().newImageLoader(context),
                                     contentDescription = "",

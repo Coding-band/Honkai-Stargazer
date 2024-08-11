@@ -24,6 +24,7 @@ import okio.FileSystem
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
+import types.Character
 import utils.annotation.DoItLater
 import utils.annotation.VersionUpdateCheck
 import kotlin.math.pow
@@ -169,22 +170,27 @@ class UtilTools {
     }
 
     fun getIconByUserAccountIconValue(icon : String): Any {
-        val iconSplit = icon.split("")
+        println(icon)
         if(icon == ""){
             return UtilTools().getAssetsWebpByteArrayByFileName(
-                folderType = UtilTools.ImageFolderType.CHAR_ICON,
+                folderType = ImageFolderType.AVATAR_ICON,
                 "Anonymous"
             )
         }else if(icon.startsWith("http")){
             return icon
-        }else if (icon.length == 4 || icon.length == 6 && iconSplit[2] == "1"){
-            return UtilTools().getAssetsWebpByteArrayByFileName(
-                folderType = UtilTools.ImageFolderType.CHAR_ICON,
+        }else if (icon.length == 4){
+            return Character.getCharacterImageFromOfficialId(
+                imageFolderType = ImageFolderType.CHAR_ICON,
+                icon
+            )
+        }else if (icon.length == 6 && icon[2] == '1'){
+            return Character.getCharacterImageFromOfficialId(
+                imageFolderType = ImageFolderType.CHAR_ICON,
                 icon.substring(2)
             )
         }else {
             return UtilTools().getAssetsWebpByteArrayByFileName(
-                folderType = UtilTools.ImageFolderType.AVATAR_ICON,
+                folderType = ImageFolderType.AVATAR_ICON,
                 icon
             )
         }
