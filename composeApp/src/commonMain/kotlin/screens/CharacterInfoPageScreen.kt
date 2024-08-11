@@ -15,12 +15,15 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.SnackbarHostState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -66,6 +69,8 @@ import files.phorphos_sword_regular
 import files.phorphos_tree_structure_regular
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
@@ -76,8 +81,10 @@ import moe.tlaster.precompose.navigation.path
 import moe.tlaster.precompose.navigation.query
 import types.Character
 import types.CombatType
+import utils.JsonElementSaver
 import utils.Language
 import utils.UtilTools
+import utils.annotation.DoItLater
 
 private lateinit var localCoroutineScope: CoroutineScope;
 private lateinit var localSnackbarHostState: SnackbarHostState;
@@ -104,6 +111,7 @@ fun CharacterInfoPage(
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ) {
 
+    @DoItLater("Use rememberStatus")
     var density = LocalDensity.current.density
     val characterName = backStackEntry.path<String>("charName")!!.replace("_", " ")
     val characterFileName = backStackEntry.query<String>("fileName")!!
@@ -112,7 +120,7 @@ fun CharacterInfoPage(
     val path = types.Path.valueOf(backStackEntry.query<String>("path")!!)
 
     val hazeState = remember { HazeState() }
-    val charInfoJson = Character.getCharacterDataFromFileName(characterFileName, Language.TextLanguageInstance)
+    val charInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Character.getCharacterDataFromFileName(characterFileName, Language.TextLanguageInstance) as JsonElement) }
 
     localCoroutineScope = rememberCoroutineScope();
     localSnackbarHostState = snackbarHostState!!;
@@ -124,11 +132,14 @@ fun CharacterInfoPage(
 
     val listState = rememberLazyListState()
 
-    val isNaviBarVisible by remember {
-        derivedStateOf {
-            // whatever logic you need
-            listState.canScrollBackward
-        }
+    var isNaviBarVisible by rememberSaveable { mutableStateOf(false) }
+
+    LaunchedEffect(listState) {
+        snapshotFlow { listState.canScrollBackward }
+            .distinctUntilChanged()
+            .collect {
+                isNaviBarVisible = it
+            }
     }
 
     //It will be transfer from CharacterTraceTree.kt !

@@ -37,13 +37,15 @@ import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
 import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -84,6 +86,7 @@ import files.ui_icon_star
 import getScreenSizeInfo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.float
 import kotlinx.serialization.json.int
@@ -100,6 +103,7 @@ import types.Constants
 import types.Relic
 import utils.FontSizeNormal12
 import utils.FontSizeNormal14
+import utils.JsonElementSaver
 import utils.Language
 import utils.TextColorNormalDim
 import utils.UtilTools
@@ -130,7 +134,7 @@ fun RelicInfoPage(
     val relicFileName = backStackEntry.query<String>("fileName")!!
 
     val hazeState = remember { HazeState() }
-    val relicInfoJson = Relic.getRelicDataFromJSON(relicFileName, Language.TextLanguageInstance)
+    val relicInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Relic.getRelicDataFromJSON(relicFileName, Language.TextLanguageInstance) as JsonElement) }
 
     localCoroutineScope = rememberCoroutineScope();
     localSnackbarHostState = snackbarHostState!!;
@@ -142,11 +146,14 @@ fun RelicInfoPage(
 
     val listState = rememberLazyListState()
 
-    val isNaviBarVisible by remember {
-        derivedStateOf {
-            // whatever logic you need
-            listState.canScrollBackward
-        }
+    var isNaviBarVisible by rememberSaveable { mutableStateOf(false) }
+
+    LaunchedEffect(listState) {
+        snapshotFlow { listState.canScrollBackward }
+            .distinctUntilChanged()
+            .collect {
+                isNaviBarVisible = it
+            }
     }
 
     val dialogComponent : MutableState<@Composable () -> Unit> = remember { mutableStateOf({}) }

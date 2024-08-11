@@ -15,12 +15,15 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.SnackbarHostState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -56,6 +59,8 @@ import files.phorphos_person_fill
 import files.phorphos_person_regular
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import moe.tlaster.precompose.navigation.BackStackEntry
@@ -63,6 +68,7 @@ import moe.tlaster.precompose.navigation.Navigator
 import moe.tlaster.precompose.navigation.path
 import moe.tlaster.precompose.navigation.query
 import types.Lightcone
+import utils.JsonElementSaver
 import utils.Language
 import utils.UtilTools
 
@@ -94,7 +100,7 @@ fun LightconeInfoPage(
     val path = types.Path.valueOf(backStackEntry.query<String>("path")!!)
 
     val hazeState = remember { HazeState() }
-    val lcInfoJson = Lightcone.getLightconeDataFromJSON(lightconeFileName, Language.TextLanguageInstance)
+    val lcInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Lightcone.getLightconeDataFromJSON(lightconeFileName, Language.TextLanguageInstance) as JsonElement) }
 
     localCoroutineScope = rememberCoroutineScope();
     localSnackbarHostState = snackbarHostState!!;
@@ -106,11 +112,14 @@ fun LightconeInfoPage(
 
     val listState = rememberLazyListState()
 
-    val isNaviBarVisible by remember {
-        derivedStateOf {
-            // whatever logic you need
-            listState.canScrollBackward
-        }
+    var isNaviBarVisible by rememberSaveable { mutableStateOf(false) }
+
+    LaunchedEffect(listState) {
+        snapshotFlow { listState.canScrollBackward }
+            .distinctUntilChanged()
+            .collect {
+                isNaviBarVisible = it
+            }
     }
 
     //It will be transfer from LightconeTraceTree.kt !

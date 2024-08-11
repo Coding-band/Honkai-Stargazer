@@ -2,6 +2,7 @@ package utils
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.saveable.Saver
+import androidx.compose.runtime.saveable.autoSaver
 import androidx.compose.runtime.saveable.listSaver
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.unit.Dp
@@ -397,6 +398,12 @@ val JsonArraySaver: Saver<JsonArray, Any> = listSaver(
     save = { listOf(it.toString()) },
     restore = { Json.parseToJsonElement(it[0]).jsonArray }
 )
+val JsonElementSaver: Saver<JsonElement, Any> = listSaver(
+    save = { listOf(it.toString()) },
+    restore = { Json.parseToJsonElement(it[0]) }
+)
+
+val BooleanSaver: Saver<Boolean, Any> = autoSaver()
 
 private fun CosImageOfVocchi(){
     /** 你在想甚麼呀？ */
