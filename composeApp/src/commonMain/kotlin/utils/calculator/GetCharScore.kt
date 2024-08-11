@@ -6,7 +6,7 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import types.CharWeightList
+import utils.CharWeightList
 import types.Character
 import utils.hoyolab.AttributeExchange
 import kotlin.math.max

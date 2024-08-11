@@ -1,4 +1,4 @@
-package types
+package utils
 
 import com.russhwolf.settings.Settings
 import getLocalHttpClient
@@ -12,22 +12,23 @@ import io.ktor.client.statement.HttpResponse
 import io.ktor.serialization.kotlinx.json.json
 import io.ktor.util.network.UnresolvedAddressException
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withTimeout
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import types.AppInfo.Companion.AppInfoInstance
-import utils.Preferences
-import utils.annotation.DoItLater
-import utils.errorLogExport
+import utils.starbase.StarbaseAPI
 
-@DoItLater("Move CharWeightList to Classes-base")
 @Serializable
 class CharWeightList(){
     companion object{
         const val prefKeyJson = "charWeightListJson"
-        var INSTANCE = Json.parseToJsonElement(Settings().getString(prefKeyJson, Json.encodeToString(getWeightListJson())))
+        var INSTANCE = Json.parseToJsonElement(Settings().getString(
+            prefKeyJson, Json.encodeToString(
+                getWeightListJson()
+            )))
 
         fun update(force : Boolean = false){
             if(!Preferences().isUpdateCharWeightListNow() && !force) return
@@ -41,10 +42,10 @@ class CharWeightList(){
         }
 
         private fun getWeightListJson(): JsonElement{
-            val jsonUrl = "https://voc2048.com/stargazer/charWeightList.json"
+            val jsonUrl = "${StarbaseAPI().getStarbaseStaticFolderURL()}/charWeightList.json"
             val client = getLocalHttpClient {
                 install(HttpTimeout){
-                    requestTimeoutMillis = 3000
+                    requestTimeoutMillis = 15000
                 }
                 install(ContentNegotiation){
                     json()
@@ -61,14 +62,20 @@ class CharWeightList(){
 
             try {
                 return runBlocking {
-                    val response: HttpResponse = client.get(jsonUrl)
-                    //Check whether it is having any errors
-                    if (!arrayListOf(200,201).contains(response.status.value)){
-                        errorLogExport("CharWeightList", "getWeightListJson()",Exception("HTTP Error Code ${response.status.value} : ${response.status.description}"))
-                        return@runBlocking Json.parseToJsonElement("{}")
+                    return@runBlocking withTimeout(15000) {
+                        val response: HttpResponse = client.get(jsonUrl)
+                        //Check whether it is having any errors
+                        if (!arrayListOf(200, 201).contains(response.status.value)) {
+                            errorLogExport(
+                                "CharWeightList",
+                                "getWeightListJson()",
+                                Exception("HTTP Error Code ${response.status.value} : ${response.status.description}")
+                            )
+                            return@withTimeout Json.parseToJsonElement("{}")
 
-                    }else{
-                        return@runBlocking response.body()
+                        } else {
+                            return@withTimeout response.body()
+                        }
                     }
                 }
 
