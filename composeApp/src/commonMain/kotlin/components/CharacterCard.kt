@@ -61,16 +61,16 @@ import utils.FontSizeNormal12
 import utils.TextColorNormalDim
 import utils.UtilTools
 import utils.navigation.Screen
-import utils.navigation.navControllerInstance
+import utils.navigation.navigatorInstance
 
 @Composable
 fun CharacterCard(
     character: Character,
     displayName: String? = character.displayName,
-    onClick: () -> Unit = { navControllerInstance.navigate(
+    onClick: () -> Unit = { navigatorInstance.navigate(
         Screen.CharacterInfoPage.route
                 + "/${character.registName!!.replace(" ","_")}"
-                + "/?fileName=${character.fileName}"
+                + "?fileName=${character.fileName}"
                 + "&combatType=${character.combatType}"
                 + "&path=${character.path}"
                 + "&charId=${character.officialId}"

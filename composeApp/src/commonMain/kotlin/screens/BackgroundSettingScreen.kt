@@ -30,7 +30,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
 import com.russhwolf.settings.Settings
 import components.BackIcon
 import components.HeaderData
@@ -47,6 +46,7 @@ import files.SwitchOn
 import files.UseBlurEffect
 import getScreenSizeInfo
 import kotlinx.coroutines.launch
+import moe.tlaster.precompose.navigation.Navigator
 import types.Character
 import types.Constants
 import types.Wallpaper
@@ -58,7 +58,7 @@ import utils.UtilTools
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun BackgroundSettingScreen(modifier: Modifier = Modifier, navController: NavController, headerData: HeaderData = defaultHeaderData){
+fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerData: HeaderData = defaultHeaderData){
 
     val hazeState = remember { HazeState() }
     val coroutineScope = rememberCoroutineScope()
@@ -167,12 +167,12 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navController: NavCon
                 Spacer(modifier = Modifier.width(10.dp))
                 UIButton(Modifier .weight(1f).height(64.dp), text = UtilTools().removeStringResDoubleQuotes(Res.string.SetWallPaper), onClick = {
                     Settings().putString("backgroundImage", extendedItems[wallpaperIndex.value].id)
-                    navController.popBackStack()
+                    navigator.popBackStack()
                 })
             }
         }
 
-        PageHeader(navController = navController, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.BACK)
+        PageHeader(navigator = navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.BACK)
     }
 
 }

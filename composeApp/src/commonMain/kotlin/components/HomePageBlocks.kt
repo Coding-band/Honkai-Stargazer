@@ -31,25 +31,20 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
 import files.AppStatusLostConnect
 import files.Res
 import files.phorphos_cake_fill
-import files.phorphos_moon_fill
-import files.phorphos_person_fill
 import getIsLandscape
+import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
 import utils.BlackAlpha20
 import utils.BlackAlpha80
 import utils.FontSizeNormal16
 import utils.FontSizeNormalLarge24
 import utils.FontSizeNormalSmall
-import utils.Stargazer3Theme
 import utils.TextColorNormal
 import utils.UtilTools
 import utils.navigation.Screen
@@ -91,7 +86,7 @@ val gradient = Brush.verticalGradient(
 fun HomePageBlock1x1(
     blockData: HomePageBlocks.HomePageBlockItem,
     modifier: Modifier = Modifier,
-    navController: NavController
+    navigator: Navigator
 ) {
     var isLandscape = getIsLandscape();
 
@@ -101,7 +96,7 @@ fun HomePageBlock1x1(
         onClick = blockData.itemOnClickAction ?: {
             if (blockData.itemOnClickToNavigate !== null) {
                 println("Ok I'm Navigating to " + blockData.itemOnClickToNavigate)
-                navController.navigate(blockData.itemOnClickToNavigate!!.route)
+                navigator.navigate(blockData.itemOnClickToNavigate!!.route)
             }
         },
         shape = RoundedCornerShape(8.dp),
@@ -147,9 +142,8 @@ fun HomePageBlock1x1(
 fun HomePageBlock2x1(
     blockData: HomePageBlocks.HomePageBlockItem,
     modifier: Modifier = Modifier,
-    navController: NavController
+    navigator: Navigator
 ) {
-    val navController = rememberNavController();
     var isLandscape = getIsLandscape();
 
     OutlinedButton(
@@ -158,7 +152,7 @@ fun HomePageBlock2x1(
         onClick = {
             if (blockData.itemOnClickToNavigate !== null) {
                 println("Ok I'm Navigating to " + blockData.itemOnClickToNavigate)
-                navController.navigate(blockData.itemOnClickToNavigate!!.route)
+                navigator.navigate(blockData.itemOnClickToNavigate!!.route)
             } else {
                 println("Ok I'm OnClick la")
                 blockData.itemOnClickAction;
@@ -232,33 +226,6 @@ fun HomePageBlock2x1(
                     style = FontSizeNormalSmall(),
                 )
             }
-        }
-    }
-}
-
-@Preview
-@Composable
-fun HomePageBlockPreview() {
-    Stargazer3Theme {
-        Row(Modifier.background(Color(0xFF000000))) {
-            HomePageBlock1x1(
-                HomePageBlocks.HomePageBlockItem(
-                    itemTitle = "角色aaaaaaaaaaaaaaaa",
-                    itemIconId = Res.drawable.phorphos_person_fill,
-                ),
-                navController = rememberNavController()
-            )
-            HomePageBlock2x1(
-                HomePageBlocks.HomePageBlockItem(
-                    itemTitle = "開拓力",
-                    itemIconId = Res.drawable.phorphos_moon_fill,
-                    itemType = HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1,
-                    itemTopHighlight = "116",
-                    itemTop = "/240",
-                    itemBottom = "今天18:16"
-                ),
-                navController = rememberNavController()
-            )
         }
     }
 }

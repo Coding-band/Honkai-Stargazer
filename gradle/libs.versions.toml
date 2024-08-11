@@ -10,15 +10,37 @@ androidx-core-ktx = "1.13.1"
 androidx-espresso-core = "3.6.1"
 androidx-material = "1.12.0"
 androidx-test-junit = "1.2.1"
+coil = "3.0.0-alpha08"
 compose-plugin = "1.6.11"
+composeMultiplatformScreenCapture = "1.0.1"
+composeWebviewMultiplatform = "1.9.20"
+haze = "0.6.2"
 junit = "4.13.2"
 kotlin = "2.0.0"
 kotlinGradlePlugin = "1.9.0"
+kotlinxDatetime = "0.6.0"
 kotlinxSerializationJson = "1.7.1"
+ktorClientCio = "2.0.0"
+ktorClientContentNegotiation = "2.3.4"
+ktorClientCore = "2.3.12"
+ktorClientDarwin = "2.0.0"
+ktorClientSerialization = "2.0.0"
 material3Android = "1.2.1"
 firebaseCrashlyticsBuildtools = "3.0.2"
+multiplatformSettings = "1.1.1"
+multiplatformSettingsNoArg = "1.1.1"
+okio = "3.9.0"
+precompose = "1.6.0"
+richeditorCompose = "1.0.0-rc05"
+sonner = "0.3.8"
 
 [libraries]
+coil = { module = "io.coil-kt.coil3:coil", version.ref = "coil" }
+coil-compose-core = { module = "io.coil-kt.coil3:coil-compose-core", version.ref = "coil" }
+coil-network-ktor = { module = "io.coil-kt.coil3:coil-network-ktor", version.ref = "coil" }
+compose-multiplatform-screen-capture = { module = "network.chaintech:compose-multiplatform-screen-capture", version.ref = "composeMultiplatformScreenCapture" }
+compose-webview-multiplatform = { module = "io.github.kevinnzou:compose-webview-multiplatform", version.ref = "composeWebviewMultiplatform" }
+haze = { module = "dev.chrisbanes.haze:haze", version.ref = "haze" }
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinGradlePlugin" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
@@ -31,8 +53,23 @@ androidx-material = { group = "com.google.android.material", name = "material", 
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidx-constraintlayout" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 androidx-material3-android = { group = "androidx.compose.material3", name = "material3-android", version.ref = "material3Android" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
+kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinxSerializationJson" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 firebase-crashlytics-buildtools = { group = "com.google.firebase", name = "firebase-crashlytics-buildtools", version.ref = "firebaseCrashlyticsBuildtools" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktorClientCio" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktorClientContentNegotiation" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorClientCore" }
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktorClientDarwin" }
+ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktorClientSerialization" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktorClientContentNegotiation" }
+multiplatform-settings-no-arg = { module = "com.russhwolf:multiplatform-settings-no-arg", version.ref = "multiplatformSettingsNoArg" }
+multiplatform-settings = { module = "com.russhwolf:multiplatform-settings", version.ref = "multiplatformSettings" }
+okio = { module = "com.squareup.okio:okio", version.ref = "okio" }
+precompose = { module = "moe.tlaster:precompose" }
+richeditor-compose = { module = "com.mohamedrejeb.richeditor:richeditor-compose", version.ref = "richeditorCompose" }
+sonner = { module = "io.github.dokar3:sonner", version.ref = "sonner" }
+tlaster-precompose = { module = "moe.tlaster:precompose", version.ref = "precompose" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

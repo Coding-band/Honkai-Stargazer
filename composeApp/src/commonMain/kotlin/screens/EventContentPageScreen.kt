@@ -11,8 +11,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavBackStackEntry
-import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import coil3.request.CachePolicy
@@ -29,6 +27,9 @@ import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.Res
 import files.phorphos_film_slate_fill
+import moe.tlaster.precompose.navigation.BackStackEntry
+import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.query
 import types.Constants
 import types.EventItem
 import types.EventItem.Companion.EventListInstance
@@ -96,13 +97,13 @@ val headerHTML = "<meta name=\"viewport\" content=\"initial-scale=1.0, maximum-s
 @Composable
 fun EventContentPageScreen(
     modifier: Modifier = Modifier,
-    navController: NavController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData,
-    backStackEntry: NavBackStackEntry? = null,
+    backStackEntry: BackStackEntry,
 ) {
     val hazeState = remember { HazeState() }
 
-    val eventId = backStackEntry!!.arguments?.getInt("eventId")!!
+    val eventId = backStackEntry.query<Int>("eventId")
 
     val eventItem = EventListInstance.filter { it.ann_id == eventId }[0]
 
@@ -135,7 +136,7 @@ fun EventContentPageScreen(
         }
 
         PageHeader(
-            navController = navController,
+            navigator = navigator,
             headerData = HeaderData(title = eventItem.title, titleIconId = Res.drawable.phorphos_film_slate_fill),
             hazeState = hazeState,
             backIconId = BackIcon.BACK,

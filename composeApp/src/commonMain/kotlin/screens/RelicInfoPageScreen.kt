@@ -56,8 +56,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavBackStackEntry
-import androidx.navigation.NavController
 import com.mohamedrejeb.richeditor.model.RichTextState
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material.RichText
@@ -92,6 +90,10 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import moe.tlaster.precompose.navigation.BackStackEntry
+import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.path
+import moe.tlaster.precompose.navigation.query
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.Constants
@@ -117,15 +119,15 @@ private const val scrollPxTrigInvisible = 250f
 @Composable
 fun RelicInfoPage(
     modifier: Modifier = Modifier,
-    navController: NavController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData,
-    backStackEntry: NavBackStackEntry? = null,
+    backStackEntry: BackStackEntry,
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ) {
 
     var density = LocalDensity.current.density
-    val relicFileName = backStackEntry!!.arguments?.getString("fileName")!!
-    val relicName = backStackEntry.arguments?.getString("relicName")!!.replace("_", " ")
+    val relicName = backStackEntry.path<String>("relicName")!!.replace("_", " ")
+    val relicFileName = backStackEntry.query<String>("fileName")!!
 
     val hazeState = remember { HazeState() }
     val relicInfoJson = Relic.getRelicDataFromJSON(relicFileName, Language.TextLanguageInstance)
@@ -172,7 +174,7 @@ fun RelicInfoPage(
         }
 
         PageHeader(
-            navController = navController,
+            navigator = navigator,
             headerData = headerDataPage,
             hazeState = hazeState,
             backIconId = BackIcon.CANCEL,

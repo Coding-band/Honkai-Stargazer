@@ -46,8 +46,6 @@ import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Popup
-import androidx.navigation.NavBackStackEntry
-import androidx.navigation.NavController
 import coil3.PlatformContext
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
@@ -77,6 +75,9 @@ import files.phorphos_question_fill
 import files.ui_icon_share
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import moe.tlaster.precompose.navigation.BackStackEntry
+import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.query
 import org.jetbrains.compose.resources.painterResource
 import types.Constants
 import types.Constants.Companion.CHAR_CARD_WIDTH
@@ -94,13 +95,13 @@ import kotlin.math.min
 @Composable
 fun UserInfoPageScreen(
     modifier: Modifier = Modifier,
-    navController: NavController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData,
-    backStackEntry: NavBackStackEntry? = null,
+    backStackEntry: BackStackEntry,
 ) {
     val hazeState = remember { HazeState() }
     val context = LocalPlatformContext.current
-    val uid = backStackEntry!!.arguments?.getString("uid")!!
+    val uid = backStackEntry.query<String>("uid")!!
 
     val userAccount by remember { mutableStateOf(
         if(UserAccount.INSTANCE.uid == uid){
@@ -178,7 +179,7 @@ fun UserInfoPageScreen(
                         overrideNameComponent = { CharacterLcInfoDisplay(character) },
                         isDisplayName = !isDisplayLcInfo.value,
                         isDisplayCombatPath = false,
-                        onClick = { navController.navigate("${Screen.UserCharacterPageScreen.route}?uid=${uid}&charId=${character.officialId}") }
+                        onClick = { navigator.navigate("${Screen.UserCharacterPageScreen.route}?uid=${uid}&charId=${character.officialId}") }
                     )
                 }
             }
@@ -200,7 +201,7 @@ fun UserInfoPageScreen(
                             overrideNameComponent = { CharacterLcInfoDisplay(character) },
                             isDisplayName = !isDisplayLcInfo.value,
                             isDisplayCombatPath = false ,
-                            onClick = { navController.navigate("${Screen.UserCharacterPageScreen.route}?uid=${uid}&charId=${character.officialId}") }
+                            onClick = { navigator.navigate("${Screen.UserCharacterPageScreen.route}?uid=${uid}&charId=${character.officialId}") }
                         )
                     }
                 }
@@ -237,7 +238,7 @@ fun UserInfoPageScreen(
 
         PageHeader(
             headerData = headerData,
-            navController = navController,
+            navigator = navigator,
             forwardIconId = Res.drawable.ui_icon_share,
             onForward = { /* TODO : Share Function*/ },
             hazeState = hazeState,

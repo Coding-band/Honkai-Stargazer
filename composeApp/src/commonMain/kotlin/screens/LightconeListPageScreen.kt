@@ -21,8 +21,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
 import com.voc.honkai_stargazer.component.LightconeCard
 import components.BackIcon
 import components.HeaderData
@@ -36,16 +34,15 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import org.jetbrains.compose.ui.tooling.preview.Preview
+import moe.tlaster.precompose.navigation.Navigator
 import types.Constants.Companion.CHAR_CARD_WIDTH
 import types.Lightcone
 import types.Path
 import utils.Language
-import utils.navigation.RootContent
 import utils.navigation.Screen
 
 @Composable
-fun LightconeListPage(modifier: Modifier = Modifier, navController: NavController, headerData: HeaderData = defaultHeaderData) {
+fun LightconeListPage(modifier: Modifier = Modifier, navigator: Navigator, headerData: HeaderData = defaultHeaderData) {
     val hazeState = remember { HazeState() }
     val lcListJSON: JsonArray = Lightcone.getLightconeListFromJSON() as JsonArray
     val lcNameList: ArrayList<String> = arrayListOf()
@@ -90,10 +87,10 @@ fun LightconeListPage(modifier: Modifier = Modifier, navController: NavControlle
                     onClick = {
                         val lcName = lcListItem.jsonObject["name"]?.jsonPrimitive?.content!!;
                         val fileName = lcListItem.jsonObject["fileName"]?.jsonPrimitive?.content!!;
-                        navController.navigate(
+                        navigator.navigate(
                             Screen.LightconeInfoPage.route
                                     + "/${lcName}"
-                                    + "/?fileName=${fileName}"
+                                    + "?fileName=${fileName}"
                                     + "&path=${lcListItem.jsonObject["path"]?.jsonPrimitive?.content!!}"
                         )
                     }
@@ -107,14 +104,6 @@ fun LightconeListPage(modifier: Modifier = Modifier, navController: NavControlle
                 )
             }
         }
-        PageHeader(navController = navController, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.CANCEL)
+        PageHeader(navigator = navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.CANCEL)
     }
-}
-
-@Preview
-@Composable
-fun LightconeListPagePreview() {
-    RootContent(
-        screen = Screen.LightconeListPage,
-        page = { LightconeListPage(navController = rememberNavController()) })
 }

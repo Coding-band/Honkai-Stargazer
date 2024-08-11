@@ -29,7 +29,6 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
 import com.russhwolf.settings.Settings
 import com.voc.honkaistargazer.BuildKonfig
 import components.BackIcon
@@ -75,6 +74,7 @@ import files.ic_selected_orange_circle
 import files.phorphos_caret_down_regular
 import files.phorphos_caret_right_regular
 import getDeviceInfo
+import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import types.Character
@@ -90,7 +90,7 @@ import kotlin.math.max
 
 
 @Composable
-fun SettingScreen(modifier: Modifier = Modifier, navController: NavController, headerData: HeaderData = defaultHeaderData
+fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerData: HeaderData = defaultHeaderData
 ){
     val hazeState = remember { HazeState() }
     val wallpaper = Wallpaper.wallpaperList.find { it.id == Settings().getString("backgroundImage", "221000") } ?: Wallpaper.wallpaperList[0]
@@ -153,7 +153,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navController: NavController, h
                     SettingOptionNavigateBar(
                         titleRes = Res.string.ChangeWallPaper,
                         navigateDesc = wallpaper.localeName ?: Character.getCharacterItemFromJSON(wallpaper.id).displayName ?: "?",
-                        navigateClick = { navController.navigate(Screen.BackgroundSettingScreen.route) }
+                        navigateClick = { navigator.navigate(Screen.BackgroundSettingScreen.route) }
                     )
 
                     //啟用模糊效果
@@ -268,7 +268,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navController: NavController, h
 
         }
 
-        PageHeader(navController = navController, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.BACK)
+        PageHeader(navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.BACK)
     }
 }
 

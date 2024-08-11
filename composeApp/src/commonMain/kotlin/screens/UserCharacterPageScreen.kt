@@ -54,8 +54,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavBackStackEntry
-import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
@@ -96,6 +94,9 @@ import kotlinx.serialization.json.float
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import moe.tlaster.precompose.navigation.BackStackEntry
+import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.query
 import org.jetbrains.compose.resources.painterResource
 import types.Character
 import types.Constants
@@ -119,16 +120,15 @@ import utils.calculator.getGradAttrAndValue
 import utils.calculator.getLcAttrData
 import utils.hoyolab.AttributeExchange
 
-@DoItLater("Get User Data from Database / API")
 @DoItLater("Confirm that work when charStatus is null")
 @Composable
 fun UserCharacterPageScreen(
     modifier: Modifier = Modifier,
-    navController: NavController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData,
-    backStackEntry: NavBackStackEntry? = null,
+    backStackEntry: BackStackEntry,
 ) {
-    val uid = backStackEntry!!.arguments?.getString("uid")!!
+    val uid = backStackEntry.query<String>("uid")!!
     val userAccount by remember { mutableStateOf(
         if (UserAccount.INSTANCE.uid == uid) {
             UserAccount.INSTANCE
@@ -136,7 +136,7 @@ fun UserCharacterPageScreen(
             UserAccount.UIDSEARCH
         }
     ) }
-    val characterId = backStackEntry.arguments?.getInt("charId")!!
+    val characterId = backStackEntry.query<Int>("charId")!!
     val characterFilter = userAccount.characterList.filter { it.officialId == characterId }
     val hazeState = remember { HazeState() }
     val listState = rememberLazyListState()
@@ -149,7 +149,7 @@ fun UserCharacterPageScreen(
     val character = if(characterFilter.isEmpty()) null else characterFilter[0]
     val isShare = remember { mutableStateOf(false) }
 
-    if(character == null){ navController.popBackStack() }else{
+    if(character == null){ navigator.popBackStack() }else{
         Box(modifier = modifier
             .fillMaxSize()
         ){
@@ -176,7 +176,7 @@ fun UserCharacterPageScreen(
 
 
             PageHeaderAlpha(
-                navController = navController,
+                navigator = navigator,
                 onForward = {
                     //TODO : Remember to add the Share Function
                 },

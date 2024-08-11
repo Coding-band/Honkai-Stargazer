@@ -20,8 +20,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Popup
-import androidx.navigation.NavBackStackEntry
-import androidx.navigation.NavController
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
 import com.multiplatform.webview.web.WebView
@@ -48,6 +46,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import moe.tlaster.precompose.navigation.BackStackEntry
+import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.query
 import types.UserAccount
 import utils.FontSizeNormal14
 import utils.FontSizeNormal16
@@ -56,7 +57,7 @@ import utils.UtilTools
 import utils.annotation.DoItLater
 import utils.hoyolab.HoyolabConst
 import utils.navigation.Screen
-import utils.navigation.navControllerInstance
+import utils.navigation.navigatorInstance
 import utils.navigation.pomPomPopupInstance
 import utils.starbase.StarbaseAPI
 
@@ -64,12 +65,12 @@ import utils.starbase.StarbaseAPI
 @Composable
 fun HoyolabLoginPageScreen(
     modifier: Modifier = Modifier,
-    navController: NavController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData,
-    backStackEntry: NavBackStackEntry? = null,
+    backStackEntry: BackStackEntry,
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ){
-    val serverId = backStackEntry!!.arguments?.getString("serverId")!!
+    val serverId = backStackEntry.query<String>("serverId")!!
     val serverSelected = HoyolabConst().getServerById(serverId)
     val url = HoyolabConst().getLoginURL(serverSelected)
     val hazeState = remember { HazeState() }
@@ -95,7 +96,7 @@ fun HoyolabLoginPageScreen(
         WebView(webviewState, modifier = Modifier.statusBarsPadding().padding(top = PAGE_HEADER_HEIGHT).matchParentSize())
 
         PageHeader(
-            navController = navController,
+            navigator = navigator,
             headerData = headerData,
             hazeState = hazeState,
             backIconId = BackIcon.CANCEL,
@@ -110,7 +111,7 @@ fun HoyolabLoginPageScreen(
                     StarbaseAPI().updateCharData()
                     withContext(Dispatchers.Main){
                         pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
-                        navController.popBackStack()
+                        navigator.popBackStack()
                     }
                 }
             }
@@ -224,7 +225,7 @@ fun HoyolabServerSelectPopup(modifier: Modifier = Modifier, showPopup : MutableS
                             UIButton(
                                 text = UtilTools().removeStringResDoubleQuotes(server.localeName),
                                 onClick = {
-                                    navControllerInstance.navigate("${Screen.HoyolabLoginPageScreen.route}?serverId=${server.serverId}")
+                                    navigatorInstance.navigate("${Screen.HoyolabLoginPageScreen.route}?serverId=${server.serverId}")
                                     showPopup.value = false
                                 }
                             )

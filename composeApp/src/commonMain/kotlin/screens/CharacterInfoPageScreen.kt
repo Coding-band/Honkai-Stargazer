@@ -28,8 +28,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavBackStackEntry
-import androidx.navigation.NavController
 import components.BackIcon
 import components.CharacterEidolon
 import components.CharacterTraceTree.CharacterTraceTree
@@ -72,6 +70,10 @@ import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import moe.tlaster.precompose.navigation.BackStackEntry
+import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.path
+import moe.tlaster.precompose.navigation.query
 import types.Character
 import types.CombatType
 import utils.Language
@@ -96,18 +98,18 @@ private const val scrollPxTrigInvisible = 250f
 @Composable
 fun CharacterInfoPage(
     modifier: Modifier = Modifier,
-    navController: NavController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData,
-    backStackEntry: NavBackStackEntry? = null,
+    backStackEntry: BackStackEntry,
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ) {
 
     var density = LocalDensity.current.density
-    val characterFileName = backStackEntry!!.arguments?.getString("fileName")!!
-    val characterName = backStackEntry.arguments?.getString("charName")!!.replace("_", " ")
-    val characterId = backStackEntry.arguments?.getString("charId")!!
-    val combatType = CombatType.valueOf(backStackEntry.arguments?.getString("combatType")!!)
-    val path = types.Path.valueOf(backStackEntry.arguments?.getString("path")!!)
+    val characterName = backStackEntry.path<String>("charName")!!.replace("_", " ")
+    val characterFileName = backStackEntry.query<String>("fileName")!!
+    val characterId = backStackEntry.query<String>("charId")!!
+    val combatType = CombatType.valueOf(backStackEntry.query<String>("combatType")!!)
+    val path = types.Path.valueOf(backStackEntry.query<String>("path")!!)
 
     val hazeState = remember { HazeState() }
     val charInfoJson = Character.getCharacterDataFromFileName(characterFileName, Language.TextLanguageInstance)
@@ -166,7 +168,7 @@ fun CharacterInfoPage(
         }
 
         PageHeader(
-            navController = navController,
+            navigator = navigator,
             headerData = headerDataPage,
             hazeState = hazeState,
             backIconId = BackIcon.CANCEL,

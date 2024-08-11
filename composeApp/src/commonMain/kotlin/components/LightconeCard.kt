@@ -52,17 +52,17 @@ import utils.FontSizeNormal12
 import utils.TextColorNormalDim
 import utils.UtilTools
 import utils.navigation.Screen
-import utils.navigation.navControllerInstance
+import utils.navigation.navigatorInstance
 
 @Composable
 fun LightconeCard(
     lightcone: Lightcone,
     level: Int? = -1,
     ascensionPhase: Int? = -1, //Rank 突破等級
-    onClick: () -> Unit = { navControllerInstance.navigate(
+    onClick: () -> Unit = { navigatorInstance.navigate(
         Screen.LightconeInfoPage.route
                 + "/${lightcone.registName!!.replace(" ","_")}"
-                + "/?fileName=${lightcone.fileName}"
+                + "?fileName=${lightcone.fileName}"
                 + "&path=${lightcone.path}"
 
     ) }, //按下後會做甚麼

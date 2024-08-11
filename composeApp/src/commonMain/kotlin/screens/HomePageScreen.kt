@@ -57,7 +57,6 @@ import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import coil3.request.CachePolicy
@@ -81,6 +80,7 @@ import files.Res
 import files.Setting
 import files.donate_ad_bg
 import files.ic_rounded_option_btn
+import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.painterResource
 import types.Character
 import types.Constants.Companion.HOME_PAGE_ITEMS
@@ -97,11 +97,15 @@ import utils.TextColorNormalDim
 import utils.UtilTools
 import utils.checkHasErrorLogFromLastCrash
 import utils.navigation.Screen
-import utils.navigation.navControllerInstance
+import utils.navigation.navigatorInstance
 import kotlin.math.min
 
 @Composable
-fun HomePage(modifier: Modifier = Modifier, navController: NavController, headerData: HeaderData = defaultHeaderData) {
+fun HomePage(
+    modifier: Modifier = Modifier,
+    navigator: Navigator,
+    headerData: HeaderData = defaultHeaderData
+) {
     val threeDotDialogDisplay = remember { mutableStateOf(false) }
     val threeDotDialogPos = remember { mutableStateOf<Offset>(Offset(0f, 0f)) }
     val hazeState = remember { HazeState() }
@@ -116,12 +120,12 @@ fun HomePage(modifier: Modifier = Modifier, navController: NavController, header
         .haze(hazeState)
     ) {
         Column {
-            HomePageHeader(navController = navController, threeDotDialogPos = threeDotDialogPos, threeDotDialogDisplay = threeDotDialogDisplay, userAccount = userAccount.value)
-            HomePageMenuScrollView(navController = navController,userAccount = userAccount.value)
+            HomePageHeader(navigator = navigator, threeDotDialogPos = threeDotDialogPos, threeDotDialogDisplay = threeDotDialogDisplay, userAccount = userAccount.value)
+            HomePageMenuScrollView(navigator = navigator,userAccount = userAccount.value)
         }
     }
 
-    ThreeDotsDialog(navController = navController, threeDotDialogPos = threeDotDialogPos, hazeState = hazeState, threeDotDialogDisplay = threeDotDialogDisplay, userAccount = userAccount)
+    ThreeDotsDialog(navigator = navigator, threeDotDialogPos = threeDotDialogPos, hazeState = hazeState, threeDotDialogDisplay = threeDotDialogDisplay, userAccount = userAccount)
 
 }
 
@@ -129,7 +133,7 @@ fun HomePage(modifier: Modifier = Modifier, navController: NavController, header
 fun UserHelpTeamIcon(
     modifier: Modifier = Modifier,
     character: Character,
-    navController: NavController,
+    navigator: Navigator,
     uid: String
 ) {
     AsyncImage(
@@ -143,7 +147,7 @@ fun UserHelpTeamIcon(
             .border(1.5.dp, Color(0xFFD3D3D3), CircleShape)
             .clickable {
                 if (uid != "") {
-                    navController.navigate("${Screen.UserCharacterPageScreen.route}?uid=${uid}&charId=${character.officialId}")
+                    navigator.navigate("${Screen.UserCharacterPageScreen.route}?uid=${uid}&charId=${character.officialId}")
                 }
             }
     )
@@ -153,10 +157,10 @@ fun UserHelpTeamIcon(
 @Composable
 fun HomePageHeader(
     modifier: Modifier = Modifier,
-    navController: NavController,
+    navigator: Navigator,
     threeDotDialogPos: MutableState<Offset>,
     threeDotDialogDisplay: MutableState<Boolean>,
-    userAccount : UserAccount,
+    userAccount: UserAccount,
 ) {
     Box(
         modifier = Modifier
@@ -199,7 +203,7 @@ fun HomePageHeader(
                         .border(1.dp, Color(0x66907C54), CircleShape)
                         .clickable {
                             if (userAccount.isLogin) {
-                                navController.navigate("${Screen.UserInfoPageScreen.route}?uid=${userAccount.uid}")
+                                navigator.navigate("${Screen.UserInfoPageScreen.route}?uid=${userAccount.uid}")
                             }
                         }, contentAlignment = Alignment.Center
                     ) {
@@ -242,12 +246,12 @@ fun HomePageHeader(
                             item {
                                 val filterResult = userAccount.characterList.filter { it.characterStatus != null && it.characterStatus!!.isHelper }
                                 if (filterResult.isNotEmpty()) {
-                                    filterResult.forEach { UserHelpTeamIcon(character = it, navController = navController, uid = userAccount.uid) }
+                                    filterResult.forEach { UserHelpTeamIcon(character = it, navigator = navigator, uid = userAccount.uid) }
                                 }else if(userAccount.characterList.size > 0){
                                     for (i in 0 until min(userAccount.characterList.size, 6)) {
                                         UserHelpTeamIcon(
                                             character = userAccount.characterList[i],
-                                            navController = navController,
+                                            navigator = navigator,
                                             uid = userAccount.uid
                                         )
                                     }
@@ -309,7 +313,7 @@ fun HomePageHeader(
 
 
 @Composable
-fun HomePageMenuScrollView(modifier: Modifier = Modifier, navController: NavController, userAccount: UserAccount) {
+fun HomePageMenuScrollView(modifier: Modifier = Modifier, navigator: Navigator, userAccount: UserAccount) {
     Column {
         LazyVerticalGrid(
             modifier = Modifier
@@ -334,8 +338,8 @@ fun HomePageMenuScrollView(modifier: Modifier = Modifier, navController: NavCont
                 var blockData: HomePageBlocks.HomePageBlockItem = finalBlockData[index];
                 Box(Modifier.layoutId("HomePageItemBox")){
                     when (blockData.itemType) {
-                        HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W1H1 -> HomePageBlock1x1(blockData,navController = navController)
-                        HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1 -> HomePageBlock2x1(blockData,navController = navController)
+                        HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W1H1 -> HomePageBlock1x1(blockData,navigator = navigator)
+                        HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1 -> HomePageBlock2x1(blockData,navigator = navigator)
                     }
                 }
             }
@@ -370,7 +374,7 @@ fun BetaVersionBox(){
 @Composable
 fun ThreeDotsDialog(
     modifier: Modifier = Modifier,
-    navController: NavController = navControllerInstance,
+    navigator: Navigator = navigatorInstance,
     threeDotDialogPos: MutableState<Offset>,
     hazeState: HazeState = remember { HazeState() },
     threeDotDialogDisplay: MutableState<Boolean>,
@@ -419,7 +423,7 @@ fun ThreeDotsDialog(
                             textRes = Res.string.Setting,
                             onClick = {
                                 threeDotDialogDisplay.value =
-                                    false; navController.navigate(Screen.SettingScreen.route)
+                                    false; navigator.navigate(Screen.SettingScreen.route)
                             },
                             buttonSize = UIButtonSize.SmallChoice
                         )

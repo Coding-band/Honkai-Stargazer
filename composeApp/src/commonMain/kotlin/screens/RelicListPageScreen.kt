@@ -21,8 +21,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
 import com.voc.honkai_stargazer.component.RelicCard
 import components.BackIcon
 import components.HeaderData
@@ -36,15 +34,13 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import org.jetbrains.compose.ui.tooling.preview.Preview
+import moe.tlaster.precompose.navigation.Navigator
 import types.Constants.Companion.CHAR_CARD_WIDTH
 import types.Relic
 import utils.Language
-import utils.navigation.RootContent
-import utils.navigation.Screen
 
 @Composable
-fun RelicListPage(modifier: Modifier = Modifier, navController: NavController, headerData: HeaderData = defaultHeaderData) {
+fun RelicListPage(modifier: Modifier = Modifier, navigator: Navigator, headerData: HeaderData = defaultHeaderData) {
     val hazeState = remember { HazeState() }
     val relicListJSON: JsonArray = Relic.getRelicListFromJSON() as JsonArray
     val relicNameList: ArrayList<String> = arrayListOf()
@@ -94,14 +90,6 @@ fun RelicListPage(modifier: Modifier = Modifier, navController: NavController, h
                 )
             }
         }
-        PageHeader(navController = navController, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.CANCEL)
+        PageHeader(navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.CANCEL)
     }
-}
-
-@Preview
-@Composable
-fun RelicListPagePreview() {
-    RootContent(
-        screen = Screen.LightconeListPage,
-        page = { RelicListPage(navController = rememberNavController()) })
 }

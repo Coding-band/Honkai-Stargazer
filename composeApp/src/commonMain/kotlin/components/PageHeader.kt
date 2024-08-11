@@ -30,8 +30,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.HazeStyle
 import dev.chrisbanes.haze.hazeChild
@@ -41,6 +39,8 @@ import files.phorphos_sun_fill
 import files.ui_icon_back
 import files.ui_icon_close
 import files.ui_icon_share
+import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.rememberNavigator
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
@@ -64,8 +64,8 @@ class HeaderData(
 
 @Composable
 fun PageHeader(
-    navController: NavController = rememberNavController(),
-    onBack: ((navController: NavController) -> Unit) = { navController: NavController -> navController.popBackStack() },
+    navigator: Navigator = rememberNavigator(),
+    onBack: ((navigator : Navigator) -> Unit) = { navigator: Navigator -> navigator.popBackStack() },
     backIconId: BackIcon = BackIcon.BACK,
     onForward: (() -> Unit) = {},
     forwardIconId: DrawableResource = Res.drawable.bg_transparent,
@@ -104,7 +104,7 @@ fun PageHeader(
                     modifier = Modifier
                         .size(40.dp)
                         .align(Alignment.CenterVertically),
-                    onClick = { onBack(navController) },
+                    onClick = { onBack(navigator) },
                 ) {
                     Image(
                         painter = painterResource(resource = backIconId.res),
@@ -147,8 +147,8 @@ fun PageHeader(
 
 @Composable
 fun PageHeaderAlpha(
-    navController: NavController = rememberNavController(),
-    onBack: ((navController: NavController) -> Unit) = { navController: NavController -> navController.popBackStack() },
+    navigator: Navigator = rememberNavigator(),
+    onBack: ((navigator: Navigator) -> Unit) = { navigator: Navigator -> navigator.popBackStack() },
     backIconId: BackIcon = BackIcon.CANCEL,
     onForward: (() -> Unit) = {},
     hazeState: HazeState? = HazeState(),
@@ -177,7 +177,7 @@ fun PageHeaderAlpha(
                     modifier = Modifier
                         .size(40.dp)
                         .align(Alignment.CenterVertically),
-                    onClick = { onBack(navController) },
+                    onClick = { onBack(navigator) },
                 ) {
                     Image(
                         painter = painterResource(resource = backIconId.res),

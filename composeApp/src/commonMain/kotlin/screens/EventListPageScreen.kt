@@ -28,8 +28,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavBackStackEntry
-import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import coil3.request.CachePolicy
@@ -57,6 +55,7 @@ import kotlinx.datetime.TimeZone
 import kotlinx.datetime.format.char
 import kotlinx.datetime.periodUntil
 import kotlinx.datetime.toInstant
+import moe.tlaster.precompose.navigation.Navigator
 import types.Constants
 import types.EventItem
 import types.EventItem.Companion.EventListInstance
@@ -66,9 +65,8 @@ import utils.navigation.Screen
 @Composable
 fun EventListPageScreen(
     modifier: Modifier = Modifier,
-    navController: NavController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData,
-    backStackEntry: NavBackStackEntry? = null,
 ) {
     val isDateOutside = remember { mutableStateOf(Settings().getBoolean("isDateOutside",true)) }
     val hazeState = remember { HazeState() }
@@ -82,7 +80,7 @@ fun EventListPageScreen(
                 Spacer(Modifier.padding(top = PAGE_HEADER_HEIGHT).statusBarsPadding())
             }
             items(eventList.size) { index ->
-                EventItemCard(eventList[index], isDateOutside, navController)
+                EventItemCard(eventList[index], isDateOutside, navigator)
             }
             item {
                 Spacer(Modifier.padding(top = 16.dp).navigationBarsPadding())
@@ -91,7 +89,7 @@ fun EventListPageScreen(
         }
 
         PageHeader(
-            navController = navController,
+            navigator = navigator,
             headerData = headerData,
             hazeState = hazeState,
             backIconId = BackIcon.CANCEL,
@@ -100,7 +98,7 @@ fun EventListPageScreen(
 }
 
 @Composable
-fun EventItemCard(eventItem: EventItem, isDateOutside: MutableState<Boolean>, navController: NavController) {
+fun EventItemCard(eventItem: EventItem, isDateOutside: MutableState<Boolean>, navigator: Navigator) {
     val currentTime = Clock.System.now()
     val endTime = LocalDateTime.parse(eventItem.end_time,
         LocalDateTime.Format { date(LocalDate.Formats.ISO); char(' '); time(LocalTime.Formats.ISO) }
@@ -136,7 +134,7 @@ fun EventItemCard(eventItem: EventItem, isDateOutside: MutableState<Boolean>, na
 
                 is PressInteraction.Release -> {
                     if (isLongClick.not()) {
-                        navController.navigate("${Screen.EventContentPageScreen.route}?eventId=${eventItem.ann_id}")
+                        navigator.navigate("${Screen.EventContentPageScreen.route}?eventId=${eventItem.ann_id}")
                     }
 
                 }

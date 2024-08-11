@@ -83,39 +83,42 @@ kotlin {
             implementation(compose.material)
             implementation(compose.ui)
             implementation(compose.components.resources)
-            implementation("org.jetbrains.androidx.navigation:navigation-compose:2.7.0-alpha07")
-            implementation("dev.chrisbanes.haze:haze:0.6.2") //Haze's BlurView https://github.com/chrisbanes/haze
-            implementation("io.coil-kt.coil3:coil:3.0.0-alpha06")
+            //implementation("org.jetbrains.androidx.navigation:navigation-compose:2.7.0-alpha07")
+            implementation(libs.haze) //Haze's BlurView https://github.com/chrisbanes/haze
+            implementation(libs.coil)
             implementation(libs.kotlinx.serialization.json)
             implementation(compose.components.uiToolingPreview)
-            implementation("com.russhwolf:multiplatform-settings:1.1.1")
-            implementation("com.russhwolf:multiplatform-settings-no-arg:1.1.1")
-            implementation("com.mohamedrejeb.richeditor:richeditor-compose:1.0.0-rc05")
+            implementation(libs.multiplatform.settings)
+            implementation(libs.multiplatform.settings.no.arg)
 
-            implementation("com.squareup.okio:okio:3.9.0")
+            implementation(libs.okio)
 
-            implementation("io.coil-kt.coil3:coil:3.0.0-alpha08")
-            implementation("io.coil-kt.coil3:coil-network-ktor:3.0.0-alpha08")
-            implementation("io.coil-kt.coil3:coil-compose-core:3.0.0-alpha08")
+            implementation(libs.coil.network.ktor)
+            implementation(libs.coil.compose.core)
 
             //Ktor - Web Request I/O
-            implementation("io.ktor:ktor-client-core:2.0.0")
-            implementation("io.ktor:ktor-client-cio:2.0.0")
-            implementation("io.ktor:ktor-serialization-kotlinx-json:2.0.0")
-            implementation("io.ktor:ktor-client-content-negotiation:2.0.0")
-            implementation("io.ktor:ktor-client-serialization:2.0.0")
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.cio)
+            implementation(libs.ktor.serialization.kotlinx.json)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.client.serialization)
 
             // use api since the desktop app need to access the Cef to initialize it.
-            api("io.github.kevinnzou:compose-webview-multiplatform:1.9.20")
+            api(libs.compose.webview.multiplatform)
+
+            // Precompose!
+            api(libs.tlaster.precompose)
 
             //Kotlinx DateTime
-            implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.0")
+            implementation(libs.kotlinx.datetime)
 
             //Sonner - Toast
-            implementation("io.github.dokar3:sonner:0.3.8")
+            implementation(libs.sonner)
+
+            implementation(libs.richeditor.compose)
 
             //Screen Capture
-            implementation("network.chaintech:compose-multiplatform-screen-capture:1.0.1")
+            //implementation(libs.compose.multiplatform.screen.capture)
 
         }
         desktopMain.dependencies {
@@ -124,11 +127,11 @@ kotlin {
                 exclude("org.jetbrains.compose.material")
             }
             // Explicitly include this is required to fix Proguard warnings coming from Kotlinx.DateTime
-            implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.7.0")
+            implementation(libs.kotlinx.serialization.core)
 
         }
         nativeMain.dependencies {
-            implementation("io.ktor:ktor-client-darwin:2.0.0")
+            implementation(libs.ktor.client.darwin)
         }
     }
 

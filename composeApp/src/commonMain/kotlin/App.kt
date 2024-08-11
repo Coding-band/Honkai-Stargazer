@@ -1,6 +1,7 @@
 
 
 import androidx.compose.runtime.Composable
+import moe.tlaster.precompose.PreComposeApp
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import utils.Stargazer3Theme
 import utils.navigation.Navigation
@@ -16,6 +17,8 @@ fun App() {
     Stargazer3Theme(
         darkTheme = true
     ){
-        Navigation()
+        PreComposeApp {
+            Navigation()
+        }
     }
 }

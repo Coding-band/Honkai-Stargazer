@@ -47,17 +47,17 @@ import utils.FontSizeNormal12
 import utils.TextColorNormalDim
 import utils.UtilTools
 import utils.navigation.Screen
-import utils.navigation.navControllerInstance
+import utils.navigation.navigatorInstance
 
 @Composable
 fun RelicCard(
     relic: Relic,
     level: Int? = -1,
     ascensionPhase: Int? = -1, //Rank 突破等級
-    onClick: () -> Unit = { navControllerInstance.navigate(
+    onClick: () -> Unit = { navigatorInstance.navigate(
         Screen.RelicInfoPage.route
                 + "/${relic.registName!!.replace(" ","_")}"
-                + "/?fileName=${relic.fileName}"
+                + "?fileName=${relic.fileName}"
 
     ) }, //按下後會做甚麼
 ) {
@@ -133,10 +133,10 @@ fun RelicCard(
 fun RelicSmallCard(
     relic: Relic,
     pieceIndex : Int = 1,
-    onClick: () -> Unit = { navControllerInstance.navigate(
+    onClick: () -> Unit = { navigatorInstance.navigate(
         Screen.RelicInfoPage.route
                 + "/${relic.registName!!.replace(" ","_")}"
-                + "/?fileName=${relic.fileName}"
+                + "?fileName=${relic.fileName}"
 
     ) }, //按下後會做甚麼
 ){

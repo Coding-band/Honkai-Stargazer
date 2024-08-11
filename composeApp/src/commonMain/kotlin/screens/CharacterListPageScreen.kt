@@ -21,8 +21,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
 import com.voc.honkai_stargazer.component.CharacterCard
 import components.BackIcon
 import components.HeaderData
@@ -36,19 +34,18 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import org.jetbrains.compose.ui.tooling.preview.Preview
+import moe.tlaster.precompose.navigation.Navigator
 import types.Character
 import types.CombatType
 import types.Constants.Companion.CHAR_CARD_WIDTH
 import types.Path
 import utils.Language
-import utils.navigation.RootContent
 import utils.navigation.Screen
 
 @Composable
 fun CharacterListPage(
     modifier: Modifier = Modifier,
-    navController: NavController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData
 ) {
     val hazeState = remember { HazeState() }
@@ -119,10 +116,10 @@ fun CharacterListPage(
                     onClick = {
                         val charName = charListItem.jsonObject["name"]?.jsonPrimitive?.content!!;
                         val fileName = charListItem.jsonObject["fileName"]?.jsonPrimitive?.content!!;
-                        navController.navigate(
+                        navigator.navigate(
                             Screen.CharacterInfoPage.route
                                   + "/${charName.replace(" ","_")}"
-                                  + "/?fileName=${fileName}"
+                                  + "?fileName=${fileName}"
                                   + "&combatType=${charListItem.jsonObject["element"]?.jsonPrimitive?.content!!}"
                                   + "&path=${charListItem.jsonObject["path"]?.jsonPrimitive?.content!!}"
                                   + "&charId=${charListItem.jsonObject["charId"]?.jsonPrimitive?.content!!}"
@@ -138,19 +135,6 @@ fun CharacterListPage(
                 )
             }
         }
-        PageHeader(navController = navController, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.CANCEL)
+        PageHeader(navigator = navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.CANCEL)
     }
-}
-
-@Preview
-@Composable
-fun CharacterListPagePreview() {
-    RootContent(
-        screen = Screen.CharacterListPage,
-        page = {
-            CharacterListPage(
-                headerData = Screen.CharacterListPage.headerData,
-                navController = rememberNavController()
-            )
-        })
 }

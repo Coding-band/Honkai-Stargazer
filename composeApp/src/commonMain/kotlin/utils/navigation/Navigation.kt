@@ -6,26 +6,20 @@
 
 package utils.navigation
 
-import androidx.compose.animation.EnterTransition
-import androidx.compose.animation.ExitTransition
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.foundation.layout.Box
 import androidx.compose.material.Scaffold
 import androidx.compose.material.SnackbarHost
 import androidx.compose.material.SnackbarHostState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavController
-import androidx.navigation.NavType
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navArgument
 import com.dokar.sonner.Toaster
 import com.dokar.sonner.ToasterState
 import com.dokar.sonner.rememberToasterState
@@ -57,6 +51,11 @@ import files.phorphos_map_trifold_fill
 import files.phorphos_person_fill
 import files.phorphos_sliders_horizontal_fill
 import files.phorphos_sword_fill
+import moe.tlaster.precompose.navigation.NavHost
+import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.SwipeProperties
+import moe.tlaster.precompose.navigation.rememberNavigator
+import moe.tlaster.precompose.navigation.transition.NavTransition
 import screens.BackgroundSettingScreen
 import screens.CharacterInfoPage
 import screens.CharacterListPage
@@ -77,9 +76,12 @@ import screens.UserCharacterPageScreen
 import screens.UserInfoPageScreen
 
 //This should not be there, but CharacterCard need it in clickable, without using @Composable ...
-lateinit var navControllerInstance : NavController
+lateinit var navigatorInstance : Navigator
 lateinit var toastInstance : ToasterState
 lateinit var pomPomPopupInstance: MutableState<PomPomPopup>
+
+lateinit var swipeProperties: SwipeProperties
+lateinit var navTransition : NavTransition
 
 var isHomePaged = false
 sealed class Screen(val route: String, val headerData: HeaderData = defaultHeaderData) {
@@ -164,294 +166,284 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
 @Composable
 fun Navigation() {
     println("HI IS FROM APP.KT")
-    val navController = rememberNavController()
+    val navigator = rememberNavigator()
     val snackbarHostState = remember { SnackbarHostState() }
-    val coroutineScope = rememberCoroutineScope()
-    val errorMessage by remember { mutableStateOf<String?>(null) }
-    //val defaultEnterTransition = EnterTransition.None
-    //val defaultExitTransition = ExitTransition.None
-    val defaultEnterTransition = EnterTransition.None
-    val defaultExitTransition = ExitTransition.None
-    navControllerInstance = navController
+
+    navigatorInstance = navigator
     toastInstance = rememberToasterState()
     pomPomPopupInstance = remember { mutableStateOf(PomPomPopup()) }
     docCountDown = remember { mutableStateOf(0) }
-    NavHost(navController = navController, startDestination = Screen.SplashPage.route) {
-        composable(
-            route = Screen.SplashPage.route,
-            enterTransition = { defaultEnterTransition },
-            exitTransition = { defaultExitTransition }) {
-            SplashPage(navController = navController, headerData = Screen.HomePage.headerData)
+    swipeProperties = remember { SwipeProperties() }
+    navTransition = remember {
+        NavTransition(
+            createTransition = slideInHorizontally(animationSpec = tween(easing = LinearEasing)) { it },
+            destroyTransition = slideOutHorizontally(animationSpec = tween(easing = LinearEasing)) { it },
+            pauseTransition = slideOutHorizontally { -it / 4 },
+            resumeTransition = slideInHorizontally { -it / 4 },
+            exitTargetContentZIndex = 1f
+        )
+    }
+
+    NavHost(
+        navigator = navigator,
+        swipeProperties = swipeProperties,
+        navTransition = navTransition,
+        initialRoute = Screen.SplashPage.route
+    ) {
+        scene(route = Screen.SplashPage.route, navTransition = navTransition) {
+            SplashPage(navigator = navigator, headerData = Screen.HomePage.headerData)
         }
-        composable(
-            route = Screen.HomePage.route,
-            enterTransition = { defaultEnterTransition },
-            exitTransition = { defaultExitTransition }) {
+
+        scene(route = Screen.HomePage.route, navTransition = navTransition) {
             RootContent(
                 screen = Screen.HomePage,
                 snackbarHostState = snackbarHostState,
                 page = {
                     HomePage(
-                        navController = navController,
+                        navigator = navigator,
                         headerData = Screen.HomePage.headerData
                     )
-                })
+                }
+            )
         }
-        composable(
-            route = Screen.CharacterListPage.route,
-            enterTransition = { defaultEnterTransition },
-            exitTransition = { defaultExitTransition }) {
+
+        scene(
+            route = Screen.CharacterListPage.route, navTransition = navTransition) {
             RootContent(
                 screen = Screen.CharacterListPage,
                 snackbarHostState = snackbarHostState,
                 page = {
                     CharacterListPage(
-                        navController = navController,
+                        navigator = navigator,
                         headerData = Screen.CharacterListPage.headerData
                     )
-                })
+                }
+            )
         }
-        composable(
-            route = Screen.LightconeListPage.route,
-            enterTransition = { defaultEnterTransition },
-            exitTransition = { defaultExitTransition }) {
+
+        scene(
+            route = Screen.LightconeListPage.route, navTransition = navTransition) {
             RootContent(
                 screen = Screen.LightconeListPage,
                 snackbarHostState = snackbarHostState,
                 page = {
                     LightconeListPage(
-                        navController = navController,
+                        navigator = navigator,
                         headerData = Screen.LightconeListPage.headerData
                     )
-                })
+                }
+            )
         }
-        composable(
-            route = Screen.RelicListPage.route,
-            enterTransition = { defaultEnterTransition },
-            exitTransition = { defaultExitTransition }) {
+
+        scene(
+            route = Screen.RelicListPage.route, navTransition = navTransition) {
             RootContent(
                 screen = Screen.RelicListPage,
                 snackbarHostState = snackbarHostState,
                 page = {
                     RelicListPage(
-                        navController = navController,
+                        navigator = navigator,
                         headerData = Screen.RelicListPage.headerData
                     )
-                })
+                }
+            )
         }
-        composable(
-            route = "${Screen.CharacterInfoPage.route}/{charName}/?fileName={fileName}&combatType={combatType}&path={path}&charId={charId}",
-            arguments = listOf(
-                (navArgument("fileName") { type = NavType.StringType }),
-                (navArgument("charName") { type = NavType.StringType }),
-                (navArgument("combatType") { type = NavType.StringType }),
-                (navArgument("path") { type = NavType.StringType }),
-                (navArgument("charId") { type = NavType.StringType }),
-            ),
-            enterTransition = { defaultEnterTransition }, exitTransition = { defaultExitTransition }
+
+        scene(
+            //?fileName={fileName}&combatType={combatType}&path={path}&charId={charId}
+            route = "${Screen.CharacterInfoPage.route}/{charName}",
+            navTransition = navTransition
         ) { backStackEntry ->
             RootContent(
                 screen = Screen.CharacterInfoPage,
                 snackbarHostState = snackbarHostState,
                 page = {
                     CharacterInfoPage(
-                        navController = navController,
+                        navigator = navigator,
                         headerData = Screen.CharacterInfoPage.headerData,
                         backStackEntry = backStackEntry,
                         snackbarHostState = snackbarHostState
                     )
-                })
+                }
+            )
         }
-        composable(
-            route = "${Screen.LightconeInfoPage.route}/{lcName}/?fileName={fileName}&path={path}",
-            arguments = listOf(
-                (navArgument("fileName") { type = NavType.StringType }),
-                (navArgument("lcName") { type = NavType.StringType }),
-                (navArgument("path") { type = NavType.StringType }),
-            ),
-            enterTransition = { defaultEnterTransition }, exitTransition = { defaultExitTransition }
+
+        scene(
+            //?fileName={fileName}&path={path}
+            route = "${Screen.LightconeInfoPage.route}/{lcName}",
+            navTransition = navTransition
         ) { backStackEntry ->
             RootContent(
                 screen = Screen.LightconeInfoPage,
                 snackbarHostState = snackbarHostState,
                 page = {
                     LightconeInfoPage(
-                        navController = navController,
+                        navigator = navigator,
                         headerData = Screen.LightconeInfoPage.headerData,
                         backStackEntry = backStackEntry,
                         snackbarHostState = snackbarHostState
                     )
-                })
+                }
+            )
         }
-        composable(
-            route = "${Screen.RelicInfoPage.route}/{relicName}/?fileName={fileName}",
-            arguments = listOf(
-                (navArgument("fileName") { type = NavType.StringType }),
-                (navArgument("relicName") { type = NavType.StringType }),
-            ),
-            enterTransition = { defaultEnterTransition }, exitTransition = { defaultExitTransition }
+
+        //?fileName={fileName}
+        scene(
+            route = "${Screen.RelicInfoPage.route}/{relicName}",
+            navTransition = navTransition
         ) { backStackEntry ->
             RootContent(
                 screen = Screen.RelicInfoPage,
                 snackbarHostState = snackbarHostState,
                 page = {
                     RelicInfoPage(
-                        navController = navController,
+                        navigator = navigator,
                         headerData = Screen.RelicInfoPage.headerData,
                         backStackEntry = backStackEntry,
                         snackbarHostState = snackbarHostState
                     )
-                })
+                }
+            )
         }
 
-        composable(
-            route = Screen.SettingScreen.route,
-            enterTransition = { defaultEnterTransition },
-            exitTransition = { defaultExitTransition }) {
+        scene(
+            route = Screen.SettingScreen.route, navTransition = navTransition) {
             RootContent(
                 screen = Screen.SettingScreen,
                 snackbarHostState = snackbarHostState,
                 page = {
                     SettingScreen(
-                        navController = navController,
+                        navigator = navigator,
                         headerData = Screen.SettingScreen.headerData
                     )
-                })
+                }
+            )
         }
 
-        composable(
-            route = Screen.BackgroundSettingScreen.route,
-            enterTransition = { defaultEnterTransition },
-            exitTransition = { defaultExitTransition }) {
+        scene(
+            route = Screen.BackgroundSettingScreen.route, navTransition = navTransition) {
             RootContent(
                 screen = Screen.BackgroundSettingScreen,
                 snackbarHostState = snackbarHostState,
                 page = {
                     BackgroundSettingScreen(
-                        navController = navController,
+                        navigator = navigator,
                         headerData = Screen.BackgroundSettingScreen.headerData
                     )
-                })
+                }
+            )
         }
-        composable(
-            route = "${Screen.HoyolabLoginPageScreen.route}?serverId={serverId}",
-            arguments = listOf(
-                (navArgument("serverId") { type = NavType.StringType }),
-            ),
-            enterTransition = { defaultEnterTransition }, exitTransition = { defaultExitTransition }
+
+        //?serverId={serverId}
+        scene(
+            route = Screen.HoyolabLoginPageScreen.route,
+            navTransition = navTransition
         ) { backStackEntry ->
             RootContent(
                 screen = Screen.HoyolabLoginPageScreen,
                 snackbarHostState = snackbarHostState,
                 page = {
                     HoyolabLoginPageScreen(
-                        navController = navController,
+                        navigator = navigator,
                         headerData = Screen.HoyolabLoginPageScreen.headerData,
                         backStackEntry = backStackEntry,
                         snackbarHostState = snackbarHostState
                     )
-                })
+                }
+            )
         }
 
-        composable(
-            route = Screen.EventListPageScreen.route,
-            enterTransition = { defaultEnterTransition },
-            exitTransition = { defaultExitTransition }) {
+        scene(
+            route = Screen.EventListPageScreen.route, navTransition = navTransition) {
             RootContent(
                 screen = Screen.EventListPageScreen,
                 snackbarHostState = snackbarHostState,
                 page = {
                     EventListPageScreen(
-                        navController = navController,
+                        navigator = navigator,
                         headerData = Screen.EventListPageScreen.headerData
                     )
                 })
         }
 
-        composable(
-            route = "${Screen.EventContentPageScreen.route}?eventId={eventId}",
-            arguments = listOf(
-                (navArgument("eventId") { type = NavType.IntType }),
-            ),
-            enterTransition = { defaultEnterTransition }, exitTransition = { defaultExitTransition }
+        //?eventId={eventId}
+        scene(
+            route = Screen.EventContentPageScreen.route,
+            navTransition = navTransition
         ) { backStackEntry ->
             RootContent(
                 screen = Screen.EventContentPageScreen,
                 snackbarHostState = snackbarHostState,
                 page = {
                     EventContentPageScreen(
-                        navController = navController,
+                        navigator = navigator,
                         headerData = Screen.EventContentPageScreen.headerData,
                         backStackEntry = backStackEntry,
                     )
-                })
+                }
+            )
         }
-        composable(
-            route = Screen.MapPageScreen.route,
-            enterTransition = { defaultEnterTransition },
-            exitTransition = { defaultExitTransition }) {
+        scene(
+            route = Screen.MapPageScreen.route, navTransition = navTransition) {
             RootContent(
                 screen = Screen.MapPageScreen,
                 snackbarHostState = snackbarHostState,
                 page = {
                     MapPageScreen(
-                        navController = navController,
+                        navigator = navigator,
                         headerData = Screen.MapPageScreen.headerData
                     )
-                })
+                }
+            )
         }
 
-        composable(
-            route = "${Screen.UserInfoPageScreen.route}?uid={uid}",
-            arguments = listOf(
-                (navArgument("uid") { type = NavType.StringType }),
-            ),
-            enterTransition = { defaultEnterTransition }, exitTransition = { defaultExitTransition }
+        //?uid={uid}
+        scene(
+            route = Screen.UserInfoPageScreen.route,
+            navTransition = navTransition
         ) { backStackEntry ->
             RootContent(
                 screen = Screen.UserInfoPageScreen,
                 snackbarHostState = snackbarHostState,
                 page = {
                     UserInfoPageScreen(
-                        navController = navController,
+                        navigator = navigator,
                         headerData = Screen.UserInfoPageScreen.headerData,
                         backStackEntry = backStackEntry,
                     )
-                })
+                }
+            )
         }
 
-        composable(
-            route = "${Screen.UserCharacterPageScreen.route}?uid={uid}&charId={charId}",
-            arguments = listOf(
-                (navArgument("uid") { type = NavType.StringType }),
-                (navArgument("charId") { type = NavType.IntType }),
-            ),
-            enterTransition = { defaultEnterTransition }, exitTransition = { defaultExitTransition }
+        //?uid={uid}&charId={charId}
+        scene(
+            route = Screen.UserCharacterPageScreen.route,
+            navTransition = navTransition
         ) { backStackEntry ->
             RootContent(
                 screen = Screen.UserCharacterPageScreen,
                 snackbarHostState = snackbarHostState,
                 page = {
                     UserCharacterPageScreen(
-                        navController = navController,
+                        navigator = navigator,
                         headerData = Screen.UserCharacterPageScreen.headerData,
                         backStackEntry = backStackEntry,
                     )
-                })
+                }
+            )
         }
-        composable(
-            route = Screen.UIDSearchPageScreen.route,
-            enterTransition = { defaultEnterTransition },
-            exitTransition = { defaultExitTransition }) {
+        scene(
+            route = Screen.UIDSearchPageScreen.route, navTransition = navTransition) {
             RootContent(
                 screen = Screen.UIDSearchPageScreen,
                 snackbarHostState = snackbarHostState,
                 page = {
                     UIDSearchPageScreen(
-                        navController = navController,
+                        navigator = navigator,
                         headerData = Screen.UIDSearchPageScreen.headerData
                     )
-                })
+                }
+            )
         }
     }
 }

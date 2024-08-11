@@ -17,7 +17,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
 import components.HeaderData
 import components.defaultHeaderData
 import files.Res
@@ -29,6 +28,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -45,7 +45,7 @@ import utils.starbase.StarbaseAPI
 @Composable
 fun SplashPage(
     modifier: Modifier = Modifier,
-    navController: NavController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData
 ) {
 
@@ -59,7 +59,7 @@ fun SplashPage(
         }
 
         withContext(Dispatchers.Main) {
-            navController.navigate(Screen.HomePage.route)
+            navigator.navigate(Screen.HomePage.route)
         }
     }
 

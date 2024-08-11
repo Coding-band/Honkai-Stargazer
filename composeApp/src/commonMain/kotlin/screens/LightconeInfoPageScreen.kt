@@ -28,8 +28,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavBackStackEntry
-import androidx.navigation.NavController
 import components.BackIcon
 import components.HeaderData
 import components.InfoAdviceCharacter
@@ -60,6 +58,10 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.FlowPreview
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import moe.tlaster.precompose.navigation.BackStackEntry
+import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.path
+import moe.tlaster.precompose.navigation.query
 import types.Lightcone
 import utils.Language
 import utils.UtilTools
@@ -80,16 +82,16 @@ private const val scrollPxTrigInvisible = 250f
 @Composable
 fun LightconeInfoPage(
     modifier: Modifier = Modifier,
-    navController: NavController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData,
-    backStackEntry: NavBackStackEntry? = null,
+    backStackEntry: BackStackEntry,
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ) {
 
     var density = LocalDensity.current.density
-    val lightconeFileName = backStackEntry!!.arguments?.getString("fileName")!!
-    val lightconeName = backStackEntry.arguments?.getString("lcName")!!.replace("_", " ")
-    val path = types.Path.valueOf(backStackEntry.arguments?.getString("path")!!)
+    val lightconeName = backStackEntry.path<String>("lcName")!!.replace("_", " ")
+    val lightconeFileName = backStackEntry.query<String>("fileName")!!
+    val path = types.Path.valueOf(backStackEntry.query<String>("path")!!)
 
     val hazeState = remember { HazeState() }
     val lcInfoJson = Lightcone.getLightconeDataFromJSON(lightconeFileName, Language.TextLanguageInstance)
@@ -137,7 +139,7 @@ fun LightconeInfoPage(
         }
 
         PageHeader(
-            navController = navController,
+            navigator = navigator,
             headerData = headerDataPage,
             hazeState = hazeState,
             backIconId = BackIcon.CANCEL,

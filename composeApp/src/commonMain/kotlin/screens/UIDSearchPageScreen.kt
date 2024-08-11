@@ -28,8 +28,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavBackStackEntry
-import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import com.dokar.sonner.ToastType
@@ -48,6 +46,7 @@ import files.Res
 import files.UIDNoData
 import files.UIDSearchRecord
 import files.UIDSearchRecordClear
+import moe.tlaster.precompose.navigation.Navigator
 import types.Constants
 import types.UserAccount.Companion.UIDSEARCH
 import types.UserAccountLite
@@ -59,14 +58,13 @@ import utils.UtilTools
 import utils.hoyolab.HoyolabConst
 import utils.hoyolab.MihomoRequest
 import utils.navigation.Screen
-import utils.navigation.navControllerInstance
+import utils.navigation.navigatorInstance
 
 @Composable
 fun UIDSearchPageScreen(
     modifier: Modifier = Modifier,
-    navController: NavController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData,
-    backStackEntry: NavBackStackEntry? = null,
 ){
     val hazeState = remember { HazeState() }
     val listState = rememberLazyListState()
@@ -104,7 +102,7 @@ fun UIDSearchPageScreen(
                         searchRecordList.value.add(UserAccountLite(UIDSEARCH.uid, UIDSEARCH.username, UIDSEARCH.level, UIDSEARCH.icon, UIDSEARCH.server))
                         UserAccountLite.saveSearchRecordList(searchRecordList.value)
                     }
-                    navControllerInstance.navigate("${Screen.UserInfoPageScreen.route}?uid=${searchWords.value}")
+                    navigatorInstance.navigate("${Screen.UserInfoPageScreen.route}?uid=${searchWords.value}")
                 }else{
                     toaster.show(
                         message = noDataStr,
@@ -148,7 +146,7 @@ fun UIDSearchPageScreen(
                             .background(Color((0x66F3F9FF)), RoundedCornerShape(10.dp))
                             .clip(RoundedCornerShape(10.dp)).clickable {
                                 UIDSEARCH = MihomoRequest(item.uid).getUserAccountByMiHomo()
-                                navControllerInstance.navigate("${Screen.UserInfoPageScreen.route}?uid=${item.uid}")
+                                navigatorInstance.navigate("${Screen.UserInfoPageScreen.route}?uid=${item.uid}")
                             }
                     ) {
                         Row(Modifier.padding(10.dp).fillMaxWidth().wrapContentHeight()) {
@@ -280,7 +278,7 @@ fun UIDSearchPageScreen(
         }
 
         PageHeader(
-            navController = navController,
+            navigator = navigator,
             headerData = headerData,
             hazeState = hazeState,
             backIconId = BackIcon.CANCEL,

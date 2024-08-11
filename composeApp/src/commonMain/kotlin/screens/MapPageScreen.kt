@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavController
 import com.multiplatform.webview.web.WebView
 import com.multiplatform.webview.web.rememberWebViewState
 import components.BackIcon
@@ -17,12 +16,13 @@ import components.PAGE_HEADER_HEIGHT
 import components.PageHeader
 import components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
+import moe.tlaster.precompose.navigation.Navigator
 import utils.Language
 
 @Composable
 fun MapPageScreen(
     modifier: Modifier = Modifier,
-    navController: NavController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData,
 ) {
     val hazeState = remember { HazeState() }
@@ -36,7 +36,7 @@ fun MapPageScreen(
         )
 
         PageHeader(
-            navController = navController,
+            navigator = navigator,
             headerData = headerData,
             hazeState = hazeState,
             backIconId = BackIcon.BACK,

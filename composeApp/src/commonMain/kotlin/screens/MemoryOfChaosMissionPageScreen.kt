@@ -7,19 +7,19 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
-import androidx.navigation.NavBackStackEntry
-import androidx.navigation.NavController
 import components.HeaderData
 import components.PageHeaderAlpha
 import components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
+import moe.tlaster.precompose.navigation.BackStackEntry
+import moe.tlaster.precompose.navigation.Navigator
 
 @Composable
 fun MemoryOfChaosMissionPage(
     modifier: Modifier = Modifier,
-    navController: NavController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData,
-    backStackEntry: NavBackStackEntry? = null,
+    backStackEntry: BackStackEntry,
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ) {
     var density = LocalDensity.current.density
@@ -28,7 +28,7 @@ fun MemoryOfChaosMissionPage(
 
     Box(Modifier.fillMaxSize()) {
         PageHeaderAlpha(
-            navController = navController,
+            navigator = navigator,
             hazeState = hazeState,
         )
     }
