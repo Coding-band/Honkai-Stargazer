@@ -11,6 +11,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.SnackbarHostState
@@ -26,6 +28,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
@@ -52,6 +55,8 @@ import files.BasicStatus
 import files.LightconeEffect
 import files.LightconeStory
 import files.Res
+import files.bg_lightcone_artwork_back
+import files.bg_lightcone_artwork_front
 import files.ic_favourite_btn
 import files.phorphos_chats_circle_regular
 import files.phorphos_info_regular
@@ -67,6 +72,7 @@ import moe.tlaster.precompose.navigation.BackStackEntry
 import moe.tlaster.precompose.navigation.Navigator
 import moe.tlaster.precompose.navigation.path
 import moe.tlaster.precompose.navigation.query
+import org.jetbrains.compose.resources.painterResource
 import types.Lightcone
 import utils.JsonElementSaver
 import utils.Language
@@ -179,13 +185,9 @@ fun LightconeInfoFullImgWithRare(
             exit = fadeOut(),
             modifier = Modifier.fillMaxWidth().fillMaxHeight(0.8f).align(Alignment.BottomCenter)
         ) {
-            Image(
-                bitmap = Lightcone.getLightconeImageFromJSON(
-                    UtilTools.ImageFolderType.LC_ARTWORK, fileName
-                ),
-                contentDescription = "Lightcone Full Image",
-                contentScale = ContentScale.Fit,
-            )
+            Box(Modifier.fillMaxWidth(0.5f), contentAlignment = Alignment.TopCenter) {
+                LightconeInfoFullImageContent(modifier = Modifier.fillMaxWidth(0.85f).rotate(5f).padding(16.dp).align(Alignment.TopCenter), fileName = fileName)
+            }
         }
         Box(
             modifier = Modifier.fillMaxWidth().fillMaxHeight(0.5f).background(
@@ -193,6 +195,36 @@ fun LightconeInfoFullImgWithRare(
                     colors = listOf(Color(0x00000000), Color(0xCC000000))
                 )
             ).align(Alignment.BottomCenter),
+        )
+
+    }
+}
+
+@Composable
+fun LightconeInfoFullImageContent(
+    modifier: Modifier = Modifier,
+    fileName: String,
+) {
+    Box(modifier = modifier) {
+        Image(
+            painter = painterResource(Res.drawable.bg_lightcone_artwork_back),
+            modifier = modifier.offset((12).dp, (12).dp),
+            contentDescription = "Lightcone Back Image",
+            contentScale = ContentScale.FillBounds,
+        )
+        Image(
+            bitmap = Lightcone.getLightconeImageFromJSON(
+                UtilTools.ImageFolderType.LC_ARTWORK, fileName
+            ),
+            modifier = modifier,
+            contentDescription = "Lightcone Full Image",
+            contentScale = ContentScale.Fit,
+        )
+        Image(
+            painter = painterResource(Res.drawable.bg_lightcone_artwork_front),
+            contentDescription = "Lightcone Front Image",
+            modifier = modifier.offset((-12).dp, (-12).dp),
+            contentScale = ContentScale.FillBounds,
         )
 
     }
