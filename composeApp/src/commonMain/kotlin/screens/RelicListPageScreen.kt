@@ -41,12 +41,13 @@ import kotlinx.serialization.json.jsonPrimitive
 import moe.tlaster.precompose.navigation.Navigator
 import types.Constants.Companion.CHAR_CARD_WIDTH
 import types.Relic
+import utils.JsonArraySaver
 import utils.Language
 
 @Composable
 fun RelicListPage(modifier: Modifier = Modifier, navigator: Navigator, headerData: HeaderData = defaultHeaderData) {
     val hazeState = remember { HazeState() }
-    val relicListJSON: JsonArray by rememberSaveable { mutableStateOf(Relic.getRelicListFromJSON() as JsonArray) }
+    val relicListJSON: JsonArray by rememberSaveable(stateSaver = JsonArraySaver) { mutableStateOf(Relic.getRelicListFromJSON() as JsonArray) }
     val relicNameList: ArrayList<String> = rememberSaveable { arrayListOf() }
     var isInited by rememberSaveable { mutableStateOf(false) }
 

@@ -14,7 +14,7 @@ import java.util.Properties
 val appVersion = "2.3.2"
 val appVersionCodeName = "Dan Heng"
 
-val appVersionBeta = "2.4.0"
+val appVersionBeta = "2.4.3"
 val appVersionCodeNameBeta = "Echo"
 
 plugins {
