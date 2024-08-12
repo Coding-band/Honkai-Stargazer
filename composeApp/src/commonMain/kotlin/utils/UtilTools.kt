@@ -263,6 +263,11 @@ class UtilTools {
         return stringResource(stringResource).removePrefix("\"").removeSuffix("\"")
     }
 
+    @Composable
+    fun removeStringResDoubleQuotesTest(stringResource: utils.res.StringResource) : String{
+        return utils.res.stringResource(stringResource).removePrefix("\"").removeSuffix("\"")
+    }
+
     fun pxToDp(px : Int, density: Float) : Dp {
         return Dp(px / density)
     }

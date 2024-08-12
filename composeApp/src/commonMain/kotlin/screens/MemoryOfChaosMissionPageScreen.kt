@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.intl.Locale
 import components.HeaderData
 import components.PageHeaderAlpha
 import components.defaultHeaderData
@@ -27,6 +28,7 @@ fun MemoryOfChaosMissionPage(
 
 
     Box(Modifier.fillMaxSize()) {
+        Locale.current.language
         PageHeaderAlpha(
             navigator = navigator,
             hazeState = hazeState,
