@@ -101,7 +101,7 @@ class UtilTools {
     @OptIn(ExperimentalCoroutinesApi::class, ExperimentalResourceApi::class)
     fun getAssetsWebpByteArrayByFileName(folderType: ImageFolderType, fileName: String): ByteArray {
         return runBlocking {
-            val job = async(Dispatchers.IO) {
+            val job = async(Dispatchers.Default) {
                 try {
                     return@async (Res.readBytes("files/images/${folderType.folderName}/${fileName}${folderType.suffix}"))
                 } catch (e: Exception) {
@@ -141,6 +141,26 @@ class UtilTools {
             job.getCompleted()
         }
     }
+
+    @OptIn(ExperimentalCoroutinesApi::class, ExperimentalResourceApi::class)
+    fun getAssetsJsonStrByFilePath(filePath: String): String {
+        return runBlocking {
+            val job = async(Dispatchers.Default) {
+                try {
+                    //Ararar I spent 4hrs on there lol
+                    val assetString: String = Res.readBytes("files/data/${filePath}").decodeToString()
+                    return@async assetString
+                } catch (e: Exception) {
+                    // Handle the exception, ErrorLogExporter Please!
+                    errorLogExport("UtilTools","getAssetsWebpByFileName()",e)
+                    return@async "{}"
+                }
+            }
+            job.await()
+            job.getCompleted()
+        }
+    }
+
     fun htmlDescApplier(htmlText: String, levelDataParams: ArrayList<Float>) : String{
         var htmlTextFinal = htmlText
 

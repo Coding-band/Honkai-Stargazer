@@ -2,6 +2,8 @@ package utils
 
 import androidx.compose.runtime.Composable
 import com.russhwolf.settings.Settings
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 
 //App語言 Language for App (R.string)
@@ -24,18 +26,43 @@ class Language() {
         JYU_YAM("ㄓㄨˋ ㄧㄣ", "zh"),
         UK("Українська", "uk");
     }
+
+    @Serializable
     enum class TextLanguage(val localeName: String, val folderName: String, val hoyolabName: String, val langCode: String) {
+        @SerialName("en")
         EN("English", "en", "en-us", "en"),
+
+        @SerialName("zh_cn")
         ZH_CN("简体中文", "zh_cn", "zh-cn", "cn"),
+
+        @SerialName("zh_hk")
         ZH_HK("繁體中文", "zh_hk", "zh-tw", "cht"),
+
+        @SerialName("jp")
         JP("日本語", "jp", "ja-jp", "jp"),
+
+        @SerialName("fr")
         FR("Français", "fr", "fr-fr", "fr"),
+
+        @SerialName("ru")
         RU("Русский", "ru", "ru-ru", "ru"),
+
+        @SerialName("de")
         DE("Deutsch", "de", "de-de", "de"),
+
+        @SerialName("pt")
         PT("Português", "pt_pt", "pt-pt", "pt"),
+
+        @SerialName("vi")
         VI("tiếng Việt", "vi", "vi-vn", "vi"),
+
+        @SerialName("es")
         ES("Español", "es_es", "es-es", "es"),
+
+        @SerialName("kr")
         KR("한국어", "kr", "ko-kr", "kr"),
+
+        @SerialName("th")
         TH("ภาษาไทย", "th", "th-th", "th"),
 
         //@DoItLater("Add support to ITALIAN") IT("ITALIAN", "it", "it-it"),

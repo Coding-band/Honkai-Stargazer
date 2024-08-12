@@ -6,8 +6,6 @@
 
 package components
 
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -196,13 +194,7 @@ fun PageHeaderAlpha(
                         )
                 }
                 Box(Modifier.weight(1f)){
-                    androidx.compose.animation.AnimatedVisibility(
-                        visible = !isListScrolling,
-                        enter = fadeIn(),
-                        exit = fadeOut(),
-                    ) {
-                        components()
-                    }
+                    components()
                 }
                 OutlinedButton(
                     contentPadding = PaddingValues(0.dp),
