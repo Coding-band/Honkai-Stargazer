@@ -32,7 +32,6 @@ import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import utils.Language
 import utils.UtilTools
-import utils.annotation.DoItLater
 import utils.annotation.VersionUpdateCheck
 import utils.errorLogExport
 
@@ -98,19 +97,39 @@ data class MemoryOfChaos(
 @Serializable
 data class MemoryOfChaosList(
     @SerialName("id") val id: Int,
-    @Serializable(with = Language.TextLanguageSerializer::class)
     @SerialName("name") val nameList: Map<Language.TextLanguage, String>,
     @SerialName("time") val time: MemoryOfChaosTime
 ){
-    @DoItLater("Fixed the bug of unable to read as a list, or manually work with that")
     companion object{
         fun getMocList(): ArrayList<MemoryOfChaosList> {
+            val retArray = arrayListOf<MemoryOfChaosList>()
             try {
-                val mocJsonStr = UtilTools().getAssetsJsonStrByFilePath("memory_of_chao_data/chao_list.json")
-                return Json.decodeFromString<ArrayList<MemoryOfChaosList>>(mocJsonStr)
+                val mocJson = UtilTools().getAssetsJsonStrByFilePath("memory_of_chao_data/chao_list.json")
+
+                //記得以後Enum要寫全 不然會出問題
+                return Json.decodeFromString<ArrayList<MemoryOfChaosList>>(mocJson)
+                /*
+                val mocJson = UtilTools().getAssetsJsonByFilePath("memory_of_chao_data/chao_list.json")
+                if(mocJson !is JsonArray) return arrayListOf()
+
+                for(mocItem in mocJson){
+                    val nameList = hashMapOf<Language.TextLanguage, String>()
+                    mocItem.jsonObject["name"]?.jsonObject?.map {
+                        nameList[Language.TextLanguage.valueOf(it.key.uppercase())] = it.value.jsonPrimitive.content
+                    }
+
+                    val mocObj = MemoryOfChaosList(
+                        id = mocItem.jsonObject["id"]?.jsonPrimitive?.int ?: -1,
+                        nameList = nameList,
+                        time = Json.decodeFromString(mocItem.jsonObject["time"]!!.jsonObject.toString())
+                    )
+                    retArray.add(mocObj)
+                }
+                 */
+
             }catch (e: Exception) {
                 errorLogExport("MemoryOfChaosList", "getMocList()", e)
-                return arrayListOf()
+                return retArray
             }
         }
     }

@@ -82,9 +82,14 @@ class Language() {
         @SerialName("th")
         TH("ภาษาไทย", "th", "th-th", "th"),
 
-        //@DoItLater("Add support to ITALIAN") IT("ITALIAN", "it", "it-it"),
-        //@DoItLater("Add support to TURKISH") TR("TURKISH", "tr", "tr-tr"),
-        //@DoItLater("Add support to INDONESIAN") ID("INDONESIAN", "id", "id-id"),
+        @SerialName("it")
+        IT("ITALIAN", "it", "it-it", "it"),
+
+        @SerialName("tr")
+        TR("TURKISH", "tr", "tr-tr", "tr"),
+
+        @SerialName("id")
+        ID("INDONESIAN", "id", "id-id", "id"),
     }
 
     companion object{
