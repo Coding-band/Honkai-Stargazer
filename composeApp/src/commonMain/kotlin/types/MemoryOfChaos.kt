@@ -32,6 +32,7 @@ import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import utils.Language
 import utils.UtilTools
+import utils.annotation.DoItLater
 import utils.annotation.VersionUpdateCheck
 import utils.errorLogExport
 
@@ -92,6 +93,28 @@ data class MemoryOfChaos(
         }
 
     }
+}
+
+@Serializable
+data class MemoryOfChaosList(
+    @SerialName("id") val id: Int,
+    @Serializable(with = Language.TextLanguageSerializer::class)
+    @SerialName("name") val nameList: Map<Language.TextLanguage, String>,
+    @SerialName("time") val time: MemoryOfChaosTime
+){
+    @DoItLater("Fixed the bug of unable to read as a list, or manually work with that")
+    companion object{
+        fun getMocList(): ArrayList<MemoryOfChaosList> {
+            try {
+                val mocJsonStr = UtilTools().getAssetsJsonStrByFilePath("memory_of_chao_data/chao_list.json")
+                return Json.decodeFromString<ArrayList<MemoryOfChaosList>>(mocJsonStr)
+            }catch (e: Exception) {
+                errorLogExport("MemoryOfChaosList", "getMocList()", e)
+                return arrayListOf()
+            }
+        }
+    }
+
 }
 
 @Serializable

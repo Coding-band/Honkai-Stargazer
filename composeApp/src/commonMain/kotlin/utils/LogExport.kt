@@ -151,7 +151,7 @@ fun errorLogExport(className: String, functionName: String, error: Exception) {
 
     showErrorToast(logExportObj)
 
-    if(BuildKonfig.appProfile == "DEV"){
+    if(BuildKonfig.appProfile == "DEV" || BuildKonfig.appProfile == "C.BETA" || BuildKonfig.appProfile == "BETA"){
         error.printStackTrace()
     }
 }

@@ -195,6 +195,7 @@ class Constants {
             HomePageBlocks.HomePageBlockItem(
                 itemTitleRId = Res.string.MemoryOfChaos,
                 itemIconId = Res.drawable.phorphos_medal_military_fill,
+                itemOnClickToNavigate = Screen.MemoryOfChaosMissionPageScreen
                 /* itemOnClickAction = {
 
                     val obj = MemoryOfChaos.getMocItemByMocId(1016)!!.toString()

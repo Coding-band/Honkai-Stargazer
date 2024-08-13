@@ -2,8 +2,14 @@ package utils
 
 import androidx.compose.runtime.Composable
 import com.russhwolf.settings.Settings
+import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.descriptors.PrimitiveKind
+import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
+import kotlinx.serialization.descriptors.SerialDescriptor
+import kotlinx.serialization.encoding.Decoder
+import kotlinx.serialization.encoding.Encoder
 
 
 //App語言 Language for App (R.string)
@@ -27,6 +33,17 @@ class Language() {
         UK("Українська", "uk");
     }
 
+    object TextLanguageSerializer : KSerializer<Language.TextLanguage> {
+        override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("TextLanguage", PrimitiveKind.STRING)
+
+        override fun serialize(encoder: Encoder, value: Language.TextLanguage) {
+            encoder.encodeString(value.name)
+        }
+
+        override fun deserialize(decoder: Decoder): Language.TextLanguage {
+            return Language.TextLanguage.valueOf(decoder.decodeString())
+        }
+    }
     @Serializable
     enum class TextLanguage(val localeName: String, val folderName: String, val hoyolabName: String, val langCode: String) {
         @SerialName("en")

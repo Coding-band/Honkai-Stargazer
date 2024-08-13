@@ -93,7 +93,9 @@ fun HomePageBlock1x1(
     OutlinedButton(
         contentPadding = PaddingValues(10.dp),
         colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent),
-        onClick = blockData.itemOnClickAction ?: {
+        onClick = {
+            blockData.itemOnClickAction
+
             if (blockData.itemOnClickToNavigate !== null) {
                 println("Ok I'm Navigating to " + blockData.itemOnClickToNavigate)
                 navigator.navigate(blockData.itemOnClickToNavigate!!.route)

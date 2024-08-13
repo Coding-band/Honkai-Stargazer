@@ -42,12 +42,13 @@ import files.Res
 import files.Setting
 import files.UIDSearch
 import files.UserInfoGameData
-import files.phorphos_alien_regular
+import files.phorphos_alien_fill
 import files.phorphos_baseball_cap_fill
 import files.phorphos_film_slate_regular
 import files.phorphos_game_controller_regular
 import files.phorphos_house_fill
 import files.phorphos_map_trifold_fill
+import files.phorphos_medal_military_fill
 import files.phorphos_person_fill
 import files.phorphos_sliders_horizontal_fill
 import files.phorphos_sword_fill
@@ -67,6 +68,7 @@ import screens.LightconeInfoPage
 import screens.LightconeListPage
 import screens.MakeBackground
 import screens.MapPageScreen
+import screens.MemoryOfChaosMissionPageScreen
 import screens.RelicInfoPage
 import screens.RelicListPage
 import screens.SettingScreen
@@ -159,7 +161,11 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     )
     data object UIDSearchPageScreen : Screen(
         "UIDSearchPageScreen",
-        HeaderData(titleRId = Res.string.UIDSearch, titleIconId = Res.drawable.phorphos_alien_regular)
+        HeaderData(titleRId = Res.string.UIDSearch, titleIconId = Res.drawable.phorphos_alien_fill)
+    )
+    data object MemoryOfChaosMissionPageScreen : Screen(
+        "MemoryOfChaosMissionPageScreen",
+        HeaderData(titleRId = Res.string.UIDSearch, titleIconId = Res.drawable.phorphos_medal_military_fill)
     )
 }
 
@@ -439,6 +445,19 @@ fun Navigation() {
                 snackbarHostState = snackbarHostState,
                 page = {
                     UIDSearchPageScreen(
+                        navigator = navigator,
+                        headerData = Screen.UIDSearchPageScreen.headerData
+                    )
+                }
+            )
+        }
+        scene(
+            route = Screen.MemoryOfChaosMissionPageScreen.route, navTransition = navTransition) {
+            RootContent(
+                screen = Screen.MemoryOfChaosMissionPageScreen,
+                snackbarHostState = snackbarHostState,
+                page = {
+                    MemoryOfChaosMissionPageScreen(
                         navigator = navigator,
                         headerData = Screen.UIDSearchPageScreen.headerData
                     )
