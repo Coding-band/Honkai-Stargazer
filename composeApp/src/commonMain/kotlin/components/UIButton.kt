@@ -7,6 +7,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -31,6 +32,8 @@ import utils.UtilTools
 public enum class UIButtonSize {
     Normal,
     NormalLargeText,
+    NormalText,
+    NormalTextLeft,
     SmallChoice
 }
 @Composable
@@ -49,21 +52,21 @@ fun UIButton(modifierTmp: Modifier = Modifier, textRes: StringResource? = null, 
             modifier = Modifier.padding(5.dp).border(width = 1.dp, color = Color(0x0F000000), shape = RoundedCornerShape(23.dp))
         ) {
             if(textRes == null && text == null && icon != null){
-                Image(painter = painterResource(icon), contentDescription = "UIButton Icon", modifier = Modifier.padding(16.dp))
+                Image(painter = painterResource(icon), contentDescription = "UIButton Icon", modifier = Modifier.fillMaxSize().padding(4.dp))
             }else if(textRes == null || text == null){
                 Row {
                     Text(
                         if (textRes == null) { text ?: "?" } else UtilTools().removeStringResDoubleQuotes(textRes),
                         style = if(buttonSize == UIButtonSize.NormalLargeText) FontSizeNormal20() else  FontSizeNormal16(),
                         color = if(isAvailable) Color(0xFF222222) else Color(0x4D222222),
-                        textAlign = if(icon != null) TextAlign.Left else TextAlign.Center,
+                        textAlign = if(icon != null || buttonSize == UIButtonSize.NormalTextLeft) TextAlign.Left else TextAlign.Center,
                         maxLines = 1,
                         modifier = Modifier.align(Alignment.CenterVertically).weight(1f).padding(top = if(buttonSize == UIButtonSize.SmallChoice) (2.dp) else 6.dp, bottom = if(buttonSize == UIButtonSize.SmallChoice) (2.dp) else 6.dp, start = 8.dp, end = 8.dp)
                     )
                     if(icon != null){
                         Box(Modifier.width(2.dp).fillMaxHeight().padding(top = 8.dp, bottom =  8.dp))
                         
-                        Image(painter = painterResource(icon), contentDescription = "UIButton Icon", modifier = Modifier.padding(16.dp))
+                        Image(painter = painterResource(icon), contentDescription = "UIButton Icon", modifier = Modifier.fillMaxSize().padding(4.dp))
                     }
                 }
             }

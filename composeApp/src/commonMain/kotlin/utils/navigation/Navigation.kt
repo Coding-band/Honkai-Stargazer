@@ -37,6 +37,7 @@ import files.HaveNotUsed
 import files.LightconeList
 import files.Login
 import files.Map
+import files.MemoryOfChaos
 import files.RelicList
 import files.Res
 import files.Setting
@@ -165,7 +166,7 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     )
     data object MemoryOfChaosMissionPageScreen : Screen(
         "MemoryOfChaosMissionPageScreen",
-        HeaderData(titleRId = Res.string.UIDSearch, titleIconId = Res.drawable.phorphos_medal_military_fill)
+        HeaderData(titleRId = Res.string.MemoryOfChaos, titleIconId = Res.drawable.phorphos_medal_military_fill)
     )
 }
 
@@ -459,7 +460,7 @@ fun Navigation() {
                 page = {
                     MemoryOfChaosMissionPageScreen(
                         navigator = navigator,
-                        headerData = Screen.UIDSearchPageScreen.headerData
+                        headerData = Screen.MemoryOfChaosMissionPageScreen.headerData
                     )
                 }
             )

@@ -14,6 +14,18 @@ import coil3.memory.MemoryCache
 import coil3.request.CachePolicy
 import coil3.request.ImageRequest
 import coil3.request.crossfade
+import files.MOCMissionPart1
+import files.MOCMissionPart10
+import files.MOCMissionPart11
+import files.MOCMissionPart12
+import files.MOCMissionPart2
+import files.MOCMissionPart3
+import files.MOCMissionPart4
+import files.MOCMissionPart5
+import files.MOCMissionPart6
+import files.MOCMissionPart7
+import files.MOCMissionPart8
+import files.MOCMissionPart9
 import files.Res
 import getImageBitmapByByteArray
 import kotlinx.coroutines.Dispatchers
@@ -159,6 +171,31 @@ class UtilTools {
             job.await()
             job.getCompleted()
         }
+    }
+
+    @Composable
+    fun getMocPhaseStrListByMocLen(mocLen: Int): ArrayList<String> {
+        val mocPhaseStrList = ArrayList<String>()
+        for (index in 0 until mocLen) {
+            mocPhaseStrList.add(
+                when (index) {
+                    0 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart1)
+                    1 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart2)
+                    2 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart3)
+                    3 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart4)
+                    4 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart5)
+                    5 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart6)
+                    6 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart7)
+                    7 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart8)
+                    8 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart9)
+                    9 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart10)
+                    10 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart11)
+                    11 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart12)
+                    else -> "?"
+                }
+            )
+        }
+        return mocPhaseStrList
     }
 
     fun htmlDescApplier(htmlText: String, levelDataParams: ArrayList<Float>) : String{

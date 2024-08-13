@@ -48,12 +48,14 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen) {
     when(screen){
         Screen.HomePage -> {isBlur = false;}
         Screen.BackgroundSettingScreen -> {isBlur = false;}
+        Screen.MemoryOfChaosMissionPageScreen -> {isBlur = false;}
         else -> {}
     }
     Box{
         Image(
             bitmap = when(screen){
                 Screen.BackgroundSettingScreen -> UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.BGS, "bg_light")
+                Screen.MemoryOfChaosMissionPageScreen -> UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.BGS, "memory_of_chaos_bg")
                 else -> backgroundImageBitmap
             },
             contentDescription = "",
