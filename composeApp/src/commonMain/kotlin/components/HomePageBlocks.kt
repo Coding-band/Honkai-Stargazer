@@ -48,6 +48,7 @@ import utils.FontSizeNormalSmall
 import utils.TextColorNormal
 import utils.UtilTools
 import utils.navigation.Screen
+import utils.navigation.navigateLimited
 
 class HomePageBlocks {
     val HOME_PAGE_BLOCK_WIDTH_1x1 = 80.dp
@@ -98,7 +99,7 @@ fun HomePageBlock1x1(
 
             if (blockData.itemOnClickToNavigate !== null) {
                 println("Ok I'm Navigating to " + blockData.itemOnClickToNavigate)
-                navigator.navigate(blockData.itemOnClickToNavigate!!.route)
+                navigator.navigateLimited(blockData.itemOnClickToNavigate!!.route)
             }
         },
         shape = RoundedCornerShape(8.dp),
@@ -154,7 +155,7 @@ fun HomePageBlock2x1(
         onClick = {
             if (blockData.itemOnClickToNavigate !== null) {
                 println("Ok I'm Navigating to " + blockData.itemOnClickToNavigate)
-                navigator.navigate(blockData.itemOnClickToNavigate!!.route)
+                navigator.navigateLimited(blockData.itemOnClickToNavigate!!.route)
             } else {
                 println("Ok I'm OnClick la")
                 blockData.itemOnClickAction;

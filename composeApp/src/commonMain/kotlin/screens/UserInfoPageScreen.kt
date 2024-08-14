@@ -89,6 +89,7 @@ import utils.LongStringXML
 import utils.UtilTools
 import utils.annotation.DoItLater
 import utils.navigation.Screen
+import utils.navigation.navigateLimited
 import utils.showSuccessToast
 import kotlin.math.min
 
@@ -179,7 +180,7 @@ fun UserInfoPageScreen(
                         overrideNameComponent = { CharacterLcInfoDisplay(character) },
                         isDisplayName = !isDisplayLcInfo.value,
                         isDisplayCombatPath = false,
-                        onClick = { navigator.navigate("${Screen.UserCharacterPageScreen.route}?uid=${uid}&charId=${character.officialId}") }
+                        onClick = { navigator.navigateLimited("${Screen.UserCharacterPageScreen.route}?uid=${uid}&charId=${character.officialId}") }
                     )
                 }
             }
@@ -201,7 +202,7 @@ fun UserInfoPageScreen(
                             overrideNameComponent = { CharacterLcInfoDisplay(character) },
                             isDisplayName = !isDisplayLcInfo.value,
                             isDisplayCombatPath = false ,
-                            onClick = { navigator.navigate("${Screen.UserCharacterPageScreen.route}?uid=${uid}&charId=${character.officialId}") }
+                            onClick = { navigator.navigateLimited("${Screen.UserCharacterPageScreen.route}?uid=${uid}&charId=${character.officialId}") }
                         )
                     }
                 }

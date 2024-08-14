@@ -57,6 +57,7 @@ import utils.UtilTools
 import utils.annotation.DoItLater
 import utils.hoyolab.HoyolabConst
 import utils.navigation.Screen
+import utils.navigation.navigateLimited
 import utils.navigation.navigatorInstance
 import utils.navigation.pomPomPopupInstance
 import utils.starbase.StarbaseAPI
@@ -225,7 +226,7 @@ fun HoyolabServerSelectPopup(modifier: Modifier = Modifier, showPopup : MutableS
                             UIButton(
                                 text = UtilTools().removeStringResDoubleQuotes(server.localeName),
                                 onClick = {
-                                    navigatorInstance.navigate("${Screen.HoyolabLoginPageScreen.route}?serverId=${server.serverId}")
+                                    navigatorInstance.navigateLimited("${Screen.HoyolabLoginPageScreen.route}?serverId=${server.serverId}")
                                     showPopup.value = false
                                 }
                             )

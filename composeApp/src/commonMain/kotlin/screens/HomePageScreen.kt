@@ -99,6 +99,7 @@ import utils.UtilTools
 import utils.annotation.DoItLater
 import utils.checkHasErrorLogFromLastCrash
 import utils.navigation.Screen
+import utils.navigation.navigateLimited
 import utils.navigation.navigatorInstance
 import kotlin.math.min
 
@@ -149,7 +150,7 @@ fun UserHelpTeamIcon(
             .border(1.5.dp, Color(0xFFD3D3D3), CircleShape)
             .clickable {
                 if (uid != "") {
-                    navigator.navigate("${Screen.UserCharacterPageScreen.route}?uid=${uid}&charId=${character.officialId}")
+                    navigator.navigateLimited("${Screen.UserCharacterPageScreen.route}?uid=${uid}&charId=${character.officialId}")
                 }
             }
     )
@@ -205,7 +206,7 @@ fun HomePageHeader(
                         .border(1.dp, Color(0x66907C54), CircleShape)
                         .clickable {
                             if (userAccount.isLogin) {
-                                navigator.navigate("${Screen.UserInfoPageScreen.route}?uid=${userAccount.uid}")
+                                navigator.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=${userAccount.uid}")
                             }
                         }, contentAlignment = Alignment.Center
                     ) {
@@ -428,7 +429,7 @@ fun ThreeDotsDialog(
                             textRes = Res.string.Setting,
                             onClick = {
                                 threeDotDialogDisplay.value =
-                                    false; navigator.navigate(Screen.SettingScreen.route)
+                                    false; navigator.navigateLimited(Screen.SettingScreen.route)
                             },
                             buttonSize = UIButtonSize.SmallChoice
                         )

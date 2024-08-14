@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import com.dokar.sonner.Toaster
 import com.dokar.sonner.ToasterState
 import com.dokar.sonner.rememberToasterState
+import com.russhwolf.settings.Settings
 import components.HeaderData
 import components.PomPomPopup
 import components.PomPomPopupUI
@@ -53,7 +54,9 @@ import files.phorphos_medal_military_fill
 import files.phorphos_person_fill
 import files.phorphos_sliders_horizontal_fill
 import files.phorphos_sword_fill
+import kotlinx.datetime.Clock
 import moe.tlaster.precompose.navigation.NavHost
+import moe.tlaster.precompose.navigation.NavOptions
 import moe.tlaster.precompose.navigation.Navigator
 import moe.tlaster.precompose.navigation.SwipeProperties
 import moe.tlaster.precompose.navigation.rememberNavigator
@@ -465,6 +468,17 @@ fun Navigation() {
                 }
             )
         }
+    }
+}
+
+fun Navigator.navigateLimited(route: String, options: NavOptions? = null) {
+    val navigationInterval: Long = 1000 // 2 seconds
+    val lastNavigationTime: Long = Settings().getLong("lastNavigationTime", 0)
+
+    val currentTime = Clock.System.now().toEpochMilliseconds()
+    if (currentTime - lastNavigationTime >= navigationInterval) {
+        navigate(route, options)
+        Settings().putLong("lastNavigationTime", currentTime)
     }
 }
 

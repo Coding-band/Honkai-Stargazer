@@ -46,6 +46,7 @@ import types.Path
 import utils.JsonArraySaver
 import utils.Language
 import utils.navigation.Screen
+import utils.navigation.navigateLimited
 
 @Composable
 fun CharacterListPage(
@@ -126,7 +127,7 @@ fun CharacterListPage(
                     onClick = {
                         val charName = charListItem.jsonObject["name"]?.jsonPrimitive?.content!!;
                         val fileName = charListItem.jsonObject["fileName"]?.jsonPrimitive?.content!!;
-                        navigator.navigate(
+                        navigator.navigateLimited(
                             Screen.CharacterInfoPage.route
                                   + "/${charName.replace(" ","_")}"
                                   + "?fileName=${fileName}"

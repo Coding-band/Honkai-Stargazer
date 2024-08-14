@@ -45,6 +45,7 @@ import types.Path
 import utils.JsonArraySaver
 import utils.Language
 import utils.navigation.Screen
+import utils.navigation.navigateLimited
 
 @Composable
 fun LightconeListPage(modifier: Modifier = Modifier, navigator: Navigator, headerData: HeaderData = defaultHeaderData) {
@@ -98,7 +99,7 @@ fun LightconeListPage(modifier: Modifier = Modifier, navigator: Navigator, heade
                     onClick = {
                         val lcName = lcListItem.jsonObject["name"]?.jsonPrimitive?.content!!;
                         val fileName = lcListItem.jsonObject["fileName"]?.jsonPrimitive?.content!!;
-                        navigator.navigate(
+                        navigator.navigateLimited(
                             Screen.LightconeInfoPage.route
                                     + "/${lcName}"
                                     + "?fileName=${fileName}"

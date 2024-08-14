@@ -61,6 +61,7 @@ import types.EventItem
 import types.EventItem.Companion.EventListInstance
 import utils.UtilTools
 import utils.navigation.Screen
+import utils.navigation.navigateLimited
 
 @Composable
 fun EventListPageScreen(
@@ -134,7 +135,7 @@ fun EventItemCard(eventItem: EventItem, isDateOutside: MutableState<Boolean>, na
 
                 is PressInteraction.Release -> {
                     if (isLongClick.not()) {
-                        navigator.navigate("${Screen.EventContentPageScreen.route}?eventId=${eventItem.ann_id}")
+                        navigator.navigateLimited("${Screen.EventContentPageScreen.route}?eventId=${eventItem.ann_id}")
                     }
 
                 }

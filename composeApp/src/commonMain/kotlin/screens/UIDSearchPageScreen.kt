@@ -58,6 +58,7 @@ import utils.UtilTools
 import utils.hoyolab.HoyolabConst
 import utils.hoyolab.MihomoRequest
 import utils.navigation.Screen
+import utils.navigation.navigateLimited
 import utils.navigation.navigatorInstance
 import utils.starbase.StarbaseAPI
 
@@ -82,7 +83,7 @@ fun UIDSearchPageScreen(
     /*
                 itemOnClickAction = {
                     UIDSEARCH = MihomoRequest("800333171").getUserAccountByMiHomo()
-                    navControllerInstance.navigate("${Screen.UserInfoPageScreen.route}?uid=800333171")
+                    navControllerInstance.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=800333171")
                 },
      */
 
@@ -109,7 +110,7 @@ fun UIDSearchPageScreen(
                         searchRecordList.value.add(UserAccountLite(UIDSEARCH.uid, UIDSEARCH.username, UIDSEARCH.level, UIDSEARCH.icon, UIDSEARCH.server))
                         UserAccountLite.saveSearchRecordList(searchRecordList.value)
                     }
-                    navigatorInstance.navigate("${Screen.UserInfoPageScreen.route}?uid=${searchWords.value}")
+                    navigatorInstance.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=${searchWords.value}")
                 }else{
                     toaster.show(
                         message = noDataStr,
@@ -153,7 +154,7 @@ fun UIDSearchPageScreen(
                             .background(Color((0x66F3F9FF)), RoundedCornerShape(10.dp))
                             .clip(RoundedCornerShape(10.dp)).clickable {
                                 UIDSEARCH = MihomoRequest(item.uid).getUserAccountByMiHomo()
-                                navigatorInstance.navigate("${Screen.UserInfoPageScreen.route}?uid=${item.uid}")
+                                navigatorInstance.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=${item.uid}")
                             }
                     ) {
                         Row(Modifier.padding(10.dp).fillMaxWidth().wrapContentHeight()) {

@@ -93,6 +93,7 @@ import utils.Language
 import utils.UtilTools
 import utils.annotation.DoItLater
 import utils.navigation.Screen
+import utils.navigation.navigateLimited
 import utils.res.LocalComposeEnvironment
 import kotlin.math.max
 
@@ -189,7 +190,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
                     SettingOptionNavigateBar(
                         titleRes = Res.string.ChangeWallPaper,
                         navigateDesc = wallpaper.localeName ?: Character.getCharacterItemFromJSON(wallpaper.id).displayName ?: "?",
-                        navigateClick = { navigator.navigate(Screen.BackgroundSettingScreen.route) }
+                        navigateClick = { navigator.navigateLimited(Screen.BackgroundSettingScreen.route) }
                     )
 
                     //啟用模糊效果

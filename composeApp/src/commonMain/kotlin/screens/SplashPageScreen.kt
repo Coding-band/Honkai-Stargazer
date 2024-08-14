@@ -39,6 +39,7 @@ import types.UserAccount.Companion.refreshNoteData
 import utils.FontSizeNormalLarge24
 import utils.FontSizeNormalSmall
 import utils.navigation.Screen
+import utils.navigation.navigateLimited
 import utils.starbase.StarbaseAPI
 
 
@@ -60,7 +61,7 @@ fun SplashPage(
         }
 
         withContext(Dispatchers.Main) {
-            navigator.navigate(Screen.HomePage.route)
+            navigator.navigateLimited(Screen.HomePage.route)
         }
     }
 
