@@ -231,6 +231,7 @@ class UtilTools {
         return htmlTextFinal
     }
 
+    @VersionUpdateCheck
     fun getIconByUserAccountIconValue(icon : String): Any {
         println(icon)
         if(icon == ""){
@@ -245,7 +246,7 @@ class UtilTools {
                 imageFolderType = ImageFolderType.CHAR_ICON,
                 icon
             )
-        }else if (icon.length == 6 && icon[2] == '1'){
+        }else if (icon.length == 6 && icon[2] == '1' || icon.length == 6 && icon[2] == '8'){
             return Character.getCharacterImageFromOfficialId(
                 imageFolderType = ImageFolderType.CHAR_ICON,
                 icon.substring(2)

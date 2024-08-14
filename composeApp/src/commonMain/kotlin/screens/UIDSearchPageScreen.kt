@@ -59,6 +59,7 @@ import utils.hoyolab.HoyolabConst
 import utils.hoyolab.MihomoRequest
 import utils.navigation.Screen
 import utils.navigation.navigatorInstance
+import utils.starbase.StarbaseAPI
 
 @Composable
 fun UIDSearchPageScreen(
@@ -96,7 +97,13 @@ fun UIDSearchPageScreen(
             Spacer(Modifier.padding(top = PAGE_HEADER_HEIGHT + 8.dp).statusBarsPadding())
 
             UISearchBar(inputString = searchWords, onClick = {
-                UIDSEARCH = MihomoRequest(searchWords.value).getUserAccountByMiHomo()
+                val mihomoRequest = MihomoRequest(searchWords.value).getUserAccountByMiHomo()
+                UIDSEARCH = if(mihomoRequest.uid == "000000000") {
+                    StarbaseAPI().getUserAccountInfo(searchWords.value)
+                }else{
+                    mihomoRequest
+                }
+
                 if(UIDSEARCH.uid != "000000000") {
                     if(searchRecordList.value.none { it.uid == UIDSEARCH.uid }) {
                         searchRecordList.value.add(UserAccountLite(UIDSEARCH.uid, UIDSEARCH.username, UIDSEARCH.level, UIDSEARCH.icon, UIDSEARCH.server))

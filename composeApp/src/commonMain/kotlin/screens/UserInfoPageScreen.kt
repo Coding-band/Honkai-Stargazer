@@ -89,6 +89,7 @@ import utils.LongStringXML
 import utils.UtilTools
 import utils.annotation.DoItLater
 import utils.navigation.Screen
+import utils.showSuccessToast
 import kotlin.math.min
 
 @DoItLater("Get User Data from Database / API")
@@ -112,7 +113,6 @@ fun UserInfoPageScreen(
     ) }
 
     println(Json.encodeToString(userAccount))
-
 
     val lazyGridState = rememberLazyGridState()
     val isListScrolling  by remember {
@@ -307,6 +307,7 @@ fun UserInfoBioUI(context: PlatformContext, userAccount: UserAccount) {
             .clickable {
                 if (userAccount.signature != "") {
                     //Print Nickname
+                    showSuccessToast(message = userAccount.signature)
                 }
             }, contentAlignment = Alignment.Center
         ) {
@@ -399,14 +400,14 @@ fun UserInfoBioUI2(context: PlatformContext, userAccount: UserAccount) {
         )
 
         for (data in rowData){
-            if(data.first == 0) { continue }
+            if(data.first == 0 || data.first == 0L) { continue }
             var textSize by remember { mutableStateOf(24.sp) }
             Column(
                 Modifier.wrapContentHeight()
                     .weight(1f)
                     .onSizeChanged { size ->
                         // 根據寬度動態計算字體大小
-                textSize = TextUnit(size.width / 10f, TextUnitType.Sp)
+                textSize = min(TextUnit(size.width / 10f, TextUnitType.Sp), 30.sp)
             }) {
                 Text(
                     //DoItLater("LastLoginTime")
@@ -427,4 +428,12 @@ fun UserInfoBioUI2(context: PlatformContext, userAccount: UserAccount) {
         }
     }
 
+}
+
+fun max(textUnit: TextUnit, sp: TextUnit): TextUnit {
+    return if(textUnit > sp) textUnit else sp
+}
+
+fun min(textUnit: TextUnit, sp: TextUnit): TextUnit {
+    return if(textUnit < sp) textUnit else sp
 }
