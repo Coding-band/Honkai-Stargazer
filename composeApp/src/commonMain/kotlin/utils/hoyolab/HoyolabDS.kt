@@ -1,6 +1,6 @@
 package utils.hoyolab
 
-import getTimeStamp
+import kotlinx.datetime.Clock
 import okio.Buffer
 import okio.ByteString.Companion.encodeUtf8
 import okio.HashingSink
@@ -10,7 +10,7 @@ import kotlin.random.Random
 
 fun genDSv1(): String {
     val salt = "6s25p5ox5y14umn1p61aqyyvbvvl3lrt"
-    val time = getTimeStamp()/1000
+    val time = Clock.System.now().toEpochMilliseconds()/1000
     var random = ""
     val characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
     for (x in 0..5) {
@@ -30,7 +30,7 @@ fun genDSv1(): String {
  */
 fun genDSv2(body: String, queryFromURL: String): String {
     val salt = "xV8v4Qu54lUKrEYFZkJhB8cuOh9Asafs"
-    val time = getTimeStamp()/1000
+    val time = Clock.System.now().toEpochMilliseconds()/1000
     val preQuery = queryFromURL.split("&".toRegex()).sorted() as ArrayList<String>
     var query = ""
     for (index in preQuery.indices) {

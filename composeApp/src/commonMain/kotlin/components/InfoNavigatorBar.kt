@@ -38,9 +38,9 @@ import androidx.compose.ui.unit.dp
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.HazeStyle
 import dev.chrisbanes.haze.hazeChild
-import getTimeStamp
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlinx.datetime.Clock
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
@@ -72,15 +72,15 @@ fun InfoNavigatorBar(
     //不要忘了目录的提示默认应该是不显示的
     //显示的情况：滚动页面时显示，点击目录图标时显示
     var isHintVisible by remember { mutableStateOf(false) }
-    var lastExpectInvisibleMS by remember { mutableStateOf(getTimeStamp()) }
+    var lastExpectInvisibleMS by remember { mutableStateOf(Clock.System.now().toEpochMilliseconds()) }
 
     LaunchedEffect(listState.firstVisibleItemIndex){
         if(currChoiceIndex != listState.firstVisibleItemIndex){
             isHintVisible = true
-            lastExpectInvisibleMS = getTimeStamp() + animationDuration
+            lastExpectInvisibleMS = Clock.System.now().toEpochMilliseconds() + animationDuration
             coroutineScope.launch {
                 delay(animationDuration)
-                isHintVisible = !(getTimeStamp() >= lastExpectInvisibleMS)
+                isHintVisible = !(Clock.System.now().toEpochMilliseconds() >= lastExpectInvisibleMS)
             }
         }
         currChoiceIndex = min(listState.firstVisibleItemIndex, infoItemList.size-1)
@@ -158,11 +158,11 @@ fun InfoNavigatorBar(
                                     ).clickable(
                                         onClick = {
                                             currChoiceIndex = index;
-                                            isHintVisible = true
                                             coroutineScope.launch {
                                                 listState.animateScrollToItem(index = item.itemPosIndex, scrollOffset = -UtilTools().DpToPx(offSet + 4.dp,density = density))
                                                 delay(animationDuration)
-                                                isHintVisible = !(getTimeStamp() >= lastExpectInvisibleMS)
+                                                isHintVisible = Clock.System.now().toEpochMilliseconds() < lastExpectInvisibleMS
+
                                             }
                                         },
                                         indication = rememberRipple(),
