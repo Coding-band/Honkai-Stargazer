@@ -285,8 +285,8 @@ August 22 - August 27
 
 August 28 - September 7
 - [ ] Relic Score Algorthm (? days) [With Reset]
-- [ ] Wrap Simulator (3 days)
-- [ ] Wrap Analysis (4 days)
+- [ ] Warp Simulator (3 days)
+- [ ] Warp Analysis (4 days)
 
 September 10 - September 15
 - [ ] Final checking

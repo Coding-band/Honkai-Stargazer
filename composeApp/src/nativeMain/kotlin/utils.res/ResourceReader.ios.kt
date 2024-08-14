@@ -1,14 +1,27 @@
 package utils.res
 
+import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.addressOf
 import kotlinx.cinterop.usePinned
+import platform.Foundation.NSBundle
+import platform.Foundation.NSData
+import platform.Foundation.NSFileHandle
+import platform.Foundation.NSFileManager
+import platform.Foundation.NSURL
+import platform.Foundation.closeFile
+import platform.Foundation.fileHandleForReadingAtPath
+import platform.Foundation.readDataOfLength
+import platform.posix.memcpy
 
+@OptIn(ExperimentalForeignApi::class)
 internal actual fun getPlatformResourceReader(): ResourceReader = object : ResourceReader {
     override suspend fun read(path: String): ByteArray {
+
         val data = readData(getPathInBundle(path))
         return ByteArray(data.length.toInt()).apply {
             usePinned { memcpy(it.addressOf(0), data.bytes, data.length) }
         }
+
     }
 
     override suspend fun readPart(path: String, offset: Long, size: Long): ByteArray {
