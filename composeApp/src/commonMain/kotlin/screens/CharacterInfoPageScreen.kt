@@ -95,9 +95,10 @@ val charInfoNavItemList = arrayOf<InfoNavigateItem>(
     InfoNavigateItem(Res.drawable.phorphos_star_half_regular, 3, Res.string.Eidolon),
     InfoNavigateItem(Res.drawable.phorphos_sword_regular, 4, Res.string.AdviceLightcones),
     InfoNavigateItem(Res.drawable.phorphos_baseball_cap_regular, 5, Res.string.AdviceRelics),
-    InfoNavigateItem(Res.drawable.phorphos_chats_circle_regular, 6, Res.string.AdviceTeams),
-    InfoNavigateItem(Res.drawable.phorphos_person_regular, 7, Res.string.CharacterStory),
-)
+    InfoNavigateItem(Res.drawable.phorphos_person_regular, 6, Res.string.CharacterStory),
+    InfoNavigateItem(Res.drawable.phorphos_chats_circle_regular, 7, Res.string.AdviceTeams),
+
+    )
 
 private const val scrollPxTrigInvisible = 250f
 
@@ -164,7 +165,7 @@ fun CharacterInfoPage(
         )
 
         //RecycleView
-        LazyColumn(horizontalAlignment = Alignment.CenterHorizontally, state = listState, modifier = Modifier.haze(hazeState).align(Alignment.Center)) {
+        LazyColumn(horizontalAlignment = Alignment.CenterHorizontally, state = listState, modifier = Modifier.haze(hazeState).align(Alignment.Center).navigationBarsPadding()) {
             item { InfoBioColumn(charInfoJson, combatType, path, isUserOwned = false, isFullEidolon = false) }
             //Don't forget to add "StatusBarPadding" !
             item { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
@@ -174,7 +175,7 @@ fun CharacterInfoPage(
             item { InfoAdviceRelic(charWeightJsonObject) }
             item { InfoAdviceTeammate(charWeightJsonObject, characterId, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
             item { InfoStory(charInfoJson) }
-            item { Box(modifier = Modifier.height(72.dp).navigationBarsPadding()) }
+            item { Box(modifier = Modifier.height(72.dp)) }
 
         }
 
