@@ -12,13 +12,17 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
@@ -348,8 +352,8 @@ Task :composeApp:linkDebugFrameworkIosSimulatorArm64 FAILED
 fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
     var infoLevel by remember { mutableStateOf(1f) }
     var richTextState = rememberRichTextState()
-
-    Column {
+    val scrollState = rememberScrollState()
+    Column(Modifier.verticalScroll(scrollState)) {
         if(treeItemArray[0].typeDescHash !== null){
             Box(Modifier.clip(RoundedCornerShape(41.dp)).background(Color(0xFF666666))){
                 Text(treeItemArray[0].typeDescHash ?: "?", modifier = Modifier.padding(start = 12.dp, end = 12.dp, top = 6.dp, bottom = 6.dp), style = FontSizeNormal14(), color = Color.White)
@@ -396,8 +400,9 @@ fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
                 params = treeItem.levelData[infoLevel.toInt()-1].params
                 Spacer(Modifier.height(8.dp))
                 Row(Modifier.height(20.dp)){
-                    Text("Lv.${infoLevel.toInt()}/${treeItem.levelData.size}", modifier = Modifier.width(60.dp).align(
+                    Text("Lv.${infoLevel.toInt()}/${treeItem.levelData.size}", modifier = Modifier.requiredWidth(60.dp).wrapContentWidth().align(
                         Alignment.CenterVertically), color = Color.Black)
+                    Spacer(Modifier.width(24.dp))
                     ThemedSlider(infoLevel, { infoLevel = it}, valueRange = 1f .. treeItem.levelData.size.toFloat(), steps = 0)
                 }
             }
@@ -422,10 +427,9 @@ fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
             )
             RichText(state = richTextState, style = FontSizeNormal14(), modifier = Modifier.fillMaxWidth(), color = Color(0xFF666666))
 
-            Spacer(Modifier.height(8.dp))
 
             //Material Cost
-            if(treeItem.levelData != null && treeItem.levelData.size > 0) {
+            if(treeItem.levelData != null && treeItem.levelData.size > 0 && index == 0) {
                 if(infoLevel.toInt() >= treeItem.levelData.size){
                     infoLevel = treeItem.levelData.size.toFloat()
                 }
@@ -441,6 +445,7 @@ fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
 
                     }
                 }
+                Spacer(Modifier.height(8.dp))
             }
 
         }

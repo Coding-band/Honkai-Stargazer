@@ -46,6 +46,8 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
+import com.mohamedrejeb.richeditor.model.rememberRichTextState
+import com.mohamedrejeb.richeditor.ui.material3.RichText
 import components.DropdownMenuNoPadding
 import components.HeaderData
 import components.InfoDisplayDialog
@@ -127,16 +129,19 @@ fun MemoryOfChaosMissionPageScreen(
             TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
         }
 
+
+        val richTextState = rememberRichTextState()
+        richTextState.setHtml(mocInfoList?.descList?.get(TextLanguageInstance) ?: "?")
+
         InfoDisplayDialog(
             modifier = Modifier.align(Alignment.Center),
             titleString = stringResource(Res.string.MOCEffect),
             hazeState = hazeState,
             isDialogVisible = isDialogVisible,
             components = {
-                Text(text = mocInfoList?.descList?.get(TextLanguageInstance) ?: "?",
+                RichText(state = richTextState,
                     style = FontSizeNormal14(),
                     color = Color.Black,
-                    textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth()
                 )
             }
