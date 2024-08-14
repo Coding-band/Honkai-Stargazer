@@ -88,6 +88,7 @@ import types.UserAccount
 import utils.BlackAlpha30
 import utils.FontSizeNormal12
 import utils.FontSizeNormal14
+import utils.FontSizeNormal16
 import utils.FontSizeNormalLarge24
 import utils.ProgressLevelBackground
 import utils.ProgressLevelPrimary
@@ -95,6 +96,7 @@ import utils.TextColorLevel
 import utils.TextColorNormal
 import utils.TextColorNormalDim
 import utils.UtilTools
+import utils.annotation.DoItLater
 import utils.checkHasErrorLogFromLastCrash
 import utils.navigation.Screen
 import utils.navigation.navigatorInstance
@@ -349,6 +351,7 @@ fun HomePageMenuScrollView(modifier: Modifier = Modifier, navigator: Navigator, 
 }
 
 @Composable
+@DoItLater("Ads function")
 fun BottomView(modifier: Modifier = Modifier){
     Box(modifier = Modifier
         .heightIn(64.dp, 100.dp)){
@@ -359,6 +362,8 @@ fun BottomView(modifier: Modifier = Modifier){
             contentScale = ContentScale.Crop,
             colorFilter = ColorFilter.tint(Color(0xCCFFFFFF), BlendMode.Lighten)
         )
+
+        Text("恭喜您，看到了一條我發呆寫的廣告", color = Color.LightGray, style = FontSizeNormal16(), modifier = Modifier.align(Alignment.Center))
     }
 }
 

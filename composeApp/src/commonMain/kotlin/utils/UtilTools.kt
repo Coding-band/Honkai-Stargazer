@@ -66,7 +66,7 @@ class UtilTools {
         LC_ICON("lightcone_icon", ".webp"),
         MAOGOU("maogou", ".webp"),
         MATERIAL_ICON("material_icon", ".webp"),
-        MONSTER_ICON("monster_icon", ".webp"),
+        MONSTER_ICON("monster_icon", "_icon.webp"),
         ORMANENT_ICON("ornament_icon", ".webp"),
         ORMANENT_PC_ICON("ornament_pcicon", ".webp"),
         RELIC_ICON("relic_icon", ".webp"),

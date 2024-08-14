@@ -15,6 +15,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.blur
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import com.russhwolf.settings.Settings
@@ -40,6 +41,7 @@ val gradient = Brush.verticalGradient(
 fun MakeBackground(modifier: Modifier = Modifier, screen: Screen) {
     val hazeState = remember { HazeState() }
     var isBlur = true;
+    var isGradient = true;
     val backgroundImageBitmap = UtilTools().getAssetsWebpByFileName(
         UtilTools.ImageFolderType.BGS,
         Settings().getString("backgroundImage", "221000")
@@ -48,7 +50,7 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen) {
     when(screen){
         Screen.HomePage -> {isBlur = false;}
         Screen.BackgroundSettingScreen -> {isBlur = false;}
-        Screen.MemoryOfChaosMissionPageScreen -> {isBlur = false;}
+        Screen.MemoryOfChaosMissionPageScreen -> {isBlur = false; isGradient = false}
         else -> {}
     }
     Box{
@@ -62,7 +64,11 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen) {
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize().blur(if (isBlur) 20.dp else 0.dp)
         )
-        Box(modifier = Modifier.matchParentSize().background(gradient))
+        Box(
+            modifier = Modifier.matchParentSize().background(
+                if (isGradient) gradient else Brush.linearGradient(listOf(Color.Transparent,Color.Transparent))
+            )
+        )
     }
 }
 

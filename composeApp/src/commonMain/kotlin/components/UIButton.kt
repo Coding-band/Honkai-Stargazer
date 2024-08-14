@@ -6,6 +6,8 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -20,6 +22,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.resources.DrawableResource
@@ -61,12 +64,14 @@ fun UIButton(modifierTmp: Modifier = Modifier, textRes: StringResource? = null, 
                         color = if(isAvailable) Color(0xFF222222) else Color(0x4D222222),
                         textAlign = if(icon != null || buttonSize == UIButtonSize.NormalTextLeft) TextAlign.Left else TextAlign.Center,
                         maxLines = 1,
-                        modifier = Modifier.align(Alignment.CenterVertically).weight(1f).padding(top = if(buttonSize == UIButtonSize.SmallChoice) (2.dp) else 6.dp, bottom = if(buttonSize == UIButtonSize.SmallChoice) (2.dp) else 6.dp, start = 8.dp, end = 8.dp)
+                        modifier = Modifier.align(Alignment.CenterVertically).weight(1f).padding(top = if(buttonSize == UIButtonSize.SmallChoice) (2.dp) else 6.dp, bottom = if(buttonSize == UIButtonSize.SmallChoice) (2.dp) else 6.dp, start = 12.dp, end = 12.dp)
                     )
                     if(icon != null){
                         Box(Modifier.width(2.dp).fillMaxHeight().padding(top = 8.dp, bottom =  8.dp))
                         
-                        Image(painter = painterResource(icon), contentDescription = "UIButton Icon", modifier = Modifier.fillMaxSize().padding(4.dp))
+                        Image(painter = painterResource(icon), contentDescription = "UIButton Icon", modifier = Modifier.size(16.dp).align(Alignment.CenterVertically).aspectRatio(1f), colorFilter = ColorFilter.tint(Color.Black))
+
+                        Spacer(Modifier.width(12.dp))
                     }
                 }
             }

@@ -49,7 +49,7 @@ fun InfoDisplayDialog(
     components: @Composable () -> Unit,
     modifier: Modifier = Modifier,
     hazeState: HazeState,
-    isNavBarVisible: Boolean,
+    isNavBarVisible: Boolean = true,
     isDialogVisible: MutableState<Boolean>
 ){
     AnimatedVisibility(
