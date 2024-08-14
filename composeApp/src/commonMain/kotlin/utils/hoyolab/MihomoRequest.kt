@@ -26,6 +26,7 @@ import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import types.AppInfo.Companion.AppInfoInstance
+import types.Attribute
 import types.Character
 import types.CharacterStatus
 import types.HsrProperties
@@ -147,12 +148,11 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                                 }
 
                                 //Relics
-                                if(characterObj["relics"] != null && characterObj["relics"]!! is JsonObject){
+                                if(characterObj["relics"] != null && characterObj["relics"]!! is JsonArray){
                                     val relicArrJson = characterObj["relics"]!!.jsonArray
                                     for (relicJson in relicArrJson) {
                                         val relicObj = relicJson.jsonObject
-                                        val relic =
-                                            Relic.getRelicItemFromJSON(relicObj["set_id"]!!.jsonPrimitive.content)
+                                        val relic = Relic.getRelicItemFromJSON(relicObj["set_id"]!!.jsonPrimitive.content)
                                         relic.level = relicObj["level"]!!.jsonPrimitive.int
                                         //Main
                                         relic.properties.add(
@@ -178,6 +178,8 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                                                 )
                                             )
                                         }
+
+                                        println(relic)
 
                                         when (relicObj["type"]!!.jsonPrimitive.int) {
                                             1 -> characterStatus.equippingRelicHead = relic
@@ -213,6 +215,19 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                                 //Attr & Addi
                                 val attrAddi = arrayListOf<HsrProperties>()
 
+                                //Missing Speed Data
+                                attrAddi.add(
+                                    HsrProperties(
+                                        attributeExchange = AttributeExchange.getAttrKeyByMihomoType(
+                                            "SPRatioBase",
+                                            isForRelic = false,
+                                            isPercent = true
+                                        ),
+                                        valueBase = 1f,
+                                        valueFinal = 1f
+                                    )
+                                )
+
                                 if(characterObj["attributes"] != null && characterObj["attributes"] is JsonArray){
                                     for (attr in characterObj["attributes"]!!.jsonArray) {
                                         val attrObj = attr.jsonObject
@@ -234,8 +249,8 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                                                 )
                                             )
                                         } else {
-                                            attrAddi[index].valueBase = attrObj["value"]!!.jsonPrimitive.float
-                                            attrAddi[index].valueFinal += attrObj["value"]!!.jsonPrimitive.float
+                                            attrAddi[index].valueBase = attrObj["value"]!!.jsonPrimitive.float + if(attrEx.attribute == Attribute.ATTR_SP_RATE) {1f} else {0f}
+                                            attrAddi[index].valueFinal += attrObj["value"]!!.jsonPrimitive.float + if(attrEx.attribute == Attribute.ATTR_SP_RATE) {1f} else {0f}
                                         }
                                     }
                                 }

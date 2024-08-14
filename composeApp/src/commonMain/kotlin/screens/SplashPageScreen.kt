@@ -26,6 +26,7 @@ import files.star_peace_icon
 import getScreenSizeInfo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import moe.tlaster.precompose.navigation.Navigator
@@ -52,10 +53,10 @@ fun SplashPage(
     CoroutineScope(Dispatchers.Default).launch {
 
         if(INSTANCE.uid != "000000000"){
-            refreshCharacterList()
-            refreshNoteData()
-            StarbaseAPI().updateUserAccountInfo()
-            StarbaseAPI().updateCharData()
+            async { refreshCharacterList() }.await()
+            async { refreshNoteData() }.await()
+            async { StarbaseAPI().updateUserAccountInfo() }.await()
+            async { StarbaseAPI().updateCharData() }.await()
         }
 
         withContext(Dispatchers.Main) {

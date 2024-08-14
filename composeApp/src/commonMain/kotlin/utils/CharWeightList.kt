@@ -45,7 +45,7 @@ class CharWeightList(){
             val jsonUrl = "${StarbaseAPI().getStarbaseStaticFolderURL()}/charWeightList.json"
             val client = getLocalHttpClient {
                 install(HttpTimeout){
-                    requestTimeoutMillis = 15000
+                    requestTimeoutMillis = 6000
                 }
                 install(ContentNegotiation){
                     json()
@@ -62,7 +62,7 @@ class CharWeightList(){
 
             try {
                 return runBlocking {
-                    return@runBlocking withTimeout(15000) {
+                    return@runBlocking withTimeout(6000) {
                         val response: HttpResponse = client.get(jsonUrl)
                         //Check whether it is having any errors
                         if (!arrayListOf(200, 201).contains(response.status.value)) {
