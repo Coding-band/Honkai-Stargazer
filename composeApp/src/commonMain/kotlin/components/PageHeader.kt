@@ -75,7 +75,7 @@ fun PageHeader(
         Modifier
             .hazeChild(
                 state = hazeState!!,
-                style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE)
+                style = HazeStyle(Color.Unspecified, 10.dp, Float.MIN_VALUE)
             )
             //.shadow(8.dp)
             .background(Color(0x33FFFFFF))

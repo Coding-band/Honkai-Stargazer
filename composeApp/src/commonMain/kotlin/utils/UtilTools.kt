@@ -14,6 +14,7 @@ import coil3.memory.MemoryCache
 import coil3.request.CachePolicy
 import coil3.request.ImageRequest
 import coil3.request.crossfade
+import coil3.util.DebugLogger
 import files.MOCMissionPart1
 import files.MOCMissionPart10
 import files.MOCMissionPart11
@@ -289,6 +290,8 @@ class UtilTools {
             .replace(" ","_")
             .replace("-","_")
 
+            .replace("void_ranger","voidranger")
+
         if(isCharFullImg){
             registNameFinal = registNameFinal
                 .replace("trailblazer_physical_male","trailblazer_boy")
@@ -421,7 +424,7 @@ class UtilTools {
         }
     }
 
-    fun newImageLoader(context : PlatformContext): ImageLoader = ImageLoader.Builder(context)
+    fun newImageLoader(context : PlatformContext, logger: DebugLogger? = null): ImageLoader = ImageLoader.Builder(context)
         .networkCachePolicy(CachePolicy.ENABLED)
         .memoryCachePolicy(CachePolicy.ENABLED)
         .memoryCache {
@@ -437,7 +440,7 @@ class UtilTools {
                 .directory(FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("image_cache"))
                 .build()
         }
-        //.logger(DebugLogger())
+        .logger(DebugLogger())
         .addLastModifiedToFileCacheKey(true)
         .build()
 

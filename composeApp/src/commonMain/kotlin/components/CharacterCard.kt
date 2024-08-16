@@ -38,14 +38,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
-import coil3.request.CachePolicy
-import coil3.request.ImageRequest
-import coil3.request.crossfade
 import files.Res
 import files.SuperimposeLvl
 import files.SuperimposeNotEquipped
@@ -83,7 +79,7 @@ fun CharacterCard(
 ) {
     val interactionSource = remember { MutableInteractionSource() }
 
-    /* AsyncImage */
+    /* AsyncImage
     val context = LocalPlatformContext.current
     val imageRequest =  remember {
         ImageRequest.Builder(context)
@@ -99,7 +95,7 @@ fun CharacterCard(
     val imageLoader = remember {
         UtilTools().newImageLoader(context = context)
     }
-
+    */
     Box(
         modifier = Modifier
             .defaultMinSize(CHAR_CARD_WIDTH, CHAR_CARD_HEIGHT)
@@ -124,19 +120,8 @@ fun CharacterCard(
     ) {
 
         Column(modifier = Modifier.fillMaxSize()) {
-            /* KEEP FOR FUTURE USE
-            Image(
-                bitmap = Character.getCharacterImageFromFileName(
-                    UtilTools.ImageFolderType.CHAR_ICON,
-                    character.registName!!
-                ),
-                contentDescription = "Character Icon",
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .aspectRatio(1f),
-            )
-             */
             Box {
+                /*
                 AsyncImage(
                     model = imageRequest,
                     contentDescription = "Character Icon",
@@ -145,6 +130,17 @@ fun CharacterCard(
                         .aspectRatio(1f),
                     contentScale = ContentScale.Crop,
                     imageLoader = imageLoader
+                )
+                 */
+                Image(
+                    bitmap = Character.getCharacterImageFromFileName(
+                        UtilTools.ImageFolderType.CHAR_ICON,
+                        character.registName!!
+                    ),
+                    contentDescription = "Character Icon",
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .aspectRatio(1f),
                 )
 
                 if(character.characterStatus != null && character.characterStatus!!.characterLevel != -1){

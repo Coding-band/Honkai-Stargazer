@@ -44,7 +44,6 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
-import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
@@ -371,12 +370,6 @@ fun MemoryOfChaosContent(
                                         MonsterCard(monster)
                                         Spacer(Modifier.width(8.dp))
                                     }
-                                    monsterInfo.forEachIndexed { index, monster ->
-                                        if(index == 0) return@forEachIndexed
-                                        Spacer(Modifier.width(8.dp))
-                                        MonsterCard(monster)
-                                        Spacer(Modifier.width(8.dp))
-                                    }
                                 }
                             }
 
@@ -429,19 +422,17 @@ fun MemoryOfChaosContent(
 @Composable
 fun MonsterCard(monsterInfo: MemoryOfChaosMonsterInfo){
     val context = LocalPlatformContext.current
+
     Column(verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
         Box(Modifier.size(48.dp).background(Brush.verticalGradient(Constants.getCardBgColorByRare(1)), shape = RoundedCornerShape(4.dp)).wrapContentHeight(), contentAlignment = Alignment.Center) {
-            AsyncImage(
-                model = UtilTools().newImageRequest(
-                    data = UtilTools().getAssetsWebpByteArrayByFileName(
-                        UtilTools.ImageFolderType.MONSTER_ICON,
-                        "monster_${UtilTools().getImageNameByRegistName(monsterInfo.registName)}"
-                    ),
-                    context = context,
+            Image(
+                bitmap = UtilTools().getAssetsWebpByFileName(
+                    UtilTools.ImageFolderType.MONSTER_ICON,
+                    "monster_${UtilTools().getImageNameByRegistName(monsterInfo.registName)}"
                 ),
-                imageLoader = UtilTools().newImageLoader(context),
                 contentDescription = null,
-                modifier = Modifier.size(32.dp)
+                modifier = Modifier.size(32.dp),
+                //onError = { println("${it.result.throwable.message} : ${it.result.throwable.stackTraceToString()}") }
             )
         }
 
