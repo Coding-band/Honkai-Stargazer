@@ -295,8 +295,7 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                     if(
                         srInfoParsed is JsonObject &&
                         !srInfoParsed.isEmpty() &&
-                            !(srInfoParsed.containsKey("detail") &&
-                            srInfoParsed["detail"]!!.jsonPrimitive.content == "Invalid uid")
+                        !(srInfoParsed.containsKey("detail"))
                     ){
                         errorLogExport("MihomoRequest", "getUserAccountByMiHomo()",e)
                     }

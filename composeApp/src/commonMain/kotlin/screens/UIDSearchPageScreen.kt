@@ -37,6 +37,7 @@ import components.BackIcon
 import components.HeaderData
 import components.PAGE_HEADER_HEIGHT
 import components.PageHeader
+import components.PomPomPopup
 import components.UISearchBar
 import components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
@@ -47,6 +48,10 @@ import files.UIDFormatError
 import files.UIDNoData
 import files.UIDSearchRecord
 import files.UIDSearchRecordClear
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import moe.tlaster.precompose.navigation.Navigator
 import types.Constants
 import types.UserAccount.Companion.UIDSEARCH
@@ -61,6 +66,7 @@ import utils.hoyolab.MihomoRequest
 import utils.navigation.Screen
 import utils.navigation.navigateLimited
 import utils.navigation.navigatorInstance
+import utils.navigation.pomPomPopupInstance
 import utils.starbase.StarbaseAPI
 
 @Composable
@@ -92,7 +98,7 @@ fun UIDSearchPageScreen(
         val toaster = rememberToasterState()
         val noDataStr = UtilTools().removeStringResDoubleQuotes(Res.string.UIDNoData)
         val wrongFormatStr = UtilTools().removeStringResDoubleQuotes(Res.string.UIDFormatError)
-
+        val isQuerying = remember { mutableStateOf(false) }
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.haze(hazeState).align(Alignment.Center).padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
@@ -100,35 +106,50 @@ fun UIDSearchPageScreen(
             Spacer(Modifier.padding(top = PAGE_HEADER_HEIGHT + 8.dp).statusBarsPadding())
 
             UISearchBar(inputString = searchWords, onClick = {
-                //Fix : UID查詢未輸入時點擊搜尋會閃退
-                //Preventing user enter empty value / non-number value
-                searchWords.value = searchWords.value.trim()
-                if(arrayListOf(null, "").contains(searchWords.value) || searchWords.value.toLongOrNull() == null) {
-                    toaster.show(
-                        message = wrongFormatStr,
-                        type = ToastType.Warning,
-                    )
-                    return@UISearchBar
-                }
-
-                val mihomoRequest = MihomoRequest(searchWords.value).getUserAccountByMiHomo()
-                UIDSEARCH = if(mihomoRequest.uid == "000000000") {
-                    StarbaseAPI().getUserAccountInfo(searchWords.value, true)
-                }else{
-                    mihomoRequest
-                }
-
-                if(UIDSEARCH.uid != "000000000") {
-                    if(searchRecordList.value.none { it.uid == UIDSEARCH.uid }) {
-                        searchRecordList.value.add(UserAccountLite(UIDSEARCH.uid, UIDSEARCH.username, UIDSEARCH.level, UIDSEARCH.icon, UIDSEARCH.server))
-                        UserAccountLite.saveSearchRecordList(searchRecordList.value)
+                CoroutineScope(Dispatchers.Default).launch{
+                    if(isQuerying.value) {
+                        return@launch
                     }
-                    navigatorInstance.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=${searchWords.value}")
-                }else{
-                    toaster.show(
-                        message = noDataStr,
-                        type = ToastType.Warning,
-                    )
+                    withContext(Dispatchers.Main){
+                        pomPomPopupInstance.value = PomPomPopup(isDisplay = true)
+                        isQuerying.value = true
+                    }
+
+                    //Fix : UID查詢未輸入時點擊搜尋會閃退
+                    //Preventing user enter empty value / non-number value
+                    searchWords.value = searchWords.value.trim()
+
+                    if(arrayListOf(null, "").contains(searchWords.value) || searchWords.value.toLongOrNull() == null) {
+                        toaster.show(
+                            message = wrongFormatStr,
+                            type = ToastType.Warning,
+                        )
+                        return@launch
+                    }else{
+                        val mihomoRequest = MihomoRequest(searchWords.value).getUserAccountByMiHomo()
+                        UIDSEARCH = if(mihomoRequest.uid == "000000000") {
+                            StarbaseAPI().getUserAccountInfo(searchWords.value, true)
+                        }else{
+                            mihomoRequest
+                        }
+
+                        if(UIDSEARCH.uid != "000000000") {
+                            if(searchRecordList.value.none { it.uid == UIDSEARCH.uid }) {
+                                searchRecordList.value.add(UserAccountLite(UIDSEARCH.uid, UIDSEARCH.username, UIDSEARCH.level, UIDSEARCH.icon, UIDSEARCH.server))
+                                UserAccountLite.saveSearchRecordList(searchRecordList.value)
+                            }
+                            navigatorInstance.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=${searchWords.value}")
+                        }else{
+                            toaster.show(
+                                message = noDataStr,
+                                type = ToastType.Warning,
+                            )
+                        }
+                    }
+
+                    withContext(Dispatchers.Main){
+                        pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
+                    }
                 }
             })
 
@@ -166,8 +187,24 @@ fun UIDSearchPageScreen(
                         Modifier.fillMaxWidth().padding(top = 4.dp, bottom = 4.dp)
                             .background(Color((0x66F3F9FF)), RoundedCornerShape(10.dp))
                             .clip(RoundedCornerShape(10.dp)).clickable {
-                                UIDSEARCH = MihomoRequest(item.uid).getUserAccountByMiHomo()
-                                navigatorInstance.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=${item.uid}")
+                                CoroutineScope(Dispatchers.Default).launch {
+                                    if (isQuerying.value) {
+                                        return@launch
+                                    }
+
+                                    withContext(Dispatchers.Main) {
+                                        pomPomPopupInstance.value = PomPomPopup(isDisplay = true)
+                                        isQuerying.value = true
+                                    }
+
+                                    UIDSEARCH = MihomoRequest(item.uid).getUserAccountByMiHomo()
+                                    navigatorInstance.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=${item.uid}")
+
+                                    withContext(Dispatchers.Main) {
+                                        pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
+                                        isQuerying.value = false
+                                    }
+                                }
                             }
                     ) {
                         Row(Modifier.padding(10.dp).fillMaxWidth().wrapContentHeight()) {
