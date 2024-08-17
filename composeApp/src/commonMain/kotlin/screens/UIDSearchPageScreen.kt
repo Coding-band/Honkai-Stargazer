@@ -43,6 +43,7 @@ import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.PlayerLevel
 import files.Res
+import files.UIDFormatError
 import files.UIDNoData
 import files.UIDSearchRecord
 import files.UIDSearchRecordClear
@@ -90,6 +91,7 @@ fun UIDSearchPageScreen(
     Box{
         val toaster = rememberToasterState()
         val noDataStr = UtilTools().removeStringResDoubleQuotes(Res.string.UIDNoData)
+        val wrongFormatStr = UtilTools().removeStringResDoubleQuotes(Res.string.UIDFormatError)
 
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -98,9 +100,20 @@ fun UIDSearchPageScreen(
             Spacer(Modifier.padding(top = PAGE_HEADER_HEIGHT + 8.dp).statusBarsPadding())
 
             UISearchBar(inputString = searchWords, onClick = {
+                //Fix : UID查詢未輸入時點擊搜尋會閃退
+                //Preventing user enter empty value / non-number value
+                searchWords.value = searchWords.value.trim()
+                if(arrayListOf(null, "").contains(searchWords.value) || searchWords.value.toLongOrNull() == null) {
+                    toaster.show(
+                        message = wrongFormatStr,
+                        type = ToastType.Warning,
+                    )
+                    return@UISearchBar
+                }
+
                 val mihomoRequest = MihomoRequest(searchWords.value).getUserAccountByMiHomo()
                 UIDSEARCH = if(mihomoRequest.uid == "000000000") {
-                    StarbaseAPI().getUserAccountInfo(searchWords.value)
+                    StarbaseAPI().getUserAccountInfo(searchWords.value, true)
                 }else{
                     mihomoRequest
                 }

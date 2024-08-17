@@ -292,7 +292,14 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                         }
                     }
                 }catch (e : Exception){
-                    errorLogExport("MihomoRequest", "getUserAccountByMiHomo()",e)
+                    if(
+                        srInfoParsed is JsonObject &&
+                        !srInfoParsed.isEmpty() &&
+                            !(srInfoParsed.containsKey("detail") &&
+                            srInfoParsed["detail"]!!.jsonPrimitive.content == "Invalid uid")
+                    ){
+                        errorLogExport("MihomoRequest", "getUserAccountByMiHomo()",e)
+                    }
                 }
 
                 return@async userAccount
