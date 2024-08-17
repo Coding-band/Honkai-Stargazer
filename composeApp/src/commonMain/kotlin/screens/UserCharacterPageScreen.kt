@@ -432,10 +432,10 @@ fun ProficientScoreInfo(character: Character) {
 @Composable
 fun getDataDecimalsByAttrExchange(attrExchange: AttributeExchange, value: Float): String {
     return UtilTools().formatDecimal(
-        value * if (attrExchange.isPercent) 100 else 1,
-        if (attrExchange.key == "spd") 1 else if (attrExchange.isPercent) 1 else 0,
+        value * if (attrExchange.isPercent == true) 100 else 1,
+        if (attrExchange.key == "spd") 1 else if (attrExchange.isPercent == true) 1 else 0,
         isRoundDown = true
-    ) + if (attrExchange.isPercent) "%" else ""
+    ) + if (attrExchange.isPercent == true) "%" else ""
 }
 
 @Composable
@@ -827,10 +827,10 @@ fun StatusShortUI(
         )
         Text(
             text = (if(isRelic) "+" else "") + UtilTools().formatDecimal(
-                status.valueFinal * if (status.attributeExchange.isPercent) 100 else 1,
-                if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent) 1 else 0,
+                status.valueFinal * if (status.attributeExchange.isPercent == true) 100 else 1,
+                if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent == true) 1 else 0,
                 isRoundDown = true
-            ) + if (status.attributeExchange.isPercent) "%" else "",
+            ) + if (status.attributeExchange.isPercent == true) "%" else "",
             style = textStyle,
             color = Color.White,
             maxLines = 1
@@ -858,10 +858,10 @@ fun StatusFullUI(status : HsrProperties){
         if(status.valueBase == 0f && status.valueAdd == 0f){
             Text(
                 text = "+" + UtilTools().formatDecimal(
-                    status.valueFinal * if (status.attributeExchange.isPercent) 100 else 1,
-                    if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent) 1 else 0,
+                    status.valueFinal * if (status.attributeExchange.isPercent == true) 100 else 1,
+                    if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent == true) 1 else 0,
                     isRoundDown = true
-                ) + if (status.attributeExchange.isPercent) "%" else "",
+                ) + if (status.attributeExchange.isPercent == true) "%" else "",
                 style = FontSizeNormal14(),
                 color = Color.White,
                 maxLines = 1
@@ -870,10 +870,10 @@ fun StatusFullUI(status : HsrProperties){
             if(status.valueBase > 0f){
                 Text(
                     text = UtilTools().formatDecimal(
-                        status.valueBase * if (status.attributeExchange.isPercent) 100 else 1,
-                        if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent) 1 else 0,
+                        status.valueBase * if (status.attributeExchange.isPercent == true) 100 else 1,
+                        if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent == true) 1 else 0,
                         isRoundDown = true
-                    ) + if (status.attributeExchange.isPercent) "%" else "",
+                    ) + if (status.attributeExchange.isPercent == true) "%" else "",
                     style = FontSizeNormal14(),
                     color = Color.White,
                     maxLines = 1
@@ -893,10 +893,10 @@ fun StatusFullUI(status : HsrProperties){
             if(status.valueAdd > 0f){
                 Text(
                     text = UtilTools().formatDecimal(
-                        status.valueAdd * if (status.attributeExchange.isPercent) 100 else 1,
-                        if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent) 1 else 0,
+                        status.valueAdd * if (status.attributeExchange.isPercent == true) 100 else 1,
+                        if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent == true) 1 else 0,
                         isRoundDown = true
-                    ) + if (status.attributeExchange.isPercent) "%" else "",
+                    ) + if (status.attributeExchange.isPercent == true) "%" else "",
                     style = FontSizeNormal14(),
                     color = AdditionalGreen,
                     maxLines = 1

@@ -10,8 +10,8 @@ data class AttributeExchange(
     val key: String,
     val type: String = "",
     val attribute: Attribute = Attribute.ATTR_UNKNOWN,
-    val isPercent: Boolean = false,
-    val isForRelic: Boolean = false,
+    val isPercent: Boolean? = null,
+    val isForRelic: Boolean? = null,
     val id: Int = -1
 ){
     companion object{
@@ -75,25 +75,27 @@ data class AttributeExchange(
             AttributeExchange(id = 60,key = "sp", isPercent = false), //Using, for relics?
         )
 
+        //FIX : Cannot find if case : isForRelic = true and Expect key is xx_dmg
+        //To avoid that case, if isForRelic/isPercent is null, still expect as ok to find
         fun getAttrKeyByPropertyType(property_type: Int, isPercent: Boolean? = null, isForRelic: Boolean? = null): AttributeExchange {
             return AttrExchangeList.find {
                 it.id == property_type
-                        && (if (isPercent != null) it.isPercent == isPercent else true)
-                        && (if (isForRelic != null) it.isForRelic == isForRelic else true)
+                        && (if (isPercent != null) (it.isPercent == null || it.isPercent == isForRelic) == isPercent else true)
+                        && (if (isForRelic != null) (it.isForRelic == null || it.isForRelic == isForRelic) else true)
             } ?: ATTREX_UNKNOWN
         }
         fun getAttrKeyByMihomoType(type: String, isPercent: Boolean? = null, isForRelic: Boolean? = null): AttributeExchange {
             return AttrExchangeList.find {
                 it.type == type
-                        && (if (isPercent != null) it.isPercent == isPercent else true)
-                        && (if (isForRelic != null) it.isForRelic == isForRelic else true)
+                        && (if (isPercent != null) (it.isPercent == null || it.isPercent == isForRelic) == isPercent else true)
+                        && (if (isForRelic != null) (it.isForRelic == null || it.isForRelic == isForRelic) else true)
             } ?: ATTREX_UNKNOWN
         }
         fun getAttrKeyByMihomoKey(key: String, isPercent: Boolean? = null, isForRelic: Boolean? = null): AttributeExchange {
             return AttrExchangeList.find {
                 it.key == key
-                        && (if (isPercent != null) it.isPercent == isPercent else true)
-                        && (if (isForRelic != null) it.isForRelic == isForRelic else true)
+                        && (if (isPercent != null) (it.isPercent == null || it.isPercent == isForRelic) == isPercent else true)
+                        && (if (isForRelic != null) (it.isForRelic == null || it.isForRelic == isForRelic) else true)
             } ?: ATTREX_UNKNOWN
         }
 
