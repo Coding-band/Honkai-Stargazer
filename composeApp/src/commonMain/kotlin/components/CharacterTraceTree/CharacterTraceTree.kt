@@ -8,11 +8,11 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
@@ -400,7 +400,7 @@ fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
                 params = treeItem.levelData[infoLevel.toInt()-1].params
                 Spacer(Modifier.height(8.dp))
                 Row(Modifier.height(20.dp)){
-                    Text("Lv.${infoLevel.toInt()}/${treeItem.levelData.size}", modifier = Modifier.requiredWidth(60.dp).wrapContentWidth().align(
+                    Text("Lv.${infoLevel.toInt()}/${treeItem.levelData.size}", modifier = Modifier.defaultMinSize(minWidth = 60.dp).wrapContentWidth().align(
                         Alignment.CenterVertically), color = Color.Black)
                     Spacer(Modifier.width(24.dp))
                     ThemedSlider(infoLevel, { infoLevel = it}, valueRange = 1f .. treeItem.levelData.size.toFloat(), steps = 0)
