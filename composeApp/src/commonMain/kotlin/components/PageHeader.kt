@@ -27,6 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.HazeStyle
@@ -71,71 +72,76 @@ fun PageHeader(
     hazeState: HazeState? = HazeState()
 ) {
     //Background
-    Box(
-        Modifier
-            .hazeChild(
-                state = hazeState!!,
-                style = HazeStyle(Color.Unspecified, 10.dp, Float.MIN_VALUE)
-            )
-            //.shadow(8.dp)
-            .background(Color(0x33FFFFFF))
-            //.clippedShadow(elevation = 2.dp)
-            .statusBarsPadding()
-            .requiredHeight(PAGE_HEADER_HEIGHT)
-
-
+    DropShadow(
+        color = Color.Black.copy(alpha = 0.5f),
+        offset = DpOffset(0.dp, 4.dp),
+        radius = 4.dp
     ) {
         //BlurView can place in there
         //Now will use Pure Color Background
-        Column {
-            Row(
-                Modifier
-                    .padding(start = 16.dp, end = 16.dp)
-                    .fillMaxSize()
-                    .weight(1f)
-            ) {
-                OutlinedButton(
-                    contentPadding = PaddingValues(0.dp),
-                    colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent),
-                    border = BorderStroke(0.dp, Color(0x00FFFFFF)),
-                    shape = CircleShape,
-                    modifier = Modifier
-                        .size(40.dp)
-                        .align(Alignment.CenterVertically),
-                    onClick = { onBack(navigator) },
+        Box(
+            Modifier
+                .hazeChild(
+                    state = hazeState!!,
+                    style = HazeStyle(Color.Unspecified, 10.dp, 0f)
+                )
+                .background(Color(0x33FFFFFF))
+                //.clippedShadow(elevation = 2.dp)
+                .statusBarsPadding()
+                .requiredHeight(PAGE_HEADER_HEIGHT)
+
+
+        ){
+            Column {
+                Row(
+                    Modifier
+                        .padding(start = 16.dp, end = 16.dp)
+                        .fillMaxSize()
+                        .weight(1f)
                 ) {
-                    Image(
-                        painter = painterResource(resource = backIconId.res),
-                        contentDescription = "Back Icon",
+                    OutlinedButton(
+                        contentPadding = PaddingValues(0.dp),
+                        colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent),
+                        border = BorderStroke(0.dp, Color(0x00FFFFFF)),
+                        shape = CircleShape,
                         modifier = Modifier
                             .size(40.dp)
                             .align(Alignment.CenterVertically),
-                        colorFilter = ColorFilter.tint(Color.White),
+                        onClick = { onBack(navigator) },
+                    ) {
+                        Image(
+                            painter = painterResource(resource = backIconId.res),
+                            contentDescription = "Back Icon",
+                            modifier = Modifier
+                                .size(40.dp)
+                                .align(Alignment.CenterVertically),
+                            colorFilter = ColorFilter.tint(Color.White),
 
-                        )
-                }
-                Box(Modifier.weight(1f)){
-                    TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
-                }
-                OutlinedButton(
-                    contentPadding = PaddingValues(0.dp),
-                    modifier = Modifier
-                        .size(40.dp)
-                        .align(Alignment.CenterVertically),
-                    onClick = { onForward },
-                    colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent),
-                    border = BorderStroke(0.dp, Color(0x00FFFFFF)),
-                    shape = CircleShape,
-                ) {
-                    Image(
-                        painter = painterResource(resource = forwardIconId),
-                        contentDescription = "Forward Icon",
+                            )
+                    }
+                    Box(Modifier.weight(1f)){
+                        TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
+                    }
+                    OutlinedButton(
+                        contentPadding = PaddingValues(0.dp),
                         modifier = Modifier
                             .size(40.dp)
                             .align(Alignment.CenterVertically),
-                        colorFilter = ColorFilter.tint(Color.White),
+                        onClick = { onForward },
+                        colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent),
+                        border = BorderStroke(0.dp, Color(0x00FFFFFF)),
+                        shape = CircleShape,
+                    ) {
+                        Image(
+                            painter = painterResource(resource = forwardIconId),
+                            contentDescription = "Forward Icon",
+                            modifier = Modifier
+                                .size(40.dp)
+                                .align(Alignment.CenterVertically),
+                            colorFilter = ColorFilter.tint(Color.White),
 
-                        )
+                            )
+                    }
                 }
             }
         }
@@ -186,7 +192,7 @@ fun PageHeaderAlpha(
                             .hazeChild(
                                 shape = CircleShape,
                                 state = hazeState!!,
-                                style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE)
+                                style = HazeStyle(Color.Unspecified, 10.dp, 0f)
                             )
                             .align(Alignment.CenterVertically),
                         colorFilter = ColorFilter.tint(Color.White),
@@ -215,7 +221,7 @@ fun PageHeaderAlpha(
                             .hazeChild(
                                 shape = CircleShape,
                                 state = hazeState!!,
-                                style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE)
+                                style = HazeStyle(Color.Unspecified, 10.dp, 0f)
                             ),
                         colorFilter = ColorFilter.tint(Color.White),
 

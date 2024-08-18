@@ -12,6 +12,8 @@ androidx-material = "1.12.0"
 androidx-test-junit = "1.2.1"
 coil = "3.0.0-alpha08"
 compose-plugin = "1.6.11"
+composeBoxshadow = "0.2.2"
+composeDropshadow = "0.2.2"
 composeMultiplatformScreenCapture = "1.0.1"
 composeWebviewMultiplatform = "1.9.20"
 haze = "0.6.2"
@@ -38,6 +40,8 @@ sonner = "0.3.8"
 coil = { module = "io.coil-kt.coil3:coil", version.ref = "coil" }
 coil-compose-core = { module = "io.coil-kt.coil3:coil-compose-core", version.ref = "coil" }
 coil-network-ktor = { module = "io.coil-kt.coil3:coil-network-ktor", version.ref = "coil" }
+compose-dropshadow = { module = "io.github.kubode.compose.shadow:compose-dropshadow", version.ref = "composeDropshadow" }
+compose-boxshadow = { module = "io.github.kubode.compose.shadow:compose-boxshadow", version.ref = "composeBoxshadow" }
 compose-multiplatform-screen-capture = { module = "network.chaintech:compose-multiplatform-screen-capture", version.ref = "composeMultiplatformScreenCapture" }
 compose-webview-multiplatform = { module = "io.github.kevinnzou:compose-webview-multiplatform", version.ref = "composeWebviewMultiplatform" }
 haze = { module = "dev.chrisbanes.haze:haze", version.ref = "haze" }

@@ -177,7 +177,7 @@ fun CharacterCard(
         }
 
         if(isDisplayCombatPath){
-            Column (modifier = Modifier.padding(2.dp)){
+            Column (modifier = Modifier.padding(4.dp)){
                 Image(
                     painter = painterResource(resource = character.combatType.iconColor),
                     contentDescription = "Character Combat Type Icon",
@@ -187,7 +187,7 @@ fun CharacterCard(
                         .background(Color(0x66000000), CircleShape)
                         .padding(2.dp)
                 )
-                Spacer(modifier = Modifier.height(2.dp))
+                Spacer(modifier = Modifier.height(4.dp))
                 Image(
                     painter = painterResource(resource = character.path.iconWhite),
                     contentDescription = "Character Path Icon",

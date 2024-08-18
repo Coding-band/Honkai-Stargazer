@@ -74,7 +74,7 @@ fun PomPomPopupUI(
                 Box(
                     Modifier.fillMaxWidth(0.5f).wrapContentHeight().align(Alignment.Center).hazeChild(
                         hazeState,
-                        style = HazeStyle(Color(0x66AAAAAA), 20.dp, Float.MIN_VALUE),
+                        style = HazeStyle(Color(0x66AAAAAA), 10.dp, 0f),
                         shape = RoundedCornerShape(25.dp)
                     )
                 ) {

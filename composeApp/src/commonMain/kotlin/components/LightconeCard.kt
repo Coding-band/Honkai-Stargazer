@@ -116,6 +116,9 @@ fun LightconeCard(
 
                 )
             }
+
+            Spacer(modifier = Modifier.height(4.dp))
+
             Row(
                 Modifier.fillMaxWidth().wrapContentHeight(),
                 verticalAlignment = Alignment.CenterVertically,
@@ -133,7 +136,7 @@ fun LightconeCard(
             }
             Spacer(modifier = Modifier.height(2.dp))
         }
-        Column(modifier = Modifier.padding(2.dp)) {
+        Column(modifier = Modifier.padding(4.dp)) {
             Image(
                 painter = painterResource(resource = lightcone.path.iconWhite),
                 contentDescription = "Lightcone Icon",

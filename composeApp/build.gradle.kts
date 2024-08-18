@@ -117,6 +117,8 @@ kotlin {
 
             implementation(libs.richeditor.compose)
 
+            implementation(libs.compose.boxshadow)
+
             //Screen Capture
             //implementation(libs.compose.multiplatform.screen.capture)
 
