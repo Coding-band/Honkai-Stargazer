@@ -31,12 +31,12 @@ class CharWeightList(){
             )))
 
         fun update(force : Boolean = false){
-            if(!Preferences().isUpdateCharWeightListNow() && !force) return
+            if(!Preferences().CharWeightList.isUpdateCharWeightListNow() && !force) return
             val json = getWeightListJson()
             if(json is JsonObject && json.isNotEmpty()){
                 INSTANCE = json
                 Settings().putString(prefKeyJson, json.toString())
-                Preferences().updatedCharWeightList()
+                Preferences().CharWeightList.updatedCharWeightList()
                 println("CharWeightList Updated")
             }
         }

@@ -2,6 +2,7 @@ package utils.hoyolab
 
 import androidx.annotation.IntRange
 import utils.Language
+import utils.Preferences
 import utils.annotation.DoItLater
 
 class HoyolabAPI(platform: HoyolabRequest.PLATFORM = HoyolabRequest.PLATFORM.HOYOLAB, cookies : String) {
@@ -82,6 +83,18 @@ class HoyolabAPI(platform: HoyolabRequest.PLATFORM = HoyolabRequest.PLATFORM.HOY
             when(platformLocale){
                 HoyolabRequest.PLATFORM.HOYOLAB -> "https://bbs-api-os.hoyolab.com/game_record/hkrpg/api/challenge_story?server=${server.serverId}&role_id=${uid}&schedule_type=${scheduleType}&need_all=true"
                 HoyolabRequest.PLATFORM.MIYOUSHE -> "https://api-takumi-record.mihoyo.com/game_record/app/hkrpg/api/challenge_story?server=${server.serverId}&role_id=${uid}&schedule_type=${scheduleType}&need_all=true"
+            }
+        )
+    }
+
+    /**
+     * 獲取末日幻影資料
+     */
+    fun getHsrApocalypticShadow(uid: String, server: HoyolabConst.SERVER = HoyolabConst.SERVER.ASIA, @IntRange(1,2) scheduleType: Long = 1) : HoyolabResponse {
+        return hoyolabRequest.send(
+            when(platformLocale){
+                HoyolabRequest.PLATFORM.HOYOLAB -> "https://bbs-api-os.hoyolab.com/game_record/hkrpg/api/challenge_boss?server=${server.serverId}&role_id=${uid}&schedule_type=${scheduleType}&need_all=true"
+                HoyolabRequest.PLATFORM.MIYOUSHE -> "https://api-takumi-record.mihoyo.com/game_record/app/hkrpg/api/challenge_boss?server=${server.serverId}&role_id=${uid}&schedule_type=${scheduleType}&need_all=true"
             }
         )
     }

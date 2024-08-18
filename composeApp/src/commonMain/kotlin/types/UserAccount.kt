@@ -76,7 +76,7 @@ class UserAccount(
         fun resetUserAccount(){
             INSTANCE = UserAccount()
             Settings().putString("userAccount", Json.encodeToString(INSTANCE))
-            Preferences().resetCharList()
+            Preferences().CharList.resetCharList()
         }
 
         fun refreshUserAccount() {
@@ -152,14 +152,14 @@ class UserAccount(
             if(INSTANCE.uid == "000000000"){ return }
 
             //if it's not the moment to grab data from hoyolab, then grab data from starbase
-            if(!Preferences().isUpdateHoYoLabCharListNow()){
+            if(!Preferences().CharList.isUpdateHoYoLabCharListNow()){
                 //If there is no character data in local, but expected to have, then grab data from starbase
                 if(INSTANCE.unlockedCharCount > 0 && INSTANCE.characterList.size == 0){
                     val result = StarbaseAPI().getCharData(INSTANCE.uid)
                     println("[Starbaze] since it's not the moment to grab CharList data from Hoyolab : $result")
                     INSTANCE.characterList.clear()
                     INSTANCE.characterList = result
-                    Preferences().setLocalCharListString(Json.encodeToString(result))
+                    Preferences().CharList.setLocalCharListString(Json.encodeToString(result))
                 }
                 return
             }else{
@@ -184,7 +184,7 @@ class UserAccount(
                     if(characterList.size > 0 || INSTANCE.unlockedCharCount == 0){
                         INSTANCE.characterList.clear()
                         INSTANCE.characterList = characterList
-                        Preferences().updatedHoYoLabCharList()
+                        Preferences().CharList.updatedHoYoLabCharList()
                         //No need to do other action, since upload to Starbase will be done in the next step of caller
                     }
                     return
@@ -234,7 +234,7 @@ class UserAccount(
                     if(characterList.size > 0 || INSTANCE.unlockedCharCount == 0){
                         INSTANCE.characterList.clear()
                         INSTANCE.characterList = characterList
-                        Preferences().updatedHoYoLabCharList()
+                        Preferences().CharList.updatedHoYoLabCharList()
                         println("[HoYoLab] Update CharList from Hoyolab : $characterList")
                     }
                 }
