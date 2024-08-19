@@ -40,8 +40,12 @@ data class MemoryOfChaosUserRecord(
     val mocId: Int,
     val floor: Int,
     val phaseId: Int,
+
+    @SerialName("record_time")
     val recordTime: String,
+    @SerialName("round_used")
     val roundUsed: Int,
+    @SerialName("char_ids")
     val charIdStr : String,
     val charIdList: ArrayList<Int> = arrayListOf(),
     val lightconeIdList: ArrayList<Int> = arrayListOf(),

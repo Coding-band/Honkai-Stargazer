@@ -339,6 +339,41 @@ class UserAccount(
             }
         }
 
+        fun refreshMOCData(){
+            try{
+                if(INSTANCE.uid == "000000000"){ return }
+
+                val api = HoyolabAPI(INSTANCE.server.platform, INSTANCE.cookies)
+                val userMocCurr = api.getHsrMemoryOfChaos(INSTANCE.uid, INSTANCE.server, 1).data
+                val userMocLast = api.getHsrMemoryOfChaos(INSTANCE.uid, INSTANCE.server, 2).data
+
+                if(userMocCurr !is JsonNull && !userMocCurr.jsonObject.isEmpty()){
+                    val mocId = userMocCurr.jsonObject["schedule_id"]!!.jsonPrimitive.int
+                    val mocDetails = userMocCurr.jsonObject["all_floor_detail"]?.jsonArray
+
+                    if(!mocDetails.isNullOrEmpty()){
+                        for (mocDetail in mocDetails){
+                            val detail = mocDetail.jsonObject
+                            val floor = detail["maze_id"]!!.jsonPrimitive.int % 100
+                            val roundUsed = detail["round_num"]!!.jsonPrimitive.int
+                            val stars = detail["star_num"]!!.jsonPrimitive.int
+                            val floorRewards = detail["rewards"]!!.jsonArray
+                            val floorRewardsList = arrayListOf<String>()
+                            for (reward in floorRewards){
+                                floorRewardsList.add(reward.jsonPrimitive.content)
+                            }
+                        }
+                    }
+                }
+
+                if(userMocLast !is JsonNull && !userMocLast.jsonObject.isEmpty()){
+
+                }
+            }catch (e : Exception){
+                errorLogExport("UserAccount", "refreshMOCData()", e)
+            }
+        }
+
         //Reaction between UserAccount and Database Server
 
         fun getUserInfoFromServer(uid: String){
