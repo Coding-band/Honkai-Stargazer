@@ -199,6 +199,26 @@ class UtilTools {
         return mocPhaseStrList
     }
 
+
+    @Composable
+    fun getMocPhaseStrByIndex(index: Int): String {
+        return when (index) {
+            0 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart1)
+            1 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart2)
+            2 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart3)
+            3 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart4)
+            4 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart5)
+            5 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart6)
+            6 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart7)
+            7 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart8)
+            8 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart9)
+            9 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart10)
+            10 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart11)
+            11 -> UtilTools().removeStringResDoubleQuotes(Res.string.MOCMissionPart12)
+            else -> "?"
+        }
+    }
+
     fun htmlDescApplier(htmlText: String, levelDataParams: ArrayList<Float>) : String{
         var htmlTextFinal = htmlText
 
@@ -468,6 +488,11 @@ val JsonElementSaver: Saver<JsonElement, Any> = listSaver(
     save = { listOf(it.toString()) },
     restore = { Json.parseToJsonElement(it[0]) }
 )
+
+@Composable
+fun String.replaceStrRes(newValue: String, index : Int = 1) : String{
+    return this.replace("$"+"{$index}", newValue)
+}
 
 val BooleanSaver: Saver<Boolean, Any> = autoSaver()
 

@@ -70,8 +70,19 @@ class HoyolabConst {
         val minute: Int = 0,
         val second: Int = 0
     ) {
-        fun getDateTimeFromHoyolabTime(hoyolabTime: HoyolabTime): String {
-            return "${hoyolabTime.year}-${hoyolabTime.month}-${hoyolabTime.day} ${hoyolabTime.hour}:${hoyolabTime.minute}:${hoyolabTime.second}"
+        fun getDateTimeFromHoyolabTime(hoyolabTime: HoyolabTime, showSeconds: Boolean = true): String {
+            val year = hoyolabTime.year
+            val month = if (hoyolabTime.month < 10) "0${hoyolabTime.month}" else hoyolabTime.month.toString()
+            val day = if (hoyolabTime.day < 10) "0${hoyolabTime.day}" else hoyolabTime.day.toString()
+            val hour = if (hoyolabTime.hour < 10) "0${hoyolabTime.hour}" else hoyolabTime.hour.toString()
+            val minute = if (hoyolabTime.minute < 10) "0${hoyolabTime.minute}" else hoyolabTime.minute.toString()
+            val second = if (hoyolabTime.second < 10) "0${hoyolabTime.second}" else hoyolabTime.second.toString()
+
+            return if (showSeconds) {
+                "$year-$month-$day $hour:$minute:$second"
+            } else {
+                "$year-$month-$day $hour:$minute"
+            }
         }
     }
 
