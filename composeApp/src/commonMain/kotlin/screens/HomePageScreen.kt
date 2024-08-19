@@ -124,7 +124,7 @@ fun HomePage(
     ) {
         Column {
             HomePageHeader(navigator = navigator, threeDotDialogPos = threeDotDialogPos, threeDotDialogDisplay = threeDotDialogDisplay, userAccount = userAccount.value)
-            HomePageMenuScrollView(navigator = navigator,userAccount = userAccount.value)
+            HomePageMenuScrollView(navigator = navigator,userAccount = userAccount.value, hazeState = hazeState)
         }
     }
 
@@ -316,7 +316,7 @@ fun HomePageHeader(
 
 
 @Composable
-fun HomePageMenuScrollView(modifier: Modifier = Modifier, navigator: Navigator, userAccount: UserAccount) {
+fun HomePageMenuScrollView(modifier: Modifier = Modifier, navigator: Navigator, userAccount: UserAccount, hazeState: HazeState) {
     Column {
         LazyVerticalGrid(
             modifier = Modifier
@@ -341,8 +341,14 @@ fun HomePageMenuScrollView(modifier: Modifier = Modifier, navigator: Navigator, 
                 var blockData: HomePageBlocks.HomePageBlockItem = finalBlockData[index];
                 Box(Modifier.layoutId("HomePageItemBox")){
                     when (blockData.itemType) {
-                        HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W1H1 -> HomePageBlock1x1(blockData,navigator = navigator)
-                        HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1 -> HomePageBlock2x1(blockData,navigator = navigator)
+                        HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W1H1 -> HomePageBlock1x1(
+                            blockData,
+                            navigator = navigator
+                        )
+                        HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1 -> HomePageBlock2x1(
+                            blockData,
+                            navigator = navigator
+                        )
                     }
                 }
             }

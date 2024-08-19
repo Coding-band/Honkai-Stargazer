@@ -75,7 +75,7 @@ fun Stargazer3Theme(
 
 @Composable
 fun AppFont() = FontFamily(
-    Font(Res.font.misans_regular, weight = FontWeight.Normal)
+    Font(Res.font.misans_regular, weight = FontWeight.Medium)
 )
 
 

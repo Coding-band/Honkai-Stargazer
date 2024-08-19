@@ -31,6 +31,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import dev.chrisbanes.haze.HazeStyle
+import dev.chrisbanes.haze.hazeChild
 import files.AppStatusLostConnect
 import files.Res
 import files.phorphos_cake_fill
@@ -40,6 +42,7 @@ import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
+import screens.backgroundScreenHazeState
 import utils.BlackAlpha20
 import utils.BlackAlpha80
 import utils.FontSizeNormal16
@@ -109,6 +112,11 @@ fun HomePageBlock1x1(
                 HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1,
                 HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT
             )
+            .hazeChild(
+                backgroundScreenHazeState,
+                shape = RoundedCornerShape(8.dp),
+                style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE)
+            )
             .fillMaxSize(),
         border = BorderStroke(2.dp, Color(0x66907C54))
     ) {
@@ -167,6 +175,11 @@ fun HomePageBlock2x1(
             .defaultMinSize(
                 HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1,
                 HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT
+            )
+            .hazeChild(
+                backgroundScreenHazeState,
+                shape = RoundedCornerShape(8.dp),
+                style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE)
             )
             .fillMaxSize(),
         border = BorderStroke(2.dp, Color(0x66907C54))

@@ -20,6 +20,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
+import dev.chrisbanes.haze.haze
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import utils.BlackAlpha20
@@ -36,10 +37,12 @@ val gradient = Brush.verticalGradient(
     )
 )
 
+lateinit var backgroundScreenHazeState : HazeState
+
 @OptIn(ExperimentalResourceApi::class)
 @Composable
 fun MakeBackground(modifier: Modifier = Modifier, screen: Screen) {
-    val hazeState = remember { HazeState() }
+    backgroundScreenHazeState = remember { HazeState() }
     var isBlur = true;
     var isGradient = true;
     val backgroundImageBitmap = UtilTools().getAssetsWebpByFileName(
@@ -53,7 +56,9 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen) {
         Screen.MemoryOfChaosMissionPageScreen -> {isBlur = false; isGradient = false}
         else -> {}
     }
-    Box{
+    Box(
+        Modifier.haze(backgroundScreenHazeState)
+    ){
         Image(
             bitmap = when(screen){
                 Screen.BackgroundSettingScreen -> UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.BGS, "bg_light")
