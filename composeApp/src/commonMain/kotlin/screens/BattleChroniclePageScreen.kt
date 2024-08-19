@@ -22,6 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import components.BattleChronicleCard
 import components.HeaderData
 import components.PAGE_HEADER_HEIGHT
 import components.PageHeaderAlpha
@@ -35,6 +36,7 @@ import moe.tlaster.precompose.navigation.BackStackEntry
 import moe.tlaster.precompose.navigation.Navigator
 import moe.tlaster.precompose.navigation.query
 import types.Constants
+import types.MemoryOfChaosList
 import types.UserAccount
 import utils.FontSizeNormal14
 import utils.FontSizeNormal20
@@ -58,6 +60,11 @@ fun BattleChroniclePageScreen(
             UserAccount.UIDSEARCH
         }
     ) }
+    val mocIds = userAccount.userCurrMOCList.map { it.mocId }.distinct().sortedDescending()
+    val mocTitles = mocIds.map { MemoryOfChaosList.getMocTitleLocaleNameById(it) }
+
+    println("mocIds : $mocIds")
+    println("mocTitles : $mocTitles")
 
     Box(modifier = Modifier) {
         LazyColumn(
@@ -69,7 +76,27 @@ fun BattleChroniclePageScreen(
         ) {
             item { Spacer(Modifier.height(PAGE_HEADER_HEIGHT + 24.dp)) }
 
-            item { Spacer(Modifier.statusBarsPadding()) }
+            val sorttedMOCList = userAccount.userCurrMOCList
+                .sortedByDescending { it.mocId }
+                .sortedByDescending { it.floor }
+                .groupBy { it.mocId to it.floor }
+                .map { it.value }
+                .sortedByDescending { it.first().mocId }
+
+
+            items(count = sorttedMOCList.size) { index ->
+                val mocData = sorttedMOCList[index]
+                BattleChronicleCard(
+                    hazeState = hazeState,
+                    mocData = mocData,
+                    title = mocTitles[mocIds.indexOf(mocData.first().mocId)],
+                )
+                if (index < sorttedMOCList.size - 1) {
+                    Spacer(Modifier.height(8.dp))
+                }
+            }
+
+            item { Spacer(Modifier.statusBarsPadding().height(64.dp)) }
         }
 
 
@@ -96,7 +123,7 @@ fun BattleChroniclePageScreen(
                             userAccount.server.localeName
                         )
                     }",
-                    modifier = Modifier.align(Alignment.CenterHorizontally).padding(2.dp)
+                    modifier = Modifier.align(Alignment.CenterHorizontally)
                         .background(Color(0x4D000000), RoundedCornerShape(49.dp))
                         .clip(RoundedCornerShape(49.dp)).padding(8.dp),
                     style = FontSizeNormal14(),
