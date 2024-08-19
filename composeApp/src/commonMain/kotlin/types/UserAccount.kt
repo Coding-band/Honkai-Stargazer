@@ -412,7 +412,7 @@ class UserAccount(
                         }
                     }
                 }
-                Preferences().Leaderboard.setLocalMOCDataString(Json.encodeToString(mocList))
+                println("[HoYoLab] Updated MOC Data: size = ${mocList.size}, ${Json.encodeToString(mocList)}")
                 INSTANCE.userCurrMOCList = mocList
 
             }catch (e : Exception){
@@ -490,7 +490,7 @@ class UserAccount(
                     }
                 }
 
-                Preferences().Leaderboard.setLocalPFDataString(Json.encodeToString(pfList))
+                println("[HoYoLab] Updated PF Data: size = ${pfList.size}, ${Json.encodeToString(pfList)}")
                 INSTANCE.userCurrPFList = pfList
 
             }catch (e : Exception){
