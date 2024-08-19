@@ -45,9 +45,9 @@ import org.jetbrains.compose.resources.stringResource
 import screens.backgroundScreenHazeState
 import utils.BlackAlpha20
 import utils.BlackAlpha80
+import utils.FontSizeNormal12
 import utils.FontSizeNormal16
 import utils.FontSizeNormalLarge24
-import utils.FontSizeNormalSmall
 import utils.TextColorNormal
 import utils.UtilTools
 import utils.navigation.Screen
@@ -125,7 +125,7 @@ fun HomePageBlock1x1(
                 painter = painterResource(resource = blockData.itemIconId),
                 contentDescription = blockData.itemTitle,
                 Modifier
-                    .size(32.dp)
+                    .size(36.dp)
                     .align(Alignment.CenterHorizontally),
                 colorFilter = ColorFilter.tint(Color.White)
             )
@@ -142,7 +142,7 @@ fun HomePageBlock1x1(
                 Modifier
                     .align(Alignment.CenterHorizontally),
                 color = TextColorNormal,
-                style = FontSizeNormalSmall(),
+                style = FontSizeNormal12(),
                 textAlign = TextAlign.Center,
             )
         }
@@ -191,7 +191,7 @@ fun HomePageBlock2x1(
                     painter = painterResource(resource = blockData.itemIconId),
                     contentDescription = blockData.itemTitle,
                     Modifier
-                        .size(32.dp)
+                        .size(36.dp)
                         .align(Alignment.CenterHorizontally),
                     colorFilter = ColorFilter.tint(Color.White)
                 )
@@ -208,7 +208,7 @@ fun HomePageBlock2x1(
                     Modifier
                         .align(Alignment.CenterHorizontally),
                     color = TextColorNormal,
-                    style = FontSizeNormalSmall(),
+                    style = FontSizeNormal12(),
                     textAlign = TextAlign.Center,
                 )
             }
@@ -239,7 +239,7 @@ fun HomePageBlock2x1(
                     Modifier
                         .align(Alignment.CenterHorizontally),
                     color = TextColorNormal,
-                    style = FontSizeNormalSmall(),
+                    style = FontSizeNormal12(),
                 )
             }
         }
