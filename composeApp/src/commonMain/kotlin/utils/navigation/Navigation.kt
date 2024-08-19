@@ -37,6 +37,7 @@ import files.Event
 import files.HaveNotUsed
 import files.LightconeList
 import files.Login
+import files.MOCMyBattleReport
 import files.Map
 import files.MemoryOfChaos
 import files.RelicList
@@ -47,6 +48,7 @@ import files.UserInfoGameData
 import files.phorphos_alien_fill
 import files.phorphos_baseball_cap_fill
 import files.phorphos_film_slate_regular
+import files.phorphos_game_controller_fill
 import files.phorphos_game_controller_regular
 import files.phorphos_house_fill
 import files.phorphos_map_trifold_fill
@@ -62,6 +64,7 @@ import moe.tlaster.precompose.navigation.SwipeProperties
 import moe.tlaster.precompose.navigation.rememberNavigator
 import moe.tlaster.precompose.navigation.transition.NavTransition
 import screens.BackgroundSettingScreen
+import screens.BattleChroniclePageScreen
 import screens.CharacterInfoPage
 import screens.CharacterListPage
 import screens.EventContentPageScreen
@@ -170,6 +173,10 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     data object MemoryOfChaosMissionPageScreen : Screen(
         "MemoryOfChaosMissionPageScreen",
         HeaderData(titleRId = Res.string.MemoryOfChaos, titleIconId = Res.drawable.phorphos_medal_military_fill)
+    )
+    data object BattleChroniclePageScreen : Screen(
+        "BattleChroniclePageScreen",
+        HeaderData(titleRId = Res.string.MOCMyBattleReport, titleIconId = Res.drawable.phorphos_game_controller_fill)
     )
 }
 
@@ -464,6 +471,23 @@ fun Navigation() {
                     MemoryOfChaosMissionPageScreen(
                         navigator = navigator,
                         headerData = Screen.MemoryOfChaosMissionPageScreen.headerData
+                    )
+                }
+            )
+        }
+        //?uid={uid}
+        scene(
+            route = Screen.BattleChroniclePageScreen.route,
+            navTransition = navTransition
+        ) { backStackEntry ->
+            RootContent(
+                screen = Screen.BattleChroniclePageScreen,
+                snackbarHostState = snackbarHostState,
+                page = {
+                    BattleChroniclePageScreen(
+                        navigator = navigator,
+                        headerData = Screen.BattleChroniclePageScreen.headerData,
+                        backStackEntry = backStackEntry,
                     )
                 }
             )

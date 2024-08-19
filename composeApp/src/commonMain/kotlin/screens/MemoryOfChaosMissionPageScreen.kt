@@ -81,10 +81,13 @@ import types.Constants
 import types.MemoryOfChaos
 import types.MemoryOfChaosList
 import types.MemoryOfChaosMonsterInfo
+import types.UserAccount
 import utils.FontSizeNormal14
 import utils.FontSizeNormal16
 import utils.Language.Companion.TextLanguageInstance
 import utils.UtilTools
+import utils.navigation.Screen
+import utils.navigation.navigateLimited
 
 @Composable
 @Preview
@@ -122,7 +125,7 @@ fun MemoryOfChaosMissionPageScreen(
         PageHeaderAlpha(
             navigator = navigator,
             hazeState = hazeState,
-            onForward = { },
+            onForward = { navigator.navigateLimited("${Screen.BattleChroniclePageScreen.route}?uid=${UserAccount.INSTANCE.uid}") },
             forwardIconId = Res.drawable.ic_person_btn
         ){
             TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
