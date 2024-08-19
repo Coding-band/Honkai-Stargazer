@@ -10,6 +10,8 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonNull
 import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.boolean
+import kotlinx.serialization.json.decodeFromJsonElement
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
@@ -46,6 +48,8 @@ class UserAccount(
     var characterList: ArrayList<Character> = arrayListOf(),
 
     var userNote: UserNote = UserNote(),
+
+    var userCurrMOCList: ArrayList<UserMOCRecord> = arrayListOf(),
 
     var adPlan : AdPlan = AdPlan.NORMAL,
     var role: Role = Role.USER,
@@ -342,33 +346,66 @@ class UserAccount(
         fun refreshMOCData(){
             try{
                 if(INSTANCE.uid == "000000000"){ return }
+                if(!Preferences().Leaderboard.isUpdateLeaderboardNow()){ return }
 
                 val api = HoyolabAPI(INSTANCE.server.platform, INSTANCE.cookies)
                 val userMocCurr = api.getHsrMemoryOfChaos(INSTANCE.uid, INSTANCE.server, 1).data
-                val userMocLast = api.getHsrMemoryOfChaos(INSTANCE.uid, INSTANCE.server, 2).data
+                //val userMocLast = api.getHsrMemoryOfChaos(INSTANCE.uid, INSTANCE.server, 2).data
+
+                //Check whether is same as local data
+                if(Preferences().Leaderboard.getLocalMOCDataString() == Json.encodeToString(userMocCurr)) { return }
 
                 if(userMocCurr !is JsonNull && !userMocCurr.jsonObject.isEmpty()){
                     val mocId = userMocCurr.jsonObject["schedule_id"]!!.jsonPrimitive.int
                     val mocDetails = userMocCurr.jsonObject["all_floor_detail"]?.jsonArray
 
+                    val mocCurrList = arrayListOf<UserMOCRecord>()
                     if(!mocDetails.isNullOrEmpty()){
+                        println("mocDetails : $mocDetails")
                         for (mocDetail in mocDetails){
                             val detail = mocDetail.jsonObject
                             val floor = detail["maze_id"]!!.jsonPrimitive.int % 100
                             val roundUsed = detail["round_num"]!!.jsonPrimitive.int
-                            val stars = detail["star_num"]!!.jsonPrimitive.int
-                            val floorRewards = detail["rewards"]!!.jsonArray
-                            val floorRewardsList = arrayListOf<String>()
-                            for (reward in floorRewards){
-                                floorRewardsList.add(reward.jsonPrimitive.content)
+                            val star = detail["star_num"]!!.jsonPrimitive.int
+                            val isFastPass = detail["is_fast"]!!.jsonPrimitive.boolean
+
+                            repeat(2){
+                                val nodeData = if (it == 0){ detail["node_1"]!!.jsonObject } else { detail["node_2"]!!.jsonObject }
+                                val charList = arrayListOf<UserMOCCharData>()
+
+                                //Character Data of this node
+                                for (avatar in nodeData.jsonObject["avatars"]!!.jsonArray){
+                                    val avatarObj = avatar.jsonObject
+                                    charList.add(
+                                        UserMOCCharData(
+                                            charId = avatarObj["id"]!!.jsonPrimitive.int,
+                                            charLevel = avatarObj["level"]!!.jsonPrimitive.int,
+                                            charEidolon = avatarObj["rank"]!!.jsonPrimitive.int
+                                        )
+                                    )
+                                }
+                                mocCurrList.add(UserMOCRecord(
+                                    mocId = mocId,
+                                    floor = floor,
+                                    phaseId = it + 1,
+                                    roundUsed = roundUsed,
+                                    star = star,
+                                    recordTime = HoyolabConst.HoyolabTime()
+                                        .getDateTimeFromHoyolabTime(
+                                            Json.decodeFromJsonElement<HoyolabConst.HoyolabTime>(
+                                                nodeData.jsonObject["challenge_time"]!!
+                                            )
+                                        ),
+                                    isFastPass = isFastPass,
+                                    charList = charList,
+                                ))
                             }
                         }
+                        Preferences().Leaderboard.setLocalMOCDataString(Json.encodeToString(mocCurrList))
+                        INSTANCE.userCurrMOCList = mocCurrList
                     }
                 }
 
-                if(userMocLast !is JsonNull && !userMocLast.jsonObject.isEmpty()){
-
-                }
             }catch (e : Exception){
                 errorLogExport("UserAccount", "refreshMOCData()", e)
             }
@@ -410,6 +447,25 @@ data class UserExpedition(
     var materialName: String = "Unknown",
     var materialUrl: String = "Unknown",
     var expeditionCharacterIcon : ArrayList<String> = arrayListOf()
+)
+
+@Serializable
+data class UserMOCRecord(
+    val mocId: Int,
+    val floor: Int,
+    val phaseId: Int,
+    val recordTime: String,
+    val roundUsed: Int,
+    val star: Int,
+    val isFastPass: Boolean = false,
+    val charList: ArrayList<UserMOCCharData> = arrayListOf(),
+)
+
+@Serializable
+data class UserMOCCharData(
+    val charId: Int,
+    val charLevel: Int,
+    val charEidolon: Int,
 )
 
 @Serializable

@@ -35,12 +35,12 @@ import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.UserAccount.Companion.INSTANCE
 import types.UserAccount.Companion.refreshCharacterList
+import types.UserAccount.Companion.refreshMOCData
 import types.UserAccount.Companion.refreshNoteData
 import utils.FontSizeNormalLarge24
 import utils.FontSizeNormalSmall
 import utils.navigation.Screen
 import utils.navigation.navigateLimited
-import utils.starbase.StarbaseAPI
 
 
 @Preview
@@ -56,8 +56,7 @@ fun SplashPage(
         if(INSTANCE.uid != "000000000"){
             async { refreshCharacterList() }.await()
             async { refreshNoteData() }.await()
-            async { StarbaseAPI().updateUserAccountInfo() }.await()
-            async { StarbaseAPI().updateCharData() }.await()
+            async { refreshMOCData() }.await()
         }
 
         withContext(Dispatchers.Main) {

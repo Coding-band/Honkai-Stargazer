@@ -80,11 +80,16 @@ import files.Res
 import files.Setting
 import files.donate_ad_bg
 import files.ic_rounded_option_btn
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.painterResource
 import types.Character
 import types.Constants.Companion.HOME_PAGE_ITEMS
 import types.UserAccount
+import types.UserAccount.Companion.INSTANCE
 import utils.BlackAlpha30
 import utils.FontSizeNormal12
 import utils.FontSizeNormal14
@@ -101,6 +106,7 @@ import utils.checkHasErrorLogFromLastCrash
 import utils.navigation.Screen
 import utils.navigation.navigateLimited
 import utils.navigation.navigatorInstance
+import utils.starbase.StarbaseAPI
 import kotlin.math.min
 
 @Composable
@@ -113,6 +119,14 @@ fun HomePage(
     val threeDotDialogPos = remember { mutableStateOf<Offset>(Offset(0f, 0f)) }
     val hazeState = remember { HazeState() }
     val userAccount = remember { mutableStateOf(UserAccount.INSTANCE) }
+
+    CoroutineScope(Dispatchers.Default).launch {
+        if(INSTANCE.uid != "000000000"){
+            async { StarbaseAPI().updateUserAccountInfo() }.await()
+            async { StarbaseAPI().updateCharData() }.await()
+            async { StarbaseAPI().updateMOCData() }.await()
+        }
+    }
 
     checkHasErrorLogFromLastCrash()
     if(!arrayListOf("PRODUCTION", "RELEASE").contains(BuildKonfig.appProfile) ){

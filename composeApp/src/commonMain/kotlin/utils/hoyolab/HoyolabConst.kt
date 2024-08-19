@@ -8,6 +8,7 @@ import files.cn1
 import files.cn2
 import files.europe
 import files.twhkmo
+import kotlinx.serialization.Serializable
 import org.jetbrains.compose.resources.StringResource
 import utils.annotation.DoItLater
 
@@ -60,6 +61,20 @@ class HoyolabConst {
         ZZZ("絕區零", 8);
     }
 
+    @Serializable
+    data class HoyolabTime(
+        val year: Int = 1970,
+        val month: Int = 1,
+        val day: Int = 1,
+        val hour: Int = 0,
+        val minute: Int = 0,
+        val second: Int = 0
+    ) {
+        fun getDateTimeFromHoyolabTime(hoyolabTime: HoyolabTime): String {
+            return "${hoyolabTime.year}-${hoyolabTime.month}-${hoyolabTime.day} ${hoyolabTime.hour}:${hoyolabTime.minute}:${hoyolabTime.second}"
+        }
+    }
+
     /**
      * 登入URL
      */
@@ -87,6 +102,8 @@ class HoyolabConst {
         }
 
     }
+
+
 
     val HOYOLAB_V2_KEY_GROUP = arrayOf(
         "cookie_token_v2",
