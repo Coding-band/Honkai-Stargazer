@@ -31,6 +31,7 @@ import kotlinx.serialization.json.Json
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import utils.Language
+import utils.Language.Companion.TextLanguageInstance
 import utils.UtilTools
 import utils.annotation.VersionUpdateCheck
 import utils.errorLogExport
@@ -75,6 +76,7 @@ data class MemoryOfChaos(
                 1014 -> "chao_2.2.0_1"
                 1015 -> "chao_2.2.0_2"
                 1016 -> "chao_2.3.0"
+                1017 -> "chao_2.4.0"
                 else -> "UNKNOWN_MOC_ID"
             }
         }
@@ -118,6 +120,21 @@ data class MemoryOfChaosList(
             }catch (e: Exception) {
                 errorLogExport("MemoryOfChaosList", "getMocList()", e)
                 return retArray
+            }
+        }
+
+        fun getMocTitleLocaleNameById(mocId: Int): String {
+            val retArray = arrayListOf<MemoryOfChaosList>()
+            try {
+                val mocJson = UtilTools().getAssetsJsonStrByFilePath("memory_of_chao_data/chao_list.json")
+                val mocList = Json.decodeFromString<ArrayList<MemoryOfChaosList>>(mocJson)
+
+                val mocFiltered = mocList.filter { it.id == mocId }
+                if(mocFiltered.isEmpty()) return "???"
+                return mocFiltered[0].nameList[TextLanguageInstance] ?: "???"
+            }catch (e: Exception) {
+                errorLogExport("MemoryOfChaosList", "getMocList()", e)
+                return "???"
             }
         }
     }
