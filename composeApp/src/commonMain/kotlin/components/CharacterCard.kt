@@ -73,9 +73,10 @@ fun CharacterCard(
                 + "&charId=${character.officialId}"
 
     ) }, //按下後會做甚麼
-    overrideNameComponent: @Composable (() -> Unit) = { },
+    overrideNameComponent: @Composable (() -> Unit)? = null,
     isDisplayCombatPath: Boolean = true,
     isDisplayName : Boolean = true,
+    isDisplayLevel : Boolean = false,
 ) {
     val interactionSource = remember { MutableInteractionSource() }
 
@@ -143,7 +144,7 @@ fun CharacterCard(
                         .aspectRatio(1f),
                 )
 
-                if(character.characterStatus != null && character.characterStatus!!.characterLevel != -1){
+                if(character.characterStatus != null && character.characterStatus!!.characterLevel != -1 && !isDisplayLevel){
                     Text(
                         text = "Lv ${character.characterStatus!!.characterLevel}",
                         color = TextColorNormalDim,
@@ -163,6 +164,15 @@ fun CharacterCard(
             ) {
                 if(!isDisplayName && overrideNameComponent != null){
                     overrideNameComponent()
+                }else if (!isDisplayName && isDisplayLevel && character.characterStatus != null && character.characterStatus!!.characterLevel != -1){
+                    Text(
+                        text = "Lv ${character.characterStatus!!.characterLevel}",
+                        textAlign = TextAlign.Center,
+                        color = TextColorNormalDim,
+                        fontSize = FontSizeNormal12().fontSize,
+                        maxLines = 1
+                    )
+
                 }else {
                     Text(
                         text = displayName!!,

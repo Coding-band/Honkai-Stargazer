@@ -207,7 +207,7 @@ fun PageHeaderAlpha(
                     modifier = Modifier
                         .size(40.dp)
                         .align(Alignment.CenterVertically),
-                    onClick = { onForward },
+                    onClick = { onForward() },
                     colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color(0x33FFFFFF)),
                     border = BorderStroke(0.dp, Color(0x00FFFFFF)),
                     shape = CircleShape,
