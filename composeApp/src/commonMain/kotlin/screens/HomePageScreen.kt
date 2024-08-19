@@ -125,6 +125,7 @@ fun HomePage(
             async { StarbaseAPI().updateUserAccountInfo() }.await()
             async { StarbaseAPI().updateCharData() }.await()
             async { StarbaseAPI().updateMOCData() }.await()
+            async { StarbaseAPI().updatePFData() }.await()
         }
     }
 
@@ -453,18 +454,6 @@ fun ThreeDotsDialog(
                             },
                             buttonSize = UIButtonSize.SmallChoice
                         )
-
-                        if(BuildKonfig.appProfile != "RELEASE" && BuildKonfig.appProfile != "PRODUCTION"){
-                            Spacer(Modifier.height(10.dp))
-                            UIButton(
-                                text = "Print API Results",
-                                onClick = {
-                                    threeDotDialogDisplay.value = false;
-                                    UserAccount.printUserAPIResults()
-                                },
-                                buttonSize = UIButtonSize.SmallChoice
-                            )
-                        }
                     }
                 }
             }

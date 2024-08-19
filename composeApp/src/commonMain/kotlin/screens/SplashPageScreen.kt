@@ -37,8 +37,10 @@ import types.UserAccount.Companion.INSTANCE
 import types.UserAccount.Companion.refreshCharacterList
 import types.UserAccount.Companion.refreshMOCData
 import types.UserAccount.Companion.refreshNoteData
+import types.UserAccount.Companion.refreshPFData
 import utils.FontSizeNormalLarge24
 import utils.FontSizeNormalSmall
+import utils.Preferences
 import utils.navigation.Screen
 import utils.navigation.navigateLimited
 
@@ -57,9 +59,12 @@ fun SplashPage(
             async { refreshCharacterList() }.await()
             async { refreshNoteData() }.await()
             async { refreshMOCData() }.await()
+            async { refreshPFData() }.await()
+
         }
 
         withContext(Dispatchers.Main) {
+            Preferences().Leaderboard.updatedLeaderboard()
             navigator.navigateLimited(Screen.HomePage.route)
         }
     }

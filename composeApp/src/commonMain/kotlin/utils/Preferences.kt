@@ -61,13 +61,27 @@ class Preferences {
             Settings().putString("localASData", "[]")
         }
 
+        fun getMOCHoyolabJsonString(): String {
+            return Settings().getString("MOCHoyolabJson", "[]")
+        }
+        fun setMOCHoyolabJsonString(charList: String){
+            Settings().putString("MOCHoyolabJson", charList)
+        }
+
+        fun getPFHoyolabJsonString(): String {
+            return Settings().getString("PFHoyolabJson", "[]")
+        }
+        fun setPFHoyolabJsonString(charList: String){
+            Settings().putString("PFHoyolabJson", charList)
+        }
+
         fun getLocalMOCDataString(): String {
             return Settings().getString("localMOCData", "[]")
         }
-
         fun setLocalMOCDataString(charList: String){
             Settings().putString("localMOCData", charList)
         }
+
         fun getLocalPFDataString(): String {
             return Settings().getString("localPFData", "[]")
         }
@@ -75,6 +89,7 @@ class Preferences {
         fun setLocalPFDataString(charList: String){
             Settings().putString("localPFData", charList)
         }
+
         fun getLocalASDataString(): String {
             return Settings().getString("localASData", "[]")
         }
