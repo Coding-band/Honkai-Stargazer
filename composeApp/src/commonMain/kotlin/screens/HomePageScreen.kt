@@ -40,6 +40,7 @@ import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -95,6 +96,7 @@ import utils.FontSizeNormal12
 import utils.FontSizeNormal14
 import utils.FontSizeNormal16
 import utils.FontSizeNormalLarge24
+import utils.Language
 import utils.ProgressLevelBackground
 import utils.ProgressLevelPrimary
 import utils.TextColorLevel
@@ -109,6 +111,8 @@ import utils.navigation.navigatorInstance
 import utils.starbase.StarbaseAPI
 import kotlin.math.min
 
+
+
 @Composable
 fun HomePage(
     modifier: Modifier = Modifier,
@@ -120,6 +124,27 @@ fun HomePage(
     val hazeState = remember { HazeState() }
     val userAccount = remember { mutableStateOf(UserAccount.INSTANCE) }
 
+    checkHasErrorLogFromLastCrash()
+    if(!arrayListOf("PRODUCTION", "RELEASE").contains(BuildKonfig.appProfile) ){
+        BetaVersionBox()
+    }
+
+    key(Language.AppLanguageInstance){
+        println("LANGUAGE CHANGED !")
+        Box(modifier = Modifier
+            .statusBarsPadding()
+            .haze(hazeState)
+        ) {
+            Column {
+                HomePageHeader(navigator = navigator, threeDotDialogPos = threeDotDialogPos, threeDotDialogDisplay = threeDotDialogDisplay, userAccount = userAccount.value)
+                HomePageMenuScrollView(navigator = navigator,userAccount = userAccount.value, hazeState = hazeState)
+            }
+        }
+
+        ThreeDotsDialog(navigator = navigator, threeDotDialogPos = threeDotDialogPos, hazeState = hazeState, threeDotDialogDisplay = threeDotDialogDisplay, userAccount = userAccount)
+
+    }
+
     CoroutineScope(Dispatchers.Default).launch {
         if(INSTANCE.uid != "000000000"){
             async { StarbaseAPI().updateUserAccountInfo() }.await()
@@ -128,23 +153,6 @@ fun HomePage(
             async { StarbaseAPI().updatePFData() }.await()
         }
     }
-
-    checkHasErrorLogFromLastCrash()
-    if(!arrayListOf("PRODUCTION", "RELEASE").contains(BuildKonfig.appProfile) ){
-        BetaVersionBox()
-    }
-    Box(modifier = Modifier
-        .statusBarsPadding()
-        .haze(hazeState)
-    ) {
-        Column {
-            HomePageHeader(navigator = navigator, threeDotDialogPos = threeDotDialogPos, threeDotDialogDisplay = threeDotDialogDisplay, userAccount = userAccount.value)
-            HomePageMenuScrollView(navigator = navigator,userAccount = userAccount.value, hazeState = hazeState)
-        }
-    }
-
-    ThreeDotsDialog(navigator = navigator, threeDotDialogPos = threeDotDialogPos, hazeState = hazeState, threeDotDialogDisplay = threeDotDialogDisplay, userAccount = userAccount)
-
 }
 
 @Composable

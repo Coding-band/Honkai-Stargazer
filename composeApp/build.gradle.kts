@@ -14,7 +14,7 @@ import java.util.Properties
 val appVersion = "2.3.2"
 val appVersionCodeName = "Dan Heng"
 
-val appVersionBeta = "2.4.4"
+val appVersionBeta = "2.4.5"
 val appVersionCodeNameBeta = "Echo"
 
 plugins {
@@ -118,6 +118,8 @@ kotlin {
             implementation(libs.richeditor.compose)
 
             implementation(libs.compose.boxshadow)
+
+            implementation("androidx.annotation:annotation:1.8.2")
 
             //Screen Capture
             //implementation(libs.compose.multiplatform.screen.capture)
