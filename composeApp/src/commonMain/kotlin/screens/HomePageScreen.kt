@@ -89,6 +89,7 @@ import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.painterResource
 import types.Character
 import types.Constants.Companion.HOME_PAGE_ITEMS
+import types.UserAbyssRecord
 import types.UserAccount
 import types.UserAccount.Companion.INSTANCE
 import utils.BlackAlpha30
@@ -97,6 +98,7 @@ import utils.FontSizeNormal14
 import utils.FontSizeNormal16
 import utils.FontSizeNormalLarge24
 import utils.Language
+import utils.Preferences
 import utils.ProgressLevelBackground
 import utils.ProgressLevelPrimary
 import utils.TextColorLevel
@@ -440,6 +442,7 @@ fun ThreeDotsDialog(
                                 threeDotDialogDisplay.value = false;
                                 if (userAccount.value.isLogin) {
                                     UserAccount.resetUserAccount()
+                                    Preferences().Leaderboard.resetLeaderboard()
                                     userAccount.value = UserAccount.INSTANCE
                                 } else {
                                     showLoginPopUp.value = true

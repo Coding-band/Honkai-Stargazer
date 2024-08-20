@@ -142,7 +142,11 @@ fun BattleChroniclePageScreen(
                 end = Constants.SCREEN_SAVE_PADDING
             ).haze(hazeState)
         ) {
-            item { Spacer(Modifier.height(PAGE_HEADER_HEIGHT + 24.dp)) }
+            item { Spacer(
+                modifier = Modifier
+                    .statusBarsPadding()
+                    .height(PAGE_HEADER_HEIGHT)
+            ) }
 
             item {
                 val optionTextViewSize = remember { mutableStateOf(IntSize.Zero) }
@@ -232,23 +236,25 @@ fun BattleChroniclePageScreen(
         }
 
         if(sorttedAbyssList.isEmpty()) {
-            Column(
-                modifier = Modifier.fillMaxWidth(1/2f).align(Alignment.Center),
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Image(
-                    painterResource(Res.drawable.pom_pom_failed_issue),
-                    contentDescription = null,
-                    modifier = Modifier.size(128.dp)
-                )
-                Spacer(Modifier.height(16.dp))
-                Text(
-                    text = UtilTools().removeStringResDoubleQuotes(Res.string.AppStatusNoDataFound),
-                    style = FontSizeNormal16(),
-                    color = Color.White,
-                    modifier = Modifier.wrapContentSize()
-                )
+            Box(Modifier.fillMaxSize()) {
+                Column(
+                    modifier = Modifier.fillMaxWidth(1/2f).align(Alignment.Center),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Image(
+                        painterResource(Res.drawable.pom_pom_failed_issue),
+                        contentDescription = null,
+                        modifier = Modifier.size(128.dp)
+                    )
+                    Spacer(Modifier.height(16.dp))
+                    Text(
+                        text = UtilTools().removeStringResDoubleQuotes(Res.string.AppStatusNoDataFound),
+                        style = FontSizeNormal16(),
+                        color = Color.White,
+                        modifier = Modifier.wrapContentSize()
+                    )
+                }
             }
         }
 

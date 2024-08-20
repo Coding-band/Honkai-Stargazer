@@ -1,8 +1,15 @@
 package utils
 
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.rememberScrollableState
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.remember
@@ -118,11 +125,14 @@ class Language() {
     }
 
 
-    fun setAppLanguage(lang: AppLanguage = AppLanguageInstance){
+    fun setAppLanguage(lang: AppLanguage = AppLanguageInstance, isFirstInit: Boolean = false){
         Settings().putString("appLanguage", lang.name)
         val langC = lang.localeCode.split("-")
         changeLanguage(langC[0], langC.getOrNull(1))
         AppLanguageInstance = lang
+        if(isFirstInit){
+            TextLanguageInstance = TextLanguage.entries.firstOrNull { it.folderName == lang.folderName } ?: TextLanguage.EN
+        }
     }
 
     fun setAppLanguage(lang: String){
@@ -177,17 +187,18 @@ class Language() {
     fun initAppLanguagePopup(showPopup : MutableState<Boolean>, hazeState: HazeState = remember { HazeState() }){
         if (showPopup.value){
             Popup(alignment = Alignment.Center) {
+                val scrollState = rememberScrollState()
                 AppDialog(
                     titleString = UtilTools().removeStringResDoubleQuotes(Res.string.LanguageSetup),
                     hazeState = hazeState,
                     components = {
-                        Column {
+                        Column(Modifier.fillMaxHeight(2/3f).verticalScroll(state = scrollState)) {
                             // Different Language Choices
                             for (appLanguage in AppLanguage.entries.filter { it != AppLanguage.JYU_YAM && it != AppLanguage.VOCCHINESE }) {
                                 UIButton(
                                     text = appLanguage.localeName,
                                     onClick = {
-                                        setAppLanguage(appLanguage)
+                                        setAppLanguage(appLanguage, true)
                                         showPopup.value = false
                                         Preferences().AppSettings.setLangInitialized()
                                     }

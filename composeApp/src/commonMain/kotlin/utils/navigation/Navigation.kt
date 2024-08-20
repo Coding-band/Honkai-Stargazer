@@ -516,7 +516,7 @@ fun Navigation() {
 }
 
 fun Navigator.navigateLimited(route: String, options: NavOptions? = null) {
-    val navigationInterval: Long = 2000 // 2 seconds
+    val navigationInterval: Long = 1000 // 1 second
     val lastNavigationTime: Long = Settings().getLong("lastNavigationTime", 0)
 
     val currentTime = Clock.System.now().toEpochMilliseconds()

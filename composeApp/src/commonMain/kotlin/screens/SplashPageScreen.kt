@@ -81,7 +81,9 @@ fun SplashPage(
                 hasRefreshed.value = true
 
                 withContext(Dispatchers.Main) {
-                    Preferences().Leaderboard.updatedLeaderboard()
+                    if(INSTANCE.uid != "000000000" && !hasRefreshed.value ){
+                        Preferences().Leaderboard.updatedLeaderboard()
+                    }
                     if (!showPopup.value) {
                         navigator.navigateLimited(Screen.HomePage.route, options = NavOptions(popUpTo = PopUpTo(Screen.SplashPage.route)))
                     }

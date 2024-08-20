@@ -71,6 +71,8 @@ class UserAccount(
                     ){ INSTANCE.hoyolabId = cookie.value }
             }
             refreshUserAccount()
+            UserAbyssRecord.refreshMOCData()
+            UserAbyssRecord.refreshPFData()
         }
 
         fun resetUserAccount(){

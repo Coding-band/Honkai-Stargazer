@@ -446,7 +446,7 @@ class UtilTools {
             else -> roundedNumber
         }
 
-        val parts = scaledNumber.toString().split('.')
+        val parts = if(isUnited){scaledNumber}else{roundedNumber}.toString().split('.')
         val integerPart = parts[0].reversed().chunked(3).joinToString(",").reversed()
         val decimalPart = parts.getOrNull(1)?.padEnd(decimalPlaces, '0') ?: "0".repeat(decimalPlaces)
         return if (isUnited) {

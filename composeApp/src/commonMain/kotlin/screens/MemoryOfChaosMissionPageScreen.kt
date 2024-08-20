@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
@@ -114,7 +115,11 @@ fun MemoryOfChaosMissionPageScreen(
         LazyColumn(
             modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).haze(hazeState)
         ) {
-            item { Spacer(Modifier.height(PAGE_HEADER_HEIGHT + 24.dp)) }
+            item { Spacer(
+                modifier = Modifier
+                    .statusBarsPadding()
+                    .height(PAGE_HEADER_HEIGHT)
+            ) }
 
             //Spinner of MOC
             item { MemoryOfChaosIdSpinner(mocList, mocChoiceIndex, isDialogVisible) }
