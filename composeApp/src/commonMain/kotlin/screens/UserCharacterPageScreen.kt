@@ -871,7 +871,7 @@ fun StatusFullUI(status : HsrProperties){
                     text = UtilTools().formatDecimal(
                         status.valueBase * if (status.attributeExchange.isPercent == true) 100 else 1,
                         if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent == true) 1 else 0,
-                        isRoundDown = true
+                        isRoundDown = true,
                     ) + if (status.attributeExchange.isPercent == true) "%" else "",
                     style = FontSizeNormal14(),
                     color = Color.White,

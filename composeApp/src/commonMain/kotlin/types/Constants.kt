@@ -45,6 +45,7 @@ import files.ranking_d_text
 import files.ranking_s_text
 import files.ranking_ss_text
 import org.jetbrains.compose.resources.DrawableResource
+import utils.UtilTools
 import utils.annotation.DoItLater
 import utils.navigation.Screen
 
@@ -175,9 +176,8 @@ class Constants {
                 itemIconId = Res.drawable.phorphos_calendar_fill
             ),
 
-            @DoItLater("Add Pretty Count of KMGB later")
             HomePageBlocks.HomePageBlockItem(
-                itemTitle = "2.4K/14K",
+                itemTitle = "${UtilTools().formatDecimal(UserAccount.INSTANCE.userNote.currUniversialScore, isUnited = true)}/${UtilTools().formatDecimal(UserAccount.INSTANCE.userNote.targetUniversialScore, isUnited = true)}",
                 itemIconId = Res.drawable.phorphos_planet_fill
             ),
 
