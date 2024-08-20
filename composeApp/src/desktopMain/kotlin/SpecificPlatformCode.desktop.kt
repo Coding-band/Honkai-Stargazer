@@ -11,6 +11,7 @@ import io.ktor.client.HttpClientConfig
 import io.ktor.client.engine.cio.CIO
 import org.jetbrains.skia.Image
 import types.DeviceInfo
+import java.util.Locale
 
 /**
  * Ehm... yes... PC not support rn.
@@ -63,4 +64,9 @@ actual fun setKeyboardDarkMode() {
 
 actual fun getLocalHttpClient(function: HttpClientConfig<*>.() -> Unit): HttpClient{
     return HttpClient(engineFactory = CIO, block = function)
+}
+
+actual fun changeLanguage(language: String, region : String?) {
+    val locale = if(region == null) Locale(language) else Locale(language, region)
+    Locale.setDefault(locale)
 }

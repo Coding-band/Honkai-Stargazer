@@ -34,3 +34,4 @@ expect fun getDeviceInfo(): DeviceInfo
 expect fun setKeyboardDarkMode()
 expect fun getLocalHttpClient(function: HttpClientConfig<*>.() -> Unit): HttpClient
 
+expect fun changeLanguage(language: String, region: String? = null)

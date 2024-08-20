@@ -16,6 +16,7 @@ import platform.UIKit.UIInterfaceOrientationLandscapeLeft
 import platform.UIKit.UIInterfaceOrientationLandscapeRight
 import types.DeviceInfo
 import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.text.toLowerCase
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.client.engine.darwin.Darwin
@@ -82,4 +83,13 @@ actual fun setKeyboardDarkMode() {
 
 actual fun getLocalHttpClient(function: HttpClientConfig<*>.() -> Unit): HttpClient{
     return HttpClient(engineFactory = Darwin, block = function)
+}
+
+actual fun changeLanguage(language: String, region : String?) {
+    val lang = if(region != null && language.lowercase() == "zh") {
+        "$language-$region"
+    }else {
+        language
+    }
+    NSUserDefaults.standardUserDefaults.setObject(arrayListOf(lang),"AppleLanguages")
 }

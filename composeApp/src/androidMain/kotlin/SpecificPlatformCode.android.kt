@@ -17,6 +17,7 @@ import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.client.engine.cio.CIO
 import types.DeviceInfo
+import java.util.Locale
 
 /**
  * This is the declaration kt file for specific-platform function
@@ -85,4 +86,9 @@ actual fun setKeyboardDarkMode() {
 
 actual fun getLocalHttpClient(function: HttpClientConfig<*>.() -> Unit): HttpClient{
     return HttpClient(engineFactory = CIO, block = function)
+}
+
+actual fun changeLanguage(language: String, region: String?) {
+    val locale = if(region == null) Locale(language) else Locale(language, region)
+    Locale.setDefault(locale)
 }
