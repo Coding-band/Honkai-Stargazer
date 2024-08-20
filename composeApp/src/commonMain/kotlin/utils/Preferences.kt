@@ -7,6 +7,7 @@ class Preferences {
     val CharList = CharListClass()
     val CharWeightList = CharWeightListClass()
     val Leaderboard = LeaderboardClass()
+    val AppSettings = AppSettingsClass()
 
     private class Constants{
         val CHAR_LIST_UPDATE_MINS = 15
@@ -111,5 +112,14 @@ class Preferences {
             Settings().putLong(Constants().KEY_HYB_CHAR_LIST_LAST_UPDATE_TIME, StarbaseAPI().getSystemTime())
         }
 
+    }
+
+    class AppSettingsClass(){
+        fun isLangInitialized(): Boolean {
+            return Settings().getBoolean("isLangInitialized", false)
+        }
+        fun setLangInitialized(){
+            Settings().putBoolean("isLangInitialized", true)
+        }
     }
 }

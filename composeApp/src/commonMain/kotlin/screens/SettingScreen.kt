@@ -24,6 +24,7 @@ import androidx.compose.material.Text
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -129,183 +130,187 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
 ){
     val hazeState = remember { HazeState() }
     val wallpaper = Wallpaper.wallpaperList.find { it.id == Settings().getString("backgroundImage", "221000") } ?: Wallpaper.wallpaperList[0]
-    Box {
+    val doRecompose = remember { mutableStateOf(false) }
 
-        LazyColumn (
-            modifier = Modifier
-                .padding(start = 16.dp, end = 16.dp)
-                .haze(state = hazeState),
-        ){
-            //Spacer for padding status bar
-            item { Spacer(modifier = Modifier.statusBarsPadding().height(PAGE_HEADER_HEIGHT)) }
+    key(doRecompose.value){
+        Box {
 
-            //item { LocaleController() }
+            LazyColumn (
+                modifier = Modifier
+                    .padding(start = 16.dp, end = 16.dp)
+                    .haze(state = hazeState),
+            ){
+                //Spacer for padding status bar
+                item { Spacer(modifier = Modifier.statusBarsPadding().height(PAGE_HEADER_HEIGHT)) }
 
-            //帳號設定 Account Setup
-            item {
-                SettingCategory(title = UtilTools().removeStringResDoubleQuotes(Res.string.AccountSetup).replace("$"+"{1}", "900033852")) {
+                //item { LocaleController() }
 
-                    //使用邀請碼 Use Invite Code
-                    SettingOptionNoneBar(
-                        titleRes = Res.string.UseInviteCode,
-                        optionStatic = UtilTools().removeStringResDoubleQuotes(Res.string.HaveNotUsed)
-                    )
+                //帳號設定 Account Setup
+                item {
+                    SettingCategory(title = UtilTools().removeStringResDoubleQuotes(Res.string.AccountSetup).replace("$"+"{1}", "900033852")) {
 
-                    //個人頁面展示 User Info Page Display All Character?
-                    SettingOptionDropDownBar(
-                        titleRes = Res.string.SettingPersonalPageShow,
-                        //optionSavedChoice = @DoItLater("Add the function of show personal page"),
-                        optionList = arrayListOf(UtilTools().removeStringResDoubleQuotes(Res.string.SettingPersonalPageDisable), UtilTools().removeStringResDoubleQuotes(Res.string.SettingPersonalPageShow)),
-                        optionAction = { index: Int -> DoItLater("Add function of show personal page") }
-                    )
+                        //使用邀請碼 Use Invite Code
+                        SettingOptionNoneBar(
+                            titleRes = Res.string.UseInviteCode,
+                            optionStatic = UtilTools().removeStringResDoubleQuotes(Res.string.HaveNotUsed)
+                        )
+
+                        //個人頁面展示 User Info Page Display All Character?
+                        SettingOptionDropDownBar(
+                            titleRes = Res.string.SettingPersonalPageShow,
+                            //optionSavedChoice = @DoItLater("Add the function of show personal page"),
+                            optionList = arrayListOf(UtilTools().removeStringResDoubleQuotes(Res.string.SettingPersonalPageDisable), UtilTools().removeStringResDoubleQuotes(Res.string.SettingPersonalPageShow)),
+                            optionAction = { index: Int -> DoItLater("Add function of show personal page") }
+                        )
+                    }
                 }
+
+                //語言設定 Language Setting
+                //Known Issue : Cannot Implement Locale Change, please refer to https://github.com/JetBrains/compose-multiplatform/issues/4347
+                item {
+                    SettingCategory(title = UtilTools().removeStringResDoubleQuotes(Res.string.LanguageSetup)) {
+                        //文本語言 Text Language
+                        SettingOptionDropDownBar(
+                            titleRes = Res.string.DocumentLanguage,
+                            optionSavedChoice = Language.TextLanguageInstance.localeName,
+                            optionList = Language().getTextLangLocaleNameList(),
+                            optionAction = { index: Int -> Language().setTextLanguage(Language().getTextLangEnumList()[index]) ; Language.TextLanguageInstance = Language().getTextLangEnumList()[index] }
+                        )
+
+                        //App語言 App Language
+                        SettingOptionDropDownBar(
+                            titleRes = Res.string.AppLanguage,
+                            optionSavedChoice = Language.AppLanguageInstance.localeName,
+                            optionList = Language().getAppLangLocaleNameList(),
+                            optionAction = { index: Int -> Language().setAppLanguage(Language().getAppLangEnumList()[index]) ; Language.AppLanguageInstance = Language().getAppLangEnumList()[index] ; doRecompose.value = !doRecompose.value }
+                        )
+                    }
+                }
+
+                //偏好 Preferences
+                item {
+                    SettingCategory(title = UtilTools().removeStringResDoubleQuotes(Res.string.Customize)) {
+                        //更換桌布 Change Wallpaper
+                        SettingOptionNavigateBar(
+                            titleRes = Res.string.ChangeWallPaper,
+                            navigateDesc = wallpaper.localeName ?: Character.getCharacterItemFromJSON(wallpaper.id).displayName ?: "?",
+                            navigateClick = { navigator.navigateLimited(Screen.BackgroundSettingScreen.route) }
+                        )
+
+                        //啟用模糊效果
+                        SettingOptionDropDownTFBar(
+                            titleRes = Res.string.UseBlurEffect,
+                            optionSavedChoice = Settings().getBoolean("useBlurEffect", true),
+                            optionAction = { index: Int -> Settings().putBoolean("useBlurEffect", index == 1) }
+                        )
+                    }
+                }
+
+                //通知 Notification
+                item {
+                    SettingCategory(title = UtilTools().removeStringResDoubleQuotes(Res.string.Notifi), isAvailable = false) {
+                        //所有通知 All Notification
+                        SettingOptionDropDownTFBar(
+                            titleRes = Res.string.NotifiAll,
+                            optionSavedChoice = Settings().getBoolean("enableAllNotifi", false),
+                            optionAction = { index: Int -> Settings().putBoolean("enableAllNotifi", index == 1) }
+                        )
+
+                        //開拓力 Stamina Notification
+                        SettingOptionDropDownTFBar(
+                            titleRes = Res.string.NotiStamina,
+                            optionSavedChoice = Settings().getBoolean("enableStaminaNotifi", false),
+                            optionAction = { index: Int -> Settings().putBoolean("enableStaminaNotifi", index == 1) }
+                        )
+
+                        //派遣委託 Stamina Notification
+                        SettingOptionDropDownTFBar(
+                            titleRes = Res.string.NotiExpedition,
+                            optionSavedChoice = Settings().getBoolean("enableExpeditionNotifi", false),
+                            optionAction = { index: Int -> Settings().putBoolean("enableExpeditionNotifi", index == 1) }
+                        )
+
+                        //每日實訓 Mission Notification
+                        SettingOptionDropDownTFBar(
+                            titleRes = Res.string.NotiMission,
+                            optionSavedChoice = Settings().getBoolean("enableMissionNotifi", false),
+                            optionAction = { index: Int -> Settings().putBoolean("enableMissionNotifi", index == 1) }
+                        )
+
+                        //模擬宇宙 Simulated Universe Notification
+                        SettingOptionDropDownTFBar(
+                            titleRes = Res.string.NotiSimulatedUniverse,
+                            optionSavedChoice = Settings().getBoolean("enableSimulatedUniverseNotifi", false),
+                            optionAction = { index: Int -> Settings().putBoolean("enableSimulatedUniverseNotifi", index == 1) }
+                        )
+                    }
+                }
+
+                //支持我們 Support Us
+                item {
+                    SettingCategory(title = UtilTools().removeStringResDoubleQuotes(Res.string.SupportUs)) {
+                        //捐贈 Donation
+                        SettingOptionNavigateBar(
+                            titleRes = Res.string.DonateUs,
+                            navigateClick = { } //@DoItLater("Add the function of donation")
+                        )
+
+                        //邀請使用 Invite Friends To Use Stargazer3
+                        SettingOptionNavigateBar(
+                            titleRes = Res.string.InviteOthers,
+                            navigateClick = { } //@DoItLater("Add the function of invite link")
+                        )
+
+                        //Discord Invite Link
+                        SettingOptionNavigateBar(
+                            title = "Discord",
+                            navigateClick = { } //@DoItLater("Add the function of invite link")
+                        )
+                    }
+                }
+
+                //關於 About
+                item {
+                    SettingCategory(title = UtilTools().removeStringResDoubleQuotes(Res.string.About)) {
+                        //捐贈 Donation
+                        SettingOptionNavigateBar(
+                            titleRes = Res.string.AboutTheApp,
+                            navigateClick = { } //@DoItLater("Add the function of donation")
+                        )
+
+                        //邀請使用 Invite Friends To Use Stargazer3
+                        SettingOptionNavigateBar(
+                            titleRes = Res.string.SourceCode,
+                            navigateClick = { } //@DoItLater("Add the function of invite link")
+                        )
+
+                        //App 版本 App Version
+                        SettingOptionNavigateBar(
+                            titleRes = Res.string.AppVersion,
+                            navigateDesc = "${
+                                if (!arrayListOf("PRODUCTION", "RELEASE").contains(BuildKonfig.appProfile)) "${BuildKonfig.appProfile} " else " "
+                            }${BuildKonfig.appVersionName} (${BuildKonfig.appVersionCode})",
+                            navigateClick = { } //@DoItLater("Add the function of invite link")
+                        )
+
+                        //App 開發代號 Codename
+                        SettingOptionNoneBar(
+                            titleRes = Res.string.AppInnerVersionCode,
+                            optionStatic = BuildKonfig.appVersionCodeName,
+                        )
+
+                        //系統版本 System Version
+                        SettingOptionNoneBar(
+                            titleRes = Res.string.OsVersion,
+                            optionStatic = "${getDeviceInfo().deviceOSName} ${getDeviceInfo().deviceOSVersion}",
+                        )
+                    }
+                }
+
             }
 
-            //語言設定 Language Setting
-            //Known Issue : Cannot Implement Locale Change, please refer to https://github.com/JetBrains/compose-multiplatform/issues/4347
-            item {
-                SettingCategory(title = UtilTools().removeStringResDoubleQuotes(Res.string.LanguageSetup)) {
-                    //文本語言 Text Language
-                    SettingOptionDropDownBar(
-                        titleRes = Res.string.DocumentLanguage,
-                        optionSavedChoice = Language.TextLanguageInstance.localeName,
-                        optionList = Language().getTextLangLocaleNameList(),
-                        optionAction = { index: Int -> Language().setTextLanguage(Language().getTextLangEnumList()[index]) ; Language.TextLanguageInstance = Language().getTextLangEnumList()[index] }
-                    )
-
-                    //App語言 App Language
-                    SettingOptionDropDownBar(
-                        titleRes = Res.string.AppLanguage,
-                        optionSavedChoice = Language.AppLanguageInstance.localeName,
-                        optionList = Language().getAppLangLocaleNameList(),
-                        optionAction = { index: Int -> Language().setAppLanguage(Language().getAppLangEnumList()[index]) ; Language.AppLanguageInstance = Language().getAppLangEnumList()[index] }
-                    )
-                }
-            }
-
-            //偏好 Preferences
-            item {
-                SettingCategory(title = UtilTools().removeStringResDoubleQuotes(Res.string.Customize)) {
-                    //更換桌布 Change Wallpaper
-                    SettingOptionNavigateBar(
-                        titleRes = Res.string.ChangeWallPaper,
-                        navigateDesc = wallpaper.localeName ?: Character.getCharacterItemFromJSON(wallpaper.id).displayName ?: "?",
-                        navigateClick = { navigator.navigateLimited(Screen.BackgroundSettingScreen.route) }
-                    )
-
-                    //啟用模糊效果
-                    SettingOptionDropDownTFBar(
-                        titleRes = Res.string.UseBlurEffect,
-                        optionSavedChoice = Settings().getBoolean("useBlurEffect", true),
-                        optionAction = { index: Int -> Settings().putBoolean("useBlurEffect", index == 1) }
-                    )
-                }
-            }
-
-            //通知 Notification
-            item {
-                SettingCategory(title = UtilTools().removeStringResDoubleQuotes(Res.string.Notifi), isAvailable = false) {
-                    //所有通知 All Notification
-                    SettingOptionDropDownTFBar(
-                        titleRes = Res.string.NotifiAll,
-                        optionSavedChoice = Settings().getBoolean("enableAllNotifi", false),
-                        optionAction = { index: Int -> Settings().putBoolean("enableAllNotifi", index == 1) }
-                    )
-
-                    //開拓力 Stamina Notification
-                    SettingOptionDropDownTFBar(
-                        titleRes = Res.string.NotiStamina,
-                        optionSavedChoice = Settings().getBoolean("enableStaminaNotifi", false),
-                        optionAction = { index: Int -> Settings().putBoolean("enableStaminaNotifi", index == 1) }
-                    )
-
-                    //派遣委託 Stamina Notification
-                    SettingOptionDropDownTFBar(
-                        titleRes = Res.string.NotiExpedition,
-                        optionSavedChoice = Settings().getBoolean("enableExpeditionNotifi", false),
-                        optionAction = { index: Int -> Settings().putBoolean("enableExpeditionNotifi", index == 1) }
-                    )
-
-                    //每日實訓 Mission Notification
-                    SettingOptionDropDownTFBar(
-                        titleRes = Res.string.NotiMission,
-                        optionSavedChoice = Settings().getBoolean("enableMissionNotifi", false),
-                        optionAction = { index: Int -> Settings().putBoolean("enableMissionNotifi", index == 1) }
-                    )
-
-                    //模擬宇宙 Simulated Universe Notification
-                    SettingOptionDropDownTFBar(
-                        titleRes = Res.string.NotiSimulatedUniverse,
-                        optionSavedChoice = Settings().getBoolean("enableSimulatedUniverseNotifi", false),
-                        optionAction = { index: Int -> Settings().putBoolean("enableSimulatedUniverseNotifi", index == 1) }
-                    )
-                }
-            }
-
-            //支持我們 Support Us
-            item {
-                SettingCategory(title = UtilTools().removeStringResDoubleQuotes(Res.string.SupportUs)) {
-                    //捐贈 Donation
-                    SettingOptionNavigateBar(
-                        titleRes = Res.string.DonateUs,
-                        navigateClick = { } //@DoItLater("Add the function of donation")
-                    )
-
-                    //邀請使用 Invite Friends To Use Stargazer3
-                    SettingOptionNavigateBar(
-                        titleRes = Res.string.InviteOthers,
-                        navigateClick = { } //@DoItLater("Add the function of invite link")
-                    )
-
-                    //Discord Invite Link
-                    SettingOptionNavigateBar(
-                        title = "Discord",
-                        navigateClick = { } //@DoItLater("Add the function of invite link")
-                    )
-                }
-            }
-
-            //關於 About
-            item {
-                SettingCategory(title = UtilTools().removeStringResDoubleQuotes(Res.string.About)) {
-                    //捐贈 Donation
-                    SettingOptionNavigateBar(
-                        titleRes = Res.string.AboutTheApp,
-                        navigateClick = { } //@DoItLater("Add the function of donation")
-                    )
-
-                    //邀請使用 Invite Friends To Use Stargazer3
-                    SettingOptionNavigateBar(
-                        titleRes = Res.string.SourceCode,
-                        navigateClick = { } //@DoItLater("Add the function of invite link")
-                    )
-
-                    //App 版本 App Version
-                    SettingOptionNavigateBar(
-                        titleRes = Res.string.AppVersion,
-                        navigateDesc = "${
-                            if (!arrayListOf("PRODUCTION", "RELEASE").contains(BuildKonfig.appProfile)) "${BuildKonfig.appProfile} " else " "
-                        }${BuildKonfig.appVersionName} (${BuildKonfig.appVersionCode})",
-                        navigateClick = { } //@DoItLater("Add the function of invite link")
-                    )
-
-                    //App 開發代號 Codename
-                    SettingOptionNoneBar(
-                        titleRes = Res.string.AppInnerVersionCode,
-                        optionStatic = BuildKonfig.appVersionCodeName,
-                    )
-
-                    //系統版本 System Version
-                    SettingOptionNoneBar(
-                        titleRes = Res.string.OsVersion,
-                        optionStatic = "${getDeviceInfo().deviceOSName} ${getDeviceInfo().deviceOSVersion}",
-                    )
-                }
-            }
-
+            PageHeader(navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.BACK)
         }
-
-        PageHeader(navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.BACK)
     }
 }
 
