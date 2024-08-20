@@ -33,11 +33,11 @@ import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import types.UserAbyssRecord.Companion.refreshMOCData
+import types.UserAbyssRecord.Companion.refreshPFData
 import types.UserAccount.Companion.INSTANCE
 import types.UserAccount.Companion.refreshCharacterList
-import types.UserAccount.Companion.refreshMOCData
 import types.UserAccount.Companion.refreshNoteData
-import types.UserAccount.Companion.refreshPFData
 import utils.FontSizeNormalLarge24
 import utils.FontSizeNormalSmall
 import utils.Preferences

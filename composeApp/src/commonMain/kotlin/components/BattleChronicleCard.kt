@@ -32,10 +32,10 @@ import files.PlayersRounds
 import files.Res
 import files.ic_moc_star
 import org.jetbrains.compose.resources.painterResource
+import types.AbyssInfoType
 import types.Character
 import types.CharacterStatus
-import types.UserMOCRecord
-import types.UserPFRecord
+import types.UserAbyssRecordData
 import utils.FontSizeNormal12
 import utils.FontSizeNormal14
 import utils.FontSizeNormal16
@@ -46,8 +46,8 @@ import utils.replaceStrRes
 fun BattleChronicleCard(
     modifier: Modifier = Modifier,
     hazeState: HazeState = remember { HazeState() },
-    mocData: List<UserMOCRecord>? = null,
-    pfData: List<UserPFRecord>? = null,
+    data: List<UserAbyssRecordData>,
+    type: AbyssInfoType,
     title: String? = null,
     isSelected : Boolean? = null,
     //asData: UserASRecord? = null,
@@ -70,18 +70,18 @@ fun BattleChronicleCard(
                 Column {
                     //Phase
                     Text(
-                        text = "${title}·${UtilTools().getMocPhaseStrByIndex(((mocData?.get(0)?.floor ?: pfData?.get(0)?.floor) ?: 1) - 1)}",
+                        text = "${title}·${UtilTools().getMocPhaseStrByIndex((data[0].floor) - 1)}",
                         color = Color.White,
                         style = FontSizeNormal16()
                     )
 
                     //Remaining Rounds
                     Text(
-                        text = if(mocData?.get(0)?.isFastPass == true || pfData?.get(0)?.isFastPass == true) {
+                        text = if(data[0].isFastPass) {
                             UtilTools().removeStringResDoubleQuotes(Res.string.MOCSkipped)
                         } else {
                             UtilTools().removeStringResDoubleQuotes(Res.string.PlayersRounds).replaceStrRes(
-                                (mocData?.get(0)?.roundUsed ?: pfData?.get(0)?.roundUsed ?: 0).toString(),
+                                data[0].roundUsed.toString(),
                             )
                         },
                         color = Color(0xCCFFFFFF),
@@ -93,13 +93,13 @@ fun BattleChronicleCard(
 
                 //Star
                 Row {
-                    repeat(mocData?.get(0)?.star ?: pfData?.get(0)?.star ?: 0) {
+                    repeat(data[0].star) {
                         Image(
                             painter = painterResource(Res.drawable.ic_moc_star),
                             contentDescription = null,
                             modifier = Modifier.size(24.dp).aspectRatio(1f)
                         )
-                        if(it < 2) {
+                        if(it < data[0].star - 1) {
                             Spacer(Modifier.width(8.dp))
                         }
                     }
@@ -112,15 +112,17 @@ fun BattleChronicleCard(
             //DateTime & Score
             Row {
                 Text(
-                    text = mocData?.get(0)?.recordTime ?: pfData?.get(0)?.recordTime ?: "????",
+                    text = data[0].recordTime,
                     color = Color.White,
                     style = FontSizeNormal12()
                 )
                 Spacer(Modifier.weight(1f))
 
-                if(pfData?.get(0)?.score != null) {
+                val score1 = if (data.isNotEmpty()) data[0].score else 0
+                val score2 = if(data.size > 1) data[1].score else 0
+                if(score1 != -1 || score2 != -1) {
                     Text(
-                        text = pfData[0].score.toString(),
+                        text = (score1 + score2).toString(),
                         color = Color(0xFFDD8200),
                         style = FontSizeNormal14()
                     )
@@ -130,15 +132,14 @@ fun BattleChronicleCard(
 
             //node 1 & node 2
             repeat(2){
-                val charList = mocData?.get(it)?.charList ?: pfData?.get(it)?.charList
+                val charList = data[0].charList
 
                 Column(Modifier.fillMaxWidth().wrapContentHeight()) {
                     NonLazyGrid(
                         columns = 4,
-                        itemCount = charList?.size ?: 0,
+                        itemCount = charList.size ?: 0,
                         horizontalSpaceBetween = 6.dp
                     ){charIndex ->
-                        if(charList?.get(charIndex)?.charId == null) return@NonLazyGrid
                         val character = Character.getCharacterItemFromJSON((charList[charIndex].charId.toString()))
                         character.characterStatus = CharacterStatus(
                             eidolon = charList[charIndex].charEidolon,
@@ -151,7 +152,7 @@ fun BattleChronicleCard(
                         )
                     }
 
-                    if(it == 0 && !(mocData?.get(it)?.isFastPass == true || pfData?.get(it)?.isFastPass == true)) {
+                    if(it == 0 && !data[0].isFastPass) {
                         Spacer(Modifier.height(4.dp))
                         //Divider
                         Box(Modifier.fillMaxWidth().padding(top = 12.dp, bottom = 12.dp), contentAlignment = Alignment.Center) {

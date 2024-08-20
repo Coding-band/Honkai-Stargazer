@@ -39,6 +39,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
@@ -47,6 +48,7 @@ import androidx.compose.ui.unit.dp
 import coil3.compose.LocalPlatformContext
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
+import com.voc.honkaistargazer.BuildKonfig
 import components.DropdownMenuNoPadding
 import components.HeaderData
 import components.InfoDisplayDialog
@@ -63,11 +65,11 @@ import files.MOCEffect
 import files.Res
 import files.bg_transparent
 import files.ic_arrow_down_spinner
-import files.ic_arrow_to_down
 import files.ic_exchange_icon
 import files.ic_moc_buff_icon
 import files.ic_person_btn
 import files.ic_selected_orange_circle
+import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
 import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
@@ -77,10 +79,11 @@ import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import types.AbyssInfo
+import types.AbyssInfoList
+import types.AbyssInfoMonster
+import types.AbyssInfoType
 import types.Constants
-import types.MemoryOfChaos
-import types.MemoryOfChaosList
-import types.MemoryOfChaosMonsterInfo
 import types.UserAccount
 import utils.FontSizeNormal14
 import utils.FontSizeNormal16
@@ -100,9 +103,11 @@ fun MemoryOfChaosMissionPageScreen(
     val hazeState = remember { HazeState() }
 
     val mocChoiceIndex = remember { mutableStateOf(0) }
-    val mocList = MemoryOfChaosList.getMocList().sortedByDescending { it.id }
+    val mocList = AbyssInfoList.getAbyssList(type = AbyssInfoType.MemoryOfChaos)
+        .sortedByDescending { it.id }
+        .filter { (BuildKonfig.appProfile != "DEV") && it.time.begin <= Clock.System.now().toEpochMilliseconds() }
     val isDialogVisible = remember { mutableStateOf(false) }
-    val mocInfoList = MemoryOfChaos.getMocItemByMocId(mocList[mocChoiceIndex.value].id)
+    val mocInfoList = AbyssInfo.getAbyssItemById(abyssId = mocList[mocChoiceIndex.value].id, type = AbyssInfoType.MemoryOfChaos)
 
 
     Box(Modifier.fillMaxSize()) {
@@ -153,7 +158,7 @@ fun MemoryOfChaosMissionPageScreen(
 
 @Composable
 fun MemoryOfChaosIdSpinner(
-    mocList: List<MemoryOfChaosList>,
+    mocList: List<AbyssInfoList>,
     mocChoiceIndex: MutableState<Int>,
     isDialogVisible: MutableState<Boolean>
 ){
@@ -236,7 +241,7 @@ fun MemoryOfChaosIdSpinner(
 @Preview
 @Composable
 fun MemoryOfChaosContent(
-    mocInfoList: MemoryOfChaos?
+    mocInfoList: AbyssInfo?
 ){
     val density = LocalDensity.current.density
     val mocPhaseList = UtilTools().getMocPhaseStrListByMocLen(mocInfoList?.missionList?.size ?: -1)
@@ -265,7 +270,7 @@ fun MemoryOfChaosContent(
                 ) {
                     Text(usageList[mocInfoDisplayIndex.value], style = FontSizeNormal16(), color = Color.White)
                     Spacer(Modifier.width(4.dp))
-                    Image(painterResource(Res.drawable.ic_exchange_icon), modifier = Modifier.size(12.dp), contentDescription = null)
+                    Image(painterResource(Res.drawable.ic_exchange_icon), modifier = Modifier.size(12.dp).align(Alignment.CenterVertically), colorFilter = ColorFilter.tint(Color.White), contentDescription = null)
                 }
 
                 Spacer(Modifier.width(4.dp).weight(1f))
@@ -288,7 +293,7 @@ fun MemoryOfChaosContent(
                         Spacer(Modifier.width(16.dp))
                         Text(mocPhaseList[mocPhaseIndex.value], style = FontSizeNormal16(), color = Color.White)
                         Spacer(Modifier.width(4.dp))
-                        Image(painterResource(Res.drawable.ic_arrow_to_down), modifier = Modifier.size(12.dp), contentDescription = null)
+                        Image(painterResource(Res.drawable.ic_arrow_down_spinner), modifier = Modifier.size(12.dp).align(Alignment.CenterVertically), colorFilter = ColorFilter.tint(Color.White), contentDescription = null)
                     }
                     //對於DropdownItem沒法按照設計稿展示，暫時無解
                     DropdownMenuNoPadding(
@@ -329,8 +334,8 @@ fun MemoryOfChaosContent(
             repeat(2){phase ->
                 //Showing Floor & Phase
                 val phaseInfo = when(phase){
-                    0 -> mocInfoList?.missionList?.get(mocPhaseIndex.value)?.phase1
-                    1 -> mocInfoList?.missionList?.get(mocPhaseIndex.value)?.phase2
+                    0 -> mocInfoList?.missionList?.get(mocPhaseIndex.value)?.part1
+                    1 -> mocInfoList?.missionList?.get(mocPhaseIndex.value)?.part2
                     else -> null
                 }
 
@@ -404,11 +409,11 @@ fun MemoryOfChaosContent(
                             dateFormat.format(
                                 Instant.fromEpochMilliseconds(mocInfoList?.timeInfo?.begin ?: 0L).toLocalDateTime(TimeZone.currentSystemDefault())
                             )
-                        } - ${
+                        } ~ ${
                             dateFormat.format(
                                 Instant.fromEpochMilliseconds(mocInfoList?.timeInfo?.end ?: 0L).toLocalDateTime(TimeZone.currentSystemDefault())
                             )
-                        } (${TimeZone.currentSystemDefault().id})"
+                        }"
                     } else {
                         "角色使用率"
                     },
@@ -423,7 +428,7 @@ fun MemoryOfChaosContent(
 }
 
 @Composable
-fun MonsterCard(monsterInfo: MemoryOfChaosMonsterInfo){
+fun MonsterCard(monsterInfo: AbyssInfoMonster){
     val context = LocalPlatformContext.current
 
     Column(verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
@@ -443,23 +448,6 @@ fun MonsterCard(monsterInfo: MemoryOfChaosMonsterInfo){
         Row{
             repeat(monsterInfo.monsterWeakness.size) {
                 Image(painterResource(monsterInfo.monsterWeakness[it].iconColor), modifier = Modifier.size(16.dp) ,contentDescription = null)
-            }
-        }
-    }
-}
-
-@Composable
-fun MemoryOfChaosEnemyList(
-    modifier: Modifier = Modifier,
-) {
-    var density = LocalDensity.current.density
-    val hazeState = remember { HazeState() }
-
-    Box(Modifier.fillMaxSize()) {
-        LazyColumn {
-            item {
-
-
             }
         }
     }
