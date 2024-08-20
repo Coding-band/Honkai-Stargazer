@@ -52,6 +52,7 @@ import utils.TextColorNormal
 import utils.UtilTools
 import utils.navigation.Screen
 import utils.navigation.navigateLimited
+import utils.showFunctionIsDevelopingToast
 
 class HomePageBlocks {
     val HOME_PAGE_BLOCK_WIDTH_1x1 = 80.dp
@@ -103,6 +104,10 @@ fun HomePageBlock1x1(
             if (blockData.itemOnClickToNavigate !== null) {
                 println("Ok I'm Navigating to " + blockData.itemOnClickToNavigate)
                 navigator.navigateLimited(blockData.itemOnClickToNavigate!!.route)
+            }
+
+            if(blockData.itemOnClickAction == null && blockData.itemOnClickToNavigate == null){
+                showFunctionIsDevelopingToast()
             }
         },
         shape = RoundedCornerShape(8.dp),
@@ -161,12 +166,14 @@ fun HomePageBlock2x1(
         contentPadding = PaddingValues(10.dp),
         colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent),
         onClick = {
+            blockData.itemOnClickAction;
+
             if (blockData.itemOnClickToNavigate !== null) {
                 println("Ok I'm Navigating to " + blockData.itemOnClickToNavigate)
                 navigator.navigateLimited(blockData.itemOnClickToNavigate!!.route)
-            } else {
-                println("Ok I'm OnClick la")
-                blockData.itemOnClickAction;
+            }
+            if(blockData.itemOnClickAction == null && blockData.itemOnClickToNavigate == null){
+                showFunctionIsDevelopingToast()
             }
         },
         shape = RoundedCornerShape(8.dp),

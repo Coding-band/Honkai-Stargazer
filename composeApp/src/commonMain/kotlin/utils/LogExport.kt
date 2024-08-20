@@ -26,6 +26,7 @@ import com.dokar.sonner.ToastType
 import com.dokar.sonner.ToasterState
 import com.russhwolf.settings.Settings
 import com.voc.honkaistargazer.BuildKonfig
+import files.FunctionStillInDevelop
 import files.Res
 import files.pom_pom_failed_issue
 import getDeviceInfo
@@ -52,6 +53,13 @@ import kotlin.time.Duration.Companion.milliseconds
 
 @OptIn(FormatStringsInDatetimeFormats::class)
 val dateFormat = LocalDateTime.Format { byUnicodePattern("yyyy-MM-dd'T'HH:mm:ss[.SSS]") }
+
+lateinit var ToastStrFunctionStillInDevelop: String
+
+@Composable
+fun initToastStr(){
+    ToastStrFunctionStillInDevelop = UtilTools().removeStringResDoubleQuotes(Res.string.FunctionStillInDevelop)
+}
 
 @Serializable
 data class LogExportObj @OptIn(ExperimentalSerializationApi::class) constructor(
@@ -119,6 +127,14 @@ fun showWarningToast(toasterState: ToasterState = toastInstance, message: String
         message = message,
         type = ToastType.Warning,
         duration = 10000.milliseconds,
+    )
+}
+
+fun showFunctionIsDevelopingToast(toasterState: ToasterState = toastInstance) {
+    toasterState.show(
+        message = ToastStrFunctionStillInDevelop,
+        type = ToastType.Warning,
+        duration = 5000.milliseconds,
     )
 }
 
