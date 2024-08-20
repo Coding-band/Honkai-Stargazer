@@ -3,6 +3,7 @@ package screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -45,12 +46,14 @@ import components.PageHeaderAlpha
 import components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import files.AppStatusNoDataFound
 import files.MOCMyBattleReport
 import files.MemoryOfChaos
 import files.PureFiction
 import files.Res
 import files.ic_arrow_down_spinner
 import files.ic_exchange_icon
+import files.pom_pom_failed_issue
 import files.ui_icon_exchange
 import moe.tlaster.precompose.navigation.BackStackEntry
 import moe.tlaster.precompose.navigation.Navigator
@@ -120,6 +123,16 @@ fun BattleChroniclePageScreen(
         AbyssInfoType.PureFiction -> pfIds
     }
     val density = LocalDensity.current.density
+    val sorttedAbyssList = choiceChronicle.value
+        .asSequence()
+        .sortedByDescending { it.id }
+        .sortedByDescending { it.floor }
+        .groupBy { it.id to it.floor }
+        .map { it.value }
+        .sortedByDescending { it.first().id }
+        .toList()
+
+    val sorttedAbyssListAsc = sorttedAbyssList.reversed()
 
     Box(modifier = Modifier) {
         LazyColumn(
@@ -130,17 +143,6 @@ fun BattleChroniclePageScreen(
             ).haze(hazeState)
         ) {
             item { Spacer(Modifier.height(PAGE_HEADER_HEIGHT + 24.dp)) }
-
-            val sorttedAbyssList = choiceChronicle.value
-                .asSequence()
-                .sortedByDescending { it.id }
-                .sortedByDescending { it.floor }
-                .groupBy { it.id to it.floor }
-                .map { it.value }
-                .sortedByDescending { it.first().id }
-                .toList()
-
-            val sorttedAbyssListAsc = sorttedAbyssList.reversed()
 
             item {
                 val optionTextViewSize = remember { mutableStateOf(IntSize.Zero) }
@@ -227,6 +229,27 @@ fun BattleChroniclePageScreen(
             }
 
             item { Spacer(Modifier.statusBarsPadding().height(64.dp)) }
+        }
+
+        if(sorttedAbyssList.isEmpty()) {
+            Column(
+                modifier = Modifier.fillMaxWidth(1/2f).align(Alignment.Center),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Image(
+                    painterResource(Res.drawable.pom_pom_failed_issue),
+                    contentDescription = null,
+                    modifier = Modifier.size(128.dp)
+                )
+                Spacer(Modifier.height(16.dp))
+                Text(
+                    text = UtilTools().removeStringResDoubleQuotes(Res.string.AppStatusNoDataFound),
+                    style = FontSizeNormal16(),
+                    color = Color.White,
+                    modifier = Modifier.wrapContentSize()
+                )
+            }
         }
 
 
