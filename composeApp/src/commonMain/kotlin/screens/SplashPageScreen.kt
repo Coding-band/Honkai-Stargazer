@@ -11,6 +11,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -19,6 +22,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import components.HeaderData
 import components.defaultHeaderData
+import dev.chrisbanes.haze.HazeState
+import dev.chrisbanes.haze.haze
 import files.Res
 import files.app_icon_black_bg
 import files.euclid_circular_a_medium
@@ -29,7 +34,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import moe.tlaster.precompose.navigation.NavOptions
 import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.PopUpTo
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -40,7 +47,9 @@ import types.UserAccount.Companion.refreshCharacterList
 import types.UserAccount.Companion.refreshNoteData
 import utils.FontSizeNormalLarge24
 import utils.FontSizeNormalSmall
+import utils.Language
 import utils.Preferences
+import utils.initToastStr
 import utils.navigation.Screen
 import utils.navigation.navigateLimited
 
@@ -53,26 +62,41 @@ fun SplashPage(
     headerData: HeaderData = defaultHeaderData
 ) {
 
-    CoroutineScope(Dispatchers.Default).launch {
+    Language().setAppLanguage()
 
-        if(INSTANCE.uid != "000000000"){
-            async { refreshCharacterList() }.await()
-            async { refreshNoteData() }.await()
-            async { refreshMOCData() }.await()
-            async { refreshPFData() }.await()
+    val hazeStateRoot = remember { HazeState() }
+    val showPopup = remember { mutableStateOf(!Preferences().AppSettings.isLangInitialized()) }
 
-        }
+    val hasRefreshed = remember { mutableStateOf(false) }
+    LaunchedEffect(showPopup.value) {
+        if (!showPopup.value) {
+            CoroutineScope(Dispatchers.Default).launch {
+                if (INSTANCE.uid != "000000000" && !hasRefreshed.value) {
+                    async { refreshCharacterList() }.await()
+                    async { refreshNoteData() }.await()
+                    async { refreshMOCData() }.await()
+                    async { refreshPFData() }.await()
+                }
 
-        withContext(Dispatchers.Main) {
-            Preferences().Leaderboard.updatedLeaderboard()
-            navigator.navigateLimited(Screen.HomePage.route)
+                hasRefreshed.value = true
+
+                withContext(Dispatchers.Main) {
+                    Preferences().Leaderboard.updatedLeaderboard()
+                    if (!showPopup.value) {
+                        navigator.navigateLimited(Screen.HomePage.route, options = NavOptions(popUpTo = PopUpTo(Screen.SplashPage.route)))
+                    }
+                }
+            }
         }
     }
+
+    initToastStr()
 
     //Root Container of this page
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .haze(hazeStateRoot)
             .background(Color.Black)
     ) {
         //Container of App Icon & Ads
@@ -196,4 +220,7 @@ fun SplashPage(
 
         }
     }
+
+
+    Language().initAppLanguagePopup(showPopup,hazeState = hazeStateRoot)
 }
