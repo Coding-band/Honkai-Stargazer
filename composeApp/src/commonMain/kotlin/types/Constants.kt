@@ -196,24 +196,11 @@ class Constants {
                 itemTitleRId = Res.string.MemoryOfChaos,
                 itemIconId = Res.drawable.phorphos_medal_military_fill,
                 itemOnClickToNavigate = Screen.MemoryOfChaosMissionPageScreen
-                /* itemOnClickAction = {
-
-                    val obj = MemoryOfChaos.getMocItemByMocId(1016)!!.toString()
-                    val len = obj.length
-
-                    for (i in 0 until len step 1024) {
-                        if(i+1024<len){
-                            println(obj.substring(i, i + 1024))
-                        }else{
-                            println(obj.substring(i, len))
-                        }
-                    }
-
-                }*/
             ),
             HomePageBlocks.HomePageBlockItem(
                 itemTitleRId = Res.string.PureFiction,
-                itemIconId = Res.drawable.phorphos_atom_fill
+                itemIconId = Res.drawable.phorphos_atom_fill,
+                itemOnClickToNavigate = Screen.PureFictionMissionPageScreen
             ),
             HomePageBlocks.HomePageBlockItem(
                 itemTitleRId = Res.string.Event,

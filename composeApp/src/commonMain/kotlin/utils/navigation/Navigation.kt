@@ -40,12 +40,14 @@ import files.Login
 import files.MOCMyBattleReport
 import files.Map
 import files.MemoryOfChaos
+import files.PureFiction
 import files.RelicList
 import files.Res
 import files.Setting
 import files.UIDSearch
 import files.UserInfoGameData
 import files.phorphos_alien_fill
+import files.phorphos_atom_fill
 import files.phorphos_baseball_cap_fill
 import files.phorphos_film_slate_regular
 import files.phorphos_game_controller_fill
@@ -76,6 +78,7 @@ import screens.LightconeListPage
 import screens.MakeBackground
 import screens.MapPageScreen
 import screens.MemoryOfChaosMissionPageScreen
+import screens.PureFictionMissionPageScreen
 import screens.RelicInfoPage
 import screens.RelicListPage
 import screens.SettingScreen
@@ -177,6 +180,10 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     data object BattleChroniclePageScreen : Screen(
         "BattleChroniclePageScreen",
         HeaderData(titleRId = Res.string.MOCMyBattleReport, titleIconId = Res.drawable.phorphos_game_controller_fill)
+    )
+    data object PureFictionMissionPageScreen : Screen(
+        "PureFictionMissionPageScreen",
+        HeaderData(titleRId = Res.string.PureFiction, titleIconId = Res.drawable.phorphos_atom_fill)
     )
 }
 
@@ -492,11 +499,24 @@ fun Navigation() {
                 }
             )
         }
+        scene(
+            route = Screen.PureFictionMissionPageScreen.route, navTransition = navTransition) {
+            RootContent(
+                screen = Screen.PureFictionMissionPageScreen,
+                snackbarHostState = snackbarHostState,
+                page = {
+                    PureFictionMissionPageScreen(
+                        navigator = navigator,
+                        headerData = Screen.PureFictionMissionPageScreen.headerData
+                    )
+                }
+            )
+        }
     }
 }
 
 fun Navigator.navigateLimited(route: String, options: NavOptions? = null) {
-    val navigationInterval: Long = 1000 // 2 seconds
+    val navigationInterval: Long = 2000 // 2 seconds
     val lastNavigationTime: Long = Settings().getLong("lastNavigationTime", 0)
 
     val currentTime = Clock.System.now().toEpochMilliseconds()
