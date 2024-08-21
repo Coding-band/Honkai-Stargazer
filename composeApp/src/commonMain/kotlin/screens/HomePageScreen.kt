@@ -39,10 +39,14 @@ import androidx.compose.material.IconButton
 import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -89,7 +93,6 @@ import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.painterResource
 import types.Character
 import types.Constants.Companion.HOME_PAGE_ITEMS
-import types.UserAbyssRecord
 import types.UserAccount
 import types.UserAccount.Companion.INSTANCE
 import utils.BlackAlpha30
@@ -112,7 +115,6 @@ import utils.navigation.navigateLimited
 import utils.navigation.navigatorInstance
 import utils.starbase.StarbaseAPI
 import kotlin.math.min
-
 
 
 @Composable
@@ -146,13 +148,18 @@ fun HomePage(
         ThreeDotsDialog(navigator = navigator, threeDotDialogPos = threeDotDialogPos, hazeState = hazeState, threeDotDialogDisplay = threeDotDialogDisplay, userAccount = userAccount)
 
     }
-
-    CoroutineScope(Dispatchers.Default).launch {
-        if(INSTANCE.uid != "000000000"){
-            async { StarbaseAPI().updateUserAccountInfo() }.await()
-            async { StarbaseAPI().updateCharData() }.await()
-            async { StarbaseAPI().updateMOCData() }.await()
-            async { StarbaseAPI().updatePFData() }.await()
+    var inited by rememberSaveable { mutableStateOf(false) }
+    if(!inited){
+        LaunchedEffect(Unit){
+            CoroutineScope(Dispatchers.Default).launch {
+                if(INSTANCE.uid != "000000000"){
+                    async { StarbaseAPI().updateUserAccountInfo() }.await()
+                    async { StarbaseAPI().updateCharData() }.await()
+                    async { StarbaseAPI().updateMOCData() }.await()
+                    async { StarbaseAPI().updatePFData() }.await()
+                }
+                inited = true
+            }
         }
     }
 }
