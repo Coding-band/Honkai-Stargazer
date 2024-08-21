@@ -179,8 +179,6 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                                             )
                                         }
 
-                                        println(relic)
-
                                         when (relicObj["type"]!!.jsonPrimitive.int) {
                                             1 -> characterStatus.equippingRelicHead = relic
                                             2 -> characterStatus.equippingRelicHands = relic
@@ -239,6 +237,7 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
 
                                         //Find the index of HsrProperties where hsrProperties.attributeExchange == attrEx
                                         val index = attrAddi.indexOfFirst { it.attributeExchange == attrEx }
+
 
                                         if (index == -1) {
                                             attrAddi.add(

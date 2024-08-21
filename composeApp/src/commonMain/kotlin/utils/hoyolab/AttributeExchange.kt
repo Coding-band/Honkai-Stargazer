@@ -78,23 +78,23 @@ data class AttributeExchange(
         //FIX : Cannot find if case : isForRelic = true and Expect key is xx_dmg
         //To avoid that case, if isForRelic/isPercent is null, still expect as ok to find
         fun getAttrKeyByPropertyType(property_type: Int, isPercent: Boolean? = null, isForRelic: Boolean? = null): AttributeExchange {
-            return AttrExchangeList.find {
+            return AttrExchangeList.firstOrNull {
                 it.id == property_type
-                        && (if (isPercent != null) (it.isPercent == null || it.isPercent == isForRelic) == isPercent else true)
+                        && (if (isPercent != null) (it.isPercent == null || it.isPercent == isPercent) else true)
                         && (if (isForRelic != null) (it.isForRelic == null || it.isForRelic == isForRelic) else true)
             } ?: ATTREX_UNKNOWN
         }
         fun getAttrKeyByMihomoType(type: String, isPercent: Boolean? = null, isForRelic: Boolean? = null): AttributeExchange {
-            return AttrExchangeList.find {
+            return AttrExchangeList.firstOrNull {
                 it.type == type
-                        && (if (isPercent != null) (it.isPercent == null || it.isPercent == isForRelic) == isPercent else true)
+                        && (if (isPercent != null) (it.isPercent == null || it.isPercent == isPercent) else true)
                         && (if (isForRelic != null) (it.isForRelic == null || it.isForRelic == isForRelic) else true)
             } ?: ATTREX_UNKNOWN
         }
         fun getAttrKeyByMihomoKey(key: String, isPercent: Boolean? = null, isForRelic: Boolean? = null): AttributeExchange {
-            return AttrExchangeList.find {
+            return AttrExchangeList.firstOrNull {
                 it.key == key
-                        && (if (isPercent != null) (it.isPercent == null || it.isPercent == isForRelic) == isPercent else true)
+                        && (if (isPercent != null) (it.isPercent == null || it.isPercent == isPercent) else true)
                         && (if (isForRelic != null) (it.isForRelic == null || it.isForRelic == isForRelic) else true)
             } ?: ATTREX_UNKNOWN
         }
