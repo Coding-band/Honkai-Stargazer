@@ -8,6 +8,10 @@ package types
 
 import androidx.annotation.IntRange
 import androidx.compose.ui.graphics.ImageBitmap
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.int
@@ -16,7 +20,19 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import utils.Language
 import utils.UtilTools
+import utils.calculator.AttrData
+import utils.calculator.getCharAttrData
 
+/**
+ * Data from JSON of assets/character_data/<lang>/<fileName>.json
+ */
+@Serializable
+data class CharacterBaseStatus(
+    val hp: Float = 0f,
+    val atk: Float = 0f,
+    val def: Float = 0f,
+    val ultimateEnergyRequire: Int = 0,
+)
 
 @Serializable
 open class Character(
@@ -33,7 +49,7 @@ open class Character(
     var characterStatus: CharacterStatus? = null,
     var displayName: String? = "?",
     var version: String? = "1.0.0",
-
+    var characterAttrData: AttrData? = null,
     ){
     enum class Gender{
         Male, Female, Unspecified
@@ -63,21 +79,29 @@ open class Character(
             return getCharacterImageByteArrayFromFileName(imageFolderType, listDataJson.jsonObject["name"]!!.jsonPrimitive.content)
         }
 
+        @OptIn(ExperimentalCoroutinesApi::class)
         fun getCharacterItemFromJSON(charId : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance) : Character {
-            val listDataJson = getCharacterListFromJSON().jsonArray.find { lcData -> lcData.jsonObject["charId"]!!.jsonPrimitive.content == charId } ?: return Character(path = Path.Unspecified, )
+            return runBlocking {
+                val job = async(Dispatchers.Default) {
+                    val listDataJson = getCharacterListFromJSON().jsonArray.find { lcData -> lcData.jsonObject["charId"]!!.jsonPrimitive.content == charId } ?: return@async Character(path = Path.Unspecified, )
 
-            val dataJson = getCharacterDataFromFileName(listDataJson.jsonObject["fileName"]!!.jsonPrimitive.content, textLanguage)
+                    val dataJson = getCharacterDataFromFileName(listDataJson.jsonObject["fileName"]!!.jsonPrimitive.content, textLanguage)
 
-            return Character(
-                officialId = charId.toInt(),
-                fileName = listDataJson.jsonObject["fileName"]!!.jsonPrimitive.content,
-                registName = (listDataJson.jsonObject["name"]!!.jsonPrimitive.content),
-                rarity = dataJson.jsonObject["rarity"]!!.jsonPrimitive.int,
-                path = (Path.valueOf(listDataJson.jsonObject["path"]!!.jsonPrimitive.content)),
-                version = (listDataJson.jsonObject["version"]!!.jsonPrimitive.content),
-                displayName = dataJson.jsonObject["name"]!!.jsonPrimitive.content,
-                combatType = (CombatType.valueOf(listDataJson.jsonObject["element"]!!.jsonPrimitive.content)),
-            )
+                    return@async Character(
+                        officialId = charId.toInt(),
+                        fileName = listDataJson.jsonObject["fileName"]!!.jsonPrimitive.content,
+                        registName = (listDataJson.jsonObject["name"]!!.jsonPrimitive.content),
+                        rarity = dataJson.jsonObject["rarity"]!!.jsonPrimitive.int,
+                        path = (Path.valueOf(listDataJson.jsonObject["path"]!!.jsonPrimitive.content)),
+                        version = (listDataJson.jsonObject["version"]!!.jsonPrimitive.content),
+                        displayName = dataJson.jsonObject["name"]!!.jsonPrimitive.content,
+                        combatType = (CombatType.valueOf(listDataJson.jsonObject["element"]!!.jsonPrimitive.content)),
+                        characterAttrData = getCharAttrData(dataJson, 80),
+                    )
+                }
+                job.await()
+                job.getCompleted()
+            }
         }
     }
 }

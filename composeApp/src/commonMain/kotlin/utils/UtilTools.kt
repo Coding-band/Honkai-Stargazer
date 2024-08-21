@@ -139,15 +139,32 @@ class UtilTools {
              */
     fun getAssetsJsonByFilePath(filePath: String): JsonElement {
         return runBlocking {
-            val job = async(Dispatchers.IO) {
+            val job = async(Dispatchers.Default) {
                 try {
-                    //Ararar I spent 4hrs on there lol
-                    val assetString: String = Res.readBytes("files/data/${filePath}").decodeToString()
-                    return@async Json.parseToJsonElement(assetString)
+                    return@async Json.parseToJsonElement(getAssetsStringByFilePath(filePath))
                 } catch (e: Exception) {
                     // Handle the exception, ErrorLogExporter Please!
                     errorLogExport("UtilTools","getAssetsWebpByFileName()",e)
                     return@async Json.parseToJsonElement("{}")
+                }
+            }
+            job.await()
+            job.getCompleted()
+        }
+    }
+
+    @OptIn(ExperimentalResourceApi::class)
+    fun getAssetsStringByFilePath(filePath: String): String{
+        return runBlocking {
+            val job = async(Dispatchers.IO) {
+                try {
+                    //Ararar I spent 4hrs on there lol
+                    val assetString: String = Res.readBytes("files/data/${filePath}").decodeToString()
+                    return@async assetString
+                } catch (e: Exception) {
+                    // Handle the exception, ErrorLogExporter Please!
+                    errorLogExport("UtilTools","getAssetsWebpByFileName()",e)
+                    return@async "{}"
                 }
             }
             job.await()

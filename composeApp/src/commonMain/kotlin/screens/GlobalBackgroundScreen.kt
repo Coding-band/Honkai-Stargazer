@@ -23,17 +23,25 @@ import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import utils.Black
 import utils.BlackAlpha20
 import utils.BlackAlpha80
 import utils.Stargazer3Theme
+import utils.Transparent
 import utils.UtilTools
 import utils.navigation.Screen
 
 
 val gradient = Brush.verticalGradient(
     colors = listOf(
-        BlackAlpha20,
-        BlackAlpha80
+        BlackAlpha80,
+        BlackAlpha20
+    )
+)
+val gradientBottom = Brush.verticalGradient(
+    colors = listOf(
+        Transparent,
+        Black
     )
 )
 
@@ -73,7 +81,7 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen) {
         )
         Box(
             modifier = Modifier.matchParentSize().background(
-                if (isGradient) gradient else Brush.linearGradient(listOf(Color.Transparent,Color.Transparent))
+                if (isGradient) gradientBottom else Brush.linearGradient(listOf(Color.Transparent,Color.Transparent))
             )
         )
     }

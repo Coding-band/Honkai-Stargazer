@@ -1,10 +1,17 @@
 package utils
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
@@ -13,6 +20,7 @@ import androidx.compose.ui.unit.sp
 import files.Res
 import files.misans_regular
 import org.jetbrains.compose.resources.Font
+import screens.gradientBottom
 import setKeyboardDarkMode
 
 val Purple80 = Color(0xFFD0BCFF)
@@ -132,3 +140,12 @@ fun FontSizeNormalLarge32() = TextStyle(
     fontWeight = FontWeight.Medium,
     fontSize = 32.sp
 )
+
+@Composable
+fun PageBottomMask(modifier: Modifier = Modifier) {
+    Box(Modifier.fillMaxSize()) {
+        Box(
+            modifier = Modifier.fillMaxWidth().fillMaxHeight(0.2f).background(gradientBottom).align(Alignment.BottomCenter)
+        )
+    }
+}

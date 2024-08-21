@@ -1,5 +1,6 @@
 package utils.calculator
 
+import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.float
 import kotlinx.serialization.json.int
@@ -11,6 +12,7 @@ import kotlinx.serialization.json.jsonPrimitive
  * This file is ref from https://github.com/Coding-band/Honkai-Stargazer/blob/rn_branch/src/utils/calculator/getAttrData.ts
  * (寫算法係我自己吖嘛...拎嚟用返冇問題掛...)
  */
+@Serializable
 data class AttrData(
     var atk: Float,
     var hp: Float,

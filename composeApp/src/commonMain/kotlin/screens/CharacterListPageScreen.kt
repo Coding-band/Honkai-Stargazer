@@ -28,23 +28,21 @@ import androidx.compose.ui.unit.dp
 import com.voc.honkai_stargazer.component.CharacterCard
 import components.BackIcon
 import components.HeaderData
+import components.ListFilterTool
+import components.ListFilterType
 import components.PAGE_HEADER_HEIGHT
 import components.PageHeader
 import components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import kotlinx.serialization.json.JsonArray
-import kotlinx.serialization.json.int
-import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import moe.tlaster.precompose.navigation.Navigator
 import types.Character
-import types.CombatType
 import types.Constants.Companion.CHAR_CARD_WIDTH
-import types.Path
 import utils.JsonArraySaver
-import utils.Language
+import utils.PageBottomMask
 import utils.navigation.Screen
 import utils.navigation.navigateLimited
 
@@ -56,21 +54,18 @@ fun CharacterListPage(
 ) {
     val hazeState = remember { HazeState() }
     val charListJSON: JsonArray by rememberSaveable(stateSaver = JsonArraySaver) { mutableStateOf(Character.getCharacterListFromJSON() as JsonArray) }
-    val charNameList: ArrayList<String> = rememberSaveable { arrayListOf<String>() }
+    //val charNameList: ArrayList<String> = rememberSaveable { arrayListOf<String>() }
     var isInited by rememberSaveable { mutableStateOf(false) }
+    val charList = arrayListOf<Character>()
 
     if(!isInited){
         isInited = true
+        println("charListJSON inited")
         charListJSON.forEach { jsonElement ->
-            val localeName : String? = Character.getCharacterDataFromFileName(
-                jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!, Language.TextLanguageInstance
-            ).jsonObject["name"]?.jsonPrimitive?.content
-
-            if(localeName !== null){
-                charNameList.add(localeName)
-            }
+            charList.add(Character.getCharacterItemFromJSON(jsonElement.jsonObject["charId"]?.jsonPrimitive?.content!!,))
         }
     }
+    val charListSortable = remember { mutableStateOf(charList) }
 
     /*
        val charList = arrayListOf<Character>()
@@ -112,28 +107,18 @@ fun CharacterListPage(
                         .height(PAGE_HEADER_HEIGHT)
                 )
             }
-            items(count = charListJSON.size) { index ->
-                val charListItem = charListJSON.jsonArray[index]
+            items(count = charListSortable.value.size) { index ->
+                val charListItem = charListSortable.value[index]
                 CharacterCard(
-                    character = Character(
-                        registName = charListItem.jsonObject["name"]?.jsonPrimitive?.content,
-                        fileName = charListItem.jsonObject["fileName"]?.jsonPrimitive?.content,
-                        rarity = charListItem.jsonObject["rare"]?.jsonPrimitive?.int!!,
-                        path = Path.valueOf(charListItem.jsonObject["path"]?.jsonPrimitive?.content!!),
-                        combatType = CombatType.valueOf(charListItem.jsonObject["element"]?.jsonPrimitive?.content!!),
-                        officialId = charListItem.jsonObject["charId"]?.jsonPrimitive?.int!!,
-                    ),
-                    displayName = charNameList[index],
+                    character = charListSortable.value[index],
                     onClick = {
-                        val charName = charListItem.jsonObject["name"]?.jsonPrimitive?.content!!;
-                        val fileName = charListItem.jsonObject["fileName"]?.jsonPrimitive?.content!!;
                         navigator.navigateLimited(
                             Screen.CharacterInfoPage.route
-                                  + "/${charName.replace(" ","_")}"
-                                  + "?fileName=${fileName}"
-                                  + "&combatType=${charListItem.jsonObject["element"]?.jsonPrimitive?.content!!}"
-                                  + "&path=${charListItem.jsonObject["path"]?.jsonPrimitive?.content!!}"
-                                  + "&charId=${charListItem.jsonObject["charId"]?.jsonPrimitive?.content!!}"
+                                  + "/${charListItem.registName?.replace(" ","_")}"
+                                  + "?fileName=${charListItem.fileName}"
+                                  + "&combatType=${charListItem.combatType.name}"
+                                  + "&path=${charListItem.path.name}"
+                                  + "&charId=${charListItem.officialId}"
                         )
                     }
                 )
@@ -146,6 +131,18 @@ fun CharacterListPage(
                 )
             }
         }
+
+        PageBottomMask()
+
+        ListFilterTool(
+            filterList = charList,
+            filterType = ListFilterType.CHARACTER,
+            onFilterApplied = { filteredList ->
+                charListSortable.value = filteredList
+            }
+        )
+
+
         PageHeader(navigator = navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.CANCEL)
     }
 }
