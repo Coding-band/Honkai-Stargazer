@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -31,6 +32,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -136,6 +139,9 @@ fun InfoAdviceLightcone(charWeightData : JsonObject? = null) {
 @YouMustKiddingMe
 @Composable
 fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
+    val relicWidth = remember { mutableStateOf(Constants.RELIC_CARD_WIDTH) }
+    val relicHeight = remember { mutableStateOf(Constants.RELIC_CARD_HEIGHT + Constants.RELIC_CARD_TITLE_HEIGHT) }
+    val density = LocalDensity.current.density
     val relicPart = arrayListOf(Res.string.RelicPropBody,Res.string.RelicPropFeet,Res.string.RelicPropPlanarSphere, Res.string.RelicPropLinkRope)
     //val relicPartShort = arrayListOf(Res.string.RelicPropBodyShort, Res.string.RelicPropFeetShort,Res.string.RelicPropPlanarSphereShort, Res.string.RelicPropLinkRopeShort)
     val relicList : ArrayList<Pair<Relic,Relic>> = arrayListOf()
@@ -248,7 +254,7 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
                             Modifier.size(
                                 Constants.RELIC_CARD_WIDTH,
                                 Constants.RELIC_CARD_HEIGHT + Constants.RELIC_CARD_TITLE_HEIGHT
-                            )
+                            ).weight(1f)
                         ) {
                             RelicCard(
                                 relicList[relicSelectIndex.value].first,
@@ -257,9 +263,12 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
                         Spacer(modifier = Modifier.width(10.dp))
                         Box(
                             Modifier.size(
-                                Constants.RELIC_CARD_WIDTH,
-                                Constants.RELIC_CARD_HEIGHT + Constants.RELIC_CARD_TITLE_HEIGHT
-                            )
+                                Constants.RELIC_CARD_WIDTH, Constants.RELIC_CARD_HEIGHT + Constants.RELIC_CARD_TITLE_HEIGHT
+                            ).weight(1f)
+                                .onSizeChanged {
+                                    relicWidth.value = UtilTools().pxToDp(it.width, density)
+                                    relicHeight.value = UtilTools().pxToDp(it.height, density)
+                                }
                         ) {
                             RelicCard(
                                 relicList[relicSelectIndex.value].second,
@@ -326,8 +335,7 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
 
                     //Ornament Cards
                     Row(
-                        modifier = Modifier.height(Constants.RELIC_CARD_HEIGHT + Constants.RELIC_CARD_TITLE_HEIGHT)
-                            .width(Constants.RELIC_CARD_WIDTH)
+                        modifier = Modifier.defaultMinSize(Constants.RELIC_CARD_WIDTH, Constants.RELIC_CARD_HEIGHT + Constants.RELIC_CARD_TITLE_HEIGHT).size(relicWidth.value, relicHeight.value)
                     ) {
                         RelicCard(
                             ornamentList[ornamentSelectIndex.value],
