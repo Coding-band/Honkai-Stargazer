@@ -18,6 +18,7 @@ import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -35,6 +36,10 @@ import components.PageHeader
 import components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
@@ -53,19 +58,27 @@ fun CharacterListPage(
     headerData: HeaderData = defaultHeaderData
 ) {
     val hazeState = remember { HazeState() }
-    val charListJSON: JsonArray by rememberSaveable(stateSaver = JsonArraySaver) { mutableStateOf(Character.getCharacterListFromJSON() as JsonArray) }
+    val charListJSON: JsonArray by rememberSaveable(stateSaver = JsonArraySaver) { mutableStateOf(Character.getCharListJson() as JsonArray) }
     //val charNameList: ArrayList<String> = rememberSaveable { arrayListOf<String>() }
     var isInited by rememberSaveable { mutableStateOf(false) }
-    val charList by rememberSaveable { mutableStateOf(arrayListOf<Character>()) }
+    val charList by rememberSaveable(stateSaver = Character.ListSaver) { mutableStateOf(arrayListOf()) }
 
+    var charListSortable by rememberSaveable(stateSaver = Character.ListSaver) { mutableStateOf(charList) }
     if(!isInited){
-        isInited = true
-        println("charListJSON inited")
-        charListJSON.forEach { jsonElement ->
-            charList.add(Character.getCharacterItemFromJSON(jsonElement.jsonObject["charId"]?.jsonPrimitive?.content!!,))
+        LaunchedEffect(Unit){
+            CoroutineScope(Dispatchers.Default).launch {
+                charListJSON.forEach { jsonElement ->
+                    charList.add(Character.getCharacterItemFromJSON(jsonElement.jsonObject["charId"]?.jsonPrimitive?.content!!,))
+                }
+                withContext(Dispatchers.Main){
+                    charListSortable = charList
+                    isInited = true
+                }
+            }
         }
     }
-    var charListSortable by rememberSaveable { mutableStateOf(charList) }
+
+
 
     /*
        val charList = arrayListOf<Character>()

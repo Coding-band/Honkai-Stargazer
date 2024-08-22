@@ -1,15 +1,11 @@
 package utils
 
-import androidx.compose.foundation.gestures.Orientation
-import androidx.compose.foundation.gestures.rememberScrollableState
-import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.remember
@@ -90,13 +86,13 @@ class Language() {
         DE("Deutsch", "de", "de-de", "de"),
 
         @SerialName("pt")
-        PT("Português", "pt_pt", "pt-pt", "pt"),
+        PT("Português", "pt", "pt-pt", "pt"),
 
         @SerialName("vi")
         VI("tiếng Việt", "vi", "vi-vn", "vi"),
 
         @SerialName("es")
-        ES("Español", "es_es", "es-es", "es"),
+        ES("Español", "es", "es-es", "es"),
 
         @SerialName("kr")
         KR("한국어", "kr", "ko-kr", "kr"),

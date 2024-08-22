@@ -11,7 +11,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -44,9 +44,9 @@ fun <T> ListFilterTool(
     filterType: ListFilterType,
     onFilterApplied: (ArrayList<T>) -> Unit
 ) {
-    val isShowing = remember { mutableStateOf("NOPE") }
-    val isAsc = remember { mutableStateOf(false) }
-    val sortChoiceIndex = remember { mutableStateOf(0) }
+    val isShowing = rememberSaveable { mutableStateOf("NOPE") }
+    val isAsc = rememberSaveable { mutableStateOf(false) }
+    val sortChoiceIndex = rememberSaveable { mutableStateOf(0) }
     val sortChoiceList = arrayListOf(
         Res.string.SortByTime,
         Res.string.SortByName,

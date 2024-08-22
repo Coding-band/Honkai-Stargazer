@@ -152,6 +152,28 @@ class UtilTools {
             job.getCompleted()
         }
     }
+    @OptIn(ExperimentalCoroutinesApi::class, ExperimentalResourceApi::class)
+    inline
+            /**
+             * You must know the basic structure it is, JsonArray or JsonObject
+             * E.g. getAssetsJsonByContext("character_data/character_list.json").jsonArray[0]
+             */
+    fun <reified T> getAssetsJsonByFilePathWithIgnore(filePath: String): T {
+        return runBlocking {
+            val job = async(Dispatchers.Default) {
+                try {
+                    return@async Json {ignoreUnknownKeys = true} .decodeFromString<T>(getAssetsStringByFilePath(filePath))
+                } catch (e: Exception) {
+                    // Handle the exception, ErrorLogExporter Please!
+                    errorLogExport("UtilTools","getAssetsJsonByFilePathWithIgnore()",e)
+                    return@async Json {ignoreUnknownKeys = true} .decodeFromString<T>("{}")
+                }
+            }
+
+            job.await()
+            job.getCompleted()
+        }
+    }
 
     @OptIn(ExperimentalResourceApi::class)
     fun getAssetsStringByFilePath(filePath: String): String{

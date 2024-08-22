@@ -7,12 +7,16 @@
 package types
 
 import androidx.annotation.IntRange
+import androidx.compose.runtime.saveable.Saver
+import androidx.compose.runtime.saveable.listSaver
 import androidx.compose.ui.graphics.ImageBitmap
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
@@ -55,8 +59,18 @@ open class Character(
         Male, Female, Unspecified
     }
     companion object {
-        fun getCharacterListFromJSON() : JsonElement {
+        private val charListJson = getCharacterListFromJSON()
+        private val charExtListJson = getCharacterExtListFromJSON()
+
+        fun getCharListJson() : JsonElement {
+            return charListJson
+        }
+
+        private fun getCharacterListFromJSON() : JsonElement {
             return UtilTools().getAssetsJsonByFilePath("character_data/character_list.json")
+        }
+        fun getCharacterExtListFromJSON() : JsonElement {
+            return UtilTools().getAssetsJsonByFilePath("character_data/character_ext_list.json")
         }
 
         fun getCharacterDataFromFileName(characterFileName : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance) : JsonElement {
@@ -75,33 +89,43 @@ open class Character(
         }
 
         fun getCharacterImageFromOfficialId(imageFolderType: UtilTools.ImageFolderType, charId : String) : ByteArray {
-            val listDataJson = getCharacterListFromJSON().jsonArray.find { lcData -> lcData.jsonObject["charId"]!!.jsonPrimitive.content == charId } ?: return UtilTools().getLostImgByteArray()
+            val listDataJson = charListJson.jsonArray.find { lcData -> lcData.jsonObject["charId"]!!.jsonPrimitive.content == charId } ?: return UtilTools().getLostImgByteArray()
             return getCharacterImageByteArrayFromFileName(imageFolderType, listDataJson.jsonObject["name"]!!.jsonPrimitive.content)
         }
 
         @OptIn(ExperimentalCoroutinesApi::class)
-        fun getCharacterItemFromJSON(charId : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance) : Character {
+        fun getCharacterItemFromJSON(charId : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance, requireAttrData: Boolean = false) : Character {
             return runBlocking {
                 val job = async(Dispatchers.Default) {
-                    val listDataJson = getCharacterListFromJSON().jsonArray.find { lcData -> lcData.jsonObject["charId"]!!.jsonPrimitive.content == charId } ?: return@async Character(path = Path.Unspecified, )
-
-                    val dataJson = getCharacterDataFromFileName(listDataJson.jsonObject["fileName"]!!.jsonPrimitive.content, textLanguage)
+                    val listDataJson = charListJson.jsonArray.firstOrNull { charData -> charData.jsonObject["charId"]!!.jsonPrimitive.content == charId } ?: return@async Character(path = Path.Unspecified, )
+                    val listExtDataJson = charExtListJson.jsonArray.firstOrNull { charData -> charData.jsonObject["officialId"]!!.jsonPrimitive.content == charId } ?: return@async Character(path = Path.Unspecified, )
 
                     return@async Character(
                         officialId = charId.toInt(),
                         fileName = listDataJson.jsonObject["fileName"]!!.jsonPrimitive.content,
                         registName = (listDataJson.jsonObject["name"]!!.jsonPrimitive.content),
-                        rarity = dataJson.jsonObject["rarity"]!!.jsonPrimitive.int,
+                        rarity = listDataJson.jsonObject["rare"]!!.jsonPrimitive.int,
                         path = (Path.valueOf(listDataJson.jsonObject["path"]!!.jsonPrimitive.content)),
                         version = (listDataJson.jsonObject["version"]!!.jsonPrimitive.content),
-                        displayName = dataJson.jsonObject["name"]!!.jsonPrimitive.content,
+                        displayName = listExtDataJson.jsonObject["localeName"]!!.jsonObject[textLanguage.folderName]?.jsonPrimitive?.content ?: "?",
                         combatType = (CombatType.valueOf(listDataJson.jsonObject["element"]!!.jsonPrimitive.content)),
-                        characterAttrData = getCharAttrData(dataJson, 80),
+                        characterAttrData = if(requireAttrData){ getCharAttrData(listExtDataJson.jsonObject["levelData"]!!, 80) } else { null },
                     )
                 }
                 job.await()
                 job.getCompleted()
             }
         }
+
+        val Saver: Saver<Character, Any> = Saver(
+            save = { Json.encodeToString(it) },
+            restore = { Json.decodeFromString<Character>(it as String) }
+        )
+        val ListSaver: Saver<ArrayList<Character>, Any> = listSaver(
+            save = { listOf(Json.encodeToString(it)) },
+            restore = { Json.decodeFromString(it[0]) }
+        )
+
+
     }
 }
