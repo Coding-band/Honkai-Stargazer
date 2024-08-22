@@ -44,6 +44,7 @@ import types.Lightcone
 import types.Path
 import utils.JsonArraySaver
 import utils.Language
+import utils.PageBottomMask
 import utils.navigation.Screen
 import utils.navigation.navigateLimited
 
@@ -116,6 +117,10 @@ fun LightconeListPage(modifier: Modifier = Modifier, navigator: Navigator, heade
                 )
             }
         }
+
+
+        PageBottomMask()
+
         PageHeader(navigator = navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.CANCEL)
     }
 }

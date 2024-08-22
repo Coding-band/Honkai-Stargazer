@@ -56,7 +56,7 @@ fun CharacterListPage(
     val charListJSON: JsonArray by rememberSaveable(stateSaver = JsonArraySaver) { mutableStateOf(Character.getCharacterListFromJSON() as JsonArray) }
     //val charNameList: ArrayList<String> = rememberSaveable { arrayListOf<String>() }
     var isInited by rememberSaveable { mutableStateOf(false) }
-    val charList = arrayListOf<Character>()
+    val charList by rememberSaveable { mutableStateOf(arrayListOf<Character>()) }
 
     if(!isInited){
         isInited = true
@@ -65,7 +65,7 @@ fun CharacterListPage(
             charList.add(Character.getCharacterItemFromJSON(jsonElement.jsonObject["charId"]?.jsonPrimitive?.content!!,))
         }
     }
-    val charListSortable = remember { mutableStateOf(charList) }
+    var charListSortable by rememberSaveable { mutableStateOf(charList) }
 
     /*
        val charList = arrayListOf<Character>()
@@ -107,10 +107,10 @@ fun CharacterListPage(
                         .height(PAGE_HEADER_HEIGHT)
                 )
             }
-            items(count = charListSortable.value.size) { index ->
-                val charListItem = charListSortable.value[index]
+            items(count = charListSortable.size) { index ->
+                val charListItem = charListSortable[index]
                 CharacterCard(
-                    character = charListSortable.value[index],
+                    character = charListSortable[index],
                     onClick = {
                         navigator.navigateLimited(
                             Screen.CharacterInfoPage.route
@@ -138,7 +138,7 @@ fun CharacterListPage(
             filterList = charList,
             filterType = ListFilterType.CHARACTER,
             onFilterApplied = { filteredList ->
-                charListSortable.value = filteredList
+                charListSortable = filteredList
             }
         )
 

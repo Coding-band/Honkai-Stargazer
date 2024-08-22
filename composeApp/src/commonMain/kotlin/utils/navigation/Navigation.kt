@@ -20,6 +20,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import com.dokar.sonner.Toaster
 import com.dokar.sonner.ToasterState
 import com.dokar.sonner.rememberToasterState
@@ -86,6 +87,7 @@ import screens.SplashPage
 import screens.UIDSearchPageScreen
 import screens.UserCharacterPageScreen
 import screens.UserInfoPageScreen
+import types.Constants
 
 //This should not be there, but CharacterCard need it in clickable, without using @Composable ...
 lateinit var navigatorInstance : Navigator
@@ -193,11 +195,18 @@ fun Navigation() {
     val navigator = rememberNavigator()
     val snackbarHostState = remember { SnackbarHostState() }
 
+
+
     navigatorInstance = navigator
     toastInstance = rememberToasterState()
     pomPomPopupInstance = remember { mutableStateOf(PomPomPopup()) }
     docCountDown = remember { mutableStateOf(0) }
-    swipeProperties = remember { SwipeProperties() }
+    swipeProperties = remember { SwipeProperties(
+        spaceToSwipe = Constants.SCREEN_SAVE_PADDING,
+        positionalThreshold = { distance -> distance * 0.5f },
+        velocityThreshold = { 10.dp.toPx() }
+    ) }
+
     navTransition = remember {
         NavTransition(
             createTransition = slideInHorizontally(animationSpec = tween(easing = LinearEasing)) { it },
@@ -207,6 +216,7 @@ fun Navigation() {
             exitTargetContentZIndex = 1f
         )
     }
+
 
     NavHost(
         navigator = navigator,

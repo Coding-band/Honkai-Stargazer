@@ -85,7 +85,7 @@ fun SplashPage(
                         Preferences().Leaderboard.updatedLeaderboard()
                     }
                     if (!showPopup.value) {
-                        navigator.navigateLimited(Screen.HomePage.route, options = NavOptions(popUpTo = PopUpTo(Screen.SplashPage.route)))
+                        navigator.navigateLimited(Screen.HomePage.route, options = NavOptions(popUpTo = PopUpTo(Screen.SplashPage.route, true)))
                     }
                 }
             }

@@ -43,6 +43,7 @@ import types.Constants.Companion.CHAR_CARD_WIDTH
 import types.Relic
 import utils.JsonArraySaver
 import utils.Language
+import utils.PageBottomMask
 
 @Composable
 fun RelicListPage(modifier: Modifier = Modifier, navigator: Navigator, headerData: HeaderData = defaultHeaderData) {
@@ -101,6 +102,11 @@ fun RelicListPage(modifier: Modifier = Modifier, navigator: Navigator, headerDat
                 )
             }
         }
+
+
+        PageBottomMask()
+
+
         PageHeader(navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.CANCEL)
     }
 }
