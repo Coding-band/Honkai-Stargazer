@@ -73,7 +73,7 @@ fun CharacterListPage(
             val job = CoroutineScope(Dispatchers.Default).async {
                 val tmpCharList = arrayListOf<Character>()
                 (Character.charListJson as JsonArray).fastForEach { jsonElement ->
-                    tmpCharList.add(Character.getCharacterItemFromJSON(jsonElement.jsonObject["charId"]?.jsonPrimitive?.content!!,))
+                    tmpCharList.add(Character.getCharacterItemFromJSON(jsonElement.jsonObject["charId"]?.jsonPrimitive?.content!!, requireAttrData = true))
                 }
                 return@async tmpCharList
             }
@@ -115,6 +115,7 @@ fun CharacterListPage(
 
         PageBottomMask()
 
+        /*
         ListFilterTool(
             filterList = charList,
             filterType = ListFilterType.CHARACTER,
@@ -122,6 +123,7 @@ fun CharacterListPage(
                 charListSortable = filteredList
             }
         )
+         */
 
 
         PageHeader(navigator = navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.CANCEL)

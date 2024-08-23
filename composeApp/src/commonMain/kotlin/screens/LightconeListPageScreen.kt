@@ -66,7 +66,7 @@ fun LightconeListPage(modifier: Modifier = Modifier, navigator: Navigator, heade
     if(!isInited){
         val tmpLcList = arrayListOf<Lightcone>()
         (Lightcone.lcListJson as JsonArray).fastForEach { jsonElement ->
-            tmpLcList.add(Lightcone.getLightconeItemFromJSON(jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!,))
+            tmpLcList.add(Lightcone.getLightconeItemFromJSON(jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!, requireAttrData = true))
         }
 
         lcList = tmpLcList

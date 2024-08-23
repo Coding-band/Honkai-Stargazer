@@ -31,7 +31,7 @@ data class AttrData(
 fun getCharAttrData(jsonElement: JsonElement, level: Int = 1) : AttrData{
     return runBlocking {
         val job = CoroutineScope(Dispatchers.Default).async {
-            val charLevelData = jsonElement.jsonObject["levelData"]!!
+            val charLevelData = jsonElement.jsonObject["attrData"]!!
             var tmpAttrData : AttrData = AttrData(0f,0f,0f,0f,0,0)
 
             // 找到對應等級的數據
@@ -66,7 +66,7 @@ fun getCharAttrData(jsonElement: JsonElement, level: Int = 1) : AttrData{
 fun getLcAttrData(jsonElement: JsonElement, level: Int = 1) : AttrData{
     return runBlocking {
         val job = async (Dispatchers.Default){
-            val charLevelData = jsonElement.jsonObject["levelData"]!!
+            val charLevelData = jsonElement.jsonObject["attrData"]!!
             var tmpAttrData : AttrData = AttrData(0f,0f,0f,0f,0,0)
 
             // 找到對應等級的數據

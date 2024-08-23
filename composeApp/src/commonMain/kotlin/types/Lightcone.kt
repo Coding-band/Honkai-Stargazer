@@ -19,6 +19,7 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.decodeFromJsonElement
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
@@ -82,7 +83,7 @@ open class Lightcone(
                         path = (Path.valueOf(listDataJson.jsonObject["path"]!!.jsonPrimitive.content)),
                         releaseVersion = (listDataJson.jsonObject["version"]!!.jsonPrimitive.content),
                         displayName = listExtDataJson.jsonObject["localeName"]!!.jsonObject[textLanguage.folderName]?.jsonPrimitive?.content ?: "?",
-                        lcAttrData = if(requireAttrData){ getLcAttrData(listExtDataJson.jsonObject["levelData"]!!, 80) } else { null },
+                        lcAttrData = if(requireAttrData){ Json.decodeFromJsonElement<AttrData>(listExtDataJson.jsonObject["attrData"]!!) } else { null },
                     )
                 }
                 job.await()
