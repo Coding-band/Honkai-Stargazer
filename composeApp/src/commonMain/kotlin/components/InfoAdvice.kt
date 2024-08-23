@@ -365,75 +365,30 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
 
                 Spacer(Modifier.height(10.dp))
 
-                Row(modifier = Modifier.fillMaxWidth().widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).wrapContentHeight()) {
-                    Row(Modifier.weight(1f)){
-                        Text(
-                            UtilTools().removeStringResDoubleQuotes(relicPart[0]),
-                            style = FontSizeNormal14(),
-                            fontWeight = FontWeight.Bold,
-                            color = TextColorNormalDim
-                        )
-                        Text(
-                            text = UtilTools().removeStringResDoubleQuotes(adviceAttrList[0].second.resName),
-                            style = FontSizeNormal14(),
-                            textAlign = TextAlign.End,
-                            color = TextColorNormalDimCC,
-                            modifier = Modifier.weight(1f)
-                        )
+                NonLazyGrid(
+                    modifier = Modifier.fillMaxWidth().widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).wrapContentHeight(),
+                    itemCount = adviceAttrList.size,
+                    columns = 2,
+                    horizontalSpaceBetween = 10.dp,
+                    verticalSpaceBetween = 10.dp,
+                    content = { index ->
+                        Row(Modifier.fillMaxWidth().wrapContentHeight()){
+                            Text(
+                                UtilTools().removeStringResDoubleQuotes(relicPart[index]),
+                                style = FontSizeNormal14(),
+                                fontWeight = FontWeight.Bold,
+                                color = TextColorNormalDim
+                            )
+                            Text(
+                                text = UtilTools().removeStringResDoubleQuotes(adviceAttrList[index].second.resName),
+                                style = FontSizeNormal14(),
+                                textAlign = TextAlign.End,
+                                color = TextColorNormalDimCC,
+                                modifier = Modifier.weight(1f)
+                            )
+                        }
                     }
-                    Spacer(Modifier.width(10.dp))
-                    Row(Modifier.weight(1f)){
-                        Text(
-                            UtilTools().removeStringResDoubleQuotes(relicPart[1]),
-                            style = FontSizeNormal14(),
-                            fontWeight = FontWeight.Bold,
-                            color = TextColorNormalDim
-                        )
-                        Text(
-                            text = UtilTools().removeStringResDoubleQuotes(adviceAttrList[1].second.resName),
-                            style = FontSizeNormal14(),
-                            textAlign = TextAlign.End,
-                            color = TextColorNormalDimCC,
-                            modifier = Modifier.weight(1f)
-                        )
-                    }
-                }
-
-                Spacer(Modifier.height(10.dp))
-
-                Row(modifier = Modifier.fillMaxWidth().widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).wrapContentHeight()) {
-                    Row(Modifier.weight(1f)){
-                        Text(
-                            UtilTools().removeStringResDoubleQuotes(relicPart[2]),
-                            style = FontSizeNormal14(),
-                            fontWeight = FontWeight.Bold,
-                            color = TextColorNormalDim
-                        )
-                        Text(
-                            text = UtilTools().removeStringResDoubleQuotes(adviceAttrList[2].second.resName),
-                            style = FontSizeNormal14(),
-                            textAlign = TextAlign.End,
-                            color = TextColorNormalDimCC,
-                            modifier = Modifier.weight(1f)
-                        )
-                    }
-                    Spacer(Modifier.width(10.dp))
-                    Row(Modifier.weight(1f)){
-                        Text(
-                            UtilTools().removeStringResDoubleQuotes(relicPart[3]),
-                            style = FontSizeNormal14(),
-                            fontWeight = FontWeight.Bold,
-                            color = TextColorNormalDim
-                        )
-                        Text(
-                            text = UtilTools().removeStringResDoubleQuotes(adviceAttrList[3].second.resName),
-                            style = FontSizeNormal14(),
-                            textAlign = TextAlign.End,
-                            color = TextColorNormalDimCC,
-                            modifier = Modifier.weight(1f)
-                        )
-                    }
-                }
+                )
 
                 Spacer(Modifier.height(10.dp))
 
