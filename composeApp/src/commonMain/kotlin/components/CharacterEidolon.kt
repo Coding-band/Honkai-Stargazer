@@ -153,6 +153,13 @@ fun CharacterEidolonBox(eidolonList: ArrayList<Eidolon>, selectIndex : MutableSt
 
             ){
 
+                Image(
+                    bitmap = UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.CHAR_EIDOLON, eidolon.eidolonImgName),
+                    modifier = Modifier.size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale),
+                    contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Image"
+                )
+
+                /*
                 AsyncImage(
                     model = UtilTools().newImageRequest(
                         LocalPlatformContext.current,
@@ -163,6 +170,7 @@ fun CharacterEidolonBox(eidolonList: ArrayList<Eidolon>, selectIndex : MutableSt
                     contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Image",
                     imageLoader = UtilTools().newImageLoader(LocalPlatformContext.current)
                 )
+                 */
 
                 if((selectIndex.value == eidolon.eidolonIndex) && dialogLastTrigTypeLocal.value == lastTrigTypeTag) {
                     Image(
