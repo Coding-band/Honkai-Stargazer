@@ -26,6 +26,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.min
 import androidx.compose.ui.zIndex
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
 import files.CharSoul
@@ -147,12 +149,19 @@ fun CharacterEidolonBox(eidolonList: ArrayList<Eidolon>, selectIndex : MutableSt
                             dialogComponentLocal.value = { EidolonDialogComponent(eidolon) }
                         }
                         dialogLastTrigTypeLocal.value = lastTrigTypeTag
-                    })
+                    }),
+
             ){
-                Image(
-                    bitmap = UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.CHAR_EIDOLON, eidolon.eidolonImgName),
+
+                AsyncImage(
+                    model = UtilTools().newImageRequest(
+                        LocalPlatformContext.current,
+                        UtilTools().getAssetsWebpByteArrayByFileName(UtilTools.ImageFolderType.CHAR_EIDOLON, eidolon.eidolonImgName),
+                        false
+                    ),
                     modifier = Modifier.size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale),
-                    contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Image"
+                    contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Image",
+                    imageLoader = UtilTools().newImageLoader(LocalPlatformContext.current)
                 )
 
                 if((selectIndex.value == eidolon.eidolonIndex) && dialogLastTrigTypeLocal.value == lastTrigTypeTag) {

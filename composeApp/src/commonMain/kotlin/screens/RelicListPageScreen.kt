@@ -29,6 +29,7 @@ import androidx.compose.ui.util.fastForEach
 import com.voc.honkai_stargazer.component.RelicCard
 import components.BackIcon
 import components.HeaderData
+import components.LIST_FILTER_TOOL_HEIGHT
 import components.PAGE_HEADER_HEIGHT
 import components.PageHeader
 import components.defaultHeaderData
@@ -79,11 +80,12 @@ fun RelicListPage(modifier: Modifier = Modifier, navigator: Navigator, headerDat
             items(count = relicListSortable.size) { index ->
                 RelicCard(relic = relicListSortable[index])
             }
+
             item(span = { GridItemSpan(maxLineSpan) }) {
                 Spacer(
                     modifier = Modifier
                         .navigationBarsPadding()
-                        .height(0.dp)
+                        .height(LIST_FILTER_TOOL_HEIGHT)
                 )
             }
         }

@@ -30,6 +30,7 @@ import androidx.compose.ui.util.fastForEach
 import com.voc.honkai_stargazer.component.CharacterCard
 import components.BackIcon
 import components.HeaderData
+import components.LIST_FILTER_TOOL_HEIGHT
 import components.ListFilterTool
 import components.ListFilterType
 import components.PAGE_HEADER_HEIGHT
@@ -107,7 +108,7 @@ fun CharacterListPage(
                 Spacer(
                     modifier = Modifier
                         .navigationBarsPadding()
-                        .height(0.dp)
+                        .height(LIST_FILTER_TOOL_HEIGHT)
                 )
             }
         }

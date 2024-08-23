@@ -38,6 +38,8 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.min
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
 import components.MaterialCard
@@ -319,6 +321,7 @@ fun TraceTreeBtn(
                 },
             )
     ) {
+        /*
         Image(
             bitmap = if (selfId <= 5) {
                 UtilTools().getAssetsWebpByFileName(
@@ -333,6 +336,28 @@ fun TraceTreeBtn(
             },
             contentDescription = "Skill Icon",
             modifier = Modifier.size(imgWidth).align(Alignment.Center)
+        )
+         */
+
+        AsyncImage(
+            model = UtilTools().newImageRequest(
+                LocalPlatformContext.current,
+                if (selfId <= 5) {
+                    UtilTools().getAssetsWebpByteArrayByFileName(
+                        UtilTools.ImageFolderType.CHAR_SKILL,
+                        UtilTools().getImageNameByRegistName(traceTreeItem[0].iconPath, isCharNoGen = true)
+                    )
+                } else {
+                    UtilTools().getAssetsWebpByteArrayByFileName(
+                        UtilTools.ImageFolderType.CHAR_SKILL_TREE,
+                        traceTreeItem[0].iconPath
+                    )
+                },
+                false
+            ),
+            contentDescription = "Skill Icon",
+            modifier = Modifier.size(imgWidth).align(Alignment.Center),
+            imageLoader = UtilTools().newImageLoader(LocalPlatformContext.current)
         )
     }
 }

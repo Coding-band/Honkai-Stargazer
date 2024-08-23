@@ -37,6 +37,8 @@ enum class ListFilterType {
     RELIC,
 }
 
+val LIST_FILTER_TOOL_HEIGHT = (46.dp + 16.dp + 8.dp)
+
 @Composable
 fun <T> ListFilterTool(
     modifier: Modifier = Modifier,
