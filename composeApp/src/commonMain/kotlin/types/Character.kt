@@ -59,17 +59,13 @@ open class Character(
         Male, Female, Unspecified
     }
     companion object {
-        private val charListJson = getCharacterListFromJSON()
-        private val charExtListJson = getCharacterExtListFromJSON()
-
-        fun getCharListJson() : JsonElement {
-            return charListJson
-        }
+        val charListJson = getCharacterListFromJSON()
+        val charExtListJson = getCharacterExtListFromJSON()
 
         private fun getCharacterListFromJSON() : JsonElement {
             return UtilTools().getAssetsJsonByFilePath("character_data/character_list.json")
         }
-        fun getCharacterExtListFromJSON() : JsonElement {
+        private fun getCharacterExtListFromJSON() : JsonElement {
             return UtilTools().getAssetsJsonByFilePath("character_data/character_ext_list.json")
         }
 

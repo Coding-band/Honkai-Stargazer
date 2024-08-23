@@ -1,5 +1,10 @@
 package utils.calculator
 
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.float
@@ -22,29 +27,36 @@ data class AttrData(
     var energy: Int,
 )
 // 根據等級取得角色屬性數值
+@OptIn(ExperimentalCoroutinesApi::class)
 fun getCharAttrData(jsonElement: JsonElement, level: Int = 1) : AttrData{
-    val charLevelData = jsonElement.jsonObject["levelData"]!!
-    var tmpAttrData : AttrData = AttrData(0f,0f,0f,0f,0,0)
+    return runBlocking {
+        val job = CoroutineScope(Dispatchers.Default).async {
+            val charLevelData = jsonElement.jsonObject["levelData"]!!
+            var tmpAttrData : AttrData = AttrData(0f,0f,0f,0f,0,0)
 
-    // 找到對應等級的數據
-    val dataFromLevel = charLevelData.jsonArray.find { data ->
-        if(level == 80) {
-            level <= data.jsonObject["maxLevel"]!!.jsonPrimitive.int
-        } else {
-            level < data.jsonObject["maxLevel"]!!.jsonPrimitive.int
+            // 找到對應等級的數據
+            val dataFromLevel = charLevelData.jsonArray.find { data ->
+                if(level == 80) {
+                    level <= data.jsonObject["maxLevel"]!!.jsonPrimitive.int
+                } else {
+                    level < data.jsonObject["maxLevel"]!!.jsonPrimitive.int
+                }
+            }
+
+            if(dataFromLevel !== null){
+                tmpAttrData.atk = dataFromLevel.jsonObject["attackBase"]!!.jsonPrimitive.float + (dataFromLevel.jsonObject["attackAdd"]!!.jsonPrimitive.float) * (level - 1)
+                tmpAttrData.def = dataFromLevel.jsonObject["defenseBase"]!!.jsonPrimitive.float + (dataFromLevel.jsonObject["defenseAdd"]!!.jsonPrimitive.float) * (level - 1)
+                tmpAttrData.hp = dataFromLevel.jsonObject["hpBase"]!!.jsonPrimitive.float + (dataFromLevel.jsonObject["hpAdd"]!!.jsonPrimitive.float) * (level - 1)
+                tmpAttrData.spd = dataFromLevel.jsonObject["speedBase"]!!.jsonPrimitive.float + (dataFromLevel.jsonObject["speedAdd"]!!.jsonPrimitive.float) * (level - 1)
+                tmpAttrData.aggro = dataFromLevel.jsonObject["aggro"]!!.jsonPrimitive.int
+                tmpAttrData.energy = jsonElement.jsonObject["spRequirement"]!!.jsonPrimitive.int
+            }
+
+            return@async tmpAttrData
         }
+        job.await()
+        job.getCompleted()
     }
-
-    if(dataFromLevel !== null){
-        tmpAttrData.atk = dataFromLevel.jsonObject["attackBase"]!!.jsonPrimitive.float + (dataFromLevel.jsonObject["attackAdd"]!!.jsonPrimitive.float) * (level - 1)
-        tmpAttrData.def = dataFromLevel.jsonObject["defenseBase"]!!.jsonPrimitive.float + (dataFromLevel.jsonObject["defenseAdd"]!!.jsonPrimitive.float) * (level - 1)
-        tmpAttrData.hp = dataFromLevel.jsonObject["hpBase"]!!.jsonPrimitive.float + (dataFromLevel.jsonObject["hpAdd"]!!.jsonPrimitive.float) * (level - 1)
-        tmpAttrData.spd = dataFromLevel.jsonObject["speedBase"]!!.jsonPrimitive.float + (dataFromLevel.jsonObject["speedAdd"]!!.jsonPrimitive.float) * (level - 1)
-        tmpAttrData.aggro = dataFromLevel.jsonObject["aggro"]!!.jsonPrimitive.int
-        tmpAttrData.energy = jsonElement.jsonObject["spRequirement"]!!.jsonPrimitive.int
-    }
-
-    return tmpAttrData
 }
 
 

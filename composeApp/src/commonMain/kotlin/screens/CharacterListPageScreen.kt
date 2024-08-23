@@ -26,6 +26,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.util.fastForEach
 import com.voc.honkai_stargazer.component.CharacterCard
 import components.BackIcon
 import components.HeaderData
@@ -38,7 +39,10 @@ import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.jsonObject
@@ -51,6 +55,8 @@ import utils.PageBottomMask
 import utils.navigation.Screen
 import utils.navigation.navigateLimited
 
+
+@OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun CharacterListPage(
     modifier: Modifier = Modifier,
@@ -58,24 +64,23 @@ fun CharacterListPage(
     headerData: HeaderData = defaultHeaderData
 ) {
     val hazeState = remember { HazeState() }
-    val charListJSON: JsonArray by rememberSaveable(stateSaver = JsonArraySaver) { mutableStateOf(Character.getCharListJson() as JsonArray) }
-    //val charNameList: ArrayList<String> = rememberSaveable { arrayListOf<String>() }
     var isInited by rememberSaveable { mutableStateOf(false) }
-    val charList by rememberSaveable(stateSaver = Character.ListSaver) { mutableStateOf(arrayListOf()) }
-
+    var charList by rememberSaveable(stateSaver = Character.ListSaver) { mutableStateOf(arrayListOf()) }
     var charListSortable by rememberSaveable(stateSaver = Character.ListSaver) { mutableStateOf(charList) }
     if(!isInited){
-        LaunchedEffect(Unit){
-            CoroutineScope(Dispatchers.Default).launch {
-                charListJSON.forEach { jsonElement ->
-                    charList.add(Character.getCharacterItemFromJSON(jsonElement.jsonObject["charId"]?.jsonPrimitive?.content!!,))
+        charList = runBlocking {
+            val job = CoroutineScope(Dispatchers.Default).async {
+                val tmpCharList = arrayListOf<Character>()
+                (Character.charListJson as JsonArray).fastForEach { jsonElement ->
+                    tmpCharList.add(Character.getCharacterItemFromJSON(jsonElement.jsonObject["charId"]?.jsonPrimitive?.content!!,))
                 }
-                withContext(Dispatchers.Main){
-                    charListSortable = charList
-                    isInited = true
-                }
+                return@async tmpCharList
             }
+            job.await()
+            job.getCompleted()
         }
+        isInited = true
+        charListSortable = charList
     }
 
 
