@@ -231,7 +231,7 @@ fun getIconByInfo(infoId : String){
         Box(Modifier.clip(CircleShape).padding(4.dp)) {
             if (infoId.toInt() in 1000..9999) {
                 val characterSearch =
-                    Character.getCharListJson().jsonArray.find { char -> char.jsonObject["charId"]!!.jsonPrimitive.content == infoId }
+                    Character.charListJson.jsonArray.find { char -> char.jsonObject["charId"]!!.jsonPrimitive.content == infoId }
                         ?: return
                 Image(
                     contentDescription = null,

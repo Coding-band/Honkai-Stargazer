@@ -25,6 +25,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.util.fastForEach
 import com.voc.honkai_stargazer.component.RelicCard
 import components.BackIcon
 import components.HeaderData
@@ -34,36 +35,28 @@ import components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import kotlinx.serialization.json.JsonArray
-import kotlinx.serialization.json.int
-import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import moe.tlaster.precompose.navigation.Navigator
 import types.Constants.Companion.CHAR_CARD_WIDTH
 import types.Relic
-import utils.JsonArraySaver
-import utils.Language
 import utils.PageBottomMask
 
 @Composable
 fun RelicListPage(modifier: Modifier = Modifier, navigator: Navigator, headerData: HeaderData = defaultHeaderData) {
     val hazeState = remember { HazeState() }
-    val relicListJSON: JsonArray by rememberSaveable(stateSaver = JsonArraySaver) { mutableStateOf(Relic.getRelicListFromJSON() as JsonArray) }
-    val relicNameList: ArrayList<String> = rememberSaveable { arrayListOf() }
     var isInited by rememberSaveable { mutableStateOf(false) }
-
-    if(!isInited) {
-        isInited = true
-        relicListJSON.forEach { jsonElement ->
-            val localeName: String? = Relic.getRelicDataFromJSON(
-                jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!,
-                Language.TextLanguageInstance
-            ).jsonObject["name"]?.jsonPrimitive?.content
-
-            if (localeName !== null) {
-                relicNameList.add(localeName)
-            }
+    var relicList by rememberSaveable(stateSaver = Relic.ListSaver) { mutableStateOf(arrayListOf()) }
+    var relicListSortable by rememberSaveable(stateSaver = Relic.ListSaver) { mutableStateOf(relicList) }
+    if(!isInited){
+        val tmpList = arrayListOf<Relic>()
+        (Relic.relicListJson as JsonArray).fastForEach { jsonElement ->
+            tmpList.add(Relic.getRelicItemFromJSON(jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!))
         }
+
+        relicList = tmpList
+        relicListSortable = tmpList
+        isInited = true
     }
 
     Box {
@@ -83,16 +76,8 @@ fun RelicListPage(modifier: Modifier = Modifier, navigator: Navigator, headerDat
                         .height(PAGE_HEADER_HEIGHT)
                 )
             }
-            items(count = relicListJSON.size) { index ->
-                val relicListItem = relicListJSON.jsonArray[index]
-                RelicCard(
-                    relic = Relic(
-                        registName = relicListItem.jsonObject["name"]?.jsonPrimitive?.content,
-                        fileName = relicListItem.jsonObject["fileName"]?.jsonPrimitive?.content,
-                        officialId = relicListItem.jsonObject["fileName"]?.jsonPrimitive?.int,
-                        displayName = relicNameList[index]
-                        ),
-                )
+            items(count = relicListSortable.size) { index ->
+                RelicCard(relic = relicListSortable[index])
             }
             item(span = { GridItemSpan(maxLineSpan) }) {
                 Spacer(

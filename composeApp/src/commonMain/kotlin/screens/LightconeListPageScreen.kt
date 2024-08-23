@@ -25,6 +25,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.util.fastForEach
 import com.voc.honkai_stargazer.component.LightconeCard
 import components.BackIcon
 import components.HeaderData
@@ -33,12 +34,18 @@ import components.PageHeader
 import components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import moe.tlaster.precompose.navigation.Navigator
+import types.Character
 import types.Constants.Companion.CHAR_CARD_WIDTH
 import types.Lightcone
 import types.Path
@@ -48,26 +55,22 @@ import utils.PageBottomMask
 import utils.navigation.Screen
 import utils.navigation.navigateLimited
 
+@OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun LightconeListPage(modifier: Modifier = Modifier, navigator: Navigator, headerData: HeaderData = defaultHeaderData) {
     val hazeState = remember { HazeState() }
-    val lcListJSON: JsonArray by rememberSaveable(stateSaver = JsonArraySaver) { mutableStateOf(Lightcone.getLightconeListFromJSON() as JsonArray) }
-    val lcNameList: ArrayList<String> = rememberSaveable { arrayListOf() }
     var isInited by rememberSaveable { mutableStateOf(false) }
-
-    if(!isInited) {
-        isInited = true
-        lcListJSON.forEach { jsonElement ->
-            val localeName: String? = Lightcone.getLightconeDataFromJSON(
-                jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!,
-                Language.TextLanguageInstance
-            ).jsonObject["name"]?.jsonPrimitive?.content
-
-            if (localeName !== null) {
-                lcNameList.add(localeName)
-            }
-
+    var lcList by rememberSaveable(stateSaver = Lightcone.ListSaver) { mutableStateOf(arrayListOf()) }
+    var lcListSortable by rememberSaveable(stateSaver = Lightcone.ListSaver) { mutableStateOf(lcList) }
+    if(!isInited){
+        val tmpLcList = arrayListOf<Lightcone>()
+        (Lightcone.lcListJson as JsonArray).fastForEach { jsonElement ->
+            tmpLcList.add(Lightcone.getLightconeItemFromJSON(jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!,))
         }
+
+        lcList = tmpLcList
+        lcListSortable = tmpLcList
+        isInited = true
     }
 
     Box {
@@ -87,27 +90,8 @@ fun LightconeListPage(modifier: Modifier = Modifier, navigator: Navigator, heade
                         .height(PAGE_HEADER_HEIGHT)
                 )
             }
-            items(count = lcListJSON.size) { index ->
-                val lcListItem = lcListJSON.jsonArray[index]
-                LightconeCard(
-                    lightcone = Lightcone(
-                        registName = lcListItem.jsonObject["name"]?.jsonPrimitive?.content,
-                        fileName = lcListItem.jsonObject["fileName"]?.jsonPrimitive?.content,
-                        rarity = lcListItem.jsonObject["rare"]?.jsonPrimitive?.int!!,
-                        path = Path.valueOf(lcListItem.jsonObject["path"]?.jsonPrimitive?.content!!),
-                        displayName = lcNameList[index]
-                        ),
-                    onClick = {
-                        val lcName = lcListItem.jsonObject["name"]?.jsonPrimitive?.content!!;
-                        val fileName = lcListItem.jsonObject["fileName"]?.jsonPrimitive?.content!!;
-                        navigator.navigateLimited(
-                            Screen.LightconeInfoPage.route
-                                    + "/${lcName}"
-                                    + "?fileName=${fileName}"
-                                    + "&path=${lcListItem.jsonObject["path"]?.jsonPrimitive?.content!!}"
-                        )
-                    }
-                )
+            items(count = lcListSortable.size) { index ->
+                LightconeCard(lightcone = lcListSortable[index])
             }
             item(span = { GridItemSpan(maxLineSpan) }) {
                 Spacer(

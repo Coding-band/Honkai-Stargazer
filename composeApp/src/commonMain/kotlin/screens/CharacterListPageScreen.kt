@@ -83,31 +83,6 @@ fun CharacterListPage(
         charListSortable = charList
     }
 
-
-
-    /*
-       val charList = arrayListOf<Character>()
-    val charBitmaps : ArrayList<Bitmap> = arrayListOf<Bitmap>()
-
-    for( x in (0..<charListJSON.length())){
-        val charListItem : JSONObject = charListJSON.getJSONObject(x)
-        charList.add(Character(
-            registName = charListItem.getString("name"),
-            fileName = charListItem.getString("fileName"),
-            combatType = CombatType.valueOf(charListItem.getString("element")),
-            rarity = charListItem.getInt("rare"),
-            path = Path.valueOf(charListItem.getString("path")),
-        ))
-        charBitmaps.add(
-            Character.getCharacterImageFromJSON(
-                LocalContext.current,
-                UtilTools.ImageFolderType.CHAR_ICON,
-                charListItem.getString("name")
-            )
-        )
-    }
-     */
-
     Box {
         LazyVerticalGrid(
             modifier = Modifier
@@ -126,20 +101,7 @@ fun CharacterListPage(
                 )
             }
             items(count = charListSortable.size) { index ->
-                val charListItem = charListSortable[index]
-                CharacterCard(
-                    character = charListSortable[index],
-                    onClick = {
-                        navigator.navigateLimited(
-                            Screen.CharacterInfoPage.route
-                                  + "/${charListItem.registName?.replace(" ","_")}"
-                                  + "?fileName=${charListItem.fileName}"
-                                  + "&combatType=${charListItem.combatType.name}"
-                                  + "&path=${charListItem.path.name}"
-                                  + "&charId=${charListItem.officialId}"
-                        )
-                    }
-                )
+                CharacterCard(character = charListSortable[index])
             }
             item(span = { GridItemSpan(maxLineSpan) }) {
                 Spacer(

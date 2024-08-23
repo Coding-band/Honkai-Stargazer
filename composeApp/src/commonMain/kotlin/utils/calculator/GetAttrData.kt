@@ -62,25 +62,32 @@ fun getCharAttrData(jsonElement: JsonElement, level: Int = 1) : AttrData{
 
 
 // 根據等級取得光錐屬性數值
-fun getLcAttrData(charJsonElement: JsonElement, level: Int = 1) : AttrData{
-    val charLevelData = charJsonElement.jsonObject["levelData"]!!
-    var tmpAttrData : AttrData = AttrData(0f,0f,0f,0f,0,0)
+@OptIn(ExperimentalCoroutinesApi::class)
+fun getLcAttrData(jsonElement: JsonElement, level: Int = 1) : AttrData{
+    return runBlocking {
+        val job = async (Dispatchers.Default){
+            val charLevelData = jsonElement.jsonObject["levelData"]!!
+            var tmpAttrData : AttrData = AttrData(0f,0f,0f,0f,0,0)
 
-    // 找到對應等級的數據
-    val dataFromLevel = charLevelData.jsonArray.find { data ->
-        if(level == 80) {
-            level <= data.jsonObject["maxLevel"]!!.jsonPrimitive.int
-        } else {
-            level < data.jsonObject["maxLevel"]!!.jsonPrimitive.int
+            // 找到對應等級的數據
+            val dataFromLevel = charLevelData.jsonArray.find { data ->
+                if(level == 80) {
+                    level <= data.jsonObject["maxLevel"]!!.jsonPrimitive.int
+                } else {
+                    level < data.jsonObject["maxLevel"]!!.jsonPrimitive.int
+                }
+            }
+
+            if(dataFromLevel !== null){
+                tmpAttrData.atk = dataFromLevel.jsonObject["attackBase"]!!.jsonPrimitive.float + (dataFromLevel.jsonObject["attackAdd"]!!.jsonPrimitive.float) * (level - 1)
+                tmpAttrData.def = dataFromLevel.jsonObject["defenseBase"]!!.jsonPrimitive.float + (dataFromLevel.jsonObject["defenseAdd"]!!.jsonPrimitive.float) * (level - 1)
+                tmpAttrData.hp = dataFromLevel.jsonObject["hpBase"]!!.jsonPrimitive.float + (dataFromLevel.jsonObject["hpAdd"]!!.jsonPrimitive.float) * (level - 1)
+            }
+
+            return@async  tmpAttrData
         }
+        job.await()
+        job.getCompleted()
     }
-
-    if(dataFromLevel !== null){
-        tmpAttrData.atk = dataFromLevel.jsonObject["attackBase"]!!.jsonPrimitive.float + (dataFromLevel.jsonObject["attackAdd"]!!.jsonPrimitive.float) * (level - 1)
-        tmpAttrData.def = dataFromLevel.jsonObject["defenseBase"]!!.jsonPrimitive.float + (dataFromLevel.jsonObject["defenseAdd"]!!.jsonPrimitive.float) * (level - 1)
-        tmpAttrData.hp = dataFromLevel.jsonObject["hpBase"]!!.jsonPrimitive.float + (dataFromLevel.jsonObject["hpAdd"]!!.jsonPrimitive.float) * (level - 1)
-    }
-
-    return tmpAttrData
 }
 
