@@ -18,6 +18,7 @@ import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -35,6 +36,11 @@ import components.PageHeader
 import components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
@@ -43,22 +49,35 @@ import types.Constants.Companion.CHAR_CARD_WIDTH
 import types.Relic
 import utils.PageBottomMask
 
+lateinit var relicList : MutableState<ArrayList<Relic>>
+lateinit var relicListSortable : MutableState<ArrayList<Relic>>
+
+@OptIn(ExperimentalCoroutinesApi::class)
+@Composable
+fun initRelicList(){
+    var isInited by rememberSaveable { mutableStateOf(false) }
+    relicList = rememberSaveable(stateSaver = Relic.ListSaver) { mutableStateOf(arrayListOf()) }
+    relicListSortable = rememberSaveable(stateSaver = Relic.ListSaver) { (relicList) }
+    if(!isInited){
+        relicList.value = runBlocking {
+            val job = CoroutineScope(Dispatchers.Default).async {
+                val tmpList = arrayListOf<Relic>()
+                (Relic.relicListJson as JsonArray).fastForEach { jsonElement ->
+                    tmpList.add(Relic.getRelicItemFromJSON(jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!))
+                }
+                return@async tmpList
+            }
+            job.await()
+            job.getCompleted()
+        }
+        relicListSortable.value = relicList.value
+        isInited = true
+    }
+}
+
 @Composable
 fun RelicListPage(modifier: Modifier = Modifier, navigator: Navigator, headerData: HeaderData = defaultHeaderData) {
     val hazeState = remember { HazeState() }
-    var isInited by rememberSaveable { mutableStateOf(false) }
-    var relicList by rememberSaveable(stateSaver = Relic.ListSaver) { mutableStateOf(arrayListOf()) }
-    var relicListSortable by rememberSaveable(stateSaver = Relic.ListSaver) { mutableStateOf(relicList) }
-    if(!isInited){
-        val tmpList = arrayListOf<Relic>()
-        (Relic.relicListJson as JsonArray).fastForEach { jsonElement ->
-            tmpList.add(Relic.getRelicItemFromJSON(jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!))
-        }
-
-        relicList = tmpList
-        relicListSortable = tmpList
-        isInited = true
-    }
 
     Box {
         LazyVerticalGrid(
@@ -77,8 +96,8 @@ fun RelicListPage(modifier: Modifier = Modifier, navigator: Navigator, headerDat
                         .height(PAGE_HEADER_HEIGHT)
                 )
             }
-            items(count = relicListSortable.size) { index ->
-                RelicCard(relic = relicListSortable[index])
+            items(count = relicListSortable.value.size) { index ->
+                RelicCard(relic = relicListSortable.value[index])
             }
 
             item(span = { GridItemSpan(maxLineSpan) }) {

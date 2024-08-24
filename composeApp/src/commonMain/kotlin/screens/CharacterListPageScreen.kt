@@ -18,7 +18,7 @@ import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -31,8 +31,6 @@ import com.voc.honkai_stargazer.component.CharacterCard
 import components.BackIcon
 import components.HeaderData
 import components.LIST_FILTER_TOOL_HEIGHT
-import components.ListFilterTool
-import components.ListFilterType
 import components.PAGE_HEADER_HEIGHT
 import components.PageHeader
 import components.defaultHeaderData
@@ -42,34 +40,26 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import moe.tlaster.precompose.navigation.Navigator
 import types.Character
 import types.Constants.Companion.CHAR_CARD_WIDTH
-import utils.JsonArraySaver
 import utils.PageBottomMask
-import utils.navigation.Screen
-import utils.navigation.navigateLimited
 
+lateinit var charList : MutableState<ArrayList<Character>>
+lateinit var charListSortable : MutableState<ArrayList<Character>>
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
-fun CharacterListPage(
-    modifier: Modifier = Modifier,
-    navigator: Navigator,
-    headerData: HeaderData = defaultHeaderData
-) {
-    val hazeState = remember { HazeState() }
+fun initCharList() {
     var isInited by rememberSaveable { mutableStateOf(false) }
-    var charList by rememberSaveable(stateSaver = Character.ListSaver) { mutableStateOf(arrayListOf()) }
-    var charListSortable by rememberSaveable(stateSaver = Character.ListSaver) { mutableStateOf(charList) }
+    charList = rememberSaveable(stateSaver = Character.ListSaver) { mutableStateOf(arrayListOf()) }
+    charListSortable = rememberSaveable(stateSaver = Character.ListSaver) { (charList) }
     if(!isInited){
-        charList = runBlocking {
+        charList.value = runBlocking {
             val job = CoroutineScope(Dispatchers.Default).async {
                 val tmpCharList = arrayListOf<Character>()
                 (Character.charListJson as JsonArray).fastForEach { jsonElement ->
@@ -81,8 +71,18 @@ fun CharacterListPage(
             job.getCompleted()
         }
         isInited = true
-        charListSortable = charList
+        charListSortable.value = charList.value
     }
+}
+
+@OptIn(ExperimentalCoroutinesApi::class)
+@Composable
+fun CharacterListPage(
+    modifier: Modifier = Modifier,
+    navigator: Navigator,
+    headerData: HeaderData = defaultHeaderData
+) {
+    val hazeState = remember { HazeState() }
 
     Box {
         LazyVerticalGrid(
@@ -101,8 +101,8 @@ fun CharacterListPage(
                         .height(PAGE_HEADER_HEIGHT)
                 )
             }
-            items(count = charListSortable.size) { index ->
-                CharacterCard(character = charListSortable[index])
+            items(count = charListSortable.value.size) { index ->
+                CharacterCard(character = charListSortable.value[index])
             }
             item(span = { GridItemSpan(maxLineSpan) }) {
                 Spacer(
@@ -115,15 +115,17 @@ fun CharacterListPage(
 
         PageBottomMask()
 
+
         /*
         ListFilterTool(
-            filterList = charList,
+            filterList = charList.value,
             filterType = ListFilterType.CHARACTER,
             onFilterApplied = { filteredList ->
-                charListSortable = filteredList
+                charListSortable.value = filteredList
             }
         )
          */
+
 
 
         PageHeader(navigator = navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.CANCEL)

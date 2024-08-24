@@ -1,5 +1,7 @@
 package types
 
+import androidx.compose.runtime.saveable.Saver
+import androidx.compose.runtime.saveable.listSaver
 import files.Fire
 import files.HaveNotUsed
 import files.Ice
@@ -25,8 +27,13 @@ import files.ic_physical
 import files.ic_quatumn
 import files.icon_wind
 import files.pom_pom_failed_issue
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
@@ -128,44 +135,68 @@ data class AbyssInfoList(
     @SerialName("time") val time: AbyssInfoTime
 ){
     companion object{
+        @OptIn(ExperimentalCoroutinesApi::class)
         fun getAbyssList(type: AbyssInfoType): ArrayList<AbyssInfoList> {
-            val retArray = arrayListOf<AbyssInfoList>()
-            try {
-                val abyssJson = UtilTools().getAssetsJsonStrByFilePath(
-                    when(type){
-                        AbyssInfoType.MemoryOfChaos -> "memory_of_chao_data/chao_list.json"
-                        AbyssInfoType.PureFiction -> "pure_fiction_data/pf_list.json"
+            return runBlocking {
+                val job = async(Dispatchers.Default) {
+                    val retArray = arrayListOf<AbyssInfoList>()
+                    try {
+                        val abyssJson = UtilTools().getAssetsJsonStrByFilePath(
+                            when(type){
+                                AbyssInfoType.MemoryOfChaos -> "memory_of_chao_data/chao_list.json"
+                                AbyssInfoType.PureFiction -> "pure_fiction_data/pf_list.json"
+                            }
+                        )
+
+                        //記得以後Enum要寫全 不然會出問題
+                        val json = Json { ignoreUnknownKeys = true }
+                        return@async json.decodeFromString<ArrayList<AbyssInfoList>>(abyssJson)
+
+                    }catch (e: Exception) {
+                        errorLogExport("AbyssInfoList", "getAbyssList(type = $type)", e)
+                        return@async retArray
                     }
-                )
-
-                //記得以後Enum要寫全 不然會出問題
-                val json = Json { ignoreUnknownKeys = true }
-                return json.decodeFromString<ArrayList<AbyssInfoList>>(abyssJson)
-
-            }catch (e: Exception) {
-                errorLogExport("AbyssInfoList", "getAbyssList(type = $type)", e)
-                return retArray
+                }
+                job.await()
+                job.getCompleted()
             }
         }
+        @OptIn(ExperimentalCoroutinesApi::class)
         fun getAbyssTitleLocaleNameById(abyssId: Int, type: AbyssInfoType): String {
-            try {
-                val abyssJson = UtilTools().getAssetsJsonStrByFilePath(
-                    when(type){
-                        AbyssInfoType.MemoryOfChaos -> "memory_of_chao_data/chao_list.json"
-                        AbyssInfoType.PureFiction -> "pure_fiction_data/pf_list.json"
-                    }
-                )
-                val abyssList = Json.decodeFromString<ArrayList<AbyssInfoList>>(abyssJson)
+            return runBlocking {
+                val job = async(Dispatchers.Default) {
+                    try {
+                        val abyssJson = UtilTools().getAssetsJsonStrByFilePath(
+                            when(type){
+                                AbyssInfoType.MemoryOfChaos -> "memory_of_chao_data/chao_list.json"
+                                AbyssInfoType.PureFiction -> "pure_fiction_data/pf_list.json"
+                            }
+                        )
+                        val abyssList = Json.decodeFromString<ArrayList<AbyssInfoList>>(abyssJson)
 
-                val abyssFiltered = abyssList.filter { it.id == abyssId }
-                if(abyssFiltered.isEmpty()) return "???"
-                return abyssFiltered[0].nameList[TextLanguageInstance] ?: "???"
-            }catch (e: Exception) {
-                errorLogExport("AbyssInfoList", "getAbyssTitleLocaleNameById(abyssId = $abyssId, type = $type)", e)
-                return "???"
+                        val abyssFiltered = abyssList.filter { it.id == abyssId }
+                        if(abyssFiltered.isEmpty()) return@async "???"
+                        return@async abyssFiltered[0].nameList[TextLanguageInstance] ?: "???"
+                    }catch (e: Exception) {
+                        errorLogExport("AbyssInfoList", "getAbyssTitleLocaleNameById(abyssId = $abyssId, type = $type)", e)
+                        return@async "???"
+                    }
+                }
+                job.await()
+                job.getCompleted()
             }
+
         }
+        val Saver: Saver<AbyssInfoList, Any> = Saver(
+            save = { Json.encodeToString(it) },
+            restore = { Json.decodeFromString<AbyssInfoList>(it as String) }
+        )
+        val ListSaver: Saver<ArrayList<AbyssInfoList>, Any> = listSaver(
+            save = { listOf(Json.encodeToString(it)) },
+            restore = { Json.decodeFromString(it[0]) }
+        )
     }
+
 }
 
 @Serializable

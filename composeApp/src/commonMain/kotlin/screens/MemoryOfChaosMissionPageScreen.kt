@@ -33,8 +33,10 @@ import androidx.compose.material.Text
 import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -70,6 +72,10 @@ import files.ic_exchange_icon
 import files.ic_moc_buff_icon
 import files.ic_person_btn
 import files.ic_selected_orange_circle
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
 import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
 import kotlinx.datetime.LocalDateTime
@@ -93,6 +99,26 @@ import utils.UtilTools
 import utils.navigation.Screen
 import utils.navigation.navigateLimited
 
+lateinit var mocList : MutableState<ArrayList<AbyssInfoList>>
+
+@OptIn(ExperimentalCoroutinesApi::class)
+@Composable
+fun initMOCList(){
+    val isInited by rememberSaveable { mutableStateOf(false) }
+    if(!isInited){
+        mocList = rememberSaveable(stateSaver = AbyssInfoList.ListSaver) { mutableStateOf(arrayListOf()) }
+        mocList.value = runBlocking {
+            val job = async(Dispatchers.Default) {
+                return@async AbyssInfoList.getAbyssList(type = AbyssInfoType.MemoryOfChaos)
+                    .sortedByDescending { it.id }
+                    .filter { (BuildKonfig.appProfile != "DEV") && it.time.begin <= Clock.System.now().toEpochMilliseconds() } as ArrayList<AbyssInfoList>
+            }
+            job.await()
+            job.getCompleted()
+        }
+    }
+}
+
 @Composable
 @Preview
 fun MemoryOfChaosMissionPageScreen(
@@ -104,11 +130,8 @@ fun MemoryOfChaosMissionPageScreen(
     val hazeState = remember { HazeState() }
 
     val mocChoiceIndex = remember { mutableStateOf(0) }
-    val mocList = AbyssInfoList.getAbyssList(type = AbyssInfoType.MemoryOfChaos)
-        .sortedByDescending { it.id }
-        .filter { (BuildKonfig.appProfile != "DEV") && it.time.begin <= Clock.System.now().toEpochMilliseconds() }
     val isDialogVisible = remember { mutableStateOf(false) }
-    val mocInfoList = AbyssInfo.getAbyssItemById(abyssId = mocList[mocChoiceIndex.value].id, type = AbyssInfoType.MemoryOfChaos)
+    val mocInfoList = AbyssInfo.getAbyssItemById(abyssId = mocList.value[mocChoiceIndex.value].id, type = AbyssInfoType.MemoryOfChaos)
 
 
     Box(Modifier.fillMaxSize()) {
@@ -122,7 +145,7 @@ fun MemoryOfChaosMissionPageScreen(
             ) }
 
             //Spinner of MOC
-            item { MemoryOfChaosIdSpinner(mocList, mocChoiceIndex, isDialogVisible) }
+            item { MemoryOfChaosIdSpinner(mocList.value, mocChoiceIndex, isDialogVisible) }
 
             item { Spacer(Modifier.height(8.dp)) }
 

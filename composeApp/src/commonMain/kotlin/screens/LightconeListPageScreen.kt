@@ -18,6 +18,7 @@ import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -41,38 +42,43 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.JsonArray
-import kotlinx.serialization.json.int
-import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import moe.tlaster.precompose.navigation.Navigator
-import types.Character
 import types.Constants.Companion.CHAR_CARD_WIDTH
 import types.Lightcone
-import types.Path
-import utils.JsonArraySaver
-import utils.Language
 import utils.PageBottomMask
-import utils.navigation.Screen
-import utils.navigation.navigateLimited
+
+lateinit var lcList : MutableState<ArrayList<Lightcone>>
+lateinit var lcListSortable : MutableState<ArrayList<Lightcone>>
+
+@OptIn(ExperimentalCoroutinesApi::class)
+@Composable
+fun initLcList(){
+    var isInited by rememberSaveable { mutableStateOf(false) }
+    lcList = rememberSaveable(stateSaver = Lightcone.ListSaver) { mutableStateOf(arrayListOf()) }
+    lcListSortable = rememberSaveable(stateSaver = Lightcone.ListSaver) { (lcList) }
+    if(!isInited){
+        lcList.value = runBlocking {
+            val job = CoroutineScope(Dispatchers.Default).async {
+                val tmpLcList = arrayListOf<Lightcone>()
+                (Lightcone.lcListJson as JsonArray).fastForEach { jsonElement ->
+                    tmpLcList.add(Lightcone.getLightconeItemFromJSON(jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!, requireAttrData = true))
+                }
+                return@async tmpLcList
+            }
+            job.await()
+            job.getCompleted()
+        }
+        lcListSortable.value = lcList.value
+        isInited = true
+    }
+}
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun LightconeListPage(modifier: Modifier = Modifier, navigator: Navigator, headerData: HeaderData = defaultHeaderData) {
     val hazeState = remember { HazeState() }
-    var isInited by rememberSaveable { mutableStateOf(false) }
-    var lcList by rememberSaveable(stateSaver = Lightcone.ListSaver) { mutableStateOf(arrayListOf()) }
-    var lcListSortable by rememberSaveable(stateSaver = Lightcone.ListSaver) { mutableStateOf(lcList) }
-    if(!isInited){
-        val tmpLcList = arrayListOf<Lightcone>()
-        (Lightcone.lcListJson as JsonArray).fastForEach { jsonElement ->
-            tmpLcList.add(Lightcone.getLightconeItemFromJSON(jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!, requireAttrData = true))
-        }
-
-        lcList = tmpLcList
-        lcListSortable = tmpLcList
-        isInited = true
-    }
 
     Box {
         LazyVerticalGrid(
@@ -91,8 +97,8 @@ fun LightconeListPage(modifier: Modifier = Modifier, navigator: Navigator, heade
                         .height(PAGE_HEADER_HEIGHT)
                 )
             }
-            items(count = lcListSortable.size) { index ->
-                LightconeCard(lightcone = lcListSortable[index])
+            items(count = lcListSortable.value.size) { index ->
+                LightconeCard(lightcone = lcListSortable.value[index])
             }
 
             item(span = { GridItemSpan(maxLineSpan) }) {

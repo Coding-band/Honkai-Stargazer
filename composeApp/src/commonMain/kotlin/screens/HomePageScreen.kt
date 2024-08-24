@@ -161,6 +161,11 @@ fun HomePage(
                 inited = true
             }
         }
+        initCharList()
+        initLcList()
+        initRelicList()
+        initMOCList()
+        initPFList()
     }
 }
 
