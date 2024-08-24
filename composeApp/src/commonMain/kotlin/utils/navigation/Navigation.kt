@@ -6,7 +6,6 @@
 
 package utils.navigation
 
-import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
@@ -88,6 +87,7 @@ import screens.UIDSearchPageScreen
 import screens.UserCharacterPageScreen
 import screens.UserInfoPageScreen
 import types.Constants
+import utils.BezierEasing2O48
 
 //This should not be there, but CharacterCard need it in clickable, without using @Composable ...
 lateinit var navigatorInstance : Navigator
@@ -195,8 +195,6 @@ fun Navigation() {
     val navigator = rememberNavigator()
     val snackbarHostState = remember { SnackbarHostState() }
 
-
-
     navigatorInstance = navigator
     toastInstance = rememberToasterState()
     pomPomPopupInstance = remember { mutableStateOf(PomPomPopup()) }
@@ -209,8 +207,8 @@ fun Navigation() {
 
     navTransition = remember {
         NavTransition(
-            createTransition = slideInHorizontally(animationSpec = tween(easing = LinearEasing)) { it },
-            destroyTransition = slideOutHorizontally(animationSpec = tween(easing = LinearEasing)) { it },
+            createTransition = slideInHorizontally(animationSpec = tween(easing = BezierEasing2O48)) { it },
+            destroyTransition = slideOutHorizontally(animationSpec = tween(easing = BezierEasing2O48)) { it },
             pauseTransition = slideOutHorizontally { -it / 4 },
             resumeTransition = slideInHorizontally { -it / 4 },
             exitTargetContentZIndex = 1f

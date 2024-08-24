@@ -1,5 +1,6 @@
 package utils
 
+import androidx.compose.animation.core.CubicBezierEasing
 import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
@@ -45,6 +46,8 @@ val ProgressLevelBackground = Color(0xFF666666)
 val ProgressLevelPrimary = Color(0xFFDBC291)
 val AdditionalGreen = Color(0xFF43A047)
 val GradReachYellow = Color(0xFFFFD070)
+
+val BezierEasing2O48 = CubicBezierEasing(0.3f, 0f, 0.3f, 1f)
 
 private val DarkColorScheme = darkColors(
     primary = Purple80,
