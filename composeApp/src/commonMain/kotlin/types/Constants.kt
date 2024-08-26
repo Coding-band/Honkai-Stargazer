@@ -9,6 +9,9 @@ import files.Event
 import files.Expedition
 import files.Lightcone
 import files.LotterySimulator
+import files.MOCMissionPart1
+import files.MOCMissionPart2
+import files.MOCMissionPart3
 import files.Map
 import files.MemoryOfChaos
 import files.MemoryOfChaosLeaderboard
@@ -232,6 +235,24 @@ class Constants {
                 itemTitleRId = Res.string.WrapAnalysis,
                 itemIconId = Res.drawable.phorphos_shooting_star_fill
             ),
+            /*
+
+            HomePageBlocks.HomePageBlockItem(
+                itemTitleRId = Res.string.MOCMissionPart1,
+                itemIconId = Res.drawable.phorphos_shooting_star_fill,
+                itemOnClickToNavigate = Screen.BlankScreen
+            ),
+            HomePageBlocks.HomePageBlockItem(
+                itemTitleRId = Res.string.MOCMissionPart2,
+                itemIconId = Res.drawable.phorphos_shooting_star_fill,
+                itemOnClickToNavigate = Screen.WithBGScreen
+            ),
+            HomePageBlocks.HomePageBlockItem(
+                itemTitleRId = Res.string.MOCMissionPart3,
+                itemIconId = Res.drawable.phorphos_shooting_star_fill,
+                itemOnClickToNavigate = Screen.WithBGHeaderScreen
+            ),
+             */
         )
     }
 }

@@ -45,6 +45,7 @@ import files.RelicList
 import files.Res
 import files.Setting
 import files.UIDSearch
+import files.UnLockAll
 import files.UserInfoGameData
 import files.phorphos_alien_fill
 import files.phorphos_atom_fill
@@ -186,6 +187,19 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     data object PureFictionMissionPageScreen : Screen(
         "PureFictionMissionPageScreen",
         HeaderData(titleRId = Res.string.PureFiction, titleIconId = Res.drawable.phorphos_atom_fill)
+    )
+
+    data object BlankScreen : Screen(
+        "BlankScreen",
+        HeaderData(titleRId = Res.string.PureFiction, titleIconId = Res.drawable.phorphos_atom_fill)
+    )
+    data object WithBGScreen : Screen(
+        "WithBGScreen",
+        HeaderData(titleRId = Res.string.PureFiction, titleIconId = Res.drawable.phorphos_atom_fill)
+    )
+    data object WithBGHeaderScreen : Screen(
+        "WithBGHeaderScreen",
+        HeaderData(titleRId = Res.string.UnLockAll, titleIconId = Res.drawable.phorphos_atom_fill)
     )
 }
 
@@ -520,6 +534,50 @@ fun Navigation() {
                 }
             )
         }
+
+        //For Testing
+
+        scene(
+            route = Screen.BlankScreen.route, navTransition = navTransition) {
+            RootContent(
+                screen = Screen.BlankScreen,
+                snackbarHostState = snackbarHostState,
+                page = {
+                    BlankScreen(
+                        navigator = navigator,
+                        headerData = Screen.BlankScreen.headerData
+                    )
+                }
+            )
+        }
+        scene(
+            route = Screen.WithBGScreen.route, navTransition = navTransition) {
+            RootContent(
+                screen = Screen.WithBGScreen,
+                snackbarHostState = snackbarHostState,
+                page = {
+                    WithBGScreen(
+                        navigator = navigator,
+                        headerData = Screen.WithBGScreen.headerData,
+                    )
+                }
+            )
+        }
+        scene(
+            route = Screen.WithBGHeaderScreen.route, navTransition = navTransition) {
+            RootContent(
+                screen = Screen.WithBGHeaderScreen,
+                snackbarHostState = snackbarHostState,
+                page = {
+                    WithBGScreen(
+                        navigator = navigator,
+                        headerData = Screen.WithBGHeaderScreen.headerData,
+                        haveHeader = true
+                    )
+                }
+            )
+        }
+
     }
 }
 
