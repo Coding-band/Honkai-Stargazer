@@ -37,7 +37,7 @@ Regarding the follow-up arrangements for Stargazer 2`
   return (
     <ReactNativeModal
       useNativeDriverForBackdrop
-      isVisible={isVisible}
+      isVisible={isVisible || false}
       statusBarTranslucent
       deviceHeight={Dimensions.get("screen").height}
     >

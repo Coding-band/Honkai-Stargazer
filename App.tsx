@@ -27,7 +27,7 @@ import getSurveyURL from "./src/hooks/survey/getSurveyURL";
 // import playground for testing
 // import "./playground";
 
-SplashScreen.preventAutoHideAsync();
+//SplashScreen.preventAutoHideAsync();
 const queryClient = new QueryClient();
 
 //https://stackoverflow.com/questions/65192622/initializing-text-defaultprops-with-typescript
@@ -78,7 +78,7 @@ export default function App() {
 
   const onLayoutRootView = useCallback(async () => {
     if (fontsLoaded) {
-      await SplashScreen.hideAsync();
+      //await SplashScreen.hideAsync();
     }
   }, [fontsLoaded]);
 

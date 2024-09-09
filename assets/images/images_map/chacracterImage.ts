@@ -10,8 +10,7 @@ const CharacterImage: any = {
   "Yunli": {
     icon: require("../../images/character_icon/yunli_icon.webp"),
     imageSplash: require("../../images/character_splash/yunli_splash.webp"),
-    imageFull: require("../../images/character_splash/yunli_splash.webp"),
-    //imageFull: require("../../images/character_full/yunli_full.webp"),
+    imageFull: require("../../images/character_full/yunli_full.webp"),
     fade: require("../../images/character_fade/yunli_fade.webp"),
   },
   "March 7th (Imaginary)": {

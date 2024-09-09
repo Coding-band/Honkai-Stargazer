@@ -123,13 +123,13 @@ export default function getCharScore(charId, charData, scoreWeight) {
           * ((0.5 * Math.pow(charLevel, 2) / 80) / 40) //角色等級Curve
           * (weightValue / attrWeightSum) * 60 //佔比
         // console.log(name + " : " + (attrValue) + " / " + (gradValue) + " || " + ((attrValue) / (gradValue)) + " || " + ((attrValue) / (gradValue)) * (weightValue / attrWeightSum) * 58) //畢業比率
-
+        //61.5562843142
       }
 
     })
 
     //最大值 沒上限 , 畢業100
-    //console.log(charId + " : "+lightconeScore+"||"+ soulScore+"||" + traceScore +"||"+ attrScore+"||"+promotionScore+" = "+(lightconeScore + soulScore + traceScore + attrScore + promotionScore))
+    console.log(charId + " : "+lightconeScore+"||"+ soulScore+"||" + traceScore +"||"+ attrScore+"||"+promotionScore+" = "+(lightconeScore + soulScore + traceScore + attrScore + promotionScore))
 
     schoolData.push((lightconeScore + soulScore + traceScore + attrScore + promotionScore))
     if (schoolData[index] > schoolData[maxSchoolDataIndex]) {
