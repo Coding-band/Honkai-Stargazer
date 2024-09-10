@@ -4,7 +4,29 @@
  */
 
 const CharacterSkillMain: any = {
-  //add in 2.3.0
+  //add in 2.5.0
+  "Lingsha": {
+    skill1: require("../../images/character_skill/lingsha_skill1.webp"),
+    skill2: require("../../images/character_skill/lingsha_skill2.webp"),
+    skill3: require("../../images/character_skill/lingsha_skill3.webp"),
+    skill4: require("../../images/character_skill/lingsha_skill4.webp"),
+    skill6: require("../../images/character_skill/lingsha_skill6.webp"),
+  },
+  "Feixiao": {
+    skill1: require("../../images/character_skill/feixiao_skill1.webp"),
+    skill2: require("../../images/character_skill/feixiao_skill2.webp"),
+    skill3: require("../../images/character_skill/feixiao_skill3.webp"),
+    skill4: require("../../images/character_skill/feixiao_skill4.webp"),
+    skill6: require("../../images/character_skill/feixiao_skill6.webp"),
+  },
+  "Moze": {
+    skill1: require("../../images/character_skill/moze_skill1.webp"),
+    skill2: require("../../images/character_skill/moze_skill2.webp"),
+    skill3: require("../../images/character_skill/moze_skill3.webp"),
+    skill4: require("../../images/character_skill/moze_skill4.webp"),
+    skill6: require("../../images/character_skill/moze_skill6.webp"),
+  },
+  //add in 2.4.0
   "Jiaoqiu": {
     skill1: require("../../images/character_skill/jiaoqiu_skill1.webp"),
     skill2: require("../../images/character_skill/jiaoqiu_skill2.webp"),

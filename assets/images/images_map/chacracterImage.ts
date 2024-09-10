@@ -1,4 +1,27 @@
 const CharacterImage: any = {
+  //add in 2.5.0
+  "Lingsha": {
+    icon: require("../../images/character_icon/lingsha_icon.webp"),
+    imageSplash: require("../../images/character_splash/lingsha_splash.webp"),
+    imageFull: require("../../images/character_splash/lingsha_splash.webp"),
+    //imageFull: require("../../images/character_full/lingsha_full.webp"),
+    fade: require("../../images/character_fade/lingsha_fade.webp"),
+  },
+  "Feixiao": {
+    icon: require("../../images/character_icon/feixiao_icon.webp"),
+    imageSplash: require("../../images/character_splash/feixiao_splash.webp"),
+    imageFull: require("../../images/character_splash/feixiao_splash.webp"),
+    //imageFull: require("../../images/character_full/feixiao_full.webp"),
+    fade: require("../../images/character_fade/feixiao_fade.webp"),
+  },
+  "Moze": {
+    icon: require("../../images/character_icon/moze_icon.webp"),
+    imageSplash: require("../../images/character_splash/moze_splash.webp"),
+    imageFull: require("../../images/character_splash/moze_splash.webp"),
+    //imageFull: require("../../images/character_full/moze_full.webp"),
+    fade: require("../../images/character_fade/moze_fade.webp"),
+  },
+
   //add in 2.4.0
   "Jiaoqiu": {
     icon: require("../../images/character_icon/jiaoqiu_icon.webp"),

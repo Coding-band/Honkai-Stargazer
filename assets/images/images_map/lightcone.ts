@@ -1,4 +1,17 @@
 const Lightcone: any = {
+  //add in 2.5.0
+  "Shadowed by Night": {
+    icon: require("../../images/lightcone_icon/shadowed_by_night.webp"),
+    imageFull: require("../../images/lightcone_artwork/shadowed_by_night_artwork.webp"),
+  },
+  "I Venture Forth to Hunt": {
+    icon: require("../../images/lightcone_icon/i_venture_forth_to_hunt.webp"),
+    imageFull: require("../../images/lightcone_artwork/i_venture_forth_to_hunt_artwork.webp"),
+  },
+  "Scent Alone Stays True": {
+    icon: require("../../images/lightcone_icon/scent_alone_stays_true.webp"),
+    imageFull: require("../../images/lightcone_artwork/scent_alone_stays_true_artwork.webp"),
+  },
   //add in 2.4.0
   "Those Many Springs": {
     icon: require("../../images/lightcone_icon/those_many_springs.webp"),

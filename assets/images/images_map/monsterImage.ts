@@ -1,4 +1,26 @@
 const Monsterimages: any = {
+  //Add in 2.5.0
+  "Maddened Feixiao": {
+    icon: require("../../images/monster_icon/monster_maddened_feixiao_icon.webp"),
+  },
+  "Borisin Warhead: Hoolay ": {
+    icon: require("../../images/monster_icon/monster_borisin_warhead_hoolay_icon.webp"),
+  },
+  "Ecliptic Inner Beast & Shadow of \"Feixiao\"": {
+    icon: require("../../images/monster_icon/monster_ecliptic_inner_beast_shadow_of_feixiao_icon.webp"),
+  },
+  "Worldpurge Tail": {
+    icon: require("../../images/monster_icon/monster_worldpurge_tail_icon.webp"),
+  },
+  "All or Nothing: Double Fortune": {
+    icon: require("../../images/monster_icon/monster_all_or_nothing_double_fortune_icon.webp"),
+  },
+  "Nebula Devourer": {
+    icon: require("../../images/monster_icon/monster_nebula_devourer_icon.webp"),
+  },
+  "Planeshred Claws ": {
+    icon: require("../../images/monster_icon/monster_planeshred_claws_icon.webp"),
+  },
   //Add in 2.4.0
   "\"Howling Casket\"": {
     icon: require("../../images/monster_icon/monster_howling_casket_icon.webp"),

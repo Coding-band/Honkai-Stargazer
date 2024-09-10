@@ -4,6 +4,49 @@
  */
 
 const CharacterSoul: any = {
+  //add in 2.5.0
+  "Lingsha": {
+    eidolon1: require("../../images/character_eidolon/lingsha_eidolon1.webp"),
+    eidolon2: require("../../images/character_eidolon/lingsha_eidolon2.webp"),
+    eidolon3: require("../../images/character_eidolon/lingsha_eidolon3.webp"),
+    eidolon4: require("../../images/character_eidolon/lingsha_eidolon4.webp"),
+    eidolon5: require("../../images/character_eidolon/lingsha_eidolon5.webp"),
+    eidolon6: require("../../images/character_eidolon/lingsha_eidolon6.webp"),
+    soul1: require("../../images/character_soul/lingsha_soul1.webp"),
+    soul2: require("../../images/character_soul/lingsha_soul2.webp"),
+    soul3: require("../../images/character_soul/lingsha_soul3.webp"),
+    soul4: require("../../images/character_soul/lingsha_soul4.webp"),
+    soul5: require("../../images/character_soul/lingsha_soul5.webp"),
+    soul6: require("../../images/character_soul/lingsha_soul6.webp"),
+  },
+  "Feixiao": {
+    eidolon1: require("../../images/character_eidolon/feixiao_eidolon1.webp"),
+    eidolon2: require("../../images/character_eidolon/feixiao_eidolon2.webp"),
+    eidolon3: require("../../images/character_eidolon/feixiao_eidolon3.webp"),
+    eidolon4: require("../../images/character_eidolon/feixiao_eidolon4.webp"),
+    eidolon5: require("../../images/character_eidolon/feixiao_eidolon5.webp"),
+    eidolon6: require("../../images/character_eidolon/feixiao_eidolon6.webp"),
+    soul1: require("../../images/character_soul/feixiao_soul1.webp"),
+    soul2: require("../../images/character_soul/feixiao_soul2.webp"),
+    soul3: require("../../images/character_soul/feixiao_soul3.webp"),
+    soul4: require("../../images/character_soul/feixiao_soul4.webp"),
+    soul5: require("../../images/character_soul/feixiao_soul5.webp"),
+    soul6: require("../../images/character_soul/feixiao_soul6.webp"),
+  },
+  "Moze": {
+    eidolon1: require("../../images/character_eidolon/moze_eidolon1.webp"),
+    eidolon2: require("../../images/character_eidolon/moze_eidolon2.webp"),
+    eidolon3: require("../../images/character_eidolon/moze_eidolon3.webp"),
+    eidolon4: require("../../images/character_eidolon/moze_eidolon4.webp"),
+    eidolon5: require("../../images/character_eidolon/moze_eidolon5.webp"),
+    eidolon6: require("../../images/character_eidolon/moze_eidolon6.webp"),
+    soul1: require("../../images/character_soul/moze_soul1.webp"),
+    soul2: require("../../images/character_soul/moze_soul2.webp"),
+    soul3: require("../../images/character_soul/moze_soul3.webp"),
+    soul4: require("../../images/character_soul/moze_soul4.webp"),
+    soul5: require("../../images/character_soul/moze_soul5.webp"),
+    soul6: require("../../images/character_soul/moze_soul6.webp"),
+  },
   //add in 2.4.0
   "Jiaoqiu": {
     eidolon1: require("../../images/character_eidolon/jiaoqiu_eidolon1.webp"),

@@ -1,4 +1,15 @@
 const Relic: any = {
+  //Add in 2.5.0
+  "Lushaka, the Sunken Seas": {
+    icon1: require("../ornament_icon/lushaka_the_sunken_seas_5.webp"),
+    icon2: require("../ornament_icon/lushaka_the_sunken_seas_6.webp"),
+    pcIcon: require("../ornament_pcicon/lushaka_the_sunken_seas.webp"),
+  },
+  "The Wondrous BananAmusement Park": {
+    icon1: require("../ornament_icon/the_wondrous_bananamusement_park_5.webp"),
+    icon2: require("../ornament_icon/the_wondrous_bananamusement_park_6.webp"),
+    pcIcon: require("../ornament_pcicon/the_wondrous_bananamusement_park.webp"),
+  },
   //Add in 2.3.0
   "Iron Cavalry Against the Scourge": {
     icon1: require("../relic_icon/iron_cavalry_against_the_scourge_1.webp"),
