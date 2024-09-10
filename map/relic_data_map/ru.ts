@@ -43,7 +43,7 @@ import ForgeOfTheKalpagniLantern from "../../data/relic_data/ru/316.json";
 
 //Add in 2.5.0
 import LushakatheSunkenSeas from "../../data/relic_data/ru/317.json";
-import TheWondrousBananAmusementPark from "../../data/relic_data/rur/318.json";
+import TheWondrousBananAmusementPark from "../../data/relic_data/ru/318.json";
 
 const RU = {
   //add in 2.5.0
