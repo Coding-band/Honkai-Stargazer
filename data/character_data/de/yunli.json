@@ -1004,7 +1004,7 @@
    "tagHash": "Verstärkung",
    "descHash": "Verbraucht <nobr>#8[i]</nobr> Pkt. Energie. Yunli erhält „Parade“ und versetzt alle Gegner in den Status Verspotten bis zum Ende der nächsten Runde eines Verbündeten oder eines Gegners. Der KRIT-SCH von Yunlis nächstem Konter wird um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> erhöht. Wenn der Konter des Talents ausgelöst wird, wird stattdessen der <u>Konter</u> „Intuition: Auslöschen“ ausgelöst und der Effekt Parade entfernt. Wenn im Status Parade kein Konter ausgelöst wird, führt Yunli nach Ende des Status sofort einen <u>Konter</u> „Intuition: Abtrennen“ gegen zufällige Gegner aus.<br />„Intuition: Abtrennen“: Verursacht beim Ziel physischen SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Yunlis ANG und bei angrenzenden Einheiten physischen SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#6[i]%</nobr></span> von Yunlis ANG.<br />„Intuition: Auslöschen“: Verursacht beim Ziel physischen SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Yunlis ANG und bei angrenzenden Einheiten physischen SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#6[i]%</nobr></span> von Yunlis ANG. Verursacht danach zusätzlich <nobr>#4[i]</nobr>-mal SCH, der jeweils einem zufälligen Gegner physischen SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#7[i]%</nobr></span> von Yunlis ANG zufügt.<br />Wenn Yunli durch diese Fähigkeit SCH verursacht, wird dieser als Ultimate-SCH angesehen.",
    "ultimateCost": 120,
-   "break": "60",
+   "break": "30",
    "energy": "5",
    "id": 30975,
    "name": "Himmlische Verkündung der Klinge",
@@ -2341,7 +2341,7 @@
   {
    "id": 17,
    "title": "Über Feixiao",
-   "text": "Ich ziehe es vor, Freundschaften durch Duelle zu schließen – schließlich ist ein Kampf aufrichtiger als es Worte sind. Der unbekümmerte General der Yaoqing ist in dieser Hinsicht genauso wie ich.",
+   "text": "Ich ziehe es vor, Freundschaften durch Duelle zu schließen – schließlich ist ein Kampf aufrichtiger als es Worte sind. Die unbekümmerte Generalin der Yaoqing ist in dieser Hinsicht genauso wie ich.",
    "unlockRequirement": "",
    "cnUrl": "ae4ec5a35f888f2c9d7fd28cb25b999ed7ef3683070b95f5acceade512b3d43f",
    "jpUrl": "bfe72f30bac45bbab42b20aec8c23a55b81bb545b1884b6886ec28d45b3ea0b9",
@@ -2517,6 +2517,36 @@
    "jpUrl": "839ab9b147f31761f472adf6c7a18b91e7efc5bf9df3cdfe6f6294fa0bac7565",
    "enUrl": "95788bb0175762a373c112252ef81d8e34d2c3024f8bdaca3b179d23d42e867c",
    "krUrl": "fb130511c736e331ec16552eb22f5124c578e376b003ec470ef0729c4710d92c"
+  },
+  {
+   "id": 35,
+   "title": "Teammitglied: Lingsha",
+   "text": "Lingsha, überlass mir die Feinde da vorne.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 36,
+   "title": "Teammitglied: Feixiao",
+   "text": "An der Seite der Generalin kämpfen zu können ... Sogar Altes Eisen ist begeistert!",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 37,
+   "title": "Teammitglied: Moze",
+   "text": "Die legendäre Figur ist aufgetaucht!",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
   },
   {
    "id": 51,
@@ -2802,7 +2832,7 @@
  "storyItems": [
   {
    "title": "Figurendetails",
-   "text": "Eine Schwertjägerin der Xianzhou Zhuming. Sie ist die Enkelin des „Flammenden Herzens“, General Huaiyan.<br />Sie hat von klein auf die Schwertkunst und das Schmieden von Huaiyan gelernt und ist daher die jüngste Schwertmeisterin des Flammenrad-Oktetts.<br />Sie verabscheut die verfluchten Schwerter, die aus der Zhuming strömten, und schwor, dass sie alle verfluchten Schwerter finden und zertrümmern würde.",
+   "text": "Eine Schwertjägerin der Xianzhou Zhuming. Sie ist die Enkelin des „Flammenden Herzens“, General Huaiyan.<br />Sie hat von klein auf die Schwertkunst und das Schmieden von Huaiyan gelernt und ist die zweitjüngste Schwertmeisterin des Flammenrad-Oktetts.<br />Sie verabscheut die verfluchten Schwerter, die aus der Zhuming strömten, und schwor, dass sie alle verfluchten Schwerter finden und zertrümmern würde.",
    "unlockRequirement": ""
   },
   {
@@ -2935,7 +2965,7 @@
  },
  "name": "Yunli",
  "rarity": 5,
- "descHash": "Eine Schwertjägerin der Xianzhou Zhuming. Sie ist die Enkelin des „Flammenden Herzens“, General Huaiyan. Sie hat von klein auf die Schwertkunst und das Schmieden von Huaiyan gelernt und ist daher die jüngste Schwertmeisterin des Flammenrad-Oktetts. Sie verabscheut die verfluchten Schwerter, die aus der Zhuming strömten, und schwor, dass sie alle verfluchten Schwerter finden und zertrümmern würde.",
+ "descHash": "Eine Schwertjägerin der Xianzhou Zhuming. Sie ist die Enkelin des „Flammenden Herzens“, General Huaiyan. Sie hat von klein auf die Schwertkunst und das Schmieden von Huaiyan gelernt und ist die zweitjüngste Schwertmeisterin des Flammenrad-Oktetts. Sie verabscheut die verfluchten Schwerter, die aus der Zhuming strömten, und schwor, dass sie alle verfluchten Schwerter finden und zertrümmern würde.",
  "artPath": "efd0af2c8e169842d6ab917bf314d54dfb270d3bbc2a3292508bb7a5b62f21da",
  "miniIconPath": "c9d438ee7a4b3c1d9b1ca099d1369793c8779e938c051cce2e3ce44b51d4ac4d",
  "damageType": {

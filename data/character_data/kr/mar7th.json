@@ -521,7 +521,7 @@
  "skills": [
   {
    "tagHash": "단일 공격",
-   "descHash": "지정된 단일 적에게 Mar. 7th 공격력 <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>만큼의 <span style=\"color:#47C7FD;\">얼음</span> 속성 피해를 가한다",
+   "descHash": "지정된 단일 적에게 Mar. 7th 공격력의 <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>만큼 <span style=\"color:#47C7FD;\">얼음</span> 속성 피해를 가한다",
    "ultimateCost": 0,
    "break": "30",
    "energy": "20",
@@ -1013,7 +1013,7 @@
   },
   {
    "tagHash": "범위 공격",
-   "descHash": "모든 적에게 Mar. 7th 공격력 <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>만큼의 <span style=\"color:#47C7FD;\">얼음</span> 속성 피해를 준다. 피격된 적은 <nobr>#2[i]%</nobr>의 <u>기본 확률</u>로 빙결 상태에 빠진다. 지속 시간: <nobr>#3[i]</nobr>턴.<br />빙결 상태의 적은 움직임이 제한될 뿐만 아니라 턴이 시작될 때마다 Mar. 7th 공격력 <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>만큼의 <span style=\"color:#47C7FD;\">얼음</span> 속성 <u>추가 피해</u>를 받는다",
+   "descHash": "모든 적에게 Mar. 7th 공격력의 <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>만큼 <span style=\"color:#47C7FD;\">얼음</span> 속성 피해를 가한다. 피격된 적은 <nobr>#2[i]%</nobr>의 <u>기본 확률</u>로 빙결 상태에 빠진다, 지속 시간: <nobr>#3[i]</nobr>턴.<br />빙결 상태의 적은 행동이 불가할 뿐만 아니라 턴이 시작될 때마다 Mar. 7th 공격력의 <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>만큼 <span style=\"color:#47C7FD;\">얼음</span> 속성 <u>추가 피해</u>를 받는다",
    "ultimateCost": 120,
    "break": "60/hit",
    "energy": "5",
@@ -1329,7 +1329,7 @@
   },
   {
    "tagHash": "단일 공격",
-   "descHash": "실드를 지닌 아군이 적에게 피격되면 Mar. 7th는 즉시 공격자에게 <u>반격</u>을 발동하여 Mar. 7th 공격력 <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>만큼의 <span style=\"color:#47C7FD;\">얼음</span> 속성 피해를 가한다. 해당 효과는 턴마다 <nobr>#2[i]</nobr>회 발동할 수 있다",
+   "descHash": "실드를 보유한 아군이 적에게 피격되면 Mar. 7th는 즉시 공격자에게 <u>반격</u>을 발동하여 Mar. 7th 공격력의 <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>만큼 <span style=\"color:#47C7FD;\">얼음</span> 속성 피해를 가한다. 해당 효과는 턴마다 <nobr>#2[i]</nobr>회 발동할 수 있다",
    "ultimateCost": 0,
    "break": "30",
    "energy": "10",
@@ -1615,7 +1615,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "적을 공격하며, 전투 진입 후 적에게 대응하는 속성의 강인성을 소모시킨다",
+   "descHash": "적을 공격하며, 전투 진입 후 적에게 대응하는 속성의 강인성을 감소시킨다",
    "ultimateCost": 0,
    "break": "30",
    "energy": "0",
@@ -1663,150 +1663,6 @@
   }
  ],
  "skillTreePoints": [
-  {
-   "id": 1001103,
-   "anchor": 8,
-   "type": 1,
-   "children": [
-    {
-     "id": 1001208,
-     "anchor": 16,
-     "type": 2,
-     "children": [
-      {
-       "id": 1001209,
-       "anchor": 17,
-       "type": 2,
-       "children": [],
-       "embedBuff": {
-        "id": 877747,
-        "name": "피해 강화•얼음",
-        "levelReq": 75,
-        "promotionReq": 0,
-        "iconPath": "30e53905e606abc915cd27cdc42170fc4a8bae2e767f6404e2ba82c80f097b2c",
-        "statusList": [
-         {
-          "key": "<span style=\"color:#47C7FD;\">얼음</span> 속성 피해 증가",
-          "value": 0.064
-         }
-        ],
-        "cost": [
-         {
-          "id": 29328,
-          "count": 128000
-         },
-         {
-          "id": 836254,
-          "count": 6
-         },
-         {
-          "id": 717319,
-          "count": 6
-         }
-        ]
-       }
-      },
-      {
-       "id": 1001210,
-       "anchor": 18,
-       "type": 2,
-       "children": [],
-       "embedBuff": {
-        "id": 961679,
-        "name": "방어 강화",
-        "levelReq": 80,
-        "promotionReq": 0,
-        "iconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
-        "statusList": [
-         {
-          "key": "방어력",
-          "value": 0.1
-         }
-        ],
-        "cost": [
-         {
-          "id": 29328,
-          "count": 128000
-         },
-         {
-          "id": 836254,
-          "count": 6
-         },
-         {
-          "id": 717319,
-          "count": 6
-         }
-        ]
-       }
-      }
-     ],
-     "embedBuff": {
-      "id": 877746,
-      "name": "피해 강화•얼음",
-      "levelReq": 0,
-      "promotionReq": 6,
-      "iconPath": "30e53905e606abc915cd27cdc42170fc4a8bae2e767f6404e2ba82c80f097b2c",
-      "statusList": [
-       {
-        "key": "<span style=\"color:#47C7FD;\">얼음</span> 속성 피해 증가",
-        "value": 0.048
-       }
-      ],
-      "cost": [
-       {
-        "id": 29328,
-        "count": 128000
-       },
-       {
-        "id": 836254,
-        "count": 6
-       },
-       {
-        "id": 717319,
-        "count": 6
-       }
-      ]
-     }
-    }
-   ],
-   "embedBonusSkill": {
-    "descHash": "필살기 발동 시 적을 빙결하는 기본 확률이 <nobr>#1[i]%</nobr> 증가한다",
-    "ultimateCost": 0,
-    "id": 877642,
-    "name": "얼음 저주",
-    "iconPath": "bb421bddce7eed2476d8c523169155db1d7ebb760e6151efda4097d79f5267c2",
-    "levelReq": 0,
-    "promotionReq": 6,
-    "levelData": [
-     {
-      "params": [
-       0.15
-      ],
-      "level": 1,
-      "levelReq": 0,
-      "promotionReq": 6,
-      "cost": [
-       {
-        "id": 29328,
-        "count": 128000
-       },
-       {
-        "id": 836254,
-        "count": 6
-       },
-       {
-        "id": 125435,
-        "count": 1
-       },
-       {
-        "id": 985668,
-        "count": 1
-       }
-      ]
-     }
-    ]
-   }
-  },
   {
    "id": 1001201,
    "anchor": 9,
@@ -2118,6 +1974,150 @@
      }
     ]
    }
+  },
+  {
+   "id": 1001103,
+   "anchor": 8,
+   "type": 1,
+   "children": [
+    {
+     "id": 1001208,
+     "anchor": 16,
+     "type": 2,
+     "children": [
+      {
+       "id": 1001209,
+       "anchor": 17,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 877747,
+        "name": "피해 강화•얼음",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "30e53905e606abc915cd27cdc42170fc4a8bae2e767f6404e2ba82c80f097b2c",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#47C7FD;\">얼음</span> 속성 피해 증가",
+          "value": 0.064
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836254,
+          "count": 6
+         },
+         {
+          "id": 717319,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 1001210,
+       "anchor": 18,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 961679,
+        "name": "방어 강화",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+        "statusList": [
+         {
+          "key": "방어력",
+          "value": 0.1
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836254,
+          "count": 6
+         },
+         {
+          "id": 717319,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 877746,
+      "name": "피해 강화•얼음",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "30e53905e606abc915cd27cdc42170fc4a8bae2e767f6404e2ba82c80f097b2c",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#47C7FD;\">얼음</span> 속성 피해 증가",
+        "value": 0.048
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836254,
+        "count": 6
+       },
+       {
+        "id": 717319,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "필살기 발동 시 적을 빙결하는 기본 확률이 <nobr>#1[i]%</nobr> 증가한다",
+    "ultimateCost": 0,
+    "id": 877642,
+    "name": "얼음 저주",
+    "iconPath": "bb421bddce7eed2476d8c523169155db1d7ebb760e6151efda4097d79f5267c2",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.15
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836254,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
   }
  ],
  "relicRecommend": {
@@ -2399,7 +2399,7 @@
   {
    "id": 28,
    "title": "운리에 대해",
-   "text": "운리 사부의 수업 방식은 무척 자유로워. 가장 자주 하는 말은 「이건 느낌적인 느낌이에요!」야…. 이런 게 바로 「체험형 수업」인 걸까?",
+   "text": "운리 사부의 수업 방식은 무척 자유로워. 가장 자주 하는 말은 「이건 느낌적인 느낌이야!」지…. 이런 게 바로 「체험형 수업」인 걸까?",
    "unlockRequirement": "개척 후문 「#1」 완료 후 개방",
    "cnUrl": "4e6a4315bcf7d36589ea63a1469ea150a71b5932da90ad2248133a1a9b2f7fd4",
    "jpUrl": "1c5fa9ec45d43e7be691b26d5df728f40f076860d37bea060b8a8387a83ee3e7",
@@ -2429,7 +2429,7 @@
   {
    "id": 31,
    "title": "파티 편성•운리",
-   "text": "운리 사부, 제 수행 성과를 봐주세요~!",
+   "text": "운리 사부, 내 수행 성과 좀 봐봐~!",
    "unlockRequirement": "",
    "cnUrl": "c86b683e1f3ab730259a374abf6db298d1e83726e478397d610a7a1417a632f3",
    "jpUrl": "23ce6d916c233ffa40dcbdd10afa32c23f9fc418136976e0e04c816477299c55",
@@ -2439,7 +2439,7 @@
   {
    "id": 32,
    "title": "파티 편성•연경",
-   "text": "걱정 마세요, 연경 사부 얼굴에 먹칠하지 않을 테니까요~!",
+   "text": "걱정 마, 연경 사부 얼굴에 먹칠하진 않을 테니까~",
    "unlockRequirement": "",
    "cnUrl": "6422cfe175d9c25edb496528dcce20ce2ebb3d5528935ae58d065a152002b1b6",
    "jpUrl": "d3fb856448fd7558580fcd66533ef3531884856cc0d63cfc03765217ec19a8b8",

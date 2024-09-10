@@ -446,7 +446,7 @@
    "iconPath": "dc89cc98a7dad380837c87ea4fa23ebccb6cbdfafef816efc88d3cca122012e5",
    "artPath": "ad40f2546638550742f070f6651646ca93598956cceeadb4432bec9f7867db9b",
    "name": "Jusqu'au-boutiste",
-   "descHash": "Lorsque les PV du personnage sont inférieurs ou égaux à <nobr>50</nobr> % de ses PV max, augmente les DGT infligés par la compétence de <nobr>#1[i]%</nobr>.",
+   "descHash": "Lorsque le pourcentage de PV du personnage est inférieur ou égal à <nobr>50</nobr> % de ses PV max, augmente les DGT infligés par la compétence de <nobr>#1[i]%</nobr>.",
    "params": [
     0.1
    ]
@@ -491,7 +491,7 @@
    "iconPath": "c1836d755a079ed7ea64011ace2a75a646f9273a5dcf4bcc48d97f4d623a73a4",
    "artPath": "dc18733715c1b2654911a6cad5dc7a13951e5d937351c3bac6c79513144f9070",
    "name": "Abnégation",
-   "descHash": "Lorsque les PV du personnage sont inférieurs ou égaux à <nobr>50</nobr> % de ses PV max, l'ultime inflige <nobr>#1[i]%</nobr> de DGT supplémentaires. Le multiplicateur de DGT de la cible principale s'applique également aux ennemis adjacents.",
+   "descHash": "Lorsque le pourcentage de PV actuels du personnage est inférieur ou égal à <nobr>50</nobr> % de ses PV max, l'ultime inflige <nobr>#1[i]%</nobr> de DGT supplémentaires, et le multiplicateur de DGT de la cible principale s'applique également aux ennemis adjacents.",
    "params": [
     0.2
    ]
@@ -1250,7 +1250,7 @@
   },
   {
    "tagHash": "Renforcement",
-   "descHash": "Augmente les DGT d'Arlan pour chaque pourcentage de PV en dessous de ses PV max, jusqu'à un maximum de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de DGT supplémentaires.",
+   "descHash": "Obtient un bonus de DGT selon le pourcentage de PV actuels manquants à Arlan, jusqu'à une augmentation maximum de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> des DGT infligés par Arlan.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",

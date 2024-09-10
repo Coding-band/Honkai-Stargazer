@@ -1,0 +1,2752 @@
+{
+ "spRequirement": 120,
+ "iconPath": "9c171448508392a564421710cb700daf48112cb7894c2711f55656984b03ec20",
+ "bgPath": "17ba0336543a6110064ce968cc1f619950a43c19f82836ba79fc44d5d0fc40c0",
+ "figPath": "70f2bb3c3ba9ec8790274bd89effcb472111a7598f2b172dca7a2e5a963ccb8c",
+ "fgPath": "",
+ "splashIconPath": "0796ce574e21aa760d12d6f77bbc308619aa9fddfd26f907bb0df528346e3c2d",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRhYCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSOYAAAABkKNt27FH94fY5gJsGytgZbO20aZ0KlWs01kLsNpUaY3vfe4kM/P9s4SImAD8U4PjGhK9/keCFwxnh3Ib8+HvYg+um8+L0cE+tnTUkPc3azBtaBq2+UFyKtQGfPqfKeqTZ9HQ/mHkXNKiKN6UOuOfHlv8pIjwNQNuTn+4e2edUwnJL27kFkEDYFatCoUiIuSh9oeGJouKf1Dxq9sLAJzbx06phKTw9Wg6GBoAmA98FxFFctYJGgANCV2btCzFp4/NKF3DXzWULFkUPlZGwKYJr+GTnfTJSJg2AA8kpQEGHDV0XcffAVZQOCAKAQAAsAUAnQEqFAAUAD5tMpRHpCKiISgIAIANiUAVhl6j9u/TZnhxgNcqD65NBPxgcSg7IPiH3J2AAP7r/l0mht+wnuolqt5sR0tc7zfYZNWUa5zwXD/JgbNRyKZTgexVuEsXuLFtRUeUaWqHMEC6TH0n0vPDpeBDvk8uCUxLeMOezTX+inGte+7ofnTou4ZD0aqx639kJlLpM6+smK2+cXvEVfKp1EMVc4RljMpfIfOTI6h0CSZXYNIGXfd7UdzKF9D4KOdIyKvEBho8td/sAIj3WehdmVcWAY2B3iI95XlV/yl/zoIGZApM6vFGCTZhyrSjadXfx/2Tn/aJWyA8nt9v4X+E1pMoFn9WQAA=",
+  "w": 2048,
+  "h": 2048
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 2,
+  "iconPath": "0eedf689b50899c8ef651ffc7f7bd298c4ff3cc7972f379bb1572ddca0514380",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "154680875035a2d1a2d7827aa99c35f77a9fc6df9de95cd58800bde4bb17472a",
+   "name": "เครดิต",
+   "desc": "สกุลเงินที่องค์กรสันติภาพแห่งดวงดาวใช้ในการชำระบัญชีแก่ลูกค้า ซึ่งปัจจุบันได้กลายเป็นสกุลเงินหลัก ที่ใช้กันอย่างแพร่หลายสำหรับการเดินทางในอวกาศ",
+   "lore": "\"ผู้คนดิ้นรน ต่อสู้ และแลกเปลี่ยนเพื่อตัวเลขที่แสดงในเทอร์มินัล แต่สิ่งล้ำค่าที่แท้จริงนั้น ไม่สามารถซื้อได้ด้วยตัวเลขจากองค์กร\"",
+   "purpose": "สกุลเงินทั่วไป",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calyx (Great Mine)",
+    "Calyx (Artisanship Commission)",
+    "Calyx (โรงแรม Reverie - แดนฝัน)",
+    "รางวัลภารกิจ",
+    "รางวัลคำขอ",
+    "ร้าน Ember"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "04121a915c1d5e0a609e4b59417f441c101eaf1edbb092ffef36dbc24d1ae24b",
+   "name": "Tracks of Destiny",
+   "desc": "วัสดุระดับสูงสำหรับการเพิ่มเลเวล Trace",
+   "lore": "ความพ่ายแพ้ซ้ำแล้วซ้ำเล่าจะนำไปสู่ชัยชนะ ก้าวไปข้างหน้าก้าวแล้วก้าวเล่าจะนำไปสู่จุดเปลี่ยนของโชคชะตา",
+   "purpose": "วัสดุ Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "รางวัลคะแนนสะสม Simulated Universe",
+    "เกียรติยศนิรนาม",
+    "แลกเปลี่ยน Ember",
+    "ร้าน Starlight",
+    "รางวัลกิจกรรมจำกัดเวลา"
+   ]
+  },
+  "151162": {
+   "id": 151162,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "2f7d0e3d768211dac34ea37427f427dfd829759f33660f70ac3c31c1d7670c80",
+   "name": "Nail of the Beast Coffin",
+   "desc": "ส่วนหนึ่งของกระดูกสันหลัง ทางชีววิทยาของหุ่นเกราะ วัสดุเลื่อนขั้นของตัวละครประเภทสายฟ้า",
+   "lore": "สิ่งที่เลียนแบบมาจากชิ้นส่วน ที่สำคัญที่สุดของหุ่นเกราะ Borisin แม้ว่าร่างกายที่หล่อเลี้ยงมัน จะไร้ซึ่งชีวิตแล้ว แต่ \"อัลกอริทึมการสังหาร\" ที่ฝังลึกอยู่ในยีนตั้งแต่สมัยโบราณนั้น ยังคงอยู่<br /><br />\"พวกคุณเห็นมอนสเตอร์ที่เข่นฆ่าไม่หยุดยั้ง แต่ฉันมองเห็นชิ้นส่วน ที่ถอดแยกได้อย่างไม่มีสิ้นสุด นี่คือการมองต่างมุมยังไงล่ะ\"",
+   "purpose": "วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 4,
+   "rewardPath": "/material/151162",
+   "comeFrom": [
+    "Stagnant Shadow \"Shackling Prison\"",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "fe197ceacff72ca32c46a22e6cf77f460edbfa2bc70e5162ad9c9e5485944570",
+   "name": "คู่มือการเดินทาง",
+   "desc": "วัสดุประสบการณ์ตัวละคร จะมอบ EXP ตัวละคร <nobr>20000</nobr> หน่วย",
+   "lore": "หนังสือชุดเกี่ยวกับการผจญภัยที่จำเป็นต่อการสำรวจโลก กดปุ่มอ่านเพื่อฟังเสียงที่น่าฟังในภาษาที่คุณเข้าใจ ซึ่งจะบอกเล่าเกี่ยวกับประสบการณ์การผจญภัยในโลกต่างๆ ของเหล่านักผจญภัยที่มีชื่อเสียง รวมถึงภูมิปัญญาอันล้ำค่าที่พวกเขาได้รับจากดาวแต่ละดวงด้วย<br /><br />\"คู่มือการเดินทางชุดใหม่ 'การทำอาหารระหว่างดวงดาว' จะวางจำหน่ายเร็วๆ นี้ โปรดติดตามกันให้ดี\"<br />\"สำหรับการส่งผลงาน โปรดติดต่อกับ Synesthesia Beacon ERD<nobr>-23</nobr>θ เพื่อติดต่อตัวแทนของสถาบันแห่งปัญญา โดยวิธีการจ่ายค่าต้นฉบับนั้น สามารถจัดการได้ตามความสะดวกของคุณ\"",
+   "purpose": "วัสดุ EXP ตัวละคร",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calyx (Outlying Snow Plains)",
+    "Calyx (Cloudford)",
+    "Calyx (พรมแดนสร้างฝัน)",
+    "\"Forgotten Hall\""
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "3aa3378fafc0e98fb07b480ae468b4fc5b29027f1ec3d000d89353e7ae656832",
+   "name": "บันทึกการผจญภัย",
+   "desc": "วัสดุประสบการณ์ตัวละคร จะมอบ EXP ตัวละคร <nobr>5000</nobr> หน่วย",
+   "lore": "บันทึกการผจญภัยที่ได้รับการจัดการอย่างเป็นระเบียบ และมีคุณค่าต่อการศึกษา ซึ่งประกอบไปด้วยภาพประกอบและข้อความที่เกี่ยวกับการผจญภัยตั้งแต่ต้นจนจบ ตลอดจนข้อมูลที่มีคุณค่าและเทคนิคที่เกี่ยวข้องกับการเอาชีวิตรอด<br /><br />\"ทำไมไม่แปลงข้อมูลใส่ลงไปในดิสก์ล่ะ? สะดวกกว่าตั้งเยอะ\"<br />\"เมื่อเผชิญกับพายุดาว และการปะทุของกระแสนิวตรอนแล้ว เทคโนโลยีขั้นสูงนั้นมีความเปราะบางมากกว่าที่คิด นอกจากนี้ คนทำหนังสือเล่มนี้คงอยากจะให้คนอ่าน สามารถอ่านได้ด้วยวิธีที่ง่ายที่สุด\"",
+   "purpose": "วัสดุ EXP ตัวละคร",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calyx (Outlying Snow Plains)",
+    "Calyx (Cloudford)",
+    "Calyx (พรมแดนสร้างฝัน)",
+    "การฝึกประจำวัน",
+    "ร้าน Ember"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "a0f7c642d789346ecde22056b8a1e76a4707343bc0ebaa161e802db6d7836041",
+   "name": "ความรู้จากการเดินทาง",
+   "desc": "วัสดุประสบการณ์ตัวละคร จะมอบ EXP ตัวละคร <nobr>1000</nobr> หน่วย",
+   "lore": "ไดอารี่การเดินทางที่เขียนด้วยลายมือสุดยุ่งเหยิงและมีเนื้อหาตามใจชอบ ซึ่งไม่ค่อยมีประโยชน์สำหรับคุณสักเท่าไหร่<br /><br />\"Dan Heng อ่านจบแล้วก็รีบเอากระดาษพวกนี้ไปทิ้งเถอะ\"",
+   "purpose": "วัสดุ EXP ตัวละคร",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calyx (Outlying Snow Plains)",
+    "Calyx (Cloudford)",
+    "Calyx (พรมแดนสร้างฝัน)",
+    "รางวัลคำขอ"
+   ]
+  },
+  "549503": {
+   "id": 549503,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "331cfae2dda242daee852ae39ae6b04e8d92340a65e232c5f1d654c28203681d",
+   "name": "Artifex's Module",
+   "desc": "ชิ้นส่วนของเครื่องจักร Xianzhou วัสดุพื้นฐานที่ใช้สำหรับการเสริมพลัง",
+   "lore": "รากฐานของเทคโนโลยีเครื่องยนต์กลไกของ Xianzhou มันเป็นส่วนประกอบที่เล็กที่สุดในอะไหล่เครื่องจักร การแยกชิ้นส่วนออก ก็เหมือนกับการทำลายโครงสร้างเซลล์ของสิ่งมีชีวิต<br /><br />\"สถาบันแห่งปัญญา จะมอบเงินรางวัลสองล้านเครดิต ให้กับวิธีการทางเทคนิคที่สามารถใช้รื้อถอนหุ่น Xianzhou ได้โดยไม่ก่อให้เกิดความเสียหาย\"<br />\"ถ้าเธอรู้จัก Screwllum ละก็ เงินสองล้านนี้ก็จะได้ไปฟรีๆ เลย...\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 2,
+   "rewardPath": "/material/549503",
+   "comeFrom": [
+    "ดรอปจาก Entranced Ingenium",
+    "ดรอปจากศัตรูใน \"จักรวาลต่างมิติ\"",
+    "ดรอปจากศัตรูใน Simulated Universe",
+    "รางวัลคำขอ",
+    "แลกเปลี่ยน Ember",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ",
+    "Calyx (Golden)"
+   ]
+  },
+  "633444": {
+   "id": 633444,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "c9879e0b2b8417e1a07392576b95269b3ad578abb45764c4c7ef61eb7afcf5aa",
+   "name": "Artifex's Cogwheel",
+   "desc": "ชิ้นส่วนของเครื่องจักร Xianzhou วัสดุธรรมดาที่ใช้สำหรับการเสริมพลัง",
+   "lore": "ชิ้นส่วนที่ใช้สำหรับเชื่อมต่อในเทคโนโลยีเครื่องยนต์กลไกของ Xianzhou ฟันเฟืองที่เชื่อมต่อกันอย่างประณีตนั้น มีขนาดเล็กพอๆ กับเมล็ดมัสตาร์ด แต่กลับเชื่อมกันเป็นกลไกที่ซับซ้อน ทำให้เครื่องจักรเคลื่อนไหวได้ราวกับมีชีวิต<br /><br />\"รูปร่างของมันกลมกลืน ขนานคู่ไปกับผืนฟ้า การเคลื่อนไหวเวียนวน กึกก้องไปพร้อมกับจักรวาล\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 3,
+   "rewardPath": "/material/633444",
+   "comeFrom": [
+    "ดรอปจาก Entranced Ingenium เมื่อระดับความสมดุลถึง Lv.2",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
+    "ดรอปจากศัตรูใน \"จักรวาลต่างมิติ\"",
+    "ดรอปจากศัตรูใน Simulated Universe",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "635681": {
+   "id": 635681,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "7016052de047f4de04082bc4be266780c61d6cb728287f3a6dc4a4799da6190c",
+   "name": "Meteoric Bullet",
+   "desc": "ลูกเหล็กที่หลอมขึ้นเพื่อล่าสัตว์ประหลาด รอยที่สลักอยู่บนนั้น ราวกับจะบันทึกจำนวนของเหยื่อ ที่ตายด้วยน้ำมือของมันไว้ สามารถใช้เพื่อเพิ่มเลเวล Trace ของตัวละคร Path <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">ล่าสังหาร</span>ได้เล็กน้อย",
+   "lore": "แผนกโบราณคดีได้ค้นพบเหล็กกลมเหล่านี้ ในซากฟอสซิลของสัตว์ประหลาดหลายชนิด ซึ่งได้รับการยืนยันจากการตรวจวัดด้วยรังสีแล้วว่า พวกมันถูกยิงออกมาในยุคสมัยที่มนุษย์ยังไม่ถือกำเนิด และสิ่งที่พวกมันยิงเพื่อสังหารนั้น ล้วนเป็นลูกหลานตัวสุดท้ายของฝูงสัตว์ประหลาดบางชนิด<br /><br />\"การตายด้วยวัยชราและการตายด้วยลูกกระสุน ไม่มีอะไรต่างกัน เส้นทางแห่งนักล่าไม่ได้นำไปสู่ความศักดิ์สิทธิ์ หรือจุดจบที่ผิดบาปใดๆ ทั้งนั้น\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้น Light Cone",
+   "rarity": 2,
+   "rewardPath": "/material/635681",
+   "comeFrom": [
+    "Calyx: สถานที่ออดิชันผืนทรายระอุ SoulGlad™",
+    "ร้าน Ember",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "671367": {
+   "id": 671367,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "0073bd10e11aa0a7afd8c74ecec0d60b2f15fa2bc1248abb540efa12e7973bc0",
+   "name": "Auspice Sliver",
+   "desc": "วัสดุระดับสูงสำหรับการเพิ่มเลเวล Trace",
+   "lore": "มีเพียงช่วงเวลาที่สรรพสิ่งนิ่งงัน ก่อนที่ความตายจะมาเยือนเท่านั้น ที่ดวงตาของมนุษย์จะสามารถมองเห็น ขนแห่งจิตวิญญาณเหล่านี้ร่วงหล่นลงมาได้ ในบรรดาร่างปรากฏทั้งเจ็ดของเทพแห่งคันศร จิ้งจอกเวหาที่น่าเกรงขาม คือสิ่งที่รวดเร็วมากที่สุด<br /><br />\"ฉันใช้เวลา <nobr>12</nobr> วัน <nobr>12</nobr> คืนเพื่อไล่ล่ามัน จนได้พบว่ามันอยู่ในร่างกายของฉันมาตลอด\"",
+   "purpose": "วัสดุ Trace",
+   "rarity": 4,
+   "rewardPath": "/material/671367",
+   "comeFrom": [
+    "Echo of War \"เรือประชันคมดาบ\""
+   ]
+  },
+  "717385": {
+   "id": 717385,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "4b8c4f6407d75c2fe9c15db70802f9c84fbc4b2ae4fe9210bc6558947fc4a4c2",
+   "name": "Artifex's Gyreheart",
+   "desc": "ชิ้นส่วนของเครื่องจักร Xianzhou วัสดุชั้นสูงที่ใช้สำหรับการเสริมพลัง",
+   "lore": "แกนกลางของเทคโนโลยีเครื่องยนต์กลไกของ Xianzhou วงแหวนดวงดาวจะหมุนวนและสั่นเป็นจังหวะราวกับหัวใจ ทำให้เครื่องจักรมีความคิดเหมือนสิ่งมีชีวิต<br /><br />\"ผู้เป็นใหญ่ตื่นตกใจ จึงแยกชิ้นส่วนจิตใจของมันออก และทำให้เขา... เอ่อ เธอ? ไม่สิ ทำให้มันสูญเสียสติสัมปชัญญะ แล้วกลับคืนสู่การเป็นโลหะดังเดิม\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้นตัวละคร",
+   "rarity": 4,
+   "rewardPath": "/material/717385",
+   "comeFrom": [
+    "ดรอปจาก Entranced Ingenium เมื่อระดับความสมดุลถึง Lv.4",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
+    "ดรอปจากศัตรูใน \"จักรวาลต่างมิติ\"",
+    "ดรอปจากศัตรูใน Simulated Universe",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "836267": {
+   "id": 836267,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "47b3145b725e848f1a50ffa863008438deba3b4be9077d1b9e32374dd0b474e8",
+   "name": "Countertemporal Shot",
+   "desc": "หัวกระสุนบิดเกลียว ที่เคลื่อนที่ไปคนละทาง กับลูกศรแห่งกาลเวลาอยู่เสมอ ราวกับสุนัขล่าเนื้อ ที่ไล่ตามความอมตะอันขัดต่อกาลเวลาชั่วนิจนิรันดร์ สามารถใช้เพื่อเพิ่มเลเวล Trace ของตัวละคร Path <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">ล่าสังหาร</span>ได้เป็นอย่างมาก",
+   "lore": "ครั้งหนึ่งเคยเป็นเถ้าถ่านของลอร์ดผู้ล้างผลาญ ครั้งหนึ่งเคยเป็นปุ่มที่สามารถชะล้างอารยธรรมได้ และครั้งหนึ่ง ก็เคยเป็นเสียงคร่ำครวญของอสูรโบราณตัวสุดท้าย... ต้องรวบรวมวัสดุแห่งความตายมากเท่าไหร่ จึงจะสามารถหลอมออกมาเป็นกระสุนแบบนี้ได้? แล้วต้องเป็นอาวุธแบบใด จึงจะสามารถยิงไปยังอดีตได้? มันคือคำตอบของคำถามทุกอย่าง และตัวมันเองก็ไม่ใช่คำถาม<br /><br />\"หนีสิ หนีไปในรอยแยกของช่วงเวลาใดก็ได้ แต่มันก็จะหาตัวเธอเจออยู่ดี แล้วตรึงเอาไว้ในโชคชะตาตลอดไป\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้น Light Cone",
+   "rarity": 4,
+   "rewardPath": "/material/836267",
+   "comeFrom": [
+    "Calyx: สถานที่ออดิชันผืนทรายระอุ SoulGlad™",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  },
+  "920208": {
+   "id": 920208,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "83d73025b46ad57802c4c7f4316c9ef1738ab07d9755d9c5211f97aede16171c",
+   "name": "Destined Expiration",
+   "desc": "ฝังไว้ที่หว่างคิ้วของผู้ตาย ทะลวงผ่านรอยแยกของวัตถุ กระสุนลูกนี้ จะอยู่ในตำแหน่งของรูกระสุนเสมอ สามารถใช้เพื่อเพิ่มเลเวล Trace ของตัวละคร Path <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">ล่าสังหาร</span>ได้ปานกลาง",
+   "lore": "มันเคลื่อนตัวผ่านช่องว่างที่คดเคี้ยวในกองทัพนับหมื่น ทะลวงจุดที่เปราะบางที่สุดบนหมวกเกราะ และสุดท้ายก็หยุดนิ่ง อยู่ที่กลางกระโหลกศีรษะของราชันจอมโหดผู้โอหัง ส่วนเสียงที่เปล่งออกมานั้น ก็คล้ายกับเสียงถอนหายใจอันแผ่วเบา มันปรากฏขึ้นที่ตรงนั้น ราวกับความบังเอิญที่รุนแรงจนถึงชีวิต มันปรากฏอยู่ที่ตรงนั้น ราวกับว่าทุกคนล้วนต้องเดินไปสู่จุดจบ<br /><br />\"บางครั้ง รูกระสุนก็ปราฏขึ้นก่อนวิถีกระสุนเสียอีก\"",
+   "purpose": "วัสดุ Trace <br />วัสดุเลื่อนขั้น Light Cone",
+   "rarity": 3,
+   "rewardPath": "/material/920208",
+   "comeFrom": [
+    "Calyx: สถานที่ออดิชันผืนทรายระอุ SoulGlad™",
+    "\"เครื่องผสานสารพัดประโยชน์\" - ผสานวัสดุ",
+    "ร้าน Ember",
+    "\"เครื่องผสานสารพัดประโยชน์\" - แลกเปลี่ยนวัสดุ"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 81.6,
+   "attackAdd": 4.08,
+   "hpBase": 110.4,
+   "hpAdd": 5.52,
+   "defenseBase": 48,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549503,
+     "count": 4
+    }
+   ]
+  },
+  {
+   "attackBase": 114.24,
+   "attackAdd": 4.08,
+   "hpBase": 154.56,
+   "hpAdd": 5.52,
+   "defenseBase": 67.2,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549503,
+     "count": 8
+    }
+   ]
+  },
+  {
+   "attackBase": 146.88,
+   "attackAdd": 4.08,
+   "hpBase": 198.72,
+   "hpAdd": 5.52,
+   "defenseBase": 86.4,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633444,
+     "count": 5
+    },
+    {
+     "id": 151162,
+     "count": 2
+    }
+   ]
+  },
+  {
+   "attackBase": 179.52,
+   "attackAdd": 4.08,
+   "hpBase": 242.88,
+   "hpAdd": 5.52,
+   "defenseBase": 105.6,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633444,
+     "count": 8
+    },
+    {
+     "id": 151162,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 212.16,
+   "attackAdd": 4.08,
+   "hpBase": 287.04,
+   "hpAdd": 5.52,
+   "defenseBase": 124.8,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717385,
+     "count": 5
+    },
+    {
+     "id": 151162,
+     "count": 15
+    }
+   ]
+  },
+  {
+   "attackBase": 244.8,
+   "attackAdd": 4.08,
+   "hpBase": 331.2,
+   "hpAdd": 5.52,
+   "defenseBase": 144,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717385,
+     "count": 7
+    },
+    {
+     "id": 151162,
+     "count": 28
+    }
+   ]
+  },
+  {
+   "attackBase": 277.44,
+   "attackAdd": 4.08,
+   "hpBase": 375.36,
+   "hpAdd": 5.52,
+   "defenseBase": 163.2,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "84fea6dd01531c0e3195fdca93ab88fafaa569e10406525ea5fbb1f1d8488516",
+   "artPath": "fa374cf2ae832bd53dec9d22604e64e327b696c71f5c3e934551c2b36c971d68",
+   "name": "Oathkeeper",
+   "descHash": "หลังจากเข้าสู่การต่อสู้ Moze จะฟื้นฟูพลังงาน <nobr>#2[i]</nobr> หน่วย และทุกครั้งที่พรสวรรค์ทำให้เกิด DMG เพิ่มเติม 1 ครั้ง Moze จะฟื้นฟูพลังงาน <nobr>#1[i]</nobr> หน่วย",
+   "params": [
+    2,
+    20
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "8f2ebd82ccec4b4736164e5ac4439e9984a8664cc057da8ec5ce5605319c1987",
+   "artPath": "234e15480bebc50511cd080adbf0393aa2de4128136c97e8fd0b91b0e5d79030",
+   "name": "Wrathbearer",
+   "descHash": "เมื่อเป้าหมายฝ่ายเราทั้งหมด สร้าง DMG แก่ศัตรูเป้าหมายที่กลายเป็น \"เหยื่อ\" แล้ว DMG คริติคอลจะเพิ่มขึ้น <nobr>#1[i]%</nobr>",
+   "params": [
+    0.4
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "7dce6c7eff965801cff4dec1a9d3e5db57fceab00bdf42b5bb5a1ea710d93e5c",
+   "artPath": "7f9d6f2e78f1fd794f5b924d4df9545608a81a56e859770d0cf50c21a7ac253e",
+   "name": "Deathchaser",
+   "descHash": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน<br />Lv.<nobr>15</nobr>",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "e1993526e050b762e2a263b73bc8eb95714487ff18b59fb74b39c4ce3f183247",
+   "artPath": "05857417769be72fedc129d9c054126a42452bce72f108adc989dec5d7be0ed6",
+   "name": "Heathprowler",
+   "descHash": "เมื่อปล่อยท่าไม้ตาย Moze สร้าง DMG เพิ่มขึ้น <nobr>#1[f1]%</nobr> เป็นเวลา <nobr>#2[i]</nobr> เทิร์น",
+   "params": [
+    0.3,
+    2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "6b219107256a2ead55529920c423d0da5ce7de76ba97c1b1c90da3110fdd7e26",
+   "artPath": "6c440afd7a1daf4aa6a37c47d7b88c64055a1a1312e597a7699450297c135525",
+   "name": "Truthbender",
+   "descHash": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "ca022399785ad656f6e948ff45fb6aaf7794a43bcf7b3e557dc763a3ac31a3b3",
+   "artPath": "27226d6806439a350ccbe0a350c5c273885d8b09bbec9bedd58510fb0c4c6697",
+   "name": "Faithbinder",
+   "descHash": "ตัวคูณ DMG ของการโจมตีต่อเนื่อง จากพรสวรรค์เพิ่มขึ้น <nobr>#1[i]%</nobr>",
+   "params": [
+    0.25
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   906559
+  ],
+  [
+   990500
+  ],
+  [
+   107145
+  ],
+  [
+   421446
+  ],
+  [
+   705973
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "โจมตีเดี่ยว",
+   "descHash": "สร้าง DMG <span style=\"color:#c75de2;\">สายฟ้า</span> <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> ของ ATK ของ Moze แก่ศัตรูที่กำหนดหนึ่งตัว",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 906559,
+   "name": "Hurlthorn",
+   "iconPath": "c93c471a400030809af3ae3099c68c36db880974b398d22b87ac1b6d0582db6e",
+   "typeDescHash": "โจมตีปกติ",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635681,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920208,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920208,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836267,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836267,
+       "count": 6
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "โจมตีเดี่ยว",
+   "descHash": "ทำให้ศัตรูเป้าหมายที่กำหนดหนึ่งตัวกลายเป็น \"เหยื่อ\" และสร้าง DMG <span style=\"color:#c75de2;\">สายฟ้า</span> <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> ของ ATK ของ Moze แก่ศัตรูดังกล่าว อีกทั้งได้รับการชาร์จพลัง <nobr>#2[i]</nobr> หน่วย<br />เมื่อในการต่อสู้ ไม่มีตัวละครอื่นที่สามารถต่อสู้ได้ Moze จะไม่สามารถใช้สกิลต่อสู้ และจะลบล้างสถานะ \"เหยื่อ\" ของศัตรู",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "30",
+   "id": 990500,
+   "name": "Fleetwinged Raid",
+   "iconPath": "6b219107256a2ead55529920c423d0da5ce7de76ba97c1b1c90da3110fdd7e26",
+   "typeDescHash": "สกิลต่อสู้",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.75,
+      9
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.825,
+      9
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9,
+      9
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635681,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.975,
+      9
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920208,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05,
+      9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920208,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.125,
+      9
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920208,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      1.21875,
+      9
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836267,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.3125,
+      9
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836267,
+       "count": 4
+      },
+      {
+       "id": 671367,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.40625,
+      9
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836267,
+       "count": 6
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5,
+      9
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836267,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.575,
+      9
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.65,
+      9
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.725,
+      9
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.8,
+      9
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.875,
+      9
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "โจมตีเดี่ยว",
+   "descHash": "สร้าง DMG <span style=\"color:#c75de2;\">สายฟ้า</span> <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> ของ ATK ของ Moze แก่ศัตรูที่กำหนดหนึ่งตัว และปล่อย <u>\"การโจมตีต่อเนื่อง\"</u> ของพรสวรรค์ ใส่เป้าหมายดังกล่าว หากเป้าหมายถูกกำจัด ก่อนที่จะปล่อย <u>การโจมตีต่อเนื่อง</u> ครั้งนี้ ก็จะปล่อย <u>การโจมตีต่อเนื่อง</u> ใส่ศัตรูหนึ่งตัวแบบสุ่ม",
+   "ultimateCost": 120,
+   "break": "90",
+   "energy": "5",
+   "id": 107145,
+   "name": "Dash In, Gash Out",
+   "iconPath": "db9cc9fd24c13d2b58692575f3d561b8f7556cb9a5fc48d3180b72ec0a54f5f5",
+   "typeDescHash": "ท่าไม้ตาย",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.62
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.728
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.836
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635681,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.944
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920208,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      2.052
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920208,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.16
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920208,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      2.295
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836267,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      2.43
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836267,
+       "count": 4
+      },
+      {
+       "id": 671367,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.565
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836267,
+       "count": 6
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.7
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836267,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.808
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.916
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.024
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.132
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.24
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "โจมตีเดี่ยว",
+   "descHash": "เมื่อมี \"เหยื่อ\" อยู่ในการต่อสู้ Moze จะเข้าสู่สถานะ <u>ออกจากสนาม</u><br />หลังจากเป้าหมายฝ่ายเราโจมตี \"เหยื่อ\" แล้ว Moze จะสร้าง <u>DMG <span style=\"color:#c75de2;\">สายฟ้า</span>เพิ่มเติม</u> <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> ของ ATK ของตัวเอง อีก 1 ครั้ง และใช้การชาร์จพลัง 1 หน่วย ทุกครั้งที่ใช้การชาร์จพลังไป <nobr>#2[i]</nobr> หน่วย Moze จะปล่อย <u>การโจมตีต่อเนื่อง</u> ใส่ \"เหยื่อ\" 1 ครั้ง ซึ่งสร้าง DMG <span style=\"color:#c75de2;\">สายฟ้า</span> <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> ของ ATK ของตัวเอง เมื่อการชาร์จพลังเป็น 0 ก็จะลบล้างสถานะ \"เหยื่อ\" ของเป้าหมาย และรีเซ็ตการนับจำนวนหน่วยชาร์จพลัง ซึ่งจำเป็นต่อการปล่อย <u>โจมตีต่อเนื่อง</u> ทั้งนี้ <u>การโจมตีต่อเนื่อง</u> ของพรสวรรค์ จะไม่ใช้การชาร์จพลังแต่อย่างใด",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "10",
+   "id": 421446,
+   "name": "Cascading Featherblade",
+   "iconPath": "386a49dc66c9f728ee7da25afe031c41e7614ba961073e75ea467a65bfb1553d",
+   "typeDescHash": "พรสวรรค์",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.15,
+      3,
+      0.8
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.165,
+      3,
+      0.88
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.18,
+      3,
+      0.96
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635681,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.195,
+      3,
+      1.04
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920208,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.21,
+      3,
+      1.12
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920208,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.225,
+      3,
+      1.2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920208,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      0.24375,
+      3,
+      1.3
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836267,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.2625,
+      3,
+      1.4
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836267,
+       "count": 4
+      },
+      {
+       "id": 671367,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.28125,
+      3,
+      1.5
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836267,
+       "count": 6
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1.6
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836267,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.315,
+      3,
+      1.68
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.33,
+      3,
+      1.76
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.345,
+      3,
+      1.84
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.36,
+      3,
+      1.92
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.375,
+      3,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "หลังจากโจมตีศัตรูและเข้าสู่การต่อสู้ จะลดทอนความทนทานของประเภท ที่สอดคล้องกับศัตรูเป้าหมาย",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 622032,
+   "name": "Attack",
+   "iconPath": "c93c471a400030809af3ae3099c68c36db880974b398d22b87ac1b6d0582db6e",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "เสริมพลัง",
+   "descHash": "หลังจากใช้เทคนิคแล้ว จะติดสถานะซ่อนตัวเป็นเวลา <nobr>#1[i]</nobr> วินาที ขณะที่ติดสถานะซ่อนตัว จะไม่ถูกศัตรูเป้าหมายค้นพบ เมื่อ Moze ที่อยู่ในสถานะซ่อนตัว ทำการโจมตีศัตรูและเข้าสู่การต่อสู้ DMG จะเพิ่มขึ้น <nobr>#2[i]%</nobr> เป็นเวลา <nobr>#3[i]</nobr> เทิร์น",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 705973,
+   "name": "Bated Wings",
+   "iconPath": "548d452968655d300eefd130e93a5167fbba157fe7e3f967588f0058a1142fe4",
+   "typeDescHash": "เทคนิค",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      20,
+      0.3,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1223101,
+   "anchor": 6,
+   "type": 1,
+   "children": [
+    {
+     "id": 1223202,
+     "anchor": 10,
+     "type": 2,
+     "children": [
+      {
+       "id": 1223203,
+       "anchor": 11,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 345259,
+        "name": "เสริม DMG คริติคอล",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+        "statusList": [
+         {
+          "key": "DMG คริติคอล",
+          "value": 0.053
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920208,
+          "count": 2
+         },
+         {
+          "id": 633444,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 345258,
+      "name": "เสริมการโจมตี",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+      "statusList": [
+       {
+        "key": "ATK",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635681,
+        "count": 2
+       },
+       {
+        "id": 549503,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "หลังจากปล่อยการโจมตีต่อเนื่อง ของพรสวรรค์ จะฟื้นฟูแต้มสกิลต่อสู้ <nobr>#1[i]</nobr> แต้ม โดยหลังจากผ่านไป <nobr>#2[i]</nobr> เทิร์น เอฟเฟกต์นี้จะสามารถเกิดขึ้นได้อีกครั้ง",
+    "ultimateCost": 0,
+    "id": 345290,
+    "name": "Nightfeather",
+    "iconPath": "fb787fec4da467c5daa2b23e0b268b6cb57160e30a9e2a28f9ccbb0427cf30d3",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       1,
+       1
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635681,
+        "count": 2
+       },
+       {
+        "id": 671367,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223102,
+   "anchor": 7,
+   "type": 1,
+   "children": [
+    {
+     "id": 1223205,
+     "anchor": 13,
+     "type": 2,
+     "children": [
+      {
+       "id": 1223206,
+       "anchor": 14,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 345254,
+        "name": "เสริมการโจมตี",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+        "statusList": [
+         {
+          "key": "ATK",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836267,
+          "count": 2
+         },
+         {
+          "id": 717385,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 345253,
+      "name": "เสริม DMG คริติคอล",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+      "statusList": [
+       {
+        "key": "DMG คริติคอล",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920208,
+        "count": 4
+       },
+       {
+        "id": 633444,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "เมื่อ Moze ปลดสถานะออกจากสนามแล้ว จะเร่งแอ็กชัน <nobr>#1[i]%</nobr> และเมื่อแต่ละ Wave เริ่มขึ้น Moze จะเร่งแอ็กชันขึ้น <nobr>#2[i]%</nobr>",
+    "ultimateCost": 0,
+    "id": 345289,
+    "name": "Daggerhold",
+    "iconPath": "28b34b73acf675ae63a110b86886058180ae9ceebbce37a7712d3538c35f1e24",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.2,
+       0.3
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920208,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 671367,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223103,
+   "anchor": 8,
+   "type": 1,
+   "children": [
+    {
+     "id": 1223208,
+     "anchor": 16,
+     "type": 2,
+     "children": [
+      {
+       "id": 1223209,
+       "anchor": 17,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 345265,
+        "name": "เสริมการโจมตี",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+        "statusList": [
+         {
+          "key": "ATK",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836267,
+          "count": 6
+         },
+         {
+          "id": 717385,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 1223210,
+       "anchor": 18,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 429197,
+        "name": "เสริม DMG คริติคอล",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+        "statusList": [
+         {
+          "key": "DMG คริติคอล",
+          "value": 0.107
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836267,
+          "count": 6
+         },
+         {
+          "id": 717385,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 345264,
+      "name": "เสริม HP",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+      "statusList": [
+       {
+        "key": "HP",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836267,
+        "count": 6
+       },
+       {
+        "id": 717385,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "เมื่อปล่อยท่าไม้ตายเพื่อสร้าง DMG จะถือเป็นการโจมตีต่อเนื่อง นอกจากนั้น \"เหยื่อ\" จะได้รับ DMG โจมตีต่อเนื่องเพิ่มขึ้น <nobr>#1[i]%</nobr>",
+    "ultimateCost": 0,
+    "id": 345288,
+    "name": "Vengewise",
+    "iconPath": "b2f87d6275b2c6651ed889a9f7a5b67b6997a9013ef52862277347d527b01089",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.25
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836267,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 671367,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223201,
+   "anchor": 9,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 345257,
+    "name": "เสริม DMG คริติคอล",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+    "statusList": [
+     {
+      "key": "DMG คริติคอล",
+      "value": 0.053
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549503,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223204,
+   "anchor": 12,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 345252,
+    "name": "เสริม HP",
+    "levelReq": 0,
+    "promotionReq": 3,
+    "iconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+    "statusList": [
+     {
+      "key": "HP",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 8000
+     },
+     {
+      "id": 920208,
+      "count": 2
+     },
+     {
+      "id": 633444,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223207,
+   "anchor": 15,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 345255,
+    "name": "เสริม DMG คริติคอล",
+    "levelReq": 0,
+    "promotionReq": 5,
+    "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+    "statusList": [
+     {
+      "key": "DMG คริติคอล",
+      "value": 0.08
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 36000
+     },
+     {
+      "id": 836267,
+      "count": 2
+     },
+     {
+      "id": 717385,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": []
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "พบกันครั้งแรก",
+   "text": "ฉันชื่อ Moze เป็นผู้พิทักษ์เงาของ Feixiao ช่วยมายืนตรงนี้หน่อยสิ แบบนี้จะได้บังสายตาคนอื่นไม่ให้มองเห็นฉันได้",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 2,
+   "title": "ทักทาย",
+   "text": "สบายดีไหม? ไม่ ไม่ต้องจับมือ มือของฉันต้องอยู่บนอาวุธเสมอ",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 3,
+   "title": "บอกลา",
+   "text": "ไม่ต้องบอกลาหรอก ยังไงฉันก็เดินผ่านเธอ/นายที่มุมถนนบ่อยๆ อยู่แล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 4,
+   "title": "เกี่ยวกับตัวเอง - งาน",
+   "text": "การบุกทะลวงคืองานของ Feixiao การวางแผนกลยุทธ์คืองานของ Jiaoqiu ส่วนการ \"เก็บกวาด\" ...คืองานของฉัน",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 5,
+   "title": "เกี่ยวกับตัวเอง - สาวก Sanctus Medicus",
+   "text": "ฉันเป็นเด็กที่ \"สาวก Sanctus Medicus\" เลี้ยงดูมา ต้องเจอทั้ง \"การรักษา\" ที่ไม่มีที่สิ้นสุด \"กฎครอบครัว\" ที่ไร้เหตุผล และ \"ครอบครัว\" ที่อารมณ์แปรปรวน... ฉันเคยคิดว่านั่นคือชีวิตของคนธรรมดาด้วยซ้ำ",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 6,
+   "title": "เกี่ยวกับตัวเอง - นิสัยรักสะอาด",
+   "text": "ถ้าอยากกำจัดสิ่งสกปรกบนโลกนี้ มือของตัวเองก็ต้องสกปรกเสียก่อน ดังนั้นฉันถึงต้องล้างมือซ้ำแล้วซ้ำเล่า",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 7,
+   "title": "เกี่ยวกับตัวเอง - นิ่งเงียบ",
+   "text": "บางคนนิ่งเงียบเพราะไร้ความปรารถนา บางคนนิ่งเงียบเพราะไร้ความคิด ส่วนฉันก็แค่ไม่อยากพูดเท่านั้น",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 8,
+   "title": "เกี่ยวกับตัวเอง - ปีกกามหากาฬ",
+   "text": "ฉายา \"ปีกกามหากาฬ\" ไม่ได้หมายถึงรูปร่างหน้าตาของฉัน แต่เป็นเพราะฉันเคยใช้ปากกาขนนก ส่งคนชั่วสามคนไปพบ Medicus ผู้เปี่ยมด้วยเมตตา ไม่ต้องถามหรอกว่าทำไมถึงใช้ปากกาขนนก เพราะมันแค่บังเอิญอยู่บนโต๊ะพอดีน่ะ",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 9,
+   "title": "พูดคุยทั่วไป - หน้าที่",
+   "text": "เกลียดชังความชั่วร้ายเหมือนเกลียดศัตรู? ไม่ ไม่เลย พนักงานทำความสะอาดท่อระบายน้ำ จะเกลียดสิ่งปฏิกูลจากในเมืองมั้ยล่ะ?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 10,
+   "title": "พูดคุยทั่วไป - ตำนานเมือง",
+   "text": "ชาว Yaoqing ชอบเล่าลือถึงฉันกัน แต่พอมีบางคนเห็นฉันเข้าจริง อีกฝ่ายก็จะกรีดร้องแล้วขดตัวเป็นก้อนเลยละ",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 11,
+   "title": "งานอดิเรก",
+   "text": "อาบน้ำและทำความสะอาด ความรู้สึกตอนที่กำจัดสิ่งสกปรกออกไป เป็นอะไรที่ยอดเยี่ยมมากๆ",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 12,
+   "title": "เรื่องกลุ้มใจ",
+   "text": "การกลายเป็นเงานั้น หมายความว่าประตูอัตโนมัติจะหมางเมินเรา แต่ก็ช่างเถอะ ปกติฉันก็ไม่ได้เข้าทางประตูหลักอยู่แล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 13,
+   "title": "เรื่องที่อยากจะแบ่งปัน",
+   "text": "รู้รึเปล่า? ร่องที่อยู่บนตัวดาบไม่ได้มีไว้ให้เลือดไหลผ่านหรอก แต่มีไว้เพื่อลดน้ำหนักของอาวุธ มันคือโครงสร้างที่เรียกว่า \"ร่องเลือด\"... ถ้าก่อนหน้านี้ไม่รู้จัก ตอนนี้ก็ได้รู้แล้วนะ",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 14,
+   "title": "ความรู้",
+   "text": "\"Yaoqing\" คือเรือ Xianzhou ที่งดงามมาก แต่ก็ใกล้กับสาวกแห่งความเฟื่องฟูมากไปหน่อย",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 15,
+   "title": "เกี่ยวกับ Feixiao 1",
+   "text": "Feixiao คือ \"ศัตรู\" ที่พรากชีวิต \"ครอบครัว\" ของฉันไป และเป็นผู้มีพระคุณที่มอบชีวิตใหม่ให้ฉันด้วย",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 16,
+   "title": "เกี่ยวกับ Feixiao 2",
+   "text": "Feixiao อนุญาตให้ฉัน \"ลอบสังหาร\" เธอได้ทุกเมื่อ และยังใช้ฉันเป็นกริชที่ช่วยลับคมความระมัดระวังของตัวเธออีกด้วย เธอใช้วิธีนี้ในการแสดงถึงความเชื่อมั่นในตัวฉัน แต่ว่าจนถึงตอนนี้ ฉันก็ยังไม่เคยชนะเลยสักครั้ง",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 17,
+   "title": "เกี่ยวกับ Jiaoqiu",
+   "text": "เขาบอกว่านายพลคือคนไข้ของเขา แต่ฉันว่านายพลต่างหากที่เป็นหมอของเขา",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 18,
+   "title": "เกี่ยวกับ Sushang",
+   "text": "เมื่อหลายปีก่อนตอนที่ฉันเจอเธอในค่ายทหาร เธอกลับจำฉันไม่ได้เสียอย่างนั้น ตอนนั้นฉันเป็นที่ปรึกษาของ Feixiao และต้องไปเยี่ยมบ้านของ Jiaoqiu บ่อยๆ แล้วจะไม่เคยเจอกันได้ยังไง?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 19,
+   "title": "เกี่ยวกับ Huaiyan",
+   "text": "ผู้เฒ่าคนนี้เก่งกาจมาก คนที่มีชีวิตมาตั้งนานขนาดนี้ แต่กลับไม่เคยเกลียดชังตัวเอง ล้วนแต่เก่งกาจกันทั้งนั้น",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 20,
+   "title": "เกี่ยวกับ Jing Yuan",
+   "text": "เขาเหมือนจะไม่ชอบงานตัวเองเท่าไหร่ แต่ก็ยังทำด้วยความรับผิดชอบมาจนถึงตอนนี้ เรื่องนี้เหมือนกับฉันทีเดียว",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 21,
+   "title": "เปิดใช้งาน Eidolon",
+   "text": "เงาที่อยู่ในทุกหนแห่งของ Yaoqing ล้วนอาจเป็นฉันทั้งนั้น",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 22,
+   "title": "เลื่อนขั้นตัวละคร",
+   "text": "ความรุนแรงเป็นวิธีสุดท้าย และเป็นเพียงวิธีเดียวของฉันด้วย",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 23,
+   "title": "ตัวละครถึงเลเวลสูงสุด",
+   "text": "ฉันจะหลอมรวมเข้าไปในเงามืด และคอยเฝ้ามองทุกคน",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 24,
+   "title": "เปิดใช้งาน Trace",
+   "text": "ดวงวิญญาณในอดีต จะหวนกลับมามองพวกเราเสมอ",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 25,
+   "title": "สมาชิกทีม - ผู้บุกเบิก",
+   "text": "วางใจเถอะ เมื่อไหร่ที่เธอ/นายต้องการ ฉันจะลงมือเอง",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 26,
+   "title": "สมาชิกทีม - Feixiao",
+   "text": "ผมจะต่อสู้ร่วมกับคุณไปจนถึงวินาทีสุดท้าย",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 27,
+   "title": "สมาชิกทีม - Jiaoqiu",
+   "text": "หมอ ถึงตาที่นายจะได้มาสัมผัสชีวิตของฉันแล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 28,
+   "title": "สมาชิกทีม - Sushang",
+   "text": "เธอรับหน้าที่ดึงดูดความสนใจก็พอ ส่วนฉันจะเป็นคนสังหารเอง แต่อย่าทำเป็นเก่งเกินไปล่ะ",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 29,
+   "title": "สมาชิกทีม - Jing Yuan",
+   "text": "นายพลเทพยุทธการ คุณไม่ควรลงมาทำงานสกปรกแบบนี้ ให้เป็นหน้าที่ของผมเถอะ",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 51,
+   "title": "เริ่มการต่อสู้ - ทำลายจุดอ่อน",
+   "text": "ตรงจุดปลิดชีพ",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 52,
+   "title": "เริ่มการต่อสู้ - เตือนภัย",
+   "text": "รับมือกับการเปลี่ยนแปลง ด้วยการไม่เปลี่ยนแปลง",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 53,
+   "title": "เริ่มเทิร์น 1",
+   "text": "ฉัน คือคมดาบ...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 54,
+   "title": "เริ่มเทิร์น 2",
+   "text": "ฉัน คือเงามืด...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 55,
+   "title": "เทิร์นสแตนด์บาย",
+   "text": "คำสั่งต่อไปคืออะไร?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 56,
+   "title": "โจมตีปกติ",
+   "text": "โจมตีจุดเดียว",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 57,
+   "title": "สกิลต่อสู้ 1",
+   "text": "โอกาส มีเพียงชั่วขณะ",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 58,
+   "title": "สกิลต่อสู้ 2",
+   "text": "ราตรีมืดมิดตามติดดั่งเงา",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 59,
+   "title": "โดนโจมตีเล็กน้อย",
+   "text": "แกเผยตัวออกมาแล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 60,
+   "title": "โดนโจมตีอย่างรุนแรง",
+   "text": "ไม่เท่าไหร่",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 61,
+   "title": "ท่าไม้ตาย - เปิดใช้งาน",
+   "text": "ได้เวลาเก็บเกี่ยวแล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 62,
+   "title": "ท่าไม้ตาย - ปล่อย",
+   "text": "ที่ใดที่มีเสียงลมพัดผ่าน... แกจะไม่มีหนทางหนี!",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 63,
+   "title": "พรสวรรค์",
+   "text": "ความมืดมน จู่โจม!",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 64,
+   "title": "หมดสติ",
+   "text": "พลาดพลั้ง... ไปแค่นิดเดียว...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 65,
+   "title": "กลับสู่การต่อสู้",
+   "text": "ครั้งนี้ จะต้องไม่ซ้ำรอยเดิม",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 66,
+   "title": "ฟื้นฟูพลังชีวิต",
+   "text": "รบกวนแล้ว",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 67,
+   "title": "เทคนิค",
+   "text": "ขนอีกาแฝงตัว",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 68,
+   "title": "ชนะการต่อสู้",
+   "text": "เก็บกวาดสนามรบเรียบร้อย",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 69,
+   "title": "เปิดสมบัติ 1",
+   "text": "ดวงดีใช้ได้",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 70,
+   "title": "เปิดสมบัติ 2",
+   "text": "ไม่มีอันตราย เก็บให้ดีล่ะ",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 71,
+   "title": "เปิดสมบัติล้ำค่า",
+   "text": "อย่าอวดทรัพย์สินให้ใครรู้ ระวังตัวด้วย",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 72,
+   "title": "ไขปริศนาสำเร็จ 1",
+   "text": "แบบนี้นี่เอง",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 73,
+   "title": "ไขปริศนาสำเร็จ 2",
+   "text": "สังเกตให้ดี แล้วจะมีชัย",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 74,
+   "title": "พบศัตรูเป้าหมาย",
+   "text": "ไปต่อเลย ฉันจะจัดการเอง",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 75,
+   "title": "กลับเข้าเมือง",
+   "text": "ที่ใดที่มีฝูงคนพลุกพล่าน ที่นั่นย่อมมีเงาซุ่มซ่อนอยู่...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "รายละเอียดตัวละคร",
+   "text": "ผู้พิทักษ์เงาแห่ง Xianzhou Yaoqing ที่เงียบขรึม และรักสันโดษ<br />เชี่ยวชาญด้านข่าวกรอง และภารกิจที่ไม่ควรเปิดเผย น้อยครั้งนักที่จะเผยโฉมต่อหน้าผู้คน เมื่อใดก็ตามที่ Moze ปรากฏตัว เมื่อนั้นคือเวลาที่ศัตรู ต้องเผชิญหน้ากับความตาย<br />เขามีวิธีการลอบสังหารที่หลากหลาย และดูเหมือนจะยึดติดกับความเป็นระเบียบ และรักความสะอาดมากเป็นพิเศษ",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 1",
+   "text": "\"โอ้ ท่าน Sanctus Medicus ผู้เปี่ยมด้วยเมตตา... เชื่อฟัง กลืนมันลงไปซะ แล้วอาการของนายจะหายดี ไม่ใช่แค่มีชีวิตเหมือนเผ่าพันธุ์อายุยืนยาว... แต่จะมีชีวิตอยู่ได้นาน... นานมากๆ...\"<br />เขาพยายามกลืนยาลงคอ แต่กลับไม่กล้าแม้แต่จะหายใจ<br /><br />ความเจ็บปวดทุรนทุรายแบบนี้ ไม่รู้ว่าเขายังต้องเผชิญกับมันอีกกี่หน สารเหลวเหนียวหนืดไหลผ่านหลอดอาหาร เหมือนกับการกลืนเข็มเข้าไปทั้งเล่ม ความรู้สึกพะอืดพะอมแรงกล้า ได้กดทับทรวงอกอย่างรุนแรง<br />\"กลืนลงไป ห้ามคาย มันเป็นยา...\" ร่างกายของเขาก็บอกแบบเดียวกัน: กลืนลงไป กลืนลงไป กลืนลงไป<br />แค่กลืนลงไป ก็ไม่ต้องเผชิญกับภัยคุกคามจากอสูรร้าย และไม่ต้องเผชิญกับความหวาดกลัว จากการหลบหนีให้พ้นปากใหญ่นองโลหิตอีก<br />แค่กลืนลงไป มือเท้าก็จะไม่อ่อนเปลี้ยเพลียแรง ไม่ต้องทนมองผองเพื่อนตายไปต่อหน้าต่อตาอีก<br />กลืนลงไป<br /><br />ยาเริ่มซึมซับเข้าสู่อวัยวะและเลือดเนื้อ พลังที่ไม่คุ้นเคยพลุ่งพล่านไปทั่วร่างกาย เขาอยากจะสูดหายใจเฮือกใหญ่ แต่ความรู้สึกเหมือนถูกกัดกิน และถูกฉีกกระชาก ที่แพร่จากท้องไปยังแขนขา ก็ทำให้เขาแทบจะหายใจไม่ออก<br />\"อดทนไว้ เหมือนที่ผ่านมา ทนจนมันผ่านไปก็พอ...\" เขาเปล่งเสียงไม่ออกอีกต่อไป มีเพียงร่างกายที่ยังพร่ำบอกเขาว่า<br />อดทนไว้ เขาไม่ใช่เด็กกำพร้าที่ถูกหมู่บ้านทอดทิ้ง จนต้องระหกระเหินอยู่ในป่าอีกต่อไป<br />อดทนไว้ ทุกถ้อยคำของเขา จะได้รับการตอบรับ และไม่ต้องทนโดดเดี่ยวเดียวดายอีกต่อไป<br />อดทนไว้<br /><br />\"Moze? รู้สึกยังไงบ้าง...<br />ดีมาก นายอดทนผ่านมันไปได้อีกครั้งแล้ว<br />อดทนต่อไป ไม่ต้องกลัว อาการของนายกำลังจะถูกรักษาจนหาย<br />ถึงตอนนั้น... ไม่ว่าจะเป็นการล่าสัตว์ป่า ปกป้องเพื่อนฝูง หรือมีอายุขัยยืนยาว... นายอยากจะทำอะไรก็ได้ทั้งนั้น<br />เมื่อร่างกายหายดี... นายจะได้รับชีวิตสมบูรณ์แบบ... และกลายเป็นครอบครัวที่แท้จริงของเรา<br />พอถึงตอนนั้น พวกเราจะร่วมกันสืบต่อเจตจำนงนี้\"<br /><br />ที่แท้ ก็ต้องทนรับความเจ็บปวดมากมายเสียก่อน ถึงจะได้ครอบครัวมาสินะ<br />\"เจ็บ...\"<br />ในที่สุดเขาก็ทนไม่ไหว ความเจ็บปวดถูกเค้นเป็นเสียงลอดไรฟัน แต่คนรอบข้างเพียงบอกกับเขาว่า:<br />\"สาวกรวมใจ ร่วมก้าวสู่วิถีแห่งเซียน ผู้ที่ผ่านพ้นอาการเหล่านี้ได้ จักคว้าชัยครองชีวิน<br /> โอ้ ท่าน Sanctus Medicus ผู้เปี่ยมด้วยเมตตา\"<br /><br />ไม่เคยมีใครเหลียวแลคำพูดของเขา ดังนั้น เขาจึงเริ่มเคยชินกับการไม่พูด",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>20</nobr>"
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 2",
+   "text": "\"รายงานท่านนายพล สาวก Sanctus Medicus ที่ยังหลงเหลือถูกรวบตัวแล้ว รวมทั้งสิ้น <nobr>117</nobr> ราย ขั้นตอนต่อไปกำลังรอให้ Ten-Lords Commission ดำเนินการนำตัวเข้าขังในเรือนจำ\"<br />\"แต่เด็กคนนั้น น่าจะถูกทรมานด้วยยานะ ท่านนายพลลองดูสิ...\"<br />เขาหลบอยู่ในมุมมืด ผู้หญิงที่ถูกเรียกว่านายพลเดินมาหาเขา ชัดเจนว่าเธอสังเกตเห็นเขาตั้งแต่แรก<br /><br />\"พอถึงตอนนั้น พวกเราจะร่วมกันสืบต่อเจตจำนงนี้\"<br />เสียงที่ดังขึ้นในหัวปราศจากความรู้สึกใดๆ แต่การฟังซ้ำๆ ทุกวัน กลับทำให้เขาหยิบกริชขึ้นมาฉับพลัน<br />แต่แค่ชั่วพริบตาเดียว กริชในมือก็ร่วงหล่นสู่พื้น<br />\"คิดจะปลิดชีพฉัน?\"<br />\"แกสังหารครอบครัวฉัน\"<br />เขาสังเกตเห็นความชะงักงัน ในแววตาของหญิงสาวหูจิ้งจอกคนนั้น<br />\"นายเห็นพวกเขาเป็นครอบครัว?\"<br />\"พวกเขาช่วยชีวิตฉัน และทำให้ฉันมีชีวิตอยู่\"<br />เธอปล่อยมือออกและส่ายหน้า<br />\"ดูท่านายจะไม่รู้อะไรเลยสินะ... เอาเถอะ เดี๋ยวจะมีคนมาจัดการเรื่องที่พักอาศัย และความเป็นอยู่ของนายเอง แค่ตามพวกเขาไปก็พอ\" <br /><br />เธอหันหลังเดินจากไป แต่เด็กหนุ่มกลับไม่ได้ลุกขึ้น เอาแต่จ้องเขม็งไปที่แผ่นหลังของเธอ เขารู้ว่านี่อาจจะเป็นโอกาสสุดท้าย<br />เขาเก็บกริชบนพื้นขึ้นมา กระโจนไปยังแผ่นหลังของร่างนั้น และแทงกริชพรวดไปข้างหน้า<br /><br />\"โจมตีได้ไม่เลว!\" เธอเอ่ยชมเขา<br />ครั้งนี้กริชไม่ได้ร่วงหล่น แต่กลับไปอยู่ในมือของหญิงสาว แต่เขายังคงไม่ยอมแพ้ หลังพุ่งซ้ายหลบขวาไม่สำเร็จ สุดท้ายเขาก็ตัดสินใจจะกัดมือของเธอ<br />\"กัดคนไม่ได้นะ... เฮ้อ ไม่เป็นไร ทุกคนไม่ต้องเข้ามา... เด็กคนนี้เหมือนฉันสมัยอยู่ในค่ายทหาร Borisin เลย\"<br />หญิงสาวไม่ได้โต้ตอบ เพียงแค่ตั้งท่าหลบ เด็กหนุ่มหอบหายใจเหนื่อยหอบ แต่ยังคงรอโอกาสจู่โจมช่องโหว่ของเธอ<br />จนแล้วจนรอด พวกเขาก็ยื้อยุดกันอยู่อย่างนั้น<br /><br />\"เอางี้มั้ย นายกลับไปกับฉัน\"<br />หญิงสาวหยิบ Strale เหรียญหนึ่งออกมายื่นให้เขา<br />\"ฉันรับปากว่า ถ้านายยอมไปกับฉัน ต่อไปนี้ นายจะสามารถท้าทายฉันเมื่อไหร่ก็ได้ จนกว่าจะแก้แค้นได้สำเร็จเลย\"<br />\"หมายความว่ายังไง?\"<br />\"ถ้านายยอมไปกับฉัน นายก็จะสังหารฉันได้ทุกเมื่อ\"<br />ไม่ใช่แค่เด็กหนุ่ม แม้แต่พลทหารกองทัพแดนเขียวขจีที่อยู่ในบริเวณนั้น ก็ยังนิ่งอึ้งไปกันหมด<br />\"แน่นอนว่า ก่อนที่นายจะฆ่าฉันได้สำเร็จ นายต้องฟังคำสั่งฉัน กินข้าวให้ตรงเวลา เรียนหนังสือ ฝึกซ้อม... จริงสิ ยังต้องอาบน้ำทุกวันด้วย\"<br />เด็กหนุ่มกลืนน้ำลายอย่างยากลำบาก<br />\"แล้วหลังจากฆ่าคุณล่ะ?\"<br />หญิงสาวชะงักไปชั่วครู่ ก่อนจะหัวเราะเสียงดังขึ้นมา<br />\"ถึงตอนนั้น นายอยากจะทำอะไรก็ทำได้ทั้งนั้น\"",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>40</nobr>"
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 3",
+   "text": "\"นายเป็นใคร?\"<br />เขาไม่ได้เอ่ยตอบ แต่คนที่ใกล้ตายกลับพูดมากเป็นพิเศษ<br />\"ฉันเข้าใจแล้ว นายคือผู้พิทักษ์เงาของ Feixiao สินะ? ฉันเดาถูกใช่มั้ยล่ะ ก้าวเดินอยู่ในความมืดตลอดชีพ และทำแต่เรื่องที่ให้ใครรู้ไม่ได้...\"<br />\"เอางี้มั้ย ฉันจะให้โอกาสนาย เจ้านายของฉันแค่อยากรู้ว่า ข่าวลือเรื่อง 'Feixiao มีสายเลือดชาว Borisin' เป็นเรื่องจริงหรือเปล่า? ถ้าพวกเราตกลงร่วมมือกันได้ เอาไว้หลังโค่นล้ม Fei... อ๊าก!\"<br />เรื่องราวดำเนินไปแบบที่เขาคิด ดังนั้น เขาจึงจบภารกิจในครั้งนี้โดยไม่รีรอ<br /><br />นี่เป็นหน้าที่ของเขาในฐานะผู้พิทักษ์เงา ไม่ได้เกี่ยวว่าจะถูกต้องหรือไม่... การกระทำของเขา ขึ้นอยู่กับคำสั่งเท่านั้น<br />เพราะว่าสำหรับตัวเขาแล้ว ทุกครั้งที่ปฏิบัติการสำเร็จ จะหมายถึง... โอกาสในการแก้แค้นหนึ่งครั้ง<br />\"ทำภารกิจสำเร็จหนึ่งครั้ง จะได้รับ Strale หนึ่งเหรียญ ที่ใช้แลกการยกเว้นโทษลอบสังหารได้หนึ่งครั้ง\"<br />เขาเคยกังวลว่า ตัวเองจะไม่สามารถเข้าใกล้ Feixiao ได้ แต่กลับถูกแต่งตั้งให้เป็นผู้พิทักษ์เงาแห่ง Yaoqing และได้ติดตามข้างกายเธอเสียอย่างนั้น<br />เขาไม่เคยลอบสังหาร Feixiao สำเร็จสักครั้ง แต่กลับฝึกวิชาผลุบโผล่เยี่ยงวิญญาณได้สำเร็จ ดาบคมที่คอยจู่โจมอยู่ในเงามืดนี้ ไม่เพียงหันเข้าหานายพลแห่ง Yaoqing ผู้เดียว แต่ยังหันเข้าหาศัตรูของ Xianzhou Yaoqing ทุกคน และกลายเป็นเงาที่มีอยู่ทุกหนแห่ง<br /><br />\"หรือว่าพี่จะเป็น... ปีกกามหากาฬ?\"<br />ภารกิจลุล่วงไปอีกครั้ง เด็กน้อยที่ล้มจ้ำเบ้าอยู่กับพื้น เอ่ยปากถามอย่างกล้าๆ กลัวๆ<br />\"เขาว่ากันว่า ปีกกามหากาฬจะกำจัดคนร้าย ปกป้องคนดี ผดุงความชอบธรรม... แต่เขาใส่ชุดดำสนิทขนาดนั้น ก็เลยไม่มีใครมองเห็นเขา...\"<br />\"พี่เก่งขนาดนี้ แถมยังใส่ชุดดำสนิทแบบนั้นอีก เพราะ... เพราะงั้น ขะ ขอบคุณที่ช่วยผมไว้ฮะ!\"<br />ปกป้องคนดี ผดุงความชอบธรรมเหรอ? ไม่ใช่เพราะสาเหตุนั้นสักหน่อย เขาก็แค่บังเอิญช่วยชีวิตเด็กน้อยไว้ ระหว่างปฏิบัติภารกิจเท่านั้น แต่เขาเคยชินกับการอำพรางตัว อยู่ในเงามืดของที่ต่างๆ มานานแล้ว เขาจะคอยเฝ้าสังเกตการณ์รอบด้าน และไม่ปล่อยให้มุมใดหลุดรอดจากสายตา<br />เขาเห็นแววตาเปล่งประกายของเด็กน้อย ที่สะท้อนภาพชุดสีครึ้มของตัวเองชัดเจน<br />ท่องไปในความมืด และดำรงอยู่ในความมืด<br />จะมนุษย์ปีกกามหากาฬก็ดี หรือผู้พิทักษ์เงาก็ดี ล้วนแล้วแต่เป็นส่วนหนึ่งของตัวเขาทั้งนั้น",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>60</nobr>"
+  },
+  {
+   "title": "เรื่องราวของตัวละคร 4",
+   "text": "หมอชาวมนุษย์จิ้งจอก ใช้พัดขนนกปิดบังครึ่งหน้าเอาไว้ เขาไปยังภาพเบื้องหน้าด้วยความเห็นใจ... ดวงตา ใบหู ลิ้น ฟัน ข้อต่ออวัยวะและเส้นผมนับไม่ถ้วน กำลังผุดงอกและหลุดร่วง บนร่างที่ไร้ลมหายใจอย่างคลุ้มคลั่ง ประหนึ่งกำลังสัมผัสความเจ็บปวด ในเฮือกสุดท้ายอย่างหมดหนทาง<br /><br />เขารู้สึกถึงความไม่สบายใจ ที่ไม่ได้สัมผัสมาเนิ่นนาน หาใช่แค่เพราะภาพความเละเทะเบื้องหน้า แต่ยังเป็นเพราะ เขานึกถึงอดีตอันเลือนรางขึ้นมาอีกแล้ว<br /><br />\"โอ้ ท่าน Sanctus Medicus ผู้เปี่ยมด้วยเมตตา... การเกิดจะไร้ขีดจำกัด... ความชราจะไม่มาเยือน... ตายแล้วจะฟื้นคืนชีพ...\"<br />สาวก Sanctus Medicus ล้อมวงกันเป็นกลุ่ม หนึ่งในนั้นเหมือนจะบาดเจ็บสาหัส แต่คนรอบตัว ยังคงเอาแต่ท่องถ้อยคำเดิมๆ ที่คุ้นเคยพวกนั้น<br />\"ปาฏิหาริย์แห่งเทพดารา 'เฟื่องฟู' จะคุ้มครอง... เร็วเข้า... รีบดื่มมันเข้าไป...\"<br />\"ความเจ็บปวด เป็นเพียงความรู้สึกชั่วคราว... คุณจะได้โอบรับชีวิตใหม่อีกครั้ง ไม่มีทางดับสูญอยู่... ที่นี่...\"<br />ชั่ววินาทีถัดมา ผู้พูดคนนั้นก็ล้มลงกับพื้น ผู้พิทักษ์เงาชุดสีทึมปรากฏตัวใต้แสงสว่าง แล้วยืนตระหง่านอยู่เบื้องหน้าพวกเขา พร้อมกับจิตสังหารเยือกเย็น ความเงียบไม่สามารถปิดจิตสังหาร ที่กำลังโหมขึ้นอีกครั้งได้เลย<br />...<br />\"คนพวกนั้นไม่ใช่คนตั้งนานแล้ว พวกเขาไม่รู้สึกเจ็บหรอก... นายล่ะ? เจ็บหนักขนาดนี้ คงไม่คิดจะบอกไม่เจ็บหรอกใช่มั้ย?\"<br />หมอชาวมนุษย์จิ้งจอก เทผงยาลงบนแผลของเขา และพร่ำบ่นเหมือนอย่างเคย<br />\"พวกเราก็แค่มาสอดแนมเท่านั้น บอกแล้วว่า ข้างหลังยังมีกำลังเสริมตามมา... ทำไมยังจะชิงลงมือก่อนอีก?\"<br />เขาไม่ได้ตอบ เพียงก้มหน้ามองกริชปลายโค้งในมือ ที่เปรอะเปื้อนคราบเลือด<br />หลายปีที่ผ่านมา จากการปฏิบัติภารกิจแต่ละครั้ง เขารู้ตั้งนานแล้วว่า \"ครอบครัว\" เมื่อตอนนั้นคืออะไรกันแน่ แต่เขาแค่ไม่ต้องการย้อนนึกถึง และไม่อยากจะยอมรับว่า จุดยืนของเขาเปลี่ยนไปจากตอนนั้นแล้ว... เพราะไม่งั้นการแก้แค้นและคำสัญญา ยังจะมีความหมายอะไรอีก?<br /><br />\"เจ็บมั้ย?\"<br />\"...\" เขายังคงไม่ตอบตามเคย<br />หมอชาวมนุษย์จิ้งจอกเร่งมือขึ้น หยิบผ้ามาพันแผลให้เขา ก่อนผูกปมเป็นอันจบ จากนั้นก็กดแผลเขาทีเผลอ<br />\"เจ็บ...\"<br />\"เจ็บก็พูดสิ ทนไว้จะไปมีประโยชน์อะไร? ขนาดฉันแค่เห็นก็ยังรู้สึกเจ็บจะแย่แล้ว\"<br />เขาพยักหน้าตอบ<br /><br />เขาเคยชินกับการไม่พูดไม่จา แต่ก็เริ่มคุ้นเคยกับการมีคนมาพูดแทนเขาแล้ว",
+   "unlockRequirement": "ปลดล็อกเมื่อตัวละครถึง Lv.<nobr>80</nobr>"
+  }
+ ],
+ "archive": {
+  "cvCn": "黄进泽",
+  "cvJp": "坂田将吾",
+  "cvKr": "최현식",
+  "cvEn": "Ben Balmaceda",
+  "camp": "Xianzhou \"Yaoqing\""
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328,
+  "rankConfig": {
+   "3": {
+    "107145": 2,
+    "421446": 2
+   },
+   "5": {
+    "906559": 1,
+    "990500": 2
+   }
+  }
+ },
+ "name": "Moze",
+ "rarity": 4,
+ "descHash": "ผู้พิทักษ์เงาแห่ง Xianzhou Yaoqing ที่เงียบขรึม และรักสันโดษ เชี่ยวชาญด้านข่าวกรอง และภารกิจที่ไม่ควรเปิดเผย น้อยครั้งนักที่จะเผยโฉมต่อหน้าผู้คน เมื่อใดก็ตามที่ Moze ปรากฏตัว เมื่อนั้นคือเวลาที่ศัตรู ต้องเผชิญหน้ากับความตาย เขามีวิธีการลอบสังหารที่หลากหลาย และดูเหมือนจะยึดติดกับความเป็นระเบียบ และรักความสะอาดมากเป็นพิเศษ",
+ "artPath": "73644d0def3b384e2b8c90fe456688ba8b1f6d04b08787a874380fb7dc3d8253",
+ "miniIconPath": "96dadfea3ec775a2f60c668389e8a9d5dc79855cded2e8cb968b008e1b1279dc",
+ "damageType": {
+  "id": 8,
+  "iconPath": "a7514faadd356e58de950903e3a51379328d6d6714ec0b38cf2fe7186f537f88",
+  "color": "#8872F1",
+  "name": "สายฟ้า",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "da480674bee722c2f12b37fdebec3086ce34d219fa0b69e05cab8ed60abcdf90",
+  "altIconPath": "f97c2a2d6cc68654c0412722bb75c765f2e6c5a04bda62a526d56f9a95964f17",
+  "color": "#FFFFFF",
+  "name": "ล่าสังหาร",
+  "rarity": 0
+ },
+ "pageId": "moze"
+}

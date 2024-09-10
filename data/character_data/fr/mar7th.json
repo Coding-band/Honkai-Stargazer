@@ -1664,150 +1664,6 @@
  ],
  "skillTreePoints": [
   {
-   "id": 1001103,
-   "anchor": 8,
-   "type": 1,
-   "children": [
-    {
-     "id": 1001208,
-     "anchor": 16,
-     "type": 2,
-     "children": [
-      {
-       "id": 1001209,
-       "anchor": 17,
-       "type": 2,
-       "children": [],
-       "embedBuff": {
-        "id": 877747,
-        "name": "Augmentation des DGT de glace",
-        "levelReq": 75,
-        "promotionReq": 0,
-        "iconPath": "30e53905e606abc915cd27cdc42170fc4a8bae2e767f6404e2ba82c80f097b2c",
-        "statusList": [
-         {
-          "key": "Augm. des DGT de glace",
-          "value": 0.064
-         }
-        ],
-        "cost": [
-         {
-          "id": 29328,
-          "count": 128000
-         },
-         {
-          "id": 836254,
-          "count": 6
-         },
-         {
-          "id": 717319,
-          "count": 6
-         }
-        ]
-       }
-      },
-      {
-       "id": 1001210,
-       "anchor": 18,
-       "type": 2,
-       "children": [],
-       "embedBuff": {
-        "id": 961679,
-        "name": "Augmentation de DÉF",
-        "levelReq": 80,
-        "promotionReq": 0,
-        "iconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
-        "statusList": [
-         {
-          "key": "DÉF",
-          "value": 0.1
-         }
-        ],
-        "cost": [
-         {
-          "id": 29328,
-          "count": 128000
-         },
-         {
-          "id": 836254,
-          "count": 6
-         },
-         {
-          "id": 717319,
-          "count": 6
-         }
-        ]
-       }
-      }
-     ],
-     "embedBuff": {
-      "id": 877746,
-      "name": "Augmentation des DGT de glace",
-      "levelReq": 0,
-      "promotionReq": 6,
-      "iconPath": "30e53905e606abc915cd27cdc42170fc4a8bae2e767f6404e2ba82c80f097b2c",
-      "statusList": [
-       {
-        "key": "Augm. des DGT de glace",
-        "value": 0.048
-       }
-      ],
-      "cost": [
-       {
-        "id": 29328,
-        "count": 128000
-       },
-       {
-        "id": 836254,
-        "count": 6
-       },
-       {
-        "id": 717319,
-        "count": 6
-       }
-      ]
-     }
-    }
-   ],
-   "embedBonusSkill": {
-    "descHash": "Augmente les chances de base de l'ultime de geler les ennemis de <nobr>#1[i]%</nobr>.",
-    "ultimateCost": 0,
-    "id": 877642,
-    "name": "Sortilège de glace",
-    "iconPath": "bb421bddce7eed2476d8c523169155db1d7ebb760e6151efda4097d79f5267c2",
-    "levelReq": 0,
-    "promotionReq": 6,
-    "levelData": [
-     {
-      "params": [
-       0.15
-      ],
-      "level": 1,
-      "levelReq": 0,
-      "promotionReq": 6,
-      "cost": [
-       {
-        "id": 29328,
-        "count": 128000
-       },
-       {
-        "id": 836254,
-        "count": 6
-       },
-       {
-        "id": 125435,
-        "count": 1
-       },
-       {
-        "id": 985668,
-        "count": 1
-       }
-      ]
-     }
-    ]
-   }
-  },
-  {
    "id": 1001201,
    "anchor": 9,
    "type": 2,
@@ -2118,6 +1974,150 @@
      }
     ]
    }
+  },
+  {
+   "id": 1001103,
+   "anchor": 8,
+   "type": 1,
+   "children": [
+    {
+     "id": 1001208,
+     "anchor": 16,
+     "type": 2,
+     "children": [
+      {
+       "id": 1001209,
+       "anchor": 17,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 877747,
+        "name": "Augmentation des DGT de glace",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "30e53905e606abc915cd27cdc42170fc4a8bae2e767f6404e2ba82c80f097b2c",
+        "statusList": [
+         {
+          "key": "Augm. des DGT de glace",
+          "value": 0.064
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836254,
+          "count": 6
+         },
+         {
+          "id": 717319,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 1001210,
+       "anchor": 18,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 961679,
+        "name": "Augmentation de DÉF",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+        "statusList": [
+         {
+          "key": "DÉF",
+          "value": 0.1
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836254,
+          "count": 6
+         },
+         {
+          "id": 717319,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 877746,
+      "name": "Augmentation des DGT de glace",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "30e53905e606abc915cd27cdc42170fc4a8bae2e767f6404e2ba82c80f097b2c",
+      "statusList": [
+       {
+        "key": "Augm. des DGT de glace",
+        "value": 0.048
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836254,
+        "count": 6
+       },
+       {
+        "id": 717319,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Augmente les chances de base de l'ultime de geler les ennemis de <nobr>#1[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 877642,
+    "name": "Sortilège de glace",
+    "iconPath": "bb421bddce7eed2476d8c523169155db1d7ebb760e6151efda4097d79f5267c2",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.15
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836254,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
   }
  ],
  "relicRecommend": {
@@ -2329,7 +2329,7 @@
   {
    "id": 21,
    "title": "Rejoint l'équipe avec Pionnier/Pionnière",
-   "text": "Tu viens ? Je prends les paris.",
+   "text": "Tu viens ? Hmm, chacun son tour.",
    "unlockRequirement": "",
    "cnUrl": "dc60d5715b04ee49405592e0fde8bae014869712753e563d08ac555e666ed8f1",
    "jpUrl": "256a402b276cb64a56520500733993c6a48be727bd1d878a49be73e92563b486",
@@ -2399,7 +2399,7 @@
   {
    "id": 28,
    "title": "À propos de Yunli",
-   "text": "Maître Yunli a une approche très indépendante en matière d'enseignement. Elle n'arrête pas de dire qu'il faut ressentir les choses. C'est peut-être ça l'apprentissage empirique ?",
+   "text": "Maîtresse Yunli a une approche très originale en matière d'enseignement. Elle n'arrête pas de dire qu'il faut ressentir les choses. C'est peut-être ça l'apprentissage empirique ?",
    "unlockRequirement": "Débloqué après avoir terminé la continuité pionnière « #1 »",
    "cnUrl": "4e6a4315bcf7d36589ea63a1469ea150a71b5932da90ad2248133a1a9b2f7fd4",
    "jpUrl": "1c5fa9ec45d43e7be691b26d5df728f40f076860d37bea060b8a8387a83ee3e7",
@@ -2419,7 +2419,7 @@
   {
    "id": 30,
    "title": "Activation de Trace de la Chasse",
-   "text": "On n'a jamais fini d'apprendre ! Allez on retourne à l'entraînement.",
+   "text": "On n'a jamais fini d'apprendre ! Allez, on retourne à l'entraînement.",
    "unlockRequirement": "",
    "cnUrl": "1544143146fd9b7dad4534ab612651e82f2606355d6490c3b0a0f1a2521dd127",
    "jpUrl": "76c93c25b7778f11e940dd236e7b5ee079d939867c3592a2ad72c923067f4c60",
@@ -2429,7 +2429,7 @@
   {
    "id": 31,
    "title": "Rejoint l'équipe avec Yunli",
-   "text": "Maître Yunli, regardez comme je me suis entraînée dur !",
+   "text": "Maîtresse Yunli, regardez comme je me suis entraînée dur !",
    "unlockRequirement": "",
    "cnUrl": "c86b683e1f3ab730259a374abf6db298d1e83726e478397d610a7a1417a632f3",
    "jpUrl": "23ce6d916c233ffa40dcbdd10afa32c23f9fc418136976e0e04c816477299c55",
@@ -2709,7 +2709,7 @@
   {
    "id": 77,
    "title": "Rupture de faiblesse en début de combat (La Chasse)",
-   "text": "Je vais pouvoir m'entraîner !",
+   "text": "Voilà qui va faire un bon entraînement !",
    "unlockRequirement": "",
    "cnUrl": "96ec9434630f55a8bef82b8bcbaa46f2e029a463331316ee8660712d5f63b01e",
    "jpUrl": "1a7abd41ef07c628f591ee7aec7991c2c366a9a71b4ea0495784e0d3a5817633",

@@ -1,0 +1,2752 @@
+{
+ "spRequirement": 120,
+ "iconPath": "9c171448508392a564421710cb700daf48112cb7894c2711f55656984b03ec20",
+ "bgPath": "17ba0336543a6110064ce968cc1f619950a43c19f82836ba79fc44d5d0fc40c0",
+ "figPath": "70f2bb3c3ba9ec8790274bd89effcb472111a7598f2b172dca7a2e5a963ccb8c",
+ "fgPath": "",
+ "splashIconPath": "0796ce574e21aa760d12d6f77bbc308619aa9fddfd26f907bb0df528346e3c2d",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRhYCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSOYAAAABkKNt27FH94fY5gJsGytgZbO20aZ0KlWs01kLsNpUaY3vfe4kM/P9s4SImAD8U4PjGhK9/keCFwxnh3Ib8+HvYg+um8+L0cE+tnTUkPc3azBtaBq2+UFyKtQGfPqfKeqTZ9HQ/mHkXNKiKN6UOuOfHlv8pIjwNQNuTn+4e2edUwnJL27kFkEDYFatCoUiIuSh9oeGJouKf1Dxq9sLAJzbx06phKTw9Wg6GBoAmA98FxFFctYJGgANCV2btCzFp4/NKF3DXzWULFkUPlZGwKYJr+GTnfTJSJg2AA8kpQEGHDV0XcffAVZQOCAKAQAAsAUAnQEqFAAUAD5tMpRHpCKiISgIAIANiUAVhl6j9u/TZnhxgNcqD65NBPxgcSg7IPiH3J2AAP7r/l0mht+wnuolqt5sR0tc7zfYZNWUa5zwXD/JgbNRyKZTgexVuEsXuLFtRUeUaWqHMEC6TH0n0vPDpeBDvk8uCUxLeMOezTX+inGte+7ofnTou4ZD0aqx639kJlLpM6+smK2+cXvEVfKp1EMVc4RljMpfIfOTI6h0CSZXYNIGXfd7UdzKF9D4KOdIyKvEBho8td/sAIj3WehdmVcWAY2B3iI95XlV/yl/zoIGZApM6vFGCTZhyrSjadXfx/2Tn/aJWyA8nt9v4X+E1pMoFn9WQAA=",
+  "w": 2048,
+  "h": 2048
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 2,
+  "iconPath": "0eedf689b50899c8ef651ffc7f7bd298c4ff3cc7972f379bb1572ddca0514380",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "154680875035a2d1a2d7827aa99c35f77a9fc6df9de95cd58800bde4bb17472a",
+   "name": "신용 포인트",
+   "desc": "스타피스 컴퍼니가 고객과 결산을 위해 사용하던 화폐. 오늘날 우주여행에 널리 쓰이는 경화가 되었다",
+   "lore": "「사람들이 그저 단말 장치에 표시된 숫자를 위해 분주히 뛰고, 싸우고, 거래한다. 하지만 정작 정말로 소중한 것은 컴퍼니의 숫자로 살 수 없다」",
+   "purpose": "통용 화폐",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "모조 꽃받침 [큰 광산구역]",
+    "모조 꽃받침 [공조사]",
+    "모조 꽃받침 [「레버리」 호텔-꿈세계]",
+    "임무 보상",
+    "의뢰 보상",
+    "잔화 교환"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "04121a915c1d5e0a609e4b59417f441c101eaf1edbb092ffef36dbc24d1ae24b",
+   "name": "운명의 발자취",
+   "desc": "행적 레벨업의 고급 소재",
+   "lore": "거듭되는 패배가 당신에게 승리를 가져다주었고, 한 걸음 한 걸음의 전진이 당신을 운명의 전환점으로 이끌었다",
+   "purpose": "행적 재료",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "시뮬레이션 우주 점수 보상",
+    "무명의 공훈",
+    "잔화 교환",
+    "스타라이트 교환",
+    "한정 이벤트 보상"
+   ]
+  },
+  "151162": {
+   "id": 151162,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "2f7d0e3d768211dac34ea37427f427dfd829759f33660f70ac3c31c1d7670c80",
+   "name": "수관(獸棺)의 못",
+   "desc": "기갑 바이오닉 척추의 일부분. 번개 속성 캐릭터의 승급 소재",
+   "lore": "보리인 기갑의 가장 중요한 중추 부분을 모방한 부품. 비록 배양된 몸에는 더 이상 생명이 존재하지 않지만, 예로부터 유전자에 깊게 새겨진 「살육 알고리즘」은 남아있다.<br /><br />「너희에게는 죽여도 죽여도 끝이 없는 괴물로 보이겠지만, 내겐 무한한 부속품으로 보인다. 이게 바로 시야의 차이지」",
+   "purpose": "캐릭터 승급 재료",
+   "rarity": 4,
+   "rewardPath": "/material/151162",
+   "comeFrom": [
+    "정체된 허영 [유폐옥]",
+    "「만능 합성기」- 재료 치환"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "fe197ceacff72ca32c46a22e6cf77f460edbfa2bc70e5162ad9c9e5485944570",
+   "name": "여행 가이드",
+   "desc": "캐릭터 경험치 재료. 캐릭터 경험치를 <nobr>20,000</nobr>pt 획득한다",
+   "lore": "세계를 횡단할 때 반드시 구비해야 하는 모험 총서. 읽기 버튼을 누르면 매력적인 목소리가 독자의 언어로 유명 모험가들의 다양한 세계에서의 모험 전기와 각 행성에서 획득한 값진 지혜에 대해 들려준다.<br /><br />「여행 가이드의 신규 시리즈 ≪우주 요리 가이드≫가 곧 출판됩니다. 많은 기대 바랍니다」<br />「투고는 지식학회 공감각 비콘 <nobr>23</nobr>θ 연락원에게 연락 바랍니다. 원고료는 원하시는 방식으로 지급합니다」",
+   "purpose": "캐릭터 경험치 재료",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "모조 꽃받침 [외곽 설원]",
+    "모조 꽃받침 [구름나루]",
+    "모조 꽃받침 [꿈 건축 경계]",
+    "「망각의 정원」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "3aa3378fafc0e98fb07b480ae468b4fc5b29027f1ec3d000d89353e7ae656832",
+   "name": "모험 기록",
+   "desc": "캐릭터 경험치 재료. 캐릭터 경험치를 <nobr>5,000</nobr>pt 획득한다",
+   "lore": "정갈하게 제본된 모험 일지. 딱 봐도 교육적인 취지의 책이다. 모험의 시작과 끝, 가치 있는 정보와 생존 기술을 삽화와 글로 묘사했다.<br /><br />「왜 데이터화해서 디스크에 넣지 않는 거야? 그게 더 편리한데」<br />「항성 폭풍과 중성자 흐름 분출을 마주할 때, 첨단 기술은 네가 생각하는 것보다 많이 연약하지. 더군다나 이 책을 만든 사람은 이 책이 가장 간단한 방법으로 읽히길 원했을 거야」",
+   "purpose": "캐릭터 경험치 재료",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "모조 꽃받침 [외곽 설원]",
+    "모조 꽃받침 [구름나루]",
+    "모조 꽃받침 [꿈 건축 경계]",
+    "일일 훈련",
+    "잔화 교환"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "a0f7c642d789346ecde22056b8a1e76a4707343bc0ebaa161e802db6d7836041",
+   "name": "여행 견문",
+   "desc": "캐릭터 경험치 재료. 캐릭터 경험치를 <nobr>1,000</nobr>pt 획득한다",
+   "lore": "여행 견문을 기록한 일지. 알아보기 힘들 정도로 휘갈긴 글씨로 멋대로 적은 내용은 별 도움이 되지 않는다.<br /><br />「단항, 다 읽었으면 이 폐지 더미는 빨리 버리자」",
+   "purpose": "캐릭터 경험치 재료",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "모조 꽃받침 [외곽 설원]",
+    "모조 꽃받침 [구름나루]",
+    "모조 꽃받침 [꿈 건축 경계]",
+    "의뢰 보상"
+   ]
+  },
+  "549503": {
+   "id": 549503,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "331cfae2dda242daee852ae39ae6b04e8d92340a65e232c5f1d654c28203681d",
+   "name": "공조 기계 부품",
+   "desc": "선주의 기계부품. 강화에 필요한 기본 재료",
+   "lore": "선주 기교술의 기초이자 기교 부속품을 이루는 가장 작은 구성 요소. 이를 분해하는 것은 곧 생물의 세포 구조를 파괴하는 것과 같다.<br /><br />「지식학회는 선주의 꼭두각시를 완벽하게 분해할 수 있는 기술에 <nobr>200</nobr>만 신용 포인트를 상금으로 내걸었다」<br />「당신이 스크루룸과 아는 사이라면 <nobr>200</nobr>만은 따놓은 당상일걸……」",
+   "purpose": "행적 재료<br />캐릭터 승급 재료",
+   "rarity": 2,
+   "rewardPath": "/material/549503",
+   "comeFrom": [
+    "신들린 기교 드랍",
+    "「차분화 우주」 적 드랍",
+    "「시뮬레이션 우주」 적 드랍",
+    "의뢰 보상",
+    "잔화 교환",
+    "「만능 합성기」- 재료 치환",
+    "모조 꽃받침(금)"
+   ]
+  },
+  "633444": {
+   "id": 633444,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "c9879e0b2b8417e1a07392576b95269b3ad578abb45764c4c7ef61eb7afcf5aa",
+   "name": "공조 톱니바퀴",
+   "desc": "선주의 기계부품. 강화에 필요한 일반 재료",
+   "lore": "선주 기교술의 연결 부속품. 겨자씨처럼 작고 복잡한 톱니가 서로 맞물려서 기계에 생명을 불어넣고 있다.<br /><br />「그 형태는 하늘을 본떠 둥그랗고, 그 움직임은 길을 본떠 돌고 돈다」",
+   "purpose": "행적 재료<br />캐릭터 승급 재료",
+   "rarity": 3,
+   "rewardPath": "/material/633444",
+   "comeFrom": [
+    "균형 레벨 Lv.2까지 돌파 후 신들린 기교 드랍",
+    "「만능 합성기」- 재료 합성",
+    "「차분화 우주」 적 드랍",
+    "「시뮬레이션 우주」 적 드랍",
+    "「만능 합성기」- 재료 치환"
+   ]
+  },
+  "635681": {
+   "id": 635681,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "7016052de047f4de04082bc4be266780c61d6cb728287f3a6dc4a4799da6190c",
+   "name": "운철 탄환",
+   "desc": "몬스터를 사냥하기 위해 만들어진 쇠구슬. 새겨진 자국이 죽인 사냥감의 수를 기록하는 듯하다. <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">수렵</span> 캐릭터의 운명의 길 행적이 소폭 상승한다",
+   "lore": "무장 고고학파는 각종 몬스터의 화석에서 이 철 탄환을 발견했다. 방사능 측정 결과 이는 인류가 존재하지 않았던 시대에 발사되었고, 사살된 존재는 모두 어느 몬스터 종족의 마지막 개체였다.<br /><br />「노화로 죽는 것과 총알에 죽는 건 차이가 없다. 사냥꾼의 길은 신성함이나 죄악의 종착지로 이어지지 않는다」",
+   "purpose": "행적 재료<br />광추 승급 재료",
+   "rarity": 2,
+   "rewardPath": "/material/635681",
+   "comeFrom": [
+    "모조 꽃받침 [솔글래드™ 뜨거운 모래 오디션장]",
+    "잔화 교환",
+    "「만능 합성기」- 재료 치환"
+   ]
+  },
+  "671367": {
+   "id": 671367,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "0073bd10e11aa0a7afd8c74ecec0d60b2f15fa2bc1248abb540efa12e7973bc0",
+   "name": "길광편우",
+   "desc": "행적 레벨업의 고급 소재",
+   "lore": "인간의 눈은 죽기 전 만물이 멈추는 순간에만 비로소 이 영물의 깃이 떨어지는 모습을 볼 수 있다. 위령 비황은 천궁이 시현한 칠상(七相) 중 가장 빠르다.<br /><br />「<nobr>12</nobr>일 밤낮으로 사냥했지만 그것은 줄곧 내 몸속에 있었다」",
+   "purpose": "행적 재료",
+   "rarity": 4,
+   "rewardPath": "/material/671367",
+   "comeFrom": [
+    "전쟁의 여운 [경기 함선]"
+   ]
+  },
+  "717385": {
+   "id": 717385,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "4b8c4f6407d75c2fe9c15db70802f9c84fbc4b2ae4fe9210bc6558947fc4a4c2",
+   "name": "공조 환류 심장",
+   "desc": "선주의 기계부품. 강화에 필요한 고급 재료",
+   "lore": "선주 기교술의 중추. 마치 심장처럼 펄떡거려서 살아있는 것이 아닌가 싶을 정도다.<br /><br />「놀라지 마십시오. 심장을 떼어내면 그는… 아니, 그녀인가? 아니… 그것이 지혜를 잃고 광석으로 돌아가거든요」",
+   "purpose": "행적 재료<br />캐릭터 승급 재료",
+   "rarity": 4,
+   "rewardPath": "/material/717385",
+   "comeFrom": [
+    "균형 레벨 Lv.4까지 돌파 후 신들린 기교 드랍",
+    "「만능 합성기」- 재료 합성",
+    "「차분화 우주」 적 드랍",
+    "「시뮬레이션 우주」 적 드랍",
+    "「만능 합성기」- 재료 치환"
+   ]
+  },
+  "836267": {
+   "id": 836267,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "47b3145b725e848f1a50ffa863008438deba3b4be9077d1b9e32374dd0b474e8",
+   "name": "시간을 역행하는 일격",
+   "desc": "영원히 시간의 화살과 역행하는 나선형 탄두. 마치 시간을 거스르는 불사의 존재를 영원히 쫓는 사냥개 같다. <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">수렵</span> 캐릭터의 운명의 길 행적이 대폭 증가한다",
+   "lore": "한 절멸 대군의 잔화였고, 한 문명을 멸할 버튼이었으며, 태고 괴수의 마지막 울음소리였다…. 얼마나 많은 죽음의 재료를 모아야 이런 탄약을 만들 수 있을까? 또 어떤 총기가 이를 과거로 날려버릴 수 있을까? 이는 모든 의문을 푸는 해답이지, 질문이 아니다.<br /><br />「도망쳐라, 시간의 틈새로 도망쳐라. 이는 언젠가 너를 찾아 죽음의 숙명에 못 박아 둘 것이다」",
+   "purpose": "행적 재료<br />광추 승급 재료",
+   "rarity": 4,
+   "rewardPath": "/material/836267",
+   "comeFrom": [
+    "모조 꽃받침 [솔글래드™ 뜨거운 모래 오디션장]",
+    "「만능 합성기」- 재료 합성",
+    "「만능 합성기」- 재료 치환"
+   ]
+  },
+  "920208": {
+   "id": 920208,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "83d73025b46ad57802c4c7f4316c9ef1738ab07d9755d9c5211f97aede16171c",
+   "name": "숙명적인 사인",
+   "desc": "죽은 자의 미간에 박히고, 물체의 틈새를 관통한다. 이 탄환은 언제나 총알구멍이 있어야 할 곳에 있다. <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">수렵</span> 캐릭터의 운명의 길 행적이 중폭 증가한다",
+   "lore": "수많은 군인 사이의 틈새를 지나, 견고한 투구의 가장 연약한 부분을 뚫어 기고만장한 폭군의 두개골 중심에 머물며 속삭이는 듯한 한숨을 내쉰다. 이것이 그곳에 나타난 건 치명적인 우연과 같다. 마치 모두가 종점에 도달해야 하는 것처럼.<br /><br />「때론 총알구멍이 탄도보다 먼저 존재한다」",
+   "purpose": "행적 재료<br />광추 승급 재료",
+   "rarity": 3,
+   "rewardPath": "/material/920208",
+   "comeFrom": [
+    "모조 꽃받침 [솔글래드™ 뜨거운 모래 오디션장]",
+    "「만능 합성기」- 재료 합성",
+    "잔화 교환",
+    "「만능 합성기」- 재료 치환"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 81.6,
+   "attackAdd": 4.08,
+   "hpBase": 110.4,
+   "hpAdd": 5.52,
+   "defenseBase": 48,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549503,
+     "count": 4
+    }
+   ]
+  },
+  {
+   "attackBase": 114.24,
+   "attackAdd": 4.08,
+   "hpBase": 154.56,
+   "hpAdd": 5.52,
+   "defenseBase": 67.2,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549503,
+     "count": 8
+    }
+   ]
+  },
+  {
+   "attackBase": 146.88,
+   "attackAdd": 4.08,
+   "hpBase": 198.72,
+   "hpAdd": 5.52,
+   "defenseBase": 86.4,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633444,
+     "count": 5
+    },
+    {
+     "id": 151162,
+     "count": 2
+    }
+   ]
+  },
+  {
+   "attackBase": 179.52,
+   "attackAdd": 4.08,
+   "hpBase": 242.88,
+   "hpAdd": 5.52,
+   "defenseBase": 105.6,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633444,
+     "count": 8
+    },
+    {
+     "id": 151162,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 212.16,
+   "attackAdd": 4.08,
+   "hpBase": 287.04,
+   "hpAdd": 5.52,
+   "defenseBase": 124.8,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717385,
+     "count": 5
+    },
+    {
+     "id": 151162,
+     "count": 15
+    }
+   ]
+  },
+  {
+   "attackBase": 244.8,
+   "attackAdd": 4.08,
+   "hpBase": 331.2,
+   "hpAdd": 5.52,
+   "defenseBase": 144,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717385,
+     "count": 7
+    },
+    {
+     "id": 151162,
+     "count": 28
+    }
+   ]
+  },
+  {
+   "attackBase": 277.44,
+   "attackAdd": 4.08,
+   "hpBase": 375.36,
+   "hpAdd": 5.52,
+   "defenseBase": 163.2,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "84fea6dd01531c0e3195fdca93ab88fafaa569e10406525ea5fbb1f1d8488516",
+   "artPath": "fa374cf2ae832bd53dec9d22604e64e327b696c71f5c3e934551c2b36c971d68",
+   "name": "다짐",
+   "descHash": "전투 진입 후 맥택은 에너지를 <nobr>#2[i]</nobr>pt 회복한다. 특성의 추가 피해를 1회 발동할 때마다 맥택은 에너지를 <nobr>#1[i]</nobr>pt 회복한다",
+   "params": [
+    2,
+    20
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "8f2ebd82ccec4b4736164e5ac4439e9984a8664cc057da8ec5ce5605319c1987",
+   "artPath": "234e15480bebc50511cd080adbf0393aa2de4128136c97e8fd0b91b0e5d79030",
+   "name": "정벌",
+   "descHash": "모든 아군이 [사냥감]이 된 적에게 피해를 가할 시 치명타 피해가 <nobr>#1[i]%</nobr> 증가한다",
+   "params": [
+    0.4
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "7dce6c7eff965801cff4dec1a9d3e5db57fceab00bdf42b5bb5a1ea710d93e5c",
+   "artPath": "7f9d6f2e78f1fd794f5b924d4df9545608a81a56e859770d0cf50c21a7ac253e",
+   "name": "추격",
+   "descHash": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "e1993526e050b762e2a263b73bc8eb95714487ff18b59fb74b39c4ce3f183247",
+   "artPath": "05857417769be72fedc129d9c054126a42452bce72f108adc989dec5d7be0ed6",
+   "name": "은폐",
+   "descHash": "필살기 발동 시 맥택이 가하는 피해가 <nobr>#1[f1]%</nobr> 증가한다. 지속 시간: <nobr>#2[i]</nobr>턴",
+   "params": [
+    0.3,
+    2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "6b219107256a2ead55529920c423d0da5ce7de76ba97c1b1c90da3110fdd7e26",
+   "artPath": "6c440afd7a1daf4aa6a37c47d7b88c64055a1a1312e597a7699450297c135525",
+   "name": "기만",
+   "descHash": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "ca022399785ad656f6e948ff45fb6aaf7794a43bcf7b3e557dc763a3ac31a3b3",
+   "artPath": "27226d6806439a350ccbe0a350c5c273885d8b09bbec9bedd58510fb0c4c6697",
+   "name": "단심",
+   "descHash": "특성의 추가 공격 피해 배율이 <nobr>#1[i]%</nobr> 증가한다",
+   "params": [
+    0.25
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   906559
+  ],
+  [
+   990500
+  ],
+  [
+   107145
+  ],
+  [
+   421446
+  ],
+  [
+   705973
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "단일 공격",
+   "descHash": "지정된 단일 적에게 맥택 공격력의 <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>만큼 <span style=\"color:#c75de2;\">번개</span> 속성 피해를 가한다",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 906559,
+   "name": "암기 투척",
+   "iconPath": "c93c471a400030809af3ae3099c68c36db880974b398d22b87ac1b6d0582db6e",
+   "typeDescHash": "일반 공격",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635681,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920208,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920208,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836267,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836267,
+       "count": 6
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "단일 공격",
+   "descHash": "지정된 단일 적을 [사냥감]으로 만들고 해당 목표에게 맥택 공격력의 <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>만큼 <span style=\"color:#c75de2;\">번개</span> 속성 피해를 가하며, 충전을 <nobr>#2[i]</nobr>pt 획득한다.<br />필드 위에 전투 가능한 다른 캐릭터가 없을 시 맥택은 전투 스킬을 사용할 수 없으며, 적의 [사냥감] 상태는 해제된다",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "30",
+   "id": 990500,
+   "name": "맹속 기습",
+   "iconPath": "6b219107256a2ead55529920c423d0da5ce7de76ba97c1b1c90da3110fdd7e26",
+   "typeDescHash": "전투 스킬",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.75,
+      9
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.825,
+      9
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9,
+      9
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635681,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.975,
+      9
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920208,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05,
+      9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920208,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.125,
+      9
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920208,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      1.21875,
+      9
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836267,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.3125,
+      9
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836267,
+       "count": 4
+      },
+      {
+       "id": 671367,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.40625,
+      9
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836267,
+       "count": 6
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5,
+      9
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836267,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.575,
+      9
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.65,
+      9
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.725,
+      9
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.8,
+      9
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.875,
+      9
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "단일 공격",
+   "descHash": "지정된 단일 적에게 맥택 공격력의 <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>만큼 <span style=\"color:#c75de2;\">번개</span> 속성 피해를 가하고, 해당 목표에게 특성의 <u>추가 공격</u>을 발동한다. 이번 <u>추가 공격</u> 발동 전에 목표가 처치됐을 경우 랜덤 단일 적에게 <u>추가 공격</u>을 발동한다",
+   "ultimateCost": 120,
+   "break": "90",
+   "energy": "5",
+   "id": 107145,
+   "name": "날렵한 예기, 맹렬한 그림자",
+   "iconPath": "db9cc9fd24c13d2b58692575f3d561b8f7556cb9a5fc48d3180b72ec0a54f5f5",
+   "typeDescHash": "필살기",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.62
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.728
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.836
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635681,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.944
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920208,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      2.052
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920208,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.16
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920208,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      2.295
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836267,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      2.43
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836267,
+       "count": 4
+      },
+      {
+       "id": 671367,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.565
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836267,
+       "count": 6
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.7
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836267,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.808
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.916
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.024
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.132
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.24
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "단일 공격",
+   "descHash": "필드 위에 [사냥감]이 있을 시 맥택이 <u>퇴장</u> 상태에 진입한다.<br />아군이 [사냥감]을 공격하면 맥택은 추가로 자신의 공격력의 <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>만큼 <span style=\"color:#c75de2;\">번개</span> 속성 <u>추가 피해</u>를 1회 가하고, 충전을 1pt 소모한다. 충전을 <nobr>#2[i]</nobr>pt 소모할 때마다 맥택이 [사냥감]에게 <u>추가 공격</u>을 1회 발동하며, 자신의 공격력의 <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>만큼 <span style=\"color:#c75de2;\">번개</span> 속성 피해를 가한다. 충전이 0일 시 목표의 [사냥감] 상태를 해제하고, <u>추가 공격</u> 발동에 필요한 충전 포인트 계산을 초기화한다. 특성의 <u>추가 공격</u>은 충전을 소모하지 않는다",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "10",
+   "id": 421446,
+   "name": "깃을 꺾어 완성한 칼날",
+   "iconPath": "386a49dc66c9f728ee7da25afe031c41e7614ba961073e75ea467a65bfb1553d",
+   "typeDescHash": "특성",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.15,
+      3,
+      0.8
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.165,
+      3,
+      0.88
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.18,
+      3,
+      0.96
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635681,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.195,
+      3,
+      1.04
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920208,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.21,
+      3,
+      1.12
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920208,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.225,
+      3,
+      1.2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920208,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      0.24375,
+      3,
+      1.3
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836267,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.2625,
+      3,
+      1.4
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836267,
+       "count": 4
+      },
+      {
+       "id": 671367,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.28125,
+      3,
+      1.5
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836267,
+       "count": 6
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1.6
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836267,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.315,
+      3,
+      1.68
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.33,
+      3,
+      1.76
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.345,
+      3,
+      1.84
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.36,
+      3,
+      1.92
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.375,
+      3,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "적을 공격하며, 전투 진입 후 적에게 대응하는 속성의 강인성을 감소시킨다",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 622032,
+   "name": "공격",
+   "iconPath": "c93c471a400030809af3ae3099c68c36db880974b398d22b87ac1b6d0582db6e",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "강화",
+   "descHash": "비술 사용 후 <nobr>#1[i]</nobr>초 동안 지속되는 은신 상태에 진입한다. 은신 상태에선 적에게 들키지 않으며, 맥택이 은신 상태에서 적을 공격해 전투에 진입할 시 피해가 <nobr>#2[i]%</nobr> 증가한다, 지속 시간: <nobr>#3[i]</nobr>턴",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 705973,
+   "name": "은닉한 날개",
+   "iconPath": "548d452968655d300eefd130e93a5167fbba157fe7e3f967588f0058a1142fe4",
+   "typeDescHash": "비술",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      20,
+      0.3,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1223101,
+   "anchor": 6,
+   "type": 1,
+   "children": [
+    {
+     "id": 1223202,
+     "anchor": 10,
+     "type": 2,
+     "children": [
+      {
+       "id": 1223203,
+       "anchor": 11,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 345259,
+        "name": "치명타 피해 강화",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+        "statusList": [
+         {
+          "key": "치명타 피해",
+          "value": 0.053
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920208,
+          "count": 2
+         },
+         {
+          "id": 633444,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 345258,
+      "name": "공격 강화",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+      "statusList": [
+       {
+        "key": "공격력",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635681,
+        "count": 2
+       },
+       {
+        "id": 549503,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "특성의 추가 공격 발동 후 전투 스킬 포인트를 <nobr>#1[i]</nobr>pt 회복한다. 해당 효과는 <nobr>#2[i]</nobr>턴 후 다시 발동할 수 있다",
+    "ultimateCost": 0,
+    "id": 345290,
+    "name": "수묵자객",
+    "iconPath": "fb787fec4da467c5daa2b23e0b268b6cb57160e30a9e2a28f9ccbb0427cf30d3",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       1,
+       1
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635681,
+        "count": 2
+       },
+       {
+        "id": 671367,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223102,
+   "anchor": 7,
+   "type": 1,
+   "children": [
+    {
+     "id": 1223205,
+     "anchor": 13,
+     "type": 2,
+     "children": [
+      {
+       "id": 1223206,
+       "anchor": 14,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 345254,
+        "name": "공격 강화",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+        "statusList": [
+         {
+          "key": "공격력",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836267,
+          "count": 2
+         },
+         {
+          "id": 717385,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 345253,
+      "name": "치명타 피해 강화",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+      "statusList": [
+       {
+        "key": "치명타 피해",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920208,
+        "count": 4
+       },
+       {
+        "id": 633444,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "맥택이 퇴장 상태 해제 시 행동 게이지가 <nobr>#1[i]%</nobr> 증가한다. 웨이브가 시작될 때마다 맥택의 행동 게이지가 <nobr>#2[i]%</nobr> 증가한다",
+    "ultimateCost": 0,
+    "id": 345289,
+    "name": "비수를 쥔 손",
+    "iconPath": "28b34b73acf675ae63a110b86886058180ae9ceebbce37a7712d3538c35f1e24",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.2,
+       0.3
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920208,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 671367,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223103,
+   "anchor": 8,
+   "type": 1,
+   "children": [
+    {
+     "id": 1223208,
+     "anchor": 16,
+     "type": 2,
+     "children": [
+      {
+       "id": 1223209,
+       "anchor": 17,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 345265,
+        "name": "공격 강화",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+        "statusList": [
+         {
+          "key": "공격력",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836267,
+          "count": 6
+         },
+         {
+          "id": 717385,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 1223210,
+       "anchor": 18,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 429197,
+        "name": "치명타 피해 강화",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+        "statusList": [
+         {
+          "key": "치명타 피해",
+          "value": 0.107
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836267,
+          "count": 6
+         },
+         {
+          "id": 717385,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 345264,
+      "name": "HP 강화",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+      "statusList": [
+       {
+        "key": "HP",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836267,
+        "count": 6
+       },
+       {
+        "id": 717385,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "필살기를 발동해 피해를 가할 시 추가 공격을 발동한 것으로 간주한다. [사냥감]이 받는 추가 공격 피해가 <nobr>#1[i]%</nobr> 증가한다",
+    "ultimateCost": 0,
+    "id": 345288,
+    "name": "올곧은 복수심",
+    "iconPath": "b2f87d6275b2c6651ed889a9f7a5b67b6997a9013ef52862277347d527b01089",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.25
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836267,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 671367,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223201,
+   "anchor": 9,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 345257,
+    "name": "치명타 피해 강화",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+    "statusList": [
+     {
+      "key": "치명타 피해",
+      "value": 0.053
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549503,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223204,
+   "anchor": 12,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 345252,
+    "name": "HP 강화",
+    "levelReq": 0,
+    "promotionReq": 3,
+    "iconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+    "statusList": [
+     {
+      "key": "HP",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 8000
+     },
+     {
+      "id": 920208,
+      "count": 2
+     },
+     {
+      "id": 633444,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223207,
+   "anchor": 15,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 345255,
+    "name": "치명타 피해 강화",
+    "levelReq": 0,
+    "promotionReq": 5,
+    "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+    "statusList": [
+     {
+      "key": "치명타 피해",
+      "value": 0.08
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 36000
+     },
+     {
+      "id": 836267,
+      "count": 2
+     },
+     {
+      "id": 717385,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": []
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "첫 만남",
+   "text": "내 이름은 맥택, 비소 님의 그림자 호위지. 이쪽으로 서줘, 그래야 나를 관찰하는 시선을 막을 수 있어",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 2,
+   "title": "인사",
+   "text": "별일 없지? 아, 악수는 괜찮아. 내 손은 항상 무기에 대고 있어야 하거든",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 3,
+   "title": "작별",
+   "text": "작별 인사는 생략하지. 난 언제나 길모퉁이에서 너를 지나치거든",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 4,
+   "title": "자신에 대해•업무",
+   "text": "돌격해 적진을 무너뜨리는 건 비소 님의 일이고, 계책을 내는 건 초구의 일이지. 그리고 「청소」하는 것이… 내 일이야",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 5,
+   "title": "자신에 대해•약왕의 비전",
+   "text": "난 「약왕의 비전」에 의해 키워졌어. 끝없는 「치료」, 억지스러운 「가문의 규칙」, 변덕스러운 「가족」…. 난 그게 평범한 사람의 삶인 줄 알았지",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 6,
+   "title": "자신에 대해•결벽",
+   "text": "이 세상의 오물을 제거하기 위해선 내 두 손을 먼저 더럽혀야만 하지. 그래서 난 계속 손을 씻고 또 씻는 거야",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 7,
+   "title": "자신에 대해•침묵",
+   "text": "어떤 자의 침묵은 욕망이 없어서이고, 어떤 자의 침묵은 생각이 없어서이기도 하지만, 난 그저 말하기 싫은 것뿐이야",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 8,
+   "title": "자신에 대해•까마귀깃 괴인",
+   "text": "「까마귀깃 괴인」이란 호칭은 내 외모를 표현한 게 아니야. 내가 전에 깃펜 하나로 악당 셋을 자애로운 약왕에게 보냈었거든. 왜 깃펜을 썼는지는 묻지 마, 마침 책상 위에 있었거든",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 9,
+   "title": "잡담•직책",
+   "text": "악을 증오하냐고? 아니, 하수도 청소부가 도시에서 배출되는 오염물을 증오할까?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 10,
+   "title": "잡담•도시 전설",
+   "text": "요청 사람들은 나에 대해 얘기하는 걸 좋아하지만, 어떤 사람들은 진짜 나를 보면 비명을 지르며 몸을 웅크리곤 해",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 11,
+   "title": "취미",
+   "text": "샤워랑 청소를 좋아해. 더러움을 제거하는 기분은 정말 최고지",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 12,
+   "title": "고민",
+   "text": "그림자가 된다는 건 종종 자동문에 무시당한다는 뜻이지. 됐어, 어차피 나도 평소엔 정문으로 다니지 않아",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 13,
+   "title": "공유",
+   "text": "그거 알아? 칼날에 있는 홈은 피를 흘려보내려는 게 아니라 무기의 무게를 줄여주는 「혈조」라는 거야…. 만약 몰랐었다면 이제라도 알게 된 셈이군",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 14,
+   "title": "견문",
+   "text": "「요청」은 정말 아름다운 선주야. 풍요의 백성과 너무 가깝긴 하지만",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 15,
+   "title": "비소에 대해•1",
+   "text": "비소 님은 내 「가족」의 목숨을 앗아간 「원수」이자, 내게 새로운 삶을 선물해 준 은인이야",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 16,
+   "title": "비소에 대해•2",
+   "text": "비소 님은 나한테 언제든 자신을 「암살」해도 된다고 허락하셨어. 날 경계심을 연마하기 위한 비수로 삼으신 거지. 그분은 이런 방식으로 나에 대한 믿음을 표현하시지만, 지금까지 난 한 번도 그녀를 이겨본 적이 없어",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 17,
+   "title": "초구에 대해",
+   "text": "그는 장군이 그의 환자라고 하는데, 내가 봤을 땐 장군이야말로 그의 의사 같아",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 18,
+   "title": "소상에 대해",
+   "text": "몇 년 전 군영에서 만났었는데 날 못 알아보더군. 그때 난 비소 님의 막료로 초구의 집을 자주 방문했는데, 안 마주쳤을 리가 없잖아?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 19,
+   "title": "회염에 대해",
+   "text": "참 대단하신 분이지. 그렇게 오래 살았으면서도 자신을 싫어하지 않는 사람은 모두 대단해",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 20,
+   "title": "경원에 대해",
+   "text": "본인의 일을 즐기진 않는 것 같지만, 그래도 지금까지 책임감 있게 일해오셨지. 그 점은 나와 같아",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 21,
+   "title": "성혼 활성화",
+   "text": "요청의 모든 그림자는 나일 수도 있어",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 22,
+   "title": "캐릭터 승급",
+   "text": "폭력은 최후의 수단이자 내 유일한 수단이야",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 23,
+   "title": "캐릭터 최고 레벨",
+   "text": "난 그림자에 녹아들어 너희를 지켜볼게",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 24,
+   "title": "행적 활성화",
+   "text": "과거의 망령은 우릴 보러오기 마련이지",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 25,
+   "title": "파티 편성•개척자",
+   "text": "안심해, 네가 필요로하면 내가 나설게",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 26,
+   "title": "파티 편성•비소",
+   "text": "마지막 순간까지 함께 싸우겠습니다",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 27,
+   "title": "파티 편성•초구",
+   "text": "의사 선생, 네가 내 삶을 체험해 볼 차례야",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 28,
+   "title": "파티 편성•소상",
+   "text": "적의 주의를 끄는 것만 맡아주면 처리는 내가 하지. 무리하지는 마",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 29,
+   "title": "파티 편성•경원",
+   "text": "신책 장군, 이렇게 더러운 일에 관여하시면 안 됩니다. 제게 맡겨주시죠",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 51,
+   "title": "전투 시작•약점 격파",
+   "text": "급소에 맞았군",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 52,
+   "title": "전투 시작•위험 경보",
+   "text": "불변으로 변화에 맞서지",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 53,
+   "title": "턴 시작•1",
+   "text": "내가 바로 칼날이다……",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 54,
+   "title": "턴 시작•2",
+   "text": "내가 바로 그림자다……",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 55,
+   "title": "턴 대기",
+   "text": "다음 명령은 뭐지?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 56,
+   "title": "일반 공격",
+   "text": "집중 공격",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 57,
+   "title": "전투 스킬•1",
+   "text": "기회는 순식간에 사라지지",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 58,
+   "title": "전투 스킬•2",
+   "text": "밤은 그림자처럼 따라다니지",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 59,
+   "title": "약공격 피격",
+   "text": "네 위치는 파악됐다",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 60,
+   "title": "강공격 피격",
+   "text": "별것 아니야",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 61,
+   "title": "필살기•활성화",
+   "text": "수확할 시간이군",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 62,
+   "title": "필살기•발동",
+   "text": "바람 소리가 닿는 곳에… 숨을 곳은 없다!",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 63,
+   "title": "특성",
+   "text": "저승, 급습!",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 64,
+   "title": "전투 불능",
+   "text": "거의 다… 됐는데……",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 65,
+   "title": "전투 복귀",
+   "text": "이번에는 같은 실수를 반복하지 않아",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 66,
+   "title": "HP 회복",
+   "text": "신세를 졌군",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 67,
+   "title": "비술",
+   "text": "검은 깃털의 잠행",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 68,
+   "title": "전투 승리",
+   "text": "전장은 다 정리됐어",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 69,
+   "title": "전리품 오픈•1",
+   "text": "운이 좋군",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 70,
+   "title": "전리품 오픈•2",
+   "text": "위험한 건 없으니 잘 챙겨",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 71,
+   "title": "진귀한 전리품 오픈",
+   "text": "재물은 과시하면 안 돼, 조심해",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 72,
+   "title": "수수께끼 풀이 성공•1",
+   "text": "그렇군",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 73,
+   "title": "수수께끼 풀이 성공•2",
+   "text": "자세히 관찰하면 이길 수 있어",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 74,
+   "title": "적 발견",
+   "text": "앞으로 가, 내가 상대하지",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 75,
+   "title": "도시로 복귀",
+   "text": "사람들이 지나다니는 곳엔 어두운 그림자가 숨어있지……",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "캐릭터 상세",
+   "text": "선주 「요청」의 그림자 호위, 과묵하고 홀로 움직인다.<br />정보에 관한 일과 공개적으로 처리할 수 없는 일을 전담하며, 사람들 앞에 모습을 드러내는 일이 드물다. 맥택이 칼끝을 드러내는 순간, 적에게는 죽음의 시간이 임박한 것이다.<br />암살 수단이 다양하고, 청결과 정리 정돈에 대해 남다른 집착을 보인다",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "캐릭터 스토리•1",
+   "text": "「약왕의 자애다…. 말하는 대로 삼키면 네 병이 다 나을 것이다. 장수종과 똑같아질 뿐 아니라… 아주 오래 살 수 있지……」<br />그는 약물을 삼키려 했지만 숨 쉴 엄두가 나지 않았다.<br /><br />그는 이런 고통을 몇 번이나 더 겪어야 할지 알 수 없었다. 걸쭉한 액체가 식도로 흘러가면서 바늘을 삼킨 것 같은 느낌이 들었다. 강렬한 구토감이 그의 흉강을 압박했다.<br />「삼켜. 토하면 안 돼. 이건 약이야……」그의 몸도 똑같이 말했다. 삼켜. 삼켜. 삼켜.<br />삼켜. 그럼 이제 야수의 위협을 받지 않아도 되고, 새빨간 입에서 벗어날 수 없는 공포에 시달리지 않아도 돼.<br />삼켜. 그럼 이제 팔다리에서 힘이 빠지지 않고, 눈앞에서 동료가 죽는 모습을 지켜보지 않아도 된다고.<br />삼켜.<br /><br />약물은 장기와 피, 살에 의해 삼켜지기 시작했고, 낯선 힘이 몸속을 제멋대로 활개 쳤다. 그는 숨을 크게 들이마시고 싶었지만, 복부에서 시작해 사지로 퍼지는, 물리고 찢기는듯한 느낌에 숨이 턱턱 막혀왔다.<br />「참아. 예전처럼 그냥 참기만 하면 돼……」그는 이미 소리를 낼 수 없었고, 그의 몸만 그에게 말하고 있었다.<br />참아. 그는 더 이상 마을에서 버림받고 황야에 버려져 있던 고아가 아니다.<br />참아. 그가 말한 모든 건 응답받을 것이며, 더는 홀로 고생할 일이 없을 것이다.<br />참아.<br /><br />「맥택? 기분은 어떤가…」<br />「잘했다. 네가 또 해냈구나」<br />「계속 버티고 두려워하지 마라. 그럼 네 병은 다 사라질 테니까」<br />「때가 되면… 야수를 사냥하고, 동료를 보호하고, 오래오래 살 수 있을 거다…. 네가 하고 싶은 일은 모두 해낼 수 있을 거야」<br />「몸이 완벽하게 치유되면… 넌 완전한 생명을 얻게 될 것이고… 우리는 진정한 가족이 될 것이다」<br />「그때가 되면 우리는 서로의 의지를 계승해야 하지」<br /><br />이렇게 많은 고통을 견뎌야만 가족을 데려올 수 있는 것인가.<br />「아파……」<br />그는 결국 견디지 못하고 고통에 겨운 나머지 이 사이로 소리를 냈다. 하지만 곁에 있는 사람이 그에게 말했다.<br />「한마음으로 선인의 길에 오르리라. 이 재난만 무사히 넘기면 생명을 얻을 것이다」<br />「약왕의 자애」<br /><br />그의 말은 아무도 신경 쓰지 않았다. 그러다 보니 그는 점점 말하지 않는 것에 익숙해졌다",
+   "unlockRequirement": "캐릭터 레벨 Lv.<nobr>20</nobr> 개방"
+  },
+  {
+   "title": "캐릭터 스토리•2",
+   "text": "「장군님, 보고드립니다. 약왕의 비전 잔당 <nobr>117</nobr>명 전원을 체포했습니다. 시왕사에 인계하여 하옥할 예정입니다」<br />「하지만 저 소년은 약물로 고문을 받은 듯합니다. 보십시오……」<br />그는 그림자에 숨어있었으나, 장군이라고 불린 여자가 그를 향해 걸어오는 걸 보면 이미 들킨 것 같았다.<br /><br />「그때가 되면 우리는 서로의 의지를 계승해야 하지」<br />머릿속에 떠오르는 목소리에 감정은 없었다. 하지만 매일 듣던 그 말이 지금 그에게 비수를 들게 했다.<br />하지만 눈 깜짝할 사이에 손에 들고 있던 비수가 땅에 떨어졌다.<br />「날 죽이고 싶어?」<br />「당신이 내 가족을 죽였으니까」<br />그는 여우 귀가 달린 여자의 눈빛이 순간 흔들린 것을 보았다.<br />「그들을 가족이라고 생각하는 건가?」<br />「그 사람들이 날 구해준 덕분에 내가 살아있으니까」<br />그녀는 손을 놓은 후 고개를 저었다.<br />「넌 아무것도 모르는 모양이구나… 어쩔 수 없지. 나중에 네 생활과 거처를 마련해 주러 누군가 올 거야. 넌 그 사람들을 따라가면 돼」<br /><br />그녀는 뒤돌아서 가버렸지만, 소년은 그대로 주저앉은 채 그녀의 뒷모습만 바라보고 있었다. 그는 어쩌면 이게 마지막 기회일지도 모른다는 걸 알고 있었다.<br />그는 땅에 있는 비수를 주운 후 그 뒷모습을 향해 뛰어올라 앞으로 휘둘렀다.<br /><br />「나쁘지 않은 공격인데!」그녀가 칭찬하며 말했다.<br />이번에는 비수가 떨어지지 않고 여자의 손에 들어갔다. 하지만 그는 여전히 포기하지 않고 좌우로 몸을 피하려다 실패하자 여자의 손을 물려고 했다.<br />「사람을 물면 안 되지…. 아, 괜찮아. 너희는 가만히 있어…. 얘는 어쩜 예전에 보리인 군영에 있을 때의 나랑 똑같담」<br />여자는 아무런 공격도 하지 않고 그저 피하기만 했다. 소년은 숨을 헐떡이며 계속해서 그녀의 빈틈을 노렸다.<br />그들은 그렇게 계속 대치했다.<br /><br />「이렇게 하자. 나랑 같이 돌아가는 거야」<br />여자는 순촉 하나를 꺼내서 그에게 건네주었다.<br />「약속할게. 나랑 같이 가면 복수에 성공할 때까지 나한테 도전해도 좋아」<br />「무슨 뜻이지?」<br />「나랑 같이 가면 언제든 내 목숨을 노릴 수 있다고」<br />소년뿐 아니라 주변에 있던 청구군도 얼빠진 표정을 지었다.<br />「물론 날 죽이기 전에는 내 말을 들어야 해. 정해진 시간에 밥을 먹고, 책도 읽고, 수련도 해야 돼… 아, 매일 목욕도 해야 되고」<br />소년이 침을 꿀꺽 삼켰다.<br />「당신을 죽이고 나면?」<br />여자가 잠깐 벙찐 표정을 지었다가 호탕하게 웃기 시작했다.<br />「그럼 그땐 네가 하고 싶은 대로 하는 거지」",
+   "unlockRequirement": "캐릭터 레벨 Lv.<nobr>40</nobr> 개방"
+  },
+  {
+   "title": "캐릭터 스토리•3",
+   "text": "「넌 누구지?」<br />그는 아무 말도 하지 않았다. 하지만 죽음을 코앞에 둔 사람은 유난히 말이 많았다.<br />「알겠군. 너 비소의 그림자 호위지? 어때, 맞아? 평생을 어둠 속에서 남들에게 드러낼 수 없는 일을 한다는…」<br />「네게 기회를 줄게. 우리 가주께서 『비소에게 보리 혈통이 있는지』 궁금해하시는데, 이 소문이 사실이야? 우리에게 협력하면 미래에 비소를 해치우고——커헉!」<br />딱 그가 생각한 상황이었다. 따라서 그는 깔끔하게 이 임무를 끝내버리기로 했다.<br /><br />이것이 그림자 호위인 그의 직책이며, 옳고 그름은 중요하지 않다…. 그는 오직 명령에 따라 행동했다.<br />왜냐면 성공할 때마다 기회가 뒤따르기 때문이다…. 복수의 기회가.<br />「임무에 1번 성공하면 순촉 1개를 얻을 수 있고, 암살을 1번 실행하면 순촉 1개로 용서를 받을 수 있지」<br />과거, 그는 비소에게 접근하지 못할까 봐 걱정했지만, 그녀 덕분에 요청의 그림자 호위가 되어 그녀의 곁을 따르게 되었다.<br />그는 비소에게 암살을 시도해 한 번도 성공하지 못했지만, 신출귀몰한 능력을 갈고닦게 되었다. 어둠 속에서 공격해 오는 칼날은 요청 장군 본인뿐 아니라 모든 요청 선주의 적에게 향해 어디에나 존재하는 그림자가 되었다.<br /><br />「혹시… 까마귀깃 괴인이세요?」<br />또 한 번의 임무가 끝났다. 바닥에 무릎을 꿇고 있는 아이가 쭈뼛거리며 물었다.<br />「까마귀깃 괴인은 나쁜 사람을 혼내주고 권선징악을 행하지만… 너무 까만 옷을 입고 있어서 아무도 그의 모습을 본 적이 없다던데……」<br />「엄청 힘도 세시고 옷도 까마시네요. 그, 그러니까… 고, 고맙습니다. 구해주셔서!」<br />권선징악? 그런 목적은 없었다. 그저 임무를 수행하다 우연히 아이를 구해준 것뿐이다. 하지만 그는 확실히 오래전부터 그림자 속에 몸을 숨긴 채 주위를 관찰하고 그 무엇도 놓치지 않는 것에 익숙해져 있었다.<br />어린아이의 반짝이는 눈빛 속에서 검은 옷을 입은 자신의 모습이 똑똑히 보였다.<br />어둠 속에 움직이고 어둠 속에 서 있는 모습.<br />까마귀깃 괴인이든 그림자 호위든 이젠 모두 그의 일부다",
+   "unlockRequirement": "캐릭터 레벨 Lv.<nobr>60</nobr> 개방"
+  },
+  {
+   "title": "캐릭터 스토리•4",
+   "text": "여우족 의사가 부채로 얼굴을 반쯤 가린 채 고통스러운 표정으로 눈앞의 광경을 바라보고 있다…. 수많은 눈, 귀, 혀, 치아, 팔다리, 머리카락이 죽은 몸에서 미친 듯이 자랐다가 떨어지고 있다. 마지막 고통을 헛되이 느끼고 있는 것처럼.<br /><br />실로 오랜만에 그는 언짢아졌다. 눈앞의 참상 때문만이 아니라 희미한 과거가 다시금 떠올랐기 때문이다.<br /><br />「약왕의 자애… 끝없는 생명과… 늙지 않는 몸… 죽지 않는 수명을 가지고……」<br />약왕의 신도들이 떼를 지어 몰려왔다. 그중 한 사람은 중상을 입은 듯했으나, 주변 사람들은 여전히 귀에 익은 말을 중얼거렸다.<br />「풍요의 기적이 지켜줄 테니… 어서… 그것을 마셔라……」<br />「고통은 잠시뿐… 완전한 생명을 다시 얻게 될 것이니, 절대 여기서… 끝나지 않을 것이다——」<br />다음 순간, 중얼대던 이가 땅에 쓰러졌다. 검은 옷을 입은 그림자 호위가 빛 아래서 스산하게 나타나 그들 앞에 섰다. 침묵 속에서도 숨겨지지 않는 살의가 다시 한번 꿈틀댔다.<br />……<br />「저들은 더 이상 인간이라 할 수 없어. 통각이 없거든… 하지만 넌? 이렇게 다쳐놓고 너도 통각이 없다고 할 건가?」<br />여우족 의사는 그의 상처에 가루약을 뿌리며 평소처럼 잔소리를 해댔다.<br />「우리는 정찰을 하러 온 거고 나중에 주요 병력이 올 거라고 분명히 말했는데… 왜 먼저 나선 거지?」<br />그는 아무 말 없이 고개를 숙여 손에 쥔 비수를 바라봤다. 날카롭게 휜 날에는 핏자국이 남아있었다.<br />그간 임무를 숱하게 처리하면서 당시의 「가족」이란 무엇이었는지 진작 깨달았다. 하지만 그는 자세히 생각하고 싶지도, 인정하고 싶지도 않았다. 자신의 입장이 그때와 달라졌다는 걸——안 그럼 복수와 계약이 무슨 의미가 있겠는가?<br /><br />「아파?」<br />「……」그는 여전히 말하지 않았다.<br />여우족 의사가 좀 더 빠른 손놀림으로 그의 상처를 붕대로 싸매고 모른 척 상처 부위를 꾹 눌렀다.<br />「아파……」<br />「아프면 말을 해야지 참는 게 무슨 소용인데? 보는 내가 다 아프다」<br />그는 고개를 끄덕였다.<br /><br />그는 말하지 않는 게 익숙했다. 하지만 누군가 그 대신 말해주는 데 익숙해지기 시작했다",
+   "unlockRequirement": "캐릭터 레벨 Lv.<nobr>80</nobr> 개방"
+  }
+ ],
+ "archive": {
+  "cvCn": "黄进泽",
+  "cvJp": "坂田将吾",
+  "cvKr": "최현식",
+  "cvEn": "Ben Balmaceda",
+  "camp": "선주 「요청」"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328,
+  "rankConfig": {
+   "3": {
+    "107145": 2,
+    "421446": 2
+   },
+   "5": {
+    "906559": 1,
+    "990500": 2
+   }
+  }
+ },
+ "name": "맥택",
+ "rarity": 4,
+ "descHash": "선주 「요청」의 그림자 호위, 과묵하고 홀로 움직인다. 정보에 관한 일과 공개적으로 처리할 수 없는 일을 전담하며, 사람들 앞에 모습을 드러내는 일이 드물다. 맥택이 칼끝을 드러내는 순간, 적에게는 죽음의 시간이 임박한 것이다. 암살 수단이 다양하고, 청결과 정리 정돈에 대해 남다른 집착을 보인다",
+ "artPath": "73644d0def3b384e2b8c90fe456688ba8b1f6d04b08787a874380fb7dc3d8253",
+ "miniIconPath": "96dadfea3ec775a2f60c668389e8a9d5dc79855cded2e8cb968b008e1b1279dc",
+ "damageType": {
+  "id": 8,
+  "iconPath": "a7514faadd356e58de950903e3a51379328d6d6714ec0b38cf2fe7186f537f88",
+  "color": "#8872F1",
+  "name": "번개",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "da480674bee722c2f12b37fdebec3086ce34d219fa0b69e05cab8ed60abcdf90",
+  "altIconPath": "f97c2a2d6cc68654c0412722bb75c765f2e6c5a04bda62a526d56f9a95964f17",
+  "color": "#FFFFFF",
+  "name": "수렵",
+  "rarity": 0
+ },
+ "pageId": "moze"
+}

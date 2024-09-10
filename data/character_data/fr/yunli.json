@@ -1004,7 +1004,7 @@
    "tagHash": "Renforcement",
    "descHash": "Consomme <nobr>#8[i]</nobr> points d'énergie. Yunli obtient l'effet Parade et provoque tous les ennemis. Dure jusqu'à la fin du prochain tour allié ou ennemi et augmente les DGT critiques infligés par le prochain contre de Yunli de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. Lorsque l'effet de contre du talent se déclenche dans l'état Parade, il est converti en <u>contre</u> Sens de l'éradication et supprime l'état Parade. Si aucun contre n'est déclenché dans l'état Parade, Yunli lance immédiatement le <u>contre</u> Sens de l'entaille sur une cible ennemie aléatoire à la fin de l'état Parade.<br /><br />Sens de l'entaille : Inflige des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Yunli à la cible et des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#6[i]%</nobr></span> de l'ATQ de Yunli aux cibles adjacentes.<br />Sens de l'éradication : Inflige des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Yunli à la cible et des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#6[i]%</nobr></span> de l'ATQ de Yunli aux cibles adjacentes. Puis, inflige <nobr>#4[i]</nobr> instances de DGT supplémentaires, chacune infligeant des DGT physiques équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#7[i]%</nobr></span> de l'ATQ de Yunli à une cible ennemie unique aléatoire.<br /><br />Les DGT que Yunli inflige via cette capacité sont considérés comme des DGT d'ultime.",
    "ultimateCost": 120,
-   "break": "60",
+   "break": "30",
    "energy": "5",
    "id": 30975,
    "name": "Du ciel à la terre",
@@ -1842,7 +1842,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Après chaque utilisation de « Sens de l'entaille », la prochaine utilisation de « Sens de l'entaille  » est remplacée par « Sens de l'éradication ».",
+    "descHash": "Après chaque utilisation de Sens de l'entaille, la prochaine utilisation de Sens de l'entaille est remplacée par Sens de l'éradication.",
     "ultimateCost": 0,
     "id": 670292,
     "name": "Roue enflammée",
@@ -2231,7 +2231,7 @@
   {
    "id": 4,
    "title": "Anecdote personnelle : Parler aux épées",
-   "text": "Les épées ont également leurs humeurs. Parfois il suffit de les toucher pour les calmer, mets la poignée de l'épée dans ta main, et elle te dira ce qui ne va pas !",
+   "text": "Les épées ont leurs humeurs. Parfois il suffit de les toucher pour les calmer, mets la poignée de l'épée dans ta main, et elle te dira ce qui ne va pas !",
    "unlockRequirement": "",
    "cnUrl": "7c082727214a0a48f4d7f545469a21a93bb206b19a66708ef2554a7507a9f9d4",
    "jpUrl": "e516353bd8d7c50eedb5b53ba1685cd6ec7ec48b3b794444870fb4bd01680bb6",
@@ -2271,7 +2271,7 @@
   {
    "id": 10,
    "title": "Passe-temps",
-   "text": "Apprécier la beauté d'une épée est un savoir-faire. Observez d'abord son aspect extérieur, puis percevez-la de préférence par le toucher pour en ressentir le tempérament et sa qualité intérieure. Enfin, et surtout, acceptez la certitude qui vous poussera à vivre avec elle pour le reste de votre vie !",
+   "text": "Évaluer une épée requiert un véritable savoir-faire. Il faut commencer par observer son aspect extérieur, puis ressentir son aura. L'idéal est de la toucher pour avoir une bonne idée de sa qualité intérieure. Enfin, et c'est le plus important, il faut avoir la conviction qu'elle vous accompagnera pour la vie !",
    "unlockRequirement": "",
    "cnUrl": "4a94089682ada56cb5a509c5ab66ae71b02c20608c96e013ad2e7dc1a74e31c0",
    "jpUrl": "d744e6a0ec23b9412223f46162d378ad2986dee0f30a4ef9759025bf06362f91",
@@ -2291,7 +2291,7 @@
   {
    "id": 12,
    "title": "Fait notable",
-   "text": "Pour un artisan, laisser une perle rare dans l'oubli est du gâchis. Si je conserve toutes les épées que je trouve dans le four de fusion, ce n'est pas pour les détruire, mais pour les protéger jusqu'à l'arrivée d'un maître d'armes qualifié...",
+   "text": "Pour un artisan, laisser une perle rare dans l'oubli est du gâchis. Si je conserve toutes les épées que je trouve dans la Forge Fonte-Lames, ce n'est pas pour les détruire, mais pour les protéger jusqu'à l'arrivée d'un maître d'armes qualifié...",
    "unlockRequirement": "",
    "cnUrl": "c89779e28d30d7f77300fdc720ddb184f97c652dafcb2aa706385b64e7b1dcfc",
    "jpUrl": "995750d333ab8a9739c5ba072ba3d8188503c5cdbd76ff1e29954c7617558335",
@@ -2321,7 +2321,7 @@
   {
    "id": 15,
    "title": "À propos de Jing Yuan",
-   "text": "Chaque fois que j'entends Grand-père et le général Jing Yuan discuter, je m'endors. Pourquoi ils ne peuvent pas parler comme ils me parlent à moi ? Je ne comprendrai jamais les conversations entre généraux...",
+   "text": "Chaque fois que j'entends Grand-père et le général Jing Yuan discuter, je m'endors. Pourquoi ils ne peuvent pas parler comme ils le font avec moi ? Je ne comprendrai jamais les conversations entre généraux...",
    "unlockRequirement": "",
    "cnUrl": "63a61aa967eb56d96c67895187c556a19fc170ed4308425541028ce3c07ed39f",
    "jpUrl": "10a5188bf2bb0bca4ded6e32058989a25d4a85261dec8b2ea1696997c1fb0bda",
@@ -2381,7 +2381,7 @@
   {
    "id": 21,
    "title": "À propos de Blade",
-   "text": "Tu parles de Yingxing ? Je ne l'ai jamais rencontré en personne, mais Grand-père en a parlé à maintes reprises. C'est sans doute l'un de ses apprentis les plus célèbres... J'adorerais discuter avec sa Lame d'éclat si j'en ai l'occasion.",
+   "text": "Tu veux dire Yingxing ? Je ne l'ai jamais rencontré en personne, mais Grand-père en a parlé à maintes reprises. C'est sans doute l'un de ses apprentis les plus célèbres... J'adorerais discuter avec sa Lame d'éclat si j'en ai l'occasion.",
    "unlockRequirement": "",
    "cnUrl": "65f85eb1f6d02cc1e06f6aad09e7ba67964a8cf689e49171aae39dbf6532c0a5",
    "jpUrl": "0e81c8413843ff83517f02722153898efebf6db76d9442be6a36bfb194b1373f",
@@ -2421,7 +2421,7 @@
   {
    "id": 25,
    "title": "À propos de Qingque",
-   "text": "Qingque a le toupet de me piquer March pour jouer au Jade céleste... Enfin, je vois qu'elle a de l'expérience. March pourrait apprendre des choses à ses côtés et les appliquer à son jeu d'épée.",
+   "text": "Qingque a le toupet de me piquer March pour jouer au Jade céleste... Enfin, je vois qu'elle a de l'expérience. March pourrait apprendre des choses à ses côtés et les appliquer à sa pratique de l'épée.",
    "unlockRequirement": "Débloqué après avoir terminé la continuité pionnière « #1 »",
    "cnUrl": "ec266c01ffce9fce438640b8348ed270cceb7ac945c449738d63bc11e1603c85",
    "jpUrl": "b4105222090e43535f23af229f5568353ea12f833aa0d0751e007c0ef6c351cb",
@@ -2511,12 +2511,42 @@
   {
    "id": 34,
    "title": "Rejoint l'équipe avec Jiaoqiu",
-   "text": "Ça va...? Grand-père dit toujours qu'il ne faut pas faire de sport après avoir mangé...",
+   "text": "Est-ce que ça va...? Grand-père dit toujours qu'il ne faut pas faire de sport après avoir mangé...",
    "unlockRequirement": "",
    "cnUrl": "9d852456cd6d768d10372cb62f2bc1d275f1f810bcc9a1d687ddd9f9c06f2692",
    "jpUrl": "839ab9b147f31761f472adf6c7a18b91e7efc5bf9df3cdfe6f6294fa0bac7565",
    "enUrl": "95788bb0175762a373c112252ef81d8e34d2c3024f8bdaca3b179d23d42e867c",
    "krUrl": "fb130511c736e331ec16552eb22f5124c578e376b003ec470ef0729c4710d92c"
+  },
+  {
+   "id": 35,
+   "title": "Rejoint l'équipe avec Lingsha",
+   "text": "Mademoiselle Lingsha, laissez-moi m'occuper de ces ennemis.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 36,
+   "title": "Rejoint l'équipe avec Feixiao",
+   "text": "Même Fer-fidèle est enthousiaste à l'idée de se battre aux côtés de la grande générale Feixiao !",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 37,
+   "title": "Rejoint l'équipe avec Moze",
+   "text": "Ah... voilà la légende !",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
   },
   {
    "id": 51,
@@ -2531,7 +2561,7 @@
   {
    "id": 52,
    "title": "Avertissement de danger en début de combat",
-   "text": "Je n'ai encore jamais trouvé de morceau de fer qui ne font pas.",
+   "text": "Je n'ai encore jamais trouvé de morceau de fer qui ne fond pas.",
    "unlockRequirement": "",
    "cnUrl": "1efd26a5970c43b3b34269b0dd4c8f09acb5d77f2f9f745173dba9b4c873289f",
    "jpUrl": "65bcfe9f900ad191a67a9c3ac820ad9033944a71d4ee299130f9005f0e18a545",
@@ -2561,7 +2591,7 @@
   {
    "id": 55,
    "title": "Tour inactif",
-   "text": "Hé, Fer-fidèle, juste entre nous, tu veux trancher lequel... Oh, tous ? C'est parti !",
+   "text": "Hé, Fer-fidèle, juste entre nous, lequel tu veux frapper... Oh, tous ? Très bien !",
    "unlockRequirement": "",
    "cnUrl": "e931cea243bbb0cf9186cf043fb1e7be7e109bbb3022d59cd8f70dc888e218d3",
    "jpUrl": "e4a012eabd8108a0a9dbb37b3878f0821c4d853009f3dfa2b29ff07f7b502c42",
@@ -2640,7 +2670,7 @@
   },
   {
    "id": 63,
-   "title": "Ultime « Sens de l'entaille »",
+   "title": "Sens de l'entaille de l'ultime",
    "text": "Je vais trancher les nuages et scinder les montagnes !",
    "unlockRequirement": "",
    "cnUrl": "ff8d8d671f5524bf709f29b6f478ffb2650fd18b7354944968c7c6defe837e5b",
@@ -2650,7 +2680,7 @@
   },
   {
    "id": 64,
-   "title": "Ultime « Sens de l'entaille »",
+   "title": "Sens de l'entaille de l'ultime",
    "text": "Que l'épée brandie fasse s'écrouler la montagne !",
    "unlockRequirement": "",
    "cnUrl": "13d6db9978baac940565a6fafc23f1182291a2e38f717cee0524bb3625360410",
@@ -2660,7 +2690,7 @@
   },
   {
    "id": 65,
-   "title": "Ultime « Sens de l'éradication »",
+   "title": "Sens de l'éradication de l'ultime",
    "text": "Que le chemin tracé franchisse les nuages, ha !",
    "unlockRequirement": "",
    "cnUrl": "1205db8acdd6e15525e8291025c8bde4ec34e0a3a7da3aecee10e872e7e71d23",
@@ -2670,7 +2700,7 @@
   },
   {
    "id": 66,
-   "title": "Ultime « Sens de l'éradication »",
+   "title": "Sens de l'éradication de l'ultime",
    "text": "Une puissance capable de fendre la terre !",
    "unlockRequirement": "",
    "cnUrl": "5243dc7e70fe2516b35720cbb98b5f737009b91ff3aef338b548abf7c22c78fc",
@@ -2781,7 +2811,7 @@
   {
    "id": 77,
    "title": "Cible ennemie trouvée",
-   "text": "À nous, Fer-fidèle !",
+   "text": "Allons-y, Fer-fidèle !",
    "unlockRequirement": "",
    "cnUrl": "a921ffa54e43f719f164787a0036eaeace95e50a9a1afdf80ffa94cc1ed6c09a",
    "jpUrl": "5b7f3da880ee736d9f7c943efb64c08366754f462cc1fe23a5f982c738b4de64",
@@ -2807,12 +2837,12 @@
   },
   {
    "title": "Histoire du personnage : Partie I",
-   "text": "Regarder son père façonner les épées dans son atelier lui donnait encore plus faim que d'habitude, probablement à cause de la chaleur intense émise par le foyer. En conséquence, il lui arrivait fréquemment de s'éclipser plusieurs heures au marché afin de se remplir la panse. Dans le but, sans doute, d'être dans un meilleur état d'esprit pour observer et apprendre de son père.<br /><br />« Cette boutique sert les saucisses plus rapidement que ses concurrents. Le chef a une technique impeccable pour embrocher les saucisses, il arrive à transpercer parfaitement le centre. Hmm, s'il apprenait le maniement de l'épée, il serait probablement très précis. », se disait-elle en prenant place dans la file d'attente.<br /><br />Les boulettes de riz au sésame de cette boutique étaient habituellement préparées par la propriétaire, mais son mari avait pris le relais ce jour-là. Les muscles de son avant-bras étaient plus toniques que ceux de ses bras, peut-être parce qu'il s'entraînait régulièrement au maniement de l'épée. Aussi préparait-il les boulettes de riz au sésame avec beaucoup plus de force que nécessaire, au point de réduire même les grains de riz en morceaux. Chacune de ses boules de riz était trois fois plus grosse que d'habitude. Quand elle s'en aperçut, elle s'empressa de passer commande : « Deux boulettes de riz. Plus de riz, s'il vous plaît ! »<br /><br />Les racines de lotus frites et sucrées que vendait le type en vert n'étaient jamais de même qualité. Ce jour-là, elles étaient plutôt pas mal : sucrées mais pas trop, croustillantes à l'extérieur tout en conservant leur mâche. Elle s'était déjà éloignée quand elle termina celle qu'elle avait achetée, et elle s'arrêta pour observer le type. Il faisait tourner son poignet de manière rythmée tout en enrobant la friandise de sirop... Il connaissait en fait un mouvement typique du maniement de l'épée ! Mais quand l'avait-il appris ? « Hmm... On dirait que l'art de l'épée peut aussi s'appliquer à la cuisine... »<br /><br />Le soleil était déjà couché lorsqu'elle rentra chez elle repue. Dans la cour, son père remettait une épée toute neuve à un autre homme coiffé d'un casque de fer.<br />« Merci, Maître Hanguang. Grâce à cette lame... je pourrai purger le mal. » Le soleil couchant baignait son visage de lumière, révélant à la fois sa détermination farouche et une touche de désespoir.<br /><br />Pourtant, Yunli ne remarqua pas le soleil couchant. Toute son attention était portée sur l'homme au casque de fer. Il y avait devant elle un homme visiblement costaud et robuste, qui pourtant avait reçu une épée si légère. La pointe de l'épée était également plus large que la normale. Une telle lame était faite pour affronter des ennemis venant de tous les côtés. Mais curieusement, après avoir accepté la lame, la première chose que fit l'homme fut de vérifier la solidité de la garde...<br /><br />« Cet homme sert dans la cavalerie d'assaut, n'est-ce pas ? Il espère que cette épée légère ne lui échappera pas grâce à la garde...? Il a l'air plutôt bon cavalier, mais il a aussi l'air de quelqu'un qui fuira la bataille. Il n'est pas digne de ton épée. »<br /><br />Hanguang fixa Yunli, l'air surpris.<br />« Tout ce grignotage, ça aiguise la perspicacité ! »",
+   "text": "Regarder son père façonner les épées dans son atelier lui donnait encore plus faim que d'habitude, probablement à cause de la chaleur intense émise par le foyer. En conséquence, il lui arrivait fréquemment de s'éclipser plusieurs heures au marché afin de se remplir la panse. Dans le but, sans doute, d'être dans un meilleur état d'esprit pour observer et apprendre de son père.<br /><br />« Cette boutique sert les saucisses plus rapidement que ses concurrents. Le chef a une technique impeccable pour embrocher les saucisses, il arrive à transpercer parfaitement le centre. Hmm, s'il apprenait le maniement de l'épée, il serait probablement très précis. », se disait-elle en prenant place dans la file d'attente.<br /><br />Les boulettes de riz au sésame de cette boutique étaient habituellement préparées par la propriétaire, mais son mari avait pris le relais ce jour-là. Les muscles de son avant-bras étaient plus toniques que ceux de ses bras, peut-être parce qu'il s'entraînait régulièrement au maniement de l'épée. Aussi préparait-il les boulettes de riz au sésame avec beaucoup plus de force que nécessaire, au point de compacter les grains de riz. Chacune de ses boules de riz était trois fois plus grosse que d'habitude. Quand elle s'en aperçut, elle s'empressa de passer commande : « Deux boulettes de riz. Plus de riz, s'il vous plaît ! »<br /><br />Les racines de lotus frites et sucrées que vendait le type en vert n'étaient jamais de même qualité. Ce jour-là, elles étaient plutôt pas mal : sucrées mais pas trop, croustillantes à l'extérieur tout en conservant leur mâche. Elle s'était déjà éloignée quand elle termina celle qu'elle avait achetée, et elle s'arrêta pour observer le type. Il faisait tourner son poignet de manière rythmée tout en enrobant la friandise de sirop... Il connaissait en fait un mouvement typique du maniement de l'épée ! Mais quand l'avait-il appris ? « Hmm... On dirait que l'art de l'épée peut aussi s'appliquer à la cuisine... »<br /><br />Le soleil était déjà couché lorsqu'elle rentra chez elle repue. Dans la cour, son père remettait une épée toute neuve à un autre homme coiffé d'un casque de fer.<br />« Merci, Maître Hanguang. Grâce à cette lame... je pourrai purger le mal. » Le soleil couchant baignait son visage de lumière, révélant à la fois sa détermination farouche et une touche de désespoir.<br /><br />Pourtant, Yunli ne remarqua pas le soleil couchant. Toute son attention était portée sur l'homme au casque de fer. Il y avait devant elle un homme visiblement costaud et robuste, qui pourtant avait reçu une épée si légère. La pointe de l'épée était également plus large que la normale. Une telle lame était faite pour affronter des ennemis venant de tous les côtés. Mais curieusement, après avoir accepté la lame, la première chose que fit l'homme fut de vérifier la solidité de la garde...<br /><br />« Cet homme sert dans la cavalerie d'assaut, n'est-ce pas ? Il espère que cette épée légère ne lui échappera pas grâce à la garde...? Il a l'air plutôt bon cavalier, mais il a aussi l'air de quelqu'un qui fuira la bataille. Il n'est pas digne de ton épée. »<br /><br />Hanguang fixa Yunli, l'air surpris.<br />« Tout ce grignotage, ça aiguise la perspicacité ! »",
    "unlockRequirement": "Disponible au niveau <nobr>20</nobr> de personnage"
   },
   {
    "title": "Histoire du personnage : Partie II",
-   "text": "Elle suivit le son jusqu'à un coin de l'atelier. Son père était introuvable, et sur le sol gisait l'ébauche d'une grande épée forgée dans un alliage de fer. En la ramassant, Yunli se rendit compte que l'épée était même plus grande qu'elle. Elle posa des mains curieuses sur la lame, et imita le geste professionnel de son père comme pour finaliser le corps de l'arme.<br /><br />Mais cette grande épée n'était pas terminée. Hanguang, en fondant l'épée possédée par un Héliobe, avait provoqué une tragédie à la Forge du disque enflammé. Yunli avait échappé de justesse au funeste destin qui avait frappé les autres grâce à l'arrivée in extremis de Huaiyan qui l'avait sauvée. Par la suite, elle est devenue sa disciple emportant avec elle l'ébauche de l'épée.<br /><br />« Yunli, ton épée risque de se briser si tu n'utilises pas les bonnes matières premières. » Un compagnon d'apprentissage ne put s'empêcher de lui donner quelques conseils, son épée lui reprochant subtilement sa méthode.<br />« Pourquoi tu ne vas pas plutôt couper de l'écorce ? »<br />Le camarade afficha une expression à la fois perplexe et gênée. Yunli leva les yeux et fixa l'épée silencieuse de son camarade. « Désolée, je ne m'adressais pas à toi... mais à ton épée. »<br /><br />« Je m'appelle Radiance en raison de mon éclat. »<br />Elle savait toutefois que cette épée serait mise au rebut par son propriétaire et que plus personne ne verrait son éclat.<br />« Je m'appelle Jasminette. J'aime la fleur de jasmin qui est gravée sur ma garde. »<br />Elle voyait bien que Jasminette n'aimait pas le nom frivole que son maître lui avait donné mais qu'elle appréciait d'avoir de la valeur à ses yeux.<br /><br />Alors que la parole des hommes dissimule leurs intentions, la voix des épées est beaucoup plus transparente.<br />Les souvenirs de l'épée maudite qui avait poussé tant de gens à perdre la raison et le souvenir macabre du sang sur le sol restaient profondément gravés dans l'esprit de Yunli... Peut-être était-ce le cas également de l'ébauche de l'épée, bien qu'elle ne lui ait jamais parlé des événements qui s'étaient déroulés en ce jour fatidique.<br /><br />« Tu as vu ces épées assoiffées de sang et de meurtre ? »<br />« Je ne penses pas que ces Héliobes puissent être capables de te manier. Tu es grande et émoussée, et tu n'as pas d'âme. »<br />L'ébauche de l'epée se mit soudain à trembler, soulevant une couche de poudre de carbone noire qui retomba comme une nébuleuse impressionnante.<br />« Tu as été abandonnée parce que tu as rejeté l'Héliobe... Même une épée non terminée comme toi peut comprendre ça... Alors pourquoi mon père... »<br />« Quand est-ce qu'une épée peut être considérée comme \"terminée\"... ? »<br />Elle ne put s'empêcher de passer ses doigts sur les bords irréguliers de la lame. Malgré l'absence d'arête centrale, l'épée pouvait être considérée comme tranchante.<br />« Tu ne parles toujours pas ? Tu es vraiment têtue... Puisque c'est comme ça, je vais t'appeler \"Fer-fidèle\". »<br />« Ne t'inquiète pas. Les autres ont beau te considérer comme une épée sans lame, ça n'a pas d'importance pour la pratique de l'art de l'épée. »<br />« La lame que je brandis est toujours tranchante. »<br />« Allons-y, Fer-fidèle. Allons parcourir le monde ensemble. »",
+   "text": "Elle suivit le son jusqu'à un coin de l'atelier. Son père était introuvable, et sur le sol gisait l'ébauche d'une grande épée forgée dans un alliage de fer. En la ramassant, Yunli se rendit compte que l'épée était même plus grande qu'elle. Elle posa des mains curieuses sur la lame, et imita le geste professionnel de son père comme pour finaliser le corps de l'arme.<br /><br />Mais cette grande épée n'était pas terminée. Hanguang, en fondant l'épée possédée par un Héliobe, avait provoqué une tragédie à la Forge du disque enflammé. Yunli avait échappé de justesse au funeste destin qui avait frappé les autres grâce à l'arrivée in extremis de Huaiyan qui l'avait sauvée. Par la suite, elle est devenue sa disciple emportant avec elle l'ébauche de l'épée.<br /><br />« Yunli, ton épée risque de se briser si tu n'utilises pas les bonnes matières premières. » Un compagnon d'apprentissage ne put s'empêcher de lui donner quelques conseils, son épée lui reprochant subtilement sa méthode.<br />« Pourquoi tu ne vas pas plutôt couper de l'écorce ? »<br />Le camarade afficha une expression à la fois perplexe et gênée. Yunli leva les yeux et fixa l'épée silencieuse de son camarade. « Désolée, je ne m'adressais pas à toi... mais à ton épée. »<br /><br />« Je m'appelle Radiance en raison de mon éclat. »<br />Elle savait toutefois que cette épée serait mise au rebut par son propriétaire et que plus personne ne verrait son éclat.<br />« Je m'appelle Jasminette. J'aime la fleur de jasmin qui est gravée sur ma garde. »<br />Elle voyait bien que Jasminette n'aimait pas le nom frivole que son maître lui avait donné mais qu'elle appréciait d'avoir de la valeur à ses yeux.<br /><br />Alors que la parole des hommes dissimule leurs intentions, la voix des épées est beaucoup plus transparente.<br />Les souvenirs de l'épée maudite qui avait poussé tant de gens à la folie et celui du sang sur le sol restaient profondément gravés dans la mémoire de Yunli... Peut-être était-ce également le cas de l'ébauche d'épée, bien qu'elle ne lui ait jamais parlé des événements qui s'étaient déroulés en ce jour fatidique.<br /><br />« Tu as vu ces épées assoiffées de sang et de meurtre ?<br />Je ne penses pas que ces Héliobes puissent être capables de te manier. Tu es grande et émoussée, et tu n'as pas d'âme. »<br />L'épée inachevée se mit soudain à trembler, soulevant une couche de poussière de charbon noire qui retomba comme une nébuleuse impressionnante.<br />« Tu as été abandonnée parce que tu as rejeté l'Héliobe... Même une épée non terminée comme toi peut comprendre ça... Alors pourquoi mon père ne l'a pas compris ?...<br />Quand est-ce qu'on peut considérer une épée comme \"terminée\"...? »<br />Elle ne put s'empêcher de passer ses doigts sur les bords irréguliers de la lame. Malgré l'absence d'arête centrale, l'épée pouvait être considérée comme tranchante.<br />« Tu ne parles toujours pas ? Tu es vraiment têtue... Puisque c'est comme ça, je vais t'appeler \"Fer-fidèle\".<br />Ne t'inquiète pas. Les autres ont beau te considérer comme une épée sans lame, ça n'a pas d'importance pour la pratique de l'art de l'épée.<br />La lame que je brandis est toujours tranchante.<br />Allons-y, Fer-fidèle. Allons parcourir le monde ensemble. »",
    "unlockRequirement": "Disponible au niveau <nobr>40</nobr> de personnage"
   },
   {
@@ -2822,7 +2852,7 @@
   },
   {
    "title": "Histoire du personnage : Partie IV",
-   "text": "Elle fit pivoter l'épée pour que les langues de feu puissent envelopper entièrement la lame. Une chaleur brûlante se diffusait dans le fourneau. Pourtant, une odeur âcre de rancune s'en dégageait.<br /><br />Le regard vide, Yunli observa le coucher de soleil par la fenêtre. Avec l'âge, elle avait peu à peu trouvé des réponses aux questions qu'elle se posait autrefois.<br /><br />Les Héliobes absorbent les émotions humaines et les dévorent... Cependant, les épées sont des armes dont la pointe est forgée avec l'intention de tuer. Au combat, une épée imprégnée d'un Héliobe absorbe la rage, la soif de sang et la violence, puis ronge l'esprit de son porteur jusqu'à devenir une « épée maudite ».<br /><br />« Est-ce que tu sais ce qu'il a ressenti lorsqu'il a brandi son épée ? De l'exaltation... De l'orgueil... De la suffisance ! Ce n'était qu'un Chevalier des nuages ordinaire, au plus bas de l'échelle ! J'ai réalisé le souhait qu'il n'aurait jamais pu réaliser lui-même ! De quel droit... »<br />Elle ajouta un peu de combustible dans le feu. Pourquoi fallait-il que les épées maudites soient aussi bavardes, même face à leur destruction ?<br /><br />« Hé... Est-ce que tu sais qu'un jour, il a abandonné son épée avant de s'enfuir à cheval ? Les humains sont tellement lâches ! Tu crois vraiment que ce que tu fais a un sens ? Tant que les humains auront des désirs, ta chasse ne prendra pas fin... »<br />Depuis ce jour, elle s'est juré de traquer toutes les épées maudites et de racheter les fautes de Hanguang. Cependant, il avait trop de péchés à expier et elle se sentait découragée d'avoir repris un fardeau si lourd. Malgré les vibrations provoquées dans l'air par la chaleur intense, la fierté de Yunli était bien perceptible.<br />« Je ne supporte pas de voir de bonnes épées finir en déchets, mais je refuse de voir une épée maléfique corrompre quelqu'un de bien. »<br />« Ce n'est pas à toi de décider s'il s'agit d'une épée précieuse ou d'un vulgaire couteau de boucherie. »<br />« Celui qui a de mauvaises intentions doit être puni, et les épées maléfiques fondue. Quant à toi, accepte ton destin, qui est d'être reforgée dans les charbons ardents. »<br /><br />Alors que les flammes de la forge engloutissaient l'épée maudite, le fer en fusion bouillonnait à côté des étincelles de feu, semblable à l'âme d'une nouvelle épée naissant sous le marteau. Telle fut sa réponse.<br />« Pourquoi ne pas simplement fondre l'épée maudite pour la transformer en fer en fusion ? Puisque l'absence d'entretien a précipité la désuétude de cette épée, elle peut attendre qu'une personne digne d'elle la reforge dans tout son éclat. »<br />La température augmenta encore tandis qu'elle fermait la porte du four, ses pensées enveloppées de vagues de chaleur.<br />La renaissance ne tarderait plus.",
+   "text": "Elle fit pivoter l'épée pour que les langues de feu puissent envelopper entièrement la lame. Une chaleur brûlante se diffusait dans le Forge Fonte-Lames. Pourtant, une odeur âcre de rancune s'en dégageait.<br /><br />Le regard vide, Yunli observa le coucher de soleil par la fenêtre. Avec l'âge, elle avait peu à peu trouvé des réponses aux questions qu'elle se posait autrefois.<br /><br />Les Héliobes absorbent les émotions humaines et les dévorent... Cependant, les épées sont des armes dont la pointe est forgée avec l'intention de tuer. Au combat, une épée imprégnée d'un Héliobe absorbe la rage, la soif de sang et la violence, puis ronge l'esprit de son porteur jusqu'à devenir une « épée maudite ».<br /><br />« Est-ce que tu sais ce qu'il a ressenti lorsqu'il a brandi son épée ? De l'exaltation... De l'orgueil... De la suffisance ! Ce n'était qu'un Chevalier des nuages ordinaire, au plus bas de l'échelle ! J'ai réalisé le souhait qu'il n'aurait jamais pu réaliser lui-même ! De quel droit... »<br />Elle ajouta un peu de combustible dans le feu. Pourquoi fallait-il que les épées maudites soient aussi bavardes, même face à leur destruction ?<br /><br />« Hé... Est-ce que tu sais qu'un jour, il a abandonné son épée avant de s'enfuir à cheval ? Les humains sont tellement lâches ! Tu crois vraiment que ce que tu fais a un sens ? Tant que les humains auront des désirs, ta chasse ne prendra pas fin... »<br />Depuis ce jour, elle s'est juré de traquer toutes les épées maudites et de racheter les fautes de Hanguang. Cependant, il avait trop de péchés à expier et elle se sentait découragée d'avoir repris un fardeau si lourd. Malgré les vibrations provoquées dans l'air par la chaleur intense, la fierté de Yunli était bien perceptible.<br />« Je ne supporte pas de voir de bonnes épées finir en déchets, mais je refuse de voir une épée maléfique corrompre quelqu'un de bien. »<br />« Ce n'est pas à toi de décider s'il s'agit d'une épée précieuse ou d'un vulgaire couteau de boucherie. »<br />« Celui qui a de mauvaises intentions doit être puni, et les épées maléfiques fondue. Quant à toi, accepte ton destin, qui est d'être reforgée dans les charbons ardents. »<br /><br />Alors que les flammes de la forge engloutissaient l'épée maudite, le métal en fusion bouillonnait au milieu des étincelles de feu, comme si l'âme de l'épée renaissait. Telle fut sa réponse.<br />« Pourquoi ne pas simplement fondre une épée quand elle est maudite ? Puisque cette épée n'a pas été traitée avec les égards qui lui étaient dus, autant la transformer en une nouvelle épée qui pourra trouver un propriétaire digne. »<br />La température augmenta encore tandis qu'elle fermait la porte du fourneau, une vague de chaleur invisible submergeant ses pensées.<br />La renaissance était en marche.",
    "unlockRequirement": "Disponible au niveau <nobr>80</nobr> de personnage"
   }
  ],

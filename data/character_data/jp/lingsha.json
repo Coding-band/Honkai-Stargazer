@@ -1,0 +1,3048 @@
+{
+ "spRequirement": 110,
+ "iconPath": "488307689cad02983c52af9ab124b6aa2b241ee24fd99a06fc3cb121a02e6c4f",
+ "bgPath": "034f4c49e7efd96658348a15576ed5c5caa59836986b454192061dc7d0ec8188",
+ "figPath": "c990e240363d472b2f7bc69510b3961fc34ac662c95ec6eeb8d0b5a8582e6ab0",
+ "fgPath": "f837e1f9dcb7dd11f39593f6f3fb7ae904d017ac3273af478473f674bf415ae0",
+ "splashIconPath": "ac52ac4c22b57e5cd5a7137b462401fc9027281fee62e943a793c482c3b4fa61",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRrICAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSC8BAAABkLtt2/mv0q8PfmbcbJu7a7LdZtv25ppsuyZjdq229dH73CkiJgAgKAw9AA/wPP4NaT61N9X31oXcXPD+gZJmnRc90GHmD6reqi5A7uQWue2v/PyV6aRd2Da2acvAZ7G+Xzin6IuclOru9p1Q+lmSc/EXWRwplcZB0TOlzvTzp/Q1llncEbipWKbESd+dnF4W43FYkTNFTvqaKdNNCNioWFJmUmpKtJQgZJbil06SmWSmXgSNlq9+vPPWd5lJZqYzlfFyuhx89FRmkslM0UQfoOqAW3L/mEzp8cb4+B4jHinJnFmWma61xvPo1KjV8CeSMkn2bsOu6UDeoiVlNaZffKrvl7d+nMbYmeBRtHJTe8g9oTvn53kEIeBBjt91XaVw6OBq4PF/H3KKCwB8/gUAVlA4IFwBAACwBwCdASoUABQAPm0ukkakIqGhKA1QgA2JagCxHuN10su9gLtV3j0lTPiy1AN0A/TMPTk6C+fN0V2vcP9JNmNSLuuTL3gAAP7xSd3gtx8XFyb7vr3rgoTc4XKx4h1tGcnKha10JrK8o6k3YMdBMTnGVIe4q6aioQcOKwpRJQQSg2tTyUK2SiEN68GwgW73Q+/slMLpNzoMKRfbbG4LcLKxrbTL9aZubg0/JMqnWokQZgOWxtfVeGEMyBFWmUTx8cEJSglJb0gMWfVAuwS8RAXrcbVMn/PxtqyYcfg13weCln/waCXudEjXONfPqS5Swv9DRZ9T5jJIOqB/FETx5gjyJsad7lU+Qtmazwf9PE6QHnQ/9GqeAOVqzsCiEfut/FQyMN7rGnwsu6nZ98INeXM+HXRfGBxXkAoDHosWQ/iYRVb5L4Km/YHtf7BRVmJP8v3+dfdRrB2oKH6AAAA=",
+  "w": 2048,
+  "h": 2048
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 7,
+  "iconPath": "47b709f33faf9b5b1f7d1cc9b1db8b9f4999261df20e8b29f38496c12a04bc2d",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "154680875035a2d1a2d7827aa99c35f77a9fc6df9de95cd58800bde4bb17472a",
+   "name": "信用ポイント",
+   "desc": "スターピースカンパニーが顧客との決済に使用している貨幣。現在は宇宙旅行をする時の決済通貨となっている。",
+   "lore": "「人々は、端末に表示される数字のためだけに奔走し、戦い、取引をする。しかし、本当に大切なものは、カンパニーの数字で買えるものではない」",
+   "purpose": "星間通貨",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "疑似花萼「大鉱区」",
+    "疑似花萼「工造司」",
+    "疑似花萼「ホテル・『レバリー』-夢境」",
+    "クエスト報酬",
+    "依頼報酬",
+    "エンバー交換"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "04121a915c1d5e0a609e4b59417f441c101eaf1edbb092ffef36dbc24d1ae24b",
+   "name": "運命の足跡",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "幾度の敗北があなたに勝利をもたらし、一歩一歩の前進があなたを運命の転換点へと導いた。",
+   "purpose": "軌跡素材",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」ポイント報酬",
+    "ナナシの勲功",
+    "エンバー交換",
+    "星芒交換",
+    "期間限定イベント報酬"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "fe197ceacff72ca32c46a22e6cf77f460edbfa2bc70e5162ad9c9e5485944570",
+   "name": "漫遊指南",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>20000</nobr>獲得できる。",
+   "lore": "世界を渡り歩くためには欠かせない、冒険手引き集。閲覧キーを押すと、電子音声が理解可能な言語で、有名な冒険者たちが様々な世界で体験したことや、彼らが色々な星で得た貴重な知識を語り聞かせてくれる。<br /><br />「漫遊指南最新シリーズ『スペースグルメガイド』が現在発売中。ぜひお買い求めください」<br />「投稿の際は、博識学会共感覚ビーコンのオペレーター<nobr>23</nobr>θにお繋ぎください。原稿料はあなたが普段から利用している方法でお振込みいたします」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "疑似花萼「流雲渡し」",
+    "疑似花萼「ドリームボーダー」",
+    "「忘却の庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "3aa3378fafc0e98fb07b480ae468b4fc5b29027f1ec3d000d89353e7ae656832",
+   "name": "冒険記録",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>5000</nobr>獲得できる。",
+   "lore": "綺麗に装丁された、一目でためになるとわかる冒険日誌。冒険に関する細かい描写、価値のある情報、サバイバル術が書かれている。<br /><br />「なんで数字化してデバイスに保存しないの？持ち歩きやすくなるでしょ」<br />「お前が思っているより、先進技術は恒星嵐や中性子噴出に弱いんだ。なにより、この本の制作者は、最も簡単な方法で人々に読んでもらいたかったんだろう」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "疑似花萼「流雲渡し」",
+    "疑似花萼「ドリームボーダー」",
+    "デイリー訓練",
+    "エンバー交換"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "a0f7c642d789346ecde22056b8a1e76a4707343bc0ebaa161e802db6d7836041",
+   "name": "旅の見聞",
+   "desc": "キャラクターの経験値素材、キャラクター経験値を<nobr>1000</nobr>獲得できる。",
+   "lore": "旅の出来事を記した日記。字はかすれており、不鮮明。思うままに内容が書かれてあるので、あまり助けにはならないだろう。<br /><br />「読み終わったら早くその紙切れを捨てるのよ、丹恒？」",
+   "purpose": "キャラクター経験値素材",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "疑似花萼「郊外雪原」",
+    "疑似花萼「流雲渡し」",
+    "疑似花萼「ドリームボーダー」",
+    "依頼報酬"
+   ]
+  },
+  "549504": {
+   "id": 549504,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "f379ce82fbe9ed8dbe09f69c50f2edb02d96534ce5f4cff5b102d938c78c2143",
+   "name": "永寿の萌芽",
+   "desc": "古の神物が芽生えた幼芽、強化に必要な簡易素材。",
+   "lore": "仙舟の長命種が持つ「無尽形寿」の源、「豊穣」の神跡の残余。幾星霜も前、とある皇帝の長命への妄念が、仙舟艦隊を仙方を求める旅へと促した。<br /><br />「朕は万世の垂化、永延の国祚を欲す。が、天年に尽頭有り、人力に窮限有り。故に、天舟九座遣い、天外へ仙方を求める」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/549504",
+   "comeFrom": [
+    "豊穣の忌み物からドロップ",
+    "「階差宇宙」で敵からドロップ",
+    "「模擬宇宙」で敵からドロップ",
+    "依頼報酬",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換",
+    "疑似花萼（金）"
+   ]
+  },
+  "589812": {
+   "id": 589812,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "9dd861f657a1fcde2f7dfcf333b0bf2c31c14f3074153b279e8f556858c9a8f3",
+   "name": "育みの蜜",
+   "desc": "生命の成長を促進する蜜。ウェンワークの聖なる林にあるハートツリーの花から作られる。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">豊穣</span>の運命を歩むキャラクターの軌跡を中アップできる。",
+   "lore": "魔王は肥沃な土壌から顔を出すが、片腕ほどの背丈しかない、丸々とした実だ。何故かは分からないが、花の蜜を飲んで発育する資格を得るには、同胞や兄弟姉妹を打ち負かす必要がある。<br /><br />「この林のどの木の樹液をどれほど飲んでも構わないが、唯一、あの木の蜜だけは口をつけてはならない」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/589812",
+   "comeFrom": [
+    "疑似花萼「綏園」",
+    "「万能合成マシン」- 素材合成",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "633445": {
+   "id": 633445,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "9838aee14bb17d6a739dee3330913587f055262bbec2601c6505335e36d97da0",
+   "name": "永寿の天華",
+   "desc": "古の神物が咲いた花、強化に必要な普通素材。",
+   "lore": "仙舟の長命種が持つ「無尽形寿」の源、「豊穣」の神跡の残余。艱難辛苦を乗り越え、薬を求める舟は天顔を謁見した。神は垂迹し奇跡を降ろす、そして建木が萌芽する。<br /><br />「月に落ちる新蕊、雲外に香る天の華。桂薫が吐納する間、鶴髪も髫に換わる」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 3,
+   "rewardPath": "/material/633445",
+   "comeFrom": [
+    "均衡Lv.2に達した後、豊穣の忌み物からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「階差宇宙」で敵からドロップ",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "671367": {
+   "id": 671367,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "0073bd10e11aa0a7afd8c74ecec0d60b2f15fa2bc1248abb540efa12e7973bc0",
+   "name": "吉光の羽",
+   "desc": "軌跡レベルアップ用の高級素材。",
+   "lore": "死ぬ直前の万物が動きを止める時のみ、人はこの神聖な羽が舞い落ちる様子を目にできる。威霊飛黄は、帝弓が顕現させた七相の中で最も素早い。<br /><br />「ソレを狩るために<nobr>12</nobr>もの昼夜を費やしてやっと、ソレが自分の身体の中にあると気づいた」",
+   "purpose": "軌跡素材",
+   "rarity": 4,
+   "rewardPath": "/material/671367",
+   "comeFrom": [
+    "歴戦余韻「競鋒艦」"
+   ]
+  },
+  "673753": {
+   "id": 673753,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "c003a2f97916fe6fe4ebe4c904ab9c71ef20fd7df2761f185855cee2b8f11c40",
+   "name": "森羅の果実",
+   "desc": "ありとあらゆる命を含む果実。ウェンワークの聖なる林にあるハートツリーの枝頭で育つ。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">豊穣</span>の運命を歩むキャラクターの軌跡を大アップできる。",
+   "lore": "聖なる木の蜜を飲んでから半日以内に、おかしな球状の果実が膨らんで繊維質の鎧となり、「魔王」は木の矛と葉の盾を手にする。その足跡を取り囲むようにして、林の生き物が次から次へと自分の遺伝子を献上し、王者に試させ、学びと変化を与える。そして、魔王はウェンワークの海と空に挑もうとする。<br /><br />「この方法によって、古代の先賢たちは最も恐ろしい物事を、最も面白おかしい遊びの中に閉じ込めたのだ」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/673753",
+   "comeFrom": [
+    "疑似花萼「綏園」",
+    "「万能合成マシン」- 素材合成",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "717386": {
+   "id": 717386,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "8cd84cd139e2a18672b1f2fe33c10525cb045a4504d95e68a0c79d7c3f46bbf9",
+   "name": "永寿の栄枝",
+   "desc": "古の神物の栄枯する枝、強化に必要な高級素材。",
+   "lore": "仙舟の長命種が持つ「無尽形寿」の源、「豊穣」の神跡の残余。三つの災いの後、仙舟は塗炭の苦しみを舐めた。天人が魔に堕ち、苦しみと災厄は絶え間なく生じる。<br /><br />「十王司の律令に基づき、頻繁に魔陰に堕ちる者は判官が捕らえ、幽獄に収監し審断する」",
+   "purpose": "軌跡素材 <br />キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/717386",
+   "comeFrom": [
+    "均衡Lv.4に達した後、豊穣の忌み物からドロップ",
+    "「万能合成マシン」- 素材合成",
+    "「階差宇宙」で敵からドロップ",
+    "「模擬宇宙」で敵からドロップ",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "874339": {
+   "id": 874339,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "d3be437aa8a6f9fdfdd24ae70eae423a228386a89fd88a455eb7e976dbc3f2cf",
+   "name": "珍木の種",
+   "desc": "様々な種の遺伝子を持つ種子。ウェンワークの聖なる林にあるハートツリーの実から採れる。<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">豊穣</span>の運命を歩むキャラクターの軌跡を小アップできる。",
+   "lore": "ウェンワークの神聖なる林では、巨大で珍しい聖なる樹木が数々の命のサイクルによって起きる生物圏の変化を根気強く記録している。それは様々な生命の遺伝子を種子にし、理想的な「魔王」を育て続けている。<br /><br />「硬い果実を割って果肉の中から種を取り出し、聖なる土壌に埋める。翌年には数十人もの王者が収穫できるだろう。そして、勝敗が決まるのを静かに待つのだ！」",
+   "purpose": "軌跡素材 <br />光円錐昇格素材",
+   "rarity": 2,
+   "rewardPath": "/material/874339",
+   "comeFrom": [
+    "疑似花萼「綏園」",
+    "エンバー交換",
+    "「万能合成マシン」- 素材交換"
+   ]
+  },
+  "983280": {
+   "id": 983280,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "21b8467c91fcc05ce339b19accbc92d696532aabe1dbf98fa94b181b67c10f9b",
+   "name": "憤怒の心",
+   "desc": "「怒りの抜け殻」の憶質コア。炎属性のキャラクターの昇格素材。",
+   "lore": "怒りの火はやがて自身を焼き尽くし、その原因すら忘れ去られる。そして、ただ悔いの余燼と消えることのない憤りの心だけが残される。<br /><br />「怒りに関する憶質は恨みによって長く存在し続けるが、恨みによって歪められる」",
+   "purpose": "キャラクター昇格素材",
+   "rarity": 4,
+   "rewardPath": "/material/983280",
+   "comeFrom": [
+    "凝結虚影「朝露の館」",
+    "「万能合成マシン」- 素材交換"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 92.4,
+   "attackAdd": 4.62,
+   "hpBase": 184.8,
+   "hpAdd": 9.24,
+   "defenseBase": 59.4,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549504,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 129.36,
+   "attackAdd": 4.62,
+   "hpBase": 258.72,
+   "hpAdd": 9.24,
+   "defenseBase": 83.16,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549504,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 166.32,
+   "attackAdd": 4.62,
+   "hpBase": 332.64,
+   "hpAdd": 9.24,
+   "defenseBase": 106.92,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633445,
+     "count": 6
+    },
+    {
+     "id": 983280,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 203.28,
+   "attackAdd": 4.62,
+   "hpBase": 406.56,
+   "hpAdd": 9.24,
+   "defenseBase": 130.68,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633445,
+     "count": 9
+    },
+    {
+     "id": 983280,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 240.24,
+   "attackAdd": 4.62,
+   "hpBase": 480.48,
+   "hpAdd": 9.24,
+   "defenseBase": 154.44,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717386,
+     "count": 6
+    },
+    {
+     "id": 983280,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 277.2,
+   "attackAdd": 4.62,
+   "hpBase": 554.4,
+   "hpAdd": 9.24,
+   "defenseBase": 178.2,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717386,
+     "count": 9
+    },
+    {
+     "id": 983280,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 314.16,
+   "attackAdd": 4.62,
+   "hpBase": 628.32,
+   "hpAdd": 9.24,
+   "defenseBase": 201.96,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "3d9becd77e82baba98687d88473b1d52f9ef70613daca321148dc37dbc05d65d",
+   "artPath": "ae43ec77cac34750afc79e527ce9ccf274cad21a98855fdc29042a06242a6e3f",
+   "name": "破邪の香り",
+   "descHash": "霊砂の弱点撃破効率+<nobr>#2[i]%</nobr>。敵を弱点撃破した時、その敵の防御力-<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.2,
+    0.5
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "33c604e5768b83400d32d785d2c06c9a2a2061e3ac8f75b97313787179372678",
+   "artPath": "eb94c5969847022cd7259d3c2c923618048b13e87765234c92dccb92442ebca4",
+   "name": "垂れ雲に紅香炉",
+   "descHash": "必殺技を発動する時、味方全体の撃破特効+<nobr>#1[i]%</nobr>、<nobr>#2[i]</nobr>ターン継続。",
+   "params": [
+    0.4,
+    3
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "c59ebbcbdf72e4fae9f21a68e1f95c8476a7367bf2eb053386ab90c4c5e7752b",
+   "artPath": "aa633ab7201db3dd1e7b39ceb168209bba977802e5b4ad823369fd6bb195d0be",
+   "name": "一縷の新芽、<br />濃香なる華",
+   "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "ab642418e7a76cba0efb047a446b6b1e4da5dd342e3f5a83dde37d6960ab4ed2",
+   "artPath": "166e458574bcdafe19caf0a1c07795e54cb7b48fbc6f9bcdf2e98e1f7e289761",
+   "name": "帳を撫でる朱煙",
+   "descHash": "「浮元」が行動する時、残りHPが最も低い味方のHPを、霊砂の攻撃力<nobr>#1[i]%</nobr>分回復する。",
+   "params": [
+    0.4
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "2c3246f680a3b32f5dd18958c5f4a9c76c31215c0b54f051eade1c00f7c8f061",
+   "artPath": "47b78d1b0dd56e4cde93fd99d08a250147a59511cb424fcfa441b32351723572",
+   "name": "揺るがぬ規矩",
+   "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "49c44a76f0b4dc2f1e2945b6d4402d8f8be868eec82d44fc7e095f08b19b1a3b",
+   "artPath": "6c06a46695504f43711854925fec87d254aca27212209767dc5bb38f099149bc",
+   "name": "春蘭の宿香",
+   "descHash": "「浮元」がフィールド上に存在する時、敵全体の全属性耐性-<nobr>#1[i]%</nobr>。「浮元」が攻撃を行う時、さらに<nobr>#2[i]</nobr>ヒットする。<br />1ヒットにつき、ランダムな敵単体に霊砂の攻撃力<nobr>#3[i]%</nobr>分の炎属性ダメージを与える。この時、「浮元」は炎属性弱点を持ち、かつ残り靭性値が0より大きい敵を優先的にターゲットにする。なお、このダメージの削靭値は1ヒットにつき<nobr>#4[i]</nobr>。",
+   "params": [
+    0.2,
+    4,
+    0.5,
+    5
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   744058
+  ],
+  [
+   28585
+  ],
+  [
+   944644
+  ],
+  [
+   459531
+  ],
+  [
+   543472
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "単体攻撃",
+   "descHash": "指定した敵単体に霊砂の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#F84F36;\">炎</span>属性ダメージを与える。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 744058,
+   "name": "供香",
+   "iconPath": "849f421b83e4644249b57bf61a44d371c65c61445191369053af560c3761cc4c",
+   "typeDescHash": "通常攻撃",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874339,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589812,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589812,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673753,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673753,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "全体攻撃",
+   "descHash": "敵全体に霊砂の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#F84F36;\">炎</span>属性ダメージを与え、味方全体のHPを霊砂の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]</nobr></span>回復する。また、「浮元」の<u>行動順</u>を<nobr>#4[i]%</nobr>早める。",
+   "ultimateCost": 0,
+   "break": "30/hit",
+   "energy": "30",
+   "id": 28585,
+   "name": "彩煙",
+   "iconPath": "2c3246f680a3b32f5dd18958c5f4a9c76c31215c0b54f051eade1c00f7c8f061",
+   "typeDescHash": "戦闘スキル",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.4,
+      0.1,
+      105,
+      0.2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.44,
+      0.105,
+      168,
+      0.2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.48,
+      0.11,
+      215.25,
+      0.2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874339,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.52,
+      0.115,
+      262.5,
+      0.2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589812,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.56,
+      0.12,
+      294,
+      0.2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589812,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.6,
+      0.124,
+      325.5,
+      0.2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589812,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0.128,
+      349.125,
+      0.2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673753,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7,
+      0.132,
+      372.75,
+      0.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673753,
+       "count": 5
+      },
+      {
+       "id": 671367,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.75,
+      0.13599999,
+      396.375,
+      0.2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673753,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8,
+      0.14,
+      420,
+      0.2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673753,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.84,
+      0.144,
+      443.625,
+      0.2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.88,
+      0.148,
+      467.25,
+      0.2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.92,
+      0.152,
+      490.875,
+      0.2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.96,
+      0.156,
+      514.5,
+      0.2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0.16,
+      538.125,
+      0.2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "全体攻撃",
+   "descHash": "敵全体を「芳酔」状態にする。「芳酔」状態の敵が受ける<u>弱点撃破ダメージ</u>+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>、<nobr>#5[i]</nobr>ターン継続。<br />敵全体に霊砂の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#F84F36;\">炎</span>属性ダメージを与え、同時に味方全体のHPを霊砂の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]</nobr></span>回復する。また、「浮元」の<u>行動順</u>を<nobr>#6[i]%</nobr>早める。",
+   "ultimateCost": 110,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 944644,
+   "name": "彩雲の如く巡る霞",
+   "iconPath": "7ac2ba44643097be3212995e93a93b01c07c05abf3785739487e0f26d36be048",
+   "typeDescHash": "必殺技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.9,
+      0.08,
+      90,
+      0.15,
+      2,
+      1
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.96,
+      0.085,
+      144,
+      0.16,
+      2,
+      1
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.02,
+      0.09,
+      184.5,
+      0.17,
+      2,
+      1
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874339,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.08,
+      0.095,
+      225,
+      0.18,
+      2,
+      1
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589812,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.14,
+      0.1,
+      252,
+      0.19,
+      2,
+      1
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589812,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2,
+      0.104,
+      279,
+      0.2,
+      2,
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589812,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.275,
+      0.108,
+      299.25,
+      0.2125,
+      2,
+      1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673753,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.35,
+      0.112,
+      319.5,
+      0.225,
+      2,
+      1
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673753,
+       "count": 5
+      },
+      {
+       "id": 671367,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.425,
+      0.116,
+      339.75,
+      0.2375,
+      2,
+      1
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673753,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5,
+      0.12,
+      360,
+      0.25,
+      2,
+      1
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673753,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.56,
+      0.124,
+      380.25,
+      0.26,
+      2,
+      1
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.62,
+      0.128,
+      400.5,
+      0.27,
+      2,
+      1
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.68,
+      0.132,
+      420.75,
+      0.28,
+      2,
+      1
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.74,
+      0.13599999,
+      441,
+      0.29,
+      2,
+      1
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.8,
+      0.14,
+      461.25,
+      0.3,
+      2,
+      1
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "全体攻撃",
+   "descHash": "戦闘スキルを発動する時、「浮元」を召喚する。「浮元」の初期速度は<nobr>#1[i]</nobr>、初期行動可能回数は<nobr>#7[i]</nobr>回。<br />行動時、「浮元」は敵全体に<u>追加攻撃</u>を行い、霊砂の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>分の<span style=\"color:#F84F36;\">炎</span>属性ダメージを与える。<br />さらに、ランダムな敵単体に霊砂の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#8[i]%</nobr></span>分の<span style=\"color:#F84F36;\">炎</span>属性ダメージを与える。この時、「浮元」は<span style=\"color:#F84F36;\">炎</span>属性弱点を持ち、かつ残り靭性値が0より大きいいずれかの敵を優先的にターゲットにする。<br />また、味方それぞれの<u>デバフ</u>を<nobr>#6[i]</nobr>つ解除すると同時に、霊砂の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span>のHPを回復する。<br />「浮元」の行動可能回数は最大で<nobr>#5[i]</nobr>回まで累積できる。行動可能回数が0になる、または霊砂が<u>戦闘不能状態</u>になると「浮元」は消える。<br />「浮元」がフィールド上にいる時に戦闘スキルを発動すると、「浮元」の行動可能回数+<nobr>#7[i]</nobr>回。",
+   "ultimateCost": 0,
+   "break": "30/hit",
+   "energy": "0",
+   "id": 459531,
+   "name": "紅霧より出づる煙獣",
+   "iconPath": "1de8a660c71e9b74205015e70410ec0ac42f07e79694110a10a619d0cf1d2f08",
+   "typeDescHash": "天賦",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      90,
+      0.375,
+      0.08,
+      90,
+      5,
+      1,
+      3,
+      0.375
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      90,
+      0.4125,
+      0.085,
+      144,
+      5,
+      1,
+      3,
+      0.4125
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      90,
+      0.45,
+      0.09,
+      184.5,
+      5,
+      1,
+      3,
+      0.45
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874339,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      90,
+      0.4875,
+      0.095,
+      225,
+      5,
+      1,
+      3,
+      0.4875
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589812,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      90,
+      0.525,
+      0.1,
+      252,
+      5,
+      1,
+      3,
+      0.525
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589812,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      90,
+      0.5625,
+      0.104,
+      279,
+      5,
+      1,
+      3,
+      0.5625
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589812,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      90,
+      0.609375,
+      0.108,
+      299.25,
+      5,
+      1,
+      3,
+      0.609375
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673753,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      90,
+      0.65625,
+      0.112,
+      319.5,
+      5,
+      1,
+      3,
+      0.65625
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673753,
+       "count": 5
+      },
+      {
+       "id": 671367,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      90,
+      0.703125,
+      0.116,
+      339.75,
+      5,
+      1,
+      3,
+      0.703125
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673753,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      90,
+      0.75,
+      0.12,
+      360,
+      5,
+      1,
+      3,
+      0.75
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673753,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      90,
+      0.7875,
+      0.124,
+      380.25,
+      5,
+      1,
+      3,
+      0.7875
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      90,
+      0.825,
+      0.128,
+      400.5,
+      5,
+      1,
+      3,
+      0.825
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      90,
+      0.8625,
+      0.132,
+      420.75,
+      5,
+      1,
+      3,
+      0.8625
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      90,
+      0.9,
+      0.13599999,
+      441,
+      5,
+      1,
+      3,
+      0.9
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      90,
+      0.9375,
+      0.14,
+      461.25,
+      5,
+      1,
+      3,
+      0.9375
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "単体攻撃",
+   "descHash": "敵を攻撃。戦闘に入った後、敵の対応する属性の靭性を削る。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 660117,
+   "name": "攻撃",
+   "iconPath": "849f421b83e4644249b57bf61a44d371c65c61445191369053af560c3761cc4c",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "サポート",
+   "descHash": "秘技を使用した後、次の戦闘開始時に即座に「浮元」を召喚し、敵全体を「芳酔」状態にする、<nobr>#1[i]</nobr>ターン継続。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 543472,
+   "name": "流翠散雲",
+   "iconPath": "0d4c3b4569805cbad92056896d7e75c1ac5eddf91e20011b32c1133825c97618",
+   "typeDescHash": "秘技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1222101,
+   "anchor": 6,
+   "type": 1,
+   "children": [
+    {
+     "id": 1222202,
+     "anchor": 10,
+     "type": 2,
+     "children": [
+      {
+       "id": 1222203,
+       "anchor": 11,
+       "type": 2,
+       "children": [
+        {
+         "id": 1222204,
+         "anchor": 12,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 383337,
+          "name": "攻撃強化",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+          "statusList": [
+           {
+            "key": "攻撃力",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 589812,
+            "count": 3
+           },
+           {
+            "id": 633445,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 383344,
+        "name": "撃破強化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+        "statusList": [
+         {
+          "key": "撃破特効",
+          "value": 0.053
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 589812,
+          "count": 3
+         },
+         {
+          "id": 633445,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 383343,
+      "name": "HP強化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+      "statusList": [
+       {
+        "key": "HP",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 874339,
+        "count": 3
+       },
+       {
+        "id": 549504,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "自身の攻撃力を撃破特効<nobr>#1[i]%</nobr>分アップする、最大で攻撃力+<nobr>#3[i]%</nobr>。また、自身の治癒量を撃破特効<nobr>#2[i]%</nobr>分アップする、最大で治癒量+<nobr>#4[i]%</nobr>。",
+    "ultimateCost": 0,
+    "id": 383375,
+    "name": "朱炎",
+    "iconPath": "cd4face1e75e2787f7e00d5ca2acf8acf1ceaee3338b20dda89c4a18be571ddd",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.25,
+       0.1,
+       0.5,
+       0.2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 874339,
+        "count": 3
+       },
+       {
+        "id": 671367,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1222102,
+   "anchor": 7,
+   "type": 1,
+   "children": [
+    {
+     "id": 1222205,
+     "anchor": 13,
+     "type": 2,
+     "children": [
+      {
+       "id": 1222206,
+       "anchor": 14,
+       "type": 2,
+       "children": [
+        {
+         "id": 1222207,
+         "anchor": 15,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 383340,
+          "name": "撃破強化",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+          "statusList": [
+           {
+            "key": "撃破特効",
+            "value": 0.08
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 673753,
+            "count": 3
+           },
+           {
+            "id": 717386,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 383339,
+        "name": "HP強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+        "statusList": [
+         {
+          "key": "HP",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 673753,
+          "count": 3
+         },
+         {
+          "id": 717386,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 383338,
+      "name": "撃破強化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+      "statusList": [
+       {
+        "key": "撃破特効",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 589812,
+        "count": 5
+       },
+       {
+        "id": 633445,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "通常攻撃を行う時、さらにEPを<nobr>#1[i]</nobr>回復する。",
+    "ultimateCost": 0,
+    "id": 383374,
+    "name": "幽香",
+    "iconPath": "b7715b4106b12eb84d2dda74ff583e78af9501ec340fdbb79e904535f4d43d33",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       10
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 589812,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 671367,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1222103,
+   "anchor": 8,
+   "type": 1,
+   "children": [
+    {
+     "id": 1222208,
+     "anchor": 16,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 383349,
+      "name": "攻撃強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+      "statusList": [
+       {
+        "key": "攻撃力",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673753,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1222209,
+     "anchor": 17,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 383350,
+      "name": "HP強化",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+      "statusList": [
+       {
+        "key": "HP",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673753,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "「浮元」がフィールド上に存在する時、任意の味方キャラがダメージを受ける、またはHPを消費する時、パーティに残りHP割合が<nobr>#1[i]%</nobr>以下のキャラがいる場合、「浮元」が即座に天賦による追加攻撃を行う。この追加攻撃は「浮元」の行動可能回数を消費せず、<nobr>#2[i]</nobr>ターン後に再度発動できる。",
+    "ultimateCost": 0,
+    "id": 383373,
+    "name": "余香",
+    "iconPath": "4153fd4be19c5db3da4513e6052198d8a218427bfec8c0008d030f4dce2602c2",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.6,
+       2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673753,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 671367,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1222201,
+   "anchor": 9,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 383342,
+    "name": "撃破強化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+    "statusList": [
+     {
+      "key": "撃破特効",
+      "value": 0.053
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549504,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1222210,
+   "anchor": 18,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 266696,
+    "name": "撃破強化",
+    "levelReq": 80,
+    "promotionReq": 0,
+    "iconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+    "statusList": [
+     {
+      "key": "撃破特効",
+      "value": 0.107
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 160000
+     },
+     {
+      "id": 673753,
+      "count": 8
+     },
+     {
+      "id": 717386,
+      "count": 8
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": []
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初対面",
+   "text": "始めまして、霊砂と申します。朱明で知識を学び、羅浮に戻ってきて丹鼎司の司鼎を務めています。体調が悪い時はいつでも医士を手配しますよ。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 2,
+   "title": "挨拶",
+   "text": "最近はどうですか？私の方は相変わらずで、仕事はあまり順調ではありません。列車で自由に旅するナナシビトたちが羨ましいです。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 3,
+   "title": "お別れ",
+   "text": "あなたから苦悩の匂いがしました。ですから、朱明の安息散と炎龍涎を沈霞燼に混ぜ、焚香を作りました。名前は「忘憂」、どうぞ。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 4,
+   "title": "自分について・出身",
+   "text": "私は羅浮で生まれ育った持明族です。かつては「丹朱」という名で、師匠のもとで多くのことを学びました。しかし、彼女は政争に巻き込まれ、異邦の地に追放されてしまったので、私も後を追ったのです。今は名前を変え「故郷に錦を飾る」ことができたので、とても感慨深いです。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 5,
+   "title": "自分について・煙蘿の玉枝",
+   "text": "この「煙蘿の玉枝」は治療を施す際の必需品です。私は朱明の龍尊である炎庭君の門下で「金鱗燃犀」という医術を学びました。この香炉を使うことで治療ができるのですが、中で錬成された煙獣に関しては…ふふ、秘伝だと言っておきますね。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 6,
+   "title": "世間話・羅浮の丹鼎司",
+   "text": "私の見立ててでは、丹鼎司の根本的な問題は内部紛争です。医士と丹士は、熱心に病人を救うでもなく、学術の研究に没頭するでもなく、権利争いに固執してばかり。それでどうやって法の網をかいくぐった蒔者と、企み事をする龍師の対処をするというのでしょう？",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 7,
+   "title": "世間話・感情の管理",
+   "text": "物事をうまく進めるには、感情を管理しないといけません。今からやり方をお見せしますね——こころの怒りを絶ち、おもての怒りを棄て、人のたがふを怒らざれ。そして深呼吸……すう…はあ……",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 8,
+   "title": "世間話・匂い",
+   "text": "匂いはさまざまなことを教えてくれます——感情、健康状態、病気の症状、嘘…全部私の鼻から隠すことはできません。逆に言えば、この鼻に何かあってはいけませんので、臭い匂いがしたら窒息死しようとも呼吸することをやめます。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 9,
+   "title": "趣味",
+   "text": "「調香」をご存じですか？これは世渡りと同じです。「前調」、「中調」、「後調」がうまく混ざり合ってこそ、いい香りが出来上がるのです。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 10,
+   "title": "悩み事",
+   "text": "私は一介の医士で、権力を振りかざす人が一番嫌いです。丹鼎司で地位を築くためには、時には手段を選ばずにそういう人たちを牽制する必要がありました。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 11,
+   "title": "シェア",
+   "text": "飛霄将軍の病は私では治せません。しかし、椒丘さんでしたら何か方法を思いつくかもしれませんね…彼はそういうのが得意ですから。",
+   "unlockRequirement": "開拓クエスト・幕間「#1」をクリアした後に解放",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 12,
+   "title": "見聞",
+   "text": "私が軍医をしていた時は、主に朱明の「御陽軍」の戦士のために拡大した執念を取り除いていました。精神的苦痛を受けた時、人と歳陽の間の結びつきは不安定になります。こういう時に薫香が必要になるのです。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 13,
+   "title": "懐炎について",
+   "text": "懐炎将軍のことはそんなに詳しくないですが、彼のためにお香を用意したことがあります。ふふ、あの方は普段は好々爺ですが…怒ると煙硝や火の匂いが強くするんです。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 14,
+   "title": "雲璃について",
+   "text": "雲璃の匂いは甘く爽やかで、乳香のようです。私に会いに来ると、小動物のように膝の上に座ってくるのですが、その時は彼女の匂いを吸わずにはいられません…ああ、思い出しただけで幸せな気持ちになります。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 15,
+   "title": "景元について",
+   "text": "師匠と景元将軍の間には…あまりよくない過去があります。ただ、大人にとって「個人的な恨み」というものはあまりにも贅沢ですね。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 16,
+   "title": "彦卿について",
+   "text": "この羅浮の幼い剣士の匂いは、彼の人となりと同じように清らかで、雨の後のように爽やかです。んー、それは彼の心が清らかだからでしょうか？それとも彼の性格が単純だからでしょうか？",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 17,
+   "title": "雲華について",
+   "text": "師匠が陥れられたのは、彼女が優しく、誠実で利己を一切考えない人だったからでしょう。口が巧く国をひっくり返すような悪者を前にする時、善意の心は少しも持ってはいけないのです。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 18,
+   "title": "飛霄について",
+   "text": "以前、彼女の戦いをこの目で見たことがあります。将軍というより彼女は武者でした。かつては死に向かって突き進む気迫に、恐怖の匂いが少し混じっていましたが、今はもうほとんどないですね。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 19,
+   "title": "椒丘について",
+   "text": "見るからに火鍋っぽくて、その匂いもやり口も火鍋のようだったら…私は彼を火鍋であると診断を下すしかないですね。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 20,
+   "title": "モゼについて",
+   "text": "彼自身の匂いは薄くてほとんど感じられないのに、鼻に突き刺さる鉄の匂いがします。きっと背後に色んな物語がある人なのでしょう。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 21,
+   "title": "白露について",
+   "text": "医術の話なら、私など羅浮の龍尊と比べものにならないでしょう。ただ、この波乱に満ちた場所で、彼女をしっかり守れる自信はあります。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 22,
+   "title": "御空について",
+   "text": "<nobr>30</nobr>年前の戦争は多くの人を変えてしまった。彼女はいつも悲しみの匂いを纏っています。長い間会っていませんでしたが、匂いは嘘をつかない——御空は今も昔のままですよ。彼女自身が気づいていなかったとしても。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 23,
+   "title": "符玄について",
+   "text": "太卜様はいつも私のところに来て、砂糖水を要求してきます。砂糖水の飲み過ぎは健康によくないと何度も言っているのですが、聞いてくれなくて…そのうえ「砂糖水を飲めない方が体に障る」って反論してくるんです。本当にどうしようもないお方ですよ。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 24,
+   "title": "青雀について",
+   "text": "羅浮に戻った後は雑務に追われています。そんな私に残された楽しみは3つだけ——食事、調香、青雀をからかうことです。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 25,
+   "title": "フォフォについて",
+   "text": "朱明でも、歳陽と一心同体と言えるほど融合できる戦士は少ないです。この全身からふわふわした匂いのする少女は本当にすごいですね。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 26,
+   "title": "シッポについて",
+   "text": "羅浮はあまりにも保守的です。これほどの能力を持ち、そして人を傷つけない歳陽なんて、朱明でしたら絶対に封印なんかしませんよ。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 27,
+   "title": "星魂覚醒",
+   "text": "限りなき雲霧、連綿と続く篆煙。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 28,
+   "title": "キャラクター昇格",
+   "text": "紅羅の帳、四角に香り袋。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 29,
+   "title": "レベルMax",
+   "text": "道聞かずして、金やヒスイを持つ者などいようか？",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 30,
+   "title": "軌跡覚醒",
+   "text": "火がなくとも、煙は自ずと立ちのぼるもの。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 31,
+   "title": "パーティ編成・開拓者",
+   "text": "あなたがいると、安心できます。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 32,
+   "title": "パーティ編成・雲璃",
+   "text": "雲璃、怪我しないように気をつけてくださいね。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 33,
+   "title": "パーティ編成・景元",
+   "text": "景元将軍、私にお任せください。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 34,
+   "title": "パーティ編成・飛霄",
+   "text": "また飛霄将軍の英姿を拝めるなんて、私は運がいいですね。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 35,
+   "title": "パーティ編成・椒丘",
+   "text": "今回もあなたの悪知恵に頼らせてもらいますね。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 36,
+   "title": "パーティ編成・モゼ",
+   "text": "影の中で問題を解決するという考えは、悪くないと思います。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 37,
+   "title": "パーティ編成・白露",
+   "text": "龍女様。私たちがお互い守り合えば、どんな難関でも乗り越えられるでしょう。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 38,
+   "title": "パーティ編成・御空",
+   "text": "御空様、あなたはやはりお変わりありませんね～",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 39,
+   "title": "パーティ編成・符玄",
+   "text": "きっと、太卜様の占いに吉兆が出たのでしょう。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 40,
+   "title": "パーティ編成・青雀",
+   "text": "頑張ってください、青雀！あなたの後ろに隠れるって言ったのは冗談ですので安心して…私が守ってあげますから。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 51,
+   "title": "戦闘開始・弱点撃破",
+   "text": "酔い痴れなさい。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 52,
+   "title": "戦闘開始・危険予知",
+   "text": "…濁悪の気。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 53,
+   "title": "ターン・1",
+   "text": "悪臭のもとを断たなければ。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 54,
+   "title": "ターン・2",
+   "text": "私が手を下さないといけないのですか？",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 55,
+   "title": "戦闘中待機",
+   "text": "お疲れのようですね、眠気を覚ましてあげましょうか？",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 56,
+   "title": "通常攻撃",
+   "text": "隙あり。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 57,
+   "title": "戦闘スキル・1",
+   "text": "穢れを払いましょう。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 58,
+   "title": "戦闘スキル・2",
+   "text": "身も心も、清らかに。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 59,
+   "title": "攻撃を受ける",
+   "text": "怒ってはダメ……",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 60,
+   "title": "重撃を受ける",
+   "text": "冥頑不霊ですね。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 61,
+   "title": "必殺技・アクティブ",
+   "text": "金鱗燃犀、火を見るより明らかです。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 62,
+   "title": "必殺技・発動",
+   "text": "この世のすべては…過ぎ行く雲煙にすぎません。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 63,
+   "title": "戦闘不能",
+   "text": "炎が消えて…煙も……",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 64,
+   "title": "戦闘に戻る",
+   "text": "起死回生の術、感服しました。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 65,
+   "title": "HP回復",
+   "text": "沁みますね……",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 66,
+   "title": "秘技",
+   "text": "炉香嫋嫋、蒼天へ昇る。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 67,
+   "title": "戦闘勝利",
+   "text": "これで匂いがマシになりました。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 68,
+   "title": "戦利品を開ける・1",
+   "text": "古いものは捨てて、新しいものを取り入れましょう。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 69,
+   "title": "戦利品を開ける・2",
+   "text": "清々しい気分です。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 70,
+   "title": "貴重な戦利品を開ける",
+   "text": "いい香りがすると思ったら、やっぱりお宝がありましたね。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 71,
+   "title": "謎解きに成功・1",
+   "text": "謎解きは調香と同じで、少しでも間違えると正しい結果には辿り着けないのです。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 72,
+   "title": "謎解きに成功・2",
+   "text": "勝利の法は、綿密な分析にあり。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 73,
+   "title": "敵ターゲット発見",
+   "text": "鼻を突くような臭い…明らかに悪意がありますね。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 74,
+   "title": "町に戻る",
+   "text": "この賑やかな雰囲気…いつも懐かしく感じます。",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "キャラクター詳細",
+   "text": "新しく仙舟「羅浮」丹鼎司の司鼎に就任した、美しく聡明な医士。<br />鋭い嗅覚で病を突き止め、薫香で患者を落ち着かせる。<br />複雑な人間関係の中でも上手く立ち回るのが得意。たとえ心の奥が激しい怒りに燃えていようと、表面上は平静を保ち、他人に隙を見せることはない。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "ストーリー・1",
+   "text": "煙が立ち昇る丹鼎を見つめながら、少女は落ち着かない様子で座布団に腰を下ろした。その輝く両目は上下に躍る丹炉の蓋に注目している。<br />そして薬の完成を知らせる爆発音がすると、少女は真っ黒に焦げた煎餅のようになった顔を気にすることなく、きらきらと光る丹薬を掴み、嬉しそうに師匠の診察室に駆け込んだ。<br />「雲華師匠！見てください、できました！」<br /><br />混み合う診察室では丹鼎司の司鼎、雲華が病人に治療を施しているところだった。<br />集中している師匠を見て、少女は大人しく雲華の後ろに引っ込むと、俯いて軽く丹薬の匂いを嗅ぐ。<br />「この症状は…少し複雑ですね……」<br />すると、師匠の躊躇うような言葉に反応したように、少女は病人に近づいて匂いを嗅いだ。<br />「丹朱、あなたほど鼻の利く者はいません。この患者の病について何か気づいたことがあったら、ぜひ聞かせてください」雲華は少女を近くに呼び寄せ、励ますように彼女を見つめる。<br />「ええと…熟れすぎた果実のような匂いがするので…脾臓に問題があり、消渇の症状が出ているのかと……」<br />「よろしい…たしかに初期症状に当てはまります。では、どの薬を用いるべきだと思いますか？」<br />少女は手の中の丹薬を突き出して、大声で言った。「回生丹を半粒、水で服用とします！」<br />…<br />その日の診療が終わると、少女は雲華の後ろをついて回りながら、不思議そうに尋ねた。<br />「師匠、なぜ毎日ご自分で患者を診られているのですか？丹鼎司の他の上級医士たちは、自分のことにかかりきりか、名士や富豪の家を訪問するかなのに……」<br />雲華は診療録の整理を終えると、しゃがんで少女の頭を撫でた。<br />「丹朱…もしかして、どこかで何か聞いたのでは？」<br />「うっ…実は先日、師匠のことを悪く言っている人がいまして……」そう言って項垂れる少女は、今にも泣き出しそうだ。<br />「丹朱、医士の職務は何だと思いますか？」雲華は微笑みながら丹朱を抱き締めた。<br />「それはもちろん、薬を研究して、人の命を救うことです……」<br />「それなら、我々医士は日々真剣に仕事に取り組み、職責を果たさなければなりませんよね？違いますか？」<br />「…はい、師匠」<br />師匠の優しい微笑みを見つめながらも、心に残るわずかな疑念が晴れることはなかった。",
+   "unlockRequirement": "キャラLv.<nobr>20</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・2",
+   "text": "丹鼎司で雲華について学んだ毎日は、彼女の人生の中で最も充実した時間だったといえるだろう。<br /><br />嗅覚の鋭い蛇のように、彼女は芳しい薬草の間をするすると行き来しては、異なる星から来た珍しい生物の研究をしていた。魔陰の身の起源、豊穣の忌み物の本質、魔陰の身の発作を和らげる丹薬…どの研究課題も彼女を夢中にさせ、日々収穫と喜びを与えてくれていたのだ。<br /><br />そうして彼女が薬の香りと妄想に浸っている間に、丹鼎司の情勢は静かに不穏な動きを見せていた。<br />数十日にわたる徹底的な内部監察を経て、争いの波はついに司鼎雲華にまで及んだ。<br />彼女は紙切れ1枚で司鼎の地位を剥奪されることになったのである。<br /><br />実を言うと、このような事態に陥る前に、彼女は奇妙な臭いを嗅ぎつけていた。<br />龍師たちの内緒話、丹鼎司内に漂う嗅ぎ慣れない丹薬の香り、さらには謎の知らせを受け取った師匠が、連夜幽囚獄に通っていたこと…しかし、これらの出来事の関連性に気づいた時には、何もかもが遅すぎたのだ。<br />彼女は丹鼎司の先輩に助けを求めたが、それまでは優しかったはずの彼も、次期司鼎の座を狙い目の色を変えていた。そして最終的に彼女が受け取ったのは、冷たい返事と警告だけだったのである。<br />彼女は異議を申し立てたが、何度書類を提出しようと、同じような内容の文書が返ってくるばかりだった。<br />それでも彼女は、患者の命を救うという使命を片時も忘れたことのない司鼎が、人としてあるまじき残忍な行いをしたなどとは決して信じなかった。<br /><br />そのことでまた人と言い合いになった、ある日。どこからともなく現れた雲華が優しく彼女の肩を叩いた。<br />「丹朱、私を庇う必要はありません…もう疲れました。ここを出るのも悪くないでしょう」<br />彼女は師匠を追いかけたが、それ以上何か言うことはなかった。なぜなら、ある臭いが彼女の鼻腔を満たしたからである――<br />――それは陰謀の臭いだった。<br />",
+   "unlockRequirement": "キャラLv.<nobr>40</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・3",
+   "text": "彼女は即座に理解した――ここを離れたほうがいいのかもしれないと。<br />師弟は龍師の助けを借りて羅浮を離れ、朱明へと向かった。その道中、過去のさまざまな出来事が脳裏に蘇っては消えていく。丹薬作りに没頭していた2人は、人々の悪意が織り成した網が自分たちを覆っていることに気づかなかったのである。<br /><br />「俗世との向き合い方を知らなければ、自分の理想は遅かれ早かれ打ち砕かれることになる」<br />二度と同じ轍を踏むわけにはいかない――彼女は密かに決意した。<br />雲華の紹介で朱明の龍尊「炎庭君」と知り合い、「金鱗燃犀」一派に入門した彼女は、針灸、お香、炎治療など、さまざまな特殊な医術を学んだ。<br />それに加え、外のことに無関心だった自分を改め、何食わぬ顔でいろいろな人と関わり合うようになったのである。<br /><br />そして時間が経つにつれ、彼女はすべての人、すべての「病」に独特の「におい」があることに気づき始めた。<br />嫉妬と陰謀の腐臭なら嗅いだことがある。<br />朱明で学んでいる間、知らぬ間に薬材が失くなったことがあるのだが、そのせいで誤解され、冷遇されようと、彼女が押し潰されることはなかった。それどころか、大勢の先輩丹士を遥かに凌ぐ調香技術で、あらゆる疑念と嘲笑を一蹴したのである。<br />陰謀や虚偽の生臭いにおいも嗅いだことがある。<br />他の星の生物工学専門家を迎え入れた時、相手の謀略をひとつずつ暴き、徐々に策を進め、ついには彼らが薬王秘伝と共に企んだ計画を失敗に終わらせた。<br />さらには、欲に目がくらんだ者が発する悪臭も嗅いだことがある。<br />朱明の軍医に任命された時、軍の薬品に隠された大きな利益に気づき、顔色ひとつ変えずに密かに調査を進め、不正に手を染めた関係者たちを一挙に処分した。<br /><br />人々が抱えるさまざまな「病」も、彼女が診察すれば露わになる。そして彼女が自ら調合した「香り」で、その異臭を取り除くのだ。<br />「私は師匠のように俗世を超越するような存在にはなれません。それならいっそ、人の心の在り様について見聞を深め、異臭を放つ人々と戦おうではありませんか」<br />彼女は自身の名前を「霊砂」と改めた。<br />それは陰陽の均衡を整え、水と火を調和させ、人々を危機から救う妙薬の名であると同時に、彼女自身がなりたいと望む姿でもある。",
+   "unlockRequirement": "キャラLv.<nobr>60</nobr>で解放"
+  },
+  {
+   "title": "ストーリー・4",
+   "text": "彼女はお香を使い、羅浮の丹術と朱明の「金鱗燃犀」の技術を巧みに融合させ、次第に同盟に知らぬ者のいない著名な医士へと成長した。<br /><br />同盟から羅浮丹鼎司の司鼎に任命された時、一時は夢見心地であった霊砂。しかしいざ羅浮に到着すると、丹鼎司の状況は改善されていないどころか、彼女が去った時よりもひどい内部抗争が発生していることを、失望と共に知ることになった。<br />「第一に、利益が複雑に絡み合い、人間関係に問題がある。第二に、専門性に欠け、責任の押し付け合いをしている。第三に、賞罰が不公平で、そのために人々の心が乱されている。第四に、研究を蔑ろにしているだけでなく、診察を軽んじている。第五に、権力を持つ者が大小問わず仕事を奪っていくため、向上心のある者が落胆している。長年積もりに積もった問題は数知れない……」<br />彼女は笑顔で人と交流している間も、心の中では静かに相手の人物像を定め、己の立ち向かうべき問題を明確にしていった。<br /><br />とはいえ、丹鼎司の問題は一朝一夕で解決できるものではない。<br />龍師の上辺だけの親切にしろ、丹鼎司の医士による事実の歪曲にしろ、他の部門との水掛け論にしろ、すべてが彼女の頭痛の種だ。心を落ち着かせるために、彼女は毎日たくさんのお香を焚かなければならなかった。<br />「怒らない怒らない、怒ったせいで病気にでもなったら、誰が私の代わりを務めるというの……」<br />医士の見るに堪えない報告書に苦笑しながら、彼女は無意識に自分のこめかみを揉んだ。<br /><br />外からは相変わらず波の音が聞こえてくる。<br />彼女は窓の外の引いては満ちていく海を眺め、雲華も当時はこうして毎日を過ごしていたのだろうと考えた。<br />「師匠…世間の浮き沈みに直面しながら、それでも諦めずに前に進み続けるというのは、簡単なことではありませんね……」<br />かつては丹炉で顔を真っ黒にしていた少女も、今ではいくつもの問題を抱え込む大人になってしまったのである。",
+   "unlockRequirement": "キャラLv.<nobr>80</nobr>で解放"
+  }
+ ],
+ "archive": {
+  "cvCn": "饶梓君",
+  "cvJp": "前田佳織里",
+  "cvKr": "장예나",
+  "cvEn": "Whitney Holland",
+  "camp": "仙舟「羅浮」"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328,
+  "rankConfig": {
+   "3": {
+    "459531": 2,
+    "944644": 2
+   },
+   "5": {
+    "28585": 2,
+    "744058": 1
+   }
+  }
+ },
+ "name": "霊砂",
+ "rarity": 5,
+ "descHash": "新しく仙舟「羅浮」丹鼎司の司鼎に就任した、美しく聡明な医士。 鋭い嗅覚で病を突き止め、薫香で患者を落ち着かせる。 複雑な人間関係の中でも上手く立ち回るのが得意。たとえ心の奥が激しい怒りに燃えていようと、表面上は平静を保ち、他人に隙を見せることはない。",
+ "artPath": "bef204da3273324fd5b0c844be810ef6e36ad8ac3757f61446bc7ecc961e2e5e",
+ "miniIconPath": "192165f699b40c348c17fce7d4ff69a10aac243037633e787190a0371550db2f",
+ "damageType": {
+  "id": 2,
+  "iconPath": "f31e4c89ba28d5755b8bb082a0ab5eca99b345e87c07bbe46ef43b47b4684315",
+  "color": "#F84F36",
+  "name": "炎",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "138157815bdf8ef6be6fa8d6e50ae13d4a4f6d00321760144a3ec9763e4b42bb",
+  "altIconPath": "c3cb2c87568e0230ced320492630c84b77ff8d941d9caf26c02d886c0290083f",
+  "color": "#FFFFFF",
+  "name": "豊穣",
+  "rarity": 0
+ },
+ "pageId": "lingsha"
+}

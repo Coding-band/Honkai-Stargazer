@@ -493,7 +493,7 @@
    "iconPath": "2b5b72d609a83f0aab96dcc9c7d4685cc82ebba1cc1596472f86ad054aa2acac",
    "artPath": "8afff67803dca0e05032ae8393a91d16646c30149f8339284d52a29d529fd6f3",
    "name": "Feu des neufs transformations",
-   "descHash": "Lorsqu'une cible ennemie est éliminée, ses cumuls de Charbons ardents accumulés sont transférés à l'ennemi ayant le moins de cumuls de Charbons ardents sur le champ de bataille. La limite de cumuls de Charbons ardents passe à <nobr>#2[i]</nobr>. Chaque cumul de Charbons ardents réduit toutes les RÉS de type de la cible de <nobr>#3[i]%</nobr>.",
+   "descHash": "Lorsqu'une cible ennemie est éliminée, ses cumuls de Charbons ardents sont transférés à l'ennemi ayant le moins de cumuls de Charbons ardents sur le champ de bataille. La limite de cumuls de Charbons ardents passe à <nobr>#2[i]</nobr>. Chaque cumul de Charbons ardents réduit toutes les RÉS de type de la cible de <nobr>#3[i]%</nobr>.",
    "params": [
     1,
     9,
@@ -1694,7 +1694,7 @@
   },
   {
    "tagHash": "Incapacitation",
-   "descHash": "Crée une dimension spéciale qui dure <nobr>#2[i]</nobr> secondes après avoir utilisé la technique. Inflige des DGT de feu équivalents à <nobr>#1[i]%</nobr> de l'ATQ de Jiaoqiu à tous les ennemis, avec <nobr>#3[i]%</nobr> de <u>chances de base</u> d'appliquer 1 cumul de Charbons ardents après être entré en combat avec des ennemis dans cette dimension. Il ne peut exister qu'1 dimension créée par les alliés à la fois.",
+   "descHash": "Crée une dimension spéciale qui dure <nobr>#2[i]</nobr> secondes après avoir utilisé la technique. Inflige des DGT de feu équivalents à <nobr>#1[i]%</nobr> de l'ATQ de Jiaoqiu à tous les ennemis, avec <nobr>#3[i]%</nobr> de <u>chances de base</u> d'appliquer 1 cumul de Charbons ardents après être entré en combat avec des ennemis dans cette dimension spéciale. Il ne peut exister qu'1 dimension créée par les alliés à la fois.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
@@ -2194,7 +2194,7 @@
   {
    "id": 1,
    "title": "Première rencontre",
-   "text": "C'est un plaisir de te rencontrer ! Je suis Jiaoqiu, guérisseur militaire du Yaoqing, sous les ordres de Feixiao, la Serre du griffon. On peut aussi dire que je suis un genre de conseiller. Comment je dois t'appeler ? Tu peux m'appeler Jiao si tu veux, ou Qiu, c'est toujours une syllabe de gagné.",
+   "text": "C'est un plaisir de te rencontrer ! Je suis Jiaoqiu, le guérisseur militaire du Yaoqing, sous les ordres de Feixiao, la Serre du griffon. On peut aussi dire que je suis un genre de conseiller. Comment tu dois m'appeler ? Tu peux m'appeler Jiao si tu veux, ou Qiu, c'est toujours une syllabe de gagné.",
    "unlockRequirement": "",
    "cnUrl": "ccc4997acda917452253029109634b47b0b25859ccddf5004dee0f755ab3a582",
    "jpUrl": "71848a8b9d85ad4fc1a678867d91535aa90006c17282ce19a44745b8d728eeff",
@@ -2344,7 +2344,7 @@
   {
    "id": 16,
    "title": "À propos de Sushang",
-   "text": "La première fois que j'ai vu Sushang, elle était dans les bras de Suyi, à sucer son pouce. J'ai l'impression que c'était hier que je l'aidais à sécher les cours et qu'elle se faisait réprimander par Suyi... Ah, je me fais vieux.",
+   "text": "La première fois que j'ai vu Sushang, elle était encore dans les bras de Suyi, à sucer son pouce. J'ai l'impression que c'était hier que je l'aidais à sécher les cours et qu'elle se faisait réprimander par Suyi... Ah, je me fais vieux.",
    "unlockRequirement": "",
    "cnUrl": "674b58f450f91b9cbe56126ef53478bfb7ebaabf53f0fc3f9db699eba4a2e699",
    "jpUrl": "37a4ef2434bcdc999890bb8df28a8b869262059e1880b24c2293c2d8a03afef2",
@@ -2364,7 +2364,7 @@
   {
    "id": 18,
    "title": "À propos de Yunli",
-   "text": "Mademoiselle Yunli a beau être la plus jeune membre de l'Octuor du disque enflammé, elle est au moins aussi douée à l'épée que les sept autres. Certains insinuent qu'elle profite de son lien avec Huaiyan, mais elle n'aurait pas pu supporter une telle rigueur et un tel entraînement si elle n'avait pas du talent.",
+   "text": "Mademoiselle Yunli a beau être la deuxième plus jeune membre de l'Octuor du disque enflammé, elle est au moins aussi douée à l'épée que les sept autres. Certains insinuent qu'elle profite de son lien avec Huaiyan, mais elle n'aurait pas pu supporter une telle rigueur et un tel entraînement si elle n'avait pas du talent.",
    "unlockRequirement": "",
    "cnUrl": "c54493a8e5f02141adebb587ee05b0e3da43fbc117618b21b859bfcd7331c5a9",
    "jpUrl": "1aaf4810283e5a1c84c183c0d96b5e925ef13140d0ef6d7df853e139241f4f83",
@@ -2374,7 +2374,7 @@
   {
    "id": 19,
    "title": "À propos de Fu Xuan",
-   "text": "Ceux qui trouvent que la maîtresse de la divination est étrange devraient se rendre dans son monde d'origine, le Yuque de Xianzhou. C'est le bastion des adeptes du Propagateur du Savoir. Là-bas, les conversations sont à base de : « Il sait que tu sais que je sais qu'il sait, non ? ».",
+   "text": "Ceux qui trouvent que la maîtresse de la divination est étrange devraient se rendre dans son monde d'origine, le Yuque de Xianzhou. C'est le bastion des adeptes du Propagateur du Savoir. Là-bas, les conversations sont à base de : « Il sait que tu sais que je sais qu'il sait ».",
    "unlockRequirement": "",
    "cnUrl": "dde5ea1f8fe21b450a9b9a746d805157197b91ab05ece6b925d355c8b4aafbff",
    "jpUrl": "2be5dfdeb8e8971ac847809dea53be68ad0f212f1cbdee4e4dde1ba4ce83493b",
@@ -2454,7 +2454,7 @@
   {
    "id": 27,
    "title": "Niveau max atteint",
-   "text": "Un sentiment de sécurité familier... ça brûle de l'intérieur.",
+   "text": "Un sentiment de sécurité familier... Ça brûle de l'intérieur.",
    "unlockRequirement": "",
    "cnUrl": "051e7f8aa4e5041abc49403f8a7e1d0e91d031c3c7a2f5376ebcbdecf2195285",
    "jpUrl": "fb22977ca867e17d8311e64b6c8d63815ac4a3a3f2ea4e67004a447d43d07692",
@@ -2484,7 +2484,7 @@
   {
    "id": 30,
    "title": "Rejoint l'équipe avec Jing Yuan",
-   "text": "Je n'aurais jamais imaginé que dans cette vie, je me battrais aux côtés de la Clairvoyance divine en personne.",
+   "text": "Je n'aurais jamais imaginé que dans cette vie, je me battrais aux côtés du Clairvoyant en personne.",
    "unlockRequirement": "",
    "cnUrl": "d6ad52111e9e514a6e1397e7a62e6d413456ebdfc924f447e3b6a780ad25cea7",
    "jpUrl": "2c2531e8112a11cb4e0159e10b33a9ebdf1e199986a27422ba52aab7dc92ede7",
@@ -2494,7 +2494,7 @@
   {
    "id": 31,
    "title": "Rejoint l'équipe avec Sushang",
-   "text": "Un tel trésor ancestral a été remis entre tes mains ? Impressionnant Sushang.",
+   "text": "Un tel trésor ancestral a été remis entre tes mains ? Impressionnant, Sushang.",
    "unlockRequirement": "",
    "cnUrl": "bf639f519d3c3503139378adad751e4b338737ebecc99fa0ef37ff34cf18c588",
    "jpUrl": "7a9695831f558c421fab219f958e632867152e3e29e30235d139fd9b1a600aa6",
@@ -2504,7 +2504,7 @@
   {
    "id": 32,
    "title": "Rejoint l'équipe avec Yanqing",
-   "text": "La sécurité avant tout, Yanqing. S'il t'arrive quoi que ce soit, je ne pourrais jamais regarder le général Jing Yuan dans les yeux.",
+   "text": "La sécurité avant tout, Yanqing. S'il t'arrive quoi que ce soit, je ne pourrai jamais regarder le général Jing Yuan dans les yeux.",
    "unlockRequirement": "",
    "cnUrl": "b46226cfb60b8e8fff69f50a86fb7922977f0aaaf9a9c78f7822c1c403d23221",
    "jpUrl": "8489f6307c0513233c50f41364a66f387bbcdf4d3e5987d9c4570129262df16f",
@@ -2530,6 +2530,36 @@
    "jpUrl": "ab2598cbe09409c89ff4782041efb599f812898a68d1637a91d8d8fc08fc561e",
    "enUrl": "669bcf0f3b17f4b8dea5519f58538197a4fa92d811964b9f1349009c24900941",
    "krUrl": "303844843a97fad2088a7d9892443a5f6e03862081644ec0ac590d112abb4411"
+  },
+  {
+   "id": 35,
+   "title": "Rejoint l'équipe avec Moze",
+   "text": "Je vais attiser les flammes. Toi, tu t'infiltres dans l'ombre.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 36,
+   "title": "Rejoint l'équipe avec Feixiao",
+   "text": "Quoi que je dise, Générale, on dirait que vous ne changerez pas d'avis à propos de cette bataille... On devrait en rediscuter plus tard.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 37,
+   "title": "Rejoint l'équipe avec Lingsha",
+   "text": "Montrez-moi de quoi vous êtes capable, Lingsha.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
   },
   {
    "id": 51,
@@ -2644,7 +2674,7 @@
   {
    "id": 62,
    "title": "Déclenchement de l'ultime",
-   "text": "Puisque vous êtes déjà là, pourquoi ne pas manger avant de partir ?",
+   "text": "Puisque vous êtes déjà là, pourquoi ne pas partager un repas avant de partir ?",
    "unlockRequirement": "",
    "cnUrl": "c157946611d6fed243feaf229b8de61d4bfc08ff4bbb926c161a7ccd66488fbf",
    "jpUrl": "a6a3ba44ea8ded4a999e2f971523a2e5ad212a26a312428d87516d81f53e7d85",
@@ -2654,7 +2684,7 @@
   {
    "id": 63,
    "title": "À terre",
-   "text": "Pardon... Général...",
+   "text": "Pardon... Générale...",
    "unlockRequirement": "",
    "cnUrl": "611b6f1098475bb6f00300916e10da3f1a87f27fb11abd2432a3803714d8e502",
    "jpUrl": "327bed0aafa1fa1d5aad91c2482a02b054a7fe8c1a9fd4263a1aa055c2c3e580",
@@ -2780,22 +2810,22 @@
   },
   {
    "title": "Histoire du personnage : Partie I",
-   "text": "Yaoqing, lac Haute-averse.<br />Au milieu de la bruine, des nénuphars jaunes flottaient à la surface du lac, tandis que des poissons sautaient de temps à autre hors de l'eau. Les abords du lac regorgeaient de lotus et de châtaignes d'eau, et l'on pouvait apercevoir tous les jours de vieilles tortues se prélasser sur des galets.<br /><br />Un jeune Foxien, portant sur son dos un panier dédié à la cueillette, manœuvrait une barque, les gouttes de pluie ruisselant le long de ses oreilles.<br />Il ramassait les nénuphars et les fleurs de lotus à la surface de l'eau, écossait les tiges de riz sauvage et les jetait nonchalamment dans sa bouche.<br />« C'est tellement bon et rafraîchissant, c'est un délice pour les papilles... »<br />Après avoir cueilli les plantes, il ramena sa barque sur le rivage qu'il longea avec aisance et grâce, avant de revêtir sa tenue de guérisseur.<br />...<br />De la vapeur s'échappait de l'apothicaire et des arômes alléchants emplissaient l'air.<br />« Votre pouls est plus stable que la dernière fois, mais vous devriez davantage vous reposer et nourrir votre corps. Voulez-vous essayer un de mes nouveaux médicaments ? »<br />En souriant, il repoussa le coussinet et les aiguilles dorées, et étala sa toute nouvelle panoplie d'outils médicaux.<br />Alors que le vieil homme observait ce drôle de chaudron, il eut un sourire en coin.<br />« Là où d'autres peinent à inventer quelques médicaments décents au cours de leur vie, toi, tu y parviens en un jour seulement. »<br />« Vous me flattez, Maître. Cette formule médicinale élaborée dans un chaudron porte le nom de \"grille à neuf cases\". Non seulement elle est facile à réaliser, mais ses effets sont incroyables. »<br />Le jeune homme prit les ingrédients dans son panier, les nettoya rapidement avant de les découper. Ce faisant, le contenu du chaudron se mit à bouillonner.<br />« Un tael d'euphorbe, trois qian de bois amer et quatre pincées de cistanche du désert. Faire bouillir le tout avec de gros os, puis mélanger avec des fruits de mer pour enlever l'amertume. Cette concoction aide à trouver un sommeil paisible. Quant à la loche blanche et au vivaneau voilier, leurs propriétés réchauffantes sont excellentes pour nourrir le qi et le sang. Il suffit de les cuire pendant deux à trois secondes.<br />Les champignons verts, les feuilles de thé blanc et les racines de lotus des neiges sont cultivés par mes soins avec le marc des décoctions ici, au lac Haute-averse. Non seulement ce plat est goûteux et rafraîchissant, mais en plus, il a des vertus médicinales. »<br />Le maître et son disciple trempèrent leurs tranches de poisson brillantes dans la soupe chaude et savourèrent ce repas délicieux qui leur fit oublier la froideur humide de ce jour pluvieux.<br /><br />À la fin du repas, le vieil homme posa ses baguettes, désormais certain d'une chose.<br />« Ce que je viens de manger, cette \"grille à neuf cases\"... J'ai l'impression que ce repas est un prétexte pour aborder un autre sujet. »<br />Le jeune homme se leva et s'inclina solennellement.<br />« En effet, Maître. Vous êtes perspicace. J'ai beaucoup réfléchi quant à rejoindre la Commission d'alchimie.<br />C'est un lieu formidable, mais après réflexion, il ne correspond pas à ma façon d'envisager la médecine. La place des guérisseurs est sur le champ de bataille, avec les forces du Yaoqing.<br />Parmi les nombreuses écoles de guérisseurs, seule l'école Ranzhi met l'accent sur le lien entre l'alimentation et la médecine. La \"grille à neuf cases\", rapide et efficace, permet de lutter contre le froid qui affecte notre organisme, et a été spécialement conçue par mes soins pour venir en aide aux soldats sur le champ de bataille.<br />Pour ceux qui sont entre la vie et la mort, rien n'est plus important que de rester en vie. C'est en leur apportant un remède que je fais honneur aux enseignements de la Commission d'alchimie. »<br />Le vieil homme sembla vouloir dissuader son disciple, mais se ravisa.<br />« Le champ de bataille est un endroit glacial. Veille à faire le plein de nourriture qui réchauffe le cœur avant de partir. »",
+   "text": "Yaoqing, lac Haute-averse.<br />Au milieu de la bruine, des nénuphars jaunes flottaient à la surface du lac, tandis que des poissons sautaient de temps à autre hors de l'eau. Les abords du lac regorgeaient de lotus et de châtaignes d'eau, et l'on pouvait apercevoir tous les jours de vieilles tortues se prélasser sur les galets.<br /><br />Un jeune Foxien, portant sur son dos un panier dédié à la cueillette, manœuvrait une barque, les gouttes de pluie ruisselant le long de ses oreilles.<br />Il ramassait les nénuphars et les fleurs de lotus à la surface de l'eau, écossait les tiges de riz sauvage et les jetait nonchalamment dans sa bouche.<br />« C'est tellement bon et rafraîchissant, c'est un délice pour les papilles... »<br />Après avoir cueilli les plantes, il ramena sa barque sur le rivage qu'il longea avec aisance et grâce, avant de revêtir sa tenue de guérisseur.<br />...<br />De la vapeur s'échappait de l'apothicaire et des arômes alléchants emplissaient l'air.<br />« Votre pouls est plus stable que la dernière fois, mais vous devriez davantage vous reposer et nourrir votre corps. Voulez-vous essayer un de mes nouveaux médicaments ? »<br />En souriant, il repoussa le coussinet et les aiguilles dorées, et étala sa toute nouvelle panoplie d'outils médicaux.<br />Alors que le vieil homme observait ce drôle de chaudron, il eut un sourire en coin.<br />« Là où d'autres peinent à inventer quelques médicaments décents au cours de leur vie, toi, tu y parviens en un jour seulement. »<br />« Vous me flattez, Maître. Cette formule médicinale élaborée dans un chaudron porte le nom de \"grille à neuf cases\". Non seulement elle est facile à réaliser, mais ses effets sont incroyables. »<br />Le jeune homme prit les ingrédients dans son panier, les nettoya rapidement avant de les découper. Ce faisant, le contenu du chaudron se mit à bouillonner.<br />« Un tael d'euphorbe, trois qian de bois amer et quatre pincées de cistanche du désert. Faire bouillir le tout avec de gros os, puis mélanger avec des fruits de mer pour enlever l'amertume. Cette concoction aide à trouver un sommeil paisible. Quant à la loche blanche et au vivaneau voilier, leurs propriétés réchauffantes sont excellentes pour nourrir le qi et le sang. Il suffit de les cuire pendant deux à trois secondes.<br />Les champignons verts, les feuilles de thé blanc et les racines de lotus des neiges sont cultivés par mes soins avec le marc des décoctions ici, au lac Volauvent. Non seulement ce plat est goûteux et rafraîchissant, mais en plus, il a des vertus médicinales. »<br />Le maître et son disciple trempèrent leurs tranches de poisson brillantes dans la soupe chaude et savourèrent ce repas délicieux qui leur fit oublier la froideur humide de ce jour pluvieux.<br /><br />À la fin du repas, le vieil homme posa ses baguettes, désormais certain d'une chose.<br />« Ce que je viens de manger, cette \"grille à neuf cases\"... J'ai l'impression que ce repas est un prétexte pour aborder un autre sujet. »<br />Le jeune homme se leva et s'inclina solennellement.<br />« En effet, Maître. Vous êtes perspicace. J'ai beaucoup réfléchi quant à rejoindre la Commission d'alchimie.<br />« C'est un lieu formidable, mais après réflexion, il ne correspond pas à ma façon d'envisager la médecine. La place es guérisseurs est sur le champ de bataille, avec les forces du Yaoqing. »<br />« Parmi les nombreuses écoles de guérisseurs, seule l'école Ranzhi, met l'accent sur le lien entre l'alimentation et la médecine. La \"grille à neuf cases\", rapide et efficace, permet de lutter contre le froid qui affecte notre organisme, et a été spécialement conçue par mes soins pour venir en aide aux soldats sur le champ de bataille. »<br />« Pour ceux qui sont entre la vie et la mort, rien n'est plus important que de rester en vie. C'est en leur apportant un remède que je fais honneur aux enseignements de la Commission d'alchimie. »<br />Le vieil homme sembla vouloir dissuader son disciple, mais se ravisa.<br />« Le champ de bataille est un endroit glacial. Veille à faire le plein de nourriture qui réchauffe le cœur avant de partir. »",
    "unlockRequirement": "Disponible au niveau <nobr>20</nobr> de personnage"
   },
   {
    "title": "Histoire du personnage : Partie II",
-   "text": "Les troupes du Yaoqing étaient en guerre perpétuelle sur des planètes lointaines. Le jeune homme s'évertuait à apporter des améliorations à ses méthodes médicinales pour faire face à un environnement de plus en plus difficile et complexe.<br /><br />Ses méthodes inhabituelles et pourtant efficaces furent bientôt sur toutes les lèvres, et le jeune homme gagna la confiance aussi bien des soldats que des officiers du Yaoqing.<br />Malgré ce succès, son cœur restait lourd.<br />Chaque jour, lorsque le clairon sonnait l'heure du départ des troupes, il savait que les blessés remis sur pieds par ses soins devraient retourner au combat.<br />Et chaque jour, lorsqu'il entendait les pas des soldats qui rentraient, il savait qu'il manquerait quelques visages familiers autour de son chaudron.<br />Il ne fallut pas longtemps avant que même celui qui rentrait toujours au camp en réclamant sa part haut et fort passe l'arme à gauche.<br />À la fin de sa journée de consultation, il quitta l'hôpital militaire en poussant un long soupir. Le froid ne le dérangeait pas le moins du monde, malgré les rafales de neige qui s'abattaient sur lui.<br />Lorsque le clairon retentit une fois de plus, les troupes étaient parées à partir. L'hôpital militaire serait bientôt surchargé de soldats grièvement blessés, comme d'habitude. Certes, il savait remettre les jeunes blessés sur pied, mais ils finiraient par perdre la vie dans cette guerre féroce et sans fin...<br /><br />Chaque soir, il discutait avec le général Yueyu. Ce jour-là pourtant, il resta silencieux étonnamment longtemps.<br />« J'ai beaucoup réfléchi, ces derniers temps... Si ceux que je soigne sont voués à une mort certaine, à quoi bon les soigner ? »<br /><br />Des pleurs étouffés résonnèrent dans l'hôpital. Ce n'est qu'après avoir cligné des yeux plusieurs fois qu'il se rendit compte qu'ils étaient secs, probablement depuis longtemps...<br />Tellement secs que les larmes ne coulaient plus.",
+   "text": "Les troupes du Yaoqing étaient en guerre perpétuelle sur des planètes lointaines. Le jeune homme s'évertuait à apporter des améliorations à ses méthodes médicinales pour faire face à un environnement de plus en plus difficile et complexe.<br /><br />Ses méthodes inhabituelles et pourtant efficaces furent bientôt sur toutes les lèvres, et le jeune homme gagna la confiance aussi bien des soldats que des officiers du Yaoqing.<br />Malgré ce succès, son cœur restait lourd.<br />Chaque jour, lorsque le clairon sonnait l'heure du départ des troupes, il savait que les blessés remis sur pieds par ses soins devraient retourner au combat.<br />Et chaque jour, lorsqu'il entendait les pas des soldats qui rentraient, il savait qu'il manquerait quelques visages familiers autour de son chaudron.<br />Il ne fallut pas longtemps avant que même celui qui rentrait toujours au camp en réclamant sa part haut et fort passe l'arme à gauche.<br />À la fin de sa journée de consultation, il quitta l'hôpital militaire en poussant un long soupir. Le froid ne le dérangeait pas le moins du monde, malgré les rafales de neige qui s'abattaient sur lui.<br />Lorsque le clairon retentit une fois de plus, les troupes étaient parées à partir. L'hôpital militaire serait bientôt surchargé de soldats grièvement blessés, comme d'habitude. Certes, il savait remettre les jeunes blessés sur pied, mais ils finiraient par perdre la vie dans cette guerre féroce et sans fin...<br /><br />Chaque soir, il discutait avec la générale Yueyu. Ce jour-là pourtant, il resta silencieux étonnamment longtemps.<br />« J'ai beaucoup réfléchi, ces derniers temps... Si ceux que je soigne sont voués à une mort certaine, à quoi bon les soigner ? »<br /><br />Des pleurs étouffés résonnèrent dans l'hôpital. Ce n'est qu'après avoir cligné des yeux plusieurs fois qu'il se rendit compte qu'ils étaient secs, probablement depuis longtemps...<br />Tellement secs que les larmes ne coulaient plus.",
    "unlockRequirement": "Disponible au niveau <nobr>40</nobr> de personnage"
   },
   {
    "title": "Histoire du personnage : Partie III",
-   "text": "L'armée devait à nouveau lever le camp.<br />Cependant, les cadavres effroyables, le taux de mortalité toujours plus élevé, les tirs d'artillerie incessants ainsi qu'une créature monstrueuse apparue dans le ciel étaient autant de signes annonciateurs d'une guerre dévastatrice comme jamais auparavant.<br /><br />Jusqu'à ce qu'un jour, l'imposant Nimbutélescope, témoin des volontés de milliards de citoyens de Xianzhou, reçoive une réponse de SA part.<br />Une virulente détonation se fit entendre, oblitérant les faibles Abominations de l'Abondance en charpie sanglante. L'éclair de lumière aveuglant déchira le dôme céleste.<br />Même les montagnes et les collines volèrent en éclats.<br />Il vit les Abominations de l'Abondance et les membres de la légion de Xianzhou trop lents à s'enfuir être pulvérisés.<br />Il entendit parler d'une jeune fille, toujours aux côtés du général Yueyu, parvenue à s'extirper des rangs ennemis ravagés en tentant de ramener les soldats encore en vie.<br />Avant que la vague de lumière ne les rattrape, il rassembla le peu de forces qu'il lui restait et se rua vers la jeune fille pour la secourir, avant de s'évanouir dans le sillage de la lumière dévastatrice.<br />...<br />Les bannières en lambeaux flottaient au vent tandis que les quelques survivants se rassemblaient en silence autour d'un feu de joie.<br />Blang, blang, blang.<br />Une bourrasque fit rouler un chaudron cabossé sur le sol désolé.<br /><br />Son corps aurait dû s'acclimater depuis longtemps au froid glacial, en raison de sa présence prolongée sur cette planète. Pourtant, il n'avait jamais eu aussi froid. Un froid qui lui mordait les entrailles.<br />D'un geste maîtrisé, il ramassa le récipient en fer, le remplit d'eau qu'il porta à ébullition avant d'y jeter quelques restes alimentaires.<br />« C'est encore froid... »<br />Les survivants mangèrent leur pitance sans mot dire.<br />« Ça manque d'épices. »<br />Il saisit le sachet de médicaments qu'il avait toujours sur lui.<br />« Ce n'est pas assez épicé. »<br />Il ajouta des piments à la préparation.<br />« Ce n'est pas encore ça. »<br />Il versa dans le chaudron toutes les épices qu'il lui restait.<br />« Et voilà. »<br />Tandis que bouillonnait l'huile des piments, il préleva une herbe dans le chaudron pour la goûter. Lorsque son sens du goût, déjà engourdi, perçut enfin l'épice, un courant électrique lui traversa le corps. Pour la première fois, il se sentit vivant !<br />Ce choc en était presque douloureux.",
+   "text": "L'armée devait à nouveau lever le camp.<br />Cependant, les cadavres effroyables, le taux de mortalité toujours plus élevé, les tirs d'artillerie incessants ainsi qu'une créature monstrueuse apparue dans le ciel étaient autant de signes annonciateurs d'une guerre dévastatrice comme jamais auparavant.<br /><br />Jusqu'à ce qu'un jour, l'imposant Nimbutélescope, témoin des volontés de milliards de citoyens de Xianzhou, reçoive une réponse de SA part.<br />Une virulente détonation se fit entendre, oblitérant les faibles Abominations de l'Abondance en une charpie sanglante. L'éclair de lumière aveuglant déchira le dôme céleste.<br />Même les montagnes et les collines volèrent en éclats.<br />Il vit les Abominations de l'Abondance et les membres de la légion de Xianzhou trop lents à s'enfuir être pulvérisés.<br />Il entendit parler d'une jeune fille, toujours aux côtés de la générale Yueyu, parvenue à s'extirper des rangs ennemis ravagés en tentant de ramener les soldats encore en vie.<br />Avant que la vague de lumière ne les rattrape, il rassembla le peu de forces qu'il lui restait et se rua vers la jeune fille pour la secourir, avant de s'évanouir dans le sillage de la lumière dévastatrice.<br />...<br />Les bannières en lambeaux flottaient au vent tandis que les quelques survivants se rassemblaient en silence autour d'un feu de joie.<br />Blang, blang, blang.<br />Une bourrasque fit rouler un chaudron cabossé sur le sol désolé.<br /><br />Son corps aurait dû s'acclimater depuis longtemps au froid glacial, en raison de sa présence prolongée sur cette planète. Pourtant, il n'avait jamais eu aussi froid. Un froid qui lui mordait les entrailles.<br />D'un geste maîtrisé, il ramassa le récipient en fer, le remplit d'eau qu'il porta à ébullition avant d'y jeter quelques restes alimentaires.<br />« C'est encore froid... »<br />Les survivants mangèrent leur pitance sans mot dire.<br />« Ça manque d'épices. »<br />Il saisit le sachet de médicaments qu'il avait toujours sur lui.<br />« Ce n'est pas assez épicé. »<br />Il ajouta des piments à la préparation.<br />« Ce n'est pas encore ça. »<br />Il versa dans le chaudron toutes les épices qu'il lui restait.<br />« Et voilà. »<br />Tandis que bouillonnait l'huile des piments, il préleva une herbe dans le chaudron pour la goûter. Lorsque son sens du goût, déjà engourdi, perçut enfin l'épice, un courant électrique lui traversa le corps. Pour la première fois, il se sentit vivant !<br />Ce choc en était presque douloureux.",
    "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
   },
   {
    "title": "Histoire du personnage : Partie IV",
-   "text": "Yaoqing, lac Haute-averse.<br />Au milieu de la bruine, des nénuphars jaunes flottaient à la surface du lac, tandis que des poissons sautaient de temps à autre hors de l'eau. Les abords du lac regorgeaient de lotus et de châtaignes d'eau, et l'on pouvait apercevoir tous les jours de vieilles tortues se prélasser sur des galets.<br /><br />Portant sur son dos un panier d'épices, il mena sa barque au milieu du lac tandis que les gouttes de pluie ruisselaient derrière ses oreilles et mouillaient ses vêtements.<br />Il ramassait les nénuphars et les fleurs de lotus à la surface de l'eau, écossait les tiges de riz sauvage et les jetait dans sa bouche.<br />« Arf, trop fade. » Il secoua la tête.<br />« Monsieur, un homme âgé vous cherchait au restaurant. Il disait être un vieil ami à vous... »<br />Un disciple l'appela depuis l'autre côté du lac, ce à quoi il répondit par un soupir avant de ramener sa barque sur le rivage.<br /><br />Il savait ce que voulait ce visiteur, mais il n'était pas pressé de reprendre la pratique médicale.<br />« Maître, vous êtes venu goûter les plats préparés dans le chaudron du restaurant Haute-averse ? Je dois cependant vous mettre en garde : tous nos mets sont soit très épicés, soit extrêmement épicés. »<br />Le vieil homme, assis à la table, soupira.<br />« Tu préférais la nourriture fade avant de rejoindre l'armée. »<br />Il apporta la marmite, une expression de nostalgie traversant brièvement son regard.<br />« Les gens... finissent toujours par changer. »<br />Le vieil homme prit une tranche de poisson et la déposa dans le bouillon rouge qui laissait échapper de grosses bulles.<br />« Autant goûter, alors. Mais sache que je ne suis pas venu ici pour cela. Tu te souviens de la fille que tu as sauvée ?<br />Elle s'appelait Feixiao. Celle qui suivait l'ancien général comme son ombre. Elle a depuis accédé au grade de général du Yaoqing et a grand besoin d'un guérisseur. Il n'y a personne de mieux placé que toi pour occuper ce poste. »<br />Il eut un sourire ironique, se rappelant sans raison la douleur aiguë qu'il avait ressentie sur la langue ce jour fatidique. « Ceux que j'ai sauvés se sont précipités tête baissée sur le champ de bataille, sans se soucier le moins du monde de leur vie. Je ne veux plus faire de tels efforts inutiles. »<br />Le vieil homme reposa ses baguettes et secoua la tête.<br />« Tu te méprends. Je ne suis pas venu te convaincre de soigner tout le monde, je suis ici parce que je veux que cette générale... guérisse ton cœur découragé.<br />Elle va te montrer... quel est le véritable but d'un guérisseur. »",
+   "text": "Yaoqing, lac Haute-averse.<br />Au milieu de la bruine, des nénuphars jaunes flottaient à la surface du lac, tandis que des poissons sautaient de temps à autre hors de l'eau. Les abords du lac regorgeaient de lotus et de châtaignes d'eau, et l'on pouvait apercevoir tous les jours de vieilles tortues se prélasser sur les galets.<br /><br />Portant sur son dos un panier d'épices, il mena sa barque au milieu du lac tandis que les gouttes de pluie ruisselaient derrière ses oreilles et mouillaient ses vêtements.<br />Il ramassait les nénuphars et les fleurs de lotus à la surface de l'eau, écossait les tiges de riz sauvage et les jetait dans sa bouche.<br />« Arf, trop fade. » Il secoua la tête.<br />« Monsieur, un homme âgé vous cherchait au restaurant. Il disait être un vieil ami à vous... »<br />Un disciple l'appela depuis l'autre côté du lac, ce à quoi il répondit par un soupir avant de ramener sa barque sur le rivage.<br /><br />Il savait ce que voulait ce visiteur, mais il n'était pas pressé de reprendre la pratique médicale.<br />« Maître, vous êtes venu goûter les plats préparés dans le chaudron du restaurant Haute-averse ? Je dois cependant vous mettre en garde : tous nos mets sont soit très épicés, soit extrêmement épicés. »<br />Le vieil homme, assis à la table, soupira.<br />« Tu préférais la nourriture fade avant de rejoindre l'armée. »<br />Il apporta la marmite, une expression de nostalgie traversant brièvement son regard.<br />« Les gens... finissent toujours par changer. »<br />Le vieil homme prit une tranche de poisson et la déposa dans le bouillon rouge qui laissait échapper de grosses bulles.<br />« Autant goûter, alors. Mais sache que je ne suis pas venu ici pour cela. Tu te souviens de la fille que tu as sauvée ?<br />Elle s'appelait Feixiao. Celle qui suivait l'ancienne générale comme son ombre. Elle a depuis accédé au grade de général du Yaoqing et a grand besoin d'un guérisseur. Il n'y a personne de mieux placé que toi pour occuper ce poste. »<br />Il eut un sourire ironique, se rappelant sans raison la douleur aiguë qu'il avait ressentie sur la langue ce jour fatidique. « Ceux que j'ai sauvés se sont précipités tête baissée sur le champ de bataille, sans se soucier le moins du monde de leur vie. Je ne veux plus faire de tels efforts inutiles. »<br />Le vieil homme reposa ses baguettes et secoua la tête.<br />« Tu te méprends. Je ne suis pas venu te convaincre de soigner tout le monde, je suis ici parce que je veux que cette générale... guérisse ton cœur découragé.<br />Elle va te montrer... quel est le véritable but d'un guérisseur. »",
    "unlockRequirement": "Disponible au niveau <nobr>80</nobr> de personnage"
   }
  ],

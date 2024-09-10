@@ -1,0 +1,2752 @@
+{
+ "spRequirement": 120,
+ "iconPath": "9c171448508392a564421710cb700daf48112cb7894c2711f55656984b03ec20",
+ "bgPath": "17ba0336543a6110064ce968cc1f619950a43c19f82836ba79fc44d5d0fc40c0",
+ "figPath": "70f2bb3c3ba9ec8790274bd89effcb472111a7598f2b172dca7a2e5a963ccb8c",
+ "fgPath": "",
+ "splashIconPath": "0796ce574e21aa760d12d6f77bbc308619aa9fddfd26f907bb0df528346e3c2d",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRhYCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSOYAAAABkKNt27FH94fY5gJsGytgZbO20aZ0KlWs01kLsNpUaY3vfe4kM/P9s4SImAD8U4PjGhK9/keCFwxnh3Ib8+HvYg+um8+L0cE+tnTUkPc3azBtaBq2+UFyKtQGfPqfKeqTZ9HQ/mHkXNKiKN6UOuOfHlv8pIjwNQNuTn+4e2edUwnJL27kFkEDYFatCoUiIuSh9oeGJouKf1Dxq9sLAJzbx06phKTw9Wg6GBoAmA98FxFFctYJGgANCV2btCzFp4/NKF3DXzWULFkUPlZGwKYJr+GTnfTJSJg2AA8kpQEGHDV0XcffAVZQOCAKAQAAsAUAnQEqFAAUAD5tMpRHpCKiISgIAIANiUAVhl6j9u/TZnhxgNcqD65NBPxgcSg7IPiH3J2AAP7r/l0mht+wnuolqt5sR0tc7zfYZNWUa5zwXD/JgbNRyKZTgexVuEsXuLFtRUeUaWqHMEC6TH0n0vPDpeBDvk8uCUxLeMOezTX+inGte+7ofnTou4ZD0aqx639kJlLpM6+smK2+cXvEVfKp1EMVc4RljMpfIfOTI6h0CSZXYNIGXfd7UdzKF9D4KOdIyKvEBho8td/sAIj3WehdmVcWAY2B3iI95XlV/yl/zoIGZApM6vFGCTZhyrSjadXfx/2Tn/aJWyA8nt9v4X+E1pMoFn9WQAA=",
+  "w": 2048,
+  "h": 2048
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 2,
+  "iconPath": "0eedf689b50899c8ef651ffc7f7bd298c4ff3cc7972f379bb1572ddca0514380",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "154680875035a2d1a2d7827aa99c35f77a9fc6df9de95cd58800bde4bb17472a",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Calice de la Commission de l'artisanat",
+    "Calice de l'Hôtel Rêverie du Pays des rêves",
+    "Récompense de mission",
+    "Récompense d'affectation",
+    "Échange de braises immortelles"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "04121a915c1d5e0a609e4b59417f441c101eaf1edbb092ffef36dbc24d1ae24b",
+   "name": "Voies de la destinée",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "La victoire s'acquiert au terme de nombreux échecs, et chaque pas conduit à l'instant décisif.",
+   "purpose": "Matériau de Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Récompenses de points de l'Univers simulé",
+    "Honneur des Sans Noms",
+    "Échange de braises immortelles",
+    "Lumières d'étoile",
+    "Récompense d'événement à durée limitée"
+   ]
+  },
+  "151162": {
+   "id": 151162,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "2f7d0e3d768211dac34ea37427f427dfd829759f33660f70ac3c31c1d7670c80",
+   "name": "Clou du cercueil de la bête",
+   "desc": "Section de colonne vertébrale bionique de mecha. Permet l'élévation des personnages de type foudre.",
+   "lore": "Bien que le corps qui l'abrite soit dépourvu de toute vie, ce composant central des mechas conçu sur le modèle des Borissiens a conservé l'ancien Algorithme du massacre dans ses gènes.<br /><br />« Vous voyez des monstres impossibles à tuer, moi je vois une source inépuisable de pièces détachées. Voilà nos différentes perspectives. »",
+   "purpose": "Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/151162",
+   "comeFrom": [
+    "Ombre stagnante de la Prison des enchaînés",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "fe197ceacff72ca32c46a22e6cf77f460edbfa2bc70e5162ad9c9e5485944570",
+   "name": "Guide du voyageur",
+   "desc": "Matériau d'EXP de personnage. Confère <nobr>20</nobr> <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Lecture indispensable à l'exploration des mondes. Appuyez sur le bouton de lecture pour activer une voix agréable, dans une langue de votre choix qui vous racontera les rencontres légendaires d'aventuriers de renom à travers différents mondes, ainsi que la sagesse précieuse et les connaissances qui en découlent.<br /><br />« La nouvelle série du Guide du voyageur, \"Le manuel du chef de la cuisine galactique\" est désormais disponible en magasin. »<br />« Pour toute question, connectez-vous à la balise de synesthésie ERD<nobr>-23</nobr>θ et contactez un représentant de la Guilde de l'intelligentsia. Facilités de paiement disponibles. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Calice de Passenuage",
+    "Calice de la Frontière des rêves",
+    "Salle oubliée"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "3aa3378fafc0e98fb07b480ae468b4fc5b29027f1ec3d000d89353e7ae656832",
+   "name": "Journal d'aventure",
+   "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Calice de Passenuage",
+    "Calice de la Frontière des rêves",
+    "Entraînement quotidien",
+    "Échange de braises immortelles"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "a0f7c642d789346ecde22056b8a1e76a4707343bc0ebaa161e802db6d7836041",
+   "name": "Rencontres de voyage",
+   "desc": "Matériau d'EXP de personnage. Confère 1 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un carnet de voyage parsemé de commentaires et de contenus divers griffonnés. Il ne vous sera pas très utile.<br /><br />« Dan Heng, dépêche-toi de lire ça pour t'en débarrasser. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Calice de Passenuage",
+    "Calice de la Frontière des rêves",
+    "Récompense d'affectation"
+   ]
+  },
+  "549503": {
+   "id": 549503,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "331cfae2dda242daee852ae39ae6b04e8d92340a65e232c5f1d654c28203681d",
+   "name": "Module artisanal",
+   "desc": "Composant utilisé dans les ingéniosités. Matière première utilisée pour les améliorations.",
+   "lore": "La base de la technologie des ingéniosités de Xianzhou. C'est le plus petit composant de toutes les pièces de machine. Le casser reviendrait à détruire la structure cellulaire d'un être vivant.<br /><br />« La Guilde de l'intelligentsia a fixé une prime de deux millions de crédits pour obtenir des plans techniques qui permettraient de démonter parfaitement les marionnettes mécaniques de Xianzhou. »<br />« Si vous connaissez Screwllum, alors ces deux millions sont à vous... »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549503",
+   "comeFrom": [
+    "Ingéniosité envoûtée",
+    "Butin d'ennemis dans l'Univers parallèle",
+    "Ennemis de l'Univers simulé",
+    "Récompenses d'affectation",
+    "Échange de braises immortelles",
+    "Échange de matériaux de l'Omni-synthétiseur",
+    "Calice doré"
+   ]
+  },
+  "633444": {
+   "id": 633444,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "c9879e0b2b8417e1a07392576b95269b3ad578abb45764c4c7ef61eb7afcf5aa",
+   "name": "Roue dentée artisanale",
+   "desc": "Partie des machines de Xianzhou. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "Les composants connecteurs de la technologie des ingéniosités de Xianzhou. Les fines dents complexes des roues sont aussi minuscules que des graines de moutarde. Pourtant, elles s'imbriquent pour former un corps complexe, ce qui donne l'illusion que la machine est en vie.<br /><br />« Sa forme est en parfaite harmonie avec la nature, ses mouvements cycliques faisant écho au cosmos. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633444",
+   "comeFrom": [
+    "Ingéniosité envoûtée au niveau d'équilibre 2 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Butin d'ennemis dans l'Univers parallèle",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "635681": {
+   "id": 635681,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "7016052de047f4de04082bc4be266780c61d6cb728287f3a6dc4a4799da6190c",
+   "name": "Balle météore",
+   "desc": "Les balles de fer forgées pour la chasse aux monstres. Chacune porte des marques, semblant indiquer le nombre de proies qu'elles ont abattues. Permet d'améliorer légèrement les Traces des personnages de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">la Chasse</span>.",
+   "lore": "Les archéologues armés ont découvert ces balles de fer au milieu de fossiles et d'ossements de différents monstres. La datation radioactive a confirmé qu'elles ont été tirées à une époque où l'humanité n'existait pas encore et que les créatures qu'elles avaient abattues étaient les derniers vestiges d'une certaine tribu de monstres.<br /><br />« Mourir de vieillesse n'est pas différent de mourir par balle. La voie du chasseur ne mènera ni à une fin sacrée, ni à une fin pécheresse. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/635681",
+   "comeFrom": [
+    "Calice : Salle d'audition Félicitâme™ d'Écorchesable",
+    "Échange de braises immortelles",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "671367": {
+   "id": 671367,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "0073bd10e11aa0a7afd8c74ecec0d60b2f15fa2bc1248abb540efa12e7973bc0",
+   "name": "Plume de bon augure",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "Ce n'est qu'au moment précis avant que ne sonne la mort, lorsque le temps s'arrête, que l'œil humain peut apercevoir la silhouette éthérée de ces plumes de l'esprit. Spiritus ou la Chimère volante constitue l'entité la plus rapide des sept visages de l'Archer de la destinée.<br /><br />« Après avoir passé sept jours à la traquer, j'ai en fait compris qu'elle vivait en mon corps. »",
+   "purpose": "Matériau de Trace",
+   "rarity": 4,
+   "rewardPath": "/material/671367",
+   "comeFrom": [
+    "Écho de la guerre du Fendeur des cieux"
+   ]
+  },
+  "717385": {
+   "id": 717385,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "4b8c4f6407d75c2fe9c15db70802f9c84fbc4b2ae4fe9210bc6558947fc4a4c2",
+   "name": "Gyrocœur artisanal",
+   "desc": "Composant utilisé dans les ingéniosités. Matériau avancé utilisé pour les améliorations.",
+   "lore": "Le cœur de la technologie des ingéniosités de Xianzhou. La sphère armillaire tourbillonne et vibre telle l'essence d'un cœur, donnant l'illusion que la machine pense comme un être vivant.<br /><br />« N'ayez pas peur. Lui enlever son cœur la rendrait... le rendrait ?... Non, cela lui ferait perdre toute sensibilité et retourner à ses origines mécaniques. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717385",
+   "comeFrom": [
+    "Ingéniosité envoûtée au niveau d'équilibre 4 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Butin d'ennemis dans l'Univers parallèle",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "836267": {
+   "id": 836267,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "47b3145b725e848f1a50ffa863008438deba3b4be9077d1b9e32374dd0b474e8",
+   "name": "Tir contre-temporel",
+   "desc": "Une balle en spirale qui se heurte toujours à la flèche du temps, comme un chien de chasse qui poursuivrait éternellement l'immortel qui défie le temps. Permet d'améliorer considérablement les Traces des personnages de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">la Chasse</span>.",
+   "lore": "Autrefois braises d'un Seigneur ravageur, autrefois bouton de destruction massive, autrefois dernière complainte d'un ancien mastodonte... Combien de morts ont été nécessaires pour forger de telles munitions ? Et quel type d'arme à feu peut les propulser dans le passé ? C'est la réponse à tout, pas une question en soi.<br /><br />« Vous aurez beau courir, vous aurez beau fuir, il vous retrouvera toujours, pour vous clouer dans le tissu du destin. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/836267",
+   "comeFrom": [
+    "Calice : Salle d'audition Félicitâme™ d'Écorchesable",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "920208": {
+   "id": 920208,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "83d73025b46ad57802c4c7f4316c9ef1738ab07d9755d9c5211f97aede16171c",
+   "name": "Extinction destinée",
+   "desc": "Enfoncée dans le front de la personne décédée, transperçant la fente de la matière, cette balle réside à jamais à l'endroit où son trou devrait se trouver. Permet d'améliorer modérément les Traces des personnages de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Chasse</span>.",
+   "lore": "Elle traversa les chemins sinueux au milieu des légions de soldats, transperça le point faible des casques les plus solides, pour finir par s'arrêter en plein milieu du crâne du tyran invincible, en émettant un soupir semblable à un murmure. Son impact se fit comme une coïncidence fatale. Un point final que tous étaient condamnés à rencontrer.<br /><br />« Parfois, l'impact de la balle précède la trajectoire. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/920208",
+   "comeFrom": [
+    "Calice : Salle d'audition Félicitâme™ d'Écorchesable",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Échange de braises immortelles",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 81.6,
+   "attackAdd": 4.08,
+   "hpBase": 110.4,
+   "hpAdd": 5.52,
+   "defenseBase": 48,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549503,
+     "count": 4
+    }
+   ]
+  },
+  {
+   "attackBase": 114.24,
+   "attackAdd": 4.08,
+   "hpBase": 154.56,
+   "hpAdd": 5.52,
+   "defenseBase": 67.2,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549503,
+     "count": 8
+    }
+   ]
+  },
+  {
+   "attackBase": 146.88,
+   "attackAdd": 4.08,
+   "hpBase": 198.72,
+   "hpAdd": 5.52,
+   "defenseBase": 86.4,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633444,
+     "count": 5
+    },
+    {
+     "id": 151162,
+     "count": 2
+    }
+   ]
+  },
+  {
+   "attackBase": 179.52,
+   "attackAdd": 4.08,
+   "hpBase": 242.88,
+   "hpAdd": 5.52,
+   "defenseBase": 105.6,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633444,
+     "count": 8
+    },
+    {
+     "id": 151162,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 212.16,
+   "attackAdd": 4.08,
+   "hpBase": 287.04,
+   "hpAdd": 5.52,
+   "defenseBase": 124.8,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717385,
+     "count": 5
+    },
+    {
+     "id": 151162,
+     "count": 15
+    }
+   ]
+  },
+  {
+   "attackBase": 244.8,
+   "attackAdd": 4.08,
+   "hpBase": 331.2,
+   "hpAdd": 5.52,
+   "defenseBase": 144,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717385,
+     "count": 7
+    },
+    {
+     "id": 151162,
+     "count": 28
+    }
+   ]
+  },
+  {
+   "attackBase": 277.44,
+   "attackAdd": 4.08,
+   "hpBase": 375.36,
+   "hpAdd": 5.52,
+   "defenseBase": 163.2,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "84fea6dd01531c0e3195fdca93ab88fafaa569e10406525ea5fbb1f1d8488516",
+   "artPath": "fa374cf2ae832bd53dec9d22604e64e327b696c71f5c3e934551c2b36c971d68",
+   "name": "Gardien du serment",
+   "descHash": "Moze gagne <nobr>#2[i]</nobr> points d'énergie après être entré en combat et <nobr>#1[i]</nobr> points d'énergie chaque fois que les DGT additionnels de son talent sont déclenchés.",
+   "params": [
+    2,
+    20
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "8f2ebd82ccec4b4736164e5ac4439e9984a8664cc057da8ec5ce5605319c1987",
+   "artPath": "234e15480bebc50511cd080adbf0393aa2de4128136c97e8fd0b91b0e5d79030",
+   "name": "Héraut du châtiment",
+   "descHash": "Augmente de <nobr>#1[i]%</nobr> les DGT critiques lorsque tous les alliés infligent des DGT à une cible ennemie marquée comme Proie.",
+   "params": [
+    0.4
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "7dce6c7eff965801cff4dec1a9d3e5db57fceab00bdf42b5bb5a1ea710d93e5c",
+   "artPath": "7f9d6f2e78f1fd794f5b924d4df9545608a81a56e859770d0cf50c21a7ac253e",
+   "name": "Justicier implacable",
+   "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "e1993526e050b762e2a263b73bc8eb95714487ff18b59fb74b39c4ce3f183247",
+   "artPath": "05857417769be72fedc129d9c054126a42452bce72f108adc989dec5d7be0ed6",
+   "name": "Rôdeur des ombres",
+   "descHash": "Les DGT infligés par Moze augmentent de <nobr>#1[f1]%</nobr> pendant <nobr>#2[i]</nobr> tours lors de l'utilisation de l'ultime.",
+   "params": [
+    0.3,
+    2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "6b219107256a2ead55529920c423d0da5ce7de76ba97c1b1c90da3110fdd7e26",
+   "artPath": "6c440afd7a1daf4aa6a37c47d7b88c64055a1a1312e597a7699450297c135525",
+   "name": "Manipulateur de vérité",
+   "descHash": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "ca022399785ad656f6e948ff45fb6aaf7794a43bcf7b3e557dc763a3ac31a3b3",
+   "artPath": "27226d6806439a350ccbe0a350c5c273885d8b09bbec9bedd58510fb0c4c6697",
+   "name": "Rassembleur de loyauté",
+   "descHash": "Le multiplicateur de DGT de l'attaque de suivi du talent augmente de <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.25
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   906559
+  ],
+  [
+   990500
+  ],
+  [
+   107145
+  ],
+  [
+   421446
+  ],
+  [
+   705973
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT de foudre équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Moze à une cible ennemie unique.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 906559,
+   "name": "Dague volante",
+   "iconPath": "c93c471a400030809af3ae3099c68c36db880974b398d22b87ac1b6d0582db6e",
+   "typeDescHash": "ATQ normale",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635681,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920208,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920208,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836267,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836267,
+       "count": 6
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Désigne une cible ennemie unique comme Proie et lui inflige des DGT de foudre équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Moze. D'autre part, gagne <nobr>#2[i]</nobr> points de charge.<br />Lorsqu'il n'y a aucun autre personnage sur le champ de bataille en état de combattre, Moze ne peut pas utiliser sa compétence et dissipe l'état Proie de l'ennemi.",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "30",
+   "id": 990500,
+   "name": "Frappe de l'aigle",
+   "iconPath": "6b219107256a2ead55529920c423d0da5ce7de76ba97c1b1c90da3110fdd7e26",
+   "typeDescHash": "Compétence",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.75,
+      9
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.825,
+      9
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9,
+      9
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635681,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.975,
+      9
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920208,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05,
+      9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920208,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.125,
+      9
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920208,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      1.21875,
+      9
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836267,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.3125,
+      9
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836267,
+       "count": 4
+      },
+      {
+       "id": 671367,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.40625,
+      9
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836267,
+       "count": 6
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5,
+      9
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836267,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.575,
+      9
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.65,
+      9
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.725,
+      9
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.8,
+      9
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.875,
+      9
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT de foudre équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Moze à une cible ennemie unique et déclenche l'<u>attaque de suivi</u> de son talent sur cette cible. Si la cible est vaincue avant que l'<u>attaque de suivi</u> ne soit utilisée, lance l'<u>attaque de suivi</u> sur un ennemi unique aléatoire à la place.",
+   "ultimateCost": 120,
+   "break": "90",
+   "energy": "5",
+   "id": 107145,
+   "name": "Perforation des ténèbres",
+   "iconPath": "db9cc9fd24c13d2b58692575f3d561b8f7556cb9a5fc48d3180b72ec0a54f5f5",
+   "typeDescHash": "Ultime",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.62
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.728
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.836
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635681,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.944
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920208,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      2.052
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920208,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.16
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920208,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      2.295
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836267,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      2.43
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836267,
+       "count": 4
+      },
+      {
+       "id": 671367,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.565
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836267,
+       "count": 6
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.7
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836267,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.808
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.916
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.024
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.132
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.24
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Moze entre dans l'état <u>Retrait</u> lorsqu'il y a une Proie sur le champ de bataille.<br />Lorsque les alliés attaquent la Proie, Moze inflige également 1 instance de <u>DGT de foudre additionnels</u> équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de son ATQ et il consomme 1 point de charge. Moze lance 1 <u>attaque de suivi</u> sur la Proie tous les <nobr>#2[i]</nobr> points de charge consommés, ce qui inflige des DGT de foudre équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de son ATQ. L'état Proie de la cible est dissipé lorsque la charge tombe à 0 et le nombre de points de charge nécessaires pour lancer l'<u>attaque de suivi</u> est réinitialisé. L'<u>attaque de suivi</u> du talent ne consomme pas de point de charge.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "10",
+   "id": 421446,
+   "name": "Assaut des plumes",
+   "iconPath": "386a49dc66c9f728ee7da25afe031c41e7614ba961073e75ea467a65bfb1553d",
+   "typeDescHash": "Talent",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.15,
+      3,
+      0.8
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.165,
+      3,
+      0.88
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.18,
+      3,
+      0.96
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635681,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.195,
+      3,
+      1.04
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920208,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.21,
+      3,
+      1.12
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920208,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.225,
+      3,
+      1.2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920208,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      0.24375,
+      3,
+      1.3
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836267,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.2625,
+      3,
+      1.4
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836267,
+       "count": 4
+      },
+      {
+       "id": 671367,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.28125,
+      3,
+      1.5
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836267,
+       "count": 6
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1.6
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836267,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.315,
+      3,
+      1.68
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.33,
+      3,
+      1.76
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.345,
+      3,
+      1.84
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.36,
+      3,
+      1.92
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.375,
+      3,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 622032,
+   "name": "Attaque",
+   "iconPath": "c93c471a400030809af3ae3099c68c36db880974b398d22b87ac1b6d0582db6e",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Renforcement",
+   "descHash": "Après avoir utilisé sa technique, Moze entre en état de Furtivité pendant <nobr>#1[i]</nobr> secondes. Lorsque Moze est en état de Furtivité, il ne peut pas être détecté par les ennemis. Si Moze engage le combat en attaquant des ennemis en état de Furtivité, ses DGT augmentent de <nobr>#2[i]%</nobr> pendant <nobr>#3[i]</nobr> tours.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 705973,
+   "name": "Vol obscur",
+   "iconPath": "548d452968655d300eefd130e93a5167fbba157fe7e3f967588f0058a1142fe4",
+   "typeDescHash": "Technique",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      20,
+      0.3,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1223101,
+   "anchor": 6,
+   "type": 1,
+   "children": [
+    {
+     "id": 1223202,
+     "anchor": 10,
+     "type": 2,
+     "children": [
+      {
+       "id": 1223203,
+       "anchor": 11,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 345259,
+        "name": "Augmentation des DGT critiques",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+        "statusList": [
+         {
+          "key": "DGT CRIT",
+          "value": 0.053
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920208,
+          "count": 2
+         },
+         {
+          "id": 633444,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 345258,
+      "name": "Augmentation d'ATQ",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635681,
+        "count": 2
+       },
+       {
+        "id": 549503,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Récupère <nobr>#1[i]</nobr> point de compétence après avoir utilisé l'attaque de suivi du talent. Cet effet peut se déclencher à nouveau après <nobr>#2[i]</nobr> tour.",
+    "ultimateCost": 0,
+    "id": 345290,
+    "name": "Plume nocturne",
+    "iconPath": "fb787fec4da467c5daa2b23e0b268b6cb57160e30a9e2a28f9ccbb0427cf30d3",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       1,
+       1
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635681,
+        "count": 2
+       },
+       {
+        "id": 671367,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223102,
+   "anchor": 7,
+   "type": 1,
+   "children": [
+    {
+     "id": 1223205,
+     "anchor": 13,
+     "type": 2,
+     "children": [
+      {
+       "id": 1223206,
+       "anchor": 14,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 345254,
+        "name": "Augmentation d'ATQ",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836267,
+          "count": 2
+         },
+         {
+          "id": 717385,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 345253,
+      "name": "Augmentation des DGT critiques",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+      "statusList": [
+       {
+        "key": "DGT CRIT",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920208,
+        "count": 4
+       },
+       {
+        "id": 633444,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Lorsque Moze dissipe son état Retrait, son action est avancée de <nobr>#1[i]%</nobr>. Au début de chaque vague, son action est avancée de <nobr>#2[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 345289,
+    "name": "Pointe de dague",
+    "iconPath": "28b34b73acf675ae63a110b86886058180ae9ceebbce37a7712d3538c35f1e24",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.2,
+       0.3
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920208,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 671367,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223103,
+   "anchor": 8,
+   "type": 1,
+   "children": [
+    {
+     "id": 1223208,
+     "anchor": 16,
+     "type": 2,
+     "children": [
+      {
+       "id": 1223209,
+       "anchor": 17,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 345265,
+        "name": "Augmentation d'ATQ",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836267,
+          "count": 6
+         },
+         {
+          "id": 717385,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 1223210,
+       "anchor": 18,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 429197,
+        "name": "Augmentation des DGT critiques",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+        "statusList": [
+         {
+          "key": "DGT CRIT",
+          "value": 0.107
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836267,
+          "count": 6
+         },
+         {
+          "id": 717385,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 345264,
+      "name": "Augmentation de PV",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836267,
+        "count": 6
+       },
+       {
+        "id": 717385,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Lorsque Moze inflige des DGT avec son ultime, cela est considéré comme le déclenchement d'une attaque de suivi. Les DGT des attaques de suivi subis par les ennemis marqués en tant que Proie augmentent de <nobr>#1[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 345288,
+    "name": "Vengeance",
+    "iconPath": "b2f87d6275b2c6651ed889a9f7a5b67b6997a9013ef52862277347d527b01089",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.25
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836267,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 671367,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223201,
+   "anchor": 9,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 345257,
+    "name": "Augmentation des DGT critiques",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+    "statusList": [
+     {
+      "key": "DGT CRIT",
+      "value": 0.053
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549503,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223204,
+   "anchor": 12,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 345252,
+    "name": "Augmentation de PV",
+    "levelReq": 0,
+    "promotionReq": 3,
+    "iconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+    "statusList": [
+     {
+      "key": "PV",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 8000
+     },
+     {
+      "id": 920208,
+      "count": 2
+     },
+     {
+      "id": 633444,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223207,
+   "anchor": 15,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 345255,
+    "name": "Augmentation des DGT critiques",
+    "levelReq": 0,
+    "promotionReq": 5,
+    "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+    "statusList": [
+     {
+      "key": "DGT CRIT",
+      "value": 0.08
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 36000
+     },
+     {
+      "id": 836267,
+      "count": 2
+     },
+     {
+      "id": 717385,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": []
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Première rencontre",
+   "text": "Je m'appelle Moze. Je suis le gardien de l'ombre de Feixiao. Déplace-toi de ce côté pour qu'on ne me voie pas.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 2,
+   "title": "Salutation",
+   "text": "Comment ça va ? Non, pas de poignée de main, je dois garder ma main sur mon arme en toute circonstance.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 3,
+   "title": "Au revoir",
+   "text": "Pas la peine de se dire au revoir. Je passe souvent devant toi dans la rue de toute façon.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 4,
+   "title": "Anecdote personnelle : Travail",
+   "text": "Le travail de Feixiao consiste à charger les lignes ennemies, celui de Jiaoqiu à élaborer des stratégies, et le mien... à faire le ménage...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 5,
+   "title": "Anecdote personnelle : Disciples du Sanctus Medicus",
+   "text": "J'ai été élevée par les Disciples du Sanctus Medicus. Subir des « traitements » interminables, avoir des « règles familiales » qui n'ont aucun sens et des « tuteurs » imprévisibles... J'ai longtemps cru que tout cela était normal.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 6,
+   "title": "Anecdote personnelle  : Maniaquerie",
+   "text": "Pour débarrasser le monde de ses saletés, il faut se salir les mains. C'est la raison pour laquelle je me lave les mains encore et encore.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 7,
+   "title": "Anecdote personnelle : Silence",
+   "text": "Certains sont silencieux parce qu'il n'y a rien qui les anime, d'autres parce qu'ils ne pensent à rien. Moi, je ne veux simplement pas parler.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 8,
+   "title": "Anecdote personnelle : Plume de corbeau",
+   "text": "Le surnom « plume de corbeau » ne fait pas référence à mon apparence, mais au fait que j'aie envoyé trois malfrats auprès du Médecin miséricordieux avec juste une plume de corbeau. Ne me demande pas pourquoi j'ai utilisé une plume. C'est tout ce que j'avais sous la main.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 9,
+   "title": "Bavardage : Devoir",
+   "text": "Est-ce que je déteste le mal ? Bien sûr que non, est-ce qu'un nettoyeur d'égouts déteste la souillure qui émane de la ville ?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 10,
+   "title": "Bavardage : Légendes urbaines",
+   "text": "Les habitants du Yaoqing aiment parler de moi, mais lorsqu'ils me voient, ils se recroquevillent en boule et se mettent à crier.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 11,
+   "title": "Passe-temps",
+   "text": "Prendre une douche et faire le ménage. J'adore me débarrasser de la saleté.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 12,
+   "title": "Problèmes",
+   "text": "Être une ombre signifie que les portes automatiques ne vous détectent pas. Peu importe, je n'utilise pas l'entrée principale de toute façon.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 13,
+   "title": "Fait notable",
+   "text": "Est-ce que tu savais que la rainure centrale sur la lame d'une épée ne sert pas à faire s'écouler le sang, mais à alléger son poids ? C'est ce qu'on appelle la « gouttière »... Maintenant, tu sais.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 14,
+   "title": "Connaissances",
+   "text": "Le Yaoqing est un magnifique vaisseau de Xianzhou, mais il est un peu trop près des Peuples de l'Abondance.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 15,
+   "title": "À propos de Feixiao 1",
+   "text": "Feixiao est à la fois une ennemie personnelle qui a pris la vie des « membres de ma famille » et la bienfaitrice qui m'a offert une nouvelle vie.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 16,
+   "title": "À propos de Feixiao 2",
+   "text": "Feixiao m'autorise à essayer de « l'assassiner » à tout moment. Elle m'utilise comme arme pour aiguiser ses sens. C'est sa façon de me témoigner sa confiance, mais je n'ai encore jamais gagné une seule fois.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 17,
+   "title": "À propos de Jiaoqiu",
+   "text": "Il dit que la générale est sa patiente, mais je pense plutôt que c'est elle qui le soigne.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 18,
+   "title": "À propos de Sushang",
+   "text": "Je l'ai rencontrée à la caserne il y a quelques années, mais elle ne m'a pas reconnu. J'étais le conseiller de Feixiao à l'époque et je devais souvent aller chez Jiaoqiu. Comment a-t-elle pu ne pas me voir ?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 19,
+   "title": "À propos de Huaiyan",
+   "text": "Cet homme est impressionnant. Toute personne qui vit aussi longtemps sans se détester ne peut être qu'impressionnante.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 20,
+   "title": "À propos de Jing Yuan",
+   "text": "Il n'a pas l'air d'apprécier son travail, mais il l'a fait avec dévouement jusqu'ici. On se ressemble sur ce point.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 21,
+   "title": "Activation d'Eidolon",
+   "text": "Je peux me cacher dans chaque ombre du Yaoqing.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 22,
+   "title": "Élévation de personnage",
+   "text": "La violence est le dernier recours, et également le seul que je connaisse.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 23,
+   "title": "Niveau max atteint",
+   "text": "Je vais me fondre dans les ombres et veiller sur toi.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 24,
+   "title": "Activation de Trace",
+   "text": "Les fantômes du passé finissent toujours par refaire surface.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 25,
+   "title": "Rejoint l'équipe avec Pionnier/Pionnière",
+   "text": "Ne t'inquiète pas, je serai toujours là quand tu en auras besoin.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 26,
+   "title": "Rejoint l'équipe avec Feixiao",
+   "text": "Je me battrai à vos côtés jusqu'à la fin.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 27,
+   "title": "Rejoint l'équipe avec Jiaoqiu",
+   "text": "Guérisseur, à ton tour d'endosser mon fardeau.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 28,
+   "title": "Rejoint l'équipe avec Sushang",
+   "text": "Toi, tu attires l'attention, moi, je m'occupe du sale boulot. Et ne joue pas aux héroïnes.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 29,
+   "title": "Rejoint l'équipe avec Jing Yuan",
+   "text": "Clairvoyant, vous ne devriez pas avoir à vous salir les mains. Laissez-moi m'en occuper.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 51,
+   "title": "Rupture de faiblesse en début de combat",
+   "text": "Pile là où ça fait mal.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 52,
+   "title": "Avertissement de danger en début de combat",
+   "text": "Il faut combattre le changement par l'immuabilité.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 53,
+   "title": "Début du tour 1",
+   "text": "Je suis la lame...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 54,
+   "title": "Début du tour 2",
+   "text": "Je suis l'ombre...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 55,
+   "title": "Tour inactif",
+   "text": "Quelle est la suite ?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 56,
+   "title": "ATQ normale",
+   "text": "Concentrer l'attaque sur un point.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 57,
+   "title": "Compétence 1",
+   "text": "C'est le moment d'agir.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 58,
+   "title": "Compétence 2",
+   "text": "La nuit vous suit telle une ombre.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 59,
+   "title": "Attaque légère subie",
+   "text": "Bas les masques.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 60,
+   "title": "Attaque lourde subie",
+   "text": "Ce n'était rien.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 61,
+   "title": "Activation de l'ultime",
+   "text": "L'heure de la récolte a sonné.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 62,
+   "title": "Déclenchement de l'ultime",
+   "text": "Partout où le vent murmure... tu n'as nulle part où aller !",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 63,
+   "title": "Talent",
+   "text": "Ténèbres, à l'assaut !",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 64,
+   "title": "À terre",
+   "text": "Si... près du but...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 65,
+   "title": "Retour au combat",
+   "text": "Cette fois, je ne referai pas la même erreur.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 66,
+   "title": "Récupération de santé",
+   "text": "Désolé du dérangement.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 67,
+   "title": "Technique",
+   "text": "La furtivité des plumes de corbeau.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 68,
+   "title": "Combat gagné",
+   "text": "Le champ de bataille a été nettoyé.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 69,
+   "title": "Ouverture de coffre au trésor 1",
+   "text": "On a plutôt eu de la chance.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 70,
+   "title": "Ouverture de coffre au trésor 2",
+   "text": "Rien de dangereux, tant mieux.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 71,
+   "title": "Ouverture de coffre précieux",
+   "text": "Ne te vante pas trop de tes richesses. On ne sait jamais.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 72,
+   "title": "Énigme réussie 1",
+   "text": "Je vois.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 73,
+   "title": "Énigme réussie 2",
+   "text": "L'observation minutieuse est la clé de la victoire.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 74,
+   "title": "Cible ennemie trouvée",
+   "text": "Continue, je vais m'en occuper.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 75,
+   "title": "Retour en ville",
+   "text": "Les ombres se cachent toujours au milieu de la mer de visages...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Détails du personnage",
+   "text": "Gardien de l'ombre du Yaoqing taciturne qui agit toujours en solitaire.<br />Spécialisé dans les services de renseignement et les affaires secrètes, Moze apparaît rarement en public. Le seul moment où il montre ses talents précède généralement la mort de ses ennemis.<br />Il maîtrise un large éventail de techniques d'assassinat et il a une obsession pour la propreté et l'ordre.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Histoire du personnage : Partie I",
+   "text": "« Miséricorde du Sanctus Medicus... Écoute-nous. Avale ça. Non seulement ta maladie sera guérie, mais tu seras comme les espèces à longue espérance de vie. Tu vivras plus longtemps... »<br />Il tente d'avaler le remède, sans oser respirer.<br /><br />Il ne sait combien de fois il va devoir encore endurer ce calvaire. Le liquide visqueux coule lentement dans sa gorge, comme s'il avalait des épingles. Sa poitrine le sert tandis qu'une horrible envie de vomir l'assaille.<br />« Avale, bon sang. Ne recrache pas. C'est pour ton bien... » Son corps semble se joindre à son mantra. Avale. Avale. Avale.<br />Avale, et tu n'auras plus à redouter la menace des bêtes sauvages, tu ne connaîtras plus la terreur de leurs mâchoires béantes dont il est impossible de s'échapper.<br />Avale, et tu ne seras plus impuissant. Et tu n'auras plus à voir tes compagnons mourir.<br />Avale.<br /><br />Tandis que ses organes et sa chair s'imprègnent de ce remède, il se sent peu à peu habité par une force inconnue. Il lutte pour respirer, dévoré et déchiqueté de l'intérieur, suffoquant dans son propre corps.<br />« Tiens bon. Comme la dernière fois... Il suffit de tenir le coup... » Il n'est plus capable d'émettre le moindre son. Seul son corps continue de s'épancher.<br />Tiens bon. Il ne sera plus l'orphelin abandonné par son village, laissé pour compte dans la nature.<br />Tiens bon. Il pourra enfin être entendu, il ne sera plus jamais seul.<br />Tiens bon.<br /><br />« Moze ? Comment tu te sens ? »<br />« Parfait. Tu as encore résisté, à ce que je vois. »<br />« Continue comme ça. Ne crains rien. Et ta maladie sera bientôt terminée. »<br />« Le moment venu... tu pourras faire tout ce que tu veux. Chasser les bêtes sauvages, protéger tes compagnons, profiter d'une longue vie saine... »<br />« Une fois que ton corps sera pleinement guéri... ta vie atteindra l'apogée... tu feras partie de notre famille. »<br />« Le moment venu, nous devrons accomplir mutuellement notre volonté. »<br /><br />Qui aurait imaginé que ce serait aussi douloureux d'enfin appartenir à une famille.<br />« Quelle douleur... »<br />Il ne peut plus le supporter. Il serre les dents au point de les fissurer, sa souffrance sifflant à travers ces failles. La personne à ses côtés n'a qu'une chose à ajouter :<br />« Les Disciples connaîtront ensemble l'immortalité. Réussis à surmonter cette épreuve, et de cette victoire naîtra la vie. »<br />« La miséricorde du Sanctus Medicus. »<br /><br />Personne ne fait cas de ses paroles, ce qui l'incite à se complaire dans le silence.",
+   "unlockRequirement": "Disponible au niveau <nobr>20</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie II",
+   "text": "« Générale, au rapport ! <nobr>117</nobr> Disciples du Sanctus Medicus ont été capturés et vont être condamnés à la prison par la Commission des dix seigneurs. »<br />« Ce jeune homme a probablement été victime d'une de leurs horribles concoctions. Regardez... »<br />Alors qu'il se cache dans l'ombre, la « générale » s'approche de lui. De toute évidence, elle l'avait déjà remarqué.<br /><br />« Le moment venu, nous devrons accomplir mutuellement notre volonté. »<br />L'écho résonnant dans son esprit est dénué de la moindre émotion, mais après avoir subi inlassablement cette rengaine si longtemps, il ne peut s'empêcher de lever sa dague au son de ces mots.<br />En un instant, sa dague virevolte au sol.<br />« Tu veux me tuer ? »<br />« Vous avez tué ma famille. »<br />Il remarque une lueur d'embarras dans le regard de la femme aux oreilles de renard.<br />« Tu les considérais comme ta famille ? »<br />« Ils m'ont sauvé la vie. Sans eux, je ne serais pas là aujourd'hui. »<br />Elle relâche le garçon et secoue la tête.<br />« Tu ignores encore bien des choses... Soit. Quelqu'un va venir s'occuper de toi et te trouver un endroit où vivre. Suis cette personne et tout ira bien. »<br /><br />Alors qu'elle se tourne pour partir, le garçon reste à genoux au sol, les yeux rivés sur son dos. Il sait qu'une chance pareille ne se représentera plus.<br />Il ramasse la dague gisant au sol, s'élance derrière elle et l'assaille de plein fouet.<br /><br />« Bien tenté ! » Elle salue ses efforts.<br />Cette fois, la dague ne touche pas le sol... mais finit entre les mains de la femme. Cela ne l'arrête pas pour autant. Il esquive encore et encore, et finit en dernier recours par mordre la main de la femme.<br />« Ce n'est pas poli de mordre les gens, tu sais... Ah, ne vous inquiétez pas pour moi. N'approchez pas... Cet enfant me fait penser à moi quand j'étais au camp militaire borissien. »<br />La femme ne riposte pas. Elle se contente d'esquiver ses attaques. Le jeune homme halète, à bout de souffle, mais continue de chercher désespérément une ouverture.<br />Ils restent ainsi dans l'impasse.<br /><br />« J'ai une idée. Qu'est-ce que tu dirais de venir avec moi ? »<br />La femme sort un strale et le tend au jeune homme.<br />« J'ai une proposition à te faire. Viens avec moi et tu pourras me défier autant que tu le souhaiteras, jusqu'au jour où tu parviendras à assouvir ta vengeance. »<br />« Qu'est-ce que vous voulez dire ? »<br />« Si tu viens avec moi, tu pourras me tuer quand tu veux. »<br />Même les Chevaliers de Verdoyaume présents à ses côtés n'en croient pas leurs oreilles.<br />« Mais que les choses soient claires : tant que tu ne m'auras pas tué, tu devras m'obéir. Tu auras droit à trois repas par jour, tu étudieras et tu apprendras les arts martiaux... Oh, et tu devras prendre une douche chaque jour. »<br />La pilule semble dure à avaler pour le jeune homme.<br />« Et une fois que je vous aurai tuée ? »<br />Ses paroles prennent la femme au dépourvu, puis elle éclate de rire.<br />« Eh bien, tu pourras faire comme bon te semble, bien entendu. »",
+   "unlockRequirement": "Disponible au niveau <nobr>40</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie III",
+   "text": "« Qui es-tu ? »<br />Il ne dit pas un mot... mais les gens sur le point de mourir ont tendance à s'épancher.<br />« Je sais. Tu es le gardien de l'ombre de Feixiao, pas vrai ? Tu as passé ta vie dans les ténèbres, à commettre des actes voués à ne jamais être vus... »<br />« Qu'est-ce que tu dirais d'une seconde chance ? Mon maître veut savoir si, comme le prétend la rumeur, Feixiao a bien du sang borissien. Si on arrive à un accord, une fois qu'on aura renversé Fe... ARGH ! »<br />Les choses se passent exactement comme il l'a prévu. Il en finit donc rapidement avec sa mission.<br /><br />C'est son devoir en tant que gardien de l'ombre. Peu importe que ce soit juste ou non... Il suit les ordres à la lettre.<br />Car, pour lui, chaque mission réussie représente une opportunité...  une opportunité de vengeance.<br />« Pour chaque mission réussie, tu obtiendras un strale. Chaque strale t'offrira un pardon en cas de tentative d'assassinat. »<br />Il craignait autrefois de ne pas pouvoir s'approcher de Feixiao, mais elle l'avait choisi comme gardien de l'ombre du Yaoqing, suivant ses moindres faits et gestes.<br />Même si ses tentatives d'assassinat n'ont jamais abouti, il est parvenu à maîtriser l'art de disparaître et réapparaître tel un fantôme. Cette lame œuvrant dans les ténèbres ne cible pas uniquement la générale du Yaoqing, mais également les ennemis du Yaoqing de Xianzhou. Il est l'ombre omniprésente.<br /><br />« C'est toi, le mec bizarre aux plumes de corbeau ? »<br />Une autre mission dans la poche. Assis au sol, le garçon demande avec timidité :<br />« On raconte que le mec bizarre aux plumes de corbeau donne une raclée aux méchants et lutte contre le mal... mais... les vêtements qu'il porte sont si noirs que personne ne peut le voir... »<br />« T'es super fort et tes habits sont vachement sombres, alors... euh... ben, merci de m'avoir sauvé la vie ! » <br />Lutter contre le mal ? Ça n'a jamais été son but. Ce n'est que pur hasard s'il a sauvé la vie du garçon en accomplissant une de ses missions. Mais il est vrai qu'il a pris l'habitude de se cacher dans l'ombre et de veiller au grain, rien n'échappe à sa surveillance.<br />À travers les yeux pétillants de l'enfant face à lui, il parvient à se voir, lui et sa sombre tenue.<br />Il foule les ténèbres et ne fait plus qu'un avec.<br />Le type étrange aux plumes de corbeau, le gardien de l'ombre... Ce sont différentes facettes de sa personnalité.",
+   "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie IV",
+   "text": "Le guérisseur foxien couvre la moitié de son visage en contemplant la scène face à lui avec une inquiétude mêlée d'empathie. D'innombrables yeux, oreilles, dents, touffes de fourrure et membres poussent et tombent des corps devant eux, comme s'ils subissaient cette ultime souffrance en vain.<br /><br />Pour la première fois depuis bien longtemps, Moze se sent un peu mal à l'aise. Non seulement à cause de la scène qui se déroule sous ses yeux, mais aussi parce qu'elle lui rappelle des souvenirs flous de son passé.<br /><br />« La miséricorde du Sanctus Medicus... La vie éternelle... Plus de vieillesse... Plus de morts... »<br />Des disciples du Sanctus Medicus se rassemblent en masse. L'un d'entre eux est gravement blessé, mais ceux qui l'entourent continuent de psalmodier ces mots familiers.<br />« Les traces divines de l'Abondance guériront ton corps... rapidement. Bois ceci... »<br />« La douleur est temporaire... Tu vas de nouveau vivre pleinement. Tu ne vas pas mourir en cet... instant... »<br />Dans un éclair de lumière, l'orateur s'effondre. Le gardien de l'ombre, tout de noir vêtu, apparaît alors avec solennité. Le silence ne peut masquer la rage meurtrière qui bout à nouveau en lui.<br />...<br />« Ils ne sont plus humains. Ils ne sentent pas la douleur... Qu'en est-il de toi ? Avec de telles blessures, tu vas me dire que tu ne sens pas la douleur ? »<br />Le guérisseur foxien étale de la poudre sur ses blessures tout en parlant.<br />« À l'origine, on était venus en reconnaissance. Je t'avais dit qu'on avait des renforts prêts à intervenir. Alors pourquoi tu as lancé l'attaque ? »<br />Il ne répond pas, baissant la tête vers la dague affûtée et ensanglantée qu'il tient entre ses mains.<br />Au fil des ans, à chaque mission accomplie, il a depuis longtemps compris ce que représente cette ancienne « famille ». Cependant, il refuse de trop y penser ou d'admettre que son point de vue a changé depuis toutes ces années. Autrement, que signifieraient sa vengeance et ce vœu ?<br /><br />« Ça te fait mal ? »<br />« ... » Il refuse toujours de parler.<br />Le guérisseur foxien accélère ses gestes, bande ses blessures tout en appuyant un peu trop fort de temps en temps.<br />« Ouh... »<br />« Si ça fait mal, dis-le. À quoi bon vouloir résister à la douleur ? Rien que de te voir dans cet état, c'est une torture pour moi. »<br />Il hoche la tête.<br /><br />Il est habitué à ne pas parler, mais aussi à ce que les autres parlent pour lui.",
+   "unlockRequirement": "Disponible au niveau <nobr>80</nobr> de personnage"
+  }
+ ],
+ "archive": {
+  "cvCn": "黄进泽",
+  "cvJp": "坂田将吾",
+  "cvKr": "최현식",
+  "cvEn": "Ben Balmaceda",
+  "camp": "Yaoqing de Xianzhou"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328,
+  "rankConfig": {
+   "3": {
+    "107145": 2,
+    "421446": 2
+   },
+   "5": {
+    "906559": 1,
+    "990500": 2
+   }
+  }
+ },
+ "name": "Moze",
+ "rarity": 4,
+ "descHash": "Gardien de l'ombre du Yaoqing taciturne qui agit toujours en solitaire. Spécialisé dans les services de renseignement et les affaires secrètes, Moze apparaît rarement en public. Le seul moment où il montre ses talents précède généralement la mort de ses ennemis. Il maîtrise un large éventail de techniques d'assassinat et il a une obsession pour la propreté et l'ordre.",
+ "artPath": "73644d0def3b384e2b8c90fe456688ba8b1f6d04b08787a874380fb7dc3d8253",
+ "miniIconPath": "96dadfea3ec775a2f60c668389e8a9d5dc79855cded2e8cb968b008e1b1279dc",
+ "damageType": {
+  "id": 8,
+  "iconPath": "a7514faadd356e58de950903e3a51379328d6d6714ec0b38cf2fe7186f537f88",
+  "color": "#8872F1",
+  "name": "Foudre",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "da480674bee722c2f12b37fdebec3086ce34d219fa0b69e05cab8ed60abcdf90",
+  "altIconPath": "f97c2a2d6cc68654c0412722bb75c765f2e6c5a04bda62a526d56f9a95964f17",
+  "color": "#FFFFFF",
+  "name": "La Chasse",
+  "rarity": 0
+ },
+ "pageId": "moze"
+}

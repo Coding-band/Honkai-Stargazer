@@ -522,7 +522,7 @@
  "skills": [
   {
    "tagHash": "Cible unique",
-   "descHash": "Inflige des DGT imaginaires équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de March 7th à un ennemi unique et obtient <nobr>#2[i]</nobr> point de charge.",
+   "descHash": "Inflige des DGT imaginaires équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de March 7th à une cible ennemie unique et obtient <nobr>#2[i]</nobr> point de charge.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "20",
@@ -692,7 +692,7 @@
   },
   {
    "tagHash": "Soutien",
-   "descHash": "Désigne un allié unique (à l'exception de ce personnage) comme Maître et augmente sa VIT de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Seule la dernière cible de la compétence de March 7th est considérée comme son « Maître ».<br /><br />Chaque fois que March 7th utilise son ATQ normale ou qu'elle inflige des DGT avec 1 frappe de son ATQ normale renforcée, elle déclenche l'effet correspondant en fonction de la Voie du Maître :<br /><br />Érudition, Destruction, Chasse : Inflige des <u>DGT additionnels</u> (dont le type correspond au type de combat du Maître) équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de l'ATQ de March 7th.<br />Harmonie, Nihilité, Préservation, Abondance : Augmente la réduction de robustesse de cette instance de DGT de <nobr>#3[i]%</nobr>.",
+   "descHash": "Désigne un allié unique (à l'exception de ce personnage) comme Maître et augmente sa VIT de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Seule la dernière cible de la compétence de March 7th est considérée comme son « Maître ».<br /><br /><br />Chaque fois que March 7th utilise son ATQ normale ou qu'elle inflige des DGT avec 1 frappe de son ATQ normale renforcée, elle déclenche l'effet correspondant en fonction de la Voie du Maître présent sur le champ de bataille :<br /><br />Érudition, Destruction, Chasse : Inflige des <u>DGT additionnels</u> (du type du Maître) équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de l'ATQ de March 7th.<br /><br />Harmonie, Nihilité, Préservation, Abondance : Augmente la réduction de robustesse de cette instance de DGT de <nobr>#3[i]%</nobr>.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -1294,7 +1294,7 @@
   },
   {
    "tagHash": "Renforcement",
-   "descHash": "March 7th gagne 1 point de charge à chaque fois que le Maître utilise une attaque ou un ultime.<br />À <nobr>#1[i]</nobr> points de charge ou plus, March 7th agit immédiatement et augmente ses DGT de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. Son ATQ normale est renforcée et elle ne peut plus utiliser sa compétence. L'utilisation de l'ATQ normale renforcée consomme <nobr>#1[i]</nobr> points de charge. Les points de charge sont limités à un maximum de <nobr>#3[i]</nobr>.",
+   "descHash": "March 7th gagne 1 point de charge à chaque fois que le Maître utilise une attaque ou un ultime.<br />À <nobr>#1[i]</nobr> points de charge ou plus, March 7th agit immédiatement et augmente ses DGT de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. Son ATQ normale est renforcée et elle ne peut plus utiliser sa compétence. L'utilisation de l'ATQ normale renforcée consomme <nobr>#1[i]</nobr> points de charge. Les points de charge sont limités à un maximum de <nobr>#3[i]</nobr>.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "5",
@@ -2011,7 +2011,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "March 7th peut réduire la robustesse des ennemis qui ont une Faiblesse du même type que son Maître. Lorsqu'elle inflige une Rupture de faiblesse, elle déclenche également l'effet de Rupture de faiblesse imaginaire.",
+    "descHash": "March 7th peut réduire la robustesse des ennemis qui ont une Faiblesse du même type que son Maître. Lorsqu'elle inflige une Rupture de faiblesse, elle déclenche l'effet de Rupture de faiblesse imaginaire.",
     "ultimateCost": 0,
     "id": 58372,
     "name": "Frappe minutieuse",

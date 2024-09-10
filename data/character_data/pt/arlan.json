@@ -253,6 +253,7 @@
    "rarity": 4,
    "rewardPath": "/material/985668",
    "comeFrom": [
+    "Eco da Guerra: Zona de Abastecimento",
     "Eco da Guerra (Zona de Abastecimento)"
    ]
   }
@@ -447,7 +448,7 @@
    "iconPath": "dc89cc98a7dad380837c87ea4fa23ebccb6cbdfafef816efc88d3cca122012e5",
    "artPath": "ad40f2546638550742f070f6651646ca93598956cceeadb4432bec9f7867db9b",
    "name": "Até o Amargo Fim",
-   "descHash": "Quando os PV estiverem abaixo ou iguais a <nobr>50%</nobr> dos PV máximos, o Dano da Perícia aumenta em <nobr>#1[i]%</nobr>.",
+   "descHash": "Quando a porcentagem dos PV estiverem abaixo ou iguais a <nobr>50%</nobr> dos PV máximos, o Dano da Perícia aumenta em <nobr>#1[i]%</nobr>.",
    "params": [
     0.1
    ]
@@ -492,7 +493,7 @@
    "iconPath": "c1836d755a079ed7ea64011ace2a75a646f9273a5dcf4bcc48d97f4d623a73a4",
    "artPath": "dc18733715c1b2654911a6cad5dc7a13951e5d937351c3bac6c79513144f9070",
    "name": "Autossacrifício",
-   "descHash": "Quando os PV caem para <nobr>50%</nobr> ou menos, a Perícia Suprema causa <nobr>#1[i]%</nobr> a mais de Dano. O multiplicador de Dano para alvos adjacentes é elevado ao mesmo nível que o do alvo principal.",
+   "descHash": "Quando a porcentagem atual de PV cai para <nobr>50%</nobr> ou menos, a Perícia Suprema causa <nobr>#1[i]%</nobr> a mais de Dano e o multiplicador de Dano para alvos adjacentes é elevado ao mesmo nível que o do alvo principal.",
    "params": [
     0.2
    ]
@@ -1251,7 +1252,7 @@
   },
   {
    "tagHash": "Aprimoramento",
-   "descHash": "Aumenta o Dano de Arlan com base na porcentagem de PV reduzidos de seus PV máximos, até um máximo de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> a mais de Dano.",
+   "descHash": "Com base na porcentagem atual de PV perdidos de Arlan, ganha um bônus de Dano, até um aumento máximo de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> no Dano causado por Arlan.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
@@ -1962,7 +1963,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Ao entrar na batalha, se os PV de Arlan forem iguais ou inferiores a <nobr>#1[i]%</nobr>, ele pode anular todo o Dano recebido até ser atacado, exceto por fontes de Dano Contínuo.",
+    "descHash": "Ao entrar na batalha, se a porcentagem dos PV de Arlan forem iguais ou inferiores a <nobr>#1[i]%</nobr>, ele pode anular todo o Dano recebido até ser atacado, exceto por fontes de Dano Contínuo.",
     "ultimateCost": 0,
     "id": 215735,
     "name": "Repulsa",

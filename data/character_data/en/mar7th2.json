@@ -253,6 +253,7 @@
    "rarity": 4,
    "rewardPath": "/material/985668",
    "comeFrom": [
+    "Echo of War: Supply Zone",
     "Echo of War (Supply Zone)"
    ]
   }
@@ -523,7 +524,7 @@
  "skills": [
   {
    "tagHash": "Single Target",
-   "descHash": "Deals <span style=\"color:#F4D258;\">Imaginary </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of March 7th's ATK to a single enemy and gains <nobr>#2[i]</nobr> point(s) of Charge.",
+   "descHash": "Deals <span style=\"color:#F4D258;\">Imaginary </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of March 7th's ATK to a single target enemy and gains <nobr>#2[i]</nobr> point(s) of Charge.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "20",
@@ -693,7 +694,7 @@
   },
   {
    "tagHash": "Support",
-   "descHash": "Designates a single ally (excluding this unit) as Shifu and increases Shifu's SPD by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Only the most recent target of March 7th's Skill is considered as Shifu.<br /><br />When using Basic ATK or dealing 1 hit of Enhanced Basic ATK's DMG, triggers the corresponding effect based on the specific Path of Shifu:<br /><br />Erudition, Destruction, The Hunt: Deals <u>Additional DMG</u> (DMG Type based on Shifu's Combat Type) equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> of March 7th's ATK.<br />Harmony, Nihility, Preservation, Abundance: Increases the Toughness Reduction of this instance of DMG by <nobr>#3[i]%</nobr>.",
+   "descHash": "Designates a single ally (excluding this unit) as Shifu and increases Shifu's SPD by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Only the most recent target of March 7th's Skill is considered as Shifu.<br /><br /><br />Whenever using Basic ATK or dealing 1 hit of Enhanced Basic ATK's DMG, triggers the corresponding effect if Shifu with the specified Path is present on the field:<br /><br />Erudition, Destruction, The Hunt: Deals <u>Additional DMG</u> (DMG Type based on Shifu's Combat Type) equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> of March 7th's ATK.<br /><br />Harmony, Nihility, Preservation, Abundance: Increases the Toughness Reduction of this instance of DMG by <nobr>#3[i]%</nobr>.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -1643,7 +1644,7 @@
   },
   {
    "tagHash": "Single Target",
-   "descHash": "Initially, deals <nobr>#4[i]</nobr> hits, each causing <span style=\"color:#F4D258;\">Imaginary </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of March 7th's ATK to a single target enemy. After dealing the final hit, there is a <nobr>#2[i]%</nobr> <u>fixed chance</u> to deal 1 extra hit, up to a max of <nobr>#3[i]</nobr> extra hit(s). Energy regenerated from using Enhanced Basic ATK does not increase with the number of hits.<br />Enhanced Basic ATK cannot recover Skill Points.",
+   "descHash": "Initially, deals <nobr>#4[i]</nobr> hits, each causing <span style=\"color:#F4D258;\">Imaginary </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of March 7th's ATK to a single target enemy. Whenever dealing the final hit, there is a <nobr>#2[i]%</nobr> <u>fixed chance</u> to deal 1 additional hit of DMG, up to a max of <nobr>#3[i]</nobr> additional hit(s). Energy regenerated from using Enhanced Basic ATK does not increase with the number of hits.<br />Enhanced Basic ATK cannot recover Skill Points.",
    "ultimateCost": 0,
    "break": "15",
    "energy": "30",

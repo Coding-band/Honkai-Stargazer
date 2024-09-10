@@ -456,7 +456,7 @@
    "iconPath": "f8eb30e2229ef4fab0d148cde34ab00987f524c1f3570a64e2b0713db7530f79",
    "artPath": "80791429c08c180f8090d3f34780c2943aa692ece6d275a9147d50f3f648bfbe",
    "name": "Память об этом",
-   "descHash": "В начале боя накладывает на союзника с наименьшим процентом HP Щит, равный <nobr>#1[i]%</nobr> от защиты Март 7 плюс <nobr>#3[i]</nobr> ед., на <nobr>#2[i]</nobr> хода.",
+   "descHash": "В начале боя накладывает на союзника с наименьшим процентом НР Щит, равный <nobr>#1[i]%</nobr> от защиты Март 7 плюс <nobr>#3[i]</nobr> ед., на <nobr>#2[i]</nobr> хода.",
    "params": [
     0.24,
     3,
@@ -494,7 +494,7 @@
    "iconPath": "e8cfab68f2315e280469717802f97e83ba52520deba7ef524f226e5cf86f52bc",
    "artPath": "af914484532aaa4d96a623195e1282dafb6a48d22ef179713e1b0828a3739dac",
    "name": "Вот так, навсегда...",
-   "descHash": "Союзники с Щитом, созданным навыком персонажа, в начале каждого хода восстанавливают <nobr>#1[i]%</nobr> HP плюс <nobr>#2[i]</nobr> HP.",
+   "descHash": "Союзники с Щитом, созданным навыком персонажа, в начале каждого хода восстанавливают <nobr>#1[i]%</nobr> НР плюс <nobr>#2[i]</nobr> НР.",
    "params": [
     0.04,
     106
@@ -682,7 +682,7 @@
   },
   {
    "tagHash": "Защита",
-   "descHash": "Накладывает на одного союзника Щит, который может поглотить урон, равный <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> от защиты Март 7 плюс <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span> ед., на <nobr>#2[i]</nobr> хода.<br />Если текущее HP этого союзника выше или равно <nobr>#3[i]%</nobr>, его вероятность быть атакованным противниками повышается.",
+   "descHash": "Накладывает на одного союзника Щит, который может поглотить урон, равный <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> от защиты Март 7 плюс <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span> ед., на <nobr>#2[i]</nobr> хода.<br />Если текущее НР этого союзника выше или равно <nobr>#3[i]%</nobr>, его вероятность быть атакованным противниками повышается.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -1664,150 +1664,6 @@
  ],
  "skillTreePoints": [
   {
-   "id": 1001103,
-   "anchor": 8,
-   "type": 1,
-   "children": [
-    {
-     "id": 1001208,
-     "anchor": 16,
-     "type": 2,
-     "children": [
-      {
-       "id": 1001209,
-       "anchor": 17,
-       "type": 2,
-       "children": [],
-       "embedBuff": {
-        "id": 877747,
-        "name": "Усиление ледяного урона",
-        "levelReq": 75,
-        "promotionReq": 0,
-        "iconPath": "30e53905e606abc915cd27cdc42170fc4a8bae2e767f6404e2ba82c80f097b2c",
-        "statusList": [
-         {
-          "key": "Бонус лед. урона",
-          "value": 0.064
-         }
-        ],
-        "cost": [
-         {
-          "id": 29328,
-          "count": 128000
-         },
-         {
-          "id": 836254,
-          "count": 6
-         },
-         {
-          "id": 717319,
-          "count": 6
-         }
-        ]
-       }
-      },
-      {
-       "id": 1001210,
-       "anchor": 18,
-       "type": 2,
-       "children": [],
-       "embedBuff": {
-        "id": 961679,
-        "name": "Усиление защиты",
-        "levelReq": 80,
-        "promotionReq": 0,
-        "iconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
-        "statusList": [
-         {
-          "key": "Защита",
-          "value": 0.1
-         }
-        ],
-        "cost": [
-         {
-          "id": 29328,
-          "count": 128000
-         },
-         {
-          "id": 836254,
-          "count": 6
-         },
-         {
-          "id": 717319,
-          "count": 6
-         }
-        ]
-       }
-      }
-     ],
-     "embedBuff": {
-      "id": 877746,
-      "name": "Усиление ледяного урона",
-      "levelReq": 0,
-      "promotionReq": 6,
-      "iconPath": "30e53905e606abc915cd27cdc42170fc4a8bae2e767f6404e2ba82c80f097b2c",
-      "statusList": [
-       {
-        "key": "Бонус лед. урона",
-        "value": 0.048
-       }
-      ],
-      "cost": [
-       {
-        "id": 29328,
-        "count": 128000
-       },
-       {
-        "id": 836254,
-        "count": 6
-       },
-       {
-        "id": 717319,
-        "count": 6
-       }
-      ]
-     }
-    }
-   ],
-   "embedBonusSkill": {
-    "descHash": "Повышает базовый шанс сверхспособности наложить статус Заморозка на противников на <nobr>#1[i]%</nobr>.",
-    "ultimateCost": 0,
-    "id": 877642,
-    "name": "Ледяные чары",
-    "iconPath": "bb421bddce7eed2476d8c523169155db1d7ebb760e6151efda4097d79f5267c2",
-    "levelReq": 0,
-    "promotionReq": 6,
-    "levelData": [
-     {
-      "params": [
-       0.15
-      ],
-      "level": 1,
-      "levelReq": 0,
-      "promotionReq": 6,
-      "cost": [
-       {
-        "id": 29328,
-        "count": 128000
-       },
-       {
-        "id": 836254,
-        "count": 6
-       },
-       {
-        "id": 125435,
-        "count": 1
-       },
-       {
-        "id": 985668,
-        "count": 1
-       }
-      ]
-     }
-    ]
-   }
-  },
-  {
    "id": 1001201,
    "anchor": 9,
    "type": 2,
@@ -2115,6 +1971,150 @@
      {
       "id": 717319,
       "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1001103,
+   "anchor": 8,
+   "type": 1,
+   "children": [
+    {
+     "id": 1001208,
+     "anchor": 16,
+     "type": 2,
+     "children": [
+      {
+       "id": 1001209,
+       "anchor": 17,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 877747,
+        "name": "Усиление ледяного урона",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "30e53905e606abc915cd27cdc42170fc4a8bae2e767f6404e2ba82c80f097b2c",
+        "statusList": [
+         {
+          "key": "Бонус лед. урона",
+          "value": 0.064
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836254,
+          "count": 6
+         },
+         {
+          "id": 717319,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 1001210,
+       "anchor": 18,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 961679,
+        "name": "Усиление защиты",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+        "statusList": [
+         {
+          "key": "Защита",
+          "value": 0.1
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836254,
+          "count": 6
+         },
+         {
+          "id": 717319,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 877746,
+      "name": "Усиление ледяного урона",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "30e53905e606abc915cd27cdc42170fc4a8bae2e767f6404e2ba82c80f097b2c",
+      "statusList": [
+       {
+        "key": "Бонус лед. урона",
+        "value": 0.048
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836254,
+        "count": 6
+       },
+       {
+        "id": 717319,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Повышает базовый шанс сверхспособности наложить статус Заморозка на противников на <nobr>#1[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 877642,
+    "name": "Ледяные чары",
+    "iconPath": "bb421bddce7eed2476d8c523169155db1d7ebb760e6151efda4097d79f5267c2",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.15
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836254,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
      }
     ]
    }
@@ -2608,7 +2608,7 @@
   },
   {
    "id": 67,
-   "title": "Восстановление HP",
+   "title": "Восстановление НР",
    "text": "Большое спасибо!",
    "unlockRequirement": "",
    "cnUrl": "6c0d65bc1fff3fbe5375a78bb40a8ba2f80e7272b643f5ed0c3abf809325f9da",

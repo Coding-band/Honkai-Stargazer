@@ -70,6 +70,7 @@
    "rarity": 4,
    "rewardPath": "/material/186254",
    "comeFrom": [
+    "Echo of War: Scalegorge Waterscape",
     "Echo of War (Scalegorge Waterscape)"
    ]
   },
@@ -476,7 +477,7 @@
    "iconPath": "4c73885396dc864b5778860e57645a62970a05d464c3fceb4cf74419970e7be2",
    "artPath": "3077a1015214d2259f3a0e0494927c2a1eccc0f310057ca50c5c8425852ac23c",
    "name": "Rejected by Death, Infected With Life",
-   "descHash": "When Blade's current HP drops to <nobr>50%</nobr> or lower of his Max HP, increases his Max HP by <nobr>#1[i]%</nobr>. Stacks up to <nobr>#2[i]</nobr> time(s).",
+   "descHash": "When Blade's current HP percentage drops to <nobr>50%</nobr> or lower of his Max HP, increases his Max HP by <nobr>#1[i]%</nobr>. Stacks up to <nobr>#2[i]</nobr> time(s).",
    "params": [
     0.2,
     2
@@ -2040,7 +2041,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "When Blade's current HP is at <nobr>50%</nobr> of Max HP or lower, Incoming Healing increases by <nobr>#1[i]%</nobr>.",
+    "descHash": "When Blade's current HP percentage is at <nobr>50%</nobr> of Max HP or lower, Incoming Healing increases by <nobr>#1[i]%</nobr>.",
     "ultimateCost": 0,
     "id": 18110,
     "name": "Vita Infinita",
@@ -2580,6 +2581,26 @@
    "krUrl": "eb5b7117c728913d1f3addc630fbf6f128d26cfe06d814d9c5d9cbf8bcf8c274"
   },
   {
+   "id": 30,
+   "title": "About Sam",
+   "text": "I live in an eternal purgatory. And Sam — he is good at creating purgatory.",
+   "unlockRequirement": "",
+   "cnUrl": "628d102875118aa7988b5dab2d460fe4d0e204757b7367de6209800a7f109ff8",
+   "jpUrl": "50c059d6ab457a3f7f804e5191fcb83d5743d92894e3f40bfaa63d7159c54d0d",
+   "enUrl": "2a0ce6fdfb1935499a257e7350d93815be670bbb565c01b8e11049b951a4feec",
+   "krUrl": "ae48d8013fec6d192fdbafc45740e7a1f6ed85ec6948e4629ca46b2724f532ad"
+  },
+  {
+   "id": 32,
+   "title": "About Firefly",
+   "text": "I yearn for the end, yet she yearns for survival... We are both destiny's slaves.",
+   "unlockRequirement": "",
+   "cnUrl": "7af82bdd84f357fb745b45bf768c8afb8069d0b0ee19e873fcc26b3a55e85190",
+   "jpUrl": "9fdaaea3a19cfbcc0ecc7bdfd350e3daeab846a5713f15df4344bda27c1ca42a",
+   "enUrl": "e71c4152048c63f72a623f275d53f16eb7ef447fae4defc61d96927b7dfea1b7",
+   "krUrl": "293903d372b4418480530813069c28a9ae7cea53631e125de979637de5d17a5a"
+  },
+  {
    "id": 20,
    "title": "Eidolon Activation",
    "text": "Life itself is punishment.",
@@ -2680,16 +2701,6 @@
    "krUrl": "9091a7807c0826af194c17c3053d1b02b6b5bb14f6802c216c926bf95b742ed2"
   },
   {
-   "id": 30,
-   "title": "About Sam",
-   "text": "I live in an eternal purgatory. And Sam — he is good at creating purgatory.",
-   "unlockRequirement": "",
-   "cnUrl": "628d102875118aa7988b5dab2d460fe4d0e204757b7367de6209800a7f109ff8",
-   "jpUrl": "50c059d6ab457a3f7f804e5191fcb83d5743d92894e3f40bfaa63d7159c54d0d",
-   "enUrl": "2a0ce6fdfb1935499a257e7350d93815be670bbb565c01b8e11049b951a4feec",
-   "krUrl": "ae48d8013fec6d192fdbafc45740e7a1f6ed85ec6948e4629ca46b2724f532ad"
-  },
-  {
    "id": 31,
    "title": "Added to Team With Firefly",
    "text": "Who do you think will reach the \"end\" first — you, or me... or them?",
@@ -2698,16 +2709,6 @@
    "jpUrl": "299479643ec22625c123b503458a9e57d8995ac43c5235c78494cc2ee7a32621",
    "enUrl": "e3ab6dcac0257e9dc6e2d97cc9473da3f4ce34fc88f9fcfc0a22f48b139442e2",
    "krUrl": "2c946dda05a2e4f0ea0a22b6cdf3ee3d1384220451a7fe165c3696df057655e4"
-  },
-  {
-   "id": 32,
-   "title": "About Firefly",
-   "text": "I yearn for the end, yet she yearns for survival... We are both destiny's slaves.",
-   "unlockRequirement": "",
-   "cnUrl": "7af82bdd84f357fb745b45bf768c8afb8069d0b0ee19e873fcc26b3a55e85190",
-   "jpUrl": "9fdaaea3a19cfbcc0ecc7bdfd350e3daeab846a5713f15df4344bda27c1ca42a",
-   "enUrl": "e71c4152048c63f72a623f275d53f16eb7ef447fae4defc61d96927b7dfea1b7",
-   "krUrl": "293903d372b4418480530813069c28a9ae7cea53631e125de979637de5d17a5a"
   },
   {
    "id": 51,

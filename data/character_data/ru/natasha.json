@@ -208,7 +208,7 @@
    "id": 836257,
    "type": 601,
    "purposeId": 3,
-   "iconPath": "4dd0df46866fa519a02c7db658f463329dc9e1668974b3eb45c33d6ad94bce63",
+   "iconPath": "abf7028ee6f1d521f86750fee389781d7c1df458f5871868d4e99d460352545b",
    "name": "Цветок вечности",
    "desc": "Великолепный цветок, распустившийся из ростка жизни. Можно использовать для значительного повышения уровня Следов персонажей <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Изобилия</span>.",
    "lore": "В тычинке сконцентрирована сила Изобилия, что даёт цветку вечную жизненную силу. Ни огонь, ни лёд, ни другая суровая окружающая среда не могут помешать росту этой великолепной формы жизни.<br />Однажды он будет питаться светом звёзд, его корни вплетутся в плоть мира и никогда не погибнут, а его плоды будут сулить бессмертие.<br /><br />«Гигантские корабли затмевают собой горы и дрейфуют над пустотой. Над ними простираются ветви неумирающего древа, что дарует бессмертие».",
@@ -446,7 +446,7 @@
    "iconPath": "91ca431403948ba7925b844e4a3a38c02b8535233d47dd1a18cbff7ad83b481d",
    "artPath": "ad18c9d2fb5702977a53dc54722277e8612e5d7832a554a17f9c266c3ea548ff",
    "name": "Фармакологическая экспертиза",
-   "descHash": "После атаки противником, если текущее HP ниже или равно <nobr>#1[i]%</nobr>, восстанавливает себе <nobr>#2[i]%</nobr> HP плюс <nobr>#3[i]</nobr> HP. Этот эффект может сработать только 1 раз за бой.",
+   "descHash": "После атаки противником, если текущее НР ниже или равно <nobr>#1[i]%</nobr>, восстанавливает себе <nobr>#2[i]%</nobr> НР плюс <nobr>#3[i]</nobr> НР. Этот эффект может сработать только 1 раз за бой.",
    "params": [
     0.3,
     0.15,
@@ -458,7 +458,7 @@
    "iconPath": "1e65a38074a189a0ad7915a7746793737aa7327aa7f14b967ab721792371fb09",
    "artPath": "0515a405725de52d85d1a30a5063e4e6802b1b2f81a5bb44e86b0d624a3747d4",
    "name": "Клиническое исследование",
-   "descHash": "Использование сверхспособности периодически исцеляет союзника с HP ниже или равным <nobr>#1[i]%</nobr> в течение <nobr>#2[i]</nobr> хода. В начале своего хода этот союзник восстанавливает HP, равное <nobr>#3[i]%</nobr> от макс. HP Наташи плюс <nobr>#4[i]</nobr> HP.",
+   "descHash": "Использование сверхспособности периодически исцеляет союзника с НР ниже или равным <nobr>#1[i]%</nobr> в течение <nobr>#2[i]</nobr> хода. В начале своего хода этот союзник восстанавливает НР, равное <nobr>#3[i]%</nobr> от макс. НР Наташи плюс <nobr>#4[i]</nobr> НР.",
    "params": [
     0.3,
     1,
@@ -497,7 +497,7 @@
    "iconPath": "9550e6ccf79aa1ccbf4b6367fc2f80a87e19783d998f3b30674eeaa29ee079c5",
    "artPath": "21c900448def1aee9758aec09a3ed600e4bd4da15e3403f882af712918b2ac9e",
    "name": "Милосердие лекаря",
-   "descHash": "Базовая атака Наташи наносит дополнительный физический урон, равный <nobr>#1[i]%</nobr> от её макс. HP.",
+   "descHash": "Базовая атака Наташи наносит дополнительный физический урон, равный <nobr>#1[i]%</nobr> от её макс. НР.",
    "params": [
     0.4
    ]
@@ -684,7 +684,7 @@
   },
   {
    "tagHash": "Восстановление",
-   "descHash": "Восстанавливает HP выбранного союзника, равное <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> от макс. HP Наташи плюс <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span> HP. Также в начале каждого хода этот союзник восстанавливает HP, равное <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> от макс. HP Наташи плюс <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]</nobr></span> HP, в течение <nobr>#3[i]</nobr> ходов.",
+   "descHash": "Восстанавливает НР выбранного союзника, равное <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> от макс. НР Наташи плюс <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span> НР. Также в начале каждого хода этот союзник восстанавливает НР, равное <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> от макс. НР Наташи плюс <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]</nobr></span> НР, в течение <nobr>#3[i]</nobr> ходов.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -1015,7 +1015,7 @@
   },
   {
    "tagHash": "Восстановление",
-   "descHash": "Восстанавливает всем союзникам HP, равное <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> от макс. HP Наташи плюс <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> HP.",
+   "descHash": "Восстанавливает всем союзникам НР, равное <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> от макс. НР Наташи плюс <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> НР.",
    "ultimateCost": 90,
    "break": "0",
    "energy": "5",
@@ -1301,7 +1301,7 @@
   },
   {
    "tagHash": "Усиление",
-   "descHash": "Исцеление союзников с HP ниже или равным <nobr>#1[i]%</nobr> повышает исходящее исцеление Наташи на <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. Этот эффект также применяется к периодическому исцелению.",
+   "descHash": "Исцеление союзников с НР ниже или равным <nobr>#1[i]%</nobr> повышает исходящее исцеление Наташи на <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. Этот эффект также применяется к периодическому исцелению.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
@@ -1609,7 +1609,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "Немедленно атакует противника и после начала боя наносит случайному противнику физический урон, равный <nobr>#4[i]%</nobr> от силы атаки Наташи, и имеет <u>базовый шанс</u> <nobr>#1[i]%</nobr> наложить на всех противников статус Слабость.<br />Противник со статусом Слабость наносит на <nobr>#2[i]%</nobr> меньше урона в течение <nobr>#3[i]</nobr> хода.",
+   "descHash": "Немедленно атакует противника и после начала боя наносит случайному противнику физический урон, равный <nobr>#4[i]%</nobr> от силы атаки Наташи, и имеет <u>базовый шанс</u> <nobr>#1[i]%</nobr> наложить на всех противников статус Бессилие.<br />Противник со статусом Бессилие наносит на <nobr>#2[i]%</nobr> меньше урона в течение <nobr>#3[i]</nobr> хода.",
    "ultimateCost": 0,
    "break": "60",
    "energy": "0",
@@ -1687,13 +1687,13 @@
        ],
        "embedBuff": {
         "id": 622970,
-        "name": "Усиление HP",
+        "name": "Усиление НР",
         "levelReq": 0,
         "promotionReq": 3,
         "iconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
         "statusList": [
          {
-          "key": "HP",
+          "key": "НР",
           "value": 0.04
          }
         ],
@@ -1799,13 +1799,13 @@
          "children": [],
          "embedBuff": {
           "id": 622966,
-          "name": "Усиление HP",
+          "name": "Усиление НР",
           "levelReq": 0,
           "promotionReq": 5,
           "iconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
           "statusList": [
            {
-            "key": "HP",
+            "key": "НР",
             "value": 0.06
            }
           ],
@@ -1857,13 +1857,13 @@
      ],
      "embedBuff": {
       "id": 622968,
-      "name": "Усиление HP",
+      "name": "Усиление НР",
       "levelReq": 0,
       "promotionReq": 4,
       "iconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
       "statusList": [
        {
-        "key": "HP",
+        "key": "НР",
         "value": 0.06
        }
       ],
@@ -2039,13 +2039,13 @@
    "children": [],
    "embedBuff": {
     "id": 622972,
-    "name": "Усиление HP",
+    "name": "Усиление НР",
     "levelReq": 1,
     "promotionReq": 0,
     "iconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
     "statusList": [
      {
-      "key": "HP",
+      "key": "НР",
       "value": 0.04
      }
     ],
@@ -2068,13 +2068,13 @@
    "children": [],
    "embedBuff": {
     "id": 506326,
-    "name": "Усиление HP",
+    "name": "Усиление НР",
     "levelReq": 80,
     "promotionReq": 0,
     "iconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
     "statusList": [
      {
-      "key": "HP",
+      "key": "НР",
       "value": 0.08
      }
     ],
@@ -2513,7 +2513,7 @@
   },
   {
    "id": 67,
-   "title": "Восстановление HP",
+   "title": "Восстановление НР",
    "text": "Я буду поосторожнее.",
    "unlockRequirement": "",
    "cnUrl": "77c7f84c9c5754db35578ca98f4c42ca447b0ef8c3ffe4b2da6399da7559c59e",

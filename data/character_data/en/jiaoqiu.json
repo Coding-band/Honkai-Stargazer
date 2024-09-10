@@ -70,6 +70,7 @@
    "rarity": 4,
    "rewardPath": "/material/186254",
    "comeFrom": [
+    "Echo of War: Scalegorge Waterscape",
     "Echo of War (Scalegorge Waterscape)"
    ]
   },
@@ -446,7 +447,7 @@
    "iconPath": "b7ca9c7a05f6b701290a78d9d837060c2afe9f09c03d62b153d381993c90ec9b",
    "artPath": "d15d3e462256779aae4a70bfe8cd0d1531ef9f5e8a0071ec054211e02c10ebff",
    "name": "Pentapathic Transference",
-   "descHash": "Allies deal <nobr>#1[i]%</nobr> increased DMG to enemy targets afflicted with Ashen Roast. Whenever inflicting Ashen Roast on an enemy target via triggering the Talent's effect, additionally increases the number of Ashen Roast applied this time by <nobr>#2[i]</nobr>.",
+   "descHash": "Allies deal <nobr>#1[i]%</nobr> increased DMG to enemy targets afflicted with Ashen Roast. Whenever inflicting Ashen Roast on an enemy target via triggering the Talent's effect, additionally increases the number of \"Ashen Roast\" stacks applied this time by <nobr>#2[i]</nobr>.",
    "params": [
     0.4,
     1
@@ -457,7 +458,7 @@
    "iconPath": "69d791a9ebe52afd91909437cae440194cedd4714ce09ad198b55c869ba4fd80",
    "artPath": "4de6a96012953752f600709dcc5736ead544029e46199212dea65cf0679b7934",
    "name": "From Savor Comes Suffer",
-   "descHash": "When an enemy target is afflicted with Ashen Roast, increases the multiplier for the Fire DoT dealt by Ashen Roast to the target by <nobr>#1[i]%</nobr>.",
+   "descHash": "When an enemy target is afflicted with Ashen Roast, increases the multiplier for the Fire DoT dealt by Ashen Roast to this target by <nobr>#1[i]%</nobr>.",
    "params": [
     3
    ]
@@ -1694,7 +1695,7 @@
   },
   {
    "tagHash": "Impair",
-   "descHash": "After using Technique, creates a special dimension that lasts for <nobr>#2[i]</nobr> second(s). After entering combat with enemies in this special dimension, deals <span style=\"color:#F84F36;\">Fire </span>DMG equal to <nobr>#1[i]%</nobr> of Jiaoqiu's ATK to all enemies, with a <nobr>#3[i]%</nobr> <u>base chance</u> of applying 1 \"Ashen Roast\" stack. Only 1 dimension created by allies can exist at the same time.",
+   "descHash": "After using Technique, creates a Special Dimension that lasts for <nobr>#2[i]</nobr> second(s). After entering combat with enemies in this Special Dimension, deals <span style=\"color:#F84F36;\">Fire </span>DMG equal to <nobr>#1[i]%</nobr> of Jiaoqiu's ATK to all enemies, with a <nobr>#3[i]%</nobr> <u>base chance</u> of applying 1 \"Ashen Roast\" stack. Only 1 dimension created by allies can exist at the same time.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
@@ -2224,7 +2225,7 @@
   {
    "id": 4,
    "title": "About Self: Art of Healing",
-   "text": "Though my medical expertise is derived from the culinary Ranzhi tradition, it has become a discipline in its own right. After all, the Yaoqing's traditional culinary medicine didn't make use of tools such as the \"nine-square grid.\"",
+   "text": "Though my medical expertise is derived from the culinary Ranzhi tradition, it has become a discipline in its own right. After all, the Yaoqing's traditional culinary medicine didn't make use of tools such as the \"nine-squared grid.\"",
    "unlockRequirement": "",
    "cnUrl": "02d29d7a7a985ecf8da054d83029e6835030bd3e85e97682682b873efeb81f23",
    "jpUrl": "f35141e4f24b1fc57880f3c1f58a9d3fbc70931f13b648ee6febdedafda3be62",
@@ -2364,7 +2365,7 @@
   {
    "id": 18,
    "title": "About Yunli",
-   "text": "Miss Yunli may be the youngest member of the Flamewheel Octet, but she is no less a swordsmaster than the other seven. Some might suspect her of benefitting from her connection to Huaiyan, but she could not have endured such rigor and refinement if she were not a valuable talent in her own right.",
+   "text": "Miss Yunli may be the second youngest member of the Flamewheel Octet, but she is no less a swordsmaster than the other seven. Some might suspect her of benefitting from her connection to Huaiyan, but she could not have endured such rigor and refinement if she were not a valuable talent in her own right.",
    "unlockRequirement": "",
    "cnUrl": "c54493a8e5f02141adebb587ee05b0e3da43fbc117618b21b859bfcd7331c5a9",
    "jpUrl": "1aaf4810283e5a1c84c183c0d96b5e925ef13140d0ef6d7df853e139241f4f83",
@@ -2530,6 +2531,36 @@
    "jpUrl": "ab2598cbe09409c89ff4782041efb599f812898a68d1637a91d8d8fc08fc561e",
    "enUrl": "669bcf0f3b17f4b8dea5519f58538197a4fa92d811964b9f1349009c24900941",
    "krUrl": "303844843a97fad2088a7d9892443a5f6e03862081644ec0ac590d112abb4411"
+  },
+  {
+   "id": 35,
+   "title": "Added to Team With Moze",
+   "text": "I'll fan the flames. You sneak in from the shadows~",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 36,
+   "title": "Added to Team With Feixiao",
+   "text": "Oh, General, seems like I can't change your mind about this battle no matter what I say... Maybe we should save our talk for after.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 37,
+   "title": "Added to Team With Lingsha",
+   "text": "Show me your skills, Lingsha.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
   },
   {
    "id": 51,
@@ -2775,12 +2806,12 @@
  "storyItems": [
   {
    "title": "Character Details",
-   "text": "A foxian healer and counselor from the Xianzhou Yaoqing. Often greets people with a smile on his face and a scheme in his heart.<br />Born into a prestigious Alchemy Commission family, he once withdrew from practicing medicine due to a broken heart. However, he returned to the field to treat \"the Merlin's Claw,\" General Feixiao.<br />Skilled in the study of alchemical prescription that views food as medicine, especially those that induce a sensation of spiciness. They invented a cauldron-based medicinal formula known as the \"nine-square grid.\"",
+   "text": "A foxian healer and counselor from the Xianzhou Yaoqing. Often greets people with a smile on his face and a scheme in his heart.<br />Born into a prestigious Alchemy Commission family, he once withdrew from practicing medicine due to a broken heart. However, he returned to the field to treat \"the Merlin's Claw,\" General Feixiao.<br />Skilled in the study of alchemical prescription that views food as medicine, especially those that induce a sensation of spiciness. They invented a cauldron-based medicinal formula known as the \"nine-squared grid.\"",
    "unlockRequirement": ""
   },
   {
    "title": "Character Story: Part I",
-   "text": "Rainsoar Lake, the Yaoqing.<br />In the misty rain, yellow floating heart foliage and blossoms decorated the lake as frolicking fishes leaped out of the water from time to time. At this lakeside abounds with lotuses and water chestnuts, old turtles basking on the pebbles were an everyday sight.<br /><br />A foxian youth with a basket for storing harvested ingredients on his back rowed a small boat, raindrops running down his ear before being lightly flicked away.<br />As he scooped up floating heart plants and picked out lotus flowers, he peeled open wild rice stems and threw them casually into his mouth.<br />\"So sweet and refreshing, it delights the palate....\"<br />After harvesting the plants, he steered the boat to shore and crossed the lakeside with graceful ease before changing into the attire of a healer.<br />...<br />Inside the apothecary, misty steam hung in the air as tantalizing aromas filled the premises.<br />\"Your pulse has become more stable since you last visited, but you should still work on getting more rest and nourishing your body. Care to try one of my new medicines?\"<br />With a smile, he put away the wrist cushion and golden needles, bringing out a whole new set of medical tools.<br />As the elderly man gazed at the nine-squared cauldron in front of him, he couldn't help but break into a wry smile.<br />\"Others can hardly even invent a few decent medicines in their lifetimes, yet a single day is all you need to achieve that and more.\"<br />\"You flatter me, Master. This cauldron-based medicinal formula is called the 'nine-square grid.' Not only is it simple to make, but its effects are also wondrous.\"<br />The youth poured out the ingredients from his basket, cleaning them quickly before slicing them. As he did, the stock inside the cauldron began to bubble and boil.<br />\"A tael of euphorbia, three mace of bitterwood, and four cash of desert cistanche... Boil with big bones, then pair with deep sea shellfish to dispel the bitter flavor. The concoction can aid one in achieving peaceful slumber.\" \"As for the white loach and threadfin snapper, their constitution-warming properties are great for nourishing the qi and blood. We need only dip the slices in boiling water for two to three seconds.\"<br />\"These green mushrooms, silver needle tea leaves, and snow lotus roots were all carefully cultivated with decoction dregs by me at Rainsoar Lake. Not only are they tasty and refreshing, but they also offer medicinal benefits.\"<br />As glistening fish slices met boiling soup, both master and disciple enjoyed a delicious meal that quickly made them forget about the damp coldness of a rainy day.<br /><br />In the aftermath of the meal, the older man put down his chopsticks, seemingly having realized something.<br />\"This meal that I've just had, the 'nine-square grid'... It seems there is more you wish to tell me with this meal than what I'd thought.\"<br />The youth stood up and solemnly bowed.<br />\"Master, you are perceptive indeed. I have long since made up my mind about whether to join the Alchemy Commission.\"<br />\"While the Alchemy Commission is a good place to be, it is ultimately not compatible with my wish to practice medicine for the masses. The one place that requires a healer the most is undeniably the battlefield where the Yaoqing's forces are.\"<br />\"Among the many schools of healers, only practitioners of the Ranzhi School — such as you and me — place emphasis on the tenet of 'food is medicine,' using the joy of food to alleviate the pain of ailments... The 'nine-square grid,' with its convenience and effectiveness in dispelling the cold that ails one's constitution, was specially made by me to provide succor to those on the battlefield.\"<br />\"For those who yet breathe, there is nothing more important than the preservation of life. If I could deliver the people from pain and suffering with a mere medicinal formula, the Alchemy Commission's time and effort spent in grooming my talents would be well-spent indeed.\"<br />The elder looked as though he wanted to talk the youth out of his decision, but he ultimately decided against it.<br />\"The battlefield is a bitterly cold place... Don't forget to bring more foods that warm the constitution ere you depart.\"",
+   "text": "Rainsoar Lake, the Yaoqing.<br />In the misty rain, yellow floating heart foliage and blossoms decorated the lake as frolicking fishes leaped out of the water from time to time. At this lakeside abounds with lotuses and water chestnuts, old turtles basking on the pebbles were an everyday sight.<br /><br />A foxian youth with a basket for storing harvested ingredients on his back rowed a small boat, raindrops running down his ear before being lightly flicked away.<br />As he scooped up floating heart plants and picked out lotus flowers, he peeled open wild rice stems and threw them casually into his mouth.<br />\"So sweet and refreshing, it delights the palate....\"<br />After harvesting the plants, he steered the boat to shore and crossed the lakeside with graceful ease before changing into the attire of a healer.<br />...<br />Inside the apothecary, misty steam hung in the air as tantalizing aromas filled the premises.<br />\"Your pulse has become more stable since you last visited, but you should still work on getting more rest and nourishing your body. Care to try one of my new medicines?\"<br />With a smile, he put away the wrist cushion and golden needles, bringing out a whole new set of medical tools.<br />As the elderly man gazed at the nine-squared cauldron in front of him, he couldn't help but break into a wry smile.<br />\"Others can hardly even invent a few decent medicines in their lifetimes, yet a single day is all you need to achieve that and more.\"<br />\"You flatter me, Master. This cauldron-based medicinal formula is called the 'nine-squared grid.' Not only is it simple to make, but its effects are also wondrous.\"<br />The youth poured out the ingredients from his basket, cleaning them quickly before slicing them. As he did, the stock inside the cauldron began to bubble and boil.<br />\"A tael of euphorbia, three mace of bitterwood, and four cash of desert cistanche... Boil with big bones, then pair with deep sea shellfish to dispel the bitter flavor. The concoction can aid one in achieving peaceful slumber.\" \"As for the white loach and threadfin snapper, their constitution-warming properties are great for nourishing the qi and blood. We need only dip the slices in boiling water for two to three seconds.\"<br />\"These green mushrooms, silver needle tea leaves, and snow lotus roots were all carefully cultivated with decoction dregs by me at Rainsoar Lake. Not only are they tasty and refreshing, but they also offer medicinal benefits.\"<br />As glistening fish slices met boiling soup, both master and disciple enjoyed a delicious meal that quickly made them forget about the damp coldness of a rainy day.<br /><br />In the aftermath of the meal, the older man put down his chopsticks, seemingly having realized something.<br />\"This meal that I've just had, the 'nine-squared grid'... It seems there is more you wish to tell me with this meal than what I'd thought.\"<br />The youth stood up and solemnly bowed.<br />\"Master, you are perceptive indeed. I have long since made up my mind about whether to join the Alchemy Commission.\"<br />\"While the Alchemy Commission is a good place to be, it is ultimately not compatible with my wish to practice medicine for the masses. The one place that requires a healer the most is undeniably the battlefield where the Yaoqing's forces are.\"<br />\"Among the many schools of healers, only practitioners of the Ranzhi School — such as you and me — place emphasis on the tenet of 'food is medicine,' using the joy of food to alleviate the pain of ailments... The 'nine-squared grid,' with its convenience and effectiveness in dispelling the cold that ails one's constitution, was specially made by me to provide succor to those on the battlefield.\"<br />\"For those who yet breathe, there is nothing more important than the preservation of life. If I could deliver the people from pain and suffering with a mere medicinal formula, the Alchemy Commission's time and effort spent in grooming my talents would be well-spent indeed.\"<br />The elder looked as though he wanted to talk the youth out of his decision, but he ultimately decided against it.<br />\"The battlefield is a bitterly cold place... Don't forget to bring more foods that warm the constitution ere you depart.\"",
    "unlockRequirement": "Unlocked at Character Level <nobr>20</nobr>"
   },
   {
@@ -2908,7 +2939,7 @@
  },
  "name": "Jiaoqiu",
  "rarity": 5,
- "descHash": "A foxian healer and counselor from the Xianzhou Yaoqing. Often greets people with a smile on his face and a scheme in his heart. Born into a prestigious Alchemy Commission family, he once withdrew from practicing medicine due to a broken heart. However, he returned to the field to treat \"the Merlin's Claw,\" General Feixiao. Skilled in the study of alchemical prescription that views food as medicine, especially those that induce a sensation of spiciness. They invented a cauldron-based medicinal formula known as the \"nine-square grid.\"",
+ "descHash": "A foxian healer and counselor from the Xianzhou Yaoqing. Often greets people with a smile on his face and a scheme in his heart. Born into a prestigious Alchemy Commission family, he once withdrew from practicing medicine due to a broken heart. However, he returned to the field to treat \"the Merlin's Claw,\" General Feixiao. Skilled in the study of alchemical prescription that views food as medicine, especially those that induce a sensation of spiciness. They invented a cauldron-based medicinal formula known as the \"nine-squared grid.\"",
  "artPath": "dfff9c4e3e427e7567b5c7bc355fc77c2c624aa3c5d71334549c4d708efe4bfa",
  "miniIconPath": "48db06a5e29a02b71a2e1fb4649a9a9c60111784374e2df3cd17bc35f0bd3774",
  "damageType": {

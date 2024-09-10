@@ -1,0 +1,3048 @@
+{
+ "spRequirement": 110,
+ "iconPath": "488307689cad02983c52af9ab124b6aa2b241ee24fd99a06fc3cb121a02e6c4f",
+ "bgPath": "034f4c49e7efd96658348a15576ed5c5caa59836986b454192061dc7d0ec8188",
+ "figPath": "c990e240363d472b2f7bc69510b3961fc34ac662c95ec6eeb8d0b5a8582e6ab0",
+ "fgPath": "f837e1f9dcb7dd11f39593f6f3fb7ae904d017ac3273af478473f674bf415ae0",
+ "splashIconPath": "ac52ac4c22b57e5cd5a7137b462401fc9027281fee62e943a793c482c3b4fa61",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRrICAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSC8BAAABkLtt2/mv0q8PfmbcbJu7a7LdZtv25ppsuyZjdq229dH73CkiJgAgKAw9AA/wPP4NaT61N9X31oXcXPD+gZJmnRc90GHmD6reqi5A7uQWue2v/PyV6aRd2Da2acvAZ7G+Xzin6IuclOru9p1Q+lmSc/EXWRwplcZB0TOlzvTzp/Q1llncEbipWKbESd+dnF4W43FYkTNFTvqaKdNNCNioWFJmUmpKtJQgZJbil06SmWSmXgSNlq9+vPPWd5lJZqYzlfFyuhx89FRmkslM0UQfoOqAW3L/mEzp8cb4+B4jHinJnFmWma61xvPo1KjV8CeSMkn2bsOu6UDeoiVlNaZffKrvl7d+nMbYmeBRtHJTe8g9oTvn53kEIeBBjt91XaVw6OBq4PF/H3KKCwB8/gUAVlA4IFwBAACwBwCdASoUABQAPm0ukkakIqGhKA1QgA2JagCxHuN10su9gLtV3j0lTPiy1AN0A/TMPTk6C+fN0V2vcP9JNmNSLuuTL3gAAP7xSd3gtx8XFyb7vr3rgoTc4XKx4h1tGcnKha10JrK8o6k3YMdBMTnGVIe4q6aioQcOKwpRJQQSg2tTyUK2SiEN68GwgW73Q+/slMLpNzoMKRfbbG4LcLKxrbTL9aZubg0/JMqnWokQZgOWxtfVeGEMyBFWmUTx8cEJSglJb0gMWfVAuwS8RAXrcbVMn/PxtqyYcfg13weCln/waCXudEjXONfPqS5Swv9DRZ9T5jJIOqB/FETx5gjyJsad7lU+Qtmazwf9PE6QHnQ/9GqeAOVqzsCiEfut/FQyMN7rGnwsu6nZ98INeXM+HXRfGBxXkAoDHosWQ/iYRVb5L4Km/YHtf7BRVmJP8v3+dfdRrB2oKH6AAAA=",
+  "w": 2048,
+  "h": 2048
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 7,
+  "iconPath": "47b709f33faf9b5b1f7d1cc9b1db8b9f4999261df20e8b29f38496c12a04bc2d",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "154680875035a2d1a2d7827aa99c35f77a9fc6df9de95cd58800bde4bb17472a",
+   "name": "Crédito",
+   "desc": "Divisa que utiliza la Corporación para la Paz Interastral para sus cuentas con los clientes y que se acepta en todas partes como moneda de los viajes espaciales.",
+   "lore": "\"La gente corre, se pelea y comercia por algo que no son más que números en una terminal, pero lo que es verdaderamente valioso no se puede comprar\".",
+   "purpose": "Moneda común",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Cáliz de la mina principal",
+    "Cáliz de la Comisión de Artesanía",
+    "Cáliz del Hotel Fantasía (paisaje onírico)",
+    "Recompensa de misión",
+    "Recompensa de encargo",
+    "Canjeo de Ascuas"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "04121a915c1d5e0a609e4b59417f441c101eaf1edbb092ffef36dbc24d1ae24b",
+   "name": "Huellas del destino",
+   "desc": "Material avanzado de mejora para los Rastros.",
+   "lore": "Un fracaso tras otro garantiza la victoria final. Un paso tras otro acaba llevándote al punto de inflexión de tu destino.",
+   "purpose": "Material de Rastros",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Recompensa de puntos del Universo Simulado",
+    "Honor anónimo",
+    "Canjeo de Ascuas",
+    "Canjeo de Cosmiluz",
+    "Recompensa de evento de duración limitada"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "fe197ceacff72ca32c46a22e6cf77f460edbfa2bc70e5162ad9c9e5485944570",
+   "name": "Guía del espíritu viajero",
+   "desc": "Material de experiencia para personajes. Otorga <nobr>20</nobr> <nobr>000</nobr> pts. de EXP.",
+   "lore": "Lectura indispensable para la exploración. Pulsa el botón Leer y una voz atractiva empezará a hablar en un idioma que entiendes y te contará las vivencias legendarias de aventureros famosos de distintos mundos, así como los valiosos conocimientos que adquirieron.<br /><br />\"El nuevo volumen de la serie Guía del espíritu viajero, titulado «Manual de gastronomía intergaláctica», saldrá a la venta muy pronto\".<br />\"Para enviar un artículo, conéctese a la baliza sinestésica ERD<nobr>-23</nobr>θ y contacte con un representante de la Sociedad del Conocimiento. Puede elegir la forma de pago más conveniente para usted\".",
+   "purpose": "Material de EXP de personaje",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Cáliz de las llanuras nevadas de las afueras",
+    "Cáliz del Vado de las Nubes",
+    "Cáliz de la Frontera de los Sueños",
+    "Salón olvidado"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "3aa3378fafc0e98fb07b480ae468b4fc5b29027f1ec3d000d89353e7ae656832",
+   "name": "Registro de aventuras",
+   "desc": "Material de experiencia para personajes. Otorga <nobr>5000</nobr> pts. de EXP.",
+   "lore": "Colección de notas instructivas muy bien ordenadas. Contiene numerosas ilustraciones y textos que describen aventuras de principio a fin, así como información valiosa y técnicas de supervivencia.<br /><br />\"¿Por qué no lo digitalizan y lo guardan en un disco fotolítico? Sería mucho más práctico\".<br />\"La tecnología avanzada es mucho más frágil de lo que crees cuando tienes que enfrentarte a tormentas estelares o erupciones de neutrones. Además, seguro que quien escribió este libro quería que la gente lo leyera de la forma más sencilla posible\".",
+   "purpose": "Material de EXP de personaje",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Cáliz de las llanuras nevadas de las afueras",
+    "Cáliz del Vado de las Nubes",
+    "Cáliz de la Frontera de los Sueños",
+    "Entrenamiento diario",
+    "Canjeo de Ascuas"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "a0f7c642d789346ecde22056b8a1e76a4707343bc0ebaa161e802db6d7836041",
+   "name": "Noticias del viaje",
+   "desc": "Material de experiencia para personajes. Otorga <nobr>1000</nobr> pts. de EXP.",
+   "lore": "Diario de viaje con una caligrafía ilegible y un contenido completamente aleatorio, por lo que no te sirve de mucho.<br /><br />\"Dan Heng, acaba ya de leerlo y luego tíralo\".",
+   "purpose": "Material de EXP de personaje",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Cáliz de las llanuras nevadas de las afueras",
+    "Cáliz del Vado de las Nubes",
+    "Cáliz de la Frontera de los Sueños",
+    "Recompensa de encargo"
+   ]
+  },
+  "549504": {
+   "id": 549504,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "f379ce82fbe9ed8dbe09f69c50f2edb02d96534ce5f4cff5b102d938c78c2143",
+   "name": "Brote verde inmortal",
+   "desc": "Nuevo brote de una antigua criatura divina. Material simple que se usa en la potenciación.",
+   "lore": "El origen de la vida infinita de las razas de larga vida de Xianzhou y un remanente de la influencia del Eón de la Abundancia. Hace muchos años, el deseo de obtener la inmortalidad de un emperador causó que la flota Xianzhou se echara al mar estelar para intentar encontrar esa vida inacabable.<br /><br />\"Deseamos vivir para siempre y mantener el imperio toda la eternidad. Por desgracia, la vida humana tiene un fin y nuestra capacidad es limitada. Por eso enviamos nueve naves astriger más allá del cielo, para que busquen la receta divina de la inmortalidad\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 2,
+   "rewardPath": "/material/549504",
+   "comeFrom": [
+    "De abominaciones de la Abundancia",
+    "De enemigos en el Universo Diferenciado",
+    "De enemigos en el Universo Simulado",
+    "Recompensa de encargo",
+    "Canjeo de Ascuas",
+    "Máquina sintetizadora multiusos - Intercambio de material",
+    "Cáliz (oro)"
+   ]
+  },
+  "589812": {
+   "id": 589812,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "9dd861f657a1fcde2f7dfcf333b0bf2c31c14f3074153b279e8f556858c9a8f3",
+   "name": "Miel nutricia",
+   "desc": "Néctar elaborado a partir del néctar de la flor del árbol cardial del bosque sagrado de Vonwacq. Una miel que puede acelerar el crecimiento de la vida. Sirve para mejorar moderadamente los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abundancia</span>.",
+   "lore": "Cuando el Rey Demonio emerge de la tierra fértil, solo se ve una fruta redonda con un tallo largo como un antebrazo. Por alguna razón, tiene que vencer a sus hermanos antes de poder beber néctar y crecer.<br /><br />\"Puedes beber la savia de cualquier árbol en el bosque, excepto de este\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 3,
+   "rewardPath": "/material/589812",
+   "comeFrom": [
+    "Cáliz del Jardín del Sosiego",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "Canjeo de Ascuas",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "633445": {
+   "id": 633445,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "9838aee14bb17d6a739dee3330913587f055262bbec2601c6505335e36d97da0",
+   "name": "Flor etérea inmortal",
+   "desc": "Capullo que brota de una antigua criatura divina. Material corriente que se usa en la potenciación.",
+   "lore": "El origen de la vida infinita de las razas de larga vida de Xianzhou y un remanente de la influencia del Eón de la Abundancia. Tras incontables dificultades, la flota que buscaba el elixir de la inmortalidad contempló el rostro del ser celestial. El ente divino otorgó su bendición en forma material y del Árbol de la Ambrosía brotaron nuevas hojas.<br /><br />\" Los brotes nuevos descienden hasta la luna, las flores divinas florecen junto a las nubes. En lo que tardan en desprender su fragancia, la madera vieja vuelve a verdear\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 3,
+   "rewardPath": "/material/633445",
+   "comeFrom": [
+    "De abominaciones de la Abundancia (nivel de Equilibrio 2 o superior)",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "De enemigos en el Universo Diferenciado",
+    "De enemigos en el Universo Simulado",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "671367": {
+   "id": 671367,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "0073bd10e11aa0a7afd8c74ecec0d60b2f15fa2bc1248abb540efa12e7973bc0",
+   "name": "Pluma auspiciosa",
+   "desc": "Material avanzado de mejora para los Rastros.",
+   "lore": "Solo en esos efímeros instantes, cuando los seres al borde de la muerte quedan suspendidos en el tiempo, pueden los ojos mortales contemplar la caída de estas plumas espirituales. Feihuang, ser espiritual: su velocidad es la mayor entre las siete manifestaciones del Señor Arquero.<br /><br />\"Pasé doce días y noches persiguiéndolo, solo para descubrir que siempre habitó dentro de mí\".",
+   "purpose": "Material de Rastros",
+   "rarity": 4,
+   "rewardPath": "/material/671367",
+   "comeFrom": [
+    "Ecos de la guerra de la Bifurcacielos"
+   ]
+  },
+  "673753": {
+   "id": 673753,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "c003a2f97916fe6fe4ebe4c904ab9c71ef20fd7df2761f185855cee2b8f11c40",
+   "name": "Fruta del sinfín",
+   "desc": "Fruta obtenida de las ramas del árbol cardial del bosque sagrado de Vonwacq. Contiene la esencia de un sinfín de formas de vida. Sirve para mejorar en gran medida los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abundancia</span>.",
+   "lore": "Un día después de beber el néctar del árbol divino, la ridícula fruta esférica se hincha y se convierte en un demonio que viste armadura de tela y que blande una lanza de madera y un escudo hecho de hojas. Alrededor de sus pasos, las criaturas del bosque ofrecen sus genes como tributo para que el Rey Demonio pruebe, aprenda y se transforme. Luego, pasará a desafiar al mar y al cielo de Vonwacq.<br /><br />\"A través de este método, los sabios antiguos capturaban las cosas más aterradoras con un ridículo juego\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 4,
+   "rewardPath": "/material/673753",
+   "comeFrom": [
+    "Cáliz del Jardín del Sosiego",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "717386": {
+   "id": 717386,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "8cd84cd139e2a18672b1f2fe33c10525cb045a4504d95e68a0c79d7c3f46bbf9",
+   "name": "Rama gloriosa inmortal",
+   "desc": "Rama caducifolia de una antigua criatura divina. Material avanzado que se usa en la potenciación.",
+   "lore": "El origen de la vida infinita de las razas de larga vida de Xianzhou y un remanente de la influencia del Eón de la Abundancia. Tras las tres desgracias, Xianzhou quedó devastado. Los homo celestinae se convirtieron en demonios y las catástrofes se sucedieron sin descanso.<br /><br />\"Por orden de la Comisión de los Diez Líderes, todo aquel que parezca estar a punto de ser poseído por Mara será arrestado y encerrado en prisión\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 4,
+   "rewardPath": "/material/717386",
+   "comeFrom": [
+    "De abominaciones de la Abundancia (nivel de Equilibrio 4 o superior)",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "De enemigos en el Universo Diferenciado",
+    "De enemigos en el Universo Simulado",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "874339": {
+   "id": 874339,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "d3be437aa8a6f9fdfdd24ae70eae423a228386a89fd88a455eb7e976dbc3f2cf",
+   "name": "Semilla del árbol extraño",
+   "desc": "Semilla obtenida de la fruta del árbol cardial del bosque sagrado de Vonwacq. Contiene los genes de varias formas de vida. Sirve para mejorar ligeramente los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Abundancia</span>.",
+   "lore": "El inmenso árbol extraño del bosque sagrado de Vonwacq registra con detalle la evolución del ecosistema durante incontables ciclos vitales, lo que constantemente alimenta al Rey Demonio ideal usando los genes de varias formas de vida como semillas.<br /><br />\"Parte esta fruta dura, separa la semilla de la pulpa y plántala en terreno sagrado. El próximo año cosecharás decenas de líderes. Solo hay que esperar a que elijan a un ganador por medio de una batalla campal\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 2,
+   "rewardPath": "/material/874339",
+   "comeFrom": [
+    "Cáliz del Jardín del Sosiego",
+    "Canjeo de Ascuas",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "983280": {
+   "id": 983280,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "21b8467c91fcc05ce339b19accbc92d696532aabe1dbf98fa94b181b67c10f9b",
+   "name": "Corazón ardiente",
+   "desc": "El núcleo de memoria de Coraza de Furia Desvaída. Material de ascensión para los personajes de tipo Fuego.",
+   "lore": "Las llamas de la ira acabarán consumiéndose, borrando la causa original y dejando atrás solo un resentimiento persistente y un núcleo inextinguible de odio venenoso.<br /><br />\"La memoria de la ira persistirá por el odio, pero también se volverá irreal por él\".",
+   "purpose": "Material de ascensión de personaje",
+   "rarity": 4,
+   "rewardPath": "/material/983280",
+   "comeFrom": [
+    "Sombra paralizada del Pabellón del Rocío Matutino",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 92.4,
+   "attackAdd": 4.62,
+   "hpBase": 184.8,
+   "hpAdd": 9.24,
+   "defenseBase": 59.4,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549504,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 129.36,
+   "attackAdd": 4.62,
+   "hpBase": 258.72,
+   "hpAdd": 9.24,
+   "defenseBase": 83.16,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549504,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 166.32,
+   "attackAdd": 4.62,
+   "hpBase": 332.64,
+   "hpAdd": 9.24,
+   "defenseBase": 106.92,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633445,
+     "count": 6
+    },
+    {
+     "id": 983280,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 203.28,
+   "attackAdd": 4.62,
+   "hpBase": 406.56,
+   "hpAdd": 9.24,
+   "defenseBase": 130.68,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633445,
+     "count": 9
+    },
+    {
+     "id": 983280,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 240.24,
+   "attackAdd": 4.62,
+   "hpBase": 480.48,
+   "hpAdd": 9.24,
+   "defenseBase": 154.44,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717386,
+     "count": 6
+    },
+    {
+     "id": 983280,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 277.2,
+   "attackAdd": 4.62,
+   "hpBase": 554.4,
+   "hpAdd": 9.24,
+   "defenseBase": 178.2,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717386,
+     "count": 9
+    },
+    {
+     "id": 983280,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 314.16,
+   "attackAdd": 4.62,
+   "hpBase": 628.32,
+   "hpAdd": 9.24,
+   "defenseBase": 201.96,
+   "defenseAdd": 2.97,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 98,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "3d9becd77e82baba98687d88473b1d52f9ef70613daca321148dc37dbc05d65d",
+   "artPath": "ae43ec77cac34750afc79e527ce9ccf274cad21a98855fdc29042a06242a6e3f",
+   "name": "Ramo en flor contra los males",
+   "descHash": "La eficiencia de la Ruptura de Debilidad de Lingsha aumenta en un <nobr>#2[i]%</nobr>. Cuando se rompe la Debilidad de un enemigo, reduce su DEF en un <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.2,
+    0.5
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "33c604e5768b83400d32d785d2c06c9a2a2061e3ac8f75b97313787179372678",
+   "artPath": "eb94c5969847022cd7259d3c2c923618048b13e87765234c92dccb92442ebca4",
+   "name": "Reposo tras el velo de humo",
+   "descHash": "Al lanzar la habilidad definitiva, el efecto de Ruptura de todos los aliados aumenta en un <nobr>#1[i]%</nobr> durante <nobr>#2[i]</nobr> turnos.",
+   "params": [
+    0.4,
+    3
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "c59ebbcbdf72e4fae9f21a68e1f95c8476a7367bf2eb053386ab90c4c5e7752b",
+   "artPath": "aa633ab7201db3dd1e7b39ceb168209bba977802e5b4ad823369fd6bb195d0be",
+   "name": "Brillo del pábilo floral",
+   "descHash": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "ab642418e7a76cba0efb047a446b6b1e4da5dd342e3f5a83dde37d6960ab4ed2",
+   "artPath": "166e458574bcdafe19caf0a1c07795e54cb7b48fbc6f9bcdf2e98e1f7e289761",
+   "name": "Aromas del recuerdo bajo el dosel",
+   "descHash": "Cuando Fuyuan actúa, regenera al objetivo aliado con menos PV actualmente una cantidad de PV equivalente al <nobr>#1[i]%</nobr> del ATQ de Lingsha.",
+   "params": [
+    0.4
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "2c3246f680a3b32f5dd18958c5f4a9c76c31215c0b54f051eade1c00f7c8f061",
+   "artPath": "47b78d1b0dd56e4cde93fd99d08a250147a59511cb424fcfa441b32351723572",
+   "name": "Compostura ante las vueltas y revueltas",
+   "descHash": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "49c44a76f0b4dc2f1e2945b6d4402d8f8be868eec82d44fc7e095f08b19b1a3b",
+   "artPath": "6c06a46695504f43711854925fec87d254aca27212209767dc5bb38f099149bc",
+   "name": "Reclusión de fragancia acumulada",
+   "descHash": "Cuando Fuyuan está en el campo de batalla, la RES a todos los tipos de todos los enemigos se reduce en un <nobr>#1[i]%</nobr>. Cuando Fuyuan ataca, inflige daño <nobr>#2[i]</nobr> veces adicionales. Cada vez, inflige un <nobr>#3[i]%</nobr> del ATQ de Lingsha como Daño de Fuego a un enemigo al azar y causa <nobr>#4[i]</nobr> puntos de Reducción de Firmeza. Elige prioritariamente a objetivos con una Firmeza superior a 0 y que tengan Debilidad de Fuego.",
+   "params": [
+    0.2,
+    4,
+    0.5,
+    5
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   744058
+  ],
+  [
+   28585
+  ],
+  [
+   944644
+  ],
+  [
+   459531
+  ],
+  [
+   543472
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "ATQ individual",
+   "descHash": "Inflige un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> del ATQ de Lingsha como Daño de <span style=\"color:#F84F36;\">Fuego</span> a un enemigo.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 744058,
+   "name": "Incienso votivo",
+   "iconPath": "849f421b83e4644249b57bf61a44d371c65c61445191369053af560c3761cc4c",
+   "typeDescHash": "ATQ básico",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874339,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589812,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589812,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673753,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673753,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ATQ AdE",
+   "descHash": "Inflige un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> del ATQ de Lingsha como Daño de <span style=\"color:#F84F36;\">Fuego</span> a todos los enemigos, regenera a todos los aliados una cantidad de PV equivalente al <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> del ATQ de Lingsha + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]</nobr></span> y <u>adelanta la acción</u> de Fuyuan en un <nobr>#4[i]%</nobr>.",
+   "ultimateCost": 0,
+   "break": "30/hit",
+   "energy": "30",
+   "id": 28585,
+   "name": "Humo y esplendor",
+   "iconPath": "2c3246f680a3b32f5dd18958c5f4a9c76c31215c0b54f051eade1c00f7c8f061",
+   "typeDescHash": "Habilidad básica",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.4,
+      0.1,
+      105,
+      0.2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.44,
+      0.105,
+      168,
+      0.2
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.48,
+      0.11,
+      215.25,
+      0.2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874339,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.52,
+      0.115,
+      262.5,
+      0.2
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589812,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.56,
+      0.12,
+      294,
+      0.2
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589812,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.6,
+      0.124,
+      325.5,
+      0.2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589812,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0.128,
+      349.125,
+      0.2
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673753,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7,
+      0.132,
+      372.75,
+      0.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673753,
+       "count": 5
+      },
+      {
+       "id": 671367,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.75,
+      0.13599999,
+      396.375,
+      0.2
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673753,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8,
+      0.14,
+      420,
+      0.2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673753,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.84,
+      0.144,
+      443.625,
+      0.2
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.88,
+      0.148,
+      467.25,
+      0.2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.92,
+      0.152,
+      490.875,
+      0.2
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.96,
+      0.156,
+      514.5,
+      0.2
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1,
+      0.16,
+      538.125,
+      0.2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ATQ AdE",
+   "descHash": "Afecta con Obnubilación a todos los enemigos. En el estado de Obnubilación, el <u>Daño de Ruptura</u> que reciben los enemigos aumenta en un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> durante <nobr>#5[i]</nobr> turnos.<br />Inflige un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> del ATQ de Lingsha como Daño de <span style=\"color:#F84F36;\">Fuego</span> a todos los enemigos y, al mismo tiempo, regenera a todos los aliados una cantidad de PV equivalente al <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> del ATQ de Lingsha + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]</nobr></span> y <u>adelanta la acción</u> de Fuyuan en un <nobr>#6[i]%</nobr>.",
+   "ultimateCost": 110,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 944644,
+   "name": "Neblina goteante",
+   "iconPath": "7ac2ba44643097be3212995e93a93b01c07c05abf3785739487e0f26d36be048",
+   "typeDescHash": "Habilidad definitiva",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.9,
+      0.08,
+      90,
+      0.15,
+      2,
+      1
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.96,
+      0.085,
+      144,
+      0.16,
+      2,
+      1
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.02,
+      0.09,
+      184.5,
+      0.17,
+      2,
+      1
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874339,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.08,
+      0.095,
+      225,
+      0.18,
+      2,
+      1
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589812,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.14,
+      0.1,
+      252,
+      0.19,
+      2,
+      1
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589812,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2,
+      0.104,
+      279,
+      0.2,
+      2,
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589812,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.275,
+      0.108,
+      299.25,
+      0.2125,
+      2,
+      1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673753,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.35,
+      0.112,
+      319.5,
+      0.225,
+      2,
+      1
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673753,
+       "count": 5
+      },
+      {
+       "id": 671367,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.425,
+      0.116,
+      339.75,
+      0.2375,
+      2,
+      1
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673753,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5,
+      0.12,
+      360,
+      0.25,
+      2,
+      1
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673753,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.56,
+      0.124,
+      380.25,
+      0.26,
+      2,
+      1
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.62,
+      0.128,
+      400.5,
+      0.27,
+      2,
+      1
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.68,
+      0.132,
+      420.75,
+      0.28,
+      2,
+      1
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.74,
+      0.13599999,
+      441,
+      0.29,
+      2,
+      1
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.8,
+      0.14,
+      461.25,
+      0.3,
+      2,
+      1
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ATQ AdE",
+   "descHash": "Al lanzar la habilidad básica, invoca a Fuyuan, que tiene inicialmente una VEL de <nobr>#1[i]</nobr> y puede actuar <nobr>#7[i]</nobr> veces.<br />Cuando Fuyuan actúa, lanza un <u>ataque adicional</u> que inflige un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> del ATQ de Lingsha como Daño de <span style=\"color:#F84F36;\">Fuego</span> a todos los enemigos. Además, inflige un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#8[i]%</nobr></span> del ATQ de Lingsha como Daño de <span style=\"color:#F84F36;\">Fuego</span> a un enemigo al azar. Este daño elige prioritariamente a un objetivo con una Firmeza superior a 0 y que tenga Debilidad de <span style=\"color:#F84F36;\">Fuego</span>. Disipa <nobr>#6[i]</nobr> <u>estado negativo</u> de todos los aliados y les regenera una cantidad de PV equivalente al <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span> del ATQ de Lingsha + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span>.<br />Fuyuan puede acumular hasta <nobr>#5[i]</nobr> acciones. Cuando sus acciones llegan a 0 o Lingsha es <u>derrotada</u>, Fuyuan desaparece.<br />Mientras Fuyuan está en el campo de batalla, las acciones de Fuyuan aumentan en <nobr>#7[i]</nobr> cada vez que Lingsha lanza la habilidad básica.",
+   "ultimateCost": 0,
+   "break": "30/hit",
+   "energy": "0",
+   "id": 459531,
+   "name": "Manifestación nebulosa",
+   "iconPath": "1de8a660c71e9b74205015e70410ec0ac42f07e79694110a10a619d0cf1d2f08",
+   "typeDescHash": "Talento",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      90,
+      0.375,
+      0.08,
+      90,
+      5,
+      1,
+      3,
+      0.375
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      90,
+      0.4125,
+      0.085,
+      144,
+      5,
+      1,
+      3,
+      0.4125
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      90,
+      0.45,
+      0.09,
+      184.5,
+      5,
+      1,
+      3,
+      0.45
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874339,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      90,
+      0.4875,
+      0.095,
+      225,
+      5,
+      1,
+      3,
+      0.4875
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589812,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      90,
+      0.525,
+      0.1,
+      252,
+      5,
+      1,
+      3,
+      0.525
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589812,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      90,
+      0.5625,
+      0.104,
+      279,
+      5,
+      1,
+      3,
+      0.5625
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589812,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      90,
+      0.609375,
+      0.108,
+      299.25,
+      5,
+      1,
+      3,
+      0.609375
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673753,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      90,
+      0.65625,
+      0.112,
+      319.5,
+      5,
+      1,
+      3,
+      0.65625
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673753,
+       "count": 5
+      },
+      {
+       "id": 671367,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      90,
+      0.703125,
+      0.116,
+      339.75,
+      5,
+      1,
+      3,
+      0.703125
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673753,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      90,
+      0.75,
+      0.12,
+      360,
+      5,
+      1,
+      3,
+      0.75
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673753,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      90,
+      0.7875,
+      0.124,
+      380.25,
+      5,
+      1,
+      3,
+      0.7875
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      90,
+      0.825,
+      0.128,
+      400.5,
+      5,
+      1,
+      3,
+      0.825
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      90,
+      0.8625,
+      0.132,
+      420.75,
+      5,
+      1,
+      3,
+      0.8625
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      90,
+      0.9,
+      0.13599999,
+      441,
+      5,
+      1,
+      3,
+      0.9
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      90,
+      0.9375,
+      0.14,
+      461.25,
+      5,
+      1,
+      3,
+      0.9375
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ATQ individual",
+   "descHash": "Ataca a un enemigo y, tras entrar en combate, reduce la Firmeza del tipo correspondiente del enemigo.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 660117,
+   "name": "Ataque",
+   "iconPath": "849f421b83e4644249b57bf61a44d371c65c61445191369053af560c3761cc4c",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Apoyo",
+   "descHash": "Tras usar la técnica, invoca inmediatamente a Fuyuan al comenzar la siguiente batalla y afecta a todos los enemigos con Obnubilación durante <nobr>#1[i]</nobr> turnos.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 543472,
+   "name": "Soplos de la aurora",
+   "iconPath": "0d4c3b4569805cbad92056896d7e75c1ac5eddf91e20011b32c1133825c97618",
+   "typeDescHash": "Técnica",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1222101,
+   "anchor": 6,
+   "type": 1,
+   "children": [
+    {
+     "id": 1222202,
+     "anchor": 10,
+     "type": 2,
+     "children": [
+      {
+       "id": 1222203,
+       "anchor": 11,
+       "type": 2,
+       "children": [
+        {
+         "id": 1222204,
+         "anchor": 12,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 383337,
+          "name": "Bonificación de ATQ",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+          "statusList": [
+           {
+            "key": "ATQ",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 589812,
+            "count": 3
+           },
+           {
+            "id": 633445,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 383344,
+        "name": "Bonificación de ruptura",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+        "statusList": [
+         {
+          "key": "Efecto de Ruptura",
+          "value": 0.053
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 589812,
+          "count": 3
+         },
+         {
+          "id": 633445,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 383343,
+      "name": "Bonificación de PV",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 874339,
+        "count": 3
+       },
+       {
+        "id": 549504,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Aumenta su ATQ/curación realizada en una cantidad equivalente al <nobr>#1[i]%</nobr>/<nobr>#2[i]%</nobr> del efecto de Ruptura, hasta un aumento máximo del <nobr>#3[i]%</nobr>/<nobr>#4[i]%</nobr> respectivamente.",
+    "ultimateCost": 0,
+    "id": 383375,
+    "name": "Bocanada bermellón",
+    "iconPath": "cd4face1e75e2787f7e00d5ca2acf8acf1ceaee3338b20dda89c4a18be571ddd",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.25,
+       0.1,
+       0.5,
+       0.2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 874339,
+        "count": 3
+       },
+       {
+        "id": 671367,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1222102,
+   "anchor": 7,
+   "type": 1,
+   "children": [
+    {
+     "id": 1222205,
+     "anchor": 13,
+     "type": 2,
+     "children": [
+      {
+       "id": 1222206,
+       "anchor": 14,
+       "type": 2,
+       "children": [
+        {
+         "id": 1222207,
+         "anchor": 15,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 383340,
+          "name": "Bonificación de ruptura",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+          "statusList": [
+           {
+            "key": "Efecto de Ruptura",
+            "value": 0.08
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 673753,
+            "count": 3
+           },
+           {
+            "id": 717386,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 383339,
+        "name": "Bonificación de PV",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+        "statusList": [
+         {
+          "key": "PV",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 673753,
+          "count": 3
+         },
+         {
+          "id": 717386,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 383338,
+      "name": "Bonificación de ruptura",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+      "statusList": [
+       {
+        "key": "Efecto de Ruptura",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 589812,
+        "count": 5
+       },
+       {
+        "id": 633445,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Al lanzar el ATQ básico, recupera <nobr>#1[i]</nobr> pts. de energía adicionales.",
+    "ultimateCost": 0,
+    "id": 383374,
+    "name": "Vapores silvestres",
+    "iconPath": "b7715b4106b12eb84d2dda74ff583e78af9501ec340fdbb79e904535f4d43d33",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       10
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 589812,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 671367,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1222103,
+   "anchor": 8,
+   "type": 1,
+   "children": [
+    {
+     "id": 1222208,
+     "anchor": 16,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 383349,
+      "name": "Bonificación de ATQ",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673753,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1222209,
+     "anchor": 17,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 383350,
+      "name": "Bonificación de PV",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673753,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Cuando cualquier personaje recibe daño o pierde PV mientras Fuyuan está en el campo de batalla, si en el equipo hay algún personaje cuyo porcentaje de PV actual sea igual o inferior al <nobr>#1[i]%</nobr>, Fuyuan lanza inmediatamente contra los enemigos el ataque adicional del talento sin consumir ninguna acción. Este efecto se puede volver a activar después de <nobr>#2[i]</nobr> turnos.",
+    "ultimateCost": 0,
+    "id": 383373,
+    "name": "Ecos del incienso",
+    "iconPath": "4153fd4be19c5db3da4513e6052198d8a218427bfec8c0008d030f4dce2602c2",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.6,
+       2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673753,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 671367,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1222201,
+   "anchor": 9,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 383342,
+    "name": "Bonificación de ruptura",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+    "statusList": [
+     {
+      "key": "Efecto de Ruptura",
+      "value": 0.053
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549504,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1222210,
+   "anchor": 18,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 266696,
+    "name": "Bonificación de ruptura",
+    "levelReq": 80,
+    "promotionReq": 0,
+    "iconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+    "statusList": [
+     {
+      "key": "Efecto de Ruptura",
+      "value": 0.107
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 160000
+     },
+     {
+      "id": 673753,
+      "count": 8
+     },
+     {
+      "id": 717386,
+      "count": 8
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": []
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Primer encuentro",
+   "text": "Es un placer conocerte. Puedes llamarme Lingsha. He vuelto para servir como líder de la Comisión de Alquimia del Luofu tras completar mis estudios en el Zhuming. Si te encuentras mal, puedo conseguirte un sanador en cualquier momento.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 2,
+   "title": "Saludo",
+   "text": "¿Cómo van las cosas últimamente? El trabajo no va bien, como de costumbre. Envidio a los Anónimos del Expreso, porque pueden ir y venir cuando les plazca.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 3,
+   "title": "Despedida",
+   "text": "Puedo oler la ansiedad en ti, así que usé el polvo para dormir del Zhuming y ámbar gris, y los mezclé con cenizas del atardecer para hacer un incienso llamado \"Olvídate de todas las preocupaciones\". Toma un poco.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 4,
+   "title": "Acerca de sí misma: historia",
+   "text": "Soy una vidyadhara, nacida y criada en el Luofu, y una vez estudié técnicas de sanación bajo el nombre de 'Dan Zhu'. Pero mi maestra se enredó en la política y fue desterrada a un lugar lejano. La seguí hasta allí. Ahora que he cambiado de nombre y he vuelto a casa, tengo muchos sentimientos conflictivos.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 5,
+   "title": "Acerca de sí misma: zarcillos de rubí",
+   "text": "Este incensario se llama \"Zarcillos de rubí\". Es un dispositivo necesario para practicar el arte de la sanación. Estudié bajo el linaje de Ardens Regia, Gran Maestre del Zhuming, e investigué el arte de la sanación de la \"Mirada penetrante\". Solo usando este incensario se puede practicar este arte con facilidad. En cuanto a qué bestia de humo alberga el incensario... Digamos que es un secreto comercial.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 6,
+   "title": "Conversación: la Comisión de Alquimia del Luofu",
+   "text": "Desde mi punto de vista, el problema fundamental de la Comisión de Alquimia es la lucha interna. Los sanadores y alquimistas no se toman en serio la sanación de enfermedades ni están totalmente interesados en la investigación académica. Su única preocupación es la lucha por el poder. ¿Qué debemos hacer con los discípulos y preceptores conspiradores que pasaron inadvertidos?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 7,
+   "title": "Conversación: gestión de las emociones",
+   "text": "Si quieres que las cosas salgan bien, debes aprender a gestionar tus emociones, así: El mundo es tan maravilloso y yo me la paso renegando. Respira profundo...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 8,
+   "title": "Conversación: aromas",
+   "text": "Los aromas trasmiten mucha información: emociones, condición física, síntomas, mentiras... Mi nariz detecta todo esto. Por otro lado, no debo dejar que algo le pase a mi nariz. Si detecto que algo huele mal, prefiero sofocarme hasta la muerte que respirar hondo.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 9,
+   "title": "Aficiones",
+   "text": "¿Sabes de perfumería? Hacer perfumes es como tratar con las personas... Se crea una buena fragancia solo cuando los toques altos, medios y bajos están en perfecta armonía.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 10,
+   "title": "Molestias",
+   "text": "Soy una sanadora y siempre he odiado a las personas que hacen política. Pero si quieres posicionarte en la Comisión de Alquimia, debes tener recursos para frenar a los que abusan de su poder.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 11,
+   "title": "Algo que compartir",
+   "text": "No soy capaz de curar la enfermedad de la general Feixiao. Sin embargo, el doctor Jiaoqiu tiene unos trucos bajo la manga... Él es el mejor en esto.",
+   "unlockRequirement": "Se desbloquea tras completar la continuación trazacaminos «#1».",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 12,
+   "title": "Un dato",
+   "text": "Cuando serví como sanadora militar, purgaba principalmente el mal de los Caballeros del Alba del Zhuming. La conexión entre una persona y un heliobus se vuelve inestable si están bajo mucha presión y, en momentos así, hay que confiar en el incienso.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 13,
+   "title": "Acerca de Huaiyan",
+   "text": "No me consideraría cercana al general Huaiyan, pero he preparado incienso para él. No te dejes engañar por el habitual comportamiento alegre del viejo general... Cuando se enfada, es como si le saliera vapor por las orejas.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 14,
+   "title": "Acerca de Yunli",
+   "text": "El aroma de Yunli es fresco y dulce, como el olíbano. Cuando viene a verme, es como un animalito que se sube a mi regazo. ¿Quién podría resistirse a acercarse y respirar hondo? Hasta pensarlo me hace feliz...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 15,
+   "title": "Acerca de Jing Yuan",
+   "text": "Mi maestro y el general Jing Yuan tienen una... historia desagradable entre ellos. ¡Pero los rencores personales son un lujo que los adultos no pueden permitirse!",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 16,
+   "title": "Acerca de Yanqing",
+   "text": "El olor de este maestro de espadas del Luofu es tan puro como su carácter: solo detecto el aroma de la lluvia. Humm, ¿esto significa que su voluntad es pura o que es demasiado ingenuo?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 17,
+   "title": "Acerca de Yunhua",
+   "text": "Mi maestra fue incriminada por delincuentes, en cierto modo porque era un alma amable y abierta. Cuando te enfrentas a villanos que destruirían todo, no debes albergar benevolencia.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 18,
+   "title": "Acerca de Feixiao",
+   "text": "Una vez la vi en batalla con mis propios ojos. Es más una guerrera que una general. Solía haber un ligero aroma a miedo bajo su audacia y su voluntad de lanzarse a situaciones de vida o muerte, pero ahora casi ha desaparecido.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 19,
+   "title": "Acerca de Jiaoqiu",
+   "text": "Si alguien parece una sopa, huele como una sopa y actúa como una sopa... solo puedo diagnosticar que es una sopa.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 20,
+   "title": "Acerca de Moze",
+   "text": "Su olor es tan tenue que es casi imperceptible, pero también lleva un penetrante olor a óxido. Debe de tener muchas historias que contar.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 21,
+   "title": "Acerca de Bailu",
+   "text": "En el arte de curar, ciertamente no podía compararme con la Gran Maestre del Luofu. Pero en estos juegos de la política, aún me enorgullezco de poder protegerla.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 22,
+   "title": "Acerca de Yukong",
+   "text": "La guerra de hace treinta años cambió a mucha gente. Ahora siempre la rodea el aroma de la tristeza. Aunque no la he visto en muchos años, los olores no mienten: Yukong sigue siendo la misma Yukong, aunque ni ella misma se dé cuenta.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 23,
+   "title": "Acerca de Fu Xuan",
+   "text": "La Gran Adivina Fu viene a pedirme bebidas azucaradas, esté enferma o no. Le he dicho muchas veces que beber demasiado no tiene ningún beneficio para la salud, pero ella insiste en hacerlo de todos modos. Incluso dice: \"No poder tomar bebidas azucaradas es malo para mi salud\". Qué se le va a hacer...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 24,
+   "title": "Acerca de Qingque",
+   "text": "Desde que regresé al Luofu, estoy enterrada en el trabajo. Solo hay tres cosas que me alegran: comer, elaborar perfumes y tomarle el pelo a Qingque.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 25,
+   "title": "Acerca de Huohuo",
+   "text": "Incluso en el Zhuming, es raro ver que un soldado y un heliobus tengan una relación tan simbiótica, como si fueran de un mismo corazón y una misma mente. Esta chica de aroma suave es verdaderamente especial.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 26,
+   "title": "Acerca de Cola",
+   "text": "El Luofu es realmente un poco conservador. Si nos encontráramos con un heliobus en el Zhuming así de capaz y sin intenciones dañinas, por supuesto que no lo sellaríamos.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 27,
+   "title": "Activación de Eidolon",
+   "text": "Una neblina inagotable y un humo infinito.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 28,
+   "title": "Ascensión de personaje",
+   "text": "Bajo un toldo sedoso rojo, las especias aromáticas giran en los rincones.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 29,
+   "title": "Nivel máximo alcanzado",
+   "text": "Al haber entendido verdades tan profundas, ¿quién no está repleto de riquezas?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 30,
+   "title": "Activación de rastro",
+   "text": "El humo sube desde la estufa sin fuego.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 31,
+   "title": "Miembro del equipo: Trazacaminos",
+   "text": "Contigo a mi lado, me siento más tranquila.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 32,
+   "title": "Miembro del equipo: Yunli",
+   "text": "Yunli, cuídate, no te lastimes.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 33,
+   "title": "Miembro del equipo: Jing Yuan",
+   "text": "General Jing Yuan, por favor ten fe en mí.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 34,
+   "title": "Miembro del equipo: Feixiao",
+   "text": "Qué gran fortuna volver a ser testigo del gran heroísmo de la general Feixiao.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 35,
+   "title": "Miembro del equipo: Jiaoqiu",
+   "text": "Tendremos que confiar de nuevo en tus astutos trucos para cambiar la situación.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 36,
+   "title": "Miembro del equipo: Moze",
+   "text": "Es una buena estrategia resolver las cosas en las sombras.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 37,
+   "title": "Miembro del equipo: Bailu",
+   "text": "Dama Dragón, cuidémonos entre nosotras. Juntas, superaremos cualquier adversidad.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 38,
+   "title": "Miembro del equipo: Yukong",
+   "text": "Señora Yukong, no has cambiado nada...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 39,
+   "title": "Miembro del equipo: Fu Xuan",
+   "text": "Gran Adivina, de seguro ya sabías que saldríamos ilesas de esto.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 40,
+   "title": "Miembro del equipo: Qingque",
+   "text": "¡Vamos, Qingque! Tranquila, era broma que me escondería detrás de ti... Te protegeré.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 51,
+   "title": "Comienzo de la batalla: Ruptura de Debilidad",
+   "text": "Sumérgete allí cuando desees.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 52,
+   "title": "Comienzo de la batalla: alerta de peligro",
+   "text": "La peste del mal...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 53,
+   "title": "Comienzo del turno 1",
+   "text": "¿Qué tal si disipamos rápido esa fétida peste?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 54,
+   "title": "Comienzo del turno 2",
+   "text": "Por favor, déjame eliminar la raíz del problema.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 55,
+   "title": "En espera",
+   "text": "¿Ya te cansaste? ¿Necesitas energía?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 56,
+   "title": "ATQ básico",
+   "text": "Oh, una debilidad.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 57,
+   "title": "Habilidad básica 1",
+   "text": "Es hora de sacar la basura, ¿no crees?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 58,
+   "title": "Habilidad básica 2",
+   "text": "El cuerpo y la mente deben ser puros.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 59,
+   "title": "Al recibir un ataque ligero",
+   "text": "Contrólate...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 60,
+   "title": "Al recibir un ataque fuerte",
+   "text": "Eres alguien obstinado.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 61,
+   "title": "Habilidad definitiva: activación",
+   "text": "La verdad quema como una llama.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 62,
+   "title": "Habilidad definitiva: lanzamiento",
+   "text": "Todo en este mundo... es simplemente efímero.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 63,
+   "title": "Fuera de combate",
+   "text": "El humo se fue... el fuego se apagó...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 64,
+   "title": "Retorno a la batalla",
+   "text": "Es asombroso contemplar el arte de la resurrección.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 65,
+   "title": "Regeneración de PV",
+   "text": "Refresca hasta el alma.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 66,
+   "title": "Técnica",
+   "text": "El incienso sube y se enreda con las nubes etéreas.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 67,
+   "title": "Victoria",
+   "text": "Este aroma es mucho mejor.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 68,
+   "title": "Al abrir un tesoro 1",
+   "text": "Exhala lo viejo e inhala lo nuevo.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 69,
+   "title": "Al abrir un tesoro 2",
+   "text": "Renovada y vigorizada.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 70,
+   "title": "Al abrir un tesoro valioso",
+   "text": "Siento una fragancia exótica... Sí, debe ser un tesoro.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 71,
+   "title": "Al resolver un acertijo 1",
+   "text": "Resolver un acertijo es como hacer incienso: la diferencia más pequeña puede provocar grandes cambios.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 72,
+   "title": "Al resolver un acertijo 2",
+   "text": "Un análisis cauto es la clave para ganar.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 73,
+   "title": "Objetivo enemigo encontrado",
+   "text": "Picante, estimulante... Llegó algo amenazante.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 74,
+   "title": "Al regresar a la ciudad",
+   "text": "El ajetreo del mundo... es agradable.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Detalles del personaje",
+   "text": "La nueva líder de la Comisión de Alquimia del Luofu de Xianzhou. Una sanadora vidyadhara inteligente e ingeniosa.<br />Tiene un agudo sentido del olfato y suele usarlo para diagnosticar enfermedades, además de usar su incienso para calmar las mentes de los demás.<br />Es experta manejando relaciones sociales complicadas. Aunque por dentro quizás esté furiosa, su expresión se mantendrá calmada y serena.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Historia del personaje I",
+   "text": "A medida que nubes de humo negro rodean el caldero, la joven se sienta expectante en el cojín, mirando fijamente el traqueteo de la tapa con sus brillantes ojos.<br />Tras una explosión que resonó en todo el cuarto, la joven corre con entusiasmo al consultorio de la maestra sujetando una píldora cristalina, a pesar de que todo su cuerpo luce como un pergamino quemado que dejaron muy cerca de una vela.<br />\"¡Maestra Yunhua! Mire, ¡lo logré!\".<br /><br />La líder Yunhua está atendiendo pacientes en un consultorio abarrotado.<br />Al ver a su maestra enfocada y concentrada, la joven se esconde detrás de su maestra obedientemente y baja su cabeza para oler el aroma de la píldora medicinal.<br />\"Este pulso... es uno difícil...\".<br />La joven escucha la sospecha de su maestra y se acerca al paciente para oler.<br />\"Pequeña Dan Zhu, ¡tu sentido del olfato es insuperable! ¿Me podrías decir algo sobre la condición de este paciente?\". Yunhua le indica a la joven que avance y la mira de manera alentadora.<br />\"Humm... Hay un ligero olor a frutas demasiado maduras, es posible que sea una señal de deficiencia en el bazo con sed excesiva...\".<br />\"Exactamente... eso coincidiría con los primeros síntomas. Entonces, ¿qué medicamento recomendarías?\".<br />La joven levanta la píldora en sus manos y proclama en voz alta: \"¡La mitad de una pastilla de revitalización que debe tomarse con agua!\".<br />...<br />Después de un largo día de diagnosticar y tratar pacientes, la joven corre tras Yunhua y le pregunta perpleja:<br />\"Maestra, ¿por qué aún sigue insistiendo en ver a los pacientes en persona? Veo que otros sanadores de alto nivel de la Comisión de Alquimia pasan todo su tiempo tratándose a ellos mismos o codeándose con los vendedores adinerados...\".<br />Yunhua termina de organizar sus expedientes médicos, se arrodilla y frota la cabeza de la joven.<br />\"Pequeña Dan Zhu, ¿escuchaste algo?\".<br />\"Escuché a las personas decir cosas malas sobre usted...\". La joven baja la cabeza y parece que está llorando.<br />\"Pequeña Dan Zhu, ¿cuál crees que es el trabajo de un sanador?\". Yunhua muestra una leve sonrisa y carga a Dan Zhu en sus brazos.<br />\"Es estudiar medicina con devoción, tratar a los enfermos y salvar a los heridos...\".<br />\"Si ese es el caso, ¿no crees que los sanadores deberían trabajar duro todos los días y ser fieles a sus tareas?\".<br />\"... ¡Sí, maestra!\".<br />Incluso después de ver la sonrisa cálida de su maestra, una pizca de duda aún permanece dentro de su corazón.",
+   "unlockRequirement": "Se desbloquea en el nivel <nobr>20</nobr> de personaje."
+  },
+  {
+   "title": "Historia del personaje II",
+   "text": "Los años que pasó estudiando con Yunhua en la Comisión de Alquimia fueron los más gratificantes y felices de su vida.<br /><br />Podía revolotear entre de frascos de hierbas raras como una serpiente con un olfato agudo e investigar criaturas extrañas de otros planetas. El origen de la posesión por Mara, el verdadero aroma de las abominaciones de la Abundancia, píldoras medicinales que aliviaban la aparición de Mara... Cada nuevo tema de investigación la adentraba cada vez más en esta fascinación y originaron una obsesión que duraría toda la vida. Cada día traía más progreso y felicidad.<br /><br />Sin embargo, mientras estaba inmersa en la fragancia y sus fantasías, la Comisión de Alquimia se había vuelto silenciosamente inestable y traicionera.<br />Después de docenas de días y noches de vigilancia interna, las olas de la guerra por fin se extendieron hasta cubrir por completo a la líder Yunhua.<br />Con una sola orden, la privaron de su función como líder y se convirtió en una plebeya.<br /><br />De hecho, ya había olido la llegada de este extraño aroma.<br />Los susurros de los Preceptores, el aroma de píldoras medicinales desconocidas en la Comisión de Alquimia, las noches en las que su maestra iba y venía de la Prisión de los encadenados después de recibir un mensaje misterioso... Pero, cuando se dio cuenta de cómo todo esto estaba relacionado, fue muy tarde.<br />Les pidió ayuda a sus superiores en la Comisión de Alquimia, pero sus comúnmente amables superiores le tenían envidia a la líder anterior y solo le respondían de forma fría y con advertencias.<br />Hizo una apelación oficial una y otra vez, pero siempre recibía la misma respuesta.<br />Sin embargo, no podía creer que la líder, quién se había dedicado incondicionalmente al bienestar de sus pacientes, hubiera hecho algo inaceptable.<br /><br />Justo cuando no podía contener su deseo de discutir el caso de su maestra una vez más, Yunhua apareció de la nada y con delicadeza le dio una palmadita en el hombro.<br />\"Dan Zhu, ya no hay necesidad de que abogues por mi inocencia... Estoy agotada y no me importa irme de este lugar\".<br />Persiguió a su maestra, pero antes de que pudiera decir una palabra, percibió un aroma extraño...<br />El aroma de una conspiración.<br />",
+   "unlockRequirement": "Se desbloquea en el nivel <nobr>40</nobr> de personaje."
+  },
+  {
+   "title": "Historia del personaje III",
+   "text": "Pronto se dio cuenta de que quizás irse era su mejor opción.<br />Con la ayuda de los Preceptores, se fueron del Luofu y se dirigieron al Zhuming. El pasado pasó delante de sus ojos. Mientras estaban inmersas en el mundo de la medicina y la investigación, iban por la vida sin saber que la gran red que tejieron los corazones de los hombres ya las había atrapado.<br /><br />\"Si nunca aprendes a enfrentar este mundo, a tus ideales solo les esperará la inevitable destrucción\".<br />Se juró a sí misma que nunca dejaría que algo así volviera a suceder.<br />Gracias a la presentación de Yunhua, ella pudo conocer a Ardens Regia, Gran Maestre del Zhuming y entrar en la escuela de la Mirada Penetrante para estudiar tratamientos médicos especiales como acupuntura, aromaterapia y fuegopatía.<br />Corrigió su antiguo patrón de ignorar el mundo a su alrededor y empezó a trabajar junto a personas de todos los rincones del mundo armoniosamente.<br /><br />Con el tiempo, se dio cuenta de que cada tipo de persona y cada tipo de \"enfermedad\" tenía su propio aroma único.<br />Había olido el hedor pútrido de la envidia.<br />Mientras estudiaba en el Zhuming, no permitió que la desaparición misteriosa de hierbas medicinales, los subsecuentes malentendidos y la frialdad de los demás la aplastaran. Disipó todas las dudas y burlas con un incienso que ningún alquimista veterano podría esperar igualar.<br />Olió el hedor fétido de la conspiración y la hipocresía.<br />Cuando trabajaba con expertos de biotecnología de otros planetas, rastreó el delgado velo de pistas que relevaban sus planes y frustró sus intenciones secretas de conspirar con los Discípulos de Sanctus Medicus.<br />Olió el hedor repugnante de la ambición codiciosa.<br />Cuando sirvió como sanadora militar en el Zhuming, entendió los grandes beneficios de las medicinas escondidas en las barracas e investigó el secreto para exponer a los miembros corruptos de un solo golpe.<br /><br />Las \"aflicciones\" de la humanidad no tienen dónde esconderse bajo su diagnóstico, siempre podía formular el \"incienso\" perfecto para disipar su aroma.<br />\"Si soy capaz de destacar entre mis colegas como mi maestra, entonces debo dedicarme a aprender sobre los corazones de los hombres y luchar contra ellos justamente\".<br />Cambió su nombre a \"Lingsha\".<br />La fluctuación del ying y el yang de su homónima medicinal y sus propiedades tanto de agua como de fuego la hacen una cura milagrosa para los que están en peligro mortal, justo en lo que ella deseaba convertirse.",
+   "unlockRequirement": "Se desbloquea en el nivel <nobr>60</nobr> de personaje."
+  },
+  {
+   "title": "Historia del personaje IV",
+   "text": "Por medio de incienso quemado, hábilmente combinó la forma de hacer alquimia en el Luofu y las enseñanzas de la Mirada Penetrante del Zhuming para convertirse poco a poco en la sanadora que toda alma en la Alianza conoce.<br /><br />Cuando recibió la instrucción de servir como líder de la Comisión de Alquimia del Luofu, se preocupó un poco. Sin embargo, al llegar al Luofu, se decepcionó al darse cuenta de que la Comisión de Alquimia no había mejorado desde que se fue y que el conflicto interno de hecho había empeorado.<br />\"El primer problema es que los intereses de las personas son impuros y el nepotismo abunda. Segundo, hay una falta de vocación profesional, constantemente culpan a los demás, y hay disputas. Tercero, el sistema injusto de recompensas y castigos ha incomodado a las personas. Cuarto, la investigación se considera inútil y se descuidan las visitas a los pacientes. Quinto, las personas con poder toman todo, los que se dedicaban a mejorar están desanimados, y la mala praxis está fuera de control desde hace tiempo...\".<br />Saluda a las personas con una sonrisa y, mientras socializa, secretamente graba una imagen en su corazón de los problemas que enfrentaba con cada una de ellas.<br /><br />Sin embargo, los problemas dentro de la Comisión de Alquimia no surgieron de la noche a la mañana y tampoco se resolverían así de rápido.<br />Se trate de los falsos clichés de los Preceptores, de las constantes cortinas de humo de los sanadores de la Comisión de Alquimia o los conflictos con los otros departamentos, sus preocupaciones no tenían fin. Tenía que usar enormes cantidades de incienso para mantener la mente calma.<br />\"No te enojes, no te precipites, ¿si enfermo quién me remplazará?...\".<br />Sonreía con los dientes apretados mientras leía los reportes que le causaban desesperación y masajeaba sus sienes para consolarse.<br /><br />Las olas aún se escuchaban afuera de su ventana.<br />Mientras veía como subía y bajaba el océano, pensó en cómo Yunhua debió pasar sus días así en ese entonces.<br />\"Maestra, seguir practicando y aprendiendo con la carga de los asuntos humanos no es fácil...\".<br />Esa joven cuyo rostro quedaba completamente manchado tras explotar el crisol ahora es una mujer adulta que se ahoga en el trabajo y en disputas insignificantes.",
+   "unlockRequirement": "Se desbloquea en el nivel <nobr>80</nobr> de personaje."
+  }
+ ],
+ "archive": {
+  "cvCn": "饶梓君",
+  "cvJp": "前田佳織里",
+  "cvKr": "장예나",
+  "cvEn": "Whitney Holland",
+  "camp": "El Luofu de Xianzhou"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328,
+  "rankConfig": {
+   "3": {
+    "459531": 2,
+    "944644": 2
+   },
+   "5": {
+    "28585": 2,
+    "744058": 1
+   }
+  }
+ },
+ "name": "Lingsha",
+ "rarity": 5,
+ "descHash": "La nueva líder de la Comisión de Alquimia del Luofu de Xianzhou. Una sanadora vidyadhara inteligente e ingeniosa. Tiene un agudo sentido del olfato y suele usarlo para diagnosticar enfermedades, además de usar su incienso para calmar las mentes de los demás. Es experta manejando relaciones sociales complicadas. Aunque por dentro quizás esté furiosa, su expresión se mantendrá calmada y serena.",
+ "artPath": "bef204da3273324fd5b0c844be810ef6e36ad8ac3757f61446bc7ecc961e2e5e",
+ "miniIconPath": "192165f699b40c348c17fce7d4ff69a10aac243037633e787190a0371550db2f",
+ "damageType": {
+  "id": 2,
+  "iconPath": "f31e4c89ba28d5755b8bb082a0ab5eca99b345e87c07bbe46ef43b47b4684315",
+  "color": "#F84F36",
+  "name": "Fuego",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "138157815bdf8ef6be6fa8d6e50ae13d4a4f6d00321760144a3ec9763e4b42bb",
+  "altIconPath": "c3cb2c87568e0230ced320492630c84b77ff8d941d9caf26c02d886c0290083f",
+  "color": "#FFFFFF",
+  "name": "Abundancia",
+  "rarity": 0
+ },
+ "pageId": "lingsha"
+}

@@ -1,0 +1,2752 @@
+{
+ "spRequirement": 120,
+ "iconPath": "9c171448508392a564421710cb700daf48112cb7894c2711f55656984b03ec20",
+ "bgPath": "17ba0336543a6110064ce968cc1f619950a43c19f82836ba79fc44d5d0fc40c0",
+ "figPath": "70f2bb3c3ba9ec8790274bd89effcb472111a7598f2b172dca7a2e5a963ccb8c",
+ "fgPath": "",
+ "splashIconPath": "0796ce574e21aa760d12d6f77bbc308619aa9fddfd26f907bb0df528346e3c2d",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRhYCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSOYAAAABkKNt27FH94fY5gJsGytgZbO20aZ0KlWs01kLsNpUaY3vfe4kM/P9s4SImAD8U4PjGhK9/keCFwxnh3Ib8+HvYg+um8+L0cE+tnTUkPc3azBtaBq2+UFyKtQGfPqfKeqTZ9HQ/mHkXNKiKN6UOuOfHlv8pIjwNQNuTn+4e2edUwnJL27kFkEDYFatCoUiIuSh9oeGJouKf1Dxq9sLAJzbx06phKTw9Wg6GBoAmA98FxFFctYJGgANCV2btCzFp4/NKF3DXzWULFkUPlZGwKYJr+GTnfTJSJg2AA8kpQEGHDV0XcffAVZQOCAKAQAAsAUAnQEqFAAUAD5tMpRHpCKiISgIAIANiUAVhl6j9u/TZnhxgNcqD65NBPxgcSg7IPiH3J2AAP7r/l0mht+wnuolqt5sR0tc7zfYZNWUa5zwXD/JgbNRyKZTgexVuEsXuLFtRUeUaWqHMEC6TH0n0vPDpeBDvk8uCUxLeMOezTX+inGte+7ofnTou4ZD0aqx639kJlLpM6+smK2+cXvEVfKp1EMVc4RljMpfIfOTI6h0CSZXYNIGXfd7UdzKF9D4KOdIyKvEBho8td/sAIj3WehdmVcWAY2B3iI95XlV/yl/zoIGZApM6vFGCTZhyrSjadXfx/2Tn/aJWyA8nt9v4X+E1pMoFn9WQAA=",
+  "w": 2048,
+  "h": 2048
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 2,
+  "iconPath": "0eedf689b50899c8ef651ffc7f7bd298c4ff3cc7972f379bb1572ddca0514380",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "154680875035a2d1a2d7827aa99c35f77a9fc6df9de95cd58800bde4bb17472a",
+   "name": "Điểm Tín Dụng",
+   "desc": "Tiền mà Công ty Hành Tinh Hòa Bình (IPC) dùng để giao dịch với khách, nay đã trở thành đồng tiền chính khi đi lại trong vũ trụ.",
+   "lore": "\"Người ta bôn ba, tranh đấu, mua bán, cũng chỉ vì những con số xuất hiện trên thiết bị đầu cuối. Nhưng thứ quý giá thật sự, thì con số của công ty lại không thể mua được.\"",
+   "purpose": "Tiền Tệ Thường",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Đài Hoa Nhân Tạo - Khu Mỏ Khổng Lồ",
+    "Đài Hoa Nhân Tạo: Sở Công Nghiệp",
+    "Đài Hoa Nhân Tạo: Khách Sạn Mộng Mơ - Cõi Mộng",
+    "Phần thưởng nhiệm vụ",
+    "Thưởng Ủy Thác",
+    "Đổi Tro Tàn"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "04121a915c1d5e0a609e4b59417f441c101eaf1edbb092ffef36dbc24d1ae24b",
+   "name": "Dấu Chân Vận Mệnh",
+   "desc": "Nguyên liệu cấp cao dùng để tăng cấp Vết Tích",
+   "lore": "Những thất bại liên tiếp đã giúp bạn giành được chiến thắng, từng bước tiến về phía trước đã đưa bạn đến bước ngoặt của vận mệnh.",
+   "purpose": "Nguyên Liệu Vết Tích",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Thưởng Điểm Vũ Trụ Mô Phỏng",
+    "Vinh Dự Vô Danh",
+    "Đổi Tro Tàn",
+    "Đổi Ánh Sao",
+    "Phần Thưởng Sự Kiện Hạn Giờ"
+   ]
+  },
+  "151162": {
+   "id": 151162,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "2f7d0e3d768211dac34ea37427f427dfd829759f33660f70ac3c31c1d7670c80",
+   "name": "Chiếc Đinh Quan Tài Thú",
+   "desc": "Một phần của cột sống sinh học cơ giáp, nguyên liệu tăng bậc nhân vật thuộc tính Lôi.",
+   "lore": "Mô phỏng bộ phận trung tâm quan trọng nhất trong cơ giáp của Người Boris, mặc dù cơ thể nuôi dưỡng nó đã không còn chút sức sống nào, nhưng nó vẫn giữ được Thuật Toán Sát Sinh được kế thừa từ xa xưa và chôn sâu trong gen.<br /><br />\"Mọi người nhìn thấy vô số quái vật, tôi thì nhìn thấy vô số linh kiện. Đây là sự khác biệt về tầm nhìn.\"",
+   "purpose": "Nguyên Liệu Nâng Bậc Nhân Vật",
+   "rarity": 4,
+   "rewardPath": "/material/151162",
+   "comeFrom": [
+    "Hư Ảnh Ngưng Đọng - Nhà Giam Xiềng Xích",
+    "Máy Ghép Vạn Năng - Đổi Nguyên Liệu"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "fe197ceacff72ca32c46a22e6cf77f460edbfa2bc70e5162ad9c9e5485944570",
+   "name": "Hướng Dẫn Dạo Chơi",
+   "desc": "Nguyên liệu EXP nhân vật, có thể nhận <nobr>20000</nobr> điểm EXP nhân vật.",
+   "lore": "Tập sách thám hiểm cần thiết cho việc đi qua các thế giới. Nhấn nút đọc và giọng nói từ tính sẽ nói bằng ngôn ngữ bạn có thể hiểu được, để giảng cho bạn nghe những trải nghiệm huyền thoại của các nhà thám hiểm nổi tiếng ở các thế giới khác nhau, cũng như trí tuệ quý giá mà họ có được trên các hành tinh khác nhau.<br /><br />\"Bộ sách mới \"Hướng Dẫn Ẩm Thực Hành Tinh\" của Hướng Dẫn Dạo Chơi sắp được bán, mong mọi người ủng hộ.\"<br />\"Nộp bản thảo vui lòng kết nối với nhân viên <nobr>230</nobr> Máy Phát Liên Kết Trực Giác Hội Trí Thức, thù lao sẽ được trả bằng bất kỳ hình thức nào mà bạn có thể chấp nhận.\"",
+   "purpose": "Nguyên Liệu EXP Nhân Vật",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Đài Hoa Nhân Tạo - Cánh Đồng Tuyết Ngoại Thành",
+    "Đài Hoa Nhân Tạo: Cảng Lưu Vân",
+    "Đài Hoa Nhân Tạo: Ranh Giới Xây Mộng",
+    "Sảnh Đường Lãng Quên"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "3aa3378fafc0e98fb07b480ae468b4fc5b29027f1ec3d000d89353e7ae656832",
+   "name": "Nhật Ký Thám Hiểm",
+   "desc": "Nguyên liệu EXP nhân vật, có thể nhận <nobr>5000</nobr> điểm EXP nhân vật.",
+   "lore": "Một ghi chú thám hiểm mang tính giáo dục, được đóng gọn gàng. Những câu chuyện minh họa từ đầu đến cuối về hành động thám hiểm, có thông tin giá trị và mẹo sinh tồn.<br /><br />\"Tại sao không kỹ thuật hóa đưa nó vào thẻ quang? Tiện mang theo hơn nhiều.\"<br />\"Đối mặt trước cơn bão hằng tinh và sự phun trào neutron, công nghệ cao mong manh hơn bạn tưởng. Huống chi người làm ra quyển sách này chắc hẳn đã hy vọng mọi người sẽ đọc nó với cách đơn giản nhất. \"",
+   "purpose": "Nguyên Liệu EXP Nhân Vật",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Đài Hoa Nhân Tạo - Cánh Đồng Tuyết Ngoại Thành",
+    "Đài Hoa Nhân Tạo: Cảng Lưu Vân",
+    "Đài Hoa Nhân Tạo: Ranh Giới Xây Mộng",
+    "Huấn Luyện Mỗi Ngày",
+    "Đổi Tro Tàn"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "a0f7c642d789346ecde22056b8a1e76a4707343bc0ebaa161e802db6d7836041",
+   "name": "Kiến Thức Du Hành",
+   "desc": "Nguyên liệu EXP nhân vật, có thể nhận <nobr>1000</nobr> điểm EXP nhân vật.",
+   "lore": "Nhật ký ghi lại mọi thứ trên đường đi, chữ viết đã bị mờ, nội dung thích gì viết đó, không giúp ích gì nhiều cho bạn.<br /><br />\"Xem xong rồi thì dọn dẹp đống giấy lộn này đi, Dan Heng?\"",
+   "purpose": "Nguyên Liệu EXP Nhân Vật",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Đài Hoa Nhân Tạo - Cánh Đồng Tuyết Ngoại Thành",
+    "Đài Hoa Nhân Tạo: Cảng Lưu Vân",
+    "Đài Hoa Nhân Tạo: Ranh Giới Xây Mộng",
+    "Thưởng Ủy Thác"
+   ]
+  },
+  "549503": {
+   "id": 549503,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "331cfae2dda242daee852ae39ae6b04e8d92340a65e232c5f1d654c28203681d",
+   "name": "Linh Kiện Cơ Khí Nhân Tạo",
+   "desc": "Phụ kiện của máy móc Xianzhou. Nguyên liệu đơn giản dùng trong cường hóa.",
+   "lore": "Nền tảng của nghệ thuật cơ khí Xianzhou. Là đơn vị nhỏ nhất trong các linh kiện máy móc, phá vỡ nó sẽ giống như phá hủy cấu trúc tế bào của một sinh vật.<br /><br />\"Hội Trí Thức treo thưởng hai triệu điểm tín dụng cho công nghệ nào có thể tháo rời hoàn hảo các chi tiết cơ khí này.\"<br />\"Nếu bạn biết Screwllum, thì hai triệu này xem như tặng không cho bạn rồi...\"",
+   "purpose": "Nguyên Liệu Vết Tích <br />Nguyên Liệu Nâng<br />Bậc Nhân Vật",
+   "rarity": 2,
+   "rewardPath": "/material/549503",
+   "comeFrom": [
+    "Cơ Giáp Nhập Ma",
+    "Rớt từ kẻ địch trong Vũ Trụ Sai Phân",
+    "Kẻ địch trong Vũ Trụ Mô Phỏng",
+    "Thưởng Ủy Thác",
+    "Đổi Tro Tàn",
+    "Máy Ghép Vạn Năng - Đổi Nguyên Liệu",
+    "Đài Hoa Nhân Tạo (Vàng)"
+   ]
+  },
+  "633444": {
+   "id": 633444,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "c9879e0b2b8417e1a07392576b95269b3ad578abb45764c4c7ef61eb7afcf5aa",
+   "name": "Bánh Xe Nhân Tạo",
+   "desc": "Phụ kiện của máy móc Xianzhou. Nguyên liệu thông thường dùng trong cường hóa.",
+   "lore": "Các thành phần liên kết trong nghệ thuật cơ khí Xianzhou. Những chiếc răng mỏng và phức tạp của bánh răng có kích thước nhỏ như hạt cải, nhưng lại liên kết với nhau để tạo thành một cơ thể phức tạp, giúp cỗ máy có thể hoạt động linh hoạt như được ban cho sự sống.<br /><br />\"Hình dáng hài hòa, hòa hợp tự nhiên. Chuyển động lặp lại, tuân theo quy luật.\"",
+   "purpose": "Nguyên Liệu Vết Tích <br />Nguyên Liệu Nâng<br />Bậc Nhân Vật",
+   "rarity": 3,
+   "rewardPath": "/material/633444",
+   "comeFrom": [
+    "Cơ Giáp Nhập Ma khi đạt Cân Bằng cấp 2",
+    "Máy Ghép Vạn Năng - Ghép Nguyên Liệu",
+    "Rớt từ kẻ địch trong Vũ Trụ Sai Phân",
+    "Rớt từ kẻ địch trong \"Vũ Trụ Mô Phỏng\"",
+    "Máy Ghép Vạn Năng - Đổi Nguyên Liệu"
+   ]
+  },
+  "635681": {
+   "id": 635681,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "7016052de047f4de04082bc4be266780c61d6cb728287f3a6dc4a4799da6190c",
+   "name": "Viên Đạn Thiên Thạch",
+   "desc": "Một quả cầu sắt được đúc ra để săn quái vật, các vết khắc trên đó dường như ghi lại số lượng con mồi đã bỏ mạng vì nó. Có thể tăng nhẹ Vết Tích Vận Mệnh của nhân vật <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Săn Bắn</span>.",
+   "lore": "Các nhà khảo cổ học vũ trang đã phát hiện ra những viên sắt này từ xương hóa thạch của nhiều loại quái vật, phép đo phóng xạ xác nhận rằng chúng được bắn ra từ thời đại con người chưa tồn tại, và sinh vật bị bắn là tàn tích cuối cùng của một nhóm quái vật nào đó.<br /><br />\"Không có sự khác biệt giữa chết vì tuổi già và chết vì một viên đạn. Con đường của thợ săn không dẫn đến bất kỳ kết cục thánh thiện hay tội lỗi nào.\"",
+   "purpose": "Nguyên Liệu Vết Tích<br />Nguyên Liệu Nâng<br />Bậc Nón Ánh Sáng",
+   "rarity": 2,
+   "rewardPath": "/material/635681",
+   "comeFrom": [
+    "Đài Hoa Nhân Tạo: Hội Trường Sơ Tuyển Cát Nóng SoulGlad™",
+    "Đổi Tro Tàn",
+    "Máy Ghép Vạn Năng - Đổi Nguyên Liệu"
+   ]
+  },
+  "671367": {
+   "id": 671367,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "0073bd10e11aa0a7afd8c74ecec0d60b2f15fa2bc1248abb540efa12e7973bc0",
+   "name": "Di Sản Quý Giá",
+   "desc": "Vật liệu cao cấp để tăng cấp Vết Tích.",
+   "lore": "Chỉ trong khoảnh khắc vạn vật ngưng đọng trước khi chết, mắt người mới có thể bắt được dáng vẻ chiếc lông vũ thần thánh rơi xuống. Uy linh Phi Hoàng, tốc độ của nó là nhanh nhất trong thất tướng Đế Cung thể hiện ra.<br /><br />\"Tôi mất mười hai ngày đêm để săn bắt nó, mới phát hiện ra nó vẫn luôn ở trong cơ thể tôi.\"",
+   "purpose": "Nguyên Liệu Vết Tích",
+   "rarity": 4,
+   "rewardPath": "/material/671367",
+   "comeFrom": [
+    "Dư Âm Chiến Đấu - Tàu Phá Thiên"
+   ]
+  },
+  "717385": {
+   "id": 717385,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "4b8c4f6407d75c2fe9c15db70802f9c84fbc4b2ae4fe9210bc6558947fc4a4c2",
+   "name": "Trái Tim Nhân Tạo",
+   "desc": "Linh kiện của máy móc Xianzhou. Nguyên liệu cao cấp dùng trong cường hóa.",
+   "lore": "Cốt lõi của nghệ thuật cơ khí Xianzhou. Quả cầu xoay tròn và rung động như nhịp đập của trái tim, khiến cỗ máy biết suy nghĩ như một sinh vật sống.<br /><br />\"Ngài đừng sợ. Lấy đi trái tim, sẽ khiến anh ấy... à không, cô ấy? À không, khiến nó mất đi linh hồn và trí tuệ, trở lại là một khối kim thạch.\"",
+   "purpose": "Nguyên Liệu Vết Tích <br />Nguyên Liệu Nâng<br />Bậc Nhân Vật",
+   "rarity": 4,
+   "rewardPath": "/material/717385",
+   "comeFrom": [
+    "Cơ Giáp Nhập Ma khi đạt Cân Bằng cấp 4",
+    "Máy Ghép Vạn Năng - Ghép Nguyên Liệu",
+    "Rớt từ kẻ địch trong Vũ Trụ Sai Phân",
+    "Rớt từ kẻ địch trong \"Vũ Trụ Mô Phỏng\"",
+    "Máy Ghép Vạn Năng - Đổi Nguyên Liệu"
+   ]
+  },
+  "836267": {
+   "id": 836267,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "47b3145b725e848f1a50ffa863008438deba3b4be9077d1b9e32374dd0b474e8",
+   "name": "Cú Bắn Nghịch Thời Gian",
+   "desc": "Đầu đạn xoắn ốc luôn di chuyển ngược hướng với mũi tên thời gian, giống như chó săn luôn đuổi theo những thứ bất tử bất chấp thời gian. Có thể tăng mạnh Vết Tích Vận Mệnh của nhân vật <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Săn Bắn</span>.",
+   "lore": "Nó đã từng là tro than của một Chúa Tể Diệt Chủng, từng là chiếc nút xóa sổ một nền văn minh, từng là tiếng kêu thảm thiết cuối cùng của một con thú cổ xưa... Cần phải tập hợp bao nhiêu nguyên liệu chết chóc mới có thể đúc được một viên đạn như vậy? Và rồi loại súng nào mới có thể bắn nó đi? Nó là đáp án cho mọi thứ, nó không phải là câu hỏi.<br /><br />\"Chạy đi, chạy vào trong bất cứ khe nứt thời gian nào, nó sẽ luôn tìm thấy ngươi, đóng đinh ngươi vào trong số phận.\"",
+   "purpose": "Nguyên Liệu Vết Tích<br />Nguyên Liệu Nâng<br />Bậc Nón Ánh Sáng",
+   "rarity": 4,
+   "rewardPath": "/material/836267",
+   "comeFrom": [
+    "Đài Hoa Nhân Tạo: Hội Trường Sơ Tuyển Cát Nóng SoulGlad™",
+    "Máy Ghép Vạn Năng - Ghép Nguyên Liệu",
+    "Máy Ghép Vạn Năng - Đổi Nguyên Liệu"
+   ]
+  },
+  "920208": {
+   "id": 920208,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "83d73025b46ad57802c4c7f4316c9ef1738ab07d9755d9c5211f97aede16171c",
+   "name": "Chết Do Số Trời",
+   "desc": "Được gắn vào giữa lông mày của người đã khuất, xuyên qua các vết nứt của vật thể, viên đạn này vĩnh viễn nằm ở đúng nơi mà lỗ đạn của nó nên ở. Có thể tăng tương đối Vết Tích Vận Mệnh của nhân vật <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Săn Bắn</span>.",
+   "lore": "Nó xuyên qua những khe hở ngoằn ngoèo giữa hàng ngàn binh lính, xuyên qua điểm yếu nhất trên mũ sắt, cuối cùng dừng lại ở giữa hộp sọ của tên bạo chúa, phát ra tiếng thở dài như lời thì thầm. Nó xuất hiện ở đó, giống như một sự trùng hợp chí mạng. Nó xuất hiện ở đó, giống như ai cũng phải đến đích.<br /><br />\"Có đôi khi, lỗ đạn tồn tại trước đường đạn.\"",
+   "purpose": "Nguyên Liệu Vết Tích<br />Nguyên Liệu Nâng<br />Bậc Nón Ánh Sáng",
+   "rarity": 3,
+   "rewardPath": "/material/920208",
+   "comeFrom": [
+    "Đài Hoa Nhân Tạo: Hội Trường Sơ Tuyển Cát Nóng SoulGlad™",
+    "Máy Ghép Vạn Năng - Ghép Nguyên Liệu",
+    "Đổi Tro Tàn",
+    "Máy Ghép Vạn Năng - Đổi Nguyên Liệu"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 81.6,
+   "attackAdd": 4.08,
+   "hpBase": 110.4,
+   "hpAdd": 5.52,
+   "defenseBase": 48,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3200
+    },
+    {
+     "id": 549503,
+     "count": 4
+    }
+   ]
+  },
+  {
+   "attackBase": 114.24,
+   "attackAdd": 4.08,
+   "hpBase": 154.56,
+   "hpAdd": 5.52,
+   "defenseBase": 67.2,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6400
+    },
+    {
+     "id": 549503,
+     "count": 8
+    }
+   ]
+  },
+  {
+   "attackBase": 146.88,
+   "attackAdd": 4.08,
+   "hpBase": 198.72,
+   "hpAdd": 5.52,
+   "defenseBase": 86.4,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12800
+    },
+    {
+     "id": 633444,
+     "count": 5
+    },
+    {
+     "id": 151162,
+     "count": 2
+    }
+   ]
+  },
+  {
+   "attackBase": 179.52,
+   "attackAdd": 4.08,
+   "hpBase": 242.88,
+   "hpAdd": 5.52,
+   "defenseBase": 105.6,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 32000
+    },
+    {
+     "id": 633444,
+     "count": 8
+    },
+    {
+     "id": 151162,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 212.16,
+   "attackAdd": 4.08,
+   "hpBase": 287.04,
+   "hpAdd": 5.52,
+   "defenseBase": 124.8,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 64000
+    },
+    {
+     "id": 717385,
+     "count": 5
+    },
+    {
+     "id": 151162,
+     "count": 15
+    }
+   ]
+  },
+  {
+   "attackBase": 244.8,
+   "attackAdd": 4.08,
+   "hpBase": 331.2,
+   "hpAdd": 5.52,
+   "defenseBase": 144,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 128000
+    },
+    {
+     "id": 717385,
+     "count": 7
+    },
+    {
+     "id": 151162,
+     "count": 28
+    }
+   ]
+  },
+  {
+   "attackBase": 277.44,
+   "attackAdd": 4.08,
+   "hpBase": 375.36,
+   "hpAdd": 5.52,
+   "defenseBase": 163.2,
+   "defenseAdd": 2.4,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 111,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "84fea6dd01531c0e3195fdca93ab88fafaa569e10406525ea5fbb1f1d8488516",
+   "artPath": "fa374cf2ae832bd53dec9d22604e64e327b696c71f5c3e934551c2b36c971d68",
+   "name": "Tuyên Thệ",
+   "descHash": "Sau khi vào chiến đấu, Moze hồi <nobr>#2[i]</nobr> điểm Năng Lượng. Mỗi khi kích hoạt 1 lần Sát Thương Kèm Theo của Thiên Phú, Moze sẽ hồi <nobr>#1[i]</nobr> điểm Năng Lượng.",
+   "params": [
+    2,
+    20
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "8f2ebd82ccec4b4736164e5ac4439e9984a8664cc057da8ec5ce5605319c1987",
+   "artPath": "234e15480bebc50511cd080adbf0393aa2de4128136c97e8fd0b91b0e5d79030",
+   "name": "Trừng Phạt",
+   "descHash": "Khi toàn bộ mục tiêu phe ta gây sát thương cho mục tiêu phe địch bị đánh dấu là Con Mồi, Sát Thương Bạo Kích sẽ tăng <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.4
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "7dce6c7eff965801cff4dec1a9d3e5db57fceab00bdf42b5bb5a1ea710d93e5c",
+   "artPath": "7f9d6f2e78f1fd794f5b924d4df9545608a81a56e859770d0cf50c21a7ac253e",
+   "name": "Truy Đuổi",
+   "descHash": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "e1993526e050b762e2a263b73bc8eb95714487ff18b59fb74b39c4ce3f183247",
+   "artPath": "05857417769be72fedc129d9c054126a42452bce72f108adc989dec5d7be0ed6",
+   "name": "Rình Rập",
+   "descHash": "Khi thi triển Tuyệt Kỹ, sát thương Moze gây ra tăng <nobr>#1[f1]%</nobr>, duy trì <nobr>#2[i]</nobr> hiệp.",
+   "params": [
+    0.3,
+    2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "6b219107256a2ead55529920c423d0da5ce7de76ba97c1b1c90da3110fdd7e26",
+   "artPath": "6c440afd7a1daf4aa6a37c47d7b88c64055a1a1312e597a7699450297c135525",
+   "name": "Đánh Lừa",
+   "descHash": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "ca022399785ad656f6e948ff45fb6aaf7794a43bcf7b3e557dc763a3ac31a3b3",
+   "artPath": "27226d6806439a350ccbe0a350c5c273885d8b09bbec9bedd58510fb0c4c6697",
+   "name": "Trung Thành",
+   "descHash": "Bội Số Sát Thương Đòn Đánh Theo Sau của Thiên Phú tăng <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.25
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   906559
+  ],
+  [
+   990500
+  ],
+  [
+   107145
+  ],
+  [
+   421446
+  ],
+  [
+   705973
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "Đánh Đơn",
+   "descHash": "Gây Sát Thương <span style=\"color:#c75de2;\">Lôi</span> bằng <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> Tấn Công của Moze cho 1 kẻ địch chỉ định.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 906559,
+   "name": "Phi Đao",
+   "iconPath": "c93c471a400030809af3ae3099c68c36db880974b398d22b87ac1b6d0582db6e",
+   "typeDescHash": "Tấn Công Thường",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635681,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920208,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920208,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836267,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836267,
+       "count": 6
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Đánh Đơn",
+   "descHash": "Khiến 1 kẻ địch chỉ định trở thành Con Mồi, gây Sát Thương <span style=\"color:#c75de2;\">Lôi</span> bằng <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> Tấn Công của Moze, đồng thời nhận <nobr>#2[i]</nobr> điểm Nạp Năng Lượng.<br />Khi trong trận không có nhân vật khác có thể chiến đấu, Moze sẽ không thể sử dụng Chiến Kỹ, và giải trừ trạng thái Con Mồi của kẻ địch.",
+   "ultimateCost": 0,
+   "break": "60",
+   "energy": "30",
+   "id": 990500,
+   "name": "Đột Kích Lướt Gió",
+   "iconPath": "6b219107256a2ead55529920c423d0da5ce7de76ba97c1b1c90da3110fdd7e26",
+   "typeDescHash": "Chiến Kỹ",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.75,
+      9
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.825,
+      9
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9,
+      9
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635681,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.975,
+      9
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920208,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05,
+      9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920208,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.125,
+      9
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920208,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      1.21875,
+      9
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836267,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.3125,
+      9
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836267,
+       "count": 4
+      },
+      {
+       "id": 671367,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.40625,
+      9
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836267,
+       "count": 6
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5,
+      9
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836267,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.575,
+      9
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.65,
+      9
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.725,
+      9
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.8,
+      9
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.875,
+      9
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Đánh Đơn",
+   "descHash": "Gây Sát Thương <span style=\"color:#c75de2;\">Lôi</span> bằng <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> Tấn Công của Moze cho 1 kẻ địch chỉ định, đồng thời phát động <u>Đòn Đánh Theo Sau</u> của Thiên Phú lên mục tiêu này. Nếu trước lần thi triển <u>Đòn Đánh Theo Sau</u> này, mục tiêu bị tiêu diệt, thì sẽ phát động <u>Đòn Đánh Theo Sau</u> lên 1 kẻ địch ngẫu nhiên.",
+   "ultimateCost": 120,
+   "break": "90",
+   "energy": "5",
+   "id": 107145,
+   "name": "Dao Lạnh Vô Tình",
+   "iconPath": "db9cc9fd24c13d2b58692575f3d561b8f7556cb9a5fc48d3180b72ec0a54f5f5",
+   "typeDescHash": "Tuyệt Kỹ",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1.62
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.728
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      1.836
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635681,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.944
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920208,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      2.052
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920208,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.16
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920208,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      2.295
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836267,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      2.43
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836267,
+       "count": 4
+      },
+      {
+       "id": 671367,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      2.565
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836267,
+       "count": 6
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.7
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836267,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.808
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.916
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.024
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.132
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3.24
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Đánh Đơn",
+   "descHash": "Khi trong trận có Con Mồi, Moze sẽ vào trạng thái <u>Rời Trận</u>.<br />Sau khi mục tiêu phe ta tấn công Con Mồi, Moze sẽ gây thêm 1 lần <u>Sát Thương <span style=\"color:#c75de2;\">Lôi</span> kèm theo</u> bằng <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> Tấn Công của bản thân, đồng thời tiêu hao 1 điểm Nạp Năng Lượng. Mỗi lần tiêu hao <nobr>#2[i]</nobr> điểm Nạp Năng Lượng, Moze sẽ phát động 1 lần <u>Đòn Đánh Theo Sau</u> lên Con Mồi, gây Sát Thương <span style=\"color:#c75de2;\">Lôi</span> bằng <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> Tấn Công của bản thân. Khi Nạp Năng Lượng bằng 0, sẽ giải trừ trạng thái Con Mồi của mục tiêu, đồng thời làm mới số điểm Nạp Năng Lượng cần để phát động <u>Đòn Đánh Theo Sau</u>. <u>Đòn Đánh Theo Sau</u> của Thiên Phú sẽ không tiêu hao Nạp Năng Lượng.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "10",
+   "id": 421446,
+   "name": "Thu Cánh Tung Đao",
+   "iconPath": "386a49dc66c9f728ee7da25afe031c41e7614ba961073e75ea467a65bfb1553d",
+   "typeDescHash": "Thiên Phú",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.15,
+      3,
+      0.8
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.165,
+      3,
+      0.88
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2000
+      },
+      {
+       "id": 549503,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.18,
+      3,
+      0.96
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 4000
+      },
+      {
+       "id": 635681,
+       "count": 2
+      },
+      {
+       "id": 549503,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.195,
+      3,
+      1.04
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 8000
+      },
+      {
+       "id": 920208,
+       "count": 2
+      },
+      {
+       "id": 633444,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.21,
+      3,
+      1.12
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 16000
+      },
+      {
+       "id": 920208,
+       "count": 4
+      },
+      {
+       "id": 633444,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.225,
+      3,
+      1.2
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 24000
+      },
+      {
+       "id": 920208,
+       "count": 6
+      },
+      {
+       "id": 633444,
+       "count": 5
+      }
+     ]
+    },
+    {
+     "params": [
+      0.24375,
+      3,
+      1.3
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 36000
+      },
+      {
+       "id": 836267,
+       "count": 2
+      },
+      {
+       "id": 717385,
+       "count": 2
+      }
+     ]
+    },
+    {
+     "params": [
+      0.2625,
+      3,
+      1.4
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 64000
+      },
+      {
+       "id": 836267,
+       "count": 4
+      },
+      {
+       "id": 671367,
+       "count": 1
+      },
+      {
+       "id": 717385,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.28125,
+      3,
+      1.5
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 128000
+      },
+      {
+       "id": 836267,
+       "count": 6
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.3,
+      3,
+      1.6
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 240000
+      },
+      {
+       "id": 836267,
+       "count": 11
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 671367,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.315,
+      3,
+      1.68
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.33,
+      3,
+      1.76
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.345,
+      3,
+      1.84
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.36,
+      3,
+      1.92
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.375,
+      3,
+      2
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Tấn công kẻ địch, sau khi vào chiến đấu sẽ làm suy yếu Sức Bền thuộc tính tương ứng của mục tiêu phe địch.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 622032,
+   "name": "Tấn Công",
+   "iconPath": "c93c471a400030809af3ae3099c68c36db880974b398d22b87ac1b6d0582db6e",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Cường Hóa",
+   "descHash": "Sau khi dùng Bí Kỹ sẽ vào trạng thái Tàng Hình duy trì <nobr>#1[i]</nobr> giây. Trong trạng thái Tàng Hình sẽ không bị kẻ địch phát hiện, khi Moze trong trạng thái Tàng Hình tấn công kẻ địch để vào chiến đấu, sát thương sẽ tăng <nobr>#2[i]%</nobr>, duy trì <nobr>#3[i]</nobr> hiệp.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 705973,
+   "name": "Đôi Cánh Ẩn Hình",
+   "iconPath": "548d452968655d300eefd130e93a5167fbba157fe7e3f967588f0058a1142fe4",
+   "typeDescHash": "Bí Kỹ",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      20,
+      0.3,
+      2
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1223101,
+   "anchor": 6,
+   "type": 1,
+   "children": [
+    {
+     "id": 1223202,
+     "anchor": 10,
+     "type": 2,
+     "children": [
+      {
+       "id": 1223203,
+       "anchor": 11,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 345259,
+        "name": "Cường Hóa Sát Thương Bạo Kích",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+        "statusList": [
+         {
+          "key": "Sát Thương Bạo Kích",
+          "value": 0.053
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 8000
+         },
+         {
+          "id": 920208,
+          "count": 2
+         },
+         {
+          "id": 633444,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 345258,
+      "name": "Cường Hóa Tấn Công",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+      "statusList": [
+       {
+        "key": "Tấn Công",
+        "value": 0.04
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635681,
+        "count": 2
+       },
+       {
+        "id": 549503,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Sau khi thi triển Đòn Đánh Theo Sau của Thiên Phú, hồi <nobr>#1[i]</nobr> Điểm Chiến Kỹ, hiệu ứng này có thể kích hoạt lần nữa sau <nobr>#2[i]</nobr> hiệp.",
+    "ultimateCost": 0,
+    "id": 345290,
+    "name": "Áo Thêu Bóng Tối",
+    "iconPath": "fb787fec4da467c5daa2b23e0b268b6cb57160e30a9e2a28f9ccbb0427cf30d3",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       1,
+       1
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 4000
+       },
+       {
+        "id": 635681,
+        "count": 2
+       },
+       {
+        "id": 671367,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223102,
+   "anchor": 7,
+   "type": 1,
+   "children": [
+    {
+     "id": 1223205,
+     "anchor": 13,
+     "type": 2,
+     "children": [
+      {
+       "id": 1223206,
+       "anchor": 14,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 345254,
+        "name": "Cường Hóa Tấn Công",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+        "statusList": [
+         {
+          "key": "Tấn Công",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 36000
+         },
+         {
+          "id": 836267,
+          "count": 2
+         },
+         {
+          "id": 717385,
+          "count": 2
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 345253,
+      "name": "Cường Hóa Sát Thương Bạo Kích",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+      "statusList": [
+       {
+        "key": "Sát Thương Bạo Kích",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920208,
+        "count": 4
+       },
+       {
+        "id": 633444,
+        "count": 3
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Khi Moze giải trừ trạng thái Rời Trận, sẽ Ưu Tiên Hành Động <nobr>#1[i]%</nobr>. Khi bắt đầu mỗi đợt, Moze sẽ Ưu Tiên Hành Động <nobr>#2[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 345289,
+    "name": "Dao Găm Trong Tay",
+    "iconPath": "28b34b73acf675ae63a110b86886058180ae9ceebbce37a7712d3538c35f1e24",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.2,
+       0.3
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 16000
+       },
+       {
+        "id": 920208,
+        "count": 4
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 671367,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223103,
+   "anchor": 8,
+   "type": 1,
+   "children": [
+    {
+     "id": 1223208,
+     "anchor": 16,
+     "type": 2,
+     "children": [
+      {
+       "id": 1223209,
+       "anchor": 17,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 345265,
+        "name": "Cường Hóa Tấn Công",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+        "statusList": [
+         {
+          "key": "Tấn Công",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836267,
+          "count": 6
+         },
+         {
+          "id": 717385,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 1223210,
+       "anchor": 18,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 429197,
+        "name": "Cường Hóa Sát Thương Bạo Kích",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+        "statusList": [
+         {
+          "key": "Sát Thương Bạo Kích",
+          "value": 0.107
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836267,
+          "count": 6
+         },
+         {
+          "id": 717385,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 345264,
+      "name": "Cường Hóa HP",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+      "statusList": [
+       {
+        "key": "HP",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836267,
+        "count": 6
+       },
+       {
+        "id": 717385,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Khi thi triển Tuyệt Kỹ gây sát thương, sẽ xem như là phát động Đòn Đánh Theo Sau. Sát thương Đòn Đánh Theo Sau Con Mồi phải chịu tăng <nobr>#1[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 345288,
+    "name": "Báo Thù Khôn Ngoan",
+    "iconPath": "b2f87d6275b2c6651ed889a9f7a5b67b6997a9013ef52862277347d527b01089",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.25
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836267,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 671367,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223201,
+   "anchor": 9,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 345257,
+    "name": "Cường Hóa Sát Thương Bạo Kích",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+    "statusList": [
+     {
+      "key": "Sát Thương Bạo Kích",
+      "value": 0.053
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2000
+     },
+     {
+      "id": 549503,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223204,
+   "anchor": 12,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 345252,
+    "name": "Cường Hóa HP",
+    "levelReq": 0,
+    "promotionReq": 3,
+    "iconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+    "statusList": [
+     {
+      "key": "HP",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 8000
+     },
+     {
+      "id": 920208,
+      "count": 2
+     },
+     {
+      "id": 633444,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1223207,
+   "anchor": 15,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 345255,
+    "name": "Cường Hóa Sát Thương Bạo Kích",
+    "levelReq": 0,
+    "promotionReq": 5,
+    "iconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+    "statusList": [
+     {
+      "key": "Sát Thương Bạo Kích",
+      "value": 0.08
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 36000
+     },
+     {
+      "id": 836267,
+      "count": 2
+     },
+     {
+      "id": 717385,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": []
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Lần Đầu Gặp Mặt",
+   "text": "Tôi là Moze, ảnh vệ của Feixiao. Hãy đứng sang bên đây một chút, như vậy có thể chặn tầm mắt người khác quan sát tôi.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 2,
+   "title": "Thăm Hỏi",
+   "text": "Vẫn khỏe chứ? Không, không cần bắt tay, tay của tôi phải luôn đặt trên vũ khí.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 3,
+   "title": "Tạm Biệt",
+   "text": "Không cần thiết phải tạm biệt, dù sao thì ở một góc phố nào đó, tôi cũng hay đi ngang qua cô/anh.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 4,
+   "title": "Về Bản Thân-Công Việc",
+   "text": "Xung phong trận tuyến là công việc của Feixiao, bày mưu tính kế là công việc của Jiaoqiu, quét dọn vệ sinh... là công việc của tôi.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 5,
+   "title": "Về Bản Thân-Bí Truyền Dược Vương",
+   "text": "Tôi là một đứa trẻ được Bí Truyền Dược Vương nuôi lớn. Quá trình trị liệu không hồi kết, gia quy vô lý, người nhà vui buồn bất chợt... tôi từng nghĩ đó là cuộc sống của người bình thường.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 6,
+   "title": "Về Bản Thân-Chứng Sợ Bẩn",
+   "text": "Muốn dọn dẹp sự ô uế trên thế gian này, thì phải làm bẩn đôi tay của mình trước. Đó là lý do tại sao tôi rửa tay hết lần này đến lần khác.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 7,
+   "title": "Về Bản Thân-Im Lặng",
+   "text": "Có người im lặng là vì không có tham vọng, có người im lặng là vì không có suy nghĩ, còn tôi chỉ là đơn giản không muốn nói chuyện thôi.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 8,
+   "title": "Về Bản Thân-Quái Nhân Lông Quạ",
+   "text": "Cái tên Quái Nhân Lông Quạ không phải là mô tả vẻ ngoài của tôi. Mà bởi vì tôi từng dùng một chiếc bút lông để tiễn ba tên khốn đi gặp Dược Vương Từ Bi. Đừng hỏi tại sao tôi dùng bút lông, vì đúng lúc đó nó đang nằm trên bàn.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 9,
+   "title": "Tán Gẫu-Chức Trách",
+   "text": "Ghét cái ác như kẻ thù? Không không, công nhân vệ sinh đường ống thoát nước sẽ căm ghét chất bẩn thải ra từ thành phố sao?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 10,
+   "title": "Tán Gẫu-Truyền Thuyết Đô Thị",
+   "text": "Người Yaoqing thích nói về tôi, nhưng một số người khi thật sự nhìn thấy tôi thì sẽ hét lên và co rúm người lại.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 11,
+   "title": "Sở Thích",
+   "text": "Tắm rửa và dọn dẹp vệ sinh. Cảm giác gột rửa chất bẩn thật tuyệt vời.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 12,
+   "title": "Phiền Não",
+   "text": "Trở thành cái bóng đồng nghĩa với việc cửa tự động sẽ thường xuyên phớt lờ bạn. Mà thôi, dù gì bình thường tôi cũng không đi cửa chính.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 13,
+   "title": "Chia Sẻ",
+   "text": "Cô/Anh biết không? Đường lõm trên kiếm không phải để dẫn máu, mà là để giảm trọng lượng của vũ khí, được gọi là kết cấu \"rãnh máu\"... Nếu trước đây cô/anh không biết thì bây giờ biết rồi đó.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 14,
+   "title": "Hiểu Biết",
+   "text": "Yaoqing là một Xianzhou xinh đẹp, chỉ là quá gần với dân Trù Phú.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 15,
+   "title": "Về Feixiao 1",
+   "text": "Feixiao là \"kẻ thù\" đã cướp đi sinh mạng của \"người nhà\" tôi, cũng chính là ân nhân đã cho tôi cuộc sống mới.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 16,
+   "title": "Về Feixiao 2",
+   "text": "Feixiao cho phép tôi \"hành thích\" cô ấy bất cứ lúc nào, và xem tôi như một con dao găm để mài giũa sự cảnh giác của mình. Đó chính là cách mà cô ấy thể hiện sự tin tưởng của mình đối với tôi, và cho đến bây giờ, tôi chưa từng thắng một lần nào.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 17,
+   "title": "Về Jiaoqiu",
+   "text": "Anh ấy nói tướng quân là người bệnh của mình, nhưng tôi thấy tướng quân mới là thầy thuốc của anh ấy.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 18,
+   "title": "Về Sushang",
+   "text": "Mấy năm trước tôi gặp cô ấy ở quân doanh, cô ấy không nhận ra tôi, lúc đó tôi là phụ tá của Feixiao, thường ghé thăm nhà Jiaoqiu, sao có thể chưa từng gặp chứ?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 19,
+   "title": "Về Huaiyan",
+   "text": "Ông lão đó rất lợi hại. Bất cứ ai có thể sống lâu đến như vậy mà vẫn không ghét bỏ chính mình đều rất lợi hại.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 20,
+   "title": "Về Jing Yuan",
+   "text": "Anh ấy có vẻ không thích công việc của mình, nhưng lại làm việc có trách nhiệm cho đến tận bây giờ. Điểm này giống tôi.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 21,
+   "title": "Kích Hoạt Tinh Hồn",
+   "text": "Mọi chiếc bóng trên Yaoqing đều có thể là tôi.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 22,
+   "title": "Nâng Bậc Nhân Vật",
+   "text": "Bạo lực là cách cuối cùng, và cũng là cách duy nhất của tôi.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 23,
+   "title": "Nhân Vật Đầy Cấp",
+   "text": "Tôi sẽ hòa vào bóng tối và canh chừng mọi người.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 24,
+   "title": "Kích Hoạt Vết Tích",
+   "text": "Hồn ma của quá khứ sẽ luôn quay lại thăm chúng ta.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 25,
+   "title": "Điều Chỉnh Đội-Nhà Khai Phá",
+   "text": "Yên tâm đi, khi cô/anh cần, tôi sẽ ra tay.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 26,
+   "title": "Điều Chỉnh Đội-Feixiao",
+   "text": "Tôi sẽ cùng cô chiến đấu đến giây phút cuối cùng.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 27,
+   "title": "Điều Chỉnh Đội-Jiaoqiu",
+   "text": "Thầy thuốc, đến lượt anh trải nghiệm cuộc sống của tôi rồi.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 28,
+   "title": "Điều Chỉnh Đội-Sushang",
+   "text": "Cô chỉ cần thu hút sự chú ý là được, chuyện bẩn tay cứ để tôi. Đừng cố thể hiện.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 29,
+   "title": "Điều Chỉnh Đội-Jing Yuan",
+   "text": "Tướng Quân Thần Sách, không nên tham gia vào những việc bẩn tay như thế này. Cứ giao cho tôi.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 51,
+   "title": "Bắt Đầu Chiến Đấu-Phá Vỡ Điểm Yếu",
+   "text": "Đúng vào chỗ chết.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 52,
+   "title": "Bắt Đầu Chiến Đấu-Cảnh Báo Nguy Hiểm",
+   "text": "Lấy bất biến ứng vạn biến.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 53,
+   "title": "Bắt Đầu Hiệp 1",
+   "text": "Tôi là lưỡi dao...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 54,
+   "title": "Bắt Đầu Hiệp 2",
+   "text": "Tôi là bóng tối...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 55,
+   "title": "Chờ Lượt",
+   "text": "Mệnh lệnh tiếp theo là gì?",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 56,
+   "title": "Tấn Công Thường",
+   "text": "Tấn công một điểm.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 57,
+   "title": "Chiến Kỹ 1",
+   "text": "Thời cơ dễ vụt mất.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 58,
+   "title": "Chiến Kỹ 2",
+   "text": "Màn đêm luôn đi theo như hình với bóng.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 59,
+   "title": "Bị Tấn Công Nhẹ",
+   "text": "Ngươi bại lộ rồi.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 60,
+   "title": "Bị Tấn Công Nặng",
+   "text": "Chẳng là gì cả.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 61,
+   "title": "Kích Hoạt Tuyệt Kỹ",
+   "text": "Đến lúc thu hoạch rồi.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 62,
+   "title": "Thi Triển Tuyệt Kỹ",
+   "text": "Nơi gió thổi đến... ngươi không thể trốn được đâu!",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 63,
+   "title": "Thiên Phú",
+   "text": "Bóng tối, tập kích bất ngờ!",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 64,
+   "title": "Không Thể Chiến Đấu",
+   "text": "Chỉ thiếu... chút nữa...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 65,
+   "title": "Trở Lại Chiến Đấu",
+   "text": "Lần này sẽ không lặp lại sai lầm.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 66,
+   "title": "Hồi HP",
+   "text": "Xin lỗi đã làm phiền.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 67,
+   "title": "Bí Kỹ",
+   "text": "Lông quạ tàng hình.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 68,
+   "title": "Chiến Thắng",
+   "text": "Đã dọn dẹp xong chiến trường.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 69,
+   "title": "Mở Chiến Lợi Phẩm 1",
+   "text": "May mắn đấy.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 70,
+   "title": "Mở Chiến Lợi Phẩm 2",
+   "text": "Không có nguy hiểm, tốt lắm.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 71,
+   "title": "Mở Chiến Lợi Phẩm Quý",
+   "text": "Tiền tài không nên để lộ ra ngoài, chú ý an toàn.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 72,
+   "title": "Giải Đố Thành Công 1",
+   "text": "Thì ra là vậy.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 73,
+   "title": "Giải Đố Thành Công 2",
+   "text": "Quan sát kỹ mới có thể chiến thắng.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 74,
+   "title": "Phát Hiện Kẻ Địch",
+   "text": "Cứ đi về phía trước đi, để tôi ứng phó.",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  },
+  {
+   "id": 75,
+   "title": "Về Thành",
+   "text": "Người đến rồi đi, những chiếc bóng vẫn ẩn mình trong đó...",
+   "unlockRequirement": "",
+   "cnUrl": "",
+   "jpUrl": "",
+   "enUrl": "",
+   "krUrl": ""
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Chi Tiết Nhân Vật",
+   "text": "Ảnh Vệ của Xianzhou Yaoqing, trầm ngâm ít nói, thích hành động một mình.<br />Chuyên lo liệu về thông tin tình báo và những công việc trong bóng tối, ít khi xuất hiện trước mặt mọi người. Khi Moze bộc lộ năng lực của mình, đó là lúc kẻ địch phải bỏ mạng.<br />Thủ đoạn ám sát đa dạng, có nỗi ám ảnh cố chấp với sự gọn gàng và trật tự.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Câu Chuyện Nhân Vật 1",
+   "text": "\"Dược Vương Từ Bi... Nghe lời, hãy nuốt xuống đi, bệnh của cậu sẽ được chữa khỏi, không chỉ sẽ giống hệt Tộc Trường Sinh... mà còn có thể sống rất lâu, rất lâu...\"<br />Cậu cố gắng nuốt thuốc xuống, nhưng không dám hít thở.<br /><br />Những cơn đau đớn như thế này, không biết cậu còn phải trải qua bao nhiêu lần nữa. Chất lỏng sền sệt chảy qua thực quản, cứ như thể đang nuốt kim vậy. Cảm giác buồn nôn dữ dội chèn ép lồng ngực cậu.<br />\"Nuốt xuống, không được nôn ra, đây là thuốc...\" Cơ thể cậu cũng đang nói với cậu như vậy: Nuốt xuống. Nuốt xuống. Nuốt xuống.<br />Nuốt xuống. Sẽ không phải đối mặt với sự đe dọa của dã thú, không còn phải chìm trong nỗi sợ không thể thoát khỏi miệng cáo hang hùm nữa.<br />Nuốt xuống. Tay chân sẽ không còn bất lực nữa, không còn phải trơ mắt nhìn đồng đội chết đi nữa.<br />Nuốt xuống.<br /><br />Thuốc bắt đầu bị các cơ quan và máu thịt nuốt chửng, một luồng sức mạnh xa lạ va đập dữ dội trong cơ thể. Cậu muốn hít thở thật sâu, nhưng cảm giác cắn xé đang lan rộng từ bụng đến tứ chi khiến cậu cảm thấy ngạt thở.<br />\"Cố gắng chịu đựng, giống như trước đây, chỉ cần chịu đựng...\" Cậu đã không thể phát ra tiếng động nữa, chỉ có cơ thể đang nói chuyện với cậu.<br />Cố gắng chịu đựng. Cậu không còn là đứa trẻ mồ côi bị làng bỏ rơi, phải lưu lạc nơi hoang dã nữa.<br />Cố gắng chịu đựng. Mỗi câu mà cậu nói ra đều sẽ được đáp lại, không còn cô đơn một mình nữa.<br />Cố gắng chịu đựng.<br /><br />\"Moze? Cảm thấy thế nào...\"<br />\"Tốt lắm, cậu lại một lần nữa vượt qua được rồi.\"<br />\"Hãy tiếp tục cố gắng, đừng sợ hãi, căn bệnh của cậu sẽ được xóa sạch.\"<br />\"Đến lúc đó... Săn bắn dã thú, bảo vệ đồng đội, sống thọ trăm tuổi... Cậu có thể làm bất cứ điều gì mình muốn.\"<br />\"Và khi cơ thể được chữa khỏi hoàn toàn... Cậu sẽ có được một sự sống trọn vẹn... Và cũng sẽ trở thành người nhà thực sự của chúng tôi.\"<br />\"Đến lúc đó, chúng ta cần phải kế thừa ý chí của nhau.\"<br /><br />Hóa ra cần phải trải qua nhiều đau đớn như thế này, mới có thể đổi được người nhà.<br />\"Đau...\"<br />Cuối cùng, cậu không thể chịu đựng được nữa, tiếng rên rỉ thoát ra từ kẽ răng vì đau đớn. Nhưng những người xung quanh chỉ nói với cậu rằng:<br />\"Người nhà một lòng cùng nhau đắc đạo, chỉ cần vượt qua kiếp này, chiến thắng sẽ mang lại sự sống.\"<br />\"Dược Vương Từ Bi.\"<br /><br />Những gì cậu nói chẳng được ai quan tâm, vì vậy cậu quen dần với việc im lặng.",
+   "unlockRequirement": "Nhân vật đạt cấp <nobr>20</nobr> mở khóa"
+  },
+  {
+   "title": "Câu Chuyện Nhân Vật 2",
+   "text": "\"Báo cáo Tướng Quân, tàn dư của Bí Truyền Dược Vương đã bị bắt giữ hết, một trăm mười bảy tên, đang chờ bàn giao cho Sở Thập Vương tống vào nhà giam.\"<br />\"Nhưng tên thiếu niên đó, có lẽ đã bị tra tấn bằng thuốc, ngài xem...\"<br />Cậu trốn trong bóng tối, cô gái được gọi là Tướng Quân bước về phía cậu, rõ ràng là đã phát hiện ra từ lâu.<br /><br />\"Đến lúc đó, chúng ta cần phải kế thừa ý chí của nhau.\"<br />Giọng nói vang lên trong đầu cậu không hề có cảm xúc, nhưng việc nghe thấy nó hết ngày này đến ngày khác đã khiến cậu giơ con dao găm lên vào lúc này.<br />Nhưng chỉ trong chớp mắt, con dao trong tay đã rơi xuống đất.<br />\"Muốn giết tôi?\"<br />\"Cô đã giết người nhà của tôi.\"<br />Cậu nhận thấy trong ánh mắt của cô gái người Hồ Ly đó hình như có một khoảnh khắc do dự.<br />\"Anh coi họ là người nhà?\"<br />\"Họ đã cứu tôi, cho nên tôi mới còn sống.\"<br />Cô buông tay, rồi lắc đầu.<br />\"Có vẻ như anh chẳng biết gì cả... Thôi được rồi, sau này sẽ có người sắp xếp cuộc sống và nơi ở cho anh, anh cứ đi theo họ là được.\"<br /><br />Cô quay người bước đi, nhưng cậu thiếu niên vẫn chưa đứng dậy, chỉ dán mắt nhìn theo bóng lưng cô. Cậu biết, có lẽ đây là cơ hội cuối cùng.<br />Cậu nhặt con dao găm dưới đất lên, từ phía sau bóng lưng cô nhảy bổ lên, đâm về phía trước.<br /><br />\"Đòn này đẹp đó!\" Cô khen ngợi.<br />Lần này, con dao găm không rơi xuống đất, mà được cô nắm trong tay. Nhưng cậu vẫn không từ bỏ, đột kích từ hai bên không thành, cậu liền hung hăng lao đến cắn tay cô gái.<br />\"Cắn người thì không được... Haiz, không sao, mọi người đừng qua đây... Sao đứa trẻ này lại giống y chang như tôi lúc còn ở doanh trại quân Boris hồi trước vậy.\"<br />Cô gái không ra tay, chỉ né tránh. Cậu thiếu niên thở hổn hển, nhưng vẫn rình rập tìm kiếm sơ hở của cô.<br />Họ cứ thế giằng co.<br /><br />\"Hay vậy đi, chi bằng anh đi về cùng tôi.\"<br />Cô gái lấy ra một tấm Strale, đưa cho cậu.<br />\"Tôi hứa với anh. Chỉ cần anh đi theo tôi, sau này anh có thể thách đấu với tôi bất cứ lúc nào, cho đến khi anh trả thù thành công.\"<br />\"Ý cô là sao?\"<br />\"Chỉ cần anh đi theo tôi, anh có thể đến giết tôi bất cứ lúc nào.\"<br />Không chỉ cậu thiếu niên, mà ngay cả quân Thanh Khâu xung quanh cũng đều ngây người ra.<br />\"Tất nhiên, trước khi giết tôi, anh phải nghe lời tôi đã. Ăn uống đúng giờ, đọc sách, luyện võ... À phải rồi, còn phải tắm rửa mỗi ngày nữa.\"<br />Cậu thiếu niên nuốt vội nước bọt một cách khó khăn.<br />\"Sau khi giết cô thì sao?\"<br />Cô gái sững sờ một hồi, rồi bật cười ha hả.<br />\"Thì tất nhiên là anh muốn làm gì thì làm rồi.\"",
+   "unlockRequirement": "Nhân vật đạt cấp <nobr>40</nobr> mở khóa"
+  },
+  {
+   "title": "Câu Chuyện Nhân Vật 3",
+   "text": "\"Ngươi là ai?\"<br />Anh không nói gì, nhưng những kẻ sắp chết thường sẽ nói rất nhiều.<br />\"Ta biết rồi. Ngươi là Ảnh Vệ của Feixiao? Bị ta đoán đúng rồi phải không? Suốt đời hành động trong bóng tối, làm những việc mờ ám...\"<br />\"Hay là ta cho ngươi một cơ hội, chủ nhân của ta muốn biết tin đồn \"Feixiao có huyết thống Boris\"... có phải sự thật không? Nếu chúng ta có thể hợp tác, đợi đến sau này lật đổ Fei... A!\"<br />Mọi chuyện diễn ra đúng như anh dự đoán. Thế là anh dứt khoát kết thúc nhiệm vụ lần này.<br /><br />Đây là chức trách của một Ảnh Vệ như anh, không quan trọng đúng sai... Hành động của anh chỉ dựa trên mệnh lệnh.<br />Bởi vì, đối với bản thân anh, mỗi lần hành động thành công cũng là một cơ hội... cơ hội trả thù.<br />\"Một lần hoàn thành nhiệm vụ anh sẽ nhận được một Strale, một Strale có thể đổi lấy một sự khoan dung sau mỗi lần ám sát.\"<br />Anh từng lo rằng mình sẽ không thể tiếp cận Feixiao, nhưng lại được cô chỉ định làm Ảnh Vệ của Yaoqing, theo sát bên cạnh cô.<br />Anh chưa bao giờ ám sát Feixiao thành công, nhưng lại rèn luyện được một thân thủ xuất quỷ nhập thần. Lưỡi dao sắc bén tấn công từ trong bóng tối này, không chỉ nhắm vào bản thân Tướng Quân Yaoqing, mà còn nhắm vào tất cả kẻ địch của Xianzhou Yaoqing, trở thành một bóng ma có mặt ở khắp nơi.<br /><br />\"Không lẽ anh chính là... Quái Nhân Lông Quạ?\"<br />Lại kết thúc một nhiệm vụ nữa. Đứa trẻ ngồi bệt dưới đất, hỏi với giọng run rẩy.<br />\"Họ nói Quái Nhân Lông Quạ sẽ đánh bại kẻ xấu, trừ gian diệt ác... Nhưng người đó lúc nào cũng mặc đồ đen sì, không ai nhìn thấy được mặt mũi...\"<br />\"Anh lợi hại như vậy, còn mặc đồ đen nữa, cho... cho nên... Cảm, cảm ơn anh đã cứu em!\"<br />Trừ gian diệt ác sao? Đó không phải là mục đích của anh, anh chỉ tiện tay cứu đứa bé một mạng trong khi đang làm nhiệm vụ mà thôi. Nhưng đúng là anh đã quen với việc ẩn mình trong bóng tối, quan sát xung quanh, không bỏ sót bất kỳ một chi tiết nào.<br />Trong ánh mắt lấp lánh của cậu bé, anh đã nhìn thấy rõ hình ảnh bản thân trong bộ quần áo màu đen tuyền.<br />Đi trong bóng tối, đứng trong bóng tối.<br />Quái Nhân Lông Quạ cũng được, Ảnh Vệ cũng được, tất cả đều đã trở thành một phần của anh.",
+   "unlockRequirement": "Nhân vật đạt cấp <nobr>60</nobr> mở khóa"
+  },
+  {
+   "title": "Câu Chuyện Nhân Vật 4",
+   "text": "Thầy thuốc Người Hồ Ly cầm chiếc quạt lông vũ che nửa khuôn mặt, nhìn cảnh tượng trước mắt với vẻ xót xa... Vô số mắt, tai, lưỡi, răng, tứ chi, lông tóc mọc lên rồi lại rụng xuống một cách điên cuồng trên đống thi thể đã chết, như thể chỉ đang cố gắng cảm nhận nỗi đau đớn cuối cùng một cách vô ích.<br /><br />Lâu lắm rồi anh mới lại cảm thấy một chút khó chịu, không chỉ vì sự bừa bộn trước mắt, mà còn vì những ký ức mơ hồ của quá khứ đang ùa về.<br /><br />\"Dược Vương Từ Bi... Cuộc sống không giới hạn... Tuổi già không đến... Người chết hồi sinh...\"<br />Tín đồ Dược Vương tụ tập thành nhóm, trong đó hình như có một người bị thương nặng, nhưng những người xung quanh vẫn chỉ đang lặp đi lặp lại những từ ngữ quen thuộc này.<br />\"Thần tích Trù Phú hộ thân... Nhanh nào... Uống cạn nó đi...\"<br />\"Nỗi đau chỉ là tạm thời... Cậu sẽ có lại một sự sống trọn vẹn, tuyệt đối sẽ không chết ở đây... Hãy...\"<br />Ngay lập tức, người vừa nói đã ngã gục xuống đất. Ảnh Vệ áo đen xuất hiện trong ánh sáng, đứng hiên ngang trước mặt họ. Sự im lặng cũng không thể che giấu sát khí đang bùng lên nơi đây.<br />...<br />\"Những kẻ đó đã không còn là con người từ lâu rồi, chúng không cảm thấy đau đớn... Còn anh? Bị thương thành thế này, anh định nói với tôi rằng anh cũng không cảm thấy đau đớn à?\"<br />Thầy thuốc Người Hồ Ly rắc thuốc bột lên vết thương của anh, vẫn càm ràm như mọi khi.<br />\"Vốn dĩ chúng ta chỉ đến để do thám, đã nói rõ từ trước phía sau còn đại quân nữa mà... Tại sao anh lại ra tay trước vậy?\"<br />Anh không nói gì, chỉ cúi đầu nhìn con dao găm trong tay, lưỡi dao sắc bén dính đầy máu.<br />Những năm qua, trải qua hết nhiệm vụ này đến nhiệm vụ khác, anh đã biết \"người nhà\" năm xưa thực sự là gì từ lâu rồi. Nhưng anh không muốn nhớ lại, cũng không muốn thừa nhận rằng lập trường của mình đã khác so với trước đây... Nếu không, việc trả thù và thỏa thuận còn có ý nghĩa gì nữa?<br /><br />\"Đau à?\"<br />\"...\" Anh vẫn im lặng.<br />Nhưng tay của thầy thuốc Người Hồ Ly lại tăng tốc, dùng băng gạc quấn lấy vết thương của anh, thắt lại rồi cố ý ấn mạnh một cái.<br />\"Đau...\"<br />\"Đau thì phải nói chứ, chịu đựng thì có ích gì cho anh? Tôi nhìn thôi đã thấy đau chết đi được.\"<br />Anh gật gật đầu.<br /><br />Anh đã quen với việc không nói, nhưng cũng bắt đầu quen với việc có người nói thay mình.",
+   "unlockRequirement": "Nhân vật đạt cấp <nobr>80</nobr> mở khóa"
+  }
+ ],
+ "archive": {
+  "cvCn": "黄进泽",
+  "cvJp": "坂田将吾",
+  "cvKr": "최현식",
+  "cvEn": "Ben Balmaceda",
+  "camp": "Xianzhou Yaoqing"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328,
+  "rankConfig": {
+   "3": {
+    "107145": 2,
+    "421446": 2
+   },
+   "5": {
+    "906559": 1,
+    "990500": 2
+   }
+  }
+ },
+ "name": "Moze",
+ "rarity": 4,
+ "descHash": "Ảnh Vệ của Xianzhou Yaoqing, trầm ngâm ít nói, thích hành động một mình. Chuyên lo liệu về thông tin tình báo và những công việc trong bóng tối, ít khi xuất hiện trước mặt mọi người. Khi Moze bộc lộ năng lực của mình, đó là lúc kẻ địch phải bỏ mạng. Thủ đoạn ám sát đa dạng, có nỗi ám ảnh cố chấp với sự gọn gàng và trật tự.",
+ "artPath": "73644d0def3b384e2b8c90fe456688ba8b1f6d04b08787a874380fb7dc3d8253",
+ "miniIconPath": "96dadfea3ec775a2f60c668389e8a9d5dc79855cded2e8cb968b008e1b1279dc",
+ "damageType": {
+  "id": 8,
+  "iconPath": "a7514faadd356e58de950903e3a51379328d6d6714ec0b38cf2fe7186f537f88",
+  "color": "#8872F1",
+  "name": "Lôi",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "da480674bee722c2f12b37fdebec3086ce34d219fa0b69e05cab8ed60abcdf90",
+  "altIconPath": "f97c2a2d6cc68654c0412722bb75c765f2e6c5a04bda62a526d56f9a95964f17",
+  "color": "#FFFFFF",
+  "name": "Săn Bắn",
+  "rarity": 0
+ },
+ "pageId": "moze"
+}

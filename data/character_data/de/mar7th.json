@@ -252,6 +252,7 @@
    "rarity": 4,
    "rewardPath": "/material/985668",
    "comeFrom": [
+    "Echo des Krieges: Versorgungszone",
     "Echo des Krieges (Versorgungszone)"
    ]
   }
@@ -1664,150 +1665,6 @@
  ],
  "skillTreePoints": [
   {
-   "id": 1001103,
-   "anchor": 8,
-   "type": 1,
-   "children": [
-    {
-     "id": 1001208,
-     "anchor": 16,
-     "type": 2,
-     "children": [
-      {
-       "id": 1001209,
-       "anchor": 17,
-       "type": 2,
-       "children": [],
-       "embedBuff": {
-        "id": 877747,
-        "name": "SCH-Verstärkung: Eis",
-        "levelReq": 75,
-        "promotionReq": 0,
-        "iconPath": "30e53905e606abc915cd27cdc42170fc4a8bae2e767f6404e2ba82c80f097b2c",
-        "statusList": [
-         {
-          "key": "<span style=\"color:#47C7FD;\">Eis</span>-SCH-Erhöhung",
-          "value": 0.064
-         }
-        ],
-        "cost": [
-         {
-          "id": 29328,
-          "count": 128000
-         },
-         {
-          "id": 836254,
-          "count": 6
-         },
-         {
-          "id": 717319,
-          "count": 6
-         }
-        ]
-       }
-      },
-      {
-       "id": 1001210,
-       "anchor": 18,
-       "type": 2,
-       "children": [],
-       "embedBuff": {
-        "id": 961679,
-        "name": "VTD-Verstärkung",
-        "levelReq": 80,
-        "promotionReq": 0,
-        "iconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
-        "statusList": [
-         {
-          "key": "VTD",
-          "value": 0.1
-         }
-        ],
-        "cost": [
-         {
-          "id": 29328,
-          "count": 128000
-         },
-         {
-          "id": 836254,
-          "count": 6
-         },
-         {
-          "id": 717319,
-          "count": 6
-         }
-        ]
-       }
-      }
-     ],
-     "embedBuff": {
-      "id": 877746,
-      "name": "SCH-Verstärkung: Eis",
-      "levelReq": 0,
-      "promotionReq": 6,
-      "iconPath": "30e53905e606abc915cd27cdc42170fc4a8bae2e767f6404e2ba82c80f097b2c",
-      "statusList": [
-       {
-        "key": "<span style=\"color:#47C7FD;\">Eis</span>-SCH-Erhöhung",
-        "value": 0.048
-       }
-      ],
-      "cost": [
-       {
-        "id": 29328,
-        "count": 128000
-       },
-       {
-        "id": 836254,
-        "count": 6
-       },
-       {
-        "id": 717319,
-        "count": 6
-       }
-      ]
-     }
-    }
-   ],
-   "embedBonusSkill": {
-    "descHash": "Erhöht die Grundchance, dass Gegner durch Ultimates eingefroren werden, um <nobr>#1[i]%</nobr>.",
-    "ultimateCost": 0,
-    "id": 877642,
-    "name": "Eiszauber",
-    "iconPath": "bb421bddce7eed2476d8c523169155db1d7ebb760e6151efda4097d79f5267c2",
-    "levelReq": 0,
-    "promotionReq": 6,
-    "levelData": [
-     {
-      "params": [
-       0.15
-      ],
-      "level": 1,
-      "levelReq": 0,
-      "promotionReq": 6,
-      "cost": [
-       {
-        "id": 29328,
-        "count": 128000
-       },
-       {
-        "id": 836254,
-        "count": 6
-       },
-       {
-        "id": 125435,
-        "count": 1
-       },
-       {
-        "id": 985668,
-        "count": 1
-       }
-      ]
-     }
-    ]
-   }
-  },
-  {
    "id": 1001201,
    "anchor": 9,
    "type": 2,
@@ -2115,6 +1972,150 @@
      {
       "id": 717319,
       "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1001103,
+   "anchor": 8,
+   "type": 1,
+   "children": [
+    {
+     "id": 1001208,
+     "anchor": 16,
+     "type": 2,
+     "children": [
+      {
+       "id": 1001209,
+       "anchor": 17,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 877747,
+        "name": "SCH-Verstärkung: Eis",
+        "levelReq": 75,
+        "promotionReq": 0,
+        "iconPath": "30e53905e606abc915cd27cdc42170fc4a8bae2e767f6404e2ba82c80f097b2c",
+        "statusList": [
+         {
+          "key": "<span style=\"color:#47C7FD;\">Eis</span>-SCH-Erhöhung",
+          "value": 0.064
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836254,
+          "count": 6
+         },
+         {
+          "id": 717319,
+          "count": 6
+         }
+        ]
+       }
+      },
+      {
+       "id": 1001210,
+       "anchor": 18,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 961679,
+        "name": "VTD-Verstärkung",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "iconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+        "statusList": [
+         {
+          "key": "VTD",
+          "value": 0.1
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 128000
+         },
+         {
+          "id": 836254,
+          "count": 6
+         },
+         {
+          "id": 717319,
+          "count": 6
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 877746,
+      "name": "SCH-Verstärkung: Eis",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "30e53905e606abc915cd27cdc42170fc4a8bae2e767f6404e2ba82c80f097b2c",
+      "statusList": [
+       {
+        "key": "<span style=\"color:#47C7FD;\">Eis</span>-SCH-Erhöhung",
+        "value": 0.048
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836254,
+        "count": 6
+       },
+       {
+        "id": 717319,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Erhöht die Grundchance, dass Gegner durch Ultimates eingefroren werden, um <nobr>#1[i]%</nobr>.",
+    "ultimateCost": 0,
+    "id": 877642,
+    "name": "Eiszauber",
+    "iconPath": "bb421bddce7eed2476d8c523169155db1d7ebb760e6151efda4097d79f5267c2",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.15
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 128000
+       },
+       {
+        "id": 836254,
+        "count": 6
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 985668,
+        "count": 1
+       }
+      ]
      }
     ]
    }

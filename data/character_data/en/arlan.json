@@ -253,6 +253,7 @@
    "rarity": 4,
    "rewardPath": "/material/985668",
    "comeFrom": [
+    "Echo of War: Supply Zone",
     "Echo of War (Supply Zone)"
    ]
   }
@@ -447,7 +448,7 @@
    "iconPath": "dc89cc98a7dad380837c87ea4fa23ebccb6cbdfafef816efc88d3cca122012e5",
    "artPath": "ad40f2546638550742f070f6651646ca93598956cceeadb4432bec9f7867db9b",
    "name": "To the Bitter End",
-   "descHash": "When HP is lower than or equal to <nobr>50%</nobr> of Max HP, increases DMG dealt by Skill by <nobr>#1[i]%</nobr>.",
+   "descHash": "When HP percentage is lower than or equal to <nobr>50%</nobr> of Max HP, increases DMG dealt by Skill by <nobr>#1[i]%</nobr>.",
    "params": [
     0.1
    ]
@@ -492,7 +493,7 @@
    "iconPath": "c1836d755a079ed7ea64011ace2a75a646f9273a5dcf4bcc48d97f4d623a73a4",
    "artPath": "dc18733715c1b2654911a6cad5dc7a13951e5d937351c3bac6c79513144f9070",
    "name": "Self-Sacrifice",
-   "descHash": "When HP drops to <nobr>50%</nobr> or below, Ultimate deals <nobr>#1[i]%</nobr> more DMG. And the DMG multiplier for adjacent targets is raised to the same level as that for the primary target.",
+   "descHash": "When the current HP percentage drops to <nobr>50%</nobr> or below, Ultimate deals <nobr>#1[i]%</nobr> more DMG, and the DMG multiplier for adjacent targets is raised to the same level as that for the primary target.",
    "params": [
     0.2
    ]
@@ -1251,7 +1252,7 @@
   },
   {
    "tagHash": "Enhance",
-   "descHash": "Increases Arlan's DMG for every percent of HP below his Max HP, up to a max of <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> more DMG.",
+   "descHash": "Based on Arlan's current missing HP percentage, gains DMG bonus, up to a maximum increase of <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> DMG dealt by Arlan.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
@@ -1962,7 +1963,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Upon entering battle, if Arlan's HP is less than or equal to <nobr>#1[i]%</nobr>, he can nullify all DMG received except for DoTs until he is attacked.",
+    "descHash": "Upon entering battle, if Arlan's HP percentage is less than or equal to <nobr>#1[i]%</nobr>, he can nullify all DMG received except for DoTs until he is attacked.",
     "ultimateCost": 0,
     "id": 215735,
     "name": "Repel",
