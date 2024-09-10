@@ -8,5 +8,7 @@ const MOCDataMap = {
   1014: require("../../data/memory_of_chao_data/chao_2.2.0_1.json"), //Update in which version
   1015: require("../../data/memory_of_chao_data/chao_2.2.0_2.json"),
   1016: require("../../data/memory_of_chao_data/chao_2.3.0.json"),
+  1017: require("../../data/memory_of_chao_data/chao_2.4.0.json"),
+  1018: require("../../data/memory_of_chao_data/chao_2.5.0.json"),
 };
 export default MOCDataMap;

@@ -1,4 +1,8 @@
 const CharacterName = {
+  //add in 2.5.0
+  "feixiao": "Feixiao",
+  "lingsha": "Lingsha",
+  "moze": "Moze",
   //add in 2.4.0
   "jiaoqiu": "Jiaoqiu",
   "yunli": "Yunli",

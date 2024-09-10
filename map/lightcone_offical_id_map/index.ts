@@ -1,4 +1,9 @@
 const officalLightconeId: any = {
+  //Add in 2.5.0
+  23032: "Scent Alone Stays True",
+  23031: "I Venture Forth to Hunt",
+  21047: "Shadowed by Night",
+
   //Add in 2.4.0
   23030: "Dance at Sunset",
   23029: "Those Many Springs",

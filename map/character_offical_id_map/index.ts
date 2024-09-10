@@ -59,6 +59,10 @@ const officalCharId: any = {
   1218: "Jiaoqiu",
   1221: "Yunli",
   1224: "March 7th (Imaginary)",
+
+  1220: "Feixiao",
+  1222: "Lingsha",
+  1223: "Moze",
 };
 
 export default officalCharId;

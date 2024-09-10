@@ -41,7 +41,14 @@ import TheWindSoaringValorous from "../../data/relic_data/es/120.json";
 import DuranDynastyOfRunningWolves from "../../data/relic_data/es/315.json";
 import ForgeOfTheKalpagniLantern from "../../data/relic_data/es/316.json";
 
+//Add in 2.5.0
+import LushakatheSunkenSeas from "../../data/relic_data/es/317.json";
+import TheWondrousBananAmusementPark from "../../data/relic_data/es/318.json";
+
 const ES = {
+  //add in 2.5.0
+  "Lushaka, the Sunken Seas":LushakatheSunkenSeas,
+  "The Wondrous BananAmusement Park":TheWondrousBananAmusementPark,
   //add in 2.3.0
   "Iron Cavalry Against the Scourge":IronCavalryAgainstTheScourge,
   "The Wind-Soaring Valorous":TheWindSoaringValorous,

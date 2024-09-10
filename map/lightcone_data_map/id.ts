@@ -118,7 +118,16 @@ import DanceAtSunSet from "../../data/lightcone_data/id/23030.json";
 import ThoseManySpirings from "../../data/lightcone_data/id/23029.json";
 import PoisedToBloom from "../../data/lightcone_data/id/21046.json";
 
+//add in 2.5.0
+import ScentAloneStaysTrue from "../../data/lightcone_data/id/23032.json";
+import IVentureForthtoHunt from "../../data/lightcone_data/id/23031.json";
+import ShadowedbyNight from "../../data/lightcone_data/id/21047.json";
+
 const ID = {
+  //add in 2.5.0
+  "Scent Alone Stays True": ScentAloneStaysTrue,
+  "I Venture Forth to Hunt": IVentureForthtoHunt,
+  "Shadowed by Night": ShadowedbyNight,
   //add in 2.4.0
   "Dance at Sunset": DanceAtSunSet,
   "Those Many Springs": ThoseManySpirings,

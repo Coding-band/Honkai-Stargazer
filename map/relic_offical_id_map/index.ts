@@ -35,6 +35,8 @@ const officalRelicId: any = {
   314: "Izumo Gensei and Takama Divine Realm",
   315: "Duran, Dynasty of Running Wolves",
   316: "Forge of the Kalpagni Lantern",
+  317: "Lushaka, the Sunken Seas",
+  318: "The Wondrous BananAmusement Park",
 };
 
 export default officalRelicId;

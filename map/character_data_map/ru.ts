@@ -70,7 +70,16 @@ import Jiaoqiu from "../../data/character_data/ru/jiaoqiu.json";
 import Yunli from "../../data/character_data/ru/yunli.json";
 import March7thImaginary from "../../data/character_data/ru/mar7th2.json";
 
+//add in 2.5.0
+import Moze from "../../data/character_data/ru/moze.json";
+import Lingsha from "../../data/character_data/ru/lingsha.json";
+import Feixiao from "../../data/character_data/ru/feixiao.json";
+
 const RU = {
+  //add in 2.5.0
+  Moze,
+  Lingsha,
+  Feixiao,
   //add in 2.4.0
   Jiaoqiu,
   Yunli,

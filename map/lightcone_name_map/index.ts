@@ -1,4 +1,8 @@
 const LightconeName = {
+  //Add in 2.5.0
+  "shadowed-by-night":"Shadowed by Night",
+  "i-venture-forth-to-hunt":"I Venture Forth to Hunt",
+  "scent-alone-stays-true":"Scent Alone Stays True",
   //Add in 2.4.0
   "dance-at-sunset":"Dance at Sunset",
   "poised-to-bloom":"Poised to Bloom",
