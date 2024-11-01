@@ -1,0 +1,2450 @@
+{
+ "name": "Im Wissen verlorene Gelehrte",
+ "iconPath": "2c59933d03bc9c0c14d3a1e10014dca473ff45252e2ce078b777f9ef4e414e56",
+ "artPath": "3999910b412979eb077b2649a82e2124cc5dd76a377372df86630e0e9d70e8f3",
+ "rarity": 5,
+ "relicType": 0,
+ "embeddedBaseTypes": {
+  "0": {
+   "id": 0,
+   "iconPath": "6d40bc2fc8f47bd0508d44c359f0091c1c74bbf50e758eafac87e6944f94d261",
+   "color": "#FFFFFF",
+   "name": "",
+   "rarity": 0
+  },
+  "1": {
+   "id": 1,
+   "iconPath": "4ecdc8ee012ef343aff72aa68c82787777a1ea73152e6caf1bb99b345a2372cc",
+   "color": "#FFFFFF",
+   "name": "Kopf",
+   "rarity": 0
+  },
+  "2": {
+   "id": 2,
+   "iconPath": "17079e7e6bfc3452cc8cb81d5a9ac6fc0b5e0bb4c3c76cadf39cdb67c3c693c5",
+   "color": "#FFFFFF",
+   "name": "Hände",
+   "rarity": 0
+  },
+  "3": {
+   "id": 3,
+   "iconPath": "a6c9ef56cae6d9c4347924905d5fdf2305a61d6435c9aeaf532380b3ba7e1338",
+   "color": "#FFFFFF",
+   "name": "Körper",
+   "rarity": 0
+  },
+  "4": {
+   "id": 4,
+   "iconPath": "de02abec36b454ef7602c2e918d84eba4774feccd1f9c8c8c7a26091e159f96f",
+   "color": "#FFFFFF",
+   "name": "Füße",
+   "rarity": 0
+  },
+  "5": {
+   "id": 5,
+   "iconPath": "dc49142bdd9876527085b02af915e6079a28a204412f8bd755b42f4b646dbf53",
+   "color": "#FFFFFF",
+   "name": "Planarsphäre",
+   "rarity": 0
+  },
+  "6": {
+   "id": 6,
+   "iconPath": "e5fc490c45f56553c2310bf4420d72150c67abffa504b72571b7e0a93a7adf8e",
+   "color": "#FFFFFF",
+   "name": "Verbindungsseil",
+   "rarity": 0
+  }
+ },
+ "skills": [
+  {
+   "useNum": 2,
+   "desc": "Erhöht KRIT-Rate um <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.08
+   ]
+  },
+  {
+   "useNum": 4,
+   "desc": "Erhöht den durch Fertigkeiten und Ultimates verursachten SCH um <nobr>#1[i]%</nobr>. Nach dem Einsatz des Ultimates wird der SCH beim nächsten Einsatz der Fertigkeit zusätzlich um <nobr>#2[i]%</nobr> erhöht.",
+   "params": [
+    0.2,
+    0.25
+   ]
+  }
+ ],
+ "pieces": {
+  "1": {
+   "name": "Silberrandmonokel des Gelehrten",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "ffaf3a94c86ba2b2d8aca1023546942682c9fe4a6e500eaa80f38b7f0d9d6c79",
+   "baseTypeText": "Kopf",
+   "loreTitle": "Silberrandmonokel des Gelehrten",
+   "miniLore": "Ein Monokel, in dem sich ein großartiges Gebäude widerspiegelt. Es demonstriert zusammen mit dem Gehstock, dem Armband und der Brosche die Kultiviertheit und Gelehrsamkeit seines Besitzers.",
+   "lore": "[ID] EVD-W<nobr>019</nobr>EI<nobr>06</nobr>-<nobr>003</nobr><br /><br />[Name] Kristall-Monokel<br /><br />[Hauptmerkmal] Weist offensichtliche Bruchstellen auf<br /><br />[Ort] Labor von Bohdan im Energieforschungslabor der Zentralen Akademie der Wissenschaften in Ohioti<br /><br />[Betroffene Person] Bohdan, der leitende Wissenschaftler auf dem Gebiet der Energieanalyse und Mitglied Nr. 7 der Geniusgesellschaft.<br /><br />[Untersuchung des Tatorts]<br />Die Spuren am Tatort deuten darauf hin, dass die Person bei der Bedienung des Beobachtungsgeräts versehentlich eine Reaktion auslöste, die zum Austritt von Phlogiston und zu schweren Verletzungen an der linken Hand der Person führte. Während des Vorfalls fiel das Monokel herab und wurde dabei beschädigt.<br /><br />[Ergänzende Aussage]<br />Bohdan berichtete, dass während des Experiments anormale visuelle Lichtemissionen aus dem Monokel auftraten, die zu einer Reihe von Zufällen führten, die schließlich das Phlogiston-Leck verursachten.<br /><br />Die Aussage wurde wegen einer zu großen Anzahl an Zufällen, die der Zeuge erwähnte, für unzulässig erklärt.<br /><br />[Zusätzliche Information]<br />Es wird vermutet, dass es sich um eine vorsätzliche Straftat handelt. Da jedoch eine Häufung von Zufällen, die den Schmetterlingseffekt hervorrufen, keine reproduzierbare kriminelle Methode darstellt, wurde der Vorfall schließlich als Unfall eingestuft.<br /><br />[Aufzeichnung]<br />„... Dieser Unfall stellte sich als Segen heraus, denn dadurch bin ich wieder mit Lambda vereint. Eigentlich ist es das vierte Mal, dass wir wieder heiraten wollen ... und es ist mir ein bisschen peinlich, das zu sagen, aber dies ist MEIN erster Antrag für eine erneute Heirat.“ Aufgezeichnet von Bohdan.",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 45.1584,
+       "levelAdd": 15.80544,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-WDS",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Brucheffekt",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 67.7376,
+       "levelAdd": 23.70816,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-WDS",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Brucheffekt",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 90.3168,
+       "levelAdd": 31.61088,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-WDS",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Brucheffekt",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 112.896,
+       "levelAdd": 39.5136,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-WDS",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Brucheffekt",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "2": {
+   "name": "Hilfsfinger der Gelehrten",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "2d2a18b839dc77a47176d371b50d8cecc602c53a6f7d7c145ecb6b0dd4abd29e",
+   "baseTypeText": "Hände",
+   "loreTitle": "Hilfsfinger der Gelehrten",
+   "miniLore": "Ein Exoskelett aus einer Legierung, das die Bewegungen der Finger unterstützt, maßgeschneidert für die Hand des Benutzers und sehr wertvoll.",
+   "lore": "[ID] EVD-X<nobr>024</nobr>DE<nobr>18</nobr>-<nobr>002</nobr><br /><br />[Name] Exoskelett für Finger mit Grausiegel-Goldlegierung<br /><br />[Hauptmerkmal] Weist Anzeichen einer äußeren Beschädigung auf. Es wurde bestätigt, dass es vor der Explosion beschädigt wurde.<br /><br />[Ort] Zentraler Kontrollraum, Ausgrabungsstätte für polare Energie<br /><br />[Betroffene Person] Lambda (verstorben), die leitende Wissenschaftlerin auf dem Gebiet der Biowellenerkennung und Mitglied Nr. 8 der Geniusgesellschaft.<br /><br />[Untersuchung des Tatorts]<br />Dem Überwachungsvideo zufolge führte die unsachgemäße Bedienung durch die Person zu einer Explosion im zentralen Kontrollraum, bei der die Person sofort starb.<br /><br />[Ergänzende Aussage]<br />„Gott weiß, welche Geheimnisse sie verbirgt, aber wenn ihr etwas zustößt, hat Klein auf jeden Fall etwas damit zu tun!“<br /><br />Zwei Wochen vor der Explosion erstattete Bohdan Anzeige, wonach Lambdas behinderte rechte Hand von einem Schläger verletzt worden war. Lambda, das eigentliche Opfer, lehnte jedoch weitere Untersuchungen ab und zog den Fall zurück.<br /><br />[Zusätzliche Information]<br />Nach der Explosion bat der Ehemann des Opfers darum, das Exoskelett zusammen mit den Fingerknochen des Opfers nach Abschluss der Ermittlungen zu erhalten.<br />In Anbetracht der vielen unglaublichen Zufälle bei diesem Fall wird empfohlen, diesem hohe Priorität einzuräumen.<br /><br />[Aufzeichnung]<br />„Komm zu mir, Klein! Wir haben noch eine Rechnung zu begleichen! Du und ich wissen ganz genau, dass es in dieser Welt keine ‚Zufälle‘ gibt, und schon gar nicht diese unglaubliche Aneinanderreihung von Zufällen.“ Aufgezeichnet vom Sicherheitssystem in Kleins Haus.",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 22.5792,
+       "levelAdd": 7.90272,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-WDS",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Brucheffekt",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 33.8688,
+       "levelAdd": 11.85408,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-WDS",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Brucheffekt",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 45.1584,
+       "levelAdd": 15.80544,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-WDS",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Brucheffekt",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 56.448,
+       "levelAdd": 19.7568,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-WDS",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Brucheffekt",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "3": {
+   "name": "Tweedjacke des Gelehrten",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "d69ddf0714d9390de1ac7122a50a31cca83adf9556f1f7312297a5eb8338d4dd",
+   "baseTypeText": "Körper",
+   "loreTitle": "Tweedjacke des Gelehrten",
+   "miniLore": "Tweedjacken, kombiniert mit Strickwaren, sind an der Akademie alltäglich. Der strapazierfähige Stoff ist die ideale Wahl für Gastdozenten.",
+   "lore": "[ID] EVD-X<nobr>043</nobr>FE<nobr>21</nobr>-<nobr>001</nobr><br /><br />[Name] Tweedjacke, Weste aus grober gesponnener Wolle und weißes Hemd<br /><br />[Hauptmerkmal] Weist ein 8 Zentimeter großes Phlogiston-Brandmal auf der linken Brust auf<br /><br />[Ort] Labor von Bohdan im Energieforschungslabor der Zentralen Akademie der Wissenschaften in Ohioti<br /><br />[Betroffene Person] Bohdan (verstorben), der leitende Wissenschaftler auf dem Gebiet der Energieanalyse und Mitglied Nr. 7 der Geniusgesellschaft.<br /><br />[Untersuchung des Tatorts]<br />Die Spuren am Tatort deuten darauf hin, dass die Grausiegel-Goldpellets, welche die Person bei sich trug, eine beträchtliche Menge an Phlogiston absorbierten, was nah am Herzen der Person zu einem Temperaturanstieg von fast <nobr>1.000</nobr> Grad Celsius führte und Verbrennungsspuren auf Jacke, Weste und Hemd hinterließ.<br /><br />Im verbrannten Bereich wurde die Hälfte eines unverbrannten Fingerknochens gefunden, der als von Lambda stammend identifiziert oder mit hochreinen Grausiegel-Goldpellets in Verbindung gebracht wurde.<br /><br />[Ergänzende Aussage]<br />„... Wir hätten besser auf ihn aufpassen sollen, vor allem wenn man bedenkt, dass er den Tod seiner Frau nie wirklich überwunden hat ...“<br /><br />Nach Aussage der anderen Wissenschaftler des Labors wäre Bohdan, der die Spezifikationen des Sicherheitshandbuchs erstellt hat, ein derartiger Fehler nicht unterlaufen.<br /><br />[Zusätzliche Information]<br />Grausiegel-Gold ist eine seltene Legierung, die von Klein, Mitglied Nr. 9 der Geniusgesellschaft, entwickelt wurde und dafür bekannt ist, dass sie Phlogiston absorbieren und speichern kann.<br /><br />Wenn sich eine Reihe von Zufällen häuft, sind es dann noch Zufälle?<br /><br />[Relevantes Dokument]<br />„Es ist strengstens untersagt, hochreine Grausiegel-Goldlegierungsprodukte in Labors mit Beobachtungszonen für Phlogiston zu bringen.“ Auszug aus dem Sicherheitshandbuch des Energieforschungslabors.",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.012096001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.007258,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Bonus für bewirkte Heilung",
+       "propertyIconPath": "5c74afec377cfca6be47185ba68f61a2514e2a39d5c251aabec5ac5223023436",
+       "isPercent": true,
+       "baseValue": 0.022118,
+       "levelAdd": 0.0077410005,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-WDS",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Brucheffekt",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.010886001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.062208,
+       "levelAdd": 0.021773001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Bonus für bewirkte Heilung",
+       "propertyIconPath": "5c74afec377cfca6be47185ba68f61a2514e2a39d5c251aabec5ac5223023436",
+       "isPercent": true,
+       "baseValue": 0.033178,
+       "levelAdd": 0.011612,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-WDS",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Brucheffekt",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.082944,
+       "levelAdd": 0.029029999,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Bonus für bewirkte Heilung",
+       "propertyIconPath": "5c74afec377cfca6be47185ba68f61a2514e2a39d5c251aabec5ac5223023436",
+       "isPercent": true,
+       "baseValue": 0.044237,
+       "levelAdd": 0.015483,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-WDS",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Brucheffekt",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.0864,
+       "levelAdd": 0.030240001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.10368,
+       "levelAdd": 0.036288,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Bonus für bewirkte Heilung",
+       "propertyIconPath": "5c74afec377cfca6be47185ba68f61a2514e2a39d5c251aabec5ac5223023436",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-WDS",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Brucheffekt",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "4": {
+   "name": "Filz-Schneestiefel der Gelehrten",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "009927521cdccee2f802e345f7b47b86f88ecc08f5118e9ba2c88dfd245460eb",
+   "baseTypeText": "Füße",
+   "loreTitle": "Filz-Schneestiefel der Gelehrten",
+   "miniLore": "Diese bequemen und stilvollen Damenstiefel begleiten ihre Besitzerin seit Jahren auf Polarexpeditionen und passen perfekt zu wadenlangen Hosen.",
+   "lore": "[ID] EVD-X<nobr>031</nobr>JA<nobr>12</nobr>-<nobr>004</nobr><br /><br />[Name] Damen-Schneestiefel für Polarexpeditionen<br /><br />[Hauptmerkmal] Weisen deutliche Gebrauchs- und Reparaturspuren auf, mit einer versteckten Diskette in der Sohle. Die Möglichkeit von Spionage wurde vorläufig ausgeschlossen.<br /><br />[Ort] Keller von Kleins Haus<br /><br />[Betroffene Person] Klein (verstorben), der leitende Wissenschaftler auf dem Gebiet der Legierungswissenschaften und Mitglied Nr. 9 der Geniusgesellschaft.<br /><br />[Untersuchung des Tatorts]<br /><br />In Kleins Haus wurden zahlreiche Gegenstände gefunden, die der verstorbenen Wissenschaftlerin Lambda gehörten, darunter auch diese Stiefel.<br /><br />[Ergänzende Aussage]<br />„Vielleicht habe ich mich in ihm getäuscht ... Ich meine, Klein. Und was meine verstorbene Frau, Lambda, betrifft ... Sie ist schon eine ganze Weile fort und ich habe so ein komisches Gefühl bei ihr.“<br /><br />Bohdan wusste nichts von den Habseligkeiten der verstorbenen Lambda in Kleins Haus, war aber auch nicht überrascht, als er davon erfuhr.<br /><br />[Zusätzliche Information]<br />Kleins Wohnsitz befindet sich in einer abgelegenen Gegend, in der sich zum Zeitpunkt des Todes, wie vom Gerichtsmediziner festgestellt, keine Besucher aufhielten. Die vorläufige Diagnose ist, dass sein Tod ein Unfall war.<br /><br />Bohdan, Lambda und Klein hatten eine einzigartige Verbindung zueinander und die Reihe von „Zufällen“, die sie erlebten, grenzt an übernatürliche Phänomene.<br /><br />[Aufzeichnung]<br />„Ich weiß, dass du mir nicht glaubst, Bohdan, und ich kann nicht beweisen, dass ich unschuldig bin. Es tut mir leid wegen Lambda, aber ich bin der Letzte, der ihr je etwas antun würde ... Ich habe sogar eine Theorie über die Identität ihres Mörders. Hast du schon je von der Herrin der Stille gehört? ... *Lärm*“ Von der in den Stiefeln versteckten Diskette.",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.012096001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.6128,
+       "levelAdd": 1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-WDS",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Brucheffekt",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 2.4192,
+       "levelAdd": 1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-WDS",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Brucheffekt",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 3.2256,
+       "levelAdd": 1.1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-WDS",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Brucheffekt",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.0864,
+       "levelAdd": 0.030240001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 4.032,
+       "levelAdd": 1.4,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "LP",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ANG",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VTD",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "GES",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-Rate",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "KRIT-SCH",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-Trefferrate",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Effekt-WDS",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Brucheffekt",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  }
+ },
+ "pageId": "122"
+}

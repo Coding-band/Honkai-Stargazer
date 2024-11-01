@@ -967,7 +967,7 @@
   },
   {
    "tagHash": "Einzelangriff",
-   "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#7788ff;\">Quanten</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Xueyis ANG zu. Dieser Angriff ignoriert die Schwächen des Gegners und reduziert den WDS des Ziels. Wenn die Schwäche eines Gegners gebrochen wird, wird der Effekt „Schwächebruch: <span style=\"color:#7788ff;\">Quanten</span>“ ausgelöst.<br />Je mehr WDS reduziert wird, desto höher ist der Schaden, der mit diesem Angriff zugefügt wird, bis maximal <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>.",
+   "descHash": "Fügt einem anvisierten Gegner <span style=\"color:#7788ff;\">Quanten</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> von Xueyis ANG zu. Dieser Angriff reduziert den WDS des Gegners unabhängig vom Schwächetyp. Wenn die Schwäche eines Gegners gebrochen wird, wird der Effekt „Schwächebruch: <span style=\"color:#7788ff;\">Quanten</span>“ ausgelöst.<br />Je mehr WDS reduziert wird, desto höher ist der Schaden, der mit diesem Angriff zugefügt wird, bis maximal <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>.",
    "ultimateCost": 120,
    "break": "120",
    "energy": "5",
@@ -1267,7 +1267,7 @@
    ]
   },
   {
-   "tagHash": "Abprallung",
+   "tagHash": "Abpraller",
    "descHash": "Fügt Stapelung von „Karma“ hinzu, wenn Xueyis Angriffe den WDS eines Ziels verringern, wobei mehr Stapelungen im Verhältnis zur Menge des verringerten WDS hinzugefügt werden, bis zu <nobr>#1[i]</nobr>-fach stapelbar.<br />Wenn Xueyis Verbündete den WDS eines Ziels mit einem Angriff verringern, erhält sie <nobr>#3[i]</nobr> Stapelung von „Karma“.<br />Wenn „Karma“ maximal gestapelt wurde, werden alle Stapelungen verbraucht und es wird ein <u>Folgeangriff</u> auf ein Ziel ausgeführt, der 3-mal SCH verursacht, wobei einem zufälligen Gegner <span style=\"color:#7788ff;\">Quanten</span>-SCH in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> von Xueyis ANG zugefügt wird. Dieser Folgeangriff fügt keine „Karma“-Stapelung hinzu.",
    "ultimateCost": 0,
    "break": "15/hit",

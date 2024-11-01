@@ -1,0 +1,3536 @@
+{
+ "spRequirement": 140,
+ "iconPath": "72df2bca1c929008ad6cba44c1be6d0b1f3e4428292e12612e84522cc5428f25",
+ "bgPath": "3e7cf003c38c8519124125399aebbcf55a19c3e3d3f32015c2f09398a774535d",
+ "figPath": "66a9aeb242cb78e7863e27c9d416ee4491a04b864231d0d1686c79e003197ee0",
+ "fgPath": "",
+ "splashIconPath": "9640c301d49bfbc5661df289224c1eacfc9e08e4b92670ffa01a8a9e9e5ea5d5",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRuoCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSAwBAAABkLNt2/m34u/3j9g2Z9u2k8m2k6+QI6OtdnS7acxW2/YcW89d/hoREwCNLgb8pwIQkQSlScHGAjadMOpMNcAyEtZV1xwD3fyh/mbA1Ejah7WnD7J8ysOd/6JH4c4hubPJV+dWcqAAGFAopJyQe2w1GvUK0CFtjyciwtMTDpTMBAEK4Zs85h8iPHicBwCBmzymCIVyyvV6KAD6ZYpQSKHweMUOAEydFo4pQqEIV93xd8+vPBUR4fYPpkAPwMzR9y0PTynC9eHT7j8UKm9d3CBPRHg0cHMICn/G5U6cfcOTIz5ziRw0QKPvHXLrqTP87f+m0ys9zKse8d5VM2hWgFV/cvMQlBZADyhUWAMAVlA4ILgBAAAQCgCdASoUABQAPm0ukkakIqGhKA1QgA2JbACdMoRwMPhsK+nqc6ADxM/2A96DTAPQA/Sv0tvYi/b70ayl0eJ36M9FjfHf0gDo9UNrAALLz2o6UopzxDdwAAD++9/24125q1znDX2jL2VJF5/l+Uc5aWq3ek6aXM98uGBiVG4dOU8P3HsivfoiD5HZ8KXOkUVYwRCcSOUT81exWB/f5x3x1BXWr8u40eIA6AurmREK5Befa695cYByUUp9WQsoh+j/4wFr5hDAvnHn/EULp8cSjw+bl9q6tJkvht08vpCuUFV37FdDItu7CISnuhFNNhiuef5FikXnKIiUIq65mVfyxw+1PIllaO0una/ExyqMagUt9hBY/KNOEQN/NGXatCVBj3UGAOpoMP9+rMff4oZvMp7jfO/5p0Bv+HokioOhs8E/S4NflemzEL401tv/Q1/XvpDpjgbQxMeb8jEwuXRDmWz2ZkEfmmsf4rVxcWeqfPt5hXs9+Wrpzn3Z+Tez9zK+qqoObtN53/4VDR8wwPSrP/zRF/dOP/f//CNl8qH+oWCPWRdsvYaEedGrKht6OzKvIZIt+V1AAA==",
+  "w": 2048,
+  "h": 2048
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 3,
+  "iconPath": "7f7af34c29f58dba575c38d2d0201179fd0997bcdad5e0f477eb6d7a3b56ffbc",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "154680875035a2d1a2d7827aa99c35f77a9fc6df9de95cd58800bde4bb17472a",
+   "name": "Crédits",
+   "desc": "Cette monnaie, utilisée par la Corporation pour la Paix Interastrale pour les échanges commerciaux avec ses clients, est désormais largement acceptée comme devise lors des voyages spatiaux.",
+   "lore": "« Les gens se battent et négocient pour des numéros à un terminal, mais les choses les plus précieuses ne s'achètent pas. »",
+   "purpose": "Monnaie ordinaire",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Calice de la Grande mine",
+    "Calice de la Commission de l'artisanat",
+    "Calice de l'Hôtel Rêverie du Pays des rêves",
+    "Récompense de mission",
+    "Récompense d'affectation",
+    "Échange de braises immortelles"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "04121a915c1d5e0a609e4b59417f441c101eaf1edbb092ffef36dbc24d1ae24b",
+   "name": "Voies de la destinée",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "La victoire s'acquiert au terme de nombreux échecs, et chaque pas conduit à l'instant décisif.",
+   "purpose": "Matériau de Trace",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Récompenses de points de l'Univers simulé",
+    "Honneur des Sans Noms",
+    "Échange de braises immortelles",
+    "Lumières d'étoile",
+    "Récompense d'événement à durée limitée"
+   ]
+  },
+  "386840": {
+   "id": 386840,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "1b6ebe549bf0ff8a1ad79c8b30a22c0ad8dd34120c93ce1b4e8165c7dd46c642",
+   "name": "Écho perdu du vœu partagé",
+   "desc": "Matériau avancé d'amélioration de Traces.",
+   "lore": "C'était le seul Aiôn à jouer la mélodie suprême jusqu'à ce que cette mélodie soit absorbée dans ses chœurs.<br />Mais son auditoire refusait de se taire. Lorsque des rêveurs imprudents ont saisi la corde du vœu partagé, les interprètes factices rejouaient les mélodies oubliées.<br /><br />« Les étoiles dessinent les doigts, guidant les règles et les droits de tous les êtres vivants. Les doux rêves d'aujourd'hui deviennent réalité, et les anciennes lois des masses sombrent dans l'oubli. »",
+   "purpose": "Matériau de Trace",
+   "rarity": 4,
+   "rewardPath": "/material/386840",
+   "comeFrom": [
+    "Écho de la guerre du Grand théâtre de Penacony"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "fe197ceacff72ca32c46a22e6cf77f460edbfa2bc70e5162ad9c9e5485944570",
+   "name": "Guide du voyageur",
+   "desc": "Matériau d'EXP de personnage. Confère <nobr>20</nobr> <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Lecture indispensable à l'exploration des mondes. Appuyez sur le bouton de lecture pour activer une voix agréable, dans une langue de votre choix qui vous racontera les rencontres légendaires d'aventuriers de renom à travers différents mondes, ainsi que la sagesse précieuse et les connaissances qui en découlent.<br /><br />« La nouvelle série du Guide du voyageur, \"Le manuel du chef de la cuisine galactique\" est désormais disponible en magasin. »<br />« Pour toute question, connectez-vous à la balise de synesthésie ERD<nobr>-23</nobr>θ et contactez un représentant de la Guilde de l'intelligentsia. Facilités de paiement disponibles. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Calice de Passenuage",
+    "Calice de la Frontière des rêves",
+    "Salle oubliée"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "3aa3378fafc0e98fb07b480ae468b4fc5b29027f1ec3d000d89353e7ae656832",
+   "name": "Journal d'aventure",
+   "desc": "Matériau d'EXP de personnage. Confère 5 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un ensemble bien classé de notes d'aventure édifiantes, avec d'innombrables illustrations et commentaires exhaustifs, sans oublier de précieuses informations relatives à des techniques de survie.<br /><br />« Pourquoi ne pas les numériser et les sauvegarder sur un disque photolithique ? Ce serait tellement plus pratique. »<br />« La technologie de pointe est bien plus fragile qu'on ne le pense face aux tempêtes stellaires et aux éruptions de flux neuronaux. Et puis, l'auteur voulait sûrement que la lecture soit la plus simple possible. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Calice de Passenuage",
+    "Calice de la Frontière des rêves",
+    "Entraînement quotidien",
+    "Échange de braises immortelles"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "a0f7c642d789346ecde22056b8a1e76a4707343bc0ebaa161e802db6d7836041",
+   "name": "Rencontres de voyage",
+   "desc": "Matériau d'EXP de personnage. Confère 1 <nobr>000</nobr> points d'EXP de personnage.",
+   "lore": "Un carnet de voyage parsemé de commentaires et de contenus divers griffonnés. Il ne vous sera pas très utile.<br /><br />« Dan Heng, dépêche-toi de lire ça pour t'en débarrasser. »",
+   "purpose": "Matériau d'EXP de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Calice des Plaines des neiges périphériques",
+    "Calice de Passenuage",
+    "Calice de la Frontière des rêves",
+    "Récompense d'affectation"
+   ]
+  },
+  "468393": {
+   "id": 468393,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "b5354cb413eb3ed29eb23146af6a14294a5d9a14ba9f2b4befbf18cd79cdf883",
+   "name": "Mirage harmonieux",
+   "desc": "Cordes argentées des instruments rouges portés par les musiciens de la troupe. Permet l'élévation des personnages de type imaginaire.",
+   "lore": "Une mélodie simple tisse des passés fracturés, et la musique appelle à un avenir meilleur. Au son des cordes pincées, un océan de mondes est invoqué alors que les rires éclatent, les larmes sèchent, les vœux subsistent et les rêves périssent.<br /><br />« Ramasse les souvenirs enfouis et transforme-les en mélodies. »",
+   "purpose": "Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/468393",
+   "comeFrom": [
+    "Ombre stagnante du Grand théâtre de Penacony",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "549209": {
+   "id": 549209,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "cb955823c7b8a1a5408df61419f2957021d945b05e46b9c20e884f4e92464e4e",
+   "name": "Composant de stockage des rêves",
+   "desc": "Appareil de stockage pour les créations du Pays des rêves. Matériau commun utilisé pour le renforcement.",
+   "lore": "Appareil de stockage destiné aux rêves brisés. Fournit une source énergétique fondamentale pour les créations du Pays des rêves.<br /><br />« Installez cet appareil pour obtenir un membre de la Troupe Beaux rêves. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 2,
+   "rewardPath": "/material/549209",
+   "comeFrom": [
+    "Troupe Chocmar",
+    "Butin d'ennemis dans l'Univers parallèle",
+    "Ennemi de l'Univers simulé",
+    "Récompense d'affectation",
+    "Échange de braises immortelles",
+    "Échange de matériaux de l'Omni-synthétiseur",
+    "Calice doré"
+   ]
+  },
+  "589816": {
+   "id": 589816,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "d42ef9c23dd62d01e54b8a82753dad60c13741fc8d345b055ccca7b69aeee06c",
+   "name": "Croquis dynamique",
+   "desc": "Un dessin de Chronou dont l'éclat onirique transperce le papier. Permet d'améliorer modérément les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Érudition</span>.",
+   "lore": "Le dessin de Chronou paraît plus raffiné une fois les traits inutiles effacés. La sagesse des animateurs transparaît dans toutes les images de la danse de Chronou.<br /><br />« Tic-tac, tic-tac ! Allez, on garde le rythme ! »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 3,
+   "rewardPath": "/material/589816",
+   "comeFrom": [
+    "Calice du Grand théâtre de Penacony",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Échange de braises immortelles",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "633150": {
+   "id": 633150,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "f1a92c0ca3a7ff448af09195a1bb5b22ebd8bf77cdbb82075728f7bc7f69711c",
+   "name": "Valve de débit onirique",
+   "desc": "Composant de contrôle pour les créations du Pays des rêves. Matériau intermédiaire utilisé pour le renforcement.",
+   "lore": "Appareil de construction de rêves qui régule les désirs et contrôle les émotions des créations du Pays des rêves.<br /><br />« Si l'appareil rencontre un défaut, vous obtiendrez un membre de la Troupe Chocmar. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 3,
+   "rewardPath": "/material/633150",
+   "comeFrom": [
+    "Troupe Chocmar au niveau d'équilibre 2 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Butin d'ennemis dans l'Univers parallèle",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "673757": {
+   "id": 673757,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "c393d8dbce1631105fd2de1664644dd60250f471b43357f403e164ef68a417c0",
+   "name": "Dessin coloré exquis",
+   "desc": "Dans ce croquis de Chronou, le rêve prend vie grâce à des couleurs vives. Permet d'améliorer considérablement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Érudition</span>.",
+   "lore": "Ce dessin de Chronou très coloré prend la forme d'une figure bien connue. L'histoire de Chronou a inspiré des millions de chasseurs de rêves grâce à son aventure fantastique.<br /><br />« Je m'appelle Chronou et je suis une superstar de Rêvopolis ! »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 4,
+   "rewardPath": "/material/673757",
+   "comeFrom": [
+    "Calice du Grand théâtre de Penacony",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "717091": {
+   "id": 717091,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "827abcca93333a6029a158e5f5d2d938c80a58243b6def3bbb8c8ddf2fe2e6e1",
+   "name": "Moteur de création des rêves",
+   "desc": "Noyau d'énergie pour les créations du Pays des rêves. Matériau avancé utilisé pour le renforcement.",
+   "lore": "Appareil de construction de rêves servant à bâtir des fantasmes et accordant des âmes aux créations du Pays des rêves.<br /><br />« Si l'appareil connaît un dysfonctionnement... essayez de vous réveiller avant de sombrer dans un cauchemar. »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de personnage",
+   "rarity": 4,
+   "rewardPath": "/material/717091",
+   "comeFrom": [
+    "Troupe Chocmar au niveau d'équilibre 4 ou supérieur",
+    "Synthèse de matériaux de l'Omni-synthétiseur",
+    "Butin d'ennemis dans l'Univers parallèle",
+    "Ennemi de l'Univers simulé",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  },
+  "874343": {
+   "id": 874343,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "2e75412bc1b03e734863d7ea655fbb8dee47dc9e4c655c4ce85f0208807cd88a",
+   "name": "Esquisse rudimentaire",
+   "desc": "Un croquis de Chronou qui en quelques traits façonnent la fabrique d'un rêve. Permet d'améliorer légèrement les Traces des personnages de l'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Érudition</span>.",
+   "lore": "Différents croquis de Chronou circulent à Penacony. Qui est parvenu à capturer la brève étincelle d'inspiration et à faire résonner le premier « tic-tac » sur papier ?<br /><br />« Tic-tac ! Vous... me voyez ? »",
+   "purpose": "Matériau de Trace<br />Matériau d'élévation de cône de lumière",
+   "rarity": 2,
+   "rewardPath": "/material/874343",
+   "comeFrom": [
+    "Calice du Grand théâtre de Penacony",
+    "Échange de braises immortelles",
+    "Échange de matériaux de l'Omni-synthétiseur"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 97.68,
+   "attackAdd": 4.884,
+   "hpBase": 147.84,
+   "hpAdd": 7.392,
+   "defenseBase": 62.7,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549209,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 136.752,
+   "attackAdd": 4.884,
+   "hpBase": 206.976,
+   "hpAdd": 7.392,
+   "defenseBase": 87.78,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549209,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 175.824,
+   "attackAdd": 4.884,
+   "hpBase": 266.112,
+   "hpAdd": 7.392,
+   "defenseBase": 112.86,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633150,
+     "count": 6
+    },
+    {
+     "id": 468393,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 214.896,
+   "attackAdd": 4.884,
+   "hpBase": 325.248,
+   "hpAdd": 7.392,
+   "defenseBase": 137.94,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633150,
+     "count": 9
+    },
+    {
+     "id": 468393,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 253.968,
+   "attackAdd": 4.884,
+   "hpBase": 384.384,
+   "hpAdd": 7.392,
+   "defenseBase": 163.02,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717091,
+     "count": 6
+    },
+    {
+     "id": 468393,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 293.04,
+   "attackAdd": 4.884,
+   "hpBase": 443.52,
+   "hpAdd": 7.392,
+   "defenseBase": 188.1,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717091,
+     "count": 9
+    },
+    {
+     "id": 468393,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 332.112,
+   "attackAdd": 4.884,
+   "hpBase": 502.656,
+   "hpAdd": 7.392,
+   "defenseBase": 213.18,
+   "defenseAdd": 3.135,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 75,
+   "speedBase": 96,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "864fe659ccdf8efd71943bf2ecbcd45179fc8e51282be4f8463f7df196956ed7",
+   "artPath": "369e46eb2362a35f9133923741c2bc0ec082001974253b0565920919363f2034",
+   "name": "Retour à sec",
+   "descHash": "Lorsque Rappa entre dans la forme du sceau en utilisant son ultime, les DGT qu'elle inflige ignorent <nobr>#1[i]%</nobr> de la DÉF des cibles. D'autre part, Rappa récupère <nobr>#2[i]</nobr> points d'énergie lorsqu'elle quitte la forme du sceau.",
+   "params": [
+    0.15,
+    20
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "5c5017098fbf53c0ec8aafc7477a6a24f9158f0cbf2b89726b4bfa4537f64315",
+   "artPath": "9a0209d044a8abc0918cae035f48d4cd875903e05e59a4dfa39800b0de7e66f3",
+   "name": "Esprit illuminé par les haikus",
+   "descHash": "La réduction de robustesse des deux premières frappes de l'ATQ normale renforcée contre l'ennemi désigné augmente de <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.5
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "88fba51a2add9f9a5be6b71d484088f2f2ec3ca7d7aa4633d1ea260b6356eccc",
+   "artPath": "3526d6d183e720c2388401f580bf9bc0435027fd870f51c805665bbfc979fd03",
+   "name": "Nombreux sont les sanctuaires qui ne repoussent pas l'enfer",
+   "descHash": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "205d6cfcd30f8248a4f9610be4807943c6ec80d9d8fe34d08a0bd0731456a0cd",
+   "artPath": "882206d57e79368f6d76704c500715a69ddaef8f637a2076ab93e823c08f3ffe",
+   "name": "Nindô perdu dévoré par le temps",
+   "descHash": "Lorsque Rappa est dans la forme du sceau, la VIT de tous les alliés augmente de <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.12
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "ff4eb39485bd9763d19b6ba6ac788532282e1cf2fc2f0776a5db28ad13303c9a",
+   "artPath": "f412d93adeffc37cced16e3b75e781ca241b36a5cb8f5db89587800ce05ba9f2",
+   "name": "Volonté inébranlable et flèches infaillibles",
+   "descHash": "Niv. de l'ultime +2, jusqu'au niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au niv. <nobr>10</nobr> maximum.",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "e2be08e5a9912c6c89d7f0e4fc7a934fd3bc8f81853615a81010471c74769dd8",
+   "artPath": "b9a1ae96b7b8f86d6b43695998dc00c1f04b070247bc0d2eaa4e2ca3f9f4eaa5",
+   "name": "Justice implacable sans merci",
+   "descHash": "Augmente le nombre de points de charge initiaux du talent de <nobr>#1[i]</nobr> et la limite de points de charge de <nobr>#2[i]</nobr>. Obtient <nobr>#1[i]</nobr> points de charge après avoir lancé la troisième frappe de Ningu : Lame de pétale d'exorcisme.",
+   "params": [
+    5,
+    5
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   451237,
+   304818,
+   567881,
+   735763,
+   304817
+  ],
+  [
+   735764
+  ],
+  [
+   651823
+  ],
+  [
+   936350
+  ],
+  [
+   20291
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "Cible unique",
+   "descHash": "Inflige des DGT imaginaires équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Rappa à un ennemi désigné.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 451237,
+   "name": "Ninjutsu : Élévation",
+   "iconPath": "47815621f5286d171e925c54c670c90c705b584700f1e73320e418b76a4333ab",
+   "typeDescHash": "ATQ normale",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874343,
+       "count": 3
+      },
+      {
+       "id": 549209,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589816,
+       "count": 3
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589816,
+       "count": 5
+      },
+      {
+       "id": 633150,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673757,
+       "count": 3
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673757,
+       "count": 8
+      },
+      {
+       "id": 717091,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ZdE",
+   "descHash": "Inflige des DGT imaginaires équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Rappa à tous les ennemis.",
+   "ultimateCost": 0,
+   "break": "30/hit",
+   "energy": "30",
+   "id": 735764,
+   "name": "Frappe ninja : Résolution profonde",
+   "iconPath": "88fba51a2add9f9a5be6b71d484088f2f2ec3ca7d7aa4633d1ea260b6356eccc",
+   "typeDescHash": "Compétence",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.6
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.66
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549209,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.72
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874343,
+       "count": 3
+      },
+      {
+       "id": 549209,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.78
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589816,
+       "count": 3
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.84
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589816,
+       "count": 5
+      },
+      {
+       "id": 633150,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589816,
+       "count": 7
+      },
+      {
+       "id": 633150,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.975
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673757,
+       "count": 3
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673757,
+       "count": 5
+      },
+      {
+       "id": 386840,
+       "count": 1
+      },
+      {
+       "id": 717091,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.125
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673757,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 386840,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673757,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 386840,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.26
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.32
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.38
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.44
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.5
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Renforcement",
+   "descHash": "Entre dans la forme du sceau, gagne immédiatement 1 <u>tour supplémentaire</u>, obtient <nobr>#3[i]</nobr> points d'encre chromatique et augmente l'efficacité de Rupture de faiblesse de <nobr>#1[i]%</nobr> et l'effet de Rupture de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>.<br />Lorsque Rappa est dans la forme du sceau, son ATQ normale devient renforcée, mais elle ne peut pas utiliser sa compétence et son ultime. Chaque utilisation de l'ATQ normale renforcée consomme 1 point d'encre chromatique. Rappa quitte la forme du sceau lorsqu'elle a utilisé tous les points d'encre chromatique.",
+   "ultimateCost": 140,
+   "break": "0",
+   "energy": "5",
+   "id": 651823,
+   "name": "Nindô suprême de l'Amour profond",
+   "iconPath": "0315cd88897ce8edfc0850f91996cd997ee4ecee9e1fad166f047c49932cb55f",
+   "typeDescHash": "Ultime",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5,
+      0.1,
+      3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.5,
+      0.12,
+      3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549209,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.5,
+      0.14,
+      3
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874343,
+       "count": 3
+      },
+      {
+       "id": 549209,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.5,
+      0.16,
+      3
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589816,
+       "count": 3
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.5,
+      0.18,
+      3
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589816,
+       "count": 5
+      },
+      {
+       "id": 633150,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.5,
+      0.2,
+      3
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589816,
+       "count": 7
+      },
+      {
+       "id": 633150,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.5,
+      0.225,
+      3
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673757,
+       "count": 3
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.5,
+      0.25,
+      3
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673757,
+       "count": 5
+      },
+      {
+       "id": 386840,
+       "count": 1
+      },
+      {
+       "id": 717091,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.5,
+      0.275,
+      3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673757,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 386840,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.5,
+      0.3,
+      3
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673757,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 386840,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      0.5,
+      0.32,
+      3
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.5,
+      0.34,
+      3
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.5,
+      0.36,
+      3
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.5,
+      0.38,
+      3
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.5,
+      0.4,
+      3
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Renforcement",
+   "descHash": "Rappa obtient 1 point de charge chaque fois qu'une cible ennemie subit une Rupture de faiblesse, jusqu'à un maximum de <nobr>#1[i]</nobr> points. La prochaine fois que Rappa lance la troisième frappe de Ningu : Lame de pétale d'exorcisme, elle inflige des DGT de rupture équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de ses DGT de rupture imaginaires à tous les ennemis. Ces DGT ignorent le type de faiblesse et réduisent la robustesse de <nobr>#4[i]</nobr>. Tous les points de charge sont consommés. Chaque point de charge augmente le multiplicateur des DGT de rupture de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span>et la réduction de robustesse pouvant ignorer le type de faiblesse de <nobr>#6[i]</nobr>.<br />En cas de Rupture de faiblesse, c'est l'effet de Rupture de faiblesse imaginaire qui s'applique.",
+   "ultimateCost": 0,
+   "break": "6",
+   "energy": "0",
+   "id": 936350,
+   "name": "Technique ninja : Jauge d'endurance",
+   "iconPath": "7d3ff081bdd7b49456acc70e04c7902190915cae8cc3f62fc26ba3a9ea22d210",
+   "typeDescHash": "Talent",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      10,
+      0,
+      0.3,
+      2,
+      0.25,
+      1
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      10,
+      0,
+      0.33,
+      2,
+      0.275,
+      1
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549209,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      10,
+      0,
+      0.36,
+      2,
+      0.3,
+      1
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874343,
+       "count": 3
+      },
+      {
+       "id": 549209,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      10,
+      0,
+      0.39,
+      2,
+      0.325,
+      1
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589816,
+       "count": 3
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      10,
+      0,
+      0.42,
+      2,
+      0.35,
+      1
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589816,
+       "count": 5
+      },
+      {
+       "id": 633150,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      10,
+      0,
+      0.45,
+      2,
+      0.375,
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589816,
+       "count": 7
+      },
+      {
+       "id": 633150,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      10,
+      0,
+      0.4875,
+      2,
+      0.40625,
+      1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673757,
+       "count": 3
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      10,
+      0,
+      0.525,
+      2,
+      0.4375,
+      1
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673757,
+       "count": 5
+      },
+      {
+       "id": 386840,
+       "count": 1
+      },
+      {
+       "id": 717091,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      10,
+      0,
+      0.5625,
+      2,
+      0.46875,
+      1
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673757,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 386840,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      10,
+      0,
+      0.6,
+      2,
+      0.5,
+      1
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673757,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 386840,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      10,
+      0,
+      0.63,
+      2,
+      0.525,
+      1
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      10,
+      0,
+      0.66,
+      2,
+      0.55,
+      1
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      10,
+      0,
+      0.69,
+      2,
+      0.575,
+      1
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      10,
+      0,
+      0.72,
+      2,
+      0.6,
+      1
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      10,
+      0,
+      0.75,
+      2,
+      0.625,
+      1
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Attaque un ennemi et réduit sa robustesse au type correspondant en entrant en combat.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 136936,
+   "name": "Attaque",
+   "iconPath": "47815621f5286d171e925c54c670c90c705b584700f1e73320e418b76a4333ab",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Renforcement",
+   "descHash": "Après avoir utilisé la technique, entre dans l'état Graffiti pendant <nobr>#1[i]</nobr> secondes. Dans cet état, avance rapidement sur une distance fixe et attaque tous les ennemis touchés. Bloque toutes les attaques ennemies pendant ce déplacement rapide. Utiliser une attaque dans l'état Graffiti permet de mettre fin au déplacement plus tôt. Après être entré en combat en attaquant des ennemis, leur inflige <nobr>#5[i]</nobr> points de robustesse quelles que soient leurs Faiblesses, inflige également des DGT de rupture équivalents à <nobr>#2[i]%</nobr> des DGT de rupture imaginaires de Rappa à chaque cible ennemie et des DGT de rupture équivalents à <nobr>#3[i]%</nobr> des DGT de rupture imaginaires de Rappa aux cibles adjacentes. D'autre part, Rappa régénère <nobr>#4[i]</nobr> points d'énergie.",
+   "ultimateCost": 0,
+   "break": "90",
+   "energy": "0",
+   "id": 20291,
+   "name": "Glissade ninja : Boing Boing",
+   "iconPath": "16f5a3549307c33d3a65141ed54b0de7b7e0bba93eaaf9c0740ec00eaa0d74c1",
+   "typeDescHash": "Technique",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      20,
+      2,
+      1.8,
+      10,
+      30
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Propagation",
+   "descHash": "",
+   "ultimateCost": 0,
+   "break": "30/hit",
+   "energy": "5",
+   "id": 304818,
+   "name": "Ningu : Lame de pétale d'exorcisme",
+   "iconPath": "89b2856439b4333db61503afe705ed2c3e96585e1fe1b2d9c083899a2c9006bd",
+   "typeDescHash": "ATQ normale",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.6,
+      0.3,
+      0.6,
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.68,
+      0.34,
+      0.68,
+      0.5
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874343,
+       "count": 3
+      },
+      {
+       "id": 549209,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.76,
+      0.38,
+      0.76,
+      0.5
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589816,
+       "count": 3
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.84,
+      0.42,
+      0.84,
+      0.5
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589816,
+       "count": 5
+      },
+      {
+       "id": 633150,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.92,
+      0.46,
+      0.92,
+      0.5
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673757,
+       "count": 3
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.5,
+      1,
+      0.5
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673757,
+       "count": 8
+      },
+      {
+       "id": 717091,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.08,
+      0.54,
+      1.08,
+      0.5
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.16,
+      0.58,
+      1.16,
+      0.5
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.24,
+      0.62,
+      1.24,
+      0.5
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Propagation",
+   "descHash": "",
+   "ultimateCost": 0,
+   "break": "30/hit",
+   "energy": "5",
+   "id": 567881,
+   "name": "Ningu : Lame de pétale d'exorcisme",
+   "iconPath": "89b2856439b4333db61503afe705ed2c3e96585e1fe1b2d9c083899a2c9006bd",
+   "typeDescHash": "ATQ normale",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.6,
+      0.3
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.68,
+      0.34
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874343,
+       "count": 3
+      },
+      {
+       "id": 549209,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.76,
+      0.38
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589816,
+       "count": 3
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.84,
+      0.42
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589816,
+       "count": 5
+      },
+      {
+       "id": 633150,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.92,
+      0.46
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673757,
+       "count": 3
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.5
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673757,
+       "count": 8
+      },
+      {
+       "id": 717091,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.08,
+      0.54
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.16,
+      0.58
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.24,
+      0.62
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ZdE",
+   "descHash": "",
+   "ultimateCost": 0,
+   "break": "15/hit",
+   "energy": "10",
+   "id": 735763,
+   "name": "Ningu : Lame de pétale d'exorcisme",
+   "iconPath": "89b2856439b4333db61503afe705ed2c3e96585e1fe1b2d9c083899a2c9006bd",
+   "typeDescHash": "ATQ normale",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.6
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.68
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874343,
+       "count": 3
+      },
+      {
+       "id": 549209,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.76
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589816,
+       "count": 3
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.84
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589816,
+       "count": 5
+      },
+      {
+       "id": 633150,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.92
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673757,
+       "count": 3
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673757,
+       "count": 8
+      },
+      {
+       "id": 717091,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.08
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.16
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.24
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Propagation",
+   "descHash": "Active Ningu : Lame de pétale d'exorcisme. Les 2 premières frappes infligent des DGT imaginaires équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Rappa à un ennemi désigné et des DGT imaginaires équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de l'ATQ de Rappa aux cibles adjacentes. La 3e frappe inflige des DGT imaginaires équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de l'ATQ de Rappa à tous les ennemis.<br />L'ATQ normale renforcée ne permet pas de récupérer de points de compétence. Il est également possible d'infliger une réduction de robustesse équivalente à <nobr>#4[i]%</nobr> de la valeur initiale de réduction de robustesse aux cibles ennemies qui n'ont pas de Faiblesse imaginaire. Déclenche l'effet de Rupture de faiblesse imaginaire en cas de Rupture de faiblesse.",
+   "ultimateCost": 0,
+   "break": "75/hit",
+   "energy": "0",
+   "id": 304817,
+   "name": "Ningu : Lame de pétale d'exorcisme",
+   "iconPath": "89b2856439b4333db61503afe705ed2c3e96585e1fe1b2d9c083899a2c9006bd",
+   "typeDescHash": "Résonance de la Voie",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.6,
+      0.3,
+      0.6,
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.68,
+      0.34,
+      0.68,
+      0.5
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874343,
+       "count": 3
+      },
+      {
+       "id": 549209,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.76,
+      0.38,
+      0.76,
+      0.5
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589816,
+       "count": 3
+      },
+      {
+       "id": 633150,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.84,
+      0.42,
+      0.84,
+      0.5
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589816,
+       "count": 5
+      },
+      {
+       "id": 633150,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.92,
+      0.46,
+      0.92,
+      0.5
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673757,
+       "count": 3
+      },
+      {
+       "id": 717091,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.5,
+      1,
+      0.5
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673757,
+       "count": 8
+      },
+      {
+       "id": 717091,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.08,
+      0.54,
+      1.08,
+      0.5
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.16,
+      0.58,
+      1.16,
+      0.5
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.24,
+      0.62,
+      1.24,
+      0.5
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1317101,
+   "anchor": 6,
+   "type": 1,
+   "children": [
+    {
+     "id": 1317202,
+     "anchor": 10,
+     "type": 2,
+     "children": [
+      {
+       "id": 1317203,
+       "anchor": 11,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 91641,
+        "name": "Augmentation d'ATQ",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.04
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 589816,
+          "count": 3
+         },
+         {
+          "id": 633150,
+          "count": 3
+         }
+        ]
+       }
+      },
+      {
+       "id": 1317204,
+       "anchor": 12,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 91640,
+        "name": "Renforcement de Rupture",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+        "statusList": [
+         {
+          "key": "Effet de Rupture",
+          "value": 0.053
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 589816,
+          "count": 3
+         },
+         {
+          "id": 633150,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 91642,
+      "name": "Augmentation de VIT",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+      "statusList": [
+       {
+        "key": "VIT",
+        "value": 2,
+        "int": true
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 874343,
+        "count": 3
+       },
+       {
+        "id": 549209,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Lorsqu'un ennemi élite ou d'un niveau supérieur subit une Rupture de faiblesse, Rappa gagne <nobr>#2[i]</nobr> point de charge supplémentaire et récupère <nobr>#1[i]</nobr> points d'énergie.",
+    "ultimateCost": 0,
+    "id": 91482,
+    "name": "Écritures ninjutsu : Hauteurs célestes",
+    "iconPath": "3290aeb0ab558a40a959368efd0004fc0bd303aa946f261e48e25d2b1df3d7cd",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       10,
+       1
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 874343,
+        "count": 3
+       },
+       {
+        "id": 386840,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1317102,
+   "anchor": 7,
+   "type": 1,
+   "children": [
+    {
+     "id": 1317205,
+     "anchor": 13,
+     "type": 2,
+     "children": [
+      {
+       "id": 1317206,
+       "anchor": 14,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 91638,
+        "name": "Augmentation de VIT",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+        "statusList": [
+         {
+          "key": "VIT",
+          "value": 3,
+          "int": true
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 673757,
+          "count": 3
+         },
+         {
+          "id": 717091,
+          "count": 3
+         }
+        ]
+       }
+      },
+      {
+       "id": 1317207,
+       "anchor": 15,
+       "type": 2,
+       "children": [],
+       "embedBuff": {
+        "id": 91637,
+        "name": "Augmentation d'ATQ",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+        "statusList": [
+         {
+          "key": "ATQ",
+          "value": 0.06
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 673757,
+          "count": 3
+         },
+         {
+          "id": 717091,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 91639,
+      "name": "Augmentation d'ATQ",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+      "statusList": [
+       {
+        "key": "ATQ",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 589816,
+        "count": 5
+       },
+       {
+        "id": 633150,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Lorsque Rappa est dans la forme du sceau et qu'elle utilise son ATQ normale renforcée pour infliger des DGT à une cible ennemie qui subit une Rupture de faiblesse, la réduction de robustesse de cette instance de DGT est convertie en 1 instance de <nobr>#1[i]%</nobr> de DGT de rupture extrême.",
+    "ultimateCost": 0,
+    "id": 91483,
+    "name": "Écritures ninjutsu : Résonance des mers",
+    "iconPath": "3b67306d5b175eb85613535b7cb1132d81dc0b512c37c048e03ea72fd1a35acd",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.6
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 589816,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 386840,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1317103,
+   "anchor": 8,
+   "type": 1,
+   "children": [
+    {
+     "id": 1317208,
+     "anchor": 16,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 91652,
+      "name": "Renforcement de Rupture",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+      "statusList": [
+       {
+        "key": "Effet de Rupture",
+        "value": 0.08
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673757,
+        "count": 8
+       },
+       {
+        "id": 717091,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1317209,
+     "anchor": 17,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 91651,
+      "name": "Augmentation de VIT",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+      "statusList": [
+       {
+        "key": "VIT",
+        "value": 4,
+        "int": true
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673757,
+        "count": 8
+       },
+       {
+        "id": 717091,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Lorsqu'une cible ennemie subit une Rupture de faiblesse, les DGT de rupture qu'elle subit augmentent de <nobr>#1[i]%</nobr>. Si l'ATQ actuelle de Rappa est supérieure à <nobr>#2[i]</nobr>, pour chaque tranche de <nobr>100</nobr> d'ATQ en excédent, cette augmentation est majorée de <nobr>#3[i]%</nobr>, jusqu'à une augmentation supplémentaire maximale de <nobr>#4[i]%</nobr>. Cet effet dure <nobr>#5[i]</nobr> tours.",
+    "ultimateCost": 0,
+    "id": 91484,
+    "name": "Écritures ninjutsu : Feuille flétrie",
+    "iconPath": "a00bfce61ab971b9bce42001526710c5a9eff5ba931710018804e6372ab93cc7",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.02,
+       2400,
+       0.01,
+       0.08,
+       2
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673757,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 386840,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1317201,
+   "anchor": 9,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 91643,
+    "name": "Augmentation d'ATQ",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.04
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549209,
+      "count": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": 1317210,
+   "anchor": 18,
+   "type": 2,
+   "children": [],
+   "embedBuff": {
+    "id": 7703,
+    "name": "Augmentation d'ATQ",
+    "levelReq": 80,
+    "promotionReq": 0,
+    "iconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+    "statusList": [
+     {
+      "key": "ATQ",
+      "value": 0.08
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 160000
+     },
+     {
+      "id": 673757,
+      "count": 8
+     },
+     {
+      "id": 717091,
+      "count": 8
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": []
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Première rencontre",
+   "text": "Quel plaisir, Ninja à la batte de baseball ! Ta voie du ninja brille comme mille soleils. Comme le disent les Écritures du ninjutsu cosmique : « Au bout de l'enfer se trouve une lumière qui illumine les ténèbres du monde. »",
+   "unlockRequirement": "",
+   "cnUrl": "325b8bc29a430fbd954eeab952419b7f8060052652d457b95da2bcae28b56555",
+   "jpUrl": "1a6025a810c8e710ffe0e4d80af37dfd8d6b7ab307c511006d0e6539253a5e73",
+   "enUrl": "895b7489caaca8904cf5f87b915e2cf7efcf545086812938b2ea47b2f5e484cb",
+   "krUrl": "dd7de73153b5fba7673200ed74015d8cc734f80e351b808a4d693f23ba1e8ac7"
+  },
+  {
+   "id": 2,
+   "title": "Salutation",
+   "text": "La vie est aussi éphémère que la rosée nocturne, et nul ne peut échapper aux souffrances de la naissance, de la vieillesse et de la mort... Ninja à la batte de baseball, Yoroshiku.",
+   "unlockRequirement": "",
+   "cnUrl": "d4b23b94dc898cce272c291c530acec2c03f5779593717798321240b58540776",
+   "jpUrl": "bbdb962e8b4ac9daa0d141aee38df0fc5e7506e362e75345b53d1f16a1af56ba",
+   "enUrl": "1d31e3b07985ed2de5b17ab84e3bfeb46c9244a690622d0d797791c020c4fb1c",
+   "krUrl": "b3a857bf7aee04a875aadff7aef31b53e60dcb4a38f2d410e283b878f897fbad"
+  },
+  {
+   "id": 3,
+   "title": "Au revoir",
+   "text": "Toute chose est éphémère. Cet au revoir est peut-être notre dernier adieu. Que ta voie du ninja soit empreinte de courage et de persévérance... jusqu'à notre prochaine rencontre !",
+   "unlockRequirement": "",
+   "cnUrl": "ef05679bd8c910ed1c6861683d19105cfced17b85431dcdd96e0d72d6e3497bf",
+   "jpUrl": "d018775c2ba95d0b5014a7486f95f8c059e8931a76179bf2e1344558bd96b434",
+   "enUrl": "349981150686f2f1f8f212480b2ef3174d11e25df3d544209ee6bf6a64776083",
+   "krUrl": "7f5b0c7943f39d5a4415f0422ab14d3d30d22be633ea964339f123497efb4c9c"
+  },
+  {
+   "id": 4,
+   "title": "Anecdote personnelle : Identité",
+   "text": "Mon nom de ninja est Rappa, ce qui signifie « avoir un cœur inébranlable, détruire le mal et défendre la justice ». Tout comme les flèches toutes puissantes du Grand Lan.",
+   "unlockRequirement": "",
+   "cnUrl": "e06d8db09f3f5f4d1b183d97e159a0d5494718647519dce5c0edbc8b95fa7ba1",
+   "jpUrl": "c4f7797c0517e74720a72185991845236bf273d4bafb50a209cc0e29c691c37a",
+   "enUrl": "3081f2b9c49bac467b1290418e894b1a5e684c34c31472a402e635db5770e8a9",
+   "krUrl": "cd4b8c599e8c317c82b526ddcbc49d80440203147b0a35f06c93a859b036f59e"
+  },
+  {
+   "id": 5,
+   "title": "Anecdote personnelle : Ninjutsu",
+   "text": "Le ninjutsu cosmique est en perpétuelle évolution, mais la volonté des ninjas de purifier le mal reste immuable.",
+   "unlockRequirement": "",
+   "cnUrl": "b6c71f26dfae736f337e80d8dd289940a7348630eeed45b1414d2b02a6d25fb9",
+   "jpUrl": "37e5efd04cd23cb7dd747c6043b39229fc4c84bec0266e274eac173c38595c0f",
+   "enUrl": "b43bfac2b9d76408d7358bd2dcb94d72e9b69d5a09261ee1d107ec45afd7f7e7",
+   "krUrl": "0c32696949d1f28b4b66cd8cc8913c92bc411d559891962661e73f8092187c1a"
+  },
+  {
+   "id": 6,
+   "title": "Anecdote personnelle : Ningu",
+   "text": "Les sushis ne peuvent pas se résumer à du riz, tout comme un haïku ne se limite pas à des paroles. De même, les armes que je manie ne sont pas de simples outils. Elles sont forgées par les techniques ninja, imprégnées de l'esprit ninja, contrôlées par le ninjutsu et guidées par la voie du ninja.",
+   "unlockRequirement": "",
+   "cnUrl": "8ebc79f2373c1aa7b82ba8a11a1a0cc2f224507beb4888d0ade03f43b4b9bda8",
+   "jpUrl": "a48ad99a9289dc07980526512ff21ef88337422a8d22b83593caa1ddb83bf072",
+   "enUrl": "98f609e1f3b9c8dace6bc2401d73509efc88f3821449bbff3ff75fccfe0b5259",
+   "krUrl": "2481b9071a62e216c3b35b757368b90aa8d7a3ef091e3462715915efb75d2ca6"
+  },
+  {
+   "id": 7,
+   "title": "Bavardage : Mantra de la voie du ninja",
+   "text": "Sous le ciel étoilé, le mal ne fait que rôder, et les âmes désespérées luttent dans l'obscurité. Les arts ninjas silencieux sont ponctués de larmes meurtries, et les cœurs courageux se réunissent dans la nuit. Lorsque les paroles ont échoué, le ninjutsu vient nous éclairer, et les tyrans immoraux cachés n'ont d'autre choix que d'être annihilés. Tandis que la marée est déchaînée, le mal sombre dans le chaos, mais bientôt l'aube renaît, et les étincelles brillent à nouveau...",
+   "unlockRequirement": "",
+   "cnUrl": "29feb3764e86f2da2057ffee167ae6b99dfe9126ef7ed38c729f65efdb6a3d66",
+   "jpUrl": "66a3307695e80db6b80a0aee0e1acb2ca6bd247cef1f63a77c69e1f5fd8be6d0",
+   "enUrl": "fcf683afc4434c27b86f36bf52be72b52f37c614e434eeed0b24e061f2c838d1",
+   "krUrl": "6714491f72fa2124a20ddf7c836f387be62afad1aa5b98fd2d22c38d7d39fe21"
+  },
+  {
+   "id": 8,
+   "title": "Passe-temps",
+   "text": "Même en temps de paix, il ne faut pas négliger l'entraînement. <ruby>Réciter des mantras ninja<rt>Rapper</rt></ruby>, dessiner des <ruby>sceaux du ninja éblouissant<rt>graffitis</rt></ruby> et étudier les <ruby>écritures ninja<rt>mangas</rt></ruby>... Tels sont les trois sources de l'épanouissement.",
+   "unlockRequirement": "",
+   "cnUrl": "ccda2d1bd398bbc6139737744d3dfecdad118657bafad5918f98ff52ca0d94fe",
+   "jpUrl": "dcf8c618520cb595fb317db904d27edc58dad06cd83e8bd93c94c2c0449d8924",
+   "enUrl": "b794a745279a18334a9a04c89c2fc0425e628c6818bcd0538bcc83bf7e40c88a",
+   "krUrl": "cd5c2037655f6acf8d4c6954ef9dad242573d91e9439659b71b6014d5d596e37"
+  },
+  {
+   "id": 9,
+   "title": "Problèmes",
+   "text": "Les autorités corrompues n'aiment pas que je dessine mes sceaux du ninja éblouissant. J'ai passé sept jours et sept nuits dans une station appelée « Mé-tro » à affronter un acolyte, et cet incident semble avoir été transformé en <ruby>une super illusion<rt>un jeu</rt></ruby>.",
+   "unlockRequirement": "",
+   "cnUrl": "847b6f3605f54974c58abdcb59662c4ed373290b3ecc37305e069e5e3e151f5b",
+   "jpUrl": "9615b1679b34639a29b26d7dd5bca98120f8fa110966b56455f41395955435aa",
+   "enUrl": "8ed76b156023b25bec5e438937b6e2f5cce625d01166722b4c71256354738abf",
+   "krUrl": "d745017df3ccb3df35a1683fee0e6cfe2ae3c2c118f82e3d41fef6928ce27f47"
+  },
+  {
+   "id": 10,
+   "title": "Fait notable : Vie",
+   "text": "La vie est faite d'emprunts, alors pourquoi ne pas en profiter pleinement avant de tout rendre au ciel ? Comme le disent les Écritures du ninjutsu cosmique : « On emprunte cinq, on rend quatre, à l'origine il n'y avait rien, inutile de parler de ce qui n'existe pas. »",
+   "unlockRequirement": "",
+   "cnUrl": "d6fecd618c0ab4cf3fd0730297661a9bca15939abfba981d1629a3eba6c3312d",
+   "jpUrl": "7fcd37dab04fa089495b71e3c003118ee37918051dc190ef4f7306cbd1f713fb",
+   "enUrl": "6e1bf0da5838e42b477b0ff6e70dd4272725e39815b8be9b67af9e365ae27a03",
+   "krUrl": "9fb98ff28a309abda904092ff5297748c694c69864ec05d7c08dddff80c9cabd"
+  },
+  {
+   "id": 11,
+   "title": "Connaissances : Amour",
+   "text": "Sensei Kucha m'a enseigné que l'amour était l'élément primordial à l'origine du pouvoir ninja qui façonne l'univers. Rechercher des personnes qui partagent les mêmes idées, pour que l'amour donne naissance au courage et à la bravoure, c'est là l'essence de la technique ninja secrète qu'on appelle Amour profond.",
+   "unlockRequirement": "",
+   "cnUrl": "8183fef67160834a8df7b056a5c15f78901fc8f0249ef98608e5e487aa797f88",
+   "jpUrl": "b94932dc0ff38900f7bc7f42b353cf5eabe5ebea9a4d1ad6fb4b46331a0dc678",
+   "enUrl": "878ea0e2e5d279ff4750345cecf1353e1fbfe9d2f4e173b2dbe79fa9d50c5908",
+   "krUrl": "252067e4f5f30869c1d33f27d308a6ca98e4a2005627fd54b353a47a1df3012c"
+  },
+  {
+   "id": 12,
+   "title": "À propos du seigneur Shura Pistolargent",
+   "text": "Les balles du seigneur Shura Pistolargent peuvent toucher des cibles très éloignées sans dévier de leur trajectoire. D'autre part, sa volonté est inébranlable. Si on tirait sur sa volonté avec ses propres balles... Pardon, je m'égare...",
+   "unlockRequirement": "",
+   "cnUrl": "3a3bac09668cffc12e5f6c71daa78a6bbf4c8ac37ec02becd624a66af0704389",
+   "jpUrl": "b21d15eb7c6cbf3526bab33716803201a9e04001f9f13b48593d67464f97c189",
+   "enUrl": "7f737ee13dea0436f4e8d853103a09bf0d3cfe5a0587bdbdbef8eb118f5ba9c4",
+   "krUrl": "0e75580556e264e968a881c5ae96c515dcf55d511ba40bad728c0fd45c61b734"
+  },
+  {
+   "id": 13,
+   "title": "À propos du ninja Hiryū",
+   "text": "Son ninjutsu est impeccable et son éloquence remarquable, ce qui en fait un maître à la fois en matière de littérature et d'arts martiaux. Je suis encore loin d'être à son niveau. Il faut que je continue à m'entraîner !",
+   "unlockRequirement": "",
+   "cnUrl": "1f81e5ba78166a88de41b771c4cf5e13bab45fbb58b0dbee8a4542a563856bd5",
+   "jpUrl": "76ac0ef658ddbcfa397bad85479717a81b9031e777498278bb3b290ec6b82d3c",
+   "enUrl": "879ecec768e47197618a9541ef992746c4fc6ff22b8b728bfb5a94b40e80824c",
+   "krUrl": "997381203ba7fd07a42ff7cb7942f44ced1948f3642bc415499f727d8b8bdc79"
+  },
+  {
+   "id": 14,
+   "title": "À propos de la ninja Ruri",
+   "text": "Elle a longtemps souffert de ne pas connaître ses origines, mais cela ne l'a pas empêchée d'aller de l'avant. Comme le disent les Écritures du ninjutsu cosmique : « La vie est éphémère, elle réside en soi, et non à l'extérieur, dans le départ et non dans l'arrivée, ici et non ailleurs. »",
+   "unlockRequirement": "",
+   "cnUrl": "023b4017015bc39eca38f86d7bd2ca48bb06e929ba187ab282f99cc403b1d9e9",
+   "jpUrl": "7de3ee830544eaed1fe2869460c856a53749bf4ab55bb800427b06fd91f11458",
+   "enUrl": "edd51ec660e41d9520e82e8651a2584b862793ac7e6fcecb675cf1f8e09307a6",
+   "krUrl": "f0447566ae84c33e471dcd8c472f1405e3d35f81112a2dfc90fbcc30e5cf2152"
+  },
+  {
+   "id": 15,
+   "title": "À propos du ninja Gama",
+   "text": "Il parcourt le monde matériel, compilant toutes sortes de choses, dans l'espoir de découvrir la véritable voie du ninja. Pourtant, tous les phénomènes ne sont que des illusions. Comme le disent les Écritures du ninjutsu cosmique : « Le rêve est sans rêve, le vide n'est pas vide, ni départ ni arrivée, tout est dans l'instant présent. »",
+   "unlockRequirement": "",
+   "cnUrl": "033e387e35608e873eaa364817f536479adbe6bfd0d5060fffbf5c4410afaff4",
+   "jpUrl": "9e6aa7e6b63bdbae159aeb3bc0c777e91ff17b8464bc2bc48978b4a9c86e4702",
+   "enUrl": "eb1d9a1ea1efcf9cae8abf3fa58b1ab3b94e793289bf70f1dd1f9e4a7ee6cac9",
+   "krUrl": "ef77478475f83df4564cf8d406d492f5e91573858d7f121241f4d0b390998e7f"
+  },
+  {
+   "id": 16,
+   "title": "À propos de la chanteuse ninja",
+   "text": "Quelle magnifique mélodie ! Lorsque sa voix s'élève, je m'effondre en pleurs. La saison de la gloire ne fleurit qu'une fois au cours d'une vie. Hélas, les fleurs et les hommes vont et viennent.",
+   "unlockRequirement": "",
+   "cnUrl": "155f60e030ef1ea1b8c7521fdba89eb209439a3ab46ab005bc9685fead2e2049",
+   "jpUrl": "c6de7033ef13591ef55fd8a432cc428492a470291cb920a500a6ae1e10afc333",
+   "enUrl": "e7e61dbd10d7d7bd3a0fb17516a2dada123f538ea11d36a9fd9ed4e1e345180f",
+   "krUrl": "8fc18032ee3bfb1af5b02b2d24539c369eb466edfd56ea14d4bddaf7291b7153"
+  },
+  {
+   "id": 17,
+   "title": "À propos du ninja maléfique Osaru",
+   "text": "Cette ère Mappō du Dharma est propice au ninja maléfique. Mais peu importe sa puissance, il ne peut échapper à la loi de la naissance et de la destruction. Ceux qui naissent doivent mourir, mais les péchés restent. Le pouvoir divin du Grand Lan finira par se manifester.",
+   "unlockRequirement": "",
+   "cnUrl": "151afef5262c8ba09a8ecfacd4f0edaf061f5d2c8f3371ed0f1009e691f90736",
+   "jpUrl": "f1b73b61854ad842d27a0d82d2c8cff2ad4c26f3b35c25f86f1917fd54e6c923",
+   "enUrl": "a90f70054b6ae665c54dafc8e5d8a2461a3483822653c51eed1f103e5716aa19",
+   "krUrl": "ff80874570a893926f1b8865f48f93e24bc29518b78e0b45a19b4680ed077e40"
+  },
+  {
+   "id": 18,
+   "title": "À propos de Fièvre mécanique",
+   "text": "Le son ninja des cordes vibrantes et des flûtes rapides venu du pays des neiges ! Une telle mélodie envoûtante peut sans conteste adoucir la brise printanière et nous porter jusqu'aux nues.",
+   "unlockRequirement": "",
+   "cnUrl": "270e165b7df14f09d17bf0bd0eb58ed1b964f1d51e589b9ea0efb0eb61544118",
+   "jpUrl": "4e6ca48cd8b27eb0b2af1eb5eed8c7d53513ae02eaf26f4ca591f69e90835549",
+   "enUrl": "9a5f01914c79673932fe6f03879bce29247398c02852f0db222b3c09198c5228",
+   "krUrl": "cb89dc60e258247855556d19c3c1aca2560ae68188d8e42f1934cc7b33682206"
+  },
+  {
+   "id": 19,
+   "title": "À propos du ninja oni rouge avec une prothèse de bras",
+   "text": "Une fois, je suis allée à bord du Luofu pour assister au duel du seigneur Shura Pistolargent. Son adversaire était un ninja oni rouge avec une prothèse de bras. Il avait une volonté de fer et une détermination à toute épreuve. C'était loin d'être un adversaire ordinaire.",
+   "unlockRequirement": "",
+   "cnUrl": "8300fa8f43b206b00c8cec4858c7a32455d19d80fd0e523b463d05ea39e267bc",
+   "jpUrl": "fa1033ca62ba3c1cc1cad92ccaeee32b486169ffce5ca7a7ea213eaed177ce70",
+   "enUrl": "c879608ba3e97bd166434beb7389120bfd248f945616a70c38c09d3bc8132ba7",
+   "krUrl": "ac5942117a188aa00f0ed3fed992dbaf32beb20291fc6716ac06c71e3ed7fa88"
+  },
+  {
+   "id": 20,
+   "title": "Activation d'Eidolon",
+   "text": "Ni arrivée ni départ, ni mort ni vie.",
+   "unlockRequirement": "",
+   "cnUrl": "74e7a8e23ebd6fc1d019562118c6880ab21533624a0097c0fcaa9b5c54a821f1",
+   "jpUrl": "aa7f61638e976204ff430b8c758ab4ac12f22d5b0ded08749ab2cdcf0298135f",
+   "enUrl": "38b0240ff65278163f5b4ab13a4112955f964f7ad461aa8f6041181a3a4ed4d5",
+   "krUrl": "5723286e699908c9c9d5be84361bc8c01b339a76f1fe600f04b14e2dd8a3d823"
+  },
+  {
+   "id": 21,
+   "title": "Élévation de personnage",
+   "text": "Endurer les quatre souffrances et les huit tourments, prospérité et déclin.",
+   "unlockRequirement": "",
+   "cnUrl": "a0c1877f0461da439b9f9b5f2ffa51f0059beb366ec73dab2122011bf9f9f22a",
+   "jpUrl": "5c58d724dc4c01fda4807f6cf78e4b47e3ca56725446906d4ee7377b3530923d",
+   "enUrl": "be8e83ddff4917d58634e5c3f611a267efed431a7487a962374b8d062c262f9d",
+   "krUrl": "c9b06cd1df7cb95cf64820208b531ef5967ce130b7934decb072a398af683f14"
+  },
+  {
+   "id": 22,
+   "title": "Niveau max atteint",
+   "text": "Cette vie est aussi éphémère qu'un nuage. Elle ne laisse aucune trace, comme la rosée du matin ou l'éclair fugace.",
+   "unlockRequirement": "",
+   "cnUrl": "2f6b9a2d92929c7992cbb2650037e4d8b9bdff501d1ccb875275376f87d4d2ef",
+   "jpUrl": "6048fbe62846c2a13d82c4c30e18a4cd69cffa5c59161bb355a4e2821abe854f",
+   "enUrl": "6f310c21229964ceceb9eed0f3b8382a4e5c9a7557a308d6f7c3744d4c1275c5",
+   "krUrl": "ba09bf102cf4072feffb14f9b39472511fbc2f5a8b5d5bc09892b49bac516c8f"
+  },
+  {
+   "id": 23,
+   "title": "Activation de Trace",
+   "text": "Impitoyable ! La haine se change en tempête et disperse les fleurs.",
+   "unlockRequirement": "",
+   "cnUrl": "63dae4040bcaf74306241a99d42ecd596d747a509fbed220f82d3d0944efb3eb",
+   "jpUrl": "4bc0332654c4c861a667a2459efec050e56ac16c2a8f8ba9263ed54d8a0983aa",
+   "enUrl": "cf486d3b61d89ff68c04d5bbd814231d1b27f00a4f7cbe2e13e430aed1bcfb95",
+   "krUrl": "1e7bb5d177b9af721df1ff52805a03290311bf11f39c0de016082c11b6ae9196"
+  },
+  {
+   "id": 24,
+   "title": "Rejoint l'équipe avec Pionnier/Pionnière",
+   "text": "Ninja Pionnier/Pionnière, s'il te plaît, transmets-moi ta sagesse.",
+   "unlockRequirement": "",
+   "cnUrl": "3661aea3e1f3d1c98997db8e631558abda3204178df6b1210e6deb77b05fac9a",
+   "jpUrl": "c489de0fcdfd35c9115062a5441ed574fdfefacd557bbf9abb82f5dbf00b91ac",
+   "enUrl": "fedfab81dea658ea632e6722882a0a27f92af0af8977572739ca91eeb23c105f",
+   "krUrl": "6800c2cf8c85bfe22d5e0b908238f7d15f8d65e8f0a06b9a1e2e334872aec987"
+  },
+  {
+   "id": 25,
+   "title": "Rejoint l'équipe avec le Fossoyeur",
+   "text": "Seigneur Shura Pistolargent, faisons goûter à ces démons la puissance de notre Alliance des ninjas éblouissants !",
+   "unlockRequirement": "",
+   "cnUrl": "693c4037293f850faf9d2c91142c7ff6af28f1d50212fbb3783446df5efc8216",
+   "jpUrl": "cd37cb53be7fbb1e8f4e8bf01ce928286a12d9b65e12933cf7c328ce35d199ab",
+   "enUrl": "38e3200c7ea4d51c2fc777e46dc611cf1f0cc326ffc7e90391c15ef134e1d1fc",
+   "krUrl": "eff56cc9ed62273ee9db002616bb6e18391f7dc63e0952509b74f61df115446d"
+  },
+  {
+   "id": 26,
+   "title": "Rejoint l'équipe avec Dan Heng",
+   "text": "Ninja Hiryū, avec votre aide, nous avons la puissance d'une armée de cent hommes.",
+   "unlockRequirement": "",
+   "cnUrl": "aec3a181aa84fac14b0ea321e6bb902ef0d0259bc2daee06eb511965241e732f",
+   "jpUrl": "fe1ab1336a26255dc845137fa01cc3cc13477d889b9666793ad7c2199f231025",
+   "enUrl": "3e83144a2fa732c8fa78034630aa9b0ed04d28c5982179c05e33664f7738a3c0",
+   "krUrl": "5f00e6fc355d97ea337a25caa7a49166d32b0c3ad776e2d8f9c13d7b2fdc5be4"
+  },
+  {
+   "id": 27,
+   "title": "Rejoint l'équipe avec March 7th",
+   "text": "Une maîtrise impressionnante du ninjutsu de la glace, comme on pouvait s'y attendre de la part de la ninja Ruri.",
+   "unlockRequirement": "",
+   "cnUrl": "b8be5dc440eed82868c6965bc7ce92493fe85d8506e0cb6a1f809db9941884a9",
+   "jpUrl": "bdaa47bc2778e3aa4eb1adc43e30c6d63b3dcc55b3351f9fda65d47e62b4ee56",
+   "enUrl": "bc5dd4ee4c2f9be2d30878fe80263071ce19770c86668bcfd291a5dac209f7e5",
+   "krUrl": "ec711a91ce9794e3a707e2caecae02f4730b6b5d9e5a318f8cf273a5313c9fea"
+  },
+  {
+   "id": 28,
+   "title": "Rejoint l'équipe avec Robin",
+   "text": "Avec votre ninjutsu sonore, on a toutes les chances d'éradiquer le mal.",
+   "unlockRequirement": "",
+   "cnUrl": "5a265163a288f6446738374039f1ad36b0c26c9695ae7924f35e7e01b9e31c33",
+   "jpUrl": "6e37847efc6d50b58f20ae0d563c5339b986e28ee586db52add7f76dcb09a073",
+   "enUrl": "fa828ce9f27dcf96005deafa98e61ec9388efbd4fd5aca49b0752c8fc5435498",
+   "krUrl": "d983775fc556c45b452681a67726001409192bc9d9b7eb4eb38fd51dd33c9895"
+  },
+  {
+   "id": 51,
+   "title": "Rupture de faiblesse en début de combat",
+   "text": "Bas les masques !",
+   "unlockRequirement": "",
+   "cnUrl": "c81943b519f94c22fcf4268b32a82d06b5a0785ae2db07b51cb527ea3c361c76",
+   "jpUrl": "6ceb63a66caae4cfbf7922d36ee3d99a7b0e310228fd44042fd8479e2eb64e65",
+   "enUrl": "1af10155d31d61beb72c16963bc57166144a94a6eb451d31bcaab77d0c76ba68",
+   "krUrl": "82d2c48d094d5de0b90f2de1828dd801513dbaf65a1737855f810aeb43cd1aad"
+  },
+  {
+   "id": 52,
+   "title": "Avertissement de danger en début de combat",
+   "text": "Cet endroit va bientôt devenir le point de départ d'une grande chasse !",
+   "unlockRequirement": "",
+   "cnUrl": "f8f6b89686080f0e4f8a035119afbe53c3a9083c84f1c13f2ec4735a62c9b2bb",
+   "jpUrl": "c8a28e8b5fb9aec8aaa15ff56dbba60cd303e06beec9f65858d9bf8af21a08cf",
+   "enUrl": "ca53b15ea1ec6accbc57c417bcc9717dcfce89668be6b34634bf728795fa94e9",
+   "krUrl": "883135ddce9e0fe7b4b30764a15155a21e7e36d82e107e5c36ecdbd77aa9b49e"
+  },
+  {
+   "id": 53,
+   "title": "Début du tour 1",
+   "text": "Je suis la <span style=\"display: inline-block; color: #dbc291ff; font-weight:bold;\">ninja éblouissante</span>, et je suis là pour gagner !",
+   "unlockRequirement": "",
+   "cnUrl": "ca0b709f68840559c4b69a1834b0b73e0829c8302691d7eb6eb254606c6cdd4e",
+   "jpUrl": "8d621044c8677141c9154c754617658428523642918bd0e7d2d0a6bfcd86e867",
+   "enUrl": "a346910e558396e00838778fe27acbe864d86719e16bf891a5e5885064e1ecb1",
+   "krUrl": "030014e99c08ca6a4cdf679615da7fed2efbe8c97dea29733976fb8effcb04f6"
+  },
+  {
+   "id": 54,
+   "title": "Début du tour 2",
+   "text": "Que le mal soit anéanti, sous toutes ses formes !",
+   "unlockRequirement": "",
+   "cnUrl": "6933a6b0a87e8c425e2fcdf21ea29fe1845d0c4ce967069e4c60a90863ae8e75",
+   "jpUrl": "034c0c90033c71c5959706163690c12a1575b328d81052ac30b80d112d4c8f50",
+   "enUrl": "0d3bbeac84beadc93aeadb479bb1bb305b344c313e5ce9da7d6bc005b3733e9a",
+   "krUrl": "c50a0c0583d7d1e1741f97e4b1833c2d7d31aa623123dbb2218f6729d99605d9"
+  },
+  {
+   "id": 55,
+   "title": "Tour inactif",
+   "text": "Comme le disent les Écritures du ninjutsu cosmique : « Si ce n'est pas le bon moment, il suffit d'attendre. »",
+   "unlockRequirement": "",
+   "cnUrl": "1b6e5217e5fc03625d39fcd77bac595073188dad1fde6ec95fd4a486cf4196ab",
+   "jpUrl": "11ecbabe83991a03c047dd87c06f214eee89f211d85215b98ef28ce0eeebba58",
+   "enUrl": "1a7a50e8e97591e2d31b9e505cca4c625b8a81c17d0d92058b02e37d5ee7bb3f",
+   "krUrl": "0eed5fb09b386ffb2b7ac606e54b4837bbe63c7ebdc8462fe6a140b1b6d71b0f"
+  },
+  {
+   "id": 56,
+   "title": "ATQ normale",
+   "text": "Yaaa !",
+   "unlockRequirement": "",
+   "cnUrl": "486a6915ce4a9e49d1ed5ac03c7a125ca8e35dc69776bdcd022771fad0a2655b",
+   "jpUrl": "5600ab1682b5fbb9765e568c9c3a79780cd71481d59dc72794acf97d36c5b972",
+   "enUrl": "ce614f63a3421272eeae199d771b68413146b6b2ee9c4bace0e996f55c6eb6da",
+   "krUrl": "0b3237ca2b519cf262a7d99a0fb7f7e73a18684249b046758269d9513c58cb03"
+  },
+  {
+   "id": 57,
+   "title": "Compétence 1",
+   "text": "Technique de la peinture aux mille couleurs !",
+   "unlockRequirement": "",
+   "cnUrl": "ccf8fba7839f942e066a66888ab125cd9785e6c8a56365d0beb3a2f0d25763cb",
+   "jpUrl": "6cd47f53e418d089712d3795f5dfbd4d0a33f0066a295b0b349002e980d742a5",
+   "enUrl": "b95b0125edf560f3b2456ddfbbb0f14e7c80cff4586e12697a6fe75ae6e57906",
+   "krUrl": "e49737c903b429803f972dc7688a40a17949807bd3e88f998f0a75561592cd12"
+  },
+  {
+   "id": 58,
+   "title": "Compétence 2",
+   "text": "Explosion de couleurs !",
+   "unlockRequirement": "",
+   "cnUrl": "5c0080fe955594842e73cd3f195770c48a68694cc24274e3b620e3a24fb8d43c",
+   "jpUrl": "2454f94654c6cb95232983933f2cb3794fae73cd564bd8e186bed3d17edb8b84",
+   "enUrl": "d54da05035550ed08172b9f4bc8f929e83b257a2427009fbfd8dab3c9ad01d4c",
+   "krUrl": "77841300998291e939d8ec825b294f145b514363679e1523b4e331f5ec5aa02d"
+  },
+  {
+   "id": 59,
+   "title": "Attaque légère subie",
+   "text": "C'est une perte de temps !",
+   "unlockRequirement": "",
+   "cnUrl": "6e415e20d8eefd2450f9d33d4d02aff663c8d276a07e9dc9e8230e1c4f8ac78d",
+   "jpUrl": "404cc295faca85bfd28064f9c5b57de84fb65d000914c8e6d7ff59d141f20889",
+   "enUrl": "02180cbd31e88e91c5919559aeefdd90f797a6665e05b56083df91ba7ca380af",
+   "krUrl": "34385c301c95b86857f68cfc76b955a74846ca76232933eddf53479f710bbd03"
+  },
+  {
+   "id": 60,
+   "title": "Attaque lourde subie",
+   "text": "Pas mal !",
+   "unlockRequirement": "",
+   "cnUrl": "a95ed6f305c2f92b128830f4ba0c3525b41af21eba43e385072016429c1bde20",
+   "jpUrl": "188dd401d4373b9f6c6e140be702edab588cffadcff211f01e015647d807b3c1",
+   "enUrl": "6f98e03f9e218ef57f4cf53b151d515eb979ced23f7ffb81b55b30776941a3cd",
+   "krUrl": "077cf2d81900791301fcf6b801f35b3bbb89375bc7090f64d18ab54472831919"
+  },
+  {
+   "id": 61,
+   "title": "Activation de l'ultime",
+   "text": "Le ninjutsu cosmique est en perpétuelle évolution.",
+   "unlockRequirement": "",
+   "cnUrl": "9cdf93c132325d5183e6971c95b80773aa2c8fd38830ad605a6b33327bbcacfd",
+   "jpUrl": "c04b7f6bac0690ddd65376ed17817f32a696c6c163be73eae2a362f9a0af1a44",
+   "enUrl": "9fde5527f5e0225c606a6a1eefbddeae57b22439a7abaecf404d3e7914f80e78",
+   "krUrl": "ca0582dc1d6bb714e5b8d28aad57c10ac102702cea71d5185a52bb99b0bcf95b"
+  },
+  {
+   "id": 62,
+   "title": "Activation de l'ultime",
+   "text": "Ceci est la... technique ninja secrète de l'oblitération éblouissante !",
+   "unlockRequirement": "",
+   "cnUrl": "15367efb9a6325618d786211f759cb71fa2c1d065f28e998d1db2a09a4cd7e32",
+   "jpUrl": "f53b4e464b712724706a336b4109a135b273520282fc4239f0b835089ff6fe1c",
+   "enUrl": "be3fbce300b789f9a813bb12ca97a9b6936133c09e2d503d6023f5fab3fdf9cd",
+   "krUrl": "e5a0b6dc1f09aa33d7fbd11b0621a9a662b55df605ef9d18ee4f8ca227057ac1"
+  },
+  {
+   "id": 63,
+   "title": "Déclenchement de l'ultime",
+   "text": "Coupe ! Tranche ! Lacère !",
+   "unlockRequirement": "",
+   "cnUrl": "df41cedca545d51f8f303b5b038cfa439960ac80c173c6d29d365e5c5108e698",
+   "jpUrl": "49c156c3add5d4fb957fbf97be74666a3b748dcb68693d6d80a50a1b62baa8b7",
+   "enUrl": "5abdb4b8706dc32e49e2052fc56ba7c7266f66249a610e4dd3772005216e610f",
+   "krUrl": "c2108cfc29988d780e181468c6f7c3a0014fc1a3fbeaa3c8321eb769bb8b441e"
+  },
+  {
+   "id": 64,
+   "title": "À terre",
+   "text": "Sur ce, adieu...",
+   "unlockRequirement": "",
+   "cnUrl": "5b8d211f5409a0c0c2e43f0599bbde482b6cf3d0b1d09cea295465c99f7c3c5d",
+   "jpUrl": "c20bb5e217f0dc32daa7d198edb0e2e0a66514835bae99d2c97f86fe339602ee",
+   "enUrl": "9315327a2f7178bc4ec857674e2e9aed6a79e997727ef6caab42c9e16170c215",
+   "krUrl": "e5d99d784a7d05810fa6123ffa6039680d2983936af8bc032e9a50439fde9060"
+  },
+  {
+   "id": 65,
+   "title": "Retour au combat",
+   "text": "Une technique de réincarnation ? Je suis totalement invincible !",
+   "unlockRequirement": "",
+   "cnUrl": "8cf9f5dcb69cbaec0a2abeaa14b9cd5983d079daf2a016358e78ac15bfcd660c",
+   "jpUrl": "8c36bce6c322ba1653cf565218c5819b13592df7da262eb80f0d2470273cc9d6",
+   "enUrl": "70fc7bf16f9694561e1ebf7819e40e533da5a1c756118425c5c8dd4e1c3eaf02",
+   "krUrl": "7a45ddd2b10fbdf7a03a78c2ef89bc9a2161b1081a5f6f9f8cf55e5cf44324fb"
+  },
+  {
+   "id": 66,
+   "title": "Récupération de santé",
+   "text": "Une bénédiction, cet art ninja de la guérison !",
+   "unlockRequirement": "",
+   "cnUrl": "b69836bddc7a52394e88789863c93ccbdcb6447453e3de7d4925506b04c691c6",
+   "jpUrl": "0b1d360b12a9626b491d0426f35b3d114258b417e8ff6b978e4059c24d1abc8d",
+   "enUrl": "09b939e96b38a2c97fae114c283febd0c4f2af4085f3d30e1df61031ad8dd17e",
+   "krUrl": "5fd7aaa60f89074501b6ea81e43c758b940be7b7d5bf9ed5753161a4c8458866"
+  },
+  {
+   "id": 67,
+   "title": "Technique",
+   "text": "Technique ninja de course super rapide !",
+   "unlockRequirement": "",
+   "cnUrl": "56942138d000e79ce9f479111c8d61239a24fc95cbb9a3a63e67af425902eca9",
+   "jpUrl": "1b448671dfcc55908da72ea6f174ed223bd1d7ef21974a813722e790318669ac",
+   "enUrl": "108030e97b5ee9b00cafd6db71f7f11beb5769947a50d9d3a7eb87315fb111fb",
+   "krUrl": "1110b406fb20fe2c3d1f10a855800d91b80a56ff0b80180b98f036d97b01e544"
+  },
+  {
+   "id": 68,
+   "title": "Combat gagné",
+   "text": "Vos dernières paroles resteront gravées dans ma mémoire. Adieu.",
+   "unlockRequirement": "",
+   "cnUrl": "6ceca8ce9371f6241396ef87a420d78c67312cda209a226a1321c2f95e1f668c",
+   "jpUrl": "fd219882ee142a15c4376fc77cab06e31be7b5a0c4a83521a4f17160ebaf0338",
+   "enUrl": "52dafae43705282de5198eeda32e02d67e3cec2a0e9d9f6de937436192aea519",
+   "krUrl": "99da52dfb94ed46526d7c7b85c56b7adcbfa2b8d61673baa130a54e534caaf65"
+  },
+  {
+   "id": 69,
+   "title": "Ouverture de coffre 1",
+   "text": "Un ninja ne doit pas désirer posséder... mais il a tout de même besoin d'un minimum pour survivre.",
+   "unlockRequirement": "",
+   "cnUrl": "b191de3cf389a5f08a0ed8f45fc93b78fe92beeace3c5361c85a84e5281a87e7",
+   "jpUrl": "4a24c95b5603b02f58e8392fa329fcdc1e7a0364e43997efaf92b865b8453c4f",
+   "enUrl": "709f631e5c19be4777035b652e11a82b3b120570b321c50c40af2c82ec0387ac",
+   "krUrl": "d5679ff4e090b1a873059bf4204d9d606c53f46cb7382d4f2c91647ffcd953cd"
+  },
+  {
+   "id": 70,
+   "title": "Ouverture de coffre 2",
+   "text": "J'accepte cette récompense accordée par le Grand Lan.",
+   "unlockRequirement": "",
+   "cnUrl": "4a46dd182ec75e521aa94a16c8eb809f2716a7f4a86f55500ced45eac036c51d",
+   "jpUrl": "5629cc5782cbed7afca1d046c8343769d23195712cf08b75dae561529e1502fc",
+   "enUrl": "44c7b99a999c2d1732ab6e0d0ad6c6b69a18f67abb382240d68038147cdc3003",
+   "krUrl": "9c3ee67277387de3093ef0ceb6bfcb23e94e7c1de551a73a6f5eafd84a26572f"
+  },
+  {
+   "id": 71,
+   "title": "Ouverture de coffre précieux",
+   "text": "C'est le trésor ninja qui a été annoncé dans les Écritures du ninjutsu cosmique !",
+   "unlockRequirement": "",
+   "cnUrl": "692dcde80bbe7aca8d69c753a73cb9fecdff873170c66a5ad27b1dbc5fbcc9ed",
+   "jpUrl": "309eb03d8d417cabd24e0d1d0defa1fd9da513d126e24e663b6e577bd1b454a5",
+   "enUrl": "d190502634884a41cd00cf837fca418327ea0c591e2985f3d6de869923aa5ffc",
+   "krUrl": "0537088cc547b361f59d51796ed32ab9bec13beab13089e854704248c20463e6"
+  },
+  {
+   "id": 72,
+   "title": "Énigme réussie 1",
+   "text": "Un mécanisme ninja ingénieux, mais pas suffisamment pour m'arrêter.",
+   "unlockRequirement": "",
+   "cnUrl": "77ffefb4e9fbd89ddbabaf7a1d45da92baa3566b6b2e23ff0fd4b62b9a38284d",
+   "jpUrl": "eff49e7cfd1657752de7bea82d22ccdf60901e6c69dbea7f1a0cc838a266ec58",
+   "enUrl": "73e2eeb579de0d3981c1e6eca0b298f025c54d5fb37256b5744f7ff9866a8437",
+   "krUrl": "d59e11216d55207fa90e6cfae8c4e40d1084cf4618d0782250b7032a8a9965b3"
+  },
+  {
+   "id": 73,
+   "title": "Énigme réussie 2",
+   "text": "Tout ninja doit mettre un jour sa sagesse à l'épreuve.",
+   "unlockRequirement": "",
+   "cnUrl": "db7c3c9d4c521f4f176797ee6cde0abd4455cd15d463c9518cba47829efb9e38",
+   "jpUrl": "45ce71e034c40878a83bb936613e848a625f17267844c8668bd1be04ce97f49e",
+   "enUrl": "3969a141f1dc8d6d909b9677d914c72fcb2d392b9ad426ad0b0fe27a18bb59ec",
+   "krUrl": "dbf8d838c2509ffce4646ee9349818d34a4ba89e6c1f2a9bd26a5dc42e05c97b"
+  },
+  {
+   "id": 74,
+   "title": "Cible ennemie trouvée",
+   "text": "Par le Grand Lan, quelle infamie...",
+   "unlockRequirement": "",
+   "cnUrl": "c73bba2a94bb7fb399ee42c84a9cceed40e29d32c28080feb850c975539cd334",
+   "jpUrl": "9b4740a4a512817e4755325a1beb4f2838f81f8364520786ab1f1af891dd09a1",
+   "enUrl": "ff84868bb8d6cc75e54a66e95e61edc6729aabe06021a7437b178c941bf892ed",
+   "krUrl": "68dacc3f66a2c5f186a0de871b1805a44d100731ca4d112704f93d59e7ad5d23"
+  },
+  {
+   "id": 75,
+   "title": "Retour en ville",
+   "text": "Je sens que la puissance ninja est faible ici. Faisons donc resplendir les couleurs vibrantes du ninjutsu éblouissant !",
+   "unlockRequirement": "",
+   "cnUrl": "dca6619d0a18d41accb5d1f88e88b23b145a006f84da69a37cfe72acd424a8e5",
+   "jpUrl": "c3f3246af1c6e9a0ea70b8940d50048825d458d9d9b527123cd4ad9ed0997d3b",
+   "enUrl": "d713adbf84a89a514e31137e09946d7f8cf2a5690a27911f1eabddae37c987c0",
+   "krUrl": "f90e824b0d9d4ec3015f3e331101e6400823959005833de8150c4991e59e22f3"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Détails du personnage",
+   "text": "Une fille étrange qui a surgi à Penacony comme un éclair au milieu de la nuit. Elle se prend pour une ninja et attribue tout ce qui se passe dans le monde au « ninjutsu ».<br />Elle récite constamment des mantras ninja, dessine des sceaux du ninja éblouissant et étudie des parchemins. La voie du ninja comprend le rap, les graffitis et les mangas. Au travers d'une autodiscipline rigoureuse, elle parcourt les étoiles, faisant respecter la justice et la vertu.<br />En tant que membre des Rangers de la galaxie, elle poursuit sans relâche le méchant connu sous le nom d'Osaru le ninja maléfique, le traquant jusqu'aux limites du cosmos.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Histoire du personnage : Partie I",
+   "text": "<b>Écritures du ninjutsu cosmique, Récit de la Justice éblouissante – Épreuve : Le shuriken impitoyable</b><br />>>Initialisation du système...>><br />>>Utilisateur <span style=\"display: inline-block; color: #dbc291ff; font-weight:bold;\">Ninja éblouissante</span> connecté !>><br />>>Vérification du niveau de ninja...>><br />>>Bienvenue dans votre jeu de ninja !>><br /><br />Système de test : La lune enveloppe les rues de la capitale ninja d'une inquiétante lumière verte. Dans la maison d'Osaru, un mucus puant s'écoule de bocaux de verre brisés, accompagné de grognements monstrueux sans fin.<br />Système de test : Équipée du ningu brillant éblouissant remis par le maître, vous avancez sous une incessante pluie acide, tranchant l'air putride en direction du cœur de la maison d'Osaru.<br />Système de test : Les ninjas maléfiques vous ont repérée et plongent vers vous en éructant des mots qui ne vous sont pas familiers.<br /><br />??? : « Le sujet du test se rebelle ! »<br />??? : « Bon sang ! Les appareils que vous avez cassés coûtent un bras ! »<br />??? :« Qui a implanté ce maudit virus dans sa tête ? »<br /><span style=\"display: inline-block; color: #dbc291ff; font-weight:bold;\">Ninja éblouissante</span> : « Hiiiya ! »<br />Message système : La ninja a libéré de la couleur dans ses mains !<br /><span style=\"display: inline-block; color: #dbc291ff; font-weight:bold;\">Ninja éblouissante</span> : « Gwaaaah... »<br />Message système : La ninja se sert de son environnement pour se débarrasser des ninjas maléfiques !<br />Message système : Bouddha Daihannya tout-puissant ! Les PV de la ninja sont tombés à un niveau alarmant ! Danger imminent !<br />Message système : La ninja a brisé l'encerclement !<br />Message système : La ninja s'est hissée au sommet de la capitale ninja !<br />Message système : La lumière de la ninja illumine cette ville corrompue !<br /><span style=\"display: inline-block; color: #dbc291ff; font-weight:bold;\">Ninja éblouissante</span> : « Préparez-vous à mourir, bande de vermines ? »<br /><span style=\"display: inline-block; color: #dbc291ff; font-weight:bold;\">Ninja éblouissante</span> : « Voici... la technique secrète ninja de l'oblitération éblouissante ! »<br />Système de test : La matrice de la maison Osaru s'effrite comme des flocons de neige, vous ouvrez enfin les portes de la capitale ninja.<br />Système de test : Mais à votre grande déception, le coupable, Osaru le ninja maléfique, ne se trouve nulle part derrière cette porte.<br />Système de test : Vous réalisez que le monde à l'extérieur de la capitale ninja est vaste, si vaste que cela vous effraie.<br />Système de test : Vous regardez en arrière et vous décidez en silence.<br /><b>Vous avez le choix :<br />       1. Avancer.<br />       2. Reculer.</b><br />Message système : La ninja a 5 secondes pour faire son choix.<br />Message système : 5.<br />Message système : 4.<br />Message système : La ninja choisit « Avancer ».<br />Système de test : Grand Lan tout-puissant ! Les ninjas ne reculent jamais ! Et puis, personne ne refuserait une aventure héroïque pour sauver le monde.<br />Système de test : À présent, vous écrivez votre propre Récit de la Justice éblouissante !<br />Message système : L'utilisateur « <span style=\"display: inline-block; color: #dbc291ff; font-weight:bold;\">Ninja éblouissante</span> » a gagné <nobr>10</nobr> <nobr>000</nobr> EXP et obtenu « <span style=\"display: inline-block; color: #dbc291ff; font-weight:bold;\">Pétale d'exorcisme</span> » qui accorde une augmentation d'ATQ considérable.",
+   "unlockRequirement": "Disponible au niveau <nobr>20</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie II",
+   "text": "<b>Écritures du ninjutsu cosmique, Récit de la Justice éblouissante – Épreuve : La générosité du ninja</b><br />>>Initialisation du système...>><br />>>Utilisateur <span style=\"display: inline-block; color: #dbc291ff; font-weight:bold;\">Ninja éblouissante</span> connecté !>><br />>>Vérification du niveau de ninja...>><br />>>Bienvenue dans votre jeu de ninja !>><br /><br />Système de test : Après avoir détruit la maison du maléfique Osaru, vous jurez d'abattre Osaru, le ninja maléfique.<br />Système de test : Vous traversez un village inconnu et sauvez un voyageur qui vous dit être pourchassé par un singe de combat.<br />Système de test : Le voyageur se révèle être un archiviste qui travaillait autrefois pour Osaru. Il semble évident que le ninja maléfique Osaru veut le faire taire pour de bon.<br /><br />Archiviste gravement blessé : « Quelle ironie. Je ne pensais pas que vous me sauveriez. »<br />Archiviste gravement blessé : « Toujours accrochée à votre truc de ninja, hein ? Mais ce n'est qu'un virus mémoriel, vous le savez ? »<br />Archiviste gravement blessé : « Super-hominidé, Ninja ou Rangers... Chaque possibilité d'avenir qui s'ouvre à vous a été décidée par quelqu'un d'autre. Vous ne retournerez jamais dans le monde 'réel' ».<br />Message système : La ninja réfléchit aux paroles de l'archiviste.<br />Message système : Grand Lan tout-puissant ! Le moral de la ninja commence à baisser.<br />Système de test : Houla ! La dure vérité fait toujours mal, mais vous la connaissiez depuis longtemps. Vous ne vouliez simplement pas l'admettre.<br />Système de test : Mais désormais, vous devez faire un choix. Les hommes de main du ninja maléfique arrivent. Allez-vous sauver cet ingrat qui récompense votre gentillesse par son sarcasme ?<br /><b>Vous avez le choix :<br />       1. Le sauver.</b><br />       Système de test : « La voie vers mes destinées ne connaît aucune limite. Le ninja maléfique n'est rien de plus que des empreintes de pas éphémères, et je n'ai d'autre choix que de chercher la justice ! »<br />        Système de test : Vous entonnez la devise des ninjas, et éliminez facilement les singes diaboliques en approche. Désormais, peu importe que votre titre de « ninja » soit légitime, car vous savez que vos actes étaient sincères.<br />      <b> 2. L'ignorer.</b><br />         Système de test : « Les paroles malfaisantes d'un ninja maléfique sont sans queue ni tête ! » Vous ignorez ses remarques sarcastiques, mais les singes qui sont à vos trousses commencent à vous énerver. Vous l'ignorez et abattez tous les ennemis à vos trousses.<br />Message système : La ninja a décidé de « Le sauver ».<br />Message système : Le moral de la ninja augmente rapidement !<br />Message système : L'utilisateur « <span style=\"display: inline-block; color: #dbc291ff; font-weight:bold;\">Ninja éblouissante</span> » a gagné <nobr>20</nobr> <nobr>000</nobr> EXP et obtenu « <span style=\"display: inline-block; color: #dbc291ff; font-weight:bold;\">Âme de ninja</span> », qui augmente le moral jusqu'à son niveau maximum !<br />Système de test : Vous ne doutez plus de vous-même, et ignorez même les inepties censées vous juger.<br />Système de test : Ils disent tous que vous n'êtes qu'un insecte pathétique bercé par ses propres illusions.<br />Système de test : Mais sont-ils vraiment si différents que ça ?",
+   "unlockRequirement": "Disponible au niveau <nobr>40</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie III",
+   "text": "<b>Écritures du ninjutsu cosmique, Récit de la Justice éblouissante – Épreuve : Quelle est la voie du héros ninja</b><br />>>Initialisation du système...>><br />>>Utilisateur <span style=\"display: inline-block; color: #dbc291ff; font-weight:bold;\">Ninja éblouissante</span> connecté !>><br />>>Vérification du niveau de ninja...>><br />>>Bienvenue dans votre jeu de ninja !>><br /><br />Système de test : C'est votre trente-troisième combat depuis que vous êtes devenue la ninja éblouissante. Vous avez poursuivi Osaru, le ninja maléfique, et libéré plusieurs mondes de son emprise diabolique.<br />Système de test : Vous jetez un œil à la cave que vous avez fait exploser. Les rayons du soleil pénètrent grâce au trou dans le mur, la brise printanière s'engouffrant pour la première fois dans cette vaste caverne.<br />Système de test : Devant vous se trouve un arsenal d'armes à feu qui a été pris au piège par la supercherie d'Osaru, le ninja maléfique, pendant deux décennies. Les habitants vivant sous terre croyaient que le monde à la surface était submergé par des guerres sans fin, et avaient accepté de devenir des outils de fabrication d'armes.<br />Système de test : Hé ! Mais vous savez très bien ce que les locaux pensent vraiment. Ils se reposent sur ce mensonge de guerre sans fin pour se convaincre qu'ils sont heureux et satisfaits.<br />Système de test : Au final, ils questionnent l'avenir.<br /><br />Résident local : « Lorsque nous pensions que la guerre à la surface avait toujours cours et que nous vivions ici en paix, célébrant des mariages et des funérailles en toute sécurité, nous étions heureux de pouvoir profiter d'une joie rare en ces temps troubles. »<br />Résident local : « Quand on nous a dit que l'armée à la surface avait besoin d'armes fabriquées sous terre pour remporter la guerre, un sentiment de joie nous a envahis, car nous nous sommes sentis utiles en tant qu'humains. »<br />Résident local : « Quoi ? Vous dites que la guerre est finie depuis longtemps ? Et que ces trafiquants d'armes nous ont menti ? Si c'est vrai, quelle est la signification de tout ce à quoi nous avons renoncé ces vingt dernières années ? »<br />Message système : La ninja est confrontée aux questions des résidents locaux, à qui on a caché la vérité.<br />Message système : Le moral de la ninja baisse lentement !<br />Message de test : Mais ce n'est que l'un des nombreux mondes victimes de la tyrannie d'Osaru, le ninja maléfique. Si vous les laissez sans surveillance, eux et leur descendance souffriront encore plus de ces expériences.<br />Système de test : Comme vous autrefois.<br />Système de test : Que comptez-vous faire ?<br /><b>Vous avez le choix :<br />       1. Rester fidèle à votre voie du ninja.</b><br />        Système de test : « Ma voie du ninja constitue un serment sacré pour vaincre le mal et faire respecter la justice. Purifier ce monde de toute corruption est le paradis auquel j'aspire. »<br />        Système de test : À l'aide de vos talents en karaté, vous démolissez un mur de plus dans le donjon, et permettez à la lumière d'envahir les lieux. Certaines personnes reculent, cherchant à s'abriter dans les ténèbres, tandis que d'autres trouvent le courage d'avancer vers la lumière.<br />       <b>2. Les laisser.</b><br />        Système de test : Vous choisissez de respecter leurs croyances, de ne pas défendre la « vérité », et de partir, triste. Vous en profitez pour rapatrier tous les trafiquants d'armes du ninja maléfique à la surface. Vous êtes convaincue que maintenant que les murs ont été abattus, ils seront un jour de nouveau attirés par la lumière du soleil.<br />Message système : La ninja a décidé de rester fidèle à la voie du ninja.<br />Message système : L'utilisateur « <span style=\"display: inline-block; color: #dbc291ff; font-weight:bold;\">Ninja éblouissante</span> » a gagné <nobr>30</nobr> <nobr>000</nobr> EXP et obtenu « <span style=\"display: inline-block; color: #dbc291ff; font-weight:bold;\">Voie du ninja éblouissant</span> », qui augmente la robustesse jusqu'à son niveau maximum !<br />Système de test : Les nouvelles générations du village, autrefois centre de production d'armes, s'adaptent au monde réel à une vitesse incroyable. Vous êtes soulagée de les voir grandir dans l'insouciance et mener une vie heureuse.<br />Système de test : Félicitations ! Vous avez libéré un autre village du mal, mais le rythme auquel vous leur portez secours est très inférieur à celui avec lequel Osaru, le ninja maléfique, génère le chaos dans l'univers.<br />Système de test : Vous n'avez pas le temps de souffler. Où comptez-vous aller maintenant ?",
+   "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
+  },
+  {
+   "title": "Histoire du personnage : Partie IV",
+   "text": "<b>Écritures du ninjutsu cosmique, Récit de la Justice éblouissante – Épreuve : Le commencement et le futur</b><br />>>Initialisation du système...>><br />>>Utilisateur <span style=\"display: inline-block; color: #dbc291ff; font-weight:bold;\">Ninja éblouissante</span> connecté !>><br />>>Vérification du niveau de ninja...>><br />>>Bienvenue dans votre jeu de ninja !>><br /><br />Système de test : Attention ! Quête à durée limitée !<br />Système de test : À votre grande surprise, vous vous retrouvez dans une anomalie de l'univers et découvrez une autre vie dans un monde parallèle...« Si je n'étais pas une héroïne ninja. »<br />Système de test : Vous n'auriez pas à prendre des pilules saturées en puissance ninja ni à subir les souffrances de la technique de l'éclair, et votre esprit ne serait pas enchaîné à un virus mémoriel.<br />Système de test : Si vous n'étiez pas l'héroïne ninja, qui seriez-vous ? Et quelle autre vie auriez-vous ?<br /><span style=\"display: inline-block; color: #dbc291ff; font-weight:bold;\">Ninja éblouissante</span> : « Je ne sais pas. Je n'y ai jamais réfléchi. »<br />Système de test : On peut aisément affirmer qu'éradiquer le mal et faire la promotion de la voie du ninja sont ancrés en vous et sont votre raison de vivre. Je vais donc vous donner le choix.<br /><br /><b>Vous avez le choix :<br />       1. Mangaka passionnée.</b><br />        Système de test : Vous aimez dessiner depuis votre plus tendre enfance. En lisant plusieurs mangas, les couleurs vives et les histoires palpitantes ont commencé à vous attirer. Vous aviez envie de créer des personnages et des histoires tout aussi captivants. Enthousiasmée par votre passion, vous êtes devenue une artiste manga populaire.<br />      <b>2. Rappeuse rebelle.</b><br />        Système de test : Vous avez vécu dans un institut rempli de gens pédants qui s'exprimaient en des termes archaïques et utilisaient une rhétorique excessivement prétentieuse. Leur style délibérément et grammaticalement rigoureux ainsi que leur personnalité lèche-botte vous ennuyaient autant que la fausseté de leur langage. Vous avez composé des chansons afin de dire votre propre vérité et êtes devenue une chanteuse rebelle.<br />       <b>3. Prof d'arts martiaux.</b><br />       Système de test : Vous êtes venue au monde avec des qualités physiques supérieures et vous vous êtes concentrée sur la stimulation mentale produite par l'exercice physique... Vous êtes devenue prof d'arts martiaux, maîtresse dans l'art du karaté cosmique.<br />Système de test : Vous êtes perdue face aux diverses possibilités de ce qu'aurait pu être votre vie. Dans aucune d'elles, vous n'êtes motivée ni par la haine, ni par les responsabilités, et vous n'avez plus besoin de différencier le bien du mal. Tout ce que vous avez à faire, c'est d'adopter la vie de votre choix. Si de tels choix et possibilités existaient, voudriez-vous toujours être une ninja ?<br />Message système : À cette étape, la ninja a le temps de faire son choix.<br /><br />>>Jeu en pause>><br /><br />Elle retire ses lunettes et baisse la tête, perdue dans ses pensées.<br />« La question qui m'a été posée par le royaume super illusoire du Jardin de la zénescence est en effet intéressante. Si je n'avais pas choisi la voie du ninja éblouissant... »<br />Ce faux projet la fait brièvement réfléchir, mais elle revient vite à elle... <br />« Mais à moins que le mal ne soit éradiqué de ce monde, cette grande vision ne restera rien de plus qu'un rêve sans fondement. »<br />Les étoiles apparaissent dans le ciel, et l'héroïne ninja ne doit pas se laisser distraire avant que la chasse ne soit finie. Rien d'autre n'a autant d'importance que la chasse.<br />La ninja éblouissante abaisse son chapeau et bondit vers sa dernière épreuve sans la moindre hésitation.<br /><br />>>Sauvegarde en cours>><br /><br />Message système : L'utilisateur « <span style=\"display: inline-block; color: #dbc291ff; font-weight:bold;\">Ninja éblouissante</span> » a temporairement quitté le jeu.",
+   "unlockRequirement": "Disponible au niveau <nobr>80</nobr> de personnage"
+  }
+ ],
+ "archive": {
+  "cvCn": "金娜",
+  "cvJp": "潘めぐみ",
+  "cvKr": "김유림",
+  "cvEn": "Kendell Byrd",
+  "camp": "Ranger de la galaxie"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328,
+  "rankConfig": {
+   "3": {
+    "735764": 2,
+    "936350": 2
+   },
+   "5": {
+    "304817": 1,
+    "304818": 1,
+    "451237": 1,
+    "567881": 1,
+    "651823": 2,
+    "735763": 1
+   }
+  }
+ },
+ "name": "Rappa",
+ "rarity": 5,
+ "descHash": "Une fille étrange qui a surgi à Penacony comme un éclair au milieu de la nuit. Elle se prend pour une ninja et attribue tout ce qui se passe dans le monde au « ninjutsu ». Elle récite constamment des mantras ninja, dessine des sceaux du ninja éblouissant et étudie des parchemins. La voie du ninja comprend le rap, les graffitis et les mangas. Au travers d'une autodiscipline rigoureuse, elle parcourt les étoiles, faisant respecter la justice et la vertu. En tant que membre des Rangers de la galaxie, elle poursuit sans relâche le méchant connu sous le nom d'Osaru le ninja maléfique, le traquant jusqu'aux limites du cosmos.",
+ "artPath": "2eec000c5090aa14bd11aab19e9333e412bd1fa367b348dc62f0868c959aa569",
+ "miniIconPath": "b36e663d7967f924c881ab0dca16f896f724b0aaf3dfc95cfdf3fdf93c23427b",
+ "damageType": {
+  "id": 64,
+  "iconPath": "f71050a77e9a526a60545e5fe1a37ea4a916070efd10d7bb5ecfdf5cf69a3af0",
+  "color": "#F4D258",
+  "name": "Imaginaire",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "e237f5fd6ddaee131acf2ef3a4c544a59977e707e2031ef62dbd20318293cb01",
+  "altIconPath": "d3a88745418913e1efa4a8d16f2825e8fb6ae442338b2f6bd55eaf31665759b8",
+  "color": "#FFFFFF",
+  "name": "L'Érudition",
+  "rarity": 0
+ },
+ "pageId": "rappa"
+}

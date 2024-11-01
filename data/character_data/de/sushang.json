@@ -1952,7 +1952,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Zieht nach dem Einsatz des Standardangriffs oder der Fertigkeit Sushangs Aktion um <nobr>#1[i]%</nobr> vor, wenn sich auf dem Feld Gegner mit Schwächebruch befinden.",
+    "descHash": "Zieht nach dem Einsatz des Standardangriffs oder der Fertigkeit Sushangs Aktion um <nobr>#1[i]%</nobr> vor, wenn sich auf dem Kampffeld Gegner mit Schwächebruch befinden.",
     "ultimateCost": 0,
     "id": 731195,
     "name": "Sieger",
@@ -2254,7 +2254,7 @@
   {
    "id": 17,
    "title": "Über Bailu",
-   "text": "Bailu ... D... Das ist diese Heilerin. Ich habe gehört, dass ihre Tränen heilen können ... Aber das ist doch unmöglich! Allerdings ist sie eine Vidyadhara ... Bei denen wird eine Sache fast glaubwürdiger, je verrückter sie klingt.",
+   "text": "Bailu ... D... Das ist diese Heilerin. Ich habe gehört, dass ihre Tränen heilen können ... Aber das ist doch unmöglich! Allerdings ist sie eine Vidyadhara ... Bei denen wird eine Sache fast glaubwürdiger, je verrückter sie klingt.",
    "unlockRequirement": "",
    "cnUrl": "98c4a447a58f94a3126b75001c363d842bbb8baeb06d00836dbb556fc83706a4",
    "jpUrl": "8a0554be0dac95dd41dd22007d52a5c771bfa49657ebf78ce1d9e26f7c6106c9",
@@ -2310,6 +2310,26 @@
    "jpUrl": "4d3b1f324ac76c356d90702b383bffd31131c50d2fba95b0a8d5cef02597444d",
    "enUrl": "215467aea220a59933f7447203bfe7b4d7df78c5c1be43b526dd3fad1b33bc72",
    "krUrl": "f00d89e52ef16638aca0251812d9d5a94f5a9e8328e6a5ae3ad15730efaa4729"
+  },
+  {
+   "id": 33,
+   "title": "Über Jiaoqiu",
+   "text": "Onkel Jiao ... Oh, es ist so: als Kind mochte ich den Schwertkampfunterricht nicht, also habe ich mich weggeschlichen und ihn besucht. Er hat mir das Lesen und Schreiben beigebracht, aber sein Name war zu schwer für mich, also ließ er mich ihn einfach Onkel Jiao nennen ... Irgendwann hörte er auf, mir das Schreiben beizubringen, und kochte mir nur noch alle möglichen leckeren Gerichte, bis meine Mutter mich am Ohr zurück zum Schwertunterricht zerrte.",
+   "unlockRequirement": "",
+   "cnUrl": "0cfdf88667e3add392b5da2a96308b3b85b92058217e00a32fd2f914144c8510",
+   "jpUrl": "bd31e7760f6a5043597c5bfba0db88ad94acb7c45aea87736e709659f3d1d074",
+   "enUrl": "eacbfa9f7c2842514dddaf908cd70bf0b2900d31944a93e8d4a5d7e24d2172c5",
+   "krUrl": "1dcb44de4bee287b4822a4b3c0a8f64fa5633f14c519298395a5ab8c9578d313"
+  },
+  {
+   "id": 35,
+   "title": "Über Moze",
+   "text": "Der Name kommt mir bekannt vor ... Oh! Einmal, als ich zu Onkel Jiaos Haus ging, sah ich jemanden, der sich auf dem Dach versteckt hielt ... Könnte er das gewesen sein?",
+   "unlockRequirement": "",
+   "cnUrl": "2b0bf6bdc71192236a7d42ad31c181c7ab161b22b82d25ec59d54897fb0ed7c0",
+   "jpUrl": "591f0f9d80203d0c09a20442947f8d110367edfde8fddbda3412e8f3692c9259",
+   "enUrl": "14061d974d4c28429cfe36d37c4c128841acf3c908f1ac692e62a03a8199b972",
+   "krUrl": "a7612b5143d11e05e578f15bde0f8d7b0bef132a022b51ba7037ea2dc39d9e02"
   },
   {
    "id": 23,
@@ -2412,16 +2432,6 @@
    "krUrl": "10e7d021f9bb3cdb73105baf871d3a71ddcced3a391595db70cbf5e17f16b957"
   },
   {
-   "id": 33,
-   "title": "Über Jiaoqiu",
-   "text": "Onkel Jiao ... Oh, es ist so: als Kind mochte ich den Schwertkampfunterricht nicht, also habe ich mich weggeschlichen und ihn besucht. Er hat mir das Lesen und Schreiben beigebracht, aber sein Name war zu schwer für mich, also ließ er mich ihn einfach Onkel Jiao nennen ... Irgendwann hörte er auf, mir das Schreiben beizubringen, und kochte mir nur noch alle möglichen leckeren Gerichte, bis meine Mutter mich am Ohr zurück zum Schwertunterricht zerrte.",
-   "unlockRequirement": "",
-   "cnUrl": "0cfdf88667e3add392b5da2a96308b3b85b92058217e00a32fd2f914144c8510",
-   "jpUrl": "bd31e7760f6a5043597c5bfba0db88ad94acb7c45aea87736e709659f3d1d074",
-   "enUrl": "eacbfa9f7c2842514dddaf908cd70bf0b2900d31944a93e8d4a5d7e24d2172c5",
-   "krUrl": "1dcb44de4bee287b4822a4b3c0a8f64fa5633f14c519298395a5ab8c9578d313"
-  },
-  {
    "id": 34,
    "title": "Teammitglied: Jiaoqiu",
    "text": "Onkel Jiao! Meine Mutter lässt grüßen!",
@@ -2430,16 +2440,6 @@
    "jpUrl": "5d1989a29e733cb745c03bb6336abbbb25021680d72b61fccc68c4277a1f20f1",
    "enUrl": "e34a94bde9f9c43ccf39c99fea5a664a8bfb39e52f5c99795f8cfee5cab423b1",
    "krUrl": "65d05d8a62bdf98a12cb32e2d9dbcb5891f874de18e4a138352e860ab3b632b1"
-  },
-  {
-   "id": 35,
-   "title": "Über Moze",
-   "text": "Der Name kommt mir bekannt vor ... Oh! Einmal, als ich zu Onkel Jiaos Haus ging, sah ich jemanden, der sich auf dem Dach versteckt hielt ... Könnte er das gewesen sein?",
-   "unlockRequirement": "",
-   "cnUrl": "",
-   "jpUrl": "",
-   "enUrl": "",
-   "krUrl": ""
   },
   {
    "id": 51,
@@ -2670,7 +2670,7 @@
   },
   {
    "title": "Geschichte (Teil 1)",
-   "text": "Oh, Jade-Tor, wie du leuchtest; Oh, Jade-Himmel, Bühne des Fluges. Sternskiffs ziehen durch die Große Messe, und Touristen strömen zum Himmelstor. Jeder, der auf der Luofu hinein- oder hinausreist, kann beim Blick nach oben eine mächtige Grenzlinie sehen, die mit einer wirbelnden Strömung die Lücke im Raum markiert. Es ist in der Tat ein großartiger Anblick, wenn große und kleine interstellare Schiffe hier aufsteigen.<br /><br />Dieses Himmelstor wird Jade-Tor genannt und ist der Eingang zu den Höhlen von Xianzhou. Unterhalb des Tors strömen Reisende auf ihrem Weg in die Luofu hinein. Unter ihnen ist ein junges Mädchen in einem pfirsichfarbenen Kleid, um die <nobr>16</nobr> oder <nobr>17</nobr> Jahre alt. Aber nach Xianzhou-Maßstäben ist es unmöglich, ihr wahres Alter zu schätzen, und ebenso wenig könnte man erraten, welche seltsame Kraft ihr geholfen hat, dieses riesige Großschwert in der Hand zu halten.<br /><br />Mit seiner Länge von zwei Fuß und einem Zoll ist es sehr ungewöhnlich. Obwohl es in weißes Tuch eingewickelt ist, sieht es wie ein antikes Schwert aus. Die Kanten auf beiden Seiten der Klinge sind so dünn wie Zikadenflügel, als ob eine leichte Brise sie brechen könnte. Die Leute kamen, um das Soldatenmädchen anzustarren und hoben dabei die Augenbrauen. Aber das Mädchen schien besorgt zu sein und runzelte nur verärgert die Stirn, während sie murmelte:<br />„Wie seltsam! Mutter hat mir beigebracht, dieses Mantra zu singen, damit ich mich konzentrieren kann. Warum klappt es nicht?“<br /><br />Ohne auf ihre seltsamen Worte zu achten, hob ein Vidyadhara-Mann in der Nähe seine Hand und winkte das Mädchen heran: „Die Nächste, bitte!“ Das Mädchen erschrak und biss die Zähne fest zusammen – aber sie musste sich zusammenreißen und trat vor.<br /><br />„Gold kann man einschmelzen, aber einen Eid ...“, sagte das Mädchen ernst zu dem Vidyadhara-Mann.<br />„Gold kann man einschmelzen, aber einen Eid darf man nicht brechen.“ Der Vidyadhara-Mann sagte ausdruckslos: „Hier sind wir beim Zoll, was für ein Eid? Name, Herkunft, Grund der Reise – das ist alles, was ich brauche.“<br />Sie war verdutzt und hatte das Gefühl, dass sie ihre Luofu-Anekdote falsch erzählt hatte. Ratlos nahm sie ihren Quadratspiegel in die Hand und antwortete:<br />„Name: Sushang; persönlicher Besitz: ein Xuanyuan-Schwert; Herkunft: ...“<br />„Äh, wie buchstabiert man bitte ‚Yaoqing‘?“",
+   "text": "Oh, Jade-Tor, wie du leuchtest; Oh, Jade-Himmel, Bühne des Fluges. Sternskiffs ziehen durch die Große Messe, und Touristen strömen zum Himmelstor. Jeder, der auf der Luofu hinein- oder hinausreist, kann beim Blick nach oben eine mächtige Grenzlinie sehen, die mit einer wirbelnden Strömung die Lücke im Raum markiert. Es ist in der Tat ein großartiger Anblick, wenn große und kleine interstellare Schiffe hier aufsteigen.<br /><br />Dieses Himmelstor wird Jade-Tor genannt und ist der Eingang zu den Höhlen von Xianzhou. Unterhalb des Tors strömen Reisende auf ihrem Weg in die Luofu hinein. Unter ihnen ist ein junges Mädchen in einem pfirsichfarbenen Kleid, um die <nobr>16</nobr> oder <nobr>17</nobr> Jahre alt. Aber nach Xianzhou-Maßstäben ist es unmöglich, ihr wahres Alter zu schätzen, und ebenso wenig könnte man erraten, welche seltsame Kraft ihr geholfen hat, dieses riesige Großschwert in der Hand zu halten.<br /><br />Mit seiner Länge von zwei Fuß und einem Zoll ist es sehr ungewöhnlich. Obwohl es in weißes Tuch eingewickelt ist, sieht es wie ein antikes Schwert aus. Die Kanten auf beiden Seiten der Klinge sind so dünn wie Zikadenflügel, als ob eine leichte Brise sie brechen könnte. Die Leute kamen, um das Soldatenmädchen anzustarren und hoben dabei die Augenbrauen. Aber das Mädchen schien besorgt zu sein und runzelte nur verärgert die Stirn, während sie murmelte:<br />„Wie seltsam! Mutter hat mir beigebracht, dieses Mantra zu singen, damit ich mich konzentrieren kann. Warum klappt es nicht?“<br /><br />Ohne auf ihre seltsamen Worte zu achten, hob ein Vidyadhara-Mann in der Nähe seine Hand und winkte das Mädchen heran: „Die Nächste, bitte!“ Das Mädchen erschrak und biss die Zähne fest zusammen – aber sie musste sich zusammenreißen und trat vor.<br /><br />„Gold kann man einschmelzen, aber einen Eid ...“, sagte das Mädchen ernst zu dem Vidyadhara-Mann.<br />„Gold kann man einschmelzen, aber einen Eid darf man nicht brechen.“ Der Vidyadhara-Mann sagte ausdruckslos: „Hier sind wir beim Zoll, was für ein Eid? Name, Herkunft, Grund der Reise – das ist alles, was ich brauche.“<br />Sie war verdutzt und hatte das Gefühl, dass sie ihre Luofu-Anekdote falsch erzählt hatte. Ratlos nahm sie ihren Quadratspiegel in die Hand und antwortete:<br />„Name: Sushang; persönlicher Besitz: ein Xuanyuan-Schwert; Herkunft: ...“<br />„Äh, wie buchstabiert man bitte ‚Yaoqing‘?“",
    "unlockRequirement": "Verfügbar auf Figurenstufe <nobr>20</nobr>"
   },
   {

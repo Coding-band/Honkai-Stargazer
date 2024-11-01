@@ -447,7 +447,7 @@
    "iconPath": "583fe45a6a5452b2bb9f24a2731dc333065a25b1779ffa8019d57fbf5471c3f7",
    "artPath": "9c7ead57c18f857fe361d7e391209593f192a960f9adcde90610fde5e9eb031b",
    "name": "Meridian-Aufguss: Ambrosia-Aqua",
-   "descHash": "Wenn die „Belebung“ endet und die LP des Verbündeten vollständig sind, wird für ihn zusätzlich <nobr>#1[i]</nobr> Pkt. Energie wiederhergestellt.",
+   "descHash": "Wenn die „Belebung“ endet und die LP des Verbündeten vollständig sind, wird bei ihm zusätzlich <nobr>#1[i]</nobr> Pkt. Energie wiederhergestellt.",
    "params": [
     8
    ]
@@ -1003,7 +1003,7 @@
   },
   {
    "tagHash": "Wiederherstellung",
-   "descHash": "Stellt LP aller Verbündeten sofort um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> von Bailus max. LP plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> wieder her.<br />Verbündete, die noch nicht belebt sind, werden von Bailu belebt. Bei Verbündeten mit Belebung hält die Belebungsdauer 1 weitere Runde lang an.<br />Die „Belebung“ hält bis zu <nobr>#3[i]</nobr> Rd. lang an. Dieser Effekt ist nicht stapelbar.",
+   "descHash": "Stellt LP aller Verbündeten sofort um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> von Bailus max. LP plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> wieder her.<br />Verbündete, die noch nicht belebt sind, werden von Bailu belebt. Bei Verbündeten mit Belebung hält die Belebungsdauer 1 weitere Runde lang an.<br />Die Belebung hält bis zu <nobr>#3[i]</nobr> Rd. lang an. Dieser Effekt ist nicht stapelbar.",
    "ultimateCost": 100,
    "break": "0",
    "energy": "5",
@@ -2346,6 +2346,36 @@
    "krUrl": "e4114a655c39b3942009d381f9b4fd584f06ef4e9a65407c914ca3b703ce45e0"
   },
   {
+   "id": 28,
+   "title": "Über Jiaoqiu",
+   "text": "Es gibt so viele Geheimnisse, die Doktor Jiaoqiu umgeben ... Wie schafft er es, so viel scharfes Essen zu essen, ohne auch nur ins Schwitzen zu kommen? Hey, vielleicht kneift er deshalb so die Augen zusammen ... Er isst zu viel scharfes Essen!",
+   "unlockRequirement": "",
+   "cnUrl": "0a6edad9ce1f289054ba8f3fe2dfb7081e1b46fc66b9ab155998cc0adf3d90ca",
+   "jpUrl": "d7a3a8b3f0e59a5d9c6a4a6ad2d56ee39099cfd8e29becbe1a40700ae2881b12",
+   "enUrl": "e472dd725d00fb59a80dca66ec68be819548aa8895befe1989b598220e9fb3a4",
+   "krUrl": "151ac57eb120b76990a4e0d97f8d19cc623f733dfb4a663ba57ba104e2da715c"
+  },
+  {
+   "id": 30,
+   "title": "Über Lingsha",
+   "text": "Leiterin Lingsha ist so nett zu mir, dass sie mich immer zu interessanten Aktionen mitnimmt. Aber ich habe gehört, dass Leute hinter ihrem Rücken sagen, dass sie „ihre Arbeit nicht erledigen kann“ ... Pah! Mit mir herauszugehen ist Teil ihrer Pflicht als Leiterin der Alchemiekommission!",
+   "unlockRequirement": "",
+   "cnUrl": "f413b795965146c36fcbc54b10fa490a1df04046441c7d2042d52e7f219aa29e",
+   "jpUrl": "e1e3b472a6a30efa2da94a8193ae4c9d8a3ef38089bf5ac2a489d3f9ed3c5475",
+   "enUrl": "430161374b9c26bda439d414031ad3bc2b74706d0e419501698e82fe63be93a1",
+   "krUrl": "e0d3bc8a9722df29f24b09ce2bc17dbaa0872ab74bb840b69efaec1d6693e075"
+  },
+  {
+   "id": 31,
+   "title": "Über Feixiao",
+   "text": "Ich weiß nicht, wie ich ihre Krankheit behandeln kann, also kann ich sie nur dazu bringen, leckeres Essen zu essen. Wer gut isst, hat gute Laune, und wer gute Laune hat, kann länger mit einer Krankheit umgehen, zumindest bis ein Weg zur Heilung gefunden wird.",
+   "unlockRequirement": "",
+   "cnUrl": "d15eba290df41abf1454e864bdb49c1ce97206ec8eaba4d9720d7eb9cac7c05c",
+   "jpUrl": "c36f964c17f95b370b5018f7aa0cc5194a1013ea111d049317f322cbd693b068",
+   "enUrl": "1498b1825750d0c64014c6abc32a5df704b4a4d7aa76402ae447ad912a81a2cf",
+   "krUrl": "bc6844d84980cac5cbb67cdde91ddb2a45179db30f45b1878580dcc5b732fac0"
+  },
+  {
    "id": 20,
    "title": "Eidolon aktiviert",
    "text": "Das Leben der Vidyadharas ist wie ein Traum.",
@@ -2426,16 +2456,6 @@
    "krUrl": "2c75fbce8049c1399d3ab7de6072ff689703c090d4f8e9e2ce14a9f7f6d7dc37"
   },
   {
-   "id": 28,
-   "title": "Über Jiaoqiu",
-   "text": "Es gibt so viele Geheimnisse, die Doktor Jiaoqiu umgeben ... Wie schafft er es, so viel scharfes Essen zu essen, ohne auch nur ins Schwitzen zu kommen? Hey, vielleicht kneift er deshalb so die Augen zusammen ... Er isst zu viel scharfes Essen!",
-   "unlockRequirement": "",
-   "cnUrl": "0a6edad9ce1f289054ba8f3fe2dfb7081e1b46fc66b9ab155998cc0adf3d90ca",
-   "jpUrl": "d7a3a8b3f0e59a5d9c6a4a6ad2d56ee39099cfd8e29becbe1a40700ae2881b12",
-   "enUrl": "e472dd725d00fb59a80dca66ec68be819548aa8895befe1989b598220e9fb3a4",
-   "krUrl": "151ac57eb120b76990a4e0d97f8d19cc623f733dfb4a663ba57ba104e2da715c"
-  },
-  {
    "id": 29,
    "title": "Teammitglied: Jiaoqiu",
    "text": "Ah ... Doktor Jiaoqiu! Sogar die Süßigkeiten, die du mitgebracht hast, brennen ein wenig!",
@@ -2446,34 +2466,14 @@
    "krUrl": "dcf4c9b3ee4e70b5e63fdc4663c13dc4fe102e655a676c5e2346a9d23696754b"
   },
   {
-   "id": 30,
-   "title": "Über Lingsha",
-   "text": "Leiterin Lingsha ist so nett zu mir, dass sie mich immer zu interessanten Aktionen mitnimmt. Aber ich habe gehört, dass Leute hinter ihrem Rücken sagen, dass sie „ihre Arbeit nicht erledigen kann“ ... Pah! Mit mir herauszugehen ist Teil ihrer Pflicht als Leiterin der Alchemiekommission!",
-   "unlockRequirement": "",
-   "cnUrl": "",
-   "jpUrl": "",
-   "enUrl": "",
-   "krUrl": ""
-  },
-  {
-   "id": 31,
-   "title": "Über Feixiao",
-   "text": "Ich weiß nicht, wie ich ihre Krankheit behandeln kann, also kann ich sie nur dazu bringen, leckeres Essen zu essen. Wer gut isst, hat gute Laune, und wer gute Laune hat, kann länger mit einer Krankheit umgehen, zumindest bis ein Weg zur Heilung gefunden wird.",
-   "unlockRequirement": "",
-   "cnUrl": "",
-   "jpUrl": "",
-   "enUrl": "",
-   "krUrl": ""
-  },
-  {
    "id": 32,
    "title": "Teammitglied: Feixiao",
    "text": "Angriff! Lasst niemanden stehen!",
    "unlockRequirement": "",
-   "cnUrl": "",
-   "jpUrl": "",
-   "enUrl": "",
-   "krUrl": ""
+   "cnUrl": "dd2bc703bde15c67db08e07a852668c5d979ab5063863a69e5ba458c93e7146f",
+   "jpUrl": "0e12e20fdd175f582add693b7f8fb3f7f6e27d67ad808a412443ef2010ec9432",
+   "enUrl": "8de98c87b0f09cf91d259299039ce01559b2e0ccd3c3a919d4d91c4649a3a749",
+   "krUrl": "184060a83495368a39325eec7a168bc4dcf1f4844b41a4a2e48e4e4d398f77af"
   },
   {
    "id": 51,
@@ -2538,7 +2538,7 @@
   {
    "id": 57,
    "title": "Fertigkeit 1",
-   "text": "Sag „ahhh!“",
+   "text": "Sag „aaah!“",
    "unlockRequirement": "",
    "cnUrl": "bd5ea08212660f28e18c4053decefc3ba0497ba7e5297877680b135fa10914af",
    "jpUrl": "3539bc0c964686154c43d582c640827702e1d70d844b77aed3d6d22afd6d1db2",
@@ -2592,7 +2592,7 @@
    "unlockRequirement": "",
    "cnUrl": "4d5334987e84f023bac11379bdcb5bd6033f6c0cdf9f55200e6a5e18b42fb4c4",
    "jpUrl": "89f53e14c9b24cb4983139220995e5bda7606a49ec7466fab3ef0806bd956b19",
-   "enUrl": "73995ddb1e6385b650e3c706b53476c234efa5f9beb0bbcdf95deef46408cc26",
+   "enUrl": "07aa9882ebfe743c37c3821b6545314822cca0b741a2cef746ba1c80a598fbd0",
    "krUrl": "a941509197b7e046ca5dc390cf2b01abb396575100f4cb6285c4aa155842d968"
   },
   {
@@ -2749,7 +2749,7 @@
   },
   {
    "title": "Geschichte (Teil 4)",
-   "text": "„Seid gegrüßt, verehrte Präzeptoren:<br /><br />█ Tag des █ Monats, ████, Sternenkalender, Routineuntersuchung von Ehrenwerter Bailu, genaue Notizen wie folgt:<br /><br />Immer noch keine körperliche Veränderung bei der Hohen Ältesten, sie ist noch nicht zur Reife herangewachsen. Das ist nicht ungewöhnlich, eine langsame Entwicklung tritt bei den Vidyadhara häufig auf. Ich mache mir mehr Sorgen darüber, dass sie keine Träume hat, als über ihr langsames Körperwachstum.<br /><br />Alle früheren Hohen Ältesten durchleben die Ereignisse im Leben ihres Drachenvorfahren in Träumen, nachdem sie die „Perle des Abgrunds“ und das „wunderbare Mittel der Wiedergeburt“ empfangen haben. Das Büro der tiefen Quellen kümmert sich um die Verschriftlichung sowie um das Wiedererzählen und das Kommentieren dieser Träume, und die Unterlagen dort haben enorm viele Bände. Obwohl solche Träume normalerweise bruchstückhaft und schwer zu verstehen oder zu interpretieren sind, so sind sie doch das einzige Mittel, das wir haben, um der Beständigkeit näherzukommen. Dennoch hat Ehrenwerte Bailu keine solchen Erfahrungen gemacht. Es scheint offensichtlich, dass entweder ihr Drachenherz auf irgendeine Weise beschädigt ist, oder das „wunderbare Mittel der Wiedergeburt“ nicht vollständig durchgeführt wurde.<br /><br />Da die Hohe Älteste bereits ihre Fähigkeiten bewiesen hat, Blitze zu beschwören und das Wasser zu kontrollieren, habe ich außerdem einen unserer fähigsten Handwerker angewiesen, den Drachenhorn-Pranger herzustellen, um sie im Zaum zu halten. Ihre Kräfte müssen kontrollierbar bleiben, damit sich das Desaster von Imbibitor Lunaes Aufruhr nicht wiederholt.<br /><br />Übrigens haben wir vor ein paar Monaten ein Schreiben von dem Herrn des himmlischen Windes aus Yaoqing erhalten, in dem er sich über den derzeitigen Zustand von der Ehrenwerten Bailu erkundigt. Auf dieses habe ich gemäß eurer Anweisungen geantwortet, verehrte Älteste. Der Kern meiner Antwort war, dass die Ehrenwerte Bailu noch jung sei und die Unterstützung ihrer Präzeptoren nötig habe. Der Titel von Imbibitor Lunae werde ihr erst nach der Zeremonie ihres Mündigwerdens verliehen.<br /><br /><align=\"right\">Respektvolle Grüße, Yunyou, Dienstperson der Hohen Ältesten.</align>",
+   "text": "„Seid gegrüßt, verehrte Präzeptoren:<br /><br />█ Tag des █ Monats, ████, Sternenkalender, Routineuntersuchung von Ehrenwerter Bailu, genaue Notizen wie folgt:<br /><br />Immer noch keine körperliche Veränderung bei der Hohen Ältesten, sie ist noch nicht zur Reife herangewachsen. Das ist nicht ungewöhnlich, eine langsame Entwicklung tritt bei den Vidyadharas häufig auf. Ich mache mir mehr Sorgen darüber, dass sie keine Träume hat, als über ihr langsames Körperwachstum.<br /><br />Alle früheren Hohen Ältesten durchleben die Ereignisse im Leben ihres Drachenvorfahren in Träumen, nachdem sie die „Perle des Abgrunds“ und das „wunderbare Mittel der Wiedergeburt“ empfangen haben. Das Büro der tiefen Quellen kümmert sich um die Verschriftlichung sowie um das Wiedererzählen und das Kommentieren dieser Träume, und die Unterlagen dort haben enorm viele Bände. Obwohl solche Träume normalerweise bruchstückhaft und schwer zu verstehen oder zu interpretieren sind, so sind sie doch das einzige Mittel, das wir haben, um der Beständigkeit näherzukommen. Dennoch hat Ehrenwerte Bailu keine solchen Erfahrungen gemacht. Es scheint offensichtlich, dass entweder ihr Drachenherz auf irgendeine Weise beschädigt ist, oder das „wunderbare Mittel der Wiedergeburt“ nicht vollständig durchgeführt wurde.<br /><br />Da die Hohe Älteste bereits ihre Fähigkeiten bewiesen hat, Blitze zu beschwören und das Wasser zu kontrollieren, habe ich außerdem einen unserer fähigsten Handwerker angewiesen, den Drachenhorn-Pranger herzustellen, um sie im Zaum zu halten. Ihre Kräfte müssen kontrollierbar bleiben, damit sich das Desaster von Imbibitor Lunaes Aufruhr nicht wiederholt.<br /><br />Übrigens haben wir vor ein paar Monaten ein Schreiben von dem Herrn des himmlischen Windes aus Yaoqing erhalten, in dem er sich über den derzeitigen Zustand von der Ehrenwerten Bailu erkundigt. Auf dieses habe ich gemäß eurer Anweisungen geantwortet, verehrte Älteste. Der Kern meiner Antwort war, dass die Ehrenwerte Bailu noch jung sei und die Unterstützung ihrer Präzeptoren nötig habe. Der Titel von Imbibitor Lunae werde ihr erst nach der Zeremonie ihres Mündigwerdens verliehen.<br /><br /><align=\"right\">Respektvolle Grüße, Yunyou, Dienstperson der Hohen Ältesten.</align>",
    "unlockRequirement": "Verfügbar auf Figurenstufe <nobr>80</nobr>"
   }
  ],

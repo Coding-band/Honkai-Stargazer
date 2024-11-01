@@ -447,7 +447,7 @@
    "iconPath": "164b3a07f1db4d0acb4150e7c8412f0b09496f2fcac43ead33b986d9e3f4a9b1",
    "artPath": "6b3537636ed7223947f2fb2d353a86e8c926706f8497f1420827ce086b0e571f",
    "name": "Prisoner's Dilemma",
-   "descHash": "Increases CRIT DMG by <nobr>#1[i]%</nobr> for allies with Fortified Wager. After using the Ultimate, provides all allies with a Fortified Wager shield, whose Shield effect is equal to <nobr>#2[i]%</nobr> of the one provided by the Skill, lasting for <nobr>#3[i]</nobr> turn(s).",
+   "descHash": "Increases CRIT DMG by <nobr>#1[i]%</nobr> for ally targets with Fortified Wager. After using the Ultimate, provides all allies with a Fortified Wager shield, whose Shield Effect is equal to <nobr>#2[i]%</nobr> of the one provided by the Skill, lasting for <nobr>#3[i]</nobr> turn(s).",
    "params": [
     0.2,
     1,
@@ -499,7 +499,7 @@
    "iconPath": "52456576fd33d9689f45e529f8d49262308d6fc0f074711e8096b91740d94ee5",
    "artPath": "39270061bd5664e01b4613971fde63ed26bc22130f74a25a0f1cf35e2f436821",
    "name": "Stag Hunt Game",
-   "descHash": "For every ally that holds a Shield, the DMG dealt by Aventurine increases by <nobr>#1[i]%</nobr>, up to a maximum of <nobr>#2[i]%</nobr>.",
+   "descHash": "For every teammate that holds a Shield, the DMG dealt by Aventurine increases by <nobr>#1[i]%</nobr>, up to a maximum of <nobr>#2[i]%</nobr>.",
    "params": [
     0.5,
     1.5
@@ -687,7 +687,7 @@
   },
   {
    "tagHash": "Defense",
-   "descHash": "Provides all allies with a Fortified Wager shield that can block DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> of Aventurine's DEF plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span>, lasting for <nobr>#3[i]</nobr> turn(s). When Fortified Wager is gained repeatedly, the Shield effect can stack, up to <nobr>#4[i]%</nobr> of the current Shield effect provided by the Skill.",
+   "descHash": "Provides all allies with a Fortified Wager shield that can block DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> of Aventurine's DEF plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span>, lasting for <nobr>#3[i]</nobr> turn(s). When Fortified Wager is gained repeatedly, the Shield Effect can stack, up to <nobr>#4[i]%</nobr> of the current Shield Effect provided by the Skill.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -1818,7 +1818,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "After an ally with Fortified Wager launches a follow-up attack, Aventurine accumulates 1 Blind Bet point. This effect can trigger up to <nobr>#3[i]</nobr> time(s). Its trigger count resets at the start of Aventurine's turn. After Aventurine launches his Talent's follow-up attack, provides all allies with a Fortified Wager that can block DMG equal to <nobr>#1[i]%</nobr> of Aventurine's DEF plus <nobr>#2[i]</nobr>, and additionally grants a Fortified Wager that can block DMG equal to <nobr>#4[i]%</nobr> of Aventurine's DEF plus <nobr>#5[i]</nobr> to the ally with the lowest Shield effect, lasting for 3 turns.",
+    "descHash": "After a teammate with Fortified Wager launches Follow-up ATK, Aventurine accumulates 1 Blind Bet point. This effect can trigger up to <nobr>#3[i]</nobr> time(s). Its trigger count resets at the start of Aventurine's turn. After Aventurine launches his Talent's Follow-up ATK, provides all ally targets with a Fortified Wager that can block DMG equal to <nobr>#1[i]%</nobr> of Aventurine's DEF plus <nobr>#2[i]</nobr>, and additionally grants a Fortified Wager that can block DMG equal to <nobr>#4[i]%</nobr> of Aventurine's DEF plus <nobr>#5[i]</nobr> to the ally with the lowest Shield Effect, lasting for 3 turns.",
     "ultimateCost": 0,
     "id": 126432,
     "name": "Bingo!",
@@ -2047,7 +2047,7 @@
       }
      ],
      "embedBonusSkill": {
-      "descHash": "When battle starts, grants all allies a Fortified Wager shield, whose Shield effect is equal to <nobr>#2[i]%</nobr> of the one provided by the Skill, lasting for <nobr>#1[i]</nobr> turn(s).",
+      "descHash": "When battle starts, grants all allies a Fortified Wager shield, whose Shield Effect is equal to <nobr>#2[i]%</nobr> of the one provided by the Skill, lasting for <nobr>#1[i]</nobr> turn(s).",
       "ultimateCost": 0,
       "id": 126433,
       "name": "Hot Hand",
@@ -2354,6 +2354,16 @@
    "krUrl": "d0dd9f76f66bf437975b933d40005f389541e60c6911f5f7c657d48f8d40bdf5"
   },
   {
+   "id": 29,
+   "title": "About Jade",
+   "text": "Be careful, our lady's kindness always comes with a price. I've received it many times, so I'm already used to it.",
+   "unlockRequirement": "",
+   "cnUrl": "45b86b175a96bb6f11a2e3a6d7bcc83fe4d52a0c1c4ab6daf0dd4af84c391819",
+   "jpUrl": "6566fb382e24f02bc90d5a2133bd9647db484378d865d59640d73fdc005f3799",
+   "enUrl": "d5e1308bad367fb812c598a2e806b495365ed362f1e470a46a0f13ff60c19689",
+   "krUrl": "e69f6f4827824720d59d99ecca7093daa605f4185356bebaa9e2dd1e62c02fc2"
+  },
+  {
    "id": 18,
    "title": "Eidolon Activation",
    "text": "Give me a single die, and watch me turn the tables.",
@@ -2462,16 +2472,6 @@
    "jpUrl": "c431233fb8693a83250fbb56b96ac25dbdeea932cbc12f22f0b2210c5a4950a0",
    "enUrl": "14f7cd77a92dbec6c0206c6e720c370277a750fb1a6c9ff9369a0f6040ad2ffe",
    "krUrl": "672b3ee68121d52dfba71a740205da2c76cf0293f34f0f7dae1c14f14e157064"
-  },
-  {
-   "id": 29,
-   "title": "About Jade",
-   "text": "Be careful, our lady's kindness always comes with a price. I've received it many times, so I'm already used to it.",
-   "unlockRequirement": "",
-   "cnUrl": "45b86b175a96bb6f11a2e3a6d7bcc83fe4d52a0c1c4ab6daf0dd4af84c391819",
-   "jpUrl": "6566fb382e24f02bc90d5a2133bd9647db484378d865d59640d73fdc005f3799",
-   "enUrl": "d5e1308bad367fb812c598a2e806b495365ed362f1e470a46a0f13ff60c19689",
-   "krUrl": "e69f6f4827824720d59d99ecca7093daa605f4185356bebaa9e2dd1e62c02fc2"
   },
   {
    "id": 51,

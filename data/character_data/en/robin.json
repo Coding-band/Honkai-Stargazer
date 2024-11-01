@@ -494,7 +494,7 @@
    "iconPath": "c50caf63242464f34618867f0c05684190e7257b90ebebd4799bf2c277a46a0b",
    "artPath": "43535475824148e1ebd8fa2b79dca60ee2abd30daab56d385409ab927939ee04",
    "name": "Moonless Midnight",
-   "descHash": "While the Concerto state is active, the CRIT DMG for the Additional Physical DMG caused by the Ultimate increases by <nobr>#2[i]%</nobr>. The effect of Moonless Midnight can trigger up to <nobr>#1[i]</nobr> time(s). And the trigger count resets each time the Ultimate is used.",
+   "descHash": "While the Concerto state is active, the CRIT DMG for the Physical Additional DMG caused by the Ultimate increases by <nobr>#2[i]%</nobr>. The effect of Moonless Midnight can trigger up to <nobr>#1[i]</nobr> time(s). And the trigger count resets each time the Ultimate is used.",
    "params": [
     8,
     4.5
@@ -972,7 +972,7 @@
   },
   {
    "tagHash": "Support",
-   "descHash": "Robin enters the Concerto state and makes all other allies immediately take action.<br />While in the Concerto state, increases all allies' ATK by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> of Robin's ATK plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]</nobr></span>. Moreover, after every attack by allies, Robin deals <u>Additional <span style=\"color:#FFFFFF;\">Physical </span>DMG</u> equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> of her ATK for 1 time, with a fixed CRIT Rate for this damage set at <nobr>#5[i]%</nobr> and fixed CRIT DMG set at <nobr>#6[i]%</nobr>.<br />While in the Concerto state, Robin is immune to <u>Crowd Control debuffs</u> and cannot enter her turn or take action until the Concerto state ends.<br />A Concerto countdown appears on the Action Order bar. When the countdown's turn begins, Robin exits the Concerto state and immediately takes action. The countdown has its own fixed SPD of <nobr>#2[i]</nobr>.",
+   "descHash": "Robin enters the Concerto state and makes all teammates (i.e., excluding this unit) immediately take action.<br />While in the Concerto state, increases all allies' ATK by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> of Robin's ATK plus <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]</nobr></span>. Moreover, after every attack by ally targets, Robin deals <span style=\"color:#FFFFFF;\">Physical </span><u>Additional DMG</u> equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> of her ATK for 1 time, with a fixed CRIT Rate for this damage set at <nobr>#5[i]%</nobr> and fixed CRIT DMG set at <nobr>#6[i]%</nobr>.<br />While in the Concerto state, Robin is immune to <u>Crowd Control debuffs</u> and cannot enter her turn or take action until the Concerto state ends.<br />A Concerto countdown appears on the Action Order bar. When the countdown's turn begins, Robin exits the Concerto state and immediately takes action. The countdown has its own fixed SPD of <nobr>#2[i]</nobr>.",
    "ultimateCost": 160,
    "break": "0",
    "energy": "5",
@@ -2275,6 +2275,26 @@
    "jpUrl": "73ff7d1583bfa8f4a96993180be38819e9d78199718a80790326e793ddbd1fd2",
    "enUrl": "14cd9197df171bd3321effd437f724c448a27fbd1fff7aecf4bd8caf67d67ac2",
    "krUrl": "4f56f0e73dd63d0ace34346ba731ea66c5fbb88cc7675f7b2fc50626ad4ecc6f"
+  },
+  {
+   "id": 23,
+   "title": "About Rappa",
+   "text": "\"When I was a child, my speech, mindset, and soul reflected immaturity and innocence. When I became an adult, I put away those childish aspects.\" — Miss Rappa always views the world through such a pure lens, untouched and uncorrupted.",
+   "unlockRequirement": "",
+   "cnUrl": "7c50c727282b4277f8b456cf175411fe014c934d68d29a2811d7127f9117810b",
+   "jpUrl": "b4834a3f4dc1dd0d128c3b4d606b22aab1e03399aa217a725563f71a908ccfbb",
+   "enUrl": "22006d4d890c578d57f3286df2989cd888030f2624032fbd228ebe5f61d334a9",
+   "krUrl": "5c155cc3c5160b60df6a692abe5810128c171e67ced166b706092923be49af7d"
+  },
+  {
+   "id": 24,
+   "title": "About Mr. Reca",
+   "text": "Mr. Reca is a film fanatic. I find some of his actions hard to understand, but I fully appreciate his dedication to the art of cinema. If we ever have the chance to collaborate again, I think we should focus on peaceful and heartwarming themes.",
+   "unlockRequirement": "",
+   "cnUrl": "90bef57bd6fe2ccc6de8f7f687a7959c7613c4600af0608bc3da48c1d6ce45dc",
+   "jpUrl": "1914f3a546c4f70643ac3817be8092c52ecd48936a0e60598235cb665b806bc8",
+   "enUrl": "5ecce863ca3d855597c13199b8bf949dbc67b2ce6831b8d18264e2aa9e779525",
+   "krUrl": "d8548a82c77e7e551531ec1638aa12aaf1b595d08adac319d405524a41d42a93"
   },
   {
    "id": 16,

@@ -1,0 +1,2451 @@
+{
+ "name": "O Ordálio Revivido de Sacerdos",
+ "iconPath": "5bb36f37684618f1914707aef9270b6d07a148ec5f685abbfc775d60492e5f8f",
+ "artPath": "5bd98b6080e43d5d7efa2924e6bada8669889ce8ff71e5eeb6ed9ea40199603a",
+ "rarity": 5,
+ "relicType": 0,
+ "embeddedBaseTypes": {
+  "0": {
+   "id": 0,
+   "iconPath": "6d40bc2fc8f47bd0508d44c359f0091c1c74bbf50e758eafac87e6944f94d261",
+   "color": "#FFFFFF",
+   "name": "",
+   "rarity": 0
+  },
+  "1": {
+   "id": 1,
+   "iconPath": "4ecdc8ee012ef343aff72aa68c82787777a1ea73152e6caf1bb99b345a2372cc",
+   "color": "#FFFFFF",
+   "name": "Cabeça",
+   "rarity": 0
+  },
+  "2": {
+   "id": 2,
+   "iconPath": "17079e7e6bfc3452cc8cb81d5a9ac6fc0b5e0bb4c3c76cadf39cdb67c3c693c5",
+   "color": "#FFFFFF",
+   "name": "Mãos",
+   "rarity": 0
+  },
+  "3": {
+   "id": 3,
+   "iconPath": "a6c9ef56cae6d9c4347924905d5fdf2305a61d6435c9aeaf532380b3ba7e1338",
+   "color": "#FFFFFF",
+   "name": "Corpo",
+   "rarity": 0
+  },
+  "4": {
+   "id": 4,
+   "iconPath": "de02abec36b454ef7602c2e918d84eba4774feccd1f9c8c8c7a26091e159f96f",
+   "color": "#FFFFFF",
+   "name": "Pés",
+   "rarity": 0
+  },
+  "5": {
+   "id": 5,
+   "iconPath": "dc49142bdd9876527085b02af915e6079a28a204412f8bd755b42f4b646dbf53",
+   "color": "#FFFFFF",
+   "name": "Esfera Plana",
+   "rarity": 0
+  },
+  "6": {
+   "id": 6,
+   "iconPath": "e5fc490c45f56553c2310bf4420d72150c67abffa504b72571b7e0a93a7adf8e",
+   "color": "#FFFFFF",
+   "name": "Corda de Ligação",
+   "rarity": 0
+  }
+ },
+ "skills": [
+  {
+   "useNum": 2,
+   "desc": "Aumenta a VEL em <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.06
+   ]
+  },
+  {
+   "useNum": 4,
+   "desc": "Ao usar uma Perícia ou Perícia Suprema em um aliado-alvo, aumenta o Dano CRIT do alvo em <nobr>#1[i]%</nobr>, durando por <nobr>#2[i]</nobr> rodada(s). Esse efeito pode acumular até <nobr>#3[i]</nobr> vez(es).",
+   "params": [
+    0.18,
+    2,
+    2
+   ]
+  }
+ ],
+ "pieces": {
+  "1": {
+   "name": "Brincos Melódicos de Sacerdos",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "ba7d99d3706d5b7be603e49e1585177bf5ab8afb7a671e78e6db268a5d139eb2",
+   "baseTypeText": "Cabeça",
+   "loreTitle": "Brincos Melódicos de Sacerdos",
+   "miniLore": "Ele costuma se sentar na cabine de confissões ouvindo as histórias. Os brincos servem como um lembrete constante de que até mesmo os sussurros mais baixos têm seu peso.",
+   "lore": "\"Às ordens. Eu pequei. Aleguei falsamente que várias linhagens foram divididas e ofertei essa informação de boatos como pagamento...\"<br /><br />Através da divisória, o líder da família nota o olhar evasivo do jornalista enquanto o penitente aguarda nervoso sua resposta, um ritual de confissão que ele já havia realizado inúmeras vezes quando suas consolações tocavam como sinos para permitir que os fieis se arrependessem de seus pecados. Entretanto, dessa vez ele inconscientemente vira sua cabeça, tentando dizer alguma coisa, mas parando, permitindo que seus brincos de metal emitam um ruído perto de seus ouvidos. <br /><br />\"Estou ciente de que essa alegação é completamente sem fundamentos. Graças à graça da Grandeza, todos os membros da Família estão unidos como uma. Essa é o desejo coletivo de todos os membros da linhagem, e seu motivo para abraçar a Grandeza com devoção.<br /><br />O penitente confessa seus pecados, decide corrigir seus erros e procura absolvição de seu mal através de melodias harmônicas. O chefe da família fecha seus olhos gentilmente e murmura a bênção sagrada.<br /><br />\"Muito bem. Mostre sua sinceridade para os outros membros da Família e acabe com os boatos. Dessa forma, você será reintegrado à Harmonia. Agora, vá em paz.\"<br /><br />Qual é o pecado de falar a verdade? Os ditames são claros, mas são um fardo pesado. Ele suspira e balança a cabeça.<br /><br />\"Próximo. Por favor, aproxime-se.\"",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 45.1584,
+       "levelAdd": 15.80544,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a Efeito",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efeito de Quebra",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 67.7376,
+       "levelAdd": 23.70816,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a Efeito",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efeito de Quebra",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 90.3168,
+       "levelAdd": 31.61088,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a Efeito",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efeito de Quebra",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 112.896,
+       "levelAdd": 39.5136,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a Efeito",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efeito de Quebra",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "2": {
+   "name": "Luvas de Saudações de Sacerdos",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "3f8b0675c52e29c0639eeca7559a40b3858c94a0db851ff3ff2b7c5333226274",
+   "baseTypeText": "Mãos",
+   "loreTitle": "Luvas de Saudações de Sacerdos",
+   "miniLore": "Com frequência, ele fica na mansão para dar as boas-vindas aos visitantes, incontáveis vezes fazendo o mesmo gesto de saudação. As luvas imaculadas o lembram de observâncias de humildade e cortesia.",
+   "lore": "\"Esses visitantes alegaram terem questões urgentes para relatar, estimado líder, mas a identidade de alguns deles continua questionável, e eles usaram meios escusos para entrar no Mundonírico...\"<br /><br />Os convidados indesejados invadindo o Mundonírico estão enfileirados. Se tudo correr conforme o plano, os malfeitores que causaram dano enfrentarão o banimento, e os impostores com identidades fraudulentas serão capturados. Ele não diz nada, mas todos os arranjos já foram feitos. Os inocentes testemunham sua ira, e expectativas e incerteza surgem em seus olhos. Então, ele sorri, estendendo sua mão em um gesto convidativo para as pessoas que restam à frente dele. É um símbolo de reconhecimento e uma demonstração de autoridade.<br /><br />\"Vocês são todos estimados convidados da Família Carvalho, e, portanto, vocês devem ser recebidos com cortesia. Talvez vocês estejam se perguntando como vocês são julgados tão justamente. Permitam-me conceder uma breve explicação. É porque o 'caminho' no qual vocês andam se encontrou com o meu.\"<br /><br />Os convidados, os artistas e os desempregados baixaram a guarda assim que reconheceram a verdade por trás do convite dele.<br /><br />\"Deixe que os transgressores enfrentem a punição merecida, e deixe que os convidados recebam a cortesia devida. Tal deve ser a lei da harmonia.\"<br /><br />A severidade e a generosidade combinadas do chefe da família são o suficiente para que ele ganhe a confiança dos convidados. Analisando a assembleia, ele faz uma lenta reverência...<br /><br />\"Boas-vindas à Família Carvalho.\"",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 22.5792,
+       "levelAdd": 7.90272,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a Efeito",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efeito de Quebra",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 33.8688,
+       "levelAdd": 11.85408,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a Efeito",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efeito de Quebra",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 45.1584,
+       "levelAdd": 15.80544,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a Efeito",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efeito de Quebra",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 56.448,
+       "levelAdd": 19.7568,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a Efeito",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efeito de Quebra",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "3": {
+   "name": "Traje Cerimonial de Sacerdos",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "ef45b39a7a44e1042569923688b736c2d11669aabbd1a671362690d98b70a36a",
+   "baseTypeText": "Corpo",
+   "loreTitle": "Traje Cerimonial de Sacerdos",
+   "miniLore": "Com frequência ele se vê em frente ao espelho, garantindo que suas vestes estejam impecáveis e sua feição, perfeita. Antes de sair de casa, ele garantirá que tudo está meticulosamente arrumado, e nenhum desvio ocorrerá.",
+   "lore": "\"Pássaros nascem sem amarras, então o que prende meu destino♬?\"<br /><br />No dia do ensaio, o jovem chefe da família se escondeu entre os assentos da audiência, evitando distrair a cantora no palco e mantendo a distância adequada, assim como ele desejava. Ele se senta reto com seus trajes cerimoniais como o único ouvinte daquele momento. Entre as melodias familiares, os pensamentos dele vagam para a sua infância, lembrando-o de ocasiões onde ela cantava no palco e ele era seu único público.<br /><br />\"Já faz tanto tempo desde que você cantou com alegria... Eu construí um palco para você, mas é... um pouco rudimentar.\"<br /><br />Durante o concerto para os dois, ele prometeu realizar o sonho dela de cantar em um palco brilhante e grandioso algum dia.<br /><br />\"Deixe meu coração abrir as asas corajosamente. Voando para além da noite. Para traçar o brilhante luar...♬\"<br /><br />Ele sai do transe, e então enfrenta a raiz de sua relutância em se aproximar do palco. Seu traje cerimonial não serve apenas para aproveitar a apresentação, mas também para ter a oportunidade de se retirar a qualquer momento que quisesse.<br /><br />\"Parabéns, irmã. Nós conquistamos o que queríamos\", ele disse suavemente.",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.012096001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.007258,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Bônus de Cura Realizada",
+       "propertyIconPath": "5c74afec377cfca6be47185ba68f61a2514e2a39d5c251aabec5ac5223023436",
+       "isPercent": true,
+       "baseValue": 0.022118,
+       "levelAdd": 0.0077410005,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a Efeito",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efeito de Quebra",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.010886001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.062208,
+       "levelAdd": 0.021773001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Bônus de Cura Realizada",
+       "propertyIconPath": "5c74afec377cfca6be47185ba68f61a2514e2a39d5c251aabec5ac5223023436",
+       "isPercent": true,
+       "baseValue": 0.033178,
+       "levelAdd": 0.011612,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a Efeito",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efeito de Quebra",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.082944,
+       "levelAdd": 0.029029999,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Bônus de Cura Realizada",
+       "propertyIconPath": "5c74afec377cfca6be47185ba68f61a2514e2a39d5c251aabec5ac5223023436",
+       "isPercent": true,
+       "baseValue": 0.044237,
+       "levelAdd": 0.015483,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a Efeito",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efeito de Quebra",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.0864,
+       "levelAdd": 0.030240001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.10368,
+       "levelAdd": 0.036288,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Bônus de Cura Realizada",
+       "propertyIconPath": "5c74afec377cfca6be47185ba68f61a2514e2a39d5c251aabec5ac5223023436",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a Efeito",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efeito de Quebra",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "4": {
+   "name": "Botas Árduas de Sacerdos",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "de5b0c24c691a43f92700a9b78894669a510040f279c38489cac13d1d31a423d",
+   "baseTypeText": "Pés",
+   "loreTitle": "Botas Árduas de Sacerdos",
+   "miniLore": "Com frequência, ele escolhia botas que envolviam confortavelmente seus pés antes de embarcar em jornadas. Apesar de inúmeras quedas, ele se levantou toda vez.",
+   "lore": "\"Vá agora. Você é livre. Ó, escolhido, que ousou exceder os limites dele. Corte suas asas, desça ao reino mortal e caminhe por suas terras. Veja como este mundo é de fato.\"<br /><br />Desde então, as palavras do executivo da CPI ecoam em sua mente com frequência. Ele atravessa ruas agitadas e orlas tranquilas, sempre em movimento, mas fixo no lugar... Ele nunca duvida que ele possui a determinação para se manter inabalável ou que ele tem a capacidade de executar o plano com devoção, mas antes de se levantar novamente, ele pretendia parar e saborear o toque bruto dos ideais se espatifando no chão...<br /><br />\"As rochas fragmentadas, impregnadas em sangue de feras e suor humano, sempre frias, duras e inflexíveis...\"<br /><br />Como chefe da Família Carvalho, ele havia guiado inúmeras almas perdidas para o caminho certo. Ainda assim, quando o assunto é si mesmo, aquelas palavras tranquilizadoras gentis parecem perder o charme. Ele não precisa de repreensão, orientação ou simpatia.<br /><br />\"Apenas da lama surgem aqueles que se arrastam e labutam. Devo seguir em frente, aprendendo mais com meus erros do que meus triunfos.\"<br /><br />Antes de realmente embarcar em sua nova jornada, ele tem tempo o suficiente para desacelerar, refletir e reorganizar seus pensamentos, e então continuar a vagar no mesmo lugar.<br /><br />\"Caminhar não tem uma filosofia intrincada. Se um caminho se mostrar intransponível, simplesmente mude para outro.\"",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.012096001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.6128,
+       "levelAdd": 1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a Efeito",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efeito de Quebra",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 2.4192,
+       "levelAdd": 1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a Efeito",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efeito de Quebra",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 3.2256,
+       "levelAdd": 1.1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a Efeito",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efeito de Quebra",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.0864,
+       "levelAdd": 0.030240001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 4.032,
+       "levelAdd": 1.4,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Chance de CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Dano CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Taxa de Acerto de Efeito",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a Efeito",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efeito de Quebra",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  }
+ },
+ "pageId": "121"
+}

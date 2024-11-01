@@ -1,0 +1,2451 @@
+{
+ "name": "Sacerdote del calvario revivido",
+ "iconPath": "5bb36f37684618f1914707aef9270b6d07a148ec5f685abbfc775d60492e5f8f",
+ "artPath": "5bd98b6080e43d5d7efa2924e6bada8669889ce8ff71e5eeb6ed9ea40199603a",
+ "rarity": 5,
+ "relicType": 0,
+ "embeddedBaseTypes": {
+  "0": {
+   "id": 0,
+   "iconPath": "6d40bc2fc8f47bd0508d44c359f0091c1c74bbf50e758eafac87e6944f94d261",
+   "color": "#FFFFFF",
+   "name": "",
+   "rarity": 0
+  },
+  "1": {
+   "id": 1,
+   "iconPath": "4ecdc8ee012ef343aff72aa68c82787777a1ea73152e6caf1bb99b345a2372cc",
+   "color": "#FFFFFF",
+   "name": "Cabeza",
+   "rarity": 0
+  },
+  "2": {
+   "id": 2,
+   "iconPath": "17079e7e6bfc3452cc8cb81d5a9ac6fc0b5e0bb4c3c76cadf39cdb67c3c693c5",
+   "color": "#FFFFFF",
+   "name": "Manos",
+   "rarity": 0
+  },
+  "3": {
+   "id": 3,
+   "iconPath": "a6c9ef56cae6d9c4347924905d5fdf2305a61d6435c9aeaf532380b3ba7e1338",
+   "color": "#FFFFFF",
+   "name": "Torso",
+   "rarity": 0
+  },
+  "4": {
+   "id": 4,
+   "iconPath": "de02abec36b454ef7602c2e918d84eba4774feccd1f9c8c8c7a26091e159f96f",
+   "color": "#FFFFFF",
+   "name": "Piernas",
+   "rarity": 0
+  },
+  "5": {
+   "id": 5,
+   "iconPath": "dc49142bdd9876527085b02af915e6079a28a204412f8bd755b42f4b646dbf53",
+   "color": "#FFFFFF",
+   "name": "Esfera de plano",
+   "rarity": 0
+  },
+  "6": {
+   "id": 6,
+   "iconPath": "e5fc490c45f56553c2310bf4420d72150c67abffa504b72571b7e0a93a7adf8e",
+   "color": "#FFFFFF",
+   "name": "Cuerda de unión",
+   "rarity": 0
+  }
+ },
+ "skills": [
+  {
+   "useNum": 2,
+   "desc": "VEL +<nobr>#1[i]%</nobr>.",
+   "params": [
+    0.06
+   ]
+  },
+  {
+   "useNum": 4,
+   "desc": "Al lanzar la habilidad básica o la habilidad definitiva a un aliado, el Daño CRIT del objetivo de la habilidad aumenta en un <nobr>#1[i]%</nobr> durante <nobr>#2[i]</nobr> turnos. Este efecto se puede acumular hasta <nobr>#3[i]</nobr> veces.",
+   "params": [
+    0.18,
+    2,
+    2
+   ]
+  }
+ ],
+ "pieces": {
+  "1": {
+   "name": "Pendientes melódicos del sacerdote",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "ba7d99d3706d5b7be603e49e1585177bf5ab8afb7a671e78e6db268a5d139eb2",
+   "baseTypeText": "Cabeza",
+   "loreTitle": "Pendientes melódicos del sacerdote",
+   "miniLore": "A menudo se sienta en el confesionario y escucha atentamente. El peso de sus pendientes le recuerda constantemente que hasta los susurros más débiles tienen un significado.",
+   "lore": "\"Como ordene. Cometí pecados. Afirmé falsamente que había diferencias entre los linajes e intercambié esta información errónea por un pago...\".<br /><br />A través de la pared divisoria, el jefe de la familia capta la mirada evasiva del periodista mientras espera nervioso la respuesta... Un ritual de confesión que había realizado innumerables veces cuando otorgaba la absolución a aquellos penitentes para que se arrepintieran de sus pecados. Inconscientemente, gira la cabeza mientras intenta decir algo, pero se detiene. Sus pendientes de metal emiten un sonido nítido junto a sus orejas.<br /><br />\"Soy plenamente consciente de que esta afirmación carece de todo fundamento. La verdad es que, por la gracia de la Grandiosa, todas las familias se mantienen unidas como una sola. Esta unidad refleja el deseo colectivo de todos los miembros del linaje que aceptaron devotamente a la Grandiosa\".<br /><br />El penitente confiesa sus pecados, se propone enmendar sus errores y les pide absolución a las melodías armónicas. El jefe de la familia cierra los ojos suavemente y pronuncia una bendición sagrada.<br /><br />\"Muy bien. Muéstrales tu sinceridad a los demás miembros de La Familia y disipa esos rumores. De esta manera, volverás a ser uno con la Armonía. Ahora, por favor, vete en paz\".<br /><br />¿Qué pecado hay en decir la verdad? Sus preceptos eran claros como el agua, pero pesados como un yugo. Suspira y sacude la cabeza.<br /><br />\"... Que se acerque el siguiente\".",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 45.1584,
+       "levelAdd": 15.80544,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a efecto",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efecto de Ruptura",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 67.7376,
+       "levelAdd": 23.70816,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a efecto",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efecto de Ruptura",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 90.3168,
+       "levelAdd": 31.61088,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a efecto",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efecto de Ruptura",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 112.896,
+       "levelAdd": 39.5136,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a efecto",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efecto de Ruptura",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "2": {
+   "name": "Guantes acogedores del sacerdote",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "3f8b0675c52e29c0639eeca7559a40b3858c94a0db851ff3ff2b7c5333226274",
+   "baseTypeText": "Manos",
+   "loreTitle": "Guantes acogedores del sacerdote",
+   "miniLore": "A menudo se para en la mansión para saludar a los visitantes y realiza innumerables veces un gesto de invitación. Los guantes inmaculados le recuerdan las virtudes de la humildad y la cortesía.",
+   "lore": "\"Estos visitantes afirmaron tener asuntos urgentes que informar, estimado jefe, pero algunas de sus identidades siguen siendo cuestionables, y utilizaron medios turbios para ingresar al paisaje onírico...\".<br /><br />Los intrusos que habían entrado al paisaje onírico sin invitación forman una fila. Si no ocurre nada imprevisto, los malhechores serán expulsados y se arrestará a los impostores con identidades falsas. No dice nada, pero ya se han hecho todos los preparativos. Los inocentes presencian su ira y sus ojos brillan de esperanza e inquietud. De pronto, él sonríe y extiende su mano como gesto de invitación, un símbolo de reconocimiento y autoridad.<br /><br />\"Como estimados invitados de la familia Roble, serán bienvenidos de todo corazón. Quizás se pregunten de dónde provienen mis juicios justos. Bueno, en realidad es porque su camino se cruzó con el mío\".<br /><br />Los asistentes, los artistas y los desempleados disipan sus dudas al reconocer la sinceridad de su invitación.<br /><br />\"Que los transgresores sufran un castigo severo y que los invitados reciban el honor que merecen. Tal es la Ley de la Armonía\".<br /><br />La severidad y la generosidad del jefe de familia le valen la confianza de sus invitados. Al observar a las personas reunidas, se inclina lentamente...<br /><br />\"Les doy la bienvenida a la familia Roble\".",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 22.5792,
+       "levelAdd": 7.90272,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a efecto",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efecto de Ruptura",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 33.8688,
+       "levelAdd": 11.85408,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a efecto",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efecto de Ruptura",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 45.1584,
+       "levelAdd": 15.80544,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a efecto",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efecto de Ruptura",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 56.448,
+       "levelAdd": 19.7568,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a efecto",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efecto de Ruptura",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "3": {
+   "name": "Atuendo ceremonial del sacerdote",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "ef45b39a7a44e1042569923688b736c2d11669aabbd1a671362690d98b70a36a",
+   "baseTypeText": "Torso",
+   "loreTitle": "Atuendo ceremonial del sacerdote",
+   "miniLore": "A menudo se para frente al espejo del tocador para asegurarse de que su atuendo esté impecable y meticulosamente arreglado. Hay que asegurarse de que todo esté presentable y en orden antes de salir de casa.",
+   "lore": "\"... Las aves nacen libres de cadenas, ¿qué me ata a mi destino? ♬\".<br /><br />El día del ensayo, el joven jefe de familia se esconde entre los asientos destinados al público para evitar distraer a la cantante en el escenario y mantener la distancia adecuada, tal como había deseado. Se sienta erguido con su atuendo ceremonial como el único oyente en ese momento. En medio de las melodías familiares, sus pensamientos se remontan a su infancia y recuerda ocasiones en las que ella cantaba en el escenario y él era su único público.<br /><br />\"Hace tanto tiempo que no cantas con alegría... Te construí un escenario, aunque es... un poco rudimentario\".<br /><br />Durante el concierto para los dos, él prometió cumplir su sueño de pisar un escenario más grandioso y brillante algún día.<br /><br />\"Deja que mi corazón despliegue valientemente las alas. Pasando la noche. Para rastrear la brillante luz de la luna... ♬\".<br /><br />Sale de su trance mientras considera la razón por la que no quiere acercarse al escenario... Su vestimenta ceremonial no era solo para disfrutar de la actuación, sino también para tener la oportunidad de retirarse en cualquier momento que quisiera.<br /><br />\"Felicitaciones, hermana. Ambos logramos nuestras aspiraciones\", dice en voz baja.",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.012096001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.007258,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Bonif. curación realizada",
+       "propertyIconPath": "5c74afec377cfca6be47185ba68f61a2514e2a39d5c251aabec5ac5223023436",
+       "isPercent": true,
+       "baseValue": 0.022118,
+       "levelAdd": 0.0077410005,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a efecto",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efecto de Ruptura",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.010886001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.062208,
+       "levelAdd": 0.021773001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Bonif. curación realizada",
+       "propertyIconPath": "5c74afec377cfca6be47185ba68f61a2514e2a39d5c251aabec5ac5223023436",
+       "isPercent": true,
+       "baseValue": 0.033178,
+       "levelAdd": 0.011612,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a efecto",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efecto de Ruptura",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.082944,
+       "levelAdd": 0.029029999,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Bonif. curación realizada",
+       "propertyIconPath": "5c74afec377cfca6be47185ba68f61a2514e2a39d5c251aabec5ac5223023436",
+       "isPercent": true,
+       "baseValue": 0.044237,
+       "levelAdd": 0.015483,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a efecto",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efecto de Ruptura",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.0864,
+       "levelAdd": 0.030240001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.10368,
+       "levelAdd": 0.036288,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Bonif. curación realizada",
+       "propertyIconPath": "5c74afec377cfca6be47185ba68f61a2514e2a39d5c251aabec5ac5223023436",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a efecto",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efecto de Ruptura",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  },
+  "4": {
+   "name": "Botas tortuosas del sacerdote",
+   "type": 0,
+   "maxRarity": 5,
+   "iconPath": "de5b0c24c691a43f92700a9b78894669a510040f279c38489cac13d1d31a423d",
+   "baseTypeText": "Piernas",
+   "loreTitle": "Botas tortuosas del sacerdote",
+   "miniLore": "A menudo elige un par de botas que abriguen cómodamente sus pies antes de embarcarse en sus viajes. A pesar de haberse caído muchas veces, siempre se levanta.",
+   "lore": "\"Ahora, vete. Eres libre... Oh, elegido que se atrevió a ir más allá de sus límites. Corta tus alas, desciende al reino de los mortales y camina por sus tierras. Observa cómo luce este mundo realmente\".<br /><br />Desde entonces, las palabras del ejecutivo de la Corporación resuenan a menudo en su mente. Recorre calles bulliciosas y playas tranquilas, siempre en movimiento pero arraigado en un lugar... Nunca duda de su propia determinación y capacidades, pero antes de levantarse de nuevo, tenía la intención de saborear el duro golpe de ver sus ideales derrumbarse...<br /><br />\"Las piedras fragmentadas, empapadas de sangre de bestia y sudor humano, siempre frías, ásperas e inflexibles...\".<br /><br />Como jefe de la familia Roble, había guiado a numerosas almas perdidas hacia el buen camino. Sin embargo, cuando se trata de él, esas suaves palabras tranquilizadoras parecen perder su encanto. No necesita reprimendas, orientación ni compasión.<br /><br />\"Del fango surgen los que se esfuerzan y se fatigan. Yo seguiré adelante, aprendiendo más de mis tropiezos que de mis triunfos\".<br /><br />Antes de emprender su verdadero viaje, se concede tiempo suficiente para reflexionar y reordenar sus pensamientos.<br /><br />\"Avanzar no es una filosofía complicada. Si un camino resulta intransitable, simplemente hay que tomar otro\".",
+   "rarityData": {
+    "2": {
+     "rarity": 2,
+     "maxLevel": 6,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.009677,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.012096001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.6128,
+       "levelAdd": 1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 6.774008,
+       "levelAdd": 6.774008,
+       "stepValue": 0.846751,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.017280001,
+       "levelAdd": 0.017280001,
+       "stepValue": 0.0021600004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1,
+       "levelAdd": 1,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.010368001,
+       "levelAdd": 0.010368001,
+       "stepValue": 0.0012960008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a efecto",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.013824001,
+       "levelAdd": 0.013824001,
+       "stepValue": 0.0017280006,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efecto de Ruptura",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      }
+     ]
+    },
+    "3": {
+     "rarity": 3,
+     "maxLevel": 9,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.014515,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.018144,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 2.4192,
+       "levelAdd": 1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 20.322023,
+       "levelAdd": 20.322023,
+       "stepValue": 2.540253,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 10.161012,
+       "levelAdd": 10.161012,
+       "stepValue": 1.270126,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.2,
+       "levelAdd": 1.2,
+       "stepValue": 0.1,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.015552,
+       "levelAdd": 0.015552,
+       "stepValue": 0.0019440008,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a efecto",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efecto de Ruptura",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.031104,
+       "levelAdd": 0.031104,
+       "stepValue": 0.003888001,
+       "maxStep": 2
+      }
+     ]
+    },
+    "4": {
+     "rarity": 4,
+     "maxLevel": 12,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.055296,
+       "levelAdd": 0.019354,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 3.2256,
+       "levelAdd": 1.1,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 27.096031,
+       "levelAdd": 27.096031,
+       "stepValue": 3.387004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 13.548016,
+       "levelAdd": 13.548016,
+       "stepValue": 1.693502,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 1.6,
+       "levelAdd": 1.6,
+       "stepValue": 0.2,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.020736001,
+       "levelAdd": 0.020736001,
+       "stepValue": 0.0025920009,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a efecto",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.027648,
+       "levelAdd": 0.027648,
+       "stepValue": 0.0034560005,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efecto de Ruptura",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.041472,
+       "levelAdd": 0.041472,
+       "stepValue": 0.0051840004,
+       "maxStep": 2
+      }
+     ]
+    },
+    "5": {
+     "rarity": 5,
+     "maxLevel": 15,
+     "mainAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.06912,
+       "levelAdd": 0.024192,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.0864,
+       "levelAdd": 0.030240001,
+       "stepValue": 0,
+       "maxStep": 0
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 4.032,
+       "levelAdd": 1.4,
+       "stepValue": 0,
+       "maxStep": 0
+      }
+     ],
+     "subAffixes": [
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": false,
+       "baseValue": 33.87004,
+       "levelAdd": 33.87004,
+       "stepValue": 4.233755,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": false,
+       "baseValue": 16.935019,
+       "levelAdd": 16.935019,
+       "stepValue": 2.116877,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "PV",
+       "propertyIconPath": "58021be84b486be322a79b327175328186db239a32bd8880315bddfd1470e8a6",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "ATQ",
+       "propertyIconPath": "133ec725c4ee3c0b046da6e56eab2357dda08baf497ea688c317462fb0b93068",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "DEF",
+       "propertyIconPath": "b0aad49714e2daa2922e1c404f67807aa9b69978ddfc922b721ce5effed76d26",
+       "isPercent": true,
+       "baseValue": 0.0432,
+       "levelAdd": 0.0432,
+       "stepValue": 0.0054,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "VEL",
+       "propertyIconPath": "5f33a7516d62d6240538ebf9eef7aabde16d97f27eb53e90ae2cf6eef8168feb",
+       "isPercent": false,
+       "baseValue": 2,
+       "levelAdd": 2,
+       "stepValue": 0.3,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Prob. CRIT",
+       "propertyIconPath": "32af0a785a531bcab9fbe86da7c2f559478bf02bfe8a77d6b539c5702a1a64fb",
+       "isPercent": true,
+       "baseValue": 0.02592,
+       "levelAdd": 0.02592,
+       "stepValue": 0.0032400002,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Daño CRIT",
+       "propertyIconPath": "5550e862892998113c65d250603fc60e7a786c520ef82a80f06bd953442418c8",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Acierto de efecto",
+       "propertyIconPath": "8198085dc42c26a3e3ce48d55bf1b763c6472ac6251fb2533c710f48ab4a4b46",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "RES a efecto",
+       "propertyIconPath": "1663e14dca8f4e42f151ff8d408f9a449e11fe2cacfbb98276eca60c1abafa24",
+       "isPercent": true,
+       "baseValue": 0.034560002,
+       "levelAdd": 0.034560002,
+       "stepValue": 0.0043200003,
+       "maxStep": 2
+      },
+      {
+       "propertyName": "Efecto de Ruptura",
+       "propertyIconPath": "757dc56c4923c3e9429fa51fd3d4fa8349581723a44782b0143257fd415bd976",
+       "isPercent": true,
+       "baseValue": 0.05184,
+       "levelAdd": 0.05184,
+       "stepValue": 0.0064800004,
+       "maxStep": 2
+      }
+     ]
+    }
+   }
+  }
+ },
+ "pageId": "121"
+}
