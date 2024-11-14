@@ -1,4 +1,20 @@
 const Relic: any = {
+  //Add in 2.6.0
+  "Scholar Lost in Erudition": {
+    icon1: require("../relic_icon/scholar_lost_in_erudition_1.webp"),
+    icon2: require("../relic_icon/scholar_lost_in_erudition_2.webp"),
+    icon3: require("../relic_icon/scholar_lost_in_erudition_3.webp"),
+    icon4: require("../relic_icon/scholar_lost_in_erudition_4.webp"),
+    pcIcon: require("../relic_pcicon/scholar_lost_in_erudition.webp"),
+  },
+  "Sacerdos' Relived Ordeal": {
+    icon1: require("../relic_icon/sacerdos_relived_ordeal_1.webp"),
+    icon2: require("../relic_icon/sacerdos_relived_ordeal_2.webp"),
+    icon3: require("../relic_icon/sacerdos_relived_ordeal_3.webp"),
+    icon4: require("../relic_icon/sacerdos_relived_ordeal_4.webp"),
+    pcIcon: require("../relic_pcicon/sacerdos_relived_ordeal.webp"),
+  },
+
   //Add in 2.5.0
   "Lushaka, the Sunken Seas": {
     icon1: require("../ornament_icon/lushaka_the_sunken_seas_5.webp"),

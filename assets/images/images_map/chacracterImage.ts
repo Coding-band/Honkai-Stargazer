@@ -1,4 +1,11 @@
 const CharacterImage: any = {
+  //add in 2.6.0
+  "Rappa": {
+    icon: require("../../images/character_icon/rappa_icon.webp"),
+    imageSplash: require("../../images/character_splash/rappa_splash.webp"),
+    imageFull: require("../../images/character_full/rappa_full.webp"),
+    fade: require("../../images/character_fade/rappa_fade.webp"),
+  },
   //add in 2.5.0
   "Lingsha": {
     icon: require("../../images/character_icon/lingsha_icon.webp"),

@@ -1,4 +1,17 @@
 const Lightcone: any = {
+  //add in 2.6.0
+  "Dream's Montage": {
+    icon: require("../../images/lightcone_icon/dreams_montage.webp"),
+    imageFull: require("../../images/lightcone_artwork/dreams_montage_artwork.webp"),
+  },
+  "Ninja Record: Sound Hunt": {
+    icon: require("../../images/lightcone_icon/ninja_record_sound_hunt.webp"),
+    imageFull: require("../../images/lightcone_artwork/ninja_record_sound_hunt_artwork.webp"),
+  },
+  "Chordal Mirage": {
+    icon: require("../../images/lightcone_icon/chordal_mirage.webp"),
+    imageFull: require("../../images/lightcone_artwork/chordal_mirage_artwork.webp"),
+  },
   //add in 2.5.0
   "Shadowed by Night": {
     icon: require("../../images/lightcone_icon/shadowed_by_night.webp"),

@@ -4,6 +4,21 @@
  */
 
 const CharacterSoul: any = {
+  //add in 2.6.0
+  "Rappa": {
+    eidolon1: require("../../images/character_eidolon/rappa_eidolon1.webp"),
+    eidolon2: require("../../images/character_eidolon/rappa_eidolon2.webp"),
+    eidolon3: require("../../images/character_eidolon/rappa_eidolon3.webp"),
+    eidolon4: require("../../images/character_eidolon/rappa_eidolon4.webp"),
+    eidolon5: require("../../images/character_eidolon/rappa_eidolon5.webp"),
+    eidolon6: require("../../images/character_eidolon/rappa_eidolon6.webp"),
+    soul1: require("../../images/character_soul/rappa_soul1.webp"),
+    soul2: require("../../images/character_soul/rappa_soul2.webp"),
+    soul3: require("../../images/character_soul/rappa_soul3.webp"),
+    soul4: require("../../images/character_soul/rappa_soul4.webp"),
+    soul5: require("../../images/character_soul/rappa_soul5.webp"),
+    soul6: require("../../images/character_soul/rappa_soul6.webp"),
+  },
   //add in 2.5.0
   "Lingsha": {
     eidolon1: require("../../images/character_eidolon/lingsha_eidolon1.webp"),

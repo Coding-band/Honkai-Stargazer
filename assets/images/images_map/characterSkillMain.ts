@@ -4,6 +4,14 @@
  */
 
 const CharacterSkillMain: any = {
+  //add in 2.6.0
+  "Rappa": {
+    skill1: require("../../images/character_skill/rappa_skill1.webp"),
+    skill2: require("../../images/character_skill/rappa_skill2.webp"),
+    skill3: require("../../images/character_skill/rappa_skill3.webp"),
+    skill4: require("../../images/character_skill/rappa_skill4.webp"),
+    skill6: require("../../images/character_skill/rappa_skill6.webp"),
+  },
   //add in 2.5.0
   "Lingsha": {
     skill1: require("../../images/character_skill/lingsha_skill1.webp"),

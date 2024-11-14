@@ -1,4 +1,7 @@
 const Material: any = {  
+  //add in 2.6.0
+  468393: require("../../images/material_icon/material_a_glass_of_the_besotted_era.webp"),
+
   //add in 2.5.0
   267807: require("../../images/material_icon/material_a_glass_of_the_besotted_era.webp"),
   151162: require("../../images/material_icon/material_nail_of_the_beast_coffin.webp"),
