@@ -37,7 +37,7 @@ export default function DonateTab() {
     }, [])
   
     const doPurchasing = async(itemId : number) => {
-      if(Platform.OS !== 'ios'){
+      if(false){//Platform.OS !== 'ios'){
         Linking.openURL("https://www.buymeacoffee.com/codingband");
       }else{
         if(ENV === "beta"){ Toast(LOCALES[language].ErrorDonationInBeta); return; }
