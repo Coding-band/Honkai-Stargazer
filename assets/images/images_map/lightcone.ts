@@ -8,9 +8,9 @@ const Lightcone: any = {
     icon: require("../../images/lightcone_icon/ninja_record_sound_hunt.webp"),
     imageFull: require("../../images/lightcone_artwork/ninja_record_sound_hunt_artwork.webp"),
   },
-  "Chordal Mirage": {
-    icon: require("../../images/lightcone_icon/chordal_mirage.webp"),
-    imageFull: require("../../images/lightcone_artwork/chordal_mirage_artwork.webp"),
+  "Ninjutsu Inscription: Dazzling Evilbreaker": {
+    icon: require("../../images/lightcone_icon/ninjutsu_inscription_dazzling_evilbreaker.webp"),
+    imageFull: require("../../images/lightcone_artwork/ninjutsu_inscription_dazzling_evilbreaker_artwork.webp"),
   },
   //add in 2.5.0
   "Shadowed by Night": {
