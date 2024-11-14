@@ -1,4 +1,9 @@
 const officalLightconeId: any = {
+  //Add in 2.6.0
+  23033: "Ninjutsu Inscription: Dazzling Evilbreaker",
+  22003: "Ninja Record: Sound Hunt",
+  21048: "Dream's Montage",
+
   //Add in 2.5.0
   23032: "Scent Alone Stays True",
   23031: "I Venture Forth to Hunt",

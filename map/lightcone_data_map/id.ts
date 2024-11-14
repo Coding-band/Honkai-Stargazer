@@ -123,7 +123,16 @@ import ScentAloneStaysTrue from "../../data/lightcone_data/id/23032.json";
 import IVentureForthtoHunt from "../../data/lightcone_data/id/23031.json";
 import ShadowedbyNight from "../../data/lightcone_data/id/21047.json";
 
+//add in 2.6.0
+import NinjutsuInscriptionDazzlingEvilbreaker from "../../data/lightcone_data/id/23033.json";
+import DreamsMontage from "../../data/lightcone_data/id/21048.json";
+import NinjaRecordSoundHunt from "../../data/lightcone_data/id/22003.json";
+
 const ID = {
+  //add in 2.6.0
+  "Ninjutsu Inscription: Dazzling Evilbreaker": NinjutsuInscriptionDazzlingEvilbreaker,
+  "Dream's Montage": DreamsMontage,
+  "Ninja Record: Sound Hunt": NinjaRecordSoundHunt,
   //add in 2.5.0
   "Scent Alone Stays True": ScentAloneStaysTrue,
   "I Venture Forth to Hunt": IVentureForthtoHunt,

@@ -75,7 +75,12 @@ import Moze from "../../data/character_data/de/moze.json";
 import Lingsha from "../../data/character_data/de/lingsha.json";
 import Feixiao from "../../data/character_data/de/feixiao.json";
 
+//add in 2.6.0
+import Rappa from "../../data/character_data/de/rappa.json";
+
 const DE = {
+  //add in 2.6.0
+  Rappa,
   //add in 2.5.0
   Moze,
   Lingsha,

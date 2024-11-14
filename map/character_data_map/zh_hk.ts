@@ -75,7 +75,12 @@ import Moze from "../../data/character_data/zh_hk/moze.json";
 import Lingsha from "../../data/character_data/zh_hk/lingsha.json";
 import Feixiao from "../../data/character_data/zh_hk/feixiao.json";
 
+//add in 2.6.0
+import Rappa from "../../data/character_data/zh_hk/rappa.json";
+
 const ZH_HK = {
+  //add in 2.6.0
+  Rappa,
   //add in 2.5.0
   Moze,
   Lingsha,

@@ -37,6 +37,9 @@ const officalRelicId: any = {
   316: "Forge of the Kalpagni Lantern",
   317: "Lushaka, the Sunken Seas",
   318: "The Wondrous BananAmusement Park",
+
+  121: "Sacerdos' Relived Ordeal",
+  122: "Scholar Lost in Erudition",
 };
 
 export default officalRelicId;

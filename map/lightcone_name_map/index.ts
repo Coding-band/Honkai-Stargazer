@@ -1,4 +1,8 @@
 const LightconeName = {
+  //Add in 2.6.0
+  "dreams-montage":"Dream's Montage",
+  "chordal-mirage":"Ninja Record: Sound Hunt",
+  "ninjutsu-inscription-dazzling-evilbreaker":"Ninjutsu Inscription: Dazzling Evilbreaker",
   //Add in 2.5.0
   "shadowed-by-night":"Shadowed by Night",
   "i-venture-forth-to-hunt":"I Venture Forth to Hunt",

@@ -45,7 +45,14 @@ import ForgeOfTheKalpagniLantern from "../../data/relic_data/en/316.json";
 import LushakatheSunkenSeas from "../../data/relic_data/en/317.json";
 import TheWondrousBananAmusementPark from "../../data/relic_data/en/318.json";
 
+//Add in 2.6.0
+import SacerdosRelivedOrdeal from "../../data/relic_data/en/121.json";
+import ScholarLostinErudition from "../../data/relic_data/en/122.json";
+
 const EN = {
+  //add in 2.6.0
+  "Scholar Lost in Erudition":ScholarLostinErudition,
+  "Sacerdos' Relived Ordeal":SacerdosRelivedOrdeal,
   //add in 2.5.0
   "Lushaka, the Sunken Seas":LushakatheSunkenSeas,
   "The Wondrous BananAmusement Park":TheWondrousBananAmusementPark,

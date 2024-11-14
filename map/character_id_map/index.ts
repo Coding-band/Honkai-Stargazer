@@ -63,6 +63,8 @@ const charId: any = {
   "Feixiao": 1220,
   "Lingsha": 1222,
   "Moze": 1223,
+
+  "Rappa": 1317,
 };
 
 export default charId;
