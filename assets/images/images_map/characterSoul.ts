@@ -4,6 +4,35 @@
  */
 
 const CharacterSoul: any = {
+  //add in 2.7.0
+  "Fugue": {
+    eidolon1: require("../../images/character_eidolon/fugue_eidolon1.webp"),
+    eidolon2: require("../../images/character_eidolon/fugue_eidolon2.webp"),
+    eidolon3: require("../../images/character_eidolon/fugue_eidolon3.webp"),
+    eidolon4: require("../../images/character_eidolon/fugue_eidolon4.webp"),
+    eidolon5: require("../../images/character_eidolon/fugue_eidolon5.webp"),
+    eidolon6: require("../../images/character_eidolon/fugue_eidolon6.webp"),
+    soul1: require("../../images/character_soul/fugue_soul1.webp"),
+    soul2: require("../../images/character_soul/fugue_soul2.webp"),
+    soul3: require("../../images/character_soul/fugue_soul3.webp"),
+    soul4: require("../../images/character_soul/fugue_soul4.webp"),
+    soul5: require("../../images/character_soul/fugue_soul5.webp"),
+    soul6: require("../../images/character_soul/fugue_soul6.webp"),
+  },
+  "Sunday": {
+    eidolon1: require("../../images/character_eidolon/sunday_eidolon1.webp"),
+    eidolon2: require("../../images/character_eidolon/sunday_eidolon2.webp"),
+    eidolon3: require("../../images/character_eidolon/sunday_eidolon3.webp"),
+    eidolon4: require("../../images/character_eidolon/sunday_eidolon4.webp"),
+    eidolon5: require("../../images/character_eidolon/sunday_eidolon5.webp"),
+    eidolon6: require("../../images/character_eidolon/sunday_eidolon6.webp"),
+    soul1: require("../../images/character_soul/sunday_soul1.webp"),
+    soul2: require("../../images/character_soul/sunday_soul2.webp"),
+    soul3: require("../../images/character_soul/sunday_soul3.webp"),
+    soul4: require("../../images/character_soul/sunday_soul4.webp"),
+    soul5: require("../../images/character_soul/sunday_soul5.webp"),
+    soul6: require("../../images/character_soul/sunday_soul6.webp"),
+  },
   //add in 2.6.0
   "Rappa": {
     eidolon1: require("../../images/character_eidolon/rappa_eidolon1.webp"),

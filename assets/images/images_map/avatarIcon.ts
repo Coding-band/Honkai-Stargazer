@@ -1,4 +1,15 @@
 const AvatarIcon: any = {
+  //Add in 2.7.0
+  1313: require("../../images/avatar_icon/1313.webp"),
+  1225: require("../../images/avatar_icon/1225.webp"),
+  200132: require("../../images/avatar_icon/200132.webp"),
+  200131: require("../../images/avatar_icon/200131.webp"),
+  200130: require("../../images/avatar_icon/200130.webp"),
+  200129: require("../../images/avatar_icon/200129.webp"),
+  200128: require("../../images/avatar_icon/200128.webp"),
+  200127: require("../../images/avatar_icon/200127.webp"),
+  200126: require("../../images/avatar_icon/200126.webp"),
+  200125: require("../../images/avatar_icon/200125.webp"),
   //Add in 2.6.0
   1317: require("../../images/avatar_icon/1317.webp"),
   202017: require("../../images/avatar_icon/202017.webp"),
@@ -118,8 +129,6 @@ const AvatarIcon: any = {
   202014: require("../../images/avatar_icon/202014.webp"),
   202015: require("../../images/avatar_icon/202015.webp"),
   202016: require("../../images/avatar_icon/202016.webp"),
-  202017: require("../../images/avatar_icon/202017.webp"),
-  202018: require("../../images/avatar_icon/202018.webp"),
   8001: require("../../images/avatar_icon/8001.webp"),
   8002: require("../../images/avatar_icon/8002.webp"),
   8003: require("../../images/avatar_icon/8003.webp"),

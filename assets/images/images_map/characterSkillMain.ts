@@ -4,6 +4,21 @@
  */
 
 const CharacterSkillMain: any = {
+  //add in 2.7.0
+  "Fugue": {
+    skill1: require("../../images/character_skill/fugue_skill1.webp"),
+    skill2: require("../../images/character_skill/fugue_skill2.webp"),
+    skill3: require("../../images/character_skill/fugue_skill3.webp"),
+    skill4: require("../../images/character_skill/fugue_skill4.webp"),
+    skill6: require("../../images/character_skill/fugue_skill6.webp"),
+  },
+  "Sunday": {
+    skill1: require("../../images/character_skill/sunday_skill1.webp"),
+    skill2: require("../../images/character_skill/sunday_skill2.webp"),
+    skill3: require("../../images/character_skill/sunday_skill3.webp"),
+    skill4: require("../../images/character_skill/sunday_skill4.webp"),
+    skill6: require("../../images/character_skill/sunday_skill6.webp"),
+  },
   //add in 2.6.0
   "Rappa": {
     skill1: require("../../images/character_skill/rappa_skill1.webp"),

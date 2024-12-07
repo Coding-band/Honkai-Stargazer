@@ -1,4 +1,17 @@
 const CharacterImage: any = {
+  //add in 2.7.0
+  "Fugue": {
+    icon: require("../../images/character_icon/fugue_icon.webp"),
+    imageSplash: require("../../images/character_splash/fugue_splash.webp"),
+    imageFull: require("../../images/character_splash/fugue_splash.webp"),
+    fade: require("../../images/character_fade/fugue_fade.webp"),
+  },
+  "Sunday": {
+    icon: require("../../images/character_icon/sunday_icon.webp"),
+    imageSplash: require("../../images/character_splash/sunday_splash.webp"),
+    imageFull: require("../../images/character_full/sunday_full.webp"),
+    fade: require("../../images/character_fade/sunday_fade.webp"),
+  },
   //add in 2.6.0
   "Rappa": {
     icon: require("../../images/character_icon/rappa_icon.webp"),

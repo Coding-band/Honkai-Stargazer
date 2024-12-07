@@ -1,4 +1,13 @@
 const Lightcone: any = {
+  //add in 2.7.0
+  "Long Road Leads Home": {
+    icon: require("../../images/lightcone_icon/long_road_leads_home.webp"),
+    imageFull: require("../../images/lightcone_artwork/long_road_leads_home_artwork.webp"),
+  },
+  "A Grounded Ascent": {
+    icon: require("../../images/lightcone_icon/a_grounded_ascent.webp"),
+    imageFull: require("../../images/lightcone_artwork/a_grounded_ascent_artwork.webp"),
+  },
   //add in 2.6.0
   "Dream's Montage": {
     icon: require("../../images/lightcone_icon/dreams_montage.webp"),
