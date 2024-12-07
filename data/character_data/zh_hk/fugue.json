@@ -1,0 +1,2991 @@
+{
+ "spRequirement": 130,
+ "iconPath": "746e58249b69bf2e07c2f18b844b2a9998902fbb5134f7964965285abbf071a2",
+ "bgPath": "1d2a6d44443a510754f026534c74320d6c06f894dcd9cad7f478dc6d95d31347",
+ "figPath": "987d336255847c74ff03f98bc586ed01b0e8accae5b93e8a702ec75ec175af04",
+ "fgPath": "",
+ "splashIconPath": "33faffbaad360115b5d0a84ab417b92644cb9789e09238d0aa954263ebc4a8ce",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRqYCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSCgBAAABkLpt2/m/8u8PfrabbW5LRly1vWTbtu2tbc2O3zYbybY/73vf4fP5RcQEINKb3wUeADjoMKdopR4XIqepPQ1OhIPSuy+kVycvfvl+PRsdFLyXsYqcCCfkovN1WVpjrOWZHIQ99Hz6SlYkre7390OIb3l4/4soigq2Z8N10L5gcOHhnyIpUbqWCR9zNHzAXhlKpBhoI4BT+n71vShDkbL6WobxsvrzVJb6a2QM7c9e2KOAlqJe/be/pUBvm1DxXFai0eFF5uq2qx8fjIpL73pWhqT+vY9dmj6iobYC8LBZAUX+fXrwQqxvFsLZMRlaSfog3Y+HC2Cswn+e6ffRp7pRCwfAnB+v7C/tmfS4X2nD6UGInLpu+/LWhuSUFABIjnJKchDpOC6iAVZQOCBYAQAAsAcAnQEqFAAUAD5tMpVHpCKiISgIAIANiWYAnTKDyw3N4AGFD6YBvQ1YgOfWzlPtYbqMiae1zEtPkVrQ4cOShoaxfwLcAADz/zezsaAd2no70anSq/cPf8XhOfOLygRpyxMZ9cSvImVJ2Jf9AeNdCfrC9HUNczUQk5lTBKe7yWq55AWiP/NPUevOtUN+dLsd+9VFnfFZsn7xIlCfWGGdtGQNrl4tAzonNFcLE5o6cYqYFF5o1BzZ4c3wimAv6qJQTqRvcR7L1moz0dTIyY/9DFpUyPR3RAkoE4yHMUR4JFaefAnoxAgrAUNiSd8G7AipfTMyx2oQZzpzjPQdSNuoNz8B4fxjNkASPjVPjXZctbzBbvf4/svNMPNezHDcjLOKJD/23/Yy//jXR0EE5IceaEveasoSmMWEiKcx/N/Es6QnY37vqOd/fk5rhbKjqPsZ4+n0E6AAAAA=",
+  "w": 2048,
+  "h": 2048
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 5,
+  "iconPath": "dd7360026f025513baae7d6891bfd20d8a74c89d99e8b74c45a4092c07f2f2bc",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "662fc7ab4bcd2e14d5f4185738f92c3d4e5051f6a6af0fbcafcb08310c579372",
+   "name": "信用點",
+   "desc": "星際和平公司與客戶結算時使用的貨幣，如今已成爲太空旅行的硬通貨。",
+   "lore": "「人們奔波、爭鬥、貿易，爲的不過是個終端裏顯示的數字。但真正珍貴之物，公司的數字是買不到的。」",
+   "purpose": "通用貨幣",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "擬造花萼【工造司】",
+    "擬造花萼【「白日夢」酒店-夢境】",
+    "任務獎勵",
+    "委託獎勵",
+    "餘燼兌換"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "1faeac3cd0e3235dd5c4d7f88c0348be236c9db3d6f01c54cf1af28636a02a00",
+   "name": "命運的足跡",
+   "desc": "行跡升級的高階素材。",
+   "lore": "一次又一次的敗北成就了你的勝利，一步又一步的前進讓你抵達了命運的拐點。",
+   "purpose": "行跡材料",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "「模擬宇宙」積分獎勵",
+    "無名勳禮",
+    "餘燼兌換",
+    "星芒兌換",
+    "限時活動獎勵"
+   ]
+  },
+  "186254": {
+   "id": 186254,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "68bc5d5330c237c831ce0dda0256590ae9d8d78b5b16af1031f6489a8217568e",
+   "name": "無窮假身的遺恨",
+   "desc": "行跡升級的高階素材。",
+   "lore": "無論奪取多少肉身，它都無法如願以償。就像那些尋求仙藥的人一樣，它渴望一具長存的軀殼，不必再畏怖「毀滅」。它知道，這是永難企及的迷夢。<br /><br />「我曾見過無數世界被負創神的烈焰吞噬，我曾是這些烈焰中的一朵。我隨祂的指尖舞蹈，卻深知若柴薪燃盡，火焰也將熄滅…」",
+   "purpose": "行跡材料",
+   "rarity": 4,
+   "rewardPath": "/material/186254",
+   "comeFrom": [
+    "歷戰餘響【鱗淵境】"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "64e60a11d852e9486527315fd5dbd93e76f510b6bd0538b927b16bfb188bda62",
+   "name": "漫遊指南",
+   "desc": "角色的經驗材料，可以獲得<nobr>20000</nobr>點角色經驗。",
+   "lore": "跨越諸界必備的冒險叢書。按下閱讀鍵，充滿磁性的聲音將以你能聽懂的語言講述知名冒險家們在不同世界間的傳奇經歷，以及他們在各個星球上獲得的珍貴智慧。<br /><br />「漫遊指南全新書系《星際美食烹飪導覽》開售在即，敬請支持。」<br />「投稿請接入博識學會聯覺信標<nobr>23</nobr>θ聯絡員，稿酬可以以您接受的任何形式支付。」",
+   "purpose": "角色經驗材料",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "擬造花萼【流雲渡】",
+    "擬造花萼【築夢邊境】",
+    "「忘卻之庭」"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "bace343f74527b604cf5037157a01121ca2075f0d381673d58825aa8871d23b2",
+   "name": "冒險記錄",
+   "desc": "角色的經驗材料，可以獲得<nobr>5000</nobr>點角色經驗。",
+   "lore": "裝訂嚴整，一看就頗有教育意義的冒險札記。圖文並茂地描述了冒險行動的始末、有價值的信息和生存相關的技巧。<br /><br />「幹嘛不數據化放進光刻片裡？便攜多了。」<br />「面對恆星風暴和中子流噴發時，高科技比你想象的還要脆弱。何況，製作這本書的人一定希望人們用最簡單的方式閱讀它。」",
+   "purpose": "角色經驗材料",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "擬造花萼【流雲渡】",
+    "擬造花萼【築夢邊境】",
+    "每日實訓",
+    "餘燼兌換"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5b6df114010e87eb36fe9583af069826960af2730455a03b5379093a4a9e5aca",
+   "name": "旅情見聞",
+   "desc": "角色的經驗材料，可以獲得<nobr>1000</nobr>點角色經驗。",
+   "lore": "記錄旅途見聞的日誌，字跡漫漶不清，內容隨心所欲，對你並沒有太大的幫助。<br /><br />「看完了就趕緊把這堆廢紙處理掉吧，丹恆？」",
+   "purpose": "角色經驗材料",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "擬造花萼【城郊雪原】",
+    "擬造花萼【流雲渡】",
+    "擬造花萼【築夢邊境】",
+    "委託獎勵"
+   ]
+  },
+  "549504": {
+   "id": 549504,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "2d7d2fa9645ee6abd7bf84d990b3a32c8851e1226c92e466f63bd77b7265260d",
+   "name": "永壽幼芽",
+   "desc": "古老神物萌發的新芽，強化所需的簡單材料。",
+   "lore": "仙舟長生種「無盡形壽」的源頭，「豐饒」神跡的殘餘。無數歲月前，一位帝皇的長生妄念促成了仙舟艦隊渡航天之外海，求取仙方。<br /><br />「朕欲垂化萬世，國祚永延。惜乎天年有盡，人力有窮。故遣天艟九座，飆航天外，謁求仙方。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/549504",
+   "comeFrom": [
+    "豐饒孽物掉落",
+    "「差分宇宙」中敵方掉落",
+    "「模擬宇宙」中敵方掉落",
+    "委託獎勵",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換",
+    "擬造花萼（金）"
+   ]
+  },
+  "589818": {
+   "id": 589818,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1b78b52bd4fa8125682facdef27eee8dde23738508c8751d7c4a085363fae9df",
+   "name": "星火之精",
+   "desc": "「火劫大戰」後流竄的熾盛歲陽。可中幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虛無</span>角色的命途行跡。",
+   "lore": "刁鑽促搯、一簇團焰形狀的歲陽火苗。<br />顯形時「火焰」大小，可以辨別歲陽個體強弱。這團炬火歲陽初嘗心智，貪圖喫掉宿主的七情六慾。<br /><br />「汲取喜悲，左右意志…」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/589818",
+   "comeFrom": [
+    "擬造花萼【丹鼎司】",
+    "「萬能合成機」- 材料合成",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "633445": {
+   "id": 633445,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "fe5878a8a3e4fef155daad6bd3eaad5831ded2f83f338608f5911a77289f18fc",
+   "name": "永壽天華",
+   "desc": "古老神物結成的花朵，強化所需的普通材料。",
+   "lore": "仙舟長生種「無盡形壽」的源頭，「豐饒」神跡的殘餘。歷經坎坷，求藥之舟謁見天顏。神明垂跡顯化，建木生發。<br /><br />「新蕊月中落，天華雲外香。桂馥吐納間，鶴髮換青髫。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/633445",
+   "comeFrom": [
+    "突破至均衡等級2後，豐饒孽物掉落",
+    "「萬能合成機」- 材料合成",
+    "「差分宇宙」中敵方掉落",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "673759": {
+   "id": 673759,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "b5032641c3abb7d952d56b9bfb0a4c71f4db0edd3a2c48c10d9b4d0eec94d25c",
+   "name": "焚天之魔",
+   "desc": "「火劫大戰」後融聚的獸形歲陽。可大幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虛無</span>角色的命途行跡。",
+   "lore": "多謀善慮、初具獸形的強力歲陽。<br />顯形時「火焰」大小，可以辨別歲陽個體強弱。大歲陽融聚後漸漸成形，不死不滅，危害程度可稱之爲災害。<br /><br />「水淹火灼，山崩雷劈…」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/673759",
+   "comeFrom": [
+    "擬造花萼【丹鼎司】",
+    "「萬能合成機」- 材料合成",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "717386": {
+   "id": 717386,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ba66c445076beb6607457af5bd5f273c55a210a8c60621e6c90a4d00361df629",
+   "name": "永壽榮枝",
+   "desc": "古老神物的枯榮之枝，強化所需的高級材料。",
+   "lore": "仙舟長生種「無盡形壽」的源頭，「豐饒」神跡的殘餘。三災過後，仙舟生靈塗炭。天人墮魔，苦厄不絕。<br /><br />「按十王司律令，凡瀕陷魔陰者，將受判官勾攝，入幽獄審斷。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/717386",
+   "comeFrom": [
+    "突破至均衡等級4後，豐饒孽物掉落",
+    "「萬能合成機」- 材料合成",
+    "「差分宇宙」中敵方掉落",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "874345": {
+   "id": 874345,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "c58150f0bd3d62041c9a94a5f8cb513146f940ddbc73caa9bdf69ee5eeb007fb",
+   "name": "熾情之靈",
+   "desc": "「火劫大戰」後逸散的微弱歲陽。可小幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">虛無</span>角色的命途行跡。",
+   "lore": "天真爛漫、無固定形體的歲陽星火。<br />顯形時「火焰」大小，可以辨別歲陽個體強弱。這縷小小歲陽思慮單純，容易被更強大的歲陽吞併。<br /><br />「無形無根，漫遊天外…」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/874345",
+   "comeFrom": [
+    "擬造花萼【丹鼎司】",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "983279": {
+   "id": 983279,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "c6746fa57215b159acc5e18620fd30d64e3dd284d7a93a6ee248038329535a63",
+   "name": "過熱鋼刃",
+   "desc": "熾燃徘徊者折斷的刀刃，火屬性角色的晉升素材。",
+   "lore": "銀鬃鐵衛間偶爾會進行一場比鬥——在規定時間內帶回怪物殘軀的一部分。這些碎刃想必就是某場比試的戰利品。<br /><br />「我千真萬確親眼所見，傑帕德頭兒一拳轟碎了那傢伙滾燙的鋼刀，然後徒手握着它搠進了那個冰胖子的肚腹裏，給它暖了暖心。」",
+   "purpose": "角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/983279",
+   "comeFrom": [
+    "凝滯虛影【大礦區】",
+    "「萬能合成機」- 材料置換"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 79.2,
+   "attackAdd": 3.96,
+   "hpBase": 153.12,
+   "hpAdd": 7.656,
+   "defenseBase": 75.9,
+   "defenseAdd": 3.795,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549504,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 110.88,
+   "attackAdd": 3.96,
+   "hpBase": 214.368,
+   "hpAdd": 7.656,
+   "defenseBase": 106.26,
+   "defenseAdd": 3.795,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549504,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 142.56,
+   "attackAdd": 3.96,
+   "hpBase": 275.616,
+   "hpAdd": 7.656,
+   "defenseBase": 136.62,
+   "defenseAdd": 3.795,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633445,
+     "count": 6
+    },
+    {
+     "id": 983279,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 174.24,
+   "attackAdd": 3.96,
+   "hpBase": 336.864,
+   "hpAdd": 7.656,
+   "defenseBase": 166.98,
+   "defenseAdd": 3.795,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633445,
+     "count": 9
+    },
+    {
+     "id": 983279,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 205.92,
+   "attackAdd": 3.96,
+   "hpBase": 398.112,
+   "hpAdd": 7.656,
+   "defenseBase": 197.34,
+   "defenseAdd": 3.795,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717386,
+     "count": 6
+    },
+    {
+     "id": 983279,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 237.6,
+   "attackAdd": 3.96,
+   "hpBase": 459.36,
+   "hpAdd": 7.656,
+   "defenseBase": 227.7,
+   "defenseAdd": 3.795,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717386,
+     "count": 9
+    },
+    {
+     "id": 983279,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 269.28,
+   "attackAdd": 3.96,
+   "hpBase": 520.608,
+   "hpAdd": 7.656,
+   "defenseBase": 258.06,
+   "defenseAdd": 3.795,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "7d0bc1538966d5e87d36ed2f36a2ae44aa990be885c4f089f03c54b6b41314bc",
+   "artPath": "18691aafd1d1260c85577f93ac27ff34f6baafe1e0dd0e03746dddf8f49b93d6",
+   "name": "狐塵已去，雲駕有期",
+   "descHash": "持有【狐祈】的我方目標，弱點擊破效率提高<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.5
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "211f4952ae45da4347c329a3bcb17bbaff1efb85f357eb2aee9e0a81df3a6728",
+   "artPath": "87c9aed04d08d646779dae45638c10a03e0c53e50d27626e0fe68130f9838ca7",
+   "name": "瑞應之來，必昭有德",
+   "descHash": "當有敵方目標的弱點被擊破時，爲忘歸人恢復<nobr>#1[i]</nobr>點能量。施放終結技後，我方全體<u>行動提前</u><nobr>#2[i]%</nobr>。",
+   "params": [
+    3,
+    0.24
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "e9472db56554e7e909e5edb88f9695a59c1b45ede5c911fd81dcc8aade63f80d",
+   "artPath": "e5d7d1ff2f940bed09e58196699bca4c36be7841f200c5e513acecd37aaecb2d",
+   "name": "正色鴻燾，神思化伐",
+   "descHash": "戰技等級+2，最多不超過<nobr>15</nobr>級；普攻等級+1，最多不超過<nobr>10</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "8360f00b42ffe34dc7ac12895b38fc74c7a15a43976c899dff221b9cc951a427",
+   "artPath": "1387b1adbca9c16e6405a6177272858cf3efa5d4d249abc87be7ecd1c6addbb4",
+   "name": "自我離形，而今幾姓",
+   "descHash": "持有【狐祈】的我方目標，造成的擊破傷害提高<nobr>#1[i]%</nobr>。",
+   "params": [
+    0.2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "fb62b99ac8e3bfc68539c098b98b2d30f4935fb4d22ae3525d13418b66def116",
+   "artPath": "a0112a1402c33c8ee5ed3d065a11573366a095651fe080c56bbc525892c2dc03",
+   "name": "五色雲生，穹施後承",
+   "descHash": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "1e0f40e367f2bc679013d2b0842ce6b1d13d7a2e4b767a97e93718d7694e37f1",
+   "artPath": "04a7b69defcca01085d25424a1d320f1c7e7344b9ff2d4c988d21b113ad5dd6d",
+   "name": "肇素未來，晦明興滅",
+   "descHash": "忘歸人的弱點擊破效率提高<nobr>#1[i]%</nobr>。當忘歸人處於【熾灼】狀態時，【狐祈】效果對我方全體生效。",
+   "params": [
+    0.5
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   581557,
+   234552
+  ],
+  [
+   297030
+  ],
+  [
+   380971
+  ],
+  [
+   866084
+  ],
+  [
+   782143
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "單攻",
+   "descHash": "對指定敵方單體造成等同於忘歸人<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#F84F36;\">火</span>屬性傷害。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 581557,
+   "name": "煥煥辰尾",
+   "iconPath": "43c753abd620d7d987f2e7d97a690c83d73426ecd899903261ae7166f3e25b34",
+   "typeDescHash": "普攻",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874345,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589818,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589818,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673759,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673759,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "輔助",
+   "descHash": "使指定我方單體獲得【狐祈】，並使自身進入【熾灼】狀態，持續<nobr>#1[i]</nobr>回合，忘歸人每回合開始時持續回合數減1，且【狐祈】僅對忘歸人戰技最新的施放目標生效。<br />持有【狐祈】的我方目標，擊破特攻提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>，攻擊沒有對應屬性弱點的敵人也能削減韌性，效果等同於原削韌值的<nobr>#6[i]%</nobr>，無法與其他無視弱點屬性削韌效果疊加。<br />處於【熾灼】狀態時，忘歸人普攻獲得強化。持有【狐祈】的我方目標每次施放攻擊時，忘歸人有<nobr>#3[i]%</nobr>的<u>基礎概率</u>使受到攻擊的敵方目標防禦力降低<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>，持續<nobr>#5[i]</nobr>回合。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "30",
+   "id": 297030,
+   "name": "有道祥見，銜書搖風",
+   "iconPath": "e9472db56554e7e909e5edb88f9695a59c1b45ede5c911fd81dcc8aade63f80d",
+   "typeDescHash": "戰技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      3,
+      0.15,
+      1,
+      0.08,
+      2,
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.165,
+      1,
+      0.09,
+      2,
+      0.5
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.18,
+      1,
+      0.1,
+      2,
+      0.5
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874345,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.195,
+      1,
+      0.11,
+      2,
+      0.5
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589818,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.21,
+      1,
+      0.12,
+      2,
+      0.5
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589818,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.225,
+      1,
+      0.13,
+      2,
+      0.5
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589818,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.24375,
+      1,
+      0.1425,
+      2,
+      0.5
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673759,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.2625,
+      1,
+      0.155,
+      2,
+      0.5
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673759,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.28125,
+      1,
+      0.1675,
+      2,
+      0.5
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673759,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.3,
+      1,
+      0.18,
+      2,
+      0.5
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673759,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.315,
+      1,
+      0.19,
+      2,
+      0.5
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.33,
+      1,
+      0.2,
+      2,
+      0.5
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.345,
+      1,
+      0.21,
+      2,
+      0.5
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.36,
+      1,
+      0.22,
+      2,
+      0.5
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.375,
+      1,
+      0.23,
+      2,
+      0.5
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "羣攻",
+   "descHash": "對敵方全體造成等同於忘歸人<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#F84F36;\">火</span>屬性傷害，本次攻擊無視弱點屬性削減敵方全體的韌性，擊破弱點時，觸發<span style=\"color:#F84F36;\">火</span>屬性的弱點擊破效果。",
+   "ultimateCost": 130,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 380971,
+   "name": "陽極照世，離火滿綴",
+   "iconPath": "db23bcebe0e36fa61e25917be1032f5bad4a4667627a036adf15f02dcdb5e3c4",
+   "typeDescHash": "終結技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874345,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589818,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.4
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589818,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589818,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.625
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673759,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.75
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673759,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.875
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673759,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673759,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.1
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.3
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.4
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.5
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "妨害",
+   "descHash": "忘歸人在場時，敵方目標會被額外附上等同於自身韌性上限<nobr>#2[i]%</nobr>的【雲<span style=\"color:#F84F36;\">火</span>昭】，在初始韌性被削減至0時可被繼續削減【雲<span style=\"color:#F84F36;\">火</span>昭】，【雲<span style=\"color:#F84F36;\">火</span>昭】被削減至0時會再次受到弱點擊破傷害。<br />忘歸人在場時，我方攻擊處於<u>弱點擊破狀態</u>的敵方目標後，會將本次攻擊的削韌值轉化爲1次<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>的<u>超擊破傷害</u>。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 866084,
+   "name": "善盈後福，德氣流布",
+   "iconPath": "8bd1108e6c47ddc7a48e1e0dd0dfad726ca966898245a83df39d3813249c7e0b",
+   "typeDescHash": "天賦",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5,
+      0.4
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.55,
+      0.4
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.6,
+      0.4
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874345,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0.4
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589818,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7,
+      0.4
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589818,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.75,
+      0.4
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589818,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8125,
+      0.4
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673759,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.875,
+      0.4
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673759,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9375,
+      0.4
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673759,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.4
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673759,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05,
+      0.4
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.1,
+      0.4
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.15,
+      0.4
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2,
+      0.4
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.25,
+      0.4
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "攻擊敵人，進入戰鬥後削弱敵方目標對應屬性韌性。",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 665498,
+   "name": "攻擊",
+   "iconPath": "43c753abd620d7d987f2e7d97a690c83d73426ecd899903261ae7166f3e25b34",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "妨害",
+   "descHash": "使用祕技後使一定區域內的敵人陷入<nobr>#1[i]</nobr>秒的暈眩狀態，暈眩狀態下敵人不會主動攻擊我方目標。<br />若主動攻擊陷入暈眩狀態的敵人，進入戰鬥後忘歸人<u>行動提前</u><nobr>#4[i]%</nobr>，並有<nobr>#2[i]%</nobr>的<u>基礎概率</u>使敵方每個單體目標陷入與忘歸人戰技相同的防禦力降低狀態，持續<nobr>#3[i]</nobr>回合。",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 782143,
+   "name": "炤炤徹曠",
+   "iconPath": "9b5c72df15c698dface6d6dd7acc6d3d117aeb8b391ad0fcf1665d1487287ffa",
+   "typeDescHash": "祕技",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      10,
+      1,
+      2,
+      0.4
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "擴散",
+   "descHash": "對指定敵方單體造成等同於忘歸人<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>攻擊力的<span style=\"color:#F84F36;\">火</span>屬性傷害，對相鄰目標造成等同於忘歸人<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻擊力的<span style=\"color:#F84F36;\">火</span>屬性傷害。",
+   "ultimateCost": 0,
+   "break": "30/hit",
+   "energy": "20",
+   "id": 234552,
+   "name": "冉冉方熾",
+   "iconPath": "90860f74a8125312633b3adb2f21f1a7f56f717fecc5883c0c8bb65fa036bc71",
+   "typeDescHash": "普攻",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5,
+      0.25
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6,
+      0.3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874345,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7,
+      0.35
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589818,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8,
+      0.4
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589818,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9,
+      0.45
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673759,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.5
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673759,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1,
+      0.55
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2,
+      0.6
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3,
+      0.65
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1225101,
+   "anchor": 6,
+   "type": 1,
+   "children": [
+    {
+     "id": 1225202,
+     "anchor": 10,
+     "type": 2,
+     "children": [
+      {
+       "id": 1225203,
+       "anchor": 11,
+       "type": 2,
+       "children": [
+        {
+         "id": 1225204,
+         "anchor": 12,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 20250,
+          "name": "生命強化",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+          "statusList": [
+           {
+            "key": "生命值",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 589818,
+            "count": 3
+           },
+           {
+            "id": 633445,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 20257,
+        "name": "速度強化",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "959ebc55a284ac83b29de4d97b3422772e372e53ff820bc9af972e0201aabe98",
+        "statusList": [
+         {
+          "key": "速度",
+          "value": 2,
+          "int": true
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 589818,
+          "count": 3
+         },
+         {
+          "id": 633445,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 20256,
+      "name": "擊破強化",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "2f652a2e091ec1a28dde16dfec5968a959804447eb99f746b6f2cba53dedfc2c",
+      "statusList": [
+       {
+        "key": "擊破特攻",
+        "value": 0.053
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 874345,
+        "count": 3
+       },
+       {
+        "id": 549504,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "我方目標造成弱點擊破後額外使敵方目標<u>行動延後</u><nobr>#1[i]%</nobr>。",
+    "ultimateCost": 0,
+    "id": 20288,
+    "name": "青丘重光",
+    "iconPath": "ce889e5a7ae1ec0e31dfbadf0f6cda697d188ba87a82891d2f414ab9b2690f70",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.15
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 874345,
+        "count": 3
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1225102,
+   "anchor": 7,
+   "type": 1,
+   "children": [
+    {
+     "id": 1225205,
+     "anchor": 13,
+     "type": 2,
+     "children": [
+      {
+       "id": 1225206,
+       "anchor": 14,
+       "type": 2,
+       "children": [
+        {
+         "id": 1225207,
+         "anchor": 15,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 20253,
+          "name": "速度強化",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "959ebc55a284ac83b29de4d97b3422772e372e53ff820bc9af972e0201aabe98",
+          "statusList": [
+           {
+            "key": "速度",
+            "value": 3,
+            "int": true
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 673759,
+            "count": 3
+           },
+           {
+            "id": 717386,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 20252,
+        "name": "擊破強化",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "2f652a2e091ec1a28dde16dfec5968a959804447eb99f746b6f2cba53dedfc2c",
+        "statusList": [
+         {
+          "key": "擊破特攻",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 673759,
+          "count": 3
+         },
+         {
+          "id": 717386,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 20251,
+      "name": "速度強化",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "959ebc55a284ac83b29de4d97b3422772e372e53ff820bc9af972e0201aabe98",
+      "statusList": [
+       {
+        "key": "速度",
+        "value": 3,
+        "int": true
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 589818,
+        "count": 5
+       },
+       {
+        "id": 633445,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "使自身擊破特攻提高<nobr>#1[i]%</nobr>，施放首次戰技後立即恢復<nobr>#2[i]</nobr>點戰技點。",
+    "ultimateCost": 0,
+    "id": 20287,
+    "name": "塗山玄設",
+    "iconPath": "28c2c7c3d5b084fcf4671844c32dc34e7914e6c125c7257fa5e9ebe17c5a0067",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.3,
+       1
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 589818,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1225103,
+   "anchor": 8,
+   "type": 1,
+   "children": [
+    {
+     "id": 1225208,
+     "anchor": 16,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 20262,
+      "name": "生命強化",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "生命值",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673759,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1225209,
+     "anchor": 17,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 20263,
+      "name": "擊破強化",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "2f652a2e091ec1a28dde16dfec5968a959804447eb99f746b6f2cba53dedfc2c",
+      "statusList": [
+       {
+        "key": "擊破特攻",
+        "value": 0.107
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673759,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "當有敵方目標的弱點被擊破時，使除自身以外的隊友擊破特攻提高<nobr>#1[i]%</nobr>，若忘歸人的擊破特攻大於等於<nobr>#4[i]%</nobr>，擊破特攻提高的效果額外提高<nobr>#5[i]%</nobr>，持續<nobr>#2[i]</nobr>回合，該效果最多可疊加<nobr>#3[i]</nobr>層。",
+    "ultimateCost": 0,
+    "id": 20286,
+    "name": "璣星太素",
+    "iconPath": "1f530aa28e8474c2bfa91155ec20bb6b66c7876a8eb559e9ab32a6c826c85254",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.06,
+       2,
+       2,
+       2.2,
+       0.12
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673759,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1225201,
+   "anchor": 9,
+   "type": 2,
+   "children": [
+    {
+     "id": 1225210,
+     "anchor": 18,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 104195,
+      "name": "速度強化",
+      "levelReq": 80,
+      "promotionReq": 0,
+      "iconPath": "959ebc55a284ac83b29de4d97b3422772e372e53ff820bc9af972e0201aabe98",
+      "statusList": [
+       {
+        "key": "速度",
+        "value": 4,
+        "int": true
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673759,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 20255,
+    "name": "速度強化",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "959ebc55a284ac83b29de4d97b3422772e372e53ff820bc9af972e0201aabe98",
+    "statusList": [
+     {
+      "key": "速度",
+      "value": 2,
+      "int": true
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549504,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": []
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "初次見面",
+   "text": "雖是初次相會，小女子卻有種久別重逢的感受。前塵隔海，舊我不再，還請允許小女子暫且自稱「忘歸人」。",
+   "unlockRequirement": "",
+   "cnUrl": "605fcefb035509d9d72ddce60c1b27ff31babadab4fe28ec07d511d636d952f0",
+   "jpUrl": "c0a8b82eaa54a90968d346bcb3281918a137357ef3f4f9ce1a071b2788dccf3c",
+   "enUrl": "7a880104ede2fc25fe5bfd38b5d37694d0dd71142aa2ca16e800daea00fb6a3b",
+   "krUrl": "82daba3adc1eab9c338aec0e364b40c039a2f7f6bc768450b229100f97f94493"
+  },
+  {
+   "id": 2,
+   "title": "問候",
+   "text": "旅途可還順利？若是得閒，我這又來了一批好茶，等着列位恩公登門品鑑。",
+   "unlockRequirement": "",
+   "cnUrl": "c80c37ea2aa9239d0c625fd6d5ecb0f46375b4953af496c2f2382c633ec563fe",
+   "jpUrl": "b640dd43d73282ba017e862d5bd7b870d32c9d31cf139be51c87a48b7023d2de",
+   "enUrl": "bd7414b17d272ff623173d2c19fababa6a73c24e5955799c22d06daf6e8b5492",
+   "krUrl": "9e9b642b97ee84c0bf2c140c99965c01fd4e6ef6aea288ab8f3a2546624cd06a"
+  },
+  {
+   "id": 3,
+   "title": "道別",
+   "text": "縱然銀河迢遞，星漢漫漫，只要彼此掛念，總有重逢之時。",
+   "unlockRequirement": "",
+   "cnUrl": "9d6949c510ccc8db8bc8b6d6de37b11e3af6a442d08ef853a5729dc1fcd72352",
+   "jpUrl": "ecf8f829741c0f88a1421af2bb4fddd6a6c7867d1807b0bdb851447979738aec",
+   "enUrl": "d0ff36be6254eb93eb94cb7bd9ef99d1addf698e606d665ad14d8ea3d36a4955",
+   "krUrl": "7fb78f9949a212010fa461f5a21e93c910a287921c8fd4018eadf7cef3fb0e67"
+  },
+  {
+   "id": 4,
+   "title": "關於自己•「忘歸人」",
+   "text": "何爲忘歸人？是未能重回故地的人，還是遺落了自我的人？",
+   "unlockRequirement": "",
+   "cnUrl": "1856c36864b38ffe9358b6ca0dc3e416d0458fcc26d058a680d3c0641b128cf0",
+   "jpUrl": "bd42f46fd8e1bf4dcea62affb202a28b7932b341098d0a404af28f45b938dbd8",
+   "enUrl": "fdd30142264154831b9da1ea5aadc24362b188b4f117da57591430503624512c",
+   "krUrl": "d6046f020e138bcea8339ea71e3dfca147914c25f127b6293e747aef85ef0f70"
+  },
+  {
+   "id": 5,
+   "title": "關於自己•「忘歸人」",
+   "text": "何爲忘歸人？是未能重回故地的人，是遺落了自我的人…但，也是重新啓程之人。",
+   "unlockRequirement": "完成開拓任務「在第八日啓程」後解鎖",
+   "cnUrl": "cca68b5f6804a9707483f2dd57770efbd6c661a9d2fd3d719a35a2a89f969a9b",
+   "jpUrl": "a57e2eb61149ba6d39ac832579d5cbc214aeec66bf315dce95dce337a288d0e1",
+   "enUrl": "9b13c70264c5a8d4070907ca17a0feb3464a264da99e0fb6bf7c939ede0bf6ae",
+   "krUrl": "ca6ca227a7383bd9ae590b52005cf0574d403bdc59397e89d030d077caa3037c"
+  },
+  {
+   "id": 6,
+   "title": "關於自己•尾巴",
+   "text": "據說我醒來時，尾巴就已經是這副模樣了…或許是應了求生的渴望，每逢險境，它們就會爭先恐後地出現。",
+   "unlockRequirement": "",
+   "cnUrl": "4c2464b3a37a8c5404f974c0740bebdfa06f12b377a24727861b70add7d4eb80",
+   "jpUrl": "9047327220effa407dacbc6831101c5741a1c36ef8cc1ad6ee915b40a1f74f78",
+   "enUrl": "0397e8d933a6b1a5b8ca0421956d6cc83ec9bfc1fd51b085c77addfcadabf3bc",
+   "krUrl": "6f9f5faea7f1b167043eb9a013656fb5b26c926dfd68a16fd2268494c4521f23"
+  },
+  {
+   "id": 7,
+   "title": "關於自己•夢想",
+   "text": "小女子一心期盼自己能帶領「鳴火」成爲星海間數一數二的商團，雖然逢遭劫難…但這一點未曾變過。",
+   "unlockRequirement": "",
+   "cnUrl": "f0a69df1b4c4568a12b55c0a0328590ff6fdb49fa499653ca5e178dca864ae0c",
+   "jpUrl": "b00fb6566741a173f81021c2a897c9c60bc6356523891dac5f9e5a8dd1e92396",
+   "enUrl": "beb13635390035855bd132fe88b6d9bceea6e616754c00f207f808aae3373509",
+   "krUrl": "77ae2805db330215fbe16ddae1b61f70bce0eebf06c4b3d290baa5014a543760"
+  },
+  {
+   "id": 8,
+   "title": "關於自己•夢想•二",
+   "text": "我不會忘記那個瞬間，奔赴星海、巡遊四方的念想，從過去到現在，仍是一切的原點。",
+   "unlockRequirement": "完成開拓任務「在第八日啓程」後解鎖",
+   "cnUrl": "70fdbcfbf0d992bd6cbd7043bd1af0a2976740eceb365f543198d45c72703c6c",
+   "jpUrl": "2e36fbee3bafdf24e8933a9817ca173aaef2544d028cc36e80db00dc7a2d385a",
+   "enUrl": "732d4da97b2022ba0e67ba9946aa988e799b7537119d8cff3e0306ae3fdd3713",
+   "krUrl": "36b0b17c38248950330fd5083b311d4f4d1417909e7cfb194250e50df555fa37"
+  },
+  {
+   "id": 9,
+   "title": "閒談•扇子",
+   "text": "小女子從前就鍾愛扇子，總將「扇扇風，消消火」掛在嘴邊，但遇到不長眼的，也只好自認倒黴。如今這扇子真能掀起風浪了，卻變得有些不習慣。",
+   "unlockRequirement": "",
+   "cnUrl": "0d89d1177ef8074460b7d45d1d389f5b186259f0cd091c514d36dc5bd3337654",
+   "jpUrl": "542948b90b32bef5dfca8343f30a1c91916b4a0b8c9b71ea633140adfd249f8b",
+   "enUrl": "19acb12e936e214aca153cb86137b12282c8efc84e3734f63df54e6e37198da5",
+   "krUrl": "c825488d4beb96bbc57fb0969216e527f3d9c38c93da76d77c7207f976667769"
+  },
+  {
+   "id": 10,
+   "title": "愛好",
+   "text": "得閒時，小女子愛在市井氣濃厚的地方閒逛喝茶。從那些隻言片語和細微末節中，我總能感受到過往。",
+   "unlockRequirement": "",
+   "cnUrl": "1970bed45ddab16d05b4ebcc1259ddaee751d9d5d265c6290521913c5fde726f",
+   "jpUrl": "4f245899c2dc44a628f01f2e3c821444ed753b494649bcbf7dcb21190f03192a",
+   "enUrl": "d01a980aa03d099ffa163cfaf149f3a75644879ed56f9df4c5a826ee240bd115",
+   "krUrl": "7f5d6b8869320350b0445e4005f5cdfee06d4caa77d45c75529c5f8a74c862b5"
+  },
+  {
+   "id": 11,
+   "title": "分享•遇襲",
+   "text": "「毀滅」從外部來看僅有一瞬，於我而言卻漫長得多。只那片刻，我看見記憶、情緒、言語…它們從我身上片片剝離、飛散消亡，匯聚向另一個人。",
+   "unlockRequirement": "",
+   "cnUrl": "1208f9997e1ffcb65a57128bde427c4def55f556fb21b11949a7502cc182e90c",
+   "jpUrl": "e067cdee5935e062de1dbf636f7b21e0db227140e4566d50137ee4f384171306",
+   "enUrl": "9030ded2ddb04fe6b1bbda0cffb502bdec0d9305b78d637c3f75fc44a5d0877e",
+   "krUrl": "b85c52baf3907502c9bb7d527322be293135acaa5af4ff5605e9bebde3b9f88a"
+  },
+  {
+   "id": 12,
+   "title": "見聞",
+   "text": "行於命途的浪潮，如小女子這般的人只是一粒微渺的塵埃，隨着那些巨手的撥弄上下沉浮，身不由己。",
+   "unlockRequirement": "",
+   "cnUrl": "d281dd4a1226a41bf01fc75246aa3a3f874fd0900d9af48311426731eb16d6e4",
+   "jpUrl": "c9c7d894bfc8fcd55d325813a3be2aa03cf165adcad68de0ae9357ec9f033b76",
+   "enUrl": "a2d4625ab382096814fb7332553c832bd2c4939eba6cafa712e62e2f8d4c28f3",
+   "krUrl": "b3611343ff26c6c3145e9abb5c8d549745c1b8c4557c6af1ffafd234f6961191"
+  },
+  {
+   "id": 13,
+   "title": "見聞",
+   "text": "行於命途的浪潮，如小女子這般的人只是一粒微渺的塵埃，隨着那些巨手的撥弄上下沉浮，身不由己…可如今，小女子也得當一粒狡猾的灰塵，讓他們好好打上幾個噴嚏才是。",
+   "unlockRequirement": "完成開拓任務「在第八日啓程」後解鎖",
+   "cnUrl": "98f23d3d529681f9e6790e1a91ca2c20069ad489cb096921af9170eb182930b9",
+   "jpUrl": "c19e2ac47bd012f060ef2f9c93b574fa201bf7955658320bad8088da8826a558",
+   "enUrl": "3d53b1f40a393ac3cb2eedc51868e2a878a0189670cb37949fe74e0986c3fcb5",
+   "krUrl": "70f434e8a01f5df96eaeb76e056aa829190f49116b7e483ac02b86c3f2676a98"
+  },
+  {
+   "id": 14,
+   "title": "關於景元",
+   "text": "將軍大人四兩撥千斤的手段還歷歷在目…希望有朝一日，小女子還能再次目睹。",
+   "unlockRequirement": "",
+   "cnUrl": "d8a5bbfb27cef0810ea932213c072e70b41b58ca81fa8e307b1f6637ad6cc29f",
+   "jpUrl": "972beefaea5708e8995b5f644c950aca3be2a6156ad0079752229c67e40853f5",
+   "enUrl": "b9a479ce81c8321d13422bd14f64e43d82182c16c83e6fb5538acae018d0bf8e",
+   "krUrl": "34a61826076b25ca3c83bc62f7c30c91713967ada9a9abd57a80276f91a219d2"
+  },
+  {
+   "id": 15,
+   "title": "關於彥卿",
+   "text": "我記得…我曾送了些稀奇的玩意兒給他，他是個很有禮貌的孩子，碰到心儀的劍器更是眉飛色舞，開心得不行。",
+   "unlockRequirement": "",
+   "cnUrl": "bc5ef63aa25b1211cbf518049622349c322e769168059ba573f457faf62fc185",
+   "jpUrl": "60bab9be31d5de6166b6639f1e1addaf42385c891783417df1273bf910c48363",
+   "enUrl": "55e2c71745a938472a174300330d9da5ea6ff2ff85a57daf8ad6d26c71491fc0",
+   "krUrl": "64962ac957ecdac2b445e8658ed00a6ed970f0dd55dce0282813f6c44e4cb1ff"
+  },
+  {
+   "id": 16,
+   "title": "關於馭空·一",
+   "text": "我還記得…無論是駕駛星槎亦或統領天舶司，仙舟的航向上始終都有馭空大人的身影。",
+   "unlockRequirement": "",
+   "cnUrl": "63cb091c3fb3cf6aee5367496cc22b39d7d7def8bdb02769c66184a93826a086",
+   "jpUrl": "8400e5f238806d0b58e1782a6daf583a8d065a1fb1044446517c301205802c9d",
+   "enUrl": "59190917ece1ce311b03e4e8a8fcde2cc9ef3cd7418433d6c4e4d61cdd2ea8b2",
+   "krUrl": "d457a29a8680a86ba1ca16df21db12d609e3c22707cb635db15f5c7f2c33f5f0"
+  },
+  {
+   "id": 17,
+   "title": "關於馭空·二",
+   "text": "馭空大人同我說，她也曾在某天「死去」，而後漫長的日子裡，一直在尋找「活着」的感受。",
+   "unlockRequirement": "完成開拓任務「在第八日啓程」後解鎖",
+   "cnUrl": "8e5e64d10b5c34fe9f1dcc0eb8a65ca7f28f89bdd5f0ddfbd596e34f5dbde1b3",
+   "jpUrl": "02cad6a3339caf72cdb110ef5d0f1d0913239344c9f31a4e1f92c1293bbabd1e",
+   "enUrl": "d3f690435b8fe6870312b205ded922c5f29eaf89f72632da0d78e741dbae4cfd",
+   "krUrl": "ac813da23981960ffda3e374141c205d453a65fdb4020f59a6fdecc8c64ebc7b"
+  },
+  {
+   "id": 18,
+   "title": "關於白露",
+   "text": "不知爲何，如今身體特別疲累，總會想起白露大人。下次回羅浮，我定要去她那看一看。",
+   "unlockRequirement": "",
+   "cnUrl": "b4d1297b45479a266ee05f50faeb14ef74f038452a51997e2fad4c83116eb65e",
+   "jpUrl": "33e0eae59c99f5f6a6d3c1f703f32cd235dcc0a01a53787c1c76777c8f74b3ab",
+   "enUrl": "07c5295f8e76ee815ca6eabcfa0a4aa0ac57960ac92f6de8088a0a47b86c5e55",
+   "krUrl": "e0539ea703b94db148f67c439dbe5140473bfa8dc085e01ddcd7b5c3ee91eaa8"
+  },
+  {
+   "id": 19,
+   "title": "關於青雀",
+   "text": "她是太卜司的卜者…還是牌館的老闆娘？",
+   "unlockRequirement": "",
+   "cnUrl": "74f5a29ed9549434aca164ff1ef97a4e08c1b52ef7c0ad8e96543e60d5d1973d",
+   "jpUrl": "a9e3026a48d054020916f51aacb6f7f9f1aac68f664a61a6971f550f92fb1224",
+   "enUrl": "5ad6639b907b0259963b02924711393d71f377a1c04e79515a737ba8073c6528",
+   "krUrl": "fbd57410e04a94fcd49e9f83f47dff7fc3a6c02c627a47f4497dd809a19254d0"
+  },
+  {
+   "id": 20,
+   "title": "關於符玄",
+   "text": "太卜大人那副嚴厲而悅耳的好嗓子，我可忘不了…雖然不留情面，但又句句在理。",
+   "unlockRequirement": "",
+   "cnUrl": "c4ffdc1b89386911b0e40eca04f32fa53a9823501fe9488628da6b1887dc1906",
+   "jpUrl": "5e89b39a837444404c4aafd2e8caea6df91e032c55a9688ebdfa41dbf3734162",
+   "enUrl": "fe23a13b9a888c5ab382267486f88351af3f70aebc48db1584fc62ee4189148d",
+   "krUrl": "03c273d9d2109e0352c15f54a735ccb814240283a30f459539a1b039d2fed622"
+  },
+  {
+   "id": 21,
+   "title": "關於阮•梅",
+   "text": "「死而復生」總歸是種奇妙的體驗，可阮•梅小姐卻教我什麼都別想，只需規律作息，專注運動便可恢復健康，語氣輕鬆得…像是舉手之勞。",
+   "unlockRequirement": "",
+   "cnUrl": "32bea615a37466120cde5105f64497128242144b2b4b568d839ad935fe147a7f",
+   "jpUrl": "2afb365dbac110b27f783593b00a8e8b04a7ee99ab1bdf14f27fd5c55ba9a7c8",
+   "enUrl": "62285cda0077721d8d5bcfe78e546c568f9bdf2405a8e0b0fbd5456faa746a7f",
+   "krUrl": "f761fc7a30b16058cc58cdd41ceb15f4550bbf5a24910c1d3c49956f3814ed65"
+  },
+  {
+   "id": 22,
+   "title": "星魂激活",
+   "text": "靈魂的悸動，最爲珍貴。",
+   "unlockRequirement": "",
+   "cnUrl": "202e91d80e7a459d8f9db479be8e072b4031d91f0ff5c22d36f55763523812ca",
+   "jpUrl": "70950f2c953049e2aae77c8e58e14ef9c1437fdbba6e76a5955e6467f96b6a92",
+   "enUrl": "3f73e1cebf9a36c421e2cdbfd04d749cb54a32765c96aec319c5206b36e77c93",
+   "krUrl": "5d9e25bd9a6732b4693c934ecbeacaf87e1704a3a277f4cd5ca3100034df3282"
+  },
+  {
+   "id": 23,
+   "title": "角色晉階",
+   "text": "蛻變總免不了掙脫過去。",
+   "unlockRequirement": "",
+   "cnUrl": "1b6fee798b29141512775484c16d3b44759ba367e547d17cccf6e194358b4c9c",
+   "jpUrl": "5c25c4ab817e2614e184a6b37f569768bbdad70cba08ad1645a6a444743491a1",
+   "enUrl": "567aece1def700946c1d52986568e252f1072a4c184b63a2ffbfc4dfcbb619c4",
+   "krUrl": "82145267952fec2c0d7b5614aafb65542e6408bcc86dbae9bbb8f5b7e0065209"
+  },
+  {
+   "id": 24,
+   "title": "角色滿級",
+   "text": "如此一來，小女子也能跟上各位了。",
+   "unlockRequirement": "",
+   "cnUrl": "10c9e5f70e369d84580289560da3eb48df053f14e907c988e8e8516b0001c201",
+   "jpUrl": "1b04288497b671ed8c91b918a45a691c9558fdd5ac3b8adc2e3d4c560ef2056a",
+   "enUrl": "1e1c44f896107ddbbff166cd53035d276fb52de0b7ec66f20f6f348ab861865a",
+   "krUrl": "eba200f295f6e350a72f4c46c3571942215f360c9731de89822865cb5e21c964"
+  },
+  {
+   "id": 25,
+   "title": "行跡激活",
+   "text": "這星海間萬千世界，我還遠遠未看夠呢……",
+   "unlockRequirement": "",
+   "cnUrl": "7affe7602978ad10cebd8a41d012e3e99281c612798ce1603bd0224fe9d60ac4",
+   "jpUrl": "3f3992b8f9343592929ad60bd37354c55df32eb4fce10e9ed43d1375dff82fa1",
+   "enUrl": "8a466d40135310db68f1421c95c6d7625df4b84784297524eedc4878669b5219",
+   "krUrl": "e6c14596f4420abf860130f3ec2d9582e25c168909edc0f7713bc041bcfc0875"
+  },
+  {
+   "id": 26,
+   "title": "隊伍編成•開拓者",
+   "text": "讓小女子來助恩公一臂之力吧。",
+   "unlockRequirement": "",
+   "cnUrl": "80457070305eb1e0621dc63e8c752c41d3e57b908eb4fb88d0f35c028efca95c",
+   "jpUrl": "f05935cc16a964af402a1564a64c2667b8afd2cbda3d66ba0927299ad1712601",
+   "enUrl": "b2b395436ca6504b7bb66ac1bc6f0222f52910afba52f0cc8049b5d5d7430b3a",
+   "krUrl": "a201fe7445c6b3b6995ff197c7bec25f336f31ec8dc944261d68ba28e21356e1"
+  },
+  {
+   "id": 27,
+   "title": "隊伍編成•馭空",
+   "text": "馭空大人，請讓我同您並肩而戰。",
+   "unlockRequirement": "",
+   "cnUrl": "3d73c6cbd13b6f9980f04d7496ef6ff6ae7f7d4d5630a8b9479f63b2e6bc93dd",
+   "jpUrl": "a891fe3aae1a27ecdb6934d0b4aa2be6a6e2285b2c997c71428f45bcffbddddf",
+   "enUrl": "cce095bdd5c66cbfa970bc0da2f02984fcd2b77f96ee95c433f95a6203ad3034",
+   "krUrl": "cb44153512714272bedcea60e1133ccabbb392600b4dd069ae840a6ae1ad8ed2"
+  },
+  {
+   "id": 28,
+   "title": "隊伍編成•阮•梅",
+   "text": "請阮•梅小姐放心，我恢復得不錯呢。",
+   "unlockRequirement": "",
+   "cnUrl": "f77e520e256f68a5bd1e53dfa270e2189abcdbe0425e7e7cb3db2d695ebcaf45",
+   "jpUrl": "f64d93611b9d37f9ef18fc66f70c6b3a817ade9338a337b102239ed40126fc2e",
+   "enUrl": "c36346c97d69071eaf971fff1d9d0f964505119fbb7a4a9ff00bdc643ac9b140",
+   "krUrl": "83ca9ea5c6604e679ff9d78f4eeb904cf6430369f99df8fe2ae76aeb95f15175"
+  },
+  {
+   "id": 51,
+   "title": "戰鬥開始•弱點擊破",
+   "text": "好機會，拿下吧。",
+   "unlockRequirement": "",
+   "cnUrl": "50886bd5e38827b28d65cf6e76acc14fa918c6afffb56fbd2c0b6681085620f0",
+   "jpUrl": "ca013e500fcd840f564632e15d4a9bb342bc7e4abcdfb4c0f1513cc61831cbf1",
+   "enUrl": "0c9f4c266441af99c571156ce1ee8c6b9feb467f1e23d14cbc83061195c0b3a8",
+   "krUrl": "d997fb70c9316c12bbe6313c8f9920eb76679f868c53c3fe83e15ce26dbc8935"
+  },
+  {
+   "id": 52,
+   "title": "戰鬥開始•危險預警",
+   "text": "一定會有法子的。",
+   "unlockRequirement": "",
+   "cnUrl": "49d88c2a4a814aaab3c26aa22186538a2d10c38526219b88a4a2e48c47c2f780",
+   "jpUrl": "88fc982e7637b82229164e856ceaed5ffc722e06c79502cdc06dd7260c13d349",
+   "enUrl": "9946daf84f25f1bd25410bde46204ef4d15d9a239a11a32d3ab6a6f2c1f490a1",
+   "krUrl": "c93cea9ba638122b841379d5ba42a6ebc1cfd670db3aadb2dd43e7074a88b82a"
+  },
+  {
+   "id": 53,
+   "title": "回合開始•一",
+   "text": "不知我們是否打過照面？",
+   "unlockRequirement": "",
+   "cnUrl": "edcc16f7784600e7f3092e931fc2218c9dc0ae08f00121074aff33402d64e1d9",
+   "jpUrl": "ef5e0b304c532369e9fdd07094bc7ffef3ccfe7e6ee2cc00db78133d9e2c4c49",
+   "enUrl": "48c0bd555fed2275a7486f5d08d22b9ae05376d20e48abf29b5a1388f334431a",
+   "krUrl": "9529d2a644e61a1eea9e1fb1c0cb1f51891b90faa30194bc313a8bb40933f3ea"
+  },
+  {
+   "id": 54,
+   "title": "回合開始•二",
+   "text": "如今，小女子可不會手下留情。",
+   "unlockRequirement": "",
+   "cnUrl": "e72295dd5c418c9d943d7977b41c89172c2f7c123f3435d359e7b9a8d10754e4",
+   "jpUrl": "a800fe88581934b038aa5d7e08e9379c227d3e97b8a1ad4dc9fb3f451b36acdc",
+   "enUrl": "d4130233a8318783ea5b3925d933a99a243113c76facd937cce236f119e223c1",
+   "krUrl": "50f0ec8f79400dceb6e43dd0f17e1d183435d342af7de781f678164af6b43655"
+  },
+  {
+   "id": 55,
+   "title": "回合待機",
+   "text": "一彼一此，世事已然改換。",
+   "unlockRequirement": "",
+   "cnUrl": "3ced5a56e077044a82c32daefa604705a54615b6638d2d146dc6b220b2912de1",
+   "jpUrl": "254cddd46906460da26e8c3b3dbbb1002456ff1dca5bb11077a9a1c0d5e3c7c7",
+   "enUrl": "f696abf4de88a568bb4f492f939be8085be182289f6c8077dbe16fc307304be2",
+   "krUrl": "cc7be9bf0f562df93f2b48fcfc9efb6064d0b6457fccc11b025334e450400ce2"
+  },
+  {
+   "id": 56,
+   "title": "普攻",
+   "text": "切莫回頭。",
+   "unlockRequirement": "",
+   "cnUrl": "89adce8c197d59455a5663573795d23ecfa115d2781a26b3afd6f84617ab79bd",
+   "jpUrl": "b5a63ad047745fe096409d47971446d12c936d2c4cffc2ef167e87b2cc159a6f",
+   "enUrl": "192ceff187f7f38bf50ea35f7c9ac109c1853f7808bd2ac1f0fd9bb2fe862dde",
+   "krUrl": "61adca22256c1cd50545e123287915ff4cfc4f516b6d49321b6ad8a2f276a56c"
+  },
+  {
+   "id": 57,
+   "title": "強化普攻•一",
+   "text": "流雲易散。",
+   "unlockRequirement": "",
+   "cnUrl": "99fd920411af51b5d8c3aced9dab918baded6cc4446674302c49d7fed053d6a3",
+   "jpUrl": "21c541dbf8f2a69fce97fae292f111e9205dc9a80ae04ca648f5063c0a064346",
+   "enUrl": "3095ba1acd14d6be2a016918cee3cc57720f47f5845a4d8affd3e131754346e6",
+   "krUrl": "a92351f67a9d00b055e073af928b8655deed74c724eab5f4150187726bf62b3e"
+  },
+  {
+   "id": 58,
+   "title": "強化普攻•二",
+   "text": "長夢已醒。",
+   "unlockRequirement": "",
+   "cnUrl": "6f11e77400e0e32ac3ac4ba7c4d41b1e90e7d098043ce8d3154850b6dba5b9bb",
+   "jpUrl": "3285b7aa956dcccb7d76a65b71baa65d5472523e26edaa13d6836aa15d2cd07f",
+   "enUrl": "ab37ace545cd12f9908cfc1957fcc562dbbae84391b2c37eeb2113bf7520f8f1",
+   "krUrl": "e6e1f7ae6ef67d325c91e2c9ada31410e15e5fe8a375cf07ab548b825488d6b7"
+  },
+  {
+   "id": 59,
+   "title": "戰技•一",
+   "text": "有福不妨同享。",
+   "unlockRequirement": "",
+   "cnUrl": "b76d0b8f6005069d7b13fa672a23d014d06cb8628981a5672077cc5fd7c11e90",
+   "jpUrl": "a18d3223b07f4d3d05b94f450fecb4d258024be3e4ed9d610dbcd9bcd8d2102c",
+   "enUrl": "822b749545b4ff97c52238c23ea39aa022d9b884cf90ba365c7d500aabfb579d",
+   "krUrl": "aa391c827c697fa36ba707ad4e97673efccbd4736bfb83c573dd331cd81ba42c"
+  },
+  {
+   "id": 60,
+   "title": "戰技•二",
+   "text": "同心一意可好？",
+   "unlockRequirement": "",
+   "cnUrl": "1895eeb38463631f94052d5964075b7f56711a5aab1762db9daa26e56dc99a08",
+   "jpUrl": "9d3488803671d331a3296bf667929c2fb0c2e0565fc204477032fd87e53ce0fb",
+   "enUrl": "c50a0e76f68f418db24c4d8c0078ebbbd968e741cae2184fe989fbc9062782a8",
+   "krUrl": "9c3c99a277208cd0c75d7fbac3d352d91d988796274bb0599112a9190bc11df5"
+  },
+  {
+   "id": 61,
+   "title": "輕受擊",
+   "text": "沒事的。",
+   "unlockRequirement": "",
+   "cnUrl": "26bd73b8f5e50d058ae39b7a05b11a038b1325a428714e532f94d3d9e5672e0e",
+   "jpUrl": "b21ef4b9318a59a31bcb948b67f34371a537301c0076e49b6acf7ab45bd0d3dc",
+   "enUrl": "3781a0606721d2ec8924f98d86bdde39d284befa78190b1b84d26afd1d486b8c",
+   "krUrl": "c18885ce56d6c7a760077bab8935c9b34a447a4c04aa4b08073a8e4d4ea7a4cb"
+  },
+  {
+   "id": 62,
+   "title": "重受擊",
+   "text": "這次可不能……",
+   "unlockRequirement": "",
+   "cnUrl": "38e9882c37b6cffa11db99869011cd570ee8ed0f1391b5054abc515fd8f274cc",
+   "jpUrl": "40120ddbe3d772aef2de90ed037bcb526cb973d1ad4f5deb43ab8cbd7cd815dc",
+   "enUrl": "70271530397d1d3528a2e2fe3f4230cbe7f26d00f03928b2f8fadc98b968c142",
+   "krUrl": "392c4de3dfc73e6e2cfa49df4dcc4d7f4fcc5e6c410da80d339b8e578b677089"
+  },
+  {
+   "id": 63,
+   "title": "終結技•激活",
+   "text": "前塵舊夢，俱已往矣。",
+   "unlockRequirement": "",
+   "cnUrl": "bb08e22466ac30c6cf5803aa84f292993045d4dc9076189ee636e842ef1abaad",
+   "jpUrl": "0f857ee09e7159744ded3f95ff8c710492c2d16d2c82cf15577679b2ca822fff",
+   "enUrl": "e2274aa28906dd38e0dc31ba64345e68024da664e48fd09271dc82853034d3d9",
+   "krUrl": "d9569480d7e2d53ed4cc74b56eca065d204c5868a6ad9e8d6cdf381cdb379a05"
+  },
+  {
+   "id": 64,
+   "title": "終結技•施放",
+   "text": "生命縱如微塵，亦能翩然起舞。",
+   "unlockRequirement": "",
+   "cnUrl": "092e047f1d437eb92ab7d3df1af4e68a6615891e04962568580fa1f08fdff8dd",
+   "jpUrl": "5031cf687ae2c7b9cbab376a50c3034b650a114dd3af3fe8ddc1dee3f28f905e",
+   "enUrl": "e50dd063a9855a123f2406f725f3b51230db568cfaa4ab48bf94e540373109a3",
+   "krUrl": "43d83907cbcd31f09e1d84867b663cf7a3b8e27884ea8d4dca0b8dd74454be47"
+  },
+  {
+   "id": 65,
+   "title": "無法戰鬥",
+   "text": "命定如此麼……",
+   "unlockRequirement": "",
+   "cnUrl": "e6204d4ca214d69d74485631c1941daa0135fe4a3d44f2e3b46913d58bf2a057",
+   "jpUrl": "e4951eb083accb52b16860f44e582f0e7243891d445b1d85c36cd79cde4a8687",
+   "enUrl": "065e49a0985373ee8e3a381c2b05a4d879b20bf81bdef334546bad9e566bed42",
+   "krUrl": "6010b202a777ccc20ecce468fe4d75936969dcc0e691111c658f4fa54893fe15"
+  },
+  {
+   "id": 66,
+   "title": "重回戰鬥",
+   "text": "又是九死一生。",
+   "unlockRequirement": "",
+   "cnUrl": "ec357757263ecdd6b973d3ce16b5de7991a739174a68748f737fb956ac884cbb",
+   "jpUrl": "dd535a92ecefeb00d8e24335cbf2b959d4449eb281b9118ac5b1c13c492fa0e8",
+   "enUrl": "f28dbed15c9a49a0b4e085383c73dd45cefc340dba5857c72a81a9834491f245",
+   "krUrl": "7aa90a8e5363a4bd5591fad4320c42323f696ee04f97b41572b40b386bd6c52a"
+  },
+  {
+   "id": 67,
+   "title": "回復生命",
+   "text": "多謝恩公。",
+   "unlockRequirement": "",
+   "cnUrl": "1dffb9ce0cc92b7ab57f76438c6b53974ae50e784b2e5ffb9e5606e5ae95027b",
+   "jpUrl": "999c0e37727357219f6dd8f05aced48a62ef97fc72ca133f7948b1ebd155a3e8",
+   "enUrl": "c4f0eae879881bc85cb79b276ade85c18e04043f2fa51cdda9d52b067086929a",
+   "krUrl": "4719337682cc259728702e187db3f9958a1c98cf0c199ad0e741404cc0b1c6c5"
+  },
+  {
+   "id": 68,
+   "title": "祕技",
+   "text": "歸期尚且未至。",
+   "unlockRequirement": "",
+   "cnUrl": "9a986f7780f37c38b9acc1cff0f67ac24367dc7c4ff029d2c80da724471f8d07",
+   "jpUrl": "36d7ce6f9e9015d949d2d982ac7309dcd788a18a4c186e40b593903735aabed7",
+   "enUrl": "9ff80793fd9e173b3092662b8a1e55659a281aabfdc0dd980468f56fd4d1c0bc",
+   "krUrl": "1f6320ab30bb28fa08ead381dc1c211ca7e9f94ea48c86765075b3d7b68a6c9a"
+  },
+  {
+   "id": 69,
+   "title": "戰鬥勝利",
+   "text": "希望小女子能幫到諸位。",
+   "unlockRequirement": "",
+   "cnUrl": "b43c4ff564d3b5ace403f62d47fcdcc80109bcc12ca7df4586978586ab820a0b",
+   "jpUrl": "ad072c50775faee18b73f3acec6524e25eda874e934573faa6fc39998bcf049a",
+   "enUrl": "2dac1eb733e2b4535faef2f547c3d48da1a7c159a33f59743d805b0b7d27c3bc",
+   "krUrl": "f2ac75f533b32fe39cfab57e0067708eda3c2ac1970ddfd6c23c767dc3c13ba4"
+  },
+  {
+   "id": 70,
+   "title": "開啓戰利品•一",
+   "text": "運轉時來啦。",
+   "unlockRequirement": "",
+   "cnUrl": "a7a004d7596bca69cce98cb2e46288003d5d1d80475523123b02f406414ad2bc",
+   "jpUrl": "2303285e276f199ecd8740b35e550dea2669c9a1e6beef998376f065eec50322",
+   "enUrl": "eb369af22c34559372762796a143d649937c28072a775fdf1a59ee9247fb4958",
+   "krUrl": "038b48ee8fc1e9f1285a6dc1cbcee96faf92feb3d23d56e913dd42ec39cbbcc7"
+  },
+  {
+   "id": 71,
+   "title": "開啓戰利品•二",
+   "text": "不錯不錯，萬事順意~",
+   "unlockRequirement": "",
+   "cnUrl": "7c9527f2314e8bf03545cf76e0ade0c537e33039d45ffa269daf7585d571a374",
+   "jpUrl": "4d691ce45f136eb4e2a2ab927090bc61ac5a714055f48fb8f693fd15a52cbf09",
+   "enUrl": "c9cfe4c5229294ad41ee697a34c9fd3def699c33a20de2b2f414da3e7ed137e6",
+   "krUrl": "2a4289b47d54c8be7dbb4bfd288394146ad7187cd638aff5c9019cc8f7a5fc08"
+  },
+  {
+   "id": 72,
+   "title": "開啓貴重戰利品",
+   "text": "確實是奇珍萬千。",
+   "unlockRequirement": "",
+   "cnUrl": "9a0ce06ac858639ca498d03e5d5ae09a7bb1fbeb7b4d750dbf653884f504a261",
+   "jpUrl": "010c7bc50b41e36297b979512c4b7332cdb45872ec8b8a19089ee668d99fdd49",
+   "enUrl": "e8896399f4128aa3b302cb441eb1416cf533eeca52252f7c18cb278ce4da9863",
+   "krUrl": "765e7389f054c6fb3de6b0e2356090647642a9d3d3223fda4a82fa2a4ebe186a"
+  },
+  {
+   "id": 73,
+   "title": "解謎成功•一",
+   "text": "關關難過，關關過呀。",
+   "unlockRequirement": "",
+   "cnUrl": "d5a9ad23985000fe8b833a977043220a4f001e9cf6f33d3d13baa55873f4d2a4",
+   "jpUrl": "b6197ef2e921707962afdd5703489cf479fd1be26cfd7a0438b0a593122009dd",
+   "enUrl": "1416cb3449e96d0695524df5ddd0ccbb1a15bc0a1412ee279b607f91dbe3c047",
+   "krUrl": "c0588d666ec3fec91dad9da7a7aa6b9270161dd45df70eb5be585dae8aa93d8a"
+  },
+  {
+   "id": 74,
+   "title": "解謎成功•二",
+   "text": "全仰仗恩公~",
+   "unlockRequirement": "",
+   "cnUrl": "d226c370d8bf9a9880ad0b4ec3889cfee8c6ac09870464f68ff146543ebd5d72",
+   "jpUrl": "0c9d1556d307eee98a776b3ac71412827d74787cff7fe74cdcf479ffde849dd1",
+   "enUrl": "780487f89b31f1c5677e169a202893cc3be32fbb3bf8e5d9d6f1a89261699542",
+   "krUrl": "1bf7c619cb0d41b778c004c63d57f3b166abe5d8fb2c340aedf4d14ad8228082"
+  },
+  {
+   "id": 75,
+   "title": "發現敵方目標",
+   "text": "那位的模樣，好像不太友善……",
+   "unlockRequirement": "",
+   "cnUrl": "bca2597459c89597310e6de87c76886d1b7b60eaba1f92f39eae09493171287f",
+   "jpUrl": "a94408563ef9a49c8d3ea0a0a0f1aaa4ce17f56dc3656c849417d924f3b35126",
+   "enUrl": "98ff01c46ca7e4bdf0d1d6cd1f83a55b3331d859f35653346103f4ee3e14ae22",
+   "krUrl": "efe24af88124b06e6256efb79d92b20f57869fa33d6faabf8e662b1bd23aded8"
+  },
+  {
+   "id": 76,
+   "title": "返回城鎮",
+   "text": "這兒熱熱鬧鬧的，真好。",
+   "unlockRequirement": "",
+   "cnUrl": "30507173721a05e50412146e093d5aa0334ff45ec7eb315e3cff5b1cf101ab01",
+   "jpUrl": "ace6e129f66f923eb3a4b233ab08a5ed76c1a662e484d71cd31ee6e566ebcd01",
+   "enUrl": "2ce24b5a23bae910a96629749ec42746ad3642e5b979a9732914adfae9c598bb",
+   "krUrl": "56faff858e1061baa3f9c7e0c583cf40162cad7bc0bdadd1e0da19f5675953e9"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "角色詳情",
+   "text": "原爲天舶司「鳴火」商團的首席代表，因一場離奇的災難，幾乎殞命於返航的途中。<br />樣貌、名字、身份皆被始作俑者侵佔，幸得命運留下的一線生機，自「毀滅」的餘波重獲新生。<br />如今她以「忘歸人」自稱，無人知曉那是未能返鄉的悵然，抑或流連星海的期許，但能確定的是，她已拾起自我，再次啓程。",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "角色故事·一",
+   "text": "那護身的玉鐲業已碎裂，祈福的鈴鐺滾落泥淖，鮮妍的摺扇化作朽灰。<br />而她只能看着無明的幽火燃燒<br />——自己曾擁有的一切都在燃燒。<br /><br />她一時只有惋惜，自己仍舊比人生走慢了一步。<br />「剛和那行商談成的大生意，白白浪費了機會……<br />「可惜了這保養已久的尾巴，如今都成了浮雲……<br />「連答應給大家帶的禮物…居然也要食言了……」 <br />千頭萬緒，身體動彈不得，只有眼角漸漸溼了。<br /><br />記憶走馬燈般閃爍着，黯淡着。<br />「真想看看馭空大人帶着我送的弓飛上天空，那是她最想做的事吧……<br />「巖明啊，以後仙舟商團…都得仰仗他了……<br />「夢茗的茶種，我也尋到了，她一定心裡歡喜……<br />「還有燕翠大娘，她的刀也該換把新的了……」 <br />淚珠滑落，在觸到地面前蒸發。<br /><br />視野漸漸被黑暗吞沒，她已經辨不明仙舟的航向了。<br />「小女子本想選擇行向更遠的天際，但到最後連敵人是誰都不知道，可真不甘心吶……」<br /><br />宇宙間的各處，每分每秒都有海量的生命逝去。<br />在命途行者掀起的偉力前，凡人猶如一粒微茫的塵埃，隨風逐浪，身不由己。<br /><br />「但也正因如此，這是給予她的『選擇』，也是給予我們的一線生機……」<br />——那是很久以後發生的一場對話，發生於一位行商與一位天才之間。",
+   "unlockRequirement": "角色等級<nobr>20</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·二",
+   "text": "少女微弱的意識徘徊於黑暗。<br />前方，是不見盡頭的長夜，背後，似是近在咫尺的歸途。<br /><br />她向後退，那裡是她熟悉的繁華花燈，故友在遠方呼喚，等待自己重拾商人之業。黑霧自前方湧現，街市轉瞬化作朽木死灰。<br />她向後退，星槎的甲板於腳下顯現，她欲乘風而上，卻見詭異的星體懸於天空，熟悉之人化作怪物，舉刀相向。<br />她想如從前那般能言巧辯，此時卻無法對着面前的怪形發出半分聲響。<br /><br />「只能向前去吧。」她同自己說道。<br />「但我如何向前？」她向自己發問。<br />「抬起你的手。」冷冷的聲音從遠方傳來。<br />她低下頭，看着貫穿於手掌的傷痕。手中捏着的仍是那把摺扇，她記得它於火中成了灰白，但如今它就在那，就在自己手上。<br /><br />黑霧再次向她席捲而來。<br />「向前去吧。」<br />她抬起手來，穿透掌心的傷痕亮起。那光穿透了黑暗，但也照亮了她自己。<br />「向前去吧。」<br />她舉起扇子，那乘涼消遣的摺扇如今卻要冒出火來。<br /><br />黑霧綿延不絕，但她愈是往前，光芒便愈盛。<br />「向前去吧。」<br />那冷冷的聲音愈發清晰。<br />「不要回頭。」<br />她向前奔去。<br />「這星海間萬千世界，我還遠遠未看夠呢……」<br />她的背後，五條絨尾在此刻徹底綻放，化作烈焰照亮了將她困住的漫漫長夜。<br /><br />實驗室。<br />少女的指尖微微顫動，一滴晶瑩的淚從眼角滾落。<br />那位清冷的科學家望向艙內，表情終於有了些許變化。<br />「恭喜你『選擇』這邊的世界。」",
+   "unlockRequirement": "角色等級<nobr>40</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·三",
+   "text": "「甦醒，不過是你邁出的第一步。<br />「『毀滅』的烙印仍影響着你，你必須更快熟悉這副新的身軀，才能使力量爲你所用。」<br />日復一日，她遵照那位科學家的指導，以舞蹈配合那奇特的糕點，她以肉眼可見的速度開始痊癒。與日俱增的，還有她的疑惑。<br /><br />她在不安中等待着仙舟的消息，許久之後，阮•梅向她確認了星核災變的噩耗——<br />那被稱爲「幻朧」的令使以她的樣貌混入仙舟，掀起災禍，荼毒衆生。<br /><br />「所幸，星穹列車和仙舟合作，已擊敗幻朧，並未造成嚴重後果。」<br />她怔怔地聽着「自己」的故事，感覺荒誕而虛幻。<br />「如此說來，她不僅奪走了我的性命，還奪走了我的一段人生，小女子本不應該以如此面貌回到羅浮，與虹車相遇……」<br />「幻朧對你的『毀滅』從未停止。你雖在肉體上暫時戰勝了『毀滅』的力量，但她對你意志的折磨才剛剛開始。」<br />那冰冷的聲音中，似乎藏着一絲不易察覺的感嘆。<br />「小女子不明白，爲何是我？」<br />「只是命運擲下的骰子，偶然落在了你的身上。」<br />「…所以小女子的命運，也因此與他們聯繫在了一起。」<br />「我只是受人所託，將你救下。回到羅浮之後的事，都在於你。」<br />「但無論如何，小女子已是這些大人物棋局中的一子了吧？」<br />「無可否認。」<br /><br />她沉默了許久，盤算着，思量着。<br />「生意講究你來我往，小女子既與往日不同，可還有選擇的機會？」<br />阮•梅看着少女，搖了搖頭。<br />「我不知道。那是你的『選擇』，也只有『你』才能選擇。」",
+   "unlockRequirement": "角色等級<nobr>60</nobr>解鎖"
+  },
+  {
+   "title": "角色故事·四",
+   "text": "風波後的匹諾康尼，活力依然。<br />那座金碧輝煌的都市，是奢華迷離的商業天堂，也是她一直渴望拜訪的勝地。<br /><br />「你也是逐夢客吧？這身裝扮可不多見啊。」<br />獵人穿着的異鄉人不知何時走到她身邊。<br />「當然，我也是。別看我現在這樣，總有一天，我會把克勞克影業買下來！你呢？」<br />「如此說來，小女子也勉強算半個吧……<br />「一直想着當有一日漫遊星海，去往不同的世界，聯結各地的貿易。可惜……」<br />她沒有再說下去，異鄉人若有所思地點點頭，舉起蘇樂達向她致意，一飲而盡後，轉身離開。<br /><br />歸鄉之路本就漫長，但她還是選擇於此停留。<br />未來不止一路，她的渴望也不止於歸鄉。<br /><br />「這位女士，來點蘇樂達？」<br />她轉過頭，是一個推着車的商販。<br />「…看您的穿着，應該來自羅浮仙舟？多年前我就跟着老闆去過一趟，那巨大的艦船，繁華的樣子，我到現在也忘不了。<br />「那一次我們前往鳴火商會拜會，接待我們的使者停雲小姐，倒是和您有幾分相似，不知道您是否認識她……<br />「女士，女士，你在聽嗎？」<br /><br />她望向匹諾康尼的星空，在尚不可見的遠方，人們正在湧來，人們正在遠去。<br />「抱歉，我剛剛在想一筆能以小小槓桿撬動大鱷的『大生意』，一本萬利，卻也九死一生……」<br />「你在猶豫？」<br />她莞爾一笑。<br />「是猶豫過…不過終於是拿定了主意。<br />若是小女子此番登場，能迷了那些大手的眼，那麼也算是行往更遠的天際了。」",
+   "unlockRequirement": "角色等級<nobr>80</nobr>解鎖"
+  }
+ ],
+ "archive": {
+  "cvCn": "蔣麗",
+  "cvJp": "高田憂希",
+  "cvKr": "이명호",
+  "cvEn": "Anya Floris",
+  "camp": "仙舟「羅浮」"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328,
+  "rankConfig": {
+   "3": {
+    "234552": 1,
+    "297030": 2,
+    "581557": 1
+   },
+   "5": {
+    "380971": 2,
+    "866084": 2
+   }
+  }
+ },
+ "name": "忘歸人",
+ "rarity": 5,
+ "descHash": "八面玲瓏的狐人少女，樣貌、名字、身份皆被人奪去。 命運爲她留下一線生機，而「毀滅」的烙印仍在蠢蠢欲動。 歷經生死、重獲新生的忘歸人，何時才能返鄉？",
+ "artPath": "c70adc0dbb094c92c1a261b0095ee9d9c3e4c19bfa0a8ef806707429ce5e21c6",
+ "miniIconPath": "294b417979683ad9f224a899837a3a00b00cfbb2c7d315f3cd191c21c44bd0ac",
+ "damageType": {
+  "id": 2,
+  "iconPath": "8d57d9d10f2a4de2de0bf7aeda26d3c800d5148849aeaae7bf91dd1dc8cfabb0",
+  "color": "#F84F36",
+  "name": "火",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "9925f4d7d8ac1ad84319601be2e2127dbb697923a7add4d70bf795c7e9045d29",
+  "altIconPath": "5821b3e8829f16ad30af2613e5330feea1cd8ead70cf58d18c7bc927f50b5943",
+  "color": "#FFFFFF",
+  "name": "虛無",
+  "rarity": 0
+ },
+ "pageId": "fugue"
+}

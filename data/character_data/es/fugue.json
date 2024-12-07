@@ -1,0 +1,2991 @@
+{
+ "spRequirement": 130,
+ "iconPath": "746e58249b69bf2e07c2f18b844b2a9998902fbb5134f7964965285abbf071a2",
+ "bgPath": "1d2a6d44443a510754f026534c74320d6c06f894dcd9cad7f478dc6d95d31347",
+ "figPath": "987d336255847c74ff03f98bc586ed01b0e8accae5b93e8a702ec75ec175af04",
+ "fgPath": "",
+ "splashIconPath": "33faffbaad360115b5d0a84ab417b92644cb9789e09238d0aa954263ebc4a8ce",
+ "splashPlaceholder": {
+  "data": "data:image/webp;base64,UklGRqYCAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSCgBAAABkLpt2/m/8u8PfrabbW5LRly1vWTbtu2tbc2O3zYbybY/73vf4fP5RcQEINKb3wUeADjoMKdopR4XIqepPQ1OhIPSuy+kVycvfvl+PRsdFLyXsYqcCCfkovN1WVpjrOWZHIQ99Hz6SlYkre7390OIb3l4/4soigq2Z8N10L5gcOHhnyIpUbqWCR9zNHzAXhlKpBhoI4BT+n71vShDkbL6WobxsvrzVJb6a2QM7c9e2KOAlqJe/be/pUBvm1DxXFai0eFF5uq2qx8fjIpL73pWhqT+vY9dmj6iobYC8LBZAUX+fXrwQqxvFsLZMRlaSfog3Y+HC2Cswn+e6ffRp7pRCwfAnB+v7C/tmfS4X2nD6UGInLpu+/LWhuSUFABIjnJKchDpOC6iAVZQOCBYAQAAsAcAnQEqFAAUAD5tMpVHpCKiISgIAIANiWYAnTKDyw3N4AGFD6YBvQ1YgOfWzlPtYbqMiae1zEtPkVrQ4cOShoaxfwLcAADz/zezsaAd2no70anSq/cPf8XhOfOLygRpyxMZ9cSvImVJ2Jf9AeNdCfrC9HUNczUQk5lTBKe7yWq55AWiP/NPUevOtUN+dLsd+9VFnfFZsn7xIlCfWGGdtGQNrl4tAzonNFcLE5o6cYqYFF5o1BzZ4c3wimAv6qJQTqRvcR7L1moz0dTIyY/9DFpUyPR3RAkoE4yHMUR4JFaefAnoxAgrAUNiSd8G7AipfTMyx2oQZzpzjPQdSNuoNz8B4fxjNkASPjVPjXZctbzBbvf4/svNMPNezHDcjLOKJD/23/Yy//jXR0EE5IceaEveasoSmMWEiKcx/N/Es6QnY37vqOd/fk5rhbKjqPsZ4+n0E6AAAAA=",
+  "w": 2048,
+  "h": 2048
+ },
+ "damageTypeId": 0,
+ "baseTypeId": 0,
+ "baseTypeTraces": {
+  "id": 5,
+  "iconPath": "dd7360026f025513baae7d6891bfd20d8a74c89d99e8b74c45a4092c07f2f2bc",
+  "color": "#FFFFFF",
+  "rarity": 0
+ },
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "662fc7ab4bcd2e14d5f4185738f92c3d4e5051f6a6af0fbcafcb08310c579372",
+   "name": "Crédito",
+   "desc": "Divisa que utiliza la Corporación para la Paz Interastral para sus cuentas con los clientes y que se acepta en todas partes como moneda de los viajes espaciales.",
+   "lore": "\"La gente corre, se pelea y comercia por algo que no son más que números en una terminal, pero lo que es verdaderamente valioso no se puede comprar\".",
+   "purpose": "Moneda común",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "Cáliz de la mina principal",
+    "Cáliz de la Comisión de Artesanía",
+    "Cáliz del Hotel Fantasía (paisaje onírico)",
+    "Recompensa de misión",
+    "Recompensa de encargo",
+    "Canjeo de Ascuas"
+   ]
+  },
+  "125435": {
+   "id": 125435,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "1faeac3cd0e3235dd5c4d7f88c0348be236c9db3d6f01c54cf1af28636a02a00",
+   "name": "Huellas del destino",
+   "desc": "Material avanzado de mejora para los Rastros.",
+   "lore": "Un fracaso tras otro garantiza la victoria final. Un paso tras otro acaba llevándote al punto de inflexión de tu destino.",
+   "purpose": "Material de Rastros",
+   "rarity": 5,
+   "rewardPath": "/material/125435",
+   "comeFrom": [
+    "Recompensa de puntos del Universo Simulado",
+    "Honor anónimo",
+    "Canjeo de Ascuas",
+    "Canjeo de Cosmiluz",
+    "Recompensa de evento de duración limitada"
+   ]
+  },
+  "186254": {
+   "id": 186254,
+   "type": 601,
+   "purposeId": 4,
+   "iconPath": "68bc5d5330c237c831ce0dda0256590ae9d8d78b5b16af1031f6489a8217568e",
+   "name": "Arrepentimiento del eterno vehículo del alma",
+   "desc": "Material avanzado de mejora para los Rastros.",
+   "lore": "No importa cuántos cuerpos capture, sigue sin conseguir lo que quiere. Al igual que quienes buscar el elixir de la inmortalidad, ansía un cuerpo que pueda vivir para siempre y que no necesite temer a la destrucción, pero es consciente de que esto no es más que un sueño inalcanzable.<br /><br />\"He visto muchos mundos devorados por las llamas del Imperfecto; yo antes era una de esas llamas. Danzaba a una señal de su dedo, pero en el fondo sabía que el fuego termina extinguiéndose cuando se acaba la madera...\".",
+   "purpose": "Material de Rastros",
+   "rarity": 4,
+   "rewardPath": "/material/186254",
+   "comeFrom": [
+    "Ecos de la guerra del Desfiladero de Escamas"
+   ]
+  },
+  "409960": {
+   "id": 409960,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "64e60a11d852e9486527315fd5dbd93e76f510b6bd0538b927b16bfb188bda62",
+   "name": "Guía del espíritu viajero",
+   "desc": "Material de experiencia para personajes. Otorga <nobr>20</nobr> <nobr>000</nobr> pts. de EXP.",
+   "lore": "Lectura indispensable para la exploración. Pulsa el botón Leer y una voz atractiva empezará a hablar en un idioma que entiendes y te contará las vivencias legendarias de aventureros famosos de distintos mundos, así como los valiosos conocimientos que adquirieron.<br /><br />\"El nuevo volumen de la serie Guía del espíritu viajero, titulado «Manual de gastronomía intergaláctica», saldrá a la venta muy pronto\".<br />\"Para enviar un artículo, conéctese a la baliza sinestésica ERD<nobr>-23</nobr>θ y contacte con un representante de la Sociedad del Conocimiento. Puede elegir la forma de pago más conveniente para usted\".",
+   "purpose": "Material de EXP de personaje",
+   "rarity": 4,
+   "rewardPath": "/material/409960",
+   "comeFrom": [
+    "Cáliz de las llanuras nevadas de las afueras",
+    "Cáliz del Vado de las Nubes",
+    "Cáliz de la Frontera de los Sueños",
+    "Salón olvidado"
+   ]
+  },
+  "409961": {
+   "id": 409961,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "bace343f74527b604cf5037157a01121ca2075f0d381673d58825aa8871d23b2",
+   "name": "Registro de aventuras",
+   "desc": "Material de experiencia para personajes. Otorga <nobr>5000</nobr> pts. de EXP.",
+   "lore": "Colección de notas instructivas muy bien ordenadas. Contiene numerosas ilustraciones y textos que describen aventuras de principio a fin, así como información valiosa y técnicas de supervivencia.<br /><br />\"¿Por qué no lo digitalizan y lo guardan en un disco fotolítico? Sería mucho más práctico\".<br />\"La tecnología avanzada es mucho más frágil de lo que crees cuando tienes que enfrentarte a tormentas estelares o erupciones de neutrones. Además, seguro que quien escribió este libro quería que la gente lo leyera de la forma más sencilla posible\".",
+   "purpose": "Material de EXP de personaje",
+   "rarity": 3,
+   "rewardPath": "/material/409961",
+   "comeFrom": [
+    "Cáliz de las llanuras nevadas de las afueras",
+    "Cáliz del Vado de las Nubes",
+    "Cáliz de la Frontera de los Sueños",
+    "Entrenamiento diario",
+    "Canjeo de Ascuas"
+   ]
+  },
+  "409962": {
+   "id": 409962,
+   "type": 601,
+   "purposeId": 1,
+   "iconPath": "5b6df114010e87eb36fe9583af069826960af2730455a03b5379093a4a9e5aca",
+   "name": "Noticias del viaje",
+   "desc": "Material de experiencia para personajes. Otorga <nobr>1000</nobr> pts. de EXP.",
+   "lore": "Diario de viaje con una caligrafía ilegible y un contenido completamente aleatorio, por lo que no te sirve de mucho.<br /><br />\"Dan Heng, acaba ya de leerlo y luego tíralo\".",
+   "purpose": "Material de EXP de personaje",
+   "rarity": 2,
+   "rewardPath": "/material/409962",
+   "comeFrom": [
+    "Cáliz de las llanuras nevadas de las afueras",
+    "Cáliz del Vado de las Nubes",
+    "Cáliz de la Frontera de los Sueños",
+    "Recompensa de encargo"
+   ]
+  },
+  "549504": {
+   "id": 549504,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "2d7d2fa9645ee6abd7bf84d990b3a32c8851e1226c92e466f63bd77b7265260d",
+   "name": "Brote verde inmortal",
+   "desc": "Nuevo brote de una antigua criatura divina. Material simple que se usa en la potenciación.",
+   "lore": "El origen de la vida infinita de las razas de larga vida de Xianzhou y un remanente de la influencia del Eón de la Abundancia. Hace muchos años, el deseo de obtener la inmortalidad de un emperador causó que la flota Xianzhou se echara al mar estelar para intentar encontrar esa vida inacabable.<br /><br />\"Deseamos vivir para siempre y mantener el imperio toda la eternidad. Por desgracia, la vida humana tiene un fin y nuestra capacidad es limitada. Por eso enviamos nueve naves astriger más allá del cielo, para que busquen la receta divina de la inmortalidad\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 2,
+   "rewardPath": "/material/549504",
+   "comeFrom": [
+    "De abominaciones de la Abundancia",
+    "De enemigos en el Universo Diferenciado",
+    "De enemigos en el Universo Simulado",
+    "Recompensa de encargo",
+    "Canjeo de Ascuas",
+    "Máquina sintetizadora multiusos - Intercambio de material",
+    "Cáliz (oro)"
+   ]
+  },
+  "589818": {
+   "id": 589818,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "1b78b52bd4fa8125682facdef27eee8dde23738508c8751d7c4a085363fae9df",
+   "name": "Esencia de fuego estelar",
+   "desc": "Heliobus poderoso que surgió después de la Guerra de la Catástrofe Ardiente. Sirve para mejorar moderadamente los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihilidad</span>.",
+   "lore": "Heliobus taimado en forma de llamas.<br />La fuerza de un heliobus se puede determinar por el tamaño de su flama. Este heliobus ardiente ha adquirido consciencia y le fascina devorar las emociones y ambiciones de su huésped.<br /><br />\"Absorbe sus emociones y manipula su voluntad\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 3,
+   "rewardPath": "/material/589818",
+   "comeFrom": [
+    "Cáliz de la Comisión de Alquimia",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "Canjeo de Ascuas",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "633445": {
+   "id": 633445,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "fe5878a8a3e4fef155daad6bd3eaad5831ded2f83f338608f5911a77289f18fc",
+   "name": "Flor etérea inmortal",
+   "desc": "Capullo que brota de una antigua criatura divina. Material corriente que se usa en la potenciación.",
+   "lore": "El origen de la vida infinita de las razas de larga vida de Xianzhou y un remanente de la influencia del Eón de la Abundancia. Tras incontables dificultades, la flota que buscaba el elixir de la inmortalidad contempló el rostro del ser celestial. El ente divino otorgó su bendición en forma material y del Árbol de la Ambrosía brotaron nuevas hojas.<br /><br />\" Los brotes nuevos descienden hasta la luna, las flores divinas florecen junto a las nubes. En lo que tardan en desprender su fragancia, la madera vieja vuelve a verdear\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 3,
+   "rewardPath": "/material/633445",
+   "comeFrom": [
+    "De abominaciones de la Abundancia (nivel de Equilibrio 2 o superior)",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "De enemigos en el Universo Diferenciado",
+    "De enemigos en el Universo Simulado",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "673759": {
+   "id": 673759,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "b5032641c3abb7d952d56b9bfb0a4c71f4db0edd3a2c48c10d9b4d0eec94d25c",
+   "name": "Incinerador divino",
+   "desc": "Heliobus amalgamado que surgió después de la Guerra de la Catástrofe Ardiente. Sirve para mejorar en gran medida los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihilidad</span>.",
+   "lore": "Heliobus poderoso e ingenioso que ha tomado la forma de una bestia.<br />La fuerza de un heliobus se puede determinar por el tamaño de su flama. Al absorber a varios de sus compañeros más débiles, los heliobus de gran tamaño son capaces de alcanzar la inmortalidad y provocar calamidades.<br /><br />\"Inundaciones, incendios y deslizamientos de tierra\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 4,
+   "rewardPath": "/material/673759",
+   "comeFrom": [
+    "Cáliz de la Comisión de Alquimia",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "717386": {
+   "id": 717386,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "ba66c445076beb6607457af5bd5f273c55a210a8c60621e6c90a4d00361df629",
+   "name": "Rama gloriosa inmortal",
+   "desc": "Rama caducifolia de una antigua criatura divina. Material avanzado que se usa en la potenciación.",
+   "lore": "El origen de la vida infinita de las razas de larga vida de Xianzhou y un remanente de la influencia del Eón de la Abundancia. Tras las tres desgracias, Xianzhou quedó devastado. Los homo celestinae se convirtieron en demonios y las catástrofes se sucedieron sin descanso.<br /><br />\"Por orden de la Comisión de los Diez Líderes, todo aquel que parezca estar a punto de ser poseído por Mara será arrestado y encerrado en prisión\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de personajes",
+   "rarity": 4,
+   "rewardPath": "/material/717386",
+   "comeFrom": [
+    "De abominaciones de la Abundancia (nivel de Equilibrio 4 o superior)",
+    "Máquina sintetizadora multiusos - Síntesis de materiales",
+    "De enemigos en el Universo Diferenciado",
+    "De enemigos en el Universo Simulado",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "874345": {
+   "id": 874345,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "c58150f0bd3d62041c9a94a5f8cb513146f940ddbc73caa9bdf69ee5eeb007fb",
+   "name": "Espíritu ardiente",
+   "desc": "Heliobus debilitado que apareció después de la Guerra de la Catástrofe Ardiente. Sirve para mejorar ligeramente los Rastros de los personajes de la <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Nihilidad</span>.",
+   "lore": "Heliobus inocente y sin forma.<br />La fuerza de un heliobus se puede determinar por el tamaño de su flama. Otros heliobus más poderosos pueden ingerir a un heliobus inocente e inexperto como este.<br /><br />\"Amorfos, desarraigados y sin límites\".",
+   "purpose": "Material de Rastros<br />Material de ascensión de conos de luz",
+   "rarity": 2,
+   "rewardPath": "/material/874345",
+   "comeFrom": [
+    "Cáliz de la Comisión de Alquimia",
+    "Canjeo de Ascuas",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  },
+  "983279": {
+   "id": 983279,
+   "type": 601,
+   "purposeId": 2,
+   "iconPath": "c6746fa57215b159acc5e18620fd30d64e3dd284d7a93a6ee248038329535a63",
+   "name": "Hoja de acero sobrecalentado",
+   "desc": "Hoja rota de la espada de un Merodeador Ardiente. Material de ascensión para los personajes de tipo Fuego.",
+   "lore": "En ocasiones, la Guardia Crinargenta organiza competiciones en las que los participantes tienen que encontrar una parte del cuerpo de un monstruo antes de que acabe el tiempo. Este fragmento de la hoja de una espada debió utilizarse en una de esas competiciones.<br /><br />\"Fui testigo con mis propios ojos de cómo Gepard hizo añicos la hoja de acero sobrecalentado de aquel tipo de un puñetazo; después la agarró y atravesó de una arremetida su vientre helado, haciendo que su corazón entrase en calor\".",
+   "purpose": "Material de ascensión de personaje",
+   "rarity": 4,
+   "rewardPath": "/material/983279",
+   "comeFrom": [
+    "Sombra paralizada de la mina principal",
+    "Máquina sintetizadora multiusos - Intercambio de material"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "attackBase": 79.2,
+   "attackAdd": 3.96,
+   "hpBase": 153.12,
+   "hpAdd": 7.656,
+   "defenseBase": 75.9,
+   "defenseAdd": 3.795,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 4000
+    },
+    {
+     "id": 549504,
+     "count": 5
+    }
+   ]
+  },
+  {
+   "attackBase": 110.88,
+   "attackAdd": 3.96,
+   "hpBase": 214.368,
+   "hpAdd": 7.656,
+   "defenseBase": 106.26,
+   "defenseAdd": 3.795,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 8000
+    },
+    {
+     "id": 549504,
+     "count": 10
+    }
+   ]
+  },
+  {
+   "attackBase": 142.56,
+   "attackAdd": 3.96,
+   "hpBase": 275.616,
+   "hpAdd": 7.656,
+   "defenseBase": 136.62,
+   "defenseAdd": 3.795,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 16000
+    },
+    {
+     "id": 633445,
+     "count": 6
+    },
+    {
+     "id": 983279,
+     "count": 3
+    }
+   ]
+  },
+  {
+   "attackBase": 174.24,
+   "attackAdd": 3.96,
+   "hpBase": 336.864,
+   "hpAdd": 7.656,
+   "defenseBase": 166.98,
+   "defenseAdd": 3.795,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 40000
+    },
+    {
+     "id": 633445,
+     "count": 9
+    },
+    {
+     "id": 983279,
+     "count": 7
+    }
+   ]
+  },
+  {
+   "attackBase": 205.92,
+   "attackAdd": 3.96,
+   "hpBase": 398.112,
+   "hpAdd": 7.656,
+   "defenseBase": 197.34,
+   "defenseAdd": 3.795,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 80000
+    },
+    {
+     "id": 717386,
+     "count": 6
+    },
+    {
+     "id": 983279,
+     "count": 20
+    }
+   ]
+  },
+  {
+   "attackBase": 237.6,
+   "attackAdd": 3.96,
+   "hpBase": 459.36,
+   "hpAdd": 7.656,
+   "defenseBase": 227.7,
+   "defenseAdd": 3.795,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 160000
+    },
+    {
+     "id": 717386,
+     "count": 9
+    },
+    {
+     "id": 983279,
+     "count": 35
+    }
+   ]
+  },
+  {
+   "attackBase": 269.28,
+   "attackAdd": 3.96,
+   "hpBase": 520.608,
+   "hpAdd": 7.656,
+   "defenseBase": 258.06,
+   "defenseAdd": 3.795,
+   "crate": 0.05,
+   "cdmg": 0.5,
+   "aggro": 100,
+   "speedBase": 102,
+   "speedAdd": 0,
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": []
+  }
+ ],
+ "ranks": [
+  {
+   "id": 1,
+   "iconPath": "7d0bc1538966d5e87d36ed2f36a2ae44aa990be885c4f089f03c54b6b41314bc",
+   "artPath": "18691aafd1d1260c85577f93ac27ff34f6baafe1e0dd0e03746dddf8f49b93d6",
+   "name": "Del suelo al cielo",
+   "descHash": "La eficiencia de la Ruptura de Debilidad de los aliados con Plegaria raposiana aumenta en un <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.5
+   ]
+  },
+  {
+   "id": 2,
+   "iconPath": "211f4952ae45da4347c329a3bcb17bbaff1efb85f357eb2aee9e0a81df3a6728",
+   "artPath": "87c9aed04d08d646779dae45638c10a03e0c53e50d27626e0fe68130f9838ca7",
+   "name": "De la virtud viene la ventura",
+   "descHash": "Cuando se rompe la Debilidad de un enemigo, Fugue recupera <nobr>#1[i]</nobr> pts. de energía. Tras lanzar su habilidad definitiva, la acción de todos los aliados se <u>adelanta</u> un <nobr>#2[i]%</nobr>.",
+   "params": [
+    3,
+    0.24
+   ]
+  },
+  {
+   "id": 3,
+   "iconPath": "e9472db56554e7e909e5edb88f9695a59c1b45ede5c911fd81dcc8aade63f80d",
+   "artPath": "e5d7d1ff2f940bed09e58196699bca4c36be7841f200c5e513acecd37aaecb2d",
+   "name": "Mi verdadero yo",
+   "descHash": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+   "params": []
+  },
+  {
+   "id": 4,
+   "iconPath": "8360f00b42ffe34dc7ac12895b38fc74c7a15a43976c899dff221b9cc951a427",
+   "artPath": "1387b1adbca9c16e6405a6177272858cf3efa5d4d249abc87be7ecd1c6addbb4",
+   "name": "Cambio de forma, cambio de nombre",
+   "descHash": "El Daño de Ruptura que infligen los aliados con Plegaria raposiana aumenta en un <nobr>#1[i]%</nobr>.",
+   "params": [
+    0.2
+   ]
+  },
+  {
+   "id": 5,
+   "iconPath": "fb62b99ac8e3bfc68539c098b98b2d30f4935fb4d22ae3525d13418b66def116",
+   "artPath": "a0112a1402c33c8ee5ed3d065a11573366a095651fe080c56bbc525892c2dc03",
+   "name": "Nubes auspiciosas",
+   "descHash": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+   "params": []
+  },
+  {
+   "id": 6,
+   "iconPath": "1e0f40e367f2bc679013d2b0842ce6b1d13d7a2e4b767a97e93718d7694e37f1",
+   "artPath": "04a7b69defcca01085d25424a1d320f1c7e7344b9ff2d4c988d21b113ad5dd6d",
+   "name": "Clarividencia de fortunas y desgracias",
+   "descHash": "La eficiencia de la Ruptura de Debilidad de Fugue aumenta en un <nobr>#1[i]%</nobr>. Cuando Fugue está en el estado de Llama tórrida, el efecto de Plegaria raposiana aplica a todos los aliados.",
+   "params": [
+    0.5
+   ]
+  }
+ ],
+ "skillGrouping": [
+  [
+   581557,
+   234552
+  ],
+  [
+   297030
+  ],
+  [
+   380971
+  ],
+  [
+   866084
+  ],
+  [
+   782143
+  ]
+ ],
+ "skills": [
+  {
+   "tagHash": "ATQ individual",
+   "descHash": "Inflige un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> del ATQ de Fugue como Daño de <span style=\"color:#F84F36;\">Fuego</span> a un enemigo.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "20",
+   "id": 581557,
+   "name": "Estela radiante",
+   "iconPath": "43c753abd620d7d987f2e7d97a690c83d73426ecd899903261ae7166f3e25b34",
+   "typeDescHash": "ATQ básico",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874345,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589818,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589818,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673759,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673759,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Apoyo",
+   "descHash": "Otorga Plegaria raposiana a un aliado y entra en el estado Llama tórrida durante <nobr>#1[i]</nobr> turnos. Cada vez que comienza el turno de Fugue, la duración se reduce en 1 turno. Plegaria raposiana solo surte efecto sobre el último objetivo de la habilidad básica de Fugue.<br />El efecto de Ruptura del aliado con Plegaria raposiana aumenta en un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>. Además, también puede reducir la Firmeza de los enemigos que no tengan Debilidad de su mismo tipo en un <nobr>#6[i]%</nobr> de la Reducción de Firmeza original. Esto no puede acumularse con otros efectos que permiten reducir la Firmeza ignorando los tipos de Debilidad.<br />Cuando está en el estado de Llama tórrida, el ATQ básico de Fugue se potencia. Cada vez que el aliado con Plegaria raposiana ataca, Fugue tiene una <u>probabilidad base</u> del <nobr>#3[i]%</nobr> de reducir la DEF del enemigo atacado en un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> durante <nobr>#5[i]</nobr> turnos.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "30",
+   "id": 297030,
+   "name": "Dicha de la virtud",
+   "iconPath": "e9472db56554e7e909e5edb88f9695a59c1b45ede5c911fd81dcc8aade63f80d",
+   "typeDescHash": "Habilidad básica",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      3,
+      0.15,
+      1,
+      0.08,
+      2,
+      0.5
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.165,
+      1,
+      0.09,
+      2,
+      0.5
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.18,
+      1,
+      0.1,
+      2,
+      0.5
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874345,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.195,
+      1,
+      0.11,
+      2,
+      0.5
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589818,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.21,
+      1,
+      0.12,
+      2,
+      0.5
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589818,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.225,
+      1,
+      0.13,
+      2,
+      0.5
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589818,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.24375,
+      1,
+      0.1425,
+      2,
+      0.5
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673759,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.2625,
+      1,
+      0.155,
+      2,
+      0.5
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673759,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.28125,
+      1,
+      0.1675,
+      2,
+      0.5
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673759,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.3,
+      1,
+      0.18,
+      2,
+      0.5
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673759,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      3,
+      0.315,
+      1,
+      0.19,
+      2,
+      0.5
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.33,
+      1,
+      0.2,
+      2,
+      0.5
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.345,
+      1,
+      0.21,
+      2,
+      0.5
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.36,
+      1,
+      0.22,
+      2,
+      0.5
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      3,
+      0.375,
+      1,
+      0.23,
+      2,
+      0.5
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "ATQ AdE",
+   "descHash": "Inflige un Daño de <span style=\"color:#F84F36;\">Fuego</span> equivalente al <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> del ATQ de Fugue a todos los enemigos. Este ataque ignora los tipos de Debilidad y reduce la Firmeza de todos los enemigos. Al romper la Debilidad, activa el efecto de Ruptura de Debilidad de <span style=\"color:#F84F36;\">Fuego</span>.",
+   "ultimateCost": 130,
+   "break": "60/hit",
+   "energy": "5",
+   "id": 380971,
+   "name": "Refulgencia iluminadora",
+   "iconPath": "db23bcebe0e36fa61e25917be1032f5bad4a4667627a036adf15f02dcdb5e3c4",
+   "typeDescHash": "Habilidad definitiva",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      1
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.1
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.2
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874345,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.3
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589818,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.4
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589818,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.5
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589818,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      1.625
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673759,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1.75
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673759,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.875
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673759,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673759,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      2.1
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.2
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.3
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.4
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      2.5
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Alteración",
+   "descHash": "Cuando Fugue está en el campo de batalla, los enemigos reciben adicionalmente un Brillo nubeígneo equivalente al <nobr>#2[i]%</nobr> de su Firmeza máxima. Cuando su Firmeza inicial se reduce hasta 0, se puede seguir reduciendo Brillo nubeígneo. Cuando Brillo nubeígneo se reduce hasta 0, vuelven a recibir Daño de Ruptura de Debilidad.<br />Después de que los aliados ataquen a enemigos con <u>Ruptura de Debilidad</u> cuando Fugue está en el campo de batalla, la reducción de Firmeza de este ataque se convierte en un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de <u>Daño de Ultrarruptura</u>.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 866084,
+   "name": "Integridad afortunada",
+   "iconPath": "8bd1108e6c47ddc7a48e1e0dd0dfad726ca966898245a83df39d3813249c7e0b",
+   "typeDescHash": "Talento",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5,
+      0.4
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.55,
+      0.4
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 1,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 2500
+      },
+      {
+       "id": 549504,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.6,
+      0.4
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874345,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.65,
+      0.4
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589818,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7,
+      0.4
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589818,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.75,
+      0.4
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 30000
+      },
+      {
+       "id": 589818,
+       "count": 7
+      },
+      {
+       "id": 633445,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8125,
+      0.4
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673759,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.875,
+      0.4
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 80000
+      },
+      {
+       "id": 673759,
+       "count": 5
+      },
+      {
+       "id": 186254,
+       "count": 1
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9375,
+      0.4
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673759,
+       "count": 8
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.4
+     ],
+     "level": 10,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 300000
+      },
+      {
+       "id": 673759,
+       "count": 14
+      },
+      {
+       "id": 125435,
+       "count": 1
+      },
+      {
+       "id": 186254,
+       "count": 1
+      }
+     ]
+    },
+    {
+     "params": [
+      1.05,
+      0.4
+     ],
+     "level": 11,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.1,
+      0.4
+     ],
+     "level": 12,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.15,
+      0.4
+     ],
+     "level": 13,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2,
+      0.4
+     ],
+     "level": 14,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.25,
+      0.4
+     ],
+     "level": 15,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "",
+   "descHash": "Ataca a un enemigo y, tras entrar en combate, consume la Firmeza del tipo correspondiente del enemigo.",
+   "ultimateCost": 0,
+   "break": "30",
+   "energy": "0",
+   "id": 665498,
+   "name": "Ataque",
+   "iconPath": "43c753abd620d7d987f2e7d97a690c83d73426ecd899903261ae7166f3e25b34",
+   "typeDescHash": "",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Alteración",
+   "descHash": "Tras usar la técnica, afecta con Mareo a los enemigos que estén dentro de una zona determinada durante <nobr>#1[i]</nobr> s. Los enemigos mareados no atacan activamente a los aliados.<br />Tras atacar a enemigos mareados y entrar en combate, la acción de Fugue se <u>adelanta</u> un <nobr>#4[i]%</nobr> y tiene un <nobr>#2[i]%</nobr> de <u>probabilidad base</u> de afectar a cada uno de los objetivos enemigos con un estado de DEF reducida similar al de la habilidad básica de Fugue durante <nobr>#3[i]</nobr> turnos.",
+   "ultimateCost": 0,
+   "break": "0",
+   "energy": "0",
+   "id": 782143,
+   "name": "Brillo perspicaz",
+   "iconPath": "9b5c72df15c698dface6d6dd7acc6d3d117aeb8b391ad0fcf1665d1487287ffa",
+   "typeDescHash": "Técnica",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      10,
+      1,
+      2,
+      0.4
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  },
+  {
+   "tagHash": "Ráfaga",
+   "descHash": "Inflige un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> del ATQ de Fugue como Daño de <span style=\"color:#F84F36;\">Fuego</span> a un enemigo y un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> del ATQ de Fugue como Daño de <span style=\"color:#F84F36;\">Fuego</span> a los objetivos adyacentes.",
+   "ultimateCost": 0,
+   "break": "30/hit",
+   "energy": "20",
+   "id": 234552,
+   "name": "Caricia ardiente",
+   "iconPath": "90860f74a8125312633b3adb2f21f1a7f56f717fecc5883c0c8bb65fa036bc71",
+   "typeDescHash": "ATQ básico",
+   "levelReq": 0,
+   "promotionReq": 0,
+   "levelData": [
+    {
+     "params": [
+      0.5,
+      0.25
+     ],
+     "level": 1,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      0.6,
+      0.3
+     ],
+     "level": 2,
+     "levelReq": 0,
+     "promotionReq": 2,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 5000
+      },
+      {
+       "id": 874345,
+       "count": 3
+      },
+      {
+       "id": 549504,
+       "count": 6
+      }
+     ]
+    },
+    {
+     "params": [
+      0.7,
+      0.35
+     ],
+     "level": 3,
+     "levelReq": 0,
+     "promotionReq": 3,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 10000
+      },
+      {
+       "id": 589818,
+       "count": 3
+      },
+      {
+       "id": 633445,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      0.8,
+      0.4
+     ],
+     "level": 4,
+     "levelReq": 0,
+     "promotionReq": 4,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 20000
+      },
+      {
+       "id": 589818,
+       "count": 5
+      },
+      {
+       "id": 633445,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      0.9,
+      0.45
+     ],
+     "level": 5,
+     "levelReq": 0,
+     "promotionReq": 5,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 45000
+      },
+      {
+       "id": 673759,
+       "count": 3
+      },
+      {
+       "id": 717386,
+       "count": 3
+      }
+     ]
+    },
+    {
+     "params": [
+      1,
+      0.5
+     ],
+     "level": 6,
+     "levelReq": 0,
+     "promotionReq": 6,
+     "cost": [
+      {
+       "id": 29328,
+       "count": 160000
+      },
+      {
+       "id": 673759,
+       "count": 8
+      },
+      {
+       "id": 717386,
+       "count": 4
+      }
+     ]
+    },
+    {
+     "params": [
+      1.1,
+      0.55
+     ],
+     "level": 7,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.2,
+      0.6
+     ],
+     "level": 8,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    },
+    {
+     "params": [
+      1.3,
+      0.65
+     ],
+     "level": 9,
+     "levelReq": 0,
+     "promotionReq": 0,
+     "cost": []
+    }
+   ]
+  }
+ ],
+ "skillTreePoints": [
+  {
+   "id": 1225101,
+   "anchor": 6,
+   "type": 1,
+   "children": [
+    {
+     "id": 1225202,
+     "anchor": 10,
+     "type": 2,
+     "children": [
+      {
+       "id": 1225203,
+       "anchor": 11,
+       "type": 2,
+       "children": [
+        {
+         "id": 1225204,
+         "anchor": 12,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 20250,
+          "name": "Bonificación de PV",
+          "levelReq": 0,
+          "promotionReq": 3,
+          "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+          "statusList": [
+           {
+            "key": "PV",
+            "value": 0.04
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 10000
+           },
+           {
+            "id": 589818,
+            "count": 3
+           },
+           {
+            "id": 633445,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 20257,
+        "name": "Bonificación de VEL",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "iconPath": "959ebc55a284ac83b29de4d97b3422772e372e53ff820bc9af972e0201aabe98",
+        "statusList": [
+         {
+          "key": "VEL",
+          "value": 2,
+          "int": true
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 10000
+         },
+         {
+          "id": 589818,
+          "count": 3
+         },
+         {
+          "id": 633445,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 20256,
+      "name": "Bonificación de ruptura",
+      "levelReq": 0,
+      "promotionReq": 2,
+      "iconPath": "2f652a2e091ec1a28dde16dfec5968a959804447eb99f746b6f2cba53dedfc2c",
+      "statusList": [
+       {
+        "key": "Efecto de Ruptura",
+        "value": 0.053
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 874345,
+        "count": 3
+       },
+       {
+        "id": 549504,
+        "count": 6
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Cuando un aliado inflige Ruptura de Debilidad, la acción del enemigo se <u>retrasa</u> un <nobr>#1[i]%</nobr> adicional.",
+    "ultimateCost": 0,
+    "id": 20288,
+    "name": "Reconquista de Verdantia",
+    "iconPath": "ce889e5a7ae1ec0e31dfbadf0f6cda697d188ba87a82891d2f414ab9b2690f70",
+    "levelReq": 0,
+    "promotionReq": 2,
+    "levelData": [
+     {
+      "params": [
+       0.15
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 2,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 5000
+       },
+       {
+        "id": 874345,
+        "count": 3
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1225102,
+   "anchor": 7,
+   "type": 1,
+   "children": [
+    {
+     "id": 1225205,
+     "anchor": 13,
+     "type": 2,
+     "children": [
+      {
+       "id": 1225206,
+       "anchor": 14,
+       "type": 2,
+       "children": [
+        {
+         "id": 1225207,
+         "anchor": 15,
+         "type": 2,
+         "children": [],
+         "embedBuff": {
+          "id": 20253,
+          "name": "Bonificación de VEL",
+          "levelReq": 0,
+          "promotionReq": 5,
+          "iconPath": "959ebc55a284ac83b29de4d97b3422772e372e53ff820bc9af972e0201aabe98",
+          "statusList": [
+           {
+            "key": "VEL",
+            "value": 3,
+            "int": true
+           }
+          ],
+          "cost": [
+           {
+            "id": 29328,
+            "count": 45000
+           },
+           {
+            "id": 673759,
+            "count": 3
+           },
+           {
+            "id": 717386,
+            "count": 3
+           }
+          ]
+         }
+        }
+       ],
+       "embedBuff": {
+        "id": 20252,
+        "name": "Bonificación de ruptura",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "iconPath": "2f652a2e091ec1a28dde16dfec5968a959804447eb99f746b6f2cba53dedfc2c",
+        "statusList": [
+         {
+          "key": "Efecto de Ruptura",
+          "value": 0.08
+         }
+        ],
+        "cost": [
+         {
+          "id": 29328,
+          "count": 45000
+         },
+         {
+          "id": 673759,
+          "count": 3
+         },
+         {
+          "id": 717386,
+          "count": 3
+         }
+        ]
+       }
+      }
+     ],
+     "embedBuff": {
+      "id": 20251,
+      "name": "Bonificación de VEL",
+      "levelReq": 0,
+      "promotionReq": 4,
+      "iconPath": "959ebc55a284ac83b29de4d97b3422772e372e53ff820bc9af972e0201aabe98",
+      "statusList": [
+       {
+        "key": "VEL",
+        "value": 3,
+        "int": true
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 589818,
+        "count": 5
+       },
+       {
+        "id": 633445,
+        "count": 4
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Su efecto de Ruptura aumenta en un <nobr>#1[i]%</nobr>. Recupera <nobr>#2[i]</nobr> pt. de habilidad básica tras lanzar la habilidad básica por primera vez en una batalla.",
+    "ultimateCost": 0,
+    "id": 20287,
+    "name": "Enigma de Tushan",
+    "iconPath": "28c2c7c3d5b084fcf4671844c32dc34e7914e6c125c7257fa5e9ebe17c5a0067",
+    "levelReq": 0,
+    "promotionReq": 4,
+    "levelData": [
+     {
+      "params": [
+       0.3,
+       1
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 4,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 20000
+       },
+       {
+        "id": 589818,
+        "count": 5
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1225103,
+   "anchor": 8,
+   "type": 1,
+   "children": [
+    {
+     "id": 1225208,
+     "anchor": 16,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 20262,
+      "name": "Bonificación de PV",
+      "levelReq": 0,
+      "promotionReq": 6,
+      "iconPath": "9560c98da124f605af2e45c09f26a0b8ee24c3aa357b9701464d7c04adcd0da7",
+      "statusList": [
+       {
+        "key": "PV",
+        "value": 0.06
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673759,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    },
+    {
+     "id": 1225209,
+     "anchor": 17,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 20263,
+      "name": "Bonificación de ruptura",
+      "levelReq": 75,
+      "promotionReq": 0,
+      "iconPath": "2f652a2e091ec1a28dde16dfec5968a959804447eb99f746b6f2cba53dedfc2c",
+      "statusList": [
+       {
+        "key": "Efecto de Ruptura",
+        "value": 0.107
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673759,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBonusSkill": {
+    "descHash": "Cuando se rompe la Debilidad de algún enemigo, el efecto de Ruptura de los demás compañeros de equipo aumenta en un <nobr>#1[i]%</nobr>. Si el efecto de Ruptura de Fugue es igual o superior al <nobr>#4[i]%</nobr>, el aumento del efecto de Ruptura se incrementa en un <nobr>#5[i]%</nobr> adicional. Este efecto dura <nobr>#2[i]</nobr> turnos y se puede acumular hasta <nobr>#3[i]</nobr> veces.",
+    "ultimateCost": 0,
+    "id": 20286,
+    "name": "Primordio de Phecda",
+    "iconPath": "1f530aa28e8474c2bfa91155ec20bb6b66c7876a8eb559e9ab32a6c826c85254",
+    "levelReq": 0,
+    "promotionReq": 6,
+    "levelData": [
+     {
+      "params": [
+       0.06,
+       2,
+       2,
+       2.2,
+       0.12
+      ],
+      "level": 1,
+      "levelReq": 0,
+      "promotionReq": 6,
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673759,
+        "count": 8
+       },
+       {
+        "id": 125435,
+        "count": 1
+       },
+       {
+        "id": 186254,
+        "count": 1
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": 1225201,
+   "anchor": 9,
+   "type": 2,
+   "children": [
+    {
+     "id": 1225210,
+     "anchor": 18,
+     "type": 2,
+     "children": [],
+     "embedBuff": {
+      "id": 104195,
+      "name": "Bonificación de VEL",
+      "levelReq": 80,
+      "promotionReq": 0,
+      "iconPath": "959ebc55a284ac83b29de4d97b3422772e372e53ff820bc9af972e0201aabe98",
+      "statusList": [
+       {
+        "key": "VEL",
+        "value": 4,
+        "int": true
+       }
+      ],
+      "cost": [
+       {
+        "id": 29328,
+        "count": 160000
+       },
+       {
+        "id": 673759,
+        "count": 8
+       },
+       {
+        "id": 717386,
+        "count": 8
+       }
+      ]
+     }
+    }
+   ],
+   "embedBuff": {
+    "id": 20255,
+    "name": "Bonificación de VEL",
+    "levelReq": 1,
+    "promotionReq": 0,
+    "iconPath": "959ebc55a284ac83b29de4d97b3422772e372e53ff820bc9af972e0201aabe98",
+    "statusList": [
+     {
+      "key": "VEL",
+      "value": 2,
+      "int": true
+     }
+    ],
+    "cost": [
+     {
+      "id": 29328,
+      "count": 2500
+     },
+     {
+      "id": 549504,
+      "count": 2
+     }
+    ]
+   }
+  }
+ ],
+ "relicRecommend": {
+  "twoPcSets": [],
+  "fourPcSets": [],
+  "props": []
+ },
+ "voiceItems": [
+  {
+   "id": 1,
+   "title": "Primer encuentro",
+   "text": "Aunque es la primera vez que nos encontramos, siento que este es un reencuentro después de una larga separación. El pasado ya no existe, y mi yo antiguo tampoco. Permíteme que me presente por ahora como \"Fugue\".",
+   "unlockRequirement": "",
+   "cnUrl": "605fcefb035509d9d72ddce60c1b27ff31babadab4fe28ec07d511d636d952f0",
+   "jpUrl": "c0a8b82eaa54a90968d346bcb3281918a137357ef3f4f9ce1a071b2788dccf3c",
+   "enUrl": "7a880104ede2fc25fe5bfd38b5d37694d0dd71142aa2ca16e800daea00fb6a3b",
+   "krUrl": "82daba3adc1eab9c338aec0e364b40c039a2f7f6bc768450b229100f97f94493"
+  },
+  {
+   "id": 2,
+   "title": "Saludo",
+   "text": "¿Cómo va el viaje? Tengo otro lote de un buen té. Si tienen tiempo, espero que todos vengan a probarlo.",
+   "unlockRequirement": "",
+   "cnUrl": "c80c37ea2aa9239d0c625fd6d5ecb0f46375b4953af496c2f2382c633ec563fe",
+   "jpUrl": "b640dd43d73282ba017e862d5bd7b870d32c9d31cf139be51c87a48b7023d2de",
+   "enUrl": "bd7414b17d272ff623173d2c19fababa6a73c24e5955799c22d06daf6e8b5492",
+   "krUrl": "9e9b642b97ee84c0bf2c140c99965c01fd4e6ef6aea288ab8f3a2546624cd06a"
+  },
+  {
+   "id": 3,
+   "title": "Despedida",
+   "text": "Aunque el cosmos se extienda a lo largo y ancho, y las estrellas llenen el cielo, mientras pensemos el uno en el otro, siempre habrá una oportunidad para reencontrarnos.",
+   "unlockRequirement": "",
+   "cnUrl": "9d6949c510ccc8db8bc8b6d6de37b11e3af6a442d08ef853a5729dc1fcd72352",
+   "jpUrl": "ecf8f829741c0f88a1421af2bb4fddd6a6c7867d1807b0bdb851447979738aec",
+   "enUrl": "d0ff36be6254eb93eb94cb7bd9ef99d1addf698e606d665ad14d8ea3d36a4955",
+   "krUrl": "7fb78f9949a212010fa461f5a21e93c910a287921c8fd4018eadf7cef3fb0e67"
+  },
+  {
+   "id": 4,
+   "title": "Acerca de sí misma: \"Fugue\"",
+   "text": "¿Por qué Fugue? ¿Es alguien que no puede volver a su hogar, o alguien que se ha perdido a sí misma?",
+   "unlockRequirement": "",
+   "cnUrl": "1856c36864b38ffe9358b6ca0dc3e416d0458fcc26d058a680d3c0641b128cf0",
+   "jpUrl": "bd42f46fd8e1bf4dcea62affb202a28b7932b341098d0a404af28f45b938dbd8",
+   "enUrl": "fdd30142264154831b9da1ea5aadc24362b188b4f117da57591430503624512c",
+   "krUrl": "d6046f020e138bcea8339ea71e3dfca147914c25f127b6293e747aef85ef0f70"
+  },
+  {
+   "id": 5,
+   "title": "Acerca de sí misma: \"Fugue\"",
+   "text": "¿Por qué Fugue? Es alguien que no puede volver a su hogar, alguien que se ha perdido a sí misma... pero también alguien que emprende un nuevo viaje.",
+   "unlockRequirement": "Se desbloquea tras completar la misión trazacaminos «Y al octavo día, partió».",
+   "cnUrl": "cca68b5f6804a9707483f2dd57770efbd6c661a9d2fd3d719a35a2a89f969a9b",
+   "jpUrl": "a57e2eb61149ba6d39ac832579d5cbc214aeec66bf315dce95dce337a288d0e1",
+   "enUrl": "9b13c70264c5a8d4070907ca17a0feb3464a264da99e0fb6bf7c939ede0bf6ae",
+   "krUrl": "ca6ca227a7383bd9ae590b52005cf0574d403bdc59397e89d030d077caa3037c"
+  },
+  {
+   "id": 6,
+   "title": "Acerca de sí misma: cola",
+   "text": "Dicen que cuando desperté, mi cola ya estaba así... Quizá fue una respuesta a mi deseo por sobrevivir. Cada vez que se acerca un peligro, aparecen como por arte de magia.",
+   "unlockRequirement": "",
+   "cnUrl": "4c2464b3a37a8c5404f974c0740bebdfa06f12b377a24727861b70add7d4eb80",
+   "jpUrl": "9047327220effa407dacbc6831101c5741a1c36ef8cc1ad6ee915b40a1f74f78",
+   "enUrl": "0397e8d933a6b1a5b8ca0421956d6cc83ec9bfc1fd51b085c77addfcadabf3bc",
+   "krUrl": "6f9f5faea7f1b167043eb9a013656fb5b26c926dfd68a16fd2268494c4521f23"
+  },
+  {
+   "id": 7,
+   "title": "Acerca de sí misma: sueños",
+   "text": "Siempre he querido liderar Llamas Silbantes hasta convertirlo en uno de los mejores gremios de vendedores del universo. A pesar de todas las dificultades... eso nunca ha cambiado.",
+   "unlockRequirement": "",
+   "cnUrl": "f0a69df1b4c4568a12b55c0a0328590ff6fdb49fa499653ca5e178dca864ae0c",
+   "jpUrl": "b00fb6566741a173f81021c2a897c9c60bc6356523891dac5f9e5a8dd1e92396",
+   "enUrl": "beb13635390035855bd132fe88b6d9bceea6e616754c00f207f808aae3373509",
+   "krUrl": "77ae2805db330215fbe16ddae1b61f70bce0eebf06c4b3d290baa5014a543760"
+  },
+  {
+   "id": 8,
+   "title": "Acerca de sí misma: sueños 2",
+   "text": "Nunca olvidaré ese momento en el que viajé a través de las estrellas y exploré a lo largo y ancho del universo, desde el pasado hasta el presente. Sigue siendo el origen de todo.",
+   "unlockRequirement": "Se desbloquea tras completar la misión trazacaminos «Y al octavo día, partió».",
+   "cnUrl": "70fdbcfbf0d992bd6cbd7043bd1af0a2976740eceb365f543198d45c72703c6c",
+   "jpUrl": "2e36fbee3bafdf24e8933a9817ca173aaef2544d028cc36e80db00dc7a2d385a",
+   "enUrl": "732d4da97b2022ba0e67ba9946aa988e799b7537119d8cff3e0306ae3fdd3713",
+   "krUrl": "36b0b17c38248950330fd5083b311d4f4d1417909e7cfb194250e50df555fa37"
+  },
+  {
+   "id": 9,
+   "title": "Conversación: abanicos",
+   "text": "Siempre me han gustado los abanicos. Solía decir: \"un abanico siempre baja los humos\". Pero cuando me encontraba con necios, no tenía más remedio que aguantar del tirón sin quejarme. Ahora que este abanico puede sembrar discordia, no estoy acostumbrada.",
+   "unlockRequirement": "",
+   "cnUrl": "0d89d1177ef8074460b7d45d1d389f5b186259f0cd091c514d36dc5bd3337654",
+   "jpUrl": "542948b90b32bef5dfca8343f30a1c91916b4a0b8c9b71ea633140adfd249f8b",
+   "enUrl": "19acb12e936e214aca153cb86137b12282c8efc84e3734f63df54e6e37198da5",
+   "krUrl": "c825488d4beb96bbc57fb0969216e527f3d9c38c93da76d77c7207f976667769"
+  },
+  {
+   "id": 10,
+   "title": "Aficiones",
+   "text": "En mi tiempo libre me encanta dar una vuelta y beber té en un lugar lleno de vida. A través de esos pequeños detalles y fragmentos de conversación que escucho puedo sentir el pasado.",
+   "unlockRequirement": "",
+   "cnUrl": "1970bed45ddab16d05b4ebcc1259ddaee751d9d5d265c6290521913c5fde726f",
+   "jpUrl": "4f245899c2dc44a628f01f2e3c821444ed753b494649bcbf7dcb21190f03192a",
+   "enUrl": "d01a980aa03d099ffa163cfaf149f3a75644879ed56f9df4c5a826ee240bd115",
+   "krUrl": "7f5d6b8869320350b0445e4005f5cdfee06d4caa77d45c75529c5f8a74c862b5"
+  },
+  {
+   "id": 11,
+   "title": "Algo que compartir: emboscada",
+   "text": "Desde fuera, la \"Destrucción\" puede parecer fugaz, pero para mí, es mucho más lenta. En ese instante, veo recuerdos, emociones, palabras... Se desprenden de mí, se dispersan y desaparecen, convergiendo en otra persona distinta.",
+   "unlockRequirement": "",
+   "cnUrl": "1208f9997e1ffcb65a57128bde427c4def55f556fb21b11949a7502cc182e90c",
+   "jpUrl": "e067cdee5935e062de1dbf636f7b21e0db227140e4566d50137ee4f384171306",
+   "enUrl": "9030ded2ddb04fe6b1bbda0cffb502bdec0d9305b78d637c3f75fc44a5d0877e",
+   "krUrl": "b85c52baf3907502c9bb7d527322be293135acaa5af4ff5605e9bebde3b9f88a"
+  },
+  {
+   "id": 12,
+   "title": "Un dato",
+   "text": "Entre las olas del destino, las personas como yo no somos más que una diminuta mota de polvo, zarandeadas involuntariamente por las manos del destino.",
+   "unlockRequirement": "",
+   "cnUrl": "d281dd4a1226a41bf01fc75246aa3a3f874fd0900d9af48311426731eb16d6e4",
+   "jpUrl": "c9c7d894bfc8fcd55d325813a3be2aa03cf165adcad68de0ae9357ec9f033b76",
+   "enUrl": "a2d4625ab382096814fb7332553c832bd2c4939eba6cafa712e62e2f8d4c28f3",
+   "krUrl": "b3611343ff26c6c3145e9abb5c8d549745c1b8c4557c6af1ffafd234f6961191"
+  },
+  {
+   "id": 13,
+   "title": "Un dato",
+   "text": "Entre las olas del destino, las personas como yo no somos más que una diminuta mota de polvo, zarandeadas involuntariamente por las manos del destino... Pero ahora, tengo que convertirme en una mota astuta de polvo y hacerles estornudar varias veces.",
+   "unlockRequirement": "Se desbloquea tras completar la misión trazacaminos «Y al octavo día, partió».",
+   "cnUrl": "98f23d3d529681f9e6790e1a91ca2c20069ad489cb096921af9170eb182930b9",
+   "jpUrl": "c19e2ac47bd012f060ef2f9c93b574fa201bf7955658320bad8088da8826a558",
+   "enUrl": "3d53b1f40a393ac3cb2eedc51868e2a878a0189670cb37949fe74e0986c3fcb5",
+   "krUrl": "70f434e8a01f5df96eaeb76e056aa829190f49116b7e483ac02b86c3f2676a98"
+  },
+  {
+   "id": 14,
+   "title": "Acerca de Jing Yuan",
+   "text": "Todavía recuerdo con claridad la habilidad del general de lograr el mejor resultado con el mínimo esfuerzo... Espero poder volver a ser testigo de ello algún día.",
+   "unlockRequirement": "",
+   "cnUrl": "d8a5bbfb27cef0810ea932213c072e70b41b58ca81fa8e307b1f6637ad6cc29f",
+   "jpUrl": "972beefaea5708e8995b5f644c950aca3be2a6156ad0079752229c67e40853f5",
+   "enUrl": "b9a479ce81c8321d13422bd14f64e43d82182c16c83e6fb5538acae018d0bf8e",
+   "krUrl": "34a61826076b25ca3c83bc62f7c30c91713967ada9a9abd57a80276f91a219d2"
+  },
+  {
+   "id": 15,
+   "title": "Acerca de Yanqing",
+   "text": "Recuerdo... que una vez le regalé un juguete extraño. Era un joven muy educado, y cuando se topaba con una espada que le gustaba, se veía feliz a más no poder.",
+   "unlockRequirement": "",
+   "cnUrl": "bc5ef63aa25b1211cbf518049622349c322e769168059ba573f457faf62fc185",
+   "jpUrl": "60bab9be31d5de6166b6639f1e1addaf42385c891783417df1273bf910c48363",
+   "enUrl": "55e2c71745a938472a174300330d9da5ea6ff2ff85a57daf8ad6d26c71491fc0",
+   "krUrl": "64962ac957ecdac2b445e8658ed00a6ed970f0dd55dce0282813f6c44e4cb1ff"
+  },
+  {
+   "id": 16,
+   "title": "Acerca de Yukong 1",
+   "text": "Aún recuerdo que... ya sea pilotando astroesquifes o dirigiendo la Comisión del Transporte Celeste, la señora Yukong siempre está presente en el rumbo de Xianzhou.",
+   "unlockRequirement": "",
+   "cnUrl": "63cb091c3fb3cf6aee5367496cc22b39d7d7def8bdb02769c66184a93826a086",
+   "jpUrl": "8400e5f238806d0b58e1782a6daf583a8d065a1fb1044446517c301205802c9d",
+   "enUrl": "59190917ece1ce311b03e4e8a8fcde2cc9ef3cd7418433d6c4e4d61cdd2ea8b2",
+   "krUrl": "d457a29a8680a86ba1ca16df21db12d609e3c22707cb635db15f5c7f2c33f5f0"
+  },
+  {
+   "id": 17,
+   "title": "Acerca de Yukong 2",
+   "text": "La señora Yukong me dijo que ella también murió una vez y que, durante todo este tiempo, ha estado buscando la forma de volver a sentirse \"viva\" otra vez.",
+   "unlockRequirement": "Se desbloquea tras completar la misión trazacaminos «Y al octavo día, partió».",
+   "cnUrl": "8e5e64d10b5c34fe9f1dcc0eb8a65ca7f28f89bdd5f0ddfbd596e34f5dbde1b3",
+   "jpUrl": "02cad6a3339caf72cdb110ef5d0f1d0913239344c9f31a4e1f92c1293bbabd1e",
+   "enUrl": "d3f690435b8fe6870312b205ded922c5f29eaf89f72632da0d78e741dbae4cfd",
+   "krUrl": "ac813da23981960ffda3e374141c205d453a65fdb4020f59a6fdecc8c64ebc7b"
+  },
+  {
+   "id": 18,
+   "title": "Acerca de Bailu",
+   "text": "Por alguna razón, últimamente me siento muy cansada y siempre pienso en Bailu. La próxima vez que vuelva al Luofu, iré a verla sin falta.",
+   "unlockRequirement": "",
+   "cnUrl": "b4d1297b45479a266ee05f50faeb14ef74f038452a51997e2fad4c83116eb65e",
+   "jpUrl": "33e0eae59c99f5f6a6d3c1f703f32cd235dcc0a01a53787c1c76777c8f74b3ab",
+   "enUrl": "07c5295f8e76ee815ca6eabcfa0a4aa0ac57960ac92f6de8088a0a47b86c5e55",
+   "krUrl": "e0539ea703b94db148f67c439dbe5140473bfa8dc085e01ddcd7b5c3ee91eaa8"
+  },
+  {
+   "id": 19,
+   "title": "Acerca de Qingque",
+   "text": "¿Es una adivina de la Comisión de Adivinación?... ¿O la dueña de una sala de juegos?",
+   "unlockRequirement": "",
+   "cnUrl": "74f5a29ed9549434aca164ff1ef97a4e08c1b52ef7c0ad8e96543e60d5d1973d",
+   "jpUrl": "a9e3026a48d054020916f51aacb6f7f9f1aac68f664a61a6971f550f92fb1224",
+   "enUrl": "5ad6639b907b0259963b02924711393d71f377a1c04e79515a737ba8073c6528",
+   "krUrl": "fbd57410e04a94fcd49e9f83f47dff7fc3a6c02c627a47f4497dd809a19254d0"
+  },
+  {
+   "id": 20,
+   "title": "Acerca de Fu Xuan",
+   "text": "Nunca olvidaré la voz implacable pero agradable de la Gran Adivina... Aunque siempre se muestre apática, cada una de sus palabras tiene sentido.",
+   "unlockRequirement": "",
+   "cnUrl": "c4ffdc1b89386911b0e40eca04f32fa53a9823501fe9488628da6b1887dc1906",
+   "jpUrl": "5e89b39a837444404c4aafd2e8caea6df91e032c55a9688ebdfa41dbf3734162",
+   "enUrl": "fe23a13b9a888c5ab382267486f88351af3f70aebc48db1584fc62ee4189148d",
+   "krUrl": "03c273d9d2109e0352c15f54a735ccb814240283a30f459539a1b039d2fed622"
+  },
+  {
+   "id": 21,
+   "title": "Acerca de Ruan Mei",
+   "text": "La \"resurrección\" siempre será una experiencia extraña, pero Ruan Mei me ha enseñado a no pensar demasiado. Solo tengo que seguir mi rutina y centrarme en los ejercicios físicos para recuperar la salud. Habla con un tono tan relajado... que parece que fuera una tarea sencilla.",
+   "unlockRequirement": "",
+   "cnUrl": "32bea615a37466120cde5105f64497128242144b2b4b568d839ad935fe147a7f",
+   "jpUrl": "2afb365dbac110b27f783593b00a8e8b04a7ee99ab1bdf14f27fd5c55ba9a7c8",
+   "enUrl": "62285cda0077721d8d5bcfe78e546c568f9bdf2405a8e0b0fbd5456faa746a7f",
+   "krUrl": "f761fc7a30b16058cc58cdd41ceb15f4550bbf5a24910c1d3c49956f3814ed65"
+  },
+  {
+   "id": 22,
+   "title": "Activación de Eidolon",
+   "text": "No hay nada más preciado que los impulsos del alma.",
+   "unlockRequirement": "",
+   "cnUrl": "202e91d80e7a459d8f9db479be8e072b4031d91f0ff5c22d36f55763523812ca",
+   "jpUrl": "70950f2c953049e2aae77c8e58e14ef9c1437fdbba6e76a5955e6467f96b6a92",
+   "enUrl": "3f73e1cebf9a36c421e2cdbfd04d749cb54a32765c96aec319c5206b36e77c93",
+   "krUrl": "5d9e25bd9a6732b4693c934ecbeacaf87e1704a3a277f4cd5ca3100034df3282"
+  },
+  {
+   "id": 23,
+   "title": "Ascensión de personaje",
+   "text": "La metamorfosis siempre trata sobre liberarse del pasado.",
+   "unlockRequirement": "",
+   "cnUrl": "1b6fee798b29141512775484c16d3b44759ba367e547d17cccf6e194358b4c9c",
+   "jpUrl": "5c25c4ab817e2614e184a6b37f569768bbdad70cba08ad1645a6a444743491a1",
+   "enUrl": "567aece1def700946c1d52986568e252f1072a4c184b63a2ffbfc4dfcbb619c4",
+   "krUrl": "82145267952fec2c0d7b5614aafb65542e6408bcc86dbae9bbb8f5b7e0065209"
+  },
+  {
+   "id": 24,
+   "title": "Nivel máximo alcanzado",
+   "text": "Así estaré a la altura del resto de ustedes.",
+   "unlockRequirement": "",
+   "cnUrl": "10c9e5f70e369d84580289560da3eb48df053f14e907c988e8e8516b0001c201",
+   "jpUrl": "1b04288497b671ed8c91b918a45a691c9558fdd5ac3b8adc2e3d4c560ef2056a",
+   "enUrl": "1e1c44f896107ddbbff166cd53035d276fb52de0b7ec66f20f6f348ab861865a",
+   "krUrl": "eba200f295f6e350a72f4c46c3571942215f360c9731de89822865cb5e21c964"
+  },
+  {
+   "id": 25,
+   "title": "Activación de Rastro",
+   "text": "Este vasto universo tiene tantos mundos aún por explorar...",
+   "unlockRequirement": "",
+   "cnUrl": "7affe7602978ad10cebd8a41d012e3e99281c612798ce1603bd0224fe9d60ac4",
+   "jpUrl": "3f3992b8f9343592929ad60bd37354c55df32eb4fce10e9ed43d1375dff82fa1",
+   "enUrl": "8a466d40135310db68f1421c95c6d7625df4b84784297524eedc4878669b5219",
+   "krUrl": "e6c14596f4420abf860130f3ec2d9582e25c168909edc0f7713bc041bcfc0875"
+  },
+  {
+   "id": 26,
+   "title": "Miembro del equipo: Trazacaminos",
+   "text": "Benefactora/r, déjame echarte una mano.",
+   "unlockRequirement": "",
+   "cnUrl": "80457070305eb1e0621dc63e8c752c41d3e57b908eb4fb88d0f35c028efca95c",
+   "jpUrl": "f05935cc16a964af402a1564a64c2667b8afd2cbda3d66ba0927299ad1712601",
+   "enUrl": "b2b395436ca6504b7bb66ac1bc6f0222f52910afba52f0cc8049b5d5d7430b3a",
+   "krUrl": "a201fe7445c6b3b6995ff197c7bec25f336f31ec8dc944261d68ba28e21356e1"
+  },
+  {
+   "id": 27,
+   "title": "Miembro del equipo: Yukong",
+   "text": "Señora Yukong, permítame que luche a su lado.",
+   "unlockRequirement": "",
+   "cnUrl": "3d73c6cbd13b6f9980f04d7496ef6ff6ae7f7d4d5630a8b9479f63b2e6bc93dd",
+   "jpUrl": "a891fe3aae1a27ecdb6934d0b4aa2be6a6e2285b2c997c71428f45bcffbddddf",
+   "enUrl": "cce095bdd5c66cbfa970bc0da2f02984fcd2b77f96ee95c433f95a6203ad3034",
+   "krUrl": "cb44153512714272bedcea60e1133ccabbb392600b4dd069ae840a6ae1ad8ed2"
+  },
+  {
+   "id": 28,
+   "title": "Miembro del equipo: Ruan Mei",
+   "text": "No se preocupe, Ruan Mei. Me recupero sin problemas.",
+   "unlockRequirement": "",
+   "cnUrl": "f77e520e256f68a5bd1e53dfa270e2189abcdbe0425e7e7cb3db2d695ebcaf45",
+   "jpUrl": "f64d93611b9d37f9ef18fc66f70c6b3a817ade9338a337b102239ed40126fc2e",
+   "enUrl": "c36346c97d69071eaf971fff1d9d0f964505119fbb7a4a9ff00bdc643ac9b140",
+   "krUrl": "83ca9ea5c6604e679ff9d78f4eeb904cf6430369f99df8fe2ae76aeb95f15175"
+  },
+  {
+   "id": 51,
+   "title": "Comienzo de la batalla: Ruptura de Debilidad",
+   "text": "Aprovechemos esta oportunidad.",
+   "unlockRequirement": "",
+   "cnUrl": "50886bd5e38827b28d65cf6e76acc14fa918c6afffb56fbd2c0b6681085620f0",
+   "jpUrl": "ca013e500fcd840f564632e15d4a9bb342bc7e4abcdfb4c0f1513cc61831cbf1",
+   "enUrl": "0c9f4c266441af99c571156ce1ee8c6b9feb467f1e23d14cbc83061195c0b3a8",
+   "krUrl": "d997fb70c9316c12bbe6313c8f9920eb76679f868c53c3fe83e15ce26dbc8935"
+  },
+  {
+   "id": 52,
+   "title": "Comienzo de la batalla: alerta de peligro",
+   "text": "Seguro que encontramos una solución.",
+   "unlockRequirement": "",
+   "cnUrl": "49d88c2a4a814aaab3c26aa22186538a2d10c38526219b88a4a2e48c47c2f780",
+   "jpUrl": "88fc982e7637b82229164e856ceaed5ffc722e06c79502cdc06dd7260c13d349",
+   "enUrl": "9946daf84f25f1bd25410bde46204ef4d15d9a239a11a32d3ab6a6f2c1f490a1",
+   "krUrl": "c93cea9ba638122b841379d5ba42a6ebc1cfd670db3aadb2dd43e7074a88b82a"
+  },
+  {
+   "id": 53,
+   "title": "Comienzo del turno 1",
+   "text": "¿Nos hemos visto antes?",
+   "unlockRequirement": "",
+   "cnUrl": "edcc16f7784600e7f3092e931fc2218c9dc0ae08f00121074aff33402d64e1d9",
+   "jpUrl": "ef5e0b304c532369e9fdd07094bc7ffef3ccfe7e6ee2cc00db78133d9e2c4c49",
+   "enUrl": "48c0bd555fed2275a7486f5d08d22b9ae05376d20e48abf29b5a1388f334431a",
+   "krUrl": "9529d2a644e61a1eea9e1fb1c0cb1f51891b90faa30194bc313a8bb40933f3ea"
+  },
+  {
+   "id": 54,
+   "title": "Comienzo del turno 2",
+   "text": "Esta vez no tendré piedad.",
+   "unlockRequirement": "",
+   "cnUrl": "e72295dd5c418c9d943d7977b41c89172c2f7c123f3435d359e7b9a8d10754e4",
+   "jpUrl": "a800fe88581934b038aa5d7e08e9379c227d3e97b8a1ad4dc9fb3f451b36acdc",
+   "enUrl": "d4130233a8318783ea5b3925d933a99a243113c76facd937cce236f119e223c1",
+   "krUrl": "50f0ec8f79400dceb6e43dd0f17e1d183435d342af7de781f678164af6b43655"
+  },
+  {
+   "id": 55,
+   "title": "En espera",
+   "text": "Las cosas nunca volverán a ser como antes.",
+   "unlockRequirement": "",
+   "cnUrl": "3ced5a56e077044a82c32daefa604705a54615b6638d2d146dc6b220b2912de1",
+   "jpUrl": "254cddd46906460da26e8c3b3dbbb1002456ff1dca5bb11077a9a1c0d5e3c7c7",
+   "enUrl": "f696abf4de88a568bb4f492f939be8085be182289f6c8077dbe16fc307304be2",
+   "krUrl": "cc7be9bf0f562df93f2b48fcfc9efb6064d0b6457fccc11b025334e450400ce2"
+  },
+  {
+   "id": 56,
+   "title": "ATQ básico",
+   "text": "No mires atrás.",
+   "unlockRequirement": "",
+   "cnUrl": "89adce8c197d59455a5663573795d23ecfa115d2781a26b3afd6f84617ab79bd",
+   "jpUrl": "b5a63ad047745fe096409d47971446d12c936d2c4cffc2ef167e87b2cc159a6f",
+   "enUrl": "192ceff187f7f38bf50ea35f7c9ac109c1853f7808bd2ac1f0fd9bb2fe862dde",
+   "krUrl": "61adca22256c1cd50545e123287915ff4cfc4f516b6d49321b6ad8a2f276a56c"
+  },
+  {
+   "id": 57,
+   "title": "ATQ básico potenciado 1",
+   "text": "Las nubes se dispersan con facilidad.",
+   "unlockRequirement": "",
+   "cnUrl": "99fd920411af51b5d8c3aced9dab918baded6cc4446674302c49d7fed053d6a3",
+   "jpUrl": "21c541dbf8f2a69fce97fae292f111e9205dc9a80ae04ca648f5063c0a064346",
+   "enUrl": "3095ba1acd14d6be2a016918cee3cc57720f47f5845a4d8affd3e131754346e6",
+   "krUrl": "a92351f67a9d00b055e073af928b8655deed74c724eab5f4150187726bf62b3e"
+  },
+  {
+   "id": 58,
+   "title": "ATQ básico potenciado 2",
+   "text": "El largo sueño ha terminado.",
+   "unlockRequirement": "",
+   "cnUrl": "6f11e77400e0e32ac3ac4ba7c4d41b1e90e7d098043ce8d3154850b6dba5b9bb",
+   "jpUrl": "3285b7aa956dcccb7d76a65b71baa65d5472523e26edaa13d6836aa15d2cd07f",
+   "enUrl": "ab37ace545cd12f9908cfc1957fcc562dbbae84391b2c37eeb2113bf7520f8f1",
+   "krUrl": "e6e1f7ae6ef67d325c91e2c9ada31410e15e5fe8a375cf07ab548b825488d6b7"
+  },
+  {
+   "id": 59,
+   "title": "Habilidad básica 1",
+   "text": "No hay nada de malo en compartir la buena fortuna.",
+   "unlockRequirement": "",
+   "cnUrl": "b76d0b8f6005069d7b13fa672a23d014d06cb8628981a5672077cc5fd7c11e90",
+   "jpUrl": "a18d3223b07f4d3d05b94f450fecb4d258024be3e4ed9d610dbcd9bcd8d2102c",
+   "enUrl": "822b749545b4ff97c52238c23ea39aa022d9b884cf90ba365c7d500aabfb579d",
+   "krUrl": "aa391c827c697fa36ba707ad4e97673efccbd4736bfb83c573dd331cd81ba42c"
+  },
+  {
+   "id": 60,
+   "title": "Habilidad básica 2",
+   "text": "¿Por qué no unimos fuerzas?",
+   "unlockRequirement": "",
+   "cnUrl": "1895eeb38463631f94052d5964075b7f56711a5aab1762db9daa26e56dc99a08",
+   "jpUrl": "9d3488803671d331a3296bf667929c2fb0c2e0565fc204477032fd87e53ce0fb",
+   "enUrl": "c50a0e76f68f418db24c4d8c0078ebbbd968e741cae2184fe989fbc9062782a8",
+   "krUrl": "9c3c99a277208cd0c75d7fbac3d352d91d988796274bb0599112a9190bc11df5"
+  },
+  {
+   "id": 61,
+   "title": "Al recibir un ataque ligero",
+   "text": "No es nada.",
+   "unlockRequirement": "",
+   "cnUrl": "26bd73b8f5e50d058ae39b7a05b11a038b1325a428714e532f94d3d9e5672e0e",
+   "jpUrl": "b21ef4b9318a59a31bcb948b67f34371a537301c0076e49b6acf7ab45bd0d3dc",
+   "enUrl": "3781a0606721d2ec8924f98d86bdde39d284befa78190b1b84d26afd1d486b8c",
+   "krUrl": "c18885ce56d6c7a760077bab8935c9b34a447a4c04aa4b08073a8e4d4ea7a4cb"
+  },
+  {
+   "id": 62,
+   "title": "Al recibir un ataque fuerte",
+   "text": "Otra vez no...",
+   "unlockRequirement": "",
+   "cnUrl": "38e9882c37b6cffa11db99869011cd570ee8ed0f1391b5054abc515fd8f274cc",
+   "jpUrl": "40120ddbe3d772aef2de90ed037bcb526cb973d1ad4f5deb43ab8cbd7cd815dc",
+   "enUrl": "70271530397d1d3528a2e2fe3f4230cbe7f26d00f03928b2f8fadc98b968c142",
+   "krUrl": "392c4de3dfc73e6e2cfa49df4dcc4d7f4fcc5e6c410da80d339b8e578b677089"
+  },
+  {
+   "id": 63,
+   "title": "Habilidad definitiva: activación",
+   "text": "Los sueños del pasado son cosa del pasado.",
+   "unlockRequirement": "",
+   "cnUrl": "bb08e22466ac30c6cf5803aa84f292993045d4dc9076189ee636e842ef1abaad",
+   "jpUrl": "0f857ee09e7159744ded3f95ff8c710492c2d16d2c82cf15577679b2ca822fff",
+   "enUrl": "e2274aa28906dd38e0dc31ba64345e68024da664e48fd09271dc82853034d3d9",
+   "krUrl": "d9569480d7e2d53ed4cc74b56eca065d204c5868a6ad9e8d6cdf381cdb379a05"
+  },
+  {
+   "id": 64,
+   "title": "Habilidad definitiva: lanzamiento",
+   "text": "La vida es como una mota de polvo que danza con gracia.",
+   "unlockRequirement": "",
+   "cnUrl": "092e047f1d437eb92ab7d3df1af4e68a6615891e04962568580fa1f08fdff8dd",
+   "jpUrl": "5031cf687ae2c7b9cbab376a50c3034b650a114dd3af3fe8ddc1dee3f28f905e",
+   "enUrl": "e50dd063a9855a123f2406f725f3b51230db568cfaa4ab48bf94e540373109a3",
+   "krUrl": "43d83907cbcd31f09e1d84867b663cf7a3b8e27884ea8d4dca0b8dd74454be47"
+  },
+  {
+   "id": 65,
+   "title": "Fuera de combate",
+   "text": "¿Este es mi destino?...",
+   "unlockRequirement": "",
+   "cnUrl": "e6204d4ca214d69d74485631c1941daa0135fe4a3d44f2e3b46913d58bf2a057",
+   "jpUrl": "e4951eb083accb52b16860f44e582f0e7243891d445b1d85c36cd79cde4a8687",
+   "enUrl": "065e49a0985373ee8e3a381c2b05a4d879b20bf81bdef334546bad9e566bed42",
+   "krUrl": "6010b202a777ccc20ecce468fe4d75936969dcc0e691111c658f4fa54893fe15"
+  },
+  {
+   "id": 66,
+   "title": "Retorno a la batalla",
+   "text": "Por poco cruzo las puertas de la muerte.",
+   "unlockRequirement": "",
+   "cnUrl": "ec357757263ecdd6b973d3ce16b5de7991a739174a68748f737fb956ac884cbb",
+   "jpUrl": "dd535a92ecefeb00d8e24335cbf2b959d4449eb281b9118ac5b1c13c492fa0e8",
+   "enUrl": "f28dbed15c9a49a0b4e085383c73dd45cefc340dba5857c72a81a9834491f245",
+   "krUrl": "7aa90a8e5363a4bd5591fad4320c42323f696ee04f97b41572b40b386bd6c52a"
+  },
+  {
+   "id": 67,
+   "title": "Regeneración de PV",
+   "text": "Muchas gracias, benefactora/r.",
+   "unlockRequirement": "",
+   "cnUrl": "1dffb9ce0cc92b7ab57f76438c6b53974ae50e784b2e5ffb9e5606e5ae95027b",
+   "jpUrl": "999c0e37727357219f6dd8f05aced48a62ef97fc72ca133f7948b1ebd155a3e8",
+   "enUrl": "c4f0eae879881bc85cb79b276ade85c18e04043f2fa51cdda9d52b067086929a",
+   "krUrl": "4719337682cc259728702e187db3f9958a1c98cf0c199ad0e741404cc0b1c6c5"
+  },
+  {
+   "id": 68,
+   "title": "Técnica",
+   "text": "Todavía no ha llegado la hora de volver.",
+   "unlockRequirement": "",
+   "cnUrl": "9a986f7780f37c38b9acc1cff0f67ac24367dc7c4ff029d2c80da724471f8d07",
+   "jpUrl": "36d7ce6f9e9015d949d2d982ac7309dcd788a18a4c186e40b593903735aabed7",
+   "enUrl": "9ff80793fd9e173b3092662b8a1e55659a281aabfdc0dd980468f56fd4d1c0bc",
+   "krUrl": "1f6320ab30bb28fa08ead381dc1c211ca7e9f94ea48c86765075b3d7b68a6c9a"
+  },
+  {
+   "id": 69,
+   "title": "Victoria",
+   "text": "Espero poder serles de ayuda.",
+   "unlockRequirement": "",
+   "cnUrl": "b43c4ff564d3b5ace403f62d47fcdcc80109bcc12ca7df4586978586ab820a0b",
+   "jpUrl": "ad072c50775faee18b73f3acec6524e25eda874e934573faa6fc39998bcf049a",
+   "enUrl": "2dac1eb733e2b4535faef2f547c3d48da1a7c159a33f59743d805b0b7d27c3bc",
+   "krUrl": "f2ac75f533b32fe39cfab57e0067708eda3c2ac1970ddfd6c23c767dc3c13ba4"
+  },
+  {
+   "id": 70,
+   "title": "Al abrir un tesoro 1",
+   "text": "Un vuelco de fortuna a nuestro favor.",
+   "unlockRequirement": "",
+   "cnUrl": "a7a004d7596bca69cce98cb2e46288003d5d1d80475523123b02f406414ad2bc",
+   "jpUrl": "2303285e276f199ecd8740b35e550dea2669c9a1e6beef998376f065eec50322",
+   "enUrl": "eb369af22c34559372762796a143d649937c28072a775fdf1a59ee9247fb4958",
+   "krUrl": "038b48ee8fc1e9f1285a6dc1cbcee96faf92feb3d23d56e913dd42ec39cbbcc7"
+  },
+  {
+   "id": 71,
+   "title": "Al abrir un tesoro 2",
+   "text": "Nada mal, todo es de mi agrado...",
+   "unlockRequirement": "",
+   "cnUrl": "7c9527f2314e8bf03545cf76e0ade0c537e33039d45ffa269daf7585d571a374",
+   "jpUrl": "4d691ce45f136eb4e2a2ab927090bc61ac5a714055f48fb8f693fd15a52cbf09",
+   "enUrl": "c9cfe4c5229294ad41ee697a34c9fd3def699c33a20de2b2f414da3e7ed137e6",
+   "krUrl": "2a4289b47d54c8be7dbb4bfd288394146ad7187cd638aff5c9019cc8f7a5fc08"
+  },
+  {
+   "id": 72,
+   "title": "Al abrir un tesoro valioso",
+   "text": "Un sinfín de maravillas, sin duda.",
+   "unlockRequirement": "",
+   "cnUrl": "9a0ce06ac858639ca498d03e5d5ae09a7bb1fbeb7b4d750dbf653884f504a261",
+   "jpUrl": "010c7bc50b41e36297b979512c4b7332cdb45872ec8b8a19089ee668d99fdd49",
+   "enUrl": "e8896399f4128aa3b302cb441eb1416cf533eeca52252f7c18cb278ce4da9863",
+   "krUrl": "765e7389f054c6fb3de6b0e2356090647642a9d3d3223fda4a82fa2a4ebe186a"
+  },
+  {
+   "id": 73,
+   "title": "Al resolver un acertijo 1",
+   "text": "Cada paso es un desafío, pero hemos seguido adelante.",
+   "unlockRequirement": "",
+   "cnUrl": "d5a9ad23985000fe8b833a977043220a4f001e9cf6f33d3d13baa55873f4d2a4",
+   "jpUrl": "b6197ef2e921707962afdd5703489cf479fd1be26cfd7a0438b0a593122009dd",
+   "enUrl": "1416cb3449e96d0695524df5ddd0ccbb1a15bc0a1412ee279b607f91dbe3c047",
+   "krUrl": "c0588d666ec3fec91dad9da7a7aa6b9270161dd45df70eb5be585dae8aa93d8a"
+  },
+  {
+   "id": 74,
+   "title": "Al resolver un acertijo 2",
+   "text": "Todo gracias a tu guía, benefactora/benefactor...",
+   "unlockRequirement": "",
+   "cnUrl": "d226c370d8bf9a9880ad0b4ec3889cfee8c6ac09870464f68ff146543ebd5d72",
+   "jpUrl": "0c9d1556d307eee98a776b3ac71412827d74787cff7fe74cdcf479ffde849dd1",
+   "enUrl": "780487f89b31f1c5677e169a202893cc3be32fbb3bf8e5d9d6f1a89261699542",
+   "krUrl": "1bf7c619cb0d41b778c004c63d57f3b166abe5d8fb2c340aedf4d14ad8228082"
+  },
+  {
+   "id": 75,
+   "title": "Objetivo enemigo encontrado",
+   "text": "No tiene pinta de ser muy amistoso...",
+   "unlockRequirement": "",
+   "cnUrl": "bca2597459c89597310e6de87c76886d1b7b60eaba1f92f39eae09493171287f",
+   "jpUrl": "a94408563ef9a49c8d3ea0a0a0f1aaa4ce17f56dc3656c849417d924f3b35126",
+   "enUrl": "98ff01c46ca7e4bdf0d1d6cd1f83a55b3331d859f35653346103f4ee3e14ae22",
+   "krUrl": "efe24af88124b06e6256efb79d92b20f57869fa33d6faabf8e662b1bd23aded8"
+  },
+  {
+   "id": 76,
+   "title": "Al regresar a la ciudad",
+   "text": "Qué animado es este sitio. Qué bien.",
+   "unlockRequirement": "",
+   "cnUrl": "30507173721a05e50412146e093d5aa0334ff45ec7eb315e3cff5b1cf101ab01",
+   "jpUrl": "ace6e129f66f923eb3a4b233ab08a5ed76c1a662e484d71cd31ee6e566ebcd01",
+   "enUrl": "2ce24b5a23bae910a96629749ec42746ad3642e5b979a9732914adfae9c598bb",
+   "krUrl": "56faff858e1061baa3f9c7e0c583cf40162cad7bc0bdadd1e0da19f5675953e9"
+  }
+ ],
+ "storyItems": [
+  {
+   "title": "Detalles del personaje",
+   "text": "La antigua representante principal del gremio de vendedores de las Llamas Silbantes en la Comisión del Transporte Celeste estuvo a punto de perder la vida en un extraño y catastrófico incidente en su viaje de regreso.<br />Su rostro, nombre e identidad fueron robados por quien lo orquestó todo. Sin embargo, por un giro del destino, le quedó un resquicio de esperanza, y de las secuelas de la Destrucción, recuperó su vida.<br />Ahora, se hace llamar \"Fugue\". Sea la amargura de no volver a casa o el encanto de viajar por los mares estrellados lo que la impulsa, una cosa es segura: se levantó una vez más y emprendió de nuevo su camino.",
+   "unlockRequirement": ""
+  },
+  {
+   "title": "Historia del personaje I",
+   "text": "El brazalete de jade que una vez la protegió yacía hecho añicos, la campana de bendición había caído al barro, y el abanico plegable vibrantemente adornado se había hecho cenizas.<br />Solo podía observar cómo el fuego fantasmal de la oscuridad consumía todo lo que había poseído,<br />reduciéndolo a llamas y ruinas.<br /><br />Por un momento, solo se lamentó por quedarse a un paso por detrás de la vida.<br />\"Acabo de cerrar un gran trato con ese comerciante itinerante... Una oportunidad desperdiciada...\".<br />\"Todo ese esfuerzo por esta cola tan bien cuidada, ahora se reduce a nada...\".<br />\"Ni siquiera podré cumplir mi promesa... de llevarles regalos a todos...\". <br />Un millar de pensamientos se agolpaban en su mente, pero su cuerpo permanecía quieto, inmóvil, mientras las lágrimas se acumulaban silenciosamente en las comisuras de sus ojos.<br /><br />Los recuerdos parpadeaban y se apagaban como la luz de una vela moribunda.<br />\"Cuánto desearía ver a la señora Yukong surcando el cielo con el arco que le compré... Es lo que más anhelaba\".<br />\"Yanming... A partir de ahora, el gremio de vendedores de Xianzhou tendrá que depender de él\".<br />\"Por fin encontré las semillas de té para Mengming... Se pondrá muy contenta\".<br />\"Y Yancui... Es hora de que tenga un cuchillo nuevo\".<br />Una lágrima resbaló por su mejilla y se evaporó antes de tocar el suelo.<br /><br />Su visión se vio gradualmente envuelta por la oscuridad, y ya no pudo distinguir la trayectoria de la nave de Xianzhou.<br />\"Tenía la esperanza de adentrarme en los cielos, pero al final, ni siquiera sé quién es mi enemigo... ¿Cómo podría estar en paz con eso?\".<br /><br />En todo el universo, océanos de vidas se desvanecen con cada minuto que pasa y cada fugaz segundo. <br />Ante la presencia del inmenso poder que ejercen los Andavías, los mortales no son más que motas de polvo, arrastradas sin rumbo por el viento y las olas.<br /><br />\"Sin embargo, debido a eso, esta es una 'elección' para ella y una oportunidad arriesgada para el resto de nosotros\".<br /> Esta es una conversación que tuvo lugar mucho tiempo después entre un comerciante itinerante y una genio.",
+   "unlockRequirement": "Se desbloquea en el nivel <nobr>20</nobr> de personaje."
+  },
+  {
+   "title": "Historia del personaje II",
+   "text": "La frágil consciencia de la joven se pierde en la oscuridad.<br />Delante de ella, se extiende una noche interminable, mientras que detrás de ella, el camino a casa parece estar al alcance de la mano.<br /><br />Vuelve a pisar terreno conocido, donde brillan faroles bulliciosos y las voces de viejos amigos la llaman desde lejos, instándola a volver a su oficio de vendedora. Ante ella, la niebla negra se cuela y convierte al instante el antes animado mercado en madera podrida y ceniza muerta.<br />Se aleja de nuevo, y la cubierta del astroesquife aparece bajo sus pies. Ella anhela surcar el viento, pero un extraño cuerpo astral se cierne en el cielo, y las personas que una vez conoció se convierten en monstruos, que alzan sus espadas unos contra otros.<br />Quiere ser tan elocuente como antes, pero ahora, frente a esas formas monstruosas, ni un solo sonido escapa de sus labios.<br /><br />\"Tendré que seguir adelante\", susurra para sí.<br />\"¿Pero cómo?\", se pregunta.<br />\"Levanta la mano\". Una voz fría resuena desde lejos.<br />Baja la mirada, los ojos recorren la cicatriz que le atraviesa la palma. El abanico aún descansa en su mano, aunque recuerda que se volvió blanco ceniciento en el fuego. Sin embargo, aquí está, completo de nuevo en su mano.<br /><br />La niebla negra arremete contra ella una vez más.<br />\"Avanza\".<br />Levanta la mano, y la herida que atraviesa su palma comienza a brillar. La luz atraviesa la oscuridad, pero también la ilumina a ella.<br />\"Adelante\".<br />Levanta el abanico. Antes era una fuente de sosiego, pero ahora amenaza con estallar en llamas.<br /><br />La niebla negra se extiende sin fin, pero cuanto más avanza ella, más intensa se vuelve la luz.<br />\"Avanza\".<br />Esa voz fría se hace cada vez más clara.<br />\"No mires atrás\".<br />Avanza corriendo.<br />\"No he visto suficiente de los incontables mundos en el mar de estrellas...\".<br />Detrás de ella, cinco esponjosas colas se despliegan por completo, encendiéndose en ardientes llamas que arrojan luz en la larga noche que la atrapa.<br /><br />El laboratorio.<br />Las yemas de los dedos de la joven tiemblan ligeramente mientras una lágrima cristalina se desliza por el rabillo del ojo.<br />La científica, distante, se asoma a la cabina, y su expresión cambia por fin.<br />\"Felicidades por 'elegir' el mundo de este lado\".",
+   "unlockRequirement": "Se desbloquea en el nivel <nobr>40</nobr> de personaje."
+  },
+  {
+   "title": "Historia del personaje III",
+   "text": "\"Despertar es solo el primer paso.<br />Las cicatrices de la Destrucción aún te afectan, y debes familiarizarte con este nuevo cuerpo rápidamente para aprovechar su poder\".<br />Día tras día, sigue las instrucciones de la científica y acompaña la danza de los extraños pasteles. Empieza a curarse a un ritmo visible. Sin embargo, cada día que pasa, sus dudas se hacen más fuertes.<br /><br />Espera ansiosa noticias de Xianzhou. Después de lo que parece una eternidad, Ruan Mei comunica la sombría confirmación sobre la calamidad del Estelaron...<br />La Emanadora conocida como Phantylia se había infiltrado en Xianzhou, tomó su apariencia y causó un desastre, envenenando a todos los seres vivos.<br /><br />\"Por suerte, el Expreso Astral y Xianzhou unieron sus fuerzas y derrotaron a Phantylia antes de que hubiera graves consecuencias\".<br />Ella escucha \"su\" historia aturdida y le parece absurda e irreal.<br />\"Así que no solo tomó mi vida, sino también una parte de mi tiempo... Nunca debería volver al Luofu con esta cara y encontrarme con el tren arcoíris...\".<br />\"La «Destrucción» de Phantylia hacia ti nunca ha cesado. Aunque has superado temporalmente el poder de la Destrucción en tu cuerpo, su tormento sobre tu voluntad no ha hecho más que comenzar\".<br />Hay un sutil suspiro oculto en esa voz fría.<br />\"No lo entiendo, ¿por qué yo?\".<br />\"Es simplemente una tirada de los dados del destino, y te tocó a ti\".<br />\"Así que ahora mi destino está entrelazado con el suyo\".<br />\"Solo se me encomendó salvarte. Lo que ocurra después de que vuelvas al Luofu depende enteramente de ti\".<br />\"Pero, en cualquier caso, ya soy un peón en el juego de estos poderosos jugadores, ¿cierto?\".<br />\"Innegablemente\".<br /><br />Permanece largo rato en silencio, sumida en sus pensamientos. <br />\"Los negocios son cosa de dos, pero como ya no soy la misma de antes, ¿todavía puedo elegir?\".<br />Ruan Mei se encuentra con la mirada de la joven y niega con la cabeza.<br />\"No lo sé. Esa es tu elección, y solo tú puedes hacerla\".",
+   "unlockRequirement": "Se desbloquea en el nivel <nobr>60</nobr> de personaje."
+  },
+  {
+   "title": "Historia del personaje IV",
+   "text": "Colonipenal sigue siendo un lugar animado después de la tormenta.<br />Esa metrópolis dorada, paraíso del comercio lujoso e indulgente, es un destino que siempre había anhelado explorar.<br /><br />\"Tú también eres una Buscasueños, ¿verdad? No veo a mucha gente vestida como tú\".<br />Un forastero vestido de cazador se acerca a ella antes de que se dé cuenta.<br />\"Por supuesto, yo también lo soy. No dejes que mi apariencia te engañe. ¡Un día voy a comprar los Estudios Reloj! ¿Y tú?\".<br />\"En ese caso, también puedes considerarme una especie de Buscasueños...\".<br />\"Siempre me he imaginado paseando por los mares estrellados, viajando a diferentes planetas y haciendo negocios por todas partes. Desgraciadamente...\".<br />Se calla, y el forastero asiente pensativo. Entonces, tras levantar la botella de FelizAlma en su honor, se la bebe de un trago y se da la vuelta para marcharse.<br /><br />El camino a casa es largo, pero ella decide detenerse aquí.<br />El futuro depara muchos caminos, y su anhelo va más allá del simple regreso a casa.<br /><br />\"¿Quiere una botella de FelizAlma, señorita?\".<br />Ella gira la cabeza hacia un vendedor con un carrito.<br />\"A juzgar por la forma en la que viste, debe ser del Luofu de Xianzhou. Viajé allí con mi jefe hace muchos años y todavía recuerdo la enorme nave y la atmósfera vibrante\".<br />\"Cuando visitamos el gremio de vendedores de las Llamas Silbantes, la mensajera que nos recibió, la señorita Tingyun, se parecía bastante a usted. Me pregunto si la conoce...\".<br />\"Señorita, señorita, ¿me escucha?\".<br /><br />Ella mira el cielo estrellado de Colonipenal. Hay personas que van y vienen a lo lejos, pero son invisibles para ella.<br />\"Me disculpo. Estaba pensando en un acuerdo importante... uno que podría usar una pequeña carnada para atrapar a un tiburón gigante, que promete enormes ganancias, pero que también asume tremendos riesgos...\".<br />\"¿Tiene dudas?\".<br />Ella sonríe.<br />\"Sí, así es... pero finalmente tomé una decisión\".<br />\"Si mi apariencia puede cegar los ojos de agentes poderosos, entonces eso contaría como haber viajado a los confines más lejanos del cielo\".",
+   "unlockRequirement": "Se desbloquea en el nivel <nobr>80</nobr> de personaje."
+  }
+ ],
+ "archive": {
+  "cvCn": "蒋丽",
+  "cvJp": "高田憂希",
+  "cvKr": "이명호",
+  "cvEn": "Anya Floris",
+  "camp": "El Luofu de Xianzhou"
+ },
+ "calculator": {
+  "expCost": {
+   "1": 200,
+   "2": 300,
+   "3": 500,
+   "4": 600,
+   "5": 1050,
+   "6": 1670,
+   "7": 2320,
+   "8": 3060,
+   "9": 3860,
+   "10": 4740,
+   "11": 5710,
+   "12": 6730,
+   "13": 7830,
+   "14": 9000,
+   "15": 10240,
+   "16": 11550,
+   "17": 12920,
+   "18": 14360,
+   "19": 15870,
+   "20": 16580,
+   "21": 16840,
+   "22": 17100,
+   "23": 17370,
+   "24": 17640,
+   "25": 17910,
+   "26": 18190,
+   "27": 18480,
+   "28": 18760,
+   "29": 19040,
+   "30": 19340,
+   "31": 19630,
+   "32": 19930,
+   "33": 20220,
+   "34": 20530,
+   "35": 20840,
+   "36": 21140,
+   "37": 21450,
+   "38": 21760,
+   "39": 22080,
+   "40": 22390,
+   "41": 25550,
+   "42": 29140,
+   "43": 32830,
+   "44": 36600,
+   "45": 40470,
+   "46": 44430,
+   "47": 48480,
+   "48": 52630,
+   "49": 56870,
+   "50": 61190,
+   "51": 65620,
+   "52": 70130,
+   "53": 74740,
+   "54": 79450,
+   "55": 84240,
+   "56": 89120,
+   "57": 94110,
+   "58": 99190,
+   "59": 104350,
+   "60": 106240,
+   "61": 111830,
+   "62": 117530,
+   "63": 123320,
+   "64": 129210,
+   "65": 135200,
+   "66": 141290,
+   "67": 147480,
+   "68": 153780,
+   "69": 160170,
+   "70": 179260,
+   "71": 199920,
+   "72": 220920,
+   "73": 242260,
+   "74": 263930,
+   "75": 285950,
+   "76": 308300,
+   "77": 331000,
+   "78": 354040,
+   "79": 377420,
+   "80": 414350
+  },
+  "expItemConfig": {
+   "1000": 409962,
+   "5000": 409961,
+   "20000": 409960
+  },
+  "sCoinId": 29328,
+  "rankConfig": {
+   "3": {
+    "234552": 1,
+    "297030": 2,
+    "581557": 1
+   },
+   "5": {
+    "380971": 2,
+    "866084": 2
+   }
+  }
+ },
+ "name": "Fugue",
+ "rarity": 5,
+ "descHash": "Una raposiana con mucho tacto, cuyo aspecto, nombre e identidad han sido robados. El destino le ha dejado un pequeño margen para sobrevivir, pero la marca de la Destrucción aún se retuerce de impaciencia. La fugitiva que ha experimentado la vida y la muerte y recibe una nueva oportunidad de vivir... ¿cuándo podrá volver a casa?",
+ "artPath": "c70adc0dbb094c92c1a261b0095ee9d9c3e4c19bfa0a8ef806707429ce5e21c6",
+ "miniIconPath": "294b417979683ad9f224a899837a3a00b00cfbb2c7d315f3cd191c21c44bd0ac",
+ "damageType": {
+  "id": 2,
+  "iconPath": "8d57d9d10f2a4de2de0bf7aeda26d3c800d5148849aeaae7bf91dd1dc8cfabb0",
+  "color": "#F84F36",
+  "name": "Fuego",
+  "rarity": 0
+ },
+ "baseType": {
+  "id": 0,
+  "iconPath": "9925f4d7d8ac1ad84319601be2e2127dbb697923a7add4d70bf795c7e9045d29",
+  "altIconPath": "5821b3e8829f16ad30af2613e5330feea1cd8ead70cf58d18c7bc927f50b5943",
+  "color": "#FFFFFF",
+  "name": "Nihilidad",
+  "rarity": 0
+ },
+ "pageId": "fugue"
+}
