@@ -128,7 +128,14 @@ import NinjutsuInscriptionDazzlingEvilbreaker from "../../data/lightcone_data/en
 import DreamsMontage from "../../data/lightcone_data/en/21048.json";
 import NinjaRecordSoundHunt from "../../data/lightcone_data/en/22003.json";
 
+//add in 2.7.0
+import AGroundedAscent from "../../data/lightcone_data/en/23034.json";
+import LongRoadLeadsHome from "../../data/lightcone_data/en/23035.json";
+
 const EN = {
+  //add in 2.7.0
+  "Long Road Leads Home": LongRoadLeadsHome,
+  "A Grounded Ascent": AGroundedAscent,
   //add in 2.6.0
   "Ninjutsu Inscription: Dazzling Evilbreaker": NinjutsuInscriptionDazzlingEvilbreaker,
   "Dream's Montage": DreamsMontage,

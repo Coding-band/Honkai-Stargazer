@@ -1,4 +1,7 @@
 const LightconeName = {
+  //Add in 2.7.0
+  "a-grounded-acent": "A Grounded Ascent",
+  "long-road-leads-home": "Long Road Leads Home",
   //Add in 2.6.0
   "dreams-montage":"Dream's Montage",
   "chordal-mirage":"Ninja Record: Sound Hunt",

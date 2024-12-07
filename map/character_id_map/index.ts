@@ -65,6 +65,9 @@ const charId: any = {
   "Moze": 1223,
 
   "Rappa": 1317,
+
+  "Fugue": 1225,
+  "Sunday": 1313,
 };
 
 export default charId;

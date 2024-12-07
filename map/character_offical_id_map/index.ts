@@ -64,6 +64,8 @@ const officalCharId: any = {
   1222: "Lingsha",
   1223: "Moze",
   1317: "Rappa",
+  1225: "Fugue",
+  1313: "Sunday"
 };
 
 export default officalCharId;

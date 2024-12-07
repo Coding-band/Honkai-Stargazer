@@ -78,7 +78,14 @@ import Feixiao from "../../data/character_data/zh_hk/feixiao.json";
 //add in 2.6.0
 import Rappa from "../../data/character_data/zh_hk/rappa.json";
 
+//add in 2.7.0
+import Sunday from "../../data/character_data/zh_hk/sunday.json";
+import Fugue from "../../data/character_data/zh_hk/fugue.json";
+
 const ZH_HK = {
+  //add in 2.7.0
+  Sunday,
+  Fugue,
   //add in 2.6.0
   Rappa,
   //add in 2.5.0

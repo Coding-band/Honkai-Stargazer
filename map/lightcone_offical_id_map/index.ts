@@ -1,4 +1,7 @@
 const officalLightconeId: any = {
+  //Add in 2.7.0
+  23035: "Long Road Leads Home",
+  22034: "A Grounded Ascent",
   //Add in 2.6.0
   23033: "Ninjutsu Inscription: Dazzling Evilbreaker",
   22003: "Ninja Record: Sound Hunt",

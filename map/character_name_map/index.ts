@@ -1,4 +1,7 @@
 const CharacterName = {
+  //add in 2.7.0
+  "sunday": "Sunday",
+  "fugue": "fugue",
   //add in 2.6.0
   "rappa": "Rappa",
   //add in 2.5.0

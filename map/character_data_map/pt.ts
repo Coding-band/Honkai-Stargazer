@@ -78,7 +78,14 @@ import Feixiao from "../../data/character_data/pt/feixiao.json";
 //add in 2.6.0
 import Rappa from "../../data/character_data/pt/rappa.json";
 
+//add in 2.7.0
+import Sunday from "../../data/character_data/pt/sunday.json";
+import Fugue from "../../data/character_data/pt/fugue.json";
+
 const PT = {
+  //add in 2.7.0
+  Sunday,
+  Fugue,
   //add in 2.6.0
   Rappa,
   //add in 2.5.0
