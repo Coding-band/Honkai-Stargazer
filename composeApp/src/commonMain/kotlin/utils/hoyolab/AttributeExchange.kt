@@ -1,7 +1,7 @@
 package utils.hoyolab
 
 import kotlinx.serialization.Serializable
-import types.Attribute
+import type.Attribute
 import utils.annotation.VersionUpdateCheck
 
 @Serializable

@@ -14,9 +14,8 @@ import platform.Foundation.timeIntervalSince1970
 import platform.UIKit.UIDevice
 import platform.UIKit.UIInterfaceOrientationLandscapeLeft
 import platform.UIKit.UIInterfaceOrientationLandscapeRight
-import types.DeviceInfo
+import utils.device.DeviceInfo
 import androidx.compose.runtime.SideEffect
-import androidx.compose.ui.text.toLowerCase
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.client.engine.darwin.Darwin

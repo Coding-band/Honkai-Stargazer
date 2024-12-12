@@ -5,7 +5,7 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import types.Material
+import type.Material
 import kotlin.math.roundToInt
 
 // 根據角色等級取得 升級角色所需素材數值
@@ -50,7 +50,8 @@ fun getCharMaterialData(
                 charItemRef.jsonObject[id.toString()]!!.jsonObject["name"]!!.jsonPrimitive.content,
                 charItemRef.jsonObject[id.toString()]!!.jsonObject["rarity"]!!.jsonPrimitive.int,
                 0
-            )}
+            )
+            }
             materialList[id]!!.count += costData.jsonObject["count"]!!.jsonPrimitive.int
         }
     }
@@ -61,7 +62,8 @@ fun getCharMaterialData(
             charItemRef.jsonObject[id.toString()]!!.jsonObject["name"]!!.jsonPrimitive.content,
             charItemRef.jsonObject[id.toString()]!!.jsonObject["rarity"]!!.jsonPrimitive.int,
             0
-        )}
+        )
+        }
     }
 
     //等級經驗 - 必須遵守突破原則
@@ -111,7 +113,8 @@ fun getLcMaterialData(
                 lcItemRef.jsonObject[id.toString()]!!.jsonObject["name"]!!.jsonPrimitive.content,
                 lcItemRef.jsonObject[id.toString()]!!.jsonObject["rarity"]!!.jsonPrimitive.int,
                 0
-            )}
+            )
+            }
             materialList[id]!!.count += costData.jsonObject["count"]!!.jsonPrimitive.int
         }
     }
@@ -122,7 +125,8 @@ fun getLcMaterialData(
             lcItemRef.jsonObject[id.toString()]!!.jsonObject["name"]!!.jsonPrimitive.content,
             lcItemRef.jsonObject[id.toString()]!!.jsonObject["rarity"]!!.jsonPrimitive.int,
             0
-        )}
+        )
+        }
     }
 
     //等級經驗 - 必須遵守突破原則

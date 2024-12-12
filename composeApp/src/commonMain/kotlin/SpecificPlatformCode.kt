@@ -3,12 +3,13 @@ import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.unit.Dp
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
-import types.DeviceInfo
+import utils.device.DeviceInfo
 import utils.annotation.DoItLater
 
 /**
  * This is the declaration kt file for specific-platform function
  * THIS IS COMMON-MAIN, so ONLY EXPECT
+ * Some of them may replace by compose adaptive later
  */
 
 expect fun getImageBitmapByByteArray(byteArray: ByteArray): ImageBitmap;

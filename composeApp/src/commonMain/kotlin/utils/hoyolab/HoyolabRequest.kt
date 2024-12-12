@@ -18,7 +18,7 @@ import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withTimeout
 import kotlinx.serialization.json.Json
 import utils.annotation.DoItLater
-import utils.errorLogExport
+import utils.app.errLog
 
 /**
  * Refer from Stargazer 2 (rn-branch)
@@ -79,7 +79,7 @@ class HoyolabRequest(
 
                 //Check whether it is having any errors
                 if (!arrayListOf(200,201).contains(response.status.value)){
-                    errorLogExport("HoyolabRequest", "send(url = ${url}, body = ${body})",Exception("HTTP Error Code ${response.status.value} : ${response.status.description}"))
+                    errLog("HoyolabRequest", "send(url = ${url}, body = ${body})",Exception("HTTP Error Code ${response.status.value} : ${response.status.description}"))
                     return@runBlocking HoyolabResponse(
                         -9800,
                         "HTTP Error Code ${response.status.value} : ${response.status.description}",
@@ -97,7 +97,7 @@ class HoyolabRequest(
             e.printStackTrace()
         }catch (e : Exception){
             // All response
-            errorLogExport("HoyolabRequest", "send(url = ${url}, body = ${body})",e)
+            errLog("HoyolabRequest", "send(url = ${url}, body = ${body})",e)
         }
 
         return HoyolabResponse(-9999,"NOPE", Json.parseToJsonElement("{}"))
@@ -125,7 +125,7 @@ class HoyolabRequest(
 
                     //Check whether it is having any errors
                     if (!arrayListOf(200, 201).contains(response.status.value)) {
-                        errorLogExport(
+                        errLog(
                             "HoyolabRequest",
                             "send(url = ${url}",
                             Exception("HTTP Error Code ${response.status.value} : ${response.status.description}")
@@ -148,7 +148,7 @@ class HoyolabRequest(
             e.printStackTrace()
         }catch (e : Exception){
             // All response
-            errorLogExport("HoyolabRequest", "getPlainTxt(url = ${url})",e)
+            errLog("HoyolabRequest", "getPlainTxt(url = ${url})",e)
         }
         return HoyolabResponse(-9999,"NOPE", Json.parseToJsonElement("{}"))
 
