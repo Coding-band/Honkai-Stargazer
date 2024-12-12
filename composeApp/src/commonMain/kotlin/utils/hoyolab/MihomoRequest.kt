@@ -25,16 +25,17 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import types.AppInfo.Companion.AppInfoInstance
-import types.Attribute
-import types.Character
-import types.CharacterStatus
-import types.HsrProperties
-import types.Lightcone
-import types.Relic
-import types.UserAccount
-import utils.Language
-import utils.errorLogExport
+import utils.device.AppInfo.Companion.AppInfoInstance
+import type.Attribute
+import type.Character
+import type.CharacterStatus
+import type.HsrProperties
+import type.Lightcone
+import type.Relic
+import type.UserAccount
+import utils.annotation.DoItLater
+import utils.app.Language
+import utils.app.errLog
 
 class MihomoRequest(val uid : String, val language: Language.TextLanguage = Language.TextLanguageInstance) {
 
@@ -67,7 +68,7 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                     val response: HttpResponse = client.get(mihomoUrl)
                     //Check whether it is having any errors
                     if (!arrayListOf(200, 201).contains(response.status.value)) {
-                        errorLogExport(
+                        errLog(
                             "MihomoRequest",
                             "getSRInfoParsed(uid = ${uid}, lang = ${language})",
                             Exception("HTTP Error Code ${response.status.value} : ${response.status.description}")
@@ -82,11 +83,11 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
 
         }catch (e : UnresolvedAddressException){
             //Cannot find the Address, maybe bcz of u are offline
-            //errorLogExport("HoyolabRequest", "send(url = ${url}, body = ${body})",e)
+            //errLog("HoyolabRequest", "send(url = ${url}, body = ${body})",e)
             e.printStackTrace()
         }catch (e : Exception){
             // All response
-            errorLogExport("MihomoRequest", "getSRInfoParsed(uid = ${uid}, lang = ${language})",e)
+            errLog("MihomoRequest", "getSRInfoParsed(uid = ${uid}, lang = ${language})",e)
         }
 
         return Json.parseToJsonElement("{}")
@@ -121,8 +122,10 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                             userAccount.characterList.clear()
                             for (characterElement in characters.jsonArray) {
                                 val characterObj = characterElement.jsonObject
-                                val character =
-                                    Character.getCharacterItemFromJSON(characterObj["id"]!!.jsonPrimitive.content)
+
+                                @DoItLater("Remove default value after finished the function rearrangement")
+                                val character = Character()
+                                    //Character.getCharacterItemFromJSON(characterObj["id"]!!.jsonPrimitive.content)
                                 val charSkill = characterObj["skills"]!!.jsonArray
 
                                 //Basic Status
@@ -139,8 +142,10 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                                 //Lightcone
                                 if(characterObj["light_cone"] != null && characterObj["light_cone"]!! is JsonObject){
                                     val lightconeObj = characterObj["light_cone"]!!.jsonObject
-                                    val lightcone =
-                                        Lightcone.getLightconeItemFromJSON(lightconeObj["id"]!!.jsonPrimitive.content)
+
+                                    @DoItLater("Remove default value after finished the function rearrangement")
+                                    val lightcone = Lightcone()
+                                        //Lightcone.getLightconeItemFromJSON(lightconeObj["id"]!!.jsonPrimitive.content)
                                     lightcone.level = lightconeObj["level"]!!.jsonPrimitive.int
                                     lightcone.superimposition =
                                         lightconeObj["rank"]!!.jsonPrimitive.int
@@ -152,7 +157,10 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                                     val relicArrJson = characterObj["relics"]!!.jsonArray
                                     for (relicJson in relicArrJson) {
                                         val relicObj = relicJson.jsonObject
-                                        val relic = Relic.getRelicItemFromJSON(relicObj["set_id"]!!.jsonPrimitive.content)
+
+                                        @DoItLater("Remove default value after finished the function rearrangement")
+                                        val relic = Relic()
+                                            //Relic.getRelicItemFromJSON(relicObj["set_id"]!!.jsonPrimitive.content)
                                         relic.level = relicObj["level"]!!.jsonPrimitive.int
                                         //Main
                                         relic.properties.add(
@@ -296,7 +304,7 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                         !srInfoParsed.isEmpty() &&
                         !(srInfoParsed.containsKey("detail"))
                     ){
-                        errorLogExport("MihomoRequest", "getUserAccountByMiHomo()",e)
+                        errLog("MihomoRequest", "getUserAccountByMiHomo()",e)
                     }
                 }
 

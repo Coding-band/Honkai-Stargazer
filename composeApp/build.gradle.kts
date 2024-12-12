@@ -11,11 +11,11 @@ import java.util.Properties
  * Environment Area - App Version
  */
 
-val appVersion = "2.3.2"
-val appVersionCodeName = "Dan Heng"
+val appVersion = "3.0.0"
+val appVersionCodeName = "SG3"
 
-val appVersionBeta = "2.4.6"
-val appVersionCodeNameBeta = "Echo"
+val appVersionBeta = "2.9.9"
+val appVersionCodeNameBeta = "Re:Stargazer"
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)

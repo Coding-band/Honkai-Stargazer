@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsControllerCompat
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.client.engine.cio.CIO
-import types.DeviceInfo
+import utils.device.DeviceInfo
 import java.util.Locale
 
 /**
