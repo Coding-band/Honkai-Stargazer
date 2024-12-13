@@ -12,6 +12,7 @@ import coil3.util.DebugLogger
 import okio.FileSystem
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
+import type.Character
 import type.ImageFolder
 import utils.annotation.VersionUpdateCheck
 import utils.starbase.StarbaseAPI
@@ -154,6 +155,39 @@ fun htmlDescApplierImpl(htmlText: String) : String{
  */
 fun getAssetsURLByFileName(folder: ImageFolder, fileName: String): String {
     return StarbaseAPI().getGitHubStaticAssetURL() + "/images/${folder.folderName}/${fileName}${folder.suffix}"
+}
+
+@VersionUpdateCheck
+fun getIconByUserAccountIconValue(icon : String): Any {
+    println(icon)
+    if(icon.startsWith("http")){
+        return icon
+    }
+    /*
+    else if (icon.length == 4){
+        return Character.getCharacterImageFromOfficialId(
+            imageFolderType = ImageFolder.CHAR_ICON,
+            icon
+        )
+    }else if (icon.length == 6 && icon[2] == '1' || icon.length == 6 && icon[2] == '8'){
+        return Character.getCharacterImageFromOfficialId(
+            imageFolderType = ImageFolder.CHAR_ICON,
+            icon.substring(2)
+        )
+    }
+     */
+
+    else if(icon == ""){
+        return getAssetsURLByFileName(
+            folder = ImageFolder.AVATAR_ICON,
+            "Anonymous"
+        )
+    }else {
+        return getAssetsURLByFileName(
+            folder = ImageFolder.AVATAR_ICON,
+            icon
+        )
+    }
 }
 
 /**
