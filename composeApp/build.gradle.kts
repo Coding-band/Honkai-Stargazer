@@ -85,6 +85,7 @@ kotlin {
             implementation(compose.components.resources)
             //implementation(libs.lifecycle.viewmodel.compose)
             implementation(libs.adaptive)
+            implementation(libs.coil.network.ktor)
             api("moe.tlaster:precompose-viewmodel:1.7.0-alpha01")
 
             //implementation("org.jetbrains.androidx.navigation:navigation-compose:2.7.0-alpha07")
