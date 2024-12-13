@@ -12,6 +12,7 @@ import coil3.util.DebugLogger
 import okio.FileSystem
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
+import type.Character
 import type.ImageFolder
 import utils.annotation.VersionUpdateCheck
 import utils.starbase.StarbaseAPI
@@ -33,7 +34,7 @@ fun removeStrQuote(stringResource: StringResource) : String{
 /**
  * Image Loader, Max Cache Size: 1GB (Since Images already reach 400MB in Stargazer 2.7.0)
  */
-fun newImageLoader(context : PlatformContext, logger: DebugLogger? = null): ImageLoader = ImageLoader.Builder(context)
+fun newImageLoader(context : PlatformContext, isDebug: Boolean = false): ImageLoader = ImageLoader.Builder(context)
     .networkCachePolicy(CachePolicy.ENABLED)
     .diskCachePolicy(CachePolicy.ENABLED)
     .diskCache {
@@ -43,8 +44,7 @@ fun newImageLoader(context : PlatformContext, logger: DebugLogger? = null): Imag
             .build()
     }
     .crossfade(true)
-    .logger(DebugLogger())
-    //.addLastModifiedToFileCacheKey(true)
+    .logger(if(isDebug) {DebugLogger()} else null)
     .build()
 
 /**
@@ -155,6 +155,39 @@ fun htmlDescApplierImpl(htmlText: String) : String{
  */
 fun getAssetsURLByFileName(folder: ImageFolder, fileName: String): String {
     return StarbaseAPI().getGitHubStaticAssetURL() + "/images/${folder.folderName}/${fileName}${folder.suffix}"
+}
+
+@VersionUpdateCheck
+fun getIconByUserAccountIconValue(icon : String): Any {
+    println(icon)
+    if(icon.startsWith("http")){
+        return icon
+    }
+    /*
+    else if (icon.length == 4){
+        return Character.getCharacterImageFromOfficialId(
+            imageFolderType = ImageFolder.CHAR_ICON,
+            icon
+        )
+    }else if (icon.length == 6 && icon[2] == '1' || icon.length == 6 && icon[2] == '8'){
+        return Character.getCharacterImageFromOfficialId(
+            imageFolderType = ImageFolder.CHAR_ICON,
+            icon.substring(2)
+        )
+    }
+     */
+
+    else if(icon == ""){
+        return getAssetsURLByFileName(
+            folder = ImageFolder.AVATAR_ICON,
+            "Anonymous"
+        )
+    }else {
+        return getAssetsURLByFileName(
+            folder = ImageFolder.AVATAR_ICON,
+            icon
+        )
+    }
 }
 
 /**

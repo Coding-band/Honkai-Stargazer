@@ -68,8 +68,7 @@ class Constants {
         val INFO_MAX_WIDTH = 450.dp
 
         //For Left Corner Page
-        val HOME_MIN_WIDTH = 320.dp
-        val HOME_MAX_WIDTH = 480.dp
+        val HOME_WIDTH = 360.dp
         val SCREEN_SAVE_PADDING = 18.dp
 
         fun getCardBgColorByRare(rare: Int): List<Color> {

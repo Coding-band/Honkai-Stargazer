@@ -24,6 +24,7 @@ import files.phorphos_game_controller_regular
 import files.phorphos_house_fill
 import files.phorphos_map_trifold_fill
 import files.phorphos_medal_military_fill
+import files.phorphos_note_blank_regular
 import files.phorphos_person_fill
 import files.phorphos_sliders_horizontal_fill
 import files.phorphos_sword_fill
@@ -52,6 +53,10 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     data object HomePage : Screen(
         "HomePage",
         HeaderData(titleIconId = Res.drawable.phorphos_house_fill)
+    )
+    data object BlankPage : Screen(
+        "BlankPage",
+        HeaderData(titleIconId = Res.drawable.phorphos_note_blank_regular)
     )
 
     data object CharacterListPage : Screen(
