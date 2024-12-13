@@ -28,6 +28,8 @@ import getScreenSizeInfo
 import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
+import ui.components.HeaderData
+import ui.components.defaultHeaderData
 import utils.app.FontSizeNormalLarge24
 import utils.app.FontSizeNormalSmall
 import utils.app.Language
@@ -40,6 +42,7 @@ import utils.app.Language
 fun SplashPage(
     modifier: Modifier = Modifier,
     navigator: Navigator,
+    headerData: HeaderData = defaultHeaderData,
     viewModel: SplashPageViewModel = SplashPageViewModel(navigator = navigator)
 ) {
     val state by viewModel.state.collectAsState()

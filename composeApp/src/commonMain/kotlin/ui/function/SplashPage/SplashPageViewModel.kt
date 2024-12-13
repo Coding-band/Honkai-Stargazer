@@ -60,9 +60,8 @@ class SplashPageViewModel(private val navigator: Navigator) : ViewModel() {
                  */
 
                 if (!_state.value.showPopup.value) {
-                    CoroutineScope(Dispatchers.Default).launch {
-                        kotlinx.coroutines.delay(2000)
-                    }
+                    // Temporate Delay, will remove after the API is ready
+                    kotlinx.coroutines.delay(2000)
                     navigator.navigateLimited(
                         Screen.HomePage.route,
                         options = NavOptions(
