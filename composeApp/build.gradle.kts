@@ -72,7 +72,7 @@ kotlin {
 
     sourceSets {
         val desktopMain by getting
-        
+
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
@@ -83,6 +83,10 @@ kotlin {
             implementation(compose.material)
             implementation(compose.ui)
             implementation(compose.components.resources)
+            //implementation(libs.lifecycle.viewmodel.compose)
+            implementation(libs.adaptive)
+            api("moe.tlaster:precompose-viewmodel:1.7.0-alpha01")
+
             //implementation("org.jetbrains.androidx.navigation:navigation-compose:2.7.0-alpha07")
             implementation(libs.haze) //Haze's BlurView https://github.com/chrisbanes/haze
             implementation(libs.coil)
@@ -93,7 +97,7 @@ kotlin {
 
             implementation(libs.okio)
 
-            implementation(libs.coil.network.ktor)
+            implementation("io.coil-kt.coil3:coil-network-ktor3:3.0.0-rc01")
             implementation(libs.coil.compose.core)
 
             //Ktor - Web Request I/O
@@ -124,6 +128,9 @@ kotlin {
             //Screen Capture
             //implementation(libs.compose.multiplatform.screen.capture)
 
+            //VerticalGrid
+            implementation("com.cheonjaeung.compose.grid:grid:2.1.0")
+
         }
         desktopMain.dependencies {
             implementation(compose.material3)
@@ -135,7 +142,7 @@ kotlin {
 
         }
         nativeMain.dependencies {
-            implementation(libs.ktor.client.darwin)
+            implementation("io.ktor:ktor-client-darwin:3.0.0")
         }
     }
 

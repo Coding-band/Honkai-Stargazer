@@ -1,42 +1,45 @@
 [versions]
-agp = "8.5.0"
-android-compileSdk = "34"
+adaptive = "1.0.0"
+agp = "8.6.1"
+android-compileSdk = "35"
 android-minSdk = "24"
-android-targetSdk = "34"
-androidx-activityCompose = "1.9.1"
+android-targetSdk = "35"
+androidx-activityCompose = "1.9.3"
 androidx-appcompat = "1.7.0"
 androidx-constraintlayout = "2.1.4"
 androidx-core-ktx = "1.13.1"
 androidx-espresso-core = "3.6.1"
 androidx-material = "1.12.0"
 androidx-test-junit = "1.2.1"
-coil = "3.0.0-alpha08"
-compose-plugin = "1.6.11"
+coil = "3.0.4"
+compose-plugin = "1.7.0"
 composeBoxshadow = "0.2.2"
 composeDropshadow = "0.2.2"
 composeMultiplatformScreenCapture = "1.0.1"
 composeWebviewMultiplatform = "1.9.20"
 haze = "0.6.2"
 junit = "4.13.2"
-kotlin = "2.0.10"
+kotlin = "2.0.21"
 kotlinGradlePlugin = "1.9.0"
 kotlinxDatetime = "0.6.0"
-kotlinxSerializationJson = "1.7.1"
-ktorClientCio = "2.3.12"
-ktorClientContentNegotiation = "2.3.4"
-ktorClientCore = "2.3.12"
-ktorClientDarwin = "2.3.12"
-ktorClientSerialization = "2.3.12"
-material3Android = "1.2.1"
+kotlinxSerializationJson = "1.7.3"
+ktorClientCio = "3.0.0"
+ktorClientContentNegotiation = "3.0.0"
+ktorClientCore = "3.0.0"
+ktorClientDarwin = "3.0.0"
+ktorClientSerialization = "3.0.0"
+lifecycleViewmodelCompose = "2.8.3"
+material3Android = "1.3.1"
 firebaseCrashlyticsBuildtools = "3.0.2"
 multiplatformSettings = "1.1.1"
 multiplatformSettingsNoArg = "1.1.1"
-okio = "3.9.0"
-precompose = "1.6.0"
+okio = "3.9.1"
+precompose = "1.7.0-alpha03"
 richeditorCompose = "1.0.0-rc05"
 sonner = "0.3.8"
 
 [libraries]
+adaptive = { module = "org.jetbrains.compose.material3.adaptive:adaptive", version.ref = "adaptive" }
 coil = { module = "io.coil-kt.coil3:coil", version.ref = "coil" }
 coil-compose-core = { module = "io.coil-kt.coil3:coil-compose-core", version.ref = "coil" }
 coil-network-ktor = { module = "io.coil-kt.coil3:coil-network-ktor", version.ref = "coil" }
@@ -67,6 +70,7 @@ ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorCli
 ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktorClientDarwin" }
 ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktorClientSerialization" }
 ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktorClientContentNegotiation" }
+lifecycle-viewmodel-compose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
 multiplatform-settings-no-arg = { module = "com.russhwolf:multiplatform-settings-no-arg", version.ref = "multiplatformSettingsNoArg" }
 multiplatform-settings = { module = "com.russhwolf:multiplatform-settings", version.ref = "multiplatformSettings" }
 okio = { module = "com.squareup.okio:okio", version.ref = "okio" }
