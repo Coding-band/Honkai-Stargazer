@@ -169,7 +169,7 @@ fun errLog(className: String, functionName: String, error: Exception) {
 
     showErrorToast(logExportObj)
 
-    if(BuildKonfig.appProfile == "DEV" || BuildKonfig.appProfile == "C.BETA" || BuildKonfig.appProfile == "BETA"){
+    if(arrayOf("C.BETA","BETA","DEV").contains(BuildKonfig.appProfile)){
         error.printStackTrace()
     }
 }
