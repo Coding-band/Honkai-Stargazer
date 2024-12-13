@@ -33,7 +33,7 @@ fun removeStrQuote(stringResource: StringResource) : String{
 /**
  * Image Loader, Max Cache Size: 1GB (Since Images already reach 400MB in Stargazer 2.7.0)
  */
-fun newImageLoader(context : PlatformContext, logger: DebugLogger? = null): ImageLoader = ImageLoader.Builder(context)
+fun newImageLoader(context : PlatformContext, isDebug: Boolean = false): ImageLoader = ImageLoader.Builder(context)
     .networkCachePolicy(CachePolicy.ENABLED)
     .diskCachePolicy(CachePolicy.ENABLED)
     .diskCache {
@@ -43,8 +43,7 @@ fun newImageLoader(context : PlatformContext, logger: DebugLogger? = null): Imag
             .build()
     }
     .crossfade(true)
-    .logger(DebugLogger())
-    //.addLastModifiedToFileCacheKey(true)
+    .logger(if(isDebug) {DebugLogger()} else null)
     .build()
 
 /**
