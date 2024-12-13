@@ -56,6 +56,9 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boo
     @DoItLater("Fix Background Image Function")
     /*
     //var backgroundBitmap = UtilTools().getAssetsWebpByContext(context = LocalContext.current, "images/${UtilTools.ImageFolderType.BGS.folderPath}1006.webp")
+    }
+     */
+
     when(screen){
         Screen.HomePage -> {isBlur = false;}
         Screen.BackgroundSettingScreen -> {isBlur = false;}
@@ -63,7 +66,6 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boo
         Screen.PureFictionMissionPageScreen -> {isBlur = false; isGradient = false}
         else -> {}
     }
-     */
 
     if(forceBlur){ isBlur = true; }
     Box(
