@@ -1,5 +1,6 @@
 package ui.function.SplashPage
 
+import androidx.compose.runtime.snapshotFlow
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dev.chrisbanes.haze.HazeState
@@ -8,6 +9,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import moe.tlaster.precompose.navigation.NavOptions
@@ -51,25 +53,6 @@ class SplashPageViewModel(private val navigator: Navigator) : ViewModel() {
                 async { refreshPFData() }.await()
             }
              */
-
-            withContext(Dispatchers.Main) {
-                /*
-                if(INSTANCE.uid != "000000000" && !hasRefreshed.value ){
-                    Preferences().Leaderboard.updatedLeaderboard()
-                }
-                 */
-
-                if (!_state.value.showPopup.value) {
-                    // Temporate Delay, will remove after the API is ready
-                    kotlinx.coroutines.delay(2000)
-                    navigator.navigateLimited(
-                        Screen.HomePage.route,
-                        options = NavOptions(
-                            popUpTo = PopUpTo(Screen.SplashPage.route, true)
-                        )
-                    )
-                }
-            }
         }
     }
 

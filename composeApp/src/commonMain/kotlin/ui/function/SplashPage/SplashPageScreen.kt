@@ -25,11 +25,15 @@ import files.app_icon_black_bg
 import files.euclid_circular_a_medium
 import files.star_peace_icon
 import getScreenSizeInfo
+import moe.tlaster.precompose.navigation.NavOptions
 import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.PopUpTo
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
+import ui.navigation.Screen
+import ui.navigation.navigateLimited
 import utils.app.FontSizeNormalLarge24
 import utils.app.FontSizeNormalSmall
 import utils.app.Language
@@ -46,10 +50,17 @@ fun SplashPage(
     viewModel: SplashPageViewModel = SplashPageViewModel(navigator = navigator)
 ) {
     val state by viewModel.state.collectAsState()
-    LaunchedEffect(Unit) {
+    LaunchedEffect(state.showPopup.value) {
         viewModel.handleIntent(SplashPageIntent.Initialize)
         if(!state.showPopup.value) {
             viewModel.handleIntent(SplashPageIntent.RefreshData)
+            kotlinx.coroutines.delay(2000)
+            navigator.navigateLimited(
+                Screen.HomePage.route,
+                options = NavOptions(
+                    popUpTo = PopUpTo(Screen.SplashPage.route, true)
+                )
+            )
         }
     }
 
