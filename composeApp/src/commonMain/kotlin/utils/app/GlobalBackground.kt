@@ -92,7 +92,8 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boo
         AsyncImage(
             model = newImageRequest(
                 LocalPlatformContext.current,
-                backgroundImage
+                backgroundImage,
+                crossFade = false
                 /*
                 when(screen){
                     Screen.BackgroundSettingScreen -> UtilTools().getAssetsWebpByteArrayByFileName(UtilTools.ImageFolderType.BGS, "bg_light")
