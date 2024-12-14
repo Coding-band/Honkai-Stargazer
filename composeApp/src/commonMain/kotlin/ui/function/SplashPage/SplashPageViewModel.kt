@@ -21,7 +21,7 @@ import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import utils.app.Preferences
 
-class SplashPageViewModel(private val navigator: Navigator) : ViewModel() {
+class SplashPageViewModel() : ViewModel() {
     private val _state = MutableStateFlow(SplashPageState())
     val state: StateFlow<SplashPageState> get() = _state
 
