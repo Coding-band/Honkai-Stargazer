@@ -1,19 +1,25 @@
 package ui.navigation
 
+import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.animation.togetherWith
+import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.SnackbarHost
 import androidx.compose.material.SnackbarHostState
+import androidx.compose.material.Text
 import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -25,8 +31,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalWindowInfo
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.window.core.layout.WindowSizeClass
 import androidx.window.core.layout.WindowWidthSizeClass
 import com.dokar.sonner.Toaster
 import com.dokar.sonner.ToasterState
@@ -34,6 +44,7 @@ import com.dokar.sonner.rememberToasterState
 import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import getOrientation
 import getScreenSizeInfo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -75,8 +86,11 @@ var globalWindowWidthSizeClass: WindowWidthSizeClass = WindowWidthSizeClass.COMP
 fun isPadMode(): Boolean {
     return when (globalWindowWidthSizeClass) {
         //Phone, Pad that is not in landscape mode
-        WindowWidthSizeClass.COMPACT, WindowWidthSizeClass.MEDIUM -> {
+        WindowWidthSizeClass.COMPACT -> {
             false
+        }
+        WindowWidthSizeClass.MEDIUM -> {
+            getOrientation() == Orientation.Horizontal
         }
         //Pad in landscape mode
         WindowWidthSizeClass.EXPANDED -> {
@@ -161,11 +175,11 @@ fun RootContent(
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
     page: @Composable () -> Unit
 ) {
+
     val hazeStateRoot = remember { HazeState() }
     val isPadMode = mutableStateOf(isPadMode())
-
-
-    key(getScreenSizeInfo().wDP){
+    val isRotate = remember { mutableStateOf(false) }
+    key(isRotate.value) {
         globalWindowWidthSizeClass = currentWindowAdaptiveInfo().windowSizeClass.windowWidthSizeClass
         isPadMode.value = isPadMode()
     }
@@ -174,26 +188,26 @@ fun RootContent(
         snackbarHost = { SnackbarHost(snackbarHostState!!) },
     ) {
 
-        AnimatedVisibility(!isPadMode.value,
-            enter = fadeIn(tween(500)),
-            exit = fadeOut(tween(500))
-        ){
-            MakeBackground(screen = screen)
-            Box(modifier = Modifier.haze(hazeStateRoot)) {
-                page()
+        AnimatedContent(
+            targetState = isPadMode.value,
+            //Transition should fade in and out, also must make sure NO BLACK SCREEN
+            transitionSpec = {
+                fadeIn(tween(500)) togetherWith fadeOut(tween(1000))
+            },
+            modifier = Modifier.onSizeChanged { isRotate.value = !isRotate.value }
+        ) {
+            if(it) {
+                MakeBackground(screen = screen, forceBlur = true)
+            }else{
+                MakeBackground(screen = screen)
             }
         }
 
-        // Preload both blur and non-blur background
-        AnimatedVisibility(isPadMode.value,
-            enter = fadeIn(tween(500)),
-            exit = fadeOut(tween(500))
-        ){
-            MakeBackground(screen = screen, forceBlur = true)
-            Row (modifier = Modifier.haze(hazeStateRoot)) {
-                Box (Modifier
+        if(isPadMode.value){
+            Row(modifier = Modifier.haze(hazeStateRoot)) {
+                Box(Modifier
                     .width(HOME_WIDTH)
-                    .let { if(getScreenSizeInfo().wDP < HOME_WIDTH*2) it.weight(1f) else it }
+                    .let { if (getScreenSizeInfo().wDP < HOME_WIDTH * 1.5f) it.weight(1f) else it }
                     .fillMaxHeight()
                 ) {
                     HomePage(
@@ -202,8 +216,14 @@ fun RootContent(
                     )
                 }
                 Box(Modifier.weight(1f)) {
-                    if(screen == Screen.HomePage){ BlankPage() } else page()
+                    if (screen == Screen.HomePage) {
+                        BlankPage()
+                    } else page()
                 }
+            }
+        }else{
+            Box(modifier = Modifier.haze(hazeStateRoot)) {
+                page()
             }
         }
 
@@ -225,5 +245,7 @@ fun RootContent(
 
 @Composable
 fun BlankPage(){
-    Box(modifier = Modifier.fillMaxHeight().fillMaxHeight())
+    Box(modifier = Modifier.fillMaxHeight().fillMaxHeight()){
+
+    }
 }
