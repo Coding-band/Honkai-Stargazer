@@ -45,6 +45,10 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     ```
      */
 
+    data object RootPage : Screen(
+        "RootPage",
+        HeaderData(titleIconId = Res.drawable.phorphos_house_fill)
+    )
     data object SplashPage : Screen(
         "SplashPage",
         HeaderData(titleIconId = Res.drawable.phorphos_house_fill)

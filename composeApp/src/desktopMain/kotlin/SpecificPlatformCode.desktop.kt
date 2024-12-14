@@ -1,4 +1,5 @@
 
+import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.ExperimentalComposeUiApi
@@ -69,4 +70,15 @@ actual fun getLocalHttpClient(function: HttpClientConfig<*>.() -> Unit): HttpCli
 actual fun changeLanguage(language: String, region : String?) {
     val locale = if(region == null) Locale(language) else Locale(language, region)
     Locale.setDefault(locale)
+}
+
+@OptIn(ExperimentalComposeUiApi::class)
+@Composable
+actual fun getOrientation(): Orientation {
+    val windowInfo = LocalWindowInfo.current
+    if (windowInfo.containerSize.width > windowInfo.containerSize.height * 1.5) {
+        return Orientation.Horizontal
+    } else {
+        return Orientation.Vertical
+    }
 }

@@ -60,6 +60,7 @@ class HomePageBlocks {
     val HOME_PAGE_BLOCK_HEIGHT = 90.dp
 
     class HomePageBlockItem(
+        var itemId: String,
         var itemTitle: String? = null,
         var itemTitleRId: StringResource? = null,
         var itemIconId: DrawableResource = Res.drawable.phorphos_cake_fill,

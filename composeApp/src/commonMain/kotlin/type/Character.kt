@@ -7,8 +7,27 @@
 package type
 
 import androidx.annotation.IntRange
+import androidx.compose.runtime.saveable.Saver
+import androidx.compose.runtime.saveable.listSaver
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.decodeFromJsonElement
+import kotlinx.serialization.json.int
+import kotlinx.serialization.json.jsonArray
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 import utils.annotation.DoItLater
+import utils.app.Constants.Companion.LOST_IMAGE_DRAWABLE
+import utils.app.Language
+import utils.app.getAssetsJsonByFilePath
+import utils.app.getAssetsURLByFileName
+import utils.app.getImageNameByRegistName
 import utils.calculator.AttrData
 
 
@@ -37,38 +56,26 @@ open class Character(
 
     @DoItLater("Rearrange those function later")
     companion object {
-    /*
         val charListJson = getCharacterListFromJSON()
         val charExtListJson = getCharacterExtListFromJSON()
 
         private fun getCharacterListFromJSON() : JsonElement {
-            return UtilTools().getAssetsJsonByFilePath("character_data/character_list.json")
+            return Json.parseToJsonElement(getAssetsJsonByFilePath("character_data/character_list.json"))
         }
         private fun getCharacterExtListFromJSON() : JsonElement {
-            return UtilTools().getAssetsJsonByFilePath("character_data/character_ext_list.json")
+            return Json.parseToJsonElement(getAssetsJsonByFilePath("character_data/character_ext_list.json"))
         }
 
         fun getCharacterDataFromFileName(characterFileName : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance) : JsonElement {
-            return UtilTools().getAssetsJsonByFilePath("character_data/${textLanguage.folderName}/${characterFileName}.json")
+            return Json.parseToJsonElement(getAssetsJsonByFilePath("character_data/${textLanguage.folderName}/${characterFileName}.json"))
+        }
+        fun getCharacterImageFromFileName(imageFolderType: ImageFolder, characterName : String) : String {
+            return getAssetsURLByFileName(imageFolderType, getImageNameByRegistName(characterName, (imageFolderType === ImageFolder.CHAR_FULL)))
         }
 
-        /**
-         * composeResources/files/files/images/character_icon/jade_icon.webp
-         */
-        fun getCharacterImageFromFileName(imageFolderType: UtilTools.ImageFolderType, characterName : String) : ImageBitmap {
-            return UtilTools().getAssetsWebpByFileName(imageFolderType, UtilTools().getImageNameByRegistName(characterName, (imageFolderType === UtilTools.ImageFolderType.CHAR_FULL)))
-        }
-        fun getCharacterURLFromFileName(imageFolderType: UtilTools.ImageFolderType, characterName : String) : String {
-            return UtilTools().getAssetsURLByFileName(imageFolderType, UtilTools().getImageNameByRegistName(characterName, (imageFolderType === UtilTools.ImageFolderType.CHAR_FULL)))
-        }
-
-        fun getCharacterImageByteArrayFromFileName(imageFolderType: UtilTools.ImageFolderType, characterName : String) : ByteArray {
-            return UtilTools().getAssetsWebpByteArrayByFileName(imageFolderType, UtilTools().getImageNameByRegistName(characterName, (imageFolderType === UtilTools.ImageFolderType.CHAR_FULL)))
-        }
-
-        fun getCharacterImageFromOfficialId(imageFolderType: UtilTools.ImageFolderType, charId : String) : ByteArray {
-            val listDataJson = charListJson.jsonArray.find { lcData -> lcData.jsonObject["charId"]!!.jsonPrimitive.content == charId } ?: return UtilTools().getLostImgByteArray()
-            return getCharacterImageByteArrayFromFileName(imageFolderType, listDataJson.jsonObject["name"]!!.jsonPrimitive.content)
+        fun getCharacterImageFromOfficialId(imageFolderType: ImageFolder, charId : String) : Any {
+            val listDataJson = charListJson.jsonArray.find { data -> data.jsonObject["charId"]!!.jsonPrimitive.content == charId } ?: return LOST_IMAGE_DRAWABLE
+            return getCharacterImageFromFileName(imageFolderType, listDataJson.jsonObject["name"]!!.jsonPrimitive.content)
         }
 
         @OptIn(ExperimentalCoroutinesApi::class)
@@ -103,8 +110,5 @@ open class Character(
             save = { listOf(Json.encodeToString(it)) },
             restore = { Json.decodeFromString(it[0]) }
         )
-
-
-     */
     }
 }

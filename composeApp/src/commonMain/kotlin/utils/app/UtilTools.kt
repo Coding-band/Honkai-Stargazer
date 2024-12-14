@@ -1,21 +1,50 @@
 package utils.app
 
+import androidx.compose.foundation.Image
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.Dp
 import coil3.ImageLoader
 import coil3.PlatformContext
+import coil3.compose.LocalPlatformContext
 import coil3.disk.DiskCache
 import coil3.request.CachePolicy
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import coil3.util.DebugLogger
+import getLocalHttpClient
+import io.ktor.client.call.body
+import io.ktor.client.plugins.HttpTimeout
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.client.plugins.defaultRequest
+import io.ktor.client.request.get
+import io.ktor.client.request.headers
+import io.ktor.client.request.post
+import io.ktor.client.request.setBody
+import io.ktor.client.statement.HttpResponse
+import io.ktor.http.ContentType
+import io.ktor.http.contentType
+import io.ktor.serialization.kotlinx.json.json
+import io.ktor.util.network.UnresolvedAddressException
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withTimeout
+import kotlinx.serialization.json.Json
+import okio.FileHandle
 import okio.FileSystem
+import okio.IOException
+import okio.SYSTEM
+import okio.buffer
+import okio.use
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import type.Character
 import type.ImageFolder
 import utils.annotation.VersionUpdateCheck
+import utils.app.Constants.Companion.LOST_IMAGE_DRAWABLE
 import utils.starbase.StarbaseAPI
+import utils.starbase.StarbaseRequest.DsType
+import utils.starbase.StarbaseRequest.Method
+import utils.starbase.StarbaseResponse
+import utils.starbase.genStarbaseDSv1
 import kotlin.math.pow
 import kotlin.math.roundToInt
 
@@ -151,10 +180,100 @@ fun htmlDescApplierImpl(htmlText: String) : String{
  */
 
 /**
- * Get Assets URL by File Name, NO NEED TO SPECIFIC SUFFIX (Since it will be handled by ImageFolder)
+ * Get Assets URL by File Name
+ * @param folder ImageFolder
+ * @param fileName Only name of the file, without suffix and any slashes
+ * E.g. "yunli_icon"
  */
 fun getAssetsURLByFileName(folder: ImageFolder, fileName: String): String {
     return StarbaseAPI().getGitHubStaticAssetURL() + "/images/${folder.folderName}/${fileName}${folder.suffix}"
+}
+
+/**
+ * Get Json from online by File Name
+ * @param filePath Relative path of the file, with suffix and any slashes
+ * E.g. "character_data/character_list.json"
+ */
+fun getAssetsJsonByFilePath(filePath: String): String {
+    return readFromFile(filePath)
+}
+
+fun writeToFile(filePath: String, content: String) {
+    val fileSystem = FileSystem.SYSTEM
+    val file = FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("data").resolve(filePath)
+
+    try {
+        // Create directory if it doesn't exist
+        fileSystem.createDirectories(file.parent!!, mustCreate = false)
+
+        // Write to file
+        fileSystem.openReadWrite(file).use { fileHandle ->
+            fileHandle.sink().buffer().use { sink ->
+                sink.writeUtf8(content)
+            }
+        }
+    } catch (e: IOException) {
+        e.printStackTrace()
+    }
+}
+
+fun readFromFile(filePath: String): String {
+    val fileSystem = FileSystem.SYSTEM
+    val file = FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("data").resolve(filePath)
+
+    try {
+        // Read from file
+        if(!fileSystem.exists(file)){
+            val data = readFromOnlineURL(StarbaseAPI().getGitHubStaticAssetURL() + "/data/${filePath}")
+            writeToFile(filePath, data)
+            return data
+        }
+        return fileSystem.source(file).buffer().use { source ->
+            source.readUtf8()
+        }
+    } catch (e: IOException) {
+        errLog("UtilTools.kt", "readFromFile", e)
+        return "{}"
+    }
+}
+
+/**
+ * Read from Online URL
+ */
+fun readFromOnlineURL(url: String): String {
+    val client = getLocalHttpClient {
+        install(HttpTimeout){ requestTimeoutMillis = 8000 }
+        install(ContentNegotiation){ json() }
+        expectSuccess = true
+    }
+
+    try {
+        return runBlocking {
+            return@runBlocking withTimeout(8000) {
+                val response: HttpResponse = client.get(url)
+
+                //Check whether it is having any errors
+                if (!arrayListOf(200, 201).contains(response.status.value)) {
+                    errLog(
+                        "UtilTools.kt",
+                        "readFromOnlineURL(url = ${url})",
+                        Exception("HTTP Error Code ${response.status.value} : ${response.status.description}")
+                    )
+                    return@withTimeout "{}"
+                } else {
+                    return@withTimeout response.body<String>()
+                }
+            }
+        }
+
+    }catch (e : UnresolvedAddressException){
+        //Cannot find the Address, maybe bcz of u are offline
+        errLog("UtilTools.kt", "readFromOnlineURL(url = ${url})",e)
+    }catch (e : Exception){
+        // All response
+        errLog("StarbaseRequest", "readFromOnlineURL(url = ${url})",e)
+    }
+    return "{}"
 }
 
 @VersionUpdateCheck

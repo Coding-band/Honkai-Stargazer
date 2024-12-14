@@ -15,13 +15,14 @@ import kotlinx.coroutines.withContext
 import moe.tlaster.precompose.navigation.NavOptions
 import moe.tlaster.precompose.navigation.Navigator
 import moe.tlaster.precompose.navigation.PopUpTo
+import type.Character
 import types.UserAbyssRecord.Companion.refreshMOCData
 import types.UserAbyssRecord.Companion.refreshPFData
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import utils.app.Preferences
 
-class SplashPageViewModel(private val navigator: Navigator) : ViewModel() {
+class SplashPageViewModel() : ViewModel() {
     private val _state = MutableStateFlow(SplashPageState())
     val state: StateFlow<SplashPageState> get() = _state
 
@@ -39,6 +40,8 @@ class SplashPageViewModel(private val navigator: Navigator) : ViewModel() {
             // Initialization logic here
             val showPopup = !Preferences().AppSettings.isLangInitialized()
             _state.value.showPopup.value = showPopup
+            Character.charListJson
+            Character.charExtListJson
         }
     }
 

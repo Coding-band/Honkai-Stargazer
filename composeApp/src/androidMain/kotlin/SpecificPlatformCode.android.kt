@@ -3,6 +3,7 @@ import android.app.Activity
 import android.content.res.Configuration
 import android.graphics.BitmapFactory
 import android.os.Build
+import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.ImageBitmap
@@ -91,4 +92,12 @@ actual fun getLocalHttpClient(function: HttpClientConfig<*>.() -> Unit): HttpCli
 actual fun changeLanguage(language: String, region: String?) {
     val locale = if(region == null) Locale(language) else Locale(language, region)
     Locale.setDefault(locale)
+}
+
+@Composable
+actual fun getOrientation(): Orientation {
+    return when (LocalConfiguration.current.orientation) {
+        Configuration.ORIENTATION_LANDSCAPE -> Orientation.Horizontal
+        else -> Orientation.Vertical
+    }
 }
