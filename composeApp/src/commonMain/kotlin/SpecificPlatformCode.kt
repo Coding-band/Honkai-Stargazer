@@ -1,3 +1,4 @@
+import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.unit.Dp
@@ -36,3 +37,6 @@ expect fun setKeyboardDarkMode()
 expect fun getLocalHttpClient(function: HttpClientConfig<*>.() -> Unit): HttpClient
 
 expect fun changeLanguage(language: String, region: String? = null)
+
+@Composable
+expect fun getOrientation(): Orientation

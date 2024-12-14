@@ -1,3 +1,4 @@
+import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.graphics.ImageBitmap
@@ -20,9 +21,14 @@ import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.client.engine.darwin.Darwin
 import platform.Foundation.NSUserDefaults
+import platform.UIKit.UIApplication
+import platform.UIKit.UIDeviceOrientation
+import platform.UIKit.UIInterfaceOrientation
+import platform.UIKit.UIInterfaceOrientationPortrait
 import platform.UIKit.UIKeyboardAppearanceDark
 import platform.UIKit.UITextField
 import utils.annotation.DoItLater
+import kotlin.experimental.ExperimentalNativeApi
 
 /**
  * This is the declaration kt file for specific-platform function
@@ -92,4 +98,16 @@ actual fun changeLanguage(language: String, region : String?) {
         language
     }
     NSUserDefaults.standardUserDefaults.setObject(arrayListOf(lang),"AppleLanguages")
+}
+
+@OptIn(ExperimentalComposeUiApi::class, ExperimentalNativeApi::class)
+@Composable
+actual fun getOrientation(): Orientation {
+    //how iOS and macOS handle orientation?
+    val orientation = UIDevice.currentDevice.orientation
+    return when (orientation) {
+            UIDeviceOrientation.UIDeviceOrientationLandscapeLeft -> Orientation.Horizontal
+            UIDeviceOrientation.UIDeviceOrientationLandscapeRight -> Orientation.Horizontal
+            else -> Orientation.Vertical
+    }
 }
