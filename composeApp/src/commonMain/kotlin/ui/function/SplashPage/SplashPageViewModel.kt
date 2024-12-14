@@ -15,6 +15,7 @@ import kotlinx.coroutines.withContext
 import moe.tlaster.precompose.navigation.NavOptions
 import moe.tlaster.precompose.navigation.Navigator
 import moe.tlaster.precompose.navigation.PopUpTo
+import type.Character
 import types.UserAbyssRecord.Companion.refreshMOCData
 import types.UserAbyssRecord.Companion.refreshPFData
 import ui.navigation.Screen
@@ -39,6 +40,8 @@ class SplashPageViewModel() : ViewModel() {
             // Initialization logic here
             val showPopup = !Preferences().AppSettings.isLangInitialized()
             _state.value.showPopup.value = showPopup
+            Character.charListJson
+            Character.charExtListJson
         }
     }
 

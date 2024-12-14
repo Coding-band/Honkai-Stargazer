@@ -200,19 +200,20 @@ fun getAssetsJsonByFilePath(filePath: String): String {
 
 fun writeToFile(filePath: String, content: String) {
     val fileSystem = FileSystem.SYSTEM
-    val directory = FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("data")
-    val file = directory.resolve(filePath)
+    val file = FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("data").resolve(filePath)
 
     try {
         // Create directory if it doesn't exist
-        fileSystem.createDirectories(directory, mustCreate = false)
+        fileSystem.createDirectories(file.parent!!, mustCreate = false)
 
         // Write to file
-        FileSystem.SYSTEM.write(file) {
-            writeUtf8(content)
+        fileSystem.openReadWrite(file).use { fileHandle ->
+            fileHandle.sink().buffer().use { sink ->
+                sink.writeUtf8(content)
+            }
         }
     } catch (e: IOException) {
-        errLog("UtilTools.kt", "writeToFile", e)
+        e.printStackTrace()
     }
 }
 
