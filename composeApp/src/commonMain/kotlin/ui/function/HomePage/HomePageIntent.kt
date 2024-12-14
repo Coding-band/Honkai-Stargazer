@@ -1,17 +1,19 @@
 package ui.function.HomePage
 
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.geometry.Offset
 import dev.chrisbanes.haze.HazeState
 import ui.function.HomePage.components.HomePageBlocks
+import utils.app.Preferences
 
 data class HomePageState(
     val showPopup: MutableState<Boolean> = mutableStateOf(true),
     val hazeState: HazeState = HazeState(),
     val threeDotDialogDisplay: MutableState<Boolean> = mutableStateOf(false),
     val threeDotDialogPos: MutableState<Offset> = mutableStateOf(Offset(0f, 0f)),
-    val homeMenuBlockList: MutableList<HomePageBlocks.HomePageBlockItem> = mutableListOf()
+    val homeMenuBlockList: MutableState<ArrayList<HomePageBlocks.HomePageBlockItem>> = mutableStateOf(Preferences().HomePageMenu.getHomePageMenuArray())
 )
 
 sealed class HomePageIntent {

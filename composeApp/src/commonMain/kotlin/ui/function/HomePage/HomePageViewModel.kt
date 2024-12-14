@@ -92,7 +92,6 @@ class HomePageViewModel(private val navigator: Navigator) : ViewModel() {
         _state.value.threeDotDialogPos.value = threeDotDialogPos
     }
     private fun setHomeMenuBlockList(homeMenuBlockList: ArrayList<HomePageBlocks.HomePageBlockItem>) {
-        _state.value.homeMenuBlockList.clear()
-        _state.value.homeMenuBlockList.addAll(homeMenuBlockList)
+        _state.value.homeMenuBlockList.value = homeMenuBlockList
     }
 }
