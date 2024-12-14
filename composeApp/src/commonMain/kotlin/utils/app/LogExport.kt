@@ -58,7 +58,7 @@ lateinit var ToastStrFunctionStillInDevelop: String
 lateinit var toastInstance : ToasterState
 
 @Composable
-fun init(){
+fun LogExportInit(){
     ToastStrFunctionStillInDevelop = removeStrQuote(Res.string.FunctionStillInDevelop)
     toastInstance = rememberToasterState()
 }

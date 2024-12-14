@@ -138,6 +138,7 @@ class Constants {
             }
         }
 
+        val LOST_IMAGE_DRAWABLE = Res.drawable.ico_lost_img
 
         var HOME_PAGE_MENU_DEFAULT = arrayListOf<HomePageBlocks.HomePageBlockItem>(
             HomePageBlocks.HomePageBlockItem(
