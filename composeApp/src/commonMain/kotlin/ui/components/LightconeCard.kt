@@ -149,8 +149,7 @@ fun LightconeCard(
                             )
                         ),
                     contentScale = ContentScale.Crop,
-                    contentDescription = "Lightcone Icon",
-                    imageLoader = newImageLoader(LocalPlatformContext.current)
+                    contentDescription = "Lightcone Icon"
                 )
             }
 
