@@ -1,6 +1,6 @@
 package utils.device
 
-import com.voc.honkaistargazer.BuildKonfig
+import com.voc.stargazer3.BuildKonfig
 import kotlinx.serialization.Serializable
 
 

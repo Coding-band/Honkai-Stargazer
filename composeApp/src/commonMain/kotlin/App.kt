@@ -2,7 +2,7 @@
 
 import androidx.compose.runtime.Composable
 import coil3.compose.setSingletonImageLoaderFactory
-import com.voc.honkaistargazer.BuildKonfig
+import com.voc.stargazer3.BuildKonfig
 import moe.tlaster.precompose.PreComposeApp
 import moe.tlaster.precompose.navigation.NavHost
 import moe.tlaster.precompose.navigation.rememberNavigator

@@ -1,4 +1,4 @@
-package ui.function.CharacterList
+package ui.function.characterListPage
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

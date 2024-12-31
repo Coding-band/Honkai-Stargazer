@@ -29,7 +29,7 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.unit.dp
-import com.voc.honkaistargazer.BuildKonfig
+import com.voc.stargazer3.BuildKonfig
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.Res

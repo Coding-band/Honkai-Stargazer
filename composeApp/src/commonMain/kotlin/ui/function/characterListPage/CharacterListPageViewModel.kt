@@ -1,4 +1,4 @@
-package ui.function.CharacterList
+package ui.function.characterListPage
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

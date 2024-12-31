@@ -29,7 +29,7 @@ plugins {
 val properties = Properties()
 file("../gradle.properties").inputStream().use { properties.load(it) }
 
-var appVersion: String = SimpleDateFormat("yyyy.MM.dd").format(Date())
+val appVersion: String = SimpleDateFormat("yyyy.MM.dd").format(Date())
 val versionCodeFinal = properties.getProperty("APP_VERSION_CODE").toInt() + 1
 
 //BETA | C.BETA | DEV | PRODUCTION
@@ -170,19 +170,23 @@ android {
         properties["APP_PLATFORM"] = "Android"
 
         create("0dev"){
-            applicationId = "com.voc.honkai_stargazer_gp"
+            applicationId = "com.voc.stargazer3_gp"
             versionName = "DEV ${appVersion} (${versionCodeFinal})"
         }
         create("beta"){
-            applicationId = "com.voc.honkai_stargazer_beta"
+            applicationId = "com.voc.stargazer3_beta"
             versionName = "BETA ${appVersion} (${versionCodeFinal})"
         }
         create("closeBeta"){
-            applicationId = "com.voc.honkai_stargazer_cbeta"
+            applicationId = "com.voc.stargazer3_cbeta"
             versionName = "C.BETA ${appVersion} (${versionCodeFinal})"
         }
+        create("production_googleplay"){
+            applicationId = "com.voc.stargazer3_gp"
+            versionName = "GP ${appVersion} (${versionCodeFinal})"
+        }
         create("production"){
-            applicationId = "com.voc.honkai_stargazer_gp"
+            applicationId = "com.voc.stargazer3"
             versionName = "${appVersion} (${versionCodeFinal})"
         }
         properties.store(file("../gradle.properties").outputStream(),null)

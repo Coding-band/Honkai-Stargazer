@@ -1,12 +1,8 @@
-package ui.function.CharacterList
+package ui.function.characterListPage
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
-import dev.chrisbanes.haze.HazeState
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.decodeFromJsonElement
 import type.Character
-import type.ListFilter
 
 data class CharacterListPageState(
     val characterList: MutableState<ArrayList<Character>> = mutableStateOf(arrayListOf()),

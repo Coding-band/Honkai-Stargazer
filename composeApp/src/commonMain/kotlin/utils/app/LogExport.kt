@@ -26,7 +26,7 @@ import com.dokar.sonner.ToastType
 import com.dokar.sonner.ToasterState
 import com.dokar.sonner.rememberToasterState
 import com.russhwolf.settings.Settings
-import com.voc.honkaistargazer.BuildKonfig
+import com.voc.stargazer3.BuildKonfig
 import files.FunctionStillInDevelop
 import files.Res
 import files.pom_pom_failed_issue
