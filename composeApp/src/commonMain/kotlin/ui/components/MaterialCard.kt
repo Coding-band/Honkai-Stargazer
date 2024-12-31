@@ -48,7 +48,7 @@ fun MaterialCard(
     Box(
         modifier = Modifier
             .widthIn(MATERIAL_CARD_WIDTH, MATERIAL_CARD_WIDTH*2)
-            .aspectRatio(MATERIAL_CARD_WIDTH / MATERIAL_CARD_WIDTH)
+            .aspectRatio(MATERIAL_CARD_WIDTH / MATERIAL_CARD_HEIGHT)
             .clip(
                 RoundedCornerShape(
                     topEnd = 15.dp,

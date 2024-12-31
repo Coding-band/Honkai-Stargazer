@@ -11,6 +11,7 @@ import kotlinx.serialization.json.jsonPrimitive
 import utils.annotation.DoItLater
 import utils.app.Constants
 import utils.app.getAssetsJsonByFilePath
+import utils.app.getAssetsURLByFileName
 
 @Serializable
 open class Material(
@@ -29,7 +30,7 @@ open class Material(
         }
 
         fun getMaterialImageById(officialId: Int): String {
-            return materialListJson.jsonObject[officialId.toString()]?.jsonPrimitive?.content ?: "Unknown"
+            return getAssetsURLByFileName(ImageFolder.MATERIAL_ICON,"material_" + materialListJson.jsonObject[officialId.toString()]?.jsonPrimitive?.content)
         }
     }
 
