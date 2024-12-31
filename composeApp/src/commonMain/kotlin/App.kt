@@ -7,7 +7,7 @@ import moe.tlaster.precompose.PreComposeApp
 import moe.tlaster.precompose.navigation.NavHost
 import moe.tlaster.precompose.navigation.rememberNavigator
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import ui.function.SplashPage.SplashPage
+import ui.function.splashPage.SplashPage
 import ui.navigation.RootContent
 import ui.navigation.Screen
 import utils.app.LogExportInit

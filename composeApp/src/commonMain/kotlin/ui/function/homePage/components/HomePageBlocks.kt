@@ -4,7 +4,7 @@
  * Copyright © 2024 Coding Band 版權所有
  */
 
-package ui.function.HomePage.components
+package ui.function.homePage.components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -36,12 +36,10 @@ import dev.chrisbanes.haze.hazeChild
 import files.AppStatusLostConnect
 import files.Res
 import files.phorphos_cake_fill
-import getIsLandscape
 import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.resources.stringResource
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import utils.app.BlackAlpha20

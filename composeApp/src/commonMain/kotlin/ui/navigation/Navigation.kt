@@ -39,9 +39,9 @@ import moe.tlaster.precompose.navigation.rememberNavigator
 import moe.tlaster.precompose.navigation.transition.NavTransition
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
-import ui.function.CharacterListPage.CharacterListPage
-import ui.function.HomePage.HomePage
-import ui.function.LightconeListPage.LightconeListPage
+import ui.function.characterListPage.CharacterListPage
+import ui.function.homePage.HomePage
+import ui.function.lightconeListPage.LightconeListPage
 import utils.app.BezierEasing2O48
 import utils.app.Constants.Companion.HOME_WIDTH
 import utils.app.MakeBackground

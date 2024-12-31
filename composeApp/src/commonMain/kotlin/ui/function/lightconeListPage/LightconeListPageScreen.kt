@@ -1,4 +1,4 @@
-package ui.function.LightconeListPage
+package ui.function.lightconeListPage
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

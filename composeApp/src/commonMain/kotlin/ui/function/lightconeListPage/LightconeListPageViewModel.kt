@@ -1,4 +1,4 @@
-package ui.function.LightconeListPage
+package ui.function.lightconeListPage
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -10,10 +10,6 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import moe.tlaster.precompose.navigation.Navigator
 import type.Lightcone
-import type.CombatType
-import type.ListFilter
-import type.Path
-import ui.function.LightconeListPage.LightconeListPageState
 
 class LightconeListPageViewModel(private val navigator: Navigator) : ViewModel() {
     private val _state = MutableStateFlow(LightconeListPageState())

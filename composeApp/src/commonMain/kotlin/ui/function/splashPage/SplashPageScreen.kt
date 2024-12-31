@@ -1,4 +1,4 @@
-package ui.function.SplashPage
+package ui.function.splashPage
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

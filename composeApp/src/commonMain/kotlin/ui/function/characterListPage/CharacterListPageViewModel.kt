@@ -1,16 +1,11 @@
 package ui.function.CharacterList
 
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.util.fastForEach
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import dev.chrisbanes.haze.HazeState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
-import kotlinx.serialization.json.decodeFromJsonElement
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import moe.tlaster.precompose.navigation.Navigator
@@ -18,9 +13,6 @@ import type.Character
 import type.CombatType
 import type.ListFilter
 import type.Path
-import ui.function.HomePage.HomePageIntent
-import ui.function.HomePage.HomePageState
-import ui.function.HomePage.components.HomePageBlocks
 
 class CharacterListPageViewModel(private val navigator: Navigator) : ViewModel() {
     private val _state = MutableStateFlow(CharacterListPageState())

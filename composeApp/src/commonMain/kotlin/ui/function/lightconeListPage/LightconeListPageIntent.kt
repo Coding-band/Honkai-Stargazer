@@ -1,8 +1,7 @@
-package ui.function.LightconeListPage
+package ui.function.lightconeListPage
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
-import type.Character
 import type.Lightcone
 
 data class LightconeListPageState(

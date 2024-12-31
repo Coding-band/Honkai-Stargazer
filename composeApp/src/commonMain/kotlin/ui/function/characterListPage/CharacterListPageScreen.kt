@@ -20,7 +20,6 @@ import com.cheonjaeung.compose.grid.VerticalGrid
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import moe.tlaster.precompose.navigation.Navigator
-import type.Character
 import ui.components.BackIcon
 import ui.components.CharacterCard
 import ui.components.HeaderData
@@ -28,10 +27,8 @@ import ui.components.LIST_FILTER_TOOL_HEIGHT
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.defaultHeaderData
-import ui.function.HomePage.HomePageViewModel
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import utils.app.PageBottomMask
-import utils.app.getAssetsJsonByFilePath
 
 @Composable
 fun CharacterListPage(

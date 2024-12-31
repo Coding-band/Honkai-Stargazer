@@ -1,25 +1,12 @@
-package ui.function.SplashPage
+package ui.function.splashPage
 
-import androidx.compose.runtime.snapshotFlow
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dev.chrisbanes.haze.HazeState
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import moe.tlaster.precompose.navigation.NavOptions
-import moe.tlaster.precompose.navigation.Navigator
-import moe.tlaster.precompose.navigation.PopUpTo
 import type.Character
-import types.UserAbyssRecord.Companion.refreshMOCData
-import types.UserAbyssRecord.Companion.refreshPFData
-import ui.navigation.Screen
-import ui.navigation.navigateLimited
 import utils.app.Preferences
 
 class SplashPageViewModel() : ViewModel() {
