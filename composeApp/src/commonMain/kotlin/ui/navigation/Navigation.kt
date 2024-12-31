@@ -25,8 +25,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.unit.dp
 import androidx.window.core.layout.WindowWidthSizeClass
-import com.dokar.sonner.ToasterState
-import com.dokar.sonner.rememberToasterState
 import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
@@ -41,13 +39,12 @@ import moe.tlaster.precompose.navigation.rememberNavigator
 import moe.tlaster.precompose.navigation.transition.NavTransition
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
-import ui.function.CharacterList.CharacterListPage
+import ui.function.CharacterListPage.CharacterListPage
 import ui.function.HomePage.HomePage
+import ui.function.LightconeListPage.LightconeListPage
 import utils.app.BezierEasing2O48
 import utils.app.Constants.Companion.HOME_WIDTH
-import utils.app.LogExportObj
 import utils.app.MakeBackground
-import utils.app.toastInstance
 
 /**
  * Navigate to a route with a limited interval.
@@ -220,6 +217,15 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
                 CharacterListPage(
                     navigator = navigator,
                     headerData = Screen.CharacterListPage.headerData
+                )
+            }
+        }
+        scene(route = Screen.LightconeListPage.route) {
+            screenInstance = Screen.LightconeListPage
+            withBGScreen(isPadMode){
+                LightconeListPage(
+                    navigator = navigator,
+                    headerData = Screen.LightconeListPage.headerData
                 )
             }
         }

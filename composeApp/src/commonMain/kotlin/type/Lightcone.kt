@@ -7,8 +7,27 @@
 package type
 
 import androidx.annotation.IntRange
+import androidx.compose.runtime.saveable.Saver
+import androidx.compose.runtime.saveable.listSaver
+import androidx.compose.ui.graphics.ImageBitmap
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.decodeFromJsonElement
+import kotlinx.serialization.json.int
+import kotlinx.serialization.json.jsonArray
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 import utils.annotation.DoItLater
+import utils.app.Language
+import utils.app.getAssetsJsonByFilePath
+import utils.app.getAssetsURLByFileName
+import utils.app.getImageNameByRegistName
 import utils.calculator.AttrData
 
 
@@ -28,23 +47,22 @@ open class Lightcone(
 ){
     @DoItLater("Rearrange those function later")
     companion object {
-        /*
         val lcListJson = getLightconeListFromJSON()
         val lcExtListJson = getLightconeExtListFromJSON()
 
         private fun getLightconeListFromJSON() : JsonElement {
-            return UtilTools().getAssetsJsonByFilePath("lightcone_data/lightcone_list.json")
+            return Json.parseToJsonElement(getAssetsJsonByFilePath("lightcone_data/lightcone_list.json"))
         }
         private fun getLightconeExtListFromJSON() : JsonElement {
-            return UtilTools().getAssetsJsonByFilePath("lightcone_data/lightcone_ext_list.json")
+            return Json.parseToJsonElement(getAssetsJsonByFilePath("lightcone_data/lightcone_ext_list.json"))
         }
 
         fun getLightconeDataFromJSON(lightconeFileName : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance) : JsonElement {
-            return UtilTools().getAssetsJsonByFilePath("lightcone_data/${textLanguage.folderName}/${lightconeFileName}.json")
+            return Json.parseToJsonElement(getAssetsJsonByFilePath("lightcone_data/${textLanguage.folderName}/${lightconeFileName}.json"))
         }
 
-        fun getLightconeImageFromJSON(imageFolderType: UtilTools.ImageFolderType, lightconeName : String) : ImageBitmap {
-            return UtilTools().getAssetsWebpByFileName(imageFolderType, UtilTools().getImageNameByRegistName(lightconeName))
+        fun getLightconeImageFromJSON(imageFolderType: ImageFolder, lightconeName : String) : String {
+            return getAssetsURLByFileName(imageFolderType, getImageNameByRegistName(lightconeName))
         }
 
         @OptIn(ExperimentalCoroutinesApi::class)
@@ -80,6 +98,5 @@ open class Lightcone(
             save = { listOf(Json.encodeToString(it)) },
             restore = { Json.decodeFromString(it[0]) }
         )
-         */
     }
 }

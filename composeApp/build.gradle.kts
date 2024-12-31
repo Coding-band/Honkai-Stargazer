@@ -224,7 +224,7 @@ compose.desktop {
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.voc.honkaistargazer"
+            packageName = "com.voc.stargazer3"
             packageVersion = "1.0.0"
         }
 
@@ -245,7 +245,7 @@ compose.resources {
 
 
 buildkonfig {
-    packageName = "com.voc.honkaistargazer"
+    packageName = "com.voc.stargazer3"
     //Read only
     defaultConfigs {
         buildConfigField(STRING, "appProfile", appProfile)
