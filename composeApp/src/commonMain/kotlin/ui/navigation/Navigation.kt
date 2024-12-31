@@ -39,6 +39,7 @@ import moe.tlaster.precompose.navigation.rememberNavigator
 import moe.tlaster.precompose.navigation.transition.NavTransition
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
+import ui.function.characterInfoPage.CharacterInfoPage
 import ui.function.characterListPage.CharacterListPage
 import ui.function.homePage.HomePage
 import ui.function.lightconeListPage.LightconeListPage
@@ -236,6 +237,20 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
                 RelicListPage(
                     navigator = navigator,
                     headerData = Screen.RelicListPage.headerData
+                )
+            }
+        }
+
+        scene(
+            //?fileName={fileName}&combatType={combatType}&path={path}&charId={charId}
+            route = "${Screen.CharacterInfoPage.route}/{charName}",
+            navTransition = navTransition
+        ) { backStackEntry ->
+            withBGScreen(isPadMode){
+                CharacterInfoPage(
+                    navigator = navigator,
+                    headerData = Screen.CharacterInfoPage.headerData,
+                    backStackEntry = backStackEntry
                 )
             }
         }

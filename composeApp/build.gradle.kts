@@ -170,7 +170,7 @@ android {
         properties["APP_PLATFORM"] = "Android"
 
         create("0dev"){
-            applicationId = "com.voc.stargazer3_gp"
+            applicationId = "com.voc.stargazer3"
             versionName = "DEV ${appVersion} (${versionCodeFinal})"
         }
         create("beta"){
@@ -182,7 +182,8 @@ android {
             versionName = "C.BETA ${appVersion} (${versionCodeFinal})"
         }
         create("production_googleplay"){
-            applicationId = "com.voc.stargazer3_gp"
+            applicationId = "com.voc.stargazer3"
+            appProfile = "PRODUCTION_GP"
             versionName = "GP ${appVersion} (${versionCodeFinal})"
         }
         create("production"){
