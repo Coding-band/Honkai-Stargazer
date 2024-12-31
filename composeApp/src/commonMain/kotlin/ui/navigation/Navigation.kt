@@ -42,6 +42,7 @@ import ui.components.defaultHeaderData
 import ui.function.characterListPage.CharacterListPage
 import ui.function.homePage.HomePage
 import ui.function.lightconeListPage.LightconeListPage
+import ui.function.relicListPage.RelicListPage
 import utils.app.BezierEasing2O48
 import utils.app.Constants.Companion.HOME_WIDTH
 import utils.app.MakeBackground
@@ -226,6 +227,15 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
                 LightconeListPage(
                     navigator = navigator,
                     headerData = Screen.LightconeListPage.headerData
+                )
+            }
+        }
+        scene(route = Screen.RelicListPage.route) {
+            screenInstance = Screen.RelicListPage
+            withBGScreen(isPadMode){
+                RelicListPage(
+                    navigator = navigator,
+                    headerData = Screen.RelicListPage.headerData
                 )
             }
         }
