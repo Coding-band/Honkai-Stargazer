@@ -1,31 +1,14 @@
-package ui.function.HomePage
+package ui.function.homePage
 
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.geometry.Offset
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dev.chrisbanes.haze.HazeState
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import moe.tlaster.precompose.navigation.NavOptions
 import moe.tlaster.precompose.navigation.Navigator
-import moe.tlaster.precompose.navigation.PopUpTo
-import ui.function.HomePage.components.HomePageBlocks
-import ui.function.SplashPage.SplashPageIntent
-import ui.function.SplashPage.SplashPageState
-import ui.navigation.Screen
-import ui.navigation.navigateLimited
-import utils.app.Preferences
-import utils.starbase.StarbaseAPI
+import ui.function.homePage.components.HomePageBlocks
 
 class HomePageViewModel(private val navigator: Navigator) : ViewModel() {
     private val _state = MutableStateFlow(HomePageState())

@@ -2,12 +2,12 @@
 
 import androidx.compose.runtime.Composable
 import coil3.compose.setSingletonImageLoaderFactory
-import com.voc.honkaistargazer.BuildKonfig
+import com.voc.stargazer3.BuildKonfig
 import moe.tlaster.precompose.PreComposeApp
 import moe.tlaster.precompose.navigation.NavHost
 import moe.tlaster.precompose.navigation.rememberNavigator
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import ui.function.SplashPage.SplashPage
+import ui.function.splashPage.SplashPage
 import ui.navigation.RootContent
 import ui.navigation.Screen
 import utils.app.LogExportInit

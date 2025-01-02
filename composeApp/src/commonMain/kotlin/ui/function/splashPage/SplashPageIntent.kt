@@ -1,4 +1,4 @@
-package ui.function.SplashPage
+package ui.function.splashPage
 
 import dev.chrisbanes.haze.HazeState
 

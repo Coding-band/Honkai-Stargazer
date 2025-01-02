@@ -1,4 +1,4 @@
-package ui.function.HomePage.components
+package ui.function.homePage.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

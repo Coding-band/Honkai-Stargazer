@@ -45,7 +45,7 @@ import files.ranking_s_text
 import files.ranking_ss_text
 import org.jetbrains.compose.resources.DrawableResource
 import type.UserAccount
-import ui.function.HomePage.components.HomePageBlocks
+import ui.function.homePage.components.HomePageBlocks
 import ui.navigation.Screen
 import utils.annotation.DoItLater
 

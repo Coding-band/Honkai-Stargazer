@@ -4,6 +4,8 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
+import java.text.SimpleDateFormat
+import java.util.Date
 import java.util.Properties
 
 /**
@@ -11,11 +13,6 @@ import java.util.Properties
  * Environment Area - App Version
  */
 
-val appVersion = "3.0.0"
-val appVersionCodeName = "SG3"
-
-val appVersionBeta = "2.9.9"
-val appVersionCodeNameBeta = "Re:Stargazer"
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -32,13 +29,15 @@ plugins {
 val properties = Properties()
 file("../gradle.properties").inputStream().use { properties.load(it) }
 
+val appVersion: String = SimpleDateFormat("yyyy.MM.dd").format(Date())
 val versionCodeFinal = properties.getProperty("APP_VERSION_CODE").toInt() + 1
-initGradleProperties()
 
 //BETA | C.BETA | DEV | PRODUCTION
 //VersionUpdateCheck
 var appProfile = "C.BETA"
+val appVersionCodeName = "SG3"
 
+initGradleProperties()
 
 kotlin {
     androidTarget {
@@ -61,7 +60,7 @@ kotlin {
             baseName = "composeApp"
             isStatic = true
             binaryOption("bundleVersion", versionCodeFinal.toString())
-            binaryOption("bundleShortVersionString", if(appProfile === "BETA" || appProfile === "C.BETA" || appProfile === "DEV") appVersionBeta else appVersion)
+            binaryOption("bundleShortVersionString", appVersion)
             xcf.add(this)
         }
     }
@@ -171,19 +170,24 @@ android {
         properties["APP_PLATFORM"] = "Android"
 
         create("0dev"){
-            applicationId = "com.voc.honkai_stargazer_gp"
-            versionName = "DEV ${appVersionBeta} (${versionCodeFinal})"
+            applicationId = "com.voc.stargazer3"
+            versionName = "DEV ${appVersion} (${versionCodeFinal})"
         }
         create("beta"){
-            applicationId = "com.voc.honkai_stargazer_beta"
-            versionName = "BETA ${appVersionBeta} (${versionCodeFinal})"
+            applicationId = "com.voc.stargazer3_beta"
+            versionName = "BETA ${appVersion} (${versionCodeFinal})"
         }
         create("closeBeta"){
-            applicationId = "com.voc.honkai_stargazer_cbeta"
-            versionName = "C.BETA ${appVersionBeta} (${versionCodeFinal})"
+            applicationId = "com.voc.stargazer3_cbeta"
+            versionName = "C.BETA ${appVersion} (${versionCodeFinal})"
+        }
+        create("production_googleplay"){
+            applicationId = "com.voc.stargazer3"
+            appProfile = "PRODUCTION_GP"
+            versionName = "GP ${appVersion} (${versionCodeFinal})"
         }
         create("production"){
-            applicationId = "com.voc.honkai_stargazer_gp"
+            applicationId = "com.voc.stargazer3"
             versionName = "${appVersion} (${versionCodeFinal})"
         }
         properties.store(file("../gradle.properties").outputStream(),null)
@@ -224,7 +228,7 @@ compose.desktop {
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.voc.honkaistargazer"
+            packageName = "com.voc.stargazer3"
             packageVersion = "1.0.0"
         }
 
@@ -245,12 +249,12 @@ compose.resources {
 
 
 buildkonfig {
-    packageName = "com.voc.honkaistargazer"
+    packageName = "com.voc.stargazer3"
     //Read only
     defaultConfigs {
         buildConfigField(STRING, "appProfile", appProfile)
-        buildConfigField(STRING, "appVersionName", (if(appProfile === "BETA" || appProfile === "C.BETA" || appProfile === "DEV") appVersionBeta else appVersion))
-        buildConfigField(STRING, "appVersionCodeName", (if(appProfile === "BETA" || appProfile === "C.BETA" || appProfile === "DEV") appVersionCodeNameBeta else appVersionCodeName))
+        buildConfigField(STRING, "appVersionName", appVersion)
+        buildConfigField(STRING, "appVersionCodeName", appVersionCodeName)
         buildConfigField(INT, "appVersionCode", properties.getProperty("APP_VERSION_CODE"))
     }
 }
@@ -259,9 +263,7 @@ buildkonfig {
 fun initGradleProperties(){
     //Write only
     properties["APP_VERSION"] = appVersion
-    properties["APP_VERSION_BETA"] = appVersionBeta
     properties["APP_VERSION_CODENAME"] = appVersionCodeName
-    properties["APP_VERSION_CODENAME_BETA"] = appVersionCodeNameBeta
     properties["APP_VERSION_CODE"] = versionCodeFinal.toString()
     properties.store(file("../gradle.properties").outputStream(),null)
 }

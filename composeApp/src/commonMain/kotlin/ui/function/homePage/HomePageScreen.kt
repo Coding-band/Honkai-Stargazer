@@ -1,10 +1,7 @@
-package ui.function.HomePage
+package ui.function.homePage
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.gestures.Orientation
-import androidx.compose.foundation.gestures.draggable
-import androidx.compose.foundation.gestures.rememberDraggableState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,14 +14,12 @@ import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
@@ -34,21 +29,20 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.unit.dp
-import com.voc.honkaistargazer.BuildKonfig
+import com.voc.stargazer3.BuildKonfig
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.Res
 import files.donate_ad_bg
-import kotlinx.coroutines.launch
 import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.painterResource
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
-import ui.function.HomePage.components.HomePageBlock1x1
-import ui.function.HomePage.components.HomePageBlock2x1
-import ui.function.HomePage.components.HomePageBlocks
-import ui.function.HomePage.components.HomePageHeader
-import ui.function.HomePage.components.ThreeDotsDialog
+import ui.function.homePage.components.HomePageBlock1x1
+import ui.function.homePage.components.HomePageBlock2x1
+import ui.function.homePage.components.HomePageBlocks
+import ui.function.homePage.components.HomePageHeader
+import ui.function.homePage.components.ThreeDotsDialog
 import utils.annotation.DoItLater
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal16
@@ -172,19 +166,16 @@ fun BottomView(modifier: Modifier = Modifier){
 fun BetaVersionBox(){
     Box(modifier = Modifier.fillMaxSize()){
         Box(modifier = Modifier
-            .wrapContentSize()
             .background(Color.Black)
-            .padding(start = 2.dp, end = 2.dp, top = 12.dp, bottom = 12.dp)
-            .rotate(-90f)
+            .padding(start = 12.dp, end = 12.dp, top = 2.dp, bottom = 2.dp)
             .align(Alignment.TopEnd)
+            .wrapContentSize()
         ){
             Text(
                 text = if(BuildKonfig.appProfile == "DEV") {"DEV"} else BuildKonfig.appVersionName,
                 style = FontSizeNormal12(),
                 color = TextColorNormalDim,
-                modifier = Modifier
-                    .align(Alignment.Center
-                )
+                modifier = Modifier.align(Alignment.Center).wrapContentSize()
             )
         }
     }

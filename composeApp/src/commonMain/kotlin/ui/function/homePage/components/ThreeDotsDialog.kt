@@ -1,4 +1,4 @@
-package ui.function.HomePage.components
+package ui.function.homePage.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

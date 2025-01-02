@@ -13,6 +13,7 @@ import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
@@ -36,6 +37,7 @@ val White = Color(0xFFFFFFFF)
 val BlackAlpha30 = Color(0x4D000000)
 val BlackAlpha80 = Color(0xCC000000)
 val BlackAlpha20 = Color(0x33000000)
+val WhiteAlpha10 = Color(0x1AFFFFFF)
 val TextColorNormal = Color(0xFFFFFFFF)
 val TextColorNormalDim = Color(0xFFDDDDDD)
 val TextColorNormalDimCC = Color(0xCCDDDDDD)
@@ -45,6 +47,12 @@ val ProgressLevelBackground = Color(0xFF666666)
 val ProgressLevelPrimary = Color(0xFFDBC291)
 val AdditionalGreen = Color(0xFF43A047)
 val GradReachYellow = Color(0xFFFFD070)
+val GradientHomeButton = Brush.verticalGradient(
+    colors = listOf(
+        Color(0x99222222), //0.6f of FF222222
+        Color(0x00222222),
+    )
+)
 
 val BezierEasing2O48 = CubicBezierEasing(0.3f, 0f, 0.3f, 1f)
 

@@ -25,8 +25,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.unit.dp
 import androidx.window.core.layout.WindowWidthSizeClass
-import com.dokar.sonner.ToasterState
-import com.dokar.sonner.rememberToasterState
 import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
@@ -41,13 +39,14 @@ import moe.tlaster.precompose.navigation.rememberNavigator
 import moe.tlaster.precompose.navigation.transition.NavTransition
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
-import ui.function.CharacterList.CharacterListPage
-import ui.function.HomePage.HomePage
+import ui.function.characterInfoPage.CharacterInfoPage
+import ui.function.characterListPage.CharacterListPage
+import ui.function.homePage.HomePage
+import ui.function.lightconeListPage.LightconeListPage
+import ui.function.relicListPage.RelicListPage
 import utils.app.BezierEasing2O48
 import utils.app.Constants.Companion.HOME_WIDTH
-import utils.app.LogExportObj
 import utils.app.MakeBackground
-import utils.app.toastInstance
 
 /**
  * Navigate to a route with a limited interval.
@@ -60,6 +59,12 @@ lateinit var navigatorInstance : Navigator
 //lateinit var pomPomPopupInstance: MutableState<PomPomPopup>
 lateinit var swipeProperties: SwipeProperties
 lateinit var navTransition : NavTransition
+
+/**
+ * Only usage : For GlobalBackground check whether should blur the background
+ *
+ * **Warm remind** : popBack will not be able to this.
+ */
 var screenInstance : Screen = Screen.BlankPage
 
 var globalWindowWidthSizeClass: WindowWidthSizeClass = WindowWidthSizeClass.COMPACT
@@ -77,7 +82,10 @@ fun isPadMode(): Boolean {
             false
         }
         WindowWidthSizeClass.MEDIUM -> {
-            getOrientation() == Orientation.Horizontal
+            //Due to the request from our designer 2O48
+            //There have to allow Pad in portrait mode of iPad, etc.
+            //getOrientation() == Orientation.Horizontal
+            true
         }
         //Pad in landscape mode
         WindowWidthSizeClass.EXPANDED -> {
@@ -96,7 +104,7 @@ fun isPadMode(): Boolean {
 fun RootContent() {
     val snackbarHostState = remember { SnackbarHostState() }
     val hazeStateRoot = remember { HazeState() }
-    val isPadMode = mutableStateOf(isPadMode())
+    val isPadMode = remember { mutableStateOf(false) }
     val isRotate = remember { mutableStateOf(false) }
     val navigator = rememberNavigator()
     navigatorInstance = navigator
@@ -123,7 +131,7 @@ fun RootContent() {
     }
 
     Scaffold(
-        snackbarHost = { SnackbarHost(snackbarHostState!!) },
+        snackbarHost = { SnackbarHost(snackbarHostState) },
     ) {
 
         AnimatedContent(
@@ -141,8 +149,8 @@ fun RootContent() {
             }
         }
 
-        if(isPadMode.value){
-            Row(modifier = Modifier.haze(hazeStateRoot)) {
+        Row(modifier = Modifier.haze(hazeStateRoot)) {
+            if(isPadMode.value){
                 Box(Modifier
                     .width(HOME_WIDTH)
                     .let { if (getScreenSizeInfo().wDP < HOME_WIDTH * 1.5f) it.weight(1f) else it }
@@ -153,12 +161,8 @@ fun RootContent() {
                         headerData = Screen.HomePage.headerData
                     )
                 }
-                Box(Modifier.weight(1f)) {
-                    NavHostInit(navigatorInstance, isPadMode)
-                }
             }
-        }else{
-            Box(modifier = Modifier.haze(hazeStateRoot)) {
+            Box(Modifier.weight(1f)) {
                 NavHostInit(navigatorInstance, isPadMode)
             }
         }
@@ -185,32 +189,30 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
     val defaultNavTransition = remember {
         NavTransition(
             createTransition = fadeIn(),
-            destroyTransition = fadeOut(),
-            exitTargetContentZIndex = 0f
+            destroyTransition = fadeOut()
         )
     }
+
     NavHost(
         navigator = navigator,
         swipeProperties = if(isPadMode.value) null else swipeProperties,
         navTransition = if (isPadMode.value) defaultNavTransition else navTransition,
-        initialRoute = if(isPadMode.value) Screen.BlankPage.route else Screen.HomePage.route
+        initialRoute = Screen.HomePage.route
     ) {
-        scene(route = Screen.BlankPage.route) {
-            screenInstance = Screen.BlankPage
-            withBGScreen(isPadMode){
-                BlankPage(
-                    navigator = navigator,
-                    headerData = defaultHeaderData
-                )
-            }
-        }
         scene(route = Screen.HomePage.route) {
             screenInstance = Screen.HomePage
             withBGScreen(isPadMode){
-                HomePage(
-                    navigator = navigator,
-                    headerData = Screen.HomePage.headerData
-                )
+                if(!isPadMode.value) {
+                    HomePage(
+                        navigator = navigator,
+                        headerData = Screen.HomePage.headerData
+                    )
+                }else{
+                    BlankPage(
+                        navigator = navigator,
+                        headerData = Screen.BlankPage.headerData
+                    )
+                }
             }
         }
 
@@ -220,6 +222,37 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
                 CharacterListPage(
                     navigator = navigator,
                     headerData = Screen.CharacterListPage.headerData
+                )
+            }
+        }
+        scene(route = Screen.LightconeListPage.route) {
+            screenInstance = Screen.LightconeListPage
+            withBGScreen(isPadMode){
+                LightconeListPage(
+                    navigator = navigator,
+                    headerData = Screen.LightconeListPage.headerData
+                )
+            }
+        }
+        scene(route = Screen.RelicListPage.route) {
+            screenInstance = Screen.RelicListPage
+            withBGScreen(isPadMode){
+                RelicListPage(
+                    navigator = navigator,
+                    headerData = Screen.RelicListPage.headerData
+                )
+            }
+        }
+
+        scene(
+            //?fileName={fileName}&combatType={combatType}&path={path}&charId={charId}
+            route = "${Screen.CharacterInfoPage.route}/{charName}",
+        ) { backStackEntry ->
+            withBGScreen(isPadMode){
+                CharacterInfoPage(
+                    navigator = navigator,
+                    headerData = Screen.CharacterInfoPage.headerData,
+                    backStackEntry = backStackEntry
                 )
             }
         }

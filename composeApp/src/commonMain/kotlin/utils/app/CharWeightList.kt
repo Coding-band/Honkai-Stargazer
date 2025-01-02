@@ -1,4 +1,4 @@
-package utils.calculator
+package utils.app
 
 import com.russhwolf.settings.Settings
 import getLocalHttpClient
@@ -19,8 +19,6 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import utils.device.AppInfo.Companion.AppInfoInstance
-import utils.app.Preferences
-import utils.app.errLog
 import utils.starbase.StarbaseAPI
 
 @Serializable

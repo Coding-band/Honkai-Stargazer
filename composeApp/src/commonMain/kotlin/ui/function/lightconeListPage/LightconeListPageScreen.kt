@@ -1,4 +1,4 @@
-package ui.function.CharacterList
+package ui.function.lightconeListPage
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -20,32 +20,29 @@ import com.cheonjaeung.compose.grid.VerticalGrid
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import moe.tlaster.precompose.navigation.Navigator
-import type.Character
 import ui.components.BackIcon
-import ui.components.CharacterCard
+import ui.components.LightconeCard
 import ui.components.HeaderData
 import ui.components.LIST_FILTER_TOOL_HEIGHT
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.defaultHeaderData
-import ui.function.HomePage.HomePageViewModel
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import utils.app.PageBottomMask
-import utils.app.getAssetsJsonByFilePath
 
 @Composable
-fun CharacterListPage(
+fun LightconeListPage(
     modifier: Modifier = Modifier,
     navigator: Navigator,
     headerData: HeaderData = defaultHeaderData
 ) {
-    val viewModel = CharacterListPageViewModel(navigator = navigator)
+    val viewModel = LightconeListPageViewModel(navigator = navigator)
     val state by viewModel.state.collectAsState()
     val hazeState = remember { HazeState() }
 
 
     LaunchedEffect(Unit){
-        viewModel.handleIntent(CharacterListPageIntent.Initialize)
+        viewModel.handleIntent(LightconeListPageIntent.Initialize)
     }
 
     Box {
@@ -66,8 +63,8 @@ fun CharacterListPage(
                     horizontalArrangement = Arrangement.spacedBy(12.dp),
                     verticalArrangement = Arrangement.spacedBy(12.dp),
                 ){
-                    for(character in state.characterListFilted.value){
-                        CharacterCard(character = character)
+                    for(lightcone in state.lightconeListFilted.value){
+                        LightconeCard(lightcone = lightcone)
                     }
 
                 }

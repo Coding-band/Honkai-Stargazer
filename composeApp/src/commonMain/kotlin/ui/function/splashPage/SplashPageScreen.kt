@@ -1,4 +1,4 @@
-package ui.function.SplashPage
+package ui.function.splashPage
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -30,7 +30,6 @@ import moe.tlaster.precompose.navigation.PopUpTo
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
 import ui.navigation.Screen
-import ui.navigation.navigateLimited
 import utils.app.FontSizeNormalLarge24
 import utils.app.FontSizeNormalSmall
 import utils.app.Language
@@ -54,7 +53,7 @@ fun SplashPage(
         if(!state.showPopup.value) {
             viewModel.handleIntent(SplashPageIntent.RefreshData)
             kotlinx.coroutines.delay(2000)
-            navigator.navigateLimited(
+            navigator.navigate(
                 Screen.RootPage.route,
                 options = NavOptions(
                     popUpTo = PopUpTo(Screen.SplashPage.route, true)

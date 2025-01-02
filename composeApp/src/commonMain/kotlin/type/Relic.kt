@@ -6,9 +6,26 @@
 
 package type
 
+import androidx.compose.runtime.saveable.Saver
+import androidx.compose.runtime.saveable.listSaver
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.jsonArray
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 import type.HsrProperties
 import utils.annotation.DoItLater
+import utils.app.Language
+import utils.app.Language.Companion.TextLanguageInstance
+import utils.app.getAssetsJsonByFilePath
+import utils.app.getAssetsURLByFileName
+import utils.app.getImageNameByRegistName
 
 
 @Serializable
@@ -24,23 +41,22 @@ open class Relic(
 ){
     @DoItLater("Rearrange those function later")
     companion object {
-        /*
         val relicListJson = getRelicListFromJSON()
         val relicExtListJson = getRelicExtListFromJSON()
 
         private fun getRelicListFromJSON() : JsonElement {
-            return UtilTools().getAssetsJsonByFilePath("relic_data/relic_list.json")
+            return Json.parseToJsonElement(getAssetsJsonByFilePath("relic_data/relic_list.json"))
         }
         private fun getRelicExtListFromJSON() : JsonElement {
-            return UtilTools().getAssetsJsonByFilePath("relic_data/relic_ext_list.json")
+            return Json.parseToJsonElement(getAssetsJsonByFilePath("relic_data/relic_ext_list.json"))
         }
 
-        fun getRelicDataFromJSON(relicFileName : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance) : JsonElement {
-            return UtilTools().getAssetsJsonByFilePath("relic_data/${textLanguage.folderName}/${relicFileName}.json")
+        fun getRelicDataFromJSON(relicFileName : String, textLanguage: Language.TextLanguage = TextLanguageInstance) : JsonElement {
+            return Json.parseToJsonElement(getAssetsJsonByFilePath("relic_data/${textLanguage.folderName}/${relicFileName}.json"))
         }
 
-        fun getRelicImageFromJSON(imageFolderType: UtilTools.ImageFolderType, imageFileName : String, index: Int = -1) : ImageBitmap {
-            return UtilTools().getAssetsWebpByFileName(imageFolderType, UtilTools().getImageNameByRegistName("${imageFileName}${if(index > 0) {"_${index}"} else ""}"))
+        fun getRelicImageFromJSON(imageFolderType: ImageFolder, imageFileName : String, index: Int = -1) : String {
+            return getAssetsURLByFileName(imageFolderType,getImageNameByRegistName("${imageFileName}${if(index > 0) {"_${index}"} else ""}"))
         }
 
         @OptIn(ExperimentalCoroutinesApi::class)
@@ -84,7 +100,6 @@ open class Relic(
             save = { listOf(Json.encodeToString(it)) },
             restore = { Json.decodeFromString(it[0]) }
         )
-         */
     }
 
 

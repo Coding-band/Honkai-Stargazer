@@ -3,7 +3,7 @@ package utils.app
 import com.russhwolf.settings.Settings
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
-import ui.function.HomePage.components.HomePageBlocks
+import ui.function.homePage.components.HomePageBlocks
 import utils.app.Constants.Companion.HOME_PAGE_MENU_DEFAULT
 import utils.starbase.StarbaseAPI
 
