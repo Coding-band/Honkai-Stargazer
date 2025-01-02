@@ -3,7 +3,7 @@ const CharacterImage: any = {
   "Fugue": {
     icon: require("../../images/character_icon/fugue_icon.webp"),
     imageSplash: require("../../images/character_splash/fugue_splash.webp"),
-    imageFull: require("../../images/character_splash/fugue_splash.webp"),
+    imageFull: require("../../images/character_full/fugue_full.webp"),
     fade: require("../../images/character_fade/fugue_fade.webp"),
   },
   "Sunday": {
