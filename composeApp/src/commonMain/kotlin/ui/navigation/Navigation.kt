@@ -82,7 +82,10 @@ fun isPadMode(): Boolean {
             false
         }
         WindowWidthSizeClass.MEDIUM -> {
-            getOrientation() == Orientation.Horizontal
+            //Due to the request from our designer 2O48
+            //There have to allow Pad in portrait mode of iPad, etc.
+            //getOrientation() == Orientation.Horizontal
+            true
         }
         //Pad in landscape mode
         WindowWidthSizeClass.EXPANDED -> {
