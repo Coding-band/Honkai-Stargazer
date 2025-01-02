@@ -166,19 +166,16 @@ fun BottomView(modifier: Modifier = Modifier){
 fun BetaVersionBox(){
     Box(modifier = Modifier.fillMaxSize()){
         Box(modifier = Modifier
-            .wrapContentSize()
             .background(Color.Black)
-            .padding(start = 2.dp, end = 2.dp, top = 12.dp, bottom = 12.dp)
-            .rotate(-90f)
+            .padding(start = 12.dp, end = 12.dp, top = 2.dp, bottom = 2.dp)
             .align(Alignment.TopEnd)
+            .wrapContentSize()
         ){
             Text(
                 text = if(BuildKonfig.appProfile == "DEV") {"DEV"} else BuildKonfig.appVersionName,
                 style = FontSizeNormal12(),
                 color = TextColorNormalDim,
-                modifier = Modifier
-                    .align(Alignment.Center
-                )
+                modifier = Modifier.align(Alignment.Center).wrapContentSize()
             )
         }
     }

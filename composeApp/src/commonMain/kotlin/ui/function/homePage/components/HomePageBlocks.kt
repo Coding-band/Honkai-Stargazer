@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -47,7 +48,9 @@ import utils.app.BlackAlpha80
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
+import utils.app.GradientHomeButton
 import utils.app.TextColorNormal
+import utils.app.WhiteAlpha10
 import utils.app.backgroundScreenHazeState
 import utils.app.removeStrQuote
 import utils.app.showFunctionIsDevelopingToast
@@ -107,20 +110,22 @@ fun HomePageBlock1x1(
                 showFunctionIsDevelopingToast()
             }
         },
-        shape = RoundedCornerShape(8.dp),
+        shape = RoundedCornerShape(6.dp),
         modifier = Modifier
-            .background(BlackAlpha20, RoundedCornerShape(8.dp))
+            .background(GradientHomeButton, RoundedCornerShape(6.dp))
+            .background(WhiteAlpha10, RoundedCornerShape(6.dp))
             .defaultMinSize(
                 HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1,
                 HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT
             )
+            .aspectRatio(HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1 / HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT)
             .hazeChild(
                 backgroundScreenHazeState,
-                shape = RoundedCornerShape(8.dp),
+                shape = RoundedCornerShape(6.dp),
                 style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE)
             )
             .fillMaxSize(),
-        border = BorderStroke(2.dp, Color(0x66907C54))
+        border = BorderStroke(1.dp, Color(0x66907C54))
     ) {
         Column {
             Image(
@@ -170,20 +175,22 @@ fun HomePageBlock2x1(
                 showFunctionIsDevelopingToast()
             }
         },
-        shape = RoundedCornerShape(8.dp),
+        shape = RoundedCornerShape(6.dp),
         modifier = Modifier
-            .background(BlackAlpha20, RoundedCornerShape(8.dp))
+            .background(GradientHomeButton, RoundedCornerShape(6.dp))
+            .background(WhiteAlpha10, RoundedCornerShape(6.dp))
             .defaultMinSize(
                 HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1,
                 HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT
             )
+            .aspectRatio(HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_2x1 / HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT)
             .hazeChild(
                 backgroundScreenHazeState,
-                shape = RoundedCornerShape(8.dp),
+                shape = RoundedCornerShape(6.dp),
                 style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE)
             )
             .fillMaxSize(),
-        border = BorderStroke(2.dp, Color(0x66907C54))
+        border = BorderStroke(1.dp, Color(0x66907C54))
     ) {
         Row {
             //icon & name
