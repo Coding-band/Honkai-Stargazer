@@ -59,6 +59,12 @@ lateinit var navigatorInstance : Navigator
 //lateinit var pomPomPopupInstance: MutableState<PomPomPopup>
 lateinit var swipeProperties: SwipeProperties
 lateinit var navTransition : NavTransition
+
+/**
+ * Only usage : For GlobalBackground check whether should blur the background
+ *
+ * **Warm remind** : popBack will not be able to this.
+ */
 var screenInstance : Screen = Screen.BlankPage
 
 var globalWindowWidthSizeClass: WindowWidthSizeClass = WindowWidthSizeClass.COMPACT
@@ -122,7 +128,7 @@ fun RootContent() {
     }
 
     Scaffold(
-        snackbarHost = { SnackbarHost(snackbarHostState!!) },
+        snackbarHost = { SnackbarHost(snackbarHostState) },
     ) {
 
         AnimatedContent(
@@ -140,8 +146,8 @@ fun RootContent() {
             }
         }
 
-        if(isPadMode.value){
-            Row(modifier = Modifier.haze(hazeStateRoot)) {
+        Row(modifier = Modifier.haze(hazeStateRoot)) {
+            if(isPadMode.value){
                 Box(Modifier
                     .width(HOME_WIDTH)
                     .let { if (getScreenSizeInfo().wDP < HOME_WIDTH * 1.5f) it.weight(1f) else it }
@@ -152,12 +158,8 @@ fun RootContent() {
                         headerData = Screen.HomePage.headerData
                     )
                 }
-                Box(Modifier.weight(1f)) {
-                    NavHostInit(navigatorInstance, isPadMode)
-                }
             }
-        }else{
-            Box(modifier = Modifier.haze(hazeStateRoot)) {
+            Box(Modifier.weight(1f)) {
                 NavHostInit(navigatorInstance, isPadMode)
             }
         }
@@ -184,32 +186,30 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
     val defaultNavTransition = remember {
         NavTransition(
             createTransition = fadeIn(),
-            destroyTransition = fadeOut(),
-            exitTargetContentZIndex = 0f
+            destroyTransition = fadeOut()
         )
     }
+
     NavHost(
         navigator = navigator,
         swipeProperties = if(isPadMode.value) null else swipeProperties,
         navTransition = if (isPadMode.value) defaultNavTransition else navTransition,
-        initialRoute = if(isPadMode.value) Screen.BlankPage.route else Screen.HomePage.route
+        initialRoute = Screen.HomePage.route
     ) {
-        scene(route = Screen.BlankPage.route) {
-            screenInstance = Screen.BlankPage
-            withBGScreen(isPadMode){
-                BlankPage(
-                    navigator = navigator,
-                    headerData = defaultHeaderData
-                )
-            }
-        }
         scene(route = Screen.HomePage.route) {
             screenInstance = Screen.HomePage
             withBGScreen(isPadMode){
-                HomePage(
-                    navigator = navigator,
-                    headerData = Screen.HomePage.headerData
-                )
+                if(!isPadMode.value) {
+                    HomePage(
+                        navigator = navigator,
+                        headerData = Screen.HomePage.headerData
+                    )
+                }else{
+                    BlankPage(
+                        navigator = navigator,
+                        headerData = Screen.BlankPage.headerData
+                    )
+                }
             }
         }
 
@@ -244,7 +244,6 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
         scene(
             //?fileName={fileName}&combatType={combatType}&path={path}&charId={charId}
             route = "${Screen.CharacterInfoPage.route}/{charName}",
-            navTransition = navTransition
         ) { backStackEntry ->
             withBGScreen(isPadMode){
                 CharacterInfoPage(
