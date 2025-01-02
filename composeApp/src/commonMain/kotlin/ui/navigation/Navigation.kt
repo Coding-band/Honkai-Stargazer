@@ -101,7 +101,7 @@ fun isPadMode(): Boolean {
 fun RootContent() {
     val snackbarHostState = remember { SnackbarHostState() }
     val hazeStateRoot = remember { HazeState() }
-    val isPadMode = mutableStateOf(isPadMode())
+    val isPadMode = remember { mutableStateOf(false) }
     val isRotate = remember { mutableStateOf(false) }
     val navigator = rememberNavigator()
     navigatorInstance = navigator
