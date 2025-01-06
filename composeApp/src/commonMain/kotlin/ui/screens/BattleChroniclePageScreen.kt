@@ -67,7 +67,8 @@ import types.UserAccount
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormal20
-import utils.UtilTools
+import utils.app.pxToDp
+import utils.app.removeStrQuote
 
 @Composable
 fun BattleChroniclePageScreen(
@@ -98,8 +99,8 @@ fun BattleChroniclePageScreen(
 
     val choiceChronicleIndex = remember { mutableStateOf(0) }
     val choiceStrList = listOf(
-        UtilTools().removeStringResDoubleQuotes(Res.string.MemoryOfChaos) to AbyssInfoType.MemoryOfChaos,
-        UtilTools().removeStringResDoubleQuotes(Res.string.PureFiction) to AbyssInfoType.PureFiction,
+        removeStrQuote(Res.string.MemoryOfChaos) to AbyssInfoType.MemoryOfChaos,
+        removeStrQuote(Res.string.PureFiction) to AbyssInfoType.PureFiction,
     )
     val choiceChronicle = remember { mutableStateOf(userAbyssRecord.userCurrMOCList) }
     choiceChronicle.value = when (choiceStrList[choiceChronicleIndex.value].second) {
@@ -175,7 +176,7 @@ fun BattleChroniclePageScreen(
                                 onDismissRequest = { isDropDownOpen.value = false },
                                 modifier = Modifier
                                     .background(Color(0xFF3E3E47))
-                                    .width(UtilTools().pxToDp(optionTextViewSize.value.width, density)),
+                                    .width(pxToDp(optionTextViewSize.value.width, density)),
                             ) {
                                 choiceStrList.forEachIndexed { index, option ->
                                     DropdownMenuItem(
@@ -249,7 +250,7 @@ fun BattleChroniclePageScreen(
                     )
                     Spacer(Modifier.height(16.dp))
                     Text(
-                        text = UtilTools().removeStringResDoubleQuotes(Res.string.AppStatusNoDataFound),
+                        text = removeStrQuote(Res.string.AppStatusNoDataFound),
                         style = FontSizeNormal16(),
                         color = Color.White,
                         modifier = Modifier.wrapContentSize()
@@ -270,7 +271,7 @@ fun BattleChroniclePageScreen(
             ) {
             Column(Modifier.fillMaxSize()) {
                 Text(
-                    UtilTools().removeStringResDoubleQuotes(Res.string.MOCMyBattleReport),
+                    removeStrQuote(Res.string.MOCMyBattleReport),
                     modifier = Modifier.align(Alignment.CenterHorizontally).padding(2.dp),
                     style = FontSizeNormal20(),
                     color = Color.White
@@ -278,7 +279,7 @@ fun BattleChroniclePageScreen(
 
                 Text(
                     text = "${userAccount.uid}·${
-                        UtilTools().removeStringResDoubleQuotes(
+                        removeStrQuote(
                             userAccount.server.localeName
                         )
                     }",

@@ -18,18 +18,22 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
 import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import types.ImageFolder
 import utils.app.Black
 import utils.app.BlackAlpha20
 import utils.app.BlackAlpha80
 import utils.app.Stargazer3Theme
 import utils.app.Transparent
-import utils.UtilTools
 import ui.navigation.Screen
+import utils.app.getAssetsURLByFileName
+import utils.app.newImageRequest
 
 
 val gradient = Brush.verticalGradient(
@@ -53,8 +57,8 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boo
     backgroundScreenHazeState = remember { HazeState() }
     var isBlur = true;
     var isGradient = true;
-    val backgroundImageBitmap = UtilTools().getAssetsWebpByFileName(
-        UtilTools.ImageFolderType.BGS,
+    val backgroundImage = getAssetsURLByFileName(
+        ImageFolder.BGS,
         Settings().getString("backgroundImage", "221000")
     );
     //var backgroundBitmap = UtilTools().getAssetsWebpByContext(context = LocalContext.current, "images/${UtilTools.ImageFolderType.BGS.folderPath}1006.webp")
@@ -69,13 +73,16 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boo
     Box(
         Modifier.haze(backgroundScreenHazeState)
     ){
-        Image(
-            bitmap = when(screen){
-                Screen.BackgroundSettingScreen -> UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.BGS, "bg_light")
-                Screen.MemoryOfChaosMissionPageScreen -> UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.BGS, "memory_of_chaos_bg")
-                Screen.PureFictionMissionPageScreen -> UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.BGS, "pure_fiction_bg")
-                else -> backgroundImageBitmap
-            },
+        AsyncImage(
+            model = newImageRequest(
+                context = LocalPlatformContext.current,
+                when(screen){
+                    Screen.BackgroundSettingScreen -> getAssetsURLByFileName(ImageFolder.BGS, "bg_light")
+                    Screen.MemoryOfChaosMissionPageScreen -> getAssetsURLByFileName(ImageFolder.BGS, "memory_of_chaos_bg")
+                    Screen.PureFictionMissionPageScreen -> getAssetsURLByFileName(ImageFolder.BGS, "pure_fiction_bg")
+                    else -> backgroundImage
+                }
+            ),
             contentDescription = "",
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize().blur(if (isBlur) 20.dp else 0.dp)

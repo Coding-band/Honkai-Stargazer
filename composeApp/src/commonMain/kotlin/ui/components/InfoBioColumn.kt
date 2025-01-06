@@ -40,8 +40,9 @@ import utils.app.Constants
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
-import utils.UtilTools
 import utils.annotation.DoItLater
+import utils.app.pxToDp
+import utils.app.removeStrQuote
 
 @Composable
 fun InfoBioColumn(
@@ -72,7 +73,7 @@ fun InfoBioColumn(
 
         Column(modifier = Modifier.padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
             .onSizeChanged { item ->
-                columnHeightDp = UtilTools().pxToDp(item.height, density)
+                columnHeightDp = pxToDp(item.height, density)
             }) {
             Row() {
                 Text(
@@ -97,7 +98,7 @@ fun InfoBioColumn(
                             modifier = Modifier.padding(
                                 start = 6.dp, end = 6.dp, top = 4.dp, bottom = 4.dp
                             ),
-                            text = UtilTools().removeStringResDoubleQuotes(
+                            text = removeStrQuote(
                                 if (isUserOwned) {
                                     Res.string.UserOwned
                                 } else Res.string.UserOwned
@@ -142,7 +143,7 @@ fun InfoBioColumn(
                         contentDescription = "CombatType Icon"
                     )
                     Text(
-                        text = UtilTools().removeStringResDoubleQuotes(path.resName),
+                        text = removeStrQuote(path.resName),
                         style = FontSizeNormal16(),
                         color = Color.White,
                         textAlign = TextAlign.End,
@@ -161,7 +162,7 @@ fun InfoBioColumn(
                         contentDescription = "CombatType Icon"
                     )
                     Text(
-                        text = UtilTools().removeStringResDoubleQuotes(combatType.resName),
+                        text = removeStrQuote(combatType.resName),
                         style = FontSizeNormal16(),
                         color = Color.White,
                         textAlign = TextAlign.End,

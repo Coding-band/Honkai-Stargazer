@@ -2,8 +2,8 @@ package types
 
 import androidx.compose.ui.graphics.ImageBitmap
 import utils.app.Language
-import utils.UtilTools
 import utils.annotation.VersionUpdateCheck
+import utils.app.getAssetsURLByFileName
 
 open class Wallpaper(
     val id: String,
@@ -68,8 +68,8 @@ open class Wallpaper(
             Wallpaper(id = "1315", fileName = "1315"),
         )
 
-        fun getWallpaperByFileName(bgName : String): ImageBitmap {
-            return UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.BGS, bgName)
+        fun getWallpaperByFileName(bgName : String): String {
+            return getAssetsURLByFileName(ImageFolder.BGS, bgName)
         }
 
 

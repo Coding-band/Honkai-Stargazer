@@ -28,7 +28,7 @@ import files.ic_sort_desc
 import files.ui_icon_filter
 import files.ui_icon_search
 import types.Character
-import utils.UtilTools
+import utils.app.removeStrQuote
 
 
 enum class ListFilterType {
@@ -102,7 +102,7 @@ fun <T> ListFilterTool(
             Spacer(modifier = Modifier.width(12.dp))
             UIButton(
                 modifierTmp = Modifier.weight(1f).height(46.dp),
-                text = UtilTools().removeStringResDoubleQuotes(sortChoiceList[sortChoiceIndex.value]),
+                text = removeStrQuote(sortChoiceList[sortChoiceIndex.value]),
                 icon = if(isAsc.value){ Res.drawable.ic_sort_asc }else{ Res.drawable.ic_sort_desc },
                 buttonSize = UIButtonSize.NormalTextLeftWithLine,
                 onClick = {

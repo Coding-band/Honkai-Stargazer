@@ -33,7 +33,7 @@ import moe.tlaster.precompose.navigation.query
 import utils.app.Constants
 import types.EventItem
 import types.EventItem.Companion.EventListInstance
-import utils.UtilTools
+import utils.app.newImageRequest
 
 //This Header was copy from "rn-branch\src\components\EventScreen\Event\EventWebView\EventWebView.tsx
 val headerHTML = "<meta name=\"viewport\" content=\"initial-scale=1.0, maximum-scale=1.0\" />\n" +
@@ -148,23 +148,10 @@ fun EventContentPageScreen(
 @Composable
 fun eventImageDisplay(eventItem: EventItem){
     val context = LocalPlatformContext.current
-    val imageLoader = remember {
-        UtilTools().newImageLoader(context = context)
-    }
-    val imageRequest =  remember {
-        ImageRequest.Builder(context)
-            .data(eventItem.banner)
-            .networkCachePolicy(CachePolicy.ENABLED)
-            .crossfade(true)
-            .diskCachePolicy(CachePolicy.ENABLED)
-            .build()
-
-    }
 
     Row{
         AsyncImage(
-            imageLoader = imageLoader,
-            model = imageRequest,
+            model = newImageRequest(context, eventItem.banner),
             modifier = Modifier.fillMaxSize(),
             contentDescription = null
         )

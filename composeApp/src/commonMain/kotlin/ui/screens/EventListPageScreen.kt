@@ -59,9 +59,10 @@ import moe.tlaster.precompose.navigation.Navigator
 import utils.app.Constants
 import types.EventItem
 import types.EventItem.Companion.EventListInstance
-import utils.UtilTools
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
+import utils.app.newImageRequest
+import utils.app.removeStrQuote
 
 @Composable
 fun EventListPageScreen(
@@ -107,18 +108,6 @@ fun EventItemCard(eventItem: EventItem, isDateOutside: MutableState<Boolean>, na
     val duration = currentTime.periodUntil(endTime, TimeZone.of("UTC+8"))
 
     val context = LocalPlatformContext.current
-    val imageLoader = remember {
-        UtilTools().newImageLoader(context = context)
-    }
-    val imageRequest =  remember {
-        ImageRequest.Builder(context)
-            .data(eventItem.banner)
-            .networkCachePolicy(CachePolicy.ENABLED)
-            .crossfade(true)
-            .diskCachePolicy(CachePolicy.ENABLED)
-            .build()
-
-    }
 
     val interactionSource = remember { MutableInteractionSource() }
     LaunchedEffect(interactionSource) {
@@ -152,11 +141,11 @@ fun EventItemCard(eventItem: EventItem, isDateOutside: MutableState<Boolean>, na
                 modifier = Modifier.wrapContentSize().background(Color((0xCCF3F9FF)))
                     .padding(4.dp).height(46.dp).width(40.dp),
                 text = (
-                        if (duration.days > 0) UtilTools().removeStringResDoubleQuotes(Res.string.StatusDays)
+                        if (duration.days > 0) removeStrQuote(Res.string.StatusDays)
                             .replace("$" + "{1}", "${duration.days}\n")
-                        else if (duration.hours > 0) UtilTools().removeStringResDoubleQuotes(Res.string.StatusHours)
+                        else if (duration.hours > 0) removeStrQuote(Res.string.StatusHours)
                             .replace("$" + "{1}", "${duration.hours}\n")
-                        else UtilTools().removeStringResDoubleQuotes(Res.string.StatusMinutes)
+                        else removeStrQuote(Res.string.StatusMinutes)
                             .replace("$" + "{1}", "${duration.minutes}\n")
                         ),
                 color = Color.Black,
@@ -169,10 +158,9 @@ fun EventItemCard(eventItem: EventItem, isDateOutside: MutableState<Boolean>, na
             .clickable(interactionSource = interactionSource, indication = ripple(), onClick = {})
         ) {
             AsyncImage(
-                model = imageRequest,
+                model = newImageRequest(context, eventItem.banner),
                 contentDescription = eventItem.title,
                 modifier = Modifier.fillMaxWidth().wrapContentHeight(),
-                imageLoader = imageLoader
             )
 
             if (!isDateOutside.value) {
@@ -180,11 +168,11 @@ fun EventItemCard(eventItem: EventItem, isDateOutside: MutableState<Boolean>, na
                     modifier = Modifier.wrapContentSize().background(Color((0xCCF3F9FF)))
                         .padding(top = 6.dp, bottom = 6.dp, start = 4.dp, end = 4.dp),
                     text = (
-                            if (duration.days > 0) UtilTools().removeStringResDoubleQuotes(Res.string.StatusDays)
+                            if (duration.days > 0) removeStrQuote(Res.string.StatusDays)
                                 .replace("$" + "{1}", "${duration.days}")
-                            else if (duration.hours > 0) UtilTools().removeStringResDoubleQuotes(Res.string.StatusHours)
+                            else if (duration.hours > 0) removeStrQuote(Res.string.StatusHours)
                                 .replace("$" + "{1}", "${duration.hours}")
-                            else UtilTools().removeStringResDoubleQuotes(Res.string.StatusMinutes)
+                            else removeStrQuote(Res.string.StatusMinutes)
                                 .replace("$" + "{1}", "${duration.minutes}")
                             ),
                     color = Color.Black

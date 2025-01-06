@@ -26,6 +26,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.min
 import androidx.compose.ui.zIndex
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
 import files.CharSoul
@@ -53,8 +55,13 @@ import utils.app.Constants.Companion.EIDOLON_FRAME_BASE_WIDTH
 import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
 import utils.app.Constants.Companion.getEidolonScale
 import types.Eidolon
+import types.ImageFolder
 import utils.app.FontSizeNormal14
-import utils.UtilTools
+import utils.app.getAssetsURLByFileName
+import utils.app.getImageNameByRegistName
+import utils.app.htmlDescApplier
+import utils.app.newImageRequest
+import utils.app.removeStrQuote
 
 private lateinit var dialogTitleLocal : MutableState<String>
 private lateinit var dialogDisplayLocal: MutableState<Boolean>
@@ -101,8 +108,8 @@ fun CharacterEidolon(
                     eidolonJsonItem.jsonObject["name"]!!.jsonPrimitive.content,
                     eidolonJsonItem.jsonObject["descHash"]!!.jsonPrimitive.content,
                     jsonArrayToFloatArrayList(eidolonJsonItem.jsonObject["params"]!!.jsonArray),
-                    "${UtilTools().getImageNameByRegistName(charName, isCharNoElement = true)}_eidolon${index+1}",
-                    "${UtilTools().getImageNameByRegistName(charName, isCharNoGen = true)}_soul${index+1}",
+                    "${getImageNameByRegistName(charName, isCharNoElement = true)}_eidolon${index+1}",
+                    "${getImageNameByRegistName(charName, isCharNoGen = true)}_soul${index+1}",
                 )
             )
         }
@@ -151,8 +158,11 @@ fun CharacterEidolonBox(eidolonList: ArrayList<Eidolon>, selectIndex : MutableSt
 
             ){
 
-                Image(
-                    bitmap = UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.CHAR_EIDOLON, eidolon.eidolonImgName),
+                AsyncImage(
+                    model = newImageRequest(
+                        context = LocalPlatformContext.current,
+                        getAssetsURLByFileName(ImageFolder.CHAR_EIDOLON, eidolon.eidolonImgName)
+                    ),
                     modifier = Modifier.size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale),
                     contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Image"
                 )
@@ -201,7 +211,7 @@ Please use K1 instead of K2 version of RichText
 @Composable
 fun EidolonDialogComponent(eidolon: Eidolon){
     val richTextState = rememberRichTextState()
-    richTextState.setHtml(UtilTools().htmlDescApplier(eidolon.desc, eidolon.params))
+    richTextState.setHtml(htmlDescApplier(eidolon.desc, eidolon.params))
 
     Row(modifier = Modifier.fillMaxWidth()) {
         Box(
@@ -213,8 +223,11 @@ fun EidolonDialogComponent(eidolon: Eidolon){
                 modifier = Modifier.size(64.dp).align(Alignment.Center)
             )
 
-            Image(
-                bitmap = UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.CHAR_SOUL, eidolon.soulIconName),
+            AsyncImage(
+                model = newImageRequest(
+                    context = LocalPlatformContext.current,
+                    getAssetsURLByFileName(ImageFolder.CHAR_SOUL, eidolon.soulIconName)
+                ),
                 contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Soul Icon",
                 modifier = Modifier.size(50.5.dp).align(Alignment.Center)
             )
@@ -223,7 +236,7 @@ fun EidolonDialogComponent(eidolon: Eidolon){
         Spacer(Modifier.width(6.dp))
 
         Column {
-            Text(UtilTools().removeStringResDoubleQuotes(Res.string.CharSoul).replace("$"+"{1}",""), color = Color(0xFF333333))
+            Text(removeStrQuote(Res.string.CharSoul).replace("$"+"{1}",""), color = Color(0xFF333333))
             RichText(richTextState, color = Color(0xFF666666),style = FontSizeNormal14(),)
         }
     }

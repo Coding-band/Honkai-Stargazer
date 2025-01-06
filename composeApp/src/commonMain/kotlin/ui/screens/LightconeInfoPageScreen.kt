@@ -34,6 +34,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
 import ui.components.BackIcon
 import ui.components.HeaderData
 import ui.components.InfoAdviceCharacter
@@ -73,10 +75,11 @@ import moe.tlaster.precompose.navigation.Navigator
 import moe.tlaster.precompose.navigation.path
 import moe.tlaster.precompose.navigation.query
 import org.jetbrains.compose.resources.painterResource
+import types.ImageFolder
 import types.Lightcone
-import utils.JsonElementSaver
+import utils.app.JsonElementSaver
 import utils.app.Language
-import utils.UtilTools
+import utils.app.newImageRequest
 
 private lateinit var localCoroutineScope: CoroutineScope;
 private lateinit var localSnackbarHostState: SnackbarHostState;
@@ -212,9 +215,12 @@ fun LightconeInfoFullImageContent(
             contentDescription = "Lightcone Back Image",
             contentScale = ContentScale.FillBounds,
         )
-        Image(
-            bitmap = Lightcone.getLightconeImageFromJSON(
-                UtilTools.ImageFolderType.LC_ARTWORK, fileName
+        AsyncImage(
+            model = newImageRequest(
+                context = LocalPlatformContext.current,
+                Lightcone.getLightconeImageFromJSON(
+                    ImageFolder.LC_ARTWORK, fileName
+                )
             ),
             modifier = modifier,
             contentDescription = "Lightcone Full Image",

@@ -92,6 +92,7 @@ import kotlinx.coroutines.launch
 import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.painterResource
 import types.Character
+import types.ImageFolder
 import types.UserAccount
 import types.UserAccount.Companion.INSTANCE
 import utils.app.BlackAlpha30
@@ -106,12 +107,15 @@ import utils.app.ProgressLevelPrimary
 import utils.app.TextColorLevel
 import utils.app.TextColorNormal
 import utils.app.TextColorNormalDim
-import utils.UtilTools
 import utils.annotation.DoItLater
 import utils.app.checkHasErrorLogFromLastCrash
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
+import utils.app.getIconByUserAccountIconValue
+import utils.app.newImageRequest
+import utils.app.pxToDp
+import utils.app.removeStrQuote
 import utils.starbase.StarbaseAPI
 import kotlin.math.min
 
@@ -188,9 +192,12 @@ fun UserHelpTeamIcon(
     uid: String
 ) {
     AsyncImage(
-        model = UtilTools().newImageRequest(LocalPlatformContext.current, Character.getCharacterImageByteArrayFromFileName(UtilTools.ImageFolderType.CHAR_ICON, character.registName!!)),
+        model = newImageRequest(
+            LocalPlatformContext.current,
+            Character.getCharacterImageFromFileName(
+                ImageFolder.CHAR_ICON, character.registName!!
+            )),
         contentDescription = "Character Helper Icon",
-        imageLoader = UtilTools().newImageLoader(LocalPlatformContext.current),
         modifier = Modifier
             .size(30.dp)
             .background(Color(0xFFD9D9D9), CircleShape)
@@ -233,19 +240,6 @@ fun HomePageHeader(
             Box {
                 Row(Modifier.height(72.dp)) {
                     val context = LocalPlatformContext.current
-                    val imageRequest =  remember {
-                        ImageRequest.Builder(context)
-                            .data(
-                                UtilTools().getIconByUserAccountIconValue(userAccount.icon)
-                            )
-                            .networkCachePolicy(CachePolicy.ENABLED)
-                            .crossfade(true)
-                            .diskCachePolicy(CachePolicy.ENABLED)
-                            .build()
-                    }
-                    val imageLoader = remember {
-                        UtilTools().newImageLoader(context = context)
-                    }
 
                     //User Avatar (With Reducing Padding's Scale)
                     Box(Modifier.requiredSize(72.dp)
@@ -264,8 +258,7 @@ fun HomePageHeader(
                             // User Avatar
                             AsyncImage(
                                 modifier = Modifier.size(72.dp * scale),
-                                model = imageRequest,
-                                imageLoader = imageLoader,
+                                model = newImageRequest(context, getIconByUserAccountIconValue(userAccount.icon)),
                                 contentDescription = "",
                             )
                         }
@@ -341,7 +334,7 @@ fun HomePageHeader(
                         Spacer(Modifier.weight(1f))
 
                         Text(
-                            text = "${UtilTools().removeStringResDoubleQuotes(Res.string.PlayerLevel)} ${userAccount.level}",
+                            text = "${removeStrQuote(Res.string.PlayerLevel)} ${userAccount.level}",
                             color = TextColorLevel,
                             style = FontSizeNormal14(),
                             //fontWeight = FontWeight.Bold
@@ -463,7 +456,7 @@ fun ThreeDotsDialog(
                 modifier = Modifier
                     .width(170.dp)
                     .wrapContentHeight()
-                    .offset(y = UtilTools().pxToDp(threeDotDialogPos.value.y.toInt(), density = density) + 32.dp)
+                    .offset(y = pxToDp(threeDotDialogPos.value.y.toInt(), density = density) + 32.dp)
                     .clickable(indication = null, interactionSource = remember { MutableInteractionSource() }, onClick = {})
             ) {
                 Box(

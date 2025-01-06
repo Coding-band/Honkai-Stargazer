@@ -38,8 +38,9 @@ import types.UserAbyssRecordData
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
-import utils.UtilTools
-import utils.replaceStrRes
+import utils.app.getMocPhaseStrByIndex
+import utils.app.removeStrQuote
+import utils.app.replaceStrRes
 
 @Composable
 fun BattleChronicleCard(
@@ -69,7 +70,7 @@ fun BattleChronicleCard(
                 Column {
                     //Phase
                     Text(
-                        text = "${title}·${UtilTools().getMocPhaseStrByIndex((data[0].floor) - 1)}",
+                        text = "${title}·${getMocPhaseStrByIndex((data[0].floor) - 1)}",
                         color = Color.White,
                         style = FontSizeNormal16()
                     )
@@ -77,9 +78,9 @@ fun BattleChronicleCard(
                     //Remaining Rounds
                     Text(
                         text = if(data[0].isFastPass) {
-                            UtilTools().removeStringResDoubleQuotes(Res.string.MOCSkipped)
+                            removeStrQuote(Res.string.MOCSkipped)
                         } else {
-                            UtilTools().removeStringResDoubleQuotes(Res.string.PlayersRounds).replaceStrRes(
+                            removeStrQuote(Res.string.PlayersRounds).replaceStrRes(
                                 data[0].roundUsed.toString(),
                             )
                         },

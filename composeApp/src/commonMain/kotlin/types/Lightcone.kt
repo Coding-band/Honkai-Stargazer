@@ -9,7 +9,6 @@ package types
 import androidx.annotation.IntRange
 import androidx.compose.runtime.saveable.Saver
 import androidx.compose.runtime.saveable.listSaver
-import androidx.compose.ui.graphics.ImageBitmap
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.async
@@ -23,8 +22,11 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import utils.annotation.DoItLater
 import utils.app.Language
-import utils.UtilTools
+import utils.app.getAssetsJsonByFilePath
+import utils.app.getAssetsURLByFileName
+import utils.app.getImageNameByRegistName
 import utils.calculator.AttrData
 
 
@@ -42,23 +44,24 @@ open class Lightcone(
     @IntRange(1,5) var superimposition : Int = -1,
     var level : Int = -1,
 ){
+    @DoItLater("Rearrange those function later")
     companion object {
         val lcListJson = getLightconeListFromJSON()
         val lcExtListJson = getLightconeExtListFromJSON()
 
         private fun getLightconeListFromJSON() : JsonElement {
-            return UtilTools().getAssetsJsonByFilePath("lightcone_data/lightcone_list.json")
+            return getAssetsJsonByFilePath("lightcone_data/lightcone_list.json")
         }
         private fun getLightconeExtListFromJSON() : JsonElement {
-            return UtilTools().getAssetsJsonByFilePath("lightcone_data/lightcone_ext_list.json")
+            return getAssetsJsonByFilePath("lightcone_data/lightcone_ext_list.json")
         }
 
         fun getLightconeDataFromJSON(lightconeFileName : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance) : JsonElement {
-            return UtilTools().getAssetsJsonByFilePath("lightcone_data/${textLanguage.folderName}/${lightconeFileName}.json")
+            return getAssetsJsonByFilePath("lightcone_data/${textLanguage.folderName}/${lightconeFileName}.json")
         }
 
-        fun getLightconeImageFromJSON(imageFolderType: UtilTools.ImageFolderType, lightconeName : String) : ImageBitmap {
-            return UtilTools().getAssetsWebpByFileName(imageFolderType, UtilTools().getImageNameByRegistName(lightconeName))
+        fun getLightconeImageFromJSON(imageFolderType: ImageFolder, lightconeName : String) : String {
+            return getAssetsURLByFileName(imageFolderType, getImageNameByRegistName(lightconeName))
         }
 
         @OptIn(ExperimentalCoroutinesApi::class)

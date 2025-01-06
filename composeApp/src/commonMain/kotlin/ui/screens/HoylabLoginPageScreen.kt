@@ -54,12 +54,12 @@ import ui.components.pomPomPopupInstance
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.LongStringXML
-import utils.UtilTools
 import utils.annotation.DoItLater
 import utils.hoyolab.HoyolabConst
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
+import utils.app.removeStrQuote
 import utils.device.DeviceInfo
 import utils.starbase.StarbaseAPI
 
@@ -142,7 +142,7 @@ fun HoyolabServerRemarksPopup(modifier: Modifier = Modifier, showPopup : Mutable
     if(showPopup.value) {
         Popup(alignment = Alignment.Center) {
             AppDialog(
-                titleString = UtilTools().removeStringResDoubleQuotes(Res.string.RemarksInLogin),
+                titleString = removeStrQuote(Res.string.RemarksInLogin),
                 hazeState = hazeState,
                 components = {
                     val richTextState = rememberRichTextState()
@@ -160,7 +160,7 @@ fun HoyolabServerRemarksPopup(modifier: Modifier = Modifier, showPopup : Mutable
                         //Agree
                         UIButton(
                             isAvailable = timeCountDown.value <= 0,
-                            text = if (timeCountDown.value > 0) "${timeCountDown.value}s" else UtilTools().removeStringResDoubleQuotes(Res.string.OK),
+                            text = if (timeCountDown.value > 0) "${timeCountDown.value}s" else removeStrQuote(Res.string.OK),
                             onClick = {
                                 showPopup.value = false
                                 showSelectPopUp.value = true
@@ -170,7 +170,7 @@ fun HoyolabServerRemarksPopup(modifier: Modifier = Modifier, showPopup : Mutable
 
                         //Disagree
                         UIButton(
-                            text = UtilTools().removeStringResDoubleQuotes(Res.string.NotOK),
+                            text = removeStrQuote(Res.string.NotOK),
                             onClick = {
                                 showPopup.value = false
                             }
@@ -190,13 +190,13 @@ fun HoyolabServerSelectPopup(modifier: Modifier = Modifier, showPopup : MutableS
     if (showPopup.value){
         Popup(alignment = Alignment.Center) {
             AppDialog(
-                titleString = UtilTools().removeStringResDoubleQuotes(Res.string.SelectServerTitle),
+                titleString = removeStrQuote(Res.string.SelectServerTitle),
                 hazeState = hazeState,
                 components = {
                     Column {
                         //Please Select server that you want to login
                         Text(
-                            text = UtilTools().removeStringResDoubleQuotes(Res.string.SelectAccountInServer),
+                            text = removeStrQuote(Res.string.SelectAccountInServer),
                             color = Color.Black,
                             style = FontSizeNormal14(),
                         )
@@ -214,7 +214,7 @@ fun HoyolabServerSelectPopup(modifier: Modifier = Modifier, showPopup : MutableS
 
                         // Manually Login by Cookies 手動登錄（自行提供Cookies）
                         UIButton(
-                            text = UtilTools().removeStringResDoubleQuotes(Res.string.UseCookiesToLogin),
+                            text = removeStrQuote(Res.string.UseCookiesToLogin),
                             buttonSize = UIButtonSize.NormalLargeText,
                             onClick = {
                                 showPopup.value = false
@@ -226,7 +226,7 @@ fun HoyolabServerSelectPopup(modifier: Modifier = Modifier, showPopup : MutableS
                         // Different Server Choices
                         for (server in HoyolabConst.SERVER.entries.filter { it != HoyolabConst.SERVER.UNKNOWN }) {
                             UIButton(
-                                text = UtilTools().removeStringResDoubleQuotes(server.localeName),
+                                text = removeStrQuote(server.localeName),
                                 onClick = {
                                     navigatorInstance.navigateLimited("${Screen.HoyolabLoginPageScreen.route}?serverId=${server.serverId}")
                                     showPopup.value = false

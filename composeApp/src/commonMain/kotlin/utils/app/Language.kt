@@ -28,7 +28,6 @@ import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import utils.UtilTools
 
 
 //App語言 Language for App (R.string)
@@ -186,7 +185,7 @@ class Language() {
             Popup(alignment = Alignment.Center) {
                 val scrollState = rememberScrollState()
                 AppDialog(
-                    titleString = UtilTools().removeStringResDoubleQuotes(Res.string.LanguageSetup),
+                    titleString = removeStrQuote(Res.string.LanguageSetup),
                     hazeState = hazeState,
                     components = {
                         Column(Modifier.fillMaxHeight(2/3f).verticalScroll(state = scrollState)) {

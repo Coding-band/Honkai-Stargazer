@@ -91,10 +91,11 @@ import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
 import utils.app.Language
-import utils.UtilTools
 import utils.annotation.DoItLater
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
+import utils.app.pxToDp
+import utils.app.removeStrQuote
 import kotlin.math.max
 
 @Composable
@@ -119,19 +120,19 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
 
                 //帳號設定 Account Setup
                 item {
-                    SettingCategory(title = UtilTools().removeStringResDoubleQuotes(Res.string.AccountSetup).replace("$"+"{1}", "900033852")) {
+                    SettingCategory(title = removeStrQuote(Res.string.AccountSetup).replace("$"+"{1}", "900033852")) {
 
                         //使用邀請碼 Use Invite Code
                         SettingOptionNoneBar(
                             titleRes = Res.string.UseInviteCode,
-                            optionStatic = UtilTools().removeStringResDoubleQuotes(Res.string.HaveNotUsed)
+                            optionStatic = removeStrQuote(Res.string.HaveNotUsed)
                         )
 
                         //個人頁面展示 User Info Page Display All Character?
                         SettingOptionDropDownBar(
                             titleRes = Res.string.SettingPersonalPageShow,
                             //optionSavedChoice = @DoItLater("Add the function of show personal page"),
-                            optionList = arrayListOf(UtilTools().removeStringResDoubleQuotes(Res.string.SettingPersonalPageDisable), UtilTools().removeStringResDoubleQuotes(Res.string.SettingPersonalPageShow)),
+                            optionList = arrayListOf(removeStrQuote(Res.string.SettingPersonalPageDisable), removeStrQuote(Res.string.SettingPersonalPageShow)),
                             optionAction = { index: Int -> DoItLater("Add function of show personal page") }
                         )
                     }
@@ -140,7 +141,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
                 //語言設定 Language Setting
                 //Known Issue : Cannot Implement Locale Change, please refer to https://github.com/JetBrains/compose-multiplatform/issues/4347
                 item {
-                    SettingCategory(title = UtilTools().removeStringResDoubleQuotes(Res.string.LanguageSetup)) {
+                    SettingCategory(title = removeStrQuote(Res.string.LanguageSetup)) {
                         //文本語言 Text Language
                         SettingOptionDropDownBar(
                             titleRes = Res.string.DocumentLanguage,
@@ -161,7 +162,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
 
                 //偏好 Preferences
                 item {
-                    SettingCategory(title = UtilTools().removeStringResDoubleQuotes(Res.string.Customize)) {
+                    SettingCategory(title = removeStrQuote(Res.string.Customize)) {
                         //更換桌布 Change Wallpaper
                         SettingOptionNavigateBar(
                             titleRes = Res.string.ChangeWallPaper,
@@ -180,7 +181,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
 
                 //通知 Notification
                 item {
-                    SettingCategory(title = UtilTools().removeStringResDoubleQuotes(Res.string.Notifi), isAvailable = false) {
+                    SettingCategory(title = removeStrQuote(Res.string.Notifi), isAvailable = false) {
                         //所有通知 All Notification
                         SettingOptionDropDownTFBar(
                             titleRes = Res.string.NotifiAll,
@@ -220,7 +221,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
 
                 //支持我們 Support Us
                 item {
-                    SettingCategory(title = UtilTools().removeStringResDoubleQuotes(Res.string.SupportUs)) {
+                    SettingCategory(title = removeStrQuote(Res.string.SupportUs)) {
                         //捐贈 Donation
                         SettingOptionNavigateBar(
                             titleRes = Res.string.DonateUs,
@@ -243,7 +244,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
 
                 //關於 About
                 item {
-                    SettingCategory(title = UtilTools().removeStringResDoubleQuotes(Res.string.About)) {
+                    SettingCategory(title = removeStrQuote(Res.string.About)) {
                         //捐贈 Donation
                         SettingOptionNavigateBar(
                             titleRes = Res.string.AboutTheApp,
@@ -298,7 +299,7 @@ fun SettingOptionNoneBar(
             Row(modifier = Modifier.weight(19/35f)){
                 Text(
                     color = Color.Black,
-                    text = title ?: UtilTools().removeStringResDoubleQuotes(titleRes),
+                    text = title ?: removeStrQuote(titleRes),
                     style = FontSizeNormal14(),
                     modifier = Modifier.padding(12.dp).align(Alignment.CenterVertically)
                 )
@@ -349,7 +350,7 @@ fun SettingOptionDropDownBar(
             Row(modifier = Modifier.weight(19/35f)){
                 Text(
                     color = Color.Black,
-                    text = title ?: UtilTools().removeStringResDoubleQuotes(titleRes),
+                    text = title ?: removeStrQuote(titleRes),
                     style = FontSizeNormal14(),
                     modifier = Modifier.padding(12.dp).align(Alignment.CenterVertically)
                 )
@@ -390,7 +391,7 @@ fun SettingOptionDropDownBar(
                     onDismissRequest = { expanded.value = false },
                     modifier = Modifier
                         .background(Color(0xFFDDDDDD))
-                        .width(UtilTools().pxToDp(optionTextViewSize.value.width, density)),
+                        .width(pxToDp(optionTextViewSize.value.width, density)),
                 ) {
                     optionList.forEachIndexed { index, option ->
                         DropdownMenuItem(
@@ -434,7 +435,7 @@ fun SettingOptionDropDownTFBar(
     val expanded = remember { mutableStateOf(false) }
     val optionTextViewSize = remember { mutableStateOf(IntSize.Zero) }
     val density = LocalDensity.current.density
-    val defaultDropdownChoices = arrayListOf(UtilTools().removeStringResDoubleQuotes(Res.string.SwitchOff), UtilTools().removeStringResDoubleQuotes(Res.string.SwitchOn))
+    val defaultDropdownChoices = arrayListOf(removeStrQuote(Res.string.SwitchOff), removeStrQuote(Res.string.SwitchOn))
 
 
     Column {
@@ -443,7 +444,7 @@ fun SettingOptionDropDownTFBar(
             Row(modifier = Modifier.weight(19/35f)){
                 Text(
                     color = Color.Black,
-                    text = title ?: UtilTools().removeStringResDoubleQuotes(titleRes),
+                    text = title ?: removeStrQuote(titleRes),
                     style = FontSizeNormal14(),
                     modifier = Modifier.padding(12.dp).align(Alignment.CenterVertically)
                 )
@@ -484,7 +485,7 @@ fun SettingOptionDropDownTFBar(
                     onDismissRequest = { expanded.value = false },
                     modifier = Modifier
                         .background(Color(0xFFDDDDDD))
-                        .width(UtilTools().pxToDp(optionTextViewSize.value.width, density)),
+                        .width(pxToDp(optionTextViewSize.value.width, density)),
                 ) {
                     defaultDropdownChoices.forEachIndexed { index, option ->
                         DropdownMenuItem(
@@ -529,7 +530,7 @@ fun SettingOptionNavigateBar(
             Row(modifier = Modifier.weight(19/35f)){
                 Text(
                     color = Color.Black,
-                    text = title ?: UtilTools().removeStringResDoubleQuotes(titleRes),
+                    text = title ?: removeStrQuote(titleRes),
                     style = FontSizeNormal14(),
                     modifier = Modifier.padding(12.dp).align(Alignment.CenterVertically)
                 )
@@ -544,7 +545,7 @@ fun SettingOptionNavigateBar(
                 )
                 Text(
                     color = Color.Black,
-                    text = navigateDesc ?: UtilTools().removeStringResDoubleQuotes(Res.string.Navigate),
+                    text = navigateDesc ?: removeStrQuote(Res.string.Navigate),
                     style = FontSizeNormal14(),
                     textAlign = TextAlign.Center,
                     modifier = Modifier.padding(12.dp).weight(1f).align(Alignment.CenterVertically)
@@ -570,7 +571,7 @@ fun SettingCategory(
     Column(modifier = Modifier.padding(top = 20.dp)) {
         Text(
             color = Color.White,
-            text = title ?: UtilTools().removeStringResDoubleQuotes(titleRes),
+            text = title ?: removeStrQuote(titleRes),
             style = FontSizeNormal16(),
             modifier = Modifier.padding(bottom = 6.dp )
         )

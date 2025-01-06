@@ -100,6 +100,7 @@ import org.jetbrains.compose.resources.painterResource
 import types.Character
 import utils.app.Constants
 import types.HsrProperties
+import types.ImageFolder
 import types.Lightcone
 import types.UserAccount
 import utils.app.AdditionalGreen
@@ -111,8 +112,14 @@ import utils.app.FontSizeNormalLarge24
 import utils.app.FontSizeNormalLarge32
 import utils.app.FontSizeNormalSmall
 import utils.app.GradReachYellow
-import utils.UtilTools
 import utils.annotation.DoItLater
+import utils.app.formatDecimal
+import utils.app.getAssetsURLByFileName
+import utils.app.getImageNameByRegistName
+import utils.app.htmlDescApplier
+import utils.app.newImageRequest
+import utils.app.pxToDp
+import utils.app.removeStrQuote
 import utils.calculator.getCharRange
 import utils.calculator.getCharScore
 import utils.calculator.getGradAttrAndValue
@@ -199,7 +206,7 @@ fun UserCharacterPageScreen(
 
                         Text(
                             text = "${userAccount.uid}·${
-                                UtilTools().removeStringResDoubleQuotes(
+                                removeStrQuote(
                                     userAccount.server.localeName
                                 )
                             }",
@@ -244,7 +251,7 @@ fun ProficientScoreInfo(character: Character) {
         //Title and Spinner
         Row {
             Text(
-                text = UtilTools().removeStringResDoubleQuotes(Res.string.ScoreLevel),
+                text = removeStrQuote(Res.string.ScoreLevel),
                 style = FontSizeNormal20(),
                 color = Color.White,
                 modifier = Modifier.align(Alignment.CenterVertically)
@@ -285,7 +292,7 @@ fun ProficientScoreInfo(character: Character) {
                     onDismissRequest = { isExpandSchoolDropdown.value = false },
                     modifier = Modifier
                         .background(Color(0xFF3E3E47))
-                        .width(UtilTools().pxToDp(optionTextViewSize.value.width, density)),
+                        .width(pxToDp(optionTextViewSize.value.width, density)),
                 ) {
                     schoolDataNameArray.forEachIndexed { index, option ->
                         DropdownMenuItem(
@@ -331,13 +338,13 @@ fun ProficientScoreInfo(character: Character) {
                     }else{
                         Text(
                             text = if(scoreInfo.second is String) {
-                                Constants.getScoreRankingFont(scoreInfo.second as String).toString()} else UtilTools().formatDecimal(scoreInfo.second as Number, 1 ,
+                                Constants.getScoreRankingFont(scoreInfo.second as String).toString()} else formatDecimal(scoreInfo.second as Number, 1 ,
                                 isRoundDown = true),
                             style = FontSizeNormalLarge24(),
                             color = Color.White,
                             maxLines = 1,
                             modifier = Modifier.align(Alignment.CenterHorizontally).onSizeChanged {
-                                txt24Height.value = UtilTools().pxToDp(it.height, density)
+                                txt24Height.value = pxToDp(it.height, density)
                             },
                         )
                     }
@@ -345,7 +352,7 @@ fun ProficientScoreInfo(character: Character) {
                     Spacer(Modifier.height(6.dp))
 
                     Text(
-                        text = UtilTools().removeStringResDoubleQuotes(scoreInfo.first),
+                        text = removeStrQuote(scoreInfo.first),
                         style = FontSizeNormal12(),
                         color = Color.White,
                         modifier = Modifier.align(Alignment.CenterHorizontally),
@@ -376,7 +383,7 @@ fun ProficientScoreInfo(character: Character) {
                         //Grad Name and Value
                         Row(Modifier.fillMaxWidth().wrapContentHeight()) {
                             Text(
-                                text = UtilTools().removeStringResDoubleQuotes(req.first.attribute.resName),
+                                text = removeStrQuote(req.first.attribute.resName),
                                 style = FontSizeNormal12(),
                                 color = Color.White
                             )
@@ -404,13 +411,13 @@ fun ProficientScoreInfo(character: Character) {
 
         //Leaderboard Overview - 100 is example
         Text(
-            text = UtilTools().removeStringResDoubleQuotes(Res.string.OverWholeServerUser).replace("$"+"{1}", "-100.0"),
+            text = removeStrQuote(Res.string.OverWholeServerUser).replace("$"+"{1}", "-100.0"),
             style = FontSizeNormal16(),
             color = Color.White,
             modifier = Modifier.align(Alignment.CenterHorizontally)
         )
         Text(
-            text = UtilTools().removeStringResDoubleQuotes(Res.string.LeaderboardDataFrom),
+            text = removeStrQuote(Res.string.LeaderboardDataFrom),
             style = FontSizeNormalSmall(),
             color = Color(0x99FFFFFF),
             modifier = Modifier.align(Alignment.CenterHorizontally)
@@ -420,7 +427,7 @@ fun ProficientScoreInfo(character: Character) {
 
         //Make by Stargazer
         Text(
-            text = UtilTools().removeStringResDoubleQuotes(Res.string.ProducedByStargazer),
+            text = removeStrQuote(Res.string.ProducedByStargazer),
             style = FontSizeNormal12(),
             color = Color.White,
             modifier = Modifier.align(Alignment.CenterHorizontally)
@@ -431,7 +438,7 @@ fun ProficientScoreInfo(character: Character) {
 
 @Composable
 fun getDataDecimalsByAttrExchange(attrExchange: AttributeExchange, value: Float): String {
-    return UtilTools().formatDecimal(
+    return formatDecimal(
         value * if (attrExchange.isPercent == true) 100 else 1,
         if (attrExchange.key == "spd") 1 else if (attrExchange.isPercent == true) 1 else 0,
         isRoundDown = true
@@ -476,7 +483,7 @@ fun RelicInfo(character: Character) {
                             StatusShortUI(relic.properties[0], FontSizeNormal12(), isRelic = true)
                             Spacer(Modifier.width(8.dp).weight(1f))
                             Text(
-                                text = UtilTools().formatDecimal(score.value,1,
+                                text = formatDecimal(score.value,1,
                                     isRoundDown = true),
                                 style = FontSizeNormal14(),
                                 color = Color.White
@@ -536,7 +543,7 @@ fun CharBioSkillInfo(character: Character) {
 
         Text(
             "Lv ${charStatus.characterLevel} · ${
-                UtilTools().removeStringResDoubleQuotes(
+                removeStrQuote(
                     Res.string.Eidolon
                 )
             } ${charStatus.eidolon}",
@@ -560,7 +567,7 @@ fun CharBioSkillInfo(character: Character) {
                 contentDescription = "CombatType Icon"
             )
             Text(
-                text = UtilTools().removeStringResDoubleQuotes(character.path.resName),
+                text = removeStrQuote(character.path.resName),
                 style = FontSizeNormal16(),
                 color = Color.White,
                 textAlign = TextAlign.End,
@@ -576,7 +583,7 @@ fun CharBioSkillInfo(character: Character) {
                 contentDescription = "CombatType Icon"
             )
             Text(
-                text = UtilTools().removeStringResDoubleQuotes(character.combatType.resName),
+                text = removeStrQuote(character.combatType.resName),
                 style = FontSizeNormal16(),
                 color = Color.White,
                 textAlign = TextAlign.End,
@@ -600,17 +607,21 @@ fun CharBioSkillInfo(character: Character) {
         Row {
             for (skill in skillLvlList) {
                 Column(Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
-                    Image(
-                        bitmap = UtilTools().getAssetsWebpByFileName(
-                            UtilTools.ImageFolderType.CHAR_SKILL,
-                            "${UtilTools().getImageNameByRegistName(character.registName!!, isCharNoGen = true)}_skill" + when(skill.first) {
-                                Res.string.TraceNormalATK -> "1"
-                                Res.string.TraceSkill -> "2"
-                                Res.string.TraceUltimate -> "3"
-                                Res.string.TraceTalent -> "4"
-                                Res.string.TraceTechnique -> "6"
-                                else -> "1"
-                            }),
+                    AsyncImage(
+                        model = newImageRequest(
+                            LocalPlatformContext.current,
+                            getAssetsURLByFileName(
+                                ImageFolder.CHAR_SKILL,
+                                "${getImageNameByRegistName(character.registName!!, isCharNoGen = true)}_skill" + when(skill.first) {
+                                    Res.string.TraceNormalATK -> "1"
+                                    Res.string.TraceSkill -> "2"
+                                    Res.string.TraceUltimate -> "3"
+                                    Res.string.TraceTalent -> "4"
+                                    Res.string.TraceTechnique -> "6"
+                                    else -> "1"
+                                }
+                            )
+                        ),
                         contentDescription = "Skill Icon",
                         modifier = Modifier.size(36.dp)
                     )
@@ -619,7 +630,7 @@ fun CharBioSkillInfo(character: Character) {
 
                     Text(
                         modifier = Modifier.padding(top = 2.dp),
-                        text = UtilTools().removeStringResDoubleQuotes(skill.first),
+                        text = removeStrQuote(skill.first),
                         style = FontSizeNormal14(),
                         color = Color.White
                     )
@@ -675,23 +686,21 @@ fun LightconeInfo(character: Character){
         Row(Modifier.fillMaxWidth().wrapContentHeight().clickable { isLightconeShowDesc.value = !isLightconeShowDesc.value }) {
             Box(Modifier.requiredHeight(120.dp).weight(0.4f), contentAlignment = Alignment.Center) {
                     val context = LocalPlatformContext.current
-                    val imageRequest = remember { UtilTools().newImageRequest(
-                        context = context,
-                        data = UtilTools().getAssetsWebpByteArrayByFileName(
-                            UtilTools.ImageFolderType.LC_ARTWORK,
-                            UtilTools().getImageNameByRegistName(lightcone.registName!!)
-                        ))
-                    }
-                    val imageLoader = remember { UtilTools().newImageLoader(context) }
+
                     AsyncImage(
-                        model = imageRequest,
+                        model = newImageRequest(
+                            context,
+                            getAssetsURLByFileName(
+                                ImageFolder.LC_ARTWORK,
+                                getImageNameByRegistName(lightcone.registName!!)
+                            )
+                        ),
                         contentDescription = "Lightcone Image",
                         modifier = Modifier.height(if (isLightconeShowDesc.value) 100.dp else 112.dp).wrapContentWidth().rotate(if (isLightconeShowDesc.value) 0f else 5f)
                             .border(4.dp, Color.White, RectangleShape).align(
                                 Alignment.Center
                             ),
                         contentScale = ContentScale.Fit,
-                        imageLoader = imageLoader
                     )
             }
 
@@ -708,7 +717,7 @@ fun LightconeInfo(character: Character){
                 )
                 Text(
                     text = "Lv ${lightcone.level} · ${
-                        UtilTools().removeStringResDoubleQuotes(
+                        removeStrQuote(
                             Res.string.Superimpose
                         ).replace("$"+"{1}",lightcone.superimposition.toString())
                     }",
@@ -744,7 +753,7 @@ fun LightconeInfo(character: Character){
                             contentDescription = "CombatType Icon"
                         )
                         Text(
-                            text = UtilTools().removeStringResDoubleQuotes(character.path.resName),
+                            text = removeStrQuote(character.path.resName),
                             style = FontSizeNormal16(),
                             color = Color.White,
                             textAlign = TextAlign.End,
@@ -768,7 +777,7 @@ fun LightconeInfo(character: Character){
                                     modifier = Modifier.size(24.dp)
                                 )
                                 Text(
-                                    text = UtilTools().formatDecimal(attr.second, 0,
+                                    text = formatDecimal(attr.second, 0,
                                         isRoundDown = true),
                                     style = FontSizeNormal14(),
                                     color = Color.White,
@@ -796,7 +805,7 @@ fun getLightconeMetaInfo(lightcone: Lightcone, lcInfoJson: JsonElement, metaLv: 
         }
     }
 
-    return UtilTools().htmlDescApplier(
+    return htmlDescApplier(
         lcInfoJson.jsonObject["skill"]!!.jsonObject["descHash"]!!.jsonPrimitive.content,
         paramsList
     )
@@ -826,7 +835,7 @@ fun StatusShortUI(
             modifier = Modifier.size(24.dp)
         )
         Text(
-            text = (if(isRelic) "+" else "") + UtilTools().formatDecimal(
+            text = (if(isRelic) "+" else "") + formatDecimal(
                 status.valueFinal * if (status.attributeExchange.isPercent == true) 100 else 1,
                 if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent == true) 1 else 0,
                 isRoundDown = true
@@ -847,7 +856,7 @@ fun StatusFullUI(status : HsrProperties){
         )
         Spacer(Modifier.width(8.dp))
         Text(
-            text = UtilTools().removeStringResDoubleQuotes(status.attributeExchange.attribute.resName),
+            text = removeStrQuote(status.attributeExchange.attribute.resName),
             style = FontSizeNormal14(),
             color = Color.White,
             maxLines = 1
@@ -857,7 +866,7 @@ fun StatusFullUI(status : HsrProperties){
 
         if(status.valueBase == 0f && status.valueAdd == 0f){
             Text(
-                text = "+" + UtilTools().formatDecimal(
+                text = "+" + formatDecimal(
                     status.valueFinal * if (status.attributeExchange.isPercent == true) 100 else 1,
                     if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent == true) 1 else 0,
                     isRoundDown = true
@@ -869,7 +878,7 @@ fun StatusFullUI(status : HsrProperties){
         }else{
             if(status.valueBase > 0f){
                 Text(
-                    text = UtilTools().formatDecimal(
+                    text = formatDecimal(
                         status.valueBase * if (status.attributeExchange.isPercent == true) 100 else 1,
                         if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent == true) 1 else 0,
                         isRoundDown = true,
@@ -892,7 +901,7 @@ fun StatusFullUI(status : HsrProperties){
 
             if(status.valueAdd > 0f){
                 Text(
-                    text = UtilTools().formatDecimal(
+                    text = formatDecimal(
                         status.valueAdd * if (status.attributeExchange.isPercent == true) 100 else 1,
                         if (status.attributeExchange.key == "spd") 1 else if (status.attributeExchange.isPercent == true) 1 else 0,
                         isRoundDown = true
@@ -919,15 +928,10 @@ fun CharacterInfoFadeImg(
             exit = fadeOut(),
             modifier = Modifier.fillMaxWidth().wrapContentHeight().align(Alignment.TopCenter)
         ) {
-            Image(
-                /*
-                model = UtilTools().newImageRequest(context = LocalPlatformContext.current, data = Character.getCharacterImageByteArrayFromFileName(
-                    UtilTools.ImageFolderType.CHAR_FADE, fileName
+            AsyncImage(
+                model = newImageRequest(context = LocalPlatformContext.current, data = Character.getCharacterImageFromFileName(
+                    ImageFolder.CHAR_FADE, fileName
                 )),
-                 */
-                bitmap = Character.getCharacterImageFromFileName(
-                    UtilTools.ImageFolderType.CHAR_FADE, fileName
-                ),
                 contentDescription = "Character Full Image",
                 contentScale = ContentScale.Fit,
                 //imageLoader = UtilTools().newImageLoader(LocalPlatformContext.current)

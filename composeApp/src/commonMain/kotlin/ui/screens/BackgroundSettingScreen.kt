@@ -30,6 +30,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
 import com.russhwolf.settings.Settings
 import ui.components.BackIcon
 import ui.components.HeaderData
@@ -48,10 +50,14 @@ import getScreenSizeInfo
 import kotlinx.coroutines.launch
 import moe.tlaster.precompose.navigation.Navigator
 import types.Character
+import types.ImageFolder
 import utils.app.Constants
 import types.Wallpaper
+import utils.app.DpToPx
 import utils.app.FontSizeNormal16
-import utils.UtilTools
+import utils.app.getAssetsURLByFileName
+import utils.app.newImageRequest
+import utils.app.removeStrQuote
 
 //All the background image can find in /commonMain/composeResources/files/images/bgs
 //U can use the function UtilTools().getAssetsWebpByFileName to get the image
@@ -80,7 +86,7 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: Navigator,
         )
     }
 
-    val listState = rememberLazyListState(wallpaperIndex.value, -UtilTools().DpToPx(32.dp, density))
+    val listState = rememberLazyListState(wallpaperIndex.value, -DpToPx(32.dp, density))
 
     Box(modifier = Modifier.navigationBarsPadding()){
         Column(modifier = Modifier.fillMaxSize()) {
@@ -92,7 +98,7 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: Navigator,
                 UIButton(Modifier.weight(1f).height(64.dp), text = "Test 1")
                 Spacer(modifier = Modifier.width(10.dp))
                 UIButton(Modifier.weight(1f).height(64.dp),
-                    text = "${UtilTools().removeStringResDoubleQuotes(Res.string.UseBlurEffect)}: ${UtilTools().removeStringResDoubleQuotes(if(isBlur.value) Res.string.SwitchOn else Res.string.SwitchOff)}",
+                    text = "${removeStrQuote(Res.string.UseBlurEffect)}: ${removeStrQuote(if(isBlur.value) Res.string.SwitchOn else Res.string.SwitchOff)}",
                     onClick = {
                         isBlur.value = !isBlur.value
                         Settings().putBoolean("useBlurEffect", isBlur.value)
@@ -111,11 +117,11 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: Navigator,
                     wallpaperIndex.value = listState.firstVisibleItemIndex + 1
                     if(wallpaperIndex.value >= extendedItems.size - 2 && !listState.isScrollInProgress){
                         coroutineScope.launch {
-                            listState.scrollToItem(2,-UtilTools().DpToPx(32.dp, density))
+                            listState.scrollToItem(2,-DpToPx(32.dp, density))
                         }
                     }else if(wallpaperIndex.value <= 1 && !listState.isScrollInProgress){
                         coroutineScope.launch {
-                            listState.scrollToItem(extendedItems.size - 3 ,-UtilTools().DpToPx(32.dp, density))
+                            listState.scrollToItem(extendedItems.size - 3 ,-DpToPx(32.dp, density))
                         }
                     }
                 }
@@ -133,9 +139,9 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: Navigator,
                             modifier = Modifier
                         ) {
                             // 背景圖片
-                            Image(
+                            AsyncImage(
+                                model = newImageRequest(context = LocalPlatformContext.current, getAssetsURLByFileName(ImageFolder.BGS, wallpaper.fileName)),
                                 contentScale = ContentScale.Crop,
-                                bitmap = UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.BGS, wallpaper.fileName),
                                 contentDescription = "Background Image",
                                 modifier = Modifier.width(getScreenSizeInfo().wDP - 80.dp).fillParentMaxHeight()
                             )
@@ -163,9 +169,9 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: Navigator,
             Spacer(modifier = Modifier.height(34.dp))
 
             Row (Modifier.widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)){
-                UIButton(Modifier.weight(1f).height(64.dp), text = UtilTools().removeStringResDoubleQuotes(Res.string.SaveWallPaper))
+                UIButton(Modifier.weight(1f).height(64.dp), text = removeStrQuote(Res.string.SaveWallPaper))
                 Spacer(modifier = Modifier.width(10.dp))
-                UIButton(Modifier .weight(1f).height(64.dp), text = UtilTools().removeStringResDoubleQuotes(Res.string.SetWallPaper), onClick = {
+                UIButton(Modifier .weight(1f).height(64.dp), text = removeStrQuote(Res.string.SetWallPaper), onClick = {
                     Settings().putString("backgroundImage", extendedItems[wallpaperIndex.value].id)
                     navigator.popBackStack()
                 })

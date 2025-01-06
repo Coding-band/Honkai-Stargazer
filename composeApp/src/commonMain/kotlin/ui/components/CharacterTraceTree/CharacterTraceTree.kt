@@ -38,6 +38,8 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.min
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
 import ui.components.MaterialCard
@@ -57,6 +59,7 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import types.ImageFolder
 import utils.app.Constants
 import utils.app.Constants.Companion.TRACE_TREE_BASE_WIDTH
 import utils.app.Constants.Companion.getTraceTreeScale
@@ -67,7 +70,12 @@ import types.TracecTreeKeyStatus
 import types.TracecTreeLevelData
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
-import utils.UtilTools
+import utils.app.formatDecimal
+import utils.app.getAssetsURLByFileName
+import utils.app.getImageNameByRegistName
+import utils.app.htmlDescApplier
+import utils.app.newImageRequest
+import utils.app.removeStrQuote
 
 private lateinit var dialogTitleLocal : MutableState<String>
 private lateinit var dialogDisplayLocal: MutableState<Boolean>
@@ -319,18 +327,20 @@ fun TraceTreeBtn(
                 },
             )
     ) {
-        Image(
-            bitmap = if (selfId <= 5) {
-                UtilTools().getAssetsWebpByFileName(
-                    UtilTools.ImageFolderType.CHAR_SKILL,
-                    UtilTools().getImageNameByRegistName(traceTreeItem[0].iconPath, isCharNoGen = true)
-                )
-            } else {
-                UtilTools().getAssetsWebpByFileName(
-                    UtilTools.ImageFolderType.CHAR_SKILL_TREE,
-                    traceTreeItem[0].iconPath
-                )
-            },
+        AsyncImage(
+            model = newImageRequest(context = LocalPlatformContext.current,
+                if (selfId <= 5) {
+                    getAssetsURLByFileName(
+                        ImageFolder.CHAR_SKILL,
+                        getImageNameByRegistName(traceTreeItem[0].iconPath, isCharNoGen = true)
+                    )
+                } else {
+                    getAssetsURLByFileName(
+                        ImageFolder.CHAR_SKILL_TREE,
+                        traceTreeItem[0].iconPath
+                    )
+                }
+            ),
             contentDescription = "Skill Icon",
             modifier = Modifier.size(imgWidth).align(Alignment.Center)
         )
@@ -407,7 +417,7 @@ fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
                 }
 
                 if(treeItem.energy != -1){
-                    Text("${UtilTools().removeStringResDoubleQuotes(Res.string.TraceEnergyEarn)} ${treeItem.energy.toString()}",
+                    Text("${removeStrQuote(Res.string.TraceEnergyEarn)} ${treeItem.energy.toString()}",
                         style = FontSizeNormal14(),
                         color = Color(0xFF666666)
                     )
@@ -437,15 +447,15 @@ fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
             if(treeItem.statusList != null) {
                 for ((index, status) in treeItem.statusList.withIndex()) {
                     statusDesc = "$statusDesc${if(index > 0) "," else ""} " +
-                            "${status.key} ${UtilTools().removeStringResDoubleQuotes(Res.string.Upgrade)} " +
-                            if(status.value < 1){UtilTools().formatDecimal((status.value * 100))+"%"} else UtilTools().formatDecimal(status.value,0)
+                            "${status.key} ${removeStrQuote(Res.string.Upgrade)} " +
+                            if(status.value < 1){formatDecimal((status.value * 100))+"%"} else formatDecimal(status.value,0)
                 }
             }
             richTextState.setHtml(
                 if(statusDesc != ""){
                     statusDesc
                 }else{
-                    UtilTools().htmlDescApplier(treeItem.desc, params)
+                    htmlDescApplier(treeItem.desc, params)
                 }
             )
             RichText(state = richTextState, style = FontSizeNormal14(), modifier = Modifier.fillMaxWidth(), color = Color(0xFF666666))

@@ -39,6 +39,8 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
 import files.MatchRequirementChar
 import files.PressToView
 import files.RequirementAND
@@ -51,6 +53,7 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
 import types.Character
+import types.ImageFolder
 import utils.app.Constants.Companion.CARD_BG_COLOR_RARE_UNKNOWN
 import utils.app.Constants.Companion.CHAR_CARD_HEIGHT
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
@@ -58,8 +61,10 @@ import types.getTeamAdviceById
 import utils.app.FontSizeNormal12
 import utils.app.Language
 import utils.app.TextColorNormalDim
-import utils.UtilTools
 import utils.annotation.YouMustKiddingMe
+import utils.app.CharWeightList
+import utils.app.newImageRequest
+import utils.app.removeStrQuote
 
 
 private lateinit var dialogTitleLocal : MutableState<String>
@@ -117,12 +122,12 @@ fun MultiChoiceCard(
             } else choice.toIntOrNull()?.let { getTeamAdviceById(it).cnName } //Edit when translation done
 
         dialogTitleProgress += if(index + 1 < requirePair.first.size){
-                UtilTools().removeStringResDoubleQuotes(if(requirePair.second){Res.string.RequirementAND} else Res.string.RequirementOR)
+                removeStrQuote(if(requirePair.second){Res.string.RequirementAND} else Res.string.RequirementOR)
             } else {
                 ""
             }
     }
-    val dialogTitleTmp = UtilTools().removeStringResDoubleQuotes(Res.string.MatchRequirementChar).replace("$"+"{1}",dialogTitleProgress)
+    val dialogTitleTmp = removeStrQuote(Res.string.MatchRequirementChar).replace("$"+"{1}",dialogTitleProgress)
 
     Box(
         modifier = Modifier
@@ -185,7 +190,7 @@ fun MultiChoiceCard(
                 horizontalArrangement = Arrangement.Center
             ) {
                 Text(
-                    text = UtilTools().removeStringResDoubleQuotes(Res.string.PressToView),
+                    text = removeStrQuote(Res.string.PressToView),
                     textAlign = TextAlign.Center,
                     color = TextColorNormalDim,
                     fontSize = FontSizeNormal12().fontSize,
@@ -199,7 +204,7 @@ fun MultiChoiceCard(
 
 fun getMatchRequireCharList(requirePair: Pair<ArrayList<String>, Boolean>, leaderInfo: Character): ArrayList<Character> {
     val matchList: ArrayList<Character> = arrayListOf()
-    val charWeightList = UtilTools.TemporaryFunction().getCharWeightListJson().jsonObject
+    val charWeightList = CharWeightList.INSTANCE.jsonObject
     charWeightList.keys.filter { officialId -> forLoopOfMRCL(requirePair,leaderInfo, charWeightList, officialId)}.forEach { charId ->
         val char = Character.getCharacterItemFromJSON(charId, Language.TextLanguageInstance)
         matchList.add(char)
@@ -232,15 +237,18 @@ fun getIconByInfo(infoId : String){
                 val characterSearch =
                     Character.charListJson.jsonArray.find { char -> char.jsonObject["charId"]!!.jsonPrimitive.content == infoId }
                         ?: return
-                Image(
+                AsyncImage(
+                    model = newImageRequest(
+                        context = LocalPlatformContext.current,
+                        Character.getCharacterImageFromFileName(
+                            ImageFolder.CHAR_ICON,
+                            characterSearch.jsonObject["name"]!!.jsonPrimitive.content
+                        )
+                    ),
                     contentDescription = null,
                     modifier = Modifier
                         .background(Color(0x66000000), shape = CircleShape).wrapContentHeight()
                         .aspectRatio(1f).clip(CircleShape),
-                    bitmap = Character.getCharacterImageFromFileName(
-                        UtilTools.ImageFolderType.CHAR_ICON,
-                        characterSearch.jsonObject["name"]!!.jsonPrimitive.content
-                    )
                 )
             } else {
                 Image(

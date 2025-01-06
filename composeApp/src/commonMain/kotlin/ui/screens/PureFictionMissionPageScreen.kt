@@ -92,9 +92,10 @@ import types.UserAccount
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.Language.Companion.TextLanguageInstance
-import utils.UtilTools
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
+import utils.app.getMocPhaseStrListByMocLen
+import utils.app.pxToDp
 
 lateinit var pfList : MutableState<ArrayList<AbyssInfoList>>
 
@@ -220,7 +221,7 @@ fun PureFictionIdSpinner(
                 onDismissRequest = { isDropDownOpen.value = false },
                 modifier = Modifier
                     .background(Color(0xFFDDDDDD))
-                    .width(UtilTools().pxToDp(optionTextViewSize.value.width, density)),
+                    .width(pxToDp(optionTextViewSize.value.width, density)),
             ) {
                 pfList.forEachIndexed { index, option ->
                     DropdownMenuItem(
@@ -269,7 +270,7 @@ fun PureFictionContent(
     pfInfoList: AbyssInfo?
 ){
     val density = LocalDensity.current.density
-    val pfPhaseList = UtilTools().getMocPhaseStrListByMocLen(pfInfoList?.missionList?.size ?: -1)
+    val pfPhaseList = getMocPhaseStrListByMocLen(pfInfoList?.missionList?.size ?: -1)
     val usageList = listOf("關卡資訊", "角色使用率", "隊伍使用率", )
     val pfInfoDisplayIndex = remember { mutableStateOf(0) }
     val pfPhaseIndex = remember { mutableStateOf(0) }
@@ -326,7 +327,7 @@ fun PureFictionContent(
                         onDismissRequest = { isDropDownOpen.value = false },
                         modifier = Modifier
                             .background(Color(0xFF3E3E47))
-                            .width(UtilTools().pxToDp(optionTextViewSize.value.width, density)),
+                            .width(pxToDp(optionTextViewSize.value.width, density)),
                     ) {
                         pfPhaseList.forEachIndexed { index, option ->
                             DropdownMenuItem(

@@ -32,8 +32,8 @@ import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormal20
-import utils.UtilTools
 import utils.annotation.DoItLater
+import utils.app.removeStrQuote
 
 public enum class UIButtonSize {
     Normal,
@@ -83,7 +83,7 @@ fun UIButton(
                     Text(
                         if (textRes == null) {
                             text ?: "?"
-                        } else UtilTools().removeStringResDoubleQuotes(textRes),
+                        } else removeStrQuote(textRes),
                         style = if (buttonSize == UIButtonSize.NormalLargeText) FontSizeNormal20() else FontSizeNormal16(),
                         color = if (isAvailable) Color(0xFF222222) else Color(0x4D222222),
                         textAlign = if (icon != null || buttonSize == UIButtonSize.NormalTextLeft || buttonSize == UIButtonSize.NormalTextLeftWithLine) TextAlign.Left else TextAlign.Center,

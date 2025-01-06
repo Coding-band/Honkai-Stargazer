@@ -39,9 +39,9 @@ import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import utils.app.Language
 import utils.app.Language.Companion.TextLanguageInstance
-import utils.UtilTools
 import utils.annotation.VersionUpdateCheck
 import utils.app.errorLog
+import utils.app.getAssetsJsonStrByFilePath
 
 @Serializable
 enum class AbyssInfoType {
@@ -74,7 +74,7 @@ data class AbyssInfo(
                 val abyssFileName = getAbyssFileNameById(abyssId, type)
                 if (abyssFileName == "UNKNOWN_ID") return null
 
-                val abyssJsonStr = UtilTools().getAssetsJsonStrByFilePath(
+                val abyssJsonStr = getAssetsJsonStrByFilePath(
                     when(type){
                         AbyssInfoType.MemoryOfChaos -> "memory_of_chao_data/$abyssFileName.json"
                         AbyssInfoType.PureFiction -> "pure_fiction_data/$abyssFileName.json"
@@ -141,7 +141,7 @@ data class AbyssInfoList(
                 val job = async(Dispatchers.Default) {
                     val retArray = arrayListOf<AbyssInfoList>()
                     try {
-                        val abyssJson = UtilTools().getAssetsJsonStrByFilePath(
+                        val abyssJson = getAssetsJsonStrByFilePath(
                             when(type){
                                 AbyssInfoType.MemoryOfChaos -> "memory_of_chao_data/chao_list.json"
                                 AbyssInfoType.PureFiction -> "pure_fiction_data/pf_list.json"
@@ -166,7 +166,7 @@ data class AbyssInfoList(
             return runBlocking {
                 val job = async(Dispatchers.Default) {
                     try {
-                        val abyssJson = UtilTools().getAssetsJsonStrByFilePath(
+                        val abyssJson = getAssetsJsonStrByFilePath(
                             when(type){
                                 AbyssInfoType.MemoryOfChaos -> "memory_of_chao_data/chao_list.json"
                                 AbyssInfoType.PureFiction -> "pure_fiction_data/pf_list.json"

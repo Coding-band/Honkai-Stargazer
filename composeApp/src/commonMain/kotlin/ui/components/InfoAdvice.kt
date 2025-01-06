@@ -73,8 +73,10 @@ import utils.app.FontSizeNormal16
 import utils.app.Language
 import utils.app.TextColorNormalDim
 import utils.app.TextColorNormalDimCC
-import utils.UtilTools
 import utils.annotation.YouMustKiddingMe
+import utils.app.CharWeightList
+import utils.app.pxToDp
+import utils.app.removeStrQuote
 
 @Composable
 fun InfoAdviceLightcone(charWeightData : JsonObject? = null) {
@@ -263,8 +265,8 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
                                 Constants.RELIC_CARD_WIDTH, Constants.RELIC_CARD_HEIGHT + Constants.RELIC_CARD_TITLE_HEIGHT
                             ).weight(1f)
                                 .onSizeChanged {
-                                    relicWidth.value = UtilTools().pxToDp(it.width, density)
-                                    relicHeight.value = UtilTools().pxToDp(it.height, density)
+                                    relicWidth.value = pxToDp(it.width, density)
+                                    relicHeight.value = pxToDp(it.height, density)
                                 }
                         ) {
                             RelicCard(
@@ -358,7 +360,7 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
 
             //Attr Suggestion
             Column {
-                Text(UtilTools().removeStringResDoubleQuotes(Res.string.MainAffix),fontWeight = FontWeight.Bold, style = FontSizeNormal16(), color = TextColorNormalDim)
+                Text(removeStrQuote(Res.string.MainAffix),fontWeight = FontWeight.Bold, style = FontSizeNormal16(), color = TextColorNormalDim)
 
                 Spacer(Modifier.height(10.dp))
 
@@ -371,13 +373,13 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
                     content = { index ->
                         Row(Modifier.fillMaxWidth().wrapContentHeight()){
                             Text(
-                                UtilTools().removeStringResDoubleQuotes(relicPart[index]),
+                                removeStrQuote(relicPart[index]),
                                 style = FontSizeNormal14(),
                                 fontWeight = FontWeight.Bold,
                                 color = TextColorNormalDim
                             )
                             Text(
-                                text = UtilTools().removeStringResDoubleQuotes(adviceAttrList[index].second.resName),
+                                text = removeStrQuote(adviceAttrList[index].second.resName),
                                 style = FontSizeNormal14(),
                                 textAlign = TextAlign.End,
                                 color = TextColorNormalDimCC,
@@ -391,10 +393,10 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
 
                 var subAttrString = ""
                 for((index, subAttr) in adviceAttrSubList.withIndex()){
-                    subAttrString += UtilTools().removeStringResDoubleQuotes(subAttr.resName) + if(index < adviceAttrSubList.size-1){","} else ""
+                    subAttrString += removeStrQuote(subAttr.resName) + if(index < adviceAttrSubList.size-1){","} else ""
                 }
                 Row {
-                    Text(UtilTools().removeStringResDoubleQuotes(Res.string.SubAffix), fontWeight = FontWeight.Bold,style = FontSizeNormal16(), color = TextColorNormalDim)
+                    Text(removeStrQuote(Res.string.SubAffix), fontWeight = FontWeight.Bold,style = FontSizeNormal16(), color = TextColorNormalDim)
 
                     Text(
                         text = subAttrString,
@@ -471,7 +473,7 @@ fun InfoAdviceTeammate(
 fun InfoAdviceCharacter(
     lightconeId: String,
 ){
-    val charWeightList = UtilTools.TemporaryFunction().getCharWeightListJson()
+    val charWeightList = CharWeightList.INSTANCE
     val adviceChar : ArrayList<Character> = arrayListOf()
     for(char in charWeightList.jsonObject.keys){
         for(lcId in charWeightList.jsonObject[char]!!.jsonArray[0].jsonObject["advice_lightcone"]!!.jsonArray){
@@ -527,7 +529,7 @@ fun InfoCannotFind(){
             modifier = Modifier.size(72.dp).align(Alignment.CenterHorizontally)
         )
         Text(
-            UtilTools().removeStringResDoubleQuotes(Res.string.NoDataYet),
+            removeStrQuote(Res.string.NoDataYet),
             style = FontSizeNormal14(),
             color = Color.White,
             textAlign = TextAlign.Center,

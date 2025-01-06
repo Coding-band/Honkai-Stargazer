@@ -1,6 +1,9 @@
 package utils.app
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.saveable.Saver
+import androidx.compose.runtime.saveable.listSaver
+import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.unit.Dp
 import coil3.ImageLoader
 import coil3.PlatformContext
@@ -9,6 +12,19 @@ import coil3.request.CachePolicy
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import coil3.util.DebugLogger
+import files.MOCMissionPart1
+import files.MOCMissionPart10
+import files.MOCMissionPart11
+import files.MOCMissionPart12
+import files.MOCMissionPart2
+import files.MOCMissionPart3
+import files.MOCMissionPart4
+import files.MOCMissionPart5
+import files.MOCMissionPart6
+import files.MOCMissionPart7
+import files.MOCMissionPart8
+import files.MOCMissionPart9
+import files.Res
 import getLocalHttpClient
 import io.ktor.client.call.body
 import io.ktor.client.plugins.HttpTimeout
@@ -17,13 +33,20 @@ import io.ktor.client.request.get
 import io.ktor.client.statement.HttpResponse
 import io.ktor.serialization.kotlinx.json.json
 import io.ktor.util.network.UnresolvedAddressException
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.IO
+import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withTimeout
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonElement
 import okio.FileSystem
 import okio.IOException
 import okio.SYSTEM
 import okio.buffer
 import okio.use
+import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import types.ImageFolder
@@ -31,6 +54,48 @@ import utils.annotation.VersionUpdateCheck
 import utils.starbase.StarbaseAPI
 import kotlin.math.pow
 import kotlin.math.roundToInt
+
+/*
+ * --------- Deprecated Soon ---------
+ */
+
+@OptIn(ExperimentalResourceApi::class)
+fun getAssetsStringByFilePath(filePath: String): String{
+    return runBlocking {
+        val job = async(Dispatchers.IO) {
+            try {
+                //Ararar I spent 4hrs on there lol
+                val assetString: String = Res.readBytes("files/data/${filePath}").decodeToString()
+                return@async assetString
+            } catch (e: Exception) {
+                // Handle the exception, ErrorLogExporter Please!
+                errorLog("UtilTools","getAssetsWebpByFileName()",e)
+                return@async "{}"
+            }
+        }
+        job.await()
+        job.getCompleted()
+    }
+}
+
+@OptIn(ExperimentalCoroutinesApi::class, ExperimentalResourceApi::class)
+fun getAssetsJsonStrByFilePath(filePath: String): String {
+    return runBlocking {
+        val job = async(Dispatchers.Default) {
+            try {
+                //Ararar I spent 4hrs on there lol
+                val assetString: String = Res.readBytes("files/data/${filePath}").decodeToString()
+                return@async assetString
+            } catch (e: Exception) {
+                // Handle the exception, ErrorLogExporter Please!
+                errorLog("UtilTools","getAssetsWebpByFileName()",e)
+                return@async "{}"
+            }
+        }
+        job.await()
+        job.getCompleted()
+    }
+}
 
 /*
  * --------- Useful App Function 一些常用的App功能 ---------
@@ -159,6 +224,57 @@ fun htmlDescApplierImpl(htmlText: String) : String{
     return htmlTextFinal
 }
 
+/**
+ * Get MOC Phase's Name (Res.string) List by MOC Length
+ */
+@Composable
+fun getMocPhaseStrListByMocLen(mocLen: Int): ArrayList<String> {
+    val mocPhaseStrList = ArrayList<String>()
+    for (index in 0 until mocLen) {
+        mocPhaseStrList.add(
+            when (index) {
+                0 -> removeStrQuote(Res.string.MOCMissionPart1)
+                1 -> removeStrQuote(Res.string.MOCMissionPart2)
+                2 -> removeStrQuote(Res.string.MOCMissionPart3)
+                3 -> removeStrQuote(Res.string.MOCMissionPart4)
+                4 -> removeStrQuote(Res.string.MOCMissionPart5)
+                5 -> removeStrQuote(Res.string.MOCMissionPart6)
+                6 -> removeStrQuote(Res.string.MOCMissionPart7)
+                7 -> removeStrQuote(Res.string.MOCMissionPart8)
+                8 -> removeStrQuote(Res.string.MOCMissionPart9)
+                9 -> removeStrQuote(Res.string.MOCMissionPart10)
+                10 -> removeStrQuote(Res.string.MOCMissionPart11)
+                11 -> removeStrQuote(Res.string.MOCMissionPart12)
+                else -> "?"
+            }
+        )
+    }
+    return mocPhaseStrList
+}
+
+
+/**
+ * Get Specific MOC Phase's Name String by Index
+ */
+@Composable
+fun getMocPhaseStrByIndex(index: Int): String {
+    return when (index) {
+        0 -> removeStrQuote(Res.string.MOCMissionPart1)
+        1 -> removeStrQuote(Res.string.MOCMissionPart2)
+        2 -> removeStrQuote(Res.string.MOCMissionPart3)
+        3 -> removeStrQuote(Res.string.MOCMissionPart4)
+        4 -> removeStrQuote(Res.string.MOCMissionPart5)
+        5 -> removeStrQuote(Res.string.MOCMissionPart6)
+        6 -> removeStrQuote(Res.string.MOCMissionPart7)
+        7 -> removeStrQuote(Res.string.MOCMissionPart8)
+        8 -> removeStrQuote(Res.string.MOCMissionPart9)
+        9 -> removeStrQuote(Res.string.MOCMissionPart10)
+        10 -> removeStrQuote(Res.string.MOCMissionPart11)
+        11 -> removeStrQuote(Res.string.MOCMissionPart12)
+        else -> "?"
+    }
+}
+
 /*
  * --------- Data Process 數據處理功能 ---------
  */
@@ -178,8 +294,8 @@ fun getAssetsURLByFileName(folder: ImageFolder, fileName: String): String {
  * @param filePath Relative path of the file, with suffix and any slashes
  * E.g. "character_data/character_list.json"
  */
-fun getAssetsJsonByFilePath(filePath: String): String {
-    return readFromFile(filePath)
+fun getAssetsJsonByFilePath(filePath: String): JsonElement {
+    return Json.parseToJsonElement(readFromFile(filePath))
 }
 
 fun writeToFile(filePath: String, content: String) {
@@ -376,3 +492,13 @@ fun Boolean.toInt() = if (this) 1 else 0
  * Int to Boolean
  */
 fun Int.toBoolean() = this != 0
+
+/** 你在想甚麼呀？ */
+private fun CosImageOfVocchi(){
+    println("No Way...?...ok?")
+}
+
+val JsonElementSaver: Saver<JsonElement, Any> = listSaver(
+    save = { listOf(it.toString()) },
+    restore = { Json.parseToJsonElement(it[0]) }
+)

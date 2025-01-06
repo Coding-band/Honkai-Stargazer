@@ -1,6 +1,5 @@
 package ui.components
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -14,6 +13,7 @@ import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.material.ripple
@@ -27,12 +27,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
+import types.Material
 import utils.app.Constants
 import utils.app.Constants.Companion.MATERIAL_CARD_HEIGHT
 import utils.app.Constants.Companion.MATERIAL_CARD_WIDTH
-import types.Material
 import utils.app.FontSizeNormal12
 import utils.app.TextColorNormalDim
+import utils.app.newImageRequest
 
 @Composable
 fun MaterialCard(
@@ -44,7 +47,8 @@ fun MaterialCard(
     val interactionSource = remember { MutableInteractionSource() }
     Box(
         modifier = Modifier
-            .defaultMinSize(MATERIAL_CARD_WIDTH, MATERIAL_CARD_HEIGHT)
+            .widthIn(MATERIAL_CARD_WIDTH, MATERIAL_CARD_WIDTH*2)
+            .aspectRatio(MATERIAL_CARD_WIDTH / MATERIAL_CARD_HEIGHT)
             .clip(
                 RoundedCornerShape(
                     topEnd = 15.dp,
@@ -69,15 +73,19 @@ fun MaterialCard(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Box(modifier = Modifier.fillMaxWidth().weight(1f)){
-                Image(
-                    bitmap = Material.getMaterialImageById(material.officialId),
-                    contentDescription = "Material Icon",
+                AsyncImage(
+                    model = newImageRequest(
+                        LocalPlatformContext.current,
+                        Material.getMaterialImageById(material.officialId)
+                    ),
                     modifier = Modifier
                         .padding(6.dp)
                         .aspectRatio(1f)
                         .align(Alignment.Center),
-                    contentScale = ContentScale.Crop
+                    contentScale = ContentScale.Crop,
+                    contentDescription = "Material Icon",
                 )
+
             }
             Row(
                 modifier = Modifier.fillMaxWidth().background(Color(0xFF222222)),

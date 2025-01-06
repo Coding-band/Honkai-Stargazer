@@ -11,6 +11,7 @@ import dev.datlag.kcef.KCEFBuilder
 import io.ktor.websocket.Frame
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import utils.annotation.DoItLater
 import java.io.File
 import kotlin.math.max
 
@@ -20,6 +21,9 @@ fun main() = application {
         title = "Stargazer 3",
     ) {
 
+        @DoItLater("JCEF, do it later")
+        App()
+        /* JCEF, do it later
         var restartRequired by remember { mutableStateOf(false) }
         var downloading by remember { mutableStateOf(0F) }
         var initialized by remember { mutableStateOf(false) }
@@ -62,6 +66,8 @@ fun main() = application {
                 KCEF.disposeBlocking()
             }
         }
+
+         */
 
     }
 

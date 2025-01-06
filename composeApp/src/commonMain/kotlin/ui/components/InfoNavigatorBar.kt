@@ -45,8 +45,9 @@ import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import utils.app.DpToPx
 import utils.app.FontSizeNormal12
-import utils.UtilTools
+import utils.app.removeStrQuote
 import kotlin.math.min
 
 data class InfoNavigateItem(
@@ -118,7 +119,7 @@ fun InfoNavigatorBar(
                         modifier = Modifier.padding(
                             start = 16.dp, end = 16.dp, top = 8.dp, bottom = 8.dp
                         ),
-                        text = UtilTools().removeStringResDoubleQuotes(infoItemList[currChoiceIndex].itemTitle),
+                        text = removeStrQuote(infoItemList[currChoiceIndex].itemTitle),
                         style = FontSizeNormal12(),
                         color = Color.White
                     )
@@ -159,7 +160,7 @@ fun InfoNavigatorBar(
                                         onClick = {
                                             currChoiceIndex = index;
                                             coroutineScope.launch {
-                                                listState.animateScrollToItem(index = item.itemPosIndex, scrollOffset = -UtilTools().DpToPx(offSet + 4.dp,density = density))
+                                                listState.animateScrollToItem(index = item.itemPosIndex, scrollOffset = -DpToPx(offSet + 4.dp,density = density))
                                                 delay(animationDuration)
                                                 isHintVisible = Clock.System.now().toEpochMilliseconds() < lastExpectInvisibleMS
 

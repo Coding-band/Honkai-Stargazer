@@ -48,6 +48,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
@@ -90,14 +91,19 @@ import types.AbyssInfo
 import types.AbyssInfoList
 import types.AbyssInfoMonster
 import types.AbyssInfoType
+import types.ImageFolder
 import utils.app.Constants
 import types.UserAccount
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.Language.Companion.TextLanguageInstance
-import utils.UtilTools
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
+import utils.app.getAssetsURLByFileName
+import utils.app.getImageNameByRegistName
+import utils.app.getMocPhaseStrListByMocLen
+import utils.app.newImageRequest
+import utils.app.pxToDp
 
 lateinit var mocList : MutableState<ArrayList<AbyssInfoList>>
 
@@ -223,7 +229,7 @@ fun MemoryOfChaosIdSpinner(
                 onDismissRequest = { isDropDownOpen.value = false },
                 modifier = Modifier
                     .background(Color(0xFFDDDDDD))
-                    .width(UtilTools().pxToDp(optionTextViewSize.value.width, density)),
+                    .width(pxToDp(optionTextViewSize.value.width, density)),
             ) {
                 mocList.forEachIndexed { index, option ->
                     DropdownMenuItem(
@@ -272,7 +278,7 @@ fun MemoryOfChaosContent(
     mocInfoList: AbyssInfo?
 ){
     val density = LocalDensity.current.density
-    val mocPhaseList = UtilTools().getMocPhaseStrListByMocLen(mocInfoList?.missionList?.size ?: -1)
+    val mocPhaseList = getMocPhaseStrListByMocLen(mocInfoList?.missionList?.size ?: -1)
     val usageList = listOf("關卡資訊", "角色使用率", "隊伍使用率", )
     val mocInfoDisplayIndex = remember { mutableStateOf(0) }
     val mocPhaseIndex = remember { mutableStateOf(0) }
@@ -329,7 +335,7 @@ fun MemoryOfChaosContent(
                         onDismissRequest = { isDropDownOpen.value = false },
                         modifier = Modifier
                             .background(Color(0xFF3E3E47))
-                            .width(UtilTools().pxToDp(optionTextViewSize.value.width, density)),
+                            .width(pxToDp(optionTextViewSize.value.width, density)),
                     ) {
                         mocPhaseList.forEachIndexed { index, option ->
                             DropdownMenuItem(
@@ -461,10 +467,13 @@ fun MonsterCard(monsterInfo: AbyssInfoMonster){
 
     Column(verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
         Box(Modifier.size(48.dp).background(Brush.verticalGradient(Constants.getCardBgColorByRare(1)), shape = RoundedCornerShape(4.dp)).wrapContentHeight(), contentAlignment = Alignment.Center) {
-            Image(
-                bitmap = UtilTools().getAssetsWebpByFileName(
-                    UtilTools.ImageFolderType.MONSTER_ICON,
-                    "monster_${UtilTools().getImageNameByRegistName(monsterInfo.registName)}"
+            AsyncImage(
+                model = newImageRequest(
+                    context = context,
+                    getAssetsURLByFileName(
+                        ImageFolder.MONSTER_ICON,
+                        "monster_${getImageNameByRegistName(monsterInfo.registName)}"
+                    )
                 ),
                 contentDescription = null,
                 modifier = Modifier.size(32.dp),

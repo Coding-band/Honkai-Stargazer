@@ -87,10 +87,13 @@ import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
 import utils.app.LongStringXML
-import utils.UtilTools
 import utils.annotation.DoItLater
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
+import utils.app.getIconByUserAccountIconValue
+import utils.app.newImageLoader
+import utils.app.newImageRequest
+import utils.app.removeStrQuote
 import utils.app.showSuccessToast
 import kotlin.math.min
 
@@ -150,7 +153,7 @@ fun UserInfoPageScreen(
                 Column(Modifier.fillMaxWidth()) {
                     Row(Modifier.padding(top = 4.dp, bottom = 4.dp)) {
                         Text(
-                            UtilTools().removeStringResDoubleQuotes(Res.string.PublicChars),
+                            removeStrQuote(Res.string.PublicChars),
                             modifier = Modifier.padding(end = 8.dp),
                             style = FontSizeNormal16(),
                             color = Color.White
@@ -165,7 +168,7 @@ fun UserInfoPageScreen(
 
                         //這裏不用刷新，是基於當前的狀態短期内不會改變
                         Text(
-                            UtilTools().removeStringResDoubleQuotes(Res.string.Switch),
+                            removeStrQuote(Res.string.Switch),
                             modifier = Modifier.padding(end = 8.dp).clip(CircleShape).clickable { isDisplayLcInfo.value = !isDisplayLcInfo.value },
                             style = FontSizeNormal16(),
                             color = Color.White
@@ -228,7 +231,7 @@ fun UserInfoPageScreen(
             item(span = { GridItemSpan(maxLineSpan) }) {
                 Box {
                     Text(
-                        text = UtilTools().removeStringResDoubleQuotes(Res.string.ProducedByStargazer),
+                        text = removeStrQuote(Res.string.ProducedByStargazer),
                         textAlign = TextAlign.Center,
                         style = FontSizeNormal12(),
                         color = Color.White,
@@ -260,7 +263,7 @@ fun UserInfoPageScreen(
                 .fillMaxSize()
             ){
                 Text(
-                    UtilTools().removeStringResDoubleQuotes(Res.string.UserInfoGameData),
+                    removeStrQuote(Res.string.UserInfoGameData),
                     modifier = Modifier
                         .background(Color(0x33FFFFFF),RoundedCornerShape(16.dp))
                         .clip(RoundedCornerShape(16.dp))
@@ -282,7 +285,7 @@ fun UserInfoPageScreen(
     if(showPopup.value){
         Popup(alignment = Alignment.Center) {
             AppDialog(
-                titleString = UtilTools().removeStringResDoubleQuotes(Res.string.PublicChars),
+                titleString = removeStrQuote(Res.string.PublicChars),
                 hazeState = hazeState,
                 components = {
                     Text(
@@ -319,10 +322,10 @@ fun UserInfoBioUI(context: PlatformContext, userAccount: UserAccount) {
                 // User Avatar
                 AsyncImage(
                     modifier = Modifier.size(72.dp * scale),
-                    model = UtilTools().newImageRequest(context,
-                        UtilTools().getIconByUserAccountIconValue(userAccount.icon)
+                    model = newImageRequest(context,
+                        getIconByUserAccountIconValue(userAccount.icon)
                         ),
-                    imageLoader = UtilTools().newImageLoader(context),
+                    imageLoader = newImageLoader(context),
                     contentDescription = "",
                 )
             }
@@ -336,7 +339,7 @@ fun UserInfoBioUI(context: PlatformContext, userAccount: UserAccount) {
         )
 
         Text(
-            text = "${userAccount.uid}·${UtilTools().removeStringResDoubleQuotes(
+            text = "${userAccount.uid}·${removeStrQuote(
                 userAccount.server.localeName)}",
             modifier = Modifier.align(Alignment.CenterHorizontally).padding(2.dp)
                 .background(Color(0x4D000000), RoundedCornerShape(49.dp))
@@ -369,7 +372,7 @@ fun UserInfoBioUI(context: PlatformContext, userAccount: UserAccount) {
                     )
 
                     Text(
-                        UtilTools().removeStringResDoubleQuotes(data.second),
+                        removeStrQuote(data.second),
                         modifier = Modifier.align(Alignment.CenterHorizontally).padding(start = 24.dp, end = 24.dp, top = 2.dp , bottom = 2.dp),
                         style = FontSizeNormal12(),
                         color = Color.White
@@ -421,7 +424,7 @@ fun UserInfoBioUI2(context: PlatformContext, userAccount: UserAccount) {
                 )
 
                 Text(
-                    UtilTools().removeStringResDoubleQuotes(data.second),
+                    removeStrQuote(data.second),
                     modifier = Modifier.align(Alignment.CenterHorizontally).padding(2.dp),
                     style = FontSizeNormal12(),
                     color = Color.White

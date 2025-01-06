@@ -50,7 +50,6 @@ import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
 import utils.app.TextColorNormal
-import utils.UtilTools
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import utils.app.GradientHomeButton

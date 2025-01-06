@@ -24,7 +24,10 @@ import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import utils.app.Language
-import utils.UtilTools
+import utils.app.Constants.Companion.LOST_IMAGE_DRAWABLE
+import utils.app.getAssetsJsonByFilePath
+import utils.app.getAssetsURLByFileName
+import utils.app.getImageNameByRegistName
 import utils.calculator.AttrData
 
 /**
@@ -63,30 +66,26 @@ open class Character(
         val charExtListJson = getCharacterExtListFromJSON()
 
         private fun getCharacterListFromJSON() : JsonElement {
-            return UtilTools().getAssetsJsonByFilePath("character_data/character_list.json")
+            return getAssetsJsonByFilePath("character_data/character_list.json")
         }
         private fun getCharacterExtListFromJSON() : JsonElement {
-            return UtilTools().getAssetsJsonByFilePath("character_data/character_ext_list.json")
+            return getAssetsJsonByFilePath("character_data/character_ext_list.json")
         }
 
         fun getCharacterDataFromFileName(characterFileName : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance) : JsonElement {
-            return UtilTools().getAssetsJsonByFilePath("character_data/${textLanguage.folderName}/${characterFileName}.json")
+            return getAssetsJsonByFilePath("character_data/${textLanguage.folderName}/${characterFileName}.json")
         }
 
         /**
          * composeResources/files/files/images/character_icon/jade_icon.webp
          */
-        fun getCharacterImageFromFileName(imageFolderType: UtilTools.ImageFolderType, characterName : String) : ImageBitmap {
-            return UtilTools().getAssetsWebpByFileName(imageFolderType, UtilTools().getImageNameByRegistName(characterName, (imageFolderType === UtilTools.ImageFolderType.CHAR_FULL)))
+        fun getCharacterImageFromFileName(imageFolder: ImageFolder, characterName : String) : String {
+            return getAssetsURLByFileName(imageFolder, getImageNameByRegistName(characterName, (imageFolder === ImageFolder.CHAR_FULL)))
         }
 
-        fun getCharacterImageByteArrayFromFileName(imageFolderType: UtilTools.ImageFolderType, characterName : String) : ByteArray {
-            return UtilTools().getAssetsWebpByteArrayByFileName(imageFolderType, UtilTools().getImageNameByRegistName(characterName, (imageFolderType === UtilTools.ImageFolderType.CHAR_FULL)))
-        }
-
-        fun getCharacterImageFromOfficialId(imageFolderType: UtilTools.ImageFolderType, charId : String) : ByteArray {
-            val listDataJson = charListJson.jsonArray.find { lcData -> lcData.jsonObject["charId"]!!.jsonPrimitive.content == charId } ?: return UtilTools().getLostImgByteArray()
-            return getCharacterImageByteArrayFromFileName(imageFolderType, listDataJson.jsonObject["name"]!!.jsonPrimitive.content)
+        fun getCharacterImageFromOfficialId(imageFolderType: ImageFolder, charId : String) : Any {
+            val listDataJson = charListJson.jsonArray.find { data -> data.jsonObject["charId"]!!.jsonPrimitive.content == charId } ?: return LOST_IMAGE_DRAWABLE
+            return getCharacterImageFromFileName(imageFolderType, listDataJson.jsonObject["name"]!!.jsonPrimitive.content)
         }
 
         @OptIn(ExperimentalCoroutinesApi::class)

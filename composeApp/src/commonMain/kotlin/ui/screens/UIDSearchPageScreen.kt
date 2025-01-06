@@ -61,12 +61,14 @@ import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.LongStringXML
-import utils.UtilTools
 import utils.hoyolab.HoyolabConst
 import utils.hoyolab.MihomoRequest
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
+import utils.app.getIconByUserAccountIconValue
+import utils.app.newImageRequest
+import utils.app.removeStrQuote
 import utils.starbase.StarbaseAPI
 
 @Composable
@@ -96,8 +98,8 @@ fun UIDSearchPageScreen(
 
     Box{
         val toaster = rememberToasterState()
-        val noDataStr = UtilTools().removeStringResDoubleQuotes(Res.string.UIDNoData)
-        val wrongFormatStr = UtilTools().removeStringResDoubleQuotes(Res.string.UIDFormatError)
+        val noDataStr = removeStrQuote(Res.string.UIDNoData)
+        val wrongFormatStr = removeStrQuote(Res.string.UIDFormatError)
         val isQuerying = remember { mutableStateOf(false) }
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -162,13 +164,13 @@ fun UIDSearchPageScreen(
 
             Row(Modifier.padding(top = 8.dp, bottom = 8.dp).fillMaxWidth()) {
                 Text(
-                    text = UtilTools().removeStringResDoubleQuotes(Res.string.UIDSearchRecord),
+                    text = removeStrQuote(Res.string.UIDSearchRecord),
                     style = FontSizeNormal14(),
                     color = Color.White
                 )
                 Spacer(Modifier.weight(1f))
                 Text(
-                    text = UtilTools().removeStringResDoubleQuotes(Res.string.UIDSearchRecordClear),
+                    text = removeStrQuote(Res.string.UIDSearchRecordClear),
                     style = FontSizeNormal14(),
                     color = Color.White,
                     modifier = Modifier.clickable {
@@ -214,11 +216,10 @@ fun UIDSearchPageScreen(
                                 // User Avatar
                                 AsyncImage(
                                     modifier = Modifier.size(40.dp * scale),
-                                    model = UtilTools().newImageRequest(
+                                    model = newImageRequest(
                                         context,
-                                        UtilTools().getIconByUserAccountIconValue(item.icon)
+                                        getIconByUserAccountIconValue(item.icon)
                                     ),
-                                    imageLoader = UtilTools().newImageLoader(context),
                                     contentDescription = "",
                                 )
                             }
@@ -233,7 +234,7 @@ fun UIDSearchPageScreen(
                                 )
                                 Spacer(Modifier.height(4.dp).weight(1f))
                                 Text(
-                                    text = "${item.uid}·${UtilTools().removeStringResDoubleQuotes(item.server.localeName)}",
+                                    text = "${item.uid}·${removeStrQuote(item.server.localeName)}",
                                     style = FontSizeNormal14(),
                                     color = Color.White
                                 )
@@ -243,7 +244,7 @@ fun UIDSearchPageScreen(
 
                             Row {
                                 Text(
-                                    text = "${UtilTools().removeStringResDoubleQuotes(Res.string.PlayerLevel)} ${item.level}",
+                                    text = "${removeStrQuote(Res.string.PlayerLevel)} ${item.level}",
                                     style = FontSizeNormal12(),
                                 )
 
@@ -313,7 +314,7 @@ fun UIDSearchPageScreen(
                             )
                             Spacer(Modifier.width(4.dp))
                             Text(
-                                text = "${item.uid}·${UtilTools().removeStringResDoubleQuotes(item.server.localeName)}",
+                                text = "${item.uid}·${removeStrQuote(item.server.localeName)}",
                                 style = FontSizeNormal14(),
                                 modifier = Modifier.weight(1f)
                             )
@@ -323,7 +324,7 @@ fun UIDSearchPageScreen(
 
                         Row {
                             Text(
-                                text = "${UtilTools().removeStringResDoubleQuotes(Res.string.PlayerLevel)} ${item.level}",
+                                text = "${removeStrQuote(Res.string.PlayerLevel)} ${item.level}",
                                 style = FontSizeNormal12(),
                             )
 

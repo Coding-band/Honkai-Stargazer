@@ -31,6 +31,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
 import ui.components.BackIcon
 import ui.components.CharacterEidolon
 import ui.components.CharacterTraceTree.CharacterTraceTree
@@ -81,10 +83,12 @@ import moe.tlaster.precompose.navigation.path
 import moe.tlaster.precompose.navigation.query
 import types.Character
 import types.CombatType
-import utils.JsonElementSaver
+import types.ImageFolder
 import utils.app.Language
-import utils.UtilTools
 import utils.annotation.DoItLater
+import utils.app.CharWeightList
+import utils.app.JsonElementSaver
+import utils.app.newImageRequest
 
 private lateinit var localCoroutineScope: CoroutineScope;
 private lateinit var localSnackbarHostState: SnackbarHostState;
@@ -150,7 +154,7 @@ fun CharacterInfoPage(
     val dialogTitle = remember { mutableStateOf("Nope") }
     val selectedSectIndex = remember { mutableStateOf(0) } //流派
 
-    val singleCharWeightJsonElement = UtilTools.TemporaryFunction().getCharWeightListJson().jsonObject[characterId]
+    val singleCharWeightJsonElement = CharWeightList.INSTANCE.jsonObject[characterId]
     var charWeightJsonObject : JsonObject? = null
 
     if(singleCharWeightJsonElement != null && singleCharWeightJsonElement.jsonArray.size > 0){
@@ -211,20 +215,11 @@ fun CharacterInfoFullImgWithRare(
             exit = fadeOut(),
             modifier = Modifier.fillMaxWidth().fillMaxHeight(0.8f).align(Alignment.BottomCenter)
         ) {
-            /*
-
             AsyncImage(
-                model = UtilTools().newImageRequest(context = LocalPlatformContext.current, data = Character.getCharacterImageByteArrayFromFileName(
-                    UtilTools.ImageFolderType.CHAR_FULL, fileName
-                ), crossFade = false),
-                contentDescription = "Character Full Image",
-                contentScale = ContentScale.Fit,
-                imageLoader = UtilTools().newImageLoader(LocalPlatformContext.current)
-            )
-             */
-            Image(
-                bitmap = Character.getCharacterImageFromFileName(
-                    UtilTools.ImageFolderType.CHAR_FULL, fileName
+                model = newImageRequest(
+                    context = LocalPlatformContext.current,
+                    data = Character.getCharacterImageFromFileName(ImageFolder.CHAR_FULL, fileName),
+                    crossFade = false
                 ),
                 contentDescription = "Character Full Image",
                 contentScale = ContentScale.Fit,

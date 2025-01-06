@@ -25,7 +25,7 @@ import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import utils.app.FontSizeNormal14
 import utils.app.TextColorNormal
-import utils.UtilTools
+import utils.app.removeStrQuote
 
 @Composable
 fun TitleHeader(iconRId : DrawableResource, titleString: String? = null, titleRId: StringResource? = null){
@@ -53,9 +53,9 @@ fun TitleHeader(iconRId : DrawableResource, titleString: String? = null, titleRI
                 text =
                 if (titleString === null) {
                     if (titleRId === null)
-                        UtilTools().removeStringResDoubleQuotes(Res.string.AppStatusLostConnect)
+                        removeStrQuote(Res.string.AppStatusLostConnect)
                     else
-                        UtilTools().removeStringResDoubleQuotes(titleRId)
+                        removeStrQuote(titleRId)
                 } else titleString,
                 color = TextColorNormal,
                 style = FontSizeNormal14(),

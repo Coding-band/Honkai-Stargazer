@@ -48,7 +48,8 @@ import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormal20
 import utils.app.TextColorNormalDim
-import utils.UtilTools
+import utils.app.htmlDescApplier
+import utils.app.removeStrQuote
 import utils.calculator.AttrData
 import utils.calculator.getCharAttrData
 import utils.calculator.getCharMaterialData
@@ -191,7 +192,7 @@ fun InfoLcMetamorphosis(lcInfo: JsonElement){
 
         val richTextState = rememberRichTextState()
         richTextState.setHtml(
-            UtilTools().htmlDescApplier(
+            htmlDescApplier(
                 lcInfo.jsonObject["skill"]!!.jsonObject["descHash"]!!.jsonPrimitive.content,
                 paramsList
             )
@@ -229,7 +230,7 @@ fun InfoLcMetamorphosis(lcInfo: JsonElement){
 
                 Column {
                     Text(
-                        UtilTools().removeStringResDoubleQuotes(Res.string.CharSoul)
+                        removeStrQuote(Res.string.CharSoul)
                             .replace("$" + "{1}", ""), color = Color(0xFFFFFFFF)
                     )
                     RichText(richTextState, color = Color(0xFFFFFFFF), style = FontSizeNormal14())

@@ -29,4 +29,4 @@ data class CharacterStatus(
     var characterProperties: ArrayList<HsrProperties>? = null,
     var isHelper: Boolean = false,
 
-)
+    )

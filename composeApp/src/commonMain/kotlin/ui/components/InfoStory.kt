@@ -31,12 +31,12 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import utils.app.Constants
 import utils.app.FontSizeNormal16
-import utils.UtilTools
+import utils.app.removeStrQuote
 
 @Composable
 fun InfoStory(infoJson : JsonElement, isLcStory : Boolean = false){
     val storyList : ArrayList<String> = arrayListOf(infoJson.jsonObject["descHash"]!!.jsonPrimitive.content)
-    val storyTitleList : ArrayList<String> = arrayListOf(UtilTools().removeStringResDoubleQuotes(Res.string.CharacterStory))
+    val storyTitleList : ArrayList<String> = arrayListOf(removeStrQuote(Res.string.CharacterStory))
     if(!isLcStory && infoJson.jsonObject["storyItems"] != null){
         for(storyItem in infoJson.jsonObject["storyItems"]!!.jsonArray){
             storyList.add(storyItem.jsonObject["text"]!!.jsonPrimitive.content)

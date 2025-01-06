@@ -58,6 +58,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
 import com.mohamedrejeb.richeditor.model.RichTextState
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material.RichText
@@ -99,14 +101,19 @@ import moe.tlaster.precompose.navigation.path
 import moe.tlaster.precompose.navigation.query
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import types.ImageFolder
 import utils.app.Constants
 import types.Relic
+import utils.app.Constants.Companion.MATERIAL_CARD_TITLE_HEIGHT
+import utils.app.Constants.Companion.RELIC_CARD_WIDTH
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
-import utils.JsonElementSaver
+import utils.app.JsonElementSaver
 import utils.app.Language
 import utils.app.TextColorNormalDim
-import utils.UtilTools
+import utils.app.htmlDescApplier
+import utils.app.newImageRequest
+import utils.app.pxToDp
 
 private lateinit var localCoroutineScope: CoroutineScope;
 private lateinit var localSnackbarHostState: SnackbarHostState;
@@ -212,7 +219,7 @@ fun RelicBasicInfo(infoJson: JsonElement){
 
         Column(modifier = Modifier.padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
             .onSizeChanged { item ->
-                columnHeightDp = UtilTools().pxToDp(item.height, density)
+                columnHeightDp = pxToDp(item.height, density)
             }) {
             Row() {
                 Text(
@@ -250,12 +257,12 @@ fun RelicSetInfo(infoJson: JsonElement, isShowing4Set: Boolean){
         for(param in skill[1].jsonObject["params"]!!.jsonArray){
             paramList.add(param.jsonPrimitive.float)
         }
-        UtilTools().htmlDescApplier(skill[1].jsonObject["desc"]!!.jsonPrimitive.content,paramList )
+        htmlDescApplier(skill[1].jsonObject["desc"]!!.jsonPrimitive.content,paramList )
     }else{
         for(param in skill[0].jsonObject["params"]!!.jsonArray){
             paramList.add(param.jsonPrimitive.float)
         }
-        UtilTools().htmlDescApplier(skill[0].jsonObject["desc"]!!.jsonPrimitive.content,paramList )
+        htmlDescApplier(skill[0].jsonObject["desc"]!!.jsonPrimitive.content,paramList )
     }
 
     Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)){
@@ -298,29 +305,29 @@ fun RelicInfoFullImgWithRare(
             Column(modifier = Modifier.width(getScreenSizeInfo().wDP - 36.dp).aspectRatio(1f).sizeIn(
                 Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)) {
                 Row{
-                    Image(
-                        bitmap = Relic.getRelicImageFromJSON(if(isRelic) UtilTools.ImageFolderType.RELIC_ICON else UtilTools.ImageFolderType.ORMANENT_ICON, fileName, if(isRelic) 1 else 5),
+                    AsyncImage(
+                        model = newImageRequest(context = LocalPlatformContext.current, Relic.getRelicImageFromJSON(if(isRelic) ImageFolder.RELIC_ICON else ImageFolder.ORMANENT_ICON, fileName, if(isRelic) 1 else 5)),
                         contentDescription = null,
                         modifier = Modifier.padding(16.dp).weight(1f).fillMaxWidth().aspectRatio(1f)
                     )
 
                     Spacer(modifier = Modifier.width(8.dp))
-                    Image(
-                        bitmap = Relic.getRelicImageFromJSON(if(isRelic) UtilTools.ImageFolderType.RELIC_ICON else UtilTools.ImageFolderType.ORMANENT_ICON, fileName, if(isRelic) 2 else 6),
+                    AsyncImage(
+                        model = newImageRequest(context = LocalPlatformContext.current, Relic.getRelicImageFromJSON(if(isRelic) ImageFolder.RELIC_ICON else ImageFolder.ORMANENT_ICON, fileName, if(isRelic) 2 else 6)),
                         contentDescription = null,
                         modifier = Modifier.padding(16.dp).weight(1f).fillMaxWidth().aspectRatio(1f)
                     )
                 }
                 Row {
                     if(isRelic){
-                        Image(
-                            bitmap = Relic.getRelicImageFromJSON(UtilTools.ImageFolderType.RELIC_ICON, fileName, 3),
+                        AsyncImage(
+                            model = newImageRequest(context = LocalPlatformContext.current, Relic.getRelicImageFromJSON(ImageFolder.RELIC_ICON, fileName, 3)),
                             contentDescription = null,
                             modifier = Modifier.padding(16.dp).weight(1f).fillMaxWidth().aspectRatio(1f)
                         )
                         Spacer(modifier = Modifier.width(8.dp))
-                        Image(
-                            bitmap = Relic.getRelicImageFromJSON(UtilTools.ImageFolderType.RELIC_ICON, fileName, 4),
+                        AsyncImage(
+                            model = newImageRequest(context = LocalPlatformContext.current, Relic.getRelicImageFromJSON(ImageFolder.RELIC_ICON, fileName, 4)),
                             contentDescription = null,
                             modifier = Modifier.padding(16.dp).weight(1f).fillMaxWidth().aspectRatio(1f)
                         )
@@ -394,10 +401,13 @@ fun RelicSetsCardDisplay(
                                     interactionSource = remember { MutableInteractionSource() }
                                 )
                             ) {
-                                Image(
-                                    bitmap = Relic.getRelicImageFromJSON(
-                                        if (isRelic) UtilTools.ImageFolderType.RELIC_ICON else UtilTools.ImageFolderType.ORMANENT_ICON,
-                                        relicSetName, index
+                                AsyncImage(
+                                    model = newImageRequest(
+                                        context = LocalPlatformContext.current,
+                                        Relic.getRelicImageFromJSON(
+                                            if (isRelic) ImageFolder.RELIC_ICON else ImageFolder.ORMANENT_ICON,
+                                            relicSetName, index
+                                        )
                                     ),
                                     contentDescription = "Relic Icon",
                                     modifier = Modifier.fillMaxWidth().aspectRatio(1f).background(
@@ -421,7 +431,7 @@ fun RelicSetsCardDisplay(
                                     color = TextColorNormalDim,
                                     maxLines = 2,
                                     overflow = TextOverflow.Ellipsis,
-                                    modifier = Modifier.wrapContentWidth()
+                                    modifier = Modifier.widthIn(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH *2).wrapContentHeight()
                                 )
                             }
                             Spacer(modifier = Modifier.height(2.dp))
