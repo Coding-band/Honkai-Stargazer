@@ -23,10 +23,9 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import utils.Language
+import utils.app.Language
 import utils.UtilTools
 import utils.calculator.AttrData
-import utils.calculator.getCharAttrData
 
 /**
  * Data from JSON of assets/character_data/<lang>/<fileName>.json

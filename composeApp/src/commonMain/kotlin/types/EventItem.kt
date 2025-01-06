@@ -12,7 +12,7 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import utils.errorLogExport
+import utils.app.errorLog
 import utils.hoyolab.HoyolabAPI
 
 @Serializable
@@ -74,7 +74,7 @@ data class EventItem(
             }
 
         }catch (e : Exception){
-            errorLogExport("EventListPageScreen", "EventListPageScreen() -> Loading Event List", e)
+            errorLog("EventListPageScreen", "EventListPageScreen() -> Loading Event List", e)
         }
         return eventList
     }

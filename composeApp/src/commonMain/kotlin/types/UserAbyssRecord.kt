@@ -10,8 +10,8 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import utils.Preferences
-import utils.errorLogExport
+import utils.app.Preferences
+import utils.app.errorLog
 import utils.hoyolab.HoyolabAPI
 import utils.hoyolab.HoyolabConst
 
@@ -97,7 +97,7 @@ data class UserAbyssRecord(
                 INSTANCE.userCurrMOCList = mocList
 
             }catch (e : Exception){
-                errorLogExport("UserAccount", "refreshMOCData()", e)
+                errorLog("UserAccount", "refreshMOCData()", e)
             }
         }
 
@@ -175,7 +175,7 @@ data class UserAbyssRecord(
                 INSTANCE.userCurrPFList = pfList
 
             }catch (e : Exception){
-                errorLogExport("UserAccount", "refreshPFData()", e)
+                errorLog("UserAccount", "refreshPFData()", e)
             }
         }
     }

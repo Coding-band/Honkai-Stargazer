@@ -3,7 +3,7 @@ package types
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import components.HomePageBlocks
+import ui.components.HomePageBlocks
 import files.Character
 import files.Event
 import files.Expedition
@@ -50,7 +50,7 @@ import files.ranking_ss_text
 import org.jetbrains.compose.resources.DrawableResource
 import utils.UtilTools
 import utils.annotation.DoItLater
-import utils.navigation.Screen
+import ui.navigation.Screen
 
 
 class Constants {

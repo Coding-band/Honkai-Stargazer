@@ -3,7 +3,7 @@ package types
 import androidx.compose.material.SnackbarHostState
 import com.multiplatform.webview.cookie.Cookie
 import com.russhwolf.settings.Settings
-import com.voc.honkaistargazer.BuildKonfig
+import com.voc.stargazer3.BuildKonfig
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
@@ -14,14 +14,14 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import utils.Preferences
+import utils.app.Preferences
 import utils.annotation.DoItLater
-import utils.errorLogExport
+import utils.app.errorLog
 import utils.hoyolab.AttributeExchange
 import utils.hoyolab.HoyolabAPI
 import utils.hoyolab.HoyolabConst
 import utils.hoyolab.HoyolabRequest
-import utils.showWarningToast
+import utils.app.showWarningToast
 import utils.starbase.StarbaseAPI
 
 @Serializable
@@ -129,7 +129,7 @@ class UserAccount(
 
             }catch (e : Exception){
                 resetUserAccount()
-                errorLogExport("UserAccount", "refreshUserAccount()", e)
+                errorLog("UserAccount", "refreshUserAccount()", e)
             }
         }
         @Deprecated("This function is for debug purpose only, and it didn't have any use in previous debug.")
@@ -241,7 +241,7 @@ class UserAccount(
                     }
                 }
             } catch (e: Exception) {
-                errorLogExport("UserAccount", "refreshCharacterListHoyolab()", e)
+                errorLog("UserAccount", "refreshCharacterListHoyolab()", e)
             }
         }
 
@@ -337,7 +337,7 @@ class UserAccount(
                     }
                 }
             }catch (e : Exception){
-                errorLogExport("UserAccount", "refreshCharacterList()", e)
+                errorLog("UserAccount", "refreshCharacterList()", e)
             }
         }
 

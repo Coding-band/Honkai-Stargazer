@@ -3,7 +3,7 @@ import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.unit.Dp
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
-import types.DeviceInfo
+import utils.device.DeviceInfo
 import utils.annotation.DoItLater
 
 /**

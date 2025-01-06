@@ -25,7 +25,7 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import types.AppInfo.Companion.AppInfoInstance
+import utils.device.AppInfo.Companion.AppInfoInstance
 import types.Attribute
 import types.Character
 import types.CharacterStatus
@@ -33,8 +33,8 @@ import types.HsrProperties
 import types.Lightcone
 import types.Relic
 import types.UserAccount
-import utils.Language
-import utils.errorLogExport
+import utils.app.Language
+import utils.app.errorLog
 
 class MihomoRequest(val uid : String, val language: Language.TextLanguage = Language.TextLanguageInstance) {
 
@@ -67,7 +67,7 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                     val response: HttpResponse = client.get(mihomoUrl)
                     //Check whether it is having any errors
                     if (!arrayListOf(200, 201).contains(response.status.value)) {
-                        errorLogExport(
+                        errorLog(
                             "MihomoRequest",
                             "getSRInfoParsed(uid = ${uid}, lang = ${language})",
                             Exception("HTTP Error Code ${response.status.value} : ${response.status.description}")
@@ -86,7 +86,7 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
             e.printStackTrace()
         }catch (e : Exception){
             // All response
-            errorLogExport("MihomoRequest", "getSRInfoParsed(uid = ${uid}, lang = ${language})",e)
+            errorLog("MihomoRequest", "getSRInfoParsed(uid = ${uid}, lang = ${language})",e)
         }
 
         return Json.parseToJsonElement("{}")
@@ -296,7 +296,7 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                         !srInfoParsed.isEmpty() &&
                         !(srInfoParsed.containsKey("detail"))
                     ){
-                        errorLogExport("MihomoRequest", "getUserAccountByMiHomo()",e)
+                        errorLog("MihomoRequest", "getUserAccountByMiHomo()",e)
                     }
                 }
 

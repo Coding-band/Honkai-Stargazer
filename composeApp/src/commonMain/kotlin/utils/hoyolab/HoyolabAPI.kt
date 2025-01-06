@@ -1,8 +1,7 @@
 package utils.hoyolab
 
 import androidx.annotation.IntRange
-import utils.Language
-import utils.Preferences
+import utils.app.Language
 import utils.annotation.DoItLater
 
 class HoyolabAPI(platform: HoyolabRequest.PLATFORM = HoyolabRequest.PLATFORM.HOYOLAB, cookies : String) {

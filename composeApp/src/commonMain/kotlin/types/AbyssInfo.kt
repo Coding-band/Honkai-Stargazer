@@ -37,11 +37,11 @@ import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
-import utils.Language
-import utils.Language.Companion.TextLanguageInstance
+import utils.app.Language
+import utils.app.Language.Companion.TextLanguageInstance
 import utils.UtilTools
 import utils.annotation.VersionUpdateCheck
-import utils.errorLogExport
+import utils.app.errorLog
 
 @Serializable
 enum class AbyssInfoType {
@@ -84,7 +84,7 @@ data class AbyssInfo(
                 val json = Json { ignoreUnknownKeys = true }
                 return json.decodeFromString<AbyssInfo>(abyssJsonStr)
             }catch (e: Exception) {
-                errorLogExport("AbyssInfo", "getAbyssItemByMocId(abyssId = $abyssId, type = $type)", e)
+                errorLog("AbyssInfo", "getAbyssItemByMocId(abyssId = $abyssId, type = $type)", e)
                 return null
             }
         }
@@ -153,7 +153,7 @@ data class AbyssInfoList(
                         return@async json.decodeFromString<ArrayList<AbyssInfoList>>(abyssJson)
 
                     }catch (e: Exception) {
-                        errorLogExport("AbyssInfoList", "getAbyssList(type = $type)", e)
+                        errorLog("AbyssInfoList", "getAbyssList(type = $type)", e)
                         return@async retArray
                     }
                 }
@@ -178,7 +178,7 @@ data class AbyssInfoList(
                         if(abyssFiltered.isEmpty()) return@async "???"
                         return@async abyssFiltered[0].nameList[TextLanguageInstance] ?: "???"
                     }catch (e: Exception) {
-                        errorLogExport("AbyssInfoList", "getAbyssTitleLocaleNameById(abyssId = $abyssId, type = $type)", e)
+                        errorLog("AbyssInfoList", "getAbyssTitleLocaleNameById(abyssId = $abyssId, type = $type)", e)
                         return@async "???"
                     }
                 }

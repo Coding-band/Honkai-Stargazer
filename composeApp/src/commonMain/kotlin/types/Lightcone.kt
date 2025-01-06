@@ -10,7 +10,6 @@ import androidx.annotation.IntRange
 import androidx.compose.runtime.saveable.Saver
 import androidx.compose.runtime.saveable.listSaver
 import androidx.compose.ui.graphics.ImageBitmap
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.async
@@ -24,13 +23,9 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import types.Character.Companion.charExtListJson
-import types.Character.Companion.charListJson
-import utils.Language
+import utils.app.Language
 import utils.UtilTools
 import utils.calculator.AttrData
-import utils.calculator.getCharAttrData
-import utils.calculator.getLcAttrData
 
 
 @Serializable

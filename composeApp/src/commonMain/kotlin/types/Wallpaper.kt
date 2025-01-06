@@ -1,7 +1,7 @@
 package types
 
 import androidx.compose.ui.graphics.ImageBitmap
-import utils.Language
+import utils.app.Language
 import utils.UtilTools
 import utils.annotation.VersionUpdateCheck
 

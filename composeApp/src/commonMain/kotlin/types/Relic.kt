@@ -20,8 +20,7 @@ import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import types.Lightcone.Companion.lcExtListJson
-import utils.Language
+import utils.app.Language
 import utils.UtilTools
 import utils.hoyolab.AttributeExchange
 

@@ -8,7 +8,6 @@ import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.unit.Dp
 import coil3.ImageLoader
 import coil3.PlatformContext
-import coil3.addLastModifiedToFileCacheKey
 import coil3.disk.DiskCache
 import coil3.memory.MemoryCache
 import coil3.request.CachePolicy
@@ -45,6 +44,7 @@ import org.jetbrains.compose.resources.stringResource
 import types.Character
 import utils.annotation.DoItLater
 import utils.annotation.VersionUpdateCheck
+import utils.app.errorLog
 import kotlin.math.pow
 import kotlin.math.roundToInt
 
@@ -99,7 +99,7 @@ class UtilTools {
                     if(ImageFolderType.CHAR_FULL == folderType){
                         return@async getAssetsWebpByFileName(ImageFolderType.CHAR_SPLASH, fileName)
                     }else{
-                        errorLogExport("UtilTools","getAssetsWebpByFileName()",e)
+                        errorLog("UtilTools","getAssetsWebpByFileName()",e)
                         return@async getImageBitmapByByteArray(Res.readBytes("files/ico_lost_img.webp"))
                     }
 
@@ -121,7 +121,7 @@ class UtilTools {
                     if(ImageFolderType.CHAR_FULL == folderType){
                         return@async getAssetsWebpByteArrayByFileName(ImageFolderType.CHAR_SPLASH, fileName)
                     }else {
-                        errorLogExport("UtilTools", "getAssetsWebpByFileName()", e)
+                        errorLog("UtilTools", "getAssetsWebpByFileName()", e)
                         return@async (Res.readBytes("files/ico_lost_img.webp"))
                     }
                 }
@@ -144,7 +144,7 @@ class UtilTools {
                     return@async Json.parseToJsonElement(getAssetsStringByFilePath(filePath))
                 } catch (e: Exception) {
                     // Handle the exception, ErrorLogExporter Please!
-                    errorLogExport("UtilTools","getAssetsWebpByFileName()",e)
+                    errorLog("UtilTools","getAssetsWebpByFileName()",e)
                     return@async Json.parseToJsonElement("{}")
                 }
             }
@@ -165,7 +165,7 @@ class UtilTools {
                     return@async Json {ignoreUnknownKeys = true} .decodeFromString<T>(getAssetsStringByFilePath(filePath))
                 } catch (e: Exception) {
                     // Handle the exception, ErrorLogExporter Please!
-                    errorLogExport("UtilTools","getAssetsJsonByFilePathWithIgnore()",e)
+                    errorLog("UtilTools","getAssetsJsonByFilePathWithIgnore()",e)
                     return@async Json {ignoreUnknownKeys = true} .decodeFromString<T>("{}")
                 }
             }
@@ -185,7 +185,7 @@ class UtilTools {
                     return@async assetString
                 } catch (e: Exception) {
                     // Handle the exception, ErrorLogExporter Please!
-                    errorLogExport("UtilTools","getAssetsWebpByFileName()",e)
+                    errorLog("UtilTools","getAssetsWebpByFileName()",e)
                     return@async "{}"
                 }
             }
@@ -204,7 +204,7 @@ class UtilTools {
                     return@async assetString
                 } catch (e: Exception) {
                     // Handle the exception, ErrorLogExporter Please!
-                    errorLogExport("UtilTools","getAssetsWebpByFileName()",e)
+                    errorLog("UtilTools","getAssetsWebpByFileName()",e)
                     return@async "{}"
                 }
             }
@@ -383,11 +383,6 @@ class UtilTools {
         return stringResource(stringResource).removePrefix("\"").removeSuffix("\"")
     }
 
-    @Composable
-    fun removeStringResDoubleQuotesTest(stringResource: utils.res.StringResource) : String{
-        return utils.res.stringResource(stringResource).removePrefix("\"").removeSuffix("\"")
-    }
-
     fun pxToDp(px : Int, density: Float) : Dp {
         return Dp(px / density)
     }
@@ -520,7 +515,6 @@ class UtilTools {
                 .build()
         }
         .logger(DebugLogger())
-        .addLastModifiedToFileCacheKey(true)
         .build()
 
     fun newImageRequest(context: PlatformContext, data: Any, crossFade : Boolean = true) = ImageRequest.Builder(context)
