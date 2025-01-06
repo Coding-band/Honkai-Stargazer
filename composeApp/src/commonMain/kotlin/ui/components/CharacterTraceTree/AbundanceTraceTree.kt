@@ -22,8 +22,8 @@ import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
-import utils.app.Constants
 import types.Path
+import utils.app.Constants
 
 //(x,y) base on Figma, no need to handly calculate
 val abundanceOffsetList = arrayListOf(

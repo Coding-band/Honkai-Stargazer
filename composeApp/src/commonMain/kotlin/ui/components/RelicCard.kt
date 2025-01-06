@@ -37,6 +37,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import types.ImageFolder
@@ -44,6 +45,8 @@ import types.Relic
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
+import utils.app.Constants.Companion.CHAR_CARD_TITLE_HEIGHT
+import utils.app.Constants.Companion.MATERIAL_CARD_TITLE_HEIGHT
 import utils.app.Constants.Companion.RELIC_CARD_HEIGHT
 import utils.app.Constants.Companion.RELIC_CARD_WIDTH
 import utils.app.Constants.Companion.getCardBgColorByRare
@@ -68,8 +71,7 @@ fun RelicCard(
     val interactionSource = remember { MutableInteractionSource() }
     Box(
         modifier = Modifier
-            .widthIn(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH *2)
-            .aspectRatio(RELIC_CARD_WIDTH / RELIC_CARD_HEIGHT)
+            .widthIn(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH *2).wrapContentHeight()
             .clip(
                 RoundedCornerShape(
                     topEnd = 15.dp,
@@ -129,7 +131,8 @@ fun RelicCard(
                     color = TextColorNormalDim,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.wrapContentWidth()
+                    lineHeight = CHAR_CARD_TITLE_HEIGHT.value.sp,
+                    modifier = Modifier.widthIn(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH*2).wrapContentHeight()
                 )
             }
             Spacer(modifier = Modifier.height(2.dp))

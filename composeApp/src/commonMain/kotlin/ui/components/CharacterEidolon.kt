@@ -23,6 +23,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.min
 import androidx.compose.ui.zIndex
@@ -41,7 +43,6 @@ import files.EidolonFrame6
 import files.Res
 import files.bg_eidolon_soul
 import files.phorphos_star_half_regular
-import getScreenSizeInfo
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.float
@@ -50,17 +51,19 @@ import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
+import types.ImageFolder
+import types.Eidolon
 import utils.app.Constants
+import utils.app.Constants.Companion.EIDOLON_FRAME_BASE_HEIGHT
 import utils.app.Constants.Companion.EIDOLON_FRAME_BASE_WIDTH
 import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
 import utils.app.Constants.Companion.getEidolonScale
-import types.Eidolon
-import types.ImageFolder
 import utils.app.FontSizeNormal14
 import utils.app.getAssetsURLByFileName
 import utils.app.getImageNameByRegistName
 import utils.app.htmlDescApplier
 import utils.app.newImageRequest
+import utils.app.pxToDp
 import utils.app.removeStrQuote
 
 private lateinit var dialogTitleLocal : MutableState<String>
@@ -129,74 +132,90 @@ fun CharacterEidolon(
 
 @Composable
 fun CharacterEidolonBox(eidolonList: ArrayList<Eidolon>, selectIndex : MutableState<Int>) {
-    val eidolonScale = getEidolonScale(min(getScreenSizeInfo().wDP - 36.dp, EIDOLON_FRAME_BASE_WIDTH * 1.5f))
+    val density = LocalDensity.current.density
+    val eidolonScale = remember { mutableStateOf(2f) }
 
-    Box(modifier = Modifier.fillMaxWidth().height(Constants.EIDOLON_FRAME_BASE_HEIGHT * eidolonScale)){
-        //Box for Padding
-        for(eidolon in eidolonList){
-            //Box for Eidolon Image & Stroke
-            Box(
-                modifier = Modifier
-                    .size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale)
-                    .zIndex(if(selectIndex.value == eidolon.eidolonIndex) 10f else eidolon.eidolonIndex.toFloat())
-                    .offset(
-                        eidolonOffSet[eidolon.eidolonIndex].first.dp.times(eidolonScale),
-                        eidolonOffSet[eidolon.eidolonIndex].second.dp.times(eidolonScale),
-                    )
-                    .clickable(enabled = true, indication = null, interactionSource = remember { MutableInteractionSource() }, onClick = {
-                        if(selectIndex.value == eidolon.eidolonIndex && dialogLastTrigTypeLocal.value == lastTrigTypeTag){
-                            selectIndex.value = 0
-                            dialogDisplayLocal.value = false
-                        }else {
-                            selectIndex.value = eidolon.eidolonIndex
-                            dialogTitleLocal.value = eidolon.name
-                            dialogDisplayLocal.value = true
-                            dialogComponentLocal.value = { EidolonDialogComponent(eidolon) }
-                        }
-                        dialogLastTrigTypeLocal.value = lastTrigTypeTag
-                    }),
-
-            ){
-
-                AsyncImage(
-                    model = newImageRequest(
-                        context = LocalPlatformContext.current,
-                        getAssetsURLByFileName(ImageFolder.CHAR_EIDOLON, eidolon.eidolonImgName)
-                    ),
-                    modifier = Modifier.size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale),
-                    contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Image"
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .onSizeChanged {it ->
+                eidolonScale.value = getEidolonScale(min(pxToDp(it.width, density), EIDOLON_FRAME_BASE_WIDTH * 1.5f))
+            }
+            .height(Constants.EIDOLON_FRAME_BASE_HEIGHT * eidolonScale.value)
+    ) {
+        Box(
+            modifier = Modifier
+                .size(
+                    EIDOLON_FRAME_BASE_WIDTH * eidolonScale.value,
+                    EIDOLON_FRAME_BASE_HEIGHT * eidolonScale.value
                 )
+                .align(Alignment.Center)
+        ){
+            //Box for Padding
+            for (eidolon in eidolonList) {
+                //Box for Eidolon Image & Stroke
+                Box(
+                    modifier = Modifier
+                        .size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale.value)
+                        .zIndex(if (selectIndex.value == eidolon.eidolonIndex) 10f else eidolon.eidolonIndex.toFloat())
+                        .offset(
+                            eidolonOffSet[eidolon.eidolonIndex].first.dp.times(eidolonScale.value),
+                            eidolonOffSet[eidolon.eidolonIndex].second.dp.times(eidolonScale.value),
+                        )
+                        .clickable(
+                            enabled = true,
+                            indication = null,
+                            interactionSource = remember { MutableInteractionSource() },
+                            onClick = {
+                                if (selectIndex.value == eidolon.eidolonIndex && dialogLastTrigTypeLocal.value == lastTrigTypeTag) {
+                                    selectIndex.value = 0
+                                    dialogDisplayLocal.value = false
+                                } else {
+                                    selectIndex.value = eidolon.eidolonIndex
+                                    dialogTitleLocal.value = eidolon.name
+                                    dialogDisplayLocal.value = true
+                                    dialogComponentLocal.value = { EidolonDialogComponent(eidolon) }
+                                }
+                                dialogLastTrigTypeLocal.value = lastTrigTypeTag
+                            }),
 
-                /*
-                AsyncImage(
-                    model = UtilTools().newImageRequest(
-                        LocalPlatformContext.current,
-                        UtilTools().getAssetsWebpByteArrayByFileName(UtilTools.ImageFolderType.CHAR_EIDOLON, eidolon.eidolonImgName),
-                        false
-                    ),
-                    modifier = Modifier.size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale),
-                    contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Image",
-                    imageLoader = UtilTools().newImageLoader(LocalPlatformContext.current)
-                )
-                 */
+                    ) {
 
-                if((selectIndex.value == eidolon.eidolonIndex) && dialogLastTrigTypeLocal.value == lastTrigTypeTag) {
+                    /*
                     Image(
-                        painter = painterResource(
-                            when (eidolon.eidolonIndex) {
-                                1 -> Res.drawable.EidolonFrame1
-                                2 -> Res.drawable.EidolonFrame2
-                                3 -> Res.drawable.EidolonFrame3
-                                4 -> Res.drawable.EidolonFrame4
-                                5 -> Res.drawable.EidolonFrame5
-                                6 -> Res.drawable.EidolonFrame6
-                                else -> Res.drawable.EidolonFrame1
-                            }
-                        ),
-                        modifier = Modifier.size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale)
-                        ,
-                        contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Frame"
+                        bitmap = UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.CHAR_EIDOLON, eidolon.eidolonImgName),
+                        modifier = Modifier.size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale),
+                        contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Image"
                     )
+                     */
+
+                    AsyncImage(
+                        model = newImageRequest(
+                            LocalPlatformContext.current,
+                            getAssetsURLByFileName(ImageFolder.CHAR_EIDOLON, eidolon.eidolonImgName)
+                        ),
+                        modifier = Modifier.size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale.value),
+                        contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Image"
+                    )
+
+
+                    if ((selectIndex.value == eidolon.eidolonIndex) && dialogLastTrigTypeLocal.value == lastTrigTypeTag) {
+                        Image(
+                            painter = painterResource(
+                                when (eidolon.eidolonIndex) {
+                                    1 -> Res.drawable.EidolonFrame1
+                                    2 -> Res.drawable.EidolonFrame2
+                                    3 -> Res.drawable.EidolonFrame3
+                                    4 -> Res.drawable.EidolonFrame4
+                                    5 -> Res.drawable.EidolonFrame5
+                                    6 -> Res.drawable.EidolonFrame6
+                                    else -> Res.drawable.EidolonFrame1
+                                }
+                            ),
+                            modifier = Modifier.size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale.value),
+                            contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Frame"
+                        )
+                    }
                 }
             }
         }
@@ -225,12 +244,21 @@ fun EidolonDialogComponent(eidolon: Eidolon){
 
             AsyncImage(
                 model = newImageRequest(
-                    context = LocalPlatformContext.current,
-                    getAssetsURLByFileName(ImageFolder.CHAR_SOUL, eidolon.soulIconName)
+                    LocalPlatformContext.current,
+                    getAssetsURLByFileName(ImageFolder.CHAR_SOUL, eidolon.soulIconName),
+                    false
                 ),
+                modifier = Modifier.size(50.5.dp).align(Alignment.Center),
+                contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Soul Icon",
+            )
+
+            /*
+            Image(
+                bitmap = UtilTools().getAssetsWebpByFileName(UtilTools.ImageFolderType.CHAR_SOUL, eidolon.soulIconName),
                 contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Soul Icon",
                 modifier = Modifier.size(50.5.dp).align(Alignment.Center)
             )
+             */
         }
 
         Spacer(Modifier.width(6.dp))

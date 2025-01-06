@@ -33,6 +33,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import files.Res
@@ -45,6 +46,7 @@ import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
 import utils.app.Constants.Companion.CHAR_CARD_HEIGHT
+import utils.app.Constants.Companion.CHAR_CARD_TITLE_HEIGHT
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import utils.app.Constants.Companion.LOST_IMAGE_DRAWABLE
 import utils.app.Constants.Companion.MATERIAL_CARD_TITLE_HEIGHT
@@ -146,6 +148,7 @@ fun CharacterCard(
                         textAlign = TextAlign.Center,
                         color = TextColorNormalDim,
                         fontSize = FontSizeNormal12().fontSize,
+                        lineHeight = CHAR_CARD_TITLE_HEIGHT.value.sp,
                         maxLines = 1
                     )
 
@@ -155,6 +158,7 @@ fun CharacterCard(
                         textAlign = TextAlign.Center,
                         color = TextColorNormalDim,
                         fontSize = FontSizeNormal12().fontSize,
+                        lineHeight = CHAR_CARD_TITLE_HEIGHT.value.sp,
                         maxLines = 1
                     )
                 }

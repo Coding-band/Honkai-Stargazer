@@ -26,6 +26,7 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
@@ -364,77 +365,78 @@ fun RelicSetsCardDisplay(
         //Empty Blank
         Spacer(modifier = Modifier.height(24.dp))
 
-        LazyRow(
-            state = rememberLazyListState(),
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            for (index in if (isRelic) { 1..4 } else { 5..6 }) {
-                item{
-                    Box(
-                        modifier = Modifier.size(
-                            Constants.RELIC_CARD_WIDTH,
-                            Constants.RELIC_CARD_HEIGHT
-                        ).clip(
-                            RoundedCornerShape(
-                                topEnd = 15.dp,
-                                topStart = 4.dp,
-                                bottomEnd = 4.dp,
-                                bottomStart = 4.dp
+        Box(modifier = Modifier.fillMaxWidth().wrapContentHeight()) {
+            LazyRow(
+                state = rememberLazyListState(),
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.align(Alignment.Center).wrapContentSize()
+            ) {
+                for (index in if (isRelic) { 1..4 } else { 5..6 }) {
+                    item{
+                        Box(
+                            modifier = Modifier.widthIn(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH *1.5f).wrapContentHeight()
+                                .clip(
+                                RoundedCornerShape(
+                                    topEnd = 15.dp,
+                                    topStart = 4.dp,
+                                    bottomEnd = 4.dp,
+                                    bottomStart = 4.dp
+                                )
                             )
-                        )
-                    ) {
-                        Column {
-                            Box(
-                                modifier = Modifier.defaultMinSize(
-                                    Constants.RELIC_CARD_WIDTH, Constants.RELIC_CARD_WIDTH
-                                ).clip(
-                                    RoundedCornerShape(
-                                        topEnd = 15.dp,
-                                        topStart = 4.dp,
-                                        bottomEnd = 4.dp,
-                                        bottomStart = 4.dp
+                        ) {
+                            Column {
+                                Box(
+                                    modifier = Modifier.defaultMinSize(
+                                        Constants.RELIC_CARD_WIDTH, Constants.RELIC_CARD_WIDTH
+                                    ).clip(
+                                        RoundedCornerShape(
+                                            topEnd = 15.dp,
+                                            topStart = 4.dp,
+                                            bottomEnd = 4.dp,
+                                            bottomStart = 4.dp
+                                        )
+                                    ).clickable(
+                                        onClick = { },
+                                        indication = ripple(),
+                                        interactionSource = remember { MutableInteractionSource() }
                                     )
-                                ).clickable(
-                                    onClick = { },
-                                    indication = ripple(),
-                                    interactionSource = remember { MutableInteractionSource() }
-                                )
-                            ) {
-                                AsyncImage(
-                                    model = newImageRequest(
-                                        context = LocalPlatformContext.current,
-                                        Relic.getRelicImageFromJSON(
-                                            if (isRelic) ImageFolder.RELIC_ICON else ImageFolder.ORMANENT_ICON,
-                                            relicSetName, index
-                                        )
-                                    ),
-                                    contentDescription = "Relic Icon",
-                                    modifier = Modifier.fillMaxWidth().aspectRatio(1f).background(
-                                        Brush.verticalGradient(
-                                            colors = Constants.getCardBgColorByRare(relicJson.jsonObject["rarity"]!!.jsonPrimitive.int)
-                                        )
-                                    ),
-                                    contentScale = ContentScale.Crop
+                                ) {
+                                    AsyncImage(
+                                        model = newImageRequest(
+                                            context = LocalPlatformContext.current,
+                                            Relic.getRelicImageFromJSON(
+                                                if (isRelic) ImageFolder.RELIC_ICON else ImageFolder.ORMANENT_ICON,
+                                                relicSetName, index
+                                            )
+                                        ),
+                                        contentDescription = "Relic Icon",
+                                        modifier = Modifier.fillMaxWidth().aspectRatio(1f).background(
+                                            Brush.verticalGradient(
+                                                colors = Constants.getCardBgColorByRare(relicJson.jsonObject["rarity"]!!.jsonPrimitive.int)
+                                            )
+                                        ),
+                                        contentScale = ContentScale.Crop
 
-                                )
+                                    )
+                                }
+                                Row(
+                                    Modifier.fillMaxWidth().wrapContentHeight(),
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.Center
+                                ) {
+                                    Text(
+                                        text = relicJson.jsonObject["pieces"]!!.jsonObject[index.toString()]!!.jsonObject["name"]!!.jsonPrimitive.content,
+                                        textAlign = TextAlign.Center,
+                                        style = FontSizeNormal12(),
+                                        color = TextColorNormalDim,
+                                        maxLines = 2,
+                                        overflow = TextOverflow.Ellipsis,
+                                        modifier = Modifier.widthIn(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH *2).wrapContentHeight()
+                                    )
+                                }
+                                Spacer(modifier = Modifier.height(2.dp))
                             }
-                            Row(
-                                Modifier.fillMaxWidth().wrapContentHeight(),
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.Center
-                            ) {
-                                Text(
-                                    text = relicJson.jsonObject["pieces"]!!.jsonObject[index.toString()]!!.jsonObject["name"]!!.jsonPrimitive.content,
-                                    textAlign = TextAlign.Center,
-                                    style = FontSizeNormal12(),
-                                    color = TextColorNormalDim,
-                                    maxLines = 2,
-                                    overflow = TextOverflow.Ellipsis,
-                                    modifier = Modifier.widthIn(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH *2).wrapContentHeight()
-                                )
-                            }
-                            Spacer(modifier = Modifier.height(2.dp))
                         }
                     }
                 }

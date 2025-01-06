@@ -1,6 +1,5 @@
 package ui.components.CharacterTraceTree
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -34,6 +33,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -42,15 +43,11 @@ import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
-import ui.components.MaterialCard
-import ui.components.ThemedSlider
-import ui.components.TitleHeader
 import files.Res
 import files.TraceEnergyEarn
 import files.TraceTree
 import files.Upgrade
 import files.phorphos_tree_structure_fill
-import getScreenSizeInfo
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
@@ -60,14 +57,18 @@ import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import types.ImageFolder
-import utils.app.Constants
-import utils.app.Constants.Companion.TRACE_TREE_BASE_WIDTH
-import utils.app.Constants.Companion.getTraceTreeScale
 import types.Material
 import types.Path
 import types.TraceTreeItem
 import types.TracecTreeKeyStatus
 import types.TracecTreeLevelData
+import ui.components.MaterialCard
+import ui.components.ThemedSlider
+import ui.components.TitleHeader
+import utils.app.Constants
+import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
+import utils.app.Constants.Companion.TRACE_TREE_BASE_WIDTH
+import utils.app.Constants.Companion.getTraceTreeScale
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.formatDecimal
@@ -75,6 +76,7 @@ import utils.app.getAssetsURLByFileName
 import utils.app.getImageNameByRegistName
 import utils.app.htmlDescApplier
 import utils.app.newImageRequest
+import utils.app.pxToDp
 import utils.app.removeStrQuote
 
 private lateinit var dialogTitleLocal : MutableState<String>
@@ -99,28 +101,42 @@ fun CharacterTraceTree(
     dialogComponentLocal = dialogComponent
     dialogLastTrigTypeLocal = dialogLastTrigType
 
-    val displayWidth = min(getScreenSizeInfo().wDP - 36.dp, (TRACE_TREE_BASE_WIDTH*1.5f));
+    val displayWidth = remember { mutableStateOf(1.dp) }
     val selectedId = remember { mutableStateOf(0) }
-    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)){
-        TitleHeader(iconRId = Res.drawable.phorphos_tree_structure_fill, titleRId = Res.string.TraceTree)
-
-        //Empty Blank
-        Spacer(modifier = Modifier.height(24.dp))
-
-        Column(modifier = Modifier.fillMaxWidth().wrapContentHeight(), horizontalAlignment = Alignment.CenterHorizontally) {
-            when(path){
-                Path.Abundance -> AbundanceTraceTree(infoJson, displayWidth, selectedId, charName)
-                Path.Destruction -> DestructionTraceTree(infoJson, displayWidth, selectedId, charName)
-                Path.Erudition -> EruditionTraceTree(infoJson, displayWidth, selectedId, charName)
-                Path.Harmony -> HarmonyTraceTree(infoJson, displayWidth, selectedId, charName)
-                Path.Hunt -> HuntTraceTree(infoJson, displayWidth, selectedId, charName)
-                Path.Nihility -> NihilityTraceTree(infoJson, displayWidth, selectedId, charName)
-                Path.Preservation -> PreservationTraceTree(infoJson, displayWidth, selectedId, charName)
-                else -> {}
-            }
+    val density = LocalDensity.current.density
+    Box(modifier = Modifier
+        .fillMaxWidth()
+        .padding(start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)
+        .onSizeChanged { it->
+            displayWidth.value = min(pxToDp(it.width, density), (TRACE_TREE_BASE_WIDTH*1.5f))
         }
+        .wrapContentHeight()
+    ){
+        Column(modifier = Modifier
+            .width(displayWidth.value)
+            .statusBarsPadding()
+            .align(Alignment.Center)
+        ){
+            TitleHeader(iconRId = Res.drawable.phorphos_tree_structure_fill, titleRId = Res.string.TraceTree)
+
+            //Empty Blank
+            Spacer(modifier = Modifier.height(24.dp))
+
+            Column(modifier = Modifier.fillMaxWidth().wrapContentHeight(), horizontalAlignment = Alignment.CenterHorizontally) {
+                when(path){
+                    Path.Abundance -> AbundanceTraceTree(infoJson, displayWidth.value, selectedId, charName)
+                    Path.Destruction -> DestructionTraceTree(infoJson, displayWidth.value, selectedId, charName)
+                    Path.Erudition -> EruditionTraceTree(infoJson, displayWidth.value, selectedId, charName)
+                    Path.Harmony -> HarmonyTraceTree(infoJson, displayWidth.value, selectedId, charName)
+                    Path.Hunt -> HuntTraceTree(infoJson, displayWidth.value, selectedId, charName)
+                    Path.Nihility -> NihilityTraceTree(infoJson, displayWidth.value, selectedId, charName)
+                    Path.Preservation -> PreservationTraceTree(infoJson, displayWidth.value, selectedId, charName)
+                    else -> {}
+                }
+            }
 
 
+        }
     }
 }
 
@@ -327,8 +343,10 @@ fun TraceTreeBtn(
                 },
             )
     ) {
+
         AsyncImage(
-            model = newImageRequest(context = LocalPlatformContext.current,
+            model = newImageRequest(
+                LocalPlatformContext.current,
                 if (selfId <= 5) {
                     getAssetsURLByFileName(
                         ImageFolder.CHAR_SKILL,
@@ -339,34 +357,13 @@ fun TraceTreeBtn(
                         ImageFolder.CHAR_SKILL_TREE,
                         traceTreeItem[0].iconPath
                     )
-                }
-            ),
-            contentDescription = "Skill Icon",
-            modifier = Modifier.size(imgWidth).align(Alignment.Center)
-        )
-
-        /*
-        AsyncImage(
-            model = UtilTools().newImageRequest(
-                LocalPlatformContext.current,
-                if (selfId <= 5) {
-                    UtilTools().getAssetsWebpByteArrayByFileName(
-                        UtilTools.ImageFolderType.CHAR_SKILL,
-                        UtilTools().getImageNameByRegistName(traceTreeItem[0].iconPath, isCharNoGen = true)
-                    )
-                } else {
-                    UtilTools().getAssetsWebpByteArrayByFileName(
-                        UtilTools.ImageFolderType.CHAR_SKILL_TREE,
-                        traceTreeItem[0].iconPath
-                    )
                 },
                 false
             ),
             contentDescription = "Skill Icon",
             modifier = Modifier.size(imgWidth).align(Alignment.Center),
-            imageLoader = UtilTools().newImageLoader(LocalPlatformContext.current)
         )
-        */
+
     }
 }
 

@@ -81,12 +81,14 @@ import moe.tlaster.precompose.navigation.BackStackEntry
 import moe.tlaster.precompose.navigation.Navigator
 import moe.tlaster.precompose.navigation.path
 import moe.tlaster.precompose.navigation.query
+import org.jetbrains.compose.resources.painterResource
 import types.Character
 import types.CombatType
 import types.ImageFolder
 import utils.app.Language
 import utils.annotation.DoItLater
 import utils.app.CharWeightList
+import utils.app.Constants.Companion.LOST_IMAGE_DRAWABLE
 import utils.app.JsonElementSaver
 import utils.app.newImageRequest
 
@@ -208,6 +210,7 @@ fun CharacterInfoFullImgWithRare(
     fileName: String,
     isVisible: Boolean = true
 ) {
+    val imageURL = mutableStateOf(Character.getCharacterImageFromFileName(ImageFolder.CHAR_FULL, fileName))
     Box(modifier = Modifier.fillMaxSize()) {
         AnimatedVisibility(
             visible = isVisible,
@@ -218,11 +221,14 @@ fun CharacterInfoFullImgWithRare(
             AsyncImage(
                 model = newImageRequest(
                     context = LocalPlatformContext.current,
-                    data = Character.getCharacterImageFromFileName(ImageFolder.CHAR_FULL, fileName),
+                    data = imageURL.value,
                     crossFade = false
                 ),
                 contentDescription = "Character Full Image",
-                contentScale = ContentScale.Fit,
+                contentScale = ContentScale.Fit,onError = { error ->
+                    imageURL.value = Character.getCharacterImageFromFileName(ImageFolder.CHAR_SPLASH, fileName)
+                },
+                error = painterResource(LOST_IMAGE_DRAWABLE)
             )
 
         }

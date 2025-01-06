@@ -36,6 +36,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import files.Res
@@ -54,6 +55,7 @@ import utils.app.Constants.Companion.LC_CARD_HEIGHT
 import utils.app.Constants.Companion.LC_CARD_WIDTH
 import utils.app.Constants.Companion.LOST_IMAGE_DRAWABLE
 import utils.app.Constants.Companion.MATERIAL_CARD_TITLE_HEIGHT
+import utils.app.Constants.Companion.RELIC_CARD_WIDTH
 import utils.app.Constants.Companion.getCardBgColorByRare
 import utils.app.FontSizeNormal12
 import utils.app.TextColorNormalDim
@@ -84,7 +86,7 @@ fun LightconeCard(
     Box(
         modifier = Modifier
             .widthIn(LC_CARD_WIDTH, LC_CARD_WIDTH*2)
-            .aspectRatio(LC_CARD_WIDTH/ LC_CARD_HEIGHT)
+            .wrapContentHeight()
             .clip(
                 RoundedCornerShape(
                     topEnd = 15.dp,
@@ -167,7 +169,7 @@ fun LightconeCard(
                     color = TextColorNormalDim,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.wrapContentWidth()
+                    modifier = Modifier.widthIn(LC_CARD_WIDTH, LC_CARD_WIDTH *2).wrapContentHeight()
                 )
             }
             Spacer(modifier = Modifier.height(2.dp))
