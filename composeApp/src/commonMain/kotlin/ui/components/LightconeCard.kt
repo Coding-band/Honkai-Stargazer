@@ -1,9 +1,3 @@
-/*
- * Project Honkai Stargazer and app Stargazer (星穹觀星者) were
- * Organized & Develop by Coding Band.
- * Copyright © 2024 Coding Band 版權所有
- */
-
 package ui.components
 
 import androidx.compose.foundation.Image
@@ -17,15 +11,16 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.defaultMinSize
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
+import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.requiredWidth
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
@@ -41,25 +36,38 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
+import files.Res
+import files.SuperimposeLvl
+import files.SuperimposeNotEquipped
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
-import utils.app.Constants.Companion.LC_CARD_HEIGHT
-import utils.app.Constants.Companion.LC_CARD_WIDTH
-import utils.app.Constants.Companion.getCardBgColorByRare
+import types.Character
+import types.ImageFolder
 import types.Lightcone
-import types.Path
-import utils.app.FontSizeNormal12
-import utils.app.TextColorNormalDim
-import utils.UtilTools
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
+import utils.app.Constants.Companion.CHAR_CARD_HEIGHT
+import utils.app.Constants.Companion.CHAR_CARD_WIDTH
+import utils.app.Constants.Companion.LC_CARD_HEIGHT
+import utils.app.Constants.Companion.LC_CARD_WIDTH
+import utils.app.Constants.Companion.LOST_IMAGE_DRAWABLE
+import utils.app.Constants.Companion.MATERIAL_CARD_TITLE_HEIGHT
+import utils.app.Constants.Companion.getCardBgColorByRare
+import utils.app.FontSizeNormal12
+import utils.app.TextColorNormalDim
+import utils.app.getAssetsURLByFileName
+import utils.app.getImageNameByRegistName
+import utils.app.newImageLoader
+import utils.app.newImageRequest
+import utils.app.removeStrQuote
+import utils.app.replaceStrRes
 
 @Composable
 fun LightconeCard(
     lightcone: Lightcone,
-    level: Int? = -1,
-    ascensionPhase: Int? = -1, //Rank 突破等級
+    displayName: String? = lightcone.displayName,
     onClick: () -> Unit = { navigatorInstance.navigateLimited(
         Screen.LightconeInfoPage.route
                 + "/${lightcone.registName!!.replace(" ","_")}"
@@ -67,11 +75,16 @@ fun LightconeCard(
                 + "&path=${lightcone.path}"
 
     ) }, //按下後會做甚麼
+    overrideNameComponent: @Composable (() -> Unit)? = null,
+    isDisplayCombatPath: Boolean = true,
+    isDisplayName : Boolean = true,
+    isDisplayLevel : Boolean = false,
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     Box(
         modifier = Modifier
-            .defaultMinSize(LC_CARD_WIDTH, LC_CARD_HEIGHT)
+            .widthIn(LC_CARD_WIDTH, LC_CARD_WIDTH*2)
+            .aspectRatio(LC_CARD_WIDTH/ LC_CARD_HEIGHT)
             .clip(
                 RoundedCornerShape(
                     topEnd = 15.dp,
@@ -84,7 +97,8 @@ fun LightconeCard(
         Column {
             Box(
                 modifier = Modifier
-                    .defaultMinSize(LC_CARD_WIDTH, LC_CARD_WIDTH)
+                    .widthIn(LC_CARD_WIDTH, LC_CARD_WIDTH*2)
+                    .aspectRatio(LC_CARD_WIDTH/ LC_CARD_WIDTH)
                     .clip(
                         RoundedCornerShape(
                             topEnd = 15.dp,
@@ -98,6 +112,7 @@ fun LightconeCard(
                         interactionSource = interactionSource
                     )
             ) {
+                /*
                 Image(
                     bitmap = Lightcone.getLightconeImageFromJSON(
                         UtilTools.ImageFolderType.LC_ICON,
@@ -114,6 +129,27 @@ fun LightconeCard(
                         ),
                     contentScale = ContentScale.Crop
 
+                )
+                 */
+
+                AsyncImage(
+                    model = newImageRequest(
+                        LocalPlatformContext.current,
+                        getAssetsURLByFileName(
+                            ImageFolder.LC_ICON,
+                            getImageNameByRegistName(lightcone.registName!!)
+                        )
+                    ),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .aspectRatio(1f)
+                        .background(
+                            Brush.verticalGradient(
+                                colors = getCardBgColorByRare(lightcone.rarity)
+                            )
+                        ),
+                    contentScale = ContentScale.Crop,
+                    contentDescription = "Lightcone Icon"
                 )
             }
 
@@ -149,26 +185,3 @@ fun LightconeCard(
         }
     }
 }
-
-@Preview
-@Composable
-fun LightconeCardPreview() {
-    LazyVerticalGrid(
-        columns = GridCells.Adaptive(80.dp),
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp),
-    ) {
-        items(count = 4) {
-            LightconeCard(
-                lightcone = Lightcone(
-                    officialId = 21018,
-                    registName = "Dance! Dance! Dance!",
-                    fileName = "21018",
-                    rarity = 4,
-                    path = Path.Harmony,
-                ),
-            )
-        }
-    }
-}
-

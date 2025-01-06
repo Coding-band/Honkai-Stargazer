@@ -6,7 +6,6 @@
 
 package ui.components
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -16,10 +15,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
@@ -38,17 +37,21 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import utils.app.Constants
-import utils.app.Constants.Companion.RELIC_CARD_HEIGHT
-import utils.app.Constants.Companion.RELIC_CARD_WIDTH
-import utils.app.Constants.Companion.getCardBgColorByRare
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
+import types.ImageFolder
 import types.Relic
-import utils.app.FontSizeNormal12
-import utils.app.TextColorNormalDim
-import utils.UtilTools
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
+import utils.app.Constants.Companion.RELIC_CARD_HEIGHT
+import utils.app.Constants.Companion.RELIC_CARD_WIDTH
+import utils.app.Constants.Companion.getCardBgColorByRare
+import utils.app.FontSizeNormal12
+import utils.app.TextColorNormalDim
+import utils.app.getAssetsURLByFileName
+import utils.app.getImageNameByRegistName
+import utils.app.newImageRequest
 
 @Composable
 fun RelicCard(
@@ -65,7 +68,8 @@ fun RelicCard(
     val interactionSource = remember { MutableInteractionSource() }
     Box(
         modifier = Modifier
-            .defaultMinSize(RELIC_CARD_WIDTH, RELIC_CARD_HEIGHT)
+            .widthIn(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH *2)
+            .aspectRatio(RELIC_CARD_WIDTH / RELIC_CARD_HEIGHT)
             .clip(
                 RoundedCornerShape(
                     topEnd = 15.dp,
@@ -78,7 +82,8 @@ fun RelicCard(
         Column {
             Box(
                 modifier = Modifier
-                    .defaultMinSize(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH)
+                    .widthIn(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH*2)
+                    .aspectRatio(RELIC_CARD_WIDTH/ RELIC_CARD_WIDTH)
                     .clip(
                         RoundedCornerShape(
                             topEnd = 15.dp,
@@ -92,10 +97,13 @@ fun RelicCard(
                         interactionSource = interactionSource
                     )
             ) {
-                Image(
-                    bitmap = Relic.getRelicImageFromJSON(
-                        if(relic.officialId!! < 300) UtilTools.ImageFolderType.RELIC_PC_ICON else UtilTools.ImageFolderType.ORMANENT_PC_ICON,
-                        relic.registName!!
+                AsyncImage(
+                    model = newImageRequest(
+                        LocalPlatformContext.current,
+                        getAssetsURLByFileName(
+                            if(relic.officialId!! < 300) ImageFolder.RELIC_PC_ICON else ImageFolder.ORMANENT_PC_ICON,
+                            getImageNameByRegistName(relic.registName!!)
+                        )
                     ),
                     contentDescription = "Relic Icon",
                     modifier = Modifier
@@ -106,8 +114,7 @@ fun RelicCard(
                                 colors = getCardBgColorByRare(if(relic.rarity === null) 5 else relic.rarity!!)
                             )
                         ),
-                    contentScale = ContentScale.Crop
-
+                    contentScale = ContentScale.Crop,
                 )
             }
             Row(
@@ -142,9 +149,10 @@ fun RelicSmallCard(
     ) }, //按下後會做甚麼
 ){
     Box(
-        modifier = Modifier.defaultMinSize(
-            Constants.RELIC_CARD_WIDTH, Constants.RELIC_CARD_WIDTH + 8.dp
-        ).wrapContentSize()
+        modifier = Modifier
+            .widthIn(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH *2)
+            .aspectRatio(RELIC_CARD_WIDTH / RELIC_CARD_WIDTH+8)
+            .wrapContentSize()
     ) {
         Column{
             Box(Modifier.clip(
@@ -160,10 +168,14 @@ fun RelicSmallCard(
                     interactionSource = remember { MutableInteractionSource() }
                 )
             ){
-                Image(
-                    bitmap = Relic.getRelicImageFromJSON(
-                        if (pieceIndex < 5) UtilTools.ImageFolderType.RELIC_ICON else UtilTools.ImageFolderType.ORMANENT_ICON,
-                        UtilTools().getImageNameByRegistName(relic.registName!!), pieceIndex
+
+                AsyncImage(
+                    model = newImageRequest(
+                        LocalPlatformContext.current,
+                        getAssetsURLByFileName(
+                            if (pieceIndex < 5) ImageFolder.RELIC_ICON else ImageFolder.ORMANENT_ICON,
+                            getImageNameByRegistName("${relic.registName!!}${if(pieceIndex > 0) {"_${pieceIndex}"} else ""}")
+                        )
                     ),
                     contentDescription = "Relic Icon",
                     modifier = Modifier.fillMaxWidth().aspectRatio(1f).background(
@@ -171,7 +183,7 @@ fun RelicSmallCard(
                             colors = getCardBgColorByRare(relic.rarity!!)
                         )
                     ).padding(8.dp).aspectRatio(1f),
-                    contentScale = ContentScale.Crop
+                    contentScale = ContentScale.Crop,
                 )
             }
             Spacer(modifier = Modifier.height(8.dp))
