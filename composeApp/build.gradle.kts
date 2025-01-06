@@ -108,7 +108,7 @@ kotlin {
             implementation(libs.ktor.client.serialization)
 
             // use api since the desktop app need to access the Cef to initialize it.
-            api(libs.compose.webview.multiplatform)
+            //api(libs.compose.webview.multiplatform)
 
             // Precompose!
             api(libs.tlaster.precompose)
@@ -130,6 +130,9 @@ kotlin {
 
             //VerticalGrid
             implementation("com.cheonjaeung.compose.grid:grid:2.1.0")
+
+            //Compose WebView Multiplatform : https://github.com/KevinnZou/compose-webview-multiplatform
+            api("io.github.kevinnzou:compose-webview-multiplatform:1.9.40")
 
         }
         desktopMain.dependencies {
@@ -235,6 +238,17 @@ compose.desktop {
         buildTypes.release.proguard {
             isEnabled = false
             version.set("7.5.0")
+        }
+
+        jvmArgs("--add-opens", "java.desktop/sun.awt=ALL-UNNAMED")
+        jvmArgs(
+            "--add-opens",
+            "java.desktop/java.awt.peer=ALL-UNNAMED"
+        ) // recommended but not necessary
+
+        if (System.getProperty("os.name").contains("Mac")) {
+            jvmArgs("--add-opens", "java.desktop/sun.lwawt=ALL-UNNAMED")
+            jvmArgs("--add-opens", "java.desktop/sun.lwawt.macosx=ALL-UNNAMED")
         }
     }
 }

@@ -80,8 +80,8 @@ import moe.tlaster.precompose.navigation.BackStackEntry
 import moe.tlaster.precompose.navigation.Navigator
 import moe.tlaster.precompose.navigation.query
 import org.jetbrains.compose.resources.painterResource
-import types.Constants
-import types.Constants.Companion.CHAR_CARD_WIDTH
+import utils.app.Constants
+import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import types.UserAccount
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal16

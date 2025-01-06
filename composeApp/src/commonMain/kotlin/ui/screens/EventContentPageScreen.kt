@@ -30,7 +30,7 @@ import files.phorphos_film_slate_fill
 import moe.tlaster.precompose.navigation.BackStackEntry
 import moe.tlaster.precompose.navigation.Navigator
 import moe.tlaster.precompose.navigation.query
-import types.Constants
+import utils.app.Constants
 import types.EventItem
 import types.EventItem.Companion.EventListInstance
 import utils.UtilTools

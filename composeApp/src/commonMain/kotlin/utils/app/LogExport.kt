@@ -24,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.dokar.sonner.ToastType
 import com.dokar.sonner.ToasterState
+import com.dokar.sonner.rememberToasterState
 import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
 import files.FunctionStillInDevelop
@@ -46,7 +47,6 @@ import org.jetbrains.compose.resources.painterResource
 import utils.device.AppInfo
 import utils.device.DeviceInfo
 import utils.app.LogExportObj.Companion.SnackbarHostStateInstance
-import ui.navigation.toastInstance
 import utils.UtilTools
 import utils.starbase.StarbaseAPI
 import kotlin.time.Duration.Companion.milliseconds
@@ -56,10 +56,12 @@ import kotlin.time.Duration.Companion.milliseconds
 val dateFormat = LocalDateTime.Format { byUnicodePattern("yyyy-MM-dd'T'HH:mm:ss[.SSS]") }
 
 lateinit var ToastStrFunctionStillInDevelop: String
+lateinit var toastInstance : ToasterState
 
 @Composable
-fun initToastStr(){
-    ToastStrFunctionStillInDevelop = UtilTools().removeStringResDoubleQuotes(Res.string.FunctionStillInDevelop)
+fun LogExportInit(){
+    ToastStrFunctionStillInDevelop = removeStrQuote(Res.string.FunctionStillInDevelop)
+    toastInstance = rememberToasterState()
 }
 
 @Serializable

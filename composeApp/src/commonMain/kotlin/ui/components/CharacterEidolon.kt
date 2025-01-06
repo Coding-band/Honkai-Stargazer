@@ -48,10 +48,10 @@ import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
-import types.Constants
-import types.Constants.Companion.EIDOLON_FRAME_BASE_WIDTH
-import types.Constants.Companion.SCREEN_SAVE_PADDING
-import types.Constants.Companion.getEidolonScale
+import utils.app.Constants
+import utils.app.Constants.Companion.EIDOLON_FRAME_BASE_WIDTH
+import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
+import utils.app.Constants.Companion.getEidolonScale
 import types.Eidolon
 import utils.app.FontSizeNormal14
 import utils.UtilTools

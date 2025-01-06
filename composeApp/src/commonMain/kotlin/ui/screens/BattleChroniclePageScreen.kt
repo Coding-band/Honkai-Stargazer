@@ -61,7 +61,7 @@ import moe.tlaster.precompose.navigation.query
 import org.jetbrains.compose.resources.painterResource
 import types.AbyssInfoList
 import types.AbyssInfoType
-import types.Constants
+import utils.app.Constants
 import types.UserAbyssRecord
 import types.UserAccount
 import utils.app.FontSizeNormal14

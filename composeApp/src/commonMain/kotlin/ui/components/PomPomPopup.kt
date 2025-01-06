@@ -18,6 +18,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -34,13 +35,18 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.painterResource
 import utils.app.FontSizeNormal16
-import ui.navigation.pomPomPopupInstance
 
 lateinit var docCountDown : MutableState<Int>
+lateinit var pomPomPopupInstance: MutableState<PomPomPopup>
 
 data class PomPomPopup(
     var isDisplay: Boolean = false,
 )
+
+@Composable
+fun PomPomInit() {
+    pomPomPopupInstance = remember { mutableStateOf(PomPomPopup()) }
+}
 
 @Composable
 fun PomPomPopupUI(

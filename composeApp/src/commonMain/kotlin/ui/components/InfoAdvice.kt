@@ -65,7 +65,7 @@ import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
 import types.Attribute
 import types.Character
-import types.Constants
+import utils.app.Constants
 import types.Lightcone
 import types.Relic
 import utils.app.FontSizeNormal14
@@ -104,7 +104,7 @@ fun InfoAdviceLightcone(charWeightData : JsonObject? = null) {
                         val lightcone = Lightcone.getLightconeItemFromJSON(officialLcId.toString(), textLanguage = Language.TextLanguageInstance)
 
                         item{
-                            Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+Constants.LC_CARD_TITLE_HEIGHT))){
+                            Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+ Constants.LC_CARD_TITLE_HEIGHT))){
                                 LightconeCard(lightcone)
                             }
                         }
@@ -118,7 +118,7 @@ fun InfoAdviceLightcone(charWeightData : JsonObject? = null) {
                         val lightcone = Lightcone.getLightconeItemFromJSON(officialLcId.toString(), textLanguage = Language.TextLanguageInstance)
 
                         item{
-                            Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+Constants.LC_CARD_TITLE_HEIGHT))){
+                            Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+ Constants.LC_CARD_TITLE_HEIGHT))){
                                 LightconeCard(lightcone)
                             }
                         }

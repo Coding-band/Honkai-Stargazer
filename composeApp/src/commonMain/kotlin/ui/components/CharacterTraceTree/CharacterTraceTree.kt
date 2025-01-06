@@ -57,9 +57,9 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import types.Constants
-import types.Constants.Companion.TRACE_TREE_BASE_WIDTH
-import types.Constants.Companion.getTraceTreeScale
+import utils.app.Constants
+import utils.app.Constants.Companion.TRACE_TREE_BASE_WIDTH
+import utils.app.Constants.Companion.getTraceTreeScale
 import types.Material
 import types.Path
 import types.TraceTreeItem

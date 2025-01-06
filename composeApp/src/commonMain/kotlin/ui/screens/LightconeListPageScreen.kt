@@ -45,7 +45,7 @@ import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import moe.tlaster.precompose.navigation.Navigator
-import types.Constants.Companion.CHAR_CARD_WIDTH
+import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import types.Lightcone
 import utils.app.PageBottomMask
 

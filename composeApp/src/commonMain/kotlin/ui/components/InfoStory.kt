@@ -29,7 +29,7 @@ import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import types.Constants
+import utils.app.Constants
 import utils.app.FontSizeNormal16
 import utils.UtilTools
 

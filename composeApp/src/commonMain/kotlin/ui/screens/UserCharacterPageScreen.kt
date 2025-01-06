@@ -98,7 +98,7 @@ import moe.tlaster.precompose.navigation.Navigator
 import moe.tlaster.precompose.navigation.query
 import org.jetbrains.compose.resources.painterResource
 import types.Character
-import types.Constants
+import utils.app.Constants
 import types.HsrProperties
 import types.Lightcone
 import types.UserAccount
@@ -330,7 +330,8 @@ fun ProficientScoreInfo(character: Character) {
                         )
                     }else{
                         Text(
-                            text = if(scoreInfo.second is String) {Constants.getScoreRankingFont(scoreInfo.second as String).toString()} else UtilTools().formatDecimal(scoreInfo.second as Number, 1 ,
+                            text = if(scoreInfo.second is String) {
+                                Constants.getScoreRankingFont(scoreInfo.second as String).toString()} else UtilTools().formatDecimal(scoreInfo.second as Number, 1 ,
                                 isRoundDown = true),
                             style = FontSizeNormalLarge24(),
                             color = Color.White,

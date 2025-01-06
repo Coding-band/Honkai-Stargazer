@@ -1,17 +1,13 @@
-package types
+package utils.app
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import ui.components.HomePageBlocks
 import files.Character
 import files.Event
 import files.Expedition
 import files.Lightcone
 import files.LotterySimulator
-import files.MOCMissionPart1
-import files.MOCMissionPart2
-import files.MOCMissionPart3
 import files.Map
 import files.MemoryOfChaos
 import files.MemoryOfChaosLeaderboard
@@ -48,9 +44,10 @@ import files.ranking_d_text
 import files.ranking_s_text
 import files.ranking_ss_text
 import org.jetbrains.compose.resources.DrawableResource
-import utils.UtilTools
-import utils.annotation.DoItLater
+import types.UserAccount
+import ui.components.HomePageBlocks
 import ui.navigation.Screen
+import utils.annotation.DoItLater
 
 
 class Constants {
@@ -102,14 +99,12 @@ class Constants {
         val ADVICE_RELIC_UNSELECT_BAR_WIDTH = 10.dp
         val ADVICE_RELIC_BAR_HEIGHT = 4.dp
 
+        //For Right Corner Page
         val INFO_MIN_WIDTH = 320.dp
         val INFO_MAX_WIDTH = 450.dp
 
-        @DoItLater("Declare when handling pad layout")
-        val SCREEN_MIN_WIDTH = 320.dp
-        val SCREEN_MAX_WIDTH = 480.dp
-        val SCREEN_HOME_PAGE_PAD_WIDTH = 412.dp
-        val SCREEN_PAD_REQUIRE_WIDTH = 600.dp
+        //For Left Corner Page
+        val HOME_WIDTH = 390.dp
         val SCREEN_SAVE_PADDING = 18.dp
 
         fun getCardBgColorByRare(rare: Int): List<Color> {
@@ -143,30 +138,36 @@ class Constants {
             }
         }
 
+        val LOST_IMAGE_DRAWABLE = Res.drawable.ico_lost_img
 
-        var HOME_PAGE_ITEMS = arrayListOf<HomePageBlocks.HomePageBlockItem>(
+        var HOME_PAGE_MENU_DEFAULT = arrayListOf<HomePageBlocks.HomePageBlockItem>(
             HomePageBlocks.HomePageBlockItem(
+                itemId = "CharacterListPage",
                 itemTitleRId = Res.string.Character,
                 itemIconId = Res.drawable.phorphos_person_fill,
                 itemOnClickToNavigate = Screen.CharacterListPage,
             ),
             HomePageBlocks.HomePageBlockItem(
+                itemId = "LightconeListPage",
                 itemTitleRId = Res.string.Lightcone,
                 itemIconId = Res.drawable.phorphos_sword_fill,
                 itemOnClickToNavigate = Screen.LightconeListPage,
             ),
             HomePageBlocks.HomePageBlockItem(
+                itemId = "RelicListPage",
                 itemTitleRId = Res.string.Relic,
                 itemIconId = Res.drawable.phorphos_baseball_cap_fill,
                 itemOnClickToNavigate = Screen.RelicListPage,
             ),
             HomePageBlocks.HomePageBlockItem(
+                itemId = "UIDSearchPage",
                 itemTitleRId = Res.string.UIDSearch,
                 itemIconId = Res.drawable.phorphos_alien_fill,
                 itemOnClickToNavigate = Screen.UIDSearchPageScreen,
             ),
             @DoItLater("Add Time Count Down later")
             HomePageBlocks.HomePageBlockItem(
+                itemId = "Stamina",
                 itemTitleRId = Res.string.Stamina,
                 itemIconId = Res.drawable.phorphos_moon_fill,
                 itemType = HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1,
@@ -175,17 +176,20 @@ class Constants {
                 itemBottom = "今天18:16"
             ),
             HomePageBlocks.HomePageBlockItem(
+                itemId = "DailyMissionPage",
                 itemTitle = "${UserAccount.INSTANCE.userNote.currTrainScore}/${UserAccount.INSTANCE.userNote.maxTrainScore}",
                 itemIconId = Res.drawable.phorphos_calendar_fill
             ),
 
             HomePageBlocks.HomePageBlockItem(
-                itemTitle = "${UtilTools().formatDecimal(UserAccount.INSTANCE.userNote.currUniversialScore, isUnited = true)}/${UtilTools().formatDecimal(UserAccount.INSTANCE.userNote.targetUniversialScore, isUnited = true)}",
+                itemId = "UniversialScore",
+                itemTitle = "${formatDecimal(UserAccount.INSTANCE.userNote.currUniversialScore, isUnited = true)}/${formatDecimal(UserAccount.INSTANCE.userNote.targetUniversialScore, isUnited = true)}",
                 itemIconId = Res.drawable.phorphos_planet_fill
             ),
 
             @DoItLater("Add Time Count Down later")
             HomePageBlocks.HomePageBlockItem(
+                itemId = "ExpeditionPage",
                 itemTitleRId = Res.string.Expedition,
                 itemIconId = Res.drawable.phorphos_users_fill,
                 itemType = HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1,
@@ -196,42 +200,51 @@ class Constants {
                 }else "In Progress"
             ),
             HomePageBlocks.HomePageBlockItem(
+                itemId = "MOCPage",
                 itemTitleRId = Res.string.MemoryOfChaos,
                 itemIconId = Res.drawable.phorphos_medal_military_fill,
                 itemOnClickToNavigate = Screen.MemoryOfChaosMissionPageScreen
             ),
             HomePageBlocks.HomePageBlockItem(
+                itemId = "PFPage",
                 itemTitleRId = Res.string.PureFiction,
                 itemIconId = Res.drawable.phorphos_atom_fill,
                 itemOnClickToNavigate = Screen.PureFictionMissionPageScreen
             ),
             HomePageBlocks.HomePageBlockItem(
+                itemId = "EventListPage",
                 itemTitleRId = Res.string.Event,
                 itemIconId = Res.drawable.phorphos_film_slate_fill,
                 itemOnClickToNavigate = Screen.EventListPageScreen
             ),
             HomePageBlocks.HomePageBlockItem(
+                itemId = "ScoreLevelLeaderboard",
                 itemTitleRId = Res.string.ScoreLevelLeaderboard,
                 itemIconId = Res.drawable.phorphos_trophy_fill
             ),
             HomePageBlocks.HomePageBlockItem(
+                itemId = "MemoryOfChaosLeaderboard",
                 itemTitleRId = Res.string.MemoryOfChaosLeaderboard,
                 itemIconId = Res.drawable.phorphos_chart_bar_fill
             ),
             HomePageBlocks.HomePageBlockItem(
+                itemId = "PureFictionLeaderboard",
                 itemTitleRId = Res.string.PureFictionLeaderboard,
                 itemIconId = Res.drawable.phorphos_chart_bar_horizontal_fill
             ),
             HomePageBlocks.HomePageBlockItem(
+                itemId = "MapPage",
                 itemTitleRId = Res.string.Map,
                 itemIconId = Res.drawable.phorphos_map_trifold_fill,
                 itemOnClickToNavigate = Screen.MapPageScreen
             ),
             HomePageBlocks.HomePageBlockItem(
+                itemId = "LotterySimulator",
                 itemTitleRId = Res.string.LotterySimulator,
                 itemIconId = Res.drawable.phorphos_star_of_david_fill
             ),
             HomePageBlocks.HomePageBlockItem(
+                itemId = "WrapAnalysisPage",
                 itemTitleRId = Res.string.WrapAnalysis,
                 itemIconId = Res.drawable.phorphos_shooting_star_fill
             ),

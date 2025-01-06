@@ -14,7 +14,7 @@ import utils.device.DeviceInfo
 import java.util.Locale
 
 /**
- * Ehm... yes... PC not support rn.
+ * Yeah... PC is support rn.
  */
 
 actual fun getImageBitmapByByteArray(byteArray: ByteArray): ImageBitmap {

@@ -99,7 +99,7 @@ import moe.tlaster.precompose.navigation.path
 import moe.tlaster.precompose.navigation.query
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import types.Constants
+import utils.app.Constants
 import types.Relic
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
@@ -295,7 +295,8 @@ fun RelicInfoFullImgWithRare(
             exit = fadeOut(),
             modifier = Modifier.fillMaxWidth().wrapContentHeight().align(Alignment.Center)
         ) {
-            Column(modifier = Modifier.width(getScreenSizeInfo().wDP - 36.dp).aspectRatio(1f).sizeIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)) {
+            Column(modifier = Modifier.width(getScreenSizeInfo().wDP - 36.dp).aspectRatio(1f).sizeIn(
+                Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)) {
                 Row{
                     Image(
                         bitmap = Relic.getRelicImageFromJSON(if(isRelic) UtilTools.ImageFolderType.RELIC_ICON else UtilTools.ImageFolderType.ORMANENT_ICON, fileName, if(isRelic) 1 else 5),

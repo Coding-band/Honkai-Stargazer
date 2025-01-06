@@ -46,7 +46,7 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import moe.tlaster.precompose.navigation.Navigator
 import types.Character
-import types.Constants.Companion.CHAR_CARD_WIDTH
+import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import utils.app.PageBottomMask
 
 lateinit var charList : MutableState<ArrayList<Character>>

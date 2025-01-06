@@ -53,9 +53,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import moe.tlaster.precompose.navigation.Navigator
-import types.Constants
+import utils.app.Constants
 import types.UserAccount.Companion.UIDSEARCH
 import types.UserAccountLite
+import ui.components.pomPomPopupInstance
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
@@ -66,7 +67,6 @@ import utils.hoyolab.MihomoRequest
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
-import ui.navigation.pomPomPopupInstance
 import utils.starbase.StarbaseAPI
 
 @Composable

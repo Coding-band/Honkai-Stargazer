@@ -87,7 +87,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.AbyssInfo
 import types.AbyssInfoList
 import types.AbyssInfoType
-import types.Constants
+import utils.app.Constants
 import types.UserAccount
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16

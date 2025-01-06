@@ -48,7 +48,7 @@ import getScreenSizeInfo
 import kotlinx.coroutines.launch
 import moe.tlaster.precompose.navigation.Navigator
 import types.Character
-import types.Constants
+import utils.app.Constants
 import types.Wallpaper
 import utils.app.FontSizeNormal16
 import utils.UtilTools

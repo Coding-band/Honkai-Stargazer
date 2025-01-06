@@ -22,7 +22,7 @@ import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
-import types.Constants
+import utils.app.Constants
 import types.Path
 
 //(x,y) base on Figma, no need to handly calculate

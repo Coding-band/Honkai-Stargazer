@@ -38,10 +38,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import types.Constants
-import types.Constants.Companion.RELIC_CARD_HEIGHT
-import types.Constants.Companion.RELIC_CARD_WIDTH
-import types.Constants.Companion.getCardBgColorByRare
+import utils.app.Constants
+import utils.app.Constants.Companion.RELIC_CARD_HEIGHT
+import utils.app.Constants.Companion.RELIC_CARD_WIDTH
+import utils.app.Constants.Companion.getCardBgColorByRare
 import types.Relic
 import utils.app.FontSizeNormal12
 import utils.app.TextColorNormalDim

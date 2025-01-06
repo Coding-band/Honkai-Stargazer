@@ -27,9 +27,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import types.Constants
-import types.Constants.Companion.MATERIAL_CARD_HEIGHT
-import types.Constants.Companion.MATERIAL_CARD_WIDTH
+import utils.app.Constants
+import utils.app.Constants.Companion.MATERIAL_CARD_HEIGHT
+import utils.app.Constants.Companion.MATERIAL_CARD_WIDTH
 import types.Material
 import utils.app.FontSizeNormal12
 import utils.app.TextColorNormalDim

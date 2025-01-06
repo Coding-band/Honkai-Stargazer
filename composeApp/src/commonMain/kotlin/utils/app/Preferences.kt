@@ -1,6 +1,10 @@
 package utils.app
 
 import com.russhwolf.settings.Settings
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
+import ui.components.HomePageBlocks
+import utils.app.Constants.Companion.HOME_PAGE_MENU_DEFAULT
 import utils.starbase.StarbaseAPI
 
 class Preferences {
@@ -8,6 +12,7 @@ class Preferences {
     val CharWeightList = CharWeightListClass()
     val Leaderboard = LeaderboardClass()
     val AppSettings = AppSettingsClass()
+    val HomePageMenu = HomePageMenuClass()
 
     private class Constants{
         val CHAR_LIST_UPDATE_MINS = 15
@@ -120,6 +125,25 @@ class Preferences {
         }
         fun setLangInitialized(){
             Settings().putBoolean("isLangInitialized", true)
+        }
+    }
+
+    class HomePageMenuClass(){
+        fun getHomePageMenuArray(): ArrayList<HomePageBlocks.HomePageBlockItem>{
+            val homePageMenuArrayStr = Settings().getString("homePageMenuArray", Json.encodeToString(
+                HOME_PAGE_MENU_DEFAULT.map { it.itemId }))
+            val homePageMeun : ArrayList<HomePageBlocks.HomePageBlockItem>  = arrayListOf()
+
+            val homePageMenuArray = Json.decodeFromString<ArrayList<String>>(homePageMenuArrayStr)
+            homePageMenuArray.forEach { itemId ->
+                val item = HOME_PAGE_MENU_DEFAULT.firstOrNull { it.itemId == itemId }
+                if (item != null) homePageMeun.add(item)
+            }
+            return homePageMeun
+        }
+        fun setHomePageMenuArray(homePageMenuArray: ArrayList<HomePageBlocks.HomePageBlockItem>){
+            val menuStrArray = homePageMenuArray.map { it.itemId }
+            Settings().putString("homePageMenuArray", Json.encodeToString(menuStrArray))
         }
     }
 }

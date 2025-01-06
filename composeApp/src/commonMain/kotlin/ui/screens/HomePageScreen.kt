@@ -92,7 +92,6 @@ import kotlinx.coroutines.launch
 import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.painterResource
 import types.Character
-import types.Constants.Companion.HOME_PAGE_ITEMS
 import types.UserAccount
 import types.UserAccount.Companion.INSTANCE
 import utils.app.BlackAlpha30
@@ -127,6 +126,7 @@ fun HomePage(
     val threeDotDialogPos = remember { mutableStateOf<Offset>(Offset(0f, 0f)) }
     val hazeState = remember { HazeState() }
     val userAccount = remember { mutableStateOf(UserAccount.INSTANCE) }
+    val homeMenuBlockList = remember { mutableStateOf(Preferences().HomePageMenu.getHomePageMenuArray()) }
 
     checkHasErrorLogFromLastCrash()
     if(!arrayListOf("PRODUCTION", "RELEASE").contains(BuildKonfig.appProfile) ){
@@ -140,8 +140,19 @@ fun HomePage(
             .haze(hazeState)
         ) {
             Column {
-                HomePageHeader(navigator = navigator, threeDotDialogPos = threeDotDialogPos, threeDotDialogDisplay = threeDotDialogDisplay, userAccount = userAccount.value)
-                HomePageMenuScrollView(navigator = navigator,userAccount = userAccount.value, hazeState = hazeState)
+                HomePageHeader(
+                    navigator = navigator,
+                    threeDotDialogPos = threeDotDialogPos,
+                    threeDotDialogDisplay = threeDotDialogDisplay,
+                    userAccount = userAccount.value
+                )
+
+                HomePageMenuScrollView(
+                    navigator = navigator,
+                    userAccount = userAccount.value,
+                    hazeState = hazeState,
+                    homeMenuBlockList = homeMenuBlockList.value
+                )
             }
         }
 
@@ -353,7 +364,13 @@ fun HomePageHeader(
 
 
 @Composable
-fun HomePageMenuScrollView(modifier: Modifier = Modifier, navigator: Navigator, userAccount: UserAccount, hazeState: HazeState) {
+fun HomePageMenuScrollView(
+    modifier: Modifier = Modifier,
+    navigator: Navigator,
+    hazeState: HazeState,
+    homeMenuBlockList: MutableList<HomePageBlocks.HomePageBlockItem>,
+    userAccount: UserAccount
+) {
     Column {
         LazyVerticalGrid(
             modifier = Modifier
@@ -363,19 +380,16 @@ fun HomePageMenuScrollView(modifier: Modifier = Modifier, navigator: Navigator, 
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            var finalBlockData = HOME_PAGE_ITEMS;
-            items(count = HOME_PAGE_ITEMS.size, span = { index ->
-                if(finalBlockData[index].itemType.width > (maxCurrentLineSpan - ((index+1) % maxCurrentLineSpan))){
-                    val tmpExchange = finalBlockData[index]
-                    finalBlockData[index] = finalBlockData[index+1]
-                    finalBlockData[index+1] = tmpExchange
-                }
-                when (finalBlockData[index].itemType) {
+
+            items(count = homeMenuBlockList.size, span = { index ->
+
+                when (homeMenuBlockList[index].itemType) {
                     HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W1H1 -> GridItemSpan(1)
                     HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1 -> GridItemSpan(2)
                 }
+
             }) { index ->
-                var blockData: HomePageBlocks.HomePageBlockItem = finalBlockData[index];
+                val blockData: HomePageBlocks.HomePageBlockItem = homeMenuBlockList[index];
                 Box(Modifier.layoutId("HomePageItemBox")){
                     when (blockData.itemType) {
                         HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W1H1 -> HomePageBlock1x1(
@@ -414,8 +428,18 @@ fun BottomView(modifier: Modifier = Modifier){
 @Composable
 fun BetaVersionBox(){
     Box(modifier = Modifier.fillMaxSize()){
-        Box(modifier = Modifier.wrapContentSize().background(Color.Black).padding(start = 2.dp, end = 2.dp, top = 12.dp, bottom = 12.dp).rotate(-90f).align(Alignment.TopEnd)){
-            Text(text = if(BuildKonfig.appProfile == "DEV") {"DEV"} else BuildKonfig.appVersionName, style = FontSizeNormal12(), color = TextColorNormalDim, modifier = Modifier.align(Alignment.Center))
+        Box(modifier = Modifier
+            .background(Color.Black)
+            .padding(start = 12.dp, end = 12.dp, top = 2.dp, bottom = 2.dp)
+            .align(Alignment.TopEnd)
+            .wrapContentSize()
+        ){
+            Text(
+                text = if(BuildKonfig.appProfile == "DEV") {"DEV"} else BuildKonfig.appVersionName,
+                style = FontSizeNormal12(),
+                color = TextColorNormalDim,
+                modifier = Modifier.align(Alignment.Center).wrapContentSize()
+            )
         }
     }
 }

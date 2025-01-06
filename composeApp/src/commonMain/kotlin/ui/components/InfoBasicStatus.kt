@@ -42,8 +42,8 @@ import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
-import types.Constants
-import types.Constants.Companion.MATERIAL_CARD_HEIGHT
+import utils.app.Constants
+import utils.app.Constants.Companion.MATERIAL_CARD_HEIGHT
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormal20

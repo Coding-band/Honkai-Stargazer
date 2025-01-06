@@ -56,7 +56,7 @@ import kotlinx.datetime.format.char
 import kotlinx.datetime.periodUntil
 import kotlinx.datetime.toInstant
 import moe.tlaster.precompose.navigation.Navigator
-import types.Constants
+import utils.app.Constants
 import types.EventItem
 import types.EventItem.Companion.EventListInstance
 import utils.UtilTools

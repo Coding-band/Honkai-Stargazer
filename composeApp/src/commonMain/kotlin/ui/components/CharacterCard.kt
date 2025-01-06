@@ -49,9 +49,9 @@ import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.Character
 import types.CombatType
-import types.Constants.Companion.CHAR_CARD_HEIGHT
-import types.Constants.Companion.CHAR_CARD_WIDTH
-import types.Constants.Companion.getCardBgColorByRare
+import utils.app.Constants.Companion.CHAR_CARD_HEIGHT
+import utils.app.Constants.Companion.CHAR_CARD_WIDTH
+import utils.app.Constants.Companion.getCardBgColorByRare
 import types.Path
 import ui.navigation.Screen
 import ui.navigation.navigateLimited

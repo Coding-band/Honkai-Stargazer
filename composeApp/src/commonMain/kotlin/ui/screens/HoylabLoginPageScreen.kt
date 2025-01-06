@@ -50,6 +50,7 @@ import moe.tlaster.precompose.navigation.BackStackEntry
 import moe.tlaster.precompose.navigation.Navigator
 import moe.tlaster.precompose.navigation.query
 import types.UserAccount
+import ui.components.pomPomPopupInstance
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.LongStringXML
@@ -59,7 +60,7 @@ import utils.hoyolab.HoyolabConst
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
-import ui.navigation.pomPomPopupInstance
+import utils.device.DeviceInfo
 import utils.starbase.StarbaseAPI
 
 @DoItLater("Implement the HoyolabLoginPageScreen Webview later")
@@ -107,6 +108,7 @@ fun HoyolabLoginPageScreen(
                         pomPomPopupInstance.value = PomPomPopup(isDisplay = true)
 
                     }
+
                     UserAccount.pasteCookies(webviewState.cookieManager.getCookies(url), serverSelected, snackbarHostState)
                     StarbaseAPI().updateUserAccountInfo()
                     StarbaseAPI().updateCharData()

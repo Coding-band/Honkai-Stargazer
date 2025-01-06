@@ -51,9 +51,9 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
 import types.Character
-import types.Constants.Companion.CARD_BG_COLOR_RARE_UNKNOWN
-import types.Constants.Companion.CHAR_CARD_HEIGHT
-import types.Constants.Companion.CHAR_CARD_WIDTH
+import utils.app.Constants.Companion.CARD_BG_COLOR_RARE_UNKNOWN
+import utils.app.Constants.Companion.CHAR_CARD_HEIGHT
+import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import types.getTeamAdviceById
 import utils.app.FontSizeNormal12
 import utils.app.Language

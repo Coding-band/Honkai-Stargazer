@@ -49,7 +49,6 @@ import utils.app.FontSizeNormalLarge24
 import utils.app.FontSizeNormalSmall
 import utils.app.Language
 import utils.app.Preferences
-import utils.app.initToastStr
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 
@@ -85,16 +84,17 @@ fun SplashPage(
                         Preferences().Leaderboard.updatedLeaderboard()
                     }
                     if (!showPopup.value) {
-                        navigator.navigateLimited(
-                            Screen.HomePage.route, options = NavOptions(popUpTo = PopUpTo(
-                                Screen.SplashPage.route, true)))
+                        navigator.navigate(
+                            Screen.RootPage.route,
+                            options = NavOptions(
+                                popUpTo = PopUpTo(Screen.SplashPage.route, true)
+                            )
+                        )
                     }
                 }
             }
         }
     }
-
-    initToastStr()
 
     //Root Container of this page
     Column(

@@ -49,7 +49,7 @@ lateinit var backgroundScreenHazeState : HazeState
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
-fun MakeBackground(modifier: Modifier = Modifier, screen: Screen) {
+fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boolean = false) {
     backgroundScreenHazeState = remember { HazeState() }
     var isBlur = true;
     var isGradient = true;
@@ -65,6 +65,7 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen) {
         Screen.PureFictionMissionPageScreen -> {isBlur = false; isGradient = false}
         else -> {}
     }
+    if(forceBlur){ isBlur = true; }
     Box(
         Modifier.haze(backgroundScreenHazeState)
     ){

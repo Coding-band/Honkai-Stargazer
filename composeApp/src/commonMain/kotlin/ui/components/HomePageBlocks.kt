@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -52,6 +53,9 @@ import utils.app.TextColorNormal
 import utils.UtilTools
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
+import utils.app.GradientHomeButton
+import utils.app.WhiteAlpha10
+import utils.app.removeStrQuote
 import utils.app.showFunctionIsDevelopingToast
 
 class HomePageBlocks {
@@ -60,6 +64,7 @@ class HomePageBlocks {
     val HOME_PAGE_BLOCK_HEIGHT = 90.dp
 
     class HomePageBlockItem(
+        var itemId: String ,
         var itemTitle: String? = null,
         var itemTitleRId: StringResource? = null,
         var itemIconId: DrawableResource = Res.drawable.phorphos_cake_fill,
@@ -93,8 +98,6 @@ fun HomePageBlock1x1(
     modifier: Modifier = Modifier,
     navigator: Navigator
 ) {
-    var isLandscape = getIsLandscape();
-
     OutlinedButton(
         contentPadding = PaddingValues(10.dp),
         colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent),
@@ -110,20 +113,22 @@ fun HomePageBlock1x1(
                 showFunctionIsDevelopingToast()
             }
         },
-        shape = RoundedCornerShape(8.dp),
+        shape = RoundedCornerShape(6.dp),
         modifier = Modifier
-            .background(BlackAlpha20, RoundedCornerShape(8.dp))
+            .background(GradientHomeButton, RoundedCornerShape(6.dp))
+            .background(WhiteAlpha10, RoundedCornerShape(6.dp))
             .defaultMinSize(
                 HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1,
                 HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT
             )
+            .aspectRatio(HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1 / HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT)
             .hazeChild(
                 backgroundScreenHazeState,
-                shape = RoundedCornerShape(8.dp),
+                shape = RoundedCornerShape(6.dp),
                 style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE)
             )
             .fillMaxSize(),
-        border = BorderStroke(2.dp, Color(0x66907C54))
+        border = BorderStroke(1.dp, Color(0x66907C54))
     ) {
         Column {
             Image(
@@ -138,9 +143,9 @@ fun HomePageBlock1x1(
             Text(
                 text =
                 if (blockData.itemTitle === null && blockData.itemTitleRId === null) {
-                    UtilTools().removeStringResDoubleQuotes(Res.string.AppStatusLostConnect)
+                    removeStrQuote(Res.string.AppStatusLostConnect)
                 }else if(blockData.itemTitleRId !== null){
-                    UtilTools().removeStringResDoubleQuotes(blockData.itemTitleRId!!)
+                    removeStrQuote(blockData.itemTitleRId!!)
                 }else {
                     blockData.itemTitle!!
                 },
@@ -160,8 +165,6 @@ fun HomePageBlock2x1(
     modifier: Modifier = Modifier,
     navigator: Navigator
 ) {
-    var isLandscape = getIsLandscape();
-
     OutlinedButton(
         contentPadding = PaddingValues(10.dp),
         colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent),
@@ -169,27 +172,28 @@ fun HomePageBlock2x1(
             blockData.itemOnClickAction;
 
             if (blockData.itemOnClickToNavigate !== null) {
-                println("Ok I'm Navigating to " + blockData.itemOnClickToNavigate)
                 navigator.navigateLimited(blockData.itemOnClickToNavigate!!.route)
             }
             if(blockData.itemOnClickAction == null && blockData.itemOnClickToNavigate == null){
                 showFunctionIsDevelopingToast()
             }
         },
-        shape = RoundedCornerShape(8.dp),
+        shape = RoundedCornerShape(6.dp),
         modifier = Modifier
-            .background(BlackAlpha20, RoundedCornerShape(8.dp))
+            .background(GradientHomeButton, RoundedCornerShape(6.dp))
+            .background(WhiteAlpha10, RoundedCornerShape(6.dp))
             .defaultMinSize(
                 HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1,
                 HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT
             )
+            .aspectRatio(HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_2x1 / HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT)
             .hazeChild(
                 backgroundScreenHazeState,
-                shape = RoundedCornerShape(8.dp),
+                shape = RoundedCornerShape(6.dp),
                 style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE)
             )
             .fillMaxSize(),
-        border = BorderStroke(2.dp, Color(0x66907C54))
+        border = BorderStroke(1.dp, Color(0x66907C54))
     ) {
         Row {
             //icon & name
@@ -206,9 +210,9 @@ fun HomePageBlock2x1(
                 Text(
                     text =
                     if (blockData.itemTitle === null && blockData.itemTitleRId === null) {
-                        stringResource(Res.string.AppStatusLostConnect).removePrefix("\"").removeSuffix("\"")
+                        removeStrQuote(Res.string.AppStatusLostConnect)
                     }else if(blockData.itemTitleRId !== null){
-                        stringResource(blockData.itemTitleRId!!).removePrefix("\"").removeSuffix("\"")
+                        removeStrQuote(blockData.itemTitleRId!!)
                     }else {
                         blockData.itemTitle!!
                     },
