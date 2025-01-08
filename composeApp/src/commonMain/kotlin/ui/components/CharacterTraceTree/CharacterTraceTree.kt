@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -33,6 +34,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontStyle
@@ -104,18 +106,17 @@ fun CharacterTraceTree(
     val displayWidth = remember { mutableStateOf(1.dp) }
     val selectedId = remember { mutableStateOf(0) }
     val density = LocalDensity.current.density
-    Box(modifier = Modifier
+    BoxWithConstraints(modifier = Modifier
         .fillMaxWidth()
         .padding(start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)
-        .onSizeChanged { it->
-            displayWidth.value = min(pxToDp(it.width, density), (TRACE_TREE_BASE_WIDTH*1.5f))
-        }
-        .wrapContentHeight()
     ){
+        displayWidth.value = min(maxWidth, (TRACE_TREE_BASE_WIDTH*1.5f))
+
         Column(modifier = Modifier
-            .width(displayWidth.value)
+            .width(min(maxWidth, (TRACE_TREE_BASE_WIDTH*1.5f)))
             .statusBarsPadding()
             .align(Alignment.Center)
+            .wrapContentHeight()
         ){
             TitleHeader(iconRId = Res.drawable.phorphos_tree_structure_fill, titleRId = Res.string.TraceTree)
 

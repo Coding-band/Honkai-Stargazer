@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -14,6 +15,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -23,6 +25,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
@@ -57,6 +60,7 @@ import utils.app.Constants
 import utils.app.Constants.Companion.EIDOLON_FRAME_BASE_HEIGHT
 import utils.app.Constants.Companion.EIDOLON_FRAME_BASE_WIDTH
 import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
+import utils.app.Constants.Companion.TRACE_TREE_BASE_WIDTH
 import utils.app.Constants.Companion.getEidolonScale
 import utils.app.FontSizeNormal14
 import utils.app.getAssetsURLByFileName
@@ -98,6 +102,7 @@ fun CharacterEidolon(
     dialogLastTrigTypeLocal = dialogLastTrigType
 
     val selectIndex = remember { mutableStateOf(0) }
+    val density = LocalDensity.current.density
 
     if(infoJson.jsonObject["ranks"] != null) {
 
@@ -117,14 +122,29 @@ fun CharacterEidolon(
             )
         }
 
-        Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)){
-            TitleHeader(iconRId = Res.drawable.phorphos_star_half_regular, titleRId = Res.string.Eidolon)
+        BoxWithConstraints(
+            modifier = Modifier
+                .fillMaxWidth()
+        ){
+            Column(modifier = Modifier
+                .widthIn(min(maxWidth, (TRACE_TREE_BASE_WIDTH *1.5f)))
+                .statusBarsPadding()
+                .padding(start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)
+            ){
+                TitleHeader(iconRId = Res.drawable.phorphos_star_half_regular, titleRId = Res.string.Eidolon)
 
-            //Empty Blank
-            Spacer(modifier = Modifier.height(24.dp))
+                //Empty Blank
+                Spacer(modifier = Modifier.height(24.dp))
 
-            Column(modifier = Modifier.fillMaxWidth().wrapContentHeight(), horizontalAlignment = Alignment.CenterHorizontally) {
-                CharacterEidolonBox(eidolonList, selectIndex)
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .wrapContentHeight()
+                        .align(Alignment.CenterHorizontally),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    CharacterEidolonBox(eidolonList, selectIndex)
+                }
             }
         }
     }
@@ -135,14 +155,11 @@ fun CharacterEidolonBox(eidolonList: ArrayList<Eidolon>, selectIndex : MutableSt
     val density = LocalDensity.current.density
     val eidolonScale = remember { mutableStateOf(2f) }
 
-    Box(
+    BoxWithConstraints(
         modifier = Modifier
             .fillMaxWidth()
-            .onSizeChanged {it ->
-                eidolonScale.value = getEidolonScale(min(pxToDp(it.width, density), EIDOLON_FRAME_BASE_WIDTH * 1.5f))
-            }
-            .height(Constants.EIDOLON_FRAME_BASE_HEIGHT * eidolonScale.value)
     ) {
+        eidolonScale.value = getEidolonScale(min(maxWidth, EIDOLON_FRAME_BASE_WIDTH * 1.5f))
         Box(
             modifier = Modifier
                 .size(

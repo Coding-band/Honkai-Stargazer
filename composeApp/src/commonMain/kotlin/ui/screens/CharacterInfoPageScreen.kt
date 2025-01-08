@@ -1,11 +1,14 @@
 package ui.screens
 
+import ScreenSizeInfo
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -30,6 +33,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
@@ -101,8 +105,8 @@ val charInfoNavItemList = arrayOf<InfoNavigateItem>(
     InfoNavigateItem(Res.drawable.phorphos_star_half_regular, 3, Res.string.Eidolon),
     InfoNavigateItem(Res.drawable.phorphos_sword_regular, 4, Res.string.AdviceLightcones),
     InfoNavigateItem(Res.drawable.phorphos_baseball_cap_regular, 5, Res.string.AdviceRelics),
-    InfoNavigateItem(Res.drawable.phorphos_person_regular, 6, Res.string.CharacterStory),
-    InfoNavigateItem(Res.drawable.phorphos_chats_circle_regular, 7, Res.string.AdviceTeams),
+    InfoNavigateItem(Res.drawable.phorphos_person_regular, 6, Res.string.AdviceTeams),
+    InfoNavigateItem(Res.drawable.phorphos_chats_circle_regular, 7, Res.string.CharacterStory),
 
     )
 
@@ -163,17 +167,24 @@ fun CharacterInfoPage(
         charWeightJsonObject = singleCharWeightJsonElement.jsonArray[selectedSectIndex.value].jsonObject
     }
 
-    Box {
-
+    BoxWithConstraints {
+        val pageSize = Pair(maxWidth, maxHeight)
         CharacterInfoFullImgWithRare(
             fileName = characterName,
             isVisible = !isNaviBarVisible //alpha = scrollToAlpha
         )
 
         //RecycleView
-        LazyColumn(horizontalAlignment = Alignment.CenterHorizontally, state = listState, modifier = Modifier.haze(hazeState).align(Alignment.Center).navigationBarsPadding()) {
-            item { InfoBioColumn(charInfoJson, combatType, path, isUserOwned = false, isFullEidolon = false) }
-            //Don't forget to add "StatusBarPadding" !
+        LazyColumn(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            state = listState,
+            modifier = Modifier
+                .haze(hazeState)
+                .align(Alignment.Center)
+                .navigationBarsPadding(),
+            verticalArrangement = Arrangement.spacedBy(30.dp)
+        ) {
+            item { InfoBioColumn(charInfoJson, combatType, path, isUserOwned = false, isFullEidolon = false, pageSize = pageSize) }
             item { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
             item { CharacterTraceTree(charInfoJson, path, characterName, dialogTitle, dialogDisplay,dialogLastTrigType,  dialogComponent) }
             item { CharacterEidolon(charInfoJson, characterName, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
