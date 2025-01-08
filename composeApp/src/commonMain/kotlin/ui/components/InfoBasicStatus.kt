@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -159,7 +160,7 @@ fun InfoBasicStatus(infoJson : JsonElement, statusType : StatusType = StatusType
         Spacer(modifier = Modifier.height(16.dp))
 
         //Material List
-        LazyRow(modifier = Modifier.height(MATERIAL_CARD_HEIGHT).fillMaxWidth()) {
+        LazyRow(modifier = Modifier.height(MATERIAL_CARD_HEIGHT).wrapContentWidth().align(Alignment.CenterHorizontally)) {
             for((index, key) in (sortedMaterialKeyList).withIndex()){
                 if(materialList[key] !== null){
                     item(key = key){

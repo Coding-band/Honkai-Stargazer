@@ -99,40 +99,36 @@ fun InfoAdviceLightcone(charWeightData : JsonObject? = null) {
         //Content
         if(!(adviceList.isNullOrEmpty() || normalList.isNullOrEmpty())){
             //Show of recommend Lightcones
-            Box(
-                modifier = Modifier.fillMaxWidth().wrapContentHeight()
-            ){
-                LazyRow(
-                    state = rememberLazyListState(),
-                    horizontalArrangement = Arrangement.spacedBy(12.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier.align(Alignment.Center)
-                ) {
-                    //Most Advice To Equip
-                    if(adviceList.isNotEmpty()){
-                        for(lcItem in adviceList){
-                            val officialLcId = lcItem.jsonPrimitive.int
-                            if (officialLcId == -1) continue
-                            val lightcone = Lightcone.getLightconeItemFromJSON(officialLcId.toString(), textLanguage = Language.TextLanguageInstance)
+            LazyRow(
+                state = rememberLazyListState(),
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.align(Alignment.CenterHorizontally)
+            ) {
+                //Most Advice To Equip
+                if(adviceList.isNotEmpty()){
+                    for(lcItem in adviceList){
+                        val officialLcId = lcItem.jsonPrimitive.int
+                        if (officialLcId == -1) continue
+                        val lightcone = Lightcone.getLightconeItemFromJSON(officialLcId.toString(), textLanguage = Language.TextLanguageInstance)
 
-                            item{
-                                Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+Constants.LC_CARD_TITLE_HEIGHT))){
-                                    LightconeCard(lightcone)
-                                }
+                        item{
+                            Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+Constants.LC_CARD_TITLE_HEIGHT))){
+                                LightconeCard(lightcone)
                             }
                         }
                     }
-                    //Still Can Use If Only Have
-                    if (normalList.isNotEmpty()){
-                        for(lcItem in normalList){
-                            val officialLcId = lcItem.jsonPrimitive.int
-                            if (officialLcId == -1) continue
-                            val lightcone = Lightcone.getLightconeItemFromJSON(officialLcId.toString(), textLanguage = Language.TextLanguageInstance)
+                }
+                //Still Can Use If Only Have
+                if (normalList.isNotEmpty()){
+                    for(lcItem in normalList){
+                        val officialLcId = lcItem.jsonPrimitive.int
+                        if (officialLcId == -1) continue
+                        val lightcone = Lightcone.getLightconeItemFromJSON(officialLcId.toString(), textLanguage = Language.TextLanguageInstance)
 
-                            item{
-                                Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+Constants.LC_CARD_TITLE_HEIGHT))){
-                                    LightconeCard(lightcone)
-                                }
+                        item{
+                            Box(Modifier.size(Constants.LC_CARD_WIDTH, (Constants.LC_CARD_HEIGHT+Constants.LC_CARD_TITLE_HEIGHT))){
+                                LightconeCard(lightcone)
                             }
                         }
                     }
@@ -203,18 +199,18 @@ fun InfoAdviceRelic(charWeightData : JsonObject? = null) {
         }
     }
 
-    Box(modifier = Modifier.fillMaxWidth().wrapContentHeight().padding(start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)){
-        Column(modifier = Modifier
-            .wrapContentSize()
-            .widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH)
-            .align(Alignment.Center)
-        ){
-            TitleHeader(iconRId = Res.drawable.phorphos_baseball_cap_regular, titleRId = Res.string.AdviceRelics)
+    Column(modifier = Modifier
+        .wrapContentSize()
+        .widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH)
+        .padding(start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)
+    ){
+        TitleHeader(iconRId = Res.drawable.phorphos_baseball_cap_regular, titleRId = Res.string.AdviceRelics)
 
-            //Empty Blank
-            Spacer(modifier = Modifier.height(24.dp))
+        //Empty Blank
+        Spacer(modifier = Modifier.height(24.dp))
 
-            //Content
+        //Content
+        Column(modifier = Modifier.wrapContentSize().align(Alignment.CenterHorizontally)){
             if(charWeightData != null && relicList.size > 0){
                 Row(
                     Modifier.wrapContentWidth().widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH),

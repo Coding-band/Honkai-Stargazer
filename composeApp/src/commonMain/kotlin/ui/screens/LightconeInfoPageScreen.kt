@@ -6,6 +6,7 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -137,7 +138,8 @@ fun LightconeInfoPage(
     val dialogLastTrigType = remember { mutableStateOf("NONE") }
     val dialogTitle = remember { mutableStateOf("Nope") }
 
-    Box {
+    BoxWithConstraints {
+        val pageSize = Pair(maxWidth, maxHeight)
 
         LightconeInfoFullImgWithRare(
             fileName = lightconeName,
@@ -146,7 +148,7 @@ fun LightconeInfoPage(
 
         //RecycleView
         LazyColumn(state = listState, modifier = Modifier.haze(hazeState).align(Alignment.Center).navigationBarsPadding()) {
-            item { InfoBioColumn(lcInfoJson, combatType = null, path, isUserOwned = false, isFullEidolon = false) }
+            item { InfoBioColumn(lcInfoJson, combatType = null, path, isUserOwned = false, isFullEidolon = false, pageSize = pageSize) }
             //Don't forget to add "StatusBarPadding" !
             item { InfoBasicStatus(lcInfoJson, StatusType.LIGHTCONE) }
             item { InfoLcMetamorphosis(lcInfoJson) }

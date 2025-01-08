@@ -32,6 +32,7 @@ actual fun getIsLandscape(): Boolean {
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
+@Deprecated("Please use BoxWithConstraints instead")
 actual fun getScreenSizeInfo(): ScreenSizeInfo {
     val density = LocalDensity.current
     val windowInfo = LocalWindowInfo.current

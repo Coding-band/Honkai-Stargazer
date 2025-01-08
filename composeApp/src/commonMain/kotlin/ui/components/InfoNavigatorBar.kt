@@ -81,7 +81,7 @@ fun InfoNavigatorBar(
             lastExpectInvisibleMS = Clock.System.now().toEpochMilliseconds() + animationDuration
             coroutineScope.launch {
                 delay(animationDuration)
-                isHintVisible = !(Clock.System.now().toEpochMilliseconds() >= lastExpectInvisibleMS)
+                isHintVisible = Clock.System.now().toEpochMilliseconds() < lastExpectInvisibleMS
             }
         }
         currChoiceIndex = min(listState.firstVisibleItemIndex, infoItemList.size-1)

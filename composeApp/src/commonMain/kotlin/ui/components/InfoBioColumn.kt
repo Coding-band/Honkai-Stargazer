@@ -5,10 +5,12 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -24,6 +26,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import files.Res
@@ -51,11 +54,8 @@ fun InfoBioColumn(
     path: types.Path? = null,
     isUserOwned: Boolean = true,
     isFullEidolon: Boolean = false,
-
+    pageSize: Pair<Dp, Dp> = Pair(getScreenSizeInfo().wDP, getScreenSizeInfo().hDP)
     ) {
-
-    var columnHeightDp by remember { mutableStateOf(110.dp) }
-    val density = LocalDensity.current.density
 
     val itemName = remember { infoJson.jsonObject["name"]!!.jsonPrimitive.content }
     val itemRarity = remember { infoJson.jsonObject["rarity"]!!.jsonPrimitive.int }
@@ -68,14 +68,15 @@ fun InfoBioColumn(
         }
     }
 
-    Column {
-        Box(modifier = Modifier.height(getScreenSizeInfo().hDP - columnHeightDp))
+    Column(modifier = Modifier.size(pageSize.first, pageSize.second)) {
+        Box(modifier = Modifier.weight(1f))
 
-        Column(modifier = Modifier.padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
-            .onSizeChanged { item ->
-                columnHeightDp = pxToDp(item.height, density)
-            }) {
-            Row() {
+        Column(modifier = Modifier
+            .padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
+            .fillMaxWidth()
+            .wrapContentHeight()
+        ) {
+            Row {
                 Text(
                     modifier = Modifier.padding(end = 8.dp),
                     text = itemName,
