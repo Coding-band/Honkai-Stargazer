@@ -33,6 +33,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.IntSize
@@ -104,6 +105,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
     val hazeState = remember { HazeState() }
     val wallpaper = Wallpaper.wallpaperList.find { it.id == Settings().getString("backgroundImage", "221000") } ?: Wallpaper.wallpaperList[0]
     val doRecompose = remember { mutableStateOf(false) }
+    val urlHandler = LocalUriHandler.current
 
     key(doRecompose.value){
         Box {
@@ -237,7 +239,9 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
                         //Discord Invite Link
                         SettingOptionNavigateBar(
                             title = "Discord",
-                            navigateClick = { } //@DoItLater("Add the function of invite link")
+                            navigateClick = {
+                                urlHandler.openUri("https://discord.gg/uXatcbWKv2")
+                            } //@DoItLater("Add the function of invite link")
                         )
                     }
                 }
@@ -260,8 +264,11 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
                         //App 版本 App Version
                         SettingOptionNavigateBar(
                             titleRes = Res.string.AppVersion,
-                            navigateDesc = "${
-                                if (!arrayListOf("PRODUCTION", "RELEASE").contains(BuildKonfig.appProfile)) "${BuildKonfig.appProfile} " else " "
+                            navigateDesc =
+                            "${
+                                if (arrayListOf("PRODUCTION", "RELEASE").contains(BuildKonfig.appProfile)) {
+                                    " "
+                                }else if (arrayListOf("PRODUCTION_GP").contains(BuildKonfig.appProfile)) "GP " else "${BuildKonfig.appProfile} "
                             }${BuildKonfig.appVersionName} (${BuildKonfig.appVersionCode})",
                             navigateClick = { } //@DoItLater("Add the function of invite link")
                         )

@@ -133,7 +133,7 @@ fun HomePage(
     val homeMenuBlockList = remember { mutableStateOf(Preferences().HomePageMenu.getHomePageMenuArray()) }
 
     checkHasErrorLogFromLastCrash()
-    if(!arrayListOf("PRODUCTION", "RELEASE").contains(BuildKonfig.appProfile) ){
+    if(!arrayListOf("PRODUCTION", "RELEASE", "PRODUCTION_GP").contains(BuildKonfig.appProfile) ){
         BetaVersionBox()
     }
 

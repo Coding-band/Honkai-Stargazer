@@ -56,20 +56,36 @@ class UserAccount(
         var UIDSEARCH : UserAccount = UserAccount()
 
         fun pasteCookies(
-            cookieList: List<Cookie>,
+            cookieList: Any,
             serverSelected: HoyolabConst.SERVER,
             snackbarHostState: SnackbarHostState? = null
         ) {
             INSTANCE.server = serverSelected
 
             INSTANCE.cookies = ""
-            for(cookie in cookieList.filter { HoyolabConst().HOYOLAB_V2_KEY_GROUP.contains(it.name) }){
-                INSTANCE.cookies += "${cookie.name}=${cookie.value};"
 
-                if((cookie.name == "account_id_v2" && serverSelected.platform == HoyolabRequest.PLATFORM.HOYOLAB) ||
-                    (cookie.name == "ltuid_v2" && serverSelected.platform == HoyolabRequest.PLATFORM.MIYOUSHE)
-                    ){ INSTANCE.hoyolabId = cookie.value }
+            when(cookieList){
+                is String -> {
+                    INSTANCE.cookies = cookieList
+                    if(cookieList.contains("ltuid_v2=")){
+                        INSTANCE.hoyolabId = getCookieValue(cookieList, "ltuid_v2")!!
+                    }else if(cookieList.contains("account_id_v2=")){
+                        INSTANCE.hoyolabId = getCookieValue(cookieList, "account_id_v2")!!
+                    }
+                }
+                is List<*> -> {
+                    for(cookie in (cookieList as List<Cookie>).filter { HoyolabConst().HOYOLAB_V2_KEY_GROUP.contains(it.name) }){
+                        INSTANCE.cookies += "${cookie.name}=${cookie.value};"
+
+                        if((cookie.name == "account_id_v2" && serverSelected.platform == HoyolabRequest.PLATFORM.HOYOLAB) ||
+                            (cookie.name == "ltuid_v2" && serverSelected.platform == HoyolabRequest.PLATFORM.MIYOUSHE)
+                        ){ INSTANCE.hoyolabId = cookie.value }
+                    }
+                }
             }
+
+            println( "[UserAccount] pasteCookies : ${INSTANCE.cookies} / ${INSTANCE.hoyolabId}")
+
             refreshUserAccount()
             UserAbyssRecord.refreshMOCData()
             UserAbyssRecord.refreshPFData()
@@ -81,13 +97,15 @@ class UserAccount(
             Preferences().CharList.resetCharList()
         }
 
-        fun refreshUserAccount() {
+        private fun refreshUserAccount() {
             try {
                 val api = HoyolabAPI(INSTANCE.server.platform, INSTANCE.cookies)
 
                 if(INSTANCE.cookies == "" || INSTANCE.hoyolabId == ""){ return }
                 //Get User UID & Account Info
                 val userCards = api.getGameRecordCard(INSTANCE.hoyolabId).data
+
+                println(userCards)
 
                 @DoItLater("Provide Missing Logic")
                 if (userCards.jsonObject.isEmpty()) {
@@ -99,6 +117,7 @@ class UserAccount(
                                 && it.jsonObject["region"]!!.jsonPrimitive.content == INSTANCE.server.serverId
                     }
 
+                    println(userInfoN.isEmpty())
                     if(userInfoN.isEmpty()){
                         showWarningToast(message = "Seems you chose the incorrect server, please choose the correct server and try again.")
                         return
@@ -112,6 +131,8 @@ class UserAccount(
                         INSTANCE.achievements = userInfo.jsonObject["data"]!!.jsonArray[2].jsonObject["value"]!!.jsonPrimitive.int
                         INSTANCE.chestOpened = userInfo.jsonObject["data"]!!.jsonArray[3].jsonObject["value"]!!.jsonPrimitive.int
                         INSTANCE.isLogin = true
+
+                        print("UserAccount : ${Json.encodeToString(INSTANCE)}")
                     }
                 }
 
@@ -129,12 +150,14 @@ class UserAccount(
 
             }catch (e : Exception){
                 resetUserAccount()
+                println(e.message)
+                e.printStackTrace()
                 errorLog("UserAccount", "refreshUserAccount()", e)
             }
         }
         @Deprecated("This function is for debug purpose only, and it didn't have any use in previous debug.")
         fun printUserAPIResults(){
-            if(BuildKonfig.appProfile == "RELEASE" || BuildKonfig.appProfile == "PRODUCTION"){ return }
+            if(BuildKonfig.appProfile == "RELEASE" || BuildKonfig.appProfile == "PRODUCTION" || BuildKonfig.appProfile == "PRODUCTION_GP"){ return }
             val api = HoyolabAPI(INSTANCE.server.platform, INSTANCE.cookies)
             val userCards = api.getGameRecordCard(INSTANCE.hoyolabId).data
             val userIndexData = api.getHsrIndexData(INSTANCE.uid, INSTANCE.server).data
@@ -350,6 +373,17 @@ class UserAccount(
 
         }
     }
+}
+
+fun getCookieValue(cookieString: String, key: String): String? {
+    val cookies = cookieString.split("; ")
+    for (cookie in cookies) {
+        val keyValue = cookie.split("=")
+        if (keyValue.size == 2 && keyValue[0] == key) {
+            return keyValue[1].replace(";", "")
+        }
+    }
+    return null
 }
 
 
