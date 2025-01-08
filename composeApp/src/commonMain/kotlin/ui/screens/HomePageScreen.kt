@@ -316,19 +316,21 @@ fun HomePageHeader(
                             .padding(top = 12.dp)
                             .fillMaxHeight(), horizontalAlignment = Alignment.End
                     ) {
-                        //Three Dots
-                        IconButton(
-                            modifier = Modifier
-                                .height(23.dp)
-                                .width(45.dp)
-                                .onGloballyPositioned {
-                                    threeDotDialogPos.value = it.positionInRoot()
-                                },
-                            onClick = {
-                                threeDotDialogDisplay.value = !threeDotDialogDisplay.value
+                        Box(modifier = Modifier.size(45.dp, 23.dp).clip(RoundedCornerShape(50.dp))) {
+                            //Three Dots
+                            IconButton(
+                                modifier = Modifier
+                                    .height(23.dp)
+                                    .width(45.dp)
+                                    .onGloballyPositioned {
+                                        threeDotDialogPos.value = it.positionInRoot()
+                                    },
+                                onClick = {
+                                    threeDotDialogDisplay.value = !threeDotDialogDisplay.value
+                                }
+                            ) {
+                                Image(painterResource(resource = Res.drawable.ic_rounded_option_btn), "")
                             }
-                        ) {
-                            Image(painterResource(resource = Res.drawable.ic_rounded_option_btn), "")
                         }
 
                         Spacer(Modifier.weight(1f))

@@ -287,7 +287,6 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
         scene(
             //?fileName={fileName}&path={path}
             route = "${Screen.LightconeInfoPage.route}/{lcName}",
-            navTransition = navTransition
         ) { backStackEntry ->
             screenInstance = Screen.LightconeListPage
             withBGScreen(isPadMode){
@@ -302,7 +301,6 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
         //?fileName={fileName}
         scene(
             route = "${Screen.RelicInfoPage.route}/{relicName}",
-            navTransition = navTransition
         ) { backStackEntry ->
             screenInstance = Screen.RelicInfoPage
             withBGScreen(isPadMode){
@@ -339,7 +337,6 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
         //?serverId={serverId}
         scene(
             route = Screen.HoyolabLoginPageScreen.route,
-            navTransition = navTransition
         ) { backStackEntry ->
             screenInstance = Screen.HoyolabLoginPageScreen
             withBGScreen(isPadMode){
@@ -365,7 +362,6 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
         //?eventId={eventId}
         scene(
             route = Screen.EventContentPageScreen.route,
-            navTransition = navTransition
         ) { backStackEntry ->
             screenInstance = Screen.EventContentPageScreen
             withBGScreen(isPadMode){
@@ -392,7 +388,6 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
         //?uid={uid}
         scene(
             route = Screen.UserInfoPageScreen.route,
-            navTransition = navTransition
         ) { backStackEntry ->
             screenInstance = Screen.UserInfoPageScreen
             withBGScreen(isPadMode){
@@ -408,7 +403,6 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
         //?uid={uid}&charId={charId}
         scene(
             route = Screen.UserCharacterPageScreen.route,
-            navTransition = navTransition
         ) { backStackEntry ->
             screenInstance = Screen.UserCharacterPageScreen
             withBGScreen(isPadMode){
@@ -445,7 +439,7 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
         //?uid={uid}
         scene(
             route = Screen.BattleChroniclePageScreen.route,
-            navTransition = navTransition
+            
         ) { backStackEntry ->
             screenInstance = Screen.BattleChroniclePageScreen
             withBGScreen(isPadMode){

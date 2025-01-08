@@ -34,10 +34,10 @@ fun ThemedSlider(sliderValue : Float, sliderValueIt: (Float) -> Unit, valueRange
         CompositionLocalProvider (
             value = LocalRippleConfiguration provides RippleConfiguration(
                 rippleAlpha = RippleAlpha(
-                    pressedAlpha = 0.2f,
-                    focusedAlpha = 0.4f,
-                    draggedAlpha = 0.4f,
-                    hoveredAlpha = 0.4f
+                    pressedAlpha = 0f,
+                    focusedAlpha = 0f,
+                    draggedAlpha = 0f,
+                    hoveredAlpha = 0f
                 ),
                 color = Color.Black
             )

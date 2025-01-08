@@ -23,6 +23,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -39,6 +40,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import files.MatchRequirementChar
@@ -63,6 +65,7 @@ import utils.app.Language
 import utils.app.TextColorNormalDim
 import utils.annotation.YouMustKiddingMe
 import utils.app.CharWeightList
+import utils.app.Constants.Companion.CHAR_CARD_TITLE_HEIGHT
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
 
@@ -131,7 +134,8 @@ fun MultiChoiceCard(
 
     Box(
         modifier = Modifier
-            .defaultMinSize(CHAR_CARD_WIDTH, CHAR_CARD_HEIGHT)
+            .widthIn(CHAR_CARD_WIDTH, CHAR_CARD_WIDTH*2)
+            .aspectRatio(CHAR_CARD_WIDTH/ CHAR_CARD_HEIGHT)
             .clip(
                 RoundedCornerShape(
                     topEnd = 15.dp,
@@ -194,6 +198,7 @@ fun MultiChoiceCard(
                     textAlign = TextAlign.Center,
                     color = TextColorNormalDim,
                     fontSize = FontSizeNormal12().fontSize,
+                    lineHeight = CHAR_CARD_TITLE_HEIGHT.value.sp,
                     maxLines = 1
                 )
             }

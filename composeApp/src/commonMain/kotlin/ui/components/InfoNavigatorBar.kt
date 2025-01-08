@@ -30,6 +30,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.platform.LocalDensity
@@ -149,13 +150,14 @@ fun InfoNavigatorBar(
                             val startPadding = if (index == 0) 0.dp else 4.dp
                             val endPadding = if (index == infoItemList.size - 1) 0.dp else 4.dp
                             Box(
-                                modifier = Modifier.padding(
-                                    start = startPadding,
-                                    end = endPadding
-                                )
+                                modifier = Modifier
+                                    .padding(
+                                        start = startPadding,
+                                        end = endPadding
+                                    )
+                                    .clip(shape = RoundedCornerShape(25.dp))
                                     .size(30.dp).background(
-                                        Color(if (currChoiceIndex == index) 0x33FFFFFF else 0x00FFFFFF),
-                                        shape = RoundedCornerShape(25.dp)
+                                        Color(if (currChoiceIndex == index) 0x33FFFFFF else 0x00FFFFFF)
                                     ).clickable(
                                         onClick = {
                                             currChoiceIndex = index;

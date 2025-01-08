@@ -13,6 +13,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
 //https://dev.to/maaxgr/jetpack-compose-grid-without-lazy-5gb8
+@Deprecated("Use VerticalGrid/HorizonGrid instead")
 @Composable
 fun NonLazyGrid(
     columns: Int,
