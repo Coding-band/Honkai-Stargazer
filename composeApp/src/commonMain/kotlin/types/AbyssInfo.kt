@@ -41,7 +41,9 @@ import utils.app.Language
 import utils.app.Language.Companion.TextLanguageInstance
 import utils.annotation.VersionUpdateCheck
 import utils.app.errorLog
+import utils.app.getAssetsJsonByFilePath
 import utils.app.getAssetsJsonStrByFilePath
+import utils.app.getAssetsStrByFilePath
 
 @Serializable
 enum class AbyssInfoType {
@@ -74,7 +76,7 @@ data class AbyssInfo(
                 val abyssFileName = getAbyssFileNameById(abyssId, type)
                 if (abyssFileName == "UNKNOWN_ID") return null
 
-                val abyssJsonStr = getAssetsJsonStrByFilePath(
+                val abyssJsonStr = getAssetsStrByFilePath(
                     when(type){
                         AbyssInfoType.MemoryOfChaos -> "memory_of_chao_data/$abyssFileName.json"
                         AbyssInfoType.PureFiction -> "pure_fiction_data/$abyssFileName.json"
@@ -141,7 +143,7 @@ data class AbyssInfoList(
                 val job = async(Dispatchers.Default) {
                     val retArray = arrayListOf<AbyssInfoList>()
                     try {
-                        val abyssJson = getAssetsJsonStrByFilePath(
+                        val abyssJson = getAssetsStrByFilePath(
                             when(type){
                                 AbyssInfoType.MemoryOfChaos -> "memory_of_chao_data/chao_list.json"
                                 AbyssInfoType.PureFiction -> "pure_fiction_data/pf_list.json"
@@ -166,7 +168,7 @@ data class AbyssInfoList(
             return runBlocking {
                 val job = async(Dispatchers.Default) {
                     try {
-                        val abyssJson = getAssetsJsonStrByFilePath(
+                        val abyssJson = getAssetsStrByFilePath(
                             when(type){
                                 AbyssInfoType.MemoryOfChaos -> "memory_of_chao_data/chao_list.json"
                                 AbyssInfoType.PureFiction -> "pure_fiction_data/pf_list.json"

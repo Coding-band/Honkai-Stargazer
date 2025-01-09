@@ -79,6 +79,7 @@ fun getAssetsStringByFilePath(filePath: String): String{
 }
 
 @OptIn(ExperimentalCoroutinesApi::class, ExperimentalResourceApi::class)
+@Deprecated("Use getAssetsJsonByFilePath() instead", ReplaceWith("getAssetsJsonByFilePath(filePath)"))
 fun getAssetsJsonStrByFilePath(filePath: String): String {
     return runBlocking {
         val job = async(Dispatchers.Default) {
@@ -295,7 +296,17 @@ fun getAssetsURLByFileName(folder: ImageFolder, fileName: String): String {
  * E.g. "character_data/character_list.json"
  */
 fun getAssetsJsonByFilePath(filePath: String): JsonElement {
-    return Json.parseToJsonElement(readFromFile(filePath))
+    val readStr = readFromFile(filePath)
+    return Json.parseToJsonElement(
+        readStr
+        //if(readStr == "{}")  getAssetsJsonStrByFilePath(filePath) else readStr
+    )
+}
+
+fun getAssetsStrByFilePath(filePath: String): String {
+    val readStr = readFromFile(filePath)
+    return readStr
+        //if(readStr == "{}")  getAssetsJsonStrByFilePath(filePath) else readStr
 }
 
 fun writeToFile(filePath: String, content: String) {

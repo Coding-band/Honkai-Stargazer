@@ -84,8 +84,6 @@ class UserAccount(
                 }
             }
 
-            println( "[UserAccount] pasteCookies : ${INSTANCE.cookies} / ${INSTANCE.hoyolabId}")
-
             refreshUserAccount()
             UserAbyssRecord.refreshMOCData()
             UserAbyssRecord.refreshPFData()
@@ -105,7 +103,6 @@ class UserAccount(
                 //Get User UID & Account Info
                 val userCards = api.getGameRecordCard(INSTANCE.hoyolabId).data
 
-                println(userCards)
 
                 @DoItLater("Provide Missing Logic")
                 if (userCards.jsonObject.isEmpty()) {
@@ -117,7 +114,6 @@ class UserAccount(
                                 && it.jsonObject["region"]!!.jsonPrimitive.content == INSTANCE.server.serverId
                     }
 
-                    println(userInfoN.isEmpty())
                     if(userInfoN.isEmpty()){
                         showWarningToast(message = "Seems you chose the incorrect server, please choose the correct server and try again.")
                         return
@@ -131,8 +127,6 @@ class UserAccount(
                         INSTANCE.achievements = userInfo.jsonObject["data"]!!.jsonArray[2].jsonObject["value"]!!.jsonPrimitive.int
                         INSTANCE.chestOpened = userInfo.jsonObject["data"]!!.jsonArray[3].jsonObject["value"]!!.jsonPrimitive.int
                         INSTANCE.isLogin = true
-
-                        print("UserAccount : ${Json.encodeToString(INSTANCE)}")
                     }
                 }
 

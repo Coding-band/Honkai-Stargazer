@@ -42,6 +42,8 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.JsonArray
+import kotlinx.serialization.json.JsonNull
+import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import moe.tlaster.precompose.navigation.Navigator
@@ -62,7 +64,10 @@ fun initRelicList(){
         relicList.value = runBlocking {
             val job = CoroutineScope(Dispatchers.Default).async {
                 val tmpList = arrayListOf<Relic>()
-                (Relic.relicListJson as JsonArray).fastForEach { jsonElement ->
+                if (Relic.relicListJson !is JsonArray) {
+                    return@async tmpList
+                }
+                (Relic.relicListJson).fastForEach { jsonElement ->
                     tmpList.add(Relic.getRelicItemFromJSON(jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!))
                 }
                 return@async tmpList

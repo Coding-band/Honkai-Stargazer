@@ -42,9 +42,12 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.JsonArray
+import kotlinx.serialization.json.JsonNull
+import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import moe.tlaster.precompose.navigation.Navigator
+import types.Character
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import types.Lightcone
 import utils.app.PageBottomMask
@@ -62,7 +65,10 @@ fun initLcList(){
         lcList.value = runBlocking {
             val job = CoroutineScope(Dispatchers.Default).async {
                 val tmpLcList = arrayListOf<Lightcone>()
-                (Lightcone.lcListJson as JsonArray).fastForEach { jsonElement ->
+                if (Lightcone.lcListJson !is JsonArray) {
+                    return@async tmpLcList
+                }
+                Lightcone.lcListJson.fastForEach { jsonElement ->
                     tmpLcList.add(Lightcone.getLightconeItemFromJSON(jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!, requireAttrData = true))
                 }
                 return@async tmpLcList

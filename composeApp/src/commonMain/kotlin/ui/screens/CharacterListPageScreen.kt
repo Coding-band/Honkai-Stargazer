@@ -42,6 +42,8 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.JsonArray
+import kotlinx.serialization.json.JsonNull
+import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import moe.tlaster.precompose.navigation.Navigator
@@ -62,7 +64,10 @@ fun initCharList() {
         charList.value = runBlocking {
             val job = CoroutineScope(Dispatchers.Default).async {
                 val tmpCharList = arrayListOf<Character>()
-                (Character.charListJson as JsonArray).fastForEach { jsonElement ->
+                if (Character.charListJson !is JsonArray) {
+                    return@async tmpCharList
+                }
+                (Character.charListJson).fastForEach { jsonElement ->
                     tmpCharList.add(Character.getCharacterItemFromJSON(jsonElement.jsonObject["charId"]?.jsonPrimitive?.content!!, requireAttrData = true))
                 }
                 return@async tmpCharList
