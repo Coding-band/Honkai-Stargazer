@@ -128,6 +128,7 @@ class Language() {
         AppLanguageInstance = lang
         if(isFirstInit){
             TextLanguageInstance = TextLanguage.entries.firstOrNull { it.folderName == lang.folderName } ?: TextLanguage.EN
+            setTextLanguage(TextLanguageInstance)
         }
     }
 

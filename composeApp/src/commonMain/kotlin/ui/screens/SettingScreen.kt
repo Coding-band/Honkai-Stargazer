@@ -87,6 +87,7 @@ import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import types.Character
+import types.UserAccount
 import types.Wallpaper
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
@@ -97,6 +98,9 @@ import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import utils.app.pxToDp
 import utils.app.removeStrQuote
+import utils.app.showFunctionIsDevelopingToast
+import utils.app.toastInstance
+import utils.starbase.StarbaseAPI
 import kotlin.math.max
 
 @Composable
@@ -122,7 +126,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
 
                 //帳號設定 Account Setup
                 item {
-                    SettingCategory(title = removeStrQuote(Res.string.AccountSetup).replace("$"+"{1}", "900033852")) {
+                    SettingCategory(title = removeStrQuote(Res.string.AccountSetup).replace("$"+"{1}", UserAccount.INSTANCE.uid)) {
 
                         //使用邀請碼 Use Invite Code
                         SettingOptionNoneBar(
@@ -135,7 +139,10 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
                             titleRes = Res.string.SettingPersonalPageShow,
                             //optionSavedChoice = @DoItLater("Add the function of show personal page"),
                             optionList = arrayListOf(removeStrQuote(Res.string.SettingPersonalPageDisable), removeStrQuote(Res.string.SettingPersonalPageShow)),
-                            optionAction = { index: Int -> DoItLater("Add function of show personal page") }
+                            optionAction = { index: Int ->
+                                UserAccount.INSTANCE.showCharList = (index == 1)
+                                StarbaseAPI().updateUserAccountInfo()
+                            }
                         )
                     }
                 }
@@ -227,13 +234,17 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
                         //捐贈 Donation
                         SettingOptionNavigateBar(
                             titleRes = Res.string.DonateUs,
-                            navigateClick = { } //@DoItLater("Add the function of donation")
+                            navigateClick = {
+                                showFunctionIsDevelopingToast()
+                            } //@DoItLater("Add the function of donation")
                         )
 
                         //邀請使用 Invite Friends To Use Stargazer3
                         SettingOptionNavigateBar(
                             titleRes = Res.string.InviteOthers,
-                            navigateClick = { } //@DoItLater("Add the function of invite link")
+                            navigateClick = {
+                                showFunctionIsDevelopingToast()
+                            } //@DoItLater("Add the function of invite link")
                         )
 
                         //Discord Invite Link
@@ -249,16 +260,20 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
                 //關於 About
                 item {
                     SettingCategory(title = removeStrQuote(Res.string.About)) {
-                        //捐贈 Donation
+                        //關於應用程式 About The App
                         SettingOptionNavigateBar(
                             titleRes = Res.string.AboutTheApp,
-                            navigateClick = { } //@DoItLater("Add the function of donation")
+                            navigateClick = {
+                                navigator.navigateLimited(Screen.AboutStargazerPageScreen.route)
+                            } //@DoItLater("Add the function of donation")
                         )
 
                         //邀請使用 Invite Friends To Use Stargazer3
                         SettingOptionNavigateBar(
                             titleRes = Res.string.SourceCode,
-                            navigateClick = { } //@DoItLater("Add the function of invite link")
+                            navigateClick = {
+                                showFunctionIsDevelopingToast()
+                            } //@DoItLater("Add the function of invite link")
                         )
 
                         //App 版本 App Version
