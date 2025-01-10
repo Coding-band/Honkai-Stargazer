@@ -1,9 +1,11 @@
 package utils.app
 
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.saveable.Saver
 import androidx.compose.runtime.saveable.listSaver
-import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import coil3.ImageLoader
 import coil3.PlatformContext
@@ -30,15 +32,21 @@ import io.ktor.client.call.body
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.request.get
+import io.ktor.client.request.head
 import io.ktor.client.statement.HttpResponse
+import io.ktor.http.HttpHeaders
 import io.ktor.serialization.kotlinx.json.json
 import io.ktor.util.network.UnresolvedAddressException
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.IO
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withTimeout
+import kotlinx.datetime.Instant
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import okio.FileSystem
@@ -323,8 +331,8 @@ fun writeToFile(filePath: String, content: String) {
                 sink.writeUtf8(content)
             }
         }
-    } catch (e: IOException) {
-        e.printStackTrace()
+    } catch (e: Exception) {
+        errorLog("UtilTools.kt", "writeToFile(${filePath}, ...)", e)
     }
 }
 
@@ -333,19 +341,53 @@ fun readFromFile(filePath: String): String {
     val file = FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("data").resolve(filePath)
 
     try {
-        // Read from file
-        if(!fileSystem.exists(file)){
+        // Check if the file exists
+        if (!fileSystem.exists(file)) {
             val data = readFromOnlineURL(StarbaseAPI().getGitHubStaticAssetURL() + "/data/${filePath}")
             writeToFile(filePath, data)
             return data
         }
+
+        try {
+            // Get local file size and last modified time
+            val localFileSize = fileSystem.metadata(file).size ?: 0L
+            val localFileLastModified = fileSystem.metadata(file).lastModifiedAtMillis ?: 0L
+
+            // Get online file size and last modified time
+            val onlineFileUrl = StarbaseAPI().getGitHubStaticAssetURL() + "/data/${filePath}"
+            val client = getLocalHttpClient {
+                install(HttpTimeout) { requestTimeoutMillis = 8000 }
+                install(ContentNegotiation) { json() }
+                expectSuccess = true
+            }
+
+            val response: HttpResponse = runBlocking {
+                client.head(onlineFileUrl)
+            }
+
+            val onlineFileSize = response.headers[HttpHeaders.ContentLength]?.toLong() ?: 0L
+            val onlineFileLastModified = response.headers[HttpHeaders.LastModified]?.let {
+                Instant.parse(it).toEpochMilliseconds()
+            } ?: 0L
+
+            // Compare file size and last modified time
+            if (localFileSize != onlineFileSize || localFileSize != onlineFileSize && localFileLastModified < onlineFileLastModified) {
+                val data = readFromOnlineURL(onlineFileUrl)
+                writeToFile(filePath, data)
+                return data
+            }
+        }catch (e: UnresolvedAddressException){
+            // No need to response
+        }
+
+        // Read from file
         return fileSystem.source(file).buffer().use { source ->
             source.readUtf8()
         }
-    } catch (e: IOException) {
+    } catch (e: Exception) {
         errorLog("UtilTools.kt", "readFromFile", e)
-        return "{}"
     }
+    return "{}"
 }
 
 /**
@@ -379,7 +421,7 @@ fun readFromOnlineURL(url: String): String {
 
     }catch (e : UnresolvedAddressException){
         //Cannot find the Address, maybe bcz of u are offline
-        errorLog("UtilTools.kt", "readFromOnlineURL(url = ${url})",e)
+       // errorLog("UtilTools.kt", "readFromOnlineURL(url = ${url})",e)
     }catch (e : Exception){
         // All response
         errorLog("StarbaseRequest", "readFromOnlineURL(url = ${url})",e)
@@ -513,3 +555,5 @@ val JsonElementSaver: Saver<JsonElement, Any> = listSaver(
     save = { listOf(it.toString()) },
     restore = { Json.parseToJsonElement(it[0]) }
 )
+
+private var sJob: Job? = null

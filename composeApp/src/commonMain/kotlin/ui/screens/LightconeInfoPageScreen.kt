@@ -57,6 +57,7 @@ import files.AdviceCharacters
 import files.BasicStatus
 import files.LightconeEffect
 import files.LightconeStory
+import files.NoOnlineData
 import files.Res
 import files.bg_lightcone_artwork_back
 import files.bg_lightcone_artwork_front
@@ -69,6 +70,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import moe.tlaster.precompose.navigation.BackStackEntry
@@ -81,6 +83,8 @@ import types.Lightcone
 import utils.app.JsonElementSaver
 import utils.app.Language
 import utils.app.newImageRequest
+import utils.app.removeStrQuote
+import utils.app.showWarningToast
 
 private lateinit var localCoroutineScope: CoroutineScope;
 private lateinit var localSnackbarHostState: SnackbarHostState;
@@ -114,6 +118,12 @@ fun LightconeInfoPage(
 
     localCoroutineScope = rememberCoroutineScope();
     localSnackbarHostState = snackbarHostState!!;
+
+    if (lcInfoJson !is JsonObject || lcInfoJson.jsonObject.isEmpty()) {
+        showWarningToast(message = removeStrQuote(Res.string.NoOnlineData))
+        navigator.popBackStack()
+        return
+    }
 
     val headerDataPage = HeaderData(
         lcInfoJson.jsonObject["name"]!!.jsonPrimitive.content,

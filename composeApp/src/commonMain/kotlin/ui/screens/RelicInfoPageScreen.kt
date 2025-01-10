@@ -76,6 +76,7 @@ import ui.components.TitleHeader
 import ui.components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import files.NoOnlineData
 import files.RelicDetail
 import files.RelicStatus2Pcs
 import files.RelicStatus4Pcs
@@ -91,6 +92,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.float
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
@@ -115,6 +117,8 @@ import utils.app.TextColorNormalDim
 import utils.app.htmlDescApplier
 import utils.app.newImageRequest
 import utils.app.pxToDp
+import utils.app.removeStrQuote
+import utils.app.showWarningToast
 
 private lateinit var localCoroutineScope: CoroutineScope;
 private lateinit var localSnackbarHostState: SnackbarHostState;
@@ -146,6 +150,12 @@ fun RelicInfoPage(
 
     localCoroutineScope = rememberCoroutineScope();
     localSnackbarHostState = snackbarHostState!!;
+
+    if (relicInfoJson !is JsonObject || relicInfoJson.jsonObject.isEmpty()) {
+        showWarningToast(message = removeStrQuote(Res.string.NoOnlineData))
+        navigator.popBackStack()
+        return
+    }
 
     val headerDataPage = HeaderData(
         relicInfoJson.jsonObject["name"]!!.jsonPrimitive.content,

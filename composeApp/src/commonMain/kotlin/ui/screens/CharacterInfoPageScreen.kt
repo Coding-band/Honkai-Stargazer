@@ -62,6 +62,8 @@ import files.AdviceTeams
 import files.BasicStatus
 import files.CharacterStory
 import files.Eidolon
+import files.NoOnlineData
+import files.NotOK
 import files.Res
 import files.TraceTree
 import files.ic_favourite_btn
@@ -77,6 +79,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.JsonNull
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
@@ -95,6 +98,9 @@ import utils.app.CharWeightList
 import utils.app.Constants.Companion.LOST_IMAGE_DRAWABLE
 import utils.app.JsonElementSaver
 import utils.app.newImageRequest
+import utils.app.removeStrQuote
+import utils.app.showWarningToast
+import utils.app.toastInstance
 
 private lateinit var localCoroutineScope: CoroutineScope;
 private lateinit var localSnackbarHostState: SnackbarHostState;
@@ -135,6 +141,14 @@ fun CharacterInfoPage(
 
     localCoroutineScope = rememberCoroutineScope();
     localSnackbarHostState = snackbarHostState!!;
+
+
+    //Maybe we should make a PomPom Image with "Please Check your Network" Text
+    if (charInfoJson !is JsonObject || charInfoJson.jsonObject.isEmpty()) {
+        showWarningToast(message = removeStrQuote(Res.string.NoOnlineData))
+        navigator.popBackStack()
+        return
+    }
 
     val headerDataPage = HeaderData(
         charInfoJson.jsonObject["name"]!!.jsonPrimitive.content,
