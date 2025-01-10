@@ -84,7 +84,7 @@ fun PageHeader(
             Modifier
                 .hazeChild(
                     state = hazeState!!,
-                    style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 10.dp else 0.dp, 0f)
+                    style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 10.dp else 0.1.dp, 0f)
                 )
                 .background(Color(0x33FFFFFF))
                 //.clippedShadow(elevation = 2.dp)
@@ -193,7 +193,7 @@ fun PageHeaderAlpha(
                             .hazeChild(
                                 shape = CircleShape,
                                 state = hazeState!!,
-                                style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 10.dp else 0.dp, 0f)
+                                style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 10.dp else 0.1.dp, 0f)
                             )
                             .align(Alignment.CenterVertically),
                         colorFilter = ColorFilter.tint(Color.White),
@@ -222,7 +222,7 @@ fun PageHeaderAlpha(
                             .hazeChild(
                                 shape = CircleShape,
                                 state = hazeState!!,
-                                style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 10.dp else 0.dp, 0f)
+                                style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 10.dp else 0.1.dp, 0f)
                             ),
                         colorFilter = ColorFilter.tint(Color.White),
 

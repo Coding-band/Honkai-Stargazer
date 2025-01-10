@@ -125,7 +125,7 @@ fun HomePageBlock1x1(
             .hazeChild(
                 backgroundScreenHazeState,
                 shape = RoundedCornerShape(6.dp),
-                style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 20.dp else 0.dp, Float.MIN_VALUE)
+                style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 20.dp else 0.1.dp, Float.MIN_VALUE)
             )
             .fillMaxSize(),
         border = BorderStroke(1.dp, Color(0x66907C54))
@@ -190,7 +190,7 @@ fun HomePageBlock2x1(
             .hazeChild(
                 backgroundScreenHazeState,
                 shape = RoundedCornerShape(6.dp),
-                style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 20.dp else 0.dp, Float.MIN_VALUE)
+                style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 20.dp else 0.1.dp, Float.MIN_VALUE)
             )
             .fillMaxSize(),
         border = BorderStroke(1.dp, Color(0x66907C54))

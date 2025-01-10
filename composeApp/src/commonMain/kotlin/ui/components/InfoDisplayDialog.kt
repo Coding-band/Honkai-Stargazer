@@ -94,7 +94,7 @@ fun AppDialog(
             .background(Color(0xCCF3F9FF))
             .hazeChild(
                 hazeState,
-                style = HazeStyle(Color.Unspecified, if(isPopupShow.value && globalHazeBlur.value) 20.dp else 0.dp, Float.MIN_VALUE),
+                style = HazeStyle(Color.Unspecified, if(isPopupShow.value && globalHazeBlur.value) 20.dp else 0.1.dp, Float.MIN_VALUE),
                 shape = RoundedCornerShape(
                     topStart = 4.dp,
                     topEnd = 16.dp,

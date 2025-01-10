@@ -113,7 +113,7 @@ fun InfoNavigatorBar(
                             shape = RoundedCornerShape(25.dp)
                         ).hazeChild(
                             hazeState,
-                            style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 20.dp else 0.dp, Float.MIN_VALUE),
+                            style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 20.dp else 0.1.dp, Float.MIN_VALUE),
                             shape = RoundedCornerShape(25.dp)
                         ).clickable(indication = null, onClick = {}, interactionSource = remember { MutableInteractionSource() })
                 ) {
@@ -142,7 +142,7 @@ fun InfoNavigatorBar(
                             shape = RoundedCornerShape(25.dp)
                         ).hazeChild(
                             hazeState,
-                            style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 20.dp else 0.dp, Float.MIN_VALUE),
+                            style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 20.dp else 0.1.dp, Float.MIN_VALUE),
                             shape = RoundedCornerShape(25.dp)
                         )
                 ) {

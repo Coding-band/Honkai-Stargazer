@@ -53,7 +53,7 @@ val gradientBottom = Brush.verticalGradient(
 
 lateinit var backgroundScreenHazeState : HazeState
 val bgModified = mutableStateOf(false)
-val globalHazeBlur = mutableStateOf(Settings().getBoolean("useBlurEffect", false))
+val globalHazeBlur = mutableStateOf(Settings().getBoolean("useBlurEffect", true))
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
@@ -106,7 +106,7 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boo
             ),
             contentDescription = "",
             contentScale = ContentScale.Crop,
-            modifier = Modifier.fillMaxSize().blur(if (isBlur) 20.dp else 0.dp)
+            modifier = Modifier.fillMaxSize().blur(if (isBlur) 20.dp else 0.1.dp)
         )
         Box(
             modifier = Modifier.matchParentSize().background(
