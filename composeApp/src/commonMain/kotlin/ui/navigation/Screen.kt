@@ -1,5 +1,6 @@
 package ui.navigation
 
+import files.AboutTheApp
 import files.ChangeWallPaper
 import files.CharacterList
 import files.Event
@@ -27,6 +28,7 @@ import files.phorphos_medal_military_fill
 import files.phorphos_note_blank_regular
 import files.phorphos_person_fill
 import files.phorphos_sliders_horizontal_fill
+import files.phorphos_star_fill
 import files.phorphos_sword_fill
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
@@ -137,5 +139,9 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     data object PureFictionMissionPageScreen : Screen(
         "PureFictionMissionPageScreen",
         HeaderData(titleRId = Res.string.PureFiction, titleIconId = Res.drawable.phorphos_atom_fill)
+    )
+    data object AboutStargazerPageScreen : Screen(
+        "AboutStargazerPageScreen",
+        HeaderData(titleRId = Res.string.AboutTheApp, titleIconId = Res.drawable.phorphos_star_fill)
     )
 }

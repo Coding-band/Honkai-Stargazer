@@ -50,6 +50,7 @@ import ui.components.PomPomPopup
 import ui.components.PomPomPopupUI
 import ui.components.defaultHeaderData
 import ui.components.docCountDown
+import ui.screens.AboutStargazerPageScreen
 import ui.screens.BackgroundSettingScreen
 import ui.screens.BattleChroniclePageScreen
 import ui.screens.CharacterInfoPage
@@ -458,6 +459,17 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
                     PureFictionMissionPageScreen(
                         navigator = navigator,
                         headerData = Screen.PureFictionMissionPageScreen.headerData
+                    )
+                }
+
+        }
+        scene(
+            route = Screen.AboutStargazerPageScreen.route) {
+            screenInstance = Screen.AboutStargazerPageScreen
+            withBGScreen(isPadMode){
+                    AboutStargazerPageScreen(
+                        navigator = navigator,
+                        headerData = Screen.AboutStargazerPageScreen.headerData
                     )
                 }
 
