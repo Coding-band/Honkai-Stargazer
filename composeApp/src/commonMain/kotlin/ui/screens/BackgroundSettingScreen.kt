@@ -1,9 +1,14 @@
 package ui.screens
 
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.Image
+import androidx.compose.foundation.gestures.AnchoredDraggableState
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.anchoredDraggable
+import androidx.compose.foundation.gestures.detectDragGestures
+import androidx.compose.foundation.gestures.rememberDraggableState
 import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -18,6 +23,7 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -27,7 +33,9 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
@@ -46,7 +54,6 @@ import files.SetWallPaper
 import files.SwitchOff
 import files.SwitchOn
 import files.UseBlurEffect
-import getScreenSizeInfo
 import kotlinx.coroutines.launch
 import moe.tlaster.precompose.navigation.Navigator
 import types.Character
@@ -58,11 +65,12 @@ import utils.app.FontSizeNormal16
 import utils.app.getAssetsURLByFileName
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
+import utils.app.showFunctionIsDevelopingToast
 
 //All the background image can find in /commonMain/composeResources/files/images/bgs
 //U can use the function UtilTools().getAssetsWebpByFileName to get the image
 
-@OptIn(ExperimentalFoundationApi::class)
+@OptIn(ExperimentalFoundationApi::class, ExperimentalMaterialApi::class)
 @Composable
 fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerData: HeaderData = defaultHeaderData){
 
@@ -94,7 +102,9 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: Navigator,
 
             Spacer(modifier = Modifier.height(14.dp))
 
-            Row (Modifier.widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)){
+            //Remove : Not adapted to the new UI
+            /*
+            Row (Modifier.widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).align(Alignment.CenterHorizontally)){
                 UIButton(Modifier.weight(1f).height(64.dp), text = "Test 1")
                 Spacer(modifier = Modifier.width(10.dp))
                 UIButton(Modifier.weight(1f).height(64.dp),
@@ -104,8 +114,16 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: Navigator,
                         Settings().putBoolean("useBlurEffect", isBlur.value)
                 })
             }
-
             Spacer(modifier = Modifier.height(34.dp))
+             */
+
+            Text(
+                text = "SHIFT + Mouse_Wheel to Change Background",
+                style = FontSizeNormal16(),
+                color = Color.White,
+                modifier = Modifier.align(Alignment.CenterHorizontally)
+            )
+            Spacer(modifier = Modifier.height(14.dp))
 
             //在這裡，我們透過使用LazyRow來實現一個，透過橫向滑動來選擇背景的功能
             //當中目前選取的背景將會在正中央完整展示，其前、後的背景則只會展示右方/左方部分的背景
@@ -127,26 +145,34 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: Navigator,
                 }
             }
 
-            LazyRow(
-                state = listState,
-                modifier = Modifier.fillMaxWidth().weight(1f),
-                flingBehavior = rememberSnapFlingBehavior(lazyListState = listState),
-            ) {
-                itemsIndexed(extendedItems) { index, wallpaper ->
-                    Row {
-                        Spacer(Modifier.width(10.dp))
-                        Box(
-                            modifier = Modifier
-                        ) {
-                            // 背景圖片
-                            AsyncImage(
-                                model = newImageRequest(context = LocalPlatformContext.current, getAssetsURLByFileName(ImageFolder.BGS, wallpaper.fileName)),
-                                contentScale = ContentScale.Crop,
-                                contentDescription = "Background Image",
-                                modifier = Modifier.width(getScreenSizeInfo().wDP - 80.dp).fillParentMaxHeight()
-                            )
+            BoxWithConstraints(modifier = Modifier.fillMaxSize().weight(1f)) {
+                val screenWidth = mutableStateOf(maxWidth)
+                val flingBehavior = rememberSnapFlingBehavior(listState)
+
+                LazyRow(
+                    state = listState,
+                    modifier = Modifier.fillMaxWidth(),
+                    flingBehavior = flingBehavior,
+
+                ){
+                    itemsIndexed(extendedItems) { index, wallpaper ->
+                        Row {
+                            Spacer(Modifier.width(10.dp))
+                            Box(
+                                modifier = Modifier
+                            ) {
+                                // 背景圖片
+                                AsyncImage(
+                                    model = newImageRequest(context = LocalPlatformContext.current, getAssetsURLByFileName(ImageFolder.BGS, wallpaper.fileName)),
+                                    contentScale = ContentScale.Crop,
+                                    contentDescription = "Background Image",
+                                    modifier = Modifier
+                                        .width(screenWidth.value - 80.dp)
+                                        .fillParentMaxHeight(),
+                                )
+                            }
+                            Spacer(Modifier.width(10.dp))
                         }
-                        Spacer(Modifier.width(10.dp))
                     }
                 }
             }
@@ -168,11 +194,18 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: Navigator,
 
             Spacer(modifier = Modifier.height(34.dp))
 
-            Row (Modifier.widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)){
-                UIButton(Modifier.weight(1f).height(64.dp), text = removeStrQuote(Res.string.SaveWallPaper))
+            Row (Modifier.widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).align(Alignment.CenterHorizontally)){
+                /*
+                UIButton(Modifier.weight(1f).height(64.dp), text = removeStrQuote(Res.string.SaveWallPaper), onClick = {
+                    showFunctionIsDevelopingToast()
+                })
+
                 Spacer(modifier = Modifier.width(10.dp))
+                 */
+
                 UIButton(Modifier .weight(1f).height(64.dp), text = removeStrQuote(Res.string.SetWallPaper), onClick = {
                     Settings().putString("backgroundImage", extendedItems[wallpaperIndex.value].id)
+                    bgModified.value = true
                     navigator.popBackStack()
                 })
             }

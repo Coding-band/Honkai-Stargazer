@@ -52,6 +52,7 @@ import utils.app.FontSizeNormalLarge24
 import utils.app.TextColorNormal
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
+import ui.screens.globalHazeBlur
 import utils.app.GradientHomeButton
 import utils.app.WhiteAlpha10
 import utils.app.removeStrQuote
@@ -124,7 +125,7 @@ fun HomePageBlock1x1(
             .hazeChild(
                 backgroundScreenHazeState,
                 shape = RoundedCornerShape(6.dp),
-                style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE)
+                style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 20.dp else 0.dp, Float.MIN_VALUE)
             )
             .fillMaxSize(),
         border = BorderStroke(1.dp, Color(0x66907C54))
@@ -189,7 +190,7 @@ fun HomePageBlock2x1(
             .hazeChild(
                 backgroundScreenHazeState,
                 shape = RoundedCornerShape(6.dp),
-                style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE)
+                style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 20.dp else 0.dp, Float.MIN_VALUE)
             )
             .fillMaxSize(),
         border = BorderStroke(1.dp, Color(0x66907C54))

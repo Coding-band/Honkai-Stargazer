@@ -40,6 +40,7 @@ import dev.chrisbanes.haze.hazeChild
 import files.Res
 import files.ui_icon_close
 import org.jetbrains.compose.resources.painterResource
+import ui.screens.globalHazeBlur
 import utils.app.FontSizeNormal20
 
 
@@ -93,7 +94,7 @@ fun AppDialog(
             .background(Color(0xCCF3F9FF))
             .hazeChild(
                 hazeState,
-                style = HazeStyle(Color.Unspecified, if(isPopupShow.value) 20.dp else 0.dp, Float.MIN_VALUE),
+                style = HazeStyle(Color.Unspecified, if(isPopupShow.value && globalHazeBlur.value) 20.dp else 0.dp, Float.MIN_VALUE),
                 shape = RoundedCornerShape(
                     topStart = 4.dp,
                     topEnd = 16.dp,

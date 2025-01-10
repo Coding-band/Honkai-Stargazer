@@ -182,8 +182,11 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
                         //啟用模糊效果
                         SettingOptionDropDownTFBar(
                             titleRes = Res.string.UseBlurEffect,
-                            optionSavedChoice = Settings().getBoolean("useBlurEffect", true),
-                            optionAction = { index: Int -> Settings().putBoolean("useBlurEffect", index == 1) }
+                            optionSavedChoice = Settings().getBoolean("useHazeBlurEffect", true),
+                            optionAction = { index: Int ->
+                                globalHazeBlur.value = (index == 1 )
+                                Settings().putBoolean("useHazeBlurEffect", index == 1)
+                            }
                         )
                     }
                 }

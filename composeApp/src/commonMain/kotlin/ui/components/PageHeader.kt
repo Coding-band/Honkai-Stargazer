@@ -43,6 +43,7 @@ import moe.tlaster.precompose.navigation.rememberNavigator
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
+import ui.screens.globalHazeBlur
 
 val PAGE_HEADER_HEIGHT = 72.dp
 val PAGE_HEADER_ALPHA_HEIGHT = 64.dp
@@ -83,7 +84,7 @@ fun PageHeader(
             Modifier
                 .hazeChild(
                     state = hazeState!!,
-                    style = HazeStyle(Color.Unspecified, 10.dp, 0f)
+                    style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 10.dp else 0.dp, 0f)
                 )
                 .background(Color(0x33FFFFFF))
                 //.clippedShadow(elevation = 2.dp)
@@ -192,7 +193,7 @@ fun PageHeaderAlpha(
                             .hazeChild(
                                 shape = CircleShape,
                                 state = hazeState!!,
-                                style = HazeStyle(Color.Unspecified, 10.dp, 0f)
+                                style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 10.dp else 0.dp, 0f)
                             )
                             .align(Alignment.CenterVertically),
                         colorFilter = ColorFilter.tint(Color.White),
@@ -221,7 +222,7 @@ fun PageHeaderAlpha(
                             .hazeChild(
                                 shape = CircleShape,
                                 state = hazeState!!,
-                                style = HazeStyle(Color.Unspecified, 10.dp, 0f)
+                                style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 10.dp else 0.dp, 0f)
                             ),
                         colorFilter = ColorFilter.tint(Color.White),
 

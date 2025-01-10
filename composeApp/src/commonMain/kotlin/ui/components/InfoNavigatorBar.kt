@@ -46,6 +46,7 @@ import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import ui.screens.globalHazeBlur
 import utils.app.DpToPx
 import utils.app.FontSizeNormal12
 import utils.app.removeStrQuote
@@ -112,7 +113,7 @@ fun InfoNavigatorBar(
                             shape = RoundedCornerShape(25.dp)
                         ).hazeChild(
                             hazeState,
-                            style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE),
+                            style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 20.dp else 0.dp, Float.MIN_VALUE),
                             shape = RoundedCornerShape(25.dp)
                         ).clickable(indication = null, onClick = {}, interactionSource = remember { MutableInteractionSource() })
                 ) {
@@ -141,7 +142,7 @@ fun InfoNavigatorBar(
                             shape = RoundedCornerShape(25.dp)
                         ).hazeChild(
                             hazeState,
-                            style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE),
+                            style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 20.dp else 0.dp, Float.MIN_VALUE),
                             shape = RoundedCornerShape(25.dp)
                         )
                 ) {

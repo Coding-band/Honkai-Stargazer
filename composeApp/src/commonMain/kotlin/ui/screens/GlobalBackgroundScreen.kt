@@ -11,6 +11,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.blur
@@ -50,17 +52,34 @@ val gradientBottom = Brush.verticalGradient(
 )
 
 lateinit var backgroundScreenHazeState : HazeState
+val bgModified = mutableStateOf(false)
+val globalHazeBlur = mutableStateOf(Settings().getBoolean("useBlurEffect", false))
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
 fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boolean = false) {
     backgroundScreenHazeState = remember { HazeState() }
     var isBlur = true;
+    //var isForceBlur = Settings().getBoolean("useBlurEffect", false) || forceBlur;
     var isGradient = true;
-    val backgroundImage = getAssetsURLByFileName(
-        ImageFolder.BGS,
-        Settings().getString("backgroundImage", "221000")
-    );
+    val backgroundImage = mutableStateOf(
+        getAssetsURLByFileName(
+            ImageFolder.BGS,
+            Settings().getString("backgroundImage", "221000")
+        )
+    )
+
+    LaunchedEffect(bgModified.value) {
+        if(bgModified.value){
+            backgroundImage.value = getAssetsURLByFileName(
+                ImageFolder.BGS,
+                Settings().getString("backgroundImage", "221000")
+            )
+            //isForceBlur = Settings().getBoolean("useBlurEffect", false)
+            bgModified.value = false
+        }
+    }
+
     //var backgroundBitmap = UtilTools().getAssetsWebpByContext(context = LocalContext.current, "images/${UtilTools.ImageFolderType.BGS.folderPath}1006.webp")
     when(screen){
         Screen.HomePage -> {isBlur = false;}
@@ -69,7 +88,9 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boo
         Screen.PureFictionMissionPageScreen -> {isBlur = false; isGradient = false}
         else -> {}
     }
-    if(forceBlur){ isBlur = true; }
+
+    //isBlur = (if (isForceBlur) true else isBlur)
+
     Box(
         Modifier.haze(backgroundScreenHazeState)
     ){
@@ -80,7 +101,7 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boo
                     Screen.BackgroundSettingScreen -> getAssetsURLByFileName(ImageFolder.BGS, "bg_light")
                     Screen.MemoryOfChaosMissionPageScreen -> getAssetsURLByFileName(ImageFolder.BGS, "memory_of_chaos_bg")
                     Screen.PureFictionMissionPageScreen -> getAssetsURLByFileName(ImageFolder.BGS, "pure_fiction_bg")
-                    else -> backgroundImage
+                    else -> backgroundImage.value
                 }
             ),
             contentDescription = "",
