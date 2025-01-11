@@ -50,7 +50,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Color
@@ -64,17 +63,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
-import coil3.request.CachePolicy
-import coil3.request.ImageRequest
-import coil3.request.crossfade
 import com.voc.stargazer3.BuildKonfig
-import ui.components.HeaderData
-import ui.components.HomePageBlock1x1
-import ui.components.HomePageBlock2x1
-import ui.components.HomePageBlocks
-import ui.components.UIButton
-import ui.components.UIButtonSize
-import ui.components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.AccountLogin
@@ -95,6 +84,17 @@ import types.Character
 import types.ImageFolder
 import types.UserAccount
 import types.UserAccount.Companion.INSTANCE
+import ui.components.HeaderData
+import ui.components.HomePageBlock1x1
+import ui.components.HomePageBlock2x1
+import ui.components.HomePageBlocks
+import ui.components.UIButton
+import ui.components.UIButtonSize
+import ui.components.defaultHeaderData
+import ui.navigation.Screen
+import ui.navigation.navigateLimited
+import ui.navigation.navigatorInstance
+import utils.annotation.DoItLater
 import utils.app.BlackAlpha30
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
@@ -107,11 +107,7 @@ import utils.app.ProgressLevelPrimary
 import utils.app.TextColorLevel
 import utils.app.TextColorNormal
 import utils.app.TextColorNormalDim
-import utils.annotation.DoItLater
 import utils.app.checkHasErrorLogFromLastCrash
-import ui.navigation.Screen
-import ui.navigation.navigateLimited
-import ui.navigation.navigatorInstance
 import utils.app.getIconByUserAccountIconValue
 import utils.app.newImageRequest
 import utils.app.pxToDp
@@ -366,6 +362,13 @@ fun HomePageMenuScrollView(
     homeMenuBlockList: MutableList<HomePageBlocks.HomePageBlockItem>,
     userAccount: UserAccount
 ) {
+    val maxItemInRow = remember { mutableStateOf(4) }
+    var reorderHomeMenuBlockList by remember { mutableStateOf(reorderHomePageBlock(homeMenuBlockList, maxItemInRow.value)) }
+
+    LaunchedEffect(Unit){
+        reorderHomeMenuBlockList = reorderHomePageBlock(homeMenuBlockList, maxItemInRow.value)
+    }
+
     Column {
         LazyVerticalGrid(
             modifier = Modifier
@@ -375,17 +378,19 @@ fun HomePageMenuScrollView(
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
+            items(count = reorderHomeMenuBlockList.size, span = { index ->
 
-            items(count = homeMenuBlockList.size, span = { index ->
+                maxItemInRow.value = maxLineSpan
 
-                when (homeMenuBlockList[index].itemType) {
+                when (reorderHomeMenuBlockList[index].itemType) {
                     HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W1H1 -> GridItemSpan(1)
                     HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1 -> GridItemSpan(2)
                 }
 
             }) { index ->
-                val blockData: HomePageBlocks.HomePageBlockItem = homeMenuBlockList[index];
+                val blockData: HomePageBlocks.HomePageBlockItem = reorderHomeMenuBlockList[index];
                 Box(Modifier.layoutId("HomePageItemBox")){
+
                     when (blockData.itemType) {
                         HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W1H1 -> HomePageBlock1x1(
                             blockData,
@@ -402,6 +407,76 @@ fun HomePageMenuScrollView(
         BottomView()
     }
 }
+
+fun reorderHomePageBlockX(reorderHomePageBlockList: MutableList<HomePageBlocks.HomePageBlockItem>, maxItemInRow: Int = 1): ArrayList<HomePageBlocks.HomePageBlockItem> {
+    val tmpArrayList = reorderHomePageBlockList.toList() as ArrayList<HomePageBlocks.HomePageBlockItem>
+
+    var spanCounter = 0
+    for ((index, item) in tmpArrayList.withIndex()) {
+        // Check whether facing 2x1 block in only 1x1 area issue
+        if (item.itemType == HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1 && (maxItemInRow - spanCounter % maxItemInRow) < 2) {
+            spanCounter = 0
+            var nextIndex = index + 1
+            while (nextIndex < reorderHomePageBlockList.size) {
+                if (reorderHomePageBlockList[nextIndex].itemType == HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W1H1) {
+                    val tmpSwap = reorderHomePageBlockList[index]
+                    println("Swapped ${tmpSwap.itemId} and ${reorderHomePageBlockList[nextIndex].itemId}")
+
+                    reorderHomePageBlockList[index] = reorderHomePageBlockList[nextIndex]
+                    reorderHomePageBlockList[nextIndex] = tmpSwap
+
+                    break
+                }
+                nextIndex++
+            }
+        } else {
+            spanCounter += if (item.itemType == HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W1H1) 1 else 2
+        }
+    }
+    return tmpArrayList
+}
+
+
+// Arrange items to avoid gaps
+fun reorderHomePageBlock(items: MutableList<HomePageBlocks.HomePageBlockItem>, columns: Int): List<HomePageBlocks.HomePageBlockItem> {
+    val grid = mutableListOf<MutableList<HomePageBlocks.HomePageBlockItem?>>()
+    val arrangedItems = mutableListOf<HomePageBlocks.HomePageBlockItem>()
+
+    for (item in items) {
+        if (item.itemType == HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1) {
+            // Try to place a 2x1 item
+            var placed = false
+            for (row in grid) {
+                if (row.size <= columns - 2 && row.count { it == null } >= 2) {
+                    row.addAll(listOf(item, null))
+                    placed = true
+                    break
+                }
+            }
+            if (!placed) {
+                grid.add(mutableListOf(item, null))
+            }
+        } else {
+            // Place a 1x1 item
+            var placed = false
+            for (row in grid) {
+                if (row.size < columns) {
+                    row.add(item)
+                    placed = true
+                    break
+                }
+            }
+            if (!placed) {
+                grid.add(mutableListOf(item))
+            }
+        }
+    }
+
+    // Flatten the grid and remove nulls
+    grid.forEach { row -> arrangedItems.addAll(row.filterNotNull()) }
+    return arrangedItems
+}
+
 
 @Composable
 @DoItLater("Ads function")

@@ -121,7 +121,7 @@ fun HomePageBlock1x1(
                 HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1,
                 HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT
             )
-            .aspectRatio(HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1 / HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT)
+            //.aspectRatio(HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1 / HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT)
             .hazeChild(
                 backgroundScreenHazeState,
                 shape = RoundedCornerShape(6.dp),
@@ -186,7 +186,7 @@ fun HomePageBlock2x1(
                 HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1,
                 HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT
             )
-            .aspectRatio(HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_2x1 / HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT)
+            //.aspectRatio(HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_2x1 / HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT)
             .hazeChild(
                 backgroundScreenHazeState,
                 shape = RoundedCornerShape(6.dp),
