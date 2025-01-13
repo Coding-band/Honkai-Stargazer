@@ -57,27 +57,24 @@ lateinit var relicListSortable : MutableState<ArrayList<Relic>>
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun initRelicList(){
-    var isInited by rememberSaveable { mutableStateOf(false) }
     relicList = rememberSaveable(stateSaver = Relic.ListSaver) { mutableStateOf(arrayListOf()) }
     relicListSortable = rememberSaveable(stateSaver = Relic.ListSaver) { (relicList) }
-    if(!isInited){
-        relicList.value = runBlocking {
-            val job = CoroutineScope(Dispatchers.Default).async {
-                val tmpList = arrayListOf<Relic>()
-                if (Relic.relicListJson !is JsonArray) {
-                    return@async tmpList
-                }
-                (Relic.relicListJson).fastForEach { jsonElement ->
-                    tmpList.add(Relic.getRelicItemFromJSON(jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!))
-                }
+
+    relicList.value = runBlocking {
+        val job = CoroutineScope(Dispatchers.Default).async {
+            val tmpList = arrayListOf<Relic>()
+            if (Relic.relicListJson !is JsonArray) {
                 return@async tmpList
             }
-            job.await()
-            job.getCompleted()
+            (Relic.relicListJson).fastForEach { jsonElement ->
+                tmpList.add(Relic.getRelicItemFromJSON(jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!))
+            }
+            return@async tmpList
         }
-        relicListSortable.value = relicList.value
-        isInited = true
+        job.await()
+        job.getCompleted()
     }
+    relicListSortable.value = relicList.value
 }
 
 @Composable

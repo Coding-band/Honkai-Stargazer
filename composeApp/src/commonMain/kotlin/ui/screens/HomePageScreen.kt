@@ -158,8 +158,8 @@ fun HomePage(
         ThreeDotsDialog(navigator = navigator, threeDotDialogPos = threeDotDialogPos, hazeState = hazeState, threeDotDialogDisplay = threeDotDialogDisplay, userAccount = userAccount)
 
     }
-    var inited = remember { mutableStateOf(false) }
-    if(!inited.value){
+    var isInited by rememberSaveable { mutableStateOf(false) }
+    if(!isInited){
         LaunchedEffect(Unit){
             CoroutineScope(Dispatchers.Default).launch {
                 if(INSTANCE.uid != "000000000"){
@@ -173,7 +173,9 @@ fun HomePage(
         initCharList()
         initLcList()
         initRelicList()
-        inited.value = true
+        initMOCList()
+        initPFList()
+        isInited = true
     }
 }
 

@@ -102,18 +102,15 @@ lateinit var pfList : MutableState<ArrayList<AbyssInfoList>>
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun initPFList(){
-    val isInited by rememberSaveable() { mutableStateOf(false) }
-    if(!isInited){
-        pfList = rememberSaveable(stateSaver = AbyssInfoList.ListSaver) { mutableStateOf(arrayListOf()) }
-        pfList.value = runBlocking {
-            val job = async(Dispatchers.Default) {
-                return@async AbyssInfoList.getAbyssList(type = AbyssInfoType.PureFiction)
-                    .sortedByDescending { it.id }
-                    .filter { (BuildKonfig.appProfile != "DEV") && it.time.begin <= Clock.System.now().toEpochMilliseconds() } as ArrayList<AbyssInfoList>
-            }
-            job.await()
-            job.getCompleted()
+    pfList = rememberSaveable(stateSaver = AbyssInfoList.ListSaver) { mutableStateOf(arrayListOf()) }
+    pfList.value = runBlocking {
+        val job = async(Dispatchers.Default) {
+            return@async AbyssInfoList.getAbyssList(type = AbyssInfoType.PureFiction)
+                .sortedByDescending { it.id }
+                .filter { (BuildKonfig.appProfile != "DEV") && it.time.begin <= Clock.System.now().toEpochMilliseconds() } as ArrayList<AbyssInfoList>
         }
+        job.await()
+        job.getCompleted()
     }
 }
 

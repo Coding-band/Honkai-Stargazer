@@ -57,27 +57,24 @@ lateinit var charListSortable : MutableState<ArrayList<Character>>
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun initCharList() {
-    var isInited by rememberSaveable { mutableStateOf(false) }
     charList = rememberSaveable(stateSaver = Character.ListSaver) { mutableStateOf(arrayListOf()) }
     charListSortable = rememberSaveable(stateSaver = Character.ListSaver) { (charList) }
-    if(!isInited){
-        charList.value = runBlocking {
-            val job = CoroutineScope(Dispatchers.Default).async {
-                val tmpCharList = arrayListOf<Character>()
-                if (Character.charListJson !is JsonArray) {
-                    return@async tmpCharList
-                }
-                (Character.charListJson).fastForEach { jsonElement ->
-                    tmpCharList.add(Character.getCharacterItemFromJSON(jsonElement.jsonObject["charId"]?.jsonPrimitive?.content!!, requireAttrData = true))
-                }
+
+    charList.value = runBlocking {
+        val job = CoroutineScope(Dispatchers.Default).async {
+            val tmpCharList = arrayListOf<Character>()
+            if (Character.charListJson !is JsonArray) {
                 return@async tmpCharList
             }
-            job.await()
-            job.getCompleted()
+            (Character.charListJson).fastForEach { jsonElement ->
+                tmpCharList.add(Character.getCharacterItemFromJSON(jsonElement.jsonObject["charId"]?.jsonPrimitive?.content!!, requireAttrData = true))
+            }
+            return@async tmpCharList
         }
-        isInited = true
-        charListSortable.value = charList.value
+        job.await()
+        job.getCompleted()
     }
+    charListSortable.value = charList.value
 }
 
 @OptIn(ExperimentalCoroutinesApi::class)

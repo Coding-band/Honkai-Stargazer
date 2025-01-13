@@ -71,10 +71,12 @@ fun SplashPage(
         if (!showPopup.value) {
             CoroutineScope(Dispatchers.Default).launch {
                 if (INSTANCE.uid != "000000000" && !hasRefreshed.value) {
-                    async { refreshCharacterList() }.await()
-                    async { refreshNoteData() }.await()
-                    async { refreshMOCData() }.await()
-                    async { refreshPFData() }.await()
+                    async {
+                        refreshCharacterList()
+                        refreshNoteData()
+                        refreshMOCData()
+                        refreshPFData()
+                    }.await()
                 }
 
                 hasRefreshed.value = true

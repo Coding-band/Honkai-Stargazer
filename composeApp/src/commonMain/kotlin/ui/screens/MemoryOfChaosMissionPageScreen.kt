@@ -110,18 +110,15 @@ lateinit var mocList : MutableState<ArrayList<AbyssInfoList>>
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun initMOCList(){
-    val isInited by rememberSaveable { mutableStateOf(false) }
-    if(!isInited){
-        mocList = rememberSaveable(stateSaver = AbyssInfoList.ListSaver) { mutableStateOf(arrayListOf()) }
-        mocList.value = runBlocking {
-            val job = async(Dispatchers.Default) {
-                return@async AbyssInfoList.getAbyssList(type = AbyssInfoType.MemoryOfChaos)
-                    .sortedByDescending { it.id }
-                    .filter { (BuildKonfig.appProfile != "DEV") && it.time.begin <= Clock.System.now().toEpochMilliseconds() } as ArrayList<AbyssInfoList>
-            }
-            job.await()
-            job.getCompleted()
+    mocList = rememberSaveable(stateSaver = AbyssInfoList.ListSaver) { mutableStateOf(arrayListOf()) }
+    mocList.value = runBlocking {
+        val job = async(Dispatchers.Default) {
+            return@async AbyssInfoList.getAbyssList(type = AbyssInfoType.MemoryOfChaos)
+                .sortedByDescending { it.id }
+                .filter { (BuildKonfig.appProfile != "DEV") && it.time.begin <= Clock.System.now().toEpochMilliseconds() } as ArrayList<AbyssInfoList>
         }
+        job.await()
+        job.getCompleted()
     }
 }
 

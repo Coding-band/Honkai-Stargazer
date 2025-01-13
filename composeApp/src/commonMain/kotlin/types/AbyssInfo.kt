@@ -35,6 +35,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.decodeFromJsonElement
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import utils.app.Language
@@ -137,6 +138,9 @@ data class AbyssInfoList(
     @SerialName("time") val time: AbyssInfoTime
 ){
     companion object{
+        val mocListJson = getAssetsJsonByFilePath("memory_of_chao_data/chao_list.json")
+        val pfListJson = getAssetsJsonByFilePath("pure_fiction_data/pf_list.json")
+
         @OptIn(ExperimentalCoroutinesApi::class)
         fun getAbyssList(type: AbyssInfoType): ArrayList<AbyssInfoList> {
             return runBlocking {
@@ -168,13 +172,13 @@ data class AbyssInfoList(
             return runBlocking {
                 val job = async(Dispatchers.Default) {
                     try {
-                        val abyssJson = getAssetsStrByFilePath(
+                        val abyssJson =
                             when(type){
-                                AbyssInfoType.MemoryOfChaos -> "memory_of_chao_data/chao_list.json"
-                                AbyssInfoType.PureFiction -> "pure_fiction_data/pf_list.json"
+                                AbyssInfoType.MemoryOfChaos -> mocListJson
+                                AbyssInfoType.PureFiction -> pfListJson
                             }
-                        )
-                        val abyssList = Json.decodeFromString<ArrayList<AbyssInfoList>>(abyssJson)
+
+                        val abyssList = Json.decodeFromJsonElement<ArrayList<AbyssInfoList>>(abyssJson)
 
                         val abyssFiltered = abyssList.filter { it.id == abyssId }
                         if(abyssFiltered.isEmpty()) return@async "???"

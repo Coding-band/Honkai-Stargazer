@@ -58,27 +58,24 @@ lateinit var lcListSortable : MutableState<ArrayList<Lightcone>>
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun initLcList(){
-    var isInited by rememberSaveable { mutableStateOf(false) }
     lcList = rememberSaveable(stateSaver = Lightcone.ListSaver) { mutableStateOf(arrayListOf()) }
     lcListSortable = rememberSaveable(stateSaver = Lightcone.ListSaver) { (lcList) }
-    if(!isInited){
-        lcList.value = runBlocking {
-            val job = CoroutineScope(Dispatchers.Default).async {
-                val tmpLcList = arrayListOf<Lightcone>()
-                if (Lightcone.lcListJson !is JsonArray) {
-                    return@async tmpLcList
-                }
-                Lightcone.lcListJson.fastForEach { jsonElement ->
-                    tmpLcList.add(Lightcone.getLightconeItemFromJSON(jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!, requireAttrData = true))
-                }
+
+    lcList.value = runBlocking {
+        val job = CoroutineScope(Dispatchers.Default).async {
+            val tmpLcList = arrayListOf<Lightcone>()
+            if (Lightcone.lcListJson !is JsonArray) {
                 return@async tmpLcList
             }
-            job.await()
-            job.getCompleted()
+            Lightcone.lcListJson.fastForEach { jsonElement ->
+                tmpLcList.add(Lightcone.getLightconeItemFromJSON(jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!, requireAttrData = true))
+            }
+            return@async tmpLcList
         }
-        lcListSortable.value = lcList.value
-        isInited = true
+        job.await()
+        job.getCompleted()
     }
+    lcListSortable.value = lcList.value
 }
 
 @OptIn(ExperimentalCoroutinesApi::class)
