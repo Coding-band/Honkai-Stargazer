@@ -144,12 +144,11 @@ fun HomePage(
                     navigator = navigator,
                     threeDotDialogPos = threeDotDialogPos,
                     threeDotDialogDisplay = threeDotDialogDisplay,
-                    userAccount = userAccount.value
+                    userAccount = userAccount
                 )
 
                 HomePageMenuScrollView(
                     navigator = navigator,
-                    userAccount = userAccount.value,
                     hazeState = hazeState,
                     homeMenuBlockList = homeMenuBlockList.value
                 )
@@ -159,8 +158,8 @@ fun HomePage(
         ThreeDotsDialog(navigator = navigator, threeDotDialogPos = threeDotDialogPos, hazeState = hazeState, threeDotDialogDisplay = threeDotDialogDisplay, userAccount = userAccount)
 
     }
-    var inited by rememberSaveable { mutableStateOf(false) }
-    if(!inited){
+    var inited = remember { mutableStateOf(false) }
+    if(!inited.value){
         LaunchedEffect(Unit){
             CoroutineScope(Dispatchers.Default).launch {
                 if(INSTANCE.uid != "000000000"){
@@ -169,14 +168,12 @@ fun HomePage(
                     async { StarbaseAPI().updateMOCData() }.await()
                     async { StarbaseAPI().updatePFData() }.await()
                 }
-                inited = true
             }
         }
         initCharList()
         initLcList()
         initRelicList()
-        initMOCList()
-        initPFList()
+        inited.value = true
     }
 }
 
@@ -214,7 +211,7 @@ fun HomePageHeader(
     navigator: Navigator,
     threeDotDialogPos: MutableState<Offset>,
     threeDotDialogDisplay: MutableState<Boolean>,
-    userAccount: UserAccount,
+    userAccount: MutableState<UserAccount>,
 ) {
     Box(
         modifier = Modifier
@@ -224,7 +221,7 @@ fun HomePageHeader(
     ) {
         Column {
             Text(
-                text = userAccount.uid,
+                text = userAccount.value.uid,
                 modifier = Modifier
                     .background(BlackAlpha30, CircleShape)
                     .padding(all = 8.dp)
@@ -243,18 +240,18 @@ fun HomePageHeader(
                         .clip(CircleShape)
                         .border(1.dp, Color(0x66907C54), CircleShape)
                         .clickable {
-                            if (userAccount.isLogin) {
-                                navigator.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=${userAccount.uid}")
+                            if (userAccount.value.isLogin) {
+                                navigator.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=${userAccount.value.uid}")
                             }
                         }, contentAlignment = Alignment.Center
                     ) {
 
-                        val scale = if(userAccount.icon.startsWith("http")) 1.142857f else 1f
+                        val scale = if(userAccount.value.icon.startsWith("http")) 1.142857f else 1f
                         Box(Modifier.requiredSize(72.dp * scale)) {
                             // User Avatar
                             AsyncImage(
                                 modifier = Modifier.size(72.dp * scale),
-                                model = newImageRequest(context, getIconByUserAccountIconValue(userAccount.icon)),
+                                model = newImageRequest(context, getIconByUserAccountIconValue(userAccount.value.icon)),
                                 contentDescription = "",
                             )
                         }
@@ -267,7 +264,7 @@ fun HomePageHeader(
                     ) {
                         //User Name - Hmm interesting Kt
                         Text(
-                            text = userAccount.username,
+                            text = userAccount.value.username,
                             modifier = Modifier
                                 .weight(1f)
                                 .fillMaxSize()
@@ -284,15 +281,15 @@ fun HomePageHeader(
                                 .fillMaxWidth()
                         ) {
                             item {
-                                val filterResult = userAccount.characterList.filter { it.characterStatus != null && it.characterStatus!!.isHelper }
+                                val filterResult = userAccount.value.characterList.filter { it.characterStatus != null && it.characterStatus!!.isHelper }
                                 if (filterResult.isNotEmpty()) {
-                                    filterResult.forEach { UserHelpTeamIcon(character = it, navigator = navigator, uid = userAccount.uid) }
-                                }else if(userAccount.characterList.size > 0){
-                                    for (i in 0 until min(userAccount.characterList.size, 6)) {
+                                    filterResult.forEach { UserHelpTeamIcon(character = it, navigator = navigator, uid = userAccount.value.uid) }
+                                }else if(userAccount.value.characterList.size > 0){
+                                    for (i in 0 until min(userAccount.value.characterList.size, 6)) {
                                         UserHelpTeamIcon(
-                                            character = userAccount.characterList[i],
+                                            character = userAccount.value.characterList[i],
                                             navigator = navigator,
-                                            uid = userAccount.uid
+                                            uid = userAccount.value.uid
                                         )
                                     }
                                 }else{
@@ -332,7 +329,7 @@ fun HomePageHeader(
                         Spacer(Modifier.weight(1f))
 
                         Text(
-                            text = "${removeStrQuote(Res.string.PlayerLevel)} ${userAccount.level}",
+                            text = "${removeStrQuote(Res.string.PlayerLevel)} ${userAccount.value.level}",
                             color = TextColorLevel,
                             style = FontSizeNormal14(),
                             //fontWeight = FontWeight.Bold
@@ -342,7 +339,7 @@ fun HomePageHeader(
 
             }
             LinearProgressIndicator(
-                progress = (userAccount.level / 60f),
+                progress = (userAccount.value.level / 60f),
                 Modifier
                     .padding(top = 12.dp, bottom = 12.dp)
                     .fillMaxWidth(),
@@ -359,8 +356,7 @@ fun HomePageMenuScrollView(
     modifier: Modifier = Modifier,
     navigator: Navigator,
     hazeState: HazeState,
-    homeMenuBlockList: MutableList<HomePageBlocks.HomePageBlockItem>,
-    userAccount: UserAccount
+    homeMenuBlockList: MutableList<HomePageBlocks.HomePageBlockItem>
 ) {
     val maxItemInRow = remember { mutableStateOf(4) }
     var reorderHomeMenuBlockList by remember { mutableStateOf(reorderHomePageBlock(homeMenuBlockList, maxItemInRow.value)) }
@@ -407,35 +403,6 @@ fun HomePageMenuScrollView(
         BottomView()
     }
 }
-
-fun reorderHomePageBlockX(reorderHomePageBlockList: MutableList<HomePageBlocks.HomePageBlockItem>, maxItemInRow: Int = 1): ArrayList<HomePageBlocks.HomePageBlockItem> {
-    val tmpArrayList = reorderHomePageBlockList.toList() as ArrayList<HomePageBlocks.HomePageBlockItem>
-
-    var spanCounter = 0
-    for ((index, item) in tmpArrayList.withIndex()) {
-        // Check whether facing 2x1 block in only 1x1 area issue
-        if (item.itemType == HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1 && (maxItemInRow - spanCounter % maxItemInRow) < 2) {
-            spanCounter = 0
-            var nextIndex = index + 1
-            while (nextIndex < reorderHomePageBlockList.size) {
-                if (reorderHomePageBlockList[nextIndex].itemType == HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W1H1) {
-                    val tmpSwap = reorderHomePageBlockList[index]
-                    println("Swapped ${tmpSwap.itemId} and ${reorderHomePageBlockList[nextIndex].itemId}")
-
-                    reorderHomePageBlockList[index] = reorderHomePageBlockList[nextIndex]
-                    reorderHomePageBlockList[nextIndex] = tmpSwap
-
-                    break
-                }
-                nextIndex++
-            }
-        } else {
-            spanCounter += if (item.itemType == HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W1H1) 1 else 2
-        }
-    }
-    return tmpArrayList
-}
-
 
 // Arrange items to avoid gaps
 fun reorderHomePageBlock(items: MutableList<HomePageBlocks.HomePageBlockItem>, columns: Int): List<HomePageBlocks.HomePageBlockItem> {

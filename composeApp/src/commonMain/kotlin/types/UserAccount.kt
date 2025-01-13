@@ -1,5 +1,6 @@
 package types
 
+import TestCookies
 import androidx.compose.material.SnackbarHostState
 import com.multiplatform.webview.cookie.Cookie
 import com.russhwolf.settings.Settings
@@ -17,11 +18,14 @@ import kotlinx.serialization.json.jsonPrimitive
 import utils.app.Preferences
 import utils.annotation.DoItLater
 import utils.app.errorLog
+import utils.app.readFromFile
 import utils.hoyolab.AttributeExchange
 import utils.hoyolab.HoyolabAPI
 import utils.hoyolab.HoyolabConst
 import utils.hoyolab.HoyolabRequest
 import utils.app.showWarningToast
+import utils.app.writeToFile
+import utils.device.AppInfo
 import utils.starbase.StarbaseAPI
 
 @Serializable
@@ -52,7 +56,7 @@ class UserAccount(
     var lastLoginTime: Long = 0,
 ){
     companion object{
-        var INSTANCE = Json.decodeFromString<UserAccount>(Settings().getString("userAccount", Json.encodeToString(UserAccount())))
+        var INSTANCE = load()
         var UIDSEARCH : UserAccount = UserAccount()
 
         fun pasteCookies(
@@ -63,6 +67,8 @@ class UserAccount(
             INSTANCE.server = serverSelected
 
             INSTANCE.cookies = ""
+
+            val cookieList : Any = TestCookies
 
             when(cookieList){
                 is String -> {
@@ -91,7 +97,7 @@ class UserAccount(
 
         fun resetUserAccount(){
             INSTANCE = UserAccount()
-            Settings().putString("userAccount", Json.encodeToString(INSTANCE))
+            writeToFile("userAccount", "{}")
             Preferences().CharList.resetCharList()
         }
 
@@ -140,7 +146,7 @@ class UserAccount(
 
                 refreshNoteData()
 
-                Settings().putString("userAccount", Json.encodeToString(INSTANCE))
+                save()
 
             }catch (e : Exception){
                 resetUserAccount()
@@ -360,11 +366,17 @@ class UserAccount(
 
         //Reaction between UserAccount and Database Server
 
-        fun getUserInfoFromServer(uid: String){
+        private fun save(){
+            //Settings().putString("userAccount", Json.encodeToString(INSTANCE))
+            //Settings().putString("userAccountCharList", Json.encodeToString(characterList))
+            writeToFile("userAccount", Json.encodeToString(INSTANCE))
 
         }
-        fun saveMyUserInfoToServer(uid: String){
 
+        private fun load() : UserAccount{
+            //val userAccount = Json.decodeFromString<UserAccount>(Settings().getString("userAccount", Json.encodeToString(UserAccount())))
+            //userAccount.characterList = Json.decodeFromString<ArrayList<Character>>(Settings().getString("userAccountCharList", Json.encodeToString(arrayListOf<Character>())))
+            return Json.decodeFromString<UserAccount>(readFromFile("userAccount", true))
         }
     }
 }

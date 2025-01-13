@@ -36,15 +36,18 @@ class Preferences {
         }
         fun resetCharList(){
             Settings().putLong(Constants().KEY_HYB_CHAR_LIST_LAST_UPDATE_TIME, 0L)
-            Settings().putString("localCharList", "[]")
+            writeToFile("localCharList", "[]")
+            //Settings().putString("localCharList", "[]")
         }
 
         fun getLocalCharListString(): String {
-            return Settings().getString("localCharList", "[]")
+            //return Settings().getString("localCharList", "[]")
+            return readFromFile("localCharList", true)
         }
 
         fun setLocalCharListString(charList: String){
-            Settings().putString("localCharList", charList)
+            //Settings().putString("localCharList", charList)
+            writeToFile("localCharList", charList)
         }
     }
 
