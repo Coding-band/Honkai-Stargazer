@@ -88,8 +88,7 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boo
         Screen.PureFictionMissionPageScreen -> {isBlur = false; isGradient = false}
         else -> {}
     }
-
-    //isBlur = (if (isForceBlur) true else isBlur)
+    if(forceBlur){ isBlur = true; }
 
     Box(
         Modifier.haze(backgroundScreenHazeState)
