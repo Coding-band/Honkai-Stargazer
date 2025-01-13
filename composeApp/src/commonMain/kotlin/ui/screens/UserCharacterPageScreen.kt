@@ -10,6 +10,9 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowColumn
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
@@ -23,6 +26,7 @@ import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
@@ -37,6 +41,7 @@ import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -55,15 +60,10 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
+import com.cheonjaeung.compose.grid.SimpleGridCells
+import com.cheonjaeung.compose.grid.VerticalGrid
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
-import ui.components.RelicSmallCard
-import ui.components.DropdownMenuNoPadding
-import ui.components.HeaderData
-import ui.components.NonLazyGrid
-import ui.components.PAGE_HEADER_ALPHA_HEIGHT
-import ui.components.PageHeaderAlpha
-import ui.components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.CharRank
@@ -98,12 +98,21 @@ import moe.tlaster.precompose.navigation.Navigator
 import moe.tlaster.precompose.navigation.query
 import org.jetbrains.compose.resources.painterResource
 import types.Character
-import utils.app.Constants
 import types.HsrProperties
 import types.ImageFolder
 import types.Lightcone
 import types.UserAccount
+import ui.components.DropdownMenuNoPadding
+import ui.components.HeaderData
+import ui.components.PAGE_HEADER_ALPHA_HEIGHT
+import ui.components.PageHeaderAlpha
+import ui.components.RelicSmallCard
+import ui.components.defaultHeaderData
+import utils.annotation.DoItLater
 import utils.app.AdditionalGreen
+import utils.app.Constants
+import utils.app.Constants.Companion.INFO_MAX_WIDTH
+import utils.app.Constants.Companion.INFO_MIN_WIDTH
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
@@ -112,7 +121,8 @@ import utils.app.FontSizeNormalLarge24
 import utils.app.FontSizeNormalLarge32
 import utils.app.FontSizeNormalSmall
 import utils.app.GradReachYellow
-import utils.annotation.DoItLater
+import utils.app.JsonElementSaver
+import utils.app.Language
 import utils.app.formatDecimal
 import utils.app.getAssetsURLByFileName
 import utils.app.getImageNameByRegistName
@@ -445,6 +455,7 @@ fun getDataDecimalsByAttrExchange(attrExchange: AttributeExchange, value: Float)
     ) + if (attrExchange.isPercent == true) "%" else ""
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun RelicInfo(character: Character) {
     val relics = arrayOf(
@@ -463,38 +474,57 @@ fun RelicInfo(character: Character) {
         UserCharPageDivider()
 
         if(selectedRelicIndex.value == -1){
-            NonLazyGrid(
-                columns = 2,
-                modifier = Modifier.fillMaxWidth().wrapContentHeight(),
-                itemCount = relicValidList.size
-            ) {
-                val relic = relicValidList[it].first!!
-                val index = relicValidList[it].second
 
-                val score = remember { mutableStateOf(0f) }
-                val relicSubAttr = relic.properties.subList(1, relic.properties.size)
-                Row(Modifier.fillMaxWidth().wrapContentHeight().padding(8.dp)) {
-                    Box(Modifier.width(48.dp).wrapContentHeight()) {
-                        RelicSmallCard(relic, index, onClick = { selectedRelicIndex.value = it })
-                    }
-                    Spacer(Modifier.width(4.dp))
-                    Column(Modifier.weight(1f).wrapContentHeight()) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            StatusShortUI(relic.properties[0], FontSizeNormal12(), isRelic = true)
-                            Spacer(Modifier.width(8.dp).weight(1f))
-                            Text(
-                                text = formatDecimal(score.value,1,
-                                    isRoundDown = true),
-                                style = FontSizeNormal14(),
-                                color = Color.White
-                            )
+            Box(Modifier.fillMaxWidth().wrapContentHeight()) {
+
+                VerticalGrid(
+                    columns = SimpleGridCells.Fixed(2),
+                    modifier = Modifier.widthIn(INFO_MIN_WIDTH, INFO_MAX_WIDTH).wrapContentHeight().align(Alignment.Center)
+                ){
+                    for ((it, _) in relicValidList.withIndex()){
+
+                        val relic = relicValidList[it].first!!
+                        val index = relicValidList[it].second
+
+                        val score = remember { mutableStateOf(0f) }
+                        val relicSubAttr = relic.properties.subList(1, relic.properties.size)
+                        Row(Modifier.wrapContentSize().padding(8.dp)) {
+                            Box(Modifier.width(48.dp).wrapContentHeight().align(Alignment.CenterVertically)) {
+                                RelicSmallCard(relic, index, onClick = { selectedRelicIndex.value = it })
+                            }
+
+                            Spacer(Modifier.width(4.dp))
+
+                            Column(Modifier.wrapContentSize()) {
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    StatusShortUI(relic.properties[0], FontSizeNormal12(), isRelic = true)
+                                    Spacer(Modifier.weight(1f).width(8.dp))
+                                    Text(
+                                        text = formatDecimal(score.value,1,
+                                            isRoundDown = true),
+                                        style = FontSizeNormal14(),
+                                        color = Color.White
+                                    )
+                                }
+
+                                FlowRow(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween,
+                                    maxItemsInEachRow = 2
+                                ) {
+                                    for (status in relicSubAttr){
+                                        Box(modifier = Modifier.fillMaxWidth().weight(1f)) {
+                                            StatusShortUI(status, FontSizeNormal12(), isRelic = true)
+                                        }
+                                    }
+                                }
+                            }
                         }
-                        NonLazyGrid(columns = 2, itemCount = relicSubAttr.size){
-                                subAttrIndex -> StatusShortUI(relicSubAttr[subAttrIndex], FontSizeNormalSmall(), isRelic = true)
-                        }
+
                     }
                 }
             }
+
         }else{
             Box(Modifier.fillMaxWidth()) {
                 val relicPair = relicValidList[selectedRelicIndex.value]
@@ -516,6 +546,7 @@ fun RelicInfo(character: Character) {
     }
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun CharBioSkillInfo(character: Character) {
     val charStatus = character.characterStatus!!
@@ -558,7 +589,8 @@ fun CharBioSkillInfo(character: Character) {
         //CombatType and Path
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.Center
+            horizontalArrangement = Arrangement.Center,
+            modifier = Modifier.widthIn(INFO_MIN_WIDTH, INFO_MAX_WIDTH).wrapContentHeight()
         ) {
             Image(
                 painter = painterResource(character.path.iconWhite),
@@ -604,7 +636,7 @@ fun CharBioSkillInfo(character: Character) {
         )
 
         //Skill Icons
-        Row {
+        Row(modifier = Modifier.widthIn(INFO_MIN_WIDTH, INFO_MAX_WIDTH).wrapContentHeight()) {
             for (skill in skillLvlList) {
                 Column(Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
                     AsyncImage(
@@ -648,23 +680,17 @@ fun CharBioSkillInfo(character: Character) {
         val showFullStatus = remember { mutableStateOf(false) }
         if(charStatus.characterProperties != null){
             val statusList = charStatus.characterProperties!!.filter { it.valueFinal > 0 }
-            Column(Modifier.clickable {
-                showFullStatus.value = !showFullStatus.value
-            }) {
-                for ((index, status) in statusList.withIndex()){
+            FlowRow(modifier = Modifier
+                .clickable { showFullStatus.value = !showFullStatus.value }
+                .widthIn(INFO_MIN_WIDTH, INFO_MAX_WIDTH).wrapContentHeight(),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                for (status in statusList){
                     if(showFullStatus.value){
                         StatusFullUI(status)
-                    }else if (index % 5 == 0) {
-                        Row(
-                            Modifier.fillMaxWidth().wrapContentHeight(),
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.Center
-                        ) {
-                            for (i in 0 until 5) {
-                                if (index + i < statusList.size) {
-                                    StatusShortUI(statusList[index + i])
-                                }
-                            }
+                    }else{
+                        Box(modifier = Modifier.wrapContentWidth()){
+                            StatusShortUI(status)
                         }
                     }
                 }
@@ -673,6 +699,7 @@ fun CharBioSkillInfo(character: Character) {
     }
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun LightconeInfo(character: Character){
     val charStatus = character.characterStatus!!
@@ -682,9 +709,11 @@ fun LightconeInfo(character: Character){
         UserCharPageDivider()
 
         val lightcone = charStatus.equippingLightcone!!
-        val lcInfoJson = Lightcone.getLightconeDataFromJSON(lightcone.fileName!!)
-        Row(Modifier.fillMaxWidth().wrapContentHeight().clickable { isLightconeShowDesc.value = !isLightconeShowDesc.value }) {
-            Box(Modifier.requiredHeight(120.dp).weight(0.4f), contentAlignment = Alignment.Center) {
+        val lcInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Lightcone.getLightconeDataFromJSON(lightcone.fileName!!, Language.TextLanguageInstance) as JsonElement) }
+
+        Box(modifier = Modifier.fillMaxWidth().wrapContentHeight()){
+            Row(Modifier.widthIn(INFO_MIN_WIDTH, INFO_MAX_WIDTH).wrapContentHeight().align(Alignment.Center).clickable { isLightconeShowDesc.value = !isLightconeShowDesc.value }) {
+                Box(Modifier.requiredHeight(120.dp).weight(0.4f), contentAlignment = Alignment.Center) {
                     val context = LocalPlatformContext.current
 
                     AsyncImage(
@@ -702,96 +731,94 @@ fun LightconeInfo(character: Character){
                             ),
                         contentScale = ContentScale.Fit,
                     )
-            }
+                }
 
-            Spacer(Modifier.width(16.dp))
+                Spacer(Modifier.width(16.dp))
 
-            Column (Modifier.weight(0.6f)){
-                Text(
-                    text = lightcone.displayName!!,
-                    modifier = Modifier.padding(2.dp),
-                    style = FontSizeNormal20(),
-                    color = Color.White,
-                    textAlign = TextAlign.Center,
-                    maxLines = 1,
-                )
-                Text(
-                    text = "Lv ${lightcone.level} · ${
-                        removeStrQuote(
-                            Res.string.Superimpose
-                        ).replace("$"+"{1}",lightcone.superimposition.toString())
-                    }",
-                    modifier = Modifier.padding(top = 2.dp, bottom = 2.dp, start = 8.dp, end = 8.dp)
-                        .background(Color(0x4D000000), RoundedCornerShape(49.dp))
-                        .clip(RoundedCornerShape(49.dp)).padding(4.dp),
-                    style = FontSizeNormal12(),
-                    color = Color.White
-                )
+                Column (Modifier.weight(0.6f)){
+                    Text(
+                        text = lightcone.displayName!!,
+                        modifier = Modifier.padding(2.dp),
+                        style = FontSizeNormal20(),
+                        color = Color.White,
+                        textAlign = TextAlign.Center,
+                        maxLines = 1,
+                    )
+                    Text(
+                        text = "Lv ${lightcone.level} · ${
+                            removeStrQuote(
+                                Res.string.Superimpose
+                            ).replace("$"+"{1}",lightcone.superimposition.toString())
+                        }",
+                        modifier = Modifier.padding(top = 2.dp, bottom = 2.dp, start = 8.dp, end = 8.dp)
+                            .background(Color(0x4D000000), RoundedCornerShape(49.dp))
+                            .clip(RoundedCornerShape(49.dp)).padding(4.dp),
+                        style = FontSizeNormal12(),
+                        color = Color.White
+                    )
 
-                if(isLightconeShowDesc.value && lcInfoJson.jsonObject["skill"] != null){
-                    val richTextState = rememberRichTextState()
-                    richTextState.setHtml(getLightconeMetaInfo(lightcone, lcInfoJson, lightcone.superimposition))
+                    if(isLightconeShowDesc.value && lcInfoJson.jsonObject["skill"] != null){
+                        val richTextState = rememberRichTextState()
+                        richTextState.setHtml(getLightconeMetaInfo(lightcone, lcInfoJson, lightcone.superimposition))
 
-                    RichText(richTextState, color = Color(0xFFFFFFFF), style = FontSizeNormal14())
-                }else{
-                    Row {
-                        repeat(lightcone.rarity) {
+                        RichText(richTextState, color = Color(0xFFFFFFFF), style = FontSizeNormal14())
+                    }else{
+                        Row {
+                            repeat(lightcone.rarity) {
+                                Image(
+                                    modifier = Modifier.size(12.dp, 12.dp),
+                                    painter = painterResource(Res.drawable.ui_icon_star),
+                                    contentScale = ContentScale.FillHeight,
+                                    contentDescription = "Stars to represent Rarity"
+                                )
+                            }
+                        }
+
+                        Row{
                             Image(
-                                modifier = Modifier.size(12.dp, 12.dp),
-                                painter = painterResource(Res.drawable.ui_icon_star),
-                                contentScale = ContentScale.FillHeight,
-                                contentDescription = "Stars to represent Rarity"
+                                painter = painterResource(character.path.iconWhite),
+                                modifier = Modifier.size(24.dp).padding(end = 6.dp)
+                                    .align(Alignment.CenterVertically),
+                                contentDescription = "CombatType Icon"
+                            )
+                            Text(
+                                text = removeStrQuote(character.path.resName),
+                                style = FontSizeNormal16(),
+                                color = Color.White,
+                                textAlign = TextAlign.End,
+                                modifier = Modifier.align(Alignment.CenterVertically)
                             )
                         }
-                    }
 
-                    Row{
-                        Image(
-                            painter = painterResource(character.path.iconWhite),
-                            modifier = Modifier.size(24.dp).padding(end = 6.dp)
-                                .align(Alignment.CenterVertically),
-                            contentDescription = "CombatType Icon"
-                        )
-                        Text(
-                            text = removeStrQuote(character.path.resName),
-                            style = FontSizeNormal16(),
-                            color = Color.White,
-                            textAlign = TextAlign.End,
-                            modifier = Modifier.align(Alignment.CenterVertically)
-                        )
-                    }
-
-                    //Get Lightcone Status
-                    val lcAttrData = getLcAttrData(lcInfoJson, lightcone.level)
-                    val lcAttrDataArr = arrayOf(Res.drawable.ic_hp to lcAttrData.hp, Res.drawable.ic_atk to lcAttrData.atk, Res.drawable.ic_def to lcAttrData.def)
-                    Row {
-                        for ((index, attr) in lcAttrDataArr.withIndex()){
-                            Row(
-                                Modifier.wrapContentWidth(),
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.Center
-                            ) {
-                                Image(
-                                    painter = painterResource(attr.first),
-                                    contentDescription = "Attribute Icon",
-                                    modifier = Modifier.size(24.dp)
-                                )
-                                Text(
-                                    text = formatDecimal(attr.second, 0,
-                                        isRoundDown = true),
-                                    style = FontSizeNormal14(),
-                                    color = Color.White,
-                                    maxLines = 1
-                                )
-                                if(index < lcAttrDataArr.size - 1){
-                                    Spacer(Modifier.width(8.dp))
+                        //Get Lightcone Status
+                        val lcAttrData = getLcAttrData(lcInfoJson, lightcone.level)
+                        val lcAttrDataArr = arrayOf(Res.drawable.ic_hp to lcAttrData.hp, Res.drawable.ic_atk to lcAttrData.atk, Res.drawable.ic_def to lcAttrData.def)
+                        FlowRow(horizontalArrangement = Arrangement.Center) {
+                            for (attr in lcAttrDataArr){
+                                Row(
+                                    Modifier.wrapContentWidth(),
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.Center
+                                ) {
+                                    Image(
+                                        painter = painterResource(attr.first),
+                                        contentDescription = "Attribute Icon",
+                                        modifier = Modifier.size(24.dp)
+                                    )
+                                    Text(
+                                        text = formatDecimal(attr.second, 0,
+                                            isRoundDown = true),
+                                        style = FontSizeNormal14(),
+                                        color = Color.White,
+                                        maxLines = 1
+                                    )
                                 }
                             }
                         }
                     }
                 }
-            }
 
+            }
         }
     }
 }
@@ -827,7 +854,7 @@ fun StatusShortUI(
     Row(
         Modifier.wrapContentWidth().padding(if(isRelic) 0.dp else 4.dp),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.Center
+        horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Image(
             painter = painterResource(status.attributeExchange.attribute.iconWhite),

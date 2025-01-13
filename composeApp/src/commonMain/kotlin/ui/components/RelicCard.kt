@@ -153,9 +153,7 @@ fun RelicSmallCard(
 ){
     Box(
         modifier = Modifier
-            .widthIn(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH *2)
-            .aspectRatio(RELIC_CARD_WIDTH / RELIC_CARD_WIDTH+8)
-            .wrapContentSize()
+            .widthIn(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH *2).wrapContentHeight()
     ) {
         Column{
             Box(Modifier.clip(
@@ -185,7 +183,7 @@ fun RelicSmallCard(
                         Brush.verticalGradient(
                             colors = getCardBgColorByRare(relic.rarity!!)
                         )
-                    ).padding(8.dp).aspectRatio(1f),
+                    ).padding(8.dp).widthIn(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH*2).aspectRatio(1f),
                     contentScale = ContentScale.Crop,
                 )
             }
