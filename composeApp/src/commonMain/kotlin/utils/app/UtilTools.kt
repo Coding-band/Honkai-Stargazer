@@ -325,6 +325,10 @@ fun writeToFile(filePath: String, content: String) {
         // Create directory if it doesn't exist
         fileSystem.createDirectories(file.parent!!, mustCreate = false)
 
+        fileSystem.write(file) {
+            writeUtf8("")
+        }
+
         // Write to file
         fileSystem.openReadWrite(file).use { fileHandle ->
             fileHandle.sink().buffer().use { sink ->
@@ -336,48 +340,52 @@ fun writeToFile(filePath: String, content: String) {
     }
 }
 
-fun readFromFile(filePath: String): String {
+fun readFromFile(filePath: String, localOnly : Boolean = false): String {
     val fileSystem = FileSystem.SYSTEM
     val file = FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("data").resolve(filePath)
 
+    println(file)
+
     try {
         // Check if the file exists
-        if (!fileSystem.exists(file)) {
+        if (!fileSystem.exists(file) && !localOnly) {
             val data = readFromOnlineURL(StarbaseAPI().getGitHubStaticAssetURL() + "/data/${filePath}")
             writeToFile(filePath, data)
             return data
         }
 
-        try {
-            // Get local file size and last modified time
-            val localFileSize = fileSystem.metadata(file).size ?: 0L
-            val localFileLastModified = fileSystem.metadata(file).lastModifiedAtMillis ?: 0L
+        if (!localOnly){
+            try {
+                // Get local file size and last modified time
+                val localFileSize = fileSystem.metadata(file).size ?: 0L
+                val localFileLastModified = fileSystem.metadata(file).lastModifiedAtMillis ?: 0L
 
-            // Get online file size and last modified time
-            val onlineFileUrl = StarbaseAPI().getGitHubStaticAssetURL() + "/data/${filePath}"
-            val client = getLocalHttpClient {
-                install(HttpTimeout) { requestTimeoutMillis = 8000 }
-                install(ContentNegotiation) { json() }
-                expectSuccess = true
+                // Get online file size and last modified time
+                val onlineFileUrl = StarbaseAPI().getGitHubStaticAssetURL() + "/data/${filePath}"
+                val client = getLocalHttpClient {
+                    install(HttpTimeout) { requestTimeoutMillis = 8000 }
+                    install(ContentNegotiation) { json() }
+                    expectSuccess = true
+                }
+
+                val response: HttpResponse = runBlocking {
+                    client.head(onlineFileUrl)
+                }
+
+                val onlineFileSize = response.headers[HttpHeaders.ContentLength]?.toLong() ?: 0L
+                val onlineFileLastModified = response.headers[HttpHeaders.LastModified]?.let {
+                    Instant.parse(it).toEpochMilliseconds()
+                } ?: 0L
+
+                // Compare file size and last modified time
+                if (localFileSize != onlineFileSize || localFileSize != onlineFileSize && localFileLastModified < onlineFileLastModified) {
+                    val data = readFromOnlineURL(onlineFileUrl)
+                    writeToFile(filePath, data)
+                    return data
+                }
+            }catch (e: UnresolvedAddressException){
+                // No need to response
             }
-
-            val response: HttpResponse = runBlocking {
-                client.head(onlineFileUrl)
-            }
-
-            val onlineFileSize = response.headers[HttpHeaders.ContentLength]?.toLong() ?: 0L
-            val onlineFileLastModified = response.headers[HttpHeaders.LastModified]?.let {
-                Instant.parse(it).toEpochMilliseconds()
-            } ?: 0L
-
-            // Compare file size and last modified time
-            if (localFileSize != onlineFileSize || localFileSize != onlineFileSize && localFileLastModified < onlineFileLastModified) {
-                val data = readFromOnlineURL(onlineFileUrl)
-                writeToFile(filePath, data)
-                return data
-            }
-        }catch (e: UnresolvedAddressException){
-            // No need to response
         }
 
         // Read from file
