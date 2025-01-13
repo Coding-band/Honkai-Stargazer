@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowColumn
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -37,6 +36,7 @@ import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -51,11 +51,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
@@ -164,6 +166,8 @@ fun UserCharacterPageScreen(
     }
     val character = if(characterFilter.isEmpty()) null else characterFilter[0]
     val isShare = remember { mutableStateOf(false) }
+    val charNameVisible = remember { mutableStateOf(true) }
+    val charNameBigHeight = remember { mutableStateOf(20) }
 
     if(character == null){ navigator.popBackStack() }else{
         Box(modifier = modifier
@@ -174,41 +178,20 @@ fun UserCharacterPageScreen(
                 isVisible = !isScrolling //alpha = scrollToAlpha
             )
 
-            LazyColumn(
-                state = listState,
-                modifier = Modifier.padding(
-                    start = Constants.SCREEN_SAVE_PADDING,
-                    end = Constants.SCREEN_SAVE_PADDING
-                ).haze(hazeState)
-            ) {
-                item { Spacer(Modifier.statusBarsPadding().height(PAGE_HEADER_ALPHA_HEIGHT + 240.dp)) }
-                item { CharBioSkillInfo(character) }
-                item { LightconeInfo(character) }
-                item { RelicInfo(character) }
-                item { ProficientScoreInfo(character) }
+            Column {
+                PageHeaderAlpha(
+                    navigator = navigator,
+                    onForward = {
+                        //TODO : Remember to add the Share Function
+                    },
+                    forwardIconId = Res.drawable.ui_icon_share,
+                    hazeState = hazeState,
 
-                item { Spacer(Modifier.statusBarsPadding()) }
-            }
+                    ) {
 
-
-            PageHeaderAlpha(
-                navigator = navigator,
-                onForward = {
-                    //TODO : Remember to add the Share Function
-                },
-                forwardIconId = Res.drawable.ui_icon_share,
-                hazeState = hazeState,
-
-            ) {
-                AnimatedVisibility(
-                    visible = !isScrolling,
-                    enter = fadeIn(),
-                    exit = fadeOut(),
-                    modifier = Modifier.fillMaxWidth().wrapContentHeight().align(Alignment.TopCenter)
-                ) {
                     Column(Modifier.fillMaxSize()) {
                         Text(
-                            userAccount.username,
+                            "${userAccount.username}${if(charNameVisible.value)"·${character.displayName}" else ""}",
                             modifier = Modifier.align(Alignment.CenterHorizontally).padding(2.dp),
                             style = FontSizeNormal16(),
                             color = Color.White
@@ -227,6 +210,25 @@ fun UserCharacterPageScreen(
                             color = Color.White
                         )
                     }
+                }
+
+                charNameVisible.value = (listState.firstVisibleItemIndex > 0 && listState.firstVisibleItemScrollOffset > charNameBigHeight.value || listState.firstVisibleItemIndex > 1 )
+
+
+                LazyColumn(
+                    state = listState,
+                    modifier = Modifier.padding(
+                        start = Constants.SCREEN_SAVE_PADDING,
+                        end = Constants.SCREEN_SAVE_PADDING
+                    ).haze(hazeState)
+                ) {
+                    item { Spacer(Modifier.statusBarsPadding().height(PAGE_HEADER_ALPHA_HEIGHT + 240.dp)) }
+                    item { CharBioSkillInfo(character, charNameBigHeight) }
+                    item { LightconeInfo(character) }
+                    item { RelicInfo(character) }
+                    item { ProficientScoreInfo(character) }
+
+                    item { Spacer(Modifier.statusBarsPadding()) }
                 }
             }
         }
@@ -257,192 +259,196 @@ fun ProficientScoreInfo(character: Character) {
 
     val gradRequirement = getGradAttrAndValue(character, schoolIndex.value)
 
-    Column {
-        //Title and Spinner
-        Row {
-            Text(
-                text = removeStrQuote(Res.string.ScoreLevel),
-                style = FontSizeNormal20(),
-                color = Color.White,
-                modifier = Modifier.align(Alignment.CenterVertically)
-            )
+    Box(modifier = Modifier.fillMaxWidth().wrapContentHeight()) {
 
-            Spacer(Modifier.weight(1f))
+        Column(modifier = Modifier.widthIn(INFO_MIN_WIDTH, INFO_MAX_WIDTH).wrapContentHeight().align(
+            Alignment.Center)) {
+            //Title and Spinner
+            Row {
+                Text(
+                    text = removeStrQuote(Res.string.ScoreLevel),
+                    style = FontSizeNormal20(),
+                    color = Color.White,
+                    modifier = Modifier.align(Alignment.CenterVertically)
+                )
 
-            Box(
-                contentAlignment = Alignment.BottomCenter,
-                modifier = Modifier
-                    .defaultMinSize(100.dp, 30.dp)
-                    .wrapContentSize()
-                    .clip(RoundedCornerShape(43.dp))
-                    .clickable { isExpandSchoolDropdown.value = !isExpandSchoolDropdown.value }
-            ) {
-                Row(
-                    modifier = Modifier.background(Color(0x66000000), RoundedCornerShape(43.dp))
-                        .wrapContentWidth()
-                        .onSizeChanged { optionTextViewSize.value = it },
-                ){
-                    Text(
-                        color = Color.White,
-                        text = schoolDataNameArray[schoolIndex.value],
-                        style = FontSizeNormal14(),
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.padding(12.dp).align(Alignment.CenterVertically)
-                    )
-                    Image(
-                        painter = painterResource(Res.drawable.phorphos_caret_down_regular),
-                        contentDescription = null,
-                        modifier = Modifier.padding(12.dp).size(16.dp).align(Alignment.CenterVertically),
-                        colorFilter = ColorFilter.tint(Color.White)
-                    )
-                }
-                //對於DropdownItem沒法按照設計稿展示，暫時無解
-                DropdownMenuNoPadding(
-                    expanded = isExpandSchoolDropdown.value,
-                    onDismissRequest = { isExpandSchoolDropdown.value = false },
+                Spacer(Modifier.weight(1f))
+
+                Box(
+                    contentAlignment = Alignment.BottomCenter,
                     modifier = Modifier
-                        .background(Color(0xFF3E3E47))
-                        .width(pxToDp(optionTextViewSize.value.width, density)),
+                        .defaultMinSize(100.dp, 30.dp)
+                        .wrapContentSize()
+                        .clip(RoundedCornerShape(43.dp))
+                        .clickable { isExpandSchoolDropdown.value = !isExpandSchoolDropdown.value }
                 ) {
-                    schoolDataNameArray.forEachIndexed { index, option ->
-                        DropdownMenuItem(
-                            onClick = {
-                                schoolIndex.value = index
-                                isExpandSchoolDropdown.value = false
-                                //optionAction(schoolIndex.value)
-                            },
-                            modifier = Modifier.background(if(schoolIndex.value == index) Color(0x0F000000) else Color(0x00000000))
-                        ) {
-                            Row{
-                                Text(
-                                    text = option,
-                                    style = FontSizeNormal14(),
-                                    color = Color(0xFFFFFFFF),
-                                    modifier = Modifier.weight(1f)
-                                )
-                                Image(
-                                    painterResource(if (schoolIndex.value == index) Res.drawable.ic_selected_orange_circle else Res.drawable.bg_transparent),
-                                    contentDescription = null
-                                )
+                    Row(
+                        modifier = Modifier.background(Color(0x66000000), RoundedCornerShape(43.dp))
+                            .wrapContentWidth()
+                            .onSizeChanged { optionTextViewSize.value = it },
+                    ){
+                        Text(
+                            color = Color.White,
+                            text = schoolDataNameArray[schoolIndex.value],
+                            style = FontSizeNormal14(),
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier.padding(12.dp).align(Alignment.CenterVertically)
+                        )
+                        Image(
+                            painter = painterResource(Res.drawable.phorphos_caret_down_regular),
+                            contentDescription = null,
+                            modifier = Modifier.padding(12.dp).size(16.dp).align(Alignment.CenterVertically),
+                            colorFilter = ColorFilter.tint(Color.White)
+                        )
+                    }
+                    //對於DropdownItem沒法按照設計稿展示，暫時無解
+                    DropdownMenuNoPadding(
+                        expanded = isExpandSchoolDropdown.value,
+                        onDismissRequest = { isExpandSchoolDropdown.value = false },
+                        modifier = Modifier
+                            .background(Color(0xFF3E3E47))
+                            .width(pxToDp(optionTextViewSize.value.width, density)),
+                    ) {
+                        schoolDataNameArray.forEachIndexed { index, option ->
+                            DropdownMenuItem(
+                                onClick = {
+                                    schoolIndex.value = index
+                                    isExpandSchoolDropdown.value = false
+                                    //optionAction(schoolIndex.value)
+                                },
+                                modifier = Modifier.background(if(schoolIndex.value == index) Color(0x0F000000) else Color(0x00000000))
+                            ) {
+                                Row{
+                                    Text(
+                                        text = option,
+                                        style = FontSizeNormal14(),
+                                        color = Color(0xFFFFFFFF),
+                                        modifier = Modifier.weight(1f)
+                                    )
+                                    Image(
+                                        painterResource(if (schoolIndex.value == index) Res.drawable.ic_selected_orange_circle else Res.drawable.bg_transparent),
+                                        contentDescription = null
+                                    )
+                                }
                             }
                         }
                     }
                 }
             }
-        }
 
-        Spacer(Modifier.height(8.dp))
+            Spacer(Modifier.height(8.dp))
 
-        //Scores
-        val txt24Height = remember { mutableStateOf(30.dp) }
-        Row(Modifier.fillMaxWidth().wrapContentHeight()) {
-            for (scoreInfo in scoreInfoList){
-                Column(Modifier.weight(1f).wrapContentHeight().align(Alignment.CenterVertically), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
+            //Scores
+            val txt24Height = remember { mutableStateOf(30.dp) }
+            Row(Modifier.wrapContentWidth().wrapContentHeight()) {
+                for (scoreInfo in scoreInfoList){
+                    Column(Modifier.weight(1f).wrapContentHeight().align(Alignment.CenterVertically), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
 
-                    if(scoreInfo.second is String){
-                        Image(
-                            painter = painterResource(Constants.getScoreRankingFont(scoreInfo.second as String)),
-                            contentDescription = "Ranking Icon",
-                            modifier = Modifier.height(txt24Height.value - 8.dp).aspectRatio(1f).align(Alignment.CenterHorizontally),
-                        )
-                    }else{
-                        Text(
-                            text = if(scoreInfo.second is String) {
-                                Constants.getScoreRankingFont(scoreInfo.second as String).toString()} else formatDecimal(scoreInfo.second as Number, 1 ,
-                                isRoundDown = true),
-                            style = FontSizeNormalLarge24(),
-                            color = Color.White,
-                            maxLines = 1,
-                            modifier = Modifier.align(Alignment.CenterHorizontally).onSizeChanged {
-                                txt24Height.value = pxToDp(it.height, density)
-                            },
-                        )
-                    }
-
-                    Spacer(Modifier.height(6.dp))
-
-                    Text(
-                        text = removeStrQuote(scoreInfo.first),
-                        style = FontSizeNormal12(),
-                        color = Color.White,
-                        modifier = Modifier.align(Alignment.CenterHorizontally),
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
-                }
-            }
-        }
-
-        Spacer(Modifier.height(8.dp))
-
-        Column {
-            for (req in gradRequirement){
-                val charHsrProperties = character.characterStatus!!.characterProperties!!.find { it.attributeExchange == req.first }
-                val charValue = charHsrProperties?.valueFinal ?: 0f
-
-                Row(Modifier.padding(top = 4.dp, bottom = 4.dp)) {
-                    Image(
-                        painter = painterResource(req.first.attribute.iconWhite),
-                        contentDescription = "Attribute Icon",
-                        modifier = Modifier.size(24.dp).align(Alignment.CenterVertically)
-                    )
-
-                    Spacer(Modifier.width(8.dp))
-
-                    Column {
-                        //Grad Name and Value
-                        Row(Modifier.fillMaxWidth().wrapContentHeight()) {
-                            Text(
-                                text = removeStrQuote(req.first.attribute.resName),
-                                style = FontSizeNormal12(),
-                                color = Color.White
+                        if(scoreInfo.second is String){
+                            Image(
+                                painter = painterResource(Constants.getScoreRankingFont(scoreInfo.second as String)),
+                                contentDescription = "Ranking Icon",
+                                modifier = Modifier.height(txt24Height.value - 8.dp).aspectRatio(1f).align(Alignment.CenterHorizontally),
                             )
-                            Spacer(Modifier.weight(1f))
+                        }else{
                             Text(
-                                text = "${getDataDecimalsByAttrExchange(req.first, charValue)} / ${getDataDecimalsByAttrExchange(req.first, (req.second as Number).toFloat())}",
-                                style = FontSizeNormal12(),
-                                color = if(charValue >= (req.second as Number).toFloat()) GradReachYellow else Color.White
+                                text = if(scoreInfo.second is String) {
+                                    Constants.getScoreRankingFont(scoreInfo.second as String).toString()} else formatDecimal(scoreInfo.second as Number, 1 ,
+                                    isRoundDown = true),
+                                style = FontSizeNormalLarge24(),
+                                color = Color.White,
+                                maxLines = 1,
+                                modifier = Modifier.align(Alignment.CenterHorizontally).onSizeChanged {
+                                    txt24Height.value = pxToDp(it.height, density)
+                                },
                             )
                         }
-                        LinearProgressIndicator(
-                            progress = charValue / (req.second as Number).toFloat(),
-                            color = Color(0xCCFFFFFF),
-                            backgroundColor = Color(0x66FFFFFF),
-                            modifier = Modifier.fillMaxWidth().height(4.dp)
+
+                        Spacer(Modifier.height(6.dp))
+
+                        Text(
+                            text = removeStrQuote(scoreInfo.first),
+                            style = FontSizeNormal12(),
+                            color = Color.White,
+                            modifier = Modifier.align(Alignment.CenterHorizontally),
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
                         )
                     }
                 }
             }
+
+            Spacer(Modifier.height(8.dp))
+
+            Column {
+                for (req in gradRequirement){
+                    val charHsrProperties = character.characterStatus!!.characterProperties!!.find { it.attributeExchange == req.first }
+                    val charValue = charHsrProperties?.valueFinal ?: 0f
+
+                    Row(Modifier.padding(top = 4.dp, bottom = 4.dp)) {
+                        Image(
+                            painter = painterResource(req.first.attribute.iconWhite),
+                            contentDescription = "Attribute Icon",
+                            modifier = Modifier.size(24.dp).align(Alignment.CenterVertically)
+                        )
+
+                        Spacer(Modifier.width(8.dp))
+
+                        Column {
+                            //Grad Name and Value
+                            Row(Modifier.fillMaxWidth().wrapContentHeight()) {
+                                Text(
+                                    text = removeStrQuote(req.first.attribute.resName),
+                                    style = FontSizeNormal12(),
+                                    color = Color.White
+                                )
+                                Spacer(Modifier.weight(1f))
+                                Text(
+                                    text = "${getDataDecimalsByAttrExchange(req.first, charValue)} / ${getDataDecimalsByAttrExchange(req.first, (req.second as Number).toFloat())}",
+                                    style = FontSizeNormal12(),
+                                    color = if(charValue >= (req.second as Number).toFloat()) GradReachYellow else Color.White
+                                )
+                            }
+                            LinearProgressIndicator(
+                                progress = charValue / (req.second as Number).toFloat(),
+                                color = Color(0xCCFFFFFF),
+                                backgroundColor = Color(0x66FFFFFF),
+                                modifier = Modifier.fillMaxWidth().height(4.dp)
+                            )
+                        }
+                    }
+                }
+            }
+
+
+
+            Spacer(Modifier.height(8.dp))
+
+            //Leaderboard Overview - 100 is example
+            Text(
+                text = removeStrQuote(Res.string.OverWholeServerUser).replace("$"+"{1}", "-100.0"),
+                style = FontSizeNormal16(),
+                color = Color.White,
+                modifier = Modifier.align(Alignment.CenterHorizontally)
+            )
+            Text(
+                text = removeStrQuote(Res.string.LeaderboardDataFrom),
+                style = FontSizeNormalSmall(),
+                color = Color(0x99FFFFFF),
+                modifier = Modifier.align(Alignment.CenterHorizontally)
+            )
+
+            Spacer(Modifier.height(8.dp))
+
+            //Make by Stargazer
+            Text(
+                text = removeStrQuote(Res.string.ProducedByStargazer),
+                style = FontSizeNormal12(),
+                color = Color.White,
+                modifier = Modifier.align(Alignment.CenterHorizontally)
+            )
+
         }
-
-
-
-        Spacer(Modifier.height(8.dp))
-
-        //Leaderboard Overview - 100 is example
-        Text(
-            text = removeStrQuote(Res.string.OverWholeServerUser).replace("$"+"{1}", "-100.0"),
-            style = FontSizeNormal16(),
-            color = Color.White,
-            modifier = Modifier.align(Alignment.CenterHorizontally)
-        )
-        Text(
-            text = removeStrQuote(Res.string.LeaderboardDataFrom),
-            style = FontSizeNormalSmall(),
-            color = Color(0x99FFFFFF),
-            modifier = Modifier.align(Alignment.CenterHorizontally)
-        )
-
-        Spacer(Modifier.height(8.dp))
-
-        //Make by Stargazer
-        Text(
-            text = removeStrQuote(Res.string.ProducedByStargazer),
-            style = FontSizeNormal12(),
-            color = Color.White,
-            modifier = Modifier.align(Alignment.CenterHorizontally)
-        )
-
     }
 }
 
@@ -548,13 +554,16 @@ fun RelicInfo(character: Character) {
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-fun CharBioSkillInfo(character: Character) {
+fun CharBioSkillInfo(character: Character, charNameBigHeight: MutableState<Int>) {
     val charStatus = character.characterStatus!!
     Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
         Text(
             text = Character.getCharacterItemFromJSON(character.officialId.toString()).displayName!!,
             style = FontSizeNormalLarge32(),
-            color = Color.White
+            color = Color.White,
+            modifier = Modifier.onGloballyPositioned {
+                charNameBigHeight.value = (it.size.height)
+            }
         )
 
         Spacer(modifier = Modifier.size(6.dp))
