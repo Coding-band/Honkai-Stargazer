@@ -52,7 +52,6 @@
    "rewardPath": "/material/67219",
    "comeFrom": [
     "Sombra Estagnada: Corredor de Ecos Atenuados",
-    "Sombra Estagnada (Corredor de Ecos Atenuados)",
     "Sintetizador Omni — Troca de Material"
    ]
   },
@@ -693,7 +692,7 @@
   },
   {
    "tagHash": "Suporte",
-   "descHash": "Designa um único aliado (excluindo esta unidade) como Shifu e aumenta a VEL do Shifu em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Apenas o alvo mais recente da Perícia de 7 de Março será considerado como Shifu.<br /><br /><br />Sempre que usar um ATQ Básico ou aplicar 1 golpe de Dano do ATQ Básico Aprimorado, ativa o efeito correspondente se um Shifu com o Caminho especificado estiver presente no campo:<br /><br />A Erudição, A Destruição, A Caça: causa <u>Dano Adicional</u> (Tipo de Dano baseado no Tipo de Combate do Shifu) igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> do ATQ de 7 de Março.<br /><br />A Harmonia, A Inexistência, A Preservação, A Abundância: aumenta a Redução de Tenacidade dessa instância de Dano em <nobr>#3[i]%</nobr>.",
+   "descHash": "Designa um único aliado (excluindo esta unidade) como \"Shifu\" e aumenta a VEL do \"Shifu\" em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Apenas o alvo mais recente da Perícia de 7 de Março será considerado como \"Shifu\".<br /><br /><br />Sempre que usar um ATQ Básico ou aplicar 1 golpe de Dano do ATQ Básico Aprimorado, ativa o efeito correspondente se um \"Shifu\" com o Caminho especificado estiver presente no campo:<br /><br />A Erudição, A Destruição, A Caça, A Recordação: causa <u>Dano Adicional</u> (Tipo de Dano baseado no Tipo de Combate do \"Shifu\") igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> do ATQ de 7 de Março.<br /><br />A Harmonia, A Inexistência, A Preservação, A Abundância: aumenta a Redução de Tenacidade dessa instância de Dano em <nobr>#3[i]%</nobr>.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -2381,9 +2380,18 @@
    "80": 414350
   },
   "expItemConfig": {
-   "1000": 409962,
-   "5000": 409961,
-   "20000": 409960
+   "1000": {
+    "itemId": 409962,
+    "cost": 0
+   },
+   "5000": {
+    "itemId": 409961,
+    "cost": 0
+   },
+   "20000": {
+    "itemId": 409960,
+    "cost": 0
+   }
   },
   "sCoinId": 29328,
   "rankConfig": {
@@ -2398,6 +2406,7 @@
    }
   }
  },
+ "hasServant": false,
  "name": "7 de Março",
  "rarity": 4,
  "descHash": "7 de Março usando uma roupa no estilo Xianzhouita. Uma espadachim artista marcial. Ela está aprendendo técnicas de espada com Yunli e Yanqing e está ansiosa para criar mais memórias incríveis no Xianzhou.",

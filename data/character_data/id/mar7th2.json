@@ -692,7 +692,7 @@
   },
   {
    "tagHash": "Support",
-   "descHash": "Membuat 1 rekan tim selain diri sendiri menjadi \"Shifu\". SPD \"Shifu\" akan meningkat <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Hanya target pelancaran Skill terbaru yang akan dianggap sebagai \"Shifu\" March 7th.<br />Setiap kali melancarkan Basic Attack atau mengakibatkan 1 Hit Enhanced Basic Attack DMG, jika ada \"Shifu\" dari Path tertentu di medan pertempuran, akan memicu efek yang sesuai:<br />\"Erudition\", \"Destruction\", dan \"Hunt\": Mengakibatkan <u>DMG Tambahan</u> berdasarkan Tipe \"Shifu\" sebesar <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> ATK March 7th.<br />\"Harmony\", \"Nihility\", \"Preservation\", dan \"Abundance\": Pengurangan Toughness dari DMG kali ini meningkat <nobr>#3[i]%</nobr>.",
+   "descHash": "Membuat 1 rekan tim selain diri sendiri menjadi \"Shifu\". SPD \"Shifu\" akan meningkat <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Hanya target pelancaran Skill terbaru yang akan dianggap sebagai \"Shifu\" March 7th.<br />Setiap kali melancarkan Basic Attack atau mengakibatkan 1 Hit Enhanced Basic Attack DMG, jika ada \"Shifu\" dari Path tertentu di medan pertempuran, akan memicu efek yang sesuai:<br />\"Erudition\", \"Destruction\", \"Hunt\", dan \"Remembrance\": Mengakibatkan <u>DMG Tambahan</u> berdasarkan Tipe \"Shifu\" sebesar <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> ATK March 7th.<br />\"Harmony\", \"Nihility\", \"Preservation\", dan \"Abundance\": Pengurangan Toughness dari DMG kali ini meningkat <nobr>#3[i]%</nobr>.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -2380,9 +2380,18 @@
    "80": 414350
   },
   "expItemConfig": {
-   "1000": 409962,
-   "5000": 409961,
-   "20000": 409960
+   "1000": {
+    "itemId": 409962,
+    "cost": 0
+   },
+   "5000": {
+    "itemId": 409961,
+    "cost": 0
+   },
+   "20000": {
+    "itemId": 409960,
+    "cost": 0
+   }
   },
   "sCoinId": 29328,
   "rankConfig": {
@@ -2397,6 +2406,7 @@
    }
   }
  },
+ "hasServant": false,
  "name": "March 7th",
  "rarity": 4,
  "descHash": "March 7th yang memakai pakaian khas Xianzhou dan menjelma menjadi gadis pendekar dengan pedang di tangannya. Dengan penuh semangat, dia berguru pada Yunli dan Yanqing demi mengukir lebih banyak kenangan indah di Xianzhou.",

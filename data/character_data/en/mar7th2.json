@@ -52,7 +52,6 @@
    "rewardPath": "/material/67219",
    "comeFrom": [
     "Stagnant Shadow: Corridor of Fading Echoes",
-    "Stagnant Shadow (Corridor of Fading Echoes)",
     "Omni-Synthesizer — Material Exchange"
    ]
   },
@@ -693,7 +692,7 @@
   },
   {
    "tagHash": "Support",
-   "descHash": "Designates a single ally (excluding this unit) as Shifu and increases Shifu's SPD by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Only the most recent target of March 7th's Skill is considered as Shifu.<br /><br /><br />Whenever using Basic ATK or dealing 1 hit of Enhanced Basic ATK's DMG, triggers the corresponding effect if Shifu with the specified Path is present on the field:<br /><br />Erudition, Destruction, The Hunt: Deals <u>Additional DMG</u> (DMG Type based on Shifu's Combat Type) equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> of March 7th's ATK.<br /><br />Harmony, Nihility, Preservation, Abundance: Increases the Toughness Reduction of this instance of DMG by <nobr>#3[i]%</nobr>.",
+   "descHash": "Designates a single ally (excluding this unit) as \"Shifu\" and increases \"Shifu\"'s SPD by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Only the most recent target of March 7th's Skill is considered as \"Shifu.\"<br /><br /><br />Whenever using Basic ATK or dealing 1 hit of Enhanced Basic ATK's DMG, triggers the corresponding effect if \"Shifu\" with the specified Path is present on the field:<br /><br />Erudition, Destruction, The Hunt, Remembrance: Deals <u>Additional DMG</u> (DMG Type based on \"Shifu\"'s Combat Type) equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> of March 7th's ATK.<br /><br />Harmony, Nihility, Preservation, Abundance: Increases the Toughness Reduction of this instance of DMG by <nobr>#3[i]%</nobr>.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -2381,9 +2380,18 @@
    "80": 414350
   },
   "expItemConfig": {
-   "1000": 409962,
-   "5000": 409961,
-   "20000": 409960
+   "1000": {
+    "itemId": 409962,
+    "cost": 0
+   },
+   "5000": {
+    "itemId": 409961,
+    "cost": 0
+   },
+   "20000": {
+    "itemId": 409960,
+    "cost": 0
+   }
   },
   "sCoinId": 29328,
   "rankConfig": {
@@ -2398,6 +2406,7 @@
    }
   }
  },
+ "hasServant": false,
  "name": "March 7th",
  "rarity": 4,
  "descHash": "March 7th in a Xianzhou-styled outfit. A sword-wielding female martial artist. Learning swordplay from both Yunli and Yanqing, she is eager to create more beautiful memories on the Xianzhou.",

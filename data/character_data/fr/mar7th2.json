@@ -217,7 +217,7 @@
    "rarity": 4,
    "rewardPath": "/material/836267",
    "comeFrom": [
-    "Calice : Salle d'audition Félicitâme™ d'Écorchesable",
+    "Calice de la Salle d'audition Félicitâme™ d'Écorchesable",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Échange de matériaux de l'Omni-synthétiseur"
    ]
@@ -234,7 +234,7 @@
    "rarity": 3,
    "rewardPath": "/material/920208",
    "comeFrom": [
-    "Calice : Salle d'audition Félicitâme™ d'Écorchesable",
+    "Calice de la Salle d'audition Félicitâme™ d'Écorchesable",
     "Synthèse de matériaux de l'Omni-synthétiseur",
     "Échange de braises immortelles",
     "Échange de matériaux de l'Omni-synthétiseur"
@@ -692,7 +692,7 @@
   },
   {
    "tagHash": "Soutien",
-   "descHash": "Désigne un allié unique (à l'exception de ce personnage) comme Maître et augmente sa VIT de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Seule la dernière cible de la compétence de March 7th est considérée comme son « Maître ».<br /><br /><br />Chaque fois que March 7th utilise son ATQ normale ou qu'elle inflige des DGT avec 1 frappe de son ATQ normale renforcée, elle déclenche l'effet correspondant en fonction de la Voie du Maître présent sur le champ de bataille :<br /><br />Érudition, Destruction, Chasse : Inflige des <u>DGT additionnels</u> (du type du Maître) équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de l'ATQ de March 7th.<br /><br />Harmonie, Nihilité, Préservation, Abondance : Augmente la réduction de robustesse de cette instance de DGT de <nobr>#3[i]%</nobr>.",
+   "descHash": "Désigne un allié unique (à l'exception de ce personnage) comme Maître et augmente sa VIT de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Seule la dernière cible de la compétence de March 7th est considérée comme son « Maître ».<br /><br /><br />Chaque fois que March 7th utilise son ATQ normale ou qu'elle inflige des DGT avec 1 frappe de son ATQ normale renforcée, elle déclenche l'effet correspondant en fonction de la Voie du Maître présent sur le champ de bataille :<br /><br />Érudition, Destruction, Chasse, Souvenir : Inflige des <u>DGT additionnels</u> (du type du Maître) équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de l'ATQ de March 7th.<br /><br />Harmonie, Nihilité, Préservation, Abondance : Augmente la réduction de robustesse de cette instance de DGT de <nobr>#3[i]%</nobr>.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -2380,9 +2380,18 @@
    "80": 414350
   },
   "expItemConfig": {
-   "1000": 409962,
-   "5000": 409961,
-   "20000": 409960
+   "1000": {
+    "itemId": 409962,
+    "cost": 0
+   },
+   "5000": {
+    "itemId": 409961,
+    "cost": 0
+   },
+   "20000": {
+    "itemId": 409960,
+    "cost": 0
+   }
   },
   "sCoinId": 29328,
   "rankConfig": {
@@ -2397,6 +2406,7 @@
    }
   }
  },
+ "hasServant": false,
  "name": "March 7th",
  "rarity": 4,
  "descHash": "March 7th en jeune épéiste et vêtue d'une tenue de style Xianzhou. Elle a hâte d'apprendre l'art de l'épée auprès de Yunli et Yanqing, pour se forger de nouveaux souvenirs à Xianzhou.",

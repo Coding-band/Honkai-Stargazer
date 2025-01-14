@@ -1,0 +1,517 @@
+{
+ "name": "溯憶",
+ "rarity": 3,
+ "descHash": "自時光中凝取的稀薄力量。正是所有微不足道的剎那，編織成了壯絕的命運。<br /><br />「衰老的靈魂在短暫的美夢中，仿佛回到了童年七彩斑斕的海。」",
+ "iconPath": "96963358e64501c9600cda1c4fa77ec789e4b1f5330ab3590f0494fc341c8246",
+ "artPath": "4ccc9a3dff75b279e885e2b9bcc9c21446c57ff039ca680fc8ede2011e0734f2",
+ "artPlaceholder": {
+  "data": "data:image/webp;base64,UklGRmIBAABXRUJQVlA4IFYBAAAQBwCdASoUABwAPm0ulEckIqIhKAqogA2JbAC7FRJ57qyXmcAtRM4o1jAu8fpPmUehGg+S6pO1pwsKb/Izou3JQAD+8o5pXN8bU6e7/Jzwlbo4QyfXXDD40ERrJO7vqzfwPnYxy1hX1JFLunAjycaA5UOKG2F5XtGj9nr9rCDw3id+ld6XxVnneL6rO6cSHg4tIyPsly5V9MMQFPw0pD3MTfA0cW7aKFX0yTNdr+GUSHttlrXHxOYU/tyoWewvupFwdQTJJ5DWDOPM14WRW0rTOs3uogZI3csgrtL7+gdM3OVcO4TCeJ5/LqfXSJTjdNPO+VlP5EnZrUvSgmP54VoaTj+zrJwsAkD4Dlr6G//KlfBHEmZzuY1LF5uNRVXpuFDZB1v/kg/lxvzY7xP8/y8w+hMaCRCPszDIEitUb14Vwdmtp0hX0D/axe2RmK4zy+12o+3jAAA=",
+  "w": 867,
+  "h": 1230
+ },
+ "mediumIconPath": "c91bfa858a4846ca82bfd2b157f038de86a4fe2f90cf491337932f7a26580bfc",
+ "baseType": {
+  "id": 0,
+  "iconPath": "e9618e3794a5f07ac79ad4423907c20ac4375fbe3117ff3a7795dce0d677c13d",
+  "color": "#FFFFFF",
+  "name": "記憶",
+  "rarity": 0
+ },
+ "baseTypeId": 0,
+ "itemReferences": {
+  "29328": {
+   "id": 29328,
+   "type": 101,
+   "purposeId": 11,
+   "iconPath": "662fc7ab4bcd2e14d5f4185738f92c3d4e5051f6a6af0fbcafcb08310c579372",
+   "name": "信用點",
+   "desc": "星際和平公司與客戶結算時使用的貨幣，如今已成爲太空旅行的硬通貨。",
+   "lore": "「人們奔波、爭鬥、貿易，爲的不過是個終端裏顯示的數字。但真正珍貴之物，公司的數字是買不到的。」",
+   "purpose": "通用貨幣",
+   "rarity": 3,
+   "rewardPath": "/material/29328",
+   "comeFrom": [
+    "擬造花萼【大礦區】",
+    "擬造花萼【工造司】",
+    "擬造花萼【「白日夢」酒店-夢境】",
+    "任務獎勵",
+    "委託獎勵",
+    "餘燼兌換"
+   ]
+  },
+  "694487": {
+   "id": 694487,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "a1cd1a65d901ad489a28a318391503fe2e70453747f877afe7afda933a39622b",
+   "name": "提純以太",
+   "desc": "光錐的強化材料，可以獲得<nobr>6000</nobr>點光錐經驗。",
+   "lore": "一罐經由特殊技術精煉而成的以太。<br /><br />「憶庭盼望重現往日的輝煌，但那是由他們所選擇的『往日輝煌』，明白嗎？」",
+   "purpose": "光錐經驗材料",
+   "rarity": 4,
+   "rewardPath": "/material/694487",
+   "comeFrom": [
+    "擬造花萼【邊緣通路】",
+    "擬造花萼【太卜司】",
+    "擬造花萼【稚子的夢】",
+    "「忘卻之庭」"
+   ]
+  },
+  "694488": {
+   "id": 694488,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "e63056837d7b387f59cbaafc907b941309bc98548ff00c6b483d9d053f0c93cc",
+   "name": "凝縮以太",
+   "desc": "光錐的強化材料，可以獲得<nobr>2000</nobr>點光錐經驗。",
+   "lore": "一罐經由特殊技術精煉而成的以太。<br /><br />「小心輕放，勿壓勿摔。破損泄漏後請參照《流溢災難應對手冊》第二章內容進行災後處置。」",
+   "purpose": "光錐經驗材料",
+   "rarity": 3,
+   "rewardPath": "/material/694488",
+   "comeFrom": [
+    "擬造花萼【邊緣通路】",
+    "擬造花萼【太卜司】",
+    "擬造花萼【稚子的夢】",
+    "餘燼兌換"
+   ]
+  },
+  "694489": {
+   "id": 694489,
+   "type": 601,
+   "purposeId": 5,
+   "iconPath": "2f6dff811f4597c4f0b13baf74fa022a38c5c2f938e540b2a6b05a31c2973fa7",
+   "name": "稀薄以太",
+   "desc": "光錐的強化材料，可以獲得<nobr>500</nobr>點光錐經驗。",
+   "lore": "本不應存在於現實的假想介質，創造光錐的基本原料。<br />將之注入光錐，能令封裝其中的事象更爲清晰。<br /><br />「原來如此，流光憶庭的『憶質』就是這東西，怪不得憶者能攜帶記憶進行星際旅行。」",
+   "purpose": "光錐經驗材料",
+   "rarity": 2,
+   "rewardPath": "/material/694489",
+   "comeFrom": [
+    "擬造花萼【邊緣通路】",
+    "擬造花萼【太卜司】",
+    "擬造花萼【稚子的夢】",
+    "委託獎勵"
+   ]
+  },
+  "6471577": {
+   "id": 6471577,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "33aad7e181bb007b5e56beb56275d4c8e7c1821708236fba6fd9088d76a52610",
+   "name": "末那芽苗",
+   "desc": "記憶的細胞萃取着思緒，於銘刻者的心底滋蔓，可中幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">記憶</span>角色的命途行跡。",
+   "lore": "種子萌發，枝芽交錯，如突觸般傳遞信號。在歲月的流逝中，這些枝芽有的枯萎，有的生長，直到能承載生命，成爲某個靈魂的軀殼。<br /><br />「我們沒有拋棄肉體，只是讓它變成了一種…更長久的東西。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/6471577",
+   "comeFrom": [
+    "擬造花萼【「紛爭荒墟」懸鋒城】",
+    "「萬能合成機」- 材料合成",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "6720910": {
+   "id": 6720910,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "817a8530de59eda4145e7b96677d0871bca6ed033eeae018e65b1ecca6c43a77",
+   "name": "阿賴耶華",
+   "desc": "這是生命的另一種存在方式，也是宇宙無法忘卻的物質，可大幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">記憶</span>角色的命途行跡。",
+   "lore": "它成熟了，變作一張收攏歷史的網，一朵來自過去的花。生命是它的園圃，也可以是它的花心。若你成爲花心，你便記住了宇宙，宇宙便記住了你，你就是記憶。<br /><br />「記憶即爲諸法之實體，故而無漏淨土中，無有生滅。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/6720910",
+   "comeFrom": [
+    "擬造花萼【「紛爭荒墟」懸鋒城】",
+    "「萬能合成機」- 材料合成",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "6744567": {
+   "id": 6744567,
+   "type": 601,
+   "purposeId": 3,
+   "iconPath": "23cd2fc3a60fd252453515bc737da03bd0ba3d4086c50aa3b7c81d453d7fa54c",
+   "name": "思量的種",
+   "desc": "意識與物質交匯，孕育出了記憶的胚胎，可小幅提升<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">記憶</span>角色的命途行跡。",
+   "lore": "此物本不存在，直到你見到、聽到、感受到某物。這因感受誕生的存在很快便會沉寂，埋在思維的苗牀裏，或許會在某日發芽，或許不會。<br /><br />「那是構成我們身體的質料，因你的銘記而存在。」",
+   "purpose": "行跡材料 <br />光錐晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/6744567",
+   "comeFrom": [
+    "擬造花萼【「紛爭荒墟」懸鋒城】",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "20170864": {
+   "id": 20170864,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "d0c7c7f9f997cb0ede806d12e51f7bbfca2f8efb9ecbd2546aff0ab24a8a90dd",
+   "name": "勇氣撕裂胸膛",
+   "desc": "紛爭眷屬陣亡後的碎塊，強化所需的普通材料。",
+   "lore": "懶惰的將領開始操練，避世的賢者開始思謀。直至人發現能將神的造物擊碎，屠殺便成了戰爭。<br /><br />「恐懼是勇氣的刻刀。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 3,
+   "rewardPath": "/material/20170864",
+   "comeFrom": [
+    "突破至均衡等級2後，泰坦眷屬掉落",
+    "「萬能合成機」- 材料合成",
+    "「差分宇宙」中敵方掉落",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "20389475": {
+   "id": 20389475,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "4248c4deac64679a25e9190920297cee99e492be38480008c348d5faa425a466",
+   "name": "榮耀洗禮身軀",
+   "desc": "紛爭眷屬富含神力的心臟，強化所需的高級材料。",
+   "lore": "最初，人們爲生而戰。如今，有人爲死而戰，與那些紛爭的眷屬一樣無畏。懸鋒人說，或許肉與石的勇士都有着同一顆心臟——<br /><br />「勇氣在裡面流淌，此心名爲榮耀。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 4,
+   "rewardPath": "/material/20389475",
+   "comeFrom": [
+    "突破至均衡等級4後，泰坦眷屬掉落",
+    "「萬能合成機」- 材料合成",
+    "「差分宇宙」中敵方掉落",
+    "「模擬宇宙」中敵方掉落",
+    "「萬能合成機」- 材料置換"
+   ]
+  },
+  "20445700": {
+   "id": 20445700,
+   "type": 601,
+   "purposeId": 7,
+   "iconPath": "57fb73d5a5481d898d7901a6639f9061749101e2b47ded8580cb2ad476407aed",
+   "name": "恐懼踏碎血肉",
+   "desc": "組成紛爭眷屬的塵屑，強化所需的簡單材料。",
+   "lore": "死亡的潮席捲天地，恨與怨的巨人踏出冥河。在那堅石雕刻的軍團面前，無人不畏懼，無人不俯首。<br /><br />「殺戮是恐懼的石料。」",
+   "purpose": "行跡材料 <br />角色晉階材料",
+   "rarity": 2,
+   "rewardPath": "/material/20445700",
+   "comeFrom": [
+    "泰坦眷屬掉落",
+    "「差分宇宙」中敵方掉落",
+    "「模擬宇宙」中敵方掉落",
+    "委託獎勵",
+    "餘燼兌換",
+    "「萬能合成機」- 材料置換"
+   ]
+  }
+ },
+ "levelData": [
+  {
+   "promotion": 0,
+   "maxLevel": 20,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 3000
+    },
+    {
+     "id": 20445700,
+     "count": 4
+    }
+   ],
+   "attackBase": 19.2,
+   "attackAdd": 2.88,
+   "hpBase": 28.8,
+   "hpAdd": 4.32,
+   "defenseBase": 12,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 1,
+   "maxLevel": 30,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 6000
+    },
+    {
+     "id": 6744567,
+     "count": 2
+    },
+    {
+     "id": 20445700,
+     "count": 8
+    }
+   ],
+   "attackBase": 42.24,
+   "attackAdd": 2.88,
+   "hpBase": 63.36,
+   "hpAdd": 4.32,
+   "defenseBase": 26.4,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 2,
+   "maxLevel": 40,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 12000
+    },
+    {
+     "id": 6471577,
+     "count": 2
+    },
+    {
+     "id": 20170864,
+     "count": 4
+    }
+   ],
+   "attackBase": 72.96,
+   "attackAdd": 2.88,
+   "hpBase": 109.44,
+   "hpAdd": 4.32,
+   "defenseBase": 45.6,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 3,
+   "maxLevel": 50,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 30000
+    },
+    {
+     "id": 6471577,
+     "count": 4
+    },
+    {
+     "id": 20170864,
+     "count": 6
+    }
+   ],
+   "attackBase": 103.68,
+   "attackAdd": 2.88,
+   "hpBase": 155.52,
+   "hpAdd": 4.32,
+   "defenseBase": 64.8,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 4,
+   "maxLevel": 60,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 60000
+    },
+    {
+     "id": 6720910,
+     "count": 3
+    },
+    {
+     "id": 20389475,
+     "count": 3
+    }
+   ],
+   "attackBase": 134.4,
+   "attackAdd": 2.88,
+   "hpBase": 201.6,
+   "hpAdd": 4.32,
+   "defenseBase": 84,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 5,
+   "maxLevel": 70,
+   "cost": [
+    {
+     "id": 29328,
+     "count": 120000
+    },
+    {
+     "id": 6720910,
+     "count": 6
+    },
+    {
+     "id": 20389475,
+     "count": 5
+    }
+   ],
+   "attackBase": 165.12,
+   "attackAdd": 2.88,
+   "hpBase": 247.68,
+   "hpAdd": 4.32,
+   "defenseBase": 103.2,
+   "defenseAdd": 1.8
+  },
+  {
+   "promotion": 6,
+   "maxLevel": 80,
+   "cost": [],
+   "attackBase": 195.84,
+   "attackAdd": 2.88,
+   "hpBase": 293.76,
+   "hpAdd": 4.32,
+   "defenseBase": 122.4,
+   "defenseAdd": 1.8
+  }
+ ],
+ "skill": {
+  "id": 20022,
+  "name": "入寐",
+  "descHash": "憶靈的回合開始時，使裝備者和憶靈分別獲得1層【緬懷】，每層使造成的傷害提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>，最多疊加<nobr>#2[i]</nobr>層。憶靈消失時移除裝備者和憶靈的【緬懷】。",
+  "levelData": [
+   {
+    "params": [
+     0.08,
+     4
+    ],
+    "level": 1,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.09,
+     4
+    ],
+    "level": 2,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.1,
+     4
+    ],
+    "level": 3,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.11,
+     4
+    ],
+    "level": 4,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   },
+   {
+    "params": [
+     0.12,
+     4
+    ],
+    "level": 5,
+    "levelReq": 0,
+    "promotionReq": 0,
+    "cost": []
+   }
+  ]
+ },
+ "calculator": {
+  "expCost": {
+   "1": 40,
+   "2": 60,
+   "3": 100,
+   "4": 160,
+   "5": 220,
+   "6": 300,
+   "7": 380,
+   "8": 480,
+   "9": 580,
+   "10": 700,
+   "11": 820,
+   "12": 950,
+   "13": 1090,
+   "14": 1240,
+   "15": 1390,
+   "16": 1560,
+   "17": 1730,
+   "18": 1910,
+   "19": 2090,
+   "20": 2170,
+   "21": 2260,
+   "22": 2350,
+   "23": 2430,
+   "24": 2520,
+   "25": 2620,
+   "26": 2710,
+   "27": 2800,
+   "28": 2900,
+   "29": 2990,
+   "30": 3100,
+   "31": 3200,
+   "32": 3300,
+   "33": 3400,
+   "34": 3510,
+   "35": 3620,
+   "36": 3730,
+   "37": 3830,
+   "38": 3950,
+   "39": 4060,
+   "40": 4170,
+   "41": 4580,
+   "42": 4840,
+   "43": 5110,
+   "44": 5380,
+   "45": 5660,
+   "46": 5950,
+   "47": 6230,
+   "48": 6530,
+   "49": 6830,
+   "50": 7140,
+   "51": 7450,
+   "52": 7760,
+   "53": 8090,
+   "54": 8410,
+   "55": 8750,
+   "56": 9080,
+   "57": 9430,
+   "58": 9770,
+   "59": 10130,
+   "60": 10480,
+   "61": 10970,
+   "62": 11560,
+   "63": 12160,
+   "64": 12760,
+   "65": 13370,
+   "66": 13990,
+   "67": 14620,
+   "68": 15260,
+   "69": 15910,
+   "70": 16570,
+   "71": 18490,
+   "72": 20230,
+   "73": 22000,
+   "74": 23790,
+   "75": 25610,
+   "76": 27450,
+   "77": 29320,
+   "78": 31220,
+   "79": 33140,
+   "80": 0
+  },
+  "expItemConfig": {
+   "500": {
+    "itemId": 694489,
+    "cost": 250
+   },
+   "2000": {
+    "itemId": 694488,
+    "cost": 1000
+   },
+   "6000": {
+    "itemId": 694487,
+    "cost": 3000
+   }
+  },
+  "sCoinId": 29328
+ },
+ "pageId": "20022"
+}

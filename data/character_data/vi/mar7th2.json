@@ -692,7 +692,7 @@
   },
   {
    "tagHash": "Hỗ Trợ",
-   "descHash": "Giúp 1 đồng đội phe ta (ngoại trừ bản thân) trở thành Sư Phụ, tốc độ của Sư Phụ tăng <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Chỉ mục tiêu thi triển gần đây nhất của Chiến Kỹ được xem là Sư Phụ của March 7th.<br />Mỗi khi Tấn Công Thường hoặc gây ra 1 đòn sát thương Tấn Công Thường Cường Hóa, nếu trong trận có Sư Phụ thuộc Vận Mệnh được chỉ định, thì sẽ kích hoạt hiệu ứng tương ứng:<br />Tri Thức, Hủy Diệt, Săn Bắn: Gây thêm <u>Sát Thương Kèm Theo</u> tùy theo thuộc tính của Sư Phụ và bằng <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> Tấn Công của March 7th.<br />Hòa Hợp, Hư Vô, Bảo Hộ, Trù Phú: Tăng <nobr>#3[i]%</nobr> điểm Giảm Sức Bền của lần sát thương này.",
+   "descHash": "Giúp 1 đồng đội chỉ định (ngoại trừ bản thân) trở thành Sư Phụ, Tốc Độ của Sư Phụ tăng <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Chỉ mục tiêu thi triển gần đây nhất của Chiến Kỹ được xem là Sư Phụ của March 7th.<br />Mỗi khi Tấn Công Thường hoặc gây ra 1 đòn sát thương Tấn Công Thường Cường Hóa, nếu trong trận có Sư Phụ thuộc Vận Mệnh được chỉ định, thì sẽ kích hoạt hiệu ứng tương ứng:<br />Tri Thức, Hủy Diệt, Săn Bắn, Ký Ức: Gây thêm <u>Sát Thương Kèm Theo</u> dựa theo thuộc tính của Sư Phụ và bằng <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> Tấn Công của March 7th.<br />Hòa Hợp, Hư Vô, Bảo Hộ, Trù Phú: Tăng <nobr>#3[i]%</nobr> điểm Giảm Sức Bền của lần sát thương này.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -2380,9 +2380,18 @@
    "80": 414350
   },
   "expItemConfig": {
-   "1000": 409962,
-   "5000": 409961,
-   "20000": 409960
+   "1000": {
+    "itemId": 409962,
+    "cost": 0
+   },
+   "5000": {
+    "itemId": 409961,
+    "cost": 0
+   },
+   "20000": {
+    "itemId": 409960,
+    "cost": 0
+   }
   },
   "sCoinId": 29328,
   "rankConfig": {
@@ -2397,6 +2406,7 @@
    }
   }
  },
+ "hasServant": false,
  "name": "March 7th",
  "rarity": 4,
  "descHash": "March 7th trong trang phục của Xianzhou, một nữ hiệp trẻ tuổi cầm kiếm. Nóng lòng bái sư học nghệ cùng Yunli và Yanqing, để lưu lại thêm nhiều \"hồi ức\" đẹp đẽ ở Xianzhou.",

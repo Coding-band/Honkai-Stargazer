@@ -52,7 +52,6 @@
    "rewardPath": "/material/67219",
    "comeFrom": [
     "Ruhender Schatten (Korridor der verhallenden Echos)",
-    "Ruhender Schatten: Korridor der verhallenden Echos",
     "Omni-Synthesemaschine – Materialtausch"
    ]
   },
@@ -693,7 +692,7 @@
   },
   {
    "tagHash": "Unterstützung",
-   "descHash": "Lässt einen Verbündeten außer der Figur selbst zum „Meister“ werden. Seine GES wird um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> erhöht. Nur das letzte Ziel der Fertigkeit gilt als Meister von 7. März.<br />Wenn der Meister mit bestimmten Pfaden auf dem Kampffeld ist, werden entsprechende Effekte beim Einsatz von Standardangriffen oder beim Verursachen von SCH durch verstärkte Standardangriffe mit 1 Treffer ausgelöst:<br />Die Gelehrsamkeit, Die Zerstörung, Die Jagd: Verursacht basierend auf dem Typ des Meisters <u>zusätzlichen SCH</u> in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> von 7. März’ ANG.<br />Die Harmonie, Die Nichtigkeit, Die Bewahrung, Der Überfluss: Der WDS-Reduzierungswert des verursachten SCH wird um <nobr>#3[i]%</nobr> erhöht.",
+   "descHash": "Lässt einen Verbündeten außer der Figur selbst zum „Meister“ werden. Seine GES wird um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> erhöht. Nur das letzte Ziel der Fertigkeit gilt als Meister von 7. März.<br />Wenn der Meister mit bestimmten Pfaden auf dem Kampffeld ist, werden entsprechende Effekte beim Einsatz von Standardangriffen oder beim Verursachen von SCH durch verstärkte Standardangriffe mit 1 Treffer ausgelöst:<br />Die Gelehrsamkeit, Die Zerstörung, Die Jagd, Das Gedenken: Verursacht basierend auf dem Typ des Meisters <u>zusätzlichen SCH</u> in Höhe von <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> von 7. März’ ANG.<br />Die Harmonie, Die Nichtigkeit, Die Bewahrung, Der Überfluss: Erhöht den WDS-Reduzierungswert dieses SCH um <nobr>#3[i]%</nobr>.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -2381,9 +2380,18 @@
    "80": 414350
   },
   "expItemConfig": {
-   "1000": 409962,
-   "5000": 409961,
-   "20000": 409960
+   "1000": {
+    "itemId": 409962,
+    "cost": 0
+   },
+   "5000": {
+    "itemId": 409961,
+    "cost": 0
+   },
+   "20000": {
+    "itemId": 409960,
+    "cost": 0
+   }
   },
   "sCoinId": 29328,
   "rankConfig": {
@@ -2398,6 +2406,7 @@
    }
   }
  },
+ "hasServant": false,
  "name": "7. März",
  "rarity": 4,
  "descHash": "7. März gekleidet im Stil der Xianzhou. Eine schwertschwingende Kampfkünstlerin. Sie lernte von Yunli und Yanqing den Umgang mit dem Schwert und ist begierig darauf, noch mehr schöne Erinnerungen an die Xianzhou zu schaffen.",

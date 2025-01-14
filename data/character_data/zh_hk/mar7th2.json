@@ -692,7 +692,7 @@
   },
   {
    "tagHash": "輔助",
-   "descHash": "使除自身以外的我方指定單體成爲【師父】，【師父】的速度提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>。僅戰技最新的施放目標被視爲三月七的【師父】。<br />每當施放普攻或造成1段強化普攻的傷害時，若場上存在指定命途的【師父】，則觸發對應效果：<br />「智識」、「毀滅」、「巡獵」：額外造成等同於三月七<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻擊力的基於【師父】屬性的<u>附加傷害</u>。<br />「同諧」、「虛無」、「存護」、「豐饒」：本次傷害的削韌值提高<nobr>#3[i]%</nobr>。",
+   "descHash": "使除自身以外的我方指定單體成爲【師父】，【師父】的速度提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>。僅戰技最新的施放目標被視爲三月七的【師父】。<br />每當施放普攻或造成1段強化普攻的傷害時，若場上存在指定命途的【師父】，則觸發對應效果：<br />「智識」、「毀滅」、「巡獵」、「記憶」：額外造成等同於三月七<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻擊力的基於【師父】屬性的<u>附加傷害</u>。<br />「同諧」、「虛無」、「存護」、「豐饒」：本次傷害的削韌值提高<nobr>#3[i]%</nobr>。",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -2380,9 +2380,18 @@
    "80": 414350
   },
   "expItemConfig": {
-   "1000": 409962,
-   "5000": 409961,
-   "20000": 409960
+   "1000": {
+    "itemId": 409962,
+    "cost": 0
+   },
+   "5000": {
+    "itemId": 409961,
+    "cost": 0
+   },
+   "20000": {
+    "itemId": 409960,
+    "cost": 0
+   }
   },
   "sCoinId": 29328,
   "rankConfig": {
@@ -2397,6 +2406,7 @@
    }
   }
  },
+ "hasServant": false,
  "name": "三月七",
  "rarity": 4,
  "descHash": "換上仙舟服飾的三月七，執劍的武俠少女。 向雲璃與彥卿拜師學藝，爲在仙舟留下更多美好的「回憶」而躍躍欲試。",

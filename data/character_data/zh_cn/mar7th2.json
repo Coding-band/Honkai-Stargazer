@@ -692,7 +692,7 @@
   },
   {
    "tagHash": "辅助",
-   "descHash": "使除自身以外的我方指定单体成为【师父】，【师父】的速度提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>。仅战技最新的施放目标被视为三月七的【师父】。<br />每当施放普攻或造成1段强化普攻的伤害时，若场上存在指定命途的【师父】，则触发对应效果：<br />「智识」、「毁灭」、「巡猎」：额外造成等同于三月七<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻击力的基于【师父】属性的<u>附加伤害</u>。<br />「同谐」、「虚无」、「存护」、「丰饶」：本次伤害的削韧值提高<nobr>#3[i]%</nobr>。",
+   "descHash": "使除自身以外的我方指定单体成为【师父】，【师父】的速度提高<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>。仅战技最新的施放目标被视为三月七的【师父】。<br />每当施放普攻或造成1段强化普攻的伤害时，若场上存在指定命途的【师父】，则触发对应效果：<br />「智识」、「毁灭」、「巡猎」、「记忆」：额外造成等同于三月七<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>攻击力的基于【师父】属性的<u>附加伤害</u>。<br />「同谐」、「虚无」、「存护」、「丰饶」：本次伤害的削韧值提高<nobr>#3[i]%</nobr>。",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -2380,9 +2380,18 @@
    "80": 414350
   },
   "expItemConfig": {
-   "1000": 409962,
-   "5000": 409961,
-   "20000": 409960
+   "1000": {
+    "itemId": 409962,
+    "cost": 0
+   },
+   "5000": {
+    "itemId": 409961,
+    "cost": 0
+   },
+   "20000": {
+    "itemId": 409960,
+    "cost": 0
+   }
   },
   "sCoinId": 29328,
   "rankConfig": {
@@ -2397,6 +2406,7 @@
    }
   }
  },
+ "hasServant": false,
  "name": "三月七",
  "rarity": 4,
  "descHash": "换上仙舟服饰的三月七，执剑的武侠少女。 向云璃与彦卿拜师学艺，为在仙舟留下更多美好的「回忆」而跃跃欲试。",

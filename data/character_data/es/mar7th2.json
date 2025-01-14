@@ -692,7 +692,7 @@
   },
   {
    "tagHash": "Apoyo",
-   "descHash": "Hace que otro aliado distinto a sí misma se convierta en Maestro. La VEL del Maestro aumenta en un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Solo el último aliado que haya sido objetivo de la habilidad básica de Siete de Marzo se considera su \"Maestro\".<br />Cuando usa su ATQ básico o inflige daño 1 vez con su ATQ básico potenciado, se activa uno de los siguientes efectos en función de la Vía del Maestro que haya presente en el campo de batalla:<br />Erudición, Destrucción o Cacería: inflige un <u>daño adicional</u> del mismo tipo que el Maestro equivalente al <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> del ATQ de Siete de Marzo.<br />Armonía, Nihilidad, Conservación o Abundancia: la Reducción de Firmeza del daño infligido esta vez aumenta en un <nobr>#3[i]%</nobr>.",
+   "descHash": "Hace que otro aliado distinto a sí misma se convierta en Maestro. La VEL del Maestro aumenta en un <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Solo el último aliado que haya sido objetivo de la habilidad básica de Siete de Marzo se considera su \"Maestro\".<br />Cuando usa su ATQ básico o inflige daño 1 vez con su ATQ básico potenciado, se activa uno de los siguientes efectos en función de la Vía del Maestro que haya presente en el campo de batalla:<br />Erudición, Destrucción, Cacería o Reminiscencia: inflige un <u>daño adicional</u> del mismo tipo que el Maestro equivalente al <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> del ATQ de Siete de Marzo.<br />Armonía, Nihilidad, Conservación o Abundancia: la Reducción de Firmeza del daño infligido esta vez aumenta en un <nobr>#3[i]%</nobr>.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -2380,9 +2380,18 @@
    "80": 414350
   },
   "expItemConfig": {
-   "1000": 409962,
-   "5000": 409961,
-   "20000": 409960
+   "1000": {
+    "itemId": 409962,
+    "cost": 0
+   },
+   "5000": {
+    "itemId": 409961,
+    "cost": 0
+   },
+   "20000": {
+    "itemId": 409960,
+    "cost": 0
+   }
   },
   "sCoinId": 29328,
   "rankConfig": {
@@ -2397,6 +2406,7 @@
    }
   }
  },
+ "hasServant": false,
  "name": "Siete de Marzo",
  "rarity": 4,
  "descHash": "Siete de Marzo con un atuendo de Xianzhou. Una joven artista marcial que empuña dos espadas. Está aprendiendo el manejo de la espada de Yunli y Yanqing, y está ansiosa por crear más recuerdos hermosos en Xianzhou.",

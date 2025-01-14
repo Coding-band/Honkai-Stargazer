@@ -692,7 +692,7 @@
   },
   {
    "tagHash": "서포트",
-   "descHash": "자신 이외의 지정된 단일 아군을 [사부]로 만들고, [사부]의 속도가 <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> 증가한다. 최근 전투 스킬의 대상이 된 아군만이 Mar. 7th의 [사부]로 간주된다.<br />일반 공격을 발동하거나 강화된 일반 공격 피해를 1단 가할 시, 필드 위에 지정된 운명의 길의 [사부]가 존재하면 상응하는 효과를 발동한다.<br />「지식」, 「파멸」, 「수렵」: [사부] 속성에 따른 <u>추가 피해</u>를 Mar. 7th 공격력의 <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>만큼 추가로 가한다.<br />「화합」, 「공허」, 「보존」, 「풍요」: 이번 피해의 강인성 감소 수치가 <nobr>#3[i]%</nobr> 증가한다",
+   "descHash": "자신 이외의 지정된 단일 아군을 [사부]로 만들고, [사부]의 속도가 <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> 증가한다. 최근 전투 스킬의 대상이 된 아군만이 Mar. 7th의 [사부]로 간주된다.<br />일반 공격을 발동하거나 강화된 일반 공격 피해를 1단 가할 시, 필드 위에 지정된 운명의 길의 [사부]가 존재하면 상응하는 효과를 발동한다.<br />「지식」, 「파멸」, 「수렵」, 「기억」: [사부] 속성에 따른 <u>추가 피해</u>를 Mar. 7th 공격력의 <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>만큼 추가로 가한다.<br />「화합」, 「공허」, 「보존」, 「풍요」: 이번 피해의 강인성 감소 수치가 <nobr>#3[i]%</nobr> 증가한다",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -2380,9 +2380,18 @@
    "80": 414350
   },
   "expItemConfig": {
-   "1000": 409962,
-   "5000": 409961,
-   "20000": 409960
+   "1000": {
+    "itemId": 409962,
+    "cost": 0
+   },
+   "5000": {
+    "itemId": 409961,
+    "cost": 0
+   },
+   "20000": {
+    "itemId": 409960,
+    "cost": 0
+   }
   },
   "sCoinId": 29328,
   "rankConfig": {
@@ -2397,6 +2406,7 @@
    }
   }
  },
+ "hasServant": false,
  "name": "Mar. 7th",
  "rarity": 4,
  "descHash": "선주 의상을 입은 Mar. 7th. 검을 든 무협 소녀다. 운리와 연경의 가르침을 받고 선주에서 좋은 「기억」을 더 많이 남길 생각에 의욕이 넘친다",
