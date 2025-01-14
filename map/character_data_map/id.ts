@@ -82,7 +82,18 @@ import Rappa from "../../data/character_data/id/rappa.json";
 import Sunday from "../../data/character_data/id/sunday.json";
 import Fugue from "../../data/character_data/id/fugue.json";
 
+//add in 3.0.0
+import TheHerta from "../../data/character_data/id/theherta.json";
+import Aglaea from "../../data/character_data/id/aglaea.json";
+import PlayerBoy4 from "../../data/character_data/id/playerboy4.json";
+import PlayerGirl4 from "../../data/character_data/id/playergirl4.json";
+
 const ID = {
+  //add in 3.0.0
+  "The Herta" : TheHerta,
+  Aglaea,
+  "Trailblazer Boy (Ice)": PlayerBoy4,
+  "Trailblazer Girl (Ice)": PlayerGirl4,
   //add in 2.7.0
   Sunday,
   Fugue,

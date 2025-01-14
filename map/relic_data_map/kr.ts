@@ -48,7 +48,14 @@ import TheWondrousBananAmusementPark from "../../data/relic_data/kr/318.json";
 import SacerdosRelivedOrdeal from "../../data/relic_data/kr/121.json";
 import ScholarLostinErudition from "../../data/relic_data/kr/122.json";
 
+//Add in 3.0.0
+import HeroofTriumphantSong from "../../data/relic_data/kr/123.json";
+import PoetofMourningCollapse from "../../data/relic_data/kr/124.json";
+
 const KR = {
+  //add in 3.0.0
+  "Hero of Triumphant Song":HeroofTriumphantSong,
+  "Poet of Mourning Collapse":PoetofMourningCollapse,
   //add in 2.6.0
   "Scholar Lost in Erudition":ScholarLostinErudition,
   "Sacerdos' Relived Ordeal":SacerdosRelivedOrdeal,

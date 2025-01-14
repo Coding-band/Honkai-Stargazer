@@ -1,4 +1,13 @@
 const LightconeName = {
+  //Add in 3.0.0
+  "into-the-unreachable-veil" : "Into the Unreachable Veil",
+  "time-woven-into-gold" : "Time Woven Into Gold",
+  "sweat-now-cry-less" : "Sweat Now, Cry Less",
+  "geniuses-greeting" : "Geniuses' Greeting",
+  "victory-in-a-blink" : "Victory In a Blink",
+  "reminiscence" : "Reminiscence",
+  "shadowburn" : "Shadowburn",
+
   //Add in 2.7.0
   "a-grounded-acent": "A Grounded Ascent",
   "long-road-leads-home": "Long Road Leads Home",

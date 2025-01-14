@@ -5,6 +5,8 @@ const charId: any = {
   "Trailblazer Girl (Fire)": 8004,
   "Trailblazer Boy (Imaginary)": 8005,
   "Trailblazer Girl (Imaginary)": 8006,
+  "Trailblazer Boy (Ice)": 8007,
+  "Trailblazer Girl (Ice)": 8008,
   "March 7th": 1001,
   "Dan Heng": 1002,
   "Himeko": 1003,
@@ -68,6 +70,9 @@ const charId: any = {
 
   "Fugue": 1225,
   "Sunday": 1313,
+
+  "The Herta": 1401,
+  "Aglaea": 1402,
 };
 
 export default charId;

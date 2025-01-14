@@ -82,7 +82,18 @@ import Rappa from "../../data/character_data/zh_hk/rappa.json";
 import Sunday from "../../data/character_data/zh_hk/sunday.json";
 import Fugue from "../../data/character_data/zh_hk/fugue.json";
 
+//add in 3.0.0
+import TheHerta from "../../data/character_data/zh_hk/theherta.json";
+import Aglaea from "../../data/character_data/zh_hk/aglaea.json";
+import PlayerBoy4 from "../../data/character_data/zh_hk/playerboy4.json";
+import PlayerGirl4 from "../../data/character_data/zh_hk/playergirl4.json";
+
 const ZH_HK = {
+  //add in 3.0.0
+  "The Herta" : TheHerta,
+  Aglaea,
+  "Trailblazer Boy (Ice)": PlayerBoy4,
+  "Trailblazer Girl (Ice)": PlayerGirl4,
   //add in 2.7.0
   Sunday,
   Fugue,

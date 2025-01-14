@@ -132,7 +132,25 @@ import NinjaRecordSoundHunt from "../../data/lightcone_data/es/22003.json";
 import AGroundedAscent from "../../data/lightcone_data/es/23034.json";
 import LongRoadLeadsHome from "../../data/lightcone_data/es/23035.json";
 
+
+//add in 3.0.0
+import TimeWovenIntoGold from "../../data/lightcone_data/es/23036.json";
+import IntotheUnreachableVeil from "../../data/lightcone_data/es/23037.json";
+import SweatNowCryLess from "../../data/lightcone_data/es/21052.json";
+import GeniusesGreeting from "../../data/lightcone_data/es/21051.json";
+import VictoryInaBlink from "../../data/lightcone_data/es/21050.json";
+import Reminiscence from "../../data/lightcone_data/es/20022.json";
+import Shadowburn from "../../data/lightcone_data/es/20021.json";
+
 const ES = {
+  //add in 3.0.0
+  "Into the Unreachable Veil": TimeWovenIntoGold,
+  "Time Woven Into Gold": IntotheUnreachableVeil,
+  "Sweat Now, Cry Less": SweatNowCryLess,
+  "Geniuses' Greeting": GeniusesGreeting,
+  "Victory In a Blink": VictoryInaBlink,
+  "Reminiscence": Reminiscence,
+  "Shadowburn": Shadowburn,
   //add in 2.7.0
   "Long Road Leads Home": LongRoadLeadsHome,
   "A Grounded Ascent": AGroundedAscent,

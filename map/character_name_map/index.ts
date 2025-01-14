@@ -1,4 +1,8 @@
 const CharacterName = {
+  //add in 3.0.0
+  "the-herta": "The Herta",
+  "aglaea": "Aglaea",
+  "trailblazer-ice": "Trailblazer Girl (Ice)",
   //add in 2.7.0
   "sunday": "Sunday",
   "fugue": "fugue",

@@ -40,6 +40,8 @@ const officalRelicId: any = {
 
   121: "Sacerdos' Relived Ordeal",
   122: "Scholar Lost in Erudition",
+  123: "Hero of Triumphant Song",
+  124: "Poet of Mourning Collapse",
 };
 
 export default officalRelicId;

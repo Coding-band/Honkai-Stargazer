@@ -1,4 +1,12 @@
 const officalLightconeId: any = {
+  //Add in 3.0.0
+  23037 : "Into the Unreachable Veil",
+  23036 : "Time Woven Into Gold",
+  21052 : "Sweat Now, Cry Less",
+  21051 : "Geniuses' Greeting",
+  21050 : "Victory In a Blink",
+  20022 : "Reminiscence",
+  20021 : "Shadowburn",
   //Add in 2.7.0
   23035: "Long Road Leads Home",
   22034: "A Grounded Ascent",
