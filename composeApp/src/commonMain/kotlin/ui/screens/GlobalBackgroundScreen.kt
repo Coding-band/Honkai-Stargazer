@@ -53,7 +53,7 @@ val gradientBottom = Brush.verticalGradient(
 
 lateinit var backgroundScreenHazeState : HazeState
 val bgModified = mutableStateOf(false)
-val globalHazeBlur = mutableStateOf(Settings().getBoolean("useBlurEffect", true))
+val globalHazeBlur = mutableStateOf(Settings().getBoolean("useHazeBlurEffect", true))
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable

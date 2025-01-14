@@ -77,7 +77,7 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: Navigator,
     val hazeState = remember { HazeState() }
     val coroutineScope = rememberCoroutineScope()
     val density = LocalDensity.current.density
-    val isBlur = remember { mutableStateOf(Settings().getBoolean("useBlurEffect", true)) }
+    //val isBlur = remember { mutableStateOf(Settings().getBoolean("useBlurEffect", true)) }
 
     val extendedItems = listOf(Wallpaper.wallpaperList[Wallpaper.wallpaperList.size - 2], Wallpaper.wallpaperList.last()) + Wallpaper.wallpaperList + listOf(Wallpaper.wallpaperList.first() , Wallpaper.wallpaperList[1])
     val currentWallpaper = extendedItems.find { wallpaper: Wallpaper ->
