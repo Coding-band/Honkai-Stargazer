@@ -101,6 +101,8 @@ import utils.app.newImageRequest
 import utils.app.removeStrQuote
 import utils.app.showWarningToast
 import utils.app.toastInstance
+import utils.app.valueOfWithDefaultCombatType
+import utils.app.valueOfWithDefaultPath
 
 private lateinit var localCoroutineScope: CoroutineScope;
 private lateinit var localSnackbarHostState: SnackbarHostState;
@@ -133,8 +135,8 @@ fun CharacterInfoPage(
     val characterName = backStackEntry.path<String>("charName")!!.replace("_", " ")
     val characterFileName = backStackEntry.query<String>("fileName")!!
     val characterId = backStackEntry.query<String>("charId")!!
-    val combatType = CombatType.valueOf(backStackEntry.query<String>("combatType")!!)
-    val path = types.Path.valueOf(backStackEntry.query<String>("path")!!)
+    val combatType = valueOfWithDefaultCombatType(backStackEntry.query<String>("combatType")!!)
+    val path = valueOfWithDefaultPath(backStackEntry.query<String>("path")!!)
 
     val hazeState = remember { HazeState() }
     val charInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Character.getCharacterDataFromFileName(characterFileName, Language.TextLanguageInstance) as JsonElement) }

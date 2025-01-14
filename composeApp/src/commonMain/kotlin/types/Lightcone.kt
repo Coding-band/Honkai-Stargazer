@@ -27,6 +27,7 @@ import utils.app.Language
 import utils.app.getAssetsJsonByFilePath
 import utils.app.getAssetsURLByFileName
 import utils.app.getImageNameByRegistName
+import utils.app.valueOfWithDefaultPath
 import utils.calculator.AttrData
 
 
@@ -78,7 +79,7 @@ open class Lightcone(
                         fileName = lightconeFileName,
                         registName = (listDataJson.jsonObject["name"]!!.jsonPrimitive.content),
                         rarity = listDataJson.jsonObject["rare"]!!.jsonPrimitive.int,
-                        path = (Path.valueOf(listDataJson.jsonObject["path"]!!.jsonPrimitive.content)),
+                        path = (valueOfWithDefaultPath(listDataJson.jsonObject["path"]!!.jsonPrimitive.content)),
                         releaseVersion = (listDataJson.jsonObject["version"]!!.jsonPrimitive.content),
                         displayName = listExtDataJson.jsonObject["localeName"]!!.jsonObject[textLanguage.folderName]?.jsonPrimitive?.content ?: "?",
                         lcAttrData = if(requireAttrData){ Json.decodeFromJsonElement<AttrData>(listExtDataJson.jsonObject["attrData"]!!) } else { null },

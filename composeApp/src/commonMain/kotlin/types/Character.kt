@@ -9,7 +9,6 @@ package types
 import androidx.annotation.IntRange
 import androidx.compose.runtime.saveable.Saver
 import androidx.compose.runtime.saveable.listSaver
-import androidx.compose.ui.graphics.ImageBitmap
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.async
@@ -23,11 +22,13 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import utils.app.Language
 import utils.app.Constants.Companion.LOST_IMAGE_DRAWABLE
+import utils.app.Language
 import utils.app.getAssetsJsonByFilePath
 import utils.app.getAssetsURLByFileName
 import utils.app.getImageNameByRegistName
+import utils.app.valueOfWithDefaultCombatType
+import utils.app.valueOfWithDefaultPath
 import utils.calculator.AttrData
 
 /**
@@ -100,10 +101,10 @@ open class Character(
                         fileName = listDataJson.jsonObject["fileName"]!!.jsonPrimitive.content,
                         registName = (listDataJson.jsonObject["name"]!!.jsonPrimitive.content),
                         rarity = listDataJson.jsonObject["rare"]!!.jsonPrimitive.int,
-                        path = (Path.valueOf(listDataJson.jsonObject["path"]!!.jsonPrimitive.content)),
+                        path = (valueOfWithDefaultPath(listDataJson.jsonObject["path"]!!.jsonPrimitive.content)),
                         version = (listDataJson.jsonObject["version"]!!.jsonPrimitive.content),
                         displayName = listExtDataJson.jsonObject["localeName"]!!.jsonObject[textLanguage.folderName]?.jsonPrimitive?.content ?: "?",
-                        combatType = (CombatType.valueOf(listDataJson.jsonObject["element"]!!.jsonPrimitive.content)),
+                        combatType = (valueOfWithDefaultCombatType(listDataJson.jsonObject["element"]!!.jsonPrimitive.content)),
                         characterAttrData = if(requireAttrData){ Json.decodeFromJsonElement<AttrData>(listExtDataJson.jsonObject["attrData"]!!) } else { null },
                     )
                 }

@@ -57,7 +57,9 @@ import okio.use
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
+import types.CombatType
 import types.ImageFolder
+import types.Path
 import utils.annotation.VersionUpdateCheck
 import utils.starbase.StarbaseAPI
 import kotlin.math.pow
@@ -437,6 +439,25 @@ fun readFromOnlineURL(url: String): String {
     return "{}"
 }
 
+/**
+ * Path.valueOfWithDefault
+ */
+
+fun valueOfWithDefaultPath(name: String): Path {
+    return try {
+        Path.valueOf(name)
+    } catch (e: IllegalArgumentException) {
+        Path.Unspecified
+    }
+}
+fun valueOfWithDefaultCombatType(name: String): CombatType {
+    return try {
+        CombatType.valueOf(name)
+    } catch (e: IllegalArgumentException) {
+        CombatType.Unspecified
+    }
+}
+
 @VersionUpdateCheck
 fun getIconByUserAccountIconValue(icon : String): Any {
     println(icon)
@@ -477,12 +498,12 @@ fun getIconByUserAccountIconValue(icon : String): Any {
 @VersionUpdateCheck
 fun getImageNameByRegistName(registName: String, isCharFullImg: Boolean = false, isCharNoElement : Boolean = false, isCharNoGen: Boolean = false) : String {
     var registNameFinal = registName
-        .replace("Trailblazer Boy (Physical)","trailblazer_physical_male")
-        .replace("Trailblazer Girl (Physical)","trailblazer_physical_female")
-        .replace("Trailblazer Boy (Fire)","trailblazer_fire_male")
-        .replace("Trailblazer Girl (Fire)","trailblazer_fire_female")
-        .replace("Trailblazer Boy (Imaginary)","trailblazer_imaginary_male")
-        .replace("Trailblazer Girl (Imaginary)","trailblazer_imaginary_female")
+        .replace(Regex("Trailblazer Boy \\(([^)]+)\\)"), { matchResult ->
+            "trailblazer_${matchResult.groupValues[1].lowercase()}_male"
+        })
+        .replace(Regex("Trailblazer Girl \\(([^)]+)\\)"), { matchResult ->
+            "trailblazer_${matchResult.groupValues[1].lowercase()}_female"
+        })
         .replace("Topaz & Numby","topaz")
         .replace("Dan Heng • Imbibitor Lunae","dan_heng_il")
         .replace("Void","Void_")
@@ -507,21 +528,13 @@ fun getImageNameByRegistName(registName: String, isCharFullImg: Boolean = false,
 
     if(isCharFullImg){
         registNameFinal = registNameFinal
-            .replace("trailblazer_physical_male","trailblazer_boy")
-            .replace("trailblazer_fire_male","trailblazer_boy")
-            .replace("trailblazer_imaginary_male","trailblazer_boy")
-            .replace("trailblazer_physical_female","trailblazer_girl")
-            .replace("trailblazer_fire_female","trailblazer_girl")
-            .replace("trailblazer_imaginary_female","trailblazer_girl")
+            .replace(Regex("trailblazer_\\w+_male"), "trailblazer_boy")
+            .replace(Regex("trailblazer_\\w+_female"), "trailblazer_girl")
     }
     if(isCharNoElement){
         registNameFinal = registNameFinal
-            .replace("trailblazer_physical_male","trailblazer_male")
-            .replace("trailblazer_fire_male","trailblazer_male")
-            .replace("trailblazer_imaginary_male","trailblazer_male")
-            .replace("trailblazer_physical_female","trailblazer_female")
-            .replace("trailblazer_fire_female","trailblazer_female")
-            .replace("trailblazer_imaginary_female","trailblazer_female")
+            .replace(Regex("trailblazer_\\w+_male"), "trailblazer_male")
+            .replace(Regex("trailblazer_\\w+_female"), "trailblazer_female")
     }
     if(isCharNoGen){
         registNameFinal = registNameFinal

@@ -85,6 +85,7 @@ import utils.app.Language
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
 import utils.app.showWarningToast
+import utils.app.valueOfWithDefaultPath
 
 private lateinit var localCoroutineScope: CoroutineScope;
 private lateinit var localSnackbarHostState: SnackbarHostState;
@@ -111,7 +112,7 @@ fun LightconeInfoPage(
     var density = LocalDensity.current.density
     val lightconeName = backStackEntry.path<String>("lcName")!!.replace("_", " ")
     val lightconeFileName = backStackEntry.query<String>("fileName")!!
-    val path = types.Path.valueOf(backStackEntry.query<String>("path")!!)
+    val path = valueOfWithDefaultPath(backStackEntry.query<String>("path")!!)
 
     val hazeState = remember { HazeState() }
     val lcInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Lightcone.getLightconeDataFromJSON(lightconeFileName, Language.TextLanguageInstance) as JsonElement) }
