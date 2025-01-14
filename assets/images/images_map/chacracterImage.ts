@@ -7,7 +7,7 @@ const CharacterImage: any = {
     //imageFull: require("../../images/character_full/the_herta_full.webp"),
     fade: require("../../images/character_fade/the_herta_fade.webp"),
   },
-  "Algalea": {
+  "Aglaea": {
     icon: require("../../images/character_icon/aglaea_icon.webp"),
     imageSplash: require("../../images/character_splash/aglaea_splash.webp"),
     imageFull: require("../../images/character_splash/aglaea_splash.webp"),
@@ -15,18 +15,18 @@ const CharacterImage: any = {
     fade: require("../../images/character_fade/aglaea_fade.webp"),
   },
   "Trailblazer Girl (Ice)": {
-    icon: require("../../images/character_icon/trailblazer_female_icon.webp"),
-    imageSplash: require("../../images/character_splash/trailblazer_female_splash.webp"),
-    imageFull: require("../../images/character_splash/trailblazer_female_splash.webp"),
-    //imageFull: require("../../images/character_full/trailblazer_female_full.webp"),
-    fade: require("../../images/character_fade/trailblazer_female_fade.webp"),
+    icon: require("../../images/character_icon/trailblazer_ice_female_icon.webp"),
+    imageSplash: require("../../images/character_splash/trailblazer_ice_female_splash.webp"),
+    imageFull: require("../../images/character_splash/trailblazer_ice_female_splash.webp"),
+    //imageFull: require("../../images/character_full/trailblazer_ice_female_full.webp"),
+    fade: require("../../images/character_fade/trailblazer_ice_female_fade.webp"),
   },
   "Trailblazer Boy (Ice)": {
-    icon: require("../../images/character_icon/trailblazer_male_icon.webp"),
-    imageSplash: require("../../images/character_splash/trailblazer_male_splash.webp"),
-    imageFull: require("../../images/character_splash/trailblazer_male_splash.webp"),
-    //imageFull: require("../../images/character_full/trailblazer_male_full.webp"),
-    fade: require("../../images/character_fade/trailblazer_male_fade.webp"),
+    icon: require("../../images/character_icon/trailblazer_ice_male_icon.webp"),
+    imageSplash: require("../../images/character_splash/trailblazer_ice_male_splash.webp"),
+    imageFull: require("../../images/character_splash/trailblazer_ice_male_splash.webp"),
+    //imageFull: require("../../images/character_full/trailblazer_ice_male_full.webp"),
+    fade: require("../../images/character_fade/trailblazer_ice_male_fade.webp"),
   },
 
   //add in 2.7.0
@@ -60,15 +60,13 @@ const CharacterImage: any = {
   "Feixiao": {
     icon: require("../../images/character_icon/feixiao_icon.webp"),
     imageSplash: require("../../images/character_splash/feixiao_splash.webp"),
-    imageFull: require("../../images/character_splash/feixiao_splash.webp"),
-    //imageFull: require("../../images/character_full/feixiao_full.webp"),
+    imageFull: require("../../images/character_full/feixiao_full.webp"),
     fade: require("../../images/character_fade/feixiao_fade.webp"),
   },
   "Moze": {
     icon: require("../../images/character_icon/moze_icon.webp"),
     imageSplash: require("../../images/character_splash/moze_splash.webp"),
-    imageFull: require("../../images/character_splash/moze_splash.webp"),
-    //imageFull: require("../../images/character_full/moze_full.webp"),
+    imageFull: require("../../images/character_full/moze_full.webp"),
     fade: require("../../images/character_fade/moze_fade.webp"),
   },
 
@@ -76,8 +74,7 @@ const CharacterImage: any = {
   "Jiaoqiu": {
     icon: require("../../images/character_icon/jiaoqiu_icon.webp"),
     imageSplash: require("../../images/character_splash/jiaoqiu_splash.webp"),
-    imageFull: require("../../images/character_splash/jiaoqiu_splash.webp"),
-    //imageFull: require("../../images/character_full/jiaoqiu_full.webp"),
+    imageFull: require("../../images/character_full/jiaoqiu_full.webp"),
     fade: require("../../images/character_fade/jiaoqiu_fade.webp"),
   },
   "Yunli": {

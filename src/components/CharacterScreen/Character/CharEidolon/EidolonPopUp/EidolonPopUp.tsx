@@ -21,8 +21,13 @@ export default React.memo(function EidolonPopUp({ id, onClose }: Props) {
   const { charId, charFullData } = useCharData();
   const { language } = useAppLanguage();
 
+  console.log(charFullData.ranks);
+  console.log(charFullData.ranks?.filter(
+    (rank) => rank?.id === id
+  ));
+
   const charEidolonRank = charFullData.ranks?.filter(
-    (rank) => rank.id === id
+    (rank) => rank?.id === id
   )[0];
 
   const { setFixed } = useContext(FixedContext)!;

@@ -20,18 +20,18 @@ const CharacterSkillMain: any = {
     skill6: require("../../images/character_skill/the_herta_skill6.webp"),
   },
   "Trailblazer Boy (Ice)": {
-    skill1: require("../../images/character_skill/trailblazer_ice_male_skill1.webp"),
-    skill2: require("../../images/character_skill/trailblazer_ice_male_skill2.webp"),
-    skill3: require("../../images/character_skill/trailblazer_ice_male_skill3.webp"),
-    skill4: require("../../images/character_skill/trailblazer_ice_male_skill4.webp"),
-    skill6: require("../../images/character_skill/trailblazer_ice_male_skill6.webp"),
+    skill1: require("../../images/character_skill/trailblazer_ice_skill1.webp"),
+    skill2: require("../../images/character_skill/trailblazer_ice_skill2.webp"),
+    skill3: require("../../images/character_skill/trailblazer_ice_skill3.webp"),
+    skill4: require("../../images/character_skill/trailblazer_ice_skill4.webp"),
+    skill6: require("../../images/character_skill/trailblazer_ice_skill6.webp"),
   },
   "Trailblazer Girl (Ice)": {
-    skill1: require("../../images/character_skill/trailblazer_ice_female_skill1.webp"),
-    skill2: require("../../images/character_skill/trailblazer_ice_female_skill2.webp"),
-    skill3: require("../../images/character_skill/trailblazer_ice_female_skill3.webp"),
-    skill4: require("../../images/character_skill/trailblazer_ice_female_skill4.webp"),
-    skill6: require("../../images/character_skill/trailblazer_ice_female_skill6.webp"),
+    skill1: require("../../images/character_skill/trailblazer_ice_skill1.webp"),
+    skill2: require("../../images/character_skill/trailblazer_ice_skill2.webp"),
+    skill3: require("../../images/character_skill/trailblazer_ice_skill3.webp"),
+    skill4: require("../../images/character_skill/trailblazer_ice_skill4.webp"),
+    skill6: require("../../images/character_skill/trailblazer_ice_skill6.webp"),
   },
   //add in 2.7.0
   "Fugue": {
