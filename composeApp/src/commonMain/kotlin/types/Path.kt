@@ -14,6 +14,7 @@ import files.HaveNotUsed
 import files.Hunt
 import files.Nihility
 import files.Preservation
+import files.Remembrance
 import files.Res
 import files.app_name
 import files.path_the_abundance
@@ -30,6 +31,8 @@ import files.path_the_nihility
 import files.path_the_nihility_abyss
 import files.path_the_preservation
 import files.path_the_preservation_abyss
+import files.path_the_remembrance
+import files.path_the_remembrance_abyss
 import files.pom_pom_failed_issue
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
@@ -43,5 +46,6 @@ enum class Path (var chName : String,var resName : StringResource,var iconWhite 
     Hunt("巡獵",Res.string.Hunt, Res.drawable.path_the_hunt, Res.drawable.path_the_hunt_abyss),
     Nihility("虛無",Res.string.Nihility, Res.drawable.path_the_nihility, Res.drawable.path_the_nihility_abyss),
     Preservation("存謢",Res.string.Preservation, Res.drawable.path_the_preservation, Res.drawable.path_the_preservation_abyss),
+    Remembrance("記憶",Res.string.Remembrance, Res.drawable.path_the_remembrance, Res.drawable.path_the_remembrance_abyss),
     Unspecified("未知",Res.string.HaveNotUsed, Res.drawable.pom_pom_failed_issue, Res.drawable.pom_pom_failed_issue);
 }
