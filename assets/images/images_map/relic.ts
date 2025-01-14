@@ -1,4 +1,20 @@
 const Relic: any = {
+  //Add in 3.0.0
+  "Hero of Triumphant Song": {
+    icon1: require("../relic_icon/hero_of_triumphant_song_1.webp"),
+    icon2: require("../relic_icon/hero_of_triumphant_song_2.webp"),
+    icon3: require("../relic_icon/hero_of_triumphant_song_3.webp"),
+    icon4: require("../relic_icon/hero_of_triumphant_song_4.webp"),
+    pcIcon: require("../relic_pcicon/hero_of_triumphant_song.webp"),
+  },
+  "Poet of Mourning Collapse": {
+    icon1: require("../relic_icon/poet_of_mourning_collapse_1.webp"),
+    icon2: require("../relic_icon/poet_of_mourning_collapse_2.webp"),
+    icon3: require("../relic_icon/poet_of_mourning_collapse_3.webp"),
+    icon4: require("../relic_icon/poet_of_mourning_collapse_4.webp"),
+    pcIcon: require("../relic_pcicon/poet_of_mourning_collapse.webp"),
+  },
+
   //Add in 2.6.0
   "Scholar Lost in Erudition": {
     icon1: require("../relic_icon/scholar_lost_in_erudition_1.webp"),

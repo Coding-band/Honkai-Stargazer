@@ -1,4 +1,33 @@
 const Lightcone: any = {
+  //add in 3.0.0
+  "Into the Unreachable Veil": {
+    icon: require("../../images/lightcone_icon/into_the_unreachable_veil.webp"),
+    imageFull: require("../../images/lightcone_artwork/into_the_unreachable_veil_artwork.webp"),
+  },
+  "Time Woven Into Gold": {
+    icon: require("../../images/lightcone_icon/time_woven_into_gold.webp"),
+    imageFull: require("../../images/lightcone_artwork/time_woven_into_gold_artwork.webp"),
+  },
+  "Sweat Now, Cry Less": {
+    icon: require("../../images/lightcone_icon/sweat_now_cry_less.webp"),
+    imageFull: require("../../images/lightcone_artwork/sweat_now_cry_less_artwork.webp"),
+  },
+  "Geniuses' Greeting": {
+    icon: require("../../images/lightcone_icon/geniuses_greeting.webp"),
+    imageFull: require("../../images/lightcone_artwork/geniuses_greeting_artwork.webp"),
+  },
+  "Victory In a Blink": {
+    icon: require("../../images/lightcone_icon/victory_in_a_blink.webp"),
+    imageFull: require("../../images/lightcone_artwork/victory_in_a_blink_artwork.webp"),
+  },
+  "Reminiscence": {
+    icon: require("../../images/lightcone_icon/reminiscence.webp"),
+    imageFull: require("../../images/lightcone_artwork/reminiscence_artwork.webp"),
+  },
+  "Shadowburn": {
+    icon: require("../../images/lightcone_icon/shadowburn.webp"),
+    imageFull: require("../../images/lightcone_artwork/shadowburn_artwork.webp"),
+  },
   //add in 2.7.0
   "Long Road Leads Home": {
     icon: require("../../images/lightcone_icon/long_road_leads_home.webp"),

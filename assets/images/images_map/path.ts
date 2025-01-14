@@ -41,6 +41,12 @@ const Path: any = {
     localeName: "存护",
     constName: "Preservation",
   },
+  Remembrance: {
+    icon: require("../ui_icon/path_the_remembrance.webp"),
+    icon2: require("../ui_icon/path_the_remembrance_abyss.webp"),
+    localeName: "記憶",
+    constName: "Remembrance",
+  },
 };
 
 export default Path;

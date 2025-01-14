@@ -1,4 +1,34 @@
 const CharacterImage: any = {
+  //add in 3.0.0
+  "The Herta": {
+    icon: require("../../images/character_icon/the_herta_icon.webp"),
+    imageSplash: require("../../images/character_splash/the_herta_splash.webp"),
+    imageFull: require("../../images/character_splash/the_herta_splash.webp"),
+    //imageFull: require("../../images/character_full/the_herta_full.webp"),
+    fade: require("../../images/character_fade/the_herta_fade.webp"),
+  },
+  "Algalea": {
+    icon: require("../../images/character_icon/aglaea_icon.webp"),
+    imageSplash: require("../../images/character_splash/aglaea_splash.webp"),
+    imageFull: require("../../images/character_splash/aglaea_splash.webp"),
+    //imageFull: require("../../images/character_full/aglaea_full.webp"),
+    fade: require("../../images/character_fade/aglaea_fade.webp"),
+  },
+  "Trailblazer Girl (Ice)": {
+    icon: require("../../images/character_icon/trailblazer_female_icon.webp"),
+    imageSplash: require("../../images/character_splash/trailblazer_female_splash.webp"),
+    imageFull: require("../../images/character_splash/trailblazer_female_splash.webp"),
+    //imageFull: require("../../images/character_full/trailblazer_female_full.webp"),
+    fade: require("../../images/character_fade/trailblazer_female_fade.webp"),
+  },
+  "Trailblazer Boy (Ice)": {
+    icon: require("../../images/character_icon/trailblazer_male_icon.webp"),
+    imageSplash: require("../../images/character_splash/trailblazer_male_splash.webp"),
+    imageFull: require("../../images/character_splash/trailblazer_male_splash.webp"),
+    //imageFull: require("../../images/character_full/trailblazer_male_full.webp"),
+    fade: require("../../images/character_fade/trailblazer_male_fade.webp"),
+  },
+
   //add in 2.7.0
   "Fugue": {
     icon: require("../../images/character_icon/fugue_icon.webp"),

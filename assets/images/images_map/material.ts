@@ -1,4 +1,12 @@
-const Material: any = {  
+const Material: any = { 
+  //add in 2.7.0
+  6471577: require("../../images/material_icon/material_seedling_of_manas.webp"),
+  6720910: require("../../images/material_icon/material_flower_of_alaya.webp"),
+  6744567: require("../../images/material_icon/material_bija_of_consciousness.webp"),
+  20170864: require("../../images/material_icon/material_courage_torn_chest.webp"),
+  20389475: require("../../images/material_icon/material_glory_aspersed_torso.webp"),
+  20445700: require("../../images/material_icon/material_fear_stomped_flesh.webp"),
+ 
   //add in 2.6.0
   468393: require("../../images/material_icon/material_chordal_mirage.webp"),
 
