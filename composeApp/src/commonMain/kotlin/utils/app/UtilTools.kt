@@ -350,7 +350,7 @@ fun readFromFile(filePath: String, localOnly : Boolean = false): String {
 
     try {
         // Check if the file exists
-        if (!fileSystem.exists(file) && !localOnly) {
+        if (!fileSystem.exists(file)) {
             val data = readFromOnlineURL(StarbaseAPI().getGitHubStaticAssetURL() + "/data/${filePath}")
             writeToFile(filePath, data)
             return data

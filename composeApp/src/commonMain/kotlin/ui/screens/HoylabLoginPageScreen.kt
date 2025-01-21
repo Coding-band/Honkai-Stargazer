@@ -13,14 +13,10 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -39,20 +35,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Popup
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
-import com.multiplatform.webview.cookie.Cookie
 import com.multiplatform.webview.web.WebView
 import com.multiplatform.webview.web.rememberWebViewState
-import ui.components.AppDialog
-import ui.components.BackIcon
-import ui.components.HeaderData
-import ui.components.PAGE_HEADER_HEIGHT
-import ui.components.PageHeader
-import ui.components.PomPomPopup
-import ui.components.UIButton
-import ui.components.UIButtonSize
-import ui.components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
-import files.ManuallySetup
 import files.NotOK
 import files.OK
 import files.RemarksInLogin
@@ -70,17 +55,25 @@ import moe.tlaster.precompose.navigation.BackStackEntry
 import moe.tlaster.precompose.navigation.Navigator
 import moe.tlaster.precompose.navigation.query
 import types.UserAccount
+import ui.components.AppDialog
+import ui.components.BackIcon
+import ui.components.HeaderData
+import ui.components.PAGE_HEADER_HEIGHT
+import ui.components.PageHeader
+import ui.components.PomPomPopup
+import ui.components.UIButton
+import ui.components.UIButtonSize
+import ui.components.defaultHeaderData
 import ui.components.pomPomPopupInstance
-import utils.app.FontSizeNormal14
-import utils.app.FontSizeNormal16
-import utils.app.LongStringXML
-import utils.annotation.DoItLater
-import utils.hoyolab.HoyolabConst
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
+import utils.annotation.DoItLater
+import utils.app.FontSizeNormal14
+import utils.app.FontSizeNormal16
+import utils.app.LongStringXML
 import utils.app.removeStrQuote
-import utils.device.DeviceInfo
+import utils.hoyolab.HoyolabConst
 import utils.starbase.StarbaseAPI
 
 @DoItLater("Implement the HoyolabLoginPageScreen Webview later")
@@ -153,6 +146,7 @@ fun initDataAfterLogin(
         withContext(Dispatchers.Main){
             pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
             canPopBack.value = true
+            doRecompose.value = !doRecompose.value
         }
     }
 }

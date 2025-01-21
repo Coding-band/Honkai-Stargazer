@@ -103,12 +103,14 @@ import utils.app.toastInstance
 import utils.starbase.StarbaseAPI
 import kotlin.math.max
 
+val doRecompose = mutableStateOf(false)
+
 @Composable
 fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerData: HeaderData = defaultHeaderData
 ){
     val hazeState = remember { HazeState() }
     val wallpaper = Wallpaper.wallpaperList.find { it.id == Settings().getString("backgroundImage", "221000") } ?: Wallpaper.wallpaperList[0]
-    val doRecompose = remember { mutableStateOf(false) }
+
     val urlHandler = LocalUriHandler.current
 
     key(doRecompose.value){

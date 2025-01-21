@@ -115,7 +115,6 @@ import utils.app.removeStrQuote
 import utils.starbase.StarbaseAPI
 import kotlin.math.min
 
-
 @Composable
 fun HomePage(
     modifier: Modifier = Modifier,
@@ -133,8 +132,8 @@ fun HomePage(
         BetaVersionBox()
     }
 
-    key(Language.AppLanguageInstance){
-        println("LANGUAGE CHANGED !")
+    key(doRecompose.value){
+        println("RECOMPOSED !")
         Box(modifier = Modifier
             .statusBarsPadding()
             .haze(hazeState)
@@ -519,6 +518,7 @@ fun ThreeDotsDialog(
                                     UserAccount.resetUserAccount()
                                     Preferences().Leaderboard.resetLeaderboard()
                                     userAccount.value = UserAccount.INSTANCE
+                                    doRecompose.value = !doRecompose.value
                                 } else {
                                     showLoginPopUp.value = true
                                 }
