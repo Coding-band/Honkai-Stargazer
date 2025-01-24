@@ -14,6 +14,7 @@ import coil3.request.CachePolicy
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import coil3.util.DebugLogger
+import com.russhwolf.settings.Settings
 import files.MOCMissionPart1
 import files.MOCMissionPart10
 import files.MOCMissionPart11
@@ -27,7 +28,14 @@ import files.MOCMissionPart7
 import files.MOCMissionPart8
 import files.MOCMissionPart9
 import files.Res
+import files.StatusDays
+import files.StatusHours
+import files.StatusMinutes
+import files.StatusSeconds
+import files.StatusToday
+import files.StatusTomorrow
 import getLocalHttpClient
+import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
@@ -46,9 +54,17 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withTimeout
+import kotlinx.datetime.Clock
+import kotlinx.datetime.DateTimePeriod
 import kotlinx.datetime.Instant
+import kotlinx.datetime.TimeZone
+import kotlinx.datetime.plus
+import kotlinx.datetime.toLocalDateTime
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.jsonArray
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 import okio.FileSystem
 import okio.IOException
 import okio.SYSTEM
@@ -64,6 +80,7 @@ import utils.annotation.VersionUpdateCheck
 import utils.starbase.StarbaseAPI
 import kotlin.math.pow
 import kotlin.math.roundToInt
+import kotlin.time.Duration
 
 /*
  * --------- Deprecated Soon ---------
@@ -319,6 +336,98 @@ fun getAssetsStrByFilePath(filePath: String): String {
         //if(readStr == "{}")  getAssetsJsonStrByFilePath(filePath) else readStr
 }
 
+fun checkAssetsUpdate() {
+    val client = HttpClient {
+        install(ContentNegotiation) {
+            json()
+        }
+        install(HttpTimeout) {
+            requestTimeoutMillis = 4000
+        }
+    }
+
+    CoroutineScope(Dispatchers.IO).launch {
+        try {
+            // Get the latest release version from GitHub
+            val response: HttpResponse = client.get("${StarbaseAPI().getGithubAPIURL()}/releases/latest")
+            val jsonResponse = Json.parseToJsonElement(response.body()).jsonObject
+            val latestVersion = jsonResponse["tag_name"]?.jsonPrimitive?.content ?: return@launch
+
+            // Read the last version from the file
+            val localVersion = Settings().getString("assetsVersion", "")
+
+            // Compare versions
+            if (localVersion != latestVersion) {
+                // Get the list of changed files between the current version and the latest version
+                val diffResponse: HttpResponse = client.get("${StarbaseAPI().getGithubAPIURL()}/compare/$localVersion...$latestVersion")
+                val diffJsonResponse = Json.parseToJsonElement(diffResponse.body()).jsonObject
+                val files = diffJsonResponse["files"]?.jsonArray ?: return@launch
+
+                // Download and update each changed file
+                files.forEach { file ->
+                    val filePath = file.jsonObject["filename"]?.jsonPrimitive?.content ?: return@forEach
+                    val downloadUrl = "${StarbaseAPI().getGithubAPIURL()}/$latestVersion/$filePath"
+                    val fileContent: String = client.get(downloadUrl).body()
+
+                    // Write the updated file content to the local file system
+                    writeToFile(filePath, fileContent)
+                }
+
+                // Save the latest version to the file
+                Settings().getString("assetsVersion", latestVersion)
+            }
+        } catch (e: Exception) {
+            errorLog("UtilTools.kt", "checkAssetsUpdate", e)
+        } finally {
+            client.close()
+        }
+    }
+}
+
+/**
+ * Get Remaining Time String
+ */
+@Composable
+fun getRemainingTimeStr(remainingTime: Int): String {
+    val days = remainingTime / (24 * 60 * 60)
+    val hours = (remainingTime % (24 * 60 * 60)) / (60 * 60)
+    val minutes = (remainingTime % (60 * 60)) / 60
+
+    return (
+            if(days > 0) removeStrQuote(Res.string.StatusDays).replaceStrRes("$"+"{1}", days)+" " else ""+
+            if(hours > 0) removeStrQuote(Res.string.StatusHours).replaceStrRes("$"+"{1}", hours)+" " else ""+
+            if(minutes > 0) removeStrQuote(Res.string.StatusMinutes).replaceStrRes("$"+"{1}",minutes) else ""
+            )
+
+}
+
+@Composable
+fun getFinishTimeStr(remainingTime: Int): String {
+    val now = Clock.System.now()
+    val tz = TimeZone.currentSystemDefault()
+    val finalTime = now.plus(DateTimePeriod(seconds = remainingTime), tz)
+
+    val nowLocale = now.toLocalDateTime(tz)
+    val finalLocale = finalTime.toLocalDateTime(tz)
+
+    //check whether now and finalTime is in the same day
+    return "${removeStrQuote(if(nowLocale.dayOfYear == finalLocale.dayOfYear) Res.string.StatusToday else Res.string.StatusTomorrow)} ${finalLocale.hour}:${finalLocale.minute}"
+}
+
+@Composable
+fun getFinishTimeStr(finishTime: Long): String {
+    val now = Clock.System.now()
+    val tz = TimeZone.currentSystemDefault()
+    val finalTime = Instant.fromEpochSeconds(finishTime)
+
+    val nowLocale = now.toLocalDateTime(tz)
+    val finalLocale = finalTime.toLocalDateTime(tz)
+
+    //check whether now and finalTime is in the same day
+    return "${removeStrQuote(if(nowLocale.dayOfYear == finalLocale.dayOfYear) Res.string.StatusToday else Res.string.StatusTomorrow)} ${finalLocale.hour}:${finalLocale.minute}"
+}
+
+
 fun writeToFile(filePath: String, content: String) {
     val fileSystem = FileSystem.SYSTEM
     val file = FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("data").resolve(filePath)
@@ -346,8 +455,6 @@ fun readFromFile(filePath: String, localOnly : Boolean = false): String {
     val fileSystem = FileSystem.SYSTEM
     val file = FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("data").resolve(filePath)
 
-    println(file)
-
     try {
         // Check if the file exists
         if (!fileSystem.exists(file)) {
@@ -356,6 +463,7 @@ fun readFromFile(filePath: String, localOnly : Boolean = false): String {
             return data
         }
 
+        /*
         if (!localOnly){
             try {
                 // Get local file size and last modified time
@@ -389,6 +497,8 @@ fun readFromFile(filePath: String, localOnly : Boolean = false): String {
                 // No need to response
             }
         }
+
+         */
 
         // Read from file
         return fileSystem.source(file).buffer().use { source ->
