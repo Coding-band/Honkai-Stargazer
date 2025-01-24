@@ -15,6 +15,7 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import kotlinx.serialization.json.long
 import utils.app.Preferences
 import utils.annotation.DoItLater
 import utils.app.errorLog
@@ -331,15 +332,15 @@ class UserAccount(
 
                 if(userNoteData !is JsonNull && !userNoteData.jsonObject.isEmpty()){
                     val userNoteJson = userNoteData.jsonObject
-                    INSTANCE.userNote = UserNote()
-                    INSTANCE.userNote.currStamina = userNoteJson["current_stamina"]!!.jsonPrimitive.int
-                    INSTANCE.userNote.staminaRecoverTime = userNoteJson["stamina_recover_time"]!!.jsonPrimitive.int
-                    INSTANCE.userNote.currReserveStamina = userNoteJson["current_reserve_stamina"]!!.jsonPrimitive.int
-                    INSTANCE.userNote.currTrainScore = userNoteJson["current_train_score"]!!.jsonPrimitive.int
-                    INSTANCE.userNote.maxTrainScore = userNoteJson["max_train_score"]!!.jsonPrimitive.int
-                    INSTANCE.userNote.currUniversialScore = userNoteJson["current_rogue_score"]!!.jsonPrimitive.int
-                    INSTANCE.userNote.targetUniversialScore = userNoteJson["max_rogue_score"]!!.jsonPrimitive.int
-                    INSTANCE.userNote.weeklyBossChances = userNoteJson["weekly_cocoon_cnt"]!!.jsonPrimitive.int
+                    val note = UserNote()
+                    note.currStamina = userNoteJson["current_stamina"]!!.jsonPrimitive.int
+                    note.staminaRecoverTime = userNoteJson["stamina_recover_time"]!!.jsonPrimitive.int
+                    note.currReserveStamina = userNoteJson["current_reserve_stamina"]!!.jsonPrimitive.int
+                    note.currTrainScore = userNoteJson["current_train_score"]!!.jsonPrimitive.int
+                    note.maxTrainScore = userNoteJson["max_train_score"]!!.jsonPrimitive.int
+                    note.currUniversialScore = userNoteJson["current_rogue_score"]!!.jsonPrimitive.int
+                    note.targetUniversialScore = userNoteJson["max_rogue_score"]!!.jsonPrimitive.int
+                    note.weeklyBossChances = userNoteJson["weekly_cocoon_cnt"]!!.jsonPrimitive.int
 
                     val expeditionJson = userNoteJson["expeditions"]!!.jsonArray
                     println("[HoYoLab] Updated Note Data: size = ${expeditionJson.size}, ${Json.encodeToString(expeditionJson)}")
@@ -350,19 +351,24 @@ class UserAccount(
                         for (icon in expeditionObj["avatars"]!!.jsonArray){
                             expeditionCharacterIcon.add(icon.jsonPrimitive.content)
                         }
-                        INSTANCE.userNote.expedition.add(UserExpedition(
+                        note.expedition.add(UserExpedition(
                             status = expeditionObj["status"]!!.jsonPrimitive.content,
                             remainingTime = expeditionObj["remaining_time"]!!.jsonPrimitive.int,
+                            finishTime = expeditionObj["finish_ts"]!!.jsonPrimitive.long,
                             materialName = expeditionObj["name"]!!.jsonPrimitive.content,
                             materialUrl = expeditionObj["item_url"]!!.jsonPrimitive.content,
                             expeditionCharacterIcon = expeditionCharacterIcon
                         ))
                     }
+                    //Implement when all data is updated
+                    INSTANCE.userNote = note
                 }
             }catch (e : Exception){
                 errorLog("UserAccount", "refreshCharacterList()", e)
             }
         }
+
+
 
         //Reaction between UserAccount and Database Server
 
@@ -414,6 +420,7 @@ data class UserNote(
 data class UserExpedition(
     var status: String = "Unknown",
     var remainingTime: Int = 0,
+    var finishTime: Long = 0,
     var materialName: String = "Unknown",
     var materialUrl: String = "Unknown",
     var expeditionCharacterIcon : ArrayList<String> = arrayListOf()
