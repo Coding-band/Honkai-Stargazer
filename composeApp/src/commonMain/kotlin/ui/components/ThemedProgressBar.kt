@@ -15,6 +15,7 @@ import androidx.compose.material.SliderDefaults
 import androidx.compose.material.ripple.RippleAlpha
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
@@ -33,7 +34,8 @@ fun ThemedProgressBar(progress: Number, max: Number, barColor: Color = Color(0xC
         Box(
             modifier = Modifier
                 .height(6.dp)
-                .padding(2.dp)
+                .padding(start = 2.dp, end = 2.dp)
+                .align(Alignment.CenterStart)
                 .fillMaxWidth(min(progress.toFloat() / max.toFloat(), 1f))
                 .background(barColor, shape = RoundedCornerShape(20.dp))
         )

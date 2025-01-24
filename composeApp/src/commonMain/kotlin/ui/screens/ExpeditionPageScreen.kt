@@ -7,27 +7,39 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
+import androidx.compose.material.pullrefresh.PullRefreshIndicator
+import androidx.compose.material.pullrefresh.pullRefresh
 import androidx.compose.material.pullrefresh.rememberPullRefreshState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
 import com.multiplatform.webview.web.WebView
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeChild
@@ -47,10 +59,13 @@ import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.ThemedProgressBar
 import ui.components.defaultHeaderData
+import utils.app.Constants
+import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.getFinishTimeStr
 import utils.app.getRemainingTimeStr
+import utils.app.newImageRequest
 import utils.app.removeStrQuote
 
 @OptIn(ExperimentalMaterialApi::class)
@@ -61,31 +76,39 @@ fun ExpeditionPage(
     headerData: HeaderData = defaultHeaderData
 ) {
     val hazeState = remember { HazeState() }
-    /*
+    val isRefreshing = remember { mutableStateOf(false) }
     val pullRefreshState = rememberPullRefreshState(
         onRefresh = {
-            UserAccount.refreshNoteData()
+            UserAccount.refreshNoteData(isRefreshing)
         },
-        refreshing = false
+        refreshing = isRefreshing.value
     )
 
-     */
     Box(modifier = Modifier.fillMaxSize()) {
 
-        LazyColumn(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(top = PAGE_HEADER_HEIGHT)
-                .statusBarsPadding()
-                .navigationBarsPadding(),
-            contentPadding = PaddingValues(12.dp),
-
-        ) {
-            INSTANCE.userNote.expedition.forEach { expendition ->
-                item {
-                    ExpenditionItem(expendition, hazeState)
+        Box(modifier = Modifier.pullRefresh(pullRefreshState)) {
+            LazyColumn(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(top = PAGE_HEADER_HEIGHT, start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)
+                    .statusBarsPadding()
+                    .navigationBarsPadding(),
+            ) {
+                item { Spacer(modifier = Modifier.height(SCREEN_SAVE_PADDING)) }
+                INSTANCE.userNote.expedition.forEachIndexed { index, expendition ->
+                    item {
+                        if(index == INSTANCE.userNote.expedition.size - 1){
+                            expendition.remainingTime = 2500
+                        }
+                        ExpenditionItem(expendition, hazeState)
+                    }
+                    if(index < INSTANCE.userNote.expedition.size - 1){
+                        item { Spacer(modifier = Modifier.height(12.dp)) }
+                    }
                 }
             }
+
+            PullRefreshIndicator(isRefreshing.value, pullRefreshState, Modifier.align(Alignment.TopCenter).padding(top = PAGE_HEADER_HEIGHT))
         }
 
         PageHeader(
@@ -103,71 +126,83 @@ fun ExpenditionItem(expendition: UserExpedition, hazeState: HazeState) {
     Box(modifier = Modifier
         .fillMaxWidth()
         .wrapContentHeight()
-        .background(Color(0x66F3F9FF))
+        .background(Color(0xCCF3F9FF), RoundedCornerShape(4.dp, 20.dp, 4.dp, 4.dp))
         .clip(shape = RoundedCornerShape(4.dp, 20.dp, 4.dp, 4.dp))
         .hazeChild(hazeState)
     ) {
         //Content
-        Column {
+        Column(modifier = Modifier.fillMaxWidth().wrapContentHeight()) {
             //ExpendInfo
             Row(modifier = Modifier
-                .padding(12.dp)
+                .padding(start = 12.dp, end = 12.dp, top = 12.dp)
+                .fillMaxWidth()
+                .wrapContentHeight()
             ) {
                 //Expendition's Material Target's Icon
                 AsyncImage(
-                    model = expendition.materialUrl,
+                    model = newImageRequest(context = LocalPlatformContext.current, expendition.materialUrl),
                     modifier = Modifier
                         .padding(4.dp)
-                        .background(Color(0x66FFFFFF))
+                        .background(Color(0x66FFFFFF), CircleShape)
                         .clip(shape = CircleShape)
-                        .aspectRatio(1f)
-                        .widthIn(40.dp, 80.dp),
+                        .size(40.dp),
                     contentDescription = null,
                 )
 
                 Spacer(modifier = Modifier.width(8.dp))
 
-                //Expendition's Material Target's Name & Time Remaining
-                Column(modifier = Modifier.weight(1f)) {
-                    //Expendition's Target's Name
-                    Text(
-                        text = expendition.materialName,
-                        color = Color(0xFF222222),
-                        style = FontSizeNormal14(),
-                    )
-
-                    Spacer(modifier = Modifier.width(8.dp))
-
-                    //Expendition's Time Remaining
-                    Text(
-                        text = if(expendition.remainingTime > 0){ getRemainingTimeStr(expendition.remainingTime) } else {
-                            if (expendition.expeditionCharacterIcon.isEmpty()){
-                                removeStrQuote(Res.string.NoDataYet)
-                            } else {
-                                removeStrQuote(Res.string.IsDone)
-                            }
-                        },
-                        color = Color(0xFF222222),
-                        style = FontSizeNormal16(),
-                    )
-                }
-
-                //Character(s)
-                Column {
-                    expendition.expeditionCharacterIcon.forEach { characterIcon ->
-                        AsyncImage(
-                            model = characterIcon,
-                            modifier = Modifier
-                                .padding(4.dp)
-                                .clip(shape = CircleShape)
-                                .aspectRatio(1f)
-                                .widthIn(40.dp, 80.dp),
-                            contentDescription = null,
+                Column(modifier = Modifier.wrapContentSize()) {
+                    //Expediton's Material Name & Character Icon
+                    Row(modifier = Modifier.wrapContentSize()) {
+                        Text(
+                            text = expendition.materialName,
+                            color = Color(0xFF000000),
+                            style = FontSizeNormal16(),
+                            modifier = Modifier.weight(1f),
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
                         )
 
                         Spacer(modifier = Modifier.width(8.dp))
 
-                        //Time When Ends
+                        Row(modifier = Modifier.wrapContentSize()){
+                            expendition.expeditionCharacterIcon.forEachIndexed { index, characterIcon ->
+                                AsyncImage(
+                                    model = characterIcon,
+                                    modifier = Modifier
+                                        .clip(shape = CircleShape)
+                                        .size(20.dp),
+                                    contentDescription = null,
+                                )
+
+                                if(index < expendition.expeditionCharacterIcon.size - 1) {
+                                    Spacer(modifier = Modifier.width(4.dp))
+                                }
+                            }
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(8.dp))
+
+                    //Expendition's Status
+                    Row(modifier = Modifier.wrapContentSize()) {
+                        Text(
+                            text = if(expendition.remainingTime > 0){ getRemainingTimeStr(expendition.remainingTime) } else {
+                                if (expendition.expeditionCharacterIcon.isEmpty()){
+                                    removeStrQuote(Res.string.NoDataYet)
+                                } else {
+                                    removeStrQuote(Res.string.IsDone)
+                                }
+                            },
+                            color = Color(0xFF222222),
+                            style = FontSizeNormal14(),
+                            modifier = Modifier.weight(1f),
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+
+                        Spacer(modifier = Modifier.width(8.dp))
+
                         Text(
                             text = if(expendition.remainingTime > 0){ getFinishTimeStr(expendition.remainingTime) } else {
                                 ""
@@ -175,13 +210,17 @@ fun ExpenditionItem(expendition: UserExpedition, hazeState: HazeState) {
                             color = Color(0xFF222222),
                             style = FontSizeNormal14(),
                         )
-
                     }
                 }
+            }
 
-                //ProgressBar
+            Spacer(modifier = Modifier.height(8.dp))
+
+
+            //ProgressBar
+            Row(modifier = Modifier.padding(start = 12.dp, end = 12.dp, bottom = 12.dp).height(10.dp).fillMaxWidth()) {
                 ThemedProgressBar(
-                    progress = expendition.remainingTime,
+                    progress = 20 * 60 * 60 - expendition.remainingTime,
                     max = 20 * 60 * 60,
                 )
             }
