@@ -57,6 +57,7 @@ import ui.screens.CharacterInfoPage
 import ui.screens.CharacterListPage
 import ui.screens.EventContentPageScreen
 import ui.screens.EventListPageScreen
+import ui.screens.ExpeditionPage
 import ui.screens.HomePage
 import ui.screens.HoyolabLoginPageScreen
 import ui.screens.LightconeInfoPage
@@ -470,6 +471,17 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
                     AboutStargazerPageScreen(
                         navigator = navigator,
                         headerData = Screen.AboutStargazerPageScreen.headerData
+                    )
+                }
+
+        }
+        scene(
+            route = Screen.ExpeditionPageScreen.route) {
+            screenInstance = Screen.ExpeditionPageScreen
+            withBGScreen(isPadMode){
+                ExpeditionPage(
+                        navigator = navigator,
+                        headerData = Screen.ExpeditionPageScreen.headerData
                     )
                 }
 

@@ -4,6 +4,8 @@ import files.AboutTheApp
 import files.ChangeWallPaper
 import files.CharacterList
 import files.Event
+import files.Expedition
+import files.ExpeditionFullName
 import files.HaveNotUsed
 import files.LightconeList
 import files.Login
@@ -30,6 +32,7 @@ import files.phorphos_person_fill
 import files.phorphos_sliders_horizontal_fill
 import files.phorphos_star_fill
 import files.phorphos_sword_fill
+import files.phorphos_users_fill
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
 
@@ -143,5 +146,9 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     data object AboutStargazerPageScreen : Screen(
         "AboutStargazerPageScreen",
         HeaderData(titleRId = Res.string.AboutTheApp, titleIconId = Res.drawable.phorphos_star_fill)
+    )
+    data object ExpeditionPageScreen : Screen(
+        "ExpeditionPageScreen",
+        HeaderData(titleRId = Res.string.ExpeditionFullName, titleIconId = Res.drawable.phorphos_users_fill)
     )
 }
