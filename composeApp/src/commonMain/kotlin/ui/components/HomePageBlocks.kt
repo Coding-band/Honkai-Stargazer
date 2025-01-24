@@ -6,6 +6,7 @@
 
 package ui.components
 
+import androidx.annotation.IntRange
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -25,6 +26,8 @@ import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.OutlinedButton
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -75,6 +78,10 @@ class HomePageBlocks {
         var itemOnClickAction: (() -> Unit)? = null,
         var itemOnClickToNavigate: Screen? = null,
     ) {
+        companion object{
+            @IntRange(1 , 100) var itemOnClickCounter: MutableState<Int> = mutableStateOf(0)
+        }
+
         enum class HomePageBlockItemType(val width: Int, val height: Int) {
             W1H1(1, 1), W2H1(2, 1)
         }

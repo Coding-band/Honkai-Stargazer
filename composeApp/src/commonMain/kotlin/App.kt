@@ -13,6 +13,7 @@ import ui.navigation.Screen
 import ui.screens.SplashPage
 import utils.app.LogExportInit
 import utils.app.Stargazer3Theme
+import utils.app.dateTimeStrInit
 import utils.app.newImageLoader
 
 @Composable
@@ -38,6 +39,7 @@ fun App() {
          */
         LogExportInit()
         PomPomInit()
+        dateTimeStrInit()
 
         PreComposeApp {
             SplashNavInit()

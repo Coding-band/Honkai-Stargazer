@@ -15,6 +15,7 @@ import coil3.request.ImageRequest
 import coil3.request.crossfade
 import coil3.util.DebugLogger
 import com.russhwolf.settings.Settings
+import files.IsDone
 import files.MOCMissionPart1
 import files.MOCMissionPart10
 import files.MOCMissionPart11
@@ -384,25 +385,43 @@ fun checkAssetsUpdate() {
     }
 }
 
+lateinit var StatusDays : String
+lateinit var StatusHours : String
+lateinit var StatusMinutes : String
+lateinit var StatusToday : String
+lateinit var StatusTomorrow : String
+lateinit var StatusFinished : String
+
+
+@Composable
+fun dateTimeStrInit(){
+    StatusDays = removeStrQuote(Res.string.StatusDays)
+    StatusHours = removeStrQuote(Res.string.StatusHours)
+    StatusMinutes = removeStrQuote(Res.string.StatusMinutes)
+    StatusToday = removeStrQuote(Res.string.StatusToday)
+    StatusTomorrow = removeStrQuote(Res.string.StatusTomorrow)
+    StatusFinished = removeStrQuote(Res.string.IsDone)
+}
+
 /**
  * Get Remaining Time String
  */
-@Composable
 fun getRemainingTimeStr(remainingTime: Int): String {
     val days = remainingTime / (24 * 60 * 60)
     val hours = (remainingTime % (24 * 60 * 60)) / (60 * 60)
     val minutes = (remainingTime % (60 * 60)) / 60
 
     return (
-            if(days > 0) removeStrQuote(Res.string.StatusDays).replaceStrRes("$"+"{1}", days)+" " else ""+
-            if(hours > 0) removeStrQuote(Res.string.StatusHours).replaceStrRes("$"+"{1}", hours)+" " else ""+
-            if(minutes > 0) removeStrQuote(Res.string.StatusMinutes).replaceStrRes("$"+"{1}",minutes) else ""
+            if(days > 0) StatusDays.replaceStrRes(days.toString())+" " else ""+
+            if(hours > 0) StatusHours.replaceStrRes(hours.toString())+" " else ""+
+            if(minutes > 0) StatusMinutes.replaceStrRes(minutes.toString()) else StatusFinished
             )
 
 }
 
-@Composable
 fun getFinishTimeStr(remainingTime: Int): String {
+    if (remainingTime == 0) return StatusFinished
+
     val now = Clock.System.now()
     val tz = TimeZone.currentSystemDefault()
     val finalTime = now.plus(DateTimePeriod(seconds = remainingTime), tz)
@@ -411,12 +430,13 @@ fun getFinishTimeStr(remainingTime: Int): String {
     val finalLocale = finalTime.toLocalDateTime(tz)
 
     //check whether now and finalTime is in the same day
-    return "${removeStrQuote(if(nowLocale.dayOfYear == finalLocale.dayOfYear) Res.string.StatusToday else Res.string.StatusTomorrow)} ${finalLocale.hour}:${finalLocale.minute}"
+    return (if(nowLocale.dayOfYear == finalLocale.dayOfYear) StatusToday else StatusTomorrow).replaceStrRes("${finalLocale.hour}:${finalLocale.minute}")
 }
 
-@Composable
 fun getFinishTimeStr(finishTime: Long): String {
     val now = Clock.System.now()
+    if (finishTime < now.toEpochMilliseconds() / 1000) return StatusFinished
+
     val tz = TimeZone.currentSystemDefault()
     val finalTime = Instant.fromEpochSeconds(finishTime)
 
@@ -424,7 +444,7 @@ fun getFinishTimeStr(finishTime: Long): String {
     val finalLocale = finalTime.toLocalDateTime(tz)
 
     //check whether now and finalTime is in the same day
-    return "${removeStrQuote(if(nowLocale.dayOfYear == finalLocale.dayOfYear) Res.string.StatusToday else Res.string.StatusTomorrow)} ${finalLocale.hour}:${finalLocale.minute}"
+    return (if(nowLocale.dayOfYear == finalLocale.dayOfYear) StatusToday else StatusTomorrow).replaceStrRes("${finalLocale.hour}:${finalLocale.minute}")
 }
 
 
@@ -662,7 +682,6 @@ fun getImageNameByRegistName(registName: String, isCharFullImg: Boolean = false,
 /**
  * Replace sth like ${1} to your value
  */
-@Composable
 fun String.replaceStrRes(newValue: String, index : Int = 1) : String{
     return this.replace("\${$index}", newValue)
 }
