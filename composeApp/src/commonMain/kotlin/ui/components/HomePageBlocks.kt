@@ -10,6 +10,7 @@ import androidx.annotation.IntRange
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.PaddingValues
@@ -18,15 +19,19 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.OutlinedButton
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -72,15 +77,15 @@ class HomePageBlocks {
         var itemTitleRId: StringResource? = null,
         var itemIconId: DrawableResource = Res.drawable.phorphos_cake_fill,
         var itemType: HomePageBlockItemType = HomePageBlockItemType.W1H1,
-        var itemTopHighlight: String? = "",
-        var itemTop: String? = "",
-        var itemBottom: String? = "",
-        var itemOnClickAction: (() -> Unit)? = null,
+
+        var itemOnClickAction: ((count : MutableState<Int>) -> Unit)? = null,
         var itemOnClickToNavigate: Screen? = null,
     ) {
-        companion object{
-            @IntRange(1 , 100) var itemOnClickCounter: MutableState<Int> = mutableStateOf(0)
-        }
+        var itemTopHighlight: String? = ""
+        var itemTop: String? = ""
+        var itemBottom: String? = ""
+        var refresh: (() -> Unit)? = null
+        val itemOnClickCount = mutableStateOf(0)
 
         enum class HomePageBlockItemType(val width: Int, val height: Int) {
             W1H1(1, 1), W2H1(2, 1)
@@ -88,6 +93,11 @@ class HomePageBlocks {
 
         override fun toString(): String {
             return "HomePageBlockItem(itemTitle='$itemTitle', itemTitleRId='$itemTitleRId', itemIconId=$itemIconId, itemType=$itemType, itemTopHightlight='$itemTopHighlight', itemTop='$itemTop', itemBottom='$itemBottom')"
+        }
+
+        fun onRefresh(action : (self : HomePageBlockItem) -> Unit): HomePageBlockItem {
+            refresh = { action(this) }
+            return this
         }
     }
 }
@@ -105,12 +115,14 @@ fun HomePageBlock1x1(
     modifier: Modifier = Modifier,
     navigator: Navigator
 ) {
+    LaunchedEffect(blockData.itemOnClickCount.value){
+        blockData.refresh?.invoke()
+    }
+
     OutlinedButton(
         contentPadding = PaddingValues(10.dp),
         colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent),
         onClick = {
-            blockData.itemOnClickAction
-
             if (blockData.itemOnClickToNavigate !== null) {
                 println("Ok I'm Navigating to " + blockData.itemOnClickToNavigate)
                 navigator.navigateLimited(blockData.itemOnClickToNavigate!!.route)
@@ -119,6 +131,8 @@ fun HomePageBlock1x1(
             if(blockData.itemOnClickAction == null && blockData.itemOnClickToNavigate == null){
                 showFunctionIsDevelopingToast()
             }
+
+            blockData.itemOnClickAction?.invoke(blockData.itemOnClickCount)
         },
         shape = RoundedCornerShape(6.dp),
         modifier = Modifier
@@ -172,18 +186,23 @@ fun HomePageBlock2x1(
     modifier: Modifier = Modifier,
     navigator: Navigator
 ) {
+    blockData.refresh?.invoke()
+
+    LaunchedEffect(blockData.itemOnClickCount.value){
+        blockData.refresh?.invoke()
+    }
     OutlinedButton(
         contentPadding = PaddingValues(10.dp),
         colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent),
         onClick = {
-            blockData.itemOnClickAction;
-
             if (blockData.itemOnClickToNavigate !== null) {
                 navigator.navigateLimited(blockData.itemOnClickToNavigate!!.route)
             }
-            if(blockData.itemOnClickAction == null && blockData.itemOnClickToNavigate == null){
+            if (blockData.itemOnClickAction == null && blockData.itemOnClickToNavigate == null) {
                 showFunctionIsDevelopingToast()
             }
+
+            blockData.itemOnClickAction?.invoke(blockData.itemOnClickCount)
         },
         shape = RoundedCornerShape(6.dp),
         modifier = Modifier
@@ -197,13 +216,18 @@ fun HomePageBlock2x1(
             .hazeChild(
                 backgroundScreenHazeState,
                 shape = RoundedCornerShape(6.dp),
-                style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 20.dp else 0.1.dp, Float.MIN_VALUE)
+                style = HazeStyle(
+                    Color.Unspecified,
+                    if (globalHazeBlur.value) 20.dp else 0.1.dp,
+                    Float.MIN_VALUE
+                )
             )
             .fillMaxSize(),
         border = BorderStroke(1.dp, Color(0x66907C54))
     ) {
         Row {
             //icon & name
+            Spacer(Modifier.width(10.dp))
             Column {
                 Image(
                     painter = painterResource(resource = blockData.itemIconId),
@@ -218,9 +242,9 @@ fun HomePageBlock2x1(
                     text =
                     if (blockData.itemTitle === null && blockData.itemTitleRId === null) {
                         removeStrQuote(Res.string.AppStatusLostConnect)
-                    }else if(blockData.itemTitleRId !== null){
+                    } else if (blockData.itemTitleRId !== null) {
                         removeStrQuote(blockData.itemTitleRId!!)
-                    }else {
+                    } else {
                         blockData.itemTitle!!
                     },
                     Modifier
@@ -230,11 +254,11 @@ fun HomePageBlock2x1(
                     textAlign = TextAlign.Center,
                 )
             }
-            Spacer(Modifier.width(32.dp))
-            Column {
+            Spacer(Modifier.width(4.dp))
+            Column(modifier = Modifier.weight(1f)) {
                 Row(
-                    Modifier.height(32.dp),
-                    verticalAlignment = Alignment.Bottom
+                    Modifier.height(32.dp).wrapContentWidth().align(Alignment.CenterHorizontally),
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(
                         text = blockData.itemTopHighlight!!,
@@ -254,8 +278,7 @@ fun HomePageBlock2x1(
                 Spacer(modifier = Modifier.height(7.dp))
                 Text(
                     text = blockData.itemBottom!!,
-                    Modifier
-                        .align(Alignment.CenterHorizontally),
+                    modifier = Modifier.align(Alignment.CenterHorizontally),
                     color = TextColorNormal,
                     style = FontSizeNormal12(),
                 )
