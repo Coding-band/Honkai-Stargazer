@@ -171,10 +171,13 @@ class Constants {
                 itemTitleRId = Res.string.Stamina,
                 itemIconId = Res.drawable.phorphos_moon_fill,
                 itemType = HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1,
-                itemTopHighlight = "${UserAccount.INSTANCE.userNote.currStamina}",
-                itemTop = "/240",
-                itemBottom = "今天18:16"
-            ),
+                itemOnClickAction = {count -> count.value = (count.value + 1) % 2},
+            ).onRefresh { self ->
+                self.itemTopHighlight = if(self.itemOnClickCount.value == 0) "${UserAccount.INSTANCE.userNote.currStamina}" else "${UserAccount.INSTANCE.userNote.currReserveStamina}"
+                self.itemTop = if(self.itemOnClickCount.value == 0) "/${UserAccount.INSTANCE.userNote.maxStamina}" else ""
+                self.itemBottom = if(self.itemOnClickCount.value == 0) getFinishTimeStr(UserAccount.INSTANCE.userNote.staminaRecoverTime) else "----"
+
+            },
             HomePageBlocks.HomePageBlockItem(
                 itemId = "DailyMissionPage",
                 itemTitle = "${UserAccount.INSTANCE.userNote.currTrainScore}/${UserAccount.INSTANCE.userNote.maxTrainScore}",
@@ -193,12 +196,21 @@ class Constants {
                 itemTitleRId = Res.string.Expedition,
                 itemIconId = Res.drawable.phorphos_users_fill,
                 itemType = HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1,
-                itemTopHighlight = "${UserAccount.INSTANCE.userNote.expedition.filter { it.status == "Finished" }.size}",
-                itemTop = "/${UserAccount.INSTANCE.userNote.expedition.size}",
-                itemBottom = if(UserAccount.INSTANCE.userNote.expedition.filter { it.status == "Finished" }.size == UserAccount.INSTANCE.userNote.expedition.size){
-                    "Done"
-                }else "In Progress"
-            ),
+                itemOnClickToNavigate = Screen.ExpeditionPageScreen
+            ).onRefresh { self ->
+                self.itemTopHighlight = "${UserAccount.INSTANCE.userNote.availableExpedition}"
+                self.itemTop = "/${UserAccount.INSTANCE.userNote.totalExpedition}"
+                self.itemBottom =
+                    if(UserAccount.INSTANCE.userNote.expedition.isEmpty()) {
+                        "----"
+                    } else if(UserAccount.INSTANCE.userNote.expedition.none { it.remainingTime != 0 }){
+                        StatusFinished
+                    } else {
+                        getFinishTimeStr(UserAccount.INSTANCE.userNote.expedition.filter { it.remainingTime != 0 }
+                            .maxOfOrNull { it.finishTime } ?: 0)
+                    }
+
+            },
             HomePageBlocks.HomePageBlockItem(
                 itemId = "MOCPage",
                 itemTitleRId = Res.string.MemoryOfChaos,
