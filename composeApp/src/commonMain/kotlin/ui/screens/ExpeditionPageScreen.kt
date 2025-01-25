@@ -1,6 +1,10 @@
 package ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.draggable
+import androidx.compose.foundation.gestures.rememberDraggableState
+import androidx.compose.foundation.gestures.scrollBy
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -22,6 +26,7 @@ import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ExperimentalMaterialApi
@@ -32,6 +37,7 @@ import androidx.compose.material.pullrefresh.rememberPullRefreshState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -49,6 +55,13 @@ import files.Res
 import files.StatusDays
 import files.StatusHours
 import files.StatusMinutes
+import files.phorphos_arrows_clockwise_fill
+import files.phorphos_arrows_clockwise_regular
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import moe.tlaster.precompose.navigation.Navigator
 import types.UserAccount
 import types.UserAccount.Companion.INSTANCE
@@ -57,6 +70,7 @@ import ui.components.BackIcon
 import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
+import ui.components.RefreshBox
 import ui.components.ThemedProgressBar
 import ui.components.defaultHeaderData
 import utils.app.Constants
@@ -77,29 +91,36 @@ fun ExpeditionPage(
 ) {
     val hazeState = remember { HazeState() }
     val isRefreshing = remember { mutableStateOf(false) }
+    /*
     val pullRefreshState = rememberPullRefreshState(
         onRefresh = {
-            UserAccount.refreshNoteData(isRefreshing)
+            isRefreshing.value = true
+            CoroutineScope(Dispatchers.Default).launch {
+                async { UserAccount.refreshNoteData() }.await()
+                println("WTF")
+                withContext(Dispatchers.Main) { isRefreshing.value = false }
+            }
         },
         refreshing = isRefreshing.value
     )
+     */
+    val scrollState = rememberLazyListState()
+    val coroutineScope = rememberCoroutineScope()
 
     Box(modifier = Modifier.fillMaxSize()) {
-
-        Box(modifier = Modifier.pullRefresh(pullRefreshState)) {
+        RefreshBox(isRefreshing.value) {
             LazyColumn(
+                state = scrollState,
                 modifier = Modifier
+                    //.pullRefresh(pullRefreshState)
                     .fillMaxSize()
                     .padding(top = PAGE_HEADER_HEIGHT, start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)
                     .statusBarsPadding()
-                    .navigationBarsPadding(),
+                    .navigationBarsPadding()
             ) {
                 item { Spacer(modifier = Modifier.height(SCREEN_SAVE_PADDING)) }
                 INSTANCE.userNote.expedition.forEachIndexed { index, expendition ->
                     item {
-                        if(index == INSTANCE.userNote.expedition.size - 1){
-                            expendition.remainingTime = 2500
-                        }
                         ExpenditionItem(expendition, hazeState)
                     }
                     if(index < INSTANCE.userNote.expedition.size - 1){
@@ -108,7 +129,7 @@ fun ExpeditionPage(
                 }
             }
 
-            PullRefreshIndicator(isRefreshing.value, pullRefreshState, Modifier.align(Alignment.TopCenter).padding(top = PAGE_HEADER_HEIGHT))
+            //PullRefreshIndicator(isRefreshing.value, pullRefreshState, Modifier.align(Alignment.TopCenter).padding(top = PAGE_HEADER_HEIGHT))
         }
 
         PageHeader(
@@ -116,6 +137,14 @@ fun ExpeditionPage(
             headerData = headerData,
             hazeState = hazeState,
             backIconId = BackIcon.BACK,
+            forwardIconId = Res.drawable.phorphos_arrows_clockwise_fill,
+            onForward = {
+                isRefreshing.value = true
+                CoroutineScope(Dispatchers.Default).launch {
+                    async { UserAccount.refreshNoteData() }.await()
+                    withContext(Dispatchers.Main) { isRefreshing.value = false }
+                }
+            }
         )
     }
 }
