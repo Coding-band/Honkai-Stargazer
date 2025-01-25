@@ -11,6 +11,7 @@ import ui.components.PomPomInit
 import ui.navigation.RootContent
 import ui.navigation.Screen
 import ui.screens.SplashPage
+import utils.app.Language
 import utils.app.LogExportInit
 import utils.app.Stargazer3Theme
 import utils.app.dateTimeStrInit
@@ -37,6 +38,8 @@ fun App() {
          * Here's the logic of the app
          * Start -> SplashNavInit() -> SplashPage --`Wait for Popup`--> RootContent() -> HomePage || BlankPage
          */
+
+        Language().setAppLanguage()
         LogExportInit()
         PomPomInit()
         dateTimeStrInit()

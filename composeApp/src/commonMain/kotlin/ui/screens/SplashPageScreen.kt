@@ -60,9 +60,6 @@ fun SplashPage(
     navigator: Navigator,
     headerData: HeaderData = defaultHeaderData
 ) {
-
-    Language().setAppLanguage()
-
     val hazeStateRoot = remember { HazeState() }
     val showPopup = remember { mutableStateOf(!Preferences().AppSettings.isLangInitialized()) }
 

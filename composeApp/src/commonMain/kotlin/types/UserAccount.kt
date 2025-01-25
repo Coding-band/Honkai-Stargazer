@@ -2,6 +2,8 @@ package types
 
 import TestCookies
 import androidx.compose.material.SnackbarHostState
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
 import com.multiplatform.webview.cookie.Cookie
 import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
@@ -334,6 +336,7 @@ class UserAccount(
                     val userNoteJson = userNoteData.jsonObject
                     val note = UserNote()
                     note.currStamina = userNoteJson["current_stamina"]!!.jsonPrimitive.int
+                    note.maxStamina = userNoteJson["max_stamina"]!!.jsonPrimitive.int
                     note.staminaRecoverTime = userNoteJson["stamina_recover_time"]!!.jsonPrimitive.int
                     note.currReserveStamina = userNoteJson["current_reserve_stamina"]!!.jsonPrimitive.int
                     note.currTrainScore = userNoteJson["current_train_score"]!!.jsonPrimitive.int
@@ -341,6 +344,8 @@ class UserAccount(
                     note.currUniversialScore = userNoteJson["current_rogue_score"]!!.jsonPrimitive.int
                     note.targetUniversialScore = userNoteJson["max_rogue_score"]!!.jsonPrimitive.int
                     note.weeklyBossChances = userNoteJson["weekly_cocoon_cnt"]!!.jsonPrimitive.int
+                    note.availableExpedition = userNoteJson["accepted_epedition_num"]!!.jsonPrimitive.int
+                    note.totalExpedition = userNoteJson["total_expedition_num"]!!.jsonPrimitive.int
 
                     val expeditionJson = userNoteJson["expeditions"]!!.jsonArray
                     println("[HoYoLab] Updated Note Data: size = ${expeditionJson.size}, ${Json.encodeToString(expeditionJson)}")
@@ -404,6 +409,7 @@ fun getCookieValue(cookieString: String, key: String): String? {
 @Serializable
 data class UserNote(
     var currStamina: Int = 0,
+    var maxStamina: Int = 0,
     var staminaRecoverTime : Int = 0,
     var currReserveStamina : Int = 0,
     var currTrainScore: Int = 0,
@@ -411,6 +417,8 @@ data class UserNote(
     var currUniversialScore: Int = 0,
     var targetUniversialScore: Int = 14000,
     var weeklyBossChances: Int = 0,
+    var availableExpedition: Int = 0,
+    var totalExpedition: Int = 4,
     var expedition: ArrayList<UserExpedition> = arrayListOf()
 ){
 

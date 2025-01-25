@@ -33,22 +33,22 @@ import kotlinx.serialization.encoding.Encoder
 //App語言 Language for App (R.string)
 class Language() {
 
-    enum class AppLanguage(var localeName: String, var folderName: String, var localeCode: String) {
-        VOCCHINESE("粵語", "yue", "zh-HK"),
-        EN("English", "en", "en"),
-        ZH_CN("简体中文", "zh_cn", "zh-CN"),
-        ZH_HK("繁體中文", "zh_hk", "zh-TW"),
-        JP("日本語", "jp", "ja-JP"),
-        FR("Français", "fr", "fr-FR"),
-        RU("Русский", "ru", "ru-RU"),
-        DE("Deutsch", "de", "de-DE"),
-        PT("Português", "pt_pt", "pt-PT"),
-        VI("tiếng Việt", "vi", "vi"),
-        ES("Español", "es_es", "es-ES"),
-        KR("한국어", "kr", "ko-KR"),
-        TH("ภาษาไทย", "th", "th-TH"),
-        JYU_YAM("ㄓㄨˋ ㄧㄣ", "zh", "zh-TW"),
-        UK("Українська", "uk", "uk");
+    enum class AppLanguage(var localeName: String, var folderName: String, var localeCode: String, var hoyolabName: String) {
+        VOCCHINESE("粵語", "yue", "zh-HK", "zh-tw"),
+        EN("English", "en", "en", "en-us"),
+        ZH_CN("简体中文", "zh_cn", "zh-CN", "zh-cn"),
+        ZH_HK("繁體中文", "zh_hk", "zh-TW", "zh-tw"),
+        JP("日本語", "jp", "ja-JP", "ja-jp"),
+        FR("Français", "fr", "fr-FR", "fr-fr"),
+        RU("Русский", "ru", "ru-RU", "ru-ru"),
+        DE("Deutsch", "de", "de-DE", "de-de"),
+        PT("Português", "pt_pt", "pt-PT", "pt-pt"),
+        VI("tiếng Việt", "vi", "vi", "vi-vn"),
+        ES("Español", "es_es", "es-ES", "es-es"),
+        KR("한국어", "kr", "ko-KR", "ko-kr"),
+        TH("ภาษาไทย", "th", "th-TH", "th-th"),
+        JYU_YAM("ㄓㄨˋ ㄧㄣ", "zh", "zh-TW", "zh-tw"),
+        UK("Українська", "uk", "uk", "en");
     }
 
     object TextLanguageSerializer : KSerializer<TextLanguage> {

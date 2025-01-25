@@ -18,6 +18,8 @@ import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withTimeout
 import kotlinx.serialization.json.Json
 import utils.annotation.DoItLater
+import utils.app.Language.Companion.AppLanguageInstance
+import utils.app.Language.Companion.TextLanguageInstance
 import utils.app.errorLog
 
 /**
@@ -61,6 +63,7 @@ class HoyolabRequest(
                     append(HttpHeaders.Host, if(platform == PLATFORM.MIYOUSHE){"api-takumi-record.mihoyo.com"} else "bbs-api-os.hoyolab.com")
                     append("ds", if((platform == PLATFORM.MIYOUSHE || dsType == DsType.V2) && body != null){genDSv2(body, url.split("?")[1])} else genDSv1())
                     if(cookieStr != null){append("cookie",cookieStr)}
+                    append("x-rpc-language", AppLanguageInstance.hoyolabName)
                     append("x-rpc-client_type", "5")
                     append("x-rpc-app_version", if(platform == PLATFORM.MIYOUSHE) "2.65.2" else "1.5.0")
                     append("X-Requested-With", if(platform == PLATFORM.MIYOUSHE) "com.mihoyo.hyperion" else "com.mihoyo.hoyolab")
