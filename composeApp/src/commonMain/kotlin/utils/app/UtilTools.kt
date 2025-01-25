@@ -430,7 +430,8 @@ fun getFinishTimeStr(remainingTime: Int): String {
     val finalLocale = finalTime.toLocalDateTime(tz)
 
     //check whether now and finalTime is in the same day
-    return (if(nowLocale.dayOfYear == finalLocale.dayOfYear) StatusToday else StatusTomorrow).replaceStrRes("${finalLocale.hour}:${finalLocale.minute}")
+    return (if(nowLocale.dayOfYear == finalLocale.dayOfYear) StatusToday else StatusTomorrow).replaceStrRes(
+        "${if(finalLocale.hour < 10) "0" else ""}${finalLocale.hour}:${if(finalLocale.minute < 10) "0" else ""}${finalLocale.minute}")
 }
 
 fun getFinishTimeStr(finishTime: Long): String {
@@ -444,7 +445,8 @@ fun getFinishTimeStr(finishTime: Long): String {
     val finalLocale = finalTime.toLocalDateTime(tz)
 
     //check whether now and finalTime is in the same day
-    return (if(nowLocale.dayOfYear == finalLocale.dayOfYear) StatusToday else StatusTomorrow).replaceStrRes("${finalLocale.hour}:${finalLocale.minute}")
+    return (if(nowLocale.dayOfYear == finalLocale.dayOfYear) StatusToday else StatusTomorrow).replaceStrRes(
+        "${if(finalLocale.hour < 10) "0" else ""}${finalLocale.hour}:${if(finalLocale.minute < 10) "0" else ""}${finalLocale.minute}")
 }
 
 
