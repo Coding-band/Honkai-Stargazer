@@ -29,6 +29,7 @@ import utils.hoyolab.HoyolabRequest
 import utils.app.showWarningToast
 import utils.app.writeToFile
 import utils.device.AppInfo
+import utils.hoyolab.genDSv2
 import utils.starbase.StarbaseAPI
 
 @Serializable
@@ -71,8 +72,6 @@ class UserAccount(
 
             INSTANCE.cookies = ""
 
-            val cookieList : Any = TestCookies
-
             when(cookieList){
                 is String -> {
                     INSTANCE.cookies = cookieList
@@ -93,6 +92,8 @@ class UserAccount(
                 }
             }
 
+            println("INSTANCE.cookies : ${INSTANCE.cookies}")
+
             refreshUserAccount()
             UserAbyssRecord.refreshMOCData()
             UserAbyssRecord.refreshPFData()
@@ -110,7 +111,10 @@ class UserAccount(
 
                 if(INSTANCE.cookies == "" || INSTANCE.hoyolabId == ""){ return }
                 //Get User UID & Account Info
+                val userCardBody = api.getGameRecordCard(INSTANCE.hoyolabId)
                 val userCards = api.getGameRecordCard(INSTANCE.hoyolabId).data
+
+                println("userCardBody : "+Json.encodeToString(userCardBody))
 
 
                 @DoItLater("Provide Missing Logic")
@@ -202,8 +206,6 @@ class UserAccount(
 
                 val userFullData = userFull.data
                 var characterList = arrayListOf<Character>()
-
-                println("userFullData : $userFullData")
 
                 //If cannot get data from hoyolab (Either 10035 or server maintaining), then grab data from starbase
                 if(userFullData is JsonNull || userFullData.jsonObject.isEmpty()){

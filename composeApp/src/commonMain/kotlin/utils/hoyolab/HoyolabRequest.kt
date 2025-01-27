@@ -38,9 +38,9 @@ class HoyolabRequest(
     @DoItLater("getDeviceFP, check Miyoushe's status")
     fun send(
         url: String,
-        dsType: DsType = DsType.V1,
+        dsType: DsType = DsType.NONE,
         method: Method = Method.GET,
-        body: String? = null
+        body: String = ""
     ) : HoyolabResponse {
         val client = getLocalHttpClient {
             install(HttpTimeout){
@@ -61,7 +61,7 @@ class HoyolabRequest(
                     append(HttpHeaders.Origin, if(platform == PLATFORM.MIYOUSHE) "https://webstatic.mihoyo.com" else "https://act.hoyolab.com")
                     append(HttpHeaders.Referrer, if(platform == PLATFORM.MIYOUSHE) "https://webstatic.mihoyo.com" else "https://webstatic-sea.hoyolab.com")
                     append(HttpHeaders.Host, if(platform == PLATFORM.MIYOUSHE){"api-takumi-record.mihoyo.com"} else "bbs-api-os.hoyolab.com")
-                    append("ds", if((platform == PLATFORM.MIYOUSHE || dsType == DsType.V2) && body != null){genDSv2(body, url.split("?")[1])} else genDSv1())
+                    append("ds", if(dsType == DsType.V1) genDSv1() else if((platform == PLATFORM.MIYOUSHE || dsType == DsType.V2) && url.split("?").isNotEmpty()){genDSv2(body, url.split("?")[1])} else genDSv1())
                     if(cookieStr != null){append("cookie",cookieStr)}
                     append("x-rpc-language", AppLanguageInstance.hoyolabName)
                     append("x-rpc-client_type", "5")

@@ -36,6 +36,7 @@ import androidx.compose.ui.window.Popup
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
 import com.multiplatform.webview.web.WebView
+import com.multiplatform.webview.web.WebViewState
 import com.multiplatform.webview.web.rememberWebViewState
 import dev.chrisbanes.haze.HazeState
 import files.NotOK
@@ -116,23 +117,24 @@ fun HoyolabLoginPageScreen(
             hazeState = hazeState,
             backIconId = BackIcon.CANCEL,
             onBack = {
-                CoroutineScope(Dispatchers.Default).launch {
-                    initDataAfterLogin(
-                        cookieList = webviewState.cookieManager.getCookies(url),
-                        serverSelected = HoyolabConst.SERVER.UNKNOWN,
-                        snackbarHostState = snackbarHostState,
-                    )
-                }
+                initDataAfterLogin(
+                    webviewState = webviewState,
+                    url = url,
+                    serverSelected = serverSelected,
+                    snackbarHostState = snackbarHostState,
+                )
+                navigator.popBackStack()
             }
         )
     }
 }
 
 fun initDataAfterLogin(
-    cookieList: Any,
+    cookieList: Any = "",
+    webviewState: WebViewState? = null,
+    url: String? = null,
     serverSelected: HoyolabConst.SERVER,
     snackbarHostState: SnackbarHostState? = null,
-    canPopBack: MutableState<Boolean> =  mutableStateOf(false),
 ) {
     CoroutineScope(Dispatchers.Default).launch{
         withContext(Dispatchers.Main){
@@ -140,12 +142,11 @@ fun initDataAfterLogin(
 
         }
 
-        UserAccount.pasteCookies(cookieList, serverSelected, snackbarHostState)
+        UserAccount.pasteCookies(if(webviewState != null && url != null) webviewState.cookieManager.getCookies(url) else cookieList, serverSelected, snackbarHostState)
         StarbaseAPI().updateUserAccountInfo()
         StarbaseAPI().updateCharData()
         withContext(Dispatchers.Main){
             pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
-            canPopBack.value = true
             doRecompose.value = !doRecompose.value
         }
     }
@@ -347,13 +348,11 @@ fun HoyolabManualLoginPopup(modifier: Modifier = Modifier, showPopup : MutableSt
                             UIButton(
                                 text = removeStrQuote(Res.string.OK),
                                 onClick = {
-                                    CoroutineScope(Dispatchers.Default).launch {
-                                        initDataAfterLogin(
-                                            cookieList = cookieInput.value,
-                                            serverSelected = serverList[serverSelectedIndex.value],
-                                            snackbarHostState = null,
-                                        )
-                                    }
+                                    initDataAfterLogin(
+                                        cookieList = cookieInput.value,
+                                        serverSelected = serverList[serverSelectedIndex.value],
+                                        snackbarHostState = null,
+                                    )
                                     showPopup.value = false
                                 }
                             )

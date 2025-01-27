@@ -31,7 +31,7 @@ fun genDSv1(): String {
 fun genDSv2(body: String, queryFromURL: String): String {
     val salt = "xV8v4Qu54lUKrEYFZkJhB8cuOh9Asafs"
     val time = Clock.System.now().toEpochMilliseconds()/1000
-    val preQuery = queryFromURL.split("&".toRegex()).sorted() as ArrayList<String>
+    val preQuery = queryFromURL.split("&".toRegex()).sorted().toCollection(ArrayList())
     var query = ""
     for (index in preQuery.indices) {
         preQuery[index] += if (index + 1 < preQuery.size) "&" else ""
