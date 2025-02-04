@@ -84,7 +84,7 @@ import utils.app.removeStrQuote
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun ExpeditionPage(
+fun ExpeditionPageScreen(
     modifier: Modifier = Modifier,
     navigator: Navigator,
     headerData: HeaderData = defaultHeaderData
