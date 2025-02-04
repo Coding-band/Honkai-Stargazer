@@ -57,7 +57,7 @@ import ui.screens.CharacterInfoPage
 import ui.screens.CharacterListPage
 import ui.screens.EventContentPageScreen
 import ui.screens.EventListPageScreen
-import ui.screens.ExpeditionPage
+import ui.screens.ExpeditionPageScreen
 import ui.screens.HomePage
 import ui.screens.HoyolabLoginPageScreen
 import ui.screens.LightconeInfoPage
@@ -65,6 +65,7 @@ import ui.screens.LightconeListPage
 import ui.screens.MakeBackground
 import ui.screens.MapPageScreen
 import ui.screens.MemoryOfChaosMissionPageScreen
+import ui.screens.ProficientLeaderboardPageScreen
 import ui.screens.PureFictionMissionPageScreen
 import ui.screens.RelicInfoPage
 import ui.screens.RelicListPage
@@ -479,9 +480,20 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
             route = Screen.ExpeditionPageScreen.route) {
             screenInstance = Screen.ExpeditionPageScreen
             withBGScreen(isPadMode){
-                ExpeditionPage(
+                ExpeditionPageScreen(
                         navigator = navigator,
                         headerData = Screen.ExpeditionPageScreen.headerData
+                    )
+                }
+
+        }
+        scene(
+            route = Screen.ProficientLeaderboardPageScreen.route) {
+            screenInstance = Screen.ProficientLeaderboardPageScreen
+            withBGScreen(isPadMode){
+                ProficientLeaderboardPageScreen(
+                        navigator = navigator,
+                        headerData = Screen.ProficientLeaderboardPageScreen.headerData
                     )
                 }
 

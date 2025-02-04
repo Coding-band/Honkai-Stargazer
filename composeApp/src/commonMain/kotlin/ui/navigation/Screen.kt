@@ -15,6 +15,7 @@ import files.MemoryOfChaos
 import files.PureFiction
 import files.RelicList
 import files.Res
+import files.ScoreLevelLeaderboard
 import files.Setting
 import files.UIDSearch
 import files.UserInfoGameData
@@ -32,6 +33,7 @@ import files.phorphos_person_fill
 import files.phorphos_sliders_horizontal_fill
 import files.phorphos_star_fill
 import files.phorphos_sword_fill
+import files.phorphos_trophy_fill
 import files.phorphos_users_fill
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
@@ -150,5 +152,9 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     data object ExpeditionPageScreen : Screen(
         "ExpeditionPageScreen",
         HeaderData(titleRId = Res.string.ExpeditionFullName, titleIconId = Res.drawable.phorphos_users_fill)
+    )
+    data object ProficientLeaderboardPageScreen : Screen(
+        "ProficientLeaderboardPageScreen",
+        HeaderData(titleRId = Res.string.ScoreLevelLeaderboard, titleIconId = Res.drawable.phorphos_trophy_fill)
     )
 }

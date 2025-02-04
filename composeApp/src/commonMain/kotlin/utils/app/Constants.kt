@@ -232,7 +232,8 @@ class Constants {
             HomePageBlocks.HomePageBlockItem(
                 itemId = "ScoreLevelLeaderboard",
                 itemTitleRId = Res.string.ScoreLevelLeaderboard,
-                itemIconId = Res.drawable.phorphos_trophy_fill
+                itemIconId = Res.drawable.phorphos_trophy_fill,
+                itemOnClickToNavigate = Screen.ProficientLeaderboardPageScreen
             ),
             HomePageBlocks.HomePageBlockItem(
                 itemId = "MemoryOfChaosLeaderboard",

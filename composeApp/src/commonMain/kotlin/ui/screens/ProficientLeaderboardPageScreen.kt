@@ -1,0 +1,346 @@
+package ui.screens
+
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.defaultMinSize
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.DropdownMenuItem
+import androidx.compose.material.SnackbarHostState
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.IntSize
+import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
+import dev.chrisbanes.haze.HazeState
+import dev.chrisbanes.haze.haze
+import files.CharSoul
+import files.NoOnlineData
+import files.Res
+import files.ScoreLevel
+import files.bg_transparent
+import files.ic_person_btn
+import files.ic_selected_orange_circle
+import files.phorphos_caret_down_regular
+import files.pom_pom_praying
+import kotlinx.serialization.json.int
+import kotlinx.serialization.json.jsonArray
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
+import moe.tlaster.precompose.navigation.Navigator
+import org.jetbrains.compose.resources.painterResource
+import types.Character
+import types.Character.Companion.charExtListJson
+import types.Character.Companion.charListJson
+import types.CharacterProficient
+import types.CombatType
+import types.ImageFolder
+import types.Lightcone
+import types.Path
+import types.UserAccount
+import ui.components.DropdownMenuNoPadding
+import ui.components.HeaderData
+import ui.components.PAGE_HEADER_HEIGHT
+import ui.components.PageHeaderAlpha
+import ui.components.TitleHeader
+import ui.components.defaultHeaderData
+import ui.navigation.Screen
+import ui.navigation.navigateLimited
+import utils.app.CharWeightList
+import utils.app.Constants
+import utils.app.Constants.Companion.LOST_IMAGE_DRAWABLE
+import utils.app.FontSizeNormal14
+import utils.app.FontSizeNormal20
+import utils.app.Language
+import utils.app.formatDecimal
+import utils.app.newImageRequest
+import utils.app.pxToDp
+import utils.app.removeStrQuote
+import utils.app.replaceStrRes
+import utils.starbase.StarbaseAPI
+
+data class ProficientSchool(
+    val zhName: String = "(˘•ω•˘)",
+    val enName: String = "Default",
+    val schoolIndex: Int,
+    val charId: Int,
+    val icon: String = "",
+    val combatType: CombatType = CombatType.Unspecified,
+)
+
+@Composable
+fun ProficientLeaderboardPageScreen(
+    modifier: Modifier = Modifier,
+    navigator: Navigator,
+    headerData: HeaderData = defaultHeaderData,
+    snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
+) {
+    val hazeState = remember { HazeState() }
+    val selectedLeaderboardIndex = remember { mutableStateOf(0) }
+    val schoolList by remember { mutableStateOf(arrayListOf<ProficientSchool>()) }
+    val leaderboardList = arrayListOf<CharacterProficient>()
+    val isExpandSchoolDropdown = remember { mutableStateOf(false) }
+    val optionTextViewSize = remember { mutableStateOf(IntSize.Zero) }
+    val density = LocalDensity.current.density
+
+    LaunchedEffect(Unit){
+        CharWeightList.INSTANCE.jsonObject.mapKeys { item ->
+            val listDataJson = charListJson.jsonArray.firstOrNull { charData -> charData.jsonObject["charId"]!!.jsonPrimitive.content == item.key }
+            val listExtDataJson = charExtListJson.jsonArray.firstOrNull { charData -> charData.jsonObject["officialId"]!!.jsonPrimitive.content == item.key }
+
+            if(listExtDataJson == null || listDataJson == null) return@mapKeys
+
+            item.value.jsonArray.forEachIndexed { index, schoolData ->
+                schoolList.add(
+                    ProficientSchool(
+                        charId = item.key.toInt(),
+                        schoolIndex = index,
+                        zhName = schoolData.jsonObject["zh_name"]?.jsonPrimitive?.content ?: "???",
+                        enName = schoolData.jsonObject["en_name"]?.jsonPrimitive?.content ?: "???",
+                        icon = schoolData.jsonObject["icon"]?.jsonPrimitive?.content ?: "",
+                        combatType = CombatType.valueOf(listDataJson.jsonObject["element"]?.jsonPrimitive?.content ?: "Unspecified")
+                    )
+                )
+            }
+        }
+    }
+
+    LaunchedEffect(selectedLeaderboardIndex.value){
+        leaderboardList.clear()
+        leaderboardList.addAll(
+            StarbaseAPI().getProfLeaderboardList(
+                schoolList[selectedLeaderboardIndex.value].charId, schoolList[selectedLeaderboardIndex.value].schoolIndex
+            )
+        )
+    }
+
+
+    Box(Modifier.fillMaxSize()) {
+
+        Column {
+            Spacer(
+                modifier = Modifier
+                    .statusBarsPadding()
+                    .height(PAGE_HEADER_HEIGHT)
+            )
+
+            //DropDownBar
+            Row {
+                Text(
+                    text = removeStrQuote(Res.string.ScoreLevel),
+                    style = FontSizeNormal20(),
+                    color = Color.White,
+                    modifier = Modifier.align(Alignment.CenterVertically)
+                )
+
+                Spacer(Modifier.weight(1f))
+
+                Box(
+                    contentAlignment = Alignment.BottomCenter,
+                    modifier = Modifier
+                        .defaultMinSize(100.dp, 30.dp)
+                        .wrapContentSize()
+                        .clip(RoundedCornerShape(43.dp))
+                        .clickable { isExpandSchoolDropdown.value = !isExpandSchoolDropdown.value }
+                ) {
+                    Row(
+                        modifier = Modifier.background(Color(0x66000000), RoundedCornerShape(43.dp))
+                            .wrapContentWidth()
+                            .onSizeChanged { optionTextViewSize.value = it },
+                    ){
+                        Text(
+                            color = Color.White,
+                            text = if (schoolList.isEmpty()) "" else {
+                                if(Language.TextLanguageInstance == Language.TextLanguage.ZH_HK || Language.TextLanguageInstance == Language.TextLanguage.ZH_CN)
+                                    schoolList[selectedLeaderboardIndex.value].zhName
+                                else schoolList[selectedLeaderboardIndex.value].enName
+                            },
+                            style = FontSizeNormal14(),
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier.padding(12.dp).align(Alignment.CenterVertically)
+                        )
+                        Image(
+                            painter = painterResource(Res.drawable.phorphos_caret_down_regular),
+                            contentDescription = null,
+                            modifier = Modifier.padding(12.dp).size(16.dp).align(Alignment.CenterVertically),
+                            colorFilter = ColorFilter.tint(Color.White)
+                        )
+                    }
+                    //對於DropdownItem沒法按照設計稿展示，暫時無解
+                    DropdownMenuNoPadding(
+                        expanded = isExpandSchoolDropdown.value,
+                        onDismissRequest = { isExpandSchoolDropdown.value = false },
+                        modifier = Modifier
+                            .background(Color(0xFF3E3E47))
+                            .width(pxToDp(optionTextViewSize.value.width, density)),
+                    ) {
+                        schoolList.forEachIndexed { index, option ->
+                            DropdownMenuItem(
+                                onClick = {
+                                    selectedLeaderboardIndex.value = index
+                                    isExpandSchoolDropdown.value = false
+                                    //optionAction(schoolIndex.value)
+                                },
+                                modifier = Modifier.background(if(selectedLeaderboardIndex.value == index) Color(0x0F000000) else Color(0x00000000))
+                            ) {
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Image(
+                                        painter = painterResource(option.combatType.iconColor),
+                                        modifier = Modifier.size(24.dp).padding(end = 6.dp).align(Alignment.CenterVertically),
+                                        contentDescription = "CombatType Icon"
+                                    )
+                                    AsyncImage(
+                                        model = newImageRequest(context = LocalPlatformContext.current, option.icon),
+                                        contentDescription = null,
+                                        modifier = Modifier.size(36.dp),
+                                        error = painterResource(LOST_IMAGE_DRAWABLE)
+                                    )
+                                    Spacer(Modifier.width(8.dp))
+                                    Text(
+                                        text = if(listOf(Language.TextLanguage.ZH_HK, Language.TextLanguage.ZH_CN).contains(Language.TextLanguageInstance)) option.zhName else option.enName,
+                                        style = FontSizeNormal14(),
+                                        color = Color.White,
+                                        textAlign = TextAlign.Center,
+                                        modifier = Modifier.padding(12.dp).align(Alignment.CenterVertically)
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            LazyColumn(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
+                    .haze(hazeState),
+                verticalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
+
+                if(leaderboardList.isEmpty()){
+                    item {
+                        Column {
+                            Image(
+                                painter = painterResource(Res.drawable.pom_pom_praying),
+                                contentDescription = "No Data",
+                                modifier = Modifier.fillMaxSize(0.5f).align(Alignment.CenterHorizontally),
+                                colorFilter = ColorFilter.tint(Color(0x66000000))
+                            )
+
+                            Text(
+                                text = removeStrQuote(Res.string.NoOnlineData),
+                                style = FontSizeNormal20(),
+                                color = Color.White,
+                                textAlign = TextAlign.Center,
+                                modifier = Modifier.fillMaxSize().align(Alignment.CenterHorizontally)
+                            )
+                        }
+                    }
+                }else{
+                    items(leaderboardList) { item ->
+                        ProfLeaderboardItem(item)
+                    }
+                }
+                //Comments & Suggestions
+            }
+        }
+
+
+        PageHeaderAlpha(
+            navigator = navigator,
+            hazeState = hazeState,
+        ){
+            TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
+        }
+    }
+}
+
+@Composable
+fun ProfLeaderboardItem(charProf: CharacterProficient){
+    val lcDataJson = Lightcone.lcListJson.jsonArray.firstOrNull { lcData -> lcData.jsonObject["fileName"]!!.jsonPrimitive.int == charProf.lcId }
+    val lcName = lcDataJson?.jsonObject?.get("name")?.jsonPrimitive?.content ?: ""
+    Row {
+        Text(
+            text = charProf.rank.toString(),
+            style = FontSizeNormal20(),
+            color = when(charProf.rank){
+                1 -> Color(0xFFFFD070)
+                2 -> Color(0xCCF3F9FF)
+                3 -> Color(0xFFAB6F66)
+                else -> Color.White
+            },
+            modifier = Modifier.align(Alignment.CenterVertically)
+        )
+
+        Spacer(Modifier.width(12.dp))
+
+        Text(
+            text = charProf.playerName,
+            style = FontSizeNormal20(),
+            color = Color.White,
+            modifier = Modifier.align(Alignment.CenterVertically).weight(1f)
+        )
+
+        Spacer(Modifier.width(8.dp))
+
+        AsyncImage(
+            model = newImageRequest(
+                LocalPlatformContext.current,
+                Lightcone.getLightconeImageFromJSON(ImageFolder.LC_ICON, lcName)
+            ),
+            contentDescription = null,
+            modifier = Modifier.size(36.dp),
+            error = painterResource(LOST_IMAGE_DRAWABLE)
+        )
+
+        Spacer(Modifier.width(8.dp))
+
+        Text(
+            text = removeStrQuote(Res.string.CharSoul).replaceStrRes(charProf.charSoul.toString()),
+            style = FontSizeNormal20(),
+            color = Color.White,
+            modifier = Modifier.align(Alignment.CenterVertically)
+        )
+
+        Spacer(Modifier.width(8.dp))
+
+        Text(
+            text = formatDecimal(charProf.charTotalScore, 2),
+            style = FontSizeNormal20(),
+            color = Color.White,
+            modifier = Modifier.align(Alignment.CenterVertically).defaultMinSize(50.dp),
+            minLines = 1
+        )
+
+    }
+}
