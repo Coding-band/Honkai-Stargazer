@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
@@ -19,6 +20,7 @@ import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.SnackbarHostState
@@ -37,6 +39,7 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
@@ -44,6 +47,7 @@ import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.CharSoul
+import files.NoDataYet
 import files.NoOnlineData
 import files.Res
 import files.ScoreLevel
@@ -182,26 +186,27 @@ fun ProficientLeaderboardPageScreen(
                                 .onSizeChanged { optionTextViewSize.value = it },
                         ) {
                             Row(verticalAlignment = Alignment.CenterVertically) {
-                                Image(
-                                    painter = painterResource(schoolList[selectedLeaderboardIndex.value].combatType.iconColor),
-                                    modifier = Modifier.size(24.dp).padding(end = 6.dp).align(Alignment.CenterVertically),
-                                    contentDescription = "CombatType Icon"
-                                )
+                                Spacer(Modifier.width(12.dp))
                                 AsyncImage(
                                     model = newImageRequest(context = LocalPlatformContext.current, Character.getCharacterImageFromOfficialId(ImageFolder.CHAR_ICON,
                                         schoolList[selectedLeaderboardIndex.value].charId.toString()
                                     )),
                                     contentDescription = null,
-                                    modifier = Modifier.size(36.dp),
+                                    modifier = Modifier.size(36.dp).clip(CircleShape).align(Alignment.CenterVertically),
                                     error = painterResource(LOST_IMAGE_DRAWABLE)
                                 )
                                 Spacer(Modifier.width(8.dp))
+                                Image(
+                                    painter = painterResource(schoolList[selectedLeaderboardIndex.value].combatType.iconColor),
+                                    modifier = Modifier.size(24.dp).padding(end = 6.dp).align(Alignment.CenterVertically),
+                                    contentDescription = "CombatType Icon"
+                                )
                                 Text(
                                     text = if (listOf(Language.TextLanguage.ZH_HK, Language.TextLanguage.ZH_CN).contains(Language.TextLanguageInstance)) schoolList[selectedLeaderboardIndex.value].zhName else schoolList[selectedLeaderboardIndex.value].enName,
                                     style = FontSizeNormal14(),
                                     color = Color.White,
                                     textAlign = TextAlign.Center,
-                                    modifier = Modifier.padding(12.dp).align(Alignment.CenterVertically)
+                                    modifier = Modifier.padding(4.dp).align(Alignment.CenterVertically)
                                 )
                             }
                             Image(
@@ -218,7 +223,9 @@ fun ProficientLeaderboardPageScreen(
                         onDismissRequest = { isExpandSchoolDropdown.value = false },
                         modifier = Modifier
                             .background(Color(0xFF3E3E47))
-                            .width(pxToDp(optionTextViewSize.value.width, density)),
+                            //.width(pxToDp(optionTextViewSize.value.width, density)),
+                            .wrapContentWidth()
+                            .statusBarsPadding().navigationBarsPadding()
                     ) {
                         schoolList.forEachIndexed { index, option ->
                             DropdownMenuItem(
@@ -230,26 +237,26 @@ fun ProficientLeaderboardPageScreen(
                                 modifier = Modifier.background(if (selectedLeaderboardIndex.value == index) Color(0x0F000000) else Color(0x00000000))
                             ) {
                                 Row(verticalAlignment = Alignment.CenterVertically) {
-                                    Image(
-                                        painter = painterResource(option.combatType.iconColor),
-                                        modifier = Modifier.size(24.dp).padding(end = 6.dp).align(Alignment.CenterVertically),
-                                        contentDescription = "CombatType Icon"
-                                    )
                                     AsyncImage(
                                         model = newImageRequest(context = LocalPlatformContext.current, Character.getCharacterImageFromOfficialId(ImageFolder.CHAR_ICON,
                                             option.charId.toString()
                                         )),
                                         contentDescription = null,
-                                        modifier = Modifier.size(36.dp),
+                                        modifier = Modifier.size(36.dp).clip(CircleShape).align(Alignment.CenterVertically),
                                         error = painterResource(LOST_IMAGE_DRAWABLE)
                                     )
                                     Spacer(Modifier.width(8.dp))
+                                    Image(
+                                        painter = painterResource(option.combatType.iconColor),
+                                        modifier = Modifier.size(24.dp).padding(end = 6.dp).align(Alignment.CenterVertically),
+                                        contentDescription = "CombatType Icon"
+                                    )
                                     Text(
                                         text = if (listOf(Language.TextLanguage.ZH_HK, Language.TextLanguage.ZH_CN).contains(Language.TextLanguageInstance)) option.zhName else option.enName,
                                         style = FontSizeNormal14(),
                                         color = Color.White,
                                         textAlign = TextAlign.Center,
-                                        modifier = Modifier.padding(12.dp).align(Alignment.CenterVertically)
+                                        modifier = Modifier.padding(4.dp).align(Alignment.CenterVertically)
                                     )
                                 }
                             }
@@ -276,7 +283,7 @@ fun ProficientLeaderboardPageScreen(
                             )
 
                             Text(
-                                text = removeStrQuote(Res.string.NoOnlineData),
+                                text = removeStrQuote(Res.string.NoDataYet),
                                 style = FontSizeNormal20(),
                                 color = Color.White,
                                 textAlign = TextAlign.Center,
@@ -331,15 +338,24 @@ fun ProfLeaderboardItem(charProf: CharacterProficient) {
         Spacer(Modifier.width(8.dp))
 
         //DoItLater("Add Cast-Handle for lc_id == null")
-        AsyncImage(
-            model = newImageRequest(
-                LocalPlatformContext.current,
-                Lightcone.getLightconeImageFromJSON(ImageFolder.LC_ICON, lcName)
-            ),
-            contentDescription = null,
-            modifier = Modifier.size(36.dp),
-            error = painterResource(LOST_IMAGE_DRAWABLE)
-        )
+        if(lcName.isEmpty()){
+            Text(
+                text = "---",
+                style = FontSizeNormal20(),
+                color = Color.White,
+                modifier = Modifier.align(Alignment.CenterVertically).size(36.dp)
+            )
+        }else{
+            AsyncImage(
+                model = newImageRequest(
+                    LocalPlatformContext.current,
+                    Lightcone.getLightconeImageFromJSON(ImageFolder.LC_ICON, lcName)
+                ),
+                contentDescription = null,
+                modifier = Modifier.size(36.dp),
+                error = painterResource(LOST_IMAGE_DRAWABLE)
+            )
+        }
 
         Spacer(Modifier.width(8.dp))
 
@@ -350,13 +366,13 @@ fun ProfLeaderboardItem(charProf: CharacterProficient) {
             modifier = Modifier.align(Alignment.CenterVertically)
         )
 
-        Spacer(Modifier.width(8.dp))
+        Spacer(Modifier.width(16.dp))
 
         Text(
             text = formatDecimal(charProf.charTotalScore, 2),
             style = FontSizeNormal20(),
             color = Color.White,
-            modifier = Modifier.align(Alignment.CenterVertically).defaultMinSize(50.dp),
+            modifier = Modifier.align(Alignment.CenterVertically).defaultMinSize(50.dp, minHeight = Dp.Unspecified),
             minLines = 1
         )
     }

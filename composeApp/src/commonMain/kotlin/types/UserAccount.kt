@@ -72,6 +72,8 @@ class UserAccount(
 
             INSTANCE.cookies = ""
 
+            val cookieList = TestCookies as Any
+
             when(cookieList){
                 is String -> {
                     INSTANCE.cookies = cookieList
