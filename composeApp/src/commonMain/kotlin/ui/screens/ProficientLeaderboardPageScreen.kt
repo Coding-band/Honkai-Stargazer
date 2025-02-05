@@ -98,7 +98,6 @@ data class ProficientSchool(
     val enName: String = "Default",
     val schoolIndex: Int,
     val charId: Int,
-    val icon: String = "",
     val combatType: CombatType = CombatType.Unspecified,
 )
 
@@ -135,7 +134,7 @@ fun ProficientLeaderboardPageScreen(
                                 schoolIndex = index,
                                 zhName = schoolData.jsonObject["zh_name"]?.jsonPrimitive?.content ?: "???",
                                 enName = schoolData.jsonObject["en_name"]?.jsonPrimitive?.content ?: "???",
-                                icon = schoolData.jsonObject["icon"]?.jsonPrimitive?.content ?: "",
+                                //icon = schoolData.jsonObject["icon"]?.jsonPrimitive?.content ?: "",
                                 combatType = CombatType.valueOf(listDataJson.jsonObject["element"]?.jsonPrimitive?.content ?: "Unspecified")
                             )
                         )
@@ -189,7 +188,9 @@ fun ProficientLeaderboardPageScreen(
                                     contentDescription = "CombatType Icon"
                                 )
                                 AsyncImage(
-                                    model = newImageRequest(context = LocalPlatformContext.current, schoolList[selectedLeaderboardIndex.value].icon),
+                                    model = newImageRequest(context = LocalPlatformContext.current, Character.getCharacterImageFromOfficialId(ImageFolder.CHAR_ICON,
+                                        schoolList[selectedLeaderboardIndex.value].charId.toString()
+                                    )),
                                     contentDescription = null,
                                     modifier = Modifier.size(36.dp),
                                     error = painterResource(LOST_IMAGE_DRAWABLE)
@@ -235,7 +236,9 @@ fun ProficientLeaderboardPageScreen(
                                         contentDescription = "CombatType Icon"
                                     )
                                     AsyncImage(
-                                        model = newImageRequest(context = LocalPlatformContext.current, option.icon),
+                                        model = newImageRequest(context = LocalPlatformContext.current, Character.getCharacterImageFromOfficialId(ImageFolder.CHAR_ICON,
+                                            option.charId.toString()
+                                        )),
                                         contentDescription = null,
                                         modifier = Modifier.size(36.dp),
                                         error = painterResource(LOST_IMAGE_DRAWABLE)
@@ -327,6 +330,7 @@ fun ProfLeaderboardItem(charProf: CharacterProficient) {
 
         Spacer(Modifier.width(8.dp))
 
+        //DoItLater("Add Cast-Handle for lc_id == null")
         AsyncImage(
             model = newImageRequest(
                 LocalPlatformContext.current,
