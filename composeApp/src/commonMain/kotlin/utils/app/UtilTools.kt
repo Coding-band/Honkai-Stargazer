@@ -5,6 +5,7 @@ import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.saveable.Saver
 import androidx.compose.runtime.saveable.listSaver
+import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import coil3.ImageLoader
@@ -708,4 +709,8 @@ val JsonElementSaver: Saver<JsonElement, Any> = listSaver(
     restore = { Json.parseToJsonElement(it[0]) }
 )
 
-private var sJob: Job? = null
+fun <T> SnapshotStateList<T>.swapList(newList: List<T>){
+    clear()
+    addAll(newList)
+}
+

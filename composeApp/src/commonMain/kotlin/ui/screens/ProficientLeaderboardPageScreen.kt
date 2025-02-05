@@ -52,6 +52,10 @@ import files.ic_person_btn
 import files.ic_selected_orange_circle
 import files.phorphos_caret_down_regular
 import files.pom_pom_praying
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
@@ -86,6 +90,7 @@ import utils.app.newImageRequest
 import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.replaceStrRes
+import utils.app.swapList
 import utils.starbase.StarbaseAPI
 
 data class ProficientSchool(
@@ -106,46 +111,54 @@ fun ProficientLeaderboardPageScreen(
 ) {
     val hazeState = remember { HazeState() }
     val selectedLeaderboardIndex = remember { mutableStateOf(0) }
-    val schoolList by remember { mutableStateOf(arrayListOf<ProficientSchool>()) }
-    val leaderboardList = arrayListOf<CharacterProficient>()
+    val schoolList by remember { mutableStateOf(arrayListOf(ProficientSchool(schoolIndex = 0, charId = 8006))) }
+    val leaderboardList = remember { mutableStateListOf<CharacterProficient>() }
     val isExpandSchoolDropdown = remember { mutableStateOf(false) }
     val optionTextViewSize = remember { mutableStateOf(IntSize.Zero) }
     val density = LocalDensity.current.density
 
-    LaunchedEffect(Unit){
-        CharWeightList.INSTANCE.jsonObject.mapKeys { item ->
-            val listDataJson = charListJson.jsonArray.firstOrNull { charData -> charData.jsonObject["charId"]!!.jsonPrimitive.content == item.key }
-            val listExtDataJson = charExtListJson.jsonArray.firstOrNull { charData -> charData.jsonObject["officialId"]!!.jsonPrimitive.content == item.key }
+    LaunchedEffect(Unit) {
+        CoroutineScope(Dispatchers.Default).launch {
+            async {
+                println("KEYS: ${CharWeightList.INSTANCE.jsonObject.keys.size}")
+                schoolList.clear()
+                CharWeightList.INSTANCE.jsonObject.mapKeys { item ->
+                    val listDataJson = charListJson.jsonArray.firstOrNull { charData -> charData.jsonObject["charId"]!!.jsonPrimitive.content == item.key }
+                    val listExtDataJson = charExtListJson.jsonArray.firstOrNull { charData -> charData.jsonObject["officialId"]!!.jsonPrimitive.content == item.key }
 
-            if(listExtDataJson == null || listDataJson == null) return@mapKeys
+                    if (listExtDataJson == null || listDataJson == null) return@mapKeys
 
-            item.value.jsonArray.forEachIndexed { index, schoolData ->
-                schoolList.add(
-                    ProficientSchool(
-                        charId = item.key.toInt(),
-                        schoolIndex = index,
-                        zhName = schoolData.jsonObject["zh_name"]?.jsonPrimitive?.content ?: "???",
-                        enName = schoolData.jsonObject["en_name"]?.jsonPrimitive?.content ?: "???",
-                        icon = schoolData.jsonObject["icon"]?.jsonPrimitive?.content ?: "",
-                        combatType = CombatType.valueOf(listDataJson.jsonObject["element"]?.jsonPrimitive?.content ?: "Unspecified")
-                    )
-                )
-            }
+                    item.value.jsonArray.forEachIndexed { index, schoolData ->
+                        schoolList.add(
+                            ProficientSchool(
+                                charId = item.key.toInt(),
+                                schoolIndex = index,
+                                zhName = schoolData.jsonObject["zh_name"]?.jsonPrimitive?.content ?: "???",
+                                enName = schoolData.jsonObject["en_name"]?.jsonPrimitive?.content ?: "???",
+                                icon = schoolData.jsonObject["icon"]?.jsonPrimitive?.content ?: "",
+                                combatType = CombatType.valueOf(listDataJson.jsonObject["element"]?.jsonPrimitive?.content ?: "Unspecified")
+                            )
+                        )
+                    }
+                }
+            }.await()
         }
     }
 
-    LaunchedEffect(selectedLeaderboardIndex.value){
-        leaderboardList.clear()
-        leaderboardList.addAll(
-            StarbaseAPI().getProfLeaderboardList(
-                schoolList[selectedLeaderboardIndex.value].charId, schoolList[selectedLeaderboardIndex.value].schoolIndex
-            )
-        )
+    LaunchedEffect(selectedLeaderboardIndex.value) {
+        CoroutineScope(Dispatchers.Default).launch {
+            async {
+                val request = StarbaseAPI().getProfLeaderboardList(
+                    schoolList[selectedLeaderboardIndex.value].charId, schoolList[selectedLeaderboardIndex.value].schoolIndex
+                )
+                println("Leadeboard in ${schoolList[selectedLeaderboardIndex.value].zhName} (${schoolList[selectedLeaderboardIndex.value].schoolIndex}) : ${request.size}")
+
+                leaderboardList.swapList(request)
+            }.await()
+        }
     }
 
-
     Box(Modifier.fillMaxSize()) {
-
         Column {
             Spacer(
                 modifier = Modifier
@@ -153,17 +166,8 @@ fun ProficientLeaderboardPageScreen(
                     .height(PAGE_HEADER_HEIGHT)
             )
 
-            //DropDownBar
             Row {
-                Text(
-                    text = removeStrQuote(Res.string.ScoreLevel),
-                    style = FontSizeNormal20(),
-                    color = Color.White,
-                    modifier = Modifier.align(Alignment.CenterVertically)
-                )
-
-                Spacer(Modifier.weight(1f))
-
+                //DropDownBar
                 Box(
                     contentAlignment = Alignment.BottomCenter,
                     modifier = Modifier
@@ -172,28 +176,40 @@ fun ProficientLeaderboardPageScreen(
                         .clip(RoundedCornerShape(43.dp))
                         .clickable { isExpandSchoolDropdown.value = !isExpandSchoolDropdown.value }
                 ) {
-                    Row(
-                        modifier = Modifier.background(Color(0x66000000), RoundedCornerShape(43.dp))
-                            .wrapContentWidth()
-                            .onSizeChanged { optionTextViewSize.value = it },
-                    ){
-                        Text(
-                            color = Color.White,
-                            text = if (schoolList.isEmpty()) "" else {
-                                if(Language.TextLanguageInstance == Language.TextLanguage.ZH_HK || Language.TextLanguageInstance == Language.TextLanguage.ZH_CN)
-                                    schoolList[selectedLeaderboardIndex.value].zhName
-                                else schoolList[selectedLeaderboardIndex.value].enName
-                            },
-                            style = FontSizeNormal14(),
-                            textAlign = TextAlign.Center,
-                            modifier = Modifier.padding(12.dp).align(Alignment.CenterVertically)
-                        )
-                        Image(
-                            painter = painterResource(Res.drawable.phorphos_caret_down_regular),
-                            contentDescription = null,
-                            modifier = Modifier.padding(12.dp).size(16.dp).align(Alignment.CenterVertically),
-                            colorFilter = ColorFilter.tint(Color.White)
-                        )
+                    if(!schoolList.isEmpty()){
+                        Row(
+                            modifier = Modifier.background(Color(0x66000000), RoundedCornerShape(43.dp))
+                                .wrapContentWidth()
+                                .onSizeChanged { optionTextViewSize.value = it },
+                        ) {
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Image(
+                                    painter = painterResource(schoolList[selectedLeaderboardIndex.value].combatType.iconColor),
+                                    modifier = Modifier.size(24.dp).padding(end = 6.dp).align(Alignment.CenterVertically),
+                                    contentDescription = "CombatType Icon"
+                                )
+                                AsyncImage(
+                                    model = newImageRequest(context = LocalPlatformContext.current, schoolList[selectedLeaderboardIndex.value].icon),
+                                    contentDescription = null,
+                                    modifier = Modifier.size(36.dp),
+                                    error = painterResource(LOST_IMAGE_DRAWABLE)
+                                )
+                                Spacer(Modifier.width(8.dp))
+                                Text(
+                                    text = if (listOf(Language.TextLanguage.ZH_HK, Language.TextLanguage.ZH_CN).contains(Language.TextLanguageInstance)) schoolList[selectedLeaderboardIndex.value].zhName else schoolList[selectedLeaderboardIndex.value].enName,
+                                    style = FontSizeNormal14(),
+                                    color = Color.White,
+                                    textAlign = TextAlign.Center,
+                                    modifier = Modifier.padding(12.dp).align(Alignment.CenterVertically)
+                                )
+                            }
+                            Image(
+                                painter = painterResource(Res.drawable.phorphos_caret_down_regular),
+                                contentDescription = null,
+                                modifier = Modifier.padding(12.dp).size(16.dp).align(Alignment.CenterVertically),
+                                colorFilter = ColorFilter.tint(Color.White)
+                            )
+                        }
                     }
                     //對於DropdownItem沒法按照設計稿展示，暫時無解
                     DropdownMenuNoPadding(
@@ -210,7 +226,7 @@ fun ProficientLeaderboardPageScreen(
                                     isExpandSchoolDropdown.value = false
                                     //optionAction(schoolIndex.value)
                                 },
-                                modifier = Modifier.background(if(selectedLeaderboardIndex.value == index) Color(0x0F000000) else Color(0x00000000))
+                                modifier = Modifier.background(if (selectedLeaderboardIndex.value == index) Color(0x0F000000) else Color(0x00000000))
                             ) {
                                 Row(verticalAlignment = Alignment.CenterVertically) {
                                     Image(
@@ -226,7 +242,7 @@ fun ProficientLeaderboardPageScreen(
                                     )
                                     Spacer(Modifier.width(8.dp))
                                     Text(
-                                        text = if(listOf(Language.TextLanguage.ZH_HK, Language.TextLanguage.ZH_CN).contains(Language.TextLanguageInstance)) option.zhName else option.enName,
+                                        text = if (listOf(Language.TextLanguage.ZH_HK, Language.TextLanguage.ZH_CN).contains(Language.TextLanguageInstance)) option.zhName else option.enName,
                                         style = FontSizeNormal14(),
                                         color = Color.White,
                                         textAlign = TextAlign.Center,
@@ -246,8 +262,7 @@ fun ProficientLeaderboardPageScreen(
                     .haze(hazeState),
                 verticalArrangement = Arrangement.spacedBy(10.dp)
             ) {
-
-                if(leaderboardList.isEmpty()){
+                if (leaderboardList.isEmpty()) {
                     item {
                         Column {
                             Image(
@@ -266,7 +281,7 @@ fun ProficientLeaderboardPageScreen(
                             )
                         }
                     }
-                }else{
+                } else {
                     items(leaderboardList) { item ->
                         ProfLeaderboardItem(item)
                     }
@@ -275,25 +290,24 @@ fun ProficientLeaderboardPageScreen(
             }
         }
 
-
         PageHeaderAlpha(
             navigator = navigator,
             hazeState = hazeState,
-        ){
-            TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
+        ) {
+            TitleHeader(headerData.titleIconId, headerData.title, headerData.titleRId)
         }
     }
 }
 
 @Composable
-fun ProfLeaderboardItem(charProf: CharacterProficient){
+fun ProfLeaderboardItem(charProf: CharacterProficient) {
     val lcDataJson = Lightcone.lcListJson.jsonArray.firstOrNull { lcData -> lcData.jsonObject["fileName"]!!.jsonPrimitive.int == charProf.lcId }
     val lcName = lcDataJson?.jsonObject?.get("name")?.jsonPrimitive?.content ?: ""
     Row {
         Text(
             text = charProf.rank.toString(),
             style = FontSizeNormal20(),
-            color = when(charProf.rank){
+            color = when (charProf.rank) {
                 1 -> Color(0xFFFFD070)
                 2 -> Color(0xCCF3F9FF)
                 3 -> Color(0xFFAB6F66)
@@ -341,6 +355,5 @@ fun ProfLeaderboardItem(charProf: CharacterProficient){
             modifier = Modifier.align(Alignment.CenterVertically).defaultMinSize(50.dp),
             minLines = 1
         )
-
     }
 }
