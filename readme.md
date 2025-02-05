@@ -9,7 +9,6 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![Make With Love](https://img.shields.io/badge/make_with_%E2%9D%A4%EF%B8%8F-white)
 ![RELEASE](https://img.shields.io/badge/NOT_RELEASE-2.4.0-red)
-![BETA](https://img.shields.io/badge/BETA-2.4.1-pink)
 
 星穹觀星者 3 是由團隊[<span style="color:#E31576">Coding Band</span>](https://github.com/Coding-Band)開發
 - [<span style="color:#00CCFF">2O48](https://github.com/2O48) : UI/UX 設計
@@ -17,51 +16,48 @@
 - [<span style="color:#EE3333">Somebody<span style="color:#CCCCCC">](https://github.com/ilikecatgirls) : 後端API代碼編寫
 
 將於 Google Play Store 和 App Store 上架，讓使用 Android 和 iOS 的開拓者都能夠體驗星穹觀星者 3。
+未來也會透過GitHub分發其他平台的版本。
 
-| <span style="color:#FF99CC">📢 如果不介意的話，可以透過 App 内捐款支持我們</span><br> | <a href="https://www.buymeacoffee.com/codingband"><img src="https://img.buymeacoffee.com/button-api/?text=Support Us&emoji=☕&slug=codingband&button_colour=ff76ac&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a> |
-|--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span style="color:#FF9900">📧 如果您想與我們合作，歡迎聯絡我們</span><br>       | [![Offical Discord Server](https://dcbadge.vercel.app/api/server/uXatcbWKv2?theme=discord-inverted)](https://discord.gg/uXatcbWKv2)                                                                                                                        |
+| <span style="color:#FF99CC">📢 如果不介意的話，可以透過BuyMeACoffee支持我們</span><br> | <a href="https://www.buymeacoffee.com/codingband"><img src="https://img.buymeacoffee.com/button-api/?text=Support Us&emoji=☕&slug=codingband&button_colour=ff76ac&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a> |
+|-----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <span style="color:#FF9900">📧 歡迎聯絡我們合作</span><br>             | [![Offical Discord Server](https://dcbadge.vercel.app/api/server/uXatcbWKv2?theme=discord-inverted)](https://discord.gg/uXatcbWKv2)                                                                                                                        |
 
 ### 封測招募
 >目前星穹觀星者 3 (Stargazer 3) 正招募封測人員<br>
 >請參閱下方的招募條件及要求，並私訊`@yukina4096`以申請封測資格。
 
-#### 封測細節
-- 封測平台 : Android 和 iOS (手機爲主)
-- 封測人數 : 200 人
-- 封測時間 : 2024年8月7日 - 2024年9月6日
-  - 第一階段：2024年8月7日 - 2024年8月20日
-  - 第二階段：2024年8月21日 - 2024年8月27日
-  - 第三階段：2024年8月28日 - 2024年9月6日
-  - 封測期間仍接受申請~
-- 第一階段（基礎功能）將會測試以下内容：
-  - 角色、光錐、遺器資料及推薦
-  - 用戶角色展示櫃、角色詳細資料
-  - 首頁、設定（語言除外）
-  - UID搜尋
-- 第二階段（數據功能）將會測試以下内容：
-  - 混沌回憶、虛構敘事、練度排行榜
-  - 躍遷模擬、躍遷分析
-  - 首頁自定義排版
-  - 廣告、App內購買捐款
-- 第三階段（高階功能）將會測試以下内容：
-  - 排軸功能
-  - 通知功能（體力滿了、App更新）
-  - 平板介面適配
+### 封測細節
+- 封測平台 : Android, iOS為主，歡迎同時申請iPadOS, MacOS, Windows
+- 封測人數 : 30 人 (不包括原SG3封測員)
+- 封測時間 : 2025年2月19日 - 2025年3月5日
+  - 封測期間仍接受申請
+- 封測內容：
+  - 角色、光錐、遺器資料頁面
+  - 用戶登入
+    - Hoyoverse通行證 (僅Android, iOS)，Cookies登入
+  - 用戶當前數據
+    - 主頁面展示數據
+    - 用戶角色詳細頁面
+  - 排行榜
+    - 角色評分
+    - 混沌、虛構、末日（提供最多使用率）
+  - 大螢幕支援（iPad, Desktop)
 
 #### 招募條件
 - 擁有 Android 或 iOS 裝置
   - Android : Android 7.0 或以上
   - iOS : iOS 15 或以上
+  - Desktop : Windows 10 / MacOS 14.0 或以上
 - 願意測試及主動提供反饋
 - 願意遵守封測規則
 - 星鐵玩家將會優先考慮
 
 *若您有意申請本次招募，歡迎先加入我們的伺服器、並私信`@yukina4096`:*
-- 您想參加測試的平台(Android 或/和 iOS)
+- 您想參加測試的平台(Android, iOS, MacOS, Windows)
 - 您的電郵地址 (iOS 的話請記得提供有綁定 Apple ID 的電郵)
 - 您的星穹鐵道 UID （方便我們紀錄錯誤之類，測試時請用該 UID 的帳戶登錄）
 我們會在收到您的申請後盡快回覆，並在伺服器給予相應的身份組謝謝！
+原SG3封測員亦會自動獲得測試資格，無需再次申請。
 ![yukina4096](./docs/close_beta/yukina4096.png)
 
 
@@ -77,19 +73,19 @@
 
 ### Crowdin 翻譯進度
 
-![de translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=de&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27de%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
-![es-ES translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=es-ES&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27es-ES%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
-![fr translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=fr&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27fr%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
-![id translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=id&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27id%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
-![ja translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ja&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27ja%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
-![ko translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ko&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27ko%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
-![pt-PT translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=pt-PT&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27pt-PT%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
-![ru translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ru&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27ru%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
-![th translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=th&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27th%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
-![vi translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=vi&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27vi%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
-![cht translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=zh-HK&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27zh-HK%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
-![chs translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=zh-CN&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27zh-CN%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
-![Vocchinese translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=yue&style=for-the-badge&logo=crowdin&query=%24.progress[?(@.data.languageId==%27yue%27)].data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![de translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=de&style=for-the-badge&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![es-ES translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=es-ES&style=for-the-badge&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![fr translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=fr&style=for-the-badge&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![id translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=id&style=for-the-badge&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![ja translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ja&style=for-the-badge&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![ko translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ko&style=for-the-badge&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![pt-PT translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=pt-PT&style=for-the-badge&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![ru translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=ru&style=for-the-badge&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![th translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=th&style=for-the-badge&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![vi translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=vi&style=for-the-badge&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![cht translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=zh-HK&style=for-the-badge&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![chs translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=zh-CN&style=for-the-badge&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+![Vocchinese translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=yue&style=for-the-badge&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
 
 ## <span style="color:#569CD6">App 特點 - 為何選擇星穹觀星者 3？
 
@@ -114,7 +110,7 @@
 - 需要遵守<守則>
 - 違犯規則者將被永久停止測試資格
 - 請私信`@yukina4096` 提出申請，並提供以下資料 :
-  - 使用的平台(Android / iOS)
+  - 使用的平台(Android / iOS / Windows / MacOS)
   - 接收BETA測試的電郵 (iOS 的話請記得提供有綁定 Apple ID 的電郵)
   - 星穹鐵道 UID （方便我們紀錄錯誤之類，還請測試時用那個 UID 的帳戶登錄）
 
