@@ -18,6 +18,7 @@ import useAppLanguage from "../language/AppLanguage/useAppLanguage";
 import auth from "@react-native-firebase/auth";
 import { dynamicHeightLoginWebview } from "../constant/ui";
 import DeviceInfo from "react-native-device-info";
+import * as WebBrowser from 'expo-web-browser';
 
 export default function LoginScreen() {
   const { language } = useAppLanguage();
@@ -30,6 +31,7 @@ export default function LoginScreen() {
 
   const { setHoyolabCookie } = useHoyolabCookie();
   const { setHsrServerChosen } = useHsrServerChosen();
+  const webviewRef = useRef<WebView>(null);
 
 
   const handleLogin = async () => {
@@ -45,6 +47,36 @@ export default function LoginScreen() {
     navigation.goBack();
   };
 
+  // 當第三方授權成功後，重新載入 WebView 獲得最新 cookies
+  const handleExternalAuth = async (url: string) => {
+    try {
+      const result = await WebBrowser.openAuthSessionAsync(url, (platform === "hoyolab" ? cookieURLs.hoyolab : cookieURLs.mihoyo));
+      if (result.type === 'success') {
+        // 登入成功後，如有需要，可重新載入 WebView
+        webviewRef.current && webviewRef.current.reload();
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  // 判斷並攔截第三方登入網址
+  const handleShouldStartLoadWithRequest = (request: any) => {
+    console.log(request);
+    const { url } = request;
+    // 可根據實際第三方登入網址進行判斷
+    if (
+      url.includes('accounts.google.com') ||
+      url.includes('appleid.apple.com') ||
+      url.includes('facebook.com') ||
+      url.includes('api.x.com')
+    ) {
+      handleExternalAuth(url);
+      return false;
+    }
+    return true;
+  };
+
   useEffect(() => {
     const backHandler = BackHandler.addEventListener(
       'hardwareBackPress',
@@ -53,8 +85,6 @@ export default function LoginScreen() {
 
     return () => backHandler.remove();
   }, []);
-
-  const injectedJavaScript = `document.querySelector('div.hyv-third-party-login-container-base').hidden = true`
 
   return (
     <View style={{ flex: 1 }} className="overflow-hidden">
@@ -68,7 +98,6 @@ export default function LoginScreen() {
         javaScriptEnabled
         domStorageEnabled
         sharedCookiesEnabled
-        injectedJavaScript={injectedJavaScript}
         //injectedJavaScript="const elements = document.getElementsByClassName('hyv-third-party-login-container-base mt-p16 pb-p16'); while(elements.length > 0){ elements[0].parentNode.removeChild(elements[0]);}"
         //injectedJavaScriptBeforeContentLoaded="const elements = document.getElementsByClassName('hyv-third-party-login-container-base mt-p16 pb-p16'); while(elements.length > 0){ elements[0].parentNode.removeChild(elements[0]);}"
         thirdPartyCookiesEnabled={true}
@@ -77,6 +106,7 @@ export default function LoginScreen() {
         setSupportMultipleWindows={false}
         //userAgent={DeviceInfo.getUserAgentSync().replace("wv", "")} //Key of the Google Login
         originWhitelist={["*"]}
+        onShouldStartLoadWithRequest={handleShouldStartLoadWithRequest}
         source={{
           uri: platform === "hoyolab" ? cookieURLs.hoyolab : cookieURLs.mihoyo,
         }}

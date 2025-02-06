@@ -18,6 +18,9 @@ import {
 import { InAppBrowser } from 'react-native-inappbrowser-reborn'
 import { isHoyolabPlatform } from "../../../../../../utils/hoyolab/utils";
 import CookieManager from "@react-native-cookies/cookies";
+import * as WebBrowser from 'expo-web-browser';
+import useHoyolabCookie from "../../../../../../redux/hoyolabCookie/useHoyolabCookie";
+import useHsrServerChosen from "../../../../../../redux/hsrServerChosen/useHsrServerChosen";
 
 type Server = {
   id: hsrServerId;
@@ -43,15 +46,48 @@ export default function ToLoginScreen(props: Props) {
   const { language } = useAppLanguage();
   const navigation = useNavigation();
 
+  const { setHoyolabCookie } = useHoyolabCookie();
+  const { setHsrServerChosen } = useHsrServerChosen();
+
   const handleChoseServer = (server: Server) => {
     props.onServerChosen && props.onServerChosen(server);
     // @ts-ignore
+    
     
     navigation.navigate(SCREENS.LoginPage.id, {
       serverId: server.id,
       platform: server.platform,
     });
+    
+
+    //openInAppBrowser(server);
   };
+
+  async function openExpowebBrowser(server : Server){
+    try{
+      const url =  (server.platform === "hoyolab" ? cookieURLs.hoyolab : cookieURLs.mihoyo)
+      const serverId = server.id;
+      await WebBrowser.openAuthSessionAsync(url, undefined, { preferEphemeralSession : true} as WebBrowser.AuthSessionOpenOptions).then(async (response : WebBrowser.WebBrowserAuthSessionResult) => {
+        console.log(response)
+        if(response.type === "dismiss"){
+
+          console.log(await CookieManager.get(url,true))
+          setHsrServerChosen(serverId);
+      
+          // hoyolab 或米游社 Cookie 處理
+          const cookie = await getHoyolabCookieFromCookieManager(
+            isHoyolabPlatform(serverId) ? "hoyolab" : "mihoyo"
+          );
+          setHoyolabCookie(cookie);
+          
+          navigation.goBack();
+        }
+      });
+      
+    }catch(error : any){
+      console.error(error)
+    }
+  }
 
   async function openInAppBrowser(server : Server){
     try{
@@ -60,6 +96,7 @@ export default function ToLoginScreen(props: Props) {
       if (await InAppBrowser.isAvailable()) {
         const result = await InAppBrowser.open(url, {
         }).then(async (response : any) => {
+          console.log(response)
 
           const cookie = await getHoyolabCookieFromCookieManager(
             isHoyolabPlatform(serverId) ? "hoyolab" : "mihoyo"
