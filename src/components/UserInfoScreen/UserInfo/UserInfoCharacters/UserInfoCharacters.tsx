@@ -31,7 +31,7 @@ type Props = {
   isCapture?: boolean;
 };
 
-export default React.memo(function UserInfoCharacters(props: Props , {isCapture} : {isCapture : boolean}) {
+export default React.memo(function UserInfoCharacters(props: Props) {
   const { language: textLanguage } = useTextLanguage();
   const { language: appLanguage } = useAppLanguage();
   const navigation = useNavigation();

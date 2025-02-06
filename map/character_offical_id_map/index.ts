@@ -6,7 +6,7 @@ const officalCharId: any = {
   8005: "Trailblazer Boy (Imaginary)",
   8006: "Trailblazer Girl (Imaginary)",
   8007: "Trailblazer Boy (Ice)",
-  8008: "Trailblazer Girl (Icec)",
+  8008: "Trailblazer Girl (Ice)",
   1001: "March 7th",
   1002: "Dan Heng",
   1003: "Himeko",
