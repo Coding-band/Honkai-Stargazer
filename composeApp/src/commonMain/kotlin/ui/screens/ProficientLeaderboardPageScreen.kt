@@ -27,6 +27,7 @@ import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
@@ -60,6 +61,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
@@ -79,8 +81,10 @@ import ui.components.DropdownMenuNoPadding
 import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeaderAlpha
+import ui.components.PomPomPopup
 import ui.components.TitleHeader
 import ui.components.defaultHeaderData
+import ui.components.pomPomPopupInstance
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import utils.app.CharWeightList
@@ -114,37 +118,58 @@ fun ProficientLeaderboardPageScreen(
 ) {
     val hazeState = remember { HazeState() }
     val selectedLeaderboardIndex = remember { mutableStateOf(0) }
-    val schoolList by remember { mutableStateOf(arrayListOf(ProficientSchool(schoolIndex = 0, charId = 8006))) }
+    val schoolList by remember { mutableStateOf(arrayListOf(ProficientSchool(schoolIndex = 0, charId = 0))) }
     val leaderboardList = remember { mutableStateListOf<CharacterProficient>() }
     val isExpandSchoolDropdown = remember { mutableStateOf(false) }
     val optionTextViewSize = remember { mutableStateOf(IntSize.Zero) }
     val density = LocalDensity.current.density
+    val isInited = remember { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
-        CoroutineScope(Dispatchers.Default).launch {
-            async {
-                println("KEYS: ${CharWeightList.INSTANCE.jsonObject.keys.size}")
-                schoolList.clear()
-                CharWeightList.INSTANCE.jsonObject.mapKeys { item ->
-                    val listDataJson = charListJson.jsonArray.firstOrNull { charData -> charData.jsonObject["charId"]!!.jsonPrimitive.content == item.key }
-                    val listExtDataJson = charExtListJson.jsonArray.firstOrNull { charData -> charData.jsonObject["officialId"]!!.jsonPrimitive.content == item.key }
+        if(!isInited.value){
+            CoroutineScope(Dispatchers.Default).launch {
+                async {
+                    //println("KEYS: ${CharWeightList.INSTANCE.jsonObject.keys.size}")
+                    schoolList.clear()
+                    CharWeightList.INSTANCE.jsonObject.mapKeys { item ->
+                        val listDataJson = charListJson.jsonArray.firstOrNull { charData -> charData.jsonObject["charId"]!!.jsonPrimitive.content == item.key }
+                        val listExtDataJson = charExtListJson.jsonArray.firstOrNull { charData -> charData.jsonObject["officialId"]!!.jsonPrimitive.content == item.key }
 
-                    if (listExtDataJson == null || listDataJson == null) return@mapKeys
+                        if (listExtDataJson == null || listDataJson == null) return@mapKeys
 
-                    item.value.jsonArray.forEachIndexed { index, schoolData ->
-                        schoolList.add(
-                            ProficientSchool(
-                                charId = item.key.toInt(),
-                                schoolIndex = index,
-                                zhName = schoolData.jsonObject["zh_name"]?.jsonPrimitive?.content ?: "???",
-                                enName = schoolData.jsonObject["en_name"]?.jsonPrimitive?.content ?: "???",
-                                //icon = schoolData.jsonObject["icon"]?.jsonPrimitive?.content ?: "",
-                                combatType = CombatType.valueOf(listDataJson.jsonObject["element"]?.jsonPrimitive?.content ?: "Unspecified")
+                        item.value.jsonArray.forEachIndexed { index, schoolData ->
+                            schoolList.add(
+                                ProficientSchool(
+                                    charId = item.key.toInt(),
+                                    schoolIndex = index,
+                                    zhName = schoolData.jsonObject["zh_name"]?.jsonPrimitive?.content ?: "???",
+                                    enName = schoolData.jsonObject["en_name"]?.jsonPrimitive?.content ?: "???",
+                                    //icon = schoolData.jsonObject["icon"]?.jsonPrimitive?.content ?: "",
+                                    combatType = CombatType.valueOf(listDataJson.jsonObject["element"]?.jsonPrimitive?.content ?: "Unspecified")
+                                )
                             )
-                        )
+                        }
                     }
+                }.await()
+                withContext(Dispatchers.Main) {
+                    isInited.value = true
                 }
-            }.await()
+            }
+        }
+    }
+
+    LaunchedEffect(isInited.value) {
+        if (isInited.value) {
+            CoroutineScope(Dispatchers.Default).launch {
+                async {
+                    val request = StarbaseAPI().getProfLeaderboardList(
+                        schoolList[selectedLeaderboardIndex.value].charId, schoolList[selectedLeaderboardIndex.value].schoolIndex
+                    )
+                    //println("Leadeboard in ${schoolList[selectedLeaderboardIndex.value].zhName} (${schoolList[selectedLeaderboardIndex.value].schoolIndex}) : ${request.size}")
+
+                    leaderboardList.swapList(request)
+                }.await()
+            }
         }
     }
 
@@ -154,7 +179,7 @@ fun ProficientLeaderboardPageScreen(
                 val request = StarbaseAPI().getProfLeaderboardList(
                     schoolList[selectedLeaderboardIndex.value].charId, schoolList[selectedLeaderboardIndex.value].schoolIndex
                 )
-                println("Leadeboard in ${schoolList[selectedLeaderboardIndex.value].zhName} (${schoolList[selectedLeaderboardIndex.value].schoolIndex}) : ${request.size}")
+                //println("Leadeboard in ${schoolList[selectedLeaderboardIndex.value].zhName} (${schoolList[selectedLeaderboardIndex.value].schoolIndex}) : ${request.size}")
 
                 leaderboardList.swapList(request)
             }.await()
@@ -186,7 +211,6 @@ fun ProficientLeaderboardPageScreen(
                                 .onSizeChanged { optionTextViewSize.value = it },
                         ) {
                             Row(verticalAlignment = Alignment.CenterVertically) {
-                                Spacer(Modifier.width(12.dp))
                                 AsyncImage(
                                     model = newImageRequest(context = LocalPlatformContext.current, Character.getCharacterImageFromOfficialId(ImageFolder.CHAR_ICON,
                                         schoolList[selectedLeaderboardIndex.value].charId.toString()
@@ -198,7 +222,7 @@ fun ProficientLeaderboardPageScreen(
                                 Spacer(Modifier.width(8.dp))
                                 Image(
                                     painter = painterResource(schoolList[selectedLeaderboardIndex.value].combatType.iconColor),
-                                    modifier = Modifier.size(24.dp).padding(end = 6.dp).align(Alignment.CenterVertically),
+                                    modifier = Modifier.size(24.dp).align(Alignment.CenterVertically),
                                     contentDescription = "CombatType Icon"
                                 )
                                 Text(
@@ -212,7 +236,7 @@ fun ProficientLeaderboardPageScreen(
                             Image(
                                 painter = painterResource(Res.drawable.phorphos_caret_down_regular),
                                 contentDescription = null,
-                                modifier = Modifier.padding(12.dp).size(16.dp).align(Alignment.CenterVertically),
+                                modifier = Modifier.padding(6.dp).size(16.dp).align(Alignment.CenterVertically),
                                 colorFilter = ColorFilter.tint(Color.White)
                             )
                         }
@@ -248,7 +272,7 @@ fun ProficientLeaderboardPageScreen(
                                     Spacer(Modifier.width(8.dp))
                                     Image(
                                         painter = painterResource(option.combatType.iconColor),
-                                        modifier = Modifier.size(24.dp).padding(end = 6.dp).align(Alignment.CenterVertically),
+                                        modifier = Modifier.size(24.dp).align(Alignment.CenterVertically),
                                         contentDescription = "CombatType Icon"
                                     )
                                     Text(
@@ -272,14 +296,15 @@ fun ProficientLeaderboardPageScreen(
                     .haze(hazeState),
                 verticalArrangement = Arrangement.spacedBy(10.dp)
             ) {
+                item { Spacer(Modifier.height(10.dp)) }
                 if (leaderboardList.isEmpty()) {
                     item {
                         Column {
+                            Spacer(Modifier.height(64.dp))
                             Image(
                                 painter = painterResource(Res.drawable.pom_pom_praying),
                                 contentDescription = "No Data",
                                 modifier = Modifier.fillMaxSize(0.5f).align(Alignment.CenterHorizontally),
-                                colorFilter = ColorFilter.tint(Color(0x66000000))
                             )
 
                             Text(
@@ -293,7 +318,7 @@ fun ProficientLeaderboardPageScreen(
                     }
                 } else {
                     items(leaderboardList) { item ->
-                        ProfLeaderboardItem(item)
+                        ProfLeaderboardItem(item,navigator)
                     }
                 }
                 //Comments & Suggestions
@@ -310,10 +335,24 @@ fun ProficientLeaderboardPageScreen(
 }
 
 @Composable
-fun ProfLeaderboardItem(charProf: CharacterProficient) {
+fun ProfLeaderboardItem(charProf: CharacterProficient, navigator: Navigator) {
     val lcDataJson = Lightcone.lcListJson.jsonArray.firstOrNull { lcData -> lcData.jsonObject["fileName"]!!.jsonPrimitive.int == charProf.lcId }
     val lcName = lcDataJson?.jsonObject?.get("name")?.jsonPrimitive?.content ?: ""
-    Row {
+    Row(
+        modifier = Modifier.clickable {
+            CoroutineScope(Dispatchers.Default).launch{
+                println("UID: ${charProf.playerId}, CharID: ${charProf.charId}")
+                pomPomPopupInstance.value = PomPomPopup(isDisplay = true)
+                UserAccount.UIDSEARCH = StarbaseAPI().getUserAccountInfo(uid = charProf.playerId.toString())
+
+                withContext(Dispatchers.Main){
+                    println("UserAccount.UIDSEARCH: ${UserAccount.UIDSEARCH.characterList.size}, ${UserAccount.UIDSEARCH.characterList.map { println(it.registName) }}")
+                    pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
+                    navigator.navigateLimited("${Screen.UserCharacterPageScreen.route}?uid=${charProf.playerId}&charId=${charProf.charId}")
+                }
+            }
+        }
+    ) {
         Text(
             text = charProf.rank.toString(),
             style = FontSizeNormal20(),
