@@ -3,6 +3,7 @@ package utils.app
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import files.ActionOrderTitle
 import files.Character
 import files.Event
 import files.Expedition
@@ -21,6 +22,7 @@ import files.UIDSearch
 import files.WrapAnalysis
 import files.ico_lost_img
 import files.phorphos_alien_fill
+import files.phorphos_align_left_fill
 import files.phorphos_atom_fill
 import files.phorphos_baseball_cap_fill
 import files.phorphos_calendar_fill
@@ -106,6 +108,8 @@ class Constants {
         //For Left Corner Page
         val HOME_WIDTH = 390.dp
         val SCREEN_SAVE_PADDING = 18.dp
+
+        val CLARA_KAMOJI = "(´ • ω • `)"
 
         fun getCardBgColorByRare(rare: Int): List<Color> {
             when (rare) {
@@ -251,6 +255,15 @@ class Constants {
                 itemIconId = Res.drawable.phorphos_map_trifold_fill,
                 itemOnClickToNavigate = Screen.MapPageScreen
             ),
+
+            HomePageBlocks.HomePageBlockItem(
+                itemId = "ActionOrderListPage",
+                itemTitleRId = Res.string.ActionOrderTitle,
+                itemIconId = Res.drawable.phorphos_align_left_fill,
+                itemOnClickToNavigate = Screen.ActionOrderListPageScreen
+            ),
+            /*
+
             HomePageBlocks.HomePageBlockItem(
                 itemId = "LotterySimulator",
                 itemTitleRId = Res.string.LotterySimulator,
@@ -261,6 +274,8 @@ class Constants {
                 itemTitleRId = Res.string.WrapAnalysis,
                 itemIconId = Res.drawable.phorphos_shooting_star_fill
             ),
+            */
+
             /*
 
             HomePageBlocks.HomePageBlockItem(

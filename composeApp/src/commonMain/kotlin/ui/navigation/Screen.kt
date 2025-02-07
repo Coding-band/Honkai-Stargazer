@@ -1,6 +1,7 @@
 package ui.navigation
 
 import files.AboutTheApp
+import files.ActionOrderTitle
 import files.ChangeWallPaper
 import files.CharacterList
 import files.Event
@@ -20,6 +21,7 @@ import files.Setting
 import files.UIDSearch
 import files.UserInfoGameData
 import files.phorphos_alien_fill
+import files.phorphos_align_left_fill
 import files.phorphos_atom_fill
 import files.phorphos_baseball_cap_fill
 import files.phorphos_film_slate_regular
@@ -156,5 +158,9 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     data object ProficientLeaderboardPageScreen : Screen(
         "ProficientLeaderboardPageScreen",
         HeaderData(titleRId = Res.string.ScoreLevelLeaderboard, titleIconId = Res.drawable.phorphos_trophy_fill)
+    )
+    data object ActionOrderListPageScreen : Screen(
+        "ActionOrderListPageScreen",
+        HeaderData(titleRId = Res.string.ActionOrderTitle, titleIconId = Res.drawable.phorphos_align_left_fill)
     )
 }
