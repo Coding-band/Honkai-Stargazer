@@ -233,6 +233,18 @@ compose.desktop {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "com.voc.stargazer3"
             packageVersion = "1.0.0"
+            copyright = "Copyright © 2024 Coding Band 版權所有"
+            description = "Stargazer 3 (星穹觀星者3) is an unofficial multiplatform app, design for Honkai: Star Rail players."
+
+            linux {
+                iconFile.set(project.file("icon/app_icon.png"))
+            }
+            windows {
+                iconFile.set(project.file("icon/app_icon.ico"))
+            }
+            macOS{
+                iconFile.set(project.file("icon/app_icon.icns"))
+            }
         }
 
         buildTypes.release.proguard {
