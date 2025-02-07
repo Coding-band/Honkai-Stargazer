@@ -48,6 +48,7 @@ import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import com.multiplatform.webview.web.WebView
 import dev.chrisbanes.haze.HazeState
+import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeChild
 import files.IsDone
 import files.NoDataYet
@@ -114,11 +115,12 @@ fun ExpeditionPageScreen(
                 modifier = Modifier
                     //.pullRefresh(pullRefreshState)
                     .fillMaxSize()
-                    .padding(top = PAGE_HEADER_HEIGHT, start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)
+                    .padding(start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)
                     .statusBarsPadding()
                     .navigationBarsPadding()
+                    .haze(hazeState)
             ) {
-                item { Spacer(modifier = Modifier.height(SCREEN_SAVE_PADDING)) }
+                item { Spacer(modifier = Modifier.height(PAGE_HEADER_HEIGHT+12.dp)) }
                 INSTANCE.userNote.expedition.forEachIndexed { index, expendition ->
                     item {
                         ExpenditionItem(expendition, hazeState)
