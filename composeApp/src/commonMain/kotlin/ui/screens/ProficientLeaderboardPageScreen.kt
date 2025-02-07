@@ -89,6 +89,7 @@ import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import utils.app.CharWeightList
 import utils.app.Constants
+import utils.app.Constants.Companion.CLARA_KAMOJI
 import utils.app.Constants.Companion.LOST_IMAGE_DRAWABLE
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal20
@@ -102,7 +103,7 @@ import utils.app.swapList
 import utils.starbase.StarbaseAPI
 
 data class ProficientSchool(
-    val zhName: String = "(˘•ω•˘)",
+    val zhName: String = CLARA_KAMOJI,
     val enName: String = "Default",
     val schoolIndex: Int,
     val charId: Int,
