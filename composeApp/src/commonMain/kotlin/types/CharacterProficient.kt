@@ -1,5 +1,8 @@
 package types
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class CharacterProficient(
     val playerId: Int = 0,
     val playerName: String = "Unknown",
@@ -12,4 +15,5 @@ data class CharacterProficient(
     val lcId: Int? = null,
 
     val rank: Int = -1,
+    val totalRecords: Int = -1,
 )
