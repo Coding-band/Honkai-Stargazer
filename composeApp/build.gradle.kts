@@ -47,6 +47,7 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
+    
 
     jvm("desktop")
 
@@ -229,11 +230,11 @@ compose.desktop {
         mainClass = "MainKt"
 
         nativeDistributions {
-            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "Stargazer 3" + if(appProfile.contains("PRODUCTION")) "" else " ($appProfile)"
+            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb, TargetFormat.Exe)
+            packageName = "Stargazer 3${if(appProfile.contains("PRODUCTION")) "" else " ($appProfile)"}"
             packageVersion = "1.0.0"
             copyright = "Copyright © 2024 Coding Band 版權所有"
-            description = "Stargazer 3 (星穹觀星者3) is an unofficial multiplatform app, design for Honkai: Star Rail players."
+            description = "Stargazer 3 is an unofficial multiplatform app developed by Coding Band."
 
             linux {
                 iconFile.set(project.file("icon/app_icon.png"))
