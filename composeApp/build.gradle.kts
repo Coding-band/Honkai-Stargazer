@@ -40,6 +40,7 @@ val appVersionCodeName = "SG3"
 initGradleProperties()
 
 kotlin {
+    jvmToolchain(17)
     androidTarget {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
         compilerOptions {
@@ -85,7 +86,6 @@ kotlin {
             //implementation(libs.lifecycle.viewmodel.compose)
             implementation(libs.adaptive)
             implementation(libs.coil.network.ktor)
-            api("moe.tlaster:precompose-viewmodel:1.7.0-alpha01")
 
             //implementation("org.jetbrains.androidx.navigation:navigation-compose:2.7.0-alpha07")
             implementation(libs.haze) //Haze's BlurView https://github.com/chrisbanes/haze
@@ -97,7 +97,6 @@ kotlin {
 
             implementation(libs.okio)
 
-            implementation("io.coil-kt.coil3:coil-network-ktor3:3.0.0-rc01")
             implementation(libs.coil.compose.core)
 
             //Ktor - Web Request I/O
@@ -123,7 +122,7 @@ kotlin {
 
             implementation(libs.compose.boxshadow)
 
-            implementation("androidx.annotation:annotation:1.8.2")
+            //implementation("androidx.annotation:annotation:1.8.2")
 
             //Screen Capture
             //implementation(libs.compose.multiplatform.screen.capture)
@@ -231,7 +230,7 @@ compose.desktop {
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.voc.stargazer3"
+            packageName = "Stargazer 3" + if(appProfile.contains("PRODUCTION")) "" else " ($appProfile)"
             packageVersion = "1.0.0"
             copyright = "Copyright © 2024 Coding Band 版權所有"
             description = "Stargazer 3 (星穹觀星者3) is an unofficial multiplatform app, design for Honkai: Star Rail players."
