@@ -32,6 +32,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -118,13 +119,13 @@ fun ProficientLeaderboardPageScreen(
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ) {
     val hazeState = remember { HazeState() }
-    val selectedLeaderboardIndex = remember { mutableStateOf(0) }
-    val schoolList by remember { mutableStateOf(arrayListOf(ProficientSchool(schoolIndex = 0, charId = 0))) }
-    val leaderboardList = remember { mutableStateListOf<CharacterProficient>() }
+    val selectedLeaderboardIndex = rememberSaveable { mutableStateOf(0) }
+    val schoolList by rememberSaveable { mutableStateOf(arrayListOf(ProficientSchool(schoolIndex = 0, charId = 0))) }
+    val leaderboardList = rememberSaveable { mutableStateListOf<CharacterProficient>() }
     val isExpandSchoolDropdown = remember { mutableStateOf(false) }
     val optionTextViewSize = remember { mutableStateOf(IntSize.Zero) }
     val density = LocalDensity.current.density
-    val isInited = remember { mutableStateOf(false) }
+    val isInited = rememberSaveable { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
         if(!isInited.value){
