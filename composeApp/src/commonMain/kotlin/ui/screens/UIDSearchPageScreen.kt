@@ -200,11 +200,11 @@ fun UIDSearchPageScreen(
                                     }
 
                                     UIDSEARCH = MihomoRequest(item.uid).getUserAccountByMiHomo()
-                                    navigatorInstance.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=${item.uid}")
 
                                     withContext(Dispatchers.Main) {
                                         pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
                                         isQuerying.value = false
+                                        navigator.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=${item.uid}")
                                     }
                                 }
                             }

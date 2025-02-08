@@ -36,6 +36,7 @@ import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
@@ -71,7 +72,9 @@ import dev.chrisbanes.haze.haze
 import files.CharRank
 import files.CharScore
 import files.Eidolon
+import files.LackOfUserData
 import files.LeaderboardDataFrom
+import files.NoDataYet
 import files.OverWholeServerUser
 import files.ProducedByStargazer
 import files.Res
@@ -90,6 +93,8 @@ import files.ic_selected_orange_circle
 import files.phorphos_caret_down_regular
 import files.ui_icon_share
 import files.ui_icon_star
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.float
 import kotlinx.serialization.json.jsonArray
@@ -100,6 +105,7 @@ import moe.tlaster.precompose.navigation.Navigator
 import moe.tlaster.precompose.navigation.query
 import org.jetbrains.compose.resources.painterResource
 import types.Character
+import types.CharacterProficient
 import types.HsrProperties
 import types.ImageFolder
 import types.Lightcone
@@ -132,11 +138,13 @@ import utils.app.htmlDescApplier
 import utils.app.newImageRequest
 import utils.app.pxToDp
 import utils.app.removeStrQuote
+import utils.app.replaceStrRes
 import utils.calculator.getCharRange
 import utils.calculator.getCharScore
 import utils.calculator.getGradAttrAndValue
 import utils.calculator.getLcAttrData
 import utils.hoyolab.AttributeExchange
+import utils.starbase.StarbaseAPI
 
 @DoItLater("Confirm that work when charStatus is null")
 @Composable
@@ -226,7 +234,7 @@ fun UserCharacterPageScreen(
                     item { CharBioSkillInfo(character, charNameBigHeight) }
                     item { LightconeInfo(character) }
                     item { RelicInfo(character) }
-                    item { ProficientScoreInfo(character) }
+                    item { ProficientScoreInfo(character, uid) }
 
                     item { Spacer(Modifier.statusBarsPadding()) }
                 }
@@ -238,7 +246,7 @@ fun UserCharacterPageScreen(
 }
 
 @Composable
-fun ProficientScoreInfo(character: Character) {
+fun ProficientScoreInfo(character: Character, uid: String) {
 
     //Divider
     UserCharPageDivider()
@@ -249,13 +257,27 @@ fun ProficientScoreInfo(character: Character) {
     val optionTextViewSize = remember { mutableStateOf(IntSize.Zero) }
     val density = LocalDensity.current.density
 
-    val charScore = getCharScore(character, schoolIndex.value)
+    val isInited = remember { mutableStateOf(false) }
+    val charScoreLocal = remember { mutableStateOf(0f) }
+    val overPercentage = remember { mutableStateOf(-1f) }
+
+    if (!isInited.value) {
+        charScoreLocal.value = getCharScore(character, schoolIndex.value)
+        overPercentage.value = getProfRankResult(charScoreLocal.value, character, schoolIndex.value, uid)
+        isInited.value = true
+    }
+
+    LaunchedEffect(schoolIndex.value){
+        charScoreLocal.value = getCharScore(character, schoolIndex.value)
+        overPercentage.value = getProfRankResult(charScoreLocal.value, character, schoolIndex.value, uid)
+    }
     val scoreInfoList = arrayListOf(
-        Res.string.CharScore to charScore,
-        Res.string.CharRank to getCharRange(charScore),
+        Res.string.CharScore to charScoreLocal.value,
+        Res.string.CharRank to getCharRange(charScoreLocal.value),
         //Res.string.RelicScore to 123.4f,
         //Res.string.RelicRank to "B",
     )
+
 
     val gradRequirement = getGradAttrAndValue(character, schoolIndex.value)
 
@@ -426,7 +448,11 @@ fun ProficientScoreInfo(character: Character) {
 
             //Leaderboard Overview - 100 is example
             Text(
-                text = removeStrQuote(Res.string.OverWholeServerUser).replace("$"+"{1}", "-100.0"),
+                text = if(overPercentage.value == -1f) {
+                    removeStrQuote(Res.string.LackOfUserData)
+                } else removeStrQuote(Res.string.OverWholeServerUser).replaceStrRes(
+                    formatDecimal(overPercentage.value*100)
+                ),
                 style = FontSizeNormal16(),
                 color = Color.White,
                 modifier = Modifier.align(Alignment.CenterHorizontally)
@@ -713,7 +739,7 @@ fun CharBioSkillInfo(character: Character, charNameBigHeight: MutableState<Int>)
 fun LightconeInfo(character: Character){
     val charStatus = character.characterStatus!!
     val isLightconeShowDesc = remember { mutableStateOf(false) }
-    if (charStatus.equippingLightcone != null && charStatus.equippingLightcone!!.registName != null) {
+    if (charStatus.equippingLightcone != null && charStatus.equippingLightcone!!.registName != null && charStatus.equippingLightcone!!.registName != "Unknown") {
         //Divider
         UserCharPageDivider()
 
@@ -982,4 +1008,8 @@ fun CharacterInfoFadeImg(
         )
 
     }
+}
+
+fun getProfRankResult(score: Float, character: Character, schoolIndex: Int, uid: String): Float {
+    return StarbaseAPI().getSpecificUserCharProfOver(character.officialId!!, schoolId = schoolIndex, myScore = score, uid = uid)
 }

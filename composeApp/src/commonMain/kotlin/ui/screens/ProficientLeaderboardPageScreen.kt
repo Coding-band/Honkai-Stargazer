@@ -153,6 +153,7 @@ fun ProficientLeaderboardPageScreen(
                         }
                     }
                 }.await()
+
                 withContext(Dispatchers.Main) {
                     isInited.value = true
                 }
@@ -161,7 +162,7 @@ fun ProficientLeaderboardPageScreen(
     }
 
     LaunchedEffect(isInited.value) {
-        if (isInited.value) {
+        if (isInited.value && schoolList.isNotEmpty()) {
             CoroutineScope(Dispatchers.Default).launch {
                 async {
                     val request = StarbaseAPI().getProfLeaderboardList(
@@ -343,12 +344,12 @@ fun ProfLeaderboardItem(charProf: CharacterProficient, navigator: Navigator) {
     Row(
         modifier = Modifier.clickable {
             CoroutineScope(Dispatchers.Default).launch{
-                println("UID: ${charProf.playerId}, CharID: ${charProf.charId}")
+                //println("UID: ${charProf.playerId}, CharID: ${charProf.charId}")
                 pomPomPopupInstance.value = PomPomPopup(isDisplay = true)
                 UserAccount.UIDSEARCH = StarbaseAPI().getUserAccountInfo(uid = charProf.playerId.toString())
 
                 withContext(Dispatchers.Main){
-                    println("UserAccount.UIDSEARCH: ${UserAccount.UIDSEARCH.characterList.size}, ${UserAccount.UIDSEARCH.characterList.map { println(it.registName) }}")
+                    //println("UserAccount.UIDSEARCH: ${UserAccount.UIDSEARCH.characterList.size}, ${UserAccount.UIDSEARCH.characterList.map { println(it.registName) }}")
                     pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
                     navigator.navigateLimited("${Screen.UserCharacterPageScreen.route}?uid=${charProf.playerId}&charId=${charProf.charId}")
                 }
