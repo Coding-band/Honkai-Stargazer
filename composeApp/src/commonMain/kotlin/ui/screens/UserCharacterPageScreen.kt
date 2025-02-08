@@ -261,23 +261,25 @@ fun ProficientScoreInfo(character: Character, uid: String) {
     val charScoreLocal = remember { mutableStateOf(0f) }
     val overPercentage = remember { mutableStateOf(-1f) }
 
+    //Init Data - CharScore and OverPercentage, only once
     if (!isInited.value) {
         charScoreLocal.value = getCharScore(character, schoolIndex.value)
         overPercentage.value = getProfRankResult(charScoreLocal.value, character, schoolIndex.value, uid)
         isInited.value = true
     }
 
+    //Update Data - CharScore and OverPercentage when index changed
     LaunchedEffect(schoolIndex.value){
         charScoreLocal.value = getCharScore(character, schoolIndex.value)
         overPercentage.value = getProfRankResult(charScoreLocal.value, character, schoolIndex.value, uid)
     }
+
     val scoreInfoList = arrayListOf(
         Res.string.CharScore to charScoreLocal.value,
         Res.string.CharRank to getCharRange(charScoreLocal.value),
         //Res.string.RelicScore to 123.4f,
         //Res.string.RelicRank to "B",
     )
-
 
     val gradRequirement = getGradAttrAndValue(character, schoolIndex.value)
 
@@ -518,7 +520,7 @@ fun RelicInfo(character: Character) {
                         val relic = relicValidList[it].first!!
                         val index = relicValidList[it].second
 
-                        val score = remember { mutableStateOf(0f) }
+                        //val score = remember { mutableStateOf(0f) }
                         val relicSubAttr = relic.properties.subList(1, relic.properties.size)
                         Row(Modifier.wrapContentSize().padding(8.dp)) {
                             Box(Modifier.width(48.dp).wrapContentHeight().align(Alignment.CenterVertically)) {
@@ -531,12 +533,14 @@ fun RelicInfo(character: Character) {
                                 Row(verticalAlignment = Alignment.CenterVertically) {
                                     StatusShortUI(relic.properties[0], FontSizeNormal12(), isRelic = true)
                                     Spacer(Modifier.weight(1f).width(8.dp))
+                                    /* Since Relic Score is not available anymore.
                                     Text(
                                         text = formatDecimal(score.value,1,
                                             isRoundDown = true),
                                         style = FontSizeNormal14(),
                                         color = Color.White
                                     )
+                                     */
                                 }
 
                                 FlowRow(
