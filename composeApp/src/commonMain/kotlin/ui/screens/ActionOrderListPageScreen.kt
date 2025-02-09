@@ -129,7 +129,10 @@ fun ActionOrderListPageScreen(
             //.haze(state = hazeState)
         ) {
             item {
-                Spacer(Modifier.height(PAGE_HEADER_HEIGHT+12.dp).statusBarsPadding())
+                Spacer(Modifier
+                    .statusBarsPadding()
+                    .height(PAGE_HEADER_HEIGHT + 12.dp)
+                )
             }
             items(itemList.size) { index ->
                 TeamListItemCard(itemList[index], navigator)

@@ -123,7 +123,7 @@ fun ExpeditionPageScreen(
                 item { Spacer(modifier = Modifier.height(PAGE_HEADER_HEIGHT+12.dp)) }
                 INSTANCE.userNote.expedition.forEachIndexed { index, expendition ->
                     item {
-                        ExpenditionItem(expendition, hazeState)
+                        ExpenditionItem(expendition)
                     }
                     if(index < INSTANCE.userNote.expedition.size - 1){
                         item { Spacer(modifier = Modifier.height(12.dp)) }
@@ -152,14 +152,13 @@ fun ExpeditionPageScreen(
 }
 
 @Composable
-fun ExpenditionItem(expendition: UserExpedition, hazeState: HazeState) {
+fun ExpenditionItem(expendition: UserExpedition) {
     //Frame & Background
     Box(modifier = Modifier
         .fillMaxWidth()
         .wrapContentHeight()
         .background(Color(0xCCF3F9FF), RoundedCornerShape(4.dp, 20.dp, 4.dp, 4.dp))
         .clip(shape = RoundedCornerShape(4.dp, 20.dp, 4.dp, 4.dp))
-        .hazeChild(hazeState)
     ) {
         //Content
         Column(modifier = Modifier.fillMaxWidth().wrapContentHeight()) {
