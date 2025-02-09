@@ -140,7 +140,6 @@ fun UIDSearchPageScreen(
                                 searchRecordList.value.add(UserAccountLite(UIDSEARCH.uid, UIDSEARCH.username, UIDSEARCH.level, UIDSEARCH.icon, UIDSEARCH.server))
                                 UserAccountLite.saveSearchRecordList(searchRecordList.value)
                             }
-                            navigator.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=${searchWords.value}")
                         }else{
                             toaster.show(
                                 message = noDataStr,
@@ -151,6 +150,7 @@ fun UIDSearchPageScreen(
 
                     withContext(Dispatchers.Main){
                         pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
+                        navigator.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=${searchWords.value}")
                     }
                 }
             })

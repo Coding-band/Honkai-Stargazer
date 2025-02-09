@@ -33,6 +33,7 @@ import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -92,6 +93,7 @@ import utils.app.CharWeightList
 import utils.app.Constants
 import utils.app.Constants.Companion.CLARA_KAMOJI
 import utils.app.Constants.Companion.LOST_IMAGE_DRAWABLE
+import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal20
 import utils.app.Language
@@ -121,7 +123,7 @@ fun ProficientLeaderboardPageScreen(
     val hazeState = remember { HazeState() }
     val selectedLeaderboardIndex = rememberSaveable { mutableStateOf(0) }
     val schoolList by rememberSaveable { mutableStateOf(arrayListOf(ProficientSchool(schoolIndex = 0, charId = 0))) }
-    val leaderboardList = rememberSaveable { mutableStateListOf<CharacterProficient>() }
+    var leaderboardList by rememberSaveable { mutableStateOf(arrayListOf<CharacterProficient>()) }
     val isExpandSchoolDropdown = remember { mutableStateOf(false) }
     val optionTextViewSize = remember { mutableStateOf(IntSize.Zero) }
     val density = LocalDensity.current.density
@@ -170,22 +172,25 @@ fun ProficientLeaderboardPageScreen(
                     )
                     //println("Leadeboard in ${schoolList[selectedLeaderboardIndex.value].zhName} (${schoolList[selectedLeaderboardIndex.value].schoolIndex}) : ${request.size}")
 
-                    leaderboardList.swapList(request)
+                    leaderboardList = request
                 }.await()
             }
         }
     }
 
     LaunchedEffect(selectedLeaderboardIndex.value) {
-        CoroutineScope(Dispatchers.Default).launch {
-            async {
-                val request = StarbaseAPI().getProfLeaderboardList(
-                    schoolList[selectedLeaderboardIndex.value].charId, schoolList[selectedLeaderboardIndex.value].schoolIndex
-                )
-                //println("Leadeboard in ${schoolList[selectedLeaderboardIndex.value].zhName} (${schoolList[selectedLeaderboardIndex.value].schoolIndex}) : ${request.size}")
+        if(isInited.value){
+            CoroutineScope(Dispatchers.Default).launch {
+                async {
+                    val request = StarbaseAPI().getProfLeaderboardList(
+                        schoolList[selectedLeaderboardIndex.value].charId,
+                        schoolList[selectedLeaderboardIndex.value].schoolIndex
+                    )
+                    //println("Leadeboard in ${schoolList[selectedLeaderboardIndex.value].zhName} (${schoolList[selectedLeaderboardIndex.value].schoolIndex}) : ${request.size}")
 
-                leaderboardList.swapList(request)
-            }.await()
+                    leaderboardList = request
+                }.await()
+            }
         }
     }
 
@@ -205,6 +210,7 @@ fun ProficientLeaderboardPageScreen(
                         .defaultMinSize(100.dp, 30.dp)
                         .wrapContentSize()
                         .clip(RoundedCornerShape(43.dp))
+                        .padding(start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)
                         .clickable { isExpandSchoolDropdown.value = !isExpandSchoolDropdown.value }
                 ) {
                     if(!schoolList.isEmpty()){

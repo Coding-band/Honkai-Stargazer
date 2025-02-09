@@ -5,7 +5,9 @@ import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.saveable.Saver
 import androidx.compose.runtime.saveable.listSaver
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.snapshots.SnapshotStateList
+import androidx.compose.runtime.toMutableStateList
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import coil3.ImageLoader
@@ -62,8 +64,10 @@ import kotlinx.datetime.Instant
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.plus
 import kotlinx.datetime.toLocalDateTime
+import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.encodeToJsonElement
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
@@ -75,9 +79,11 @@ import okio.use
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
+import types.CharacterProficient
 import types.CombatType
 import types.ImageFolder
 import types.Path
+import ui.screens.ProficientSchool
 import utils.annotation.VersionUpdateCheck
 import utils.starbase.StarbaseAPI
 import kotlin.math.pow
@@ -714,3 +720,11 @@ fun <T> SnapshotStateList<T>.swapList(newList: List<T>){
     addAll(newList)
 }
 
+val CharacterProficientSaver: Saver<SnapshotStateList<CharacterProficient>, Any> = listSaver(
+    save = { listOf(Json.encodeToString(it.toList())) },
+    restore = { Json.decodeFromString(it[0]) as SnapshotStateList<CharacterProficient> }
+)
+val ProficientSchoolSaver: Saver<SnapshotStateList<ProficientSchool>, Any> = listSaver(
+    save = { listOf(Json.encodeToString(it.toMutableList())) },
+    restore = { Json.decodeFromString(it[0]) as SnapshotStateList<ProficientSchool> }
+)
