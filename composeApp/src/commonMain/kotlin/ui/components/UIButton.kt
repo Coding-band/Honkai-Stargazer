@@ -46,7 +46,7 @@ public enum class UIButtonSize {
 @DoItLater("Re-structure UIButton's logic flow")
 @Composable
 fun UIButton(
-    modifierTmp: Modifier = Modifier,
+    modifierTmp: Modifier = Modifier.fillMaxWidth().wrapContentHeight(),
     textRes: StringResource? = null,
     text: String? = null,
     icon: DrawableResource? = null,
@@ -59,7 +59,7 @@ fun UIButton(
     modifier = if (textRes == null && text == null && icon != null) {
         modifier.size(46.dp).background(Color(0xFFDDDDDD), shape = RoundedCornerShape(23.dp))
     } else {
-        modifier.fillMaxWidth().wrapContentHeight()
+        modifier
             .background(Color(0xFFDDDDDD), shape = RoundedCornerShape(23.dp))
     }
 
