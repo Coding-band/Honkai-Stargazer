@@ -12,6 +12,7 @@ import java.util.Properties
  * VersionUpdateCheck
  * Environment Area - App Version
  */
+val appVersionDesktop = "1.0.0"
 
 
 plugins {
@@ -232,15 +233,20 @@ compose.desktop {
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb, TargetFormat.Exe)
             packageName = "Stargazer 3${if(appProfile.contains("PRODUCTION")) "" else " ($appProfile)"}"
-            packageVersion = "1.0.0"
+            packageVersion = appVersionDesktop
             copyright = "Copyright © 2024 Coding Band 版權所有"
             description = "Stargazer 3 is an unofficial multiplatform app developed by Coding Band."
+            vendor = "Coding Band"
 
             linux {
                 iconFile.set(project.file("icon/app_icon.png"))
+                shortcut = true
             }
             windows {
                 iconFile.set(project.file("icon/app_icon.ico"))
+                shortcut = true
+                menu = true
+                dirChooser = true
             }
             macOS{
                 iconFile.set(project.file("icon/app_icon.icns"))
