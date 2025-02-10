@@ -1,7 +1,7 @@
 const officalLightconeId: any = {
   //Add in 3.0.0
-  23037 : "Into the Unreachable Veil",
-  23036 : "Time Woven Into Gold",
+  23037 : "Time Woven Into Gold",
+  23036 : "Into the Unreachable Veil",
   21052 : "Sweat Now, Cry Less",
   21051 : "Geniuses' Greeting",
   21050 : "Victory In a Blink",

@@ -18,7 +18,6 @@ import {
 import { InAppBrowser } from 'react-native-inappbrowser-reborn'
 import { isHoyolabPlatform } from "../../../../../../utils/hoyolab/utils";
 import CookieManager from "@react-native-cookies/cookies";
-import * as WebBrowser from 'expo-web-browser';
 import useHoyolabCookie from "../../../../../../redux/hoyolabCookie/useHoyolabCookie";
 import useHsrServerChosen from "../../../../../../redux/hsrServerChosen/useHsrServerChosen";
 
@@ -62,32 +61,6 @@ export default function ToLoginScreen(props: Props) {
 
     //openInAppBrowser(server);
   };
-
-  async function openExpowebBrowser(server : Server){
-    try{
-      const url =  (server.platform === "hoyolab" ? cookieURLs.hoyolab : cookieURLs.mihoyo)
-      const serverId = server.id;
-      await WebBrowser.openAuthSessionAsync(url, undefined, { preferEphemeralSession : true} as WebBrowser.AuthSessionOpenOptions).then(async (response : WebBrowser.WebBrowserAuthSessionResult) => {
-        console.log(response)
-        if(response.type === "dismiss"){
-
-          console.log(await CookieManager.get(url,true))
-          setHsrServerChosen(serverId);
-      
-          // hoyolab 或米游社 Cookie 處理
-          const cookie = await getHoyolabCookieFromCookieManager(
-            isHoyolabPlatform(serverId) ? "hoyolab" : "mihoyo"
-          );
-          setHoyolabCookie(cookie);
-          
-          navigation.goBack();
-        }
-      });
-      
-    }catch(error : any){
-      console.error(error)
-    }
-  }
 
   async function openInAppBrowser(server : Server){
     try{

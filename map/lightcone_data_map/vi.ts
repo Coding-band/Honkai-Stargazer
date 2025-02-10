@@ -143,8 +143,8 @@ import Shadowburn from "../../data/lightcone_data/vi/20021.json";
 
 const VI = {
   //add in 3.0.0
-  "Into the Unreachable Veil": TimeWovenIntoGold,
-  "Time Woven Into Gold": IntotheUnreachableVeil,
+  "Into the Unreachable Veil": IntotheUnreachableVeil,
+  "Time Woven Into Gold": TimeWovenIntoGold,
   "Sweat Now, Cry Less": SweatNowCryLess,
   "Geniuses' Greeting": GeniusesGreeting,
   "Victory In a Blink": VictoryInaBlink,
