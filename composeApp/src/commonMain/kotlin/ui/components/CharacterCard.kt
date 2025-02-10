@@ -24,6 +24,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -31,7 +32,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
@@ -51,10 +55,12 @@ import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import utils.app.Constants.Companion.LOST_IMAGE_DRAWABLE
 import utils.app.Constants.Companion.MATERIAL_CARD_TITLE_HEIGHT
 import utils.app.Constants.Companion.getCardBgColorByRare
+import utils.app.DpToPx
 import utils.app.FontSizeNormal12
 import utils.app.TextColorNormalDim
 import utils.app.getAssetsURLByFileName
 import utils.app.getImageNameByRegistName
+import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.replaceStrRes
 
@@ -77,13 +83,15 @@ fun CharacterCard(
     isDisplayLevel : Boolean = false,
 ) {
     val interactionSource = remember { MutableInteractionSource() }
+    val overrideNameComponentScaledHeight = remember { mutableStateOf(0.dp) }
+    val density = LocalDensity.current.density
 
     //UI of the Character Card
     //Container of the Character Card
     Box(
         modifier = Modifier
             .widthIn(CHAR_CARD_WIDTH, CHAR_CARD_WIDTH*2)
-            .aspectRatio(CHAR_CARD_WIDTH/ CHAR_CARD_HEIGHT)
+            .aspectRatio(CHAR_CARD_WIDTH/ (CHAR_CARD_HEIGHT + overrideNameComponentScaledHeight.value))
             .clip(
                 RoundedCornerShape(
                     topEnd = 15.dp,
@@ -136,12 +144,19 @@ fun CharacterCard(
                 }
             }
             Row(
-                Modifier.fillMaxWidth().background(Color(0xFF222222)).height(MATERIAL_CARD_TITLE_HEIGHT),
+                Modifier.fillMaxWidth().background(Color(0xFF222222)).wrapContentHeight(),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center
             ) {
+                if(isDisplayName){overrideNameComponentScaledHeight.value = 0.dp; println(overrideNameComponentScaledHeight.value)}
+
                 if(!isDisplayName && overrideNameComponent != null){
-                    overrideNameComponent()
+                    Box(modifier = Modifier.wrapContentHeight().fillMaxWidth().onSizeChanged {
+                        overrideNameComponentScaledHeight.value = pxToDp(it.height * (it.width / DpToPx(CHAR_CARD_WIDTH, density)), density = density) - CHAR_CARD_TITLE_HEIGHT
+                        println(overrideNameComponentScaledHeight.value)
+                    }) {
+                        overrideNameComponent()
+                    }
                 }else if (!isDisplayName && isDisplayLevel && character.characterStatus != null && character.characterStatus!!.characterLevel != -1){
                     Text(
                         text = "Lv ${character.characterStatus!!.characterLevel}",
