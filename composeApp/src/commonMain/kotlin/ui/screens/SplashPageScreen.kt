@@ -51,6 +51,7 @@ import utils.app.Language
 import utils.app.Preferences
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
+import utils.starbase.StarbaseAPI
 
 
 @Preview
@@ -64,7 +65,7 @@ fun SplashPage(
     val showPopup = remember { mutableStateOf(!Preferences().AppSettings.isLangInitialized()) }
 
     val hasRefreshed = remember { mutableStateOf(false) }
-    LaunchedEffect(showPopup.value) {
+    LaunchedEffect(Unit) {
         if (!showPopup.value) {
             CoroutineScope(Dispatchers.Default).launch {
                 if (INSTANCE.uid != "000000000" && !hasRefreshed.value) {
@@ -73,15 +74,18 @@ fun SplashPage(
                         refreshNoteData()
                         refreshMOCData()
                         refreshPFData()
+                        Preferences().Leaderboard.updatedLeaderboard()
+
+                        StarbaseAPI().updateUserAccountInfo()
+                        StarbaseAPI().updateCharData()
+                        StarbaseAPI().updatePFData()
+                        StarbaseAPI().updateMOCData()
                     }.await()
                 }
 
                 hasRefreshed.value = true
 
                 withContext(Dispatchers.Main) {
-                    if(INSTANCE.uid != "000000000" && !hasRefreshed.value ){
-                        Preferences().Leaderboard.updatedLeaderboard()
-                    }
                     if (!showPopup.value) {
                         navigator.navigate(
                             Screen.RootPage.route,

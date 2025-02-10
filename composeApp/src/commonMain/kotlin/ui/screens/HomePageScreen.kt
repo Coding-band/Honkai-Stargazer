@@ -159,21 +159,13 @@ fun HomePage(
     }
     var isInited by rememberSaveable { mutableStateOf(false) }
     if(!isInited){
-        LaunchedEffect(Unit){
-            CoroutineScope(Dispatchers.Default).launch {
-                if(INSTANCE.uid != "000000000"){
-                    async { StarbaseAPI().updateUserAccountInfo() }.await()
-                    async { StarbaseAPI().updateCharData() }.await()
-                    async { StarbaseAPI().updateMOCData() }.await()
-                    async { StarbaseAPI().updatePFData() }.await()
-                }
-            }
-        }
+
         initCharList()
         initLcList()
         initRelicList()
         initMOCList()
         initPFList()
+
         isInited = true
     }
 }
