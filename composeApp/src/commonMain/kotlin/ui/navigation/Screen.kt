@@ -163,4 +163,8 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
         "ActionOrderListPageScreen",
         HeaderData(titleRId = Res.string.ActionOrderTitle, titleIconId = Res.drawable.phorphos_align_left_fill)
     )
+    data object ActionOrderSimulatorPageScreen : Screen(
+        "ActionOrderSimulatorPageScreen",
+        HeaderData(titleRId = Res.string.ActionOrderTitle, titleIconId = Res.drawable.phorphos_align_left_fill)
+    )
 }

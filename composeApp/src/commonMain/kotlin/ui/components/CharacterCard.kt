@@ -153,7 +153,6 @@ fun CharacterCard(
                 if(!isDisplayName && overrideNameComponent != null){
                     Box(modifier = Modifier.wrapContentHeight().fillMaxWidth().onSizeChanged {
                         overrideNameComponentScaledHeight.value = pxToDp(it.height * (it.width / DpToPx(CHAR_CARD_WIDTH, density)), density = density) - CHAR_CARD_TITLE_HEIGHT
-                        println(overrideNameComponentScaledHeight.value)
                     }) {
                         overrideNameComponent()
                     }

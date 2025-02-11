@@ -52,6 +52,7 @@ import ui.components.defaultHeaderData
 import ui.components.docCountDown
 import ui.screens.AboutStargazerPageScreen
 import ui.screens.ActionOrderListPageScreen
+import ui.screens.ActionOrderSimulatorPageScreen
 import ui.screens.BackgroundSettingScreen
 import ui.screens.BattleChroniclePageScreen
 import ui.screens.CharacterInfoPage
@@ -504,10 +505,22 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
             screenInstance = Screen.ActionOrderListPageScreen
             withBGScreen(isPadMode){
                 ActionOrderListPageScreen(
-                        navigator = navigator,
-                        headerData = Screen.ActionOrderListPageScreen.headerData
-                    )
-                }
+                    navigator = navigator,
+                    headerData = Screen.ActionOrderListPageScreen.headerData
+                )
+            }
+
+        }
+        scene(
+            route = Screen.ActionOrderSimulatorPageScreen.route) { backStackEntry ->
+            screenInstance = Screen.ActionOrderSimulatorPageScreen
+            withBGScreen(isPadMode){
+                ActionOrderSimulatorPageScreen(
+                    navigator = navigator,
+                    headerData = Screen.ActionOrderSimulatorPageScreen.headerData,
+                    backStackEntry = backStackEntry,
+                )
+            }
 
         }
     }

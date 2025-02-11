@@ -111,6 +111,7 @@ import ui.components.PageHeader
 import ui.components.UIButton
 import ui.components.UIButtonSize
 import ui.components.defaultHeaderData
+import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import utils.annotation.DoItLater
 import utils.app.Constants
@@ -177,20 +178,22 @@ val TEST_LIST = arrayListOf(
     )
 )
 
-lateinit var actionOrderTeamList : MutableState<ArrayList<TeamListItem>>
+lateinit var actionOrderTeamList : SnapshotStateList<TeamListItem>
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun initActionOrderTeamList(){
-    actionOrderTeamList = rememberSaveable { mutableStateOf(arrayListOf()) }
+    actionOrderTeamList = rememberSaveable { mutableStateListOf() }
 
-    actionOrderTeamList.value = runBlocking {
-        val job = CoroutineScope(Dispatchers.Default).async {
-            return@async Preferences().ActionOrder.getActionOrderList()
+    actionOrderTeamList.addAll(
+        runBlocking {
+            val job = CoroutineScope(Dispatchers.Default).async {
+                return@async Preferences().ActionOrder.getActionOrderList()
+            }
+            job.await()
+            job.getCompleted()
         }
-        job.await()
-        job.getCompleted()
-    }
+    )
 }
 
 @DoItLater("Allow user to Export and Import TeamList")
@@ -201,7 +204,6 @@ fun ActionOrderListPageScreen(
     headerData: HeaderData = defaultHeaderData
 ) {
     val hazeState = remember { HazeState() }
-    val itemList = remember { mutableStateListOf<TeamListItem>() }
     val isInit = remember { mutableStateOf(false) }
     val isPopupOpen = remember { mutableStateOf(false) }
     val localCharList = rememberSaveable { mutableStateOf<ArrayList<Character>>(arrayListOf()) }
@@ -209,7 +211,6 @@ fun ActionOrderListPageScreen(
     //Just Testing
     LaunchedEffect(Unit){
         if(!isInit.value){
-            itemList.addAll(TEST_LIST)
             localCharList.value.addAll(UserAccount.INSTANCE.characterList)
             charList.value.forEach { char ->
                 if(UserAccount.INSTANCE.characterList.filter { it.officialId == char.officialId }.isEmpty()){
@@ -232,9 +233,9 @@ fun ActionOrderListPageScreen(
                     .height(PAGE_HEADER_HEIGHT + 12.dp)
                 )
             }
-            items(itemList.size) { index ->
-                TeamListItemCard(itemList[index], navigator)
-                if(index < itemList.size - 1){
+            items(actionOrderTeamList.size) { index ->
+                TeamListItemCard(actionOrderTeamList[index], index, navigator)
+                if(index < actionOrderTeamList.size - 1){
                     Spacer(Modifier.height(12.dp))
                 }
             }
@@ -287,7 +288,7 @@ fun ActionOrderListPageScreen(
             Box(
                 modifier = Modifier.align(Alignment.Center)
             ) {
-                TeamSelectPopup(itemList, localCharList, isPopupOpen = isPopupOpen)
+                TeamSelectPopup(localCharList, isPopupOpen = isPopupOpen)
             }
         }
     }
@@ -296,7 +297,7 @@ fun ActionOrderListPageScreen(
 }
 
 @Composable
-fun TeamSelectPopup(itemList: SnapshotStateList<TeamListItem>, localCharList: MutableState<ArrayList<Character>>,isPopupOpen: MutableState<Boolean>){
+fun TeamSelectPopup(localCharList: MutableState<ArrayList<Character>>,isPopupOpen: MutableState<Boolean>){
     val teamDataList = remember { mutableStateListOf<TeammateItem>() }
     //UI Part
     Box(modifier = Modifier.fillMaxSize()){
@@ -344,7 +345,7 @@ fun TeamSelectPopup(itemList: SnapshotStateList<TeamListItem>, localCharList: Mu
                             .clickable {
                                 val ret = arrayListOf<TeammateItem>()
                                 ret.addAll(teamDataList)
-                                itemList.add(TeamListItem(teamDataList = ret))
+                                actionOrderTeamList.add(TeamListItem(teamDataList = ret))
                                 isPopupOpen.value = false
                             }
                     ) {
@@ -478,6 +479,7 @@ fun getSpecificAttrFromChar(char: Character, attr: Attribute) : HsrProperties? {
 @Composable
 fun TeamListItemCard(
     teamListItem: TeamListItem,
+    index: Int,
     navigator: Navigator
 ) {
     val dateFormat = LocalDateTime.Format { byUnicodePattern("yyyy.MM.dd") }
@@ -487,7 +489,9 @@ fun TeamListItemCard(
         .wrapContentHeight()
         .background(Color(0xCCF3F9FF), RoundedCornerShape(4.dp, 20.dp, 4.dp, 4.dp))
         .clip(shape = RoundedCornerShape(4.dp, 20.dp, 4.dp, 4.dp))
-        .clickable { } //DoItLater("Open ActionOrderSimulatorPage")
+        .clickable {
+            navigator.navigateLimited("${Screen.ActionOrderSimulatorPageScreen.route}?index=$index")
+        }
     ) {
         //Content
         Column(modifier = Modifier.fillMaxWidth().wrapContentHeight().padding(12.dp)) {
