@@ -4,6 +4,7 @@ import com.russhwolf.settings.Settings
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import ui.components.HomePageBlocks
+import ui.screens.TeamListItem
 import utils.app.Constants.Companion.HOME_PAGE_MENU_DEFAULT
 import utils.starbase.StarbaseAPI
 
@@ -13,6 +14,9 @@ class Preferences {
     val Leaderboard = LeaderboardClass()
     val AppSettings = AppSettingsClass()
     val HomePageMenu = HomePageMenuClass()
+    val ActionOrder = ActionOrderClass()
+    //val WrapSimulator = WrapSimulatorClass()
+    //val WrapAnalysis = WrapAnalysisClass()
 
     private class Constants{
         val CHAR_LIST_UPDATE_MINS = 15
@@ -36,18 +40,18 @@ class Preferences {
         }
         fun resetCharList(){
             Settings().putLong(Constants().KEY_HYB_CHAR_LIST_LAST_UPDATE_TIME, 0L)
-            writeToFile("localCharList", "[]")
+            writeToFile("localCharList.json", "[]")
             //Settings().putString("localCharList", "[]")
         }
 
         fun getLocalCharListString(): String {
             //return Settings().getString("localCharList", "[]")
-            return readFromFile("localCharList", true)
+            return readFromFile("localCharList.json", true, "[]")
         }
 
         fun setLocalCharListString(charList: String){
             //Settings().putString("localCharList", charList)
-            writeToFile("localCharList", charList)
+            writeToFile("localCharList.json", charList)
         }
     }
 
@@ -147,6 +151,16 @@ class Preferences {
         fun setHomePageMenuArray(homePageMenuArray: ArrayList<HomePageBlocks.HomePageBlockItem>){
             val menuStrArray = homePageMenuArray.map { it.itemId }
             Settings().putString("homePageMenuArray", Json.encodeToString(menuStrArray))
+        }
+    }
+
+    class ActionOrderClass(){
+        fun getActionOrderList(): ArrayList<TeamListItem>{
+            val actionOrderListStr = readFromFile("actionOrderTeamList.json", true, "[]")
+            return Json.decodeFromString<ArrayList<TeamListItem>>(actionOrderListStr)
+        }
+        fun setActionOrderList(actionOrderList: ArrayList<String>){
+            writeToFile("actionOrderTeamList.json", Json.encodeToString(actionOrderList))
         }
     }
 }

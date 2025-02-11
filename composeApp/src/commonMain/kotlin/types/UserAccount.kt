@@ -384,14 +384,14 @@ class UserAccount(
         private fun save(){
             //Settings().putString("userAccount", Json.encodeToString(INSTANCE))
             //Settings().putString("userAccountCharList", Json.encodeToString(characterList))
-            writeToFile("userAccount", Json.encodeToString(INSTANCE))
+            writeToFile("userAccount.json", Json.encodeToString(INSTANCE))
 
         }
 
         private fun load() : UserAccount{
             //val userAccount = Json.decodeFromString<UserAccount>(Settings().getString("userAccount", Json.encodeToString(UserAccount())))
             //userAccount.characterList = Json.decodeFromString<ArrayList<Character>>(Settings().getString("userAccountCharList", Json.encodeToString(arrayListOf<Character>())))
-            return Json.decodeFromString<UserAccount>(readFromFile("userAccount", true))
+            return Json.decodeFromString<UserAccount>(readFromFile("userAccount.json", true))
         }
     }
 }

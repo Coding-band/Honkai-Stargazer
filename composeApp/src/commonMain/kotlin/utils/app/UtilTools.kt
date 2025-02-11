@@ -480,14 +480,14 @@ fun writeToFile(filePath: String, content: String) {
     }
 }
 
-fun readFromFile(filePath: String, localOnly : Boolean = false): String {
+fun readFromFile(filePath: String, localOnly : Boolean = false, defaultData : String = "{}"): String {
     val fileSystem = FileSystem.SYSTEM
     val file = FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("data").resolve(filePath)
 
     try {
         // Check if the file exists
         if (!fileSystem.exists(file)) {
-            val data = if(localOnly) "{}" else readFromOnlineURL(StarbaseAPI().getGitHubStaticAssetURL() + "/data/${filePath}")
+            val data = if(localOnly) defaultData else readFromOnlineURL(StarbaseAPI().getGitHubStaticAssetURL() + "/data/${filePath}")
             writeToFile(filePath, data)
             return data
         }
@@ -536,7 +536,7 @@ fun readFromFile(filePath: String, localOnly : Boolean = false): String {
     } catch (e: Exception) {
         errorLog("UtilTools.kt", "readFromFile", e)
     }
-    return "{}"
+    return defaultData
 }
 
 /**
