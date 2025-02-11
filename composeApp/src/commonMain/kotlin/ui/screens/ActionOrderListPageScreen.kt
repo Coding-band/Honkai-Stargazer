@@ -178,14 +178,14 @@ val TEST_LIST = arrayListOf(
     )
 )
 
-lateinit var actionOrderTeamList : SnapshotStateList<TeamListItem>
+lateinit var actionOrderTeamList : MutableState<ArrayList<TeamListItem>>
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun initActionOrderTeamList(){
-    actionOrderTeamList = rememberSaveable { mutableStateListOf() }
+    actionOrderTeamList = rememberSaveable { mutableStateOf(arrayListOf()) }
 
-    actionOrderTeamList.addAll(
+    actionOrderTeamList.value.addAll(
         runBlocking {
             val job = CoroutineScope(Dispatchers.Default).async {
                 return@async Preferences().ActionOrder.getActionOrderList()
@@ -233,9 +233,9 @@ fun ActionOrderListPageScreen(
                     .height(PAGE_HEADER_HEIGHT + 12.dp)
                 )
             }
-            items(actionOrderTeamList.size) { index ->
-                TeamListItemCard(actionOrderTeamList[index], index, navigator)
-                if(index < actionOrderTeamList.size - 1){
+            items(actionOrderTeamList.value.size) { index ->
+                TeamListItemCard(actionOrderTeamList.value[index], index, navigator)
+                if(index < actionOrderTeamList.value.size - 1){
                     Spacer(Modifier.height(12.dp))
                 }
             }
@@ -328,9 +328,9 @@ fun TeamSelectPopup(localCharList: MutableState<ArrayList<Character>>,isPopupOpe
                             .clickable { isPopupOpen.value = false }
                     ) {
                         Image(
-                            painter = painterResource(Res.drawable.ui_icon_back),
+                            painter = painterResource(Res.drawable.ui_icon_close),
                             contentDescription = "Exit Without Saving",
-                            modifier = Modifier.size(32.dp).align(Alignment.Center).rotate(180f),
+                            modifier = Modifier.size(32.dp).align(Alignment.Center),
                             colorFilter = ColorFilter.tint(Color.White),
                         )
                     }
@@ -345,14 +345,14 @@ fun TeamSelectPopup(localCharList: MutableState<ArrayList<Character>>,isPopupOpe
                             .clickable {
                                 val ret = arrayListOf<TeammateItem>()
                                 ret.addAll(teamDataList)
-                                actionOrderTeamList.add(TeamListItem(teamDataList = ret))
+                                actionOrderTeamList.value.add(TeamListItem(teamDataList = ret))
                                 isPopupOpen.value = false
                             }
                     ) {
                         Image(
-                            painter = painterResource(Res.drawable.ui_icon_right),
+                            painter = painterResource(Res.drawable.ui_icon_back),
                             contentDescription = "Saving Button",
-                            modifier = Modifier.size(32.dp).align(Alignment.Center),
+                            modifier = Modifier.size(32.dp).align(Alignment.Center).rotate(180f),
                             colorFilter = ColorFilter.tint(Color.White)
                         )
                     }
