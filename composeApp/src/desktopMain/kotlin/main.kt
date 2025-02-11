@@ -29,10 +29,8 @@ fun main() = application {
         onCloseRequest = ::exitApplication,
         title = removeStrQuote(Res.string.app_name),
         icon = painterResource(Res.drawable.app_icon),
-        state = WindowState(width = 800.dp, height = 600.dp)
+        state = WindowState(width = 1280.dp, height = 720.dp)
     ) {
-
-        window.minimumSize = java.awt.Dimension(800, 600)
 
         @DoItLater("JCEF, do it later")
         App()

@@ -202,7 +202,7 @@ fun ProficientLeaderboardPageScreen(
                     .height(PAGE_HEADER_HEIGHT)
             )
 
-            Row {
+            Row(modifier = Modifier.clip(RoundedCornerShape(43.dp))) {
                 //DropDownBar
                 Box(
                     contentAlignment = Alignment.BottomCenter,
