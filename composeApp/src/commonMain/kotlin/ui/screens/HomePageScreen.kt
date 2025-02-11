@@ -165,6 +165,7 @@ fun HomePage(
         initRelicList()
         initMOCList()
         initPFList()
+        initActionOrderTeamList()
 
         isInited = true
     }

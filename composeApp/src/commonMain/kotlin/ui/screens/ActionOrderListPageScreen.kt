@@ -55,12 +55,14 @@ import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.util.fastForEach
 import com.cheonjaeung.compose.grid.HorizontalGrid
 import com.cheonjaeung.compose.grid.SimpleGridCells
 import com.cheonjaeung.compose.grid.VerticalGrid
@@ -69,12 +71,19 @@ import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeChild
 import files.AccountSetup
 import files.ActionOrderAddItem
+import files.ActionOrderImportedCharData
 import files.ActionOrderItemChosen
 import files.Res
 import files.UserInfoOwnedCharacters
 import files.phorphos_check_regular
+import files.ui_icon_back
 import files.ui_icon_close
 import files.ui_icon_right
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
 import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
 import kotlinx.datetime.LocalDateTime
@@ -82,6 +91,10 @@ import kotlinx.datetime.TimeZone
 import kotlinx.datetime.format
 import kotlinx.datetime.format.byUnicodePattern
 import kotlinx.datetime.toLocalDateTime
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonArray
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.painterResource
 import types.Attribute
@@ -98,6 +111,7 @@ import ui.components.PageHeader
 import ui.components.UIButton
 import ui.components.UIButtonSize
 import ui.components.defaultHeaderData
+import ui.navigation.navigateLimited
 import utils.annotation.DoItLater
 import utils.app.Constants
 import utils.app.Constants.Companion.CHAR_CARD_HEIGHT
@@ -112,10 +126,13 @@ import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
+import utils.app.Preferences
 import utils.app.TextColorNormalDim
 import utils.app.removeStrQuote
+import utils.app.replaceStrRes
 import utils.hoyolab.AttributeExchange
 
+@Serializable
 data class TeamListItem(
     val uid: String = UserAccount.INSTANCE.uid,
     val teamBuildUnix: Long = Clock.System.now().toEpochMilliseconds(),
@@ -124,10 +141,12 @@ data class TeamListItem(
     val teamDataList: ArrayList<TeammateItem> = arrayListOf()
 )
 
+@Serializable
 data class TeammateItem(
     val character: Character,
     val level: Int = 1,
     val energyRechargeRate : Float = 1f,
+    val energyMax : Int = 100,
     val speedBase: Float = 100.0f,
     val speedRate: Float = 0f,
 )
@@ -138,10 +157,10 @@ val TEST_LIST = arrayListOf(
         teamBuildUnix = 1719789540000L,
         teamName = "再見，Stargazer 2；你好，Stargazer 3！\nBye Stargazer 2 and Hi Stargazer 3!",
         teamDataList = arrayListOf(
-            TeammateItem(Character.getCharacterItemFromJSON("1310"), 78, 1.0f, 100.0f, 34.0f),
-            TeammateItem(Character.getCharacterItemFromJSON("8006"), 78, 1.0f, 106.0f, 25.0f),
-            TeammateItem(Character.getCharacterItemFromJSON("1303"), 78, 1.0f, 112.0f, 25.0f),
-            TeammateItem(Character.getCharacterItemFromJSON("1217"), 78, 1.0f, 108.0f, 25.0f),
+            TeammateItem(Character.getCharacterItemFromJSON("1310"), 78, 1.0f, 120,100.0f, 34.0f),
+            TeammateItem(Character.getCharacterItemFromJSON("8006"), 78, 1.0f, 120,106.0f, 25.0f),
+            TeammateItem(Character.getCharacterItemFromJSON("1303"), 78, 1.0f, 120,112.0f, 25.0f),
+            TeammateItem(Character.getCharacterItemFromJSON("1217"), 78, 1.0f, 120,108.0f, 25.0f),
         )
     ),
 
@@ -150,13 +169,29 @@ val TEST_LIST = arrayListOf(
         teamBuildUnix = 1739937600000L,
         teamName = "來測一下？\n黑塔女士舉世無雙！\n黑塔女士聰明絕頂！\n黑塔女士沉魚落雁！",
         teamDataList = arrayListOf(
-            TeammateItem(Character.getCharacterItemFromJSON("1401"), 2, 1.0f, 100.0f, 34.0f),
-            TeammateItem(Character.getCharacterItemFromJSON("1013"), 19, 1.0f, 100.0f, 34.0f),
-            TeammateItem(Character.getCharacterItemFromJSON("8006"), 3, 1.0f, 100.0f, 34.0f),
-            TeammateItem(Character.getCharacterItemFromJSON("1303"), 5, 1.0f, 100.0f, 34.0f),
+            TeammateItem(Character.getCharacterItemFromJSON("1401"), 2, 1.0f, 120,100.0f, 34.0f),
+            TeammateItem(Character.getCharacterItemFromJSON("1013"), 19, 1.0f, 120,100.0f, 34.0f),
+            TeammateItem(Character.getCharacterItemFromJSON("8006"), 3, 1.0f, 120,100.0f, 34.0f),
+            TeammateItem(Character.getCharacterItemFromJSON("1303"), 5, 1.0f, 120,100.0f, 34.0f),
         )
     )
 )
+
+lateinit var actionOrderTeamList : MutableState<ArrayList<TeamListItem>>
+
+@OptIn(ExperimentalCoroutinesApi::class)
+@Composable
+fun initActionOrderTeamList(){
+    actionOrderTeamList = rememberSaveable { mutableStateOf(arrayListOf()) }
+
+    actionOrderTeamList.value = runBlocking {
+        val job = CoroutineScope(Dispatchers.Default).async {
+            return@async Preferences().ActionOrder.getActionOrderList()
+        }
+        job.await()
+        job.getCompleted()
+    }
+}
 
 @DoItLater("Allow user to Export and Import TeamList")
 @Composable
@@ -292,10 +327,10 @@ fun TeamSelectPopup(itemList: SnapshotStateList<TeamListItem>, localCharList: Mu
                             .clickable { isPopupOpen.value = false }
                     ) {
                         Image(
-                            painter = painterResource(Res.drawable.ui_icon_close),
+                            painter = painterResource(Res.drawable.ui_icon_back),
                             contentDescription = "Exit Without Saving",
-                            modifier = Modifier.size(32.dp).align(Alignment.Center),
-                            colorFilter = ColorFilter.tint(Color.White)
+                            modifier = Modifier.size(32.dp).align(Alignment.Center).rotate(180f),
+                            colorFilter = ColorFilter.tint(Color.White),
                         )
                     }
 
@@ -375,62 +410,60 @@ fun TeamSelectPopup(itemList: SnapshotStateList<TeamListItem>, localCharList: Mu
 
                 if(UserAccount.INSTANCE.uid !== "000000000"){
                     Text(
-                        text = "${UserAccount.INSTANCE.username} (${UserAccount.INSTANCE.uid}): "+removeStrQuote(Res.string.UserInfoOwnedCharacters),
+                        text = removeStrQuote(Res.string.ActionOrderImportedCharData).replaceStrRes("${UserAccount.INSTANCE.username} (${UserAccount.INSTANCE.uid})"),
                         style = FontSizeNormal16(),
                         color = Color(0xCCFFFFFF),
                         modifier = Modifier.align(Alignment.CenterHorizontally)
                     )
                     Spacer(Modifier.height(16.dp))
+                }
+                //Owned Characters List
 
-                    //Owned Characters List
-
-                    val lazyGridState = rememberLazyGridState()
-                    LazyVerticalGrid(
-                        columns = GridCells.Adaptive(CHAR_CARD_WIDTH),
-                        horizontalArrangement = Arrangement.spacedBy(12.dp),
-                        verticalArrangement = Arrangement.spacedBy(12.dp),
-                        state = lazyGridState,
-                        modifier = Modifier.padding(
-                            start = SCREEN_SAVE_PADDING,
-                            end = SCREEN_SAVE_PADDING
-                        )
-                    ){
-                        items(localCharList.value){ it ->
-                            CharacterCard(
-                                isDisplayLevel = false,
-                                character = it,
-                                onClick = {
-                                    if(teamDataList.size < 4 && teamDataList.none { itTeam -> itTeam.character.officialId == it.officialId }){
-                                        teamDataList.add(
-                                            TeammateItem(
-                                                character = it,
-                                                level = it.characterStatus?.characterLevel ?: 1,
-                                                energyRechargeRate = getSpecificAttrFromChar(it, Attribute.ATTR_SP_RATE)?.valueFinal ?: 1f,
-                                                speedBase = getSpecificAttrFromChar(it, Attribute.ATTR_SPD)?.valueFinal ?: 0f,
-                                                speedRate = getSpecificAttrFromChar(it, Attribute.ATTR_SPD)?.valueAdd ?: 0f
-                                            )
+                val lazyGridState = rememberLazyGridState()
+                LazyVerticalGrid(
+                    columns = GridCells.Adaptive(CHAR_CARD_WIDTH),
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp),
+                    state = lazyGridState,
+                    modifier = Modifier.padding(
+                        start = SCREEN_SAVE_PADDING,
+                        end = SCREEN_SAVE_PADDING
+                    )
+                ){
+                    items(localCharList.value){ it ->
+                        CharacterCard(
+                            isDisplayLevel = false,
+                            character = it,
+                            onClick = {
+                                if(teamDataList.size < 4 && teamDataList.none { itTeam -> itTeam.character.officialId == it.officialId }){
+                                    teamDataList.add(
+                                        TeammateItem(
+                                            character = it,
+                                            level = it.characterStatus?.characterLevel ?: 1,
+                                            energyMax = it.characterAttrData?.energy ?: 100,
+                                            energyRechargeRate = getSpecificAttrFromChar(it, Attribute.ATTR_SP_RATE)?.valueFinal ?: 1f,
+                                            speedBase = getSpecificAttrFromChar(it, Attribute.ATTR_SPD)?.valueFinal ?: it.characterAttrData?.spd ?: 0f,
+                                            speedRate = getSpecificAttrFromChar(it, Attribute.ATTR_SPD)?.valueAdd ?: 0f
                                         )
-                                    }
-                                    println(teamDataList.size)
-                                },
-                                overrideNameComponent = if(teamDataList.filter { itTeam -> itTeam.character.officialId == it.officialId }.isEmpty()) {
-                                    null
-                                } else {
-                                    {
-                                        Text(
-                                            text = removeStrQuote(Res.string.ActionOrderItemChosen),
-                                            textAlign = TextAlign.Center,
-                                            color = TextColorNormalDim,
-                                            fontSize = FontSizeNormal12().fontSize,
-                                            lineHeight = CHAR_CARD_TITLE_HEIGHT.value.sp,
-                                            maxLines = 1
-                                        )
-                                    }
+                                    )
                                 }
-                            )
-                        }
+                            },
+                            overrideNameComponent = if(teamDataList.filter { itTeam -> itTeam.character.officialId == it.officialId }.isEmpty()) {
+                                null
+                            } else {
+                                {
+                                    Text(
+                                        text = removeStrQuote(Res.string.ActionOrderItemChosen),
+                                        textAlign = TextAlign.Center,
+                                        color = TextColorNormalDim,
+                                        fontSize = FontSizeNormal12().fontSize,
+                                        lineHeight = CHAR_CARD_TITLE_HEIGHT.value.sp,
+                                        maxLines = 1
+                                    )
+                                }
+                            }
+                        )
                     }
-
                 }
             }
         }
@@ -454,7 +487,7 @@ fun TeamListItemCard(
         .wrapContentHeight()
         .background(Color(0xCCF3F9FF), RoundedCornerShape(4.dp, 20.dp, 4.dp, 4.dp))
         .clip(shape = RoundedCornerShape(4.dp, 20.dp, 4.dp, 4.dp))
-        .clickable {  } //DoItLater("Open ActionOrderSimulatorPage")
+        .clickable { } //DoItLater("Open ActionOrderSimulatorPage")
     ) {
         //Content
         Column(modifier = Modifier.fillMaxWidth().wrapContentHeight().padding(12.dp)) {
