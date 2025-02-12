@@ -128,7 +128,7 @@ fun HomePage(
     val homeMenuBlockList = remember { mutableStateOf(Preferences().HomePageMenu.getHomePageMenuArray()) }
 
     checkHasErrorLogFromLastCrash()
-    if(!arrayListOf("PRODUCTION", "RELEASE", "PRODUCTION_GP").contains(BuildKonfig.appProfile) ){
+    if(!arrayListOf("PRODUCTION", "RELEASE", "PRODUCTION_GP").contains(BuildKonfig.appProfile) ) {
         BetaVersionBox()
     }
 
@@ -156,18 +156,6 @@ fun HomePage(
 
         ThreeDotsDialog(navigator = navigator, threeDotDialogPos = threeDotDialogPos, hazeState = hazeState, threeDotDialogDisplay = threeDotDialogDisplay, userAccount = userAccount)
 
-    }
-    var isInited by rememberSaveable { mutableStateOf(false) }
-    if(!isInited){
-
-        initCharList()
-        initLcList()
-        initRelicList()
-        initMOCList()
-        initPFList()
-        initActionOrderTeamList()
-
-        isInited = true
     }
 }
 

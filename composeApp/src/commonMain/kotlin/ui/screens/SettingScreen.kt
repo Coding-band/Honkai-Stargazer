@@ -104,6 +104,7 @@ import utils.starbase.StarbaseAPI
 import kotlin.math.max
 
 val doRecompose = mutableStateOf(false)
+val doInit = mutableStateOf(false)
 
 @Composable
 fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerData: HeaderData = defaultHeaderData
