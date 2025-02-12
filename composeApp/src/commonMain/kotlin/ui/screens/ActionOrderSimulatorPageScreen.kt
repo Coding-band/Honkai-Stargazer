@@ -104,10 +104,10 @@ fun ActionOrderSimulatorPageScreen(
     val index = rememberSaveable { backStackEntry.query<String>("index")!!.toInt() }
     val hazeState = remember { HazeState() }
     val teamListItem = rememberSaveable { mutableStateOf(if(actionOrderTeamList.size < index+1) TeamListItem() else actionOrderTeamList[index]) }
+    val teamDataListSnap = rememberSaveable { mutableStateListOf<TeammateItem>().apply { addAll(teamListItem.value.teamDataList) } }
     val isInit = remember { mutableStateOf(false) }
     val isPopupOpen = remember { mutableStateOf(false) }
     val localCharList = rememberSaveable { mutableStateOf<ArrayList<Character>>(arrayListOf()) }
-    val teamDataListTmp = SnapshotStateList<TeammateItem>()
 
     LaunchedEffect(Unit){
         if(!isInit.value){
@@ -117,8 +117,6 @@ fun ActionOrderSimulatorPageScreen(
                     localCharList.value.add(char)
                 }
             }
-            teamDataListTmp.clear()
-            teamDataListTmp.addAll(actionOrderTeamList[index].teamDataList)
             isInit.value = true
         }
     }
@@ -126,7 +124,7 @@ fun ActionOrderSimulatorPageScreen(
     //UI
     Box(modifier = modifier.fillMaxSize()) {
         FlowRow(modifier = Modifier.padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)) {
-            ActionOrderItemInfoSetting(teamListItem, index, navigator, isPopupOpen)
+            ActionOrderItemInfoSetting(teamListItem, teamDataListSnap ,index, navigator, isPopupOpen)
         }
 
         AnimatedVisibility(
@@ -150,25 +148,23 @@ fun ActionOrderSimulatorPageScreen(
             Box(
                 modifier = Modifier.align(Alignment.Center)
             ) {
-                TeamSelectPopup(localCharList, isPopupOpen, teamDataList = teamDataListTmp ){ teamListItemTmp ->
+                //So complicated, consider to improve it at future
+                TeamSelectPopup(localCharList, isPopupOpen, teamDataList = mutableStateListOf<TeammateItem>().apply { addAll(teamListItem.value.teamDataList) } ){ teamListItemTmp ->
                     actionOrderTeamList[index].teamDataList.clear()
                     actionOrderTeamList[index].teamDataList.addAll(teamListItemTmp)
+                    teamDataListSnap.clear()
+                    teamDataListSnap.addAll(teamListItemTmp)
                     teamListItem.value = actionOrderTeamList[index]
                     isPopupOpen.value = false
                     Preferences().ActionOrder.setActionOrderList()
-                    teamDataListTmp.clear()
-                    teamDataListTmp.addAll(actionOrderTeamList[index].teamDataList)
                 }
             }
         }
     }
 }
 
-//TeamDataList set as non-snapshot
 @Composable
-fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, index: Int, navigator: Navigator, isPopupOpen : MutableState<Boolean>) {
-    val teamDataList: SnapshotStateList<TeammateItem> = rememberSaveable { mutableStateListOf() }
-    teamDataList.addAll(teamListItem.value.teamDataList)
+fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, teamDataListSnap : SnapshotStateList<TeammateItem>,  index: Int, navigator: Navigator, isPopupOpen : MutableState<Boolean>) {
     Column {
         Spacer(modifier = Modifier.statusBarsPadding().height(16.dp))
         //Title of Team, Back Button and Info Button
@@ -262,16 +258,16 @@ fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, index: 
                         end = SCREEN_SAVE_PADDING
                     )
                 ){
-                    items(teamDataList.size) { index ->
+                    items(teamDataListSnap.size) { index ->
                         Column(modifier = Modifier.wrapContentSize()) {
-                            CharacterCard(teamDataList[index].character, isDisplayLevel = true)
+                            CharacterCard(teamDataListSnap[index].character, isDisplayLevel = true)
 
                             Spacer(modifier = Modifier.height(8.dp))
 
                             Box(modifier = Modifier.wrapContentSize().align(Alignment.CenterHorizontally)) {
                                 UIWithGrayBG {
                                     Text(
-                                        text = teamDataList[index].energyMax.toString(),
+                                        text = teamDataListSnap[index].energyMax.toString(),
                                         style = FontSizeNormal16(),
                                         color = Color.White,
                                     )
@@ -287,7 +283,7 @@ fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, index: 
                 //@DoItLater("Apply Speed Checking in last Pair")
                 val textInfo = arrayListOf<Pair<StringResource, Int>>(
                     Pair(Res.string.ActionOrderInitSkillPoint, 3),
-                    Pair(Res.string.ActionOrderMaxSkillPoint, checkMaxSkillPoint(teamListItem.value.teamDataList)),
+                    Pair(Res.string.ActionOrderMaxSkillPoint, checkMaxSkillPoint(ArrayList(teamDataListSnap))),
                     Pair(Res.string.ActionOrderEnemySpeedTitle, teamListItem.value.teamEnemySpeed)
                 )
                 Column {
@@ -329,6 +325,8 @@ fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, index: 
         }
     }
 }
+
+
 
 @Composable
 fun UIWithGrayBG(component : @Composable () -> Unit){
