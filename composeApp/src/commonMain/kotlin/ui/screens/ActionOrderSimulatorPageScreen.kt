@@ -326,6 +326,22 @@ fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, teamDat
     }
 }
 
+@Composable
+fun ActionOrderSimulatorUI(teamListItem: MutableState<TeamListItem>, teamDataListSnap : SnapshotStateList<TeammateItem>){
+
+    //UI
+    Column {
+        Row {
+            //All Progress
+
+            Spacer(modifier = Modifier.weight(1f))
+
+            //Title Row
+
+        }
+
+    }
+}
 
 
 @Composable
