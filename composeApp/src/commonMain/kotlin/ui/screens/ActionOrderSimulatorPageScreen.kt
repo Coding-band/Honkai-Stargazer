@@ -1,5 +1,10 @@
 package ui.screens
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -11,6 +16,7 @@ import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.defaultMinSize
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -28,10 +34,12 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -73,9 +81,12 @@ import ui.components.defaultHeaderData
 import utils.annotation.VersionUpdateCheck
 import utils.app.Constants
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
+import utils.app.Constants.Companion.INFO_MAX_WIDTH
+import utils.app.Constants.Companion.INFO_MIN_WIDTH
 import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
+import utils.app.Preferences
 import utils.app.removeStrQuote
 import utils.calculator.ActionOrderEnemySpeed
 import utils.calculator.TeamListItem
@@ -96,6 +107,7 @@ fun ActionOrderSimulatorPageScreen(
     val isInit = remember { mutableStateOf(false) }
     val isPopupOpen = remember { mutableStateOf(false) }
     val localCharList = rememberSaveable { mutableStateOf<ArrayList<Character>>(arrayListOf()) }
+    val teamDataListTmp = SnapshotStateList<TeammateItem>()
 
     LaunchedEffect(Unit){
         if(!isInit.value){
@@ -105,18 +117,58 @@ fun ActionOrderSimulatorPageScreen(
                     localCharList.value.add(char)
                 }
             }
+            teamDataListTmp.clear()
+            teamDataListTmp.addAll(actionOrderTeamList[index].teamDataList)
             isInit.value = true
         }
     }
 
     //UI
-    FlowRow(modifier = Modifier.padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)) {
-        ActionOrderItemInfoSetting(teamListItem.value, index, navigator)
+    Box(modifier = modifier.fillMaxSize()) {
+        FlowRow(modifier = Modifier.padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)) {
+            ActionOrderItemInfoSetting(teamListItem, index, navigator, isPopupOpen)
+        }
+
+        AnimatedVisibility(
+            isPopupOpen.value,
+            enter = slideInVertically(
+                initialOffsetY = { it },
+                animationSpec = tween(
+                    durationMillis = 500,
+                    easing = FastOutSlowInEasing
+                )
+            ),
+            exit = slideOutVertically(
+                targetOffsetY = { it },
+                animationSpec = tween(
+                    durationMillis = 500,
+                    easing = FastOutSlowInEasing
+                )
+            ),
+            modifier = Modifier.widthIn(INFO_MIN_WIDTH, INFO_MAX_WIDTH).fillMaxHeight().align(Alignment.BottomCenter)
+        ){
+            Box(
+                modifier = Modifier.align(Alignment.Center)
+            ) {
+                TeamSelectPopup(localCharList, isPopupOpen, teamDataList = teamDataListTmp ){ teamListItemTmp ->
+                    actionOrderTeamList[index].teamDataList.clear()
+                    actionOrderTeamList[index].teamDataList.addAll(teamListItemTmp)
+                    teamListItem.value = actionOrderTeamList[index]
+                    isPopupOpen.value = false
+                    Preferences().ActionOrder.setActionOrderList()
+                    teamDataListTmp.clear()
+                    teamDataListTmp.addAll(actionOrderTeamList[index].teamDataList)
+                }
+            }
+        }
     }
 }
 
+//TeamDataList set as non-snapshot
 @Composable
-fun ActionOrderItemInfoSetting(teamListItem: TeamListItem, index: Int, navigator: Navigator) {
+fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, index: Int, navigator: Navigator, isPopupOpen : MutableState<Boolean>) {
+    val teamDataList: SnapshotStateList<TeammateItem> = rememberSaveable { mutableStateListOf() }
+    teamDataList.addAll(teamListItem.value.teamDataList)
     Column {
         Spacer(modifier = Modifier.statusBarsPadding().height(16.dp))
         //Title of Team, Back Button and Info Button
@@ -130,7 +182,7 @@ fun ActionOrderItemInfoSetting(teamListItem: TeamListItem, index: Int, navigator
                     .align(Alignment.CenterVertically)
                     .clickable {
                         //Save and Exit
-                        actionOrderTeamList[index] = teamListItem
+                        actionOrderTeamList[index] = teamListItem.value
                         navigator.popBackStack()
                     }
             ) {
@@ -147,14 +199,14 @@ fun ActionOrderItemInfoSetting(teamListItem: TeamListItem, index: Int, navigator
             Column(modifier = Modifier.wrapContentSize().align(Alignment.CenterVertically)) {
                 val dateFormat = LocalDateTime.Format { byUnicodePattern("yyyy.MM.dd") }
                 Text(
-                    text = teamListItem.teamName,
+                    text = teamListItem.value.teamName,
                     style = FontSizeNormal16(),
                     color = Color(0xFFFFFFFF)
                 )
 
                 Text(
                     text = dateFormat.format(
-                        Instant.fromEpochMilliseconds(teamListItem.teamBuildUnix).toLocalDateTime(
+                        Instant.fromEpochMilliseconds(teamListItem.value.teamBuildUnix).toLocalDateTime(
                             TimeZone.currentSystemDefault())),
                     style = FontSizeNormal14(),
                     color = Color(0x99FFFFFF)
@@ -192,6 +244,9 @@ fun ActionOrderItemInfoSetting(teamListItem: TeamListItem, index: Int, navigator
                         text = removeStrQuote(Res.string.ActionOrderModify),
                         style = FontSizeNormal16(),
                         color = Color(0xFF222222),
+                        modifier = Modifier.clickable { isPopupOpen.value = true }.clip(
+                            RoundedCornerShape(4.dp)
+                        )
                     )
                 }
 
@@ -207,16 +262,16 @@ fun ActionOrderItemInfoSetting(teamListItem: TeamListItem, index: Int, navigator
                         end = SCREEN_SAVE_PADDING
                     )
                 ){
-                    items(teamListItem.teamDataList.size) { index ->
+                    items(teamDataList.size) { index ->
                         Column(modifier = Modifier.wrapContentSize()) {
-                            CharacterCard(teamListItem.teamDataList[index].character, isDisplayLevel = true)
+                            CharacterCard(teamDataList[index].character, isDisplayLevel = true)
 
                             Spacer(modifier = Modifier.height(8.dp))
 
                             Box(modifier = Modifier.wrapContentSize().align(Alignment.CenterHorizontally)) {
                                 UIWithGrayBG {
                                     Text(
-                                        text = teamListItem.teamDataList[index].energyMax.toString(),
+                                        text = teamDataList[index].energyMax.toString(),
                                         style = FontSizeNormal16(),
                                         color = Color.White,
                                     )
@@ -232,8 +287,8 @@ fun ActionOrderItemInfoSetting(teamListItem: TeamListItem, index: Int, navigator
                 //@DoItLater("Apply Speed Checking in last Pair")
                 val textInfo = arrayListOf<Pair<StringResource, Int>>(
                     Pair(Res.string.ActionOrderInitSkillPoint, 3),
-                    Pair(Res.string.ActionOrderMaxSkillPoint, checkMaxSkillPoint(teamListItem.teamDataList)),
-                    Pair(Res.string.ActionOrderEnemySpeedTitle, teamListItem.teamEnemySpeed)
+                    Pair(Res.string.ActionOrderMaxSkillPoint, checkMaxSkillPoint(teamListItem.value.teamDataList)),
+                    Pair(Res.string.ActionOrderEnemySpeedTitle, teamListItem.value.teamEnemySpeed)
                 )
                 Column {
                     textInfo.forEachIndexed { idex, item ->

@@ -273,7 +273,13 @@ fun ActionOrderListPageScreen(
             Box(
                 modifier = Modifier.align(Alignment.Center)
             ) {
-                TeamSelectPopup(localCharList, isPopupOpen = isPopupOpen)
+                TeamSelectPopup(localCharList, isPopupOpen = isPopupOpen) {teamDataList ->
+                    val ret = arrayListOf<TeammateItem>()
+                    ret.addAll(teamDataList)
+                    actionOrderTeamList.add(TeamListItem(teamDataList = ret))
+                    isPopupOpen.value = false
+                    Preferences().ActionOrder.setActionOrderList()
+                }
             }
         }
     }
@@ -282,8 +288,12 @@ fun ActionOrderListPageScreen(
 }
 
 @Composable
-fun TeamSelectPopup(localCharList: MutableState<ArrayList<Character>>,isPopupOpen: MutableState<Boolean>){
-    val teamDataList = remember { mutableStateListOf<TeammateItem>() }
+fun TeamSelectPopup(
+    localCharList: MutableState<ArrayList<Character>>,
+    isPopupOpen: MutableState<Boolean>,
+    teamDataList: SnapshotStateList<TeammateItem> = remember { mutableStateListOf() },
+    finishAction: (teamDataListTmp : SnapshotStateList<TeammateItem>) -> Unit
+){
     //UI Part
     Box(modifier = Modifier.fillMaxSize()){
         val scrollableState = rememberScrollableState { 0f }
@@ -330,11 +340,7 @@ fun TeamSelectPopup(localCharList: MutableState<ArrayList<Character>>,isPopupOpe
                             .clip(shape = CircleShape)
                             .background(Color(0x33FFFFFF))
                             .clickable {
-                                val ret = arrayListOf<TeammateItem>()
-                                ret.addAll(teamDataList)
-                                actionOrderTeamList.add(TeamListItem(teamDataList = ret))
-                                isPopupOpen.value = false
-                                Preferences().ActionOrder.setActionOrderList()
+                                finishAction.invoke(teamDataList)
                             }
                     ) {
                         Image(
