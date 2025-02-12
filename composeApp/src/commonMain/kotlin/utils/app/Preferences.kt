@@ -4,8 +4,9 @@ import com.russhwolf.settings.Settings
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import ui.components.HomePageBlocks
-import ui.screens.TeamListItem
+import ui.screens.actionOrderTeamList
 import utils.app.Constants.Companion.HOME_PAGE_MENU_DEFAULT
+import utils.calculator.TeamListItem
 import utils.starbase.StarbaseAPI
 
 class Preferences {
@@ -159,7 +160,7 @@ class Preferences {
             val actionOrderListStr = readFromFile("actionOrderTeamList.json", true, "[]")
             return Json.decodeFromString<ArrayList<TeamListItem>>(actionOrderListStr)
         }
-        fun setActionOrderList(actionOrderList: ArrayList<String>){
+        fun setActionOrderList(actionOrderList: ArrayList<TeamListItem> = ArrayList(actionOrderTeamList)){
             writeToFile("actionOrderTeamList.json", Json.encodeToString(actionOrderList))
         }
     }

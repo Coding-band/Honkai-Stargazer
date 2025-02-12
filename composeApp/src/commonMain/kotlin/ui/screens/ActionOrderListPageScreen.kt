@@ -34,6 +34,7 @@ import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyHorizontalGrid
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
@@ -132,26 +133,9 @@ import utils.app.TextColorNormalDim
 import utils.app.rememberMutableStateListOf
 import utils.app.removeStrQuote
 import utils.app.replaceStrRes
+import utils.calculator.TeamListItem
+import utils.calculator.TeammateItem
 import utils.hoyolab.AttributeExchange
-
-@Serializable
-data class TeamListItem(
-    val uid: String = UserAccount.INSTANCE.uid,
-    val teamBuildUnix: Long = Clock.System.now().toEpochMilliseconds(),
-    val id: String = "${uid}-${teamBuildUnix}",
-    val teamName: String = CLARA_KAMOJI,
-    val teamDataList: ArrayList<TeammateItem> = arrayListOf()
-)
-
-@Serializable
-data class TeammateItem(
-    val character: Character,
-    val level: Int = 1,
-    val energyRechargeRate : Float = 1f,
-    val energyMax : Int = 100,
-    val speedBase: Float = 100.0f,
-    val speedRate: Float = 0f,
-)
 
 val TEST_LIST = arrayListOf(
     TeamListItem(
@@ -326,7 +310,9 @@ fun TeamSelectPopup(localCharList: MutableState<ArrayList<Character>>,isPopupOpe
                             .size(48.dp)
                             .clip(shape = CircleShape)
                             .background(Color(0x33FFFFFF))
-                            .clickable { isPopupOpen.value = false }
+                            .clickable {
+                                isPopupOpen.value = false
+                            }
                     ) {
                         Image(
                             painter = painterResource(Res.drawable.ui_icon_close),
@@ -348,6 +334,7 @@ fun TeamSelectPopup(localCharList: MutableState<ArrayList<Character>>,isPopupOpe
                                 ret.addAll(teamDataList)
                                 actionOrderTeamList.add(TeamListItem(teamDataList = ret))
                                 isPopupOpen.value = false
+                                Preferences().ActionOrder.setActionOrderList()
                             }
                     ) {
                         Image(
@@ -363,7 +350,7 @@ fun TeamSelectPopup(localCharList: MutableState<ArrayList<Character>>,isPopupOpe
 
                 //Select Teammates
                 LazyVerticalGrid(
-                    columns = GridCells.Adaptive(CHAR_CARD_WIDTH),
+                    columns = GridCells.Fixed(4),
                     horizontalArrangement = Arrangement.spacedBy(12.dp),
                     verticalArrangement = Arrangement.spacedBy(12.dp),
                     modifier = Modifier.padding(
@@ -376,6 +363,7 @@ fun TeamSelectPopup(localCharList: MutableState<ArrayList<Character>>,isPopupOpe
                         CharacterCard(it.character, isDisplayLevel = true, onClick = {
                             //Remove this character from teamList
                             teamDataList.remove(it)
+
                         })
                     }
 

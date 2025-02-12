@@ -148,7 +148,7 @@ fun CharacterCard(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center
             ) {
-                if(isDisplayName){overrideNameComponentScaledHeight.value = 0.dp; println(overrideNameComponentScaledHeight.value)}
+                if(isDisplayName){overrideNameComponentScaledHeight.value = 0.dp}
 
                 if(!isDisplayName && overrideNameComponent != null){
                     Box(modifier = Modifier.wrapContentHeight().fillMaxWidth().onSizeChanged {
