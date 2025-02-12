@@ -129,6 +129,7 @@ import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
 import utils.app.Preferences
 import utils.app.TextColorNormalDim
+import utils.app.rememberMutableStateListOf
 import utils.app.removeStrQuote
 import utils.app.replaceStrRes
 import utils.hoyolab.AttributeExchange
@@ -178,14 +179,14 @@ val TEST_LIST = arrayListOf(
     )
 )
 
-lateinit var actionOrderTeamList : MutableState<ArrayList<TeamListItem>>
+lateinit var actionOrderTeamList : SnapshotStateList<TeamListItem>
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun initActionOrderTeamList(){
-    actionOrderTeamList = rememberSaveable { mutableStateOf(arrayListOf()) }
+    actionOrderTeamList  = rememberMutableStateListOf<TeamListItem>()
 
-    actionOrderTeamList.value.addAll(
+    actionOrderTeamList.addAll(
         runBlocking {
             val job = CoroutineScope(Dispatchers.Default).async {
                 return@async Preferences().ActionOrder.getActionOrderList()
@@ -233,9 +234,9 @@ fun ActionOrderListPageScreen(
                     .height(PAGE_HEADER_HEIGHT + 12.dp)
                 )
             }
-            items(actionOrderTeamList.value.size) { index ->
-                TeamListItemCard(actionOrderTeamList.value[index], index, navigator)
-                if(index < actionOrderTeamList.value.size - 1){
+            items(actionOrderTeamList.size) { index ->
+                TeamListItemCard(actionOrderTeamList[index], index, navigator)
+                if(index < actionOrderTeamList.size - 1){
                     Spacer(Modifier.height(12.dp))
                 }
             }
@@ -345,7 +346,7 @@ fun TeamSelectPopup(localCharList: MutableState<ArrayList<Character>>,isPopupOpe
                             .clickable {
                                 val ret = arrayListOf<TeammateItem>()
                                 ret.addAll(teamDataList)
-                                actionOrderTeamList.value.add(TeamListItem(teamDataList = ret))
+                                actionOrderTeamList.add(TeamListItem(teamDataList = ret))
                                 isPopupOpen.value = false
                             }
                     ) {

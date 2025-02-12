@@ -59,6 +59,7 @@ import types.UserAccount
 import ui.components.CharacterCard
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
+import utils.app.Constants
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
 import utils.app.FontSizeNormal14
@@ -76,7 +77,7 @@ fun ActionOrderSimulatorPageScreen(
 ) {
     val index = backStackEntry.query<String>("index")!!.toInt()
     val hazeState = remember { HazeState() }
-    val teamListItem = remember { mutableStateOf(actionOrderTeamList.value[index]) }
+    val teamListItem = remember { mutableStateOf(actionOrderTeamList[index]) }
     val isInit = remember { mutableStateOf(false) }
     val isPopupOpen = remember { mutableStateOf(false) }
     val localCharList = rememberSaveable { mutableStateOf<ArrayList<Character>>(arrayListOf()) }
@@ -94,7 +95,7 @@ fun ActionOrderSimulatorPageScreen(
     }
 
     //UI
-    FlowRow(modifier = Modifier.fillMaxSize()) {
+    FlowRow(modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)) {
         ActionOrderItemInfoSetting(teamListItem.value, index, navigator)
     }
 }
@@ -114,7 +115,7 @@ fun ActionOrderItemInfoSetting(teamListItem: TeamListItem, index: Int, navigator
                     .align(Alignment.CenterVertically)
                     .clickable {
                         //Save and Exit
-                        actionOrderTeamList.value[index] = teamListItem
+                        actionOrderTeamList[index] = teamListItem
                         navigator.popBackStack()
                     }
             ) {

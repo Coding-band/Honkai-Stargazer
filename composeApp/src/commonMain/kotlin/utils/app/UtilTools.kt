@@ -728,3 +728,16 @@ val ProficientSchoolSaver: Saver<SnapshotStateList<ProficientSchool>, Any> = lis
     save = { listOf(Json.encodeToString(it.toMutableList())) },
     restore = { Json.decodeFromString(it[0]) as SnapshotStateList<ProficientSchool> }
 )
+
+//ref : https://stackoverflow.com/questions/68885154/using-remembersaveable-with-mutablestatelistof
+@Composable
+fun <T: Any> rememberMutableStateListOf(vararg elements: T): SnapshotStateList<T> {
+    return rememberSaveable(saver = snapshotStateListSaver()) {
+        elements.toList().toMutableStateList()
+    }
+}
+
+private fun <T : Any> snapshotStateListSaver() = listSaver<SnapshotStateList<T>, T>(
+    save = { stateList -> stateList.toList() },
+    restore = { it.toMutableStateList() },
+)
