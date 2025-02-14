@@ -64,6 +64,7 @@ import kotlinx.datetime.Instant
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.plus
 import kotlinx.datetime.toLocalDateTime
+import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
@@ -85,6 +86,8 @@ import types.ImageFolder
 import types.Path
 import ui.screens.ProficientSchool
 import utils.annotation.VersionUpdateCheck
+import utils.calculator.TeamListItem
+import utils.calculator.TeammateItem
 import utils.starbase.StarbaseAPI
 import kotlin.math.pow
 import kotlin.math.roundToInt
@@ -720,6 +723,34 @@ fun <T> SnapshotStateList<T>.swapList(newList: List<T>){
     addAll(newList)
 }
 
+val TeamListItemSaver: Saver<TeamListItem, Any> = listSaver(
+    save = { listOf(it.uid, it.teamBuildUnix, it.id, it.teamName, Json.encodeToString(it.teamDataList), it.teamEnemySpeed) },
+    restore = {
+        TeamListItem(
+            uid = it[0] as String,
+            teamBuildUnix = it[1] as Long,
+            id = it[2] as String,
+            teamName = it[3] as String,
+            teamDataList = Json.decodeFromString(it[4] as String),
+            teamEnemySpeed = it[5] as Int
+        )
+    }
+)
+
+val TeammateItemSaver: Saver<TeammateItem, Any> = listSaver(
+    save = { listOf(Json.encodeToString(it.character), it.level, it.energyRechargeRate, it.energyMax, it.speedBase, it.speedRate) },
+    restore = {
+        TeammateItem(
+            character = Json.decodeFromString(it[0] as String),
+            level = it[1] as Int,
+            energyRechargeRate = it[2] as Float,
+            energyMax = it[3] as Int,
+            speedBase = it[4] as Float,
+            speedRate = it[5] as Float
+        )
+    }
+)
+
 val CharacterProficientSaver: Saver<SnapshotStateList<CharacterProficient>, Any> = listSaver(
     save = { listOf(Json.encodeToString(it.toList())) },
     restore = { Json.decodeFromString(it[0]) as SnapshotStateList<CharacterProficient> }
@@ -740,4 +771,16 @@ fun <T: Any> rememberMutableStateListOf(vararg elements: T): SnapshotStateList<T
 private fun <T : Any> snapshotStateListSaver() = listSaver<SnapshotStateList<T>, T>(
     save = { stateList -> stateList.toList() },
     restore = { it.toMutableStateList() },
+)
+
+@Composable
+inline fun <reified T: Any> rememberMutableStateListJsonOf(vararg elements: T): SnapshotStateList<T> {
+    return rememberSaveable(saver = snapshotStateListJsonSaver<T>()) {
+        elements.toList().toMutableStateList()
+    }
+}
+
+inline fun <reified T : Any> snapshotStateListJsonSaver() = listSaver<SnapshotStateList<T>, String>(
+    save = { stateList -> listOf(Json.encodeToString(stateList.toList())) },
+    restore = { Json.decodeFromString<List<T>>(it[0]).toMutableStateList() }
 )

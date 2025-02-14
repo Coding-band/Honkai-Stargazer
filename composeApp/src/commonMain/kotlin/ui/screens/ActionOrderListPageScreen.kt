@@ -130,6 +130,7 @@ import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
 import utils.app.Preferences
 import utils.app.TextColorNormalDim
+import utils.app.rememberMutableStateListJsonOf
 import utils.app.rememberMutableStateListOf
 import utils.app.removeStrQuote
 import utils.app.replaceStrRes
@@ -168,7 +169,7 @@ lateinit var actionOrderTeamList : SnapshotStateList<TeamListItem>
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun initActionOrderTeamList(){
-    actionOrderTeamList  = rememberMutableStateListOf<TeamListItem>()
+    actionOrderTeamList  = rememberMutableStateListJsonOf<TeamListItem>()
 
     actionOrderTeamList.addAll(
         runBlocking {
@@ -295,7 +296,7 @@ fun TeamSelectPopup(
     finishAction: (teamDataListTmp : SnapshotStateList<TeammateItem>) -> Unit
 ){
     //UI Part
-    Box(modifier = Modifier.fillMaxSize()){
+    Box(modifier = Modifier.fillMaxSize().statusBarsPadding()){
         val scrollableState = rememberScrollableState { 0f }
         Column(modifier = Modifier.scrollable(
             state = scrollableState, orientation = Orientation.Horizontal

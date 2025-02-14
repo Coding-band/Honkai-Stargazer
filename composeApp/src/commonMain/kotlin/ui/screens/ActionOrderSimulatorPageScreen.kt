@@ -21,14 +21,18 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
@@ -46,6 +50,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import dev.chrisbanes.haze.HazeState
 import files.ActionOrderEnemySpeedExtHigh
@@ -57,6 +62,10 @@ import files.ActionOrderEnemySpeedTitle
 import files.ActionOrderInitSkillPoint
 import files.ActionOrderMaxSkillPoint
 import files.ActionOrderModify
+import files.ActionOrderSimulatorActionTimes
+import files.ActionOrderSimulatorActionValue
+import files.ActionOrderSimulatorCharEnergy
+import files.ActionOrderSimulatorSkillPoint
 import files.Character
 import files.ModifyHomePage
 import files.Res
@@ -87,6 +96,9 @@ import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.Preferences
+import utils.app.TeamListItemSaver
+import utils.app.rememberMutableStateListJsonOf
+import utils.app.rememberMutableStateListOf
 import utils.app.removeStrQuote
 import utils.calculator.ActionOrderEnemySpeed
 import utils.calculator.TeamListItem
@@ -103,8 +115,8 @@ fun ActionOrderSimulatorPageScreen(
 ) {
     val index = rememberSaveable { backStackEntry.query<String>("index")!!.toInt() }
     val hazeState = remember { HazeState() }
-    val teamListItem = rememberSaveable { mutableStateOf(if(actionOrderTeamList.size < index+1) TeamListItem() else actionOrderTeamList[index]) }
-    val teamDataListSnap = rememberSaveable { mutableStateListOf<TeammateItem>().apply { addAll(teamListItem.value.teamDataList) } }
+    val teamListItem = rememberSaveable(stateSaver = TeamListItemSaver) { if(actionOrderTeamList.size < index+1) mutableStateOf(TeamListItem()) else mutableStateOf(actionOrderTeamList[index]) }
+    val teamDataListSnap = rememberMutableStateListJsonOf<TeammateItem>().apply { clear() ; addAll(teamListItem.value.teamDataList) }
     val isInit = remember { mutableStateOf(false) }
     val isPopupOpen = remember { mutableStateOf(false) }
     val localCharList = rememberSaveable { mutableStateOf<ArrayList<Character>>(arrayListOf()) }
@@ -125,6 +137,7 @@ fun ActionOrderSimulatorPageScreen(
     Box(modifier = modifier.fillMaxSize()) {
         FlowRow(modifier = Modifier.padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)) {
             ActionOrderItemInfoSetting(teamListItem, teamDataListSnap ,index, navigator, isPopupOpen)
+            ActionOrderSimulatorUI(teamListItem, teamDataListSnap)
         }
 
         AnimatedVisibility(
@@ -165,7 +178,7 @@ fun ActionOrderSimulatorPageScreen(
 
 @Composable
 fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, teamDataListSnap : SnapshotStateList<TeammateItem>,  index: Int, navigator: Navigator, isPopupOpen : MutableState<Boolean>) {
-    Column {
+    Column(modifier = Modifier.defaultMinSize(360.dp, 300.dp).wrapContentSize()) {
         Spacer(modifier = Modifier.statusBarsPadding().height(16.dp))
         //Title of Team, Back Button and Info Button
         Row(modifier = Modifier.wrapContentHeight().fillMaxWidth()) {
@@ -328,17 +341,40 @@ fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, teamDat
 
 @Composable
 fun ActionOrderSimulatorUI(teamListItem: MutableState<TeamListItem>, teamDataListSnap : SnapshotStateList<TeammateItem>){
-
+    val SIMULATOR_LEFT_STATIC_ROW_WIDTH = 154.dp
     //UI
-    Column {
-        Row {
-            //All Progress
+    Column(modifier = Modifier.defaultMinSize(360.dp, 300.dp).wrapContentSize()) {
+        Spacer(modifier = Modifier.height(8.dp))
 
-            Spacer(modifier = Modifier.weight(1f))
+        Row(modifier = Modifier.fillMaxWidth()) {
+            //All Progress
+            Row(modifier = Modifier.width(SIMULATOR_LEFT_STATIC_ROW_WIDTH + 16.dp).background(Color.Blue)) {
+
+            }
+
+            Spacer(modifier = Modifier.width(4.dp))
 
             //Title Row
-
+            val textInfo = arrayListOf(Res.string.ActionOrderSimulatorSkillPoint, Res.string.ActionOrderSimulatorCharEnergy, Res.string.ActionOrderSimulatorActionValue, Res.string.ActionOrderSimulatorActionTimes)
+            LazyRow(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                items(textInfo){
+                    Text(
+                        text = removeStrQuote(it),
+                        style = FontSizeNormal14(),
+                        color = Color(0xFFDDDDDD),
+                        textAlign = TextAlign.Center,
+                        maxLines = 1,
+                        modifier = Modifier.defaultMinSize(48.dp, 32.dp).wrapContentWidth()
+                    )
+                }
+            }
         }
+
+        Spacer(modifier = Modifier.height(8.dp))
+
 
     }
 }
