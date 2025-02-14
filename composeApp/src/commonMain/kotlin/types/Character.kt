@@ -84,9 +84,9 @@ open class Character(
             return getAssetsURLByFileName(imageFolder, getImageNameByRegistName(characterName, (imageFolder === ImageFolder.CHAR_FULL)))
         }
 
-        fun getCharacterImageFromOfficialId(imageFolderType: ImageFolder, charId : String) : Any {
+        fun getCharacterImageFromOfficialId(imageFolder: ImageFolder, charId : String) : Any {
             val listDataJson = charListJson.jsonArray.find { data -> data.jsonObject["charId"]!!.jsonPrimitive.content == charId } ?: return LOST_IMAGE_DRAWABLE
-            return getCharacterImageFromFileName(imageFolderType, listDataJson.jsonObject["name"]!!.jsonPrimitive.content)
+            return getCharacterImageFromFileName(imageFolder, listDataJson.jsonObject["name"]!!.jsonPrimitive.content)
         }
 
         @OptIn(ExperimentalCoroutinesApi::class)
