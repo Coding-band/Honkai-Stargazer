@@ -360,10 +360,6 @@ fun TeamSelectPopup(
                     columns = GridCells.Fixed(4),
                     horizontalArrangement = Arrangement.spacedBy(12.dp),
                     verticalArrangement = Arrangement.spacedBy(12.dp),
-                    modifier = Modifier.padding(
-                        start = SCREEN_SAVE_PADDING,
-                        end = SCREEN_SAVE_PADDING
-                    )
                 ){
                     //Current Have Characters
                     items(teamDataList) {
