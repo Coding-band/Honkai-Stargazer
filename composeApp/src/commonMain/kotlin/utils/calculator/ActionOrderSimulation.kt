@@ -34,6 +34,30 @@ data class TeammateItem(
     val speedRate: Float = 0f,
 )
 
+@Serializable
+data class ActionOrderProcessItem(
+    val charId: Int = -1,
+    val charIcon: String = "",
+    val charRarity: Int = 4,
+    var charCurrActionTimes: Int = 0,
+    var currRound : Int = 0,
+    var actionValue : Float = 0f,
+    var currSkillPoint : Int = 3,
+    val ultimatePointMax: Int = 0, //For Feixiao, Acheron, etc.
+    var ultimatePoint: Int = 0, //For Feixiao, Acheron, etc.
+    val maxStoreEnergyScale : Int = 1, //E.g. Yunli cost 120 energy per Ultimate, and she can store 2 Ultimate at most, there should be 2.
+    val energyMax: Int = 100,
+    var energy: Int = energyMax / 2,
+    var action: CharAction = CharAction.BASIC,
+)
+
+@Serializable
+enum class CharAction(val shortForm: Char, val zhName: String){
+    BASIC('B', "普通攻擊"),
+    SKILL('S', "戰技"),
+    ULTIMATE('U', "總結技"),
+}
+
 enum class ActionOrderEnemySpeed(val speed: Int, val res: StringResource) {
     EXT_SLOW(120, Res.string.ActionOrderEnemySpeedExtSlow),
     SLOW(132, Res.string.ActionOrderEnemySpeedSlow),
@@ -68,4 +92,8 @@ fun checkMaxSkillPoint(teammateList: ArrayList<TeammateItem>) : Int{
         }
     }
     return maxSkillPoint
+}
+
+fun actionOrderSimuation(){
+
 }

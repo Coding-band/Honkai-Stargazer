@@ -110,6 +110,7 @@ class Constants {
         val SCREEN_SAVE_PADDING = 18.dp
 
         val CLARA_KAMOJI = "(´ • ω • `)"
+        val SIMULATOR_LEFT_STATIC_ROW_WIDTH = 154.dp
 
         fun getCardBgColorByRare(rare: Int): List<Color> {
             when (rare) {
