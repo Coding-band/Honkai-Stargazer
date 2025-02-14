@@ -8,11 +8,15 @@ import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.defaultMinSize
@@ -29,10 +33,12 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
@@ -48,10 +54,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
 import files.ActionOrderEnemySpeedExtHigh
 import files.ActionOrderEnemySpeedExtSlow
@@ -83,6 +92,7 @@ import moe.tlaster.precompose.navigation.query
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import types.Character
+import types.ImageFolder
 import types.UserAccount
 import ui.components.CharacterCard
 import ui.components.HeaderData
@@ -93,17 +103,89 @@ import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import utils.app.Constants.Companion.INFO_MAX_WIDTH
 import utils.app.Constants.Companion.INFO_MIN_WIDTH
 import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
+import utils.app.Constants.Companion.SIMULATOR_LEFT_STATIC_ROW_WIDTH
+import utils.app.Constants.Companion.getCardBgColorByRare
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.Preferences
 import utils.app.TeamListItemSaver
+import utils.app.newImageLoader
+import utils.app.newImageRequest
 import utils.app.rememberMutableStateListJsonOf
 import utils.app.rememberMutableStateListOf
 import utils.app.removeStrQuote
 import utils.calculator.ActionOrderEnemySpeed
+import utils.calculator.ActionOrderProcessItem
+import utils.calculator.CharAction
 import utils.calculator.TeamListItem
 import utils.calculator.TeammateItem
 import utils.calculator.checkMaxSkillPoint
+
+private lateinit var actionOrdereProcessList : SnapshotStateList<ActionOrderProcessItem> ;
+
+var TEST_SIMULATION_RESULT = arrayListOf<ActionOrderProcessItem>(
+    ActionOrderProcessItem(
+        charId = 1212,
+        charIcon = Character.getCharacterImageFromOfficialId(imageFolder = ImageFolder.CHAR_ICON, charId = "1212").let { if(it is String) it else "" },
+        charRarity = 5,
+        currRound = 1,
+        charCurrActionTimes = 1,
+        currSkillPoint = 4,
+        energy = 95,
+        energyMax = 140,
+        actionValue = 72.91f,
+        action = CharAction.BASIC
+    ),
+    ActionOrderProcessItem(
+        charId = 1202,
+        charIcon = Character.getCharacterImageFromOfficialId(imageFolder = ImageFolder.CHAR_ICON, charId = "1202").let { if(it is String) it else "" },
+        charRarity = 4,
+        currRound = 1,
+        charCurrActionTimes = 1,
+        currSkillPoint = 3,
+        energy = 90,
+        energyMax = 130,
+        actionValue = 85.30f,
+        action = CharAction.SKILL
+    ),
+    ActionOrderProcessItem(
+        charId = 1205,
+        charIcon = Character.getCharacterImageFromOfficialId(imageFolder = ImageFolder.CHAR_ICON, charId = "1205").let { if(it is String) it else "" },
+        charRarity = 5,
+        currRound = 1,
+        charCurrActionTimes = 1,
+        currSkillPoint = 2,
+        energy = 130,
+        energyMax = 130,
+        actionValue = 95.30f,
+        action = CharAction.ULTIMATE
+    ),
+    ActionOrderProcessItem(
+        charId = 1102,
+        charIcon = Character.getCharacterImageFromOfficialId(imageFolder = ImageFolder.CHAR_ICON, charId = "1102").let { if(it is String) it else "" },
+        charRarity = 5,
+        currRound = 1,
+        charCurrActionTimes = 1,
+        currSkillPoint = 1,
+        energy = 90,
+        energyMax = 120,
+        actionValue = 105.30f,
+        action = CharAction.SKILL
+    ),
+    ActionOrderProcessItem(
+        charId = 1205,
+        charIcon = Character.getCharacterImageFromOfficialId(imageFolder = ImageFolder.CHAR_ICON, charId = "1205").let { if(it is String) it else "" },
+        charRarity = 5,
+        currRound = 1,
+        charCurrActionTimes = 1,
+        currSkillPoint = 2,
+        energy = 5,
+        energyMax = 130,
+        actionValue = 110.30f,
+        action = CharAction.BASIC
+    ),
+
+)
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -120,6 +202,9 @@ fun ActionOrderSimulatorPageScreen(
     val isInit = remember { mutableStateOf(false) }
     val isPopupOpen = remember { mutableStateOf(false) }
     val localCharList = rememberSaveable { mutableStateOf<ArrayList<Character>>(arrayListOf()) }
+    val screenScaler = remember { mutableStateOf(1f) }
+
+    actionOrdereProcessList = rememberMutableStateListOf<ActionOrderProcessItem>().apply { clear() ; addAll(TEST_SIMULATION_RESULT) }
 
     LaunchedEffect(Unit){
         if(!isInit.value){
@@ -134,10 +219,14 @@ fun ActionOrderSimulatorPageScreen(
     }
 
     //UI
-    Box(modifier = modifier.fillMaxSize()) {
-        FlowRow(modifier = Modifier.padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)) {
-            ActionOrderItemInfoSetting(teamListItem, teamDataListSnap ,index, navigator, isPopupOpen)
-            ActionOrderSimulatorUI(teamListItem, teamDataListSnap)
+    BoxWithConstraints(modifier = modifier.fillMaxSize()) {
+        screenScaler.value = maxWidth / 390.dp
+        FlowRow(modifier = Modifier
+            .padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
+            .fillMaxSize(),
+        ) {
+            ActionOrderItemInfoSetting(teamListItem, teamDataListSnap ,index, navigator, isPopupOpen, screenScaler)
+            ActionOrderSimulatorUI(teamListItem, teamDataListSnap, screenScaler)
         }
 
         AnimatedVisibility(
@@ -177,8 +266,8 @@ fun ActionOrderSimulatorPageScreen(
 }
 
 @Composable
-fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, teamDataListSnap : SnapshotStateList<TeammateItem>,  index: Int, navigator: Navigator, isPopupOpen : MutableState<Boolean>) {
-    Column(modifier = Modifier.defaultMinSize(360.dp, 300.dp).wrapContentSize()) {
+fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, teamDataListSnap : SnapshotStateList<TeammateItem>,  index: Int, navigator: Navigator, isPopupOpen : MutableState<Boolean>, screenScaler: MutableState<Float>) {
+    Column(modifier = Modifier.wrapContentSize()) {
         Spacer(modifier = Modifier.statusBarsPadding().height(16.dp))
         //Title of Team, Back Button and Info Button
         Row(modifier = Modifier.wrapContentHeight().fillMaxWidth()) {
@@ -340,48 +429,135 @@ fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, teamDat
 }
 
 @Composable
-fun ActionOrderSimulatorUI(teamListItem: MutableState<TeamListItem>, teamDataListSnap : SnapshotStateList<TeammateItem>){
-    val SIMULATOR_LEFT_STATIC_ROW_WIDTH = 154.dp
+fun ActionOrderSimulatorUI(teamListItem: MutableState<TeamListItem>, teamDataListSnap : SnapshotStateList<TeammateItem>, screenScaler: MutableState<Float>){
     //UI
-    Column(modifier = Modifier.defaultMinSize(360.dp, 300.dp).wrapContentSize()) {
-        Spacer(modifier = Modifier.height(8.dp))
-
-        Row(modifier = Modifier.fillMaxWidth()) {
-            //All Progress
-            Row(modifier = Modifier.width(SIMULATOR_LEFT_STATIC_ROW_WIDTH + 16.dp).background(Color.Blue)) {
-
-            }
-
-            Spacer(modifier = Modifier.width(4.dp))
+    Box(modifier = Modifier.wrapContentSize()) {
+        Column {
+            Spacer(modifier = Modifier.height(8.dp))
 
             //Title Row
-            val textInfo = arrayListOf(Res.string.ActionOrderSimulatorSkillPoint, Res.string.ActionOrderSimulatorCharEnergy, Res.string.ActionOrderSimulatorActionValue, Res.string.ActionOrderSimulatorActionTimes)
-            LazyRow(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-            ) {
-                items(textInfo){
-                    Text(
-                        text = removeStrQuote(it),
-                        style = FontSizeNormal14(),
-                        color = Color(0xFFDDDDDD),
-                        textAlign = TextAlign.Center,
-                        maxLines = 1,
-                        modifier = Modifier.defaultMinSize(48.dp, 32.dp).wrapContentWidth()
-                    )
+            Row(modifier = Modifier.fillMaxWidth()) {
+                //All Progress
+                Row(modifier = Modifier.width((SIMULATOR_LEFT_STATIC_ROW_WIDTH + 16.dp) * screenScaler.value).background(Color.Blue)) {
+
+                }
+
+                Spacer(modifier = Modifier.width(4.dp))
+
+                //Title Row
+                val textInfo = arrayListOf(Res.string.ActionOrderSimulatorSkillPoint, Res.string.ActionOrderSimulatorCharEnergy, Res.string.ActionOrderSimulatorActionValue, Res.string.ActionOrderSimulatorActionTimes)
+                LazyRow(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                ) {
+                    items(textInfo){
+                        Text(
+                            text = removeStrQuote(it),
+                            style = FontSizeNormal14(),
+                            color = Color(0xFFDDDDDD),
+                            textAlign = TextAlign.Center,
+                            maxLines = 1,
+                            modifier = Modifier.defaultMinSize(48.dp, 32.dp).wrapContentWidth()
+                        )
+                    }
                 }
             }
+
+            Spacer(modifier = Modifier.height(8.dp))
+
+            //Simulator Box
+            Box(modifier = Modifier.fillMaxSize().padding(16.dp)){
+                LazyColumn(
+                    modifier = Modifier.fillMaxSize(),
+                    contentPadding = PaddingValues(12.dp),
+                ) {
+
+                }
+            }
+
         }
+    }
+}
 
-        Spacer(modifier = Modifier.height(8.dp))
+@Composable
+fun ActionOrderSimulatorProcessRow(processItem: ActionOrderProcessItem, screenScaler : MutableState<Float>, valueTextWidth : MutableState<List<Float>>){
+    val context = LocalPlatformContext.current
+    Row {
+        AsyncImage(
+            model = newImageRequest(
+                data = processItem.charIcon,
+                context = context
+            ),
+            contentDescription = "Character Icon",
+            modifier = Modifier
+                .size(32.dp)
+                .background(
+                    Brush.verticalGradient(
+                    colors = getCardBgColorByRare(processItem.charRarity)
+                ))
+                .clip(CircleShape),
+        )
+    }
 
+    Spacer(modifier = Modifier.width(18.dp))
 
+    //B
+    CheckableTextButton(
+        text = processItem.action.shortForm.toString(),
+        isChecked = mutableStateOf(processItem.action == CharAction.BASIC),
+        onClick = { processItemResult ->
+            processItemResult.action = CharAction.BASIC
+            //@DoItLater("Ask for re-calculation")
+        },
+        processItem = processItem
+    )
+    Spacer(modifier = Modifier.width(10.dp))
+
+    //S
+    CheckableTextButton(
+        text = processItem.action.shortForm.toString(),
+        isChecked = mutableStateOf(processItem.action == CharAction.BASIC),
+        onClick = { processItemResult ->
+            processItemResult.action = CharAction.BASIC
+            //@DoItLater("Ask for re-calculation")
+        },
+        processItem = processItem
+    )
+    Spacer(modifier = Modifier.width(10.dp))
+
+    //U
+    CheckableTextButton(
+        text = processItem.action.shortForm.toString(),
+        isChecked = mutableStateOf(processItem.action == CharAction.BASIC),
+        onClick = { processItemResult ->
+            processItemResult.action = CharAction.BASIC
+            //@DoItLater("Ask for re-calculation")
+        },
+        processItem = processItem
+    )
+    Spacer(modifier = Modifier.width(4.dp))
+}
+
+@Composable
+private fun CheckableTextButton(text: String = "B", processItem: ActionOrderProcessItem, isChecked: MutableState<Boolean> = mutableStateOf(false), onClick: (processItem: ActionOrderProcessItem) -> Unit){
+    Box(modifier = Modifier
+        .size(28.dp, 32.dp)
+        .clip(RoundedCornerShape(4.dp))
+        .background(Color(if(isChecked.value) 0xCCFFFFFF else 0x33000000))
+    ){
+        Text(
+            text = text,
+            style = FontSizeNormal16(),
+            color = Color(if(isChecked.value) 0xFF444444 else 0xFFFFFFFF),
+            textAlign = TextAlign.Center,
+            modifier = Modifier.align(Alignment.Center).clickable { onClick.invoke(processItem) }
+        )
     }
 }
 
 
 @Composable
-fun UIWithGrayBG(component : @Composable () -> Unit){
+private fun UIWithGrayBG(component : @Composable () -> Unit){
     Box(
         modifier = Modifier
             .background(Color(0x33000000), RoundedCornerShape(8.dp))
