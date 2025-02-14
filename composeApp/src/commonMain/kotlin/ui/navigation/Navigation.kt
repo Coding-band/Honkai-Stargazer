@@ -76,6 +76,13 @@ import ui.screens.SplashPage
 import ui.screens.UIDSearchPageScreen
 import ui.screens.UserCharacterPageScreen
 import ui.screens.UserInfoPageScreen
+import ui.screens.doInit
+import ui.screens.initActionOrderTeamList
+import ui.screens.initCharList
+import ui.screens.initLcList
+import ui.screens.initMOCList
+import ui.screens.initPFList
+import ui.screens.initRelicList
 import utils.app.BezierEasing2O48
 import utils.app.Constants.Companion.HOME_WIDTH
 
@@ -159,6 +166,19 @@ fun RootContent() {
     key(isRotate.value) {
         globalWindowWidthSizeClass = currentWindowAdaptiveInfo().windowSizeClass.windowWidthSizeClass
         isPadMode.value = isPadMode()
+    }
+
+    key(doInit.value){
+        if (!doInit.value){
+            initCharList()
+            initLcList()
+            initRelicList()
+            initMOCList()
+            initPFList()
+            initActionOrderTeamList()
+            println("INITED!")
+            doInit.value = true
+        }
     }
 
     Scaffold(

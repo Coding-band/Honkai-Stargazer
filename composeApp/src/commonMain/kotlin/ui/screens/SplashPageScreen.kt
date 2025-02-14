@@ -85,29 +85,19 @@ fun SplashPage(
                 }
 
                 hasRefreshed.value = true
-
-                withContext(Dispatchers.Main) {
-                    if (!showPopup.value) {
-                        navigator.navigate(
-                            Screen.RootPage.route,
-                            options = NavOptions(
-                                popUpTo = PopUpTo(Screen.SplashPage.route, true)
-                            )
-                        )
-                    }
-                }
             }
         }
     }
 
-    key(doInit.value){
-        initCharList()
-        initLcList()
-        initRelicList()
-        initMOCList()
-        initPFList()
-        initActionOrderTeamList()
-        println("INITED!")
+    LaunchedEffect(showPopup.value, hasRefreshed.value){
+        if (!showPopup.value) {
+            navigator.navigate(
+                Screen.RootPage.route,
+                options = NavOptions(
+                    popUpTo = PopUpTo(Screen.SplashPage.route, true)
+                )
+            )
+        }
     }
 
     //Root Container of this page
