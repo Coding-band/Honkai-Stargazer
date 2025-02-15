@@ -36,13 +36,14 @@ data class TeammateItem(
 
 @Serializable
 data class ActionOrderProcessItem(
-    val charId: Int = -1,
-    val charIcon: String = "",
+    val charId: Int = -1, //Character's official ID
+    val charIcon: String = "", //Character's icon
     val charRarity: Int = 4,
     var charCurrActionTimes: Int = 0,
     var currRound : Int = 0,
     var actionValue : Float = 0f,
     var currSkillPoint : Int = 3,
+    var teamMaxSkillPoint : Int = 5,
     val ultimatePointMax: Int = 0, //For Feixiao, Acheron, etc.
     var ultimatePoint: Int = 0, //For Feixiao, Acheron, etc.
     val maxStoreEnergyScale : Int = 1, //E.g. Yunli cost 120 energy per Ultimate, and she can store 2 Ultimate at most, there should be 2.

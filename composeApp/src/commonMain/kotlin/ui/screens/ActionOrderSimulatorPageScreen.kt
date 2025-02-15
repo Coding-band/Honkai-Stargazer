@@ -8,15 +8,12 @@ import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.gestures.Orientation
-import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.defaultMinSize
@@ -25,7 +22,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
@@ -34,11 +30,12 @@ import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
@@ -49,24 +46,22 @@ import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
-import files.ActionOrderEnemySpeedExtHigh
-import files.ActionOrderEnemySpeedExtSlow
-import files.ActionOrderEnemySpeedHigh
-import files.ActionOrderEnemySpeedMid
-import files.ActionOrderEnemySpeedSlow
 import files.ActionOrderEnemySpeedTitle
 import files.ActionOrderInitSkillPoint
 import files.ActionOrderMaxSkillPoint
@@ -76,7 +71,6 @@ import files.ActionOrderSimulatorActionValue
 import files.ActionOrderSimulatorCharEnergy
 import files.ActionOrderSimulatorSkillPoint
 import files.Character
-import files.ModifyHomePage
 import files.Res
 import files.ui_icon_back
 import files.ui_icon_info
@@ -87,7 +81,6 @@ import kotlinx.datetime.format.byUnicodePattern
 import kotlinx.datetime.toLocalDateTime
 import moe.tlaster.precompose.navigation.BackStackEntry
 import moe.tlaster.precompose.navigation.Navigator
-import moe.tlaster.precompose.navigation.path
 import moe.tlaster.precompose.navigation.query
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
@@ -97,20 +90,17 @@ import types.UserAccount
 import ui.components.CharacterCard
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
-import utils.annotation.VersionUpdateCheck
 import utils.app.Constants
-import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import utils.app.Constants.Companion.INFO_MAX_WIDTH
 import utils.app.Constants.Companion.INFO_MIN_WIDTH
-import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
 import utils.app.Constants.Companion.SIMULATOR_LEFT_STATIC_ROW_WIDTH
 import utils.app.Constants.Companion.getCardBgColorByRare
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.Preferences
 import utils.app.TeamListItemSaver
-import utils.app.newImageLoader
 import utils.app.newImageRequest
+import utils.app.pxToDp
 import utils.app.rememberMutableStateListJsonOf
 import utils.app.rememberMutableStateListOf
 import utils.app.removeStrQuote
@@ -187,6 +177,11 @@ var TEST_SIMULATION_RESULT = arrayListOf<ActionOrderProcessItem>(
 
 )
 
+/**
+ * arrayListOf(<All Process Spinner>, <Skill Point>, <Energy>, <Action Value>, <Action Times>)
+ */
+lateinit var maxValueTextWidth : MutableState<ArrayList<Dp>>
+
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun ActionOrderSimulatorPageScreen(
@@ -202,9 +197,9 @@ fun ActionOrderSimulatorPageScreen(
     val isInit = remember { mutableStateOf(false) }
     val isPopupOpen = remember { mutableStateOf(false) }
     val localCharList = rememberSaveable { mutableStateOf<ArrayList<Character>>(arrayListOf()) }
-    val screenScaler = remember { mutableStateOf(1f) }
 
     actionOrdereProcessList = rememberMutableStateListOf<ActionOrderProcessItem>().apply { clear() ; addAll(TEST_SIMULATION_RESULT) }
+    maxValueTextWidth = remember { mutableStateOf(arrayListOf(SIMULATOR_LEFT_STATIC_ROW_WIDTH, 48.dp, 48.dp, 48.dp, 48.dp)) }
 
     LaunchedEffect(Unit){
         if(!isInit.value){
@@ -220,13 +215,12 @@ fun ActionOrderSimulatorPageScreen(
 
     //UI
     BoxWithConstraints(modifier = modifier.fillMaxSize()) {
-        screenScaler.value = maxWidth / 390.dp
         FlowRow(modifier = Modifier
             .padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
             .fillMaxSize(),
         ) {
-            ActionOrderItemInfoSetting(teamListItem, teamDataListSnap ,index, navigator, isPopupOpen, screenScaler)
-            ActionOrderSimulatorUI(teamListItem, teamDataListSnap, screenScaler)
+            ActionOrderItemInfoSetting(teamListItem, teamDataListSnap ,index, navigator, isPopupOpen)
+            ActionOrderSimulatorUI(teamListItem, teamDataListSnap)
         }
 
         AnimatedVisibility(
@@ -266,8 +260,8 @@ fun ActionOrderSimulatorPageScreen(
 }
 
 @Composable
-fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, teamDataListSnap : SnapshotStateList<TeammateItem>,  index: Int, navigator: Navigator, isPopupOpen : MutableState<Boolean>, screenScaler: MutableState<Float>) {
-    Column(modifier = Modifier.wrapContentSize()) {
+fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, teamDataListSnap : SnapshotStateList<TeammateItem>,  index: Int, navigator: Navigator, isPopupOpen : MutableState<Boolean>) {
+    Column(modifier = Modifier.wrapContentSize().widthIn(min = INFO_MIN_WIDTH, max = INFO_MAX_WIDTH)) {
         Spacer(modifier = Modifier.statusBarsPadding().height(16.dp))
         //Title of Team, Back Button and Info Button
         Row(modifier = Modifier.wrapContentHeight().fillMaxWidth()) {
@@ -323,8 +317,7 @@ fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, teamDat
         Spacer(modifier = Modifier.height(16.dp))
 
         Box(modifier = Modifier
-            .fillMaxWidth()
-            .wrapContentHeight()
+            .wrapContentSize()
             .background(Color(0xCCF3F9FF), RoundedCornerShape(4.dp, 20.dp, 4.dp, 4.dp))
             .clip(shape = RoundedCornerShape(4.dp, 20.dp, 4.dp, 4.dp))
         ) {
@@ -355,10 +348,7 @@ fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, teamDat
                     columns = GridCells.Fixed(4),
                     horizontalArrangement = Arrangement.spacedBy(12.dp),
                     verticalArrangement = Arrangement.spacedBy(12.dp),
-                    modifier = Modifier.padding(
-                        start = SCREEN_SAVE_PADDING,
-                        end = SCREEN_SAVE_PADDING
-                    )
+                    modifier = Modifier.wrapContentSize()
                 ){
                     items(teamDataListSnap.size) { index ->
                         Column(modifier = Modifier.wrapContentSize()) {
@@ -389,7 +379,7 @@ fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, teamDat
                     Pair(Res.string.ActionOrderEnemySpeedTitle, teamListItem.value.teamEnemySpeed)
                 )
                 Column {
-                    textInfo.forEachIndexed { idex, item ->
+                    textInfo.forEachIndexed { index, item ->
                         Row {
                             Text(
                                 text = removeStrQuote(item.first),
@@ -418,7 +408,7 @@ fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, teamDat
 
                             }
                         }
-                        if(idex < textInfo.size - 1) {
+                        if(index < textInfo.size - 1) {
                             Spacer(modifier = Modifier.height(8.dp))
                         }
                     }
@@ -429,26 +419,36 @@ fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, teamDat
 }
 
 @Composable
-fun ActionOrderSimulatorUI(teamListItem: MutableState<TeamListItem>, teamDataListSnap : SnapshotStateList<TeammateItem>, screenScaler: MutableState<Float>){
+fun ActionOrderSimulatorUI(teamListItem: MutableState<TeamListItem>, teamDataListSnap : SnapshotStateList<TeammateItem>){
+    val uiWidth = remember { mutableStateOf(100.dp) }
+    val density = LocalDensity.current.density
+    val sharedLazyRowState = mutableStateOf(rememberLazyListState())
+
+
     //UI
-    Box(modifier = Modifier.wrapContentSize()) {
-        Column {
+    BoxWithConstraints(modifier = Modifier.wrapContentSize().widthIn(min = INFO_MIN_WIDTH, max = INFO_MAX_WIDTH)) {
+        uiWidth.value = this.maxWidth
+
+        Column(modifier = Modifier.wrapContentSize()) {
             Spacer(modifier = Modifier.height(8.dp))
 
             //Title Row
-            Row(modifier = Modifier.fillMaxWidth()) {
+            Row(modifier = Modifier.fillMaxWidth().wrapContentHeight()) {
                 //All Progress
-                Row(modifier = Modifier.width((SIMULATOR_LEFT_STATIC_ROW_WIDTH + 16.dp) * screenScaler.value).background(Color.Blue)) {
+                Row(modifier = Modifier
+                    .padding(start = 16.dp)
+                    .width(maxValueTextWidth.value[0])
+                    .height(10.dp)
+                    .background(Color.Blue)
+                ) {
 
                 }
-
-                Spacer(modifier = Modifier.width(4.dp))
 
                 //Title Row
                 val textInfo = arrayListOf(Res.string.ActionOrderSimulatorSkillPoint, Res.string.ActionOrderSimulatorCharEnergy, Res.string.ActionOrderSimulatorActionValue, Res.string.ActionOrderSimulatorActionTimes)
                 LazyRow(
+                    state = sharedLazyRowState.value,
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
                     items(textInfo){
                         Text(
@@ -457,8 +457,15 @@ fun ActionOrderSimulatorUI(teamListItem: MutableState<TeamListItem>, teamDataLis
                             color = Color(0xFFDDDDDD),
                             textAlign = TextAlign.Center,
                             maxLines = 1,
-                            modifier = Modifier.defaultMinSize(48.dp, 32.dp).wrapContentWidth()
+                            modifier = Modifier
+                                .defaultMinSize(48.dp, 32.dp)
+                                .wrapContentHeight().onSizeChanged { size ->
+                                maxValueTextWidth.value[textInfo.indexOf(it)+1] = androidx.compose.ui.unit.max(maxValueTextWidth.value[textInfo.indexOf(it)+1], pxToDp(size.width, density))
+                            }
                         )
+                        if(textInfo.indexOf(it) < textInfo.size - 1) {
+                            Spacer(modifier = Modifier.width(6.dp))
+                        }
                     }
                 }
             }
@@ -466,76 +473,142 @@ fun ActionOrderSimulatorUI(teamListItem: MutableState<TeamListItem>, teamDataLis
             Spacer(modifier = Modifier.height(8.dp))
 
             //Simulator Box
-            Box(modifier = Modifier.fillMaxSize().padding(16.dp)){
+            Box(modifier = Modifier.fillMaxWidth().background(Color(0x66F3F9FF), RoundedCornerShape(10.dp)).padding(16.dp)){
                 LazyColumn(
-                    modifier = Modifier.fillMaxSize(),
-                    contentPadding = PaddingValues(12.dp),
+                    modifier = Modifier.fillMaxWidth(),
                 ) {
+                    items(actionOrdereProcessList){
+                        ActionOrderSimulatorProcessRow(it, sharedLazyRowState)
 
+                        if(actionOrdereProcessList.indexOf(it) < actionOrdereProcessList.size - 1) {
+                            Spacer(modifier = Modifier.height(12.dp))
+                        }
+                    }
                 }
             }
 
         }
     }
+
+    // Synchronize scroll positions
+    LaunchedEffect(sharedLazyRowState.value.firstVisibleItemScrollOffset, sharedLazyRowState.value.firstVisibleItemIndex) {
+        snapshotFlow { sharedLazyRowState.value.firstVisibleItemScrollOffset }
+            .collect { offset ->
+                sharedLazyRowState.value.scrollToItem(sharedLazyRowState.value.firstVisibleItemIndex, offset)
+            }
+    }
 }
 
 @Composable
-fun ActionOrderSimulatorProcessRow(processItem: ActionOrderProcessItem, screenScaler : MutableState<Float>, valueTextWidth : MutableState<List<Float>>){
+fun ActionOrderSimulatorProcessRow(processItem: ActionOrderProcessItem, sharedLazyRowState: MutableState<LazyListState>){
     val context = LocalPlatformContext.current
-    Row {
-        AsyncImage(
-            model = newImageRequest(
-                data = processItem.charIcon,
-                context = context
-            ),
-            contentDescription = "Character Icon",
-            modifier = Modifier
-                .size(32.dp)
-                .background(
-                    Brush.verticalGradient(
-                    colors = getCardBgColorByRare(processItem.charRarity)
-                ))
-                .clip(CircleShape),
+    val density = LocalDensity.current.density
+
+    Row(modifier = Modifier.fillMaxWidth()) {
+        Row(modifier = Modifier.onSizeChanged {
+            maxValueTextWidth.value[0] = pxToDp(it.width, density = density)
+        }) {
+            AsyncImage(
+                model = newImageRequest(
+                    data = processItem.charIcon,
+                    context = context
+                ),
+                contentDescription = "Character Icon",
+                modifier = Modifier
+                    .size(32.dp)
+                    .clip(CircleShape)
+                    .background(
+                        Brush.verticalGradient(
+                            colors = getCardBgColorByRare(processItem.charRarity)
+                        )),
+            )
+            Spacer(modifier = Modifier.width(18.dp))
+
+            val isCheckedB = mutableStateOf(processItem.action == CharAction.BASIC)
+            val isCheckedS = mutableStateOf(processItem.action == CharAction.SKILL)
+            val isCheckedU = mutableStateOf(processItem.action == CharAction.ULTIMATE)
+
+            //B
+            CheckableTextButton(
+                text = CharAction.BASIC.shortForm.toString(),
+                isChecked = isCheckedB,
+                onClick = { processItemResult ->
+                    processItemResult.action = CharAction.BASIC
+                    isCheckedB.value = true
+                    isCheckedS.value = false
+                    isCheckedU.value = false
+                    //@DoItLater("Ask for re-calculation")
+                },
+                processItem = processItem
+            )
+            Spacer(modifier = Modifier.width(10.dp))
+
+            //S
+            CheckableTextButton(
+                text = CharAction.SKILL.shortForm.toString(),
+                isChecked = isCheckedS,
+                onClick = { processItemResult ->
+                    processItemResult.action = CharAction.SKILL
+                    isCheckedB.value = false
+                    isCheckedS.value = true
+                    isCheckedU.value = false
+                    //@DoItLater("Ask for re-calculation")
+                },
+                processItem = processItem
+            )
+            Spacer(modifier = Modifier.width(10.dp))
+
+            //U
+            CheckableTextButton(
+                text = CharAction.ULTIMATE.shortForm.toString(),
+                isChecked = isCheckedU,
+                onClick = { processItemResult ->
+                    processItemResult.action = CharAction.ULTIMATE
+                    isCheckedB.value = false
+                    isCheckedS.value = false
+                    isCheckedU.value = true
+                    //@DoItLater("Ask for re-calculation")
+                },
+                processItem = processItem
+            )
+            Spacer(modifier = Modifier.width(4.dp))
+        }
+
+        //Scrollable Row
+        val textData = mutableStateListOf(
+            processItem.currSkillPoint.toString(),
+            processItem.energy.toString(),
+            processItem.actionValue.toString(),
+            processItem.charCurrActionTimes.toString()
         )
+
+        LazyRow(
+            state = sharedLazyRowState.value,
+            modifier = Modifier.wrapContentWidth().height(32.dp).align(Alignment.CenterVertically),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            items(textData){
+                val index = textData.indexOf(it) + 1
+                Text(
+                    text = it,
+                    style = FontSizeNormal16(),
+                    color = when(index){
+                        1 -> if(processItem.currSkillPoint >= processItem.teamMaxSkillPoint) Color(0xFFFFD070) else Color.White
+                        2 -> if(processItem.energy >= processItem.energyMax) Color(0xFFFFD070) else Color.White
+                        else -> Color.White
+                    },
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.onSizeChanged {
+                        maxValueTextWidth.value[index] = androidx.compose.ui.unit.max(maxValueTextWidth.value[index], pxToDp(it.width, density))
+                    }.width(maxValueTextWidth.value[index]).height(32.dp)
+                )
+
+                if(textData.indexOf(it) < textData.size - 1) {
+                    Spacer(modifier = Modifier.width(6.dp))
+                }
+            }
+        }
     }
-
-    Spacer(modifier = Modifier.width(18.dp))
-
-    //B
-    CheckableTextButton(
-        text = processItem.action.shortForm.toString(),
-        isChecked = mutableStateOf(processItem.action == CharAction.BASIC),
-        onClick = { processItemResult ->
-            processItemResult.action = CharAction.BASIC
-            //@DoItLater("Ask for re-calculation")
-        },
-        processItem = processItem
-    )
-    Spacer(modifier = Modifier.width(10.dp))
-
-    //S
-    CheckableTextButton(
-        text = processItem.action.shortForm.toString(),
-        isChecked = mutableStateOf(processItem.action == CharAction.BASIC),
-        onClick = { processItemResult ->
-            processItemResult.action = CharAction.BASIC
-            //@DoItLater("Ask for re-calculation")
-        },
-        processItem = processItem
-    )
-    Spacer(modifier = Modifier.width(10.dp))
-
-    //U
-    CheckableTextButton(
-        text = processItem.action.shortForm.toString(),
-        isChecked = mutableStateOf(processItem.action == CharAction.BASIC),
-        onClick = { processItemResult ->
-            processItemResult.action = CharAction.BASIC
-            //@DoItLater("Ask for re-calculation")
-        },
-        processItem = processItem
-    )
-    Spacer(modifier = Modifier.width(4.dp))
 }
 
 @Composable
@@ -544,13 +617,14 @@ private fun CheckableTextButton(text: String = "B", processItem: ActionOrderProc
         .size(28.dp, 32.dp)
         .clip(RoundedCornerShape(4.dp))
         .background(Color(if(isChecked.value) 0xCCFFFFFF else 0x33000000))
+        .clickable { onClick.invoke(processItem) }
     ){
         Text(
             text = text,
             style = FontSizeNormal16(),
             color = Color(if(isChecked.value) 0xFF444444 else 0xFFFFFFFF),
             textAlign = TextAlign.Center,
-            modifier = Modifier.align(Alignment.Center).clickable { onClick.invoke(processItem) }
+            modifier = Modifier.align(Alignment.Center)
         )
     }
 }
