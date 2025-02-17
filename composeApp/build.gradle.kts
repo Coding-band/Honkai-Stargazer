@@ -35,7 +35,7 @@ val versionCodeFinal = properties.getProperty("APP_VERSION_CODE").toInt() + 1
 
 //BETA | C.BETA | DEV | PRODUCTION
 //VersionUpdateCheck
-var appProfile = "C.BETA"
+var appProfile = "PRODUCTION"
 val appVersionCodeName = "SG3"
 
 initGradleProperties()
@@ -162,7 +162,7 @@ android {
     sourceSets["main"].resources.srcDirs("src/commonMain/resources")
 
     defaultConfig {
-        applicationId = "com.voc.honkaistargazer"
+        applicationId = "com.voc.stargazer3"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = versionCodeFinal
@@ -174,23 +174,23 @@ android {
         properties["APP_PLATFORM"] = "Android"
 
         create("0dev"){
-            applicationId = "com.voc.stargazer3"
+            appProfile = "DEV"
             versionName = "DEV ${appVersion} (${versionCodeFinal})"
         }
         create("beta"){
-            applicationId = "com.voc.stargazer3_beta"
+            appProfile = "BETA"
             versionName = "BETA ${appVersion} (${versionCodeFinal})"
         }
         create("closeBeta"){
-            applicationId = "com.voc.stargazer3_cbeta"
+            appProfile = "C.BETA"
             versionName = "C.BETA ${appVersion} (${versionCodeFinal})"
         }
         create("production_googleplay"){
-            applicationId = "com.voc.stargazer3"
             appProfile = "PRODUCTION_GP"
             versionName = "GP ${appVersion} (${versionCodeFinal})"
         }
         create("production"){
+            appProfile = "PRODUCTION"
             applicationId = "com.voc.stargazer3"
             versionName = "${appVersion} (${versionCodeFinal})"
         }
@@ -255,6 +255,7 @@ compose.desktop {
                 bundleID = "com.voc.stargazer3"
                 minimumSystemVersion = "12.0"
                 signing {
+                    appStore = true //https://youtrack.jetbrains.com/issue/CMP-4272
                     sign.set(true)
                     identity.set("Chun Man Tsang")
                 }
