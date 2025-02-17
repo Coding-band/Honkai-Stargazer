@@ -250,6 +250,17 @@ compose.desktop {
             }
             macOS{
                 iconFile.set(project.file("icon/app_icon.icns"))
+
+                //ref : https://github.com/JetBrains/compose-multiplatform/blob/master/tutorials/Signing_and_notarization_on_macOS/README.md#configuring-gradle
+                bundleID = "com.voc.stargazer3"
+                minimumSystemVersion = "12.0"
+                signing {
+                    sign.set(true)
+                    identity.set("Chun Man Tsang")
+                }
+
+                //provisioningProfile.set(project.file("stores/SG3_Mac_App_Provisioning_Profile.provisionprofile"))
+                //runtimeProvisioningProfile.set(project.file("stores/JVM_Mac_App_Store_Provisioning_Profile.provisionprofile"))
             }
         }
 
