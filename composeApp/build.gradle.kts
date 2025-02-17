@@ -231,7 +231,7 @@ compose.desktop {
         mainClass = "MainKt"
 
         nativeDistributions {
-            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb, TargetFormat.Exe)
+            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb, TargetFormat.Exe, TargetFormat.Pkg)
             packageName = "Stargazer 3${if(appProfile.contains("PRODUCTION")) "" else " ($appProfile)"}"
             packageVersion = appVersionDesktop
             copyright = "Copyright © 2024 Coding Band 版權所有"
@@ -249,19 +249,24 @@ compose.desktop {
                 dirChooser = true
             }
             macOS{
+                packageName = "Stargazer 3"
                 iconFile.set(project.file("icon/app_icon.icns"))
-
+                packageBuildVersion = versionCodeFinal.toString()
                 //ref : https://github.com/JetBrains/compose-multiplatform/blob/master/tutorials/Signing_and_notarization_on_macOS/README.md#configuring-gradle
                 bundleID = "com.voc.stargazer3"
                 minimumSystemVersion = "12.0"
                 signing {
                     appStore = true //https://youtrack.jetbrains.com/issue/CMP-4272
-                    sign.set(true)
+                    sign.set(true) //https://github.com/electron/notarize/issues/120#issuecomment-1605886244
                     identity.set("Chun Man Tsang")
                 }
 
-                //provisioningProfile.set(project.file("stores/SG3_Mac_App_Provisioning_Profile.provisionprofile"))
-                //runtimeProvisioningProfile.set(project.file("stores/JVM_Mac_App_Store_Provisioning_Profile.provisionprofile"))
+                //ref : https://youtrack.jetbrains.com/issue/CMP-2096
+                //Please don't modify the profile name to other custom name, it will send u a jpackage error :)
+                provisioningProfile.set(project.file("stores/embedded.provisionprofile"))
+                runtimeProvisioningProfile.set(project.file("stores/runtime.provisionprofile"))
+                entitlementsFile.set(project.file("stores/entitlements.plist"))
+                runtimeEntitlementsFile.set(project.file("stores/runtime-entitlements.plist"))
             }
         }
 

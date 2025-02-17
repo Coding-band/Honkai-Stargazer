@@ -333,16 +333,16 @@ fun getAssetsURLByFileName(folder: ImageFolder, fileName: String): String {
  * @param filePath Relative path of the file, with suffix and any slashes
  * E.g. "character_data/character_list.json"
  */
-fun getAssetsJsonByFilePath(filePath: String): JsonElement {
-    val readStr = readFromFile(filePath)
+fun getAssetsJsonByFilePath(filePath: String, defaultData : String = "{}"): JsonElement {
+    val readStr = readFromFile(filePath, defaultData = defaultData)
     return Json.parseToJsonElement(
         readStr
         //if(readStr == "{}")  getAssetsJsonStrByFilePath(filePath) else readStr
     )
 }
 
-fun getAssetsStrByFilePath(filePath: String): String {
-    val readStr = readFromFile(filePath)
+fun getAssetsStrByFilePath(filePath: String, defaultData : String = "{}"): String {
+    val readStr = readFromFile(filePath, defaultData = defaultData)
     return readStr
         //if(readStr == "{}")  getAssetsJsonStrByFilePath(filePath) else readStr
 }

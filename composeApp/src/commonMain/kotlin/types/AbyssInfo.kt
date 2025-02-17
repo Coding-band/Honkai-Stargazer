@@ -81,7 +81,8 @@ data class AbyssInfo(
                     when(type){
                         AbyssInfoType.MemoryOfChaos -> "memory_of_chao_data/$abyssFileName.json"
                         AbyssInfoType.PureFiction -> "pure_fiction_data/$abyssFileName.json"
-                    }
+                    },
+                    defaultData = "[]"
                 )
 
                 val json = Json { ignoreUnknownKeys = true }
@@ -138,8 +139,8 @@ data class AbyssInfoList(
     @SerialName("time") val time: AbyssInfoTime
 ){
     companion object{
-        val mocListJson = getAssetsJsonByFilePath("memory_of_chao_data/chao_list.json")
-        val pfListJson = getAssetsJsonByFilePath("pure_fiction_data/pf_list.json")
+        val mocListJson = getAssetsJsonByFilePath("memory_of_chao_data/chao_list.json", defaultData = "[]")
+        val pfListJson = getAssetsJsonByFilePath("pure_fiction_data/pf_list.json", defaultData = "[]")
 
         @OptIn(ExperimentalCoroutinesApi::class)
         fun getAbyssList(type: AbyssInfoType): ArrayList<AbyssInfoList> {
@@ -151,7 +152,8 @@ data class AbyssInfoList(
                             when(type){
                                 AbyssInfoType.MemoryOfChaos -> "memory_of_chao_data/chao_list.json"
                                 AbyssInfoType.PureFiction -> "pure_fiction_data/pf_list.json"
-                            }
+                            },
+                            defaultData = "[]"
                         )
 
                         //記得以後Enum要寫全 不然會出問題
