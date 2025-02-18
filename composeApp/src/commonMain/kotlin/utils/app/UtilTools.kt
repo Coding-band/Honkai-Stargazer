@@ -490,7 +490,7 @@ fun readFromFile(filePath: String, localOnly : Boolean = false, defaultData : St
     try {
         // Check if the file exists
         if (!fileSystem.exists(file)) {
-            val data = if(localOnly) defaultData else readFromOnlineURL(StarbaseAPI().getGitHubStaticAssetURL() + "/data/${filePath}")
+            val data = if(localOnly) defaultData else readFromOnlineURL(StarbaseAPI().getGitHubStaticAssetURL() + "/data/${filePath}", defaultData)
             writeToFile(filePath, data)
             return data
         }
@@ -545,7 +545,7 @@ fun readFromFile(filePath: String, localOnly : Boolean = false, defaultData : St
 /**
  * Read from Online URL
  */
-fun readFromOnlineURL(url: String): String {
+fun readFromOnlineURL(url: String, defaultData: String): String {
     val client = getLocalHttpClient {
         install(HttpTimeout){ requestTimeoutMillis = 8000 }
         install(ContentNegotiation){ json() }
@@ -564,9 +564,9 @@ fun readFromOnlineURL(url: String): String {
                         "readFromOnlineURL(url = ${url})",
                         Exception("HTTP Error Code ${response.status.value} : ${response.status.description}")
                     )
-                    return@withTimeout "{}"
+                    return@withTimeout defaultData
                 } else {
-                    return@withTimeout response.body<String>()
+                    return@withTimeout if(response.body<String>() == "{}" && defaultData != "{}") defaultData else response.body()
                 }
             }
         }
@@ -578,7 +578,7 @@ fun readFromOnlineURL(url: String): String {
         // All response
         errorLog("StarbaseRequest", "readFromOnlineURL(url = ${url})",e)
     }
-    return "{}"
+    return defaultData
 }
 
 /**

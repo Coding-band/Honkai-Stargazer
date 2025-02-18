@@ -43,10 +43,10 @@ open class Relic(
         val relicExtListJson = getRelicExtListFromJSON()
 
         private fun getRelicListFromJSON() : JsonElement {
-            return getAssetsJsonByFilePath("relic_data/relic_list.json")
+            return getAssetsJsonByFilePath("relic_data/relic_list.json", defaultData = "[]")
         }
         private fun getRelicExtListFromJSON() : JsonElement {
-            return getAssetsJsonByFilePath("relic_data/relic_ext_list.json")
+            return getAssetsJsonByFilePath("relic_data/relic_ext_list.json", defaultData = "[]")
         }
 
         fun getRelicDataFromJSON(relicFileName : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance) : JsonElement {

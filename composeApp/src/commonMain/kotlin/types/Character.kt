@@ -67,10 +67,10 @@ open class Character(
         val charExtListJson = getCharacterExtListFromJSON()
 
         private fun getCharacterListFromJSON() : JsonElement {
-            return getAssetsJsonByFilePath("character_data/character_list.json")
+            return getAssetsJsonByFilePath("character_data/character_list.json", defaultData = "[]")
         }
         private fun getCharacterExtListFromJSON() : JsonElement {
-            return getAssetsJsonByFilePath("character_data/character_ext_list.json")
+            return getAssetsJsonByFilePath("character_data/character_ext_list.json", defaultData = "[]")
         }
 
         fun getCharacterDataFromFileName(characterFileName : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance) : JsonElement {

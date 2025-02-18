@@ -51,10 +51,10 @@ open class Lightcone(
         val lcExtListJson = getLightconeExtListFromJSON()
 
         private fun getLightconeListFromJSON() : JsonElement {
-            return getAssetsJsonByFilePath("lightcone_data/lightcone_list.json")
+            return getAssetsJsonByFilePath("lightcone_data/lightcone_list.json", defaultData = "[]")
         }
         private fun getLightconeExtListFromJSON() : JsonElement {
-            return getAssetsJsonByFilePath("lightcone_data/lightcone_ext_list.json")
+            return getAssetsJsonByFilePath("lightcone_data/lightcone_ext_list.json", defaultData = "[]")
         }
 
         fun getLightconeDataFromJSON(lightconeFileName : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance) : JsonElement {
