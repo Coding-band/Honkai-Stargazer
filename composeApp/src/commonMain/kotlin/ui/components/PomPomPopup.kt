@@ -23,9 +23,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.zIndex
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.HazeStyle
+import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeChild
 import files.Res
 import files.pom_pom_praying
@@ -35,6 +40,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.painterResource
 import utils.app.FontSizeNormal16
+import utils.app.pxToDp
 
 lateinit var docCountDown : MutableState<Int>
 lateinit var pomPomPopupInstance: MutableState<PomPomPopup>
@@ -53,8 +59,10 @@ fun PomPomPopupUI(
     hazeState: HazeState = remember { HazeState() }
 ) {
 
-    println("instance.isDisplay : ${pomPomPopupInstance.value.isDisplay}")
-    val isDisplay = pomPomPopupInstance.value.isDisplay
+    docCountDown = remember { mutableStateOf(1) }
+    val uiHeight: MutableState<Dp> = remember { mutableStateOf(1.dp) }
+    val density = LocalDensity.current.density
+
     // Display the popup
     if (pomPomPopupInstance.value.isDisplay) {
         CoroutineScope(Dispatchers.Default).launch {
@@ -67,38 +75,50 @@ fun PomPomPopupUI(
                 delay(1000)
             }
         }
-        //Full-Screen
-        AnimatedVisibility(
-            visible = pomPomPopupInstance.value.isDisplay,
-            enter = fadeIn(),
-            exit = fadeOut(),
-            modifier = Modifier.fillMaxSize()
-        ){
-            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
 
-                //Popup
-                Box(
-                    Modifier.fillMaxWidth(0.5f).wrapContentHeight().align(Alignment.Center).hazeChild(
+        //Full-Screen
+        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+            // Background
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth(0.5f)
+                    .height(uiHeight.value)
+                    .align(Alignment.Center)
+                    .hazeChild(
                         hazeState,
                         style = HazeStyle(Color(0x66AAAAAA), 10.dp, 0f),
                         shape = RoundedCornerShape(25.dp)
                     )
-                ) {
-                    // Display the content of the popup
-                    Column(Modifier.padding(24.dp)) {
-                        Image(
-                            painter = painterResource(Res.drawable.pom_pom_praying),
-                            contentDescription = "Pom Pom",
-                            modifier = Modifier.align(Alignment.CenterHorizontally).defaultMinSize(128.dp).fillMaxWidth().aspectRatio(1f)
-                        )
-                        Spacer(modifier = Modifier.height(16.dp))
-                        Text(
-                            text = "Pom Pom is praying${".".repeat(docCountDown.value)}",
-                            color = Color.White,
-                            style = FontSizeNormal16(),
-                            modifier = Modifier.align(Alignment.CenterHorizontally))
+            )
 
+            // Popup
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth(0.5f)
+                    .wrapContentHeight()
+                    .align(Alignment.Center)
+                    .onSizeChanged {
+                        uiHeight.value = pxToDp(it.height, density)
                     }
+            ) {
+                // Display the content of the popup
+                Column(Modifier.padding(24.dp)) {
+                    Image(
+                        painter = painterResource(Res.drawable.pom_pom_praying),
+                        contentDescription = "Pom Pom",
+                        modifier = Modifier
+                            .align(Alignment.CenterHorizontally)
+                            .defaultMinSize(128.dp)
+                            .fillMaxWidth()
+                            .aspectRatio(1f)
+                    )
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Text(
+                        text = "Pom Pom is praying${".".repeat(docCountDown.value)}",
+                        color = Color.White,
+                        style = FontSizeNormal16(),
+                        modifier = Modifier.align(Alignment.CenterHorizontally)
+                    )
                 }
             }
         }

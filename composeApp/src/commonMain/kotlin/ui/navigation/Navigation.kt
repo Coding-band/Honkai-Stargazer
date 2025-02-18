@@ -85,6 +85,7 @@ import ui.screens.initPFList
 import ui.screens.initRelicList
 import utils.app.BezierEasing2O48
 import utils.app.Constants.Companion.HOME_WIDTH
+import utils.app.toastInstance
 
 /**
  * Navigate to a route with a limited interval.
@@ -94,9 +95,10 @@ import utils.app.Constants.Companion.HOME_WIDTH
  */
 //This should not be there, but CharacterCard need it in clickable, without using @Composable ...
 lateinit var navigatorInstance : Navigator
-//lateinit var pomPomPopupInstance: MutableState<PomPomPopup>
-lateinit var swipeProperties: SwipeProperties
-lateinit var navTransition : NavTransition
+
+private lateinit var hazeStateRoot : HazeState
+private lateinit var swipeProperties: SwipeProperties
+private lateinit var navTransition : NavTransition
 
 /**
  * Only usage : For GlobalBackground check whether should blur the background
@@ -141,7 +143,7 @@ fun isPadMode(): Boolean {
 @Composable
 fun RootContent() {
     val snackbarHostState = remember { SnackbarHostState() }
-    val hazeStateRoot = remember { HazeState() }
+    hazeStateRoot = remember { HazeState() }
     val isPadMode = remember { mutableStateOf(false) }
     val isRotate = remember { mutableStateOf(false) }
     val navigator = rememberNavigator()
@@ -562,11 +564,26 @@ fun Navigator.navigateLimited(route: String, options: NavOptions? = null) {
 
 @Composable
 fun withBGScreen(isPadMode: MutableState<Boolean>, content: @Composable () -> Unit){
-    Box{
+    val hazeState = remember { HazeState() }
+    Box {
         if(!isPadMode.value){
             MakeBackground(screen = screenInstance)
         }
-        content()
+        Box(modifier = Modifier.haze(hazeState)){
+            content()
+        }
+
+        //Overlay - For Error Message or Loading Popup
+        PomPomPopupUI(hazeState = hazeState)
+
+        Toaster(
+            state = toastInstance,
+            richColors = true,
+            maxVisibleToasts = 10,
+            alignment = Alignment.BottomCenter,
+            showCloseButton = true,
+            darkTheme = true,
+        )
     }
 }
 
