@@ -8,6 +8,8 @@ import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -21,6 +23,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
@@ -36,12 +39,15 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -90,6 +96,7 @@ import types.UserAccount
 import ui.components.CharacterCard
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
+import ui.navigation.isPadMode
 import utils.app.Constants
 import utils.app.Constants.Companion.INFO_MAX_WIDTH
 import utils.app.Constants.Companion.INFO_MIN_WIDTH
@@ -102,7 +109,6 @@ import utils.app.TeamListItemSaver
 import utils.app.newImageRequest
 import utils.app.pxToDp
 import utils.app.rememberMutableStateListJsonOf
-import utils.app.rememberMutableStateListOf
 import utils.app.removeStrQuote
 import utils.calculator.ActionOrderEnemySpeed
 import utils.calculator.ActionOrderProcessItem
@@ -198,7 +204,7 @@ fun ActionOrderSimulatorPageScreen(
     val isPopupOpen = remember { mutableStateOf(false) }
     val localCharList = rememberSaveable { mutableStateOf<ArrayList<Character>>(arrayListOf()) }
 
-    actionOrdereProcessList = rememberMutableStateListOf<ActionOrderProcessItem>().apply { clear() ; addAll(TEST_SIMULATION_RESULT) }
+    actionOrdereProcessList = rememberMutableStateListJsonOf<ActionOrderProcessItem>().apply { clear() ; addAll(TEST_SIMULATION_RESULT) }
     maxValueTextWidth = remember { mutableStateOf(arrayListOf(SIMULATOR_LEFT_STATIC_ROW_WIDTH, 48.dp, 48.dp, 48.dp, 48.dp)) }
 
     LaunchedEffect(Unit){
@@ -215,12 +221,41 @@ fun ActionOrderSimulatorPageScreen(
 
     //UI
     BoxWithConstraints(modifier = modifier.fillMaxSize()) {
-        FlowRow(modifier = Modifier
-            .padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
-            .fillMaxSize(),
-        ) {
-            ActionOrderItemInfoSetting(teamListItem, teamDataListSnap ,index, navigator, isPopupOpen)
-            ActionOrderSimulatorUI(teamListItem, teamDataListSnap)
+        val isWideScreen = maxWidth > 750.dp
+
+        if (isWideScreen) {
+            Row(
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .wrapContentWidth()
+                    .align(Alignment.Center)
+                    .padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
+            ) {
+                key("ActionOrderItemInfoSetting") {
+                    ActionOrderItemInfoSetting(teamListItem, teamDataListSnap, index, navigator, isPopupOpen)
+                }
+                Spacer(modifier = Modifier.width(12.dp))
+                key("ActionOrderSimulatorUI") {
+                    ActionOrderSimulatorUI(teamListItem, teamDataListSnap)
+                }
+            }
+        } else {
+            Column(
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .wrapContentWidth()
+                    .scrollable(state = rememberScrollState(), orientation = Orientation.Vertical)
+                    .align(Alignment.Center)
+                    .padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
+            ) {
+                key("ActionOrderItemInfoSetting") {
+                    ActionOrderItemInfoSetting(teamListItem, teamDataListSnap, index, navigator, isPopupOpen)
+                }
+                Spacer(modifier = Modifier.height(12.dp))
+                key("ActionOrderSimulatorUI") {
+                    ActionOrderSimulatorUI(teamListItem, teamDataListSnap)
+                }
+            }
         }
 
         AnimatedVisibility(
@@ -426,7 +461,7 @@ fun ActionOrderSimulatorUI(teamListItem: MutableState<TeamListItem>, teamDataLis
 
 
     //UI
-    BoxWithConstraints(modifier = Modifier.wrapContentSize().widthIn(min = INFO_MIN_WIDTH, max = INFO_MAX_WIDTH)) {
+    BoxWithConstraints(modifier = Modifier.fillMaxHeight().padding(bottom = 8.dp).navigationBarsPadding().widthIn(min = INFO_MIN_WIDTH, max = INFO_MAX_WIDTH)) {
         uiWidth.value = this.maxWidth
 
         Column(modifier = Modifier.wrapContentSize()) {
@@ -439,7 +474,6 @@ fun ActionOrderSimulatorUI(teamListItem: MutableState<TeamListItem>, teamDataLis
                     .padding(start = 16.dp)
                     .width(maxValueTextWidth.value[0])
                     .height(10.dp)
-                    .background(Color.Blue)
                 ) {
 
                 }
@@ -473,9 +507,9 @@ fun ActionOrderSimulatorUI(teamListItem: MutableState<TeamListItem>, teamDataLis
             Spacer(modifier = Modifier.height(8.dp))
 
             //Simulator Box
-            Box(modifier = Modifier.fillMaxWidth().background(Color(0x66F3F9FF), RoundedCornerShape(10.dp)).padding(16.dp)){
+            Box(modifier = Modifier.fillMaxSize().background(Color(0x66F3F9FF), RoundedCornerShape(10.dp)).padding(16.dp)){
                 LazyColumn(
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier.fillMaxSize(),
                 ) {
                     items(actionOrdereProcessList){
                         ActionOrderSimulatorProcessRow(it, sharedLazyRowState)

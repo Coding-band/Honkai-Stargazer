@@ -131,7 +131,6 @@ import utils.app.FontSizeNormalLarge24
 import utils.app.Preferences
 import utils.app.TextColorNormalDim
 import utils.app.rememberMutableStateListJsonOf
-import utils.app.rememberMutableStateListOf
 import utils.app.removeStrQuote
 import utils.app.replaceStrRes
 import utils.calculator.TeamListItem
