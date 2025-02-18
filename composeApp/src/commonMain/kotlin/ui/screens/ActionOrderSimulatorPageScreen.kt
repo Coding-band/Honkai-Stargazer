@@ -75,6 +75,7 @@ import files.ActionOrderModify
 import files.ActionOrderSimulatorActionTimes
 import files.ActionOrderSimulatorActionValue
 import files.ActionOrderSimulatorCharEnergy
+import files.ActionOrderSimulatorSimulateRounds
 import files.ActionOrderSimulatorSkillPoint
 import files.Character
 import files.Res
@@ -406,12 +407,15 @@ fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, teamDat
 
                 Spacer(modifier = Modifier.height(8.dp))
 
+                //Default as 5, max as 99 (????)
+                val simulateRounds = remember{ mutableStateOf(5) }
+
                 //Initial/Max Battle Point, Enemy Speed
-                //@DoItLater("Apply Speed Checking in last Pair")
                 val textInfo = arrayListOf<Pair<StringResource, Int>>(
                     Pair(Res.string.ActionOrderInitSkillPoint, 3),
                     Pair(Res.string.ActionOrderMaxSkillPoint, checkMaxSkillPoint(ArrayList(teamDataListSnap))),
-                    Pair(Res.string.ActionOrderEnemySpeedTitle, teamListItem.value.teamEnemySpeed)
+                    Pair(Res.string.ActionOrderEnemySpeedTitle, teamListItem.value.teamEnemySpeed),
+                    Pair(Res.string.ActionOrderSimulatorSimulateRounds, simulateRounds.value),
                 )
                 Column {
                     textInfo.forEachIndexed { index, item ->
