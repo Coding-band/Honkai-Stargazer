@@ -72,7 +72,7 @@ class UserAccount(
 
             INSTANCE.cookies = ""
 
-            val cookieList = TestCookies as Any
+            //val cookieList = TestCookies as Any //正式測試不要用了呀OnO
 
             when(cookieList){
                 is String -> {

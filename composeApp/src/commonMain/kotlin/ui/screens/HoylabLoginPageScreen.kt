@@ -17,28 +17,39 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
+import androidx.compose.material.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Popup
+import androidx.compose.ui.window.PopupProperties
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
 import com.multiplatform.webview.web.WebView
 import com.multiplatform.webview.web.WebViewState
 import com.multiplatform.webview.web.rememberWebViewState
 import dev.chrisbanes.haze.HazeState
+import files.LoginEnterCookies
 import files.NotOK
 import files.OK
 import files.RemarksInLogin
@@ -47,6 +58,7 @@ import files.SelectAccountInServer
 import files.SelectServerTitle
 import files.TutorialVideo
 import files.UseCookiesToLogin
+import getDeviceInfo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -70,10 +82,14 @@ import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
 import utils.annotation.DoItLater
+import utils.app.AppFont
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.LongStringXML
 import utils.app.removeStrQuote
+import utils.app.showErrorToast
+import utils.app.showWarningToast
+import utils.device.DeviceInfo
 import utils.hoyolab.HoyolabConst
 import utils.starbase.StarbaseAPI
 
@@ -170,7 +186,7 @@ fun HoyolabServerRemarksPopup(modifier: Modifier = Modifier, showPopup : Mutable
     }
 
     if(showPopup.value) {
-        Popup(alignment = Alignment.Center) {
+        Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
             AppDialog(
                 titleString = removeStrQuote(Res.string.RemarksInLogin),
                 hazeState = hazeState,
@@ -219,7 +235,7 @@ fun HoyolabServerRemarksPopup(modifier: Modifier = Modifier, showPopup : Mutable
 fun HoyolabServerSelectPopup(modifier: Modifier = Modifier, showPopup : MutableState<Boolean> = remember { mutableStateOf(false) },  hazeState: HazeState = remember { HazeState() }){
     val showManualPopup = remember { mutableStateOf(false) }
     if (showPopup.value){
-        Popup(alignment = Alignment.Center) {
+        Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
             AppDialog(
                 titleString = removeStrQuote(Res.string.SelectServerTitle),
                 hazeState = hazeState,
@@ -261,8 +277,16 @@ fun HoyolabServerSelectPopup(modifier: Modifier = Modifier, showPopup : MutableS
                                 UIButton(
                                     text = removeStrQuote(server.localeName),
                                     onClick = {
-                                        navigatorInstance.navigateLimited("${Screen.HoyolabLoginPageScreen.route}?serverId=${server.serverId}")
                                         showPopup.value = false
+
+                                        //@DoItLater("Implement JCEF later")
+                                        if(getDeviceInfo().deviceOSName.lowercase().let {
+                                            it.contains("mac") || it.contains("windows") || it.contains("linux")
+                                        }){
+                                            showWarningToast(message = "PC端暫不支援Hoyoverse通行證登錄，請使用Cookies登錄\nCurrently PC does not support Hoyoverse Passport login yet, please use cookies to login instead.")
+                                        }else{
+                                            navigatorInstance.navigateLimited("${Screen.HoyolabLoginPageScreen.route}?serverId=${server.serverId}")
+                                        }
                                     }
                                 )
                             }
@@ -284,10 +308,12 @@ fun HoyolabManualLoginPopup(modifier: Modifier = Modifier, showPopup : MutableSt
     val serverList = HoyolabConst.SERVER.entries.filter { it != HoyolabConst.SERVER.UNKNOWN }
     val serverSelectedIndex = remember { mutableStateOf(0) }
     val urlHandler = LocalUriHandler.current
+    var cookieInput by remember { mutableStateOf(TextFieldValue("")) }
 
     if (showPopup.value){
-        Popup(alignment = Alignment.Center) {
-            val cookieInput = remember { mutableStateOf("") }
+        //popup properties, is really sad to see that it still need to manually set focusable to true
+        //Popup(alignment = Alignment.Center, properties = PopupProperties(focusable = true)) {
+        Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
             AppDialog(
                 titleString = removeStrQuote(Res.string.SelectServerTitle),
                 hazeState = hazeState,
@@ -329,16 +355,28 @@ fun HoyolabManualLoginPopup(modifier: Modifier = Modifier, showPopup : MutableSt
                             BoxWithConstraints(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .background(Color.White)
-                                    .clip(RoundedCornerShape(24.dp))
+                                    .heightIn(128.dp,320.dp)
                             ) {
                                 BasicTextField(
-                                    value = cookieInput.value,
-                                    onValueChange = { cookieInput.value = it },
-                                    textStyle = FontSizeNormal14().plus(TextStyle(Color.DarkGray)),
+                                    value = cookieInput,
+                                    onValueChange = { cookieInput = it },
                                     modifier = Modifier
-                                        .background(Color.White)
-                                        .fillMaxWidth().heightIn(128.dp,480.dp).aspectRatio(1f)
+                                        .background(Color(0xCCFFFFFF), RoundedCornerShape(24.dp))
+                                        .heightIn(128.dp,320.dp)
+                                        .fillMaxWidth()
+                                        .aspectRatio(1f)
+                                        .padding(16.dp),
+                                    decorationBox = { innerTextField ->
+                                        if (cookieInput.text.isEmpty()){
+                                            Text(
+                                                text = LongStringXML().LoginViaPCToGetCookies(),
+                                                color = Color.Gray,
+                                                style = TextStyle(fontSize = 14.sp, fontWeight = FontWeight.Normal, fontFamily = AppFont())
+                                            )
+                                        }
+                                        innerTextField()
+
+                                    },
                                 )
                             }
                         }
@@ -349,7 +387,7 @@ fun HoyolabManualLoginPopup(modifier: Modifier = Modifier, showPopup : MutableSt
                                 text = removeStrQuote(Res.string.OK),
                                 onClick = {
                                     initDataAfterLogin(
-                                        cookieList = cookieInput.value,
+                                        cookieList = cookieInput.text,
                                         serverSelected = serverList[serverSelectedIndex.value],
                                         snackbarHostState = null,
                                     )
