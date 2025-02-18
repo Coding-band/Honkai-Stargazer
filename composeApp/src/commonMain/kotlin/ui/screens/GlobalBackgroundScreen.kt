@@ -25,7 +25,10 @@ import coil3.compose.LocalPlatformContext
 import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import files.Res
+import files.bg_default
 import org.jetbrains.compose.resources.ExperimentalResourceApi
+import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.ImageFolder
 import utils.app.Black
@@ -105,6 +108,7 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boo
             ),
             contentDescription = "",
             contentScale = ContentScale.Crop,
+            error = painterResource(Res.drawable.bg_default),
             modifier = Modifier.fillMaxSize().blur(if (isBlur) 20.dp else 0.1.dp)
         )
         Box(

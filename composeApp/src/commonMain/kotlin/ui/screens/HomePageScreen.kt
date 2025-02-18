@@ -73,6 +73,7 @@ import files.PlayerLevel
 import files.Res
 import files.Setting
 import files.donate_ad_bg
+import files.ic_default_avatar
 import files.ic_rounded_option_btn
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -234,7 +235,8 @@ fun HomePageHeader(
                             AsyncImage(
                                 modifier = Modifier.size(72.dp * scale),
                                 model = newImageRequest(context, getIconByUserAccountIconValue(userAccount.value.icon)),
-                                contentDescription = "",
+                                contentDescription = "User Avatar",
+                                error = painterResource(Res.drawable.ic_default_avatar),
                             )
                         }
                     }
