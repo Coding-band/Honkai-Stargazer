@@ -123,7 +123,7 @@ class HoyolabRequest(
 
         try {
             return runBlocking {
-                return@runBlocking withTimeout(4000) {
+                return@runBlocking withTimeout(8000) {
                     val response: HttpResponse = client.get(url)
 
                     //Check whether it is having any errors

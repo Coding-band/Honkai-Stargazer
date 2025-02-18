@@ -63,7 +63,7 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
 
         try {
             return runBlocking {
-                return@runBlocking withTimeout(4000) {
+                return@runBlocking withTimeout(8000) {
                     val response: HttpResponse = client.get(mihomoUrl)
                     //Check whether it is having any errors
                     if (!arrayListOf(200, 201).contains(response.status.value)) {

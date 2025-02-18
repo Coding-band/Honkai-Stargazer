@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -63,18 +64,18 @@ fun PomPomPopupUI(
     val uiHeight: MutableState<Dp> = remember { mutableStateOf(1.dp) }
     val density = LocalDensity.current.density
 
+    LaunchedEffect(pomPomPopupInstance.value.isDisplay) {
+        while (pomPomPopupInstance.value.isDisplay) {
+            if (docCountDown.value == 3) {
+                docCountDown.value = 1
+            } else {
+                docCountDown.value += 1
+            }
+            delay(1000)
+        }
+    }
     // Display the popup
     if (pomPomPopupInstance.value.isDisplay) {
-        CoroutineScope(Dispatchers.Default).launch {
-            while (pomPomPopupInstance.value.isDisplay) {
-                if(docCountDown.value == 3) {
-                    docCountDown.value = 1
-                } else {
-                    docCountDown.value += 1
-                }
-                delay(1000)
-            }
-        }
 
         //Full-Screen
         Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
