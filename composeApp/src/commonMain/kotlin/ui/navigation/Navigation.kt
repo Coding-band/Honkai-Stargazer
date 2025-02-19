@@ -250,7 +250,7 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
 
     NavHost(
         navigator = navigator,
-        swipeProperties = if(isPadMode.value) null else swipeProperties,
+        swipeProperties = null,//if(isPadMode.value) null else swipeProperties,
         navTransition = if (isPadMode.value) defaultNavTransition else navTransition,
         initialRoute = Screen.HomePage.route
     ) {
