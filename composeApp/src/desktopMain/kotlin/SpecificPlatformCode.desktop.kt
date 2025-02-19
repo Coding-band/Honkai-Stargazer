@@ -9,6 +9,8 @@ import androidx.compose.ui.platform.LocalWindowInfo
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.client.engine.cio.CIO
+import okio.Path
+import okio.Path.Companion.toPath
 import org.jetbrains.skia.Image
 import utils.device.DeviceInfo
 import java.util.Locale
@@ -70,4 +72,24 @@ actual fun getLocalHttpClient(function: HttpClientConfig<*>.() -> Unit): HttpCli
 actual fun changeLanguage(language: String, region : String?) {
     val locale = if(region == null) Locale(language) else Locale(language, region)
     Locale.setDefault(locale)
+}
+
+actual fun getAppSpecificDirectory(): Path {
+    val userHome = System.getProperty("user.home")
+    return "$userHome/.Stargazer3".toPath()
+}
+
+//Desktop will never use this
+actual class ContextFactory {
+    actual fun getContext(): Any {
+        TODO("Not yet implemented")
+    }
+
+    actual fun getApplication(): Any {
+        TODO("Not yet implemented")
+    }
+
+    actual fun getActivity(): Any {
+        TODO("Not yet implemented")
+    }
 }

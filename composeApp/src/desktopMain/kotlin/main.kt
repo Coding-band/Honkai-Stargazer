@@ -24,6 +24,7 @@ import utils.app.removeStrQuote
 import java.io.File
 import kotlin.math.max
 
+
 fun main() = application {
     Window(
         onCloseRequest = ::exitApplication,
@@ -33,7 +34,7 @@ fun main() = application {
     ) {
 
         @DoItLater("JCEF, do it later")
-        App()
+        App(ContextFactory()) //Since Desktop does not have Context
         /* JCEF, do it later
         var restartRequired by remember { mutableStateOf(false) }
         var downloading by remember { mutableStateOf(0F) }

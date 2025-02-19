@@ -17,6 +17,8 @@ import utils.app.Stargazer3Theme
 import utils.app.dateTimeStrInit
 import utils.app.newImageLoader
 
+lateinit var platformContext: ContextFactory
+
 @Composable
 @Preview
         /**
@@ -24,7 +26,8 @@ import utils.app.newImageLoader
          * - Handling and deciding which display case it is (Horizonal / Landscape) , (Pad Mode ? Phone Mode?)
          * - Display specific screen as the login in Figma Design expect
          */
-fun App() {
+fun App(platformContextFactory: ContextFactory) {
+    platformContext = platformContextFactory
     setSingletonImageLoaderFactory { context ->
         newImageLoader(
             context,
@@ -68,3 +71,4 @@ fun SplashNavInit(){
         }
     }
 }
+

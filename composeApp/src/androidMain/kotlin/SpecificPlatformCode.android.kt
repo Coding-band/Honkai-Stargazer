@@ -1,8 +1,10 @@
 
 import android.app.Activity
+import android.content.Context
 import android.content.res.Configuration
 import android.graphics.BitmapFactory
 import android.os.Build
+import androidx.activity.ComponentActivity
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.ImageBitmap
@@ -16,6 +18,8 @@ import androidx.core.view.WindowInsetsControllerCompat
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.client.engine.cio.CIO
+import okio.Path
+import okio.Path.Companion.toPath
 import utils.device.DeviceInfo
 import java.util.Locale
 
@@ -91,4 +95,15 @@ actual fun getLocalHttpClient(function: HttpClientConfig<*>.() -> Unit): HttpCli
 actual fun changeLanguage(language: String, region: String?) {
     val locale = if(region == null) Locale(language) else Locale(language, region)
     Locale.setDefault(locale)
+}
+
+actual fun getAppSpecificDirectory(): Path {
+    val context: Context = platformContext.getContext() as Context
+    return context.filesDir.absolutePath.toPath()
+}
+
+actual class ContextFactory(private val activity: ComponentActivity) {
+    actual fun getContext(): Any = activity.baseContext
+    actual fun getApplication(): Any = activity.application
+    actual fun getActivity(): Any = activity
 }

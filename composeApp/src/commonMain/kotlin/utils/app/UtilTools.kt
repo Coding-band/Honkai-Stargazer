@@ -38,6 +38,7 @@ import files.StatusMinutes
 import files.StatusSeconds
 import files.StatusToday
 import files.StatusTomorrow
+import getAppSpecificDirectory
 import getLocalHttpClient
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
@@ -463,6 +464,7 @@ fun getFinishTimeStr(finishTime: Long): String {
 fun writeToFile(filePath: String, content: String) {
     val fileSystem = FileSystem.SYSTEM
     val file = FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("data").resolve(filePath)
+    //val file = getAppSpecificDirectory().resolve("data").resolve(filePath)
 
     try {
         // Create directory if it doesn't exist
@@ -486,16 +488,18 @@ fun writeToFile(filePath: String, content: String) {
 fun readFromFile(filePath: String, localOnly : Boolean = false, defaultData : String = "{}"): String {
     val fileSystem = FileSystem.SYSTEM
     val file = FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("data").resolve(filePath)
+    //println(getAppSpecificDirectory())
+    //val file = getAppSpecificDirectory().resolve("data").resolve(filePath)
 
     try {
         // Check if the file exists
         if (!fileSystem.exists(file)) {
+
             val data = if(localOnly) defaultData else readFromOnlineURL(StarbaseAPI().getGitHubStaticAssetURL() + "/data/${filePath}", defaultData)
             writeToFile(filePath, data)
             return data
         }
 
-        /*
         if (!localOnly){
             try {
                 // Get local file size and last modified time
@@ -521,16 +525,15 @@ fun readFromFile(filePath: String, localOnly : Boolean = false, defaultData : St
 
                 // Compare file size and last modified time
                 if (localFileSize != onlineFileSize || localFileSize != onlineFileSize && localFileLastModified < onlineFileLastModified) {
-                    val data = readFromOnlineURL(onlineFileUrl)
+                    val data = readFromOnlineURL(onlineFileUrl, defaultData)
                     writeToFile(filePath, data)
                     return data
                 }
-            }catch (e: UnresolvedAddressException){
+            }catch (e: Exception){
                 // No need to response
+                errorLog("UtilTools.kt", "readFromFile(...) -> !localOnly", e)
             }
         }
-
-         */
 
         // Read from file
         return fileSystem.source(file).buffer().use { source ->
@@ -545,7 +548,7 @@ fun readFromFile(filePath: String, localOnly : Boolean = false, defaultData : St
 /**
  * Read from Online URL
  */
-fun readFromOnlineURL(url: String, defaultData: String): String {
+fun readFromOnlineURL(url: String, defaultData: String = "{}"): String {
     val client = getLocalHttpClient {
         install(HttpTimeout){ requestTimeoutMillis = 8000 }
         install(ContentNegotiation){ json() }

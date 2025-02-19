@@ -54,6 +54,7 @@ import files.SetWallPaper
 import files.SwitchOff
 import files.SwitchOn
 import files.UseBlurEffect
+import getDeviceInfo
 import kotlinx.coroutines.launch
 import moe.tlaster.precompose.navigation.Navigator
 import types.Character
@@ -117,12 +118,14 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: Navigator,
             Spacer(modifier = Modifier.height(34.dp))
              */
 
-            Text(
-                text = "SHIFT + Mouse_Wheel to Change Background",
-                style = FontSizeNormal16(),
-                color = Color.White,
-                modifier = Modifier.align(Alignment.CenterHorizontally)
-            )
+            if (getDeviceInfo().deviceOSName.lowercase().let { it.contains("mac") || it.contains("windows") }){
+                Text(
+                    text = "SHIFT + Mouse_Wheel to Change Background",
+                    style = FontSizeNormal16(),
+                    color = Color.White,
+                    modifier = Modifier.align(Alignment.CenterHorizontally)
+                )
+            }
             Spacer(modifier = Modifier.height(14.dp))
 
             //在這裡，我們透過使用LazyRow來實現一個，透過橫向滑動來選擇背景的功能

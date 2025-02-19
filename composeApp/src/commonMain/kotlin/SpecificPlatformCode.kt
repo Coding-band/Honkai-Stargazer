@@ -1,5 +1,6 @@
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.unit.Dp
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
@@ -35,3 +36,12 @@ expect fun setKeyboardDarkMode()
 expect fun getLocalHttpClient(function: HttpClientConfig<*>.() -> Unit): HttpClient
 
 expect fun changeLanguage(language: String, region: String? = null)
+
+//ref: https://medium.com/@robert.jamison/passing-android-context-in-kmp-jetpack-compose-8de5b5de7bdd
+expect class ContextFactory {
+    fun getContext(): Any
+    fun getApplication(): Any
+    fun getActivity(): Any
+}
+
+expect fun getAppSpecificDirectory(): okio.Path
