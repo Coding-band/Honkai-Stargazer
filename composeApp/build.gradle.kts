@@ -36,11 +36,9 @@ val schemeProfile: String? = System.getenv("SCHEME_PROFILE")
 
 //BETA | C.BETA | DEV | PRODUCTION
 //VersionUpdateCheck
-var appProfile = schemeProfile ?: "PRODUCTION" //Please Modify this String ONLY IF NECESSERY
-val appVersionCodeName = "SG3"
 val isForAppStore = false
-
-
+var appProfile = if(isForAppStore) schemeProfile ?: "PRODUCTION" else "C.BETA" //Please Modify this String ONLY IF NECESSERY
+val appVersionCodeName = "SG3"
 
 initGradleProperties()
 
@@ -178,23 +176,18 @@ android {
         properties["APP_PLATFORM"] = "Android"
 
         create("0dev"){
-            appProfile = "DEV"
             versionName = "DEV ${appVersion} (${versionCodeFinal})"
         }
         create("beta"){
-            appProfile = "BETA"
             versionName = "BETA ${appVersion} (${versionCodeFinal})"
         }
         create("closeBeta"){
-            appProfile = "C.BETA"
             versionName = "C.BETA ${appVersion} (${versionCodeFinal})"
         }
         create("production_googleplay"){
-            appProfile = "PRODUCTION_GP"
             versionName = "GP ${appVersion} (${versionCodeFinal})"
         }
         create("production"){
-            appProfile = "PRODUCTION"
             applicationId = "com.voc.stargazer3"
             versionName = "${appVersion} (${versionCodeFinal})"
         }
@@ -249,6 +242,7 @@ compose.desktop {
             windows {
                 iconFile.set(project.file("icon/app_icon.ico"))
                 shortcut = true
+                msiPackageVersion = "1.0.$versionCodeFinal"
                 menu = true
                 dirChooser = true
             }
@@ -317,6 +311,7 @@ buildkonfig {
 
 fun initGradleProperties(){
     //Write only
+    properties["APP_PROFILE"] = appProfile
     properties["APP_VERSION"] = appVersion
     properties["APP_VERSION_CODENAME"] = appVersionCodeName
     properties["APP_VERSION_CODE"] = versionCodeFinal.toString()
