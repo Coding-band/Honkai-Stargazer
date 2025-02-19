@@ -283,7 +283,7 @@ fun UserInfoPageScreen(
     }
 
     if(showPopup.value){
-        Popup(alignment = Alignment.Center) {
+        Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
             AppDialog(
                 titleString = removeStrQuote(Res.string.PublicChars),
                 hazeState = hazeState,
@@ -359,10 +359,12 @@ fun UserInfoBioUI(context: PlatformContext, userAccount: UserAccount) {
             for ((index, data) in rowData.withIndex()){
                 var textSize by remember { mutableStateOf(24.sp) }
 
-                Column(Modifier.wrapContentHeight()
-                    .onSizeChanged { size ->
+                /*
+                .onSizeChanged { size ->
                         // 根據寬度動態計算字體大小
-                        textSize = TextUnit(size.width / 10f, TextUnitType.Sp) } ) {
+                        textSize = TextUnit(size.width / 10f, TextUnitType.Sp) }
+                 */
+                Column(Modifier.wrapContentHeight()) {
                     Text(
                         data.first,
                         modifier = Modifier.align(Alignment.CenterHorizontally).padding(2.dp),
@@ -410,16 +412,16 @@ fun UserInfoBioUI2(context: PlatformContext, userAccount: UserAccount) {
             Column(
                 Modifier.wrapContentHeight()
                     .weight(1f)
-                    .onSizeChanged { size ->
-                        // 根據寬度動態計算字體大小
-                textSize = min(TextUnit(size.width / 10f, TextUnitType.Sp), 30.sp)
-            }) {
+                    /* // 根據寬度動態計算字體大小 (注釋掉，因爲這個方法意義不大，僅確保字體平均佔用空間就好）
+                    .onSizeChanged { size -> textSize = min(TextUnit(size.width / 10f, TextUnitType.Sp), 30.sp)}
+                     */
+            ) {
                 Text(
                     //DoItLater("LastLoginTime")
                     "${data.first}",
                     modifier = Modifier.align(Alignment.CenterHorizontally).padding(2.dp),
                     style = FontSizeNormalLarge24(),
-                    fontSize = textSize,
+                    fontSize = 24.sp,
                     color = Color.White
                 )
 
