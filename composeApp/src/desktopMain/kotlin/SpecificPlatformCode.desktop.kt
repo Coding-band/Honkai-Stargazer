@@ -12,6 +12,7 @@ import io.ktor.client.engine.cio.CIO
 import okio.Path
 import okio.Path.Companion.toPath
 import org.jetbrains.skia.Image
+import utils.annotation.DoItLater
 import utils.device.DeviceInfo
 import java.util.Locale
 
@@ -74,6 +75,7 @@ actual fun changeLanguage(language: String, region : String?) {
     Locale.setDefault(locale)
 }
 
+@DoItLater("Desktop Apply To AppData / Applicaton Support Directory")
 actual fun getAppSpecificDirectory(): Path {
     val userHome = System.getProperty("user.home")
     return "$userHome/.Stargazer3".toPath()

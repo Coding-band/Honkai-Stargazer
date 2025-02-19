@@ -38,6 +38,7 @@ val schemeProfile: String? = System.getenv("SCHEME_PROFILE")
 //VersionUpdateCheck
 var appProfile = schemeProfile ?: "PRODUCTION" //Please Modify this String ONLY IF NECESSERY
 val appVersionCodeName = "SG3"
+val isForAppStore = false
 
 
 
@@ -259,17 +260,19 @@ compose.desktop {
                 bundleID = "com.voc.stargazer3"
                 minimumSystemVersion = "12.0"
                 signing {
-                    appStore = true //https://youtrack.jetbrains.com/issue/CMP-4272
-                    sign.set(true) //https://github.com/electron/notarize/issues/120#issuecomment-1605886244
+                    appStore = isForAppStore //https://youtrack.jetbrains.com/issue/CMP-4272
+                    sign.set(isForAppStore) //https://github.com/electron/notarize/issues/120#issuecomment-1605886244
                     identity.set("Chun Man Tsang")
                 }
 
-                //ref : https://youtrack.jetbrains.com/issue/CMP-2096
-                //Please don't modify the profile name to other custom name, it will send u a jpackage error :)
-                provisioningProfile.set(project.file("stores/embedded.provisionprofile"))
-                runtimeProvisioningProfile.set(project.file("stores/runtime.provisionprofile"))
-                entitlementsFile.set(project.file("stores/entitlements.plist"))
-                runtimeEntitlementsFile.set(project.file("stores/runtime-entitlements.plist"))
+                if(isForAppStore){
+                    //ref : https://youtrack.jetbrains.com/issue/CMP-2096
+                    //Please don't modify the profile name to other custom name, it will send u a jpackage error :)
+                    provisioningProfile.set(project.file("stores/embedded.provisionprofile"))
+                    runtimeProvisioningProfile.set(project.file("stores/runtime.provisionprofile"))
+                    entitlementsFile.set(project.file("stores/entitlements.plist"))
+                    runtimeEntitlementsFile.set(project.file("stores/runtime-entitlements.plist"))
+                }
             }
         }
 

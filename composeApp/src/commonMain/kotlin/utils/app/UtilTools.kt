@@ -463,8 +463,8 @@ fun getFinishTimeStr(finishTime: Long): String {
 
 fun writeToFile(filePath: String, content: String) {
     val fileSystem = FileSystem.SYSTEM
-    val file = FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("data").resolve(filePath)
-    //val file = getAppSpecificDirectory().resolve("data").resolve(filePath)
+    //val file = FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("data").resolve(filePath)
+    val file = getAppSpecificDirectory().resolve("data").resolve(filePath)
 
     try {
         // Create directory if it doesn't exist
@@ -487,9 +487,9 @@ fun writeToFile(filePath: String, content: String) {
 
 fun readFromFile(filePath: String, localOnly : Boolean = false, defaultData : String = "{}"): String {
     val fileSystem = FileSystem.SYSTEM
-    val file = FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("data").resolve(filePath)
+    //val file = FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("data").resolve(filePath)
     //println(getAppSpecificDirectory())
-    //val file = getAppSpecificDirectory().resolve("data").resolve(filePath)
+    val file = getAppSpecificDirectory().resolve("data").resolve(filePath)
 
     try {
         // Check if the file exists
