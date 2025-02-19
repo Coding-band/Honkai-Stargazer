@@ -16,6 +16,8 @@ import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.Scaffold
 import androidx.compose.material.SnackbarHost
@@ -565,7 +567,7 @@ fun Navigator.navigateLimited(route: String, options: NavOptions? = null) {
 @Composable
 fun withBGScreen(isPadMode: MutableState<Boolean>, content: @Composable () -> Unit){
     val hazeState = remember { HazeState() }
-    Box {
+    Box(modifier = Modifier.fillMaxSize()) {
         if(!isPadMode.value){
             MakeBackground(screen = screenInstance)
         }
@@ -583,6 +585,7 @@ fun withBGScreen(isPadMode: MutableState<Boolean>, content: @Composable () -> Un
             alignment = Alignment.BottomCenter,
             showCloseButton = true,
             darkTheme = true,
+            modifier = Modifier.navigationBarsPadding()
         )
     }
 }

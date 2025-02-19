@@ -48,11 +48,16 @@ import files.UIDFormatError
 import files.UIDNoData
 import files.UIDSearchRecord
 import files.UIDSearchRecordClear
+import files.ic_default_avatar
+import files.pom_pom_failed_issue
+import files.pom_pom_praying
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import moe.tlaster.precompose.navigation.Navigator
+import org.jetbrains.compose.resources.painterResource
+import types.UserAccount
 import utils.app.Constants
 import types.UserAccount.Companion.UIDSEARCH
 import types.UserAccountLite
@@ -69,6 +74,7 @@ import ui.navigation.navigatorInstance
 import utils.app.getIconByUserAccountIconValue
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
+import utils.app.showWarningToast
 import utils.starbase.StarbaseAPI
 
 @Composable
@@ -80,13 +86,6 @@ fun UIDSearchPageScreen(
     val hazeState = remember { HazeState() }
     val listState = rememberLazyListState()
     val searchWords = remember { mutableStateOf("") }
-    val demoList = arrayListOf(
-        UserAccountLite("900033852", "Vocaloid2048",70, "202014", HoyolabConst.SERVER.TW_HK_MO, ),
-        UserAccountLite("800051234", "Ascent",15, "202011", HoyolabConst.SERVER.ASIA, ),
-        UserAccountLite("601058310", "Corin",44, "1210", HoyolabConst.SERVER.AMERICA, ),
-        UserAccountLite("900033853", "Homomo",54, "1310", HoyolabConst.SERVER.TW_HK_MO, ),
-        UserAccountLite("900033852", "Bronya",70, "1101", HoyolabConst.SERVER.TW_HK_MO, ),
-    )
     val searchRecordList = remember { mutableStateOf(UserAccountLite.getSearchRecordList()) }
 
     /*
@@ -97,7 +96,6 @@ fun UIDSearchPageScreen(
      */
 
     Box{
-        val toaster = rememberToasterState()
         val noDataStr = removeStrQuote(Res.string.UIDNoData)
         val wrongFormatStr = removeStrQuote(Res.string.UIDFormatError)
         val isQuerying = remember { mutableStateOf(false) }
@@ -117,22 +115,29 @@ fun UIDSearchPageScreen(
                         isQuerying.value = true
                     }
 
-                    //Fix : UID查詢未輸入時點擊搜尋會閃退
                     //Preventing user enter empty value / non-number value
                     searchWords.value = searchWords.value.trim()
 
-                    if(arrayListOf(null, "").contains(searchWords.value) || searchWords.value.toLongOrNull() == null) {
-                        toaster.show(
+                    if(arrayListOf(null, "").contains(searchWords.value) || searchWords.value.length < 9 ||searchWords.value.toLongOrNull() == null) {
+                        //Not matching request format, show error and stop searching progress
+                        showWarningToast(
                             message = wrongFormatStr,
-                            type = ToastType.Warning,
                         )
+                        isQuerying.value = false
+                        pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
                         return@launch
                     }else{
-                        val mihomoRequest = MihomoRequest(searchWords.value).getUserAccountByMiHomo()
-                        UIDSEARCH = if(mihomoRequest.uid == "000000000") {
-                            StarbaseAPI().getUserAccountInfo(searchWords.value, true)
+                        //Else, Search UID from Starbase API first, then search UID from Mihomo API
+                        if(UserAccount.INSTANCE.uid == searchWords.value) {
+                            UserAccount.INSTANCE
                         }else{
-                            mihomoRequest
+                            val mihomoRequest = MihomoRequest(searchWords.value).getUserAccountByMiHomo()
+                            val starbaseResult = StarbaseAPI().getUserAccountInfo(searchWords.value, true)
+                            UIDSEARCH = if (starbaseResult.uid != "000000000") {
+                                starbaseResult
+                            } else {
+                                mihomoRequest
+                            }
                         }
 
                         if(UIDSEARCH.uid != "000000000") {
@@ -140,17 +145,18 @@ fun UIDSearchPageScreen(
                                 searchRecordList.value.add(UserAccountLite(UIDSEARCH.uid, UIDSEARCH.username, UIDSEARCH.level, UIDSEARCH.icon, UIDSEARCH.server))
                                 UserAccountLite.saveSearchRecordList(searchRecordList.value)
                             }
+                            withContext(Dispatchers.Main){
+                                isQuerying.value = false
+                                pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
+                                navigator.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=${searchWords.value}")
+                            }
                         }else{
-                            toaster.show(
+                            isQuerying.value = false
+                            pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
+                            showWarningToast(
                                 message = noDataStr,
-                                type = ToastType.Warning,
                             )
                         }
-                    }
-
-                    withContext(Dispatchers.Main){
-                        pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
-                        navigator.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=${searchWords.value}")
                     }
                 }
             })
@@ -221,6 +227,7 @@ fun UIDSearchPageScreen(
                                         getIconByUserAccountIconValue(item.icon)
                                     ),
                                     contentDescription = "",
+                                    error = painterResource(Res.drawable.pom_pom_failed_issue)
                                 )
                             }
 
@@ -342,7 +349,5 @@ fun UIDSearchPageScreen(
             hazeState = hazeState,
             backIconId = BackIcon.CANCEL,
         )
-
-        Toaster(state = toaster, alignment = Alignment.BottomCenter, richColors = true)
     }
 }

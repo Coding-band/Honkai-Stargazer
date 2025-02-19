@@ -602,7 +602,6 @@ fun valueOfWithDefaultCombatType(name: String): CombatType {
 
 @VersionUpdateCheck
 fun getIconByUserAccountIconValue(icon : String): Any {
-    println(icon)
     if(icon.startsWith("http")){
         return icon
     }
