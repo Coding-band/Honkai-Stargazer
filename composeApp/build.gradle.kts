@@ -32,12 +32,12 @@ file("../gradle.properties").inputStream().use { properties.load(it) }
 
 val appVersion: String = SimpleDateFormat("yyyy.MM.dd").format(Date())
 val versionCodeFinal = properties.getProperty("APP_VERSION_CODE").toInt() + 1
-val schemeProfile: String? = System.getenv("SCHEME_PROFILE")
+//val schemeProfile: String? = System.getenv("SCHEME_PROFILE")
 
 //BETA | C.BETA | DEV | PRODUCTION
 //VersionUpdateCheck
-val isForAppStore = false
-var appProfile = if(isForAppStore) schemeProfile ?: "PRODUCTION" else "C.BETA" //Please Modify this String ONLY IF NECESSERY
+val isForAppStore = true
+var appProfile = "C.BETA" //Please Modify this String ONLY IF NECESSERY
 val appVersionCodeName = "SG3"
 
 initGradleProperties()
@@ -221,6 +221,7 @@ android {
         }
     }
 }
+
 
 
 compose.desktop {
