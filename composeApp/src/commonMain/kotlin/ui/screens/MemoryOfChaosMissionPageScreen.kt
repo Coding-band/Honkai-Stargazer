@@ -65,7 +65,10 @@ import ui.components.defaultHeaderData
 import ui.components.horizontalFadingEdge
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import files.AbyssCharacterUsage
+import files.AbyssTeamUsage
 import files.MOCEffect
+import files.MOCMissionInfoTitle
 import files.Res
 import files.bg_transparent
 import files.ic_arrow_down_spinner
@@ -104,6 +107,7 @@ import utils.app.getImageNameByRegistName
 import utils.app.getMocPhaseStrListByMocLen
 import utils.app.newImageRequest
 import utils.app.pxToDp
+import utils.app.removeStrQuote
 
 lateinit var mocList : MutableState<ArrayList<AbyssInfoList>>
 
@@ -276,7 +280,11 @@ fun MemoryOfChaosContent(
 ){
     val density = LocalDensity.current.density
     val mocPhaseList = getMocPhaseStrListByMocLen(mocInfoList?.missionList?.size ?: -1)
-    val usageList = listOf("關卡資訊", "角色使用率", "隊伍使用率", )
+    val usageTextList = listOf(
+        removeStrQuote(Res.string.MOCMissionInfoTitle),
+        removeStrQuote(Res.string.AbyssCharacterUsage),
+        removeStrQuote(Res.string.AbyssTeamUsage)
+    )
     val mocInfoDisplayIndex = remember { mutableStateOf(0) }
     val mocPhaseIndex = remember { mutableStateOf(0) }
 
@@ -295,11 +303,11 @@ fun MemoryOfChaosContent(
                         interactionSource = remember { MutableInteractionSource() },
                         indication = ripple(radius = 4.dp),
                         onClick = {
-                            mocInfoDisplayIndex.value = (mocInfoDisplayIndex.value + 1) % usageList.size
+                            mocInfoDisplayIndex.value = (mocInfoDisplayIndex.value + 1) % usageTextList.size
                         }
                     )
                 ) {
-                    Text(usageList[mocInfoDisplayIndex.value], style = FontSizeNormal16(), color = Color.White)
+                    Text(usageTextList[mocInfoDisplayIndex.value], style = FontSizeNormal16(), color = Color.White)
                     Spacer(Modifier.width(4.dp))
                     Image(painterResource(Res.drawable.ic_exchange_icon), modifier = Modifier.size(12.dp).align(Alignment.CenterVertically), colorFilter = ColorFilter.tint(Color.White), contentDescription = null)
                 }
@@ -446,7 +454,7 @@ fun MemoryOfChaosContent(
                             )
                         }"
                     } else {
-                        "角色使用率"
+                        usageTextList[mocInfoDisplayIndex.value]
                     },
                     textAlign = TextAlign.Center,
                     style = FontSizeNormal16(),

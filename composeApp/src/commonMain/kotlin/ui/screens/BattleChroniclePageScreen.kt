@@ -46,6 +46,8 @@ import ui.components.PageHeaderAlpha
 import ui.components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import files.AbyssListSortAscend
+import files.AbyssListSortDescend
 import files.AppStatusNoDataFound
 import files.MOCMyBattleReport
 import files.MemoryOfChaos
@@ -117,10 +119,9 @@ fun BattleChroniclePageScreen(
     val isAsc = remember { mutableStateOf(false) }
 
 
-    @DoItLater("Translation")
     val ascendingStr = arrayListOf(
-        "降序 DESC",
-        "升序 ASC",
+        removeStrQuote(Res.string.AbyssListSortDescend),
+        removeStrQuote(Res.string.AbyssListSortAscend),
     )
     val ids = remember { mutableStateOf(mocIds) }
     ids.value = when (choiceStrList[choiceChronicleIndex.value].second) {

@@ -7,6 +7,7 @@ import moe.tlaster.precompose.PreComposeApp
 import moe.tlaster.precompose.navigation.NavHost
 import moe.tlaster.precompose.navigation.rememberNavigator
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import types.userAccountErrorMessage
 import ui.components.PomPomInit
 import ui.navigation.RootContent
 import ui.navigation.Screen
@@ -46,6 +47,7 @@ fun App(platformContextFactory: ContextFactory) {
         LogExportInit()
         PomPomInit()
         dateTimeStrInit()
+        userAccountErrorMessage()
 
         PreComposeApp {
             SplashNavInit()

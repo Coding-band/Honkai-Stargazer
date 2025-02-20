@@ -63,6 +63,9 @@ import ui.components.horizontalFadingEdge
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.MOCEffect
+import files.MOCMissionInfoTitle
+import files.AbyssTeamUsage
+import files.AbyssCharacterUsage
 import files.Res
 import files.bg_transparent
 import files.ic_arrow_down_spinner
@@ -96,6 +99,7 @@ import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import utils.app.getMocPhaseStrListByMocLen
 import utils.app.pxToDp
+import utils.app.removeStrQuote
 
 lateinit var pfList : MutableState<ArrayList<AbyssInfoList>>
 
@@ -268,7 +272,7 @@ fun PureFictionContent(
 ){
     val density = LocalDensity.current.density
     val pfPhaseList = getMocPhaseStrListByMocLen(pfInfoList?.missionList?.size ?: -1)
-    val usageList = listOf("關卡資訊", "角色使用率", "隊伍使用率", )
+    val usageTextList = listOf(removeStrQuote(Res.string.MOCMissionInfoTitle),removeStrQuote(Res.string.AbyssCharacterUsage),removeStrQuote(Res.string.AbyssTeamUsage))
     val pfInfoDisplayIndex = remember { mutableStateOf(0) }
     val pfPhaseIndex = remember { mutableStateOf(0) }
 
@@ -287,11 +291,11 @@ fun PureFictionContent(
                         interactionSource = remember { MutableInteractionSource() },
                         indication = ripple(radius = 4.dp),
                         onClick = {
-                            pfInfoDisplayIndex.value = (pfInfoDisplayIndex.value + 1) % usageList.size
+                            pfInfoDisplayIndex.value = (pfInfoDisplayIndex.value + 1) % usageTextList.size
                         }
                     )
                 ) {
-                    Text(usageList[pfInfoDisplayIndex.value], style = FontSizeNormal16(), color = Color.White)
+                    Text(usageTextList[pfInfoDisplayIndex.value], style = FontSizeNormal16(), color = Color.White)
                     Spacer(Modifier.width(4.dp))
                     Image(painterResource(Res.drawable.ic_exchange_icon), modifier = Modifier.size(12.dp).align(Alignment.CenterVertically), colorFilter = ColorFilter.tint(Color.White), contentDescription = null)
                 }
@@ -438,7 +442,7 @@ fun PureFictionContent(
                             )
                         }"
                     } else {
-                        "角色使用率"
+                        usageTextList[pfInfoDisplayIndex.value]
                     },
                     textAlign = TextAlign.Center,
                     style = FontSizeNormal16(),

@@ -2,11 +2,16 @@ package types
 
 import TestCookies
 import androidx.compose.material.SnackbarHostState
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import com.multiplatform.webview.cookie.Cookie
 import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
+import files.Res
+import files.UserAccountWarningCookiesInvalid
+import files.UserAccountWarningIncorrectServer
+import files.UserAccountWarningNoAccountRecord
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
@@ -23,6 +28,7 @@ import utils.app.Preferences
 import utils.annotation.DoItLater
 import utils.app.errorLog
 import utils.app.readFromFile
+import utils.app.removeStrQuote
 import utils.hoyolab.AttributeExchange
 import utils.hoyolab.HoyolabAPI
 import utils.hoyolab.HoyolabConst
@@ -32,6 +38,16 @@ import utils.app.writeToFile
 import utils.device.AppInfo
 import utils.hoyolab.genDSv2
 import utils.starbase.StarbaseAPI
+
+lateinit var UserAccountWarningCookiesInvalid : String
+lateinit var UserAccountWarningNoAccountRecord : String
+lateinit var UserAccountWarningIncorrectServer : String
+@Composable
+fun userAccountErrorMessage(){
+    UserAccountWarningCookiesInvalid = removeStrQuote(Res.string.UserAccountWarningCookiesInvalid)
+    UserAccountWarningNoAccountRecord = removeStrQuote(Res.string.UserAccountWarningNoAccountRecord)
+    UserAccountWarningIncorrectServer = removeStrQuote(Res.string.UserAccountWarningIncorrectServer)
+}
 
 @Serializable
 class UserAccount(
@@ -95,7 +111,7 @@ class UserAccount(
                 }
             }
 
-            println("INSTANCE.cookies : ${INSTANCE.cookies}")
+            //println("INSTANCE.cookies : ${INSTANCE.cookies}")
 
             refreshUserAccount()
             UserAbyssRecord.refreshMOCData()
@@ -119,12 +135,11 @@ class UserAccount(
 
 
                 @DoItLater("Translation")
-                @DoItLater("Provide Missing Logic")
                 if (userCards is JsonNull) {
-                    showWarningToast(message = "Cookies are invalid, please follow the steps and try again.")
+                    showWarningToast(message = UserAccountWarningCookiesInvalid)
                     return
                 } else if (userCards.jsonObject.isEmpty()) {
-                    showWarningToast(message = "Cannot find any Star Rail accounts in there, please check your account and try again.")
+                    showWarningToast(message = UserAccountWarningNoAccountRecord)
                     return
                 } else {
                     val userInfoN = userCards.jsonObject["list"]!!.jsonArray.filter {
@@ -133,7 +148,7 @@ class UserAccount(
                     }
 
                     if(userInfoN.isEmpty()){
-                        showWarningToast(message = "Seems you chose the incorrect server, please choose the correct server and try again.")
+                        showWarningToast(message = UserAccountWarningIncorrectServer)
                         return
                     }else{
                         val userInfo = userInfoN[0].jsonObject
