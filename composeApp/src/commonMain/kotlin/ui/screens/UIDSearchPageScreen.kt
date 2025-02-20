@@ -21,6 +21,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -86,7 +87,7 @@ fun UIDSearchPageScreen(
     val hazeState = remember { HazeState() }
     val listState = rememberLazyListState()
     val searchWords = remember { mutableStateOf("") }
-    val searchRecordList = remember { mutableStateOf(UserAccountLite.getSearchRecordList()) }
+    val searchRecordList = remember { mutableStateListOf<UserAccountLite>().apply { addAll(UserAccountLite.getSearchRecordList()) } }
 
     /*
                 itemOnClickAction = {
@@ -129,7 +130,7 @@ fun UIDSearchPageScreen(
                     }else{
                         //Else, Search UID from Starbase API first, then search UID from Mihomo API
                         if(UserAccount.INSTANCE.uid == searchWords.value) {
-                            UserAccount.INSTANCE
+                            UIDSEARCH = UserAccount.INSTANCE
                         }else{
                             val starbaseResult = StarbaseAPI().getUserAccountInfo(searchWords.value, true)
                             UIDSEARCH = if (starbaseResult.uid != "000000000") {
@@ -140,9 +141,9 @@ fun UIDSearchPageScreen(
                         }
 
                         if(UIDSEARCH.uid != "000000000") {
-                            if(searchRecordList.value.none { it.uid == UIDSEARCH.uid }) {
-                                searchRecordList.value.add(UserAccountLite(UIDSEARCH.uid, UIDSEARCH.username, UIDSEARCH.level, UIDSEARCH.icon, UIDSEARCH.server))
-                                UserAccountLite.saveSearchRecordList(searchRecordList.value)
+                            if(searchRecordList.none { it.uid == UIDSEARCH.uid }) {
+                                searchRecordList.add(UserAccountLite(UIDSEARCH.uid, UIDSEARCH.username, UIDSEARCH.level, UIDSEARCH.icon, UIDSEARCH.server))
+                                UserAccountLite.saveSearchRecordList(arrayListOf<UserAccountLite>().apply { addAll(searchRecordList) })
                             }
                             withContext(Dispatchers.Main){
                                 isQuerying.value = false
@@ -179,17 +180,18 @@ fun UIDSearchPageScreen(
                     style = FontSizeNormal14(),
                     color = Color.White,
                     modifier = Modifier.clickable {
-                        searchRecordList.value.clear()
+                        searchRecordList.clear()
+                        UserAccountLite.saveSearchRecordList(arrayListOf<UserAccountLite>().apply { addAll(searchRecordList) })
                     }
                 )
             }
 
             LazyColumn {
                 items(
-                    count = searchRecordList.value.size,
-                    key = { index -> searchRecordList.value[index].hashCode() }
+                    count = searchRecordList.size,
+                    key = { index -> searchRecordList[index].hashCode() }
                 ) { index ->
-                    val item = searchRecordList.value[index]
+                    val item = searchRecordList[index]
                     Box(
                         Modifier.fillMaxWidth().padding(top = 4.dp, bottom = 4.dp)
                             .background(Color((0x66F3F9FF)), RoundedCornerShape(10.dp))
@@ -205,7 +207,7 @@ fun UIDSearchPageScreen(
                                     }
 
                                     if(UserAccount.INSTANCE.uid == item.uid) {
-                                        UserAccount.INSTANCE
+                                        UIDSEARCH = UserAccount.INSTANCE
                                     }else{
                                         val starbaseResult = StarbaseAPI().getUserAccountInfo(item.uid, true)
                                         UIDSEARCH = if (starbaseResult.uid != "000000000") {

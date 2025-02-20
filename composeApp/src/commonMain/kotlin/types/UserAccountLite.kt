@@ -19,7 +19,7 @@ data class UserAccountLite(
             return Json.decodeFromString<ArrayList<UserAccountLite>>(Settings().getString("searchRecordList", "[]"))
         }
 
-        fun saveSearchRecordList(list: ArrayList<UserAccountLite>){
+        fun saveSearchRecordList(list: ArrayList<UserAccountLite> = arrayListOf()){
             Settings().putString("searchRecordList", Json.encodeToString<ArrayList<UserAccountLite>>(list))
         }
     }

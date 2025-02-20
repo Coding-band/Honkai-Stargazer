@@ -2,6 +2,7 @@ package utils.hoyolab
 
 import getLocalHttpClient
 import io.ktor.client.call.body
+import io.ktor.client.plugins.ClientRequestException
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.UserAgent
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
@@ -38,7 +39,7 @@ import utils.app.errorLog
 
 class MihomoRequest(val uid : String, val language: Language.TextLanguage = Language.TextLanguageInstance) {
 
-    fun getSRInfoParsed() : JsonElement {
+    private fun getSRInfoParsed() : JsonElement {
         if (uid.toLongOrNull() == null || uid.toLong() < 100000000L){
             return Json.parseToJsonElement("{}")
         }
@@ -66,7 +67,7 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                 return@runBlocking withTimeout(8000) {
                     val response: HttpResponse = client.get(mihomoUrl)
                     //Check whether it is having any errors
-                    if (!arrayListOf(200, 201).contains(response.status.value)) {
+                    if (!arrayListOf(200, 201, 404).contains(response.status.value)) {
                         errorLog(
                             "MihomoRequest",
                             "getSRInfoParsed(uid = ${uid}, lang = ${language})",
@@ -84,6 +85,10 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
             //Cannot find the Address, maybe bcz of u are offline
             //errorLogExport("HoyolabRequest", "send(url = ${url}, body = ${body})",e)
             e.printStackTrace()
+        }catch (e : ClientRequestException){
+            if(e.response.status.value != 404){
+                errorLog("MihomoRequest", "getSRInfoParsed(uid = ${uid}, lang = ${language})",e)
+            }
         }catch (e : Exception){
             // All response
             errorLog("MihomoRequest", "getSRInfoParsed(uid = ${uid}, lang = ${language})",e)
@@ -99,10 +104,10 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                 val srInfoParsed = getSRInfoParsed()
                 val userAccount = UserAccount()
 
-                println("srInfoParsed: $srInfoParsed")
+                //println("srInfoParsed: $srInfoParsed")
 
                 try {
-                    if (srInfoParsed is JsonObject && !srInfoParsed.isEmpty() && !(srInfoParsed.containsKey("detail") && srInfoParsed["detail"] !== null)) {
+                    if (srInfoParsed is JsonObject && !srInfoParsed.isEmpty() && !(srInfoParsed.jsonObject.containsKey("detail") && srInfoParsed.jsonObject["detail"] !== null)) {
                         val player = srInfoParsed.jsonObject["player"]
                         val characters = srInfoParsed.jsonObject["characters"]
 
@@ -294,7 +299,7 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                     if(
                         srInfoParsed is JsonObject &&
                         !srInfoParsed.isEmpty() &&
-                        !(srInfoParsed.containsKey("detail"))
+                        !(srInfoParsed.jsonObject.containsKey("detail"))
                     ){
                         errorLog("MihomoRequest", "getUserAccountByMiHomo()",e)
                     }
