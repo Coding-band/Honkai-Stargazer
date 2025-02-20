@@ -608,19 +608,12 @@ fun getIconByUserAccountIconValue(icon : String): Any {
     if(icon.startsWith("http")){
         return icon
     }
-    /*
-    else if (icon.length == 4){
-        return Character.getCharacterImageFromOfficialId(
-            imageFolderType = ImageFolder.CHAR_ICON,
-            icon
-        )
-    }else if (icon.length == 6 && icon[2] == '1' || icon.length == 6 && icon[2] == '8'){
-        return Character.getCharacterImageFromOfficialId(
-            imageFolderType = ImageFolder.CHAR_ICON,
+    if (icon.length == 6 && icon[2] == '1' || icon.length == 6 && icon[2] == '8'){
+        return getAssetsURLByFileName(
+            folder = ImageFolder.AVATAR_ICON,
             icon.substring(2)
         )
     }
-     */
 
     else if(icon == ""){
         return getAssetsURLByFileName(
