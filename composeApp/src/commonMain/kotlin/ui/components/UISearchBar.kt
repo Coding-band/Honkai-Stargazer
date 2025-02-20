@@ -46,7 +46,7 @@ fun UISearchBar(
     var text by rememberSaveable { mutableStateOf("") }
 
     Box(
-        modifier = modifier.fillMaxWidth().height(46.dp).background(Color(0xFFDDDDDD), shape = RoundedCornerShape(23.dp)).clip(shape = RoundedCornerShape(23.dp)).clickable { if(isAvailable) onClick() }
+        modifier = modifier.fillMaxWidth().height(46.dp).background(Color(0xFFDDDDDD), shape = RoundedCornerShape(23.dp)).clip(shape = RoundedCornerShape(23.dp))
     ) {
         Box(
             modifier = Modifier.padding(5.dp).border(width = 1.dp, color = Color(0x0F000000), shape = RoundedCornerShape(23.dp))
@@ -64,7 +64,7 @@ fun UISearchBar(
                 Image(
                     painter = painterResource(searchIcon ?: Res.drawable.ui_icon_search),
                     contentDescription = "UISearch Icon",
-                    modifier = Modifier.fillMaxHeight().padding(8.dp).aspectRatio(1f).clip(CircleShape).clickable { inputString.value = text ; onClick() },
+                    modifier = Modifier.fillMaxHeight().padding(8.dp).aspectRatio(1f).clip(CircleShape).clickable { inputString.value = text ; onClick.invoke() },
                     colorFilter = ColorFilter.tint(Color(0xCC000000))
                 )
             }

@@ -15,6 +15,7 @@ import kotlinx.serialization.json.JsonNull
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
+import kotlinx.serialization.json.jsonNull
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.long
@@ -76,7 +77,7 @@ class UserAccount(
 
             when(cookieList){
                 is String -> {
-                    INSTANCE.cookies = cookieList
+                    INSTANCE.cookies = cookieList.replace("\n","").replace("\t","").trim()
                     if(cookieList.contains("ltuid_v2=")){
                         INSTANCE.hoyolabId = getCookieValue(cookieList, "ltuid_v2")!!
                     }else if(cookieList.contains("account_id_v2=")){
@@ -116,11 +117,12 @@ class UserAccount(
                 val userCardBody = api.getGameRecordCard(INSTANCE.hoyolabId)
                 val userCards = api.getGameRecordCard(INSTANCE.hoyolabId).data
 
-                println("userCardBody : "+Json.encodeToString(userCardBody))
-
 
                 @DoItLater("Provide Missing Logic")
-                if (userCards.jsonObject.isEmpty()) {
+                if (userCards is JsonNull) {
+                    showWarningToast(message = "Cookies are invalid, please follow the steps and try again.")
+                    return
+                } else if (userCards.jsonObject.isEmpty()) {
                     showWarningToast(message = "Cannot find any Star Rail accounts in there, please check your account and try again.")
                     return
                 } else {
@@ -397,9 +399,9 @@ class UserAccount(
 }
 
 fun getCookieValue(cookieString: String, key: String): String? {
-    val cookies = cookieString.split("; ")
+    val cookies = cookieString.split(";")
     for (cookie in cookies) {
-        val keyValue = cookie.split("=")
+        val keyValue = cookie.trim().split("=")
         if (keyValue.size == 2 && keyValue[0] == key) {
             return keyValue[1].replace(";", "")
         }
