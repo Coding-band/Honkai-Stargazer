@@ -245,7 +245,7 @@ fun ActionOrderListPageScreen(
         UIButton(
             textRes = Res.string.ActionOrderAddItem,
             buttonSize = UIButtonSize.Normal,
-            modifierTmp = Modifier.align(Alignment.BottomCenter).padding(bottom = 16.dp).wrapContentWidth().widthIn(100.dp, 200.dp).wrapContentHeight(),
+            modifierTmp = Modifier.navigationBarsPadding().align(Alignment.BottomCenter).padding(bottom = 16.dp).wrapContentWidth().widthIn(100.dp, 200.dp).wrapContentHeight(),
             onClick = {
                 isPopupOpen.value = true
             }
