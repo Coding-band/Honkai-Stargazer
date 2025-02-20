@@ -25,9 +25,11 @@ import androidx.compose.material.SnackbarHostState
 import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.onSizeChanged
@@ -107,7 +109,7 @@ private lateinit var navTransition : NavTransition
  *
  * **Warm remind** : popBack will not be able to this.
  */
-var screenInstance : Screen = Screen.BlankPage
+var screenInstance by mutableStateOf<Screen>(Screen.BlankPage)
 
 var globalWindowWidthSizeClass: WindowWidthSizeClass = WindowWidthSizeClass.COMPACT
 
@@ -252,8 +254,15 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
         navigator = navigator,
         swipeProperties = null,//if(isPadMode.value) null else swipeProperties,
         navTransition = if (isPadMode.value) defaultNavTransition else navTransition,
-        initialRoute = Screen.HomePage.route
+        initialRoute = Screen.SplashPage.route
     ) {
+        scene(route = Screen.SplashPage.route) {
+            screenInstance = Screen.SplashPage
+            SplashPage(
+                navigator = navigator,
+                headerData = Screen.SplashPage.headerData
+            )
+        }
         scene(route = Screen.HomePage.route) {
             screenInstance = Screen.HomePage
             withBGScreen(isPadMode){

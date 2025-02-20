@@ -52,6 +52,7 @@ import utils.app.Language
 import utils.app.Preferences
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
+import ui.navigation.screenInstance
 import utils.starbase.StarbaseAPI
 
 
@@ -90,9 +91,10 @@ fun SplashPage(
     }
 
     LaunchedEffect(showPopup.value, hasRefreshed.value){
-        if (!showPopup.value) {
-            navigator.navigate(
-                Screen.RootPage.route,
+        if (!showPopup.value && screenInstance !is Screen.HomePage) {
+            screenInstance = Screen.HomePage
+            navigator.navigateLimited(
+                Screen.HomePage.route,
                 options = NavOptions(
                     popUpTo = PopUpTo(Screen.SplashPage.route, true)
                 )

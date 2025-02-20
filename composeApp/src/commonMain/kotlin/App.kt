@@ -11,6 +11,7 @@ import types.userAccountErrorMessage
 import ui.components.PomPomInit
 import ui.navigation.RootContent
 import ui.navigation.Screen
+import ui.navigation.screenInstance
 import ui.screens.SplashPage
 import utils.app.Language
 import utils.app.LogExportInit
@@ -50,27 +51,7 @@ fun App(platformContextFactory: ContextFactory) {
         userAccountErrorMessage()
 
         PreComposeApp {
-            SplashNavInit()
-        }
-    }
-}
-
-/**
- * Gate to SplashPage, and the navigator used in there is temporately.
- */
-@Composable
-fun SplashNavInit(){
-    val navigator = rememberNavigator()
-    NavHost(
-        navigator = navigator,
-        initialRoute = Screen.SplashPage.route
-    ) {
-        scene(route = Screen.SplashPage.route) {
-            SplashPage(navigator = navigator)
-        }
-        scene(route = Screen.RootPage.route) {
             RootContent()
         }
     }
 }
-
