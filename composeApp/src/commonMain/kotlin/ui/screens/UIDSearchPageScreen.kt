@@ -131,12 +131,11 @@ fun UIDSearchPageScreen(
                         if(UserAccount.INSTANCE.uid == searchWords.value) {
                             UserAccount.INSTANCE
                         }else{
-                            val mihomoRequest = MihomoRequest(searchWords.value).getUserAccountByMiHomo()
                             val starbaseResult = StarbaseAPI().getUserAccountInfo(searchWords.value, true)
                             UIDSEARCH = if (starbaseResult.uid != "000000000") {
                                 starbaseResult
                             } else {
-                                mihomoRequest
+                                MihomoRequest(searchWords.value).getUserAccountByMiHomo()
                             }
                         }
 
@@ -205,7 +204,16 @@ fun UIDSearchPageScreen(
                                         isQuerying.value = true
                                     }
 
-                                    UIDSEARCH = MihomoRequest(item.uid).getUserAccountByMiHomo()
+                                    if(UserAccount.INSTANCE.uid == item.uid) {
+                                        UserAccount.INSTANCE
+                                    }else{
+                                        val starbaseResult = StarbaseAPI().getUserAccountInfo(item.uid, true)
+                                        UIDSEARCH = if (starbaseResult.uid != "000000000") {
+                                            starbaseResult
+                                        } else {
+                                            MihomoRequest(item.uid).getUserAccountByMiHomo()
+                                        }
+                                    }
 
                                     withContext(Dispatchers.Main) {
                                         pomPomPopupInstance.value = PomPomPopup(isDisplay = false)

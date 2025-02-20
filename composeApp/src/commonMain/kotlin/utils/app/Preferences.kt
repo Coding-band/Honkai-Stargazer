@@ -134,6 +134,13 @@ class Preferences {
         fun setLangInitialized(){
             Settings().putBoolean("isLangInitialized", true)
         }
+
+        fun isShowChar(): Boolean {
+            return Settings().getBoolean("isShowChar", true)
+        }
+        fun setIsShowChar(isShowChar: Boolean){
+            Settings().putBoolean("isShowChar", isShowChar)
+        }
     }
 
     class HomePageMenuClass(){

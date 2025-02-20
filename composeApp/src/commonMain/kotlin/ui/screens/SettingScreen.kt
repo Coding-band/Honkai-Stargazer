@@ -96,6 +96,7 @@ import utils.app.Language
 import utils.annotation.DoItLater
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
+import utils.app.Preferences
 import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.showFunctionIsDevelopingToast
@@ -138,14 +139,17 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
                         )
 
                         //個人頁面展示 User Info Page Display All Character?
+                        val choiceOnOff = arrayListOf(removeStrQuote(Res.string.SettingPersonalPageDisable), removeStrQuote(Res.string.SettingPersonalPageShow))
                         SettingOptionDropDownBar(
                             titleRes = Res.string.SettingPersonalPageShow,
                             //optionSavedChoice = @DoItLater("Add the function of show personal page"),
-                            optionList = arrayListOf(removeStrQuote(Res.string.SettingPersonalPageDisable), removeStrQuote(Res.string.SettingPersonalPageShow)),
+                            optionList = choiceOnOff,
                             optionAction = { index: Int ->
-                                UserAccount.INSTANCE.showCharList = (index == 1)
-                                StarbaseAPI().updateUserAccountInfo()
-                            }
+                                //UserAccount.INSTANCE.showCharList = (index == 1)
+                                Preferences().AppSettings.setIsShowChar( index == 1 )
+                                StarbaseAPI().updateUserAccountInfo(isSetShowCharOnly = true)
+                            },
+                            optionSavedChoice = choiceOnOff[if(Preferences().AppSettings.isShowChar()) 1 else 0]
                         )
                     }
                 }

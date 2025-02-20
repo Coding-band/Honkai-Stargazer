@@ -357,7 +357,7 @@ fun checkAssetsUpdate() {
             json()
         }
         install(HttpTimeout) {
-            requestTimeoutMillis = 4000
+            requestTimeoutMillis = 8000
         }
     }
 

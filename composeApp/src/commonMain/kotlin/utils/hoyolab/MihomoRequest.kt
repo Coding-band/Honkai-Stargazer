@@ -46,7 +46,7 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
         val mihomoUrl = "https://api.mihomo.me/sr_info_parsed/${uid}?lang=${language.langCode}"
         val client = getLocalHttpClient {
             install(HttpTimeout){
-                requestTimeoutMillis = 4000
+                requestTimeoutMillis = 8000
             }
             install(ContentNegotiation){
                 json()
@@ -102,7 +102,7 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                 println("srInfoParsed: $srInfoParsed")
 
                 try {
-                    if (srInfoParsed is JsonObject && !srInfoParsed.isEmpty() && !(srInfoParsed.containsKey("detail") && srInfoParsed["detail"]!!.jsonPrimitive.content == "Invalid uid")) {
+                    if (srInfoParsed is JsonObject && !srInfoParsed.isEmpty() && !(srInfoParsed.containsKey("detail") && srInfoParsed["detail"] !== null)) {
                         val player = srInfoParsed.jsonObject["player"]
                         val characters = srInfoParsed.jsonObject["characters"]
 

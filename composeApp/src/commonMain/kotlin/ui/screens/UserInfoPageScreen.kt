@@ -117,7 +117,7 @@ fun UserInfoPageScreen(
         }
     ) }
 
-    println(Json.encodeToString(userAccount))
+    //println(Json.encodeToString(userAccount))
 
     val lazyGridState = rememberLazyGridState()
     val isListScrolling  by remember {

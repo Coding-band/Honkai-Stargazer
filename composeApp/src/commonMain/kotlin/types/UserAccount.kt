@@ -50,7 +50,7 @@ class UserAccount(
     var cookies: String = "",
     var hoyolabId: String = "",
     var server: HoyolabConst.SERVER = HoyolabConst.SERVER.UNKNOWN,
-    var showCharList: Boolean = false,
+    var showCharList: Boolean = Preferences().AppSettings.isShowChar(),
 
     var characterList: ArrayList<Character> = arrayListOf(),
 
@@ -118,6 +118,7 @@ class UserAccount(
                 val userCards = api.getGameRecordCard(INSTANCE.hoyolabId).data
 
 
+                @DoItLater("Translation")
                 @DoItLater("Provide Missing Logic")
                 if (userCards is JsonNull) {
                     showWarningToast(message = "Cookies are invalid, please follow the steps and try again.")
