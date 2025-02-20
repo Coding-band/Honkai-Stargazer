@@ -64,6 +64,7 @@ import types.AbyssInfoType
 import utils.app.Constants
 import types.UserAbyssRecord
 import types.UserAccount
+import utils.annotation.DoItLater
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormal20
@@ -114,9 +115,12 @@ fun BattleChroniclePageScreen(
     val pfTitles = pfIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.PureFiction) }
 
     val isAsc = remember { mutableStateOf(false) }
+
+
+    @DoItLater("Translation")
     val ascendingStr = arrayListOf(
-        "降序",
-        "升序",
+        "降序 DESC",
+        "升序 ASC",
     )
     val ids = remember { mutableStateOf(mocIds) }
     ids.value = when (choiceStrList[choiceChronicleIndex.value].second) {
@@ -217,7 +221,13 @@ fun BattleChroniclePageScreen(
             }
 
             items(count = sorttedAbyssList.size) { index ->
-                val mocData = (if(isAsc.value){ sorttedAbyssListAsc } else sorttedAbyssList)[index]
+                val mocDataList = (if(isAsc.value){ sorttedAbyssListAsc } else sorttedAbyssList)
+                val mocData = mocDataList[index]
+                if(index > 0 && mocDataList[index - 1].first().id != mocData.first().id) {
+                    Spacer(Modifier.height(8.dp))
+                    UserCharPageDivider()
+                    Spacer(Modifier.height(8.dp))
+                }
                 BattleChronicleCard(
                     hazeState = hazeState,
                     data = mocData,
@@ -231,6 +241,7 @@ fun BattleChroniclePageScreen(
                 if (index < sorttedAbyssList.size - 1) {
                     Spacer(Modifier.height(8.dp))
                 }
+
             }
 
             item { Spacer(Modifier.statusBarsPadding().height(64.dp)) }

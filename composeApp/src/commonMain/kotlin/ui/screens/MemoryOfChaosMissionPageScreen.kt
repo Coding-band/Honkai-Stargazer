@@ -134,7 +134,7 @@ fun MemoryOfChaosMissionPageScreen(
 
     val mocChoiceIndex = remember { mutableStateOf(0) }
     val isDialogVisible = remember { mutableStateOf(false) }
-    val mocInfoList = AbyssInfo.getAbyssItemById(abyssId = mocList.value[mocChoiceIndex.value].id, type = AbyssInfoType.MemoryOfChaos)
+    val mocInfoList = AbyssInfo.getAbyssItemById(abyssId = mocList.value[mocChoiceIndex.value].id, type = AbyssInfoType.MemoryOfChaos, abyssFileName = mocList.value[mocChoiceIndex.value].fileName)
 
 
     Box(Modifier.fillMaxSize()) {

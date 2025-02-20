@@ -68,7 +68,10 @@ import kotlinx.datetime.toLocalDateTime
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.JsonPrimitive
+import kotlinx.serialization.json.double
 import kotlinx.serialization.json.encodeToJsonElement
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
@@ -500,6 +503,7 @@ fun readFromFile(filePath: String, localOnly : Boolean = false, defaultData : St
             return data
         }
 
+        /*
         if (!localOnly){
             try {
                 // Get local file size and last modified time
@@ -534,7 +538,7 @@ fun readFromFile(filePath: String, localOnly : Boolean = false, defaultData : St
                 errorLog("UtilTools.kt", "readFromFile(...) -> !localOnly", e)
             }
         }
-
+        */
         // Read from file
         return fileSystem.source(file).buffer().use { source ->
             source.readUtf8()
@@ -691,6 +695,33 @@ fun getImageNameByRegistName(registName: String, isCharFullImg: Boolean = false,
  */
 fun String.replaceStrRes(newValue: String, index : Int = 1) : String{
     return this.replace("\${$index}", newValue)
+}
+
+fun String.replaceStr(replaceValueJsonArray: JsonArray, key: String = "Value") : String{
+    var returnString = this
+
+    replaceValueJsonArray.forEachIndexed { index, jsonElement ->
+        if(jsonElement is JsonPrimitive){
+            val value = jsonElement.double
+            val replaceVaule = if(value.toInt().toDouble() == value) {
+                formatDecimal(value, 1)
+            }else{
+                formatDecimal(value, 0)
+            }
+            returnString = returnString.replace("#${index+1}[i]", replaceVaule)
+        }else if(jsonElement.jsonObject[key] != null){
+            val value = jsonElement.jsonObject[key]!!.jsonPrimitive.double
+            val replaceVaule = if(value.toInt().toDouble() == value) {
+                formatDecimal(value, 1)
+            }else{
+                formatDecimal(value, 0)
+            }
+            returnString = returnString.replace("${index+1}[i]",replaceVaule)
+        }else{
+            //... Continue
+        }
+    }
+    return returnString
 }
 
 /**

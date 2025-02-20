@@ -132,7 +132,8 @@ fun BattleChronicleCard(
 
             //node 1 & node 2
             repeat(2){
-                val charList = data[0].charList
+                //fix: Display the node 1 twice
+                val charList = data[it].charList
 
                 Column(Modifier.fillMaxWidth().wrapContentHeight()) {
                     NonLazyGrid(

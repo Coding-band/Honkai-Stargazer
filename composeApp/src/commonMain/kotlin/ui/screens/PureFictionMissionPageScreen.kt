@@ -126,7 +126,7 @@ fun PureFictionMissionPageScreen(
 
     val pfChoiceIndex = remember { mutableStateOf(0) }
     val isDialogVisible = remember { mutableStateOf(false) }
-    val pfInfoList = AbyssInfo.getAbyssItemById(abyssId = pfList.value[pfChoiceIndex.value].id, type = AbyssInfoType.PureFiction)
+    val pfInfoList = AbyssInfo.getAbyssItemById(abyssId = pfList.value[pfChoiceIndex.value].id, type = AbyssInfoType.PureFiction, abyssFileName = pfList.value[pfChoiceIndex.value].fileName)
 
 
     Box(Modifier.fillMaxSize()) {

@@ -72,8 +72,9 @@ data class AbyssInfo(
     val timeInfo: AbyssInfoTime,
 ) {
     companion object{
-        fun getAbyssItemById(abyssId: Int, type: AbyssInfoType): AbyssInfo? {
+        fun getAbyssItemById(abyssId: Int, type: AbyssInfoType, abyssFileName: String): AbyssInfo? {
             try {
+                /*
                 val abyssFileName = getAbyssFileNameById(abyssId, type)
                 if (abyssFileName == "UNKNOWN_ID") return null
 
@@ -84,7 +85,15 @@ data class AbyssInfo(
                     },
                     defaultData = "[]"
                 )
+                 */
 
+                val abyssJsonStr = getAssetsStrByFilePath(
+                    when(type){
+                        AbyssInfoType.MemoryOfChaos -> "memory_of_chao_data/$abyssFileName.json"
+                        AbyssInfoType.PureFiction -> "pure_fiction_data/$abyssFileName.json"
+                    },
+                    defaultData = "[]"
+                )
                 val json = Json { ignoreUnknownKeys = true }
                 return json.decodeFromString<AbyssInfo>(abyssJsonStr)
             }catch (e: Exception) {
@@ -94,6 +103,7 @@ data class AbyssInfo(
         }
 
         @VersionUpdateCheck
+        @Deprecated("Instead via accessing the `fileName` key in the abyss list json")
         fun getAbyssFileNameById(abyssId: Int, type: AbyssInfoType): String {
             when(type){
                 AbyssInfoType.MemoryOfChaos -> {
@@ -135,6 +145,7 @@ data class AbyssInfo(
 @Serializable
 data class AbyssInfoList(
     @SerialName("id") val id: Int,
+    @SerialName("fileName") val fileName: String,
     @SerialName("name") val nameList: Map<Language.TextLanguage, String>,
     @SerialName("time") val time: AbyssInfoTime
 ){

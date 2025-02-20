@@ -103,7 +103,7 @@ class HoyolabRequest(
             errorLog("HoyolabRequest", "send(url = ${url}, body = ${body})",e)
         }
 
-        return HoyolabResponse(-9999,"NOPE", Json.parseToJsonElement("{}"))
+        return HoyolabResponse(-9999,"Timed Out", Json.parseToJsonElement("{}"))
     }
 
     fun getPlainTxt(
@@ -153,7 +153,7 @@ class HoyolabRequest(
             // All response
             errorLog("HoyolabRequest", "getPlainTxt(url = ${url})",e)
         }
-        return HoyolabResponse(-9999,"NOPE", Json.parseToJsonElement("{}"))
+        return HoyolabResponse(-9999,"Timed Out", Json.parseToJsonElement("{}"))
 
     }
 }
