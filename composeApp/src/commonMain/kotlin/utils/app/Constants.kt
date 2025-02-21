@@ -179,7 +179,7 @@ class Constants {
                 itemOnClickAction = {count -> count.value = (count.value + 1) % 2},
             ).onRefresh { self ->
                 self.itemTopHighlight = if(self.itemOnClickCount.value == 0) "${UserAccount.INSTANCE.userNote.currStamina}" else "${UserAccount.INSTANCE.userNote.currReserveStamina}"
-                self.itemTop = if(self.itemOnClickCount.value == 0) "/${UserAccount.INSTANCE.userNote.maxStamina}" else ""
+                self.itemTop = if(self.itemOnClickCount.value == 0) "/${UserAccount.INSTANCE.userNote.maxStamina}" else "/2400"
                 self.itemBottom = if(self.itemOnClickCount.value == 0) getFinishTimeStr(UserAccount.INSTANCE.userNote.staminaRecoverTime) else "----"
 
             },
@@ -195,7 +195,6 @@ class Constants {
                 itemIconId = Res.drawable.phorphos_planet_fill
             ),
 
-            @DoItLater("Add Time Count Down later")
             HomePageBlocks.HomePageBlockItem(
                 itemId = "ExpeditionPage",
                 itemTitleRId = Res.string.Expedition,

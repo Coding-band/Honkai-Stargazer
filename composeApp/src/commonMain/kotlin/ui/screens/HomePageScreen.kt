@@ -70,6 +70,7 @@ import files.AccountLogin
 import files.Logout
 import files.ModifyHomePage
 import files.PlayerLevel
+import files.PleaseLogin
 import files.Res
 import files.Setting
 import files.donate_ad_bg
@@ -113,6 +114,8 @@ import utils.app.getIconByUserAccountIconValue
 import utils.app.newImageRequest
 import utils.app.pxToDp
 import utils.app.removeStrQuote
+import utils.app.showFunctionIsDevelopingToast
+import utils.app.showWarningToast
 import utils.starbase.StarbaseAPI
 import kotlin.math.min
 
@@ -218,6 +221,7 @@ fun HomePageHeader(
                     val context = LocalPlatformContext.current
 
                     //User Avatar (With Reducing Padding's Scale)
+                    val pleaseLoginStr = removeStrQuote(Res.string.PleaseLogin)
                     Box(Modifier.requiredSize(72.dp)
                         .background(Color(0xFFCAB89E), CircleShape)
                         .clip(CircleShape)
@@ -225,6 +229,8 @@ fun HomePageHeader(
                         .clickable {
                             if (userAccount.value.isLogin) {
                                 navigator.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=${userAccount.value.uid}")
+                            }else{
+                                showWarningToast(message = pleaseLoginStr)
                             }
                         }, contentAlignment = Alignment.Center
                     ) {
@@ -511,7 +517,7 @@ fun ThreeDotsDialog(
                         Spacer(Modifier.height(10.dp))
                         UIButton(
                             textRes = Res.string.ModifyHomePage,
-                            onClick = { },
+                            onClick = { showFunctionIsDevelopingToast() },
                             buttonSize = UIButtonSize.SmallChoice
                         )
                         Spacer(Modifier.height(10.dp))

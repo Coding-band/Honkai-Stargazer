@@ -96,10 +96,12 @@ import utils.app.Language
 import utils.annotation.DoItLater
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
+import utils.app.Constants
 import utils.app.Preferences
 import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.showFunctionIsDevelopingToast
+import utils.app.showSuccessToast
 import utils.app.toastInstance
 import utils.starbase.StarbaseAPI
 import kotlin.math.max
@@ -271,19 +273,21 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
                 item {
                     SettingCategory(title = removeStrQuote(Res.string.About)) {
                         //關於應用程式 About The App
+                        @DoItLater("openUrl or Remake AboutStargazerPageScreen")
                         SettingOptionNavigateBar(
                             titleRes = Res.string.AboutTheApp,
                             navigateClick = {
-                                navigator.navigateLimited(Screen.AboutStargazerPageScreen.route)
-                            } //@DoItLater("Add the function of donation")
+                                showFunctionIsDevelopingToast()
+                                //navigator.navigateLimited(Screen.AboutStargazerPageScreen.route)
+                            }
                         )
 
                         //邀請使用 Invite Friends To Use Stargazer3
                         SettingOptionNavigateBar(
                             titleRes = Res.string.SourceCode,
                             navigateClick = {
-                                showFunctionIsDevelopingToast()
-                            } //@DoItLater("Add the function of invite link")
+                                urlHandler.openUri("https://github.com/Coding-band/Honkai-Stargazer")
+                            }
                         )
 
                         //App 版本 App Version
@@ -295,7 +299,9 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
                                     " "
                                 }else if (arrayListOf("PRODUCTION_GP").contains(BuildKonfig.appProfile)) "GP " else "${BuildKonfig.appProfile} "
                             }${BuildKonfig.appVersionName} (${BuildKonfig.appVersionCode})",
-                            navigateClick = { } //@DoItLater("Add the function of invite link")
+                            navigateClick = {
+                                showSuccessToast(message = Constants.CLARA_KAMOJI)
+                            } //@DoItLater("Add the function of invite link")
                         )
 
                         //App 開發代號 Codename
