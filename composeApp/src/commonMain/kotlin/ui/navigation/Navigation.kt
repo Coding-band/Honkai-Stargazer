@@ -222,6 +222,9 @@ fun RootContent() {
                     .let { if (getScreenSizeInfo().wDP < HOME_WIDTH * 1.5f) it.weight(1f) else it }
                     .fillMaxHeight()
                 ) {
+                    if(Settings().getBoolean("padModeHomePageBG", true)){
+                        MakeBackground(screen = Screen.HomePage, forceBlur = false)
+                    }
                     HomePage(
                         navigator = navigatorInstance,
                         headerData = Screen.HomePage.headerData

@@ -70,6 +70,7 @@ import files.Notifi
 import files.NotifiAll
 import files.OsVersion
 import files.Res
+import files.SettingPadModeHomePageShowBg
 import files.SettingPersonalPageDisable
 import files.SettingPersonalPageShow
 import files.SourceCode
@@ -196,6 +197,16 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
                             optionAction = { index: Int ->
                                 globalHazeBlur.value = (index == 1 )
                                 Settings().putBoolean("useHazeBlurEffect", index == 1)
+                            }
+                        )
+
+                        //首頁平板模式下展示背景
+                        SettingOptionDropDownTFBar(
+                            titleRes = Res.string.SettingPadModeHomePageShowBg,
+                            optionSavedChoice = Settings().getBoolean("padModeHomePageBG", true),
+                            optionAction = { index: Int ->
+                                globalHazeBlur.value = (index == 1 )
+                                Settings().putBoolean("padModeHomePageBG", index == 1)
                             }
                         )
                     }

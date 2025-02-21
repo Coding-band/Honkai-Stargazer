@@ -60,7 +60,7 @@ val globalHazeBlur = mutableStateOf(Settings().getBoolean("useHazeBlurEffect", t
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
-fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boolean = false) {
+fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boolean? = null) {
     backgroundScreenHazeState = remember { HazeState() }
     var isBlur = true;
     //var isForceBlur = Settings().getBoolean("useBlurEffect", false) || forceBlur;
@@ -78,7 +78,6 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boo
                 ImageFolder.BGS,
                 Settings().getString("backgroundImage", "221000")
             )
-            //isForceBlur = Settings().getBoolean("useBlurEffect", false)
             bgModified.value = false
         }
     }
@@ -91,7 +90,8 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boo
         Screen.PureFictionMissionPageScreen -> {isBlur = false; isGradient = false}
         else -> {}
     }
-    if(forceBlur){ isBlur = true; }
+    if(forceBlur == true){ isBlur = true; }
+    if(forceBlur == false){ isBlur = false; }
 
     Box(
         Modifier.haze(backgroundScreenHazeState)
