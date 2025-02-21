@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
@@ -72,6 +73,7 @@ import utils.hoyolab.MihomoRequest
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
+import utils.app.PageBottomMask
 import utils.app.getIconByUserAccountIconValue
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
@@ -101,8 +103,7 @@ fun UIDSearchPageScreen(
         val wrongFormatStr = removeStrQuote(Res.string.UIDFormatError)
         val isQuerying = remember { mutableStateOf(false) }
         Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            modifier = Modifier.haze(hazeState).align(Alignment.Center).padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
+            modifier = Modifier.fillMaxSize().haze(hazeState).padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
         ) {
             Spacer(Modifier.padding(top = PAGE_HEADER_HEIGHT + 8.dp).statusBarsPadding())
 
@@ -186,7 +187,7 @@ fun UIDSearchPageScreen(
                 )
             }
 
-            LazyColumn {
+            LazyColumn(modifier = Modifier.navigationBarsPadding()) {
                 items(
                     count = searchRecordList.size,
                     key = { index -> searchRecordList[index].hashCode() }
@@ -269,6 +270,11 @@ fun UIDSearchPageScreen(
                         }
                     }
                 }
+
+                item{
+                    Box(modifier = Modifier.height(64.dp))
+                }
+
             }
 
             /*
@@ -352,6 +358,9 @@ fun UIDSearchPageScreen(
              */
 
         }
+
+
+        PageBottomMask()
 
         PageHeader(
             navigator = navigator,
