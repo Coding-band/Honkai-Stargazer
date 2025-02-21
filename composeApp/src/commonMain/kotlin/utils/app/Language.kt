@@ -134,10 +134,6 @@ class Language() {
             TextLanguageInstance = TextLanguage.entries.firstOrNull { it.folderName == lang.folderName } ?: TextLanguage.EN
             setTextLanguage(TextLanguageInstance, isFirstInit)
         }
-        if(doInit.value){
-            refreshInit()
-            doRefresh.value = false
-        }
     }
 
     fun setAppLanguage(lang: String){
@@ -223,6 +219,7 @@ class Language() {
                 )
             }
         }else{
+            setAppLanguage()
             if (doRefresh.value){
                 refreshInit()
                 doRefresh.value = false

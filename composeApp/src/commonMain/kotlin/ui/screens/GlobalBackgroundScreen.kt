@@ -57,11 +57,14 @@ val gradientBottom = Brush.verticalGradient(
 lateinit var backgroundScreenHazeState : HazeState
 val bgModified = mutableStateOf(false)
 val globalHazeBlur = mutableStateOf(Settings().getBoolean("useHazeBlurEffect", true))
+val globalPadHomePageBg = mutableStateOf(Settings().getBoolean("padModeHomePageBG", true))
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
 fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boolean? = null) {
-    backgroundScreenHazeState = remember { HazeState() }
+    if(!::backgroundScreenHazeState.isInitialized){
+        backgroundScreenHazeState = remember { HazeState() }
+    }
     var isBlur = true;
     //var isForceBlur = Settings().getBoolean("useBlurEffect", false) || forceBlur;
     var isGradient = true;

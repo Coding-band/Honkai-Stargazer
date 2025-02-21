@@ -205,7 +205,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerDat
                             titleRes = Res.string.SettingPadModeHomePageShowBg,
                             optionSavedChoice = Settings().getBoolean("padModeHomePageBG", true),
                             optionAction = { index: Int ->
-                                globalHazeBlur.value = (index == 1 )
+                                globalPadHomePageBg.value = (index == 1 )
                                 Settings().putBoolean("padModeHomePageBG", index == 1)
                             }
                         )

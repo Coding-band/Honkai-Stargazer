@@ -85,6 +85,7 @@ import ui.screens.UIDSearchPageScreen
 import ui.screens.UserCharacterPageScreen
 import ui.screens.UserInfoPageScreen
 import ui.screens.doInit
+import ui.screens.globalPadHomePageBg
 import ui.screens.initActionOrderTeamList
 import ui.screens.initCharList
 import ui.screens.initLcList
@@ -222,7 +223,7 @@ fun RootContent() {
                     .let { if (getScreenSizeInfo().wDP < HOME_WIDTH * 1.5f) it.weight(1f) else it }
                     .fillMaxHeight()
                 ) {
-                    if(Settings().getBoolean("padModeHomePageBG", true)){
+                    if(globalPadHomePageBg.value){
                         MakeBackground(screen = Screen.HomePage, forceBlur = false)
                     }
                     HomePage(
