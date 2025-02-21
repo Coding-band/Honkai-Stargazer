@@ -8,6 +8,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.key
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -28,6 +29,9 @@ import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
+import ui.navigation.refreshInit
+import ui.screens.doInit
+import ui.screens.doRefresh
 
 
 //App語言 Language for App (R.string)
@@ -128,7 +132,11 @@ class Language() {
         AppLanguageInstance = lang
         if(isFirstInit){
             TextLanguageInstance = TextLanguage.entries.firstOrNull { it.folderName == lang.folderName } ?: TextLanguage.EN
-            setTextLanguage(TextLanguageInstance)
+            setTextLanguage(TextLanguageInstance, isFirstInit)
+        }
+        if(doInit.value){
+            refreshInit()
+            doRefresh.value = false
         }
     }
 
@@ -136,8 +144,12 @@ class Language() {
         Settings().putString("appLanguage", lang)
     }
 
-    fun setTextLanguage(lang: TextLanguage){
+    fun setTextLanguage(lang: TextLanguage, isFirstInit: Boolean = false){
         Settings().putString("textLanguage", lang.name)
+        TextLanguageInstance = lang
+        if(!isFirstInit){
+            refreshInit()
+        }
     }
 
     fun setTextLanguage(lang: String){
@@ -209,6 +221,11 @@ class Language() {
                     },
                     isPopupShow = showPopup
                 )
+            }
+        }else{
+            if (doRefresh.value){
+                refreshInit()
+                doRefresh.value = false
             }
         }
     }

@@ -115,6 +115,10 @@ lateinit var mocList : MutableState<ArrayList<AbyssInfoList>>
 @Composable
 fun initMOCList(){
     mocList = rememberSaveable(stateSaver = AbyssInfoList.ListSaver) { mutableStateOf(arrayListOf()) }
+}
+
+@OptIn(ExperimentalCoroutinesApi::class)
+fun refreshMOCList(){
     mocList.value = runBlocking {
         val job = async(Dispatchers.Default) {
             return@async AbyssInfoList.getAbyssList(type = AbyssInfoType.MemoryOfChaos)

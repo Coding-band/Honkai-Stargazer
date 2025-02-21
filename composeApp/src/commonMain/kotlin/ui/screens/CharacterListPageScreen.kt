@@ -49,17 +49,21 @@ import kotlinx.serialization.json.jsonPrimitive
 import moe.tlaster.precompose.navigation.Navigator
 import types.Character
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
+import utils.app.Language
 import utils.app.PageBottomMask
 
 lateinit var charList : MutableState<ArrayList<Character>>
 lateinit var charListSortable : MutableState<ArrayList<Character>>
 
-@OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun initCharList() {
     charList = rememberSaveable(stateSaver = Character.ListSaver) { mutableStateOf(arrayListOf()) }
     charListSortable = rememberSaveable(stateSaver = Character.ListSaver) { (charList) }
 
+}
+
+@OptIn(ExperimentalCoroutinesApi::class)
+fun refreshCharList(){
     charList.value = runBlocking {
         val job = CoroutineScope(Dispatchers.Default).async {
             val tmpCharList = arrayListOf<Character>()

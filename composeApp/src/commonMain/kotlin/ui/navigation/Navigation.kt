@@ -87,6 +87,11 @@ import ui.screens.initLcList
 import ui.screens.initMOCList
 import ui.screens.initPFList
 import ui.screens.initRelicList
+import ui.screens.refreshCharList
+import ui.screens.refreshLcList
+import ui.screens.refreshMOCList
+import ui.screens.refreshPFList
+import ui.screens.refreshRelicList
 import utils.app.BezierEasing2O48
 import utils.app.Constants.Companion.HOME_WIDTH
 import utils.app.toastInstance
@@ -239,6 +244,15 @@ fun RootContent() {
         )
          */
     }
+}
+
+fun refreshInit(){
+    refreshCharList()
+    refreshLcList()
+    refreshRelicList()
+    refreshPFList()
+    refreshMOCList()
+    println("REFRESHED!")
 }
 
 @Composable

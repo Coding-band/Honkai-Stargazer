@@ -44,7 +44,6 @@ fun App(platformContextFactory: ContextFactory) {
          * Start -> SplashNavInit() -> SplashPage --`Wait for Popup`--> RootContent() -> HomePage || BlankPage
          */
 
-        Language().setAppLanguage()
         LogExportInit()
         PomPomInit()
         dateTimeStrInit()

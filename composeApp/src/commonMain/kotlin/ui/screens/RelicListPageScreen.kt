@@ -59,7 +59,10 @@ lateinit var relicListSortable : MutableState<ArrayList<Relic>>
 fun initRelicList(){
     relicList = rememberSaveable(stateSaver = Relic.ListSaver) { mutableStateOf(arrayListOf()) }
     relicListSortable = rememberSaveable(stateSaver = Relic.ListSaver) { (relicList) }
+}
 
+@OptIn(ExperimentalCoroutinesApi::class)
+fun refreshRelicList(){
     relicList.value = runBlocking {
         val job = CoroutineScope(Dispatchers.Default).async {
             val tmpList = arrayListOf<Relic>()

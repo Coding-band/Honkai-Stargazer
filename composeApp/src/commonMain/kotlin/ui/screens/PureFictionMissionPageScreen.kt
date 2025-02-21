@@ -107,6 +107,10 @@ lateinit var pfList : MutableState<ArrayList<AbyssInfoList>>
 @Composable
 fun initPFList(){
     pfList = rememberSaveable(stateSaver = AbyssInfoList.ListSaver) { mutableStateOf(arrayListOf()) }
+}
+
+@OptIn(ExperimentalCoroutinesApi::class)
+fun refreshPFList(){
     pfList.value = runBlocking {
         val job = async(Dispatchers.Default) {
             return@async AbyssInfoList.getAbyssList(type = AbyssInfoType.PureFiction)

@@ -60,7 +60,10 @@ lateinit var lcListSortable : MutableState<ArrayList<Lightcone>>
 fun initLcList(){
     lcList = rememberSaveable(stateSaver = Lightcone.ListSaver) { mutableStateOf(arrayListOf()) }
     lcListSortable = rememberSaveable(stateSaver = Lightcone.ListSaver) { (lcList) }
+}
 
+@OptIn(ExperimentalCoroutinesApi::class)
+fun refreshLcList(){
     lcList.value = runBlocking {
         val job = CoroutineScope(Dispatchers.Default).async {
             val tmpLcList = arrayListOf<Lightcone>()

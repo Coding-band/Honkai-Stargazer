@@ -108,6 +108,7 @@ import kotlin.math.max
 
 val doRecompose = mutableStateOf(false)
 val doInit = mutableStateOf(false)
+val doRefresh = mutableStateOf(true)
 
 @Composable
 fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerData: HeaderData = defaultHeaderData
