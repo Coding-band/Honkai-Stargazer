@@ -1,8 +1,11 @@
 package ui.components
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -61,6 +64,7 @@ enum class StatusType{
     CHARACTER, LIGHTCONE
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun InfoBasicStatus(infoJson : JsonElement, statusType : StatusType = StatusType.CHARACTER){
     var statusCal : AttrData by remember { mutableStateOf(AttrData(0f,0f,0f,0f,0,0)) }
@@ -97,7 +101,7 @@ fun InfoBasicStatus(infoJson : JsonElement, statusType : StatusType = StatusType
         Spacer(modifier = Modifier.height(24.dp))
 
         //Character Attr Data
-        Row(modifier = Modifier.align(Alignment.CenterHorizontally)){
+        FlowRow(modifier = Modifier.align(Alignment.CenterHorizontally), horizontalArrangement = Arrangement.Center){
             Row(modifier = Modifier.padding(2.dp)){
                 Image(painter = painterResource(Res.drawable.ic_hp), contentDescription = "HP Icon", modifier = Modifier.size(24.dp))
                 Box(modifier = Modifier.width(2.dp))
