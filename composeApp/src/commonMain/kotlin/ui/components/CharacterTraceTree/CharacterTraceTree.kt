@@ -80,6 +80,7 @@ import utils.app.htmlDescApplier
 import utils.app.newImageRequest
 import utils.app.pxToDp
 import utils.app.removeStrQuote
+import utils.starbase.StarbaseAPI
 
 private lateinit var dialogTitleLocal : MutableState<String>
 private lateinit var dialogDisplayLocal: MutableState<Boolean>
@@ -132,6 +133,7 @@ fun CharacterTraceTree(
                     Path.Hunt -> HuntTraceTree(infoJson, displayWidth.value, selectedId, charName)
                     Path.Nihility -> NihilityTraceTree(infoJson, displayWidth.value, selectedId, charName)
                     Path.Preservation -> PreservationTraceTree(infoJson, displayWidth.value, selectedId, charName)
+                    Path.Remembrance -> RemembranceTraceTree(infoJson, displayWidth.value, selectedId, charName)
                     else -> {}
                 }
             }
@@ -146,7 +148,8 @@ fun getDataFromSkills(
     skillObjectList: ArrayList<JsonElement>,
     charFileName: String,
     skillIndex: Int,
-    infoJson: JsonElement
+    infoJson: JsonElement,
+    isServant: Boolean = false
 ): ArrayList<TraceTreeItem> {
     val itemReferences = infoJson.jsonObject["itemReferences"];
     //Since the ObjectList store at least 1 data
@@ -189,14 +192,14 @@ fun getDataFromSkills(
         treeItemList.add(
             TraceTreeItem(
                 id = skillObject.jsonObject["id"]!!.jsonPrimitive.int,
-                desc = skillObject.jsonObject["descHash"]!!.jsonPrimitive.content,
-                name = skillObject.jsonObject["name"]!!.jsonPrimitive.content,
-                energy = skillObject.jsonObject["energy"]!!.jsonPrimitive.content.split("/")[0].toInt(),
-                iconPath = "${charFileName}_skill${skillIndex}",
+                desc = (skillObject.jsonObject["descHash"] ?: skillObject.jsonObject["skillDesc"])?.jsonPrimitive?.content ?: "?",
+                name = skillObject.jsonObject["name"]?.jsonPrimitive?.content ?: "?",
+                energy = skillObject.jsonObject["energy"]?.jsonPrimitive?.content?.split("/")?.get(0)?.toIntOrNull() ?: 0,
+                iconPath = if(isServant) (skillObject.jsonObject["iconPath"] ?: skillObject.jsonObject["icon"])?.jsonPrimitive?.content ?: "?" else "${charFileName}_skill${skillIndex}",
                 levelData = levelData,
                 statusList = null,
-                tagHash = skillObject.jsonObject["tagHash"]!!.jsonPrimitive.content,
-                typeDescHash = skillObject.jsonObject["typeDescHash"]!!.jsonPrimitive.content,
+                tagHash = (skillObject.jsonObject["tagHash"] ?: skillObject.jsonObject["tag"])?.jsonPrimitive?.content ?: "?",
+                typeDescHash = (skillObject.jsonObject["typeDescHash"] ?: skillObject.jsonObject["typeDesc"])?.jsonPrimitive?.content,
             )
         )
     }
@@ -284,8 +287,8 @@ fun getDataFromSkillTreePoints(skillObject: JsonObject, infoJson: JsonElement) :
         id = skillObject.jsonObject["id"]!!.jsonPrimitive.int,
         anchor = skillObject.jsonObject["anchor"]!!.jsonPrimitive.int ,
         desc = "",
-        name = skillObject.jsonObject["embedBuff"]!!.jsonObject["name"]!!.jsonPrimitive.content,
-        iconPath = skillObject.jsonObject["embedBuff"]!!.jsonObject["iconPath"]!!.jsonPrimitive.content,
+        name = ((skillObject.jsonObject["embedBuff"])?.jsonObject?.get("name"))?.jsonPrimitive?.content ?: "?",
+        iconPath = ((skillObject.jsonObject["embedBuff"])?.jsonObject?.get("iconPath"))?.jsonPrimitive?.content ?: "?",
         levelData = if(skillObject.jsonObject["embedBuff"]!!.jsonObject["levelData"] !== null) levelData else null,
         statusList = if(skillObject.jsonObject["embedBuff"]!!.jsonObject["statusList"] !== null) statusList else null,
         trigCost = if(skillObject.jsonObject["embedBuff"]!!.jsonObject["cost"] !== null) trigCostList else null
@@ -299,7 +302,8 @@ fun TraceTreeBtn(
     traceTreeItem: ArrayList<TraceTreeItem>,
     displayWidth: Dp,
     modifier: Modifier = Modifier,
-    offset: ArrayList<Pair<Int, Int>>
+    offset: ArrayList<Pair<Int, Int>>,
+    isServant: Boolean = false
 ) {
     val isSelected = (selectedId.value == selfId) && dialogDisplayLocal.value && dialogLastTrigTypeLocal.value == lastTrigTypeTag
 
@@ -318,6 +322,11 @@ fun TraceTreeBtn(
         }
     }
 
+    if(isServant){
+        btnBaseSize = Constants.TRACE_TREE_BTN_CORE_BASE_SIZE
+        imgBaseSize = Constants.TRACE_TREE_IMG_CORE_BASE_SIZE
+    }
+
     val btnWidth = btnBaseSize * getTraceTreeScale(displayWidth)
     val imgWidth = imgBaseSize * getTraceTreeScale(displayWidth)
     Box(
@@ -330,9 +339,9 @@ fun TraceTreeBtn(
             .size(btnWidth)
             .border(
                 width = 2.dp, color = (if (isSelected) {
-                    if(selfId <= 5) Color(0xFFFCBC62) else Color(0xFFFFFFFF)
+                    if(selfId <= 5 || isServant) Color(0xFFFCBC62) else Color(0xFFFFFFFF)
                 } else
-                    if(selfId <= 5) Color(0xFF31B5FF) else Color(0x00000000)),
+                    if(selfId <= 5 || isServant) Color(0xFF31B5FF) else Color(0x00000000)),
                 shape = CircleShape
             ).clickable(
                 onClick = {
@@ -348,7 +357,9 @@ fun TraceTreeBtn(
         AsyncImage(
             model = newImageRequest(
                 LocalPlatformContext.current,
-                if (selfId <= 5) {
+                if(isServant){
+                    StarbaseAPI().getImgAssetsURL() +"/"+ traceTreeItem[0].iconPath +".webp"
+                } else if (selfId <= 5) {
                     getAssetsURLByFileName(
                         ImageFolder.CHAR_SKILL,
                         getImageNameByRegistName(traceTreeItem[0].iconPath, isCharNoGen = true)
