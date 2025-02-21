@@ -353,13 +353,29 @@ fun TraceTreeBtn(
                 },
             )
     ) {
+        val context = LocalPlatformContext.current
+        var imageRequest by remember { mutableStateOf(
+            newImageRequest(
+                context,
+                if (selfId <= 5) {
+                    getAssetsURLByFileName(
+                        ImageFolder.CHAR_SKILL,
+                        getImageNameByRegistName(traceTreeItem[0].iconPath, isCharNoGen = true)
+                    )
+                } else {
+                    getAssetsURLByFileName(
+                        ImageFolder.CHAR_SKILL_TREE,
+                        traceTreeItem[0].iconPath
+                    )
+                },
+                false
+            )
+        ) }
 
         AsyncImage(
             model = newImageRequest(
                 LocalPlatformContext.current,
-                if(isServant){
-                    StarbaseAPI().getImgAssetsURL() +"/"+ traceTreeItem[0].iconPath +".webp"
-                } else if (selfId <= 5) {
+                if (selfId <= 5) {
                     getAssetsURLByFileName(
                         ImageFolder.CHAR_SKILL,
                         getImageNameByRegistName(traceTreeItem[0].iconPath, isCharNoGen = true)
@@ -374,6 +390,13 @@ fun TraceTreeBtn(
             ),
             contentDescription = "Skill Icon",
             modifier = Modifier.size(imgWidth).align(Alignment.Center),
+            onError = {
+                imageRequest = newImageRequest(
+                    context,
+                    StarbaseAPI().getImgAssetsURL()+"/"+traceTreeItem[0].iconPath+".webp",
+                    false
+                )
+            }
         )
 
     }

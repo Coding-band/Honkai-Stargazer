@@ -42,6 +42,10 @@ import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import getScreenSizeInfo
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 import kotlinx.datetime.Clock
 import moe.tlaster.precompose.navigation.NavHost
 import moe.tlaster.precompose.navigation.NavOptions
@@ -247,12 +251,16 @@ fun RootContent() {
 }
 
 fun refreshInit(){
-    refreshCharList()
-    refreshLcList()
-    refreshRelicList()
-    refreshPFList()
-    refreshMOCList()
-    println("REFRESHED!")
+    CoroutineScope(Dispatchers.Default).launch {
+        async {
+            refreshCharList()
+            refreshLcList()
+            refreshRelicList()
+            refreshPFList()
+            refreshMOCList()
+            println("REFRESHED!")
+        }.await()
+    }
 }
 
 @Composable
