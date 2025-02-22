@@ -59,7 +59,7 @@ lateinit var lcListSortable : MutableState<ArrayList<Lightcone>>
 @Composable
 fun initLcList(){
     lcList = rememberSaveable(stateSaver = Lightcone.ListSaver) { mutableStateOf(arrayListOf()) }
-    lcListSortable = rememberSaveable(stateSaver = Lightcone.ListSaver) { (lcList) }
+    lcListSortable = rememberSaveable(stateSaver = Lightcone.ListSaver) { mutableStateOf(ArrayList(lcList.value)) }
 }
 
 @OptIn(ExperimentalCoroutinesApi::class)

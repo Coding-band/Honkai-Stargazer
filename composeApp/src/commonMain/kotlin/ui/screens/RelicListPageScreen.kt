@@ -58,7 +58,7 @@ lateinit var relicListSortable : MutableState<ArrayList<Relic>>
 @Composable
 fun initRelicList(){
     relicList = rememberSaveable(stateSaver = Relic.ListSaver) { mutableStateOf(arrayListOf()) }
-    relicListSortable = rememberSaveable(stateSaver = Relic.ListSaver) { (relicList) }
+    relicListSortable = rememberSaveable(stateSaver = Relic.ListSaver) { (mutableStateOf(ArrayList(relicList.value))) }
 }
 
 @OptIn(ExperimentalCoroutinesApi::class)
