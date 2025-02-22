@@ -7,9 +7,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
@@ -27,7 +31,10 @@ import files.ic_sort_asc
 import files.ic_sort_desc
 import files.ui_icon_filter
 import files.ui_icon_search
+import org.jetbrains.compose.resources.StringResource
 import types.Character
+import types.Lightcone
+import utils.app.Language
 import utils.app.removeStrQuote
 
 
@@ -42,9 +49,9 @@ val LIST_FILTER_TOOL_HEIGHT = (46.dp + 16.dp + 8.dp)
 @Composable
 fun <T> ListFilterTool(
     modifier: Modifier = Modifier,
-    filterList: ArrayList<T>,
+    originList: ArrayList<T>,
     filterType: ListFilterType,
-    onFilterApplied: (ArrayList<T>) -> Unit
+    filtedList: MutableState<ArrayList<T>>,
 ) {
     val isShowing = rememberSaveable { mutableStateOf("NOPE") }
     val isAsc = rememberSaveable { mutableStateOf(false) }
@@ -65,34 +72,15 @@ fun <T> ListFilterTool(
         }
     }
 
-    fun applySortAndFilter() {
-        val sortedList = when (filterType) {
-            ListFilterType.CHARACTER -> {
-                when (sortChoiceList[sortChoiceIndex.value]) {
-                    Res.string.SortByTime -> filterList
-                    Res.string.SortByName -> filterList.sortedBy { (it as Character).registName }
-                    Res.string.SortByAtk -> filterList.sortedBy { (it as Character).characterAttrData?.atk }
-                    Res.string.SortByDef -> filterList.sortedBy { (it as Character).characterAttrData?.def }
-                    Res.string.SortByHp -> filterList.sortedBy { (it as Character).characterAttrData?.hp }
-                    Res.string.SortByEnergy -> filterList.sortedBy { (it as Character).characterAttrData?.energy }
-                    Res.string.SortByRare -> filterList.sortedBy { (it as Character).rarity }
-                    else -> filterList
-                }
-            }
-
-            else -> {
-                filterList
-            }
-        }
-
-        val finalList = if (isAsc.value) sortedList else sortedList.reversed()
-        onFilterApplied(ArrayList(finalList))
+    key(Language.TextLanguageInstance){
+        filtedList.value = applySortAndFilter(originList, sortChoiceList[sortChoiceIndex.value], filterType, isAsc.value)
     }
 
     // UI
     Box(Modifier.fillMaxSize()) {
         Row(Modifier.wrapContentHeight().align(Alignment.BottomCenter).navigationBarsPadding().padding(start = 32.dp, end = 32.dp, bottom = 16.dp)) {
             UIButton(
+                modifierTmp = Modifier.size(46.dp),
                 icon = Res.drawable.ui_icon_filter,
                 buttonSize = UIButtonSize.SmallChoice,
                 onClick = {
@@ -108,15 +96,16 @@ fun <T> ListFilterTool(
                 onClick = {
                     isShowing.value = "SORT"
                     sortChoiceIndex.value = (sortChoiceIndex.value + 1) % sortChoiceList.size
-                    applySortAndFilter()
+                    filtedList.value = applySortAndFilter(originList, sortChoiceList[sortChoiceIndex.value], filterType, isAsc.value)
                 },
                 iconOnClick = {
                     isAsc.value = !isAsc.value
-                    applySortAndFilter()
+                    filtedList.value = applySortAndFilter(originList, sortChoiceList[sortChoiceIndex.value], filterType, isAsc.value)
                 }
             )
             Spacer(modifier = Modifier.width(12.dp))
             UIButton(
+                modifierTmp = Modifier.size(46.dp),
                 icon = Res.drawable.ui_icon_search,
                 buttonSize = UIButtonSize.SmallChoice,
                 onClick = {
@@ -124,5 +113,45 @@ fun <T> ListFilterTool(
                 }
             )
         }
+    }
+}
+
+fun <T> applySortAndFilter(
+    originList: List<T>,
+    sortChoice: StringResource,
+    filterType: ListFilterType,
+    isAsc: Boolean
+): ArrayList<T> {
+    val sortedList = when (filterType) {
+        ListFilterType.CHARACTER -> {
+            when (sortChoice) {
+                Res.string.SortByName -> originList.sortedBy { (it as Character).registName }
+                Res.string.SortByAtk -> originList.sortedBy { (it as Character).characterAttrData!!.atk }
+                Res.string.SortByDef -> originList.sortedBy { (it as Character).characterAttrData!!.def }
+                Res.string.SortByHp -> originList.sortedBy { (it as Character).characterAttrData!!.hp }
+                Res.string.SortByEnergy -> originList.sortedBy { (it as Character).characterAttrData!!.energy }
+                Res.string.SortByRare -> originList.sortedBy { (it as Character).rarity }
+                else -> originList
+            }
+        }
+
+        ListFilterType.LIGHTCONE -> {
+            when (sortChoice) {
+                Res.string.SortByName -> originList.sortedBy { (it as Character).registName }
+                Res.string.SortByAtk -> originList.sortedBy { (it as Character).characterAttrData!!.atk }
+                Res.string.SortByDef -> originList.sortedBy { (it as Character).characterAttrData!!.def }
+                Res.string.SortByHp -> originList.sortedBy { (it as Character).characterAttrData!!.hp }
+                Res.string.SortByEnergy -> originList.sortedBy { (it as Character).characterAttrData!!.energy }
+                Res.string.SortByRare -> originList.sortedBy { (it as Character).rarity }
+                else -> originList
+            }
+        }
+        else -> originList
+    }
+
+    return if (!isAsc) {
+        ArrayList(sortedList)
+    } else {
+        ArrayList(sortedList.reversed())
     }
 }

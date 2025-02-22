@@ -19,11 +19,9 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastForEach
@@ -42,14 +40,13 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.JsonArray
-import kotlinx.serialization.json.JsonNull
-import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import moe.tlaster.precompose.navigation.Navigator
 import types.Character
+import ui.components.ListFilterTool
+import ui.components.ListFilterType
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
-import utils.app.Language
 import utils.app.PageBottomMask
 
 lateinit var charList : MutableState<ArrayList<Character>>
@@ -58,7 +55,7 @@ lateinit var charListSortable : MutableState<ArrayList<Character>>
 @Composable
 fun initCharList() {
     charList = rememberSaveable(stateSaver = Character.ListSaver) { mutableStateOf(arrayListOf()) }
-    charListSortable = rememberSaveable(stateSaver = Character.ListSaver) { (charList) }
+    charListSortable = rememberSaveable(stateSaver = Character.ListSaver) { mutableStateOf(ArrayList(charList.value)) }
 
 }
 
@@ -122,15 +119,11 @@ fun CharacterListPage(
         PageBottomMask()
 
 
-        /*
         ListFilterTool(
-            filterList = charList.value,
+            originList = charList.value,
             filterType = ListFilterType.CHARACTER,
-            onFilterApplied = { filteredList ->
-                charListSortable.value = filteredList
-            }
+            filtedList = charListSortable
         )
-         */
 
 
 
