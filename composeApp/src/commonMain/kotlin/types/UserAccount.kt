@@ -120,8 +120,10 @@ class UserAccount(
 
         fun resetUserAccount(){
             INSTANCE = UserAccount()
-            writeToFile("userAccount", "{}")
+            writeToFile("userAccount.json", "{}")
             Preferences().CharList.resetCharList()
+            Preferences().Leaderboard.resetLeaderboard()
+            UserAbyssRecord.INSTANCE = UserAbyssRecord()
         }
 
         private fun refreshUserAccount() {

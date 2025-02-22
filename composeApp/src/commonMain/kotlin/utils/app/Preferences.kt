@@ -75,16 +75,20 @@ class Preferences {
             Settings().putString("localASData", "[]")
         }
 
+        @Deprecated("use getLocalMOCDataString instead")
         fun getMOCHoyolabJsonString(): String {
             return Settings().getString("MOCHoyolabJson", "[]")
         }
+        @Deprecated("use setLocalMOCDataString instead")
         fun setMOCHoyolabJsonString(charList: String){
             Settings().putString("MOCHoyolabJson", charList)
         }
 
+        @Deprecated("use getLocalPFDataString instead")
         fun getPFHoyolabJsonString(): String {
             return Settings().getString("PFHoyolabJson", "[]")
         }
+        @Deprecated("use setLocalPFDataString instead")
         fun setPFHoyolabJsonString(charList: String){
             Settings().putString("PFHoyolabJson", charList)
         }

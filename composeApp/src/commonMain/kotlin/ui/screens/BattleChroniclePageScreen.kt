@@ -1,5 +1,8 @@
 package ui.screens
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -25,6 +28,7 @@ import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -67,6 +71,7 @@ import utils.app.Constants
 import types.UserAbyssRecord
 import types.UserAccount
 import utils.annotation.DoItLater
+import utils.app.DpToPx
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormal20
@@ -139,6 +144,12 @@ fun BattleChroniclePageScreen(
         .toList()
 
     val sorttedAbyssListAsc = sorttedAbyssList.reversed()
+    val isDisplayPageHeader = remember { mutableStateOf(true) }
+
+    //Check if it can scroll up (forward), then hide the header
+    LaunchedEffect(listState.firstVisibleItemIndex, listState.firstVisibleItemScrollOffset) {
+        isDisplayPageHeader.value = ((listState.firstVisibleItemIndex == 0) && (listState.firstVisibleItemScrollOffset <= 0))
+    }
 
     Box(modifier = Modifier) {
         LazyColumn(
@@ -271,36 +282,41 @@ fun BattleChroniclePageScreen(
             }
         }
 
+        AnimatedVisibility(
+            isDisplayPageHeader.value,
+            enter = fadeIn(),
+            exit = fadeOut()
+        ){
+            PageHeaderAlpha(
+                navigator = navigator,
+                onForward = {
+                    isAsc.value = !isAsc.value
+                },
+                forwardIconId = Res.drawable.ui_icon_exchange,
+                hazeState = hazeState,
 
-        PageHeaderAlpha(
-            navigator = navigator,
-            onForward = {
-                isAsc.value = !isAsc.value
-            },
-            forwardIconId = Res.drawable.ui_icon_exchange,
-            hazeState = hazeState,
+                ) {
+                Column(Modifier.fillMaxSize()) {
+                    Text(
+                        removeStrQuote(Res.string.MOCMyBattleReport),
+                        modifier = Modifier.align(Alignment.CenterHorizontally).padding(2.dp),
+                        style = FontSizeNormal20(),
+                        color = Color.White
+                    )
 
-            ) {
-            Column(Modifier.fillMaxSize()) {
-                Text(
-                    removeStrQuote(Res.string.MOCMyBattleReport),
-                    modifier = Modifier.align(Alignment.CenterHorizontally).padding(2.dp),
-                    style = FontSizeNormal20(),
-                    color = Color.White
-                )
-
-                Text(
-                    text = "${userAccount.uid}·${
-                        removeStrQuote(
-                            userAccount.server.localeName
-                        )
-                    }",
-                    modifier = Modifier.align(Alignment.CenterHorizontally)
-                        .background(Color(0x4D000000), RoundedCornerShape(49.dp))
-                        .clip(RoundedCornerShape(49.dp)).padding(8.dp),
-                    style = FontSizeNormal14(),
-                    color = Color.White
-                )
+                    Text(
+                        text = "${userAccount.uid}·${
+                            removeStrQuote(
+                                userAccount.server.localeName
+                            )
+                        }",
+                        modifier = Modifier.align(Alignment.CenterHorizontally)
+                            .background(Color(0x4D000000), RoundedCornerShape(49.dp))
+                            .clip(RoundedCornerShape(49.dp)).padding(8.dp),
+                        style = FontSizeNormal14(),
+                        color = Color.White
+                    )
+                }
             }
         }
     }

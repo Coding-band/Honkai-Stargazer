@@ -32,15 +32,9 @@ data class UserAbyssRecord(
                 if(!Preferences().Leaderboard.isUpdateLeaderboardNow()){ return }
 
                 val api = HoyolabAPI(UserAccount.INSTANCE.server.platform, UserAccount.INSTANCE.cookies)
+
                 val userMocCurr = api.getHsrMemoryOfChaos(UserAccount.INSTANCE.uid, UserAccount.INSTANCE.server, 1).data
                 val userMocLast = api.getHsrMemoryOfChaos(UserAccount.INSTANCE.uid, UserAccount.INSTANCE.server, 2).data
-
-                //Check whether is same as local data
-                if(Preferences().Leaderboard.getMOCHoyolabJsonString() == Json.encodeToString(userMocCurr)) {
-                    return
-                }else{
-                    Preferences().Leaderboard.setMOCHoyolabJsonString(Json.encodeToString(userMocCurr))
-                }
 
                 val mocList = arrayListOf<UserAbyssRecordData>()
                 repeat(2){
@@ -95,6 +89,7 @@ data class UserAbyssRecord(
                 }
                 println("[HoYoLab] Updated MOC Data: size = ${mocList.size}, ${Json.encodeToString(mocList)}")
                 INSTANCE.userCurrMOCList = mocList
+                Preferences().Leaderboard.setLocalMOCDataString(Json.encodeToString(mocList))
 
             }catch (e : Exception){
                 errorLog("UserAccount", "refreshMOCData()", e)
@@ -109,13 +104,6 @@ data class UserAbyssRecord(
                 val api = HoyolabAPI(UserAccount.INSTANCE.server.platform, UserAccount.INSTANCE.cookies)
                 val userPfCurr = api.getHsrPureFiction(UserAccount.INSTANCE.uid, UserAccount.INSTANCE.server, 1).data
                 val userPfLast = api.getHsrPureFiction(UserAccount.INSTANCE.uid, UserAccount.INSTANCE.server, 2).data
-
-                //Check whether is same as local data
-                if(Preferences().Leaderboard.getPFHoyolabJsonString() == Json.encodeToString(userPfCurr)) {
-                    return
-                }else{
-                    Preferences().Leaderboard.setPFHoyolabJsonString(Json.encodeToString(userPfCurr))
-                }
 
                 val pfList = arrayListOf<UserAbyssRecordData>()
                 repeat(2){
@@ -173,11 +161,14 @@ data class UserAbyssRecord(
 
                 println("[HoYoLab] Updated PF Data: size = ${pfList.size}, ${Json.encodeToString(pfList)}")
                 INSTANCE.userCurrPFList = pfList
+                Preferences().Leaderboard.setLocalPFDataString(Json.encodeToString(pfList))
 
             }catch (e : Exception){
                 errorLog("UserAccount", "refreshPFData()", e)
             }
         }
+
+        //TODO: Add AS Data
     }
 }
 
