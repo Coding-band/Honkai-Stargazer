@@ -33,6 +33,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.unit.dp
 import androidx.window.core.layout.WindowWidthSizeClass
 import com.dokar.sonner.Toaster
@@ -99,6 +100,7 @@ import ui.screens.refreshPFList
 import ui.screens.refreshRelicList
 import utils.app.BezierEasing2O48
 import utils.app.Constants.Companion.HOME_WIDTH
+import utils.app.Language
 import utils.app.toastInstance
 
 /**
@@ -440,12 +442,16 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
         scene(
             route = Screen.MapPageScreen.route) {
             screenInstance = Screen.MapPageScreen
+            LocalUriHandler.current.openUri("https://act.hoyolab.com/sr/app/interactive-map/index.html?lang=${Language.TextLanguageInstance.hoyolabName}")
+            navigator.popBackStack()
+            /*
             withBGScreen(isPadMode){
                     MapPageScreen(
                         navigator = navigator,
                         headerData = Screen.MapPageScreen.headerData
                     )
                 }
+             */
 
         }
 
