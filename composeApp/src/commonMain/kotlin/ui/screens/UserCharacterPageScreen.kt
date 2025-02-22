@@ -173,10 +173,12 @@ fun UserCharacterPageScreen(
             listState.canScrollBackward
         }
     }
+
     val character = if(characterFilter.isEmpty()) null else characterFilter[0]
     val isShare = remember { mutableStateOf(false) }
     val charNameVisible = remember { mutableStateOf(true) }
     val charNameBigHeight = remember { mutableStateOf(20) }
+    val isInited = rememberSaveable { mutableStateOf(false) }
 
     if(character == null){ navigator.popBackStack() }else{
         Box(modifier = modifier
@@ -235,7 +237,7 @@ fun UserCharacterPageScreen(
                     item { CharBioSkillInfo(character, charNameBigHeight) }
                     item { LightconeInfo(character) }
                     item { RelicInfo(character) }
-                    item { ProficientScoreInfo(character, uid) }
+                    item { ProficientScoreInfo(character, uid, isInited) }
 
                     item { Spacer(Modifier.statusBarsPadding()) }
                 }
@@ -247,7 +249,7 @@ fun UserCharacterPageScreen(
 }
 
 @Composable
-fun ProficientScoreInfo(character: Character, uid: String) {
+fun ProficientScoreInfo(character: Character, uid: String, isInited: MutableState<Boolean>) {
 
     //Divider
     UserCharPageDivider()
@@ -258,7 +260,6 @@ fun ProficientScoreInfo(character: Character, uid: String) {
     val optionTextViewSize = remember { mutableStateOf(IntSize.Zero) }
     val density = LocalDensity.current.density
 
-    val isInited = remember { mutableStateOf(false) }
     val charScoreLocal = remember { mutableStateOf(0f) }
     val overPercentage = remember { mutableStateOf(-1f) }
 
@@ -267,12 +268,6 @@ fun ProficientScoreInfo(character: Character, uid: String) {
         charScoreLocal.value = getCharScore(character, schoolIndex.value)
         overPercentage.value = getProfRankResult(charScoreLocal.value, character, schoolIndex.value, uid)
         isInited.value = true
-    }
-
-    //Update Data - CharScore and OverPercentage when index changed
-    LaunchedEffect(schoolIndex.value){
-        charScoreLocal.value = getCharScore(character, schoolIndex.value)
-        overPercentage.value = getProfRankResult(charScoreLocal.value, character, schoolIndex.value, uid)
     }
 
     val scoreInfoList = arrayListOf(

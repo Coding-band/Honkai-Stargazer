@@ -64,6 +64,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
@@ -79,6 +81,7 @@ import types.ImageFolder
 import types.Lightcone
 import types.Path
 import types.UserAccount
+import types.UserAccount.Companion.UIDSEARCH
 import ui.components.DropdownMenuNoPadding
 import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
@@ -103,6 +106,7 @@ import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.replaceStrRes
 import utils.app.swapList
+import utils.hoyolab.MihomoRequest
 import utils.starbase.StarbaseAPI
 
 data class ProficientSchool(
@@ -347,16 +351,27 @@ fun ProficientLeaderboardPageScreen(
 fun ProfLeaderboardItem(charProf: CharacterProficient, navigator: Navigator) {
     val lcDataJson = Lightcone.lcListJson.jsonArray.firstOrNull { lcData -> lcData.jsonObject["fileName"]!!.jsonPrimitive.int == charProf.lcId }
     val lcName = lcDataJson?.jsonObject?.get("name")?.jsonPrimitive?.content ?: ""
+    val isQuerying = remember { mutableStateOf(false) }
     Row(
         modifier = Modifier.clickable {
             CoroutineScope(Dispatchers.Default).launch{
-                //println("UID: ${charProf.playerId}, CharID: ${charProf.charId}")
-                pomPomPopupInstance.value = PomPomPopup(isDisplay = true)
-                UserAccount.UIDSEARCH = StarbaseAPI().getUserAccountInfo(uid = charProf.playerId.toString())
+                if(isQuerying.value) return@launch
 
                 withContext(Dispatchers.Main){
-                    //println("UserAccount.UIDSEARCH: ${UserAccount.UIDSEARCH.characterList.size}, ${UserAccount.UIDSEARCH.characterList.map { println(it.registName) }}")
+                    pomPomPopupInstance.value = PomPomPopup(isDisplay = true)
+                    isQuerying.value = true
+                }
+
+                val starbaseResult = StarbaseAPI().getUserAccountInfo(uid = charProf.playerId.toString(), ignoreNotFind = true, isForProf = true, charProf.charId.toString())
+                UIDSEARCH = if (starbaseResult.uid != "000000000") {
+                    starbaseResult
+                } else {
+                    MihomoRequest(charProf.playerId.toString()).getUserAccountByMiHomo()
+                }
+
+                withContext(Dispatchers.Main){
                     pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
+                    isQuerying.value = false
                     navigator.navigateLimited("${Screen.UserCharacterPageScreen.route}?uid=${charProf.playerId}&charId=${charProf.charId}")
                 }
             }
