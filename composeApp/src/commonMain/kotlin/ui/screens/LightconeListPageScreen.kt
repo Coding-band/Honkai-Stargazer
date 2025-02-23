@@ -50,6 +50,8 @@ import moe.tlaster.precompose.navigation.Navigator
 import types.Character
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import types.Lightcone
+import ui.components.ListFilterTool
+import ui.components.ListFilterType
 import utils.app.PageBottomMask
 
 lateinit var lcList : MutableState<ArrayList<Lightcone>>
@@ -118,6 +120,14 @@ fun LightconeListPage(modifier: Modifier = Modifier, navigator: Navigator, heade
 
 
         PageBottomMask()
+
+        ListFilterTool(
+            originList = lcList.value,
+            filterType = ListFilterType.LIGHTCONE,
+            filtedList = lcListSortable,
+            filterChoiceArray = filterChoiceArray,
+            hazeState = hazeState
+        )
 
         PageHeader(navigator = navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.CANCEL)
     }

@@ -36,6 +36,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
@@ -127,8 +128,11 @@ fun <T> ListFilterTool(
         }
     }
     val filterChoiceList = arrayListOf<FilterEnum>().apply {
-        for(i in 0 until max(CombatType.entries.filterNot { it == CombatType.Unspecified }.size, Path.entries.filterNot { it == Path.Unspecified }.size)){
-            if(i < CombatType.entries.filterNot { it == CombatType.Unspecified }.size){
+        for(i in 0 until max(
+            if(filterType == ListFilterType.CHARACTER) CombatType.entries.filterNot { it == CombatType.Unspecified }.size else 0,
+            Path.entries.filterNot { it == Path.Unspecified }.size
+        )){
+            if(i < CombatType.entries.filterNot { it == CombatType.Unspecified }.size && filterType == ListFilterType.CHARACTER){
                 add(CombatType.entries[i])
             }
             if(i < Path.entries.filterNot { it == Path.Unspecified }.size){
@@ -194,11 +198,11 @@ fun <T> ListFilterTool(
                                         contentDescription = "Close Filter Popup",
                                         modifier = Modifier
                                             .clip(CircleShape)
-                                            .size(36.dp)
-                                            .padding(2.dp)
+                                            .size(32.dp)
                                             .clickable {
                                                 isShowing.value = "NOPE"
-                                            }
+                                            },
+                                        colorFilter = ColorFilter.tint(Color(0xFF222222))
                                     )
                                 }
 
@@ -213,7 +217,7 @@ fun <T> ListFilterTool(
                                     verticalArrangement = Arrangement.spacedBy(10.dp),
                                 ){
                                     filterChoiceList.mapIndexed { index, any ->
-                                        if(filterChoiceList.size == index+1 && any is Path){
+                                        if(filterChoiceList.size == index+1 && (filterChoiceList.size) % 2 == 1 && any is Path){
                                             Row {  }
                                         }
 
