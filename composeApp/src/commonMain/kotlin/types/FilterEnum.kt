@@ -1,5 +1,8 @@
 package types
 
-interface FilterEnum {
+import kotlinx.serialization.Serializable
+
+@Serializable
+sealed interface FilterEnum {
 
 }

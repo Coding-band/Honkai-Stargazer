@@ -50,6 +50,7 @@ import ui.components.ListFilterTool
 import ui.components.ListFilterType
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import utils.app.PageBottomMask
+import utils.app.rememberMutableStateListJsonOf
 
 lateinit var charList : MutableState<ArrayList<Character>>
 lateinit var charListSortable : MutableState<ArrayList<Character>>
@@ -59,7 +60,7 @@ lateinit var filterChoiceArray: SnapshotStateList<FilterEnum>
 fun initCharList() {
     charList = rememberSaveable(stateSaver = Character.ListSaver) { mutableStateOf(arrayListOf()) }
     charListSortable = rememberSaveable(stateSaver = Character.ListSaver) { mutableStateOf(ArrayList(charList.value)) }
-    filterChoiceArray = rememberSaveable { SnapshotStateList<FilterEnum>() }
+    filterChoiceArray = rememberMutableStateListJsonOf<FilterEnum>()
 }
 
 @OptIn(ExperimentalCoroutinesApi::class)
