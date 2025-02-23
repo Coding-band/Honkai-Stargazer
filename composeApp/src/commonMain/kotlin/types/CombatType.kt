@@ -31,13 +31,15 @@ import files.ic_physical
 import files.ic_quatumn
 import files.icon_wind
 import files.pom_pom_failed_issue
+import kotlinx.serialization.Serializable
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 
 /**
  * 屬性 CombatType
  */
-enum class CombatType (var chName : String, var resName: StringResource, var iconWhite : DrawableResource, var iconColor : DrawableResource, localeStringId : StringResource = Res.string.app_name){
+@Serializable
+enum class CombatType (var chName : String, var resName: StringResource, var iconWhite : DrawableResource, var iconColor : DrawableResource, localeStringId : StringResource = Res.string.app_name) : FilterEnum {
     Imaginary("虛數", Res.string.Imaginary, Res.drawable.ic_imaginary, Res.drawable.element_imaginary),
     Quantum("量子", Res.string.Quantum, Res.drawable.ic_quatumn, Res.drawable.element_quantum),
     Lightning("雷", Res.string.Lightning, Res.drawable.ic_lightning, Res.drawable.element_lightning),

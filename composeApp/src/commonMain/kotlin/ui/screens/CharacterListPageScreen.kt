@@ -22,6 +22,7 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastForEach
@@ -44,6 +45,7 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import moe.tlaster.precompose.navigation.Navigator
 import types.Character
+import types.FilterEnum
 import ui.components.ListFilterTool
 import ui.components.ListFilterType
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
@@ -51,12 +53,13 @@ import utils.app.PageBottomMask
 
 lateinit var charList : MutableState<ArrayList<Character>>
 lateinit var charListSortable : MutableState<ArrayList<Character>>
+lateinit var filterChoiceArray: SnapshotStateList<FilterEnum>
 
 @Composable
 fun initCharList() {
     charList = rememberSaveable(stateSaver = Character.ListSaver) { mutableStateOf(arrayListOf()) }
     charListSortable = rememberSaveable(stateSaver = Character.ListSaver) { mutableStateOf(ArrayList(charList.value)) }
-
+    filterChoiceArray = rememberSaveable { SnapshotStateList<FilterEnum>() }
 }
 
 @OptIn(ExperimentalCoroutinesApi::class)
@@ -122,7 +125,9 @@ fun CharacterListPage(
         ListFilterTool(
             originList = charList.value,
             filterType = ListFilterType.CHARACTER,
-            filtedList = charListSortable
+            filtedList = charListSortable,
+            filterChoiceArray = filterChoiceArray,
+            hazeState = hazeState
         )
 
 

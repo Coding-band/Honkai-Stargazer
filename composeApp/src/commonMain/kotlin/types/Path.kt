@@ -34,11 +34,12 @@ import files.path_the_preservation_abyss
 import files.path_the_remembrance
 import files.path_the_remembrance_abyss
 import files.pom_pom_failed_issue
+import kotlinx.serialization.Serializable
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 
-
-enum class Path (var chName : String,var resName : StringResource,var iconWhite : DrawableResource, var iconAbyss : DrawableResource, localeStringId : StringResource = Res.string.app_name){
+@Serializable
+enum class Path (var chName : String,var resName : StringResource,var iconWhite : DrawableResource, var iconAbyss : DrawableResource, localeStringId : StringResource = Res.string.app_name) : FilterEnum{
     Abundance("豐饒",Res.string.Abundance, Res.drawable.path_the_abundance, Res.drawable.path_the_abundance_abyss),
     Destruction("毀滅",Res.string.Destruction, Res.drawable.path_the_destruction, Res.drawable.path_the_destruction_abyss),
     Erudition("智識",Res.string.Erudition, Res.drawable.path_the_erudition, Res.drawable.path_the_erudition_abyss),
