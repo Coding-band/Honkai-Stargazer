@@ -42,6 +42,7 @@ import com.dokar.sonner.rememberToasterState
 import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import getDeviceInfo
 import getScreenSizeInfo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -281,7 +282,7 @@ fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
 
     NavHost(
         navigator = navigator,
-        swipeProperties = null,//if(isPadMode.value) null else swipeProperties,
+        swipeProperties = if(getDeviceInfo().deviceOSName.lowercase().contains("ios") && !isPadMode.value) swipeProperties else null,//if(isPadMode.value) null else swipeProperties,
         navTransition = if (isPadMode.value) defaultNavTransition else navTransition,
         initialRoute = Screen.SplashPage.route
     ) {
