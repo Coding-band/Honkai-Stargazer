@@ -27,9 +27,7 @@ import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -45,18 +43,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.CharSoul
 import files.NoDataYet
-import files.NoOnlineData
 import files.Res
-import files.ScoreLevel
-import files.bg_transparent
-import files.ic_person_btn
-import files.ic_selected_orange_circle
 import files.phorphos_caret_down_regular
 import files.pom_pom_praying
 import kotlinx.coroutines.CoroutineScope
@@ -64,13 +58,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.painterResource
 import types.Character
 import types.Character.Companion.charExtListJson
@@ -79,8 +70,6 @@ import types.CharacterProficient
 import types.CombatType
 import types.ImageFolder
 import types.Lightcone
-import types.Path
-import types.UserAccount
 import types.UserAccount.Companion.UIDSEARCH
 import ui.components.DropdownMenuNoPadding
 import ui.components.HeaderData
@@ -102,10 +91,8 @@ import utils.app.FontSizeNormal20
 import utils.app.Language
 import utils.app.formatDecimal
 import utils.app.newImageRequest
-import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.replaceStrRes
-import utils.app.swapList
 import utils.hoyolab.MihomoRequest
 import utils.starbase.StarbaseAPI
 
@@ -120,7 +107,7 @@ data class ProficientSchool(
 @Composable
 fun ProficientLeaderboardPageScreen(
     modifier: Modifier = Modifier,
-    navigator: Navigator,
+    navigator: NavHostController,
     headerData: HeaderData = defaultHeaderData,
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ) {
@@ -348,7 +335,7 @@ fun ProficientLeaderboardPageScreen(
 }
 
 @Composable
-fun ProfLeaderboardItem(charProf: CharacterProficient, navigator: Navigator) {
+fun ProfLeaderboardItem(charProf: CharacterProficient, navigator: NavHostController) {
     val lcDataJson = Lightcone.lcListJson.jsonArray.firstOrNull { lcData -> lcData.jsonObject["fileName"]!!.jsonPrimitive.int == charProf.lcId }
     val lcName = lcDataJson?.jsonObject?.get("name")?.jsonPrimitive?.content ?: ""
     val isQuerying = remember { mutableStateOf(false) }

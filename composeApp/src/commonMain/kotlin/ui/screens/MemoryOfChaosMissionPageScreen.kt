@@ -33,7 +33,6 @@ import androidx.compose.material.Text
 import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -48,21 +47,12 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
 import com.voc.stargazer3.BuildKonfig
-import ui.components.DropdownMenuNoPadding
-import ui.components.HeaderData
-import ui.components.InfoDisplayDialog
-import ui.components.PAGE_HEADER_HEIGHT
-import ui.components.PageHeaderAlpha
-import ui.components.TitleHeader
-import ui.components.UIButton
-import ui.components.UIButtonSize
-import ui.components.defaultHeaderData
-import ui.components.horizontalFadingEdge
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.AbyssCharacterUsage
@@ -86,7 +76,6 @@ import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.format.byUnicodePattern
 import kotlinx.datetime.toLocalDateTime
-import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -95,13 +84,23 @@ import types.AbyssInfoList
 import types.AbyssInfoMonster
 import types.AbyssInfoType
 import types.ImageFolder
-import utils.app.Constants
 import types.UserAccount
+import ui.components.DropdownMenuNoPadding
+import ui.components.HeaderData
+import ui.components.InfoDisplayDialog
+import ui.components.PAGE_HEADER_HEIGHT
+import ui.components.PageHeaderAlpha
+import ui.components.TitleHeader
+import ui.components.UIButton
+import ui.components.UIButtonSize
+import ui.components.defaultHeaderData
+import ui.components.horizontalFadingEdge
+import ui.navigation.Screen
+import ui.navigation.navigateLimited
+import utils.app.Constants
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.Language.Companion.TextLanguageInstance
-import ui.navigation.Screen
-import ui.navigation.navigateLimited
 import utils.app.getAssetsURLByFileName
 import utils.app.getImageNameByRegistName
 import utils.app.getMocPhaseStrListByMocLen
@@ -134,7 +133,7 @@ fun refreshMOCList(){
 @Preview
 fun MemoryOfChaosMissionPageScreen(
     modifier: Modifier = Modifier,
-    navigator: Navigator,
+    navigator: NavHostController,
     headerData: HeaderData = defaultHeaderData,
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ) {

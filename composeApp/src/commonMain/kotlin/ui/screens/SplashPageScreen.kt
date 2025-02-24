@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -21,8 +20,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import ui.components.HeaderData
-import ui.components.defaultHeaderData
+import androidx.navigation.NavHostController
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.Res
@@ -34,10 +32,6 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import moe.tlaster.precompose.navigation.NavOptions
-import moe.tlaster.precompose.navigation.Navigator
-import moe.tlaster.precompose.navigation.PopUpTo
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -46,13 +40,14 @@ import types.UserAbyssRecord.Companion.refreshPFData
 import types.UserAccount.Companion.INSTANCE
 import types.UserAccount.Companion.refreshCharacterList
 import types.UserAccount.Companion.refreshNoteData
+import ui.components.HeaderData
+import ui.components.defaultHeaderData
+import ui.navigation.Screen
+import ui.navigation.screenInstance
 import utils.app.FontSizeNormalLarge24
 import utils.app.FontSizeNormalSmall
 import utils.app.Language
 import utils.app.Preferences
-import ui.navigation.Screen
-import ui.navigation.navigateLimited
-import ui.navigation.screenInstance
 import utils.starbase.StarbaseAPI
 
 
@@ -60,7 +55,7 @@ import utils.starbase.StarbaseAPI
 @Composable
 fun SplashPage(
     modifier: Modifier = Modifier,
-    navigator: Navigator,
+    navigator: NavHostController,
     headerData: HeaderData = defaultHeaderData
 ) {
     val hazeStateRoot = remember { HazeState() }
@@ -93,12 +88,11 @@ fun SplashPage(
     LaunchedEffect(showPopup.value, hasRefreshed.value){
         if (!showPopup.value && screenInstance !is Screen.HomePage) {
             screenInstance = Screen.HomePage
-            navigator.navigateLimited(
-                Screen.HomePage.route,
-                options = NavOptions(
-                    popUpTo = PopUpTo(Screen.SplashPage.route, true)
-                )
-            )
+            navigator.navigate(Screen.HomePage.route){
+                popUpTo(Screen.SplashPage.route){
+                    inclusive = true
+                }
+            }
         }
     }
 

@@ -3,16 +3,10 @@
 import androidx.compose.runtime.Composable
 import coil3.compose.setSingletonImageLoaderFactory
 import com.voc.stargazer3.BuildKonfig
-import moe.tlaster.precompose.PreComposeApp
-import moe.tlaster.precompose.navigation.NavHost
-import moe.tlaster.precompose.navigation.rememberNavigator
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.userAccountErrorMessage
 import ui.components.PomPomInit
 import ui.navigation.RootContent
-import ui.navigation.Screen
-import ui.navigation.screenInstance
-import ui.screens.SplashPage
 import utils.app.Language
 import utils.app.LogExportInit
 import utils.app.Stargazer3Theme
@@ -50,8 +44,6 @@ fun App(platformContextFactory: ContextFactory) {
         dateTimeStrInit()
         userAccountErrorMessage()
 
-        PreComposeApp {
-            RootContent()
-        }
+        RootContent()
     }
 }

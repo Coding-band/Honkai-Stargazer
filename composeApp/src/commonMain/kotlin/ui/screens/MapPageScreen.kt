@@ -10,26 +10,23 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.navigation.NavHostController
 import com.multiplatform.webview.web.WebView
 import com.multiplatform.webview.web.rememberWebViewState
+import dev.chrisbanes.haze.HazeState
+import getDeviceInfo
 import ui.components.BackIcon
 import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.defaultHeaderData
-import dev.chrisbanes.haze.HazeState
-import getDeviceInfo
-import moe.tlaster.precompose.navigation.Navigator
-import ui.navigation.Screen
-import ui.navigation.navigateLimited
-import ui.navigation.navigatorInstance
 import utils.app.Language
 import utils.app.showWarningToast
 
 @Composable
 fun MapPageScreen(
     modifier: Modifier = Modifier,
-    navigator: Navigator,
+    navigator: NavHostController,
     headerData: HeaderData = defaultHeaderData,
 ) {
     val hazeState = remember { HazeState() }

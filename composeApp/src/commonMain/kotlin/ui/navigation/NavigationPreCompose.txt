@@ -10,6 +10,8 @@ import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -32,15 +34,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalUriHandler
-import androidx.navigation.NavHostController
-import androidx.navigation.NavOptions
-import androidx.navigation.NavType
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navArgument
+import androidx.compose.ui.unit.dp
 import androidx.window.core.layout.WindowWidthSizeClass
 import com.dokar.sonner.Toaster
+import com.dokar.sonner.ToasterState
+import com.dokar.sonner.rememberToasterState
 import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
@@ -50,9 +48,17 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.datetime.Clock
+import moe.tlaster.precompose.navigation.NavHost
+import moe.tlaster.precompose.navigation.NavOptions
+import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.SwipeProperties
+import moe.tlaster.precompose.navigation.rememberNavigator
+import moe.tlaster.precompose.navigation.transition.NavTransition
 import ui.components.HeaderData
+import ui.components.PomPomPopup
 import ui.components.PomPomPopupUI
 import ui.components.defaultHeaderData
+import ui.components.docCountDown
 import ui.screens.AboutStargazerPageScreen
 import ui.screens.ActionOrderListPageScreen
 import ui.screens.ActionOrderSimulatorPageScreen
@@ -68,6 +74,7 @@ import ui.screens.HoyolabLoginPageScreen
 import ui.screens.LightconeInfoPage
 import ui.screens.LightconeListPage
 import ui.screens.MakeBackground
+import ui.screens.MapPageScreen
 import ui.screens.MemoryOfChaosMissionPageScreen
 import ui.screens.ProficientLeaderboardPageScreen
 import ui.screens.PureFictionMissionPageScreen
@@ -91,6 +98,7 @@ import ui.screens.refreshLcList
 import ui.screens.refreshMOCList
 import ui.screens.refreshPFList
 import ui.screens.refreshRelicList
+import utils.app.BezierEasing2O48
 import utils.app.Constants.Companion.HOME_WIDTH
 import utils.app.Language
 import utils.app.toastInstance
@@ -102,9 +110,11 @@ import utils.app.toastInstance
  * @param options The navigation options.
  */
 //This should not be there, but CharacterCard need it in clickable, without using @Composable ...
-lateinit var navigatorInstance : NavHostController
+lateinit var navigatorInstance : Navigator
 
 private lateinit var hazeStateRoot : HazeState
+private lateinit var swipeProperties: SwipeProperties
+private lateinit var navTransition : NavTransition
 
 /**
  * Only usage : For GlobalBackground check whether should blur the background
@@ -152,8 +162,24 @@ fun RootContent() {
     hazeStateRoot = remember { HazeState() }
     val isPadMode = remember { mutableStateOf(false) }
     val isRotate = remember { mutableStateOf(false) }
-    val navigator = rememberNavController()
+    val navigator = rememberNavigator()
     navigatorInstance = navigator
+    //pomPomPopupInstance = remember { mutableStateOf(PomPomPopup()) }
+    //docCountDown = remember { mutableStateOf(0) }
+    swipeProperties = remember { SwipeProperties(
+        positionalThreshold = { distance -> distance * 0.5f },
+        velocityThreshold = { 10.dp.toPx() }
+    ) }
+
+    navTransition = remember {
+        NavTransition(
+            createTransition = slideInHorizontally(animationSpec = tween(easing = BezierEasing2O48)) { it },
+            destroyTransition = slideOutHorizontally(animationSpec = tween(easing = BezierEasing2O48)) { it },
+            pauseTransition = slideOutHorizontally { -it / 4 },
+            resumeTransition = slideInHorizontally { -it / 4 },
+            exitTargetContentZIndex = 1f
+        )
+    }
 
     key(isRotate.value) {
         globalWindowWidthSizeClass = currentWindowAdaptiveInfo().windowSizeClass.windowWidthSizeClass
@@ -244,20 +270,28 @@ fun refreshInit(){
 }
 
 @Composable
-fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>){
+fun NavHostInit(navigator : Navigator, isPadMode: MutableState<Boolean>){
+    val defaultNavTransition = remember {
+        NavTransition(
+            createTransition = fadeIn(),
+            destroyTransition = fadeOut()
+        )
+    }
+
     NavHost(
-        navController = navigator,
-        startDestination = Screen.SplashPage.route,
-        
+        navigator = navigator,
+        swipeProperties = null,//if(isPadMode.value) null else swipeProperties,
+        navTransition = if (isPadMode.value) defaultNavTransition else navTransition,
+        initialRoute = Screen.SplashPage.route
     ) {
-        composable(route = Screen.SplashPage.route) {
+        scene(route = Screen.SplashPage.route) {
             screenInstance = Screen.SplashPage
             SplashPage(
                 navigator = navigator,
                 headerData = Screen.SplashPage.headerData
             )
         }
-        composable(route = Screen.HomePage.route) {
+        scene(route = Screen.HomePage.route) {
             screenInstance = Screen.HomePage
             withBGScreen(isPadMode){
                 if(!isPadMode.value) {
@@ -274,7 +308,7 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
             }
         }
 
-        composable(route = Screen.CharacterListPage.route) {
+        scene(route = Screen.CharacterListPage.route) {
             screenInstance = Screen.CharacterListPage
             withBGScreen(isPadMode){
                 CharacterListPage(
@@ -283,7 +317,7 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
                 )
             }
         }
-        composable(route = Screen.LightconeListPage.route) {
+        scene(route = Screen.LightconeListPage.route) {
             screenInstance = Screen.LightconeListPage
             withBGScreen(isPadMode){
                 LightconeListPage(
@@ -292,7 +326,7 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
                 )
             }
         }
-        composable(route = Screen.RelicListPage.route) {
+        scene(route = Screen.RelicListPage.route) {
             screenInstance = Screen.RelicListPage
             withBGScreen(isPadMode){
                 RelicListPage(
@@ -302,16 +336,9 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
             }
         }
 
-        composable(
+        scene(
             //?fileName={fileName}&combatType={combatType}&path={path}&charId={charId}
-            route = "${Screen.CharacterInfoPage.route}/{charName}?fileName={fileName}&combatType={combatType}&path={path}&charId={charId}",
-            arguments = listOf(
-                navArgument("charName") { type = NavType.StringType ;defaultValue = ""; nullable = false; },
-                navArgument("fileName") { type = NavType.StringType ;defaultValue = ""; nullable = false; },
-                navArgument("combatType") { type = NavType.StringType ;defaultValue = ""; nullable = false; },
-                navArgument("path") { type = NavType.StringType ;defaultValue = ""; nullable = false; },
-                navArgument("charName") { type = NavType.StringType ;defaultValue = ""; nullable = false; },
-            )
+            route = "${Screen.CharacterInfoPage.route}/{charName}",
         ) { backStackEntry ->
             screenInstance = Screen.CharacterInfoPage
             withBGScreen(isPadMode){
@@ -323,13 +350,9 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
             }
         }
 
-        composable(
+        scene(
             //?fileName={fileName}&path={path}
-            route = "${Screen.LightconeInfoPage.route}/{lcName}?fileName={fileName}&path={path}\",",
-            arguments = listOf(
-                navArgument("fileName") { type = NavType.StringType ;defaultValue = ""; nullable = false; },
-                navArgument("path") { type = NavType.StringType ;defaultValue = ""; nullable = false; }
-            )
+            route = "${Screen.LightconeInfoPage.route}/{lcName}",
         ) { backStackEntry ->
             screenInstance = Screen.LightconeListPage
             withBGScreen(isPadMode){
@@ -342,11 +365,8 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
         }
 
         //?fileName={fileName}
-        composable(
-            route = "${Screen.RelicInfoPage.route}/{relicName}?fileName={fileName}",
-            arguments = listOf(
-                navArgument("fileName") { type = NavType.StringType ;defaultValue = ""; nullable = false; }
-            )
+        scene(
+            route = "${Screen.RelicInfoPage.route}/{relicName}",
         ) { backStackEntry ->
             screenInstance = Screen.RelicInfoPage
             withBGScreen(isPadMode){
@@ -358,7 +378,7 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
                 }
         }
 
-        composable(
+        scene(
             route = Screen.SettingScreen.route) {
             screenInstance = Screen.SettingScreen
             withBGScreen(isPadMode){
@@ -369,7 +389,7 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
             }
         }
 
-        composable(
+        scene(
             route = Screen.BackgroundSettingScreen.route) {
             screenInstance = Screen.BackgroundSettingScreen
             withBGScreen(isPadMode){
@@ -381,11 +401,8 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
         }
 
         //?serverId={serverId}
-        composable(
-            route = Screen.HoyolabLoginPageScreen.route +"?serverId={serverId}",
-            arguments = listOf(
-                navArgument("serverId") { type = NavType.StringType ;defaultValue = ""; nullable = false; }
-            )
+        scene(
+            route = Screen.HoyolabLoginPageScreen.route,
         ) { backStackEntry ->
             screenInstance = Screen.HoyolabLoginPageScreen
             withBGScreen(isPadMode){
@@ -397,7 +414,7 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
                 }
         }
 
-        composable(
+        scene(
             route = Screen.EventListPageScreen.route) {
             screenInstance = Screen.EventListPageScreen
             withBGScreen(isPadMode){
@@ -409,11 +426,8 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
         }
 
         //?eventId={eventId}
-        composable(
-            route = Screen.EventContentPageScreen.route +"?eventId={eventId}",
-            arguments = listOf(
-                navArgument("eventId") { type = NavType.StringType ;defaultValue = ""; nullable = false; }
-            )
+        scene(
+            route = Screen.EventContentPageScreen.route,
         ) { backStackEntry ->
             screenInstance = Screen.EventContentPageScreen
             withBGScreen(isPadMode){
@@ -425,7 +439,7 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
                 }
 
         }
-        composable(
+        scene(
             route = Screen.MapPageScreen.route) {
             screenInstance = Screen.MapPageScreen
             LocalUriHandler.current.openUri("https://act.hoyolab.com/sr/app/interactive-map/index.html?lang=${Language.TextLanguageInstance.hoyolabName}")
@@ -442,11 +456,8 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
         }
 
         //?uid={uid}
-        composable(
-            route = Screen.UserInfoPageScreen.route +"?uid={uid}",
-            arguments = listOf(
-                navArgument("uid") { type = NavType.StringType ;defaultValue = ""; nullable = false; }
-            )
+        scene(
+            route = Screen.UserInfoPageScreen.route,
         ) { backStackEntry ->
             screenInstance = Screen.UserInfoPageScreen
             withBGScreen(isPadMode){
@@ -460,12 +471,8 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
         }
 
         //?uid={uid}&charId={charId}
-        composable(
-            route = Screen.UserCharacterPageScreen.route +"?uid={uid}&charId={charId}",
-            arguments = listOf(
-                navArgument("uid") { type = NavType.StringType ;defaultValue = ""; nullable = false; },
-                navArgument("charId") { type = NavType.StringType ;defaultValue = ""; nullable = false; }
-            )
+        scene(
+            route = Screen.UserCharacterPageScreen.route,
         ) { backStackEntry ->
             screenInstance = Screen.UserCharacterPageScreen
             withBGScreen(isPadMode){
@@ -477,7 +484,7 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
                 }
 
         }
-        composable(
+        scene(
             route = Screen.UIDSearchPageScreen.route) {
             screenInstance = Screen.UIDSearchPageScreen
             withBGScreen(isPadMode){
@@ -488,7 +495,7 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
                 }
 
         }
-        composable(
+        scene(
             route = Screen.MemoryOfChaosMissionPageScreen.route) {
             screenInstance = Screen.MemoryOfChaosMissionPageScreen
             withBGScreen(isPadMode){
@@ -500,11 +507,8 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
 
         }
         //?uid={uid}
-        composable(
-            route = Screen.BattleChroniclePageScreen.route + "?uid={uid}",
-            arguments = listOf(
-                navArgument("uid") { type = NavType.StringType ;defaultValue = ""; nullable = false; }
-            )
+        scene(
+            route = Screen.BattleChroniclePageScreen.route,
             
         ) { backStackEntry ->
             screenInstance = Screen.BattleChroniclePageScreen
@@ -517,7 +521,7 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
                 }
 
         }
-        composable(
+        scene(
             route = Screen.PureFictionMissionPageScreen.route) {
             screenInstance = Screen.PureFictionMissionPageScreen
             withBGScreen(isPadMode){
@@ -528,7 +532,7 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
                 }
 
         }
-        composable(
+        scene(
             route = Screen.AboutStargazerPageScreen.route) {
             screenInstance = Screen.AboutStargazerPageScreen
             withBGScreen(isPadMode){
@@ -539,7 +543,7 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
                 }
 
         }
-        composable(
+        scene(
             route = Screen.ExpeditionPageScreen.route) {
             screenInstance = Screen.ExpeditionPageScreen
             withBGScreen(isPadMode){
@@ -550,7 +554,7 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
                 }
 
         }
-        composable(
+        scene(
             route = Screen.ProficientLeaderboardPageScreen.route) {
             screenInstance = Screen.ProficientLeaderboardPageScreen
             withBGScreen(isPadMode){
@@ -561,7 +565,7 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
                 }
 
         }
-        composable(
+        scene(
             route = Screen.ActionOrderListPageScreen.route) {
             screenInstance = Screen.ActionOrderListPageScreen
             withBGScreen(isPadMode){
@@ -572,14 +576,8 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
             }
 
         }
-
-        //?index={index}
-        composable(
-            route = Screen.ActionOrderSimulatorPageScreen.route + "?index={index}",
-            arguments = listOf(
-                navArgument("index") { type = NavType.StringType ;defaultValue = ""; nullable = false; }
-            )
-        ) { backStackEntry ->
+        scene(
+            route = Screen.ActionOrderSimulatorPageScreen.route) { backStackEntry ->
             screenInstance = Screen.ActionOrderSimulatorPageScreen
             withBGScreen(isPadMode){
                 ActionOrderSimulatorPageScreen(
@@ -596,7 +594,7 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
 /**
  * Navigate to a route with a limited interval.
  */
-fun NavHostController.navigateLimited(route: String, options: NavOptions? = null) {
+fun Navigator.navigateLimited(route: String, options: NavOptions? = null) {
     val navigationInterval: Long = 500 // 500ms is enough for most cases
     val lastNavigationTime: Long = Settings().getLong("lastNavigationTime", 0)
 
@@ -636,7 +634,7 @@ fun withBGScreen(isPadMode: MutableState<Boolean>, content: @Composable () -> Un
 @Composable
 fun BlankPage(
     modifier: Modifier = Modifier,
-    navigator: NavHostController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData
 ){
     Box(modifier = Modifier.fillMaxHeight().fillMaxHeight()){

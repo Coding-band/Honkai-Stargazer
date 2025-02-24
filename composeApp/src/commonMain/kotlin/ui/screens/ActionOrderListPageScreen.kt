@@ -21,7 +21,6 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -34,75 +33,53 @@ import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyHorizontalGrid
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Button
 import androidx.compose.material.Text
-import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.util.fastForEach
-import com.cheonjaeung.compose.grid.HorizontalGrid
-import com.cheonjaeung.compose.grid.SimpleGridCells
-import com.cheonjaeung.compose.grid.VerticalGrid
+import androidx.navigation.NavHostController
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
-import dev.chrisbanes.haze.hazeChild
-import files.AccountSetup
 import files.ActionOrderAddItem
 import files.ActionOrderImportedCharData
 import files.ActionOrderItemChosen
 import files.Res
-import files.UserInfoOwnedCharacters
 import files.phorphos_check_regular
 import files.ui_icon_back
 import files.ui_icon_close
-import files.ui_icon_right
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
-import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
 import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
-import kotlinx.datetime.format
 import kotlinx.datetime.format.byUnicodePattern
 import kotlinx.datetime.toLocalDateTime
-import kotlinx.serialization.Serializable
-import kotlinx.serialization.json.JsonArray
-import kotlinx.serialization.json.jsonObject
-import kotlinx.serialization.json.jsonPrimitive
-import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.painterResource
 import types.Attribute
 import types.Character
-import types.CombatType
 import types.HsrProperties
-import types.Path
 import types.UserAccount
 import ui.components.BackIcon
 import ui.components.CharacterCard
@@ -119,11 +96,9 @@ import utils.app.Constants
 import utils.app.Constants.Companion.CHAR_CARD_HEIGHT
 import utils.app.Constants.Companion.CHAR_CARD_TITLE_HEIGHT
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
-import utils.app.Constants.Companion.CLARA_KAMOJI
 import utils.app.Constants.Companion.INFO_MAX_WIDTH
 import utils.app.Constants.Companion.INFO_MIN_WIDTH
 import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
-import utils.app.Constants.Companion.getCardBgColorByRare
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
@@ -135,7 +110,6 @@ import utils.app.removeStrQuote
 import utils.app.replaceStrRes
 import utils.calculator.TeamListItem
 import utils.calculator.TeammateItem
-import utils.hoyolab.AttributeExchange
 
 val TEST_LIST = arrayListOf(
     TeamListItem(
@@ -185,7 +159,7 @@ fun initActionOrderTeamList(){
 @Composable
 fun ActionOrderListPageScreen(
     modifier: Modifier = Modifier,
-    navigator: Navigator,
+    navigator: NavHostController,
     headerData: HeaderData = defaultHeaderData
 ) {
     val hazeState = remember { HazeState() }
@@ -471,7 +445,7 @@ fun getSpecificAttrFromChar(char: Character, attr: Attribute) : HsrProperties? {
 fun TeamListItemCard(
     teamListItem: TeamListItem,
     index: Int,
-    navigator: Navigator
+    navigator: NavHostController
 ) {
     val dateFormat = LocalDateTime.Format { byUnicodePattern("yyyy.MM.dd") }
 

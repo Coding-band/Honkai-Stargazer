@@ -1,11 +1,6 @@
 package ui.screens
 
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.gestures.AnchoredDraggableState
-import androidx.compose.foundation.gestures.Orientation
-import androidx.compose.foundation.gestures.anchoredDraggable
-import androidx.compose.foundation.gestures.detectDragGestures
-import androidx.compose.foundation.gestures.rememberDraggableState
 import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -33,47 +28,40 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import com.russhwolf.settings.Settings
+import dev.chrisbanes.haze.HazeState
+import files.Res
+import files.SetWallPaper
+import getDeviceInfo
+import kotlinx.coroutines.launch
+import types.Character
+import types.ImageFolder
+import types.Wallpaper
 import ui.components.BackIcon
 import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.UIButton
 import ui.components.defaultHeaderData
-import dev.chrisbanes.haze.HazeState
-import files.Res
-import files.SaveWallPaper
-import files.SetWallPaper
-import files.SwitchOff
-import files.SwitchOn
-import files.UseBlurEffect
-import getDeviceInfo
-import kotlinx.coroutines.launch
-import moe.tlaster.precompose.navigation.Navigator
-import types.Character
-import types.ImageFolder
 import utils.app.Constants
-import types.Wallpaper
 import utils.app.DpToPx
 import utils.app.FontSizeNormal16
 import utils.app.getAssetsURLByFileName
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
-import utils.app.showFunctionIsDevelopingToast
 
 //All the background image can find in /commonMain/composeResources/files/images/bgs
 //U can use the function UtilTools().getAssetsWebpByFileName to get the image
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterialApi::class)
 @Composable
-fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerData: HeaderData = defaultHeaderData){
+fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, headerData: HeaderData = defaultHeaderData){
 
     val hazeState = remember { HazeState() }
     val coroutineScope = rememberCoroutineScope()
