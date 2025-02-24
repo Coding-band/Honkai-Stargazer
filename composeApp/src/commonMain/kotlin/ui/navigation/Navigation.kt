@@ -7,12 +7,9 @@
 package ui.navigation
 
 import androidx.compose.animation.AnimatedContent
-import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
-import androidx.compose.animation.slideInHorizontally
-import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -35,7 +32,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalUriHandler
-import androidx.compose.ui.unit.IntOffset
 import androidx.navigation.NavHostController
 import androidx.navigation.NavOptions
 import androidx.navigation.NavType
@@ -249,15 +245,10 @@ fun refreshInit(){
 
 @Composable
 fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>){
-    //ref: https://github.com/JetBrains/compose-multiplatform/issues/4528#issuecomment-2015222282
-    val animationSpec = tween<IntOffset>(650)
     NavHost(
         navController = navigator,
         startDestination = Screen.SplashPage.route,
-        enterTransition = { if(isPadMode.value) fadeIn() else slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Left, animationSpec) },
-        exitTransition = { if(isPadMode.value) fadeOut() else slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Left, animationSpec) },
-        popEnterTransition = { if(isPadMode.value) fadeIn() else slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Right, animationSpec) },
-        popExitTransition = { if(isPadMode.value) fadeOut() else slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Right, animationSpec) }
+        
     ) {
         composable(route = Screen.SplashPage.route) {
             screenInstance = Screen.SplashPage
