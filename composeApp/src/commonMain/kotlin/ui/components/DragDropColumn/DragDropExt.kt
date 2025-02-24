@@ -68,8 +68,8 @@ fun LazyItemScope.DraggableItem(
                 translationY = previous
             }
     } else {
-        Modifier.animateItem(
-            fadeInSpec = null, fadeOutSpec = null, placementSpec = tween(easing = FastOutLinearInEasing)
+        Modifier.animateItemPlacement(
+            tween(easing = FastOutLinearInEasing)
         )
     }
     Column(modifier = modifier.then(draggingModifier)) {

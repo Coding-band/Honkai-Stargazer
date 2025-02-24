@@ -26,7 +26,13 @@ import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastForEach
-import androidx.navigation.NavHostController
+import ui.components.CharacterCard
+import ui.components.BackIcon
+import ui.components.HeaderData
+import ui.components.LIST_FILTER_TOOL_HEIGHT
+import ui.components.PAGE_HEADER_HEIGHT
+import ui.components.PageHeader
+import ui.components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import kotlinx.coroutines.CoroutineScope
@@ -37,17 +43,11 @@ import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import moe.tlaster.precompose.navigation.Navigator
 import types.Character
 import types.FilterEnum
-import ui.components.BackIcon
-import ui.components.CharacterCard
-import ui.components.HeaderData
-import ui.components.LIST_FILTER_TOOL_HEIGHT
 import ui.components.ListFilterTool
 import ui.components.ListFilterType
-import ui.components.PAGE_HEADER_HEIGHT
-import ui.components.PageHeader
-import ui.components.defaultHeaderData
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import utils.app.PageBottomMask
 import utils.app.rememberMutableStateListJsonOf
@@ -86,7 +86,7 @@ fun refreshCharList(){
 @Composable
 fun CharacterListPage(
     modifier: Modifier = Modifier,
-    navigator: NavHostController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData
 ) {
     val hazeState = remember { HazeState() }

@@ -35,10 +35,22 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavBackStackEntry
-import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
+import ui.components.BackIcon
+import ui.components.HeaderData
+import ui.components.InfoAdviceCharacter
+import ui.components.InfoBasicStatus
+import ui.components.InfoBioColumn
+import ui.components.InfoDisplayDialog
+import ui.components.InfoLcMetamorphosis
+import ui.components.InfoNavigateItem
+import ui.components.InfoNavigatorBar
+import ui.components.InfoStory
+import ui.components.PAGE_HEADER_HEIGHT
+import ui.components.PageHeader
+import ui.components.StatusType
+import ui.components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.AdviceCharacters
@@ -61,23 +73,13 @@ import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import moe.tlaster.precompose.navigation.BackStackEntry
+import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.path
+import moe.tlaster.precompose.navigation.query
 import org.jetbrains.compose.resources.painterResource
 import types.ImageFolder
 import types.Lightcone
-import ui.components.BackIcon
-import ui.components.HeaderData
-import ui.components.InfoAdviceCharacter
-import ui.components.InfoBasicStatus
-import ui.components.InfoBioColumn
-import ui.components.InfoDisplayDialog
-import ui.components.InfoLcMetamorphosis
-import ui.components.InfoNavigateItem
-import ui.components.InfoNavigatorBar
-import ui.components.InfoStory
-import ui.components.PAGE_HEADER_HEIGHT
-import ui.components.PageHeader
-import ui.components.StatusType
-import ui.components.defaultHeaderData
 import utils.app.JsonElementSaver
 import utils.app.Language
 import utils.app.newImageRequest
@@ -101,16 +103,16 @@ private const val scrollPxTrigInvisible = 250f
 @Composable
 fun LightconeInfoPage(
     modifier: Modifier = Modifier,
-    navigator: NavHostController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData,
-    backStackEntry: NavBackStackEntry,
+    backStackEntry: BackStackEntry,
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ) {
 
     var density = LocalDensity.current.density
-    val lightconeName = backStackEntry.arguments?.getString("lcName")!!.replace("_", " ")
-    val lightconeFileName = backStackEntry.arguments?.getString("fileName")!!
-    val path = valueOfWithDefaultPath(backStackEntry.arguments?.getString("path")!!)
+    val lightconeName = backStackEntry.path<String>("lcName")!!.replace("_", " ")
+    val lightconeFileName = backStackEntry.query<String>("fileName")!!
+    val path = valueOfWithDefaultPath(backStackEntry.query<String>("path")!!)
 
     val hazeState = remember { HazeState() }
     val lcInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Lightcone.getLightconeDataFromJSON(lightconeFileName, Language.TextLanguageInstance) as JsonElement) }

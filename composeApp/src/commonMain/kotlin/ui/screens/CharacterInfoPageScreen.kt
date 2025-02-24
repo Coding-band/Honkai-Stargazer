@@ -1,8 +1,10 @@
 package ui.screens
 
+import ScreenSizeInfo
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -31,42 +33,10 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavBackStackEntry
-import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
-import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
-import files.AdviceLightcones
-import files.AdviceRelics
-import files.AdviceTeams
-import files.BasicStatus
-import files.CharacterStory
-import files.Eidolon
-import files.NoOnlineData
-import files.Res
-import files.TraceTree
-import files.ic_favourite_btn
-import files.phorphos_baseball_cap_regular
-import files.phorphos_chats_circle_regular
-import files.phorphos_info_regular
-import files.phorphos_person_fill
-import files.phorphos_person_regular
-import files.phorphos_star_half_regular
-import files.phorphos_sword_regular
-import files.phorphos_tree_structure_regular
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.FlowPreview
-import kotlinx.coroutines.flow.distinctUntilChanged
-import kotlinx.serialization.json.JsonElement
-import kotlinx.serialization.json.JsonObject
-import kotlinx.serialization.json.jsonArray
-import kotlinx.serialization.json.jsonObject
-import kotlinx.serialization.json.jsonPrimitive
-import org.jetbrains.compose.resources.painterResource
-import types.Character
-import types.ImageFolder
 import ui.components.BackIcon
 import ui.components.CharacterEidolon
 import ui.components.CharacterTraceTree.CharacterTraceTree
@@ -84,14 +54,53 @@ import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.StatusType
 import ui.components.defaultHeaderData
+import dev.chrisbanes.haze.HazeState
+import dev.chrisbanes.haze.haze
+import files.AdviceLightcones
+import files.AdviceRelics
+import files.AdviceTeams
+import files.BasicStatus
+import files.CharacterStory
+import files.Eidolon
+import files.NoOnlineData
+import files.NotOK
+import files.Res
+import files.TraceTree
+import files.ic_favourite_btn
+import files.phorphos_baseball_cap_regular
+import files.phorphos_chats_circle_regular
+import files.phorphos_info_regular
+import files.phorphos_person_fill
+import files.phorphos_person_regular
+import files.phorphos_star_half_regular
+import files.phorphos_sword_regular
+import files.phorphos_tree_structure_regular
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.JsonNull
+import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.jsonArray
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
+import moe.tlaster.precompose.navigation.BackStackEntry
+import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.path
+import moe.tlaster.precompose.navigation.query
+import org.jetbrains.compose.resources.painterResource
+import types.Character
+import types.CombatType
+import types.ImageFolder
+import utils.app.Language
 import utils.annotation.DoItLater
 import utils.app.CharWeightList
 import utils.app.Constants.Companion.LOST_IMAGE_DRAWABLE
 import utils.app.JsonElementSaver
-import utils.app.Language
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
 import utils.app.showWarningToast
+import utils.app.toastInstance
 import utils.app.valueOfWithDefaultCombatType
 import utils.app.valueOfWithDefaultPath
 
@@ -115,19 +124,19 @@ private const val scrollPxTrigInvisible = 250f
 @Composable
 fun CharacterInfoPage(
     modifier: Modifier = Modifier,
-    navigator: NavHostController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData,
-    backStackEntry: NavBackStackEntry,
+    backStackEntry: BackStackEntry,
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ) {
 
     @DoItLater("Use rememberStatus")
     var density = LocalDensity.current.density
-    val characterName = backStackEntry.arguments?.getString("charName")!!.replace("_", " ")
-    val characterFileName = backStackEntry.arguments?.getString("fileName")!!
-    val characterId = backStackEntry.arguments?.getString("charId")!!
-    val combatType = valueOfWithDefaultCombatType(backStackEntry.arguments?.getString("combatType")!!)
-    val path = valueOfWithDefaultPath(backStackEntry.arguments?.getString("path")!!)
+    val characterName = backStackEntry.path<String>("charName")!!.replace("_", " ")
+    val characterFileName = backStackEntry.query<String>("fileName")!!
+    val characterId = backStackEntry.query<String>("charId")!!
+    val combatType = valueOfWithDefaultCombatType(backStackEntry.query<String>("combatType")!!)
+    val path = valueOfWithDefaultPath(backStackEntry.query<String>("path")!!)
 
     val hazeState = remember { HazeState() }
     val charInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Character.getCharacterDataFromFileName(characterFileName, Language.TextLanguageInstance) as JsonElement) }

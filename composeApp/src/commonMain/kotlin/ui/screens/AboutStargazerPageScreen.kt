@@ -15,7 +15,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
 import com.multiplatform.webview.web.WebView
 import com.multiplatform.webview.web.rememberWebViewStateWithHTMLData
 import dev.chrisbanes.haze.HazeState
@@ -24,19 +23,21 @@ import files.AboutTheApp
 import files.Res
 import files.codingband
 import files.phorphos_film_slate_fill
+import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.painterResource
 import ui.components.BackIcon
 import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.defaultHeaderData
+import utils.app.Constants
 import utils.app.LongStringXML
 import utils.app.removeStrQuote
 
 @Composable
 fun AboutStargazerPageScreen(
     modifier: Modifier = Modifier,
-    navigator: NavHostController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData
 ) {
     val headerHTML =

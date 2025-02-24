@@ -28,10 +28,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
+import coil3.request.CachePolicy
+import coil3.request.ImageRequest
+import coil3.request.crossfade
 import com.russhwolf.settings.Settings
+import ui.components.BackIcon
+import ui.components.HeaderData
+import ui.components.PAGE_HEADER_HEIGHT
+import ui.components.PageHeader
+import ui.components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.Res
@@ -48,23 +55,19 @@ import kotlinx.datetime.TimeZone
 import kotlinx.datetime.format.char
 import kotlinx.datetime.periodUntil
 import kotlinx.datetime.toInstant
+import moe.tlaster.precompose.navigation.Navigator
+import utils.app.Constants
 import types.EventItem
 import types.EventItem.Companion.EventListInstance
-import ui.components.BackIcon
-import ui.components.HeaderData
-import ui.components.PAGE_HEADER_HEIGHT
-import ui.components.PageHeader
-import ui.components.defaultHeaderData
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
-import utils.app.Constants
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
 
 @Composable
 fun EventListPageScreen(
     modifier: Modifier = Modifier,
-    navigator: NavHostController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData,
 ) {
     val isDateOutside = remember { mutableStateOf(Settings().getBoolean("isDateOutside",true)) }
@@ -97,7 +100,7 @@ fun EventListPageScreen(
 }
 
 @Composable
-fun EventItemCard(eventItem: EventItem, isDateOutside: MutableState<Boolean>, navigator: NavHostController) {
+fun EventItemCard(eventItem: EventItem, isDateOutside: MutableState<Boolean>, navigator: Navigator) {
     val currentTime = Clock.System.now()
     val endTime = LocalDateTime.parse(eventItem.end_time,
         LocalDateTime.Format { date(LocalDate.Formats.ISO); char(' '); time(LocalTime.Formats.ISO) }

@@ -29,8 +29,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
-import androidx.navigation.compose.rememberNavController
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.HazeStyle
 import dev.chrisbanes.haze.hazeChild
@@ -40,6 +38,8 @@ import files.phorphos_sun_fill
 import files.ui_icon_back
 import files.ui_icon_close
 import files.ui_icon_share
+import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.rememberNavigator
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
@@ -64,8 +64,8 @@ class HeaderData(
 
 @Composable
 fun PageHeader(
-    navigator: NavHostController = rememberNavController(),
-    onBack: ((navigator : NavHostController) -> Unit) = { navigator: NavHostController -> navigator.popBackStack() },
+    navigator: Navigator = rememberNavigator(),
+    onBack: ((navigator : Navigator) -> Unit) = { navigator: Navigator -> navigator.popBackStack() },
     backIconId: BackIcon = BackIcon.BACK,
     onForward: (() -> Unit) = {},
     forwardIconId: DrawableResource = Res.drawable.bg_transparent,
@@ -152,8 +152,8 @@ fun PageHeader(
 
 @Composable
 fun PageHeaderAlpha(
-    navigator: NavHostController = rememberNavController(),
-    onBack: ((navigator: NavHostController) -> Unit) = { navigator: NavHostController -> navigator.popBackStack() },
+    navigator: Navigator = rememberNavigator(),
+    onBack: ((navigator: Navigator) -> Unit) = { navigator: Navigator -> navigator.popBackStack() },
     backIconId: BackIcon = BackIcon.CANCEL,
     onForward: (() -> Unit) = {},
     hazeState: HazeState? = HazeState(),

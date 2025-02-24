@@ -27,6 +27,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -58,13 +59,21 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavBackStackEntry
-import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import com.mohamedrejeb.richeditor.model.RichTextState
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material.RichText
+import ui.components.RelicCard
+import ui.components.BackIcon
+import ui.components.HeaderData
+import ui.components.InfoDisplayDialog
+import ui.components.InfoNavigateItem
+import ui.components.InfoNavigatorBar
+import ui.components.PAGE_HEADER_HEIGHT
+import ui.components.PageHeader
+import ui.components.TitleHeader
+import ui.components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.NoOnlineData
@@ -89,21 +98,16 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import moe.tlaster.precompose.navigation.BackStackEntry
+import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.path
+import moe.tlaster.precompose.navigation.query
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.ImageFolder
-import types.Relic
-import ui.components.BackIcon
-import ui.components.HeaderData
-import ui.components.InfoDisplayDialog
-import ui.components.InfoNavigateItem
-import ui.components.InfoNavigatorBar
-import ui.components.PAGE_HEADER_HEIGHT
-import ui.components.PageHeader
-import ui.components.RelicCard
-import ui.components.TitleHeader
-import ui.components.defaultHeaderData
 import utils.app.Constants
+import types.Relic
+import utils.app.Constants.Companion.MATERIAL_CARD_TITLE_HEIGHT
 import utils.app.Constants.Companion.RELIC_CARD_WIDTH
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
@@ -131,15 +135,15 @@ private const val scrollPxTrigInvisible = 250f
 @Composable
 fun RelicInfoPage(
     modifier: Modifier = Modifier,
-    navigator: NavHostController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData,
-    backStackEntry: NavBackStackEntry,
+    backStackEntry: BackStackEntry,
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ) {
 
     var density = LocalDensity.current.density
-    val relicName = backStackEntry.arguments?.getString("relicName")!!.replace("_", " ")
-    val relicFileName = backStackEntry.arguments?.getString("fileName")!!
+    val relicName = backStackEntry.path<String>("relicName")!!.replace("_", " ")
+    val relicFileName = backStackEntry.query<String>("fileName")!!
 
     val hazeState = remember { HazeState() }
     val relicInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Relic.getRelicDataFromJSON(relicFileName, Language.TextLanguageInstance) as JsonElement) }

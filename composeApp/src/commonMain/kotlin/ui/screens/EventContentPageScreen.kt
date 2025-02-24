@@ -11,24 +11,28 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavBackStackEntry
-import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
+import coil3.request.CachePolicy
+import coil3.request.ImageRequest
+import coil3.request.crossfade
 import com.multiplatform.webview.web.WebView
 import com.multiplatform.webview.web.rememberWebViewStateWithHTMLData
-import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
-import files.Res
-import files.phorphos_film_slate_fill
-import types.EventItem
-import types.EventItem.Companion.EventListInstance
 import ui.components.BackIcon
 import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.defaultHeaderData
+import dev.chrisbanes.haze.HazeState
+import dev.chrisbanes.haze.haze
+import files.Res
+import files.phorphos_film_slate_fill
+import moe.tlaster.precompose.navigation.BackStackEntry
+import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.query
 import utils.app.Constants
+import types.EventItem
+import types.EventItem.Companion.EventListInstance
 import utils.app.newImageRequest
 
 //This Header was copy from "rn-branch\src\components\EventScreen\Event\EventWebView\EventWebView.tsx
@@ -93,15 +97,15 @@ val headerHTML = "<meta name=\"viewport\" content=\"initial-scale=1.0, maximum-s
 @Composable
 fun EventContentPageScreen(
     modifier: Modifier = Modifier,
-    navigator: NavHostController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData,
-    backStackEntry: NavBackStackEntry,
+    backStackEntry: BackStackEntry,
 ) {
     val hazeState = remember { HazeState() }
 
-    val eventId = backStackEntry.arguments?.getString("eventId")!!
+    val eventId = backStackEntry.query<Int>("eventId")
 
-    val eventItem = EventListInstance.filter { it.ann_id == (eventId.toIntOrNull() ?: 0) }[0]
+    val eventItem = EventListInstance.filter { it.ann_id == eventId }[0]
 
     val htmlData = (headerHTML + "<body>" +
             "<div class=\"title\">${eventItem.title}</div>" +

@@ -37,6 +37,7 @@ import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
@@ -58,10 +59,9 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavBackStackEntry
-import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import com.cheonjaeung.compose.grid.SimpleGridCells
@@ -75,6 +75,7 @@ import files.CharScore
 import files.Eidolon
 import files.LackOfUserData
 import files.LeaderboardDataFrom
+import files.NoDataYet
 import files.OverWholeServerUser
 import files.ProducedByStargazer
 import files.Res
@@ -93,13 +94,19 @@ import files.ic_selected_orange_circle
 import files.phorphos_caret_down_regular
 import files.ui_icon_share
 import files.ui_icon_star
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.float
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import moe.tlaster.precompose.navigation.BackStackEntry
+import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.query
 import org.jetbrains.compose.resources.painterResource
 import types.Character
+import types.CharacterProficient
 import types.HsrProperties
 import types.ImageFolder
 import types.Lightcone
@@ -144,11 +151,11 @@ import utils.starbase.StarbaseAPI
 @Composable
 fun UserCharacterPageScreen(
     modifier: Modifier = Modifier,
-    navigator: NavHostController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData,
-    backStackEntry: NavBackStackEntry,
+    backStackEntry: BackStackEntry,
 ) {
-    val uid = backStackEntry.arguments?.getString("uid")!!
+    val uid = backStackEntry.query<String>("uid")!!
     val userAccount by remember { mutableStateOf(
         if (UserAccount.INSTANCE.uid == uid) {
             UserAccount.INSTANCE
@@ -156,8 +163,8 @@ fun UserCharacterPageScreen(
             UserAccount.UIDSEARCH
         }
     ) }
-    val characterId = backStackEntry.arguments?.getString("charId")!!
-    val characterFilter = userAccount.characterList.filter { it.officialId == characterId.toIntOrNull() }
+    val characterId = backStackEntry.query<Int>("charId")!!
+    val characterFilter = userAccount.characterList.filter { it.officialId == characterId }
     val hazeState = remember { HazeState() }
     val listState = rememberLazyListState()
     val isScrolling by remember {
