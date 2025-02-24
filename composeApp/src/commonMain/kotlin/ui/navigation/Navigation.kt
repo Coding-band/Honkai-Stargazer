@@ -171,6 +171,7 @@ fun RootContent() {
         velocityThreshold = { 10.dp.toPx() }
     ) }
 
+    //https://github.com/Tlaster/PreCompose/issues/45
     navTransition = remember {
         NavTransition(
             createTransition = slideInHorizontally(animationSpec = tween(easing = BezierEasing2O48)) { it },
