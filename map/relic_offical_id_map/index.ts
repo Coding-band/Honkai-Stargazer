@@ -37,6 +37,8 @@ const officalRelicId: any = {
   316: "Forge of the Kalpagni Lantern",
   317: "Lushaka, the Sunken Seas",
   318: "The Wondrous BananAmusement Park",
+  319: "Bone Collection's Serene Demesne",
+  320: "Giant Tree of Rapt Brooding",
 
   121: "Sacerdos' Relived Ordeal",
   122: "Scholar Lost in Erudition",

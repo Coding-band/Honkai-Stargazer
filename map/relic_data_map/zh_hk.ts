@@ -53,7 +53,14 @@ import ScholarLostinErudition from "../../data/relic_data/zh_hk/122.json";
 import HeroofTriumphantSong from "../../data/relic_data/zh_hk/123.json";
 import PoetofMourningCollapse from "../../data/relic_data/zh_hk/124.json";
 
+//Add in 3.1.0
+import BoneCollectionsSereneDemesne from "../../data/relic_data/zh_hk/319.json";
+import GiantTreeofRaptBrooding from "../../data/relic_data/zh_hk/320.json";
+
 const ZH_HK = {
+  //add in 3.1.0
+  "Giant Tree of Rapt Brooding": GiantTreeofRaptBrooding,
+  "Bone Collection's Serene Demesne": BoneCollectionsSereneDemesne,
   //add in 3.0.0
   "Hero of Triumphant Song":HeroofTriumphantSong,
   "Poet of Mourning Collapse":PoetofMourningCollapse,

@@ -88,7 +88,14 @@ import Aglaea from "../../data/character_data/zh_hk/aglaea.json";
 import PlayerBoy4 from "../../data/character_data/zh_hk/playerboy4.json";
 import PlayerGirl4 from "../../data/character_data/zh_hk/playergirl4.json";
 
+//add in 3.1.0
+import Mydei from "../../data/character_data/zh_hk/mydei.json";
+import Tribbie from "../../data/character_data/zh_hk/tribbie.json";
+
 const ZH_HK = {
+  //add in 3.1.0
+  Mydei,
+  Tribbie,
   //add in 3.0.0
   "The Herta" : TheHerta,
   Aglaea,

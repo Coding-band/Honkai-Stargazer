@@ -1,4 +1,8 @@
 const LightconeName = {
+  //Add in 3.1.0
+  "if-time-were-a-flower": "If Time Were a Flower",
+  "flame-of-blood-blaze-my-path": "Flame of Blood, Blaze My Path",
+
   //Add in 3.0.0
   "into-the-unreachable-veil" : "Into the Unreachable Veil",
   "time-woven-into-gold" : "Time Woven Into Gold",

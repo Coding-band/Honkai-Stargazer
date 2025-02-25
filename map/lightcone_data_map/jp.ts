@@ -141,7 +141,14 @@ import VictoryInaBlink from "../../data/lightcone_data/jp/21050.json";
 import Reminiscence from "../../data/lightcone_data/jp/20022.json";
 import Shadowburn from "../../data/lightcone_data/jp/20021.json";
 
+//add in 3.1.0
+import IfTimeWereaFlower from "../../data/lightcone_data/jp/23038.json";
+import FlameofBloodBlazeMyPath from "../../data/lightcone_data/jp/23039.json";
+
 const JP = {
+  //add in 3.1.0
+  "Flame of Blood, Blaze My Path" : FlameofBloodBlazeMyPath,
+  "If Time Were a Flower" : IfTimeWereaFlower,
   //add in 3.0.0
   "Into the Unreachable Veil": IntotheUnreachableVeil,
   "Time Woven Into Gold": TimeWovenIntoGold,

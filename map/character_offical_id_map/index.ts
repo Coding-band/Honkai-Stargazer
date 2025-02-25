@@ -71,6 +71,8 @@ const officalCharId: any = {
 
   1401: "The Herta",
   1402: "Aglaea",
+  1403: "Tribbie",
+  1404: "Mydei",
 };
 
 export default officalCharId;

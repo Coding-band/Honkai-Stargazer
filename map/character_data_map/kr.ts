@@ -88,7 +88,14 @@ import Aglaea from "../../data/character_data/kr/aglaea.json";
 import PlayerBoy4 from "../../data/character_data/kr/playerboy4.json";
 import PlayerGirl4 from "../../data/character_data/kr/playergirl4.json";
 
+//add in 3.1.0
+import Mydei from "../../data/character_data/kr/mydei.json";
+import Tribbie from "../../data/character_data/kr/tribbie.json";
+
 const KR = {
+  //add in 3.1.0
+  Mydei,
+  Tribbie,
   //add in 3.0.0
   "The Herta" : TheHerta,
   Aglaea,

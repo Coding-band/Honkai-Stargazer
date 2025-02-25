@@ -1,4 +1,8 @@
 const officalLightconeId: any = {
+  //Add in 3.1.0
+  23039: "Flame of Blood, Blaze My Path",
+  23038: "If Time Were a Flower",
+  
   //Add in 3.0.0
   23037 : "Time Woven Into Gold",
   23036 : "Into the Unreachable Veil",
