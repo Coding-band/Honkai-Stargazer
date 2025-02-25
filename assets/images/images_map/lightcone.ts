@@ -1,4 +1,13 @@
 const Lightcone: any = {
+  //add in 3.1.0
+  "Flame of Blood, Blaze My Path": {
+    icon: require("../../images/lightcone_icon/flame_of_blood_blaze_my_path.webp"),
+    imageFull: require("../../images/lightcone_artwork/flame_of_blood_blaze_my_path_artwork.webp"),
+  },
+  "If Time Were a Flower": {
+    icon: require("../../images/lightcone_icon/if_time_were_a_flower.webp"),
+    imageFull: require("../../images/lightcone_artwork/if_time_were_a_flower_artwork.webp"),
+  },
   //add in 3.0.0
   "Into the Unreachable Veil": {
     icon: require("../../images/lightcone_icon/into_the_unreachable_veil.webp"),

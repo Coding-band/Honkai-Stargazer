@@ -1,4 +1,15 @@
 const Relic: any = {
+  //Add in 3.1.0
+  "Giant Tree of Rapt Brooding": {
+    icon1: require("../ornament_icon/giant_tree_of_rapt_brooding_5.webp"),
+    icon2: require("../ornament_icon/giant_tree_of_rapt_brooding_6.webp"),
+    pcIcon: require("../ornament_pcicon/giant_tree_of_rapt_brooding.webp"),
+  },
+  "Bone Collection's Serene Demesne": {
+    icon1: require("../ornament_icon/bone_collections_serene_demesne_5.webp"),
+    icon2: require("../ornament_icon/bone_collections_serene_demesne_6.webp"),
+    pcIcon: require("../ornament_pcicon/bone_collections_serene_demesne.webp"),
+  },
   //Add in 3.0.0
   "Hero of Triumphant Song": {
     icon1: require("../relic_icon/hero_of_triumphant_song_1.webp"),

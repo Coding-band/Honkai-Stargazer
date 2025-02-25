@@ -4,6 +4,35 @@
  */
 
 const CharacterSoul: any = {
+  //add in 3.1.0
+  "Mydei": {
+    eidolon1: require("../../images/character_eidolon/mydei_eidolon1.webp"),
+    eidolon2: require("../../images/character_eidolon/mydei_eidolon2.webp"),
+    eidolon3: require("../../images/character_eidolon/mydei_eidolon3.webp"),
+    eidolon4: require("../../images/character_eidolon/mydei_eidolon4.webp"),
+    eidolon5: require("../../images/character_eidolon/mydei_eidolon5.webp"),
+    eidolon6: require("../../images/character_eidolon/mydei_eidolon6.webp"),
+    soul1: require("../../images/character_soul/mydei_soul1.webp"),
+    soul2: require("../../images/character_soul/mydei_soul2.webp"),
+    soul3: require("../../images/character_soul/mydei_soul3.webp"),
+    soul4: require("../../images/character_soul/mydei_soul4.webp"),
+    soul5: require("../../images/character_soul/mydei_soul5.webp"),
+    soul6: require("../../images/character_soul/mydei_soul6.webp"),
+  },
+  "Tribbie": {
+    eidolon1: require("../../images/character_eidolon/tribbie_eidolon1.webp"),
+    eidolon2: require("../../images/character_eidolon/tribbie_eidolon2.webp"),
+    eidolon3: require("../../images/character_eidolon/tribbie_eidolon3.webp"),
+    eidolon4: require("../../images/character_eidolon/tribbie_eidolon4.webp"),
+    eidolon5: require("../../images/character_eidolon/tribbie_eidolon5.webp"),
+    eidolon6: require("../../images/character_eidolon/tribbie_eidolon6.webp"),
+    soul1: require("../../images/character_soul/tribbie_soul1.webp"),
+    soul2: require("../../images/character_soul/tribbie_soul2.webp"),
+    soul3: require("../../images/character_soul/tribbie_soul3.webp"),
+    soul4: require("../../images/character_soul/tribbie_soul4.webp"),
+    soul5: require("../../images/character_soul/tribbie_soul5.webp"),
+    soul6: require("../../images/character_soul/tribbie_soul6.webp"),
+  },
   //add in 3.0.0
   "Aglaea": {
     eidolon1: require("../../images/character_eidolon/aglaea_eidolon1.webp"),

@@ -1,17 +1,30 @@
 const CharacterImage: any = {
+  //add in 3.1.0
+  "Mydei": {
+    icon: require("../../images/character_icon/mydei_icon.webp"),
+    imageSplash: require("../../images/character_splash/mydei_splash.webp"),
+    //imageFull: require("../../images/character_full/mydei_full.webp"),
+    imageFull: require("../../images/character_splash/mydei_splash.webp"),
+    fade: require("../../images/character_fade/mydei_fade.webp"),
+  },
+  "Tribbie": {
+    icon: require("../../images/character_icon/tribbie_icon.webp"),
+    imageSplash: require("../../images/character_splash/tribbie_splash.webp"),
+    //imageFull: require("../../images/character_full/tribbie_full.webp"),
+    imageFull: require("../../images/character_splash/tribbie_splash.webp"),
+    fade: require("../../images/character_fade/tribbie_fade.webp"),
+  },
   //add in 3.0.0
   "The Herta": {
     icon: require("../../images/character_icon/the_herta_icon.webp"),
     imageSplash: require("../../images/character_splash/the_herta_splash.webp"),
     imageFull: require("../../images/character_full/the_herta_full.webp"),
-    //imageFull: require("../../images/character_full/the_herta_full.webp"),
     fade: require("../../images/character_fade/the_herta_fade.webp"),
   },
   "Aglaea": {
     icon: require("../../images/character_icon/aglaea_icon.webp"),
     imageSplash: require("../../images/character_splash/aglaea_splash.webp"),
     imageFull: require("../../images/character_full/aglaea_full.webp"),
-    //imageFull: require("../../images/character_full/aglaea_full.webp"),
     fade: require("../../images/character_fade/aglaea_fade.webp"),
   },
   "Trailblazer Girl (Ice)": {

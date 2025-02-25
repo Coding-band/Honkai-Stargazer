@@ -4,6 +4,21 @@
  */
 
 const CharacterSkillMain: any = {
+  //add in 3.1.0
+  "Mydei": {
+    skill1: require("../../images/character_skill/mydei_skill1.webp"),
+    skill2: require("../../images/character_skill/mydei_skill2.webp"),
+    skill3: require("../../images/character_skill/mydei_skill3.webp"),
+    skill4: require("../../images/character_skill/mydei_skill4.webp"),
+    skill6: require("../../images/character_skill/mydei_skill6.webp"),
+  },
+  "Tribbie": {
+    skill1: require("../../images/character_skill/tribbie_skill1.webp"),
+    skill2: require("../../images/character_skill/tribbie_skill2.webp"),
+    skill3: require("../../images/character_skill/tribbie_skill3.webp"),
+    skill4: require("../../images/character_skill/tribbie_skill4.webp"),
+    skill6: require("../../images/character_skill/tribbie_skill6.webp"),
+  },
   //add in 3.0.0
   "Aglaea": {
     skill1: require("../../images/character_skill/aglaea_skill1.webp"),

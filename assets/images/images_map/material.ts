@@ -1,4 +1,8 @@
 const Material: any = { 
+  //add in 3.1.0
+  5837183: require("../../images/material_icon/material_harbinger_of_strife.webp"),
+  6103825: require("../../images/material_icon/material_darkveil_moonlight.webp"),
+  
   //add in 2.7.0
   6471577: require("../../images/material_icon/material_seedling_of_manas.webp"),
   6720910: require("../../images/material_icon/material_flower_of_alaya.webp"),
