@@ -88,7 +88,14 @@ import Aglaea from "../../data/character_data/de/aglaea.json";
 import PlayerBoy4 from "../../data/character_data/de/playerboy4.json";
 import PlayerGirl4 from "../../data/character_data/de/playergirl4.json";
 
+//add in 3.1.0
+import Mydei from "../../data/character_data/en/mydei.json";
+import Tribbie from "../../data/character_data/en/tribbie.json";
+
 const DE = {
+  //add in 3.1.0
+  Mydei,
+  Tribbie,
   //add in 3.0.0
   "The Herta" : TheHerta,
   Aglaea,

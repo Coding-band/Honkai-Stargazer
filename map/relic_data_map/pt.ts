@@ -53,7 +53,14 @@ import ScholarLostinErudition from "../../data/relic_data/pt/122.json";
 import HeroofTriumphantSong from "../../data/relic_data/pt/123.json";
 import PoetofMourningCollapse from "../../data/relic_data/pt/124.json";
 
+//Add in 3.1.0
+import BoneCollectionsSereneDemesne from "../../data/relic_data/en/319.json";
+import GiantTreeofRaptBrooding from "../../data/relic_data/en/320.json";
+
 const PT = {
+  //add in 3.1.0
+  "Giant Tree of Rapt Brooding": GiantTreeofRaptBrooding,
+  "Bone Collection's Serene Demesne": BoneCollectionsSereneDemesne,
   //add in 3.0.0
   "Hero of Triumphant Song":HeroofTriumphantSong,
   "Poet of Mourning Collapse":PoetofMourningCollapse,
