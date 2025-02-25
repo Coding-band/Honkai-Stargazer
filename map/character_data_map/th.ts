@@ -92,7 +92,7 @@ import PlayerGirl4 from "../../data/character_data/th/playergirl4.json";
 import Mydei from "../../data/character_data/en/mydei.json";
 import Tribbie from "../../data/character_data/en/tribbie.json";
 
-const th = {
+const TH = {
   //add in 3.1.0
   Mydei,
   Tribbie,
