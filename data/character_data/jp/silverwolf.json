@@ -34,6 +34,7 @@
     "疑似花萼「大鉱区」",
     "疑似花萼「工造司」",
     "疑似花萼「ホテル・『レバリー』-夢境」",
+    "疑似花萼「『囁きの密林』神悟の樹庭」",
     "クエスト報酬",
     "依頼報酬",
     "エンバー交換"
@@ -89,6 +90,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "「忘却の庭」"
    ]
   },
@@ -107,6 +109,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "デイリー訓練",
     "エンバー交換"
    ]
@@ -126,6 +129,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "依頼報酬"
    ]
   },
@@ -445,7 +449,7 @@
    "id": 1,
    "iconPath": "335fcc91c7562c5c869de883d7f42bcba78d6a1f99b7791d9bd621b876c69711",
    "artPath": "14912d92f37ee66756ac8041facc0eb97177273ac7f478cc348001b9f4e417fd",
-   "name": "<ruby>社会工学<rt>しゃかいこうがく</rt></ruby>",
+   "name": "社会工学",
    "descHash": "必殺技で敵を攻撃した後、敵に<u>デバフ</u>が1つあるごとに、銀狼はEPを<nobr>#1[i]</nobr>回復する。この効果は一回の必殺技発動につき、最大で<nobr>#2[i]</nobr>回発動できる。",
    "params": [
     7,
@@ -474,7 +478,7 @@
    "id": 4,
    "iconPath": "71553a88b9cdbb2e3db8af3570ebb8ab8d576e268e5d972460358aa8401a9ce0",
    "artPath": "b759966cecef53a5f134e0e8df535b142724658a7ae59b864278fa9d1f437ede",
-   "name": "バウンス<ruby>攻撃<rt>こうげき</rt></ruby>",
+   "name": "バウンス攻撃",
    "descHash": "必殺技で敵を攻撃した後、その敵にある<u>デバフ</u>1つにつき、さらに銀狼の攻撃力<nobr>#1[i]%</nobr>分の量子属性<u>付加ダメージ</u>を与える。この効果は1回の必殺技で、最大で<nobr>#2[i]</nobr>回発動できる。",
    "params": [
     0.2,
@@ -485,7 +489,7 @@
    "id": 5,
    "iconPath": "6349fb14b9d1a67bf18a4f92f30f784cfc0813b498b93ccde9f931c1b6fc0814",
    "artPath": "8dcfa2581cff454178abf925b1de8ecd5e67da618c9f4391ed1268e3d398756d",
-   "name": "<ruby>総<rt>そう</rt></ruby><ruby>当<rt>あ</rt></ruby>たり<ruby>攻撃<rt>こうげき</rt></ruby>",
+   "name": "総当たり攻撃",
    "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
    "params": []
   },
@@ -526,7 +530,7 @@
    "break": "30",
    "energy": "20",
    "id": 953518,
-   "name": "|システム<ruby>警告<rt>けいこく</rt></ruby>|",
+   "name": "|システム警告|",
    "iconPath": "c09a1447bf2b6c0bd62e6807b29db6cec1064effbff5acbe0f502edd039fb3ba",
    "typeDescHash": "通常攻撃",
    "levelReq": 0,
@@ -687,7 +691,7 @@
    "break": "60",
    "energy": "30",
    "id": 836873,
-   "name": "<ruby>変更<rt>へんこう</rt></ruby>を<ruby>許可<rt>きょか</rt></ruby>しますか？",
+   "name": "変更を許可しますか？",
    "iconPath": "7f1026235d258ae2074da01954b104dd19b8545140e71df7e0c872d2b6c95485",
    "typeDescHash": "戦闘スキル",
    "levelReq": 0,
@@ -1372,7 +1376,7 @@
    "break": "0",
    "energy": "0",
    "id": 438631,
-   "name": "プログラム<ruby>応答<rt>おうとう</rt></ruby>なし…",
+   "name": "プログラム応答なし…",
    "iconPath": "00b88314bfa118b079253e068b855f264442d7a62971dd086bafab40091ad99b",
    "typeDescHash": "天賦",
    "levelReq": 0,
@@ -1729,7 +1733,7 @@
    "break": "60",
    "energy": "0",
    "id": 121400,
-   "name": "|プロセス<ruby>強制終了<rt>きょうせいしゅうりょう</rt></ruby>|",
+   "name": "|プロセス強制終了|",
    "iconPath": "c37d8913e26721c471e69ae583cdca8423feb8ec3531e8b4f1c2f4d6573fab84",
    "typeDescHash": "秘技",
    "levelReq": 0,
@@ -1922,7 +1926,7 @@
     "descHash": "「欠陥」の継続時間+<nobr>#1[i]</nobr>ターン。敵が弱点撃破された時、銀狼は<nobr>#2[i]%</nobr>の<u>基礎確率</u>でその敵にランダムな「欠陥」を1つ埋め込む。",
     "ultimateCost": 0,
     "id": 590723,
-    "name": "<ruby>作成<rt>さくせい</rt></ruby>",
+    "name": "作成",
     "iconPath": "40fc62da1929bca3c08d06912a84f757a660392fef75d52fcdeaf7fe39fc6f24",
     "levelReq": 0,
     "promotionReq": 2,
@@ -2064,7 +2068,7 @@
     "descHash": "戦闘スキルを発動した時、敵に埋め込む弱点の継続時間+<nobr>#1[i]</nobr>ターン。",
     "ultimateCost": 0,
     "id": 590726,
-    "name": "<ruby>注入<rt>ちゅうにゅう</rt></ruby>",
+    "name": "注入",
     "iconPath": "d82742dff590cf00d8bcbec8d353218c6035e03425605ead6d02744d9a474f18",
     "levelReq": 0,
     "promotionReq": 4,
@@ -2821,7 +2825,7 @@
   }
  },
  "hasServant": false,
- "name": "<ruby>銀狼<rt>ぎんろう</rt></ruby>",
+ "name": "銀狼",
  "rarity": 5,
  "descHash": "「星核ハンター」のメンバーで、凄腕のハッカー。 宇宙を大きなシミュレーションゲームと見なして楽しんでいる。 リアルデータを修正できる「エーテル編集」を習得している。",
  "artPath": "c62c0cc06f179c73fde2e8af09492efe28a4ee923a09e57aebaa1f177dc40448",
@@ -2838,7 +2842,7 @@
   "iconPath": "9925f4d7d8ac1ad84319601be2e2127dbb697923a7add4d70bf795c7e9045d29",
   "altIconPath": "5821b3e8829f16ad30af2613e5330feea1cd8ead70cf58d18c7bc927f50b5943",
   "color": "#FFFFFF",
-  "name": "<ruby>虚無<rt>きょむ</rt></ruby>",
+  "name": "虚無",
   "rarity": 0
  },
  "pageId": "silverwolf"

@@ -34,6 +34,7 @@
     "疑似花萼「大鉱区」",
     "疑似花萼「工造司」",
     "疑似花萼「ホテル・『レバリー』-夢境」",
+    "疑似花萼「『囁きの密林』神悟の樹庭」",
     "クエスト報酬",
     "依頼報酬",
     "エンバー交換"
@@ -104,6 +105,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "「忘却の庭」"
    ]
   },
@@ -122,6 +124,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "デイリー訓練",
     "エンバー交換"
    ]
@@ -141,6 +144,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "依頼報酬"
    ]
   },
@@ -448,7 +452,7 @@
    "id": 1,
    "iconPath": "08be67733c783a7841f8eb6941a654746503dee289d3ae85cf1426a352dc78e3",
    "artPath": "c89f33225654e54530798b998dde9e9eca4d272137248ac1b2e896aed786b2cf",
-   "name": "<ruby>英気<rt>えいき</rt></ruby>を<ruby>養<rt>やしな</rt></ruby>う",
+   "name": "英気を養う",
    "descHash": "戦闘スキルを発動した時、<nobr>#1[i]%</nobr>の<u>固定確率</u>でSPを1回復する、クールタイムは1ターン。",
    "params": [
     0.5
@@ -458,7 +462,7 @@
    "id": 2,
    "iconPath": "e888d5aebcabea2b29f736d0611e956c7ab73d461ef63aa5ddd56e357bc0511e",
    "artPath": "f6a72f85936dc1114a212cec6185c9274668ef8914fce468c16d2c29bf5be807",
-   "name": "<ruby>急行軍<rt>きゅうこうぐん</rt></ruby>",
+   "name": "急行軍",
    "descHash": "戦闘スキルを発動した時、指定された味方は行動した後に速度+<nobr>#1[i]%</nobr>、1ターン継続。",
    "params": [
     0.3
@@ -468,7 +472,7 @@
    "id": 3,
    "iconPath": "b96ffbb151b7ab888bccb70bfb01bbe9198db0738af1f5388a8111592870ccc3",
    "artPath": "df399ea98b6564b426bc8d3b082468fdb33edb064ad8562eceda4cb3847f695c",
-   "name": "<ruby>一斉射撃<rt>いっせいしゃげき</rt></ruby>",
+   "name": "一斉射撃",
    "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
    "params": []
   },
@@ -476,7 +480,7 @@
    "id": 4,
    "iconPath": "4b2816dcb50c16ed0cbd8e871cc725e4f1a1188f3a57d0b40768673095684a27",
    "artPath": "655d0a0a99e9fb37dd8fb78b0a935d6ed1ad4dd1453e3e0643be0d5044526d11",
-   "name": "<ruby>不意<rt>ふい</rt></ruby><ruby>打<rt>う</rt></ruby>ち",
+   "name": "不意打ち",
    "descHash": "他の味方が、弱点が風属性の敵に通常攻撃を行った後、ブローニャは<u>追加攻撃</u>を行い、その敵に通常攻撃ダメージ<nobr>#1[i]%</nobr>分の風属性ダメージを与える、この効果はターンが回ってくるたびに1回発動できる。",
    "params": [
     0.8
@@ -486,7 +490,7 @@
    "id": 5,
    "iconPath": "63cf72168bbeb8a509ed797402c717c547c7dce3a446e340d632c1a5ca1df234",
    "artPath": "1e55ecf39ca980ceb1ac7ef9656e3ed34534339ff118c07e234f93bcc88cffc0",
-   "name": "<ruby>向<rt>む</rt></ruby>かう<ruby>所敵<rt>ところてき</rt></ruby>なし",
+   "name": "向かう所敵なし",
    "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
    "params": []
   },
@@ -494,7 +498,7 @@
    "id": 6,
    "iconPath": "43e66b6b4d4fd1d1b73b1c1566e8946d35891a754a07ca815eb011778badb59a",
    "artPath": "cc841f4ffd7d869b00f2d605f0956fbf47d69834f03f1703cfb2f454f104887e",
-   "name": "<ruby>気勢貫天<rt>きせいかんてん</rt></ruby>",
+   "name": "気勢貫天",
    "descHash": "戦闘スキルが付与する、指定した味方の与ダメージアップ効果の継続時間+<nobr>#1[i]</nobr>ターン。",
    "params": [
     1
@@ -526,7 +530,7 @@
    "break": "30",
    "energy": "20",
    "id": 635672,
-   "name": "<ruby>疾風<rt>しっぷう</rt></ruby>の<ruby>弾丸<rt>だんがん</rt></ruby>",
+   "name": "疾風の弾丸",
    "iconPath": "2f1e34c5cac68fc70c1e27e46ead80f3168f22572a907ddbfb39b11aa17f5678",
    "typeDescHash": "通常攻撃",
    "levelReq": 0,
@@ -687,7 +691,7 @@
    "break": "0",
    "energy": "30",
    "id": 920199,
-   "name": "<ruby>作戦再展開<rt>さくせんさいてんかい</rt></ruby>",
+   "name": "作戦再展開",
    "iconPath": "63cf72168bbeb8a509ed797402c717c547c7dce3a446e340d632c1a5ca1df234",
    "typeDescHash": "戦闘スキル",
    "levelReq": 0,
@@ -1007,7 +1011,7 @@
    "break": "0",
    "energy": "5",
    "id": 836258,
-   "name": "ベロブルグ<ruby>行進曲<rt>こうしんきょく</rt></ruby>",
+   "name": "ベロブルグ行進曲",
    "iconPath": "f77d80cd43a65ec8c258efea2ca10b950702501631dd79d87cf5f6a99d13b9b5",
    "typeDescHash": "必殺技",
    "levelReq": 0,
@@ -1327,7 +1331,7 @@
    "break": "30",
    "energy": "5",
    "id": 351145,
-   "name": "<ruby>先人一歩<rt>せんじんいっぽ</rt></ruby>",
+   "name": "先人一歩",
    "iconPath": "030623089e45da669ca6a9f4c06c0e98c94e7139d0e8f3cca188fdb1ac64bd87",
    "typeDescHash": "天賦",
    "levelReq": 0,
@@ -1624,7 +1628,7 @@
    "break": "0",
    "energy": "0",
    "id": 435086,
-   "name": "<ruby>旗<rt>はた</rt></ruby>の<ruby>下<rt>した</rt></ruby>で",
+   "name": "旗の下で",
    "iconPath": "ebab84fb498596b9abc1ac73e29e469d3e2a47dd88ef6610e7ef7062c2ffb6f0",
    "typeDescHash": "秘技",
    "levelReq": 0,
@@ -1721,7 +1725,7 @@
     "descHash": "通常攻撃の会心率が<nobr>100%</nobr>まで上がる。",
     "ultimateCost": 0,
     "id": 272877,
-    "name": "<ruby>号令<rt>ごうれい</rt></ruby>",
+    "name": "号令",
     "iconPath": "44a5c7f08fa468957f389e50661d80924f25044bd855f28a01b1604b08c0428f",
     "levelReq": 0,
     "promotionReq": 2,
@@ -1826,7 +1830,7 @@
     "descHash": "戦闘開始時、味方全体の防御力+<nobr>#2[i]%</nobr>、<nobr>#1[i]</nobr>ターン継続。",
     "ultimateCost": 0,
     "id": 272880,
-    "name": "<ruby>陣地<rt>じんち</rt></ruby>",
+    "name": "陣地",
     "iconPath": "347b83ae7b23b1d9b5eb467ebda968e8cc49560a749f7e952f2bb65aca2f1b5d",
     "levelReq": 0,
     "promotionReq": 4,
@@ -1971,7 +1975,7 @@
     "descHash": "ブローニャがフィールド上にいる時、味方全体の与ダメージ+<nobr>#1[i]%</nobr>。",
     "ultimateCost": 0,
     "id": 272879,
-    "name": "<ruby>軍勢<rt>ぐんぜい</rt></ruby>",
+    "name": "軍勢",
     "iconPath": "112e0760b74b7405ac646b3f400ba1d71d9c9e62e62edc39845b9ddadf334199",
     "levelReq": 0,
     "promotionReq": 6,
@@ -2750,7 +2754,7 @@
   "iconPath": "759bef0a8809f95c4e5facbd82dc0acb1d80d016113f6a214b06b7f1c648bd11",
   "altIconPath": "8b0071661cb7992d6010f02729fc318aceca620819ca6fad20b76f1126ba807c",
   "color": "#FFFFFF",
-  "name": "<ruby>調和<rt>ちょうわ</rt></ruby>",
+  "name": "調和",
   "rarity": 0
  },
  "pageId": "bronya"

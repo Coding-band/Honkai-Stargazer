@@ -446,7 +446,7 @@
    "iconPath": "39894370b97d0a199e1e5875105794cd98ef7c0d49c9a9c6ff1479bb79865ff0",
    "artPath": "f24816c76561552501e06482c2406a1736bc068e6a9a2545dc821252130b5c9c",
    "name": "Narrador/Narradora do Presente",
-   "descHash": "Aumenta a Chance de CRIT do aliado-alvo com \"Suporte da Mem\" em <nobr>#1[i]%</nobr>. Quando um aliado-alvo possui \"Suporte da Mem\", seu efeito também age no Memoespírito/Memomestre. Este efeito não pode acumular.",
+   "descHash": "Aumenta a Chance de CRIT de aliados-alvo com \"Suporte da Mem\" em <nobr>#1[i]%</nobr>. Quando um aliado-alvo possui \"Suporte da Mem\", o efeito de \"Suporte da Mem\" também se aplica ao Memoespírito/Memomestre do alvo. Este efeito não pode acumular.",
    "params": [
     0.1
    ]
@@ -456,7 +456,7 @@
    "iconPath": "78511ad03d670792037b3ae64e157c122a698c85d1f12cc24f67069cc177193f",
    "artPath": "0682c6f456353040539492e856a60b8264400b057901b3330a3ceda52a88d09b",
    "name": "Colhedor/Colhedora do Passado",
-   "descHash": "Quando Memoespíritos aliados (à parte da Mem) agem, a Desbravadora/o Desbravador regenera <nobr>#1[i]</nobr> de Energia. Este efeito pode ativar um máximo de <nobr>#2[i]</nobr> vez(es) por rodada. A contagem de ativação é reiniciada no início da rodada da Desbravadora/do Desbravador.",
+   "descHash": "Quando Memoespíritos aliados (exceto por Mem) agem, a Desbravadora/o Desbravador regenera <nobr>#1[i]</nobr> de Energia. Este efeito pode ativar um máximo de <nobr>#2[i]</nobr> vez(es) por rodada. A contagem de ativação é reiniciada no início da rodada da Desbravadora/do Desbravador.",
    "params": [
     8,
     1
@@ -968,12 +968,12 @@
   },
   {
    "tagHash": "Área",
-   "descHash": "<u>Invoca o Memoespírito</u> Mem. Concede <nobr>#2[i]%</nobr> de Carga a Mem, e em seguida permite que Mem cause Dano de <span style=\"color:#47C7FD;\">Gelo</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Mem a todos os inimigos.",
+   "descHash": "<u>Invoca o Memoespírito</u> Mem. Concede <nobr>#2[i]%</nobr> de Carga a Mem, e em seguida faz com que Mem cause Dano de <span style=\"color:#47C7FD;\">Gelo</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> do ATQ de Mem a todos os inimigos.",
    "ultimateCost": 160,
    "break": "60/hit",
    "energy": "5",
    "id": 22067902,
-   "name": "União, Mem!",
+   "name": "Vamos, Mem!",
    "iconPath": "d5dc14349176c4886ed3b4785dc1498316af3efdae149b1a66a1422460151bd4",
    "typeDescHash": "Perícia Suprema",
    "levelReq": 0,
@@ -1259,7 +1259,7 @@
    "break": "0",
    "energy": "0",
    "id": 22500522,
-   "name": "Companheiro/Companheira de Grande Poder",
+   "name": "Companheira Poderosa",
    "iconPath": "2e1b9b1e35b98370b984cbc07554f9ce58821ddf465db5785062fc8ff319ef02",
    "typeDescHash": "Talento",
    "levelReq": 0,
@@ -3149,7 +3149,7 @@
   },
   {
    "id": 158,
-   "title": "Perícia (Recordação)",
+   "title": "Perícia - 1 (Recordação)",
    "text": "Bora, eu escolho você!",
    "unlockRequirement": "Desbloqueia após trilhar um novo Caminho",
    "cnUrl": "0a57fb89c30b54b4e2e98d24aa009ffde0731aa2c5386cef5def4090f4d05207",
@@ -3159,7 +3159,7 @@
   },
   {
    "id": 159,
-   "title": "Perícia (Recordação)",
+   "title": "Perícia - 2 (Recordação)",
    "text": "A gente pode fazer tudo!",
    "unlockRequirement": "Desbloqueia após trilhar um novo Caminho",
    "cnUrl": "595f7034678a302a0318d72db97fe20198fa7e49ee8c903905c1ffcb2ee6c4df",
@@ -3500,7 +3500,7 @@
     "tag": "Área",
     "typeDesc": "Perícia do Memoespírito",
     "skillDesc": "Causa <nobr>#2[i]</nobr> instância(s) de Dano, com cada instância causando Dano de <span style=\"color:#47C7FD;\">Gelo</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> do ATQ de Mem a um inimigo aleatório. Por fim, causa Dano de <span style=\"color:#47C7FD;\">Gelo</span> igual a <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> do ATQ de Mem a todos os inimigos.",
-    "simpleSkillDesc": "Causa Dano de <span style=\"color:#47C7FD;\">Gelo</span> leve Ricocheteia por um total de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> vez(es). Causa Dano de <span style=\"color:#47C7FD;\">Gelo</span> leve a todos os inimigos no fim.",
+    "simpleSkillDesc": "Causa Dano de <span style=\"color:#47C7FD;\">Gelo</span> leve que Ricocheteia por um total de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> vez(es). Causa Dano de <span style=\"color:#47C7FD;\">Gelo</span> leve a todos os inimigos no fim.",
     "levelData": [
      {
       "params": [
@@ -3681,12 +3681,12 @@
    },
    {
     "id": 30266270,
-    "name": "Amigos! Juntos!",
+    "name": "Amigos! Unidos!",
     "icon": "1c6eef89c1e7934e197f345a715035b36c8cec61baa63758f8b20e2cc2415817",
     "tag": "Suporte",
     "typeDesc": "Talento do Memoespírito",
-    "skillDesc": "Aumenta o Dano CRIT de todos os aliados em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> do Dano CRIT de Mem + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>.<br />Se a Carga ainda não tiver chegado a <nobr>100%</nobr>, Mem usa \"Malvadões! Treta!\" automaticamente durante a ação. Quando a Carga chega a <nobr>100%</nobr>, Mem age imediatamente e pode selecionar uma unidade-aliada para utilizar \"Deixa! Eu Ajudar Você!\" na próxima ação.",
-    "simpleSkillDesc": "Aumenta o Dano CRIT de todos os aliados.<br />Durante a ação, usa ataques automaticamente. Se a Carga chegar a <nobr>100%</nobr>, age imediatamente e pode usar uma nova habilidade: <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Avança Adiante a ação <color=#f29e38ff>de um aliado e causa <color=#f29e38ff><u>Dano Verdadeiro</u></span>.",
+    "skillDesc": "Aumenta o Dano CRIT de todos os aliados em <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> do Dano CRIT de Mem + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>.<br />Se a Carga ainda não tiver chegado a <nobr>100%</nobr>, Mem usa \"Malvadões! Treta!\" automaticamente durante a ação. Quando a Carga chega a <nobr>100%</nobr>, Mem age imediatamente e pode selecionar uma unidade-aliada para utilizar \"Deixa Eu! Ajudar Você!\" na próxima ação.",
+    "simpleSkillDesc": "Aumenta o Dano CRIT de todos os aliados.<br />Durante a ação, usa ataques automaticamente. Se a Carga chegar a <nobr>100%</nobr>, age imediatamente e pode usar uma nova habilidade: <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Avança Adiante</span> a ação de um aliado e causa <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><u>Dano Verdadeiro</u></span>.",
     "levelData": [
      {
       "params": [
@@ -4027,7 +4027,7 @@
     "icon": "1c6eef89c1e7934e197f345a715035b36c8cec61baa63758f8b20e2cc2415817",
     "tag": "Aprimoramento",
     "typeDesc": "Talento do Memoespírito",
-    "skillDesc": "Quando Mem desaparece, a ação da/do Desbravador{F#a} é Avançada Adiante em <nobr>#1[i]%</nobr>.",
+    "skillDesc": "Quando Mem desaparece, a ação da Desbravadora/do Desbravador é Avançada Adiante em <nobr>#1[i]%</nobr>.",
     "simpleSkillDesc": "Ao desaparecer, Avança Adiante a ação da Desbravadora/do Desbravador.",
     "levelData": [
      {

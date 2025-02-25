@@ -34,6 +34,7 @@
     "疑似花萼「大鉱区」",
     "疑似花萼「工造司」",
     "疑似花萼「ホテル・『レバリー』-夢境」",
+    "疑似花萼「『囁きの密林』神悟の樹庭」",
     "クエスト報酬",
     "依頼報酬",
     "エンバー交換"
@@ -89,6 +90,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "「忘却の庭」"
    ]
   },
@@ -107,6 +109,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "デイリー訓練",
     "エンバー交換"
    ]
@@ -126,6 +129,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "依頼報酬"
    ]
   },
@@ -209,6 +213,7 @@
    "rewardPath": "/material/20170864",
    "comeFrom": [
     "均衡Lv.2に達した後、タイタンの眷属からドロップ",
+    "均衡Lv.2に達した後、晨昏の奇獣からドロップ",
     "「万能合成マシン」- 素材合成",
     "「階差宇宙」で敵からドロップ",
     "「模擬宇宙」で敵からドロップ",
@@ -228,6 +233,7 @@
    "rewardPath": "/material/20389475",
    "comeFrom": [
     "均衡Lv.4に達した後、タイタンの眷属からドロップ",
+    "均衡Lv.4に達した後、晨昏の奇獣からドロップ",
     "「万能合成マシン」- 素材合成",
     "「階差宇宙」で敵からドロップ",
     "「模擬宇宙」で敵からドロップ",
@@ -247,11 +253,13 @@
    "rewardPath": "/material/20445700",
    "comeFrom": [
     "タイタンの眷属からドロップ",
+    "晨昏の奇獣からドロップ",
     "「階差宇宙」で敵からドロップ",
     "「模擬宇宙」で敵からドロップ",
     "依頼報酬",
     "エンバー交換",
-    "「万能合成マシン」- 素材交換"
+    "「万能合成マシン」- 素材交換",
+    "疑似花萼（金）"
    ]
   }
  },
@@ -444,8 +452,8 @@
    "id": 1,
    "iconPath": "95c8419ac8fce4bf200e0db1948e34c605eeadec7a4c91df590c673f117a0896",
    "artPath": "23f81b50a5e99ee454efedc5dd4aaade0e18c16f8c43c0d3da507ea6d5ce3f69",
-   "name": "<ruby>金<rt>きん</rt></ruby>の<ruby>星<rt>ほし</rt></ruby>の<ruby>軌道<rt>きどう</rt></ruby>を<ruby>漂<rt>ただよ</rt></ruby>って",
-   "descHash": "「隙を縫う糸」状態の敵の受けるダメージ+<nobr>#1[i]%</nobr>。アグライアまたはラフトラが「隙を縫う糸」状態の敵を攻撃した後、さらにEPを<nobr>#2[i]</nobr>回復する。",
+   "name": "金の星の軌道を漂って",
+   "descHash": "「隙を縫う糸」状態の敵の受けるダメージ+<nobr>#1[i]%</nobr>。アグライアまたは「ラフトラ」が「隙を縫う糸」状態の敵を攻撃した後、さらにEPを<nobr>#2[i]</nobr>回復する。",
    "params": [
     0.15,
     20
@@ -455,8 +463,8 @@
    "id": 2,
    "iconPath": "97d0a7b5af567b11fab848e1eb0b4c4a795cfb6e8d5d525cf92fcff1c9437fec",
    "artPath": "4c7131d6d8ad145d77df6a80c49a295b66e5399676c9e8b71e9a9bb5cf41372b",
-   "name": "<ruby>運命<rt>うんめい</rt></ruby>の<ruby>瞼<rt>まぶた</rt></ruby>を<ruby>行<rt>ゆ</rt></ruby>く<ruby>舟<rt>ふね</rt></ruby>",
-   "descHash": "アグライアまたはラフトラが行動する時、アグライアまたはラフトラの与えるダメージが敵の防御力を<nobr>#1[i]%</nobr>無視する。この効果は最大で<nobr>#2[i]</nobr>層累積でき、アグライアとラフトラ以外の任意のユニットがスキルを発動する時まで継続する。",
+   "name": "運命の瞼を行く舟",
+   "descHash": "アグライアまたは「ラフトラ」が行動する時、アグライアとラフトラの与えるダメージが敵の防御力を<nobr>#1[i]%</nobr>無視する。この効果は最大で<nobr>#2[i]</nobr>層累積でき、アグライアとラフトラ以外の任意のユニットがスキルを発動する時まで継続する。",
    "params": [
     0.14,
     3
@@ -466,7 +474,7 @@
    "id": 3,
    "iconPath": "69c62a0fc8a38475f24e66407a39902c89c280fa9bb5dbb3ea41ffa7c1fd8602",
    "artPath": "b426c635784ea8af0e24f7bd564258d778ab6e0ea85a728661717e0cf04a57b1",
-   "name": "<ruby>華麗<rt>かれい</rt></ruby>な<ruby>露<rt>つゆ</rt></ruby>の<ruby>賜物<rt>たまもの</rt></ruby>",
+   "name": "華麗な露の賜物",
    "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。精霊天賦のLv.+1、最大Lv.<nobr>10</nobr>まで。",
    "params": []
   },
@@ -474,8 +482,8 @@
    "id": 4,
    "iconPath": "b847b4ecf9528a94928e6fe19a89c8c43827ad74f0150cd98df7c6942f355aa6",
    "artPath": "3289e695e2df837df9d597bd146ef6e877a76ffba2809e00581980bedbe937a6",
-   "name": "<ruby>大理石<rt>だいりせき</rt></ruby>の<ruby>内<rt>うち</rt></ruby>なる<ruby>輝<rt>かがや</rt></ruby>き",
-   "descHash": "精霊天賦の速度アップ効果の累積上限+<nobr>#1[i]</nobr>層。ラフトラはアグライアが攻撃を行った後にも、精霊天賦の速度アップ効果を獲得できる。",
+   "name": "大理石の内なる輝き",
+   "descHash": "精霊天賦の速度アップ効果の累積上限+<nobr>#1[i]</nobr>層。「ラフトラ」はアグライアが攻撃を行った後にも、精霊天賦の速度アップ効果を獲得できる。",
    "params": [
     1,
     2
@@ -485,7 +493,7 @@
    "id": 5,
    "iconPath": "c2555a8ced35437413bbe00b83fbadab3513162082077b774a5b0272ba36030f",
    "artPath": "dfaf7874e5ddc4549c12fbd9efaa0c9f1e3746255549b3d7f7129c3a082f7ad6",
-   "name": "<ruby>漆黒<rt>しっこく</rt></ruby>の<ruby>苦難<rt>くなん</rt></ruby>の<ruby>織<rt>お</rt></ruby>り<ruby>手<rt>て</rt></ruby>",
+   "name": "漆黒の苦難の織り手",
    "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。精霊スキルのLv.+1、最大Lv.<nobr>10</nobr>まで。",
    "params": []
   },
@@ -493,8 +501,8 @@
    "id": 6,
    "iconPath": "47871797bc02a8da3379ea1385cdb16abc13101bf261c461a1d2a10b7c2ec0e4",
    "artPath": "5c7f2a5da6fd7be6c3ab7f8a6fd1185ff96c75b49f82edcbe789c59a9701a408",
-   "name": "<ruby>空虚<rt>くうきょ</rt></ruby>で<ruby>無常<rt>むじょう</rt></ruby>なる<ruby>金糸<rt>きんし</rt></ruby>",
-   "descHash": "アグライアが「至高の姿」状態の時、自身とラフトラの雷属性<u>耐性貫通</u>+<nobr>#1[i]%</nobr>。<br />また、アグライアの速度が<nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>を超える時、自身の<u>連携攻撃</u>ダメージ+<nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr>/<nobr>#4[i]%</nobr>。<br />ラフトラの速度が<nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>を超える時、自身の<u>連携攻撃</u>ダメージ+<nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr>/<nobr>#4[i]%</nobr>。",
+   "name": "空虚で無常なる金糸",
+   "descHash": "アグライアが「至高の姿」状態の時、自身と「ラフトラ」の雷属性<u>耐性貫通</u>+<nobr>#1[i]%</nobr>。<br />この状態中、アグライアの速度が<nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>を超える時、自身の<u>連携攻撃</u>ダメージ+<nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr>/<nobr>#4[i]%</nobr>。<br />さらに、ラフトラの速度が<nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>を超える時、自身の<u>連携攻撃</u>ダメージ+<nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr>/<nobr>#4[i]%</nobr>。",
    "params": [
     0.2,
     0.1,
@@ -530,7 +538,7 @@
    "break": "30",
    "energy": "20",
    "id": 14386037,
-   "name": "サイフォスの<ruby>蜜<rt>みつ</rt></ruby>",
+   "name": "サイフォスの蜜",
    "iconPath": "d90b52249801dd35a8bdf8522d2c9f34fbbab19f64e63d63ca4c73d78b1da344",
    "typeDescHash": "通常攻撃",
    "levelReq": 0,
@@ -695,12 +703,12 @@
   },
   {
    "tagHash": "召喚",
-   "descHash": "ラフトラのHPを最大HP<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分回復する。ラフトラがフィールド上にいない場合、<u>記憶の精霊</u>ラフトラを<u>召喚</u>し、自身が即座に行動する。",
+   "descHash": "「ラフトラ」のHPを最大HP<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分回復する。ラフトラがフィールド上にいない場合、<u>記憶の精霊</u>ラフトラを<u>召喚</u>し、自身が即座に行動する。",
    "ultimateCost": 0,
    "break": "0",
    "energy": "20",
    "id": 14671107,
-   "name": "<ruby>掲<rt>かか</rt></ruby>げよ、<ruby>昇華<rt>しょうか</rt></ruby>せし<ruby>名<rt>な</rt></ruby>を",
+   "name": "掲げよ、昇華せし名を",
    "iconPath": "69c62a0fc8a38475f24e66407a39902c89c280fa9bb5dbb3ea41ffa7c1fd8602",
    "typeDescHash": "戦闘スキル",
    "levelReq": 0,
@@ -1000,12 +1008,12 @@
   },
   {
    "tagHash": "強化",
-   "descHash": "<u>記憶の精霊</u>「ラフトラ」を<u>召喚</u>する。ラフトラがフィールド上にいる場合、そのHPを最大値まで回復する。アグライアは「至高の姿」状態に入り、即座に行動する。<br />「至高の姿」状態のアグライアは、ラフトラの天賦の速度アップ効果を獲得する（層数はラフトラと同じ）。1層につき、自身の速度+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>。通常攻撃「サイフォスの蜜」が「剣先より千の口付けを」に強化され、戦闘スキルが発動できなくなる。また、ラフトラが<u>行動制限系デバフ</u>に抵抗するようになる。<br />アクションバーにカウントダウンが出現する。カウントダウンの速度は<nobr>#4[i]</nobr>に固定される。カウントダウンの間に必殺技を発動すると、カウントダウンがリセットされる。カウントダウンのターンが回ってきた時、ラフトラは自滅し、アグライアは「至高の姿」状態を解除する。",
+   "descHash": "<u>記憶の精霊</u>「ラフトラ」を<u>召喚</u>する。なお、ラフトラがすでにフィールド上にいる場合、そのHPを最大値まで回復する。アグライアは「至高の姿」状態に入り、即座に行動する。<br />「至高の姿」状態のアグライアは速度アップ効果を獲得する。この速度アップ効果の層数は、ラフトラの精霊天賦による速度アップ効果の層数と同数になる。1層につき、自身の速度+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>。<br />通常攻撃「サイフォスの蜜」が「剣先より千の口付けを」に強化され、戦闘スキルが発動できなくなる。また、ラフトラが<u>行動制限系デバフ</u>に抵抗するようになる。<br />アクションバーにカウントダウンが出現する。カウントダウンの速度は<nobr>#4[i]</nobr>に固定される。カウントダウンの間に必殺技を発動すると、カウントダウンがリセットされる。カウントダウンのターンが回ってきた時、ラフトラは退場し、アグライアは「至高の姿」状態を解除する。",
    "ultimateCost": 350,
    "break": "0",
    "energy": "5",
    "id": 14364461,
-   "name": "<ruby>共<rt>とも</rt></ruby>に<ruby>舞<rt>ま</rt></ruby>え、<ruby>運命<rt>うんめい</rt></ruby>のラフトラ",
+   "name": "共に舞え、運命のラフトラ",
    "iconPath": "2171d9d0f47514aeb598bf61b2da2ece6e598850f91b484a8285ac934b053915",
    "typeDescHash": "必殺技",
    "levelReq": 0,
@@ -1350,12 +1358,12 @@
   },
   {
    "tagHash": "強化",
-   "descHash": "記憶の精霊「ラフトラ」の初期速度は、アグライアの速度の<nobr>#4[i]%</nobr>分となり、初期最大HPは、アグライアの最大HP<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span>分+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#6[i]</nobr></span>となる。<br />ラフトラがフィールド上にいる場合、アグライアが攻撃を行う時、敵に「隙を縫う糸」状態を付与する。「隙を縫う糸」状態の敵を攻撃した後、追加でアグライアの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性<u>付加ダメージ</u>を与える。「隙を縫う糸」状態は最後に付与されたターゲットにのみ効果を発揮する。",
+   "descHash": "記憶の精霊「ラフトラ」の初期速度は、アグライアの速度の<nobr>#4[i]%</nobr>分となり、初期最大HPは、アグライアの最大HP<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span>分+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#6[i]</nobr></span>となる。<br />ラフトラがフィールド上にいる場合、アグライアが攻撃を行う時、敵に「隙を縫う糸」状態を付与する。また、「隙を縫う糸」状態の敵を攻撃した後、追加でアグライアの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性<u>付加ダメージ</u>を与える。「隙を縫う糸」状態は最後に付与されたターゲットにのみ効果を発揮する。",
    "ultimateCost": 0,
    "break": "0",
    "energy": "10",
    "id": 14645560,
-   "name": "<ruby>薔薇色<rt>ばらいろ</rt></ruby>の<ruby>指先<rt>ゆびさき</rt></ruby>",
+   "name": "薔薇色の指先",
    "iconPath": "ecda2198e2a2e8acdc26133a3b2c49bb8324f07345fc512f386003a3bb4cc5cb",
    "typeDescHash": "天賦",
    "levelReq": 0,
@@ -1722,12 +1730,12 @@
   },
   {
    "tagHash": "",
-   "descHash": "<u>記憶の精霊</u>「ラフトラ」を召喚し、共に攻撃する。戦闘に入った後、EPを<nobr>#2[i]</nobr>回復し、敵全体にアグライアの攻撃力<nobr>#1[i]%</nobr>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージを与え、ランダムな敵を「隙を縫う糸」状態にする。",
+   "descHash": "<u>記憶の精霊</u>「ラフトラ」を召喚し、共に攻撃する。戦闘に入った後、EPを<nobr>#2[i]</nobr>回復し、敵全体にアグライアの攻撃力<nobr>#1[i]%</nobr>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージを与え、ランダムな敵に「隙を縫う糸」状態を付与する。",
    "ultimateCost": 0,
    "break": "60",
    "energy": "0",
    "id": 14350307,
-   "name": "<ruby>星<rt>ほし</rt></ruby>を<ruby>纏<rt>まと</rt></ruby>いし<ruby>烈剣<rt>れっけん</rt></ruby>",
+   "name": "星を纏いし烈剣",
    "iconPath": "9c132e5da8e72a53cb52acc7ca77a59c97ccef6377061ee3b9463c7e544fb4da",
    "typeDescHash": "秘技",
    "levelReq": 0,
@@ -1747,12 +1755,12 @@
   },
   {
    "tagHash": "拡散攻撃",
-   "descHash": "アグライアとラフトラが<u>連携攻撃</u>を行い、敵単体にアグライアの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージとラフトラの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージを与え、隣接する敵にアグライアの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージとラフトラの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージを与える。<br />なお、「剣先より千の口付けを」はSPを回復できない。",
+   "descHash": "アグライアと「ラフトラ」が<u>連携攻撃</u>を行い、指定した敵単体にアグライアの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージとラフトラの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージを与え、隣接する敵にアグライアの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージとラフトラの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>分の<span style=\"color:#c75de2;\">雷</span>属性ダメージを与える。<br />なお、「剣先より千の口付けを」はSPを回復できない。",
    "ultimateCost": 0,
    "break": "60/hit",
    "energy": "20",
    "id": 14598649,
-   "name": "<ruby>剣先<rt>けんさき</rt></ruby>より<ruby>千<rt>せん</rt></ruby>の<ruby>口付<rt>くちつ</rt></ruby>けを",
+   "name": "剣先より千の口付けを",
    "iconPath": "2843b368a62f0a6cb90471b58580293220bde7aff58049bc02dd49b02f25f447",
    "typeDescHash": "通常攻撃",
    "levelReq": 0,
@@ -1930,78 +1938,6 @@
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
-    },
-    {
-     "params": [
-      1.4,
-      0.56,
-      1.4,
-      0.56
-     ],
-     "level": 10,
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "params": [
-      1.4,
-      0.56,
-      1.4,
-      0.56
-     ],
-     "level": 11,
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "params": [
-      1.4,
-      0.56,
-      1.4,
-      0.56
-     ],
-     "level": 12,
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "params": [
-      1.4,
-      0.56,
-      1.4,
-      0.56
-     ],
-     "level": 13,
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "params": [
-      1.4,
-      0.56,
-      1.4,
-      0.56
-     ],
-     "level": 14,
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "params": [
-      1.4,
-      0.56,
-      1.4,
-      0.56
-     ],
-     "level": 15,
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
     }
    ]
   },
@@ -2012,7 +1948,7 @@
    "break": "0",
    "energy": "20",
    "id": 14291863,
-   "name": "<ruby>掲<rt>かか</rt></ruby>げよ、<ruby>昇華<rt>しょうか</rt></ruby>せし<ruby>名<rt>な</rt></ruby>を",
+   "name": "掲げよ、昇華せし名を",
    "iconPath": "69c62a0fc8a38475f24e66407a39902c89c280fa9bb5dbb3ea41ffa7c1fd8602",
    "typeDescHash": "戦闘スキル",
    "levelReq": 0,
@@ -2355,10 +2291,10 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "「至高の姿」状態の時、アグライアおよびラフトラの攻撃力が、アグライアの速度<nobr>#1[i]%</nobr>分+ラフトラの速度<nobr>#2[i]%</nobr>分アップする。",
+    "descHash": "「至高の姿」状態の時、アグライアおよび「ラフトラ」の攻撃力が、アグライアの速度<nobr>#1[i]%</nobr>分+ラフトラの速度<nobr>#2[i]%</nobr>分アップする。",
     "ultimateCost": 0,
     "id": 12779200,
-    "name": "<ruby>短見<rt>たんけん</rt></ruby>への<ruby>裁<rt>さば</rt></ruby>き",
+    "name": "短見への裁き",
     "iconPath": "f89de0100444d75323b51be4517b72e2c91b970eb0bd38f5a34fc6816642eb47",
     "levelReq": 0,
     "promotionReq": 2,
@@ -2462,10 +2398,10 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "ラフトラが退場する時、精霊天賦の速度アップ効果の層数を最大で<nobr>#1[i]</nobr>層まで保持する。ラフトラが再度召喚された時、保持していた層数分の速度アップ効果を獲得する。",
+    "descHash": "「ラフトラ」が退場する時、精霊天賦の速度アップ効果の層数を最大で<nobr>#1[i]</nobr>層まで保持する。ラフトラが再度召喚された時、保持していた層数分の速度アップ効果を獲得する。",
     "ultimateCost": 0,
     "id": 13029630,
-    "name": "<ruby>最後<rt>さいご</rt></ruby>の<ruby>織運<rt>しきうん</rt></ruby>",
+    "name": "最後の織運",
     "iconPath": "99120ee7d5f2d22341360ad4119985b23c9b2d80b72d8382c3cf0c5f8fec31eb",
     "levelReq": 0,
     "promotionReq": 4,
@@ -2610,7 +2546,7 @@
     "descHash": "戦闘開始時、自身のEPが<nobr>#1[i]%</nobr>未満の場合、EPを<nobr>#2[i]%</nobr>まで回復する。",
     "ultimateCost": 0,
     "id": 12722920,
-    "name": "<ruby>刹那<rt>せつな</rt></ruby>の<ruby>陽光<rt>ようこう</rt></ruby>",
+    "name": "刹那の陽光",
     "iconPath": "a805b5c05064a8c7415b18834abaf2133f54b8ac5d756d49226434e24e6a397c",
     "levelReq": 0,
     "promotionReq": 6,
@@ -2801,7 +2737,7 @@
   {
    "id": 6,
    "title": "趣味",
-   "text": "衣服は隔たり。身体だけでなく、心も衣服によって外部と分かたれている——つまり、脱衣は両方の隔たりを取り去ることができる行為。神聖なバルネアではお互いに胸筋を開いて、水のように交ざり合い未来へと流れていけるのです。",
+   "text": "衣服は隔たり。身体だけでなく、心も衣服によって外部と分かたれている——つまり、脱衣は両方の隔たりを取り去ることができる行為。神聖なバルネアではお互いに胸襟を開いて、水のように交ざり合い未来へと流れていけるのです。",
    "unlockRequirement": "",
    "cnUrl": "cbf2ba49ed578d046d5c42b0aba5d50b32e04cfce9d9780f6986d456cee201ee",
    "jpUrl": "ce5145bad1d3c39bfac66fc5c5c46cbea4374d3b69d124c82bcc331567187c57",
@@ -2927,6 +2863,26 @@
    "jpUrl": "7cd848a2322da7be0991591dbdef5c6cf2ffaefcc03e8d6155d69b2ae0f969f0",
    "enUrl": "2d168c2b3b17b755e71a6f8805cebde906f3896176d1f2e5cd6b518e62e270ab",
    "krUrl": "00c42559133bf940010f584d2340e5a3ed9239d0a21ece3b79db0d21eae244a2"
+  },
+  {
+   "id": 19,
+   "title": "パーティ編成・トリビー",
+   "text": "師匠、私たちの行く道を導いてください。",
+   "unlockRequirement": "",
+   "cnUrl": "3153de4cb99810a2fa1da85b5154e4ebe71b100c1da8a0560a677d09e85e1a50",
+   "jpUrl": "8ff1969c6906909e78a887e197a25c1690460857dc943c1de4b3c6a544a60c8e",
+   "enUrl": "61e1d104cc0c3104869c92aab3960552481b4298feaa052315e39ea6029ec824",
+   "krUrl": "9b25d3bdc88fae6c853300027f37febe2310759b07938f9600ed80c5d201c841"
+  },
+  {
+   "id": 20,
+   "title": "パーティ編成・モーディス",
+   "text": "少なくとも、今の私たちは同じものを目指しています。",
+   "unlockRequirement": "",
+   "cnUrl": "8f1653ea69733999a13abf6f1df23aab3d3573d022ee2f8d818581ce73f4a8b8",
+   "jpUrl": "5181eafc60003a6e764de60597fd4df6d6a70c2f67899c1b4c80cda1c66a3c73",
+   "enUrl": "c7cc6f3a246b91798caf431e6de60f18534535c9287aae6f848a0aabcb338b14",
+   "krUrl": "8d15b1cd3b1d5e3885aeb3e0e1b6ccce97cdd74eaa23440b87fe1d17600f70a0"
   },
   {
    "id": 51,
@@ -3201,7 +3157,7 @@
   {
    "id": 78,
    "title": "町に戻る",
-   "text": "時間があるのなら、<ruby>バニオ<rt>入浴</rt></ruby>に行くのはどうでしょう。",
+   "text": "時間があるのなら、バニオに行くのはどうでしょう。",
    "unlockRequirement": "",
    "cnUrl": "8f18d9af6de46780226daed03d8bfc52fddecf76b4650da87b2ad5b9e88995d6",
    "jpUrl": "2473f194d9c8f2699af952a30c170cc70864a2a9a422de4f3a984c034bfac79c",
@@ -3227,12 +3183,12 @@
   },
   {
    "title": "ストーリー・3",
-   "text": "彼らは言う、あれは「火追い」の旅路であると。彼らはこうも言う、あれは「喪失」の旅路であると。<br /><br />彼女は漠然と何か大切なものが失われていくのを感じたが、それを気にする余裕はなかった。自分よりも遥かに苦しい喪失を、前を歩く人々が経験していたからだ。<br />「ここはあなたに任せた、アグライア」<br />「しっかり」<br />「また会おう」<br />別れの時、そんなふうに言ったのはなぜなのか、彼女にはわからない。<br />彼女に残されたのは深海から微かに聞こえてくる音楽と、風と共に去った大地の足跡、そして——決着のつかない戦いだけだった。<br /><br />「繊細な絹糸がどのようにして運命の重圧に耐えると言うのでしょう」<br />彼女の傍にいるのは「ラフトラ」だけだったが、かつて華やかだったクローゼットは今や空になっていた。<br />「高貴なお嬢様」が政治という戦場に足を踏み入れたことで、元老院では議論が巻き起こり、周囲の者は次々に冷笑した。そのような中、彼女は自分の計画を立て始める。<br />指先の金糸でオクヘイマを覆う網を織ると、その耳は街の片隅で憩うエンドモの呼吸一つでさえ逃さないものとなった。<br /><br />やがて金糸は鋭さを増し、初めて鮮血の臭いを帯びる。",
+   "text": "人々は言う、あれは「火追い」の旅路であると。人々はこうも言う、あれは「喪失」の旅路であると。<br /><br />彼女は漠然と何か大切なものが失われていくのを感じたが、それを気にする余裕はなかった。自分よりも遥かに苦しい喪失を、前を歩く人々が経験していたからだ。<br />「ここはあなたに任せた、アグライア」<br />「しっかり」<br />「また会おう」<br />別れの時、そんなふうに言ったのはなぜなのか、彼女にはわからない。<br />彼女に残されたのは深海から微かに聞こえてくる音楽と、風と共に去った大地の足跡、そして——決着のつかない戦いだけだった。<br /><br />「繊細な絹糸がどのようにして運命の重圧に耐えると言うのでしょう」<br />彼女の傍にいるのは「ラフトラ」だけだったが、かつて華やかだったクローゼットは今や空になっていた。<br />「高貴なお嬢様」が政治という戦場に足を踏み入れたことで、元老院では議論が巻き起こり、周囲の者は次々に冷笑した。そのような中、彼女は自分の計画を立て始める。<br />指先の金糸でオクヘイマを覆う網を織ると、その耳は街の片隅で憩うエンドモの呼吸一つでさえ逃さないものとなった。<br /><br />やがて金糸は鋭さを増し、初めて鮮血の臭いを帯びる。",
    "unlockRequirement": "キャラLv.<nobr>60</nobr>で解放"
   },
   {
    "title": "ストーリー・4",
-   "text": "今日に至るまで、神性を浴びた織機は回り続け、多くのラフトラが空中を舞った。彼らがなぜ舞うのか、なぜ動きを止めるのか、知る者はいない。<br />「ラフトラ、広場へ向かいなさい。遠路はるばる客人がお越しになったようです……」<br /><br />この光景は幾度となく繰り返されてきた。かつては彼女が手を差し伸べていたが、今は他の者が彼女を求めている。<br />あの時、白銀の鎧を纏った青年が、あどけない顔を憎しみと血痕で汚してそこに立っていた。<br />紫のドレスを着た少女は沈黙したまま、行く先々で花の深い香りが混ざった冷たい死の跡を残していった。<br />そして身軽な盗賊は気まぐれな猫のようにオクヘイマから姿を消したが、彼女はそれを面白いだけのイタズラだと思っていた。<br />柔らかな日差しのように温かな少女もまた、彼女の傷を癒したことがある。<br />そして異邦の王子や、高慢な学者も——<br />「1本の糸で足りないのならば、数えきれないほどの糸で天穹を引き上げればいい……」<br />彼女はさまざまな運命の糸を手繰り寄せ、強靭な網を編み上げる。それでタイタンの火種を覆い、新世界で再びそれらを燃え上がらせるのだ。<br />「黄金裔たちは、共に輝かしい未来を紡ぐでしょう」<br /><br />時間がある時、彼女は窓辺に座り、賑わうオクヘイマの街並みを眺める。<br />「ラフトラ、もう1杯温かいお茶を淹れてください」<br />彼女はわずかに寒さを感じていたが、かつての悲しみを思い出して震えることはもうなくなった。<br />形のない金糸が彼女の指先から外へと伸びる。街の脈拍、鼓動、雨風の音、それらすべてが彼女の指先で躍動し、震え、まるで浪漫の神が生み出すインスピレーションのように、新たな生命の息吹を育んでいる——<br />彼女はしばらく眺めた後、少女時代に仕立てた華やかな衣装をついにしまった。<br />「たとえ最後には質素な衣に身を包むしかないとしても……」<br /><br />言い伝えでは「モネータ」の信徒は皆、一生分の労力を費やして自分が「最も美しい」と思う作品を神に奉げるのだという。<br />彼女はもう長いこと美しい服を織っていない。<br />だが、運命を織ることはこれまで一度もやめたことがなかった。",
+   "text": "今日に至るまで、神性を浴びた織機は回り続け、多くのラフトラが空中を舞った。なぜ舞うのか、なぜ動きを止めるのか、それを知る者はいない。<br />「ラフトラ、広場へ向かいなさい。遠路はるばる客人がお越しになったようです……」<br /><br />この光景は幾度となく繰り返されてきた。かつては彼女が手を差し伸べていたが、今は他の者が彼女を求めている。<br />あの時、白銀の鎧を纏った青年が、あどけない顔を憎しみと血痕で汚してそこに立っていた。<br />紫のドレスを着た少女は沈黙したまま、行く先々で花の深い香りが混ざった冷たい死の跡を残していった。<br />そして身軽な盗賊は気まぐれな猫のようにオクヘイマから姿を消したが、彼女はそれを面白いだけのイタズラだと思っていた。<br />柔らかな日差しのように温かな少女もまた、彼女の傷を癒したことがある。<br />そして異邦の王子や、高慢な学者も——<br />「1本の糸で足りないのならば、数えきれないほどの糸で天穹を引き上げればいい……」<br />彼女はさまざまな運命の糸を手繰り寄せ、強靭な網を編み上げる。それでタイタンの火種を覆い、新世界で再びそれらを燃え上がらせるのだ。<br />「黄金裔たちは、共に輝かしい未来を紡ぐでしょう」<br /><br />時間がある時、彼女は窓辺に座り、賑わうオクヘイマの街並みを眺める。<br />「ラフトラ、もう1杯温かいお茶を淹れてください」<br />彼女はわずかに寒さを感じていたが、かつての悲しみを思い出して震えることはもうなくなった。<br />形のない金糸が彼女の指先から外へと伸びる。街の脈拍、鼓動、雨風の音、それらすべてが彼女の指先で躍動し、震え、まるで浪漫の神が生み出すインスピレーションのように、新たな生命の息吹を育んでいる——<br />彼女はしばらく眺めた後、少女時代に仕立てた華やかな衣装をついにしまった。<br />「たとえ最後には質素な衣に身を包むしかないとしても……」<br /><br />言い伝えでは「モネータ」の信徒は皆、一生分の労力を費やして自分が「最も美しい」と思う作品を神に奉げるのだという。<br />彼女はもう長いこと美しい服を織っていない。<br />だが、運命を織ることはこれまで一度もやめたことがなかった。",
    "unlockRequirement": "キャラLv.<nobr>80</nobr>で解放"
   }
  ],
@@ -3343,12 +3299,16 @@
   "sCoinId": 29328,
   "rankConfig": {
    "3": {
+    "8535737": 1,
+    "8541508": 1,
+    "8842377": 1,
     "14291863": 2,
     "14386037": 1,
     "14598649": 1,
     "14671107": 2
    },
    "5": {
+    "8647019": 1,
     "14364461": 2,
     "14645560": 2
    }
@@ -3362,7 +3322,7 @@
   "skills": [
    {
     "id": 8647019,
-    "name": "サイフォスの<ruby>罠<rt>わな</rt></ruby>",
+    "name": "サイフォスの罠",
     "icon": "ac07f1f601ea13987c1f07b131d2cc24d64c9d35eee4314b668670c996251b64",
     "tag": "拡散攻撃",
     "typeDesc": "精霊スキル",
@@ -3548,11 +3508,11 @@
    },
    {
     "id": 8541508,
-    "name": "<ruby>涙<rt>なみだ</rt></ruby>で<ruby>鍛<rt>きた</rt></ruby>えし<ruby>匠<rt>たくみ</rt></ruby>の<ruby>躯<rt>むくろ</rt></ruby>",
+    "name": "涙で鍛えし匠の躯",
     "icon": "2367834d571302366f81669a8d9f44d60b628b8c4da466c3d8c7174cf2135ab2",
     "tag": "強化",
     "typeDesc": "精霊天賦",
-    "skillDesc": "「隙を縫う糸」状態の敵を攻撃した後、自身の速度+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]</nobr></span>。この効果は最大で<nobr>#3[i]</nobr>層累積できる。<br />ラフトラは行動時に自動で「サイフォスの罠」を発動し、「隙を縫う糸」状態の敵を優先的に攻撃する。",
+    "skillDesc": "「隙を縫う糸」状態の敵を攻撃した後、自身の速度+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]</nobr></span>。この効果は最大で<nobr>#3[i]</nobr>層累積できる。<br />「ラフトラ」は行動時に自動で「サイフォスの罠」を発動し、「隙を縫う糸」状態の敵を優先的に攻撃する。",
     "simpleSkillDesc": "「隙を縫う糸」状態の敵を攻撃した後、<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">自身の速度がアップ</span>する。行動時に自動で攻撃を行う。なお、「隙を縫う糸」状態の敵を優先的に攻撃する。",
     "levelData": [
      {
@@ -3734,7 +3694,7 @@
    },
    {
     "id": 8535737,
-    "name": "<ruby>過<rt>す</rt></ruby>ぎ<ruby>去<rt>さ</rt></ruby>りし<ruby>夏影<rt>なつかげ</rt></ruby>",
+    "name": "過ぎ去りし夏影",
     "icon": "2367834d571302366f81669a8d9f44d60b628b8c4da466c3d8c7174cf2135ab2",
     "tag": "強化",
     "typeDesc": "精霊天賦",
@@ -3900,11 +3860,11 @@
    },
    {
     "id": 8842377,
-    "name": "<ruby>枯<rt>か</rt></ruby>れ<ruby>草<rt>くさ</rt></ruby>の<ruby>息吹<rt>いぶき</rt></ruby>",
+    "name": "枯れ草の息吹",
     "icon": "2367834d571302366f81669a8d9f44d60b628b8c4da466c3d8c7174cf2135ab2",
     "tag": "強化",
     "typeDesc": "精霊天賦",
-    "skillDesc": "ラフトラが退場する時、アグライアのEPを<nobr>#1[i]</nobr>回復する。",
+    "skillDesc": "「ラフトラ」が退場する時、アグライアのEPを<nobr>#1[i]</nobr>回復する。",
     "simpleSkillDesc": "退場する時、アグライアのEPを回復する。",
     "levelData": [
      {
@@ -4083,7 +4043,7 @@
     "children": [],
     "embedServantSkill": {
      "id": 13331530,
-     "name": "サイフォスの<ruby>罠<rt>わな</rt></ruby>",
+     "name": "サイフォスの罠",
      "iconPath": "ac07f1f601ea13987c1f07b131d2cc24d64c9d35eee4314b668670c996251b64",
      "levelReq": 0,
      "promotionReq": 0,
@@ -4205,7 +4165,7 @@
     "children": [],
     "embedServantSkill": {
      "id": 13573671,
-     "name": "<ruby>涙<rt>なみだ</rt></ruby>で<ruby>鍛<rt>きた</rt></ruby>えし<ruby>匠<rt>たくみ</rt></ruby>の<ruby>躯<rt>むくろ</rt></ruby>",
+     "name": "涙で鍛えし匠の躯",
      "iconPath": "2367834d571302366f81669a8d9f44d60b628b8c4da466c3d8c7174cf2135ab2",
      "levelReq": 0,
      "promotionReq": 0,
@@ -4339,7 +4299,7 @@
   "iconPath": "e9618e3794a5f07ac79ad4423907c20ac4375fbe3117ff3a7795dce0d677c13d",
   "altIconPath": "86ccf274abad05b1edab1d7d4aef6d9e90214891ee751354271802b8b77369e2",
   "color": "#FFFFFF",
-  "name": "<ruby>記憶<rt>きおく</rt></ruby>",
+  "name": "記憶",
   "rarity": 0
  },
  "pageId": "aglaea"

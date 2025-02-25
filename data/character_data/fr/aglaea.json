@@ -445,7 +445,7 @@
    "iconPath": "95c8419ac8fce4bf200e0db1948e34c605eeadec7a4c91df590c673f117a0896",
    "artPath": "23f81b50a5e99ee454efedc5dd4aaade0e18c16f8c43c0d3da507ea6d5ce3f69",
    "name": "Aléas de la trajectoire de Vénus",
-   "descHash": "Les ennemis affectés par Point de couture subissent <nobr>#1[i]%</nobr> de DGT supplémentaires. Lorsqu'Aglaé ou la Costumière attaque ces cibles, Aglaé régénère <nobr>#2[i]</nobr> points d'énergie supplémentaires.",
+   "descHash": "Augmente les DGT subis par l'ennemi affecté par Point de couture de <nobr>#1[i]%</nobr>. Lorsqu'Aglaé ou la Costumière attaque cette cible, Aglaé régénère <nobr>#2[i]</nobr> points d'énergie supplémentaires.",
    "params": [
     0.15,
     20
@@ -456,7 +456,7 @@
    "iconPath": "97d0a7b5af567b11fab848e1eb0b4c4a795cfb6e8d5d525cf92fcff1c9437fec",
    "artPath": "4c7131d6d8ad145d77df6a80c49a295b66e5399676c9e8b71e9a9bb5cf41372b",
    "name": "Naviguer sur le radeau des yeux",
-   "descHash": "Lorsqu'Aglaé ou la Costumière agit, les DGT qu'elles infligent ignorent <nobr>#1[i]%</nobr> de la DÉF de la cible. Cet effet peut être cumulé jusqu'à <nobr>#2[i]</nobr> fois. Dure jusqu'à ce qu'une autre unité qu'Aglaé ou la Costumière utilise activement une capacité.",
+   "descHash": "Lorsqu'Aglaé ou la Costumière agit, les DGT qu'elles infligent ignorent <nobr>#1[i]%</nobr> de la DÉF des cibles. Cet effet peut être cumulé jusqu'à <nobr>#2[i]</nobr> fois. Dure jusqu'à ce qu'une autre unité qu'Aglaé ou la Costumière utilise activement une capacité.",
    "params": [
     0.14,
     3
@@ -467,7 +467,7 @@
    "iconPath": "69c62a0fc8a38475f24e66407a39902c89c280fa9bb5dbb3ea41ffa7c1fd8602",
    "artPath": "b426c635784ea8af0e24f7bd564258d778ab6e0ea85a728661717e0cf04a57b1",
    "name": "Offrande de la perle figée",
-   "descHash": "Niv. de la compétence +2, jusqu'au niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au niv. <nobr>10</nobr> maximum.<br />Niv. de talent du mnémesprit +1, jusqu'au niv. <nobr>10</nobr> maximum.",
+   "descHash": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.<br />Niv. de talent du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
    "params": []
   },
   {
@@ -486,7 +486,7 @@
    "iconPath": "c2555a8ced35437413bbe00b83fbadab3513162082077b774a5b0272ba36030f",
    "artPath": "dfaf7874e5ddc4549c12fbd9efaa0c9f1e3746255549b3d7f7129c3a082f7ad6",
    "name": "Tissage sous le linceul du malheur",
-   "descHash": "Niv. de l'ultime +2, jusqu'au niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au niv. <nobr>15</nobr> maximum.<br />Niv. de compétence de mnémesprit +1, jusqu'au niv. <nobr>10</nobr> maximum.",
+   "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de compétence de mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
    "params": []
   },
   {
@@ -494,7 +494,7 @@
    "iconPath": "47871797bc02a8da3379ea1385cdb16abc13101bf261c461a1d2a10b7c2ec0e4",
    "artPath": "5c7f2a5da6fd7be6c3ab7f8a6fd1185ff96c75b49f82edcbe789c59a9701a408",
    "name": "Fluctuations de la tapisserie du destin",
-   "descHash": "Augmente la <u>PÉN de RÉS</u> à la foudre d'Aglaé et de la Costumière de <nobr>#1[i]%</nobr> lorsqu'Aglaé est dans l'état Posture de suprémacie. Lorsque la VIT d'Aglaé ou de la Costumière est supérieure à <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>, les DGT infligés par l'<u>ATQ conjointe</u> augmentent de <nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr>/<nobr>#4[i]%</nobr>.",
+   "descHash": "Augmente la <u>PÉN de RÉS</u> à la foudre d'Aglaé et de la Costumière de <nobr>#1[i]%</nobr> lorsqu'Aglaé est dans l'état Posture de suprématie. Lorsque la VIT d'Aglaé ou de la Costumière est supérieure à <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>, les DGT infligés par leur <u>ATQ conjointe</u> augmentent de <nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr>/<nobr>#4[i]%</nobr>.",
    "params": [
     0.2,
     0.1,
@@ -695,7 +695,7 @@
   },
   {
    "tagHash": "Invocation",
-   "descHash": "Restaure des PV équivalents à <color=#f29e38ff></color> de ses PV max à la Costumière. Si la Costumière est absente, <u>invoque le mnémesprit</u> de la Costumière et lui permet d'agir immédiatement.",
+   "descHash": "Restaure des PV équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de ses PV max à la Costumière. Si la Costumière est absente, <u>invoque le mnémesprit</u> de la Costumière et lui permet d'agir immédiatement.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "20",
@@ -1000,7 +1000,7 @@
   },
   {
    "tagHash": "Renforcement",
-   "descHash": "<u>Invoque le mnémesprit</u> de la Costumière. Si la Costumière est déjà sur le champ de bataille, restaure ses PV au max. Aglaé entre dans l'état Posture de suprémacie et agit immédiatement.<br />Dans l'état Posture de suprémacie, Aglaé bénéficie des cumuls d'augmentation de VIT du talent du mnémesprit de la Costumière, chaque cumul augmentant sa VIT de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Renforce l'ATQ normale en « Entaille de mille baisers » et ne peut pas utiliser la compétence. La Costumière est immunisée contre les <u>malus de contrôle</u>.<br />Un compte à rebours apparaît dans l'ordre d'action, avec une VIT de <nobr>#4[i]</nobr>. Utiliser l'ultime à nouveau lorsque le compte à rebours se trouve dans l'ordre d'action réinitialise le compte à rebours. La Costumière s'autodétruit au début du tour du compte à rebours. L'état Posture de suprémacie d'Aglaé est dissipé lorsque la Costumière disparaît.",
+   "descHash": "<u>Invoque le mnémesprit</u> de la Costumière. Si la Costumière est déjà sur le champ de bataille, restaure ses PV au max. Aglaé entre dans l'état Posture de suprématie et agit immédiatement.<br />Dans l'état Posture de suprématie, Aglaé bénéficie des cumuls d'augmentation de VIT du talent du mnémesprit de la Costumière, chaque cumul augmentant la VIT de cette unité de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Renforce l'ATQ normale en Entaille de mille baisers et ne peut pas utiliser la compétence. La Costumière est immunisée contre les <u>malus de contrôle</u>.<br />Un compte à rebours apparaît dans l'ordre d'action, avec une VIT de <nobr>#4[i]</nobr>. Tant que le compte à rebours est actif, utiliser l'ultime à nouveau réinitialise le compte à rebours. La Costumière disparaît au début du tour du compte à rebours. L'état Posture de suprématie d'Aglaé est dissipé lorsque la Costumière disparaît.",
    "ultimateCost": 350,
    "break": "0",
    "energy": "5",
@@ -1350,7 +1350,7 @@
   },
   {
    "tagHash": "Renforcement",
-   "descHash": "La Costumière possède initialement une VIT équivalente à <nobr>#4[i]%</nobr> de la VIT d'Aglaé et des PV max équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> des PV max d'Aglaé + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#6[i]</nobr></span>. Lorsque la Costumière est sur le champ de bataille, les attaques d'Aglaé appliquent Point de couture à la cible. L'ennemi dans l'état Point de couture subit des <u>DGT additionnels</u> de foudre équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ d'Aglaé lorsqu'il est attaqué. Point de couture ne s'applique qu'à la cible la plus récente.",
+   "descHash": "La Costumière possède une VIT initiale équivalente à <nobr>#4[i]%</nobr> de la VIT d'Aglaé et ses PV max sont équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#5[i]%</nobr></span> des PV max d'Aglaé + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#6[i]</nobr></span>. Lorsque la Costumière est sur le champ de bataille, les attaques d'Aglaé appliquent Point de couture à la cible. Après avoir attaqué l'ennemi dans l'état Point de couture, inflige des <u>DGT additionnels</u> de foudre équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ d'Aglaé. Point de couture ne s'applique qu'à la cible la plus récente.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "10",
@@ -1722,7 +1722,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "<u>Invoque le mnémesprit</u> de la Costumière et lance une ATQ conjointe vers l'avant. Régénère <nobr>#2[i]</nobr> points d'énergie, inflige des DGT de foudre équivalents à <nobr>#1[i]%</nobr> de l'ATQ d'Aglaé à toutes les cibles ennemies, puis applique Point de couture à une cible ennemie aléatoire après être entré en combat.",
+   "descHash": "<u>Invoque le mnémesprit</u> de la Costumière et lance une ATQ conjointe vers l'avant. Après être entré en combat, régénère <nobr>#2[i]</nobr> points d'énergie, inflige des DGT de foudre équivalents à <nobr>#1[i]%</nobr> de l'ATQ d'Aglaé à toutes les cibles ennemies, puis applique Point de couture à une cible ennemie aléatoire.",
    "ultimateCost": 0,
    "break": "60",
    "energy": "0",
@@ -1747,7 +1747,7 @@
   },
   {
    "tagHash": "Propagation",
-   "descHash": "Aglaé et la Costumière lancent une <u>ATQ conjointe</u> sur la cible, infligeant respectivement des DGT de foudre équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> de l'ATQ d'Aglaé et à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span> de l'ATQ de la Costumière à la cible. Inflige également des DGT de foudre équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de l'ATQ d'Aglaé et à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> de l'ATQ de la Costumière aux cibles adjacentes.<br />« Entaille de mille baisers » ne permet pas de récupérer de point de compétence.",
+   "descHash": "Aglaé et la Costumière lancent une <u>ATQ conjointe</u> sur la cible, infligeant respectivement des DGT de foudre équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> de l'ATQ d'Aglaé et à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span> de l'ATQ de la Costumière à la cible. Inflige également des DGT de foudre équivalents respectivement à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> de l'ATQ d'Aglaé et à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> de l'ATQ de la Costumière aux cibles adjacentes.<br />Entaille de mille baisers ne permet pas de récupérer de point de compétence.",
    "ultimateCost": 0,
    "break": "60/hit",
    "energy": "20",
@@ -2355,7 +2355,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Lorsqu'Aglaé est dans l'état Posture de suprémacie, l'ATQ d'Aglaé et de la Costumière augmente d'un montant équivalent à <nobr>#1[i]%</nobr> de la VIT d'Aglaé + <nobr>#2[i]%</nobr> de la VIT de la Costumière.",
+    "descHash": "Lorsqu'Aglaé est dans l'état Posture de suprématie, l'ATQ d'Aglaé et de la Costumière augmente d'un montant équivalent à <nobr>#1[i]%</nobr> de la VIT d'Aglaé + <nobr>#2[i]%</nobr> de la VIT de la Costumière.",
     "ultimateCost": 0,
     "id": 12779200,
     "name": "Rétribution des aveugles du destin",
@@ -2462,7 +2462,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Lorsque la Costumière disparaît, il est possible de conserver <nobr>#1[i]</nobr> cumuls de l'effet d'augmentation de VIT conféré par le talent du mnémesprit. Lorsque la Costumière est invoquée à nouveau, elle bénéficie de ce nombre de cumuls de l'augmentation de VIT.",
+    "descHash": "Lorsque la Costumière disparaît, il est possible de conserver <nobr>#1[i]</nobr> cumul de l'effet d'augmentation de VIT conféré par le talent du mnémesprit. Lorsque la Costumière est invoquée à nouveau, elle obtient immédiatement le nombre de cumuls d'amélioration de VIT correspondant.",
     "ultimateCost": 0,
     "id": 13029630,
     "name": "Dernier fil du destin",
@@ -2751,7 +2751,7 @@
   {
    "id": 1,
    "title": "Première rencontre",
-   "text": "Ô, noble invité venu/invitée venue de loin. Le vent m'a apporté de vos nouvelles le long de mes fils d'or. Je m'appelle Aglaé, je suis la grande couturière d'Okhema et je fais partie des Héritiers chryséens d'Amphoreus. Puissions-nous nous traiter l'un/une l'autre avec sincérité.",
+   "text": "Ô, noble invité venu/invitée venue de loin. Le vent m'a apporté de tes nouvelles le long de mes fils d'or. Je m'appelle Aglaé, je suis la grande couturière d'Okhema et je fais partie des Héritiers chryséens d'Amphoreus. J'espère que nous ferons preuve de sincérité réciproque.",
    "unlockRequirement": "",
    "cnUrl": "871d7cf2d126bbe65a9fb7a41bfbfe9810af31f1972379d92b661e461f9d4eba",
    "jpUrl": "90b614fa71e644be486ab8769f76a4d92da853fd508e3e6bc489c428835a8659",
@@ -2761,7 +2761,7 @@
   {
    "id": 2,
    "title": "Salutation",
-   "text": "Est-ce que vous passez un bon moment à Okhema ? Si vous avez le moindre souhait, n'hésitez pas à le transmettre à la « Costumière » que je suis. La ville sainte ne manque pas d'offrir l'hospitalité la plus chaleureuse à ses invités.",
+   "text": "Tu passes un bon moment à Okhema ? Si tu as la moindre demande, n'hésite pas à la transmettre à cette Costumière. La ville sainte met un point d'honneur à offrir un accueil des plus chaleureux à ses alliés.",
    "unlockRequirement": "",
    "cnUrl": "f84da8dffbd9b09a97605cf22234a29af4e70a57b7bf2b04ce59f140d0d2b3a3",
    "jpUrl": "96de97ec207cf71ddebec04ceb5495a523c392847cb90cb7821420fea7f178f5",
@@ -2771,7 +2771,7 @@
   {
    "id": 3,
    "title": "Au revoir",
-   "text": "On se reverra, mon ami/amie. Peu importe où votre voyage vous mènera, les portes d'Okhema seront toujours ouvertes aux héros.",
+   "text": "On se reverra, mon ami/amie. Peu importe où ton voyage te mènera, les portes d'Okhema seront toujours ouvertes aux héros.",
    "unlockRequirement": "",
    "cnUrl": "c529365417511e93fd068c30db1e1c4d81d0e3887551e06727d7cfb7f25406c9",
    "jpUrl": "2210d9cb338d7f64cf09b93f05676f78bc84500981b91a21bc661d9f2d7680a0",
@@ -2781,7 +2781,7 @@
   {
    "id": 4,
    "title": "Anecdote personnelle : Identité",
-   "text": "Le monde a presque péri après la Guerre chryséenne, et à présent, il ne reste plus qu'Okhema, la seule cité de l'humanité. Mon devoir est de protéger cette terre sacrée... quel qu'en soit le prix.",
+   "text": "Le monde a frôlé l'anéantissement après la Guerre chryséenne, et aujourd'hui, la cité d'Okhema est le dernier rempart de l'humanité. Mon devoir est de protéger ce sanctuaire... à n'importe quel prix.",
    "unlockRequirement": "",
    "cnUrl": "6367cd9ae7c54c4286ccf1ccca24f9499a3da8940718b898a91ed402f0a453ae",
    "jpUrl": "23c2a5d3bc1323b3abf9df809219581bc185b44e5b69334a23d2a4fd5b7d0e8f",
@@ -2791,7 +2791,7 @@
   {
    "id": 5,
    "title": "Bavardage : Art de la couture",
-   "text": "Mnestia a accordé à ce monde des milliers de romance, mais celle que je préfère est l'art de la couture : des milliers de fils qui glissent entre mes doigts, semblables aux destins entremêlés des êtres vivants.",
+   "text": "Mnestia a accordé au monde de nombreuses formes de romances, et parmi elles, je chéris tout particulièrement l'art de la couture. Chaque fil glissant entre mes doigts m'évoque les destins entrelacés de tous les êtres vivants.",
    "unlockRequirement": "",
    "cnUrl": "0f49a34966ce1bfad1730e5c3d69984413f43950f777ce687be12614cc553118",
    "jpUrl": "9f00e8d61520e60007c698f8efe6be8958aa13ef8239215105022167fce63073",
@@ -2801,7 +2801,7 @@
   {
    "id": 6,
    "title": "Passe-temps",
-   "text": "Les vêtements ne sont pas seulement une barrière pour le corps, mais également pour l'esprit. En les retirant, on peut abolir ces deux obstacles. Dans les bains sacrés, vous et moi laissons tomber nos défenses, comme l'eau qui glisse entre nos doigts, s'entrelace et s'écoule vers l'avenir.",
+   "text": "Les vêtements ne sont pas seulement une barrière pour le corps, mais également pour l'esprit. En les retirant, on peut abolir ces deux obstacles. Dans les bains sacrés, toi et moi abandonnons nos défenses, nous mêlant tel l'eau glissant entre nos doigts, pour couler ensemble vers l'avenir.",
    "unlockRequirement": "",
    "cnUrl": "cbf2ba49ed578d046d5c42b0aba5d50b32e04cfce9d9780f6986d456cee201ee",
    "jpUrl": "ce5145bad1d3c39bfac66fc5c5c46cbea4374d3b69d124c82bcc331567187c57",
@@ -2811,7 +2811,7 @@
   {
    "id": 7,
    "title": "Problèmes",
-   "text": "Écouter la joie des oiseaux et des animaux, respirer les parfums de la forêt, sentir la douceur des flots... Plus je m'immerge dans chaque souffle de ce monde, plus je crains que ces paysages ne deviennent de simples échos du passé, ne pouvant renaître qu'au bout de mes doigts.",
+   "text": "La joie d'écouter le chant des oiseaux, respirer les parfums de la forêt, sentir la douceur des flots... Plus je chéris les bonheurs de ce monde, plus je crains que ces choses ne deviennent de simples échos du passé, ne pouvant être reproduites qu'au bout de mes doigts.",
    "unlockRequirement": "",
    "cnUrl": "f9fa2b5620660d17e6ef460f35c5fa25cfbc55219e1df9e6044e99717c7bc619",
    "jpUrl": "2f5f912aea9f332c3046e7757c21b4b7212b486d1ab60222bc4162c60155f0ca",
@@ -2821,7 +2821,7 @@
   {
    "id": 8,
    "title": "Fait notable",
-   "text": "Quand j'étais encore retoucheuse, mon travail consistait déjà à briser les modèles établis. Aujourd'hui, en tant qu'Héritière chryséenne, j'ai également la responsabilité de balayer les vieilles pratiques et de créer une nouvelle forme de « beauté ».",
+   "text": "Quand j'étais encore retoucheuse, mon travail consistait déjà à briser les modèles établis. Aujourd'hui, en tant qu'Héritière chryséenne, j'ai la même responsabilité : éliminer les vieilles traditions et créer une nouvelle forme de « beauté ».",
    "unlockRequirement": "",
    "cnUrl": "92b83a00a12de5a8dcaa47edc0408fe5f1a2b7b21c3afbab1466ba28f8f60905",
    "jpUrl": "157ffaca78621d3841bd921b088138a92fa5806c54b4272889f84fc42e19ce16",
@@ -2831,7 +2831,7 @@
   {
    "id": 9,
    "title": "Connaissances",
-   "text": "La poésie, le sport, le théâtre, la sculpture... Autant de formes où la beauté se manifeste, enrichissant l'âme des Okhemiens depuis des millénaires. Même face à l'effondrement imminent du monde, ils continuent à chanter haut et fort dans les thermes, car telle est notre existence.",
+   "text": "La poésie, le sport, le théâtre, la sculpture... Autant de manifestations de la beauté, enrichissant l'âme des Okhemiens depuis des millénaires. Même face à l'effondrement imminent du monde, leurs chants continueront à résonner dans les thermes, car telle est la vie que nous menons.",
    "unlockRequirement": "",
    "cnUrl": "0ac9fa568f9c9e2429a3beebf493dee25b31ae72ce48b4b03fc2abc75477f374",
    "jpUrl": "ca01053e5b99021248f1e82e106d1c7eb7bb41395916363adb93888d3d2e604e",
@@ -2851,7 +2851,7 @@
   {
    "id": 11,
    "title": "À propos de Phaénon",
-   "text": "Faire siens les désirs des autres et les transformer en ses propres souhaits, rares sont les héros qui possèdent une telle pureté d'âme. C'est pour cette raison que le monde place tant d'espoirs en lui.",
+   "text": "Accepter les désirs des autres et en faire ses propres souhaits... Rares sont les héros qui possèdent une telle pureté d'âme. C'est pour cette raison que le monde nourrit autant d'espoir envers lui.",
    "unlockRequirement": "",
    "cnUrl": "9b34415274bb67fe48501cb25de48d3246fa873654d4292db0e6cc412407fab7",
    "jpUrl": "5dcb2513368e995cbfbaf6fc4a761bce02f98c1ae09f694535ac556c354a8e4e",
@@ -2861,7 +2861,7 @@
   {
    "id": 12,
    "title": "À propos de Mydei",
-   "text": "Il est comme un brasier, où règne une flamme insondable et inextinguible. Soit ce feu sera balayé par une tempête dévastatrice, soit il continuera à brûler éternellement, jusqu'à consumer son être tout entier.",
+   "text": "Il est comme un brasier, où brûle une flamme insondable et inextinguible. Soit ce feu sera balayé par une tempête dévastatrice, soit il sera éternellement ardent, jusqu'à consumer sa propre existence.",
    "unlockRequirement": "",
    "cnUrl": "83b4c889e887a45eca8aae43c610295eb49039aca806167e80504c871c5fa5aa",
    "jpUrl": "f85373a16973dfec1e75178806f4c065bec328145d14f4c22046d2bf5beaabc4",
@@ -2881,7 +2881,7 @@
   {
    "id": 14,
    "title": "Activation d'Eidolon",
-   "text": "On ne peut jamais vraiment éteindre un feu, car il se propage sans fin.",
+   "text": "On ne peut jamais vraiment éteindre un feu, car ses flammes se propagent sans fin.",
    "unlockRequirement": "",
    "cnUrl": "b73283296e2b6495c4840c69122059dae9c3dc69bf6981f5e1db751a9525dc2f",
    "jpUrl": "c24b5fbc909b0c956a8cbee04251b9686a9ad8d292b8137de1f4a12e791667f7",
@@ -2891,7 +2891,7 @@
   {
    "id": 15,
    "title": "Élévation de personnage",
-   "text": "Les poèmes les plus sublimes sont nés de bribes de mots.",
+   "text": "Même les plus beaux des poèmes sont tissés grâce à de simples mots.",
    "unlockRequirement": "",
    "cnUrl": "f027bcc279c82255e85de9a24ce051d9ed275c2755b28e973c780cfda0019689",
    "jpUrl": "76e3e82bfe5331c112b8cfaeae644e148624e3ce561b720df5730fb5a43fde86",
@@ -3001,7 +3001,7 @@
   {
    "id": 58,
    "title": "ATQ normale : ATQ conjointe 2",
-   "text": "La vie est tellement fragile, comme un fil suspendu.",
+   "text": "La vie est aussi fragile qu'un fil de soie.",
    "unlockRequirement": "",
    "cnUrl": "3b9a40b16f386bd99f62bdce5e0b09f4467226dd36ab097f7efcf2d0332bbbfe",
    "jpUrl": "36e33a21fe16e2f918928f4883e64523b2b9ae32b933dbaedb7025220ce98953",
@@ -3010,7 +3010,7 @@
   },
   {
    "id": 59,
-   "title": "Compétence : Invocation de mannequin 1",
+   "title": "Compétence : Invocation de la Costumière 1",
    "text": "L'heure du jugement a sonné.",
    "unlockRequirement": "",
    "cnUrl": "13012d245a8becd80d84449d1d20d80c3a66f7c98ab16b0d87c1e78b0cdac69b",
@@ -3020,7 +3020,7 @@
   },
   {
    "id": 60,
-   "title": "Compétence : Invocation de mannequin 2",
+   "title": "Compétence : Invocation de la Costumière 2",
    "text": "Une petite danse ?",
    "unlockRequirement": "",
    "cnUrl": "9528890865294bff5bb51aa55814d661c57a72f62bff638d6f405a0037ba5f80",
@@ -3030,7 +3030,7 @@
   },
   {
    "id": 61,
-   "title": "Compétence : Soin de mannequin 1",
+   "title": "Compétence : Soin de la Costumière 1",
    "text": "Baigné d'or.",
    "unlockRequirement": "",
    "cnUrl": "4702b88037067707687d40bda64f32a91eaaaed93c88a290b12696b830bbed81",
@@ -3040,7 +3040,7 @@
   },
   {
    "id": 62,
-   "title": "Compétence : Soin de mannequin 2",
+   "title": "Compétence : Soin de la Costumière 2",
    "text": "Paré de splendeur.",
    "unlockRequirement": "",
    "cnUrl": "9f594ac7ecd6b0592b70e117cf93fdd854cd96d2ab6857b76eb5533e599ce27f",
@@ -3171,7 +3171,7 @@
   {
    "id": 75,
    "title": "Énigme réussie 1",
-   "text": "Un travail méticuleux, sans la moindre erreur.",
+   "text": "Un tissage méticuleux, sans la moindre erreur.",
    "unlockRequirement": "",
    "cnUrl": "5d53f296b2dbe06bfdc335be75d1dded3cfae6c218b5fa85394be2b9e06db477",
    "jpUrl": "7762a505359423961d124d8d44650905e71005d8dd22b505087e8aa5e77c1fa1",
@@ -3191,7 +3191,7 @@
   {
    "id": 77,
    "title": "Cible ennemie trouvée",
-   "text": "Quand deux adversaires se croisent dans un espace restreint, la confrontation est inévitable.",
+   "text": "La confrontation est inévitable dans un espace restreint.",
    "unlockRequirement": "",
    "cnUrl": "241ee9c6f0233451f4a7242d4364419213fdb7109150a8050db7727d3fba350c",
    "jpUrl": "9d73794215a6d16c3759bca2ed22da2d11adacd9a72d7d5019799bbbb6f6efa7",
@@ -3201,7 +3201,7 @@
   {
    "id": 78,
    "title": "Retour en ville",
-   "text": "Si vous avez le temps, reposez-vous aux thermes.",
+   "text": "Si tu as du temps, va te reposer aux thermes.",
    "unlockRequirement": "",
    "cnUrl": "8f18d9af6de46780226daed03d8bfc52fddecf76b4650da87b2ad5b9e88995d6",
    "jpUrl": "2473f194d9c8f2699af952a30c170cc70864a2a9a422de4f3a984c034bfac79c",
@@ -3212,27 +3212,27 @@
  "storyItems": [
   {
    "title": "Détails du personnage",
-   "text": "Dans cette ville sainte embrassée par l'aube, la tisseuse caresse le fil d'or et relie le destin.<br />Une Héritière chryséenne, porteuse de la flamme divine de la Romance... Elle invoquera les héros de ce monde et les guidera une fois de plus vers un voyage sans fin.<br />— Ils y terrasseront les dieux, rendront le feu divin et feront renaître la terre mourante d'Amphoreus.",
+   "text": "Au cœur de la ville sainte baignée par la lumière de l'aube, la tisseuse caresse les fils d'or et relie les destins.<br />L'Héritière chryséenne qui porte la flamme divine de la Romance a convoqué les héros de ce monde et les guidera une fois de plus au cours d'une longue odyssée.<br />Leur mission : renverser les dieux, récupérer leurs flammes divines et offrir une renaissance éclatante à une Amphoreus au bord de l'anéantissement.",
    "unlockRequirement": ""
   },
   {
    "title": "Histoire du personnage : Partie I",
-   "text": "Des années plus tard, lorsqu'elle découvre par hasard un vêtement qu'elle a tissé dans sa jeunesse, la tendresse coule de la soie, fait doucement palpiter son cœur, muré trop longtemps dans le silence.<br /><br />Dans la famille dévouée à Mnestia, chaque membre, dès son plus jeune âge, est initié à l'art de la beauté. Les portraits des grands maîtres sont accrochés au mur d'honneur de la salle de bain privée, veillant toujours sur leur progéniture.<br />Alors que beaucoup restent sans voix sous le regard de ces professeurs, elle se déplace sans effort avec une grâce naturelle sous leur regard.<br />« La peinture succombe aux faux-semblants, la musique à l'abstraction, la sculpture à la lourdeur et le théâtre à la banalité... ».<br />Les anciens montrent des signes évidents de défaite, mais leur voix, jeune et déterminée, fait taire toutes les objections.<br />« Petite Agie, y a-t-il quelque chose de plus beau que cela ? »<br />En sortant du bain, elle danse sur la pointe des pieds jusqu'au miroir, ses cheveux d'or pâle tombent en cascade.<br />« Non. »<br />Dans le miroir embué, ses yeux dorés attirent d'innombrables regards.<br />« Je la trouverai, cette existence qui surpasse toutes les autres par sa beauté. »<br /><br />« C'est pour une raison aussi simple que plus tard... »La chaleur du vêtement touche la pointe de ses doigts, éveillant des souvenirs.<br />Elle grimpe malicieusement dans le Bosquet avant de méditer dans les bains, tout cela pour une feuille d'or, une poignée de rosée inspirante.<br />Elle courait sur les toits et s'arrêtait dans les prés, tout ça pour tisser dans ses fils la liberté de la brise et le parfum lointain des fleurs.<br />Le temps a passé. Le métier à tisser ne s'est jamais arrêté. Ses créations sont devenues de plus en plus célèbres à Okhema.<br />Vêtue de ses plus beaux atours, elle pénètre dans le temple, mais s'interroge encore : « C'est cela, la beauté ? »<br /><br />La prêtresse de Mnestia avait atteint le crépuscule de sa vie, sa vue avait baissé, mais l'éclat de la jeune fille tranchait toujours sur l'obscurité qui régnait devant elle.<br /><br />« Petite Agie, lorsque tu assumeras la responsabilité de Tisseuse d'or, tu seras destinée à créer des œuvres que même les dieux envieront. »<br />« Ce vêtement, et toi dans ce vêtement, vous êtes belles... mais ce n'est pas de la \"beauté\" ».<br />« Mais... \"belle\" et \"beauté\", c'est pareil, non ? »<br />« Tu ne comprends toujours pas... et ton incompréhension est une bonne chose, vraiment... »",
+   "text": "Des années plus tard, lorsqu'elle retrouva par hasard des vêtements tissés durant son adolescence, la douceur de la soie glissa entre ses doigts, faisant palpiter son cœur longtemps emmuré.<br /><br />Dans la famille dévouée à Mnestia, chaque membre est initié dès l'enfance à l'art de la beauté depuis des générations. Les portraits des maîtres étaient accrochés sur le mur d'honneur des thermes privés, leurs regards scrutant inlassablement leurs descendants.<br />Quiconque pénétrait ici restait silencieux et figé. Pourtant, elle se déplaçait avec grâce sous le poids oppressant de ces regards.<br />« La peinture pèche par son illusion, la musique par son abstraction, la sculpture par sa lourdeur, le théâtre par sa vulgarité... ».<br />Les anciens soupiraient d'impuissance, mais cette voix juvénile ne laissait place à aucune réplique.<br />« Agie, est-ce qu'il y a quelque chose de plus beau ? »<br />Elle sortit du bassin, dansant sur la pointe des pieds jusqu'au miroir, ses longs cheveux dorés tombant en cascade.<br />« Non. »<br />Dans le miroir embué, ses yeux dorés captèrent des milliers de fils invisibles.<br />« Je vais trouver quelque chose de plus beau encore. »<br /><br />« C'est pour une raison aussi simple que plus tard... » Le tissu chaud effleura ses doigts, réveillant une vague de souvenirs.<br />Elle grimpait malicieusement dans le Bosquet avant de méditer dans les thermes, tout cela pour recueillir une feuille d'or, une étincelle d'inspiration.<br />Elle courait et bondissait sur les toits scintillants, s'attardait dans les champs ondulants, cherchant à capturer, avec ses fils d'or, la liberté du vent et le parfum lointain des fleurs sauvages.<br />Le temps s'écoulait, le métier à tisser ne s'arrêtait jamais. Ses créations s'enchaînaient, insufflant une nouvelle vague de merveille et d'admiration à Okhema, encore et encore.<br />Vêtue de ses plus beaux atours, elle se présenta au temple. Pourtant, une question subsistait, flottant dans l'air comme une note suspendue : « Est-ce que c'est ça, la beauté ? »<br /><br />La prêtresse de Mnestia désormais âgée, avait la vue troublée par les années, mais la lumière qui émanait de la jeune fille perçait les ténèbres de son regard déclinant.<br /><br />« Agie, lorsque tu assumeras la responsabilité de Tisseuse d'or, tu devras créer une œuvre que même les dieux envieront. »<br />« Ces vêtements, et toi qui les portes, êtes magnifiques... mais ce n'est pas cela, la beauté. ».<br />« Mais... la beauté et le fait d'être belle... n'est-ce pas la même chose ? »<br />« Tu ne comprends pas encore... et ne pas comprendre, c'est une bonne chose. Une très bonne chose... »",
    "unlockRequirement": "Disponible au niveau <nobr>20</nobr> de personnage"
   },
   {
    "title": "Histoire du personnage : Partie II",
-   "text": "Au fil du temps, les vêtements qu'elle a conçus se sont multipliés, aussi vastes que les cieux étoilés.<br />Mais curieusement, elle conservait précieusement de nombreux vieux chiffons déchirés dans sa garde-robe grandiose.<br /><br />Dans les pays en conflit, les jeunes guerriers partaient vêtus de robes brillantes, qui leur servaient souvent de linceuls à leur retour... Parfois, seuls des lambeaux de leurs vêtements revenaient. Lorsque personne ne réclamait ces restes, elle était la seule à les ramasser.<br />Dans sa fureur, elle détruisit des vêtements luxueux, convaincue que la noblesse gavée et corrompue ne méritait pas de se promener dans les vêtements qu'elle avait confectionnés, même si elle avait elle-même été comme eux à une époque.<br />Et puis... il y avait ces petits vêtements...<br /><br />Au fil des ans, ils grandissent à ses côtés, partageant avec elle des chansons du passé et des rêves d'avenir.<br />- Ce n'est qu'après avoir été témoin de tant de laideur qu'elle comprend le véritable poids de ces mots innocents.<br />« En tant que maîtresse couturière d'Okhema et prêtresse de Mnestia, mes devoirs s'alignent sur les vôtres. »<br />« Mais le prix du salut... »<br />« ... est-ce le même que le vôtre ? »<br />« Tout comme <b>le nôtre.</b> »<br /><br />À l'endroit le plus visible, elle avait accroché une robe de prêtresse toute simple, sans ornements. Elle l'enlevait souvent pour la nettoyer et la dépoussiérer, se rappelant le vœu qu'elle avait fait devant la divinité.<br />« Pardonnez-moi, au nom de la plus belle création du monde... »<br />Il y a longtemps, au moment où elle s'est emparée de la flamme divine, elle a soudain « aperçu » dans l'obscurité un paysage à couper le souffle qu'elle n'avait jamais vu auparavant.<br />Dans cet avenir doré, il n'y a plus de conflits, plus de morts.",
+   "text": "Le temps a passé, et les vêtements qu'elle a conçus sont devenus aussi nombreux et vastes que les étoiles dans le ciel.<br />Pourtant, au cœur de cette immense garde-robe dorée étaient soigneusement conservés de vieux fragments de tissus usés et déchirés.<br /><br />Sur les terres déchirées par le conflit, de jeunes soldats partaient au front vêtus d'habits flamboyants, mais revenaient souvent avec des uniformes qui leur servaient de linceuls, parfois réduits à une simple étoffe déchirée. Lorsque personne ne venait réclamer ces morceaux, elle seule prenait soin de les recueillir et de les conserver.<br />Dans un accès de colère, elle avait autrefois détruit ses propres créations. Ces nobles décadents et corrompus, parés de ses œuvres pour s'enorgueillir dans l'oisiveté, n'étaient pas dignes de les porter, même si, autrefois, elle-même avait été ainsi.<br />Et puis, il y avait ces petits vêtements délicats, un à un soigneusement rangés.<br /><br />Au fil des années, ils l'avaient accompagnée dans son évolution, chantant avec elle les histoires du passé et les rêves d'avenir.<br />Ce n'est qu'après avoir été témoin de tant de laideur qu'elle comprit le véritable poids contenu dans ces paroles innocentes et enfantines.<br />« En tant que grande couturière d'Okhema et prêtresse de Mnestia, j'ai les mêmes devoirs que toi. »<br />« Mais le prix à payer pour sauver ce monde... »<br />« ... Est-ce le même que le tien ? »<br />« Est-ce le même que <b>le nôtre</b> ? »<br /><br />À l'endroit le plus visible de la garde-robe était suspendue une robe de prêtresse sobre et élégante. Elle la sortait souvent, la nettoyait et la dépoussiérait soigneusement, non pas par nécessité, mais pour ne jamais oublier le serment qu'elle avait autrefois prêté aux divinités.<br />« Pardonnez-moi... pour avoir sacrifié autant, au nom de l'œuvre la plus belle qui soit... »<br />Il y a bien longtemps, au moment où elle avait saisi la flamme divine, elle avait vu une scène d'une beauté indescriptible, comme une vision surgie des ténèbres.<br />Dans ce futur doré, il n'y aurait plus de conflits, plus de morts. Rien d'autre qu'une paix éternelle et resplendissante.",
    "unlockRequirement": "Disponible au niveau <nobr>40</nobr> de personnage"
   },
   {
    "title": "Histoire du personnage : Partie III",
-   "text": "Ils disent que c'est la Chasse aux flammes. Ils disent aussi que c'est un voyage marqué par la perte.<br /><br />Elle sentait que quelque chose de précieux lui échappait peu à peu, mais elle n'avait pas le temps d'y prêter attention, car celui qui marchait devant faisait l'expérience d'une perte bien plus grande que la sienne.<br />« Je laisse cet endroit entre tes mains, Aglaé. »<br />« Assure-toi de faire de ton mieux. »<br />« À bientôt ! »<br />Elle n'a jamais compris pourquoi ses adieux sonnaient toujours ainsi.<br />Il ne restait plus que les douces mélodies s'élevant des profondeurs de la mer, les empreintes laissées par le vent sur la terre, et un échiquier irrésolu laissé derrière.<br /><br />« Comment des fils délicats peuvent supporter le poids du destin ? »<br />La Costumière est la seule à lui tenir compagnie, mais sa garde-robe, autrefois grandiose, est aujourd'hui sinistrement vide.<br />La noble dame entre dans la mêlée politique, suscitant de vifs débats au sein du Conseil des anciens. Au milieu des ricanements incessants des badauds, elle commence à échafauder ses plans.<br />Les fils d'or au bout de ses doigts tissent un filet sur Okhema. Les réminides se reposent dans les coins de la cité, emprisonnant chaque murmure et chaque souffle.<br /><br />Même les fils d'or étaient devenus létaux, teintés par l'odeur du sang pour la première fois.",
+   "text": "Ils appelaient ça la Chasse aux flammes. On disait que c'était une épopée marquée par la perte.<br /><br />Elle sentait que quelque chose de précieux lui échappait peu à peu, mais elle n'avait pas le temps d'y prêter attention, car ceux qui marchaient sur ce même chemin connaissaient des pertes bien plus douloureuses que les siennes.<br />« Je te laisse t'en occuper, Aglaé. »<br />« Fais de ton mieux. »<br />« À bientôt ! »<br />Elle n'a jamais compris pourquoi ses adieux sonnaient toujours ainsi.<br />Tout ce qui lui restait, c'était la mélodie lointaine des abysses, les empreintes emportées par le vent sur la terre, et une partie d'échecs sans solution.<br /><br />« Comment un fil aussi fragile pourrait-il supporter le poids écrasant du destin ? »<br />Seule la Costumière restait à ses côtés, mais cette immense garde-robe autrefois somptueuse était maintenant vide et silencieuse.<br />La jeune noble entra dans l'arène politique, suscitant de vifs débats au sein du Conseil des anciens. Sous les rictus moqueurs et les sarcasmes, elle entama ses manœuvres avec précision et détermination.<br />Les fils d'or glissaient entre ses doigts, tissant une vaste toile à travers Okhema. Dans chaque recoin de la cité, chaque souffle, chaque murmure, chaque battement d'aile de réminide était capturé dans sa toile invisible.<br /><br />Même les fils dorés devinrent tranchants, et pour la première fois, ils s'imprégnèrent de l'odeur du sang.",
    "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
   },
   {
    "title": "Histoire du personnage : Partie IV",
-   "text": "Le métier à tisser divin tourne encore sans relâche, et de nombreuse Costumières planent dans les airs. Personne ne sait pourquoi elles dansent ni pourquoi elles se reposent.<br />« Costumières, veuillez vous rendre sur la place, nous avons des invités qui viennent de loin. »<br /><br />Cette scène se répète sans cesse. Auparavant, c'était toujours elle qui tendait la main, mais aujourd'hui, ce sont les autres qui la recherchent.<br />À cet instant, un jeune homme en armure d'argent se tenait là, son visage juvénile marqué par la haine et le sang.<br />La fille à la robe violette resta silencieuse, laissant dans son sillage une traînée de mort glacée mêlée à un profond parfum de fleurs.<br />Un voleur, aussi furtif qu'un chat, a disparu d'Okhema, mais elle a cru à une plaisanterie.<br />La jeune fille, chaude comme une faible lumière, a un jour soigné ses blessures.<br />Et puis il y avait le prince héritier d'une ville lointaine et l'érudit arrogant...<br />« Si un fil ne suffit pas, qu'une myriade de fils soulève le ciel... »<br />Elle a cherché les différents fils du destin et les a tissés en une toile solide. Ce filet serait jeté sur les flammes divines des Titans, les ravivant dans un nouveau monde.<br />« Les Héritiers chryséens tisseront ensemble un avenir éblouissant ».<br /><br />Pendant une brève pause, elle s'approche de la fenêtre, qui donne sur la cité animée d'Okhema.<br />« Costumière, préparez-moi une autre tasse de thé chaud, s'il vous plaît. »<br />Elle frissonne légèrement, mais son cœur n'est plus tourmenté par les chagrins du passé.<br />Des fils d'or invisibles jaillissent du bout de ses doigts, se mêlant au pouls de la cité-État, au murmure du vent et au clapotis de la pluie, le tout résonnant sous son toucher, comme une inspiration conjurée par la déesse de la Romance. La chaleur d'une promesse d'une nouvelle vie.<br />Après mûre réflexion, elle range soigneusement les vêtements ornés qu'elle a confectionnés dans sa jeunesse.<br />« Même si, au bout du compte, je ne dois porter que des vêtements ordinaires... »<br /><br />La légende veut que chaque disciple de Mnestia consacre sa vie entière à fabriquer ce qu'il estime être la beauté ultime à présenter à sa divinité.<br />Il y a longtemps qu'elle n'a pas confectionné de beaux vêtements.<br />Pourtant, elle n'a jamais cessé de tisser les fils du destin.",
+   "text": "À ce jour encore, le métier à tisser, baigné de lumière céleste, continue de tourner inlassablement. De nombreuses Costumières flottent autour, dansant silencieusement. Nul ne sait pourquoi elles dansent, ni pourquoi elles s'arrêtent.<br />« Costumière, rends-toi sur place. Des invités venus de loin nous attendent. »<br /><br />Une scène qui semblait s'être répétée d'innombrables fois. Autrefois, c'était elle qui allait vers les autres. Aujourd'hui, c'était les autres qui venaient vers elle.<br />En ce lieu, un jeune homme en armure argentée se tenait debout. Son visage juvénile, encore empreint d'innocence, était marqué par la haine et le sang.<br />Une jeune fille en robe pourpre, silencieuse, avançait. Là où elle passait, la mort glaciale se mêlait à un parfum profond et floral.<br />Un voleur agile, tel un chat rusé, avait disparu dans les ruelles d'Okhema, mais elle n'y voyait qu'une farce malicieuse.<br />Cette jeune fille à la lumière douce et chaleureuse avait autrefois guéri ses blessures invisibles.<br />Et puis il y avait ce prince héritier provenant d'une terre lointaine et cet érudit orgueilleux...<br />« Si un fil ne suffit pas, une myriade de fils viendront soutenir le ciel... »<br />Elle cherchait, tissait les différents fils du destin en une toile robuste. Une toile qui s'élancerait sur les flammes divines des Titans pour les rallumer dans un nouveau monde.<br />« Les Héritiers chryséens tisseront ensemble un avenir éblouissant ».<br /><br />Pendant une brève pause, elle s'approcha de la fenêtre, observant la ville animée d'Okhema en contrebas.<br />« Costumière, prépare-moi une autre tasse de thé chaud, je te prie. »<br />Elle ressentait un léger frisson, mais son cœur ne tremblait plus sous le poids des douleurs du passé.<br />Des fils d'or invisibles s'étiraient depuis ses doigts, s'enroulant autour du pouls vibrant de la cité, capturant chaque souffle du vent, chaque goutte de pluie. Chaque vibration semblait être une inspiration née de la Romance divine, une vie nouvelle prête à éclore.<br />Après un long moment d'observation silencieuse, elle replia soigneusement les vêtements délicats de son adolescence.<br />« Peu importe si, au bout du compte, je ne dois porter que des vêtements ordinaires... »<br /><br />On raconte que chaque fidèle de Mnestia consacre sa vie entière à offrir aux dieux ce qu'il considère comme son chef-d'œuvre ultime.<br />Il y avait longtemps qu'elle n'avait plus tissé de beaux vêtements.<br />Mais elle n'avait jamais cessé de tisser les fils du destin.",
    "unlockRequirement": "Disponible au niveau <nobr>80</nobr> de personnage"
   }
  ],
@@ -3552,8 +3552,8 @@
     "icon": "2367834d571302366f81669a8d9f44d60b628b8c4da466c3d8c7174cf2135ab2",
     "tag": "Renforcement",
     "typeDesc": "Talent du mnémesprit",
-    "skillDesc": "Augmente la VIT de cette unité de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]</nobr></span> après avoir attaqué un ennemi affecté par Point de couture, cumulable jusqu'à <nobr>#3[i]</nobr> fois. La Costumière lance automatiquement Piège de couture au cours de son tour, en donnant la priorité aux ennemis affectés par Point de couture.",
-    "simpleSkillDesc": "<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">Augmente la VIT de cette unité</span> après avoir attaqué un ennemi affecté par Point de couture. Lance automatiquement une attaque au cours de son tour, en donnant la priorité aux ennemis affectés par Point de couture.",
+    "skillDesc": "Augmente la VIT de cette unité de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]</nobr></span> après avoir attaqué l'ennemi affecté par Point de couture, cumulable jusqu'à <nobr>#3[i]</nobr> fois. La Costumière lance automatiquement Piège de couture au cours de son tour, en donnant la priorité à l'ennemi affecté par Point de couture.",
+    "simpleSkillDesc": "<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">La VIT de cette unité augmente</span> après avoir attaqué l'ennemi affecté par Point de couture. Lance automatiquement une attaque au cours de son tour, en donnant la priorité aux ennemis affectés par Point de couture.",
     "levelData": [
      {
       "params": [
@@ -3738,8 +3738,8 @@
     "icon": "2367834d571302366f81669a8d9f44d60b628b8c4da466c3d8c7174cf2135ab2",
     "tag": "Renforcement",
     "typeDesc": "Talent du mnémesprit",
-    "skillDesc": "L'action de la Costumière est <u>avancée</u> de <nobr>#1[i]%</nobr> lorsqu'elle est invoquée.",
-    "simpleSkillDesc": "L'action de cette unité est <u>avancée</u> lorsqu'elle est invoquée.",
+    "skillDesc": "L'action de la Costumière est <u>avancée</u> de <nobr>#1[i]%</nobr> lors de son invocation.",
+    "simpleSkillDesc": "L'action de cette unité est <u>avancée</u> lors de son invocation.",
     "levelData": [
      {
       "params": [
@@ -3904,7 +3904,7 @@
     "icon": "2367834d571302366f81669a8d9f44d60b628b8c4da466c3d8c7174cf2135ab2",
     "tag": "Renforcement",
     "typeDesc": "Talent du mnémesprit",
-    "skillDesc": "La Costumière régénère <nobr>#1[i]</nobr> points d'énergie pour Aglaé lorsqu'elle disparaît.",
+    "skillDesc": "La Costumière régénère <nobr>#1[i]</nobr> points d'énergie pour Aglaé lors de sa disparition.",
     "simpleSkillDesc": "Régénère l'énergie d'Aglaé lors de sa disparition.",
     "levelData": [
      {
@@ -4324,7 +4324,7 @@
  },
  "name": "Aglaé",
  "rarity": 5,
- "descHash": "Dans cette ville sainte baignée par la lumière de l'aube, la tisseuse caresse le fil d'or et connecte les destins. Les Héritiers chryséens qui portent en eux la flamme divine de la « Romance » convoquent les héros de ce monde et les guident à nouveau dans un voyage sans fin... Pour affronter les dieux, restituer le feu divin et offrir à la terre presque anéantie d'Amphoreus une nouvelle renaissance.",
+ "descHash": "Au cœur de la ville sainte baignée par la lumière de l'aube, la tisseuse caresse le fil d'or et relie les destins. Héritière chryséenne qui porte la flamme divine de la Romance, elle a convoqué les héros de ce monde et les guidera une fois de plus au cours d'une longue odyssée. Leur mission : terrasser les dieux, récupérer leurs flammes divines et offrir à Amphoreus, au bord de l'anéantissement, une renaissance éclatante.",
  "artPath": "82999c40fa963a92e81c2d0c78ce2668a1f4f8ef6ce907769a046f0508f6a626",
  "miniIconPath": "11541ca7bd0dcf33793828b34782395e4edc3efae9e4b08700cbc92d61302428",
  "damageType": {

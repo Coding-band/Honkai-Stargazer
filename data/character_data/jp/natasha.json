@@ -34,6 +34,7 @@
     "疑似花萼「大鉱区」",
     "疑似花萼「工造司」",
     "疑似花萼「ホテル・『レバリー』-夢境」",
+    "疑似花萼「『囁きの密林』神悟の樹庭」",
     "クエスト報酬",
     "依頼報酬",
     "エンバー交換"
@@ -88,6 +89,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "「忘却の庭」"
    ]
   },
@@ -106,6 +108,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "デイリー訓練",
     "エンバー交換"
    ]
@@ -125,6 +128,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "依頼報酬"
    ]
   },
@@ -445,7 +449,7 @@
    "id": 1,
    "iconPath": "ccac95c4f8cb27fd76ccbb20a89f0ab7aaa66a0df660aa8d7ffada0335780c9e",
    "artPath": "173d699c42634384f909768aaf48f9477e3b8964cd9939fe0f21153d3589609f",
-   "name": "<ruby>薬理遍識<rt>やくりへんしき</rt></ruby>",
+   "name": "薬理遍識",
    "descHash": "攻撃を受けた後、残りHPが<nobr>#1[i]%</nobr>以下の場合、自身に治癒を1回行い、自身の最大HP<nobr>#2[i]%</nobr>+<nobr>#3[i]</nobr>のHPを回復する。この効果は一度の戦闘で1回まで発動できる。",
    "params": [
     0.3,
@@ -457,7 +461,7 @@
    "id": 2,
    "iconPath": "1580b2ec4f3e199442d4c78d0a2b23e59f6ee0e888e44fdf8766ddc279c57286",
    "artPath": "6d46faf5bb9b6d0dfa50434e937d43006aae1191d213b8dc37130d8d9d466caa",
-   "name": "<ruby>臨床研学<rt>りんしょうけんがく</rt></ruby>",
+   "name": "臨床研学",
    "descHash": "必殺技を発動した時、残りHPが<nobr>#1[i]%</nobr>以下の味方に<nobr>#2[i]</nobr>ターン継続する持続治癒効果を付与する。その味方のターンが回ってきた時、ナターシャの最大HP<nobr>#3[i]%</nobr>+<nobr>#4[i]</nobr>のHPを回復する。",
    "params": [
     0.3,
@@ -470,7 +474,7 @@
    "id": 3,
    "iconPath": "0975c428fec68731f209b8d84ae53d5dd0a8a7cf1aa3d4d4961407e985e9cf77",
    "artPath": "274f1775ae34a89e2e0a34df8b0fee7c224f94600eaf61812c9018e374957b8f",
-   "name": "<ruby>因病投薬<rt>いんびょうとうやく</rt></ruby>",
+   "name": "因病投薬",
    "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
    "params": []
   },
@@ -478,7 +482,7 @@
    "id": 4,
    "iconPath": "5cea6490ef3863c64718e33408cf33d270dd19277cb059c6e6596a95059dbd30",
    "artPath": "32113ee291794ec4ec1c71893a5bb4430fc80486fc7a79e9b946538fc6b00c2d",
-   "name": "<ruby>妙手回春<rt>みょうしゅかいしゅん</rt></ruby>",
+   "name": "妙手回春",
    "descHash": "攻撃を受けた後、さらにEPを<nobr>#1[i]</nobr>回復する。",
    "params": [
     5
@@ -488,7 +492,7 @@
    "id": 5,
    "iconPath": "53ac3e96902a564e61583bcc2cfd86eecbb21ba8495edcaacf4544b431450be9",
    "artPath": "53ba53228f854c65e5229669f22671c5cb0c6c38db9d1adf95bc9c1f8172e07d",
-   "name": "<ruby>未病療治<rt>みびょうりょうじ</rt></ruby>",
+   "name": "未病療治",
    "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
    "params": []
   },
@@ -496,7 +500,7 @@
    "id": 6,
    "iconPath": "20e8e523555686590f8bcc86513f7c405639a75db9c0eb261a29de6d95913024",
    "artPath": "1c81293a0f1fa430eae17234beb4c24028d9ed4650c810affc99cd1242609a7d",
-   "name": "<ruby>医者仁心<rt>いしゃじんしん</rt></ruby>",
+   "name": "医者仁心",
    "descHash": "通常攻撃を行った時、さらにナターシャの最大HP<nobr>#1[i]%</nobr>分の物理属性ダメージを与える。",
    "params": [
     0.4
@@ -528,7 +532,7 @@
    "break": "30",
    "energy": "20",
    "id": 985668,
-   "name": "<ruby>慈心<rt>じしん</rt></ruby>の<ruby>裏側<rt>うらがわ</rt></ruby>",
+   "name": "慈心の裏側",
    "iconPath": "353cc52d90d02d415d620f3ba45a304a886415dfbaeff59f1fe4dbb42c0c4c9d",
    "typeDescHash": "通常攻撃",
    "levelReq": 0,
@@ -689,7 +693,7 @@
    "break": "0",
    "energy": "30",
    "id": 270195,
-   "name": "<ruby>愛<rt>あい</rt></ruby>、<ruby>救済<rt>きゅうさい</rt></ruby>と<ruby>選択<rt>せんたく</rt></ruby>",
+   "name": "愛、救済と選択",
    "iconPath": "0975c428fec68731f209b8d84ae53d5dd0a8a7cf1aa3d4d4961407e985e9cf77",
    "typeDescHash": "戦闘スキル",
    "levelReq": 0,
@@ -1020,7 +1024,7 @@
    "break": "0",
    "energy": "5",
    "id": 186254,
-   "name": "<ruby>新生<rt>しんせい</rt></ruby>の<ruby>礼<rt>れい</rt></ruby>",
+   "name": "新生の礼",
    "iconPath": "0d4c73012470ae80d5b870a2b45cce3d86f8ed4eb4dcf267d80b9283aaf4e5ce",
    "typeDescHash": "必殺技",
    "levelReq": 0,
@@ -1306,7 +1310,7 @@
    "break": "0",
    "energy": "0",
    "id": 470781,
-   "name": "<ruby>生命<rt>いのち</rt></ruby>の<ruby>輝<rt>かがや</rt></ruby>き",
+   "name": "生命の輝き",
    "iconPath": "d594490a5ebd33e006f5ee03f08cda4f8bfd321448b9f72a44d63bcd31ae1202",
    "typeDescHash": "天賦",
    "levelReq": 0,
@@ -1614,7 +1618,7 @@
    "break": "60",
    "energy": "0",
    "id": 554722,
-   "name": "<ruby>催眠研究<rt>さいみんけんきゅう</rt></ruby>",
+   "name": "催眠研究",
    "iconPath": "55bdc6f1fe2b8f43bbbbdaec2af6eab731a2e141870906d2f331cd4e88393c73",
    "typeDescHash": "秘技",
    "levelReq": 0,
@@ -1747,7 +1751,7 @@
     "descHash": "戦闘スキルを発動した時、指定した味方単体の<u>デバフ</u>を<nobr>#1[i]</nobr>つ解除する。",
     "ultimateCost": 0,
     "id": 622873,
-    "name": "<ruby>舒緩<rt>じょかん</rt></ruby>",
+    "name": "舒緩",
     "iconPath": "eac567b470dca90662851062f8670111c87524863a8a29b62cb8debe0188d477",
     "levelReq": 0,
     "promotionReq": 2,
@@ -1888,7 +1892,7 @@
     "descHash": "ナターシャの治癒量+<nobr>#1[i]%</nobr>。",
     "ultimateCost": 0,
     "id": 622876,
-    "name": "<ruby>医者<rt>いしゃ</rt></ruby>",
+    "name": "医者",
     "iconPath": "d130993873e8a1495e7a60e9d77f8186ebde262e92613f921d4319ea0f0fee62",
     "levelReq": 0,
     "promotionReq": 4,
@@ -1998,7 +2002,7 @@
     "descHash": "戦闘スキルの持続回復効果の継続時間+<nobr>#1[i]</nobr>ターン。",
     "ultimateCost": 0,
     "id": 622875,
-    "name": "<ruby>摂生<rt>せっせい</rt></ruby>",
+    "name": "摂生",
     "iconPath": "c166fec7f66a242a054007435e768c60cd224507e1f88f083f026e64761ca86b",
     "levelReq": 0,
     "promotionReq": 6,
@@ -2773,7 +2777,7 @@
   "iconPath": "1441508de5b76ca06a80b5df249b528307baa752ef396fb01e2e194aefcce798",
   "altIconPath": "6ca5323b89a5084cb406a1ea39bb3bf3bfc9bdbe1332b0676b4789a9dab575fc",
   "color": "#FFFFFF",
-  "name": "<ruby>豊穣<rt>ほうじょう</rt></ruby>",
+  "name": "豊穣",
   "rarity": 0
  },
  "pageId": "natasha"

@@ -34,6 +34,7 @@
     "疑似花萼「大鉱区」",
     "疑似花萼「工造司」",
     "疑似花萼「ホテル・『レバリー』-夢境」",
+    "疑似花萼「『囁きの密林』神悟の樹庭」",
     "クエスト報酬",
     "依頼報酬",
     "エンバー交換"
@@ -73,6 +74,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "「忘却の庭」"
    ]
   },
@@ -91,6 +93,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "デイリー訓練",
     "エンバー交換"
    ]
@@ -110,6 +113,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "依頼報酬"
    ]
   },
@@ -445,7 +449,7 @@
    "id": 1,
    "iconPath": "7756fa7b31532935c5a2e1d8539fa251c7fdc8ed0b0d548ca4a0a093fb6e17af",
    "artPath": "bedbf287772c7cd1a3e9a534d15f40384f9025de8d17a8d639377474638d2711",
-   "name": "<ruby>子供時代<rt>こどもじだい</rt></ruby>",
+   "name": "子供時代",
    "descHash": "「乗勝追撃」発動後、姫子の速度+<nobr>#1[i]%</nobr>、<nobr>#2[i]</nobr>ターン継続。",
    "params": [
     0.2,
@@ -456,7 +460,7 @@
    "id": 2,
    "iconPath": "b39b47668eb17055770b6546668cca722ed01ae216a99e851d1a16721ce332b1",
    "artPath": "c413d6540519dc86a1c8bc1d1a6ec3a5e3d392ada68c3ebc38f321ce922581ea",
-   "name": "<ruby>邂逅<rt>かいこう</rt></ruby>",
+   "name": "邂逅",
    "descHash": "残りHPが<nobr>#1[i]%</nobr>以下の敵に対して与ダメージ+<nobr>#2[i]%</nobr>。",
    "params": [
     0.5,
@@ -467,7 +471,7 @@
    "id": 3,
    "iconPath": "32265849546a68be39ea91958d0b7afdadf7154cce5b5d5967f5e66313c9b514",
    "artPath": "722f2f24d3b1b6f481ce299d7dc12aae7c7c800421a9c50db78083b52efac314",
-   "name": "<ruby>自我<rt>じが</rt></ruby>",
+   "name": "自我",
    "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
    "params": []
   },
@@ -475,7 +479,7 @@
    "id": 4,
    "iconPath": "9f79efbe98dfdc7c9444f3270aaea6972bab927ffdd7583e2803e062c0abc76d",
    "artPath": "17f45f838903e8bbe7cc1cca0478ab184f695308085eb18017749c7de8997ff1",
-   "name": "<ruby>没頭<rt>ぼっとう</rt></ruby>",
+   "name": "没頭",
    "descHash": "戦闘スキルで敵を弱点撃破した時、姫子はさらにチャージを<nobr>#1[i]</nobr>獲得する。",
    "params": [
     1
@@ -485,7 +489,7 @@
    "id": 5,
    "iconPath": "e59a5702058e6b65acaf56de253f972d87f9cb351b627f867ff9ec60b1bd9a77",
    "artPath": "fa0d234296c753fe0d386cc432aed0a980b6668bd71c843f7714073fed3fe8f9",
-   "name": "<ruby>夢<rt>ゆめ</rt></ruby>",
+   "name": "夢",
    "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
    "params": []
   },
@@ -493,7 +497,7 @@
    "id": 6,
    "iconPath": "6407198a2447a3561b9ef157fddfff51dd4b295921afcb2cb6ba53ed9e6c2822",
    "artPath": "719f5e1821590921c0d7ea0fb47e6354cf3e80a5d9d53f719352472486b2479a",
-   "name": "<ruby>開拓<rt>かいたく</rt></ruby>！",
+   "name": "開拓！",
    "descHash": "必殺技を発動した時、さらに2ヒットし、1ヒットごとにランダムな敵単体に本来のダメージ<nobr>#1[i]%</nobr>分の炎属性ダメージを与える。",
    "params": [
     0.4
@@ -525,7 +529,7 @@
    "break": "30",
    "energy": "20",
    "id": 766023,
-   "name": "<ruby>武装調律<rt>ぶそうちょうりつ</rt></ruby>",
+   "name": "武装調律",
    "iconPath": "014c4cb16e6d16d0c8a66d783f364e319202fb1b6b0892a71ccc4c93facda330",
    "typeDescHash": "通常攻撃",
    "levelReq": 0,
@@ -686,7 +690,7 @@
    "break": "60 + 30/adjacent",
    "energy": "30",
    "id": 481496,
-   "name": "<ruby>溶核爆裂<rt>ようかくばくれつ</rt></ruby>",
+   "name": "溶核爆裂",
    "iconPath": "32265849546a68be39ea91958d0b7afdadf7154cce5b5d5967f5e66313c9b514",
    "typeDescHash": "戦闘スキル",
    "levelReq": 0,
@@ -976,7 +980,7 @@
    "break": "60/hit",
    "energy": "5",
    "id": 565437,
-   "name": "<ruby>天墜<rt>てんつい</rt></ruby>の<ruby>火<rt>ひ</rt></ruby>",
+   "name": "天墜の火",
    "iconPath": "9f9b6869f78cea87f67aa2502a5308c7e071aac401e226d46d7e4618f561c140",
    "typeDescHash": "必殺技",
    "levelReq": 0,
@@ -1266,7 +1270,7 @@
    "break": "30/hit",
    "energy": "10",
    "id": 280910,
-   "name": "<ruby>乗勝追撃<rt>じょうしょうついげき</rt></ruby>",
+   "name": "乗勝追撃",
    "iconPath": "a28633b388ed7c19ecbf4edb88582416bf2504f221407ea7b87bbe6c4c1d5d23",
    "typeDescHash": "天賦",
    "levelReq": 0,
@@ -1578,7 +1582,7 @@
    "break": "0",
    "energy": "0",
    "id": 196969,
-   "name": "<ruby>不完全燃焼<rt>ふかんぜんねんしょう</rt></ruby>",
+   "name": "不完全燃焼",
    "iconPath": "db01e4940ee601bfad459842299237bbabf120e75085c42e47155b11f4f60409",
    "typeDescHash": "秘技",
    "levelReq": 0,
@@ -1710,7 +1714,7 @@
     "descHash": "攻撃を行った時、<nobr>#1[i]%</nobr>の<u>基礎確率</u>で敵を燃焼状態にする、<nobr>#2[i]</nobr>ターン継続。<br />燃焼状態の敵はターンが回ってくるたびに、姫子の攻撃力<nobr>#3[i]%</nobr>分の<span style=\"color:#F84F36;\">炎</span>属性持続ダメージを受ける。",
     "ultimateCost": 0,
     "id": 202642,
-    "name": "<ruby>星火<rt>せいか</rt></ruby>",
+    "name": "星火",
     "iconPath": "caa133b4dfc5350b1a9ff9daa6958215d21326193b7dbc0c7b07a671b184b6e0",
     "levelReq": 0,
     "promotionReq": 2,
@@ -1852,7 +1856,7 @@
     "descHash": "燃焼状態の敵に対する、戦闘スキルによるダメージ+<nobr>#1[i]%</nobr>。",
     "ultimateCost": 0,
     "id": 202645,
-    "name": "<ruby>灼熱<rt>しゃくねつ</rt></ruby>",
+    "name": "灼熱",
     "iconPath": "43a2fc506fbc9747ea0077059ded5712e76db0f42a81a396bc4e38217d7b093b",
     "levelReq": 0,
     "promotionReq": 4,
@@ -1962,7 +1966,7 @@
     "descHash": "残りHPが<nobr>#1[i]%</nobr>以上の場合、会心率+<nobr>#2[i]%</nobr>。",
     "ultimateCost": 0,
     "id": 202644,
-    "name": "<ruby>道標<rt>みちしるべ</rt></ruby>",
+    "name": "道標",
     "iconPath": "f9c0c8c29d0b2b01aebd8098d4e2cc7c804bb7c16d1d1ff010b161726d7cff64",
     "levelReq": 0,
     "promotionReq": 6,
@@ -2731,7 +2735,7 @@
   }
  },
  "hasServant": false,
- "name": "<ruby>姫子<rt>ひめこ</rt></ruby>",
+ "name": "姫子",
  "rarity": 5,
  "descHash": "星穹列車の修復者。 広い星空を見るため、星穹列車に乗ることを決めた。 趣味は自分で豆を挽いてコーヒーを淹れること。",
  "artPath": "0c0468db7ae2d0dac5b66b80e1bf7ddb2d78a72f438bbfbd027285a561a3a500",
@@ -2748,7 +2752,7 @@
   "iconPath": "7134e661a4b98bb730cde90946f9683802b94ca4f17bfa2f2360e78700ca803f",
   "altIconPath": "005fa14e04e2704b43c3b215129260d7abe1bc8f9ebc3918ecc85a27d0247fbb",
   "color": "#FFFFFF",
-  "name": "<ruby>知恵<rt>ちえ</rt></ruby>",
+  "name": "知恵",
   "rarity": 0
  },
  "pageId": "himeko"

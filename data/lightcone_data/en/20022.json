@@ -1,7 +1,7 @@
 {
  "name": "Reminiscence",
  "rarity": 3,
- "descHash": "A drop of strength condensed from time itself. All the seemingly insignificant moments come together to form the magnificent choir of fate. <br /><br />\"In the brief beautiful dream, it was as if the old soul returned to the colorful waters of childhood.\"",
+ "descHash": "The delicate power distilled from time itself. It's all the seemingly insignificant moments that weave together a magnificent destiny. <br /><br />\"In the fleeting sweet dream, it was as if the old soul had returned to the colorful waters of childhood.\"",
  "iconPath": "96963358e64501c9600cda1c4fa77ec789e4b1f5330ab3590f0494fc341c8246",
  "artPath": "4ccc9a3dff75b279e885e2b9bcc9c21446c57ff039ca680fc8ede2011e0734f2",
  "artPlaceholder": {
@@ -34,6 +34,7 @@
     "Calyx: Great Mine",
     "Calyx: Artisanship Commission",
     "Calyx: The Reverie (Dreamscape)",
+    "Calyx: \"Murmuring Woods\" Grove of Epiphany",
     "Mission rewards",
     "Assignment rewards",
     "Embers Exchange"
@@ -54,6 +55,7 @@
     "Calyx: Backwater Pass",
     "Calyx: Divination Commission",
     "Calyx: A Child's Dream",
+    "Calyx: \"Strife Ruins\" Castrum Kremnos",
     "Forgotten Hall"
    ]
   },
@@ -72,6 +74,7 @@
     "Calyx: Backwater Pass",
     "Calyx: Divination Commission",
     "Calyx: A Child's Dream",
+    "Calyx: \"Strife Ruins\" Castrum Kremnos",
     "Embers Exchange"
    ]
   },
@@ -90,6 +93,7 @@
     "Calyx: Backwater Pass",
     "Calyx: Divination Commission",
     "Calyx: A Child's Dream",
+    "Calyx: \"Strife Ruins\" Castrum Kremnos",
     "Assignment rewards"
    ]
   },
@@ -158,6 +162,7 @@
    "rewardPath": "/material/20170864",
    "comeFrom": [
     "Titankin at Equilibrium Level 2 or higher",
+    "Crepuscular Beasts at Equilibrium Level 2 or higher",
     "Omni-Synthesizer — Material Synthesis",
     "Divergent Universe enemies",
     "Simulated Universe enemies",
@@ -177,6 +182,7 @@
    "rewardPath": "/material/20389475",
    "comeFrom": [
     "Titankin at Equilibrium Level 4 or higher",
+    "Crepuscular Beasts at Equilibrium Level 4 or higher",
     "Omni-Synthesizer — Material Synthesis",
     "Divergent Universe enemies",
     "Simulated Universe enemies",
@@ -196,11 +202,13 @@
    "rewardPath": "/material/20445700",
    "comeFrom": [
     "Titankin",
+    "Crepuscular Beasts",
     "Divergent Universe enemies",
     "Simulated Universe enemies",
     "Assignment Rewards",
     "Embers Exchange",
-    "Omni-Synthesizer — Material Exchange"
+    "Omni-Synthesizer — Material Exchange",
+    "Calyx (Golden)"
    ]
   }
  },
@@ -360,7 +368,7 @@
  "skill": {
   "id": 20022,
   "name": "Going to Sleep",
-  "descHash": "When memosprite's turn starts, the wearer and the memosprite each gain 1 stack of \"Commemoration.\" Each stack increases DMG dealt by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>, stacking up to <nobr>#2[i]</nobr> time(s). \"Commemoration\" is removed from the wearer and the memosprite when the memosprite disappears.",
+  "descHash": "When memosprite's turn starts, the wearer and memosprite each gain 1 stack of \"Commemoration.\" Each stack increases DMG dealt by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>, stacking up to <nobr>#2[i]</nobr> time(s). When memosprite disappears, removes \"Commemoration\" from the wearer and memosprite.",
   "levelData": [
    {
     "params": [

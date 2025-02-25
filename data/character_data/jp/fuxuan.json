@@ -34,6 +34,7 @@
     "疑似花萼「大鉱区」",
     "疑似花萼「工造司」",
     "疑似花萼「ホテル・『レバリー』-夢境」",
+    "疑似花萼「『囁きの密林』神悟の樹庭」",
     "クエスト報酬",
     "依頼報酬",
     "エンバー交換"
@@ -104,6 +105,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "「忘却の庭」"
    ]
   },
@@ -122,6 +124,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "デイリー訓練",
     "エンバー交換"
    ]
@@ -141,6 +144,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "依頼報酬"
    ]
   },
@@ -445,7 +449,7 @@
    "id": 1,
    "iconPath": "e357aca96762f1824ef997d3fe807c1715f3819b03f743693ad71d165d07399b",
    "artPath": "31d2d347efa0afefe890fd72d2a1530803215d8c0622601ee55a055603cb7726",
-   "name": "<ruby>司危<rt>しき</rt></ruby>",
+   "name": "司危",
    "descHash": "「鑑知」状態の味方の会心ダメージ+<nobr>#1[i]%</nobr>。",
    "params": [
     0.3
@@ -455,7 +459,7 @@
    "id": 2,
    "iconPath": "aeb01c0b3e47257c9651a0dcaeb6f192239f8c7e6fdcdedc6959bdd3446c3860",
    "artPath": "df0b54cdcfbe85ef598fc68f94f23e9c67e41aac857817113102b0eeb09e1c89",
-   "name": "<ruby>柔兆<rt>じゅうちょう</rt></ruby>",
+   "name": "柔兆",
    "descHash": "「窮観の陣」が起動している時、味方がHPが0になるダメージを受けても、今回の行動でHPが0になるダメージを受けたすべての味方は<u>戦闘不能状態</u>にならず、自身の最大HP<nobr>#1[i]%</nobr>分のHPを回復する。この効果は一度の戦闘で1回まで発動できる。",
    "params": [
     0.7
@@ -465,7 +469,7 @@
    "id": 3,
    "iconPath": "fb7b8dafd44e9356197d11f23532d8240c4dfaf4e137594638ad6016fe4c3ce0",
    "artPath": "fe9276344323a6cdc0e85a8ce0ec40a5614e1ac0829482fc8b5736455647d3d9",
-   "name": "<ruby>直符<rt>ちょくふ</rt></ruby>",
+   "name": "直符",
    "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
    "params": []
   },
@@ -473,7 +477,7 @@
    "id": 4,
    "iconPath": "61e83c8e621a387dbb51513cb2d8c686df42b9425c2dca87818dc27e3b43c125",
    "artPath": "d8cfb3a68ae65a84d41ab5538c9389e1a6f5e7af340aa32273e8cf4f87ce698b",
-   "name": "<ruby>格澤<rt>こうたく</rt></ruby>",
+   "name": "格澤",
    "descHash": "「窮観の陣」の中にいる符玄以外の味方が攻撃を受けた後、符玄はEPを<nobr>#1[i]</nobr>回復する。",
    "params": [
     5
@@ -483,7 +487,7 @@
    "id": 5,
    "iconPath": "172fff7878d0bc849e78fa18df9f48d5d85c7148be3ce7d6a79633147e1929ef",
    "artPath": "c4bedd748467f04cb026e246d5f7e46db9f2ed6c94da94e035b8ad871da9b751",
-   "name": "<ruby>計神<rt>けいしん</rt></ruby>",
+   "name": "計神",
    "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
    "params": []
   },
@@ -491,7 +495,7 @@
    "id": 6,
    "iconPath": "4f5bef55495eaf3f355476c0cfe27939ff3106f5d8ee25d705e527617d2db966",
    "artPath": "cedf4e289b5766ca8f309ae5cf7f03003061fbb04506aee6347aa47483416520",
-   "name": "<ruby>種陵<rt>しゅりょう</rt></ruby>",
+   "name": "種陵",
    "descHash": "「窮観の陣」が起動している時、味方全体が戦闘中失った累計HPをカウントする。符玄の必殺技によるダメージが、戦闘中失った累計HP<nobr>#1[i]%</nobr>分アップする。<br />戦闘中失った累計HPのカウントは、符玄の最大HPの<nobr>#2[i]%</nobr>を超えず、必殺技を発動した後にリセットされる。",
    "params": [
     2,
@@ -524,7 +528,7 @@
    "break": "30",
    "energy": "20",
    "id": 369002,
-   "name": "<ruby>始撃歳星<rt>しげきさいせい</rt></ruby>",
+   "name": "始撃歳星",
    "iconPath": "152d08c91998cd203c9a090d177a8672240539b682ef37a0b112b79bf123555b",
    "typeDescHash": "通常攻撃",
    "levelReq": 0,
@@ -685,7 +689,7 @@
    "break": "0",
    "energy": "30",
    "id": 285061,
-   "name": "<ruby>太微<rt>たいび</rt></ruby>の<ruby>行棋<rt>ぎょうき</rt></ruby>、<ruby>影<rt>かげ</rt></ruby><ruby>示<rt>しめ</rt></ruby>す<ruby>霊台<rt>れいだい</rt></ruby>",
+   "name": "太微の行棋、影示す霊台",
    "iconPath": "fb7b8dafd44e9356197d11f23532d8240c4dfaf4e137594638ad6016fe4c3ce0",
    "typeDescHash": "戦闘スキル",
    "levelReq": 0,
@@ -1020,7 +1024,7 @@
    "break": "60/hit",
    "energy": "5",
    "id": 168416,
-   "name": "<ruby>天律大衍<rt>てんりつたいえん</rt></ruby>、<ruby>歴劫帰一<rt>れきごうきいつ</rt></ruby>",
+   "name": "天律大衍、歴劫帰一",
    "iconPath": "60e69b4731304d8a2939339a3edd68d52aa5cf3a691e74f652f5d11ff4848d49",
    "typeDescHash": "必殺技",
    "levelReq": 0,
@@ -1295,7 +1299,7 @@
    "break": "0",
    "energy": "0",
    "id": 84475,
-   "name": "<ruby>乾坤清夷<rt>けんこんせいい</rt></ruby>、<ruby>一陽来復<rt>いちようらいふく</rt></ruby>",
+   "name": "乾坤清夷、一陽来復",
    "iconPath": "ec04beb846603b006e1deb7605e3c92f239dec1d3fcd1674c26bb0cd5fc37e97",
    "typeDescHash": "天賦",
    "levelReq": 0,
@@ -1622,7 +1626,7 @@
    "break": "0",
    "energy": "0",
    "id": 799948,
-   "name": "<ruby>否泰記<rt>ひたいしる</rt></ruby>す<ruby>四郭固<rt>しかくこ</rt></ruby>",
+   "name": "否泰記す四郭固",
    "iconPath": "3163ece3ea6aed63fa66eecd8127962c847126830e68b5b50e923a55dcbd3d31",
    "typeDescHash": "秘技",
    "levelReq": 0,
@@ -1752,7 +1756,7 @@
     "descHash": "「窮観の陣」が起動している時、敵が味方に<u>行動制限系デバフ</u>を付与する場合、味方全体がその行動中に付与されるすべての<u>行動制限系デバフ</u>に抵抗する。この効果は1回まで発動できる。再度「窮観の陣」を起動すると、発動可能回数がリセットされる。",
     "ultimateCost": 0,
     "id": 6209,
-    "name": "<ruby>六壬神課<rt>りくじんしんか</rt></ruby>",
+    "name": "六壬神課",
     "iconPath": "375da1bf33558111f0cb29d4ef1b40963840c87d91a4288e4a96c21b4ddc43e7",
     "levelReq": 0,
     "promotionReq": 6,
@@ -1866,7 +1870,7 @@
       "descHash": "「窮観の陣」が起動している時、符玄が戦闘スキルを発動すると、さらにEPを<nobr>#1[i]</nobr>回復する。",
       "ultimateCost": 0,
       "id": 6207,
-      "name": "<ruby>太乙神数<rt>たいいつしんすう</rt></ruby>",
+      "name": "太乙神数",
       "iconPath": "88f209c4473360fca032b6808782923e5badbcd09fa37d15928cb977e908256e",
       "levelReq": 0,
       "promotionReq": 2,
@@ -1973,7 +1977,7 @@
       "descHash": "必殺技を発動した時、符玄以外の味方のHPを、符玄の最大HPの<nobr>#1[i]%</nobr>分+<nobr>#2[i]</nobr>回復する。",
       "ultimateCost": 0,
       "id": 6210,
-      "name": "<ruby>奇門遁甲<rt>きもんとんこう</rt></ruby>",
+      "name": "奇門遁甲",
       "iconPath": "425d7cfde286e56bf9f213c745499892d7c84f761c4ded8ccf97440b087eaf81",
       "levelReq": 0,
       "promotionReq": 4,
@@ -2109,7 +2113,7 @@
   {
    "id": 1,
    "title": "初対面",
-   "text": "私は羅浮の<ruby>太卜司<rt>タイボクシ</rt></ruby>の長、<ruby>符玄<rt>フゲン</rt></ruby>。はじめまして——いいえ、久しぶりと言うべきかしら…私は法眼を通して、すでにおまえとの初対面を<nobr>22</nobr>回経験しているから。",
+   "text": "私は羅浮の太卜司の長、符玄。はじめまして——いいえ、久しぶりと言うべきかしら…私は法眼を通して、すでにおまえとの初対面を<nobr>22</nobr>回経験しているから。",
    "unlockRequirement": "",
    "cnUrl": "ea680dc73eef1c4641c0dbe867b3c1af91316d907a75a456673922113e1d3973",
    "jpUrl": "b71c4914084dbc1941ec6ca657034af1f20984f1b2836b7321a82c38396c139f",
@@ -2199,7 +2203,7 @@
   {
    "id": 10,
    "title": "シェア",
-   "text": "太卜司の<ruby>不文律<rt>ふぶんりつ</rt></ruby>である「占うべきではない3つのもの」の中に、「不義を占わず」というのがある。宝くじや相場の変動について聞かれても、答えるつもりはないわ。",
+   "text": "太卜司の不文律である「占うべきではない3つのもの」の中に、「不義を占わず」というのがある。宝くじや相場の変動について聞かれても、答えるつもりはないわ。",
    "unlockRequirement": "",
    "cnUrl": "5cf04e57346fbc6f1a63d71cca3891c8b42dd4bb62cfa63b89c0c40341c2a5f7",
    "jpUrl": "575a2aaca998ceeb27404098ade944a05f0109a03f16dba7b283aefa9bebdf4a",
@@ -2209,7 +2213,7 @@
   {
    "id": 11,
    "title": "見聞・1",
-   "text": "同盟は帝弓の啓示に従い、<ruby>寿禍の王<rt>寿瘟禍祖</rt></ruby>を巡狩しているけれど…どの仙舟にも「豊穣の仙跡」と呼ばれる星神の造物が残っている。羅浮の多くの洞天には、私たちを長命にした「建木」が封印されているわ。",
+   "text": "同盟は帝弓の啓示に従い、寿禍の王を巡狩しているけれど…どの仙舟にも「豊穣の仙跡」と呼ばれる星神の造物が残っている。羅浮の多くの洞天には、私たちを長命にした「建木」が封印されているわ。",
    "unlockRequirement": "",
    "cnUrl": "f50416a262b4905624ea339eafcb986f3739f74955913dc49b3ac0ad282d9bcc",
    "jpUrl": "974e008d40aed8877651a65b43ffcabd5850ec1622a44dcc4227cd4a3fa3c49f",
@@ -2219,7 +2223,7 @@
   {
    "id": 12,
    "title": "見聞・2",
-   "text": "仙舟玉殿は太卜司制度発祥の地。観星士や卜者といった賢者が集まり、同盟のために方略を決め、星を観察する。かつて、あそこで「<ruby>息壌<rt>ソクジョウ</rt></ruby>」の胎石を——「息壌」玉兆技術の根源を見たことがあるわ。",
+   "text": "仙舟玉殿は太卜司制度発祥の地。観星士や卜者といった賢者が集まり、同盟のために方略を決め、星を観察する。かつて、あそこで「息壌」の胎石を——「息壌」玉兆技術の根源を見たことがあるわ。",
    "unlockRequirement": "",
    "cnUrl": "9b06c05fa265c1893c0689d828eb3ced4506b8c9fb56e15d06bfbd01f1179096",
    "jpUrl": "532f2c0e269618072ffff2f9bfc390e04dd848a07a59c798751bf193b2dcb311",
@@ -2229,7 +2233,7 @@
   {
    "id": 13,
    "title": "見聞・3",
-   "text": "仙舟<ruby>朱明<rt>シュメイ</rt></ruby>のエンジンの中心には、命の宿った炎が眠っていると言われているわ。それは、かつて仙舟が大敵とみなしていた生物で、人々が「<ruby>火皇<rt>カコウ</rt></ruby>」と呼んでいたもの。朱明の職人は、あらゆる手段を講じて「それ」を炉の中に閉じ込め、その力を使って色々な武器を鋳造したの。",
+   "text": "仙舟朱明のエンジンの中心には、命の宿った炎が眠っていると言われているわ。それは、かつて仙舟が大敵とみなしていた生物で、人々が「火皇」と呼んでいたもの。朱明の職人は、あらゆる手段を講じて「それ」を炉の中に閉じ込め、その力を使って色々な武器を鋳造したの。",
    "unlockRequirement": "",
    "cnUrl": "8678b84add6804abb2c37a0e6633cb64ca38fe25d33269d6b050b561e2afa98f",
    "jpUrl": "4f765de979673702039330796402e741e5b47bcc8807d9afde132a2d78ffa815",
@@ -2279,7 +2283,7 @@
   {
    "id": 18,
    "title": "停雲について",
-   "text": "天舶司が管轄する商団にはそれぞれの長所がある。停雲が率いる「<ruby>鳴火<rt>ナルビ</rt></ruby>」商団は、ありふれた物の中から価値ある物を見つけるのが上手いと聞いたわ。万物に秘められた可能性を見出すという点では、占いの道に通じるものがあるわね。",
+   "text": "天舶司が管轄する商団にはそれぞれの長所がある。停雲が率いる「鳴火」商団は、ありふれた物の中から価値ある物を見つけるのが上手いと聞いたわ。万物に秘められた可能性を見出すという点では、占いの道に通じるものがあるわね。",
    "unlockRequirement": "",
    "cnUrl": "e15317d43699f110b691ca2fc293293e8f787f303d739eac3d8b1f842828180c",
    "jpUrl": "e431f26575452f3beec03080fbfa25941cf0a61993b157eceed48381a69ffa2c",
@@ -2459,7 +2463,7 @@
   {
    "id": 56,
    "title": "通常攻撃・1",
-   "text": "<ruby>極数<rt>ごくすう</rt></ruby>、<ruby>知来<rt>ちらい</rt></ruby>！",
+   "text": "極数、知来！",
    "unlockRequirement": "",
    "cnUrl": "b9ccf42fc1cd6046ffe83589f2804971a60ae59f2a6ad04524654c2db10413d6",
    "jpUrl": "5d595330fe6452adba9674bf60c8f7fc2db8c790da5953a8ac5c24bbbe46faf6",
@@ -2469,7 +2473,7 @@
   {
    "id": 57,
    "title": "通常攻撃・2",
-   "text": "<ruby>成象<rt>せいしょう</rt></ruby>、<ruby>効法<rt>こうほう</rt></ruby>！",
+   "text": "成象、効法！",
    "unlockRequirement": "",
    "cnUrl": "776820b0f67a467cbd7ee5ce497c0d2a195d1a1883840dfb3cffbcf0573bdb61",
    "jpUrl": "1c8dd208d2521bf3ca8eccea4122399a5da593f45aebabd6234eb53ac7ec01dd",
@@ -2479,7 +2483,7 @@
   {
    "id": 58,
    "title": "戦闘スキル・1",
-   "text": "<ruby>相与一体<rt>そうよいったい</rt></ruby>。",
+   "text": "相与一体。",
    "unlockRequirement": "",
    "cnUrl": "09dd277bb39e81f9575be3833e1ad54eecf2407b81d90194cfc676305794ba40",
    "jpUrl": "51ce2b63087ac1f9809edfcdeb6770be03a4354d2faa5966bad0cb89a101c880",
@@ -2489,7 +2493,7 @@
   {
    "id": 59,
    "title": "戦闘スキル・2",
-   "text": "<ruby>上下象易<rt>しょうかしょうい</rt></ruby>。",
+   "text": "上下象易。",
    "unlockRequirement": "",
    "cnUrl": "8f9aa11051d8342a62f0d6bfbfa97706e328d1205f62d7dd1d8c9ca855420ad9",
    "jpUrl": "ad5d9549ae4141923e4966260488db390b918902ff638701d4492e5c3c98ba7f",
@@ -2559,7 +2563,7 @@
   {
    "id": 66,
    "title": "戦闘に戻る",
-   "text": "<ruby>一陽来復<rt>いちようらいふく</rt></ruby>ね。",
+   "text": "一陽来復ね。",
    "unlockRequirement": "",
    "cnUrl": "e24031eb369f3102ab61745cc40bbe1bb6cde6a49b47121d2d3b71e587e37524",
    "jpUrl": "92fa46427091584bc8da86a66c0290ca1773907135b8ced05100e12d9d01b853",
@@ -2569,7 +2573,7 @@
   {
    "id": 67,
    "title": "HP回復",
-   "text": "<ruby>有無相通<rt>うむあいつう</rt></ruby>ずる、妙策だわ。",
+   "text": "有無相通ずる、妙策だわ。",
    "unlockRequirement": "",
    "cnUrl": "777fc22e369ff46cf3be3e109a69317b42f0c012d944d41f83afdfe78afa3c4d",
    "jpUrl": "cba3f1de851acbe937323338797c87b2f01dc81655584562749d7d4212e85970",
@@ -2579,7 +2583,7 @@
   {
    "id": 68,
    "title": "秘技",
-   "text": "<ruby>顛撲不破<rt>てんぼくふは</rt></ruby>。",
+   "text": "顛撲不破。",
    "unlockRequirement": "",
    "cnUrl": "dc5501c558b51d0d3561ae68252b1dd353cb0e501e1399ba1b2bdfd64b2b9379",
    "jpUrl": "7463b7bc6d0178986a01140dce6f7710124ec7238b1c2e0d77ea9638dc752ca4",
@@ -2811,7 +2815,7 @@
   }
  },
  "hasServant": false,
- "name": "<ruby>符玄<rt>フゲン</rt></ruby>",
+ "name": "符玄",
  "rarity": 5,
  "descHash": "仙舟「羅浮」太卜司の長。 第三の目と窮観の陣を用いて、仙舟の航路を占い、物事の吉凶を予見する。",
  "artPath": "c6024a27be9343b9253fa8f451ce5aee85f7c9fda568b52c7d04638834571a97",
@@ -2828,7 +2832,7 @@
   "iconPath": "f9a9fde0d8ee77c108e751204e48af596243b9c2abff8458c110f43a6ca693c6",
   "altIconPath": "6a2a4c9f4b0bbd0ca1d697b6d5ed4155b4684e89bab53fcd9d5831022a506f8c",
   "color": "#FFFFFF",
-  "name": "<ruby>存護<rt>そんご</rt></ruby>",
+  "name": "存護",
   "rarity": 0
  },
  "pageId": "fuxuan"

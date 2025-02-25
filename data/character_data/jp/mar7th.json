@@ -34,6 +34,7 @@
     "疑似花萼「大鉱区」",
     "疑似花萼「工造司」",
     "疑似花萼「ホテル・『レバリー』-夢境」",
+    "疑似花萼「『囁きの密林』神悟の樹庭」",
     "クエスト報酬",
     "依頼報酬",
     "エンバー交換"
@@ -89,6 +90,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "「忘却の庭」"
    ]
   },
@@ -107,6 +109,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "デイリー訓練",
     "エンバー交換"
    ]
@@ -126,6 +129,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "依頼報酬"
    ]
   },
@@ -445,7 +449,7 @@
    "id": 1,
    "iconPath": "b297b21195d997d3395ab866195f95b5384de8913beb0e176ca67be20c2f972b",
    "artPath": "8e74872ee5bf8f0c9d8f471f15d9ce581a82f2da9e9ba58c3e975afd33661c25",
-   "name": "<ruby>記憶<rt>きおく</rt></ruby>の<ruby>中<rt>なか</rt></ruby>の<ruby>君<rt>きみ</rt></ruby>",
+   "name": "記憶の中の君",
    "descHash": "必殺技が敵1体を凍結状態にするたび、三月なのかはEPを<nobr>#1[i]</nobr>回復する。",
    "params": [
     6
@@ -454,8 +458,8 @@
   {
    "id": 2,
    "iconPath": "999464388cb6f0d4e07ab310e489b19faeca474b07e2f49c68a6e3a207b2eb84",
-   "artPath": "80791429c08c180f8090d3f34780c2943aa692ece6d275a9147d50f3f648bfbe",
-   "name": "<ruby>記憶<rt>きおく</rt></ruby>の<ruby>中<rt>なか</rt></ruby>のあの<ruby>子<rt>こ</rt></ruby>",
+   "artPath": "087db0b27688792260439a423a44f06adf71c45e6afbe2e8ddcc443a9489c988",
+   "name": "記憶の中のあの子",
    "descHash": "戦闘に入る時、残りHP割合が最も低い味方に、三月なのかの防御力<nobr>#1[i]%</nobr>+<nobr>#3[i]</nobr>の耐久値を持つバリアを付与する、<nobr>#2[i]</nobr>ターン継続。",
    "params": [
     0.24,
@@ -467,7 +471,7 @@
    "id": 3,
    "iconPath": "4ab1b64d94dfd93f8ec96b179c3fb599ffa48f6ef711ddf10cf4fc1dea4799ae",
    "artPath": "965c2c7ba77eb8b1d4e114eae691837911bd2389976df18331b648dbdb70055d",
-   "name": "<ruby>記憶<rt>きおく</rt></ruby>の<ruby>中<rt>なか</rt></ruby>の<ruby>全<rt>すべ</rt></ruby>て",
+   "name": "記憶の中の全て",
    "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
    "params": []
   },
@@ -475,7 +479,7 @@
    "id": 4,
    "iconPath": "a92f4cc3ae937e4f75b74440f2561ab0422a2415e78be9e1fb4c48a849f72583",
    "artPath": "8ba4fccabd3bafe2f613253bd05b3fb662d7099272954809b6e51cad0ca1c297",
-   "name": "もう<ruby>失<rt>うしな</rt></ruby>いたくない",
+   "name": "もう失いたくない",
    "descHash": "ターンが回ってくるたび、天賦の<u>カウンター</u>効果を発動できる回数+1。<u>カウンター</u>のダメージ基礎値が、三月なのかの防御力<nobr>#1[i]%</nobr>分アップする。",
    "params": [
     0.3
@@ -485,7 +489,7 @@
    "id": 5,
    "iconPath": "008232ea8571a3821bc65fa60b6221bd06fd71d14290a52e9266a83c76862b90",
    "artPath": "9ea0f7dc15296f13fe811f1de5822afa253a1a0cba15271c39905e745d8639c0",
-   "name": "もう<ruby>忘<rt>わす</rt></ruby>れたくない",
+   "name": "もう忘れたくない",
    "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
    "params": []
   },
@@ -526,7 +530,7 @@
    "break": "30",
    "energy": "20",
    "id": 441021,
-   "name": "<ruby>極寒<rt>ごっかん</rt></ruby>の<ruby>弓矢<rt>ゆみや</rt></ruby>",
+   "name": "極寒の弓矢",
    "iconPath": "8938f97206fb2bc70c49fa6f6c4faddd2da1b12a3772d365a65ad218b6970633",
    "typeDescHash": "通常攻撃",
    "levelReq": 0,
@@ -687,7 +691,7 @@
    "break": "0",
    "energy": "30",
    "id": 524962,
-   "name": "<ruby>可愛<rt>かわい</rt></ruby>いは<ruby>正義<rt>せいぎ</rt></ruby>",
+   "name": "可愛いは正義",
    "iconPath": "008232ea8571a3821bc65fa60b6221bd06fd71d14290a52e9266a83c76862b90",
    "typeDescHash": "戦闘スキル",
    "levelReq": 0,
@@ -1018,7 +1022,7 @@
    "break": "60/hit",
    "energy": "5",
    "id": 641607,
-   "name": "<ruby>氷刻<rt>ひょうこく</rt></ruby><ruby>矢雨<rt>やう</rt></ruby>の<ruby>時<rt>とき</rt></ruby>",
+   "name": "氷刻矢雨の時",
    "iconPath": "d814a6df970aa90d8a4fc37ac196cb8e2dd6751170b47c1589758d46cf9cd878",
    "typeDescHash": "必殺技",
    "levelReq": 0,
@@ -1334,7 +1338,7 @@
    "break": "30",
    "energy": "10",
    "id": 955908,
-   "name": "<ruby>少女<rt>しょうじょ</rt></ruby>の<ruby>特権<rt>とっけん</rt></ruby>",
+   "name": "少女の特権",
    "iconPath": "f7075f3aadbfd929d43b10a08f1205a739d81c0d22e5171f9597bbba0e4b49bc",
    "typeDescHash": "天賦",
    "levelReq": 0,
@@ -1642,7 +1646,7 @@
    "break": "60",
    "energy": "0",
    "id": 240435,
-   "name": "<ruby>凍<rt>こお</rt></ruby>る<ruby>瞬間<rt>しゅんかん</rt></ruby>",
+   "name": "凍る瞬間",
    "iconPath": "41710790b9d417e82482a0af97b23196111ec06a936d32dc547ff3eb373562d2",
    "typeDescHash": "秘技",
    "levelReq": 0,
@@ -1745,7 +1749,7 @@
       "descHash": "戦闘スキルを発動した時、指定した味方単体の<u>デバフ</u>を1つ解除する。",
       "ultimateCost": 0,
       "id": 877640,
-      "name": "<ruby>純潔<rt>じゅんけつ</rt></ruby>",
+      "name": "純潔",
       "iconPath": "f893a8f10936db62da6a8213f7bacfb9fa079452249b33fe3c026ccd4ef26250",
       "levelReq": 0,
       "promotionReq": 2,
@@ -1850,7 +1854,7 @@
       "descHash": "戦闘スキルで付与したバリアの継続時間+<nobr>#1[i]</nobr>ターン。",
       "ultimateCost": 0,
       "id": 877643,
-      "name": "<ruby>加護<rt>かご</rt></ruby>",
+      "name": "加護",
       "iconPath": "c4bd2fa55ede5bd6946052f5618dd0db22c1c4149d7fc4bb9f59249bcb28e9e2",
       "levelReq": 0,
       "promotionReq": 4,
@@ -2085,7 +2089,7 @@
     "descHash": "必殺技を発動した時、敵を凍結状態にする<u>基礎確率</u>+<nobr>#1[i]%</nobr>。",
     "ultimateCost": 0,
     "id": 877642,
-    "name": "<ruby>氷呪<rt>ひょうじゅ</rt></ruby>",
+    "name": "氷呪",
     "iconPath": "c52d5db605fea85015b3f786746f55c618f7631daebbf248ee41c70742d8138c",
     "levelReq": 0,
     "promotionReq": 6,
@@ -2919,7 +2923,7 @@
   {
    "id": 96,
    "title": "「巡狩」秘技",
-   "text": "<ruby>桃花影落飛神剣<rt>とうかえいらくひしんけん</rt></ruby>～",
+   "text": "桃花影落飛神剣～",
    "unlockRequirement": "",
    "cnUrl": "ede2023b1b3ab4b2ab8de8c836273aef64571f535930fd04a0da92dd62851926",
    "jpUrl": "5ae69ebddc3354e14e8e6bc22951003a1950cbc336e8255e5902b4989cb70441",
@@ -3161,7 +3165,7 @@
   }
  },
  "hasServant": false,
- "name": "<ruby>三月<rt>みつき</rt></ruby>なのか",
+ "name": "三月なのか",
  "rarity": 4,
  "descHash": "かつて恒氷の中で眠っていた少女。すべての記憶を失っている。 本当の自分を見つけるために、列車に乗って旅をすることを決めた。 約<nobr>67</nobr>種の「身の上話」を用意しているらしい。",
  "artPath": "1ca48661ecfb96771c6ed0c1d32df75071074efac504d40dd24c2c0508fedf24",
@@ -3178,7 +3182,7 @@
   "iconPath": "f9a9fde0d8ee77c108e751204e48af596243b9c2abff8458c110f43a6ca693c6",
   "altIconPath": "6a2a4c9f4b0bbd0ca1d697b6d5ed4155b4684e89bab53fcd9d5831022a506f8c",
   "color": "#FFFFFF",
-  "name": "<ruby>存護<rt>そんご</rt></ruby>",
+  "name": "存護",
   "rarity": 0
  },
  "pageId": "mar7th"

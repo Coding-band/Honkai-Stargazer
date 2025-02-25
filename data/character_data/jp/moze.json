@@ -34,6 +34,7 @@
     "疑似花萼「大鉱区」",
     "疑似花萼「工造司」",
     "疑似花萼「ホテル・『レバリー』-夢境」",
+    "疑似花萼「『囁きの密林』神悟の樹庭」",
     "クエスト報酬",
     "依頼報酬",
     "エンバー交換"
@@ -89,6 +90,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "「忘却の庭」"
    ]
   },
@@ -107,6 +109,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "デイリー訓練",
     "エンバー交換"
    ]
@@ -126,6 +129,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "依頼報酬"
    ]
   },
@@ -445,7 +449,7 @@
    "id": 1,
    "iconPath": "e7973ed8af7b0b0257d68b018d8eed0d7236035b5ffde1bb9f6c25dfe0265df7",
    "artPath": "f62237d04fe88675207e1925fcf7c239582fd6d595092b29fc8e1d00fe62f72d",
-   "name": "<ruby>立志<rt>りっし</rt></ruby>",
+   "name": "立志",
    "descHash": "戦闘に入った後、モゼはEPを<nobr>#2[i]</nobr>回復する。天賦による<u>付加ダメージ</u>を1回発動するたびに、EPを<nobr>#1[i]</nobr>回復する。",
    "params": [
     2,
@@ -456,7 +460,7 @@
    "id": 2,
    "iconPath": "f40bce155ec777533107bbb43c58fb3634888844751bae9eb56dac936bb7dc4e",
    "artPath": "83f11bd4adb3b5ae2e6ca04726c1da220a8468d1ec3cff49de3d37c65e7b2f18",
-   "name": "<ruby>懲罰<rt>ちょうばつ</rt></ruby>",
+   "name": "懲罰",
    "descHash": "味方が「獲物」状態の敵にダメージを与える時、会心ダメージ+<nobr>#1[i]%</nobr>。",
    "params": [
     0.4
@@ -466,7 +470,7 @@
    "id": 3,
    "iconPath": "18133237b586afb0274db015cc8c0aa65dd3325db01a1c72444f02fa3e6c8378",
    "artPath": "ec252fcff0c41d2555c010c03fbee4734aceee9f7a98b893a8acdac119ff7316",
-   "name": "<ruby>追撃<rt>ついげき</rt></ruby>",
+   "name": "追撃",
    "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
    "params": []
   },
@@ -474,7 +478,7 @@
    "id": 4,
    "iconPath": "45c1b2128400d9b1e8dd3a938bb54ce8ba2a25e176dbf3a956433eb7d575bda6",
    "artPath": "ae0d58ca7af2a53125cca3d84dcc2a475fd5d991e673d78e84eecae127ed62cd",
-   "name": "<ruby>隠密<rt>おんみつ</rt></ruby>",
+   "name": "隠密",
    "descHash": "必殺技を発動する時、モゼの与ダメージ+<nobr>#1[f1]%</nobr>、<nobr>#2[i]</nobr>ターン継続。",
    "params": [
     0.3,
@@ -485,7 +489,7 @@
    "id": 5,
    "iconPath": "e27ce301e20eee6f70354c72aba975b229a0d79e839fc337dea76064dc55030b",
    "artPath": "0cd6688ddcf61e3bcf8dea8f8b496533b6a46f33117ff694f3df9b072636b020",
-   "name": "<ruby>欺瞞<rt>ぎまん</rt></ruby>",
+   "name": "欺瞞",
    "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
    "params": []
   },
@@ -493,7 +497,7 @@
    "id": 6,
    "iconPath": "e0fe5e1756f949a3593e43988f93a383e5cb4313b3ae4b5ae82d93513d93d80a",
    "artPath": "b39e0c2cc8fc9faef1408155ee5290bc5803ae6a87c06aeaeda75c8e176b0127",
-   "name": "<ruby>忠誠<rt>ちゅうせい</rt></ruby>",
+   "name": "忠誠",
    "descHash": "天賦による<u>追加攻撃</u>のダメージ倍率+<nobr>#1[i]%</nobr>。",
    "params": [
     0.25
@@ -525,7 +529,7 @@
    "break": "30",
    "energy": "20",
    "id": 906559,
-   "name": "<ruby>暗器<rt>あんき</rt></ruby>",
+   "name": "暗器",
    "iconPath": "5144c4ca7ab3871736c2f546d9cc170daa17648499af8917eda951966e7016c3",
    "typeDescHash": "通常攻撃",
    "levelReq": 0,
@@ -686,7 +690,7 @@
    "break": "60",
    "energy": "30",
    "id": 990500,
-   "name": "<ruby>急襲<rt>きゅうしゅう</rt></ruby>する<ruby>迅羽<rt>じんう</rt></ruby>",
+   "name": "急襲する迅羽",
    "iconPath": "e27ce301e20eee6f70354c72aba975b229a0d79e839fc337dea76064dc55030b",
    "typeDescHash": "戦闘スキル",
    "levelReq": 0,
@@ -972,7 +976,7 @@
    "break": "90",
    "energy": "5",
    "id": 107145,
-   "name": "<ruby>潜<rt>ひそ</rt></ruby>む<ruby>刃<rt>やいば</rt></ruby>、<ruby>鋭<rt>するど</rt></ruby>い<ruby>影<rt>かげ</rt></ruby>",
+   "name": "潜む刃、鋭い影",
    "iconPath": "f240be91dd09c4524601a87837a08f00928095ac112b6d43b7618f9fa4e6ed22",
    "typeDescHash": "必殺技",
    "levelReq": 0,
@@ -1243,7 +1247,7 @@
    "break": "30",
    "energy": "10",
    "id": 421446,
-   "name": "<ruby>翼<rt>つばさ</rt></ruby>を<ruby>折<rt>お</rt></ruby>りて<ruby>鋒鋩<rt>ほうぼう</rt></ruby>とす",
+   "name": "翼を折りて鋒鋩とす",
    "iconPath": "e05757e693644cd08eaa7bfa90f4507d844e534472e6361fd083cb551496ba6a",
    "typeDescHash": "天賦",
    "levelReq": 0,
@@ -1566,7 +1570,7 @@
    "break": "0",
    "energy": "0",
    "id": 705973,
-   "name": "<ruby>見<rt>み</rt></ruby>えざる<ruby>脅威<rt>きょうい</rt></ruby>",
+   "name": "見えざる脅威",
    "iconPath": "4b1e9a236d66af0350727efcdc2c4a37f10fde87d68bdb54b9fc7ec50b0b15df",
    "typeDescHash": "秘技",
    "levelReq": 0,
@@ -1664,7 +1668,7 @@
     "descHash": "天賦による<u>追加攻撃</u>を行った後、SPを<nobr>#1[i]</nobr>回復する。この効果は<nobr>#2[i]</nobr>ターン後に再度発動できる。",
     "ultimateCost": 0,
     "id": 345290,
-    "name": "<ruby>烏羽<rt>からすば</rt></ruby>の<ruby>衣<rt>ころも</rt></ruby>",
+    "name": "烏羽の衣",
     "iconPath": "f683286825fc29179d3a5defc0d1b9b2f43fd23a0a4444c4a767681eddf1fd1f",
     "levelReq": 0,
     "promotionReq": 2,
@@ -1772,7 +1776,7 @@
     "descHash": "モゼの<u>一時離脱</u>状態が解除される時、<u>行動順</u>+<nobr>#1[i]%</nobr>。各ウェーブ開始時、モゼの<u>行動順</u>+<nobr>#2[i]%</nobr>。",
     "ultimateCost": 0,
     "id": 345289,
-    "name": "<ruby>忍<rt>しの</rt></ruby>び<ruby>寄<rt>よ</rt></ruby>る<ruby>匕首<rt>あいくち</rt></ruby>",
+    "name": "忍び寄る匕首",
     "iconPath": "c6cc0adfd3a2859f6b0593912296bb0fcb9e438ba45582365d24409cd7790204",
     "levelReq": 0,
     "promotionReq": 4,
@@ -1917,7 +1921,7 @@
     "descHash": "必殺技を発動してダメージを与える時、<u>追加攻撃</u>を行うと見なされる。「獲物」状態の敵が受ける<u>追加攻撃</u>ダメージ+<nobr>#1[i]%</nobr>。",
     "ultimateCost": 0,
     "id": 345288,
-    "name": "その<ruby>影<rt>かげ</rt></ruby>、<ruby>宝剣<rt>ほうけん</rt></ruby>と<ruby>共<rt>とも</rt></ruby>に<ruby>在<rt>あ</rt></ruby>り",
+    "name": "その影、宝剣と共に在り",
     "iconPath": "4dcd1c58ffd5268f1abdb9135c39658e2464cffe4f9de47cd2df2c06effe5245",
     "levelReq": 0,
     "promotionReq": 6,
@@ -2176,7 +2180,7 @@
   {
    "id": 13,
    "title": "シェア",
-   "text": "知ってるか？刀剣にある溝は血を流させるためにあるんじゃない。武器の重さを軽減するためにあるんだ。この構造は「<ruby>樋<rt>ひ</rt></ruby>」と呼ばれている…これでまた1つ賢くなったな。",
+   "text": "知ってるか？刀剣にある溝は血を流させるためにあるんじゃない。武器の重さを軽減するためにあるんだ。この構造は「樋」と呼ばれている…これでまた1つ賢くなったな。",
    "unlockRequirement": "",
    "cnUrl": "ed22d96b365a77581c7664720d24a48f2c74d9f9fc0af7c1656eceaa88c10798",
    "jpUrl": "01d34cd3542a6b13b3be6c16fa4a44fd2d353afc96b9fcbbaf332c4c36948e5e",
@@ -2755,7 +2759,7 @@
   "iconPath": "c124f823c629312e7f010bce17fa8d215b4bcb1087ca1e7a3f746a24c4198b76",
   "altIconPath": "e173ee19be5469ac6db23ce8b77109d25ed0ead1ae219b430859aeca1593c322",
   "color": "#FFFFFF",
-  "name": "<ruby>巡狩<rt>じゅんしゅ</rt></ruby>",
+  "name": "巡狩",
   "rarity": 0
  },
  "pageId": "moze"

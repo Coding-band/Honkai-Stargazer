@@ -34,6 +34,7 @@
     "疑似花萼「大鉱区」",
     "疑似花萼「工造司」",
     "疑似花萼「ホテル・『レバリー』-夢境」",
+    "疑似花萼「『囁きの密林』神悟の樹庭」",
     "クエスト報酬",
     "依頼報酬",
     "エンバー交換"
@@ -73,6 +74,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "「忘却の庭」"
    ]
   },
@@ -91,6 +93,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "デイリー訓練",
     "エンバー交換"
    ]
@@ -110,6 +113,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "依頼報酬"
    ]
   },
@@ -445,7 +449,7 @@
    "id": 1,
    "iconPath": "39894370b97d0a199e1e5875105794cd98ef7c0d49c9a9c6ff1479bb79865ff0",
    "artPath": "f24816c76561552501e06482c2406a1736bc068e6a9a2545dc821252130b5c9c",
-   "name": "<ruby>現在<rt>げんざい</rt></ruby>を<ruby>記録<rt>きろく</rt></ruby>する<ruby>者<rt>もの</rt></ruby>",
+   "name": "現在を記録する者",
    "descHash": "「ミュリオンの応援」を持つ味方の会心率+<nobr>#1[i]%</nobr>。味方が「ミュリオンの応援」を持つ時、その効果はその味方の記憶の精霊/召喚者、両方に適用される。なお、この効果は累積できない。",
    "params": [
     0.1
@@ -455,8 +459,8 @@
    "id": 2,
    "iconPath": "78511ad03d670792037b3ae64e157c122a698c85d1f12cc24f67069cc177193f",
    "artPath": "0682c6f456353040539492e856a60b8264400b057901b3330a3ceda52a88d09b",
-   "name": "<ruby>過去<rt>かこ</rt></ruby>を<ruby>拾<rt>ひろ</rt></ruby>う<ruby>者<rt>もの</rt></ruby>",
-   "descHash": "ミュリオン以外の味方の記憶の精霊が行動する時、開拓者のEPを<nobr>#1[i]</nobr>回復する。この効果はターンが回ってくるたびに<nobr>#2[i]</nobr>回まで発動でき、開拓者のターンが回ってきた時に発動可能回数がリセットされる。",
+   "name": "過去を拾う者",
+   "descHash": "「ミュリオン」以外の味方の記憶の精霊が行動する時、開拓者のEPを<nobr>#1[i]</nobr>回復する。この効果はターンが回ってくるたびに<nobr>#2[i]</nobr>回まで発動でき、開拓者のターンが回ってきた時に発動可能回数がリセットされる。",
    "params": [
     8,
     1
@@ -466,7 +470,7 @@
    "id": 3,
    "iconPath": "159da32e8731487dfcc634f0e9177fbe773b3c2e6ddae00fbf5d6c6713579157",
    "artPath": "dc4c04bfdedac3a1cf21671ec5daca6a4ddc1779316f7cc1911063b0486a3256",
-   "name": "<ruby>未来<rt>みらい</rt></ruby>を<ruby>詠<rt>うた</rt></ruby>う<ruby>者<rt>もの</rt></ruby>",
+   "name": "未来を詠う者",
    "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。精霊天賦のLv.+1、最大Lv.<nobr>10</nobr>まで。",
    "params": []
   },
@@ -474,8 +478,8 @@
    "id": 4,
    "iconPath": "dac4ee29e4ce17ddbebbd2664be78f5e3718bb56fd3c2c86ecddfac4fcec2e71",
    "artPath": "9d6d6af51f9bf61f3ba5af82e1bcb93f58927b8ebc83c2276b41df8b07df83f5",
-   "name": "ミューズの<ruby>新<rt>あら</rt></ruby>たな<br /><ruby>踊<rt>おど</rt></ruby>り<ruby>手<rt>て</rt></ruby>",
-   "descHash": "最大EPが0の味方がスキルを発動する時、ミュリオンはチャージを<nobr>#1[i]%</nobr>獲得し、その味方が「ミュリオンの応援」による確定ダメージのダメージ倍率がさらに+<nobr>#2[i]%</nobr>。",
+   "name": "ミューズの新たな<br />踊り手",
+   "descHash": "最大EPが0の味方がスキルを発動する時、「ミュリオン」はチャージを<nobr>#1[i]%</nobr>獲得し、その味方が「ミュリオンの応援」による確定ダメージのダメージ倍率がさらに+<nobr>#2[i]%</nobr>。",
    "params": [
     0.03,
     0.06
@@ -485,7 +489,7 @@
    "id": 5,
    "iconPath": "1ad272688414c329d1247a9bc02d342c5f7e0c3ce22980178e0b8c22780b9837",
    "artPath": "92f768a8da1bbbea0b28f91d270494b51d8cc736d3bf477efb8912d06ac90a3b",
-   "name": "<ruby>詩篇<rt>しへん</rt></ruby>の<ruby>紡<rt>つむ</rt></ruby>ぎ<ruby>手<rt>て</rt></ruby>",
+   "name": "詩篇の紡ぎ手",
    "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。精霊スキルのLv.+1、最大Lv.<nobr>10</nobr>まで。",
    "params": []
   },
@@ -493,7 +497,7 @@
    "id": 6,
    "iconPath": "05bb74b942fe61ad01ca41751b33354012c169b6088c225ed27ad9cfc2703263",
    "artPath": "34a2a1078dbf63b58e0e733c43b06e7a4f99d92446af5a7dc99cc7eac7b1204c",
-   "name": "<ruby>啓示<rt>けいじ</rt></ruby>の<ruby>語<rt>かた</rt></ruby>り<ruby>手<rt>て</rt></ruby>",
+   "name": "啓示の語り手",
    "descHash": "必殺技の会心率が<nobr>100%</nobr>に固定される。",
    "params": [
     1
@@ -526,7 +530,7 @@
    "break": "30",
    "energy": "20",
    "id": 22077079,
-   "name": "お<ruby>任<rt>まか</rt></ruby>せあれ！",
+   "name": "お任せあれ！",
    "iconPath": "a00238172a0bcfbb7f0e73d46fec6fdb4624b58e7a5fe0b64d4861c2cb80ed77",
    "typeDescHash": "通常攻撃",
    "levelReq": 0,
@@ -687,7 +691,7 @@
    "break": "0",
    "energy": "30",
    "id": 22317193,
-   "name": "ミュリオンに<ruby>決<rt>き</rt></ruby>めた！",
+   "name": "ミュリオンに決めた！",
    "iconPath": "159da32e8731487dfcc634f0e9177fbe773b3c2e6ddae00fbf5d6c6713579157",
    "typeDescHash": "戦闘スキル",
    "levelReq": 0,
@@ -968,7 +972,7 @@
   },
   {
    "tagHash": "全体攻撃",
-   "descHash": "<u>記憶の精霊</u>「ミュリオン」を<u>召喚</u>する。ミュリオンがチャージを<nobr>#2[i]%</nobr>獲得し、その後、ミュリオンが敵全体に攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#47C7FD;\">氷</span>属性ダメージを与える。",
+   "descHash": "<u>記憶の精霊</u>「ミュリオン」を<u>召喚</u>する。ミュリオンがチャージを<nobr>#2[i]%</nobr>獲得し、敵全体に自身攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span>分の<span style=\"color:#47C7FD;\">氷</span>属性ダメージを与える。",
    "ultimateCost": 160,
    "break": "60/hit",
    "energy": "5",
@@ -1259,7 +1263,7 @@
    "break": "0",
    "energy": "0",
    "id": 22500522,
-   "name": "なんでもできる<ruby>仲間<rt>なかま</rt></ruby>",
+   "name": "なんでもできる仲間",
    "iconPath": "2e1b9b1e35b98370b984cbc07554f9ce58821ddf465db5785062fc8ff319ef02",
    "typeDescHash": "天賦",
    "levelReq": 0,
@@ -1597,7 +1601,7 @@
    "break": "0",
    "energy": "0",
    "id": 22274785,
-   "name": "こだまする<ruby>記憶<rt>きおく</rt></ruby>",
+   "name": "こだまする記憶",
    "iconPath": "0893c57425c06fe454bfebc461ca866f3a7f101904e9dd1c7c58cb487e42309c",
    "typeDescHash": "秘技",
    "levelReq": 0,
@@ -1623,7 +1627,7 @@
    "break": "0",
    "energy": "30",
    "id": 22171140,
-   "name": "ミュリオンに<ruby>決<rt>き</rt></ruby>めた！",
+   "name": "ミュリオンに決めた！",
    "iconPath": "159da32e8731487dfcc634f0e9177fbe773b3c2e6ddae00fbf5d6c6713579157",
    "typeDescHash": "戦闘スキル",
    "levelReq": 0,
@@ -1932,10 +1936,10 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "戦闘開始時、開拓者の<u>行動順</u>が<nobr>#1[i]%</nobr><u>早まる</u>。ミュリオンを初めて召喚した時、ミュリオンがチャージを<nobr>#2[i]%</nobr>獲得する。",
+    "descHash": "戦闘開始時、開拓者の<u>行動順</u>が<nobr>#1[i]%</nobr><u>早まる</u>。「ミュリオン」を初めて召喚した時、ミュリオンがチャージを<nobr>#2[i]%</nobr>獲得する。",
     "ultimateCost": 0,
     "id": 16620054,
-    "name": "<ruby>追憶<rt>ついおく</rt></ruby>の<ruby>杖<rt>つえ</rt></ruby>",
+    "name": "追憶の杖",
     "iconPath": "585b7dd1a67d17f2b336588357c3597608744931d0251aa211f4f6e465f62518",
     "levelReq": 0,
     "promotionReq": 2,
@@ -2039,10 +2043,10 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "ミュリオンが「厄介な悪者さん！」を発動する時、即座にチャージを<nobr>#1[i]%</nobr>獲得する。",
+    "descHash": "「ミュリオン」が「厄介な悪者さん！」を発動する時、即座にチャージを<nobr>#1[i]%</nobr>獲得する。",
     "ultimateCost": 0,
     "id": 16664579,
-    "name": "<ruby>掌上<rt>しょうじょう</rt></ruby>の<ruby>叙事詩<rt>じょじし</rt></ruby>",
+    "name": "掌上の叙事詩",
     "iconPath": "237275ef772935ae5bb86707c492ca94842b73193bdc77ee129d29edb2f82628",
     "levelReq": 0,
     "promotionReq": 4,
@@ -2187,7 +2191,7 @@
     "descHash": "「ミュリオンの応援」を持つ味方の最大EPが<nobr>#1[i]</nobr>を超えている場合、超過分<nobr>#2[i]</nobr>につき、「ミュリオンの応援」による<u>確定ダメージ</u>の倍率がさらに+<nobr>#3[f1]%</nobr>、最大で<nobr>#4[i]%</nobr>アップできる。",
     "ultimateCost": 0,
     "id": 16414255,
-    "name": "<ruby>磁石<rt>じしゃく</rt></ruby>と<ruby>長鎖<rt>ちょうさ</rt></ruby>",
+    "name": "磁石と長鎖",
     "iconPath": "457b176ced7915f7f4f353112abc3f43008f7d07bcd32febfdb5c4fd233e58dc",
     "levelReq": 0,
     "promotionReq": 6,
@@ -3479,11 +3483,16 @@
    "3": {
     "22171140": 2,
     "22317193": 2,
-    "22500522": 2
+    "22500522": 2,
+    "29972931": 1,
+    "30242803": 1,
+    "30266270": 1
    },
    "5": {
     "22067902": 2,
-    "22077079": 1
+    "22077079": 1,
+    "30182444": 1,
+    "30261178": 1
    }
   }
  },
@@ -3495,11 +3504,11 @@
   "skills": [
    {
     "id": 30261178,
-    "name": "<ruby>厄介<rt>やっかい</rt></ruby>な<ruby>悪者<rt>わるもの</rt></ruby>さん！",
+    "name": "厄介な悪者さん！",
     "icon": "27b49b86b7dccc52e36743e76440c52f05d016850bc975927cf87e07c80c3f23",
     "tag": "全体攻撃",
     "typeDesc": "精霊スキル",
-    "skillDesc": "<nobr>#2[i]</nobr>回ダメージを与える。毎回ランダムな敵単体にミュリオンの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>分の<span style=\"color:#47C7FD;\">氷</span>属性ダメージを与え、最後に敵全体にミュリオンの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>分の<span style=\"color:#47C7FD;\">氷</span>属性ダメージを与える。",
+    "skillDesc": "<nobr>#2[i]</nobr>回ダメージを与える。毎回ランダムな敵単体に「ミュリオン」の攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>分の<span style=\"color:#47C7FD;\">氷</span>属性ダメージを与え、最後に敵全体にミュリオンの攻撃力<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span>分の<span style=\"color:#47C7FD;\">氷</span>属性ダメージを与える。",
     "simpleSkillDesc": "敵単体に少量の<span style=\"color:#47C7FD;\">氷</span>属性ダメージを与える、<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span>回バウンドする。最後に敵全体に少量の<span style=\"color:#47C7FD;\">氷</span>属性ダメージを与える。",
     "levelData": [
      {
@@ -3681,11 +3690,11 @@
    },
    {
     "id": 30266270,
-    "name": "<ruby>仲間<rt>なかま</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>に！",
+    "name": "仲間と一緒に！",
     "icon": "1c6eef89c1e7934e197f345a715035b36c8cec61baa63758f8b20e2cc2415817",
     "tag": "サポート",
     "typeDesc": "精霊天賦",
-    "skillDesc": "味方全体の会心ダメージを、ミュリオンの会心ダメージ<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>分+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>アップする。<br />チャージが<nobr>100%</nobr>未満の場合、ミュリオンは行動する時に自動で「厄介な悪者さん！」を発動する。チャージが<nobr>100%</nobr>に達した時、ミュリオンは即座に行動し、指定した味方単体に「あたしが助ける！」を発動できるようになる。",
+    "skillDesc": "味方全体の会心ダメージを、「ミュリオン」の会心ダメージ<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>分+<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>アップする。<br />チャージが<nobr>100%</nobr>未満の場合、ミュリオンは行動する時に自動で「厄介な悪者さん！」を発動する。チャージが<nobr>100%</nobr>に達した時、ミュリオンは即座に行動し、指定した味方単体に「あたしが助ける！」を発動できるようになる。",
     "simpleSkillDesc": "味方全体の会心ダメージをアップする。<br />行動時に自動で攻撃を行う。チャージが<nobr>100%</nobr>に達すると即座に行動し、別のスキルを発動できる。別スキルの効果：味方単体の<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><u>行動順を早め</u></span>、<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><u>確定ダメージ</u></span>を与えられるようにする。",
     "levelData": [
      {
@@ -3861,7 +3870,7 @@
     "icon": "1c6eef89c1e7934e197f345a715035b36c8cec61baa63758f8b20e2cc2415817",
     "tag": "強化",
     "typeDesc": "精霊天賦",
-    "skillDesc": "ミュリオンが召喚された時、即座にチャージを<nobr>#1[i]%</nobr>獲得する。",
+    "skillDesc": "「ミュリオン」が召喚された時、即座にチャージを<nobr>#1[i]%</nobr>獲得する。",
     "simpleSkillDesc": "ミュリオンが召喚された時、即座にチャージを獲得する。",
     "levelData": [
      {
@@ -4023,11 +4032,11 @@
    },
    {
     "id": 29972931,
-    "name": "<ruby>悔<rt>く</rt></ruby>いは…<ruby>残<rt>のこ</rt></ruby>さないの",
+    "name": "悔いは…残さないの",
     "icon": "1c6eef89c1e7934e197f345a715035b36c8cec61baa63758f8b20e2cc2415817",
     "tag": "強化",
     "typeDesc": "精霊天賦",
-    "skillDesc": "ミュリオンが退場する時、開拓者の<u>行動順</u>を<nobr>#1[i]%</nobr><u>早める</u>。",
+    "skillDesc": "「ミュリオン」が退場する時、開拓者の<u>行動順</u>を<nobr>#1[i]%</nobr><u>早める</u>。",
     "simpleSkillDesc": "退場する時、開拓者の<u>行動順を早める</u>。",
     "levelData": [
      {
@@ -4189,7 +4198,7 @@
    },
    {
     "id": 30182444,
-    "name": "あたしが<ruby>助<rt>たす</rt></ruby>ける！",
+    "name": "あたしが助ける！",
     "icon": "e2fe915433411449b96bfedc963e75881db41998152f7baed12edd5b547ee97c",
     "tag": "サポート",
     "typeDesc": "精霊スキル",
@@ -4393,7 +4402,7 @@
     "children": [],
     "embedServantSkill": {
      "id": 16146253,
-     "name": "<ruby>厄介<rt>やっかい</rt></ruby>な<ruby>悪者<rt>わるもの</rt></ruby>さん！",
+     "name": "厄介な悪者さん！",
      "iconPath": "27b49b86b7dccc52e36743e76440c52f05d016850bc975927cf87e07c80c3f23",
      "levelReq": 0,
      "promotionReq": 0,
@@ -4515,7 +4524,7 @@
     "children": [],
     "embedServantSkill": {
      "id": 15862105,
-     "name": "<ruby>仲間<rt>なかま</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>に！",
+     "name": "仲間と一緒に！",
      "iconPath": "1c6eef89c1e7934e197f345a715035b36c8cec61baa63758f8b20e2cc2415817",
      "levelReq": 0,
      "promotionReq": 0,
@@ -4649,7 +4658,7 @@
   "iconPath": "e9618e3794a5f07ac79ad4423907c20ac4375fbe3117ff3a7795dce0d677c13d",
   "altIconPath": "86ccf274abad05b1edab1d7d4aef6d9e90214891ee751354271802b8b77369e2",
   "color": "#FFFFFF",
-  "name": "<ruby>記憶<rt>きおく</rt></ruby>",
+  "name": "記憶",
   "rarity": 0
  },
  "pageId": "playerboy4"

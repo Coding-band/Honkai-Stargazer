@@ -212,7 +212,7 @@
     "Omni-Synthesemaschine – Materialsynthese",
     "Gegner in Divergentes Universum",
     "Universum-Simulation-Gegner",
-    "Omni-Synthesemaschine – Materialtausch"
+    "Omni-Synthesemaschine – Materialtausch"
    ]
   },
   "20389475": {
@@ -231,7 +231,7 @@
     "Omni-Synthesemaschine – Materialsynthese",
     "Gegner in Divergentes Universum",
     "Universum-Simulation-Gegner",
-    "Omni-Synthesemaschine – Materialtausch"
+    "Omni-Synthesemaschine – Materialtausch"
    ]
   },
   "20445700": {
@@ -251,7 +251,7 @@
     "Universum-Simulation-Gegner",
     "Auftragsbelohnungen",
     "Glut-Tausch",
-    "Omni-Synthesemaschine – Materialtausch"
+    "Omni-Synthesemaschine – Materialtausch"
    ]
   }
  },
@@ -456,7 +456,7 @@
    "iconPath": "97d0a7b5af567b11fab848e1eb0b4c4a795cfb6e8d5d525cf92fcff1c9437fec",
    "artPath": "4c7131d6d8ad145d77df6a80c49a295b66e5399676c9e8b71e9a9bb5cf41372b",
    "name": "Augenlider des treibenden Schicksals",
-   "descHash": "Wenn Aglaea oder die Kleidermacherin eine Aktion ausführt, ignoriert ihr verursachter SCH <nobr>#1[i]%</nobr> der VTD des Ziels. Dieser Effekt ist bis zu <nobr>#2[i]</nobr>-fach stapelbar und hält an, bis eine andere Einheit als Aglaea oder Kleidermacherin ihre Fähigkeit einsetzt.",
+   "descHash": "Wenn Aglaea oder die Kleidermacherin eine Aktion ausführt, ignoriert ihr verursachter SCH <nobr>#1[i]%</nobr> der VTD des Ziels. Dieser Effekt ist bis zu <nobr>#2[i]</nobr>-fach stapelbar und hält an, bis eine andere Einheit als Aglaea oder Kleidermacherin ihre Fähigkeit aktiv einsetzt.",
    "params": [
     0.14,
     3
@@ -494,7 +494,7 @@
    "iconPath": "47871797bc02a8da3379ea1385cdb16abc13101bf261c461a1d2a10b7c2ec0e4",
    "artPath": "5c7f2a5da6fd7be6c3ab7f8a6fd1185ff96c75b49f82edcbe789c59a9701a408",
    "name": "Goldene Fäden voller Ungewissheit",
-   "descHash": "Wenn Aglaea sich im Status „Höchste Haltung“ befindet, wird die <u>Blitz-WDS-DUR</u> von ihr und der Kleidermacherin um <nobr>#1[i]%</nobr> erhöht. Wenn die GES von Aglaea oder der Kleidermacherin mehr als <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr> beträgt, wird der verursachte SCH durch <u>Kettenangriffe</u> um <nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr>/<nobr>#4[i]%</nobr> erhöht.",
+   "descHash": "Wenn Aglaea sich im Status „Höchste Haltung“ befindet, wird die <u>Blitz-WDS-DUR</u> von ihr und der Kleidermacherin um <nobr>#1[i]%</nobr> erhöht. Wenn die GES von Aglaea oder der Kleidermacherin mehr als <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr> beträgt, wird der durch ihre <u>Kettenangriffe</u> verursachte SCH um <nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr>/<nobr>#4[i]%</nobr> erhöht.",
    "params": [
     0.2,
     0.1,
@@ -2462,7 +2462,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Wenn die Kleidermacherin verschwindet, kann bis zu <nobr>#1[i]</nobr> Stapelung der GES-Erhöhung vom Memogeist-Talent behalten werden. Wenn sie erneut beschworen wird, wird die entsprechende Stapelzahl von GES-Erhöhung erhalten.",
+    "descHash": "Wenn die Kleidermacherin verschwindet, kann bis zu <nobr>#1[i]</nobr> Stapelung der GES-Erhöhung vom Memogeist-Talent behalten werden. Wenn sie erneut beschworen wird, wird sie die GES-Erhöhung der entsprechenden Stapelzahl erhalten.",
     "ultimateCost": 0,
     "id": 13029630,
     "name": "Letzter Schicksalsfaden",
@@ -3212,7 +3212,7 @@
  "storyItems": [
   {
    "title": "Figurendetails",
-   "text": "In der heiligen, von der Morgendämmerung geküssten Stadt arbeitet die Weberin behutsam mit dem goldenen Faden und verknüpft Schicksale.<br />Die Erbin von Chrysos, Überbringerin der Flamme der Romantik, ruft Helden aus aller Welt zusammen und führt sie erneut auf eine epische Suche.<br />– Um Götter zu stürzen, das heilige Feuer zurückzuerobern und dem fast zerstörten Amphoreus neues Leben einzuhauchen.",
+   "text": "In der heiligen, von der Morgendämmerung geküssten Stadt arbeitet die Weberin behutsam mit dem goldenen Faden und verknüpft Schicksale.<br />Die Erbin von Chrysos, Trägerin der Kernflamme der Romantik, ruft Helden aus aller Welt zusammen und führt sie erneut auf eine endlose Reise ...<br />Um Götter zu stürzen, das heilige Feuer zurückzuerobern und dem fast zerstörten Amphoreus neues Leben einzuhauchen.",
    "unlockRequirement": ""
   },
   {
@@ -3552,7 +3552,7 @@
     "icon": "2367834d571302366f81669a8d9f44d60b628b8c4da466c3d8c7174cf2135ab2",
     "tag": "Verstärkung",
     "typeDesc": "Talent von Memogeist",
-    "skillDesc": "Nachdem Gegner mit dem Status „Nahtstich“ angegriffen wurden, wird die eigene GES um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]</nobr></span> Pkt. erhöht. Diese Effekt ist bis zu <nobr>#3[i]</nobr>-fach stapelbar. Die Kleidermacherin setzt während ihrer Aktion automatisch „Dornige Falle“ ein, wobei Gegner mit Nahtstich vorrangig getroffen werden.",
+    "skillDesc": "Nachdem Gegner mit dem Status „Nahtstich“ angegriffen wurden, wird die eigene GES um <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]</nobr></span> Pkt. erhöht. Dieser Effekt ist bis zu <nobr>#3[i]</nobr>-fach stapelbar. Die Kleidermacherin setzt während ihrer Aktion automatisch „Dornige Falle“ ein, wobei Gegner mit Nahtstich vorrangig getroffen werden.",
     "simpleSkillDesc": "Nachdem Gegner mit dem Status „Nahtstich“ angegriffen wurden, wird die <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">eigene GES erhöht</span>. Greift während der Aktion automatisch an, wobei Gegner mit Nahtstich vorrangig getroffen werden.",
     "levelData": [
      {

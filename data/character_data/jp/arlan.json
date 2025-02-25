@@ -34,6 +34,7 @@
     "疑似花萼「大鉱区」",
     "疑似花萼「工造司」",
     "疑似花萼「ホテル・『レバリー』-夢境」",
+    "疑似花萼「『囁きの密林』神悟の樹庭」",
     "クエスト報酬",
     "依頼報酬",
     "エンバー交換"
@@ -89,6 +90,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "「忘却の庭」"
    ]
   },
@@ -107,6 +109,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "デイリー訓練",
     "エンバー交換"
    ]
@@ -126,6 +129,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "依頼報酬"
    ]
   },
@@ -445,8 +449,8 @@
    "id": 1,
    "iconPath": "fbe8c5807bf2ef6cb4dd1a2a171862b89dd5a7d5aea96695987ebdeb2449e17f",
    "artPath": "ae0bf498e325a7b7c6231eebe907cf8baed555fbc6478cb05a44986623a44c30",
-   "name": "<ruby>万死<rt>ばんし</rt></ruby>も<ruby>辞<rt>じ</rt></ruby>さぬ<ruby>決意<rt>けつい</rt></ruby>",
-   "descHash": "残りHPが<nobr>50%</nobr>以下の敵に対する、戦闘スキルによるダメージ+<nobr>#1[i]%</nobr>。",
+   "name": "万死も辞さぬ決意",
+   "descHash": "残りHPが<nobr>50%</nobr>以下の時、戦闘スキルによるダメージ+<nobr>#1[i]%</nobr>。",
    "params": [
     0.1
    ]
@@ -455,7 +459,7 @@
    "id": 2,
    "iconPath": "63374e36064859df0a9ef0bfa6ef33ab960d008ce9cdd35b219b344d097e8786",
    "artPath": "a776dab7ca9002ac7f3016a2064e974f28be2f29d8b22583d0e4825c8ad24b0e",
-   "name": "<ruby>縛<rt>しば</rt></ruby>りより<ruby>放<rt>はな</rt></ruby>たれし<ruby>心<rt>こころ</rt></ruby>",
+   "name": "縛りより放たれし心",
    "descHash": "戦闘スキルまたは必殺技を発動した時、自身の<u>デバフ</u>を1つ解除する。",
    "params": []
   },
@@ -463,7 +467,7 @@
    "id": 3,
    "iconPath": "8a613431224cc1464370ad67e11348f833263a8adc9e3140218e714b48861c28",
    "artPath": "7b48b77cc6f058c20a6873e8ec771517e28e8ac1dcbf4315b67883f0ef26ae7f",
-   "name": "<ruby>重剣強攻<rt>じゅうけんきょうこう</rt></ruby>",
+   "name": "重剣強攻",
    "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
    "params": []
   },
@@ -471,7 +475,7 @@
    "id": 4,
    "iconPath": "253d1db78c70056b3f15bb29c0e11b1766fa0a2175676021950e80692dcc545d",
    "artPath": "cd6856090aee71e15bb02de70245c016711a323561b509b5feff1c418f0196db",
-   "name": "<ruby>絶境<rt>ぜっきょう</rt></ruby>の<ruby>反撃<rt>はんげき</rt></ruby>",
+   "name": "絶境の反撃",
    "descHash": "戦闘に入った後、アーランはHPが0になる攻撃を受けても<u>戦闘不能状態</u>にならず、HPを<nobr>#1[i]%</nobr>まで回復する。この効果は1回発動した後、または<nobr>#2[i]</nobr>ターン以降に自動解除される。",
    "params": [
     0.25,
@@ -482,7 +486,7 @@
    "id": 5,
    "iconPath": "70f114709a7a745665efd1a389d38d7a1517bf90d60b628cc84e38355fea15e6",
    "artPath": "6ea8898c8940f91674dd8416ea79adaf4bca7bf19f250af7b1de1c3329701d11",
-   "name": "<ruby>全力傾注<rt>ぜんりょくけいちゅう</rt></ruby>",
+   "name": "全力傾注",
    "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
    "params": []
   },
@@ -490,7 +494,7 @@
    "id": 6,
    "iconPath": "0e72623b682b83098be2c468ab9448e87cf8e3b8f3f5335bb657faf6e0b6f62e",
    "artPath": "c826158fe193dcd209f483307507660f503de246ca01c47c73d06bf0a6c55c53",
-   "name": "<ruby>献身的<rt>けんしんてき</rt></ruby>な<ruby>先導<rt>せんどう</rt></ruby>",
+   "name": "献身的な先導",
    "descHash": "残りHPが<nobr>50%</nobr>以下の時、必殺技によるダメージ+<nobr>#1[i]%</nobr>、隣接する敵に対するダメージ倍率がメインターゲットと同じになる。",
    "params": [
     0.2
@@ -522,7 +526,7 @@
    "break": "30",
    "energy": "20",
    "id": 578528,
-   "name": "<ruby>疾行<rt>しっこう</rt></ruby>する<ruby>雷<rt>かみなり</rt></ruby>の<ruby>如<rt>ごと</rt></ruby>し",
+   "name": "疾行する雷の如し",
    "iconPath": "58c4cc0665a6078fd8e33d51f8a88e28e9f3de7005898b7676a8bdd9eb12da84",
    "typeDescHash": "通常攻撃",
    "levelReq": 0,
@@ -683,7 +687,7 @@
    "break": "60",
    "energy": "30",
    "id": 863055,
-   "name": "<ruby>禁錮<rt>きんこ</rt></ruby><ruby>解除<rt>かいじょ</rt></ruby>",
+   "name": "禁錮解除",
    "iconPath": "8a613431224cc1464370ad67e11348f833263a8adc9e3140218e714b48861c28",
    "typeDescHash": "戦闘スキル",
    "levelReq": 0,
@@ -969,7 +973,7 @@
    "break": "60/hit",
    "energy": "5",
    "id": 779114,
-   "name": "<ruby>狂者<rt>きょうしゃ</rt></ruby>の<ruby>制裁<rt>せいさい</rt></ruby>",
+   "name": "狂者の制裁",
    "iconPath": "d5eabf0f327278073d5c9f516127e2b09b3bbf2cfa5a7ab7879728ef28461847",
    "typeDescHash": "必殺技",
    "levelReq": 0,
@@ -1255,7 +1259,7 @@
    "break": "0",
    "energy": "0",
    "id": 294001,
-   "name": "<ruby>痛<rt>いた</rt></ruby>みと<ruby>怒<rt>いか</rt></ruby>りの<ruby>極<rt>きわ</rt></ruby>み",
+   "name": "痛みと怒りの極み",
    "iconPath": "9f7da347d7da8d115dc78f81a8e6b3db5119eb308103dd3e3e744b555a336735",
    "typeDescHash": "天賦",
    "levelReq": 0,
@@ -1548,7 +1552,7 @@
    "break": "60",
    "energy": "0",
    "id": 377942,
-   "name": "<ruby>特急<rt>とっきゅう</rt></ruby>ハーベスト",
+   "name": "特急ハーベスト",
    "iconPath": "260fad025aa003890da02c8d607e5385ee7b042fa71b0c55204edff64f4cb847",
    "typeDescHash": "秘技",
    "levelReq": 0,
@@ -1678,7 +1682,7 @@
     "descHash": "敵を倒した時、残りHPが<nobr>#1[i]%</nobr>以下の場合、自身の最大HP<nobr>#2[i]%</nobr>分のHPを回復する。",
     "ultimateCost": 0,
     "id": 215733,
-    "name": "<ruby>蘇生<rt>そせい</rt></ruby>",
+    "name": "蘇生",
     "iconPath": "1fed1176e3ba9e7f7c270095676d251549bd4732320aaf3ce30931ef23585ad7",
     "levelReq": 0,
     "promotionReq": 2,
@@ -1820,7 +1824,7 @@
     "descHash": "持続ダメージ系デバフに抵抗する確率+<nobr>#1[i]%</nobr>。",
     "ultimateCost": 0,
     "id": 215736,
-    "name": "<ruby>堅忍<rt>けんにん</rt></ruby>",
+    "name": "堅忍",
     "iconPath": "2fa4e506ad48bd8cddcbd4ba8db0f7c69b18ecf61c96606f40018603650d174c",
     "levelReq": 0,
     "promotionReq": 4,
@@ -1964,7 +1968,7 @@
     "descHash": "戦闘に入る時、残りHPが<nobr>#1[i]%</nobr>以下の場合、アーランは持続ダメージ以外のすべてのダメージを防ぐ。アーランが攻撃を受けた後、この効果は解除される。",
     "ultimateCost": 0,
     "id": 215735,
-    "name": "<ruby>抗拒<rt>こうきょ</rt></ruby>",
+    "name": "抗拒",
     "iconPath": "128d0efab9ab138053ec14101c70a1eca44322d6ee359e1222e5a3e489618c86",
     "levelReq": 0,
     "promotionReq": 6,
@@ -2626,7 +2630,7 @@
   "iconPath": "8f21eb57a307c75c1d2367bd3a5d01cdea7db6178a1c5570a6143e3229ca54ee",
   "altIconPath": "64028c66965b78960c898ea3117321ca2503409c39e962e81aeb911a58b320cb",
   "color": "#FFFFFF",
-  "name": "<ruby>壊滅<rt>かいめつ</rt></ruby>",
+  "name": "壊滅",
   "rarity": 0
  },
  "pageId": "arlan"

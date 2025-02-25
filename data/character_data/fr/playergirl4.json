@@ -446,7 +446,7 @@
    "iconPath": "39894370b97d0a199e1e5875105794cd98ef7c0d49c9a9c6ff1479bb79865ff0",
    "artPath": "79da8c6f508ba9024bdb237c0768055df5e491c226972267b4f9a25b114ab255",
    "name": "Narration du présent",
-   "descHash": "Augmente les chances de coup critique de la cible alliée qui bénéficie de « Soutien de Mem » de <nobr>#1[i]%</nobr>. Lorsqu'une cible alliée bénéficie de « Soutien de Mem », cet effet s'applique également au mnémesprit de la cible/au mnémomaître. Cet effet n'est pas cumulable.",
+   "descHash": "Augmente les chances de coup critique des cibles alliées qui bénéficient de Soutien de Mem de <nobr>#1[i]%</nobr>. Lorsqu'une cible alliée bénéficie de Soutien de Mem, cet effet s'applique également au mnémesprit de la cible/au mnémomaître. Cet effet n'est pas cumulable.",
    "params": [
     0.1
    ]
@@ -467,7 +467,7 @@
    "iconPath": "159da32e8731487dfcc634f0e9177fbe773b3c2e6ddae00fbf5d6c6713579157",
    "artPath": "6ee6fe5efcc35658bb3f2e13da0092b667a4ba167b91f46c89c9a92719dfaa34",
    "name": "Hymne au futur",
-   "descHash": "Niv. de la compétence +2, jusqu'au niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au niv. <nobr>15</nobr> maximum.<br />Niv. de talent de mnémesprit +1, jusqu'au niv. <nobr>10</nobr> maximum.",
+   "descHash": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de talent de mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
    "params": []
   },
   {
@@ -475,7 +475,7 @@
    "iconPath": "dac4ee29e4ce17ddbebbd2664be78f5e3718bb56fd3c2c86ecddfac4fcec2e71",
    "artPath": "10a2a7c05b4f40396bebc4b969b58f84c51a357055954b753fc3dee1487f5d53",
    "name": "Danse des Muses",
-   "descHash": "Lorsqu'une cible alliée avec 0 d'énergie max utilise activement une capacité, Mem gagne <nobr>#1[i]%</nobr> de charge. De plus, le multiplicateur des DGT réels infligés par cette cible via « Soutien de Mem » augmente de <nobr>#2[i]%</nobr>.",
+   "descHash": "Lorsqu'une cible alliée avec 0 d'énergie max utilise activement une capacité, Mem gagne <nobr>#1[i]%</nobr> de charge. De plus, le multiplicateur des DGT réels infligés par cette cible via Soutien de Mem augmente de <nobr>#2[i]%</nobr> supplémentaires.",
    "params": [
     0.03,
     0.06
@@ -486,7 +486,7 @@
    "iconPath": "1ad272688414c329d1247a9bc02d342c5f7e0c3ce22980178e0b8c22780b9837",
    "artPath": "66398317cb72d7cf0785b52a75650599817bb86873025d95c2c04fbbb7c48bdf",
    "name": "Art des messages décousus",
-   "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.<br />Niv. de compétence de mnémesprit +1, jusqu'au niv. <nobr>10</nobr> maximum.",
+   "descHash": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.<br />Niv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.<br />Niv. de compétence de mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
    "params": []
   },
   {
@@ -968,7 +968,7 @@
   },
   {
    "tagHash": "ZdE",
-   "descHash": "<u>Invoque le mnémesprit</u> Mem. Permet à Mem de gagner <nobr>#2[i]%</nobr> de charge, puis d'infliger des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de son ATQ à tous les ennemis.",
+   "descHash": "<u>Invoque le mnémesprit</u> Mem. Permet à Mem de gagner <nobr>#2[i]%</nobr> de charge, puis d'infliger des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de Mem à tous les ennemis.",
    "ultimateCost": 160,
    "break": "60/hit",
    "energy": "5",
@@ -1254,7 +1254,7 @@
   },
   {
    "tagHash": "Renforcement",
-   "descHash": "Le mnémesprit Mem débute avec <nobr>#1[i]</nobr> de VIT et des PV max équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> des PV max du pionnier/de la pionnière + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span>. Tous les <nobr>#3[i]</nobr> points d'énergie régénérés par tous les alliés au total, la charge de Mem augmente de 1 %.",
+   "descHash": "Le mnémesprit Mem possède une VIT initiale de <nobr>#1[i]</nobr> et ses PV max sont équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> des PV max du pionnier/de la pionnière + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]</nobr></span>. Mem gagne 1 % de charge tous les <nobr>#3[i]</nobr> points d'énergie régénérés par tous les alliés au total.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
@@ -1592,7 +1592,7 @@
   },
   {
    "tagHash": "Incapacitation",
-   "descHash": "Crée une dimension spéciale qui dure <nobr>#1[i]</nobr> secondes après avoir utilisé la technique. Les ennemis situés dans la dimension spéciale sont affectés par Temps figé, les empêchant de réaliser toute action.<br />Lorsque vous engagez le combat contre un ennemi affecté par l'effet Temps figé, l'action de tous les ennemis est <u>retardée</u> de <nobr>#2[i]%</nobr>, puis tous les ennemis subissent des DGT de glace équivalents à <nobr>#3[i]%</nobr> de l'ATQ du pionnier/de la pionnière.<br />Il ne peut exister qu'1 effet de dimension créé par les alliés à la fois.",
+   "descHash": "Crée une dimension spéciale qui dure <nobr>#1[i]</nobr> secondes après avoir utilisé la technique. Les ennemis situés dans la dimension spéciale sont affectés par Temps figé, les empêchant de réaliser toute action.<br />Lorsque vous engagez le combat contre des ennemis affectés par l'effet Temps figé, l'action de tous les ennemis est <u>retardée</u> de <nobr>#2[i]%</nobr>, puis des DGT de glace équivalents à <nobr>#3[i]%</nobr> de l'ATQ du pionnier/de la pionnière sont infligés à tous les ennemis.<br />Il ne peut exister qu'1 effet de dimension créé par les alliés à la fois.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
@@ -1932,7 +1932,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "L'action du pionnier/de la pionnière <u>est avancée</u> de <nobr>#1[i]%</nobr> en début de combat. Permet à Mem de gagner <nobr>#2[i]%</nobr> de charge supplémentaire lors de sa première invocation.",
+    "descHash": "L'action du pionnier/de la pionnière <u>est avancée</u> de <nobr>#1[i]%</nobr> en début de combat. Mem gagne <nobr>#2[i]%</nobr> de charge lors de sa première invocation.",
     "ultimateCost": 0,
     "id": 15469283,
     "name": "Sceptre de la mémoire",
@@ -2039,7 +2039,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Mem gagne immédiatement <nobr>#1[i]%</nobr> de charge lors de l'utilisation de « Du balais les méchants ! ».",
+    "descHash": "Mem gagne immédiatement <nobr>#1[i]%</nobr> de charge lors de l'utilisation de « Du balai les méchants ! ».",
     "ultimateCost": 0,
     "id": 15214349,
     "name": "Petite parabole",
@@ -2184,7 +2184,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Lorsque l'énergie max d'une cible alliée qui bénéficie de Soutien de Mem excède <nobr>#1[i]</nobr>, pour chaque tranche de <nobr>#2[i]</nobr> points d'énergie en excédant, augmente le multiplicateur des <u>DGT réels</u> infligés avec Soutien de Mem de <nobr>#3[f1]%</nobr>, jusqu'à une augmentation maximale de <nobr>#4[i]%</nobr>.",
+    "descHash": "Lorsque l'énergie max d'une cible alliée qui bénéficie de Soutien de Mem excède <nobr>#1[i]</nobr>, pour chaque tranche de <nobr>#2[i]</nobr> points d'énergie en excédant, augmente le multiplicateur des <u>DGT réels</u> infligés avec Soutien de Mem de <nobr>#3[f1]%</nobr> supplémentaires, jusqu'à une augmentation maximale de <nobr>#4[i]%</nobr>.",
     "ultimateCost": 0,
     "id": 15521083,
     "name": "Magnétisme et longue chaîne",
@@ -3170,7 +3170,7 @@
   {
    "id": 160,
    "title": "Compétence 3 (Le Souvenir)",
-   "text": "Pas de panique, je suis encore là.",
+   "text": "Pas de panique. Je suis encore là.",
    "unlockRequirement": "Débloqué après avoir suivi une nouvelle Voie",
    "cnUrl": "7c203dd0f1c5061609bdd49d66973889a46e3762b024f9946a8a303ea628b5d7",
    "jpUrl": "56535bcdf21b07e2cb747c85210f60bfd0b9113c1fb21909d8bf36d10a5f62cd",
@@ -3260,7 +3260,7 @@
   {
    "id": 169,
    "title": "Technique (Le Souvenir)",
-   "text": "Hmm, comme une impression de déjà-vu...",
+   "text": "Hmm, j'ai comme une impression de déjà-vu...",
    "unlockRequirement": "Débloqué après avoir suivi une nouvelle Voie",
    "cnUrl": "331a78f9abb098924aa2213a5b5d14bdb9a9ef1f12cf163334b64fd72c8770d6",
    "jpUrl": "4f87345a04fa727a7d131ee9aaa2fdefe7ebb49014641f7ddef1bf2ee844d042",
@@ -3495,12 +3495,12 @@
   "skills": [
    {
     "id": 30261178,
-    "name": "Du balais les méchants !",
+    "name": "Du balai les méchants !",
     "icon": "27b49b86b7dccc52e36743e76440c52f05d016850bc975927cf87e07c80c3f23",
     "tag": "ZdE",
     "typeDesc": "Compétence du mnémesprit",
     "skillDesc": "Inflige <nobr>#2[i]</nobr> instances de DGT, chaque instance inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> de l'ATQ de Mem à un ennemi aléatoire. Puis, inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de l'ATQ de Mem à tous les ennemis.",
-    "simpleSkillDesc": "Inflige des DGT de glace mineurs qui rebondissent un total de<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> fois. Inflige ensuite des DGT de glace mineurs à tous les ennemis.",
+    "simpleSkillDesc": "Inflige des DGT de glace mineurs qui rebondissent un total de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]</nobr></span> fois. Inflige ensuite des DGT de glace mineurs à tous les ennemis.",
     "levelData": [
      {
       "params": [
@@ -3685,8 +3685,8 @@
     "icon": "1c6eef89c1e7934e197f345a715035b36c8cec61baa63758f8b20e2cc2415817",
     "tag": "Soutien",
     "typeDesc": "Talent du mnémesprit",
-    "skillDesc": "Les DGT critiques de tous les alliés augmentent d'un montant équivalent à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> des DGT critiques de Mem + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>.<br />Lorsque la charge n'a pas encore atteint <nobr>100</nobr> %, Mem utilise automatiquement « Du balais les méchants ! » lors de son tour. Lorsque la charge atteint <nobr>100</nobr> %, Mem agit immédiatement et peut sélectionner une unité alliée pour utiliser « Laisse-moi t'aider ! » au cours de son prochain tour.",
-    "simpleSkillDesc": "Les DGT critiques de tous les alliés augmentent.<br />Lance automatiquement une attaque au cours de son action. Lorsque la charge atteint <nobr>100</nobr> %, agit immédiatement et peut utiliser une nouvelle attaque capacité : permet d'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><u>avancer l'action</u></span> d'un allié et d'infliger des <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><u>DGT réels</u></span>.",
+    "skillDesc": "Mem augmente les DGT critiques de tous les alliés à hauteur de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> de ses propres DGT critiques + <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span>.<br />Lorsque la charge n'est pas à <nobr>100</nobr> %, Mem utilise automatiquement Du balai les méchants ! au cours de son tour. Lorsque la charge est à <nobr>100</nobr> %, Mem agit immédiatement, Mem peut alors sélectionner un allié pour la capacité Laisse-moi t'aider ! au cours de son prochain tour.",
+    "simpleSkillDesc": "Mem augmente les DGT critiques de tous les alliés.<br />Mem attaque automatiquement au cours de son tour. Lorsque la charge atteint <nobr>100</nobr> %, Mem agit immédiatement et peut utiliser une nouvelle capacité qui permet d'<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><u>avancer l'action</u></span> d'un allié et d'infliger des <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><u>DGT réels</u></span>.",
     "levelData": [
      {
       "params": [
@@ -3861,8 +3861,8 @@
     "icon": "1c6eef89c1e7934e197f345a715035b36c8cec61baa63758f8b20e2cc2415817",
     "tag": "Renforcement",
     "typeDesc": "Talent du mnémesprit",
-    "skillDesc": "Gagne immédiatement <nobr>#1[i]%</nobr> de charge lors de l'invocation de Mem.",
-    "simpleSkillDesc": "Gagne immédiatement de la charge lors de l'invocation.",
+    "skillDesc": "Mem gagne immédiatement <nobr>#1[i]%</nobr> de charge lors de son invocation.",
+    "simpleSkillDesc": "Mem gagne immédiatement de la charge lors de son invocation.",
     "levelData": [
      {
       "params": [
@@ -4027,8 +4027,8 @@
     "icon": "1c6eef89c1e7934e197f345a715035b36c8cec61baa63758f8b20e2cc2415817",
     "tag": "Renforcement",
     "typeDesc": "Talent du mnémesprit",
-    "skillDesc": "<u>Avance l'action</u> du pionnier/de la pionnière de <nobr>#1[i]%</nobr> lorsque Mem disparaît.",
-    "simpleSkillDesc": "<u>Avance l'action</u> du pionnier/la pionnière après sa disparition.",
+    "skillDesc": "Mem <u>avance l'action</u> du pionnier/de la pionnière de <nobr>#1[i]%</nobr> après sa disparition.",
+    "simpleSkillDesc": "Mem <u>avance l'action</u> du pionnier/de la pionnière après sa disparition.",
     "levelData": [
      {
       "params": [
@@ -4193,8 +4193,8 @@
     "icon": "e2fe915433411449b96bfedc963e75881db41998152f7baed12edd5b547ee97c",
     "tag": "Soutien",
     "typeDesc": "Compétence du mnémesprit",
-    "skillDesc": "<u>Avance l'action</u> d'un allié désigné de <nobr>#3[i]%</nobr> et lui accorde Soutien de Mem pendant <nobr>#2[i]</nobr> tours.<br />Pour chaque instance de DGT infligés par la cible avec Soutien de Mem, inflige également 1 instance de <u>DGT réels</u> équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> des DGT initiaux.<br />L'effet d'<u>avancement d'action</u> ne peut pas être déclenché lorsque la capacité est utilisée sur cette unité.",
-    "simpleSkillDesc": "<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><u>Avance l'action</u></span> d'un allié et lui accorde « Soutien de Mem », ce qui permet d'infliger des <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><u>DGT réels</u></span> supplémentaires après avoir infligé des DGT.",
+    "skillDesc": "Mem <u>avance l'action</u> d'un allié désigné de <nobr>#3[i]%</nobr> et lui accorde Soutien de Mem pendant <nobr>#2[i]</nobr> tours.<br />À chaque fois qu'une cible avec Soutien de Mem inflige des DGT, elle inflige également des <u>DGT réels</u> équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> des DGT initiaux 1 fois supplémentaire.<br />L'action n'est pas <u>avancée</u> lorsque la capacité est utilisée sur cette unité.",
+    "simpleSkillDesc": "Mem <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><u>avance l'action</u></span> d'un allié et lui accorde Soutien de Mem, ce qui lui permet d'infliger des <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><u>DGT réels</u></span> supplémentaires après avoir infligé des DGT.",
     "levelData": [
      {
       "params": [
@@ -4393,7 +4393,7 @@
     "children": [],
     "embedServantSkill": {
      "id": 16146253,
-     "name": "Du balais les méchants !",
+     "name": "Du balai les méchants !",
      "iconPath": "27b49b86b7dccc52e36743e76440c52f05d016850bc975927cf87e07c80c3f23",
      "levelReq": 0,
      "promotionReq": 0,
@@ -4634,7 +4634,7 @@
  },
  "name": "Pionnière",
  "rarity": 5,
- "descHash": "Une jeune fille/Un jeune homme qui a embarqué à bord de l'Astral Express. Elle/Il a choisi d'y voyager pour éliminer la menace que pose le Stellaron.",
+ "descHash": "Une jeune fille/Un jeune homme qui a embarqué à bord de l'Astral Express. Elle/Il a choisi de voyager à bord du train pour éliminer la menace que pose le Stellaron.",
  "artPath": "116e8d8dc8b6d7a37368d580de8da00740a72f0c0b015ec72cdfe339c41b9eff",
  "miniIconPath": "629cc4da3a64a85490543a8d8466ca545a365be45ff541e81d05ffea9042e8b6",
  "damageType": {

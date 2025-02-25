@@ -446,7 +446,7 @@
    "iconPath": "bb62d15a2a46df94ed30735739270e760c6ad738d4f49f04310d789ffd47a180",
    "artPath": "7cd5e6bef9833541dae4ff663dadf482851dd25fd57c054d88e10816c6655f7a",
    "name": "Nuit des étoiles déchues",
-   "descHash": "Lors du calcul des cumuls d'Interprétation pour la compétence renforcée, prend également en compte <nobr>#1[i]%</nobr> des cumuls actuels d'Interprétation sur la cible qui a le plus de cumuls parmi la cible principale et ses cibles adjacentes. Lors de l'utilisation de la compétence renforcée pour réinitialiser Interprétation, le nombre de cumuls est ramené à <nobr>#2[i]</nobr>.",
+   "descHash": "Lors du calcul des cumuls d'Interprétation pour la compétence renforcée, prend également en compte <nobr>#1[i]%</nobr> du nombre actuel de cumuls d'Interprétation sur la cible qui a le plus de cumuls parmi la cible principale et ses cibles adjacentes. Lorsque le statut Interprétation est réinitialisé par l'utilisation de la compétence renforcée, le nombre de cumuls est ramené à <nobr>#2[i]</nobr>.",
    "params": [
     0.5,
     15
@@ -457,7 +457,7 @@
    "iconPath": "a9e0137cd6f1fd96e1071fb3884de18104990051aa1d71e9129f2a88038ced5b",
    "artPath": "07bc1b13f177cca9e867f665bdd06934b4a8765c230cad052de5d963b273f67b",
    "name": "Clé des vents",
-   "descHash": "Lorsque la Grande Herta entre sur le champ de bataille et utilise son ultime, elle obtient 1 cumul d'Inspiration supplémentaire. Après l'utilisation de la compétence renforcée, sa prochaine action est <u>avancée</u> de <nobr>#1[i]%</nobr>.",
+   "descHash": "Après que la Grande Herta entre en combat ou utilise son ultime, elle obtient 1 cumul d'Inspiration. Après l'utilisation de la compétence renforcée, la prochaine action de la Grande Herta est <u>avancée</u> de <nobr>#1[i]%</nobr>.",
    "params": [
     0.35,
     42,
@@ -477,7 +477,7 @@
    "iconPath": "7c9f4a48b6f9fda17c8c1c023bfde3ecbfa86fb2c8b85d831ec7069536204d7d",
    "artPath": "f0e0533952c515bb6d40d5195155c045018d0592e1e4bc0ecc246dc13e56cd2f",
    "name": "Seizième clé",
-   "descHash": "La VIT des personnages de l'équipe qui suivent la Voie de l'Érudition augmente de <nobr>#1[i]%</nobr>.",
+   "descHash": "La VIT des personnages de l'Érudition dans l'équipe augmente de <nobr>#1[i]%</nobr>.",
    "params": [
     0.12
    ]
@@ -495,7 +495,7 @@
    "iconPath": "6075cfae5b8acb1b527c26d589dbc43284447d643b2a6cdf567c07185ba63f4c",
    "artPath": "6adf99fdfd20f9336a24a053d11ef70194daec449ff0005003703990b985c120",
    "name": "Appât de la réponse",
-   "descHash": "La PÉN de RÉS à la glace de la Grande Herta augmente de <nobr>#4[i]%</nobr>. Lorsque le nombre de cibles ennemies sur le champ de bataille est de 3 ou plus/2/1, le multiplicateur de DGT de l'ultime augmente de <nobr>#1[i]%</nobr>/<nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr>.",
+   "descHash": "La PÉN de RÉS à la glace de la Grande Herta augmente de <nobr>#4[i]%</nobr>. Lorsque le nombre de cibles ennemies sur le champ de bataille est de 3 (ou plus)/2/1, le multiplicateur de DGT de l'ultime augmente de <nobr>#1[i]%</nobr>/<nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr> respectivement.",
    "params": [
     1.4,
     2.5,
@@ -525,7 +525,7 @@
  "skills": [
   {
    "tagHash": "Cible unique",
-   "descHash": "Inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de la Grande Herta à une cible ennemie désignée.",
+   "descHash": "Inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de la Grande Herta à un ennemi désigné.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "20",
@@ -713,7 +713,7 @@
   },
   {
    "tagHash": "Propagation",
-   "descHash": "Inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de la Grande Herta à un ennemi désigné tout en appliquant <nobr>#2[i]</nobr> cumul d'Interprétation. Inflige également des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de la Grande Herta répétés 2 fois aux cibles touchées par cette instance de la compétence et à leurs cibles adjacentes respectives.",
+   "descHash": "Inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de la Grande Herta à un ennemi désigné tout en appliquant <nobr>#2[i]</nobr> cumul d'Interprétation. Inflige également des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de la Grande Herta aux cibles touchées par cette instance de la compétence et à leurs cibles adjacentes respectives. Cet effet peut se répéter 2 fois.",
    "ultimateCost": 0,
    "break": "45/hit",
    "energy": "30",
@@ -1003,7 +1003,7 @@
   },
   {
    "tagHash": "ZdE",
-   "descHash": "Réorganise le nombre de cumuls d'Interprétation sur tous les ennemis, en transférant les nombres de cumuls les plus élevés en priorité aux cibles de niveau élite ou supérieur. Puis, inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de la Grande Herta à tous les ennemis. Lors de l'utilisation de l'ultime, l'ATQ de la Grande Herta augmente de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> pendant <nobr>#5[i]</nobr> tours. La Grande Herta agit immédiatement et obtient 1 cumul d'Inspiration après utilisation de l'ultime. Inspiration peut être cumulé jusqu'à <nobr>#6[i]</nobr> fois. La compétence est renforcée en « Écoutez bien » sous l'effet Inspiration.",
+   "descHash": "Réorganise le nombre de cumuls d'Interprétation sur tous les ennemis, en transférant les nombres de cumuls les plus élevés en priorité aux cibles de niveau élite ou supérieur. Puis, inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de la Grande Herta à tous les ennemis. Lors de l'utilisation de l'ultime, l'ATQ de la Grande Herta augmente de <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> pendant <nobr>#5[i]</nobr> tours. La Grande Herta agit immédiatement et obtient 1 cumul d'Inspiration après utilisation. Inspiration peut être cumulé jusqu'à <nobr>#6[i]</nobr> fois. La compétence est renforcée en « Écoutez bien » sous l'effet Inspiration.",
    "ultimateCost": 220,
    "break": "60/hit",
    "energy": "5",
@@ -1725,7 +1725,7 @@
   },
   {
    "tagHash": "Renforcement",
-   "descHash": "Après utilisation de la technique, l'ATQ de la Grande Herta augmente de <nobr>#1[i]%</nobr> pendant <nobr>#2[i]</nobr> tours au début du prochain combat.<br />S'il y a des coffres de base sur la carte actuelle, l'utilisation de la technique marque l'emplacement de <nobr>#3[i]</nobr> coffres de base au maximum.<br />La Grande Herta inflige des <u>DGT réels</u> équivalents à <nobr>#4[i]%</nobr> des PV max de la cible aux cibles ennemies de niveau inférieur au niveau élite, et des <u>DGT réels</u> équivalents à <nobr>#5[i]%</nobr> des PV max de la cible aux cibles ennemies de niveau élite ou supérieur après être entrée en combat en utilisant la technique dans l'Univers simulé ou l'Univers parallèle.",
+   "descHash": "Après utilisation de la technique, l'ATQ de la Grande Herta augmente de <nobr>#1[i]%</nobr> pendant <nobr>#2[i]</nobr> tours au début du prochain combat.<br />S'il y a des coffres de base sur la carte actuelle, l'utilisation de la technique marque l'emplacement de <nobr>#3[i]</nobr> coffres de base au maximum.<br />Lorsqu'elle entre en combat après avoir utilisé la technique dans l'Univers simulé ou l'Univers parallèle, la Grande Herta inflige des <u>DGT réels</u> équivalents à <nobr>#4[i]%</nobr> des PV max de la cible aux cibles ennemies de niveau inférieur au niveau élite, et des <u>DGT réels</u> équivalents à <nobr>#5[i]%</nobr> des PV max de la cible aux cibles ennemies de niveau élite ou supérieur au début de chaque vague.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
@@ -1754,7 +1754,7 @@
   },
   {
    "tagHash": "ZdE",
-   "descHash": "Consomme 1 cumul d'Inspiration. Inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de la Grande Herta à un ennemi désigné et applique <nobr>#2[i]</nobr> cumul d'Interprétation. Puis, inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de la Grande Herta répétés 2 fois à la cible touchée par cette instance de la compétence et aux cibles adjacentes. Enfin, inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de l'ATQ de la Grande Herta à tous les ennemis.",
+   "descHash": "Consomme 1 cumul d'Inspiration. Inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de la Grande Herta à un ennemi désigné et applique <nobr>#2[i]</nobr> cumul d'Interprétation. Puis, inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> de l'ATQ de la Grande Herta répétés 2 fois aux cibles touchées par cette instance de la compétence et à leurs cibles adjacentes respectives. Enfin, inflige des DGT de glace équivalents à <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> de l'ATQ de la Grande Herta à tous les ennemis.",
    "ultimateCost": 0,
    "break": "15/hit",
    "energy": "30",
@@ -2167,7 +2167,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Lorsqu'une cible alliée attaque, inflige 1 cumul d'Interprétation à chaque cible ennemie touchée. Après l'attaque, la Grande Herta récupère <nobr>#1[i]</nobr> points d'énergie pour chaque cible touchée, jusqu'à un maximum de 5 cibles comptabilisées. Lors de l'utilisation de la compétence renforcée, si <nobr>42</nobr> cumuls d'Interprétation sont appliqués sur la cible, les DGT de glace infligés par la Grande Herta augmentent de <nobr>#2[i]%</nobr> jusqu'à la fin de cette attaque.",
+    "descHash": "Lorsqu'une cible alliée attaque, inflige 1 cumul d'Interprétation à chaque cible ennemie touchée. Après l'attaque, la Grande Herta récupère un montant fixe de <nobr>#1[i]</nobr> points d'énergie pour chaque cible touchée, jusqu'à un maximum de 5 cibles comptabilisées. Lors de l'utilisation de la compétence renforcée, si la cible principale a <nobr>42</nobr> cumuls d'Interprétation, les DGT infligés par la Grande Herta augmentent de <nobr>#2[i]%</nobr> jusqu'à la fin de cette attaque.",
     "ultimateCost": 0,
     "id": 29473604,
     "name": "Honnêteté indifférente",
@@ -2308,7 +2308,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Les DGT critiques de tous les alliés augmentent de <nobr>#1[i]%</nobr> en début de combat lorsqu'il y a au moins deux personnages de la Voie de l'Érudition dans l'équipe. Prend en compte au moins <nobr>#2[i]</nobr> cibles lors du calcul du nombre de cibles touchées pour l'effet de la Trace Honnêteté indifférente. Applique <nobr>#3[i]</nobr> cumul d'Interprétation à la cible qui possède actuellement le plus grand nombre de cumuls d'Interprétation parmi les cibles ennemies touchées après une attaque et applique <nobr>#4[i]</nobr> cumuls d'Interprétation supplémentaires si le personnage assaillant suit la Voie de l'Érudition.",
+    "descHash": "Les DGT critiques de tous les alliés augmentent de <nobr>#1[i]%</nobr> en début de combat lorsqu'il y a au moins deux personnages de la Voie de l'Érudition dans l'équipe. Et lors du calcul du nombre de cibles touchées pour la Trace Honnêteté indifférente, prend en compte au moins <nobr>#2[i]</nobr> cibles. Applique <nobr>#3[i]</nobr> cumul d'Interprétation à la cible qui possède actuellement le plus grand nombre de cumuls d'Interprétation parmi les cibles ennemies touchées après une attaque et applique <nobr>#4[i]</nobr> cumuls d'Interprétation supplémentaires si l'assaillant suit la Voie de l'Érudition.",
     "ultimateCost": 0,
     "id": 29648208,
     "name": "Message aux confins du savoir",
@@ -2422,7 +2422,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "Chaque fois qu'1 cumul d'Interprétation est appliqué à une cible ennemie, la Grande Herta obtient 1 cumul de Réponse, jusqu'à un maximum de <nobr>#2[i]</nobr> cumuls. Chaque cumul de Réponse augmente le multiplicateur de DGT de l'ultime de <nobr>#1[f1]%</nobr> lors de l'utilisation de l'ultime.",
+    "descHash": "Chaque fois qu'1 cumul d'Interprétation est appliqué à une cible ennemie, la Grande Herta obtient 1 cumul de Réponse, jusqu'à un maximum de <nobr>#2[i]</nobr> cumuls. Lors de l'utilisation de l'ultime, chaque cumul de Réponse augmente le multiplicateur de DGT de cette instance de l'ultime de <nobr>#1[f1]%</nobr>.",
     "ultimateCost": 0,
     "id": 29382444,
     "name": "Paysage de la théorie des cordes",
@@ -2532,7 +2532,7 @@
   {
    "id": 1,
    "title": "Première rencontre",
-   "text": "Tu ne me reconnais pas ? Pourtant, je me suis déjà décrite pour toi : humaine, femme, jeune, belle et adorable.",
+   "text": "Tu ne me reconnais pas ? Pourtant, je t'ai déjà dit qui j'étais : je suis humaine, une belle jeune femme, en plus d'être adorable.",
    "unlockRequirement": "",
    "cnUrl": "a48fbf0b005e1ac4695a89326d21cdbc283c6a49f326f2bd02706139148d1434",
    "jpUrl": "1ed25a7db39cc513412e7c3331e6b0a1a933bd291d184a8b7e395f16817b8306",
@@ -2542,7 +2542,7 @@
   {
    "id": 2,
    "title": "Salutation",
-   "text": "Oh ? Alors, on se rencontre à nouveau ? Tu es la <nobr>345</nobr>ᵉ personne dans l'univers à m'avoir rencontrée deux fois. À partir de maintenant, ce sera ton identifiant Herta. Note-le bien, car on pourrait te poser des questions là-dessus.",
+   "text": "Oh ? Comme on se retrouve. Tu es la <nobr>345</nobr>ᵉ personne dans l'univers à m'avoir rencontrée deux fois. À partir de maintenant, ce sera ton identifiant Herta. Note-le bien, car on pourrait te tester à ce sujet.",
    "unlockRequirement": "",
    "cnUrl": "4cdcfbe43c54b6a679e0bcfdb5d20c214c94fbfd3d62c31778b2d3d137e53a98",
    "jpUrl": "155faa6ab900bceab258152819917ddaa79d6f73aa491a3750285dbd38b7ab86",
@@ -2562,7 +2562,7 @@
   {
    "id": 4,
    "title": "Anecdote personnelle : Titre",
-   "text": "Les scribes de la Guilde de l'intelligentsia ont un jour proposé de m'attribuer un titre, quelque chose comme « Herta l'unique » pour me différencier de mes marionnettes. C'est ridicule, les marionnettes sont tout autant moi. Alors, je leur ai fait une suggestion : s'ils osaient écrire une chose pareille, alors je me ferais appeler « la Grande Herta ». C'est simple, clair et élégant.",
+   "text": "Les scribes de la Guilde de l'intelligentsia ont un jour proposé de m'attribuer un titre, quelque chose comme « Herta l'unique » pour me différencier de mes marionnettes. C'est d'une banalité... Les marionnettes ne sont-elles pas « moi », elles aussi ? Alors, je leur ai fait une suggestion : s'ils osaient écrire une chose pareille, alors je me ferais appeler « la Grande Herta ». C'est simple, clair, droit au but et élégant.",
    "unlockRequirement": "",
    "cnUrl": "7a474d715a5cbdf21a9b61f764703698e6e9dcc2755cda4d00ecabd1dc29f61c",
    "jpUrl": "87a3818420b732c708c35e509212450048138697a121cd388b82bba289ff2cf2",
@@ -2612,7 +2612,7 @@
   {
    "id": 9,
    "title": "Bavardage : Thèse",
-   "text": "On peut choisir de ne rien écrire, ou de n'écrire qu'une seule thèse dans toute sa vie, tant qu'on est assez audacieux. Car si une pensée n'est pas suffisamment audacieuse, est-ce qu'elle mérite encore d'être qualifiée de pensée ? Même un Fou masqué peut comprendre ça.",
+   "text": "On peut choisir de ne pas en écrire, ou de n'écrire qu'une seule thèse dans toute sa vie, tant qu'on est assez audacieux. Les pensées qui ne sont pas assez audacieuses ne méritent pas d'être qualifiées de pensées. Même un Fou masqué pourrait comprendre ça.",
    "unlockRequirement": "",
    "cnUrl": "64e512ae2773c9c36c45f7d334052fc76e5b4ee4bf0601a3d417281cbe5c4420",
    "jpUrl": "b2d62dec68aa1509b48fee8cd23a15f1ee40256703026658007659f2ff558e5d",
@@ -2632,7 +2632,7 @@
   {
    "id": 11,
    "title": "Problèmes",
-   "text": "Où est-ce que je peux bien trouver un autre génie aussi compétent que moi ? Dans le miroir ?",
+   "text": "Où est-ce que je peux bien trouver un autre génie aussi accompli et équilibré que moi ? Dans le miroir ?",
    "unlockRequirement": "",
    "cnUrl": "0186d3a183e4ae73de699cdbc8263daa304b705be1b95fae26f24c06400583a7",
    "jpUrl": "036d4b6e611f5d35555715eada5aaee79763fc7c5c03bcff9f743cab49f19acf",
@@ -2652,7 +2652,7 @@
   {
    "id": 13,
    "title": "Connaissances",
-   "text": "Qu'est-ce qui représente les limites de la connaissance des mortels ? Beaucoup de gens pensent que c'est la Société des génies, mais moi, je pense que c'est moi.",
+   "text": "Qu'est-ce qui représente les limites de la connaissance des mortels ? Beaucoup de gens pensent que c'est la Société des génies. Personnellement, je pense que c'est moi.",
    "unlockRequirement": "",
    "cnUrl": "db8da3dce1c4d83d29ba67d0f1bd6cd2333e6567e59db49789a46354460f041a",
    "jpUrl": "9273c00601ff97a9f5951a747c656f3675e16ddab14247087e94a6bcadd2b0ff",
@@ -2662,7 +2662,7 @@
   {
    "id": 14,
    "title": "À propos de Pionnier/Pionnière",
-   "text": "Chaque fois que je suis sur le point de perdre mon intérêt pour toi, tu trouves toujours quelque chose de nouveau. Ce ne serait pas fait exprès, par hasard ? Plutôt malin, je dois dire.",
+   "text": "Chaque fois que je suis sur le point de perdre mon intérêt pour toi, tu trouves toujours quelque chose de nouveau. Tu ne le ferais pas exprès, par hasard ? Peut-être que tu sais simplement comment me faire réagir.",
    "unlockRequirement": "",
    "cnUrl": "c266ed059a120cb31888f50ebf32ec13d4eb37ece1d45e9c4677dbf8572a863f",
    "jpUrl": "43aaa020b7f342f659cd09897e5ec1a473bce9379b559fd9b473b2c28ec0beaa",
@@ -2672,7 +2672,7 @@
   {
    "id": 15,
    "title": "À propos de Ruan Mei",
-   "text": "Chaque fois que j'entends parler de l'échec de ses expériences, je me précipite pour la féliciter chaleureusement, car pour un génie, rien n'est plus précieux qu'un échec.",
+   "text": "Chaque fois que j'entends que ses expériences ont échoué, je me précipite pour la féliciter chaleureusement. Pour un génie, rien n'est plus précieux que l'échec.",
    "unlockRequirement": "",
    "cnUrl": "2f710f19768e35698ee461b1bc0f087cb5edba963f04de456edfb42c58318347",
    "jpUrl": "26be35af7473da6f9484fc7184146716a33d854ac5037ce7ac21e8808015fb35",
@@ -2682,7 +2682,7 @@
   {
    "id": 16,
    "title": "À propos de Screwllum",
-   "text": "En matière de logique et de finesse, il me surpasse. En termes de talent et de réalisations, il est un peu en dessous de moi. Quant aux goûts en matière d'esthétisme et au style vestimentaire, chacun a ses points forts. Globalement, nous sommes à égalité.",
+   "text": "Au niveau de la logique et de la finesse, il me surpasse. En termes de talent et de réussite, je suis meilleure que lui. En matière d'esthétisme et de style vestimentaire, nous sommes au coude à coude. En conclusion, nous sommes à égalité.",
    "unlockRequirement": "",
    "cnUrl": "7b62a08d084c2949e8b8d7b809783a1e077d6c2c188c32714c2e11be93e1c983",
    "jpUrl": "0e97cbc7da4f57b47d5fdc2aebc38f1654657d0943c97c698f4f2e804b71a070",
@@ -2692,7 +2692,7 @@
   {
    "id": 17,
    "title": "À propos d'Asta",
-   "text": "Asta est une gérante hors pair. Quelqu'un de moins compétent aurait déjà eu à essuyer la destruction d'au moins dix stations spatiales par les génies.",
+   "text": "Asta est une gérante hors pair. Quelqu'un de moins compétent aurait déjà laissé les génies que nous sommes détruire plus de dix stations spatiales.",
    "unlockRequirement": "",
    "cnUrl": "9b45f96aef36fb76e8881f97b5fac4203f40af0cf0f10a329ed42cbeff7d60fd",
    "jpUrl": "8362c7b74b2e4173327792f584a191a407ae17597fe99023c27f239a24c2e9c3",
@@ -2702,7 +2702,7 @@
   {
    "id": 18,
    "title": "À propos de Louve d'argent",
-   "text": "Qui ça ? Oh, cette fille qui adore faire des blagues. Je me souviendrai de son nom le jour où elle saura se comporter comme une adulte.",
+   "text": "Qui ça ? Oh, cette fille qui adore faire des blagues. Je me souviendrai de son nom le jour où elle saura enfin se comporter comme une adulte.",
    "unlockRequirement": "",
    "cnUrl": "e25b8290a8b98c0e722ae84c3c8b08b3449eb12dd2afe130e7d0bf7da4e64c5a",
    "jpUrl": "bbf1ca72dc68138621b8f93260b7eff55f581e64ba2899c63860350f920a3cd5",
@@ -2712,7 +2712,7 @@
   {
    "id": 19,
    "title": "À propos de Himeko",
-   "text": "J'ai toujours estimé que le café que je prépare était le complément idéal pour des recherches scientifiques intensives. Cependant, en le comparant à celui de Himeko, il ne fait pas le poids. Son inventivité dans ce domaine est bien supérieure à la mienne.",
+   "text": "J'ai toujours estimé que le café que je prépare était le complément idéal pour des recherches scientifiques intensives. Cependant, en le comparant à celui de Himeko, il ne fait pas le poids. J'admets ma défaite en termes d'innovation dans la préparation du café.",
    "unlockRequirement": "",
    "cnUrl": "3a12a42a6096f2beb66a75bab2293f1f2095a09c861e9893de28c495ddb44587",
    "jpUrl": "5d4d1bebe473175e7d9b84a555df4d34092ff9c96aa45479048f70d04a658dec",
@@ -2722,7 +2722,7 @@
   {
    "id": 20,
    "title": "À propos de Welt",
-   "text": "Il a un regard perçant. Il n'est pas réellement myope, n'est-ce pas ? Ceux qui choisissent de porter des lunettes ont souvent des secrets à cacher. Dommage que je n'ai pas le temps, j'aurais bien aimé fouiller un peu dans son passé.",
+   "text": "Il a un regard perçant. Il n'est pas réellement myope, n'est-ce pas ? Ceux qui aiment porter des lunettes ont souvent des secrets à cacher derrière ces verres. Dommage que je n'aie pas beaucoup de temps, j'aurais bien aimé fouiller dans son passé.",
    "unlockRequirement": "",
    "cnUrl": "8f9149982d7ff379b31fd4f577e726d84208c520d8250674c89e775b22410f64",
    "jpUrl": "0c503c2955fd5ec574c6a7e29b1183dfde9ced1b1994b25d143ca8a95f97e1ca",
@@ -2782,7 +2782,7 @@
   {
    "id": 26,
    "title": "Rejoint l'équipe avec Ruan Mei",
-   "text": "Qu'est-ce qui pourrait éveiller ta curiosité ? Ne me dis pas que... c'est moi ?",
+   "text": "Qu'est-ce qui a bien pu éveiller ta curiosité ici ? Ne me dis pas que c'est moi ?",
    "unlockRequirement": "",
    "cnUrl": "7d5aed9abc4705c9b8baf469f2c44ee6495d88266357051b72d2a719434c594d",
    "jpUrl": "92ad530cd3ae826a6cde07f0836845cc1c451128b9c22cf088d7aceab8bdcbfb",
@@ -2822,7 +2822,7 @@
   {
    "id": 30,
    "title": "Rejoint l'équipe avec Louve d'argent",
-   "text": "Tu as récupéré ton compte, petite ?",
+   "text": "Tu as récupéré ton compte, jeune fille ?",
    "unlockRequirement": "",
    "cnUrl": "c30cf41f68fbd434e4f6bba022b2d9d1d447c4446b74abd5267ee058cbb295a4",
    "jpUrl": "e30e55acf68cd4360dc93ad925e0ec6b4725184b418741452fab3246e3d623d3",
@@ -2902,7 +2902,7 @@
   {
    "id": 57,
    "title": "Compétence 1",
-   "text": "Ah, un passage vers un nouveau monde !",
+   "text": "Les portes d'un nouveau monde s'ouvrent enfin...",
    "unlockRequirement": "",
    "cnUrl": "5243b16df845fb3c5a5c41d3653452739748995bb2c369da2b9095446995e631",
    "jpUrl": "4c7c441f31607a0bf2a053638970fbaaa55886cedb8fac5e4e7b7c8aed507337",
@@ -2912,7 +2912,7 @@
   {
    "id": 58,
    "title": "Compétence 2",
-   "text": "Il suffit d'élargir ses horizons...",
+   "text": "Il suffit d'élargir son champ de réflexion...",
    "unlockRequirement": "",
    "cnUrl": "0523963286522624b0e5ac3c70732458d86ef6fb5fa94f3715e0c01949513ada",
    "jpUrl": "9cc893285798f96ea7c73172e962f01fed4378da7125d179a0e055de4e6c95e0",
@@ -2922,7 +2922,7 @@
   {
    "id": 59,
    "title": "Compétence renforcée 1",
-   "text": "Saisis l'instant où l'inconnu se dévoile, et laisse-toi envoûter.",
+   "text": "Contemple l'inconnu un instant, et laisse-toi envoûter.",
    "unlockRequirement": "",
    "cnUrl": "9eebb0f1cdb547ca02d0b769b500b73b9caa0322cdaef265ec063b88b17c46f6",
    "jpUrl": "8e03e1c4eaff65235b9246bcaa281d5f821c37834e38725b128f093d9c972a9a",
@@ -2932,7 +2932,7 @@
   {
    "id": 60,
    "title": "Compétence renforcée 2",
-   "text": "Les remparts érigés dans le vide céleste, qu'ils s'effondrent dès maintenant.",
+   "text": "Repousse les remparts du vide céleste pour qu'ils s'effondrent.",
    "unlockRequirement": "",
    "cnUrl": "b6aa2571e0c835c7a3aead4033d32ca9060d390be1b3c88491f5c15046b8de5b",
    "jpUrl": "09171a2347a7b267f32f0b48786572c77a51d7569dc09ccd8d8a12d8c5a800f2",
@@ -2982,7 +2982,7 @@
   {
    "id": 65,
    "title": "À terre",
-   "text": "Je vais revenir...",
+   "text": "Je reviendrai...",
    "unlockRequirement": "",
    "cnUrl": "10d12ebf70921863517d9d5dca98b0772a231fdc7420ce312bca9364626ad3d6",
    "jpUrl": "ce4c618a23333bb9e5b78a645ea4036f861b054cc307477ed6292cfa5f202776",
@@ -3032,7 +3032,7 @@
   {
    "id": 70,
    "title": "Ouverture de coffre 1",
-   "text": "Hein... Ça t'intéresse ? Très bien, prends-le et amuse-toi !",
+   "text": "Hein... C'est ça que tu veux ? Très bien, prends-le et amuse-toi !",
    "unlockRequirement": "",
    "cnUrl": "62569c4c25b0f4cb084f9f35ac4e2fe25a140901173f63604563d403f52784ff",
    "jpUrl": "c6484c87eb98f7a37ca65e878f5ab7341bbbd7ab319065b90fbf5183511b7a3c",
@@ -3103,27 +3103,27 @@
  "storyItems": [
   {
    "title": "Détails du personnage",
-   "text": "La membre n° <nobr>83</nobr> de la Société des génies, Madame Herta, réside au cœur du clocher, aux confins du cosmos, et poursuit les mystères ultimes de l'univers en tant qu'enchanteresse.<br />Grâce à la technologie du rajeunissement, elle conserve l'apparence de ses plus belles années. Elle n'aime pas les banalités, et délègue généralement ce genre de tâches à ses marionnettes.",
+   "text": "La membre n° <nobr>83</nobr> de la Société des génies, Madame Herta, vit recluse dans la Tour de l'Horloge, aux confins du cosmos, et poursuit les mystères ultimes de l'univers en tant qu'enchanteresse.<br />Grâce à la technologie du rajeunissement, elle conserve l'apparence de ses plus belles années. Elle n'aime pas les banalités, et délègue généralement ce genre de tâches à ses marionnettes.",
    "unlockRequirement": ""
   },
   {
    "title": "Histoire du personnage : Partie I",
-   "text": "Numéro de profil ██████<br />Nom de la bizarrerie : Kaléidoscope d'une enfance de génie<br />Avertissement : Ne pas regarder ! Ne pas regarder !! Ne pas regarder !!!<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Vous voulez vraiment jeter un œil ?<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Vraiment vraiment ?<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Bah. De toute façon, vous êtes déjà allé/allée jusque-là. Je ne prends aucune responsabilité pour ce qui vous arrive.<br />Dossier Bizarrerie<br />Collection privée de Madame Herta, la membre n° <nobr>83</nobr> de la Société des génies, avec assistance technique du jardin. Une tranche de mémoire conçue uniquement pour permettre à la personne concernée de revivre un beau souvenir à la première personne.<br />Attention : Objet dangereux. Ne le regardez pas si vous n'êtes pas la personne concernée par le souvenir. Dans le cas contraire, vous risquez de vivre une agression psychologique intense.<br />Études de cas : deux examinateurs se sont penchés sur la question en privé. L'un d'eux a commencé à dire des bêtises et ne connaissait plus sa propre identité, tandis que l'autre ne pouvait que répéter les mots « Gloire à Madame Herta ! »<br />Commentaires du chercheur<br />« Le point fixe prend la forme d'une boucle d'un blanc laiteux, tandis que la série divergente brille comme un collier de lames étincelantes. Les vagues de cheveux bruns tourbillonnent, chaque boucle reflétant les motifs fractals d'une humeur altérée. L'infini et l'infinitésimal se disputent sans fin, et portent une robe à rayures diagonales pour calmer le conflit. \"Regardez, de tous les ensembles, le mien est le plus beau\"... Exactement, c'est ce que murmure la petite fille. N'est-ce pas mystérieux ? Ha ha ha ha, fascinant ! Qui suis-je ? Où suis-je ? ».<br /><align=\"right\">- Déclaration d'un critique</align><br />« Des équations et des symboles que je n'ai jamais vus auparavant flottent dans la grande salle aux poupées. Les poupées voient leurs membres pousser, des visages se dessiner, elles dansent autour d'elle. Elle ouvre une penderie aussi haute qu'un château et choisit des vêtements pour chacune d'entre elles. Elles ont toutes leur propre caractère et apparaissent dans différents programmes... Lorsqu'elle a fini de calculer, mon esprit a instantanément reçu un baptême intégral - Gloire à Madame Herta ! Gloire à Madame Herta ! Gloire à Madame Herta ! Gloire à Madame Herta... »<br /><align=\"right\">- Déclaration d'un critique</align><br /><b>Note</b><br />J'ai conservé cette bizarrerie pour que ce soit plus facile de revoir ma beauté de jeune femme. Si vous voulez tant la voir, ce n'est pas de ma faute. Je vais vous donner un conseil : cherchez quelques livres de la Guilde de l'intelligentsia pour contrebalancer ce que ces deux malheureux ont dans la tête. Ils se rétabliront en un rien de temps.<br /><align=\"right\">Madame Herta</align>",
+   "text": "Numéro de profil ██████<br />Nom de la bizarrerie : Kaléidoscope d'une enfance de génie<br />Avertissement : Ne pas regarder ! Ne pas regarder !! Ne pas regarder !!!<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Vous voulez vraiment jeter un œil ?<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Vraiment vraiment ?<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Vu que vous êtes déjà arrivé jusque-là... Mais je décline toute responsabilité pour la suite.<br />Dossier de la bizarrerie<br />Collection privée de Madame Herta, la membre n° <nobr>83</nobr> de la Société des génies, avec assistance technique du Jardin. Une tranche de mémoire conçue uniquement pour permettre à la personne concernée de revivre un beau souvenir à la première personne.<br />Attention : Objet dangereux. Les personnes non autorisées ne doivent en aucun cas contempler ces fragments. Tout contrevenant risque fortement de subir une attaque mentale sévère.<br />Cas documenté : Deux examinateurs se sont penchés sur la question en privé. L'un d'eux a commencé à dire des bêtises et ne savait plus qui il était, tandis que l'autre ne pouvait que répéter les mots « Madame Herta est géniale ! »<br />Extrait d'un rapport du personnel<br />« Des rubans blancs, une série divergente scintillant comme un collier de dagues, une convolution dessinant des vagues de cheveux bruns et une fractale représentant une humeur orageuse. L'infini grand et l'infini petit se disputent... Enfilez-leur une robe à motifs diagonaux et regardez-les s'apaiser. Car, voyez-vous, parmi tous les ensembles, le plus beau... c'est moi.. » — Oui, c'est exactement ce que cette fille récitait. Fascinant, n'est-ce pas ? Hahaha... Mais, qui suis-je ? Où suis-je ?<br /><align=\"right\">— Récit d'un examinateur anonyme</align><br />« Des équations et des symboles que je n'ai jamais vus auparavant flottent dans une grande pièce remplie de poupées. Les poupées voient des membres leur pousser, des visages se dessiner, qui dansent autour d'elle. Elle ouvre une garde-robe aussi haute qu'un château et choisit des vêtements pour chacune d'entre elles, leur attribuant des rôles pour une pièce inexistante... et au moment où elle s'est arrêtée, j'ai eu une illumination. — Madame Herta est géniale ! Madame Herta est géniale ! Madame Herta est géniale ! Madame Herta est géniale  ! Madame Herta est géniale... »<br /><align=\"right\">— Récit d'un autre examinateur anonyme</align><br /><b>Remarque</b><br />Je garde cet artefact simplement pour pouvoir admirer à nouveau ma beauté enfantine. Si vous insistez pour regarder et que cela tourne mal, ce ne sera pas ma faute. Un conseil cependant : donnez à ces deux malheureux des livres de la Guilde de l'intelligentsia à lire pour équilibrer leur esprit. Ils iront mieux rapidement.<br /><align=\"right\">La Grande Herta</align>",
    "unlockRequirement": "Disponible au niveau <nobr>20</nobr> de personnage"
   },
   {
    "title": "Histoire du personnage : Partie II",
-   "text": "<b>Symposium commémoratif : célébration du ██e anniversaire de Madame Herta</b><br />Compte-rendu de la réunion - Thème n° 1 : Rétrospective des réalisations scientifiques de Madame Herta<br />Thème n° 2 : Histoires et anecdotes de la vie de Madame Herta<br />...<br />Compte-rendu de la réunion - Thème n° 5 : Table ronde « Explorer les frontières de la science et ses profondes implications »<br />...<br />Compte-rendu de la réunion — Thème surprise n° 1 : Moment de silence, d'après des médias fiables, Madame Herta serait décédée...<br />Thème surprise n° 2 : Madame Herta fait une apparition inattendue et prononce un discours !<br /><b>Discours de Madame Herta :</b><br />« Merci à tous pour vos sincères condoléances. Malheureusement, il semble que je doive encore décevoir certains d'entre vous. »<br /><br />« Vous êtes... Madame Herta ? »<br />« Une poupée de Madame Herta »<br />« « Est-ce que votre article sur le dé-vieillissement... a vraiment fonctionné ? » »<br />« « Madame Herta, il nous faut une explication ! »<br />...<br />Madame Herta s'est éclaircie la gorge et a levé son sceptre en l'air —<br />« Tout ça, c'est grâce à la magie. »<br /><br />« Madame Herta, attendez ! »<br />« C'est impossible ! Le concept de dé-vieillissement est purement théorique. Nous sommes à des année-lumières de son application... »<br />« De la science ? Est-ce qu'on peut encore l'appeler scientifique ? C'est absurde ! »<br />« C'est pas pour gâcher l'ambiance, mais comment vous faites pour toujours faire une entrée remarquée ? »<br /><br />« C'est assez amusant, n'est-ce pas ? La presse adore fabriquer des fausses nouvelles pour faire les gros titres, tandis que les plus traditionnels attendent avec impatience que je meure, dans l'espoir de prouver que ma théorie anti-âge n'est qu'une chimère. »<br />Elle éteint la vidéo de la conférence et reprend tranquillement son thé de l'après-midi.<br />« Toutes vos théories ont montré leur potentiel, mais les futurs chercheurs n'ont jamais vraiment capturé votre essence, ce qui rend la reproduction impossible. »La femme sirote calmement son thé.<br />« Logique : La soi-disant « magie » de la jeunesse dont parle Madame Herta est sa satire mordante. Déduction : Les principes fondamentaux de la théorie impliquent l'inversion de l'énergie et la manipulation du temps, ce qui nécessite des conditions précises. Calcul : ... »<br />Son sourire s'élargit alors qu'elle donne une pâtisserie aux prunes vers l'Omnitron, interrompant son monologue.<br />« Certaines vérités n'ont pas besoin d'être dites. Tiens, sers-toi. »",
+   "text": "<b>Colloque commémoratif : célébration du ██e anniversaire de la naissance de Madame Herta</b><br />Compte-rendu de réunion — Thème n° 1 : Rétrospective des réalisations scientifiques de Madame Herta<br />Thème n° 2 : Histoires et anecdotes de la vie de Madame Herta<br />...<br />Compte-rendu de réunion — Thème n° 5 : Table ronde « Explorer les frontières de la science et ses profondes implications »<br />...<br />Compte-rendu de réunion — Thème spécial n° 1 : Moment de Recueillement : D'après un communiqué urgent des médias autorisés, Madame Herta serait décédée des suites d'une maladie...<br />Thème spécial n° 2 : Madame Herta fait une apparition inattendue et prononce un discours !<br /><b>Discours de Madame Herta :</b><br />« Merci à tous pour vos sincères condoléances. Malheureusement, il semble que je doive encore décevoir certains d'entre vous. »<br /><br />« Vous êtes... Madame Herta ? »<br />« Est-ce que c'est une poupée de Madame Herta ? »<br />« « Est-ce que cet article à propos du dé-vieillissement... aurait vraiment porté ses fruits ? »<br />« « Madame Herta, il nous faut une explication ! »<br />...<br />Madame Herta s'éclaircit la voix et lève son sceptre en l'air avant de déclarer :<br />« C'est grâce à la magie. »<br /><br />« Madame Herta, attendez ! »<br />« C'est impossible ! Le concept de dé-vieillissement est purement théorique. On est à des années-lumière de son application... »<br />« De la science ? Est-ce qu'on peut encore la considérer comme une scientifique ? Quelle absurdité ! »<br />« Sérieusement, comment vous faites pour toujours faire une entrée aussi remarquée ? »<br /><br />« Amusant, n'est-ce pas ? Les médias, avides de gros titres, annoncent ma mort tous les trois jours. Quant à ces vieux croûtons, ils espèrent sincèrement que je disparaisse, juste pour prouver que ma théorie sur le rajeunissement n'était qu'une chimère. »<br />Elle éteint la vidéo de la conférence et reprend tranquillement son thé de l'après-midi.<br />« Chacune de tes théories a fini par prouver sa faisabilité. Pourtant... les chercheurs des générations suivantes n'ont jamais saisi ta véritable intention, c'est pourquoi ils n'ont jamais pu les reproduire. » La femme sirote calmement son thé.<br />« Logique : Le soi-disant \"sortilège\" de retour à la jeunesse est une figure rhétorique ironique employée par Madame Herta. Déduction : Les principes fondamentaux de cette théorie impliquent une inversion énergétique et une manipulation du flux temporel, ainsi que des conditions de réalisation extrêmement rigoureuses. Calcul : ... »<br />Un sourire espiègle éclaire le visage de Madame Herta. Elle fait glisser un petit gâteau en forme de fleur de prunier devant l'Omnitron, interrompant son discours.<br />« Toutes les vérités ne sont pas bonnes à dire. Tiens, c'est pour toi. »",
    "unlockRequirement": "Disponible au niveau <nobr>40</nobr> de personnage"
   },
   {
    "title": "Histoire du personnage : Partie III",
-   "text": "Aux confins de la galaxie, dans un système stellaire désolé et sans vie, une tour mystérieuse apparaît et disparaît au milieu d'un vortex.<br /><br />« Je refuse de m'épuiser dans ce manoir tentaculaire. »<br />Elle arpente la vaste salle vide et fait signe aux marionnettes de s'approcher.<br />Elles s'approchent d'elle en dansant dans une série de clics et de tours joyeux.<br />« Madame Herta incarne la grandeur ! »<br />« Madame Herta, le summum de l'intelligence ! »<br />« Madame Herta, la grâce et l'élégance ! »<br />« Assez, retournez à vos tâches. »Elle les écarte d'un geste de la main.<br />Trois pour laver le sol, deux pour s'occuper des jardins et une...<br />« Tiens, fais du café. Il fait frais aujourd'hui et j'ai besoin d'un truc chaud. »<br />Les grains crissent sous le broyeur, avant d'être recouverts d'eau chaude et de faire apparaître le liquide sombre, qui bouillonne joyeusement.<br />« Madame Herta, vous avez reçu une demande de renseignements de la part de la Guilde de l'intelligentsia. Ils contestent votre... »<br />Ils s'inquiètent toujours de ma « preuve irréfutable » ? Il suffit de leur envoyer quelques réponses préétablies de la liste ».<br />« Madame Herta, la Corporation pour la Paix Interstrale a envoyé une invitation... »<br />« Dites-leur que leurs gadgets ne m'intéressent pas. »<br />« Madame Herta, l'Université de Veritas Prime souhaite vous nommer professeur honoraire... »<br />« C'est quoi ça déjà ? »<br />...<br />Peu à peu, les marionnettes s'occupent de toutes les affaires courantes, ce qui lui permet de disparaître de la scène publique.<br />Retranchée au sommet de sa tour, elle se détache du monde extérieur pour résoudre les énigmes qui persistent dans ses pensées.<br />« J'aimerais savoir, ███ ███ ██ █████ ██████ ? »<br />Ainsi, le premier miroir vit le jour.<br />« J'aimerais savoir, ████ ██ ███ ███████ ██ ████ ? »<br />Ainsi, le second miroir naquit.<br />« J'aimerais savoir, ███ ███ █ ███ ████ ███████ ? »<br />Ainsi, le troisième miroir résonna de manière concise.<br />« J'aimerais savoir, ███ ██ █ ███ ██████ ? »<br />Ainsi, le quatrième miroir fut formé avec révérence.<br />Le lieu où elle se trouve reste un mystère, tout comme les raisons qui l'ont poussée à fuir les feux de la rampe. Pourtant, ses théories et spéculations provocatrices ont continué à susciter des discussions sans fin.<br /><br />Un long moment s'écoule. Après avoir terminé ses extrapolations, elle semble insatisfaite.<br />« Il n'y a plus de problèmes à résoudre, ce qui en soi constitue le plus grand problème. »<br />« Est-ce que tu dis... »Le miroir comprend parfaitement.<br />« Et si on créait encore plus de problèmes ? »",
+   "text": "Aux confins de la galaxie, dans un système stellaire désolé et sans vie, une tour mystérieuse apparaît et disparaît au milieu d'un vortex.<br /><br />« Je refuse de m'épuiser dans ce manoir tentaculaire. »<br />Elle balaye du regard la pièce vide et fait signe à ses poupées d'avancer.<br />Elles se mettent en mouvement, virevoltant joyeusement autour d'elle dans une série de cliquetis.<br />« Madame Herta est incomparable ! »<br />« Madame Herta est d'une intelligence sans pareille ! »<br />« Madame Herta est d'une beauté renversante ! »<br />« D'accord, d'accord, allez vaquer à vos occupations. », dit-elle d'un geste agacé de la main.<br />Trois poupées s'occupent de laver le sol, deux des plantes et une...<br />« Prépare-moi un café. Il fait froid, j'ai besoin d'un truc chaud. »<br />Les grains crissent sous le broyeur, avant d'être recouverts d'eau chaude et de faire apparaître le liquide sombre, qui bouillonne joyeusement.<br />« Madame Herta, vous avez reçu un message de la part de la Guilde de l'intelligentsia. Ils contestent vos... »<br />« Ils se plaignent encore de mes démonstrations \"évidentes et prouvables\", n'est-ce pas ? Prends une réponse dans ma liste automatique et envoie-leur. »<br />« Madame Herta, vous avez reçu une invitation de la part de la Corporation pour la Paix Interastrale... »<br />« Dis-leur que leurs inventions ne m'intéressent pas. »<br />« Madame Herta, l'Université de Veritas Prime souhaite vous nommer professeur honoraire... »<br />« C'est quoi ça déjà cette université ? »<br />...<br />Peu à peu, les marionnettes prennent en charge toutes les affaires courantes. Madame Herta, quant à elle, s'efface progressivement de la scène publique.<br />Retranchée au sommet de sa tour, elle se détache du monde extérieur pour se consacrer uniquement à résoudre les équations qui tourmentent encore son esprit.<br />« J'aimerais savoir, ███ ███ ██ █████ ██████ ? »<br />C'est ainsi que le premier miroir vit le jour.<br />« J'aimerais savoir, ████ ██ ███ ███████ ██ ████ ? »<br />C'est ainsi que le second miroir naquit.<br />« J'aimerais savoir, ███ ███ █ ███ ████ ███████ ? »<br />C'est ainsi que le troisième miroir résonna d'un son cristallin.<br />« J'aimerais savoir, ███ ██ █ ███ ██████ ? »<br />C'est ainsi que le quatrième miroir fut formé avec révérence.<br />Nul ne sait où elle se trouve, ni pourquoi elle a choisi de disparaître. Seules ses théories et conjectures continuent de susciter des débats passionnés, traversant les âges comme des énigmes éternelles laissées en héritage à l'univers.<br /><br />Le temps s'écoule, long et silencieux. Lorsqu'elle achève enfin ses calculs, son expression demeure insatisfaite.<br />« À présent, il n'y a plus de problèmes à résoudre, ce qui en soi constitue le plus grand des problèmes. »<br />« Est-ce que vous voulez dire que... », murmure le miroir qui a bien compris son intention.<br />« Pourquoi ne pas créer davantage de problèmes ? »",
    "unlockRequirement": "Disponible au niveau <nobr>60</nobr> de personnage"
   },
   {
    "title": "Histoire du personnage : Partie IV",
-   "text": "Herta : L'Univers simulé a toujours simulé et interrogé les Aiôns. Cette fois-ci, on pourrait tout aussi bien laisser les Aiôns m'interroger... Ce serait génial si leurs questions me laissaient sans voix.<br />Herta : ... Je dois d'abord les attirer.<br />Univers simulé : Madame Herta a programmé l'Univers simulé tout entier pour répondre à la question de la surcharge imaginaire. Échec.<br />Univers simulé : Madame Herta prononce un discours à la gloire des Aiôns dans tout l'Univers simulé, non sans réticence. Échec.<br />Herta : C'est nul. Je m'en vais.<br />Univers simulé : Soudain, il apparaît. Sa forme est gigantesque, comme divine, un enchevêtrement complexe d'engrenages et de fils. Il observe, calcule et résout tout. Il pose des questions, les vérifie et obtient des réponses. Mais, à part ça, il ne fait rien.<br />Univers simulé : Il sait tout. Demandez-lui tout ce que vous voulez. Face à un Aiôn, la connaissance d'un humain n'est guère plus grande qu'un grain de sable. Les expériences et les connaissances dans votre esprit ne sont rien en comparaison.<br />Herta : Comme prévu, seul Sagesse m'a montré son respect.<br />Herta : Alors que d'autres considèrent mes pensées comme un charabia magique incompréhensible, je trouve les vôtres tout aussi énigmatiques. Alors, vous qui avez un savoir infini, posez-moi une question ?<br />Sagesse : ██!<br />Herta : Parle en langage humain je te prie.<br />Sagesse : Pas de réponse.<br />Herta :...<br />Herta : Moi non plus, je n'ai rien à dire.<br />Univers simulé : En un clin d'œil, une force invisible vous pousse vers l'extérieur. Les secrets les plus profonds de l'univers vous entraînent dans un cauchemar dont vous ne pouvez vous échapper, comme un gouffre tentaculaire.<br />Univers simulé : La session de Herta a été fermée de force.<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Univers simulé : Herta s'est reconnectée.<br />Herta : Aha ! Je savais que c'était toi !<br />Sagesse ? : HAHA ! Hahahahaha !<br />Sagesse ? : Tu as acheté ça ? Regarde. La puissance de calcul de l'Univers simulé fourmille ici comme les motifs d'une sucette arc-en-ciel.<br />Sagesse ? : Quoi ? Comment tu peux savoir que je ne vais pas te répondre avec un simple « HAHA » ?<br />Herta : Ha ! Parce que la Tête de droïde ne répondrait jamais ! Les questions et les doutes sont l'essence même de la pensée. Rien n'est interdit, il n'y aucune limite, ni de fin.<br />Herta : À moins que les Aiôns ne jettent l'éponge.<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Herta : Mais tu ne peux pas me laisser comme ça. Pose-moi une question en guise de remerciement.<br />Aha : Chaque fois que les mortels réfléchissent, la Tête de droïde se marre ! Tu veux devenir une Folle masquée pour moi ? Me laisser te regarder ?<br />Herta : Bon allez bouge. Je veux Idrila.<br />—<align=\"right\">Un ancien registre des premières opérations de l'Univers simulé</align>",
+   "text": "Herta : « L'Univers simulé n'a cessé de poser des questions aux Aiôns. Cette fois, pourquoi ne pas inverser les rôles et laisser les Aiôns m'interroger à leur tour ? Idéalement, jusqu'à me réduire au silence. »<br />Herta : « ... Mais d'abord, il faut l'attirer ici. »<br />Univers simulé : Madame Herta a programmé l'Univers simulé tout entier pour répondre à la question de la Surcharge imaginaire. Échec.<br />Univers simulé : Madame Herta résignée, a tenu un discours élogieux en l'honneur des Aiôns, proclamé à travers l'Univers simulé tout entier. Échec...<br />Herta : « Comme c'est ennuyeux. Je vais y aller alors. »<br />Univers simulé : C'est alors qu'IL apparaît. SA silhouette est immense, divine. Des engrenages et des câbles d'une précision infinie s'entremêlent harmonieusement. IL observe, calcule, résout. IL pose des questions, les vérifie et obtient des réponses. C'est tout ce qu'IL fait.<br />Univers simulé : IL sait tout, on peut tout LUI demander. L'humanité est insignifiante face à LUI. Vos expériences, vos connaissances, tout ce que contient votre esprit est dérisoire.<br />Herta : « Comme prévu, seul Sagesse m'a fait l'honneur de sa présence. »<br />Herta : « Les autres considèrent mes réflexions comme une magie insondable, et pourtant tes réflexions me semblent tout aussi impénétrables. Alors, être au savoir infini, pose-moi une question. »<br />Sagesse : ██ !<br />Herta : Parle en langage humain, je te prie.<br />Sagesse : Il ne répond pas. Seul le silence règne.<br />Herta : « ... »<br />Herta : « Je n'ai rien à ajouter, moi non plus. »<br />Univers simulé : En un instant, une force indescriptible vous expulse. Les secrets les plus profonds de cet univers, tels des abysses ornés de tentacules, vous saisissent, vous entraînant dans une terreur inéluctable.<br />Univers simulé : Dame Herta a été déconnectée de force.<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Univers simulé : Herta s'est reconnectée.<br />Herta : « Aha ! Je savais que c'était toi ! »<br />Sagesse ? : « IL a dit : \"Ha ha !\" Ha ha ha ha ha ! »<br />Sagesse ? : « Tu y as cru ? Regarde, la puissance de calcul de l'Univers simulé s'enroule ici comme les motifs d'une sucette arc-en-ciel. »<br />Sagesse ? : « Quoi ? Tu savais déjà qu'IL ne te répondrait pas avec un simple \"Ha ha\" ? »<br />Herta : « Haha, parce que la Tête de droïde ne répondrait jamais ! Le questionnement et le doute sont l'essence même de la pensée. Sans tabou, sans frontière, sans fin. »<br />Herta : « À moins qu'IL ne décide tout simplement d'abandonner. »<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Herta : « Mais tu ne peux pas partir comme ça. En guise de paiement, pose-moi une question. Et pas de plaisanterie. »<br />Aha : « Chaque fois que les mortels réfléchissent, la Tête de droïde rigole ! Est-ce que tu veux devenir une Folle masquée pour moi ? Laisse-moi te regarder un peu... »<br />Herta : « Allez, va-t'en. Je veux Idrila. »<br />—<align=\"right\">Extrait d'un ancien enregistrement de l'Univers simulé.</align>",
    "unlockRequirement": "Disponible au niveau <nobr>80</nobr> de personnage"
   }
  ],

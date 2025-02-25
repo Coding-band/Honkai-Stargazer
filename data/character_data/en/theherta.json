@@ -34,6 +34,7 @@
     "Calyx: Great Mine",
     "Calyx: Artisanship Commission",
     "Calyx: The Reverie (Dreamscape)",
+    "Calyx: \"Murmuring Woods\" Grove of Epiphany",
     "Mission rewards",
     "Assignment rewards",
     "Embers Exchange"
@@ -89,6 +90,7 @@
     "Calyx: Outlying Snow Plains",
     "Calyx: Cloudford",
     "Calyx: Dream's Edge",
+    "Calyx: \"Sanctum of Prophecy\" Janusopolis",
     "Forgotten Hall"
    ]
   },
@@ -107,6 +109,7 @@
     "Calyx: Outlying Snow Plains",
     "Calyx: Cloudford",
     "Calyx: Dream's Edge",
+    "Calyx: \"Sanctum of Prophecy\" Janusopolis",
     "Daily Training",
     "Embers Exchange"
    ]
@@ -126,6 +129,7 @@
     "Calyx: Outlying Snow Plains",
     "Calyx: Cloudford",
     "Calyx: Dream's Edge",
+    "Calyx: \"Sanctum of Prophecy\" Janusopolis",
     "Assignment rewards"
    ]
   },
@@ -446,7 +450,7 @@
    "iconPath": "bb62d15a2a46df94ed30735739270e760c6ad738d4f49f04310d789ffd47a180",
    "artPath": "7cd5e6bef9833541dae4ff663dadf482851dd25fd57c054d88e10816c6655f7a",
    "name": "Night at Shorefall",
-   "descHash": "When Enhanced Skill calculates \"Interpretation,\" additionally calculates <nobr>#1[i]%</nobr> of the \"Interpretation\" stacks on the 1 target with the highest stacks out of the primary target and adjacent targets. When using Enhanced Skill to reset \"Interpretation,\" reset the stack number to <nobr>#2[i]</nobr> instead.",
+   "descHash": "When the Enhanced Skill calculates the number of \"Interpretation\" stacks, additionally counts <nobr>#1[i]%</nobr> of the number of \"Interpretation\" stacks on the 1 target with the most stacks among the primary target and adjacent targets. When \"Interpretation\" is reset by using the Enhanced Skill, its stack number is reset to <nobr>#2[i]</nobr> instead.",
    "params": [
     0.5,
     15
@@ -457,7 +461,7 @@
    "iconPath": "a9e0137cd6f1fd96e1071fb3884de18104990051aa1d71e9129f2a88038ced5b",
    "artPath": "07bc1b13f177cca9e867f665bdd06934b4a8765c230cad052de5d963b273f67b",
    "name": "Wind Through Keyhole",
-   "descHash": "After The Herta enters battle and uses her Ultimate, she additionally gains 1 stack of \"Inspiration.\" After using Enhanced Skill, The Herta's subsequent <u>action is advanced</u> by <nobr>#1[i]%</nobr>.",
+   "descHash": "After The Herta enters battle or uses Ultimate, additionally gains 1 \"Inspiration\" stack. After using Enhanced Skill, <u>advances</u> The Herta's next action by <nobr>#1[i]%</nobr>.",
    "params": [
     0.35,
     42,
@@ -477,7 +481,7 @@
    "iconPath": "7c9f4a48b6f9fda17c8c1c023bfde3ecbfa86fb2c8b85d831ec7069536204d7d",
    "artPath": "f0e0533952c515bb6d40d5195155c045018d0592e1e4bc0ecc246dc13e56cd2f",
    "name": "The Sixteenth Key",
-   "descHash": "The SPD of characters following the Path of Erudition in the team increases by <nobr>#1[i]%</nobr>.",
+   "descHash": "The SPD of Erudition characters in the team increases by <nobr>#1[i]%</nobr>.",
    "params": [
     0.12
    ]
@@ -495,7 +499,7 @@
    "iconPath": "6075cfae5b8acb1b527c26d589dbc43284447d643b2a6cdf567c07185ba63f4c",
    "artPath": "6adf99fdfd20f9336a24a053d11ef70194daec449ff0005003703990b985c120",
    "name": "Sweet Lure of Answer",
-   "descHash": "The Herta's Ice RES PEN increases by <nobr>#4[i]%</nobr>. When the number of enemy targets on the field is 3 (or more)/2/1, Ultimate's DMG multiplier increases by <nobr>#1[i]%</nobr>/<nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr>.",
+   "descHash": "The Herta's Ice RES PEN increases by <nobr>#4[i]%</nobr>. When the number of enemy targets on the field is 3 (or more)/2/1, Ultimate's DMG multiplier increases by <nobr>#1[i]%</nobr>/<nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr> respectively.",
    "params": [
     1.4,
     2.5,
@@ -525,7 +529,7 @@
  "skills": [
   {
    "tagHash": "Single Target",
-   "descHash": "Deals <span style=\"color:#47C7FD;\">Ice </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of The Herta's ATK to one designated enemy target.",
+   "descHash": "Deals <span style=\"color:#47C7FD;\">Ice </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of The Herta's ATK to one designated enemy.",
    "ultimateCost": 0,
    "break": "30",
    "energy": "20",
@@ -1003,12 +1007,12 @@
   },
   {
    "tagHash": "AoE",
-   "descHash": "Rearranges the number of \"Interpretation\" stacks on all enemies, prioritizing the transfer of a higher number of \"Interpretation\" stacks to Elite-level targets and above. Then, deals <span style=\"color:#47C7FD;\">Ice </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> The Herta's ATK to all enemies. When using Ultimate, increases The Herta's ATK by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>, lasting for <nobr>#5[i]</nobr> turn(s). After using the Ultimate, The Herta immediately takes action and gains 1 stack of \"Inspiration.\" \"Inspiration\" can stack up to <nobr>#6[i]</nobr> time(s). While having \"Inspiration,\" enhances Skill to \"Hear Me Out.\"",
+   "descHash": "Rearranges the numbers of \"Interpretation\" stacks on all enemies, prioritizing the transfer of the higher numbers of \"Interpretation\" stacks to Elite-level targets and above. Then, deals <span style=\"color:#47C7FD;\">Ice </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of The Herta's ATK to all enemies. When using Ultimate, increases The Herta's ATK by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span>, lasting for <nobr>#5[i]</nobr> turn(s). After the use, The Herta immediately takes action and gains 1 stack of \"Inspiration.\" \"Inspiration\" can stack up to <nobr>#6[i]</nobr> time(s). While having \"Inspiration,\" enhances Skill to \"Hear Me Out.\"",
    "ultimateCost": 220,
    "break": "60/hit",
    "energy": "5",
    "id": 14810818,
-   "name": "<nobr>Told Ya! </nobr><nobr>Magic Happens</nobr>",
+   "name": "<nobr>Told Ya!</nobr> <nobr>Magic Happens</nobr>",
    "iconPath": "095a70f83d338efb7f638ffcee781476d162cf189a43a946bd86ae73a5968ae5",
    "typeDescHash": "Ultimate",
    "levelReq": 0,
@@ -1353,7 +1357,7 @@
   },
   {
    "tagHash": "Enhance",
-   "descHash": "When enemy targets enter battle, The Herta inflicts 1 stack of \"Interpretation\" on them. At the start of each wave, applies <nobr>#6[i]</nobr> stack(s) of \"Interpretation\" to a random enemy target, prioritizing Elite enemy targets or higher. When the Enhanced Skill's primary target has \"Interpretation,\" the multiplier for the DMG dealt increases, with each stack granting an increase of <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>/<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> on the primary target/other targets respectively. If 2 or more characters follow the Path of Erudition in the team, each stack grants an additional increase of <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>/<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> on the primary target/other targets respectively. \"Interpretation\" can stack up to <nobr>#3[i]</nobr> time(s). When using the Enhanced Skill, resets the number of \"Interpretation\" stacks on the primary target to 1. After the enemy target leaves the battle or gets defeated by any unit, \"Interpretation\" will be transferred, prioritizing the transfer to Elite-level targets and above.",
+   "descHash": "When enemy targets enter battle, The Herta inflicts 1 stack of \"Interpretation\" on them. At the start of each wave, applies <nobr>#6[i]</nobr> stack(s) of \"Interpretation\" to a random enemy target, prioritizing Elite-level targets and above. When the Enhanced Skill's primary target has \"Interpretation,\" the multiplier for the DMG dealt increases, with each stack granting an increase of <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>/<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> on the primary target/other targets respectively. If 2 or more characters follow the Path of Erudition in the team, each stack grants an additional increase of <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>/<span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[f1]%</nobr></span> on the primary target/other targets respectively. \"Interpretation\" can stack up to <nobr>#3[i]</nobr> time(s). When using the Enhanced Skill, resets the number of \"Interpretation\" stacks on the primary target to 1. After the enemy target leaves the field or gets defeated by any unit, \"Interpretation\" will be transferred, prioritizing the transfer to Elite-level targets and above.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "30",
@@ -1725,7 +1729,7 @@
   },
   {
    "tagHash": "Enhance",
-   "descHash": "After using Technique, The Herta's ATK increases by <nobr>#1[i]%</nobr> at the start of the next battle, lasting for <nobr>#2[i]</nobr> turn(s).<br />If there are Basic Treasures in this current map, using Technique will mark up to <nobr>#3[i]</nobr> Basic Treasures' locations.<br />After entering battle by using Technique in Simulated Universe or Divergent Universe, deals <u>True DMG</u> equal to <nobr>#4[i]%</nobr> of the target's Max HP to enemy targets lower than Elite-level, and <u>True DMG</u> equal to <nobr>#5[i]%</nobr> of the target's Max HP to enemy targets at Elite-level and above.",
+   "descHash": "After using Technique, increases The Herta's ATK by <nobr>#1[i]%</nobr> at the start of the next battle, lasting for <nobr>#2[i]</nobr> turn(s).<br />If there are Basic Treasures in this current map, using Technique can mark up to <nobr>#3[i]</nobr> Basic Treasures' locations.<br />After entering battle by using Technique in Simulated Universe or Divergent Universe, at the start of each wave, deals <u>True DMG</u> to enemy targets lower than Elite-level by an amount equal to <nobr>#4[i]%</nobr> of the targets' Max HP, and deals <u>True DMG</u> to enemy targets at Elite-level and above by an amount equal to <nobr>#5[i]%</nobr> of the targets' Max HP.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "0",
@@ -1754,7 +1758,7 @@
   },
   {
    "tagHash": "AoE",
-   "descHash": "Consumes 1 stack of \"Inspiration.\" Deals <span style=\"color:#47C7FD;\">Ice </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of The Herta's ATK to one designated enemy and inflicts <nobr>#2[i]</nobr> stack(s) of \"Interpretation.\" Deals <span style=\"color:#47C7FD;\">Ice </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of The Herta's ATK to the target hit by this instance of Skill and adjacent targets, repeating 2 times. Finally, deals <span style=\"color:#47C7FD;\">Ice </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> of The Herta's ATK to all enemies.",
+   "descHash": "Consumes 1 stack of \"Inspiration.\" Deals <span style=\"color:#47C7FD;\">Ice </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of The Herta's ATK to one designated enemy and inflicts <nobr>#2[i]</nobr> stack(s) of \"Interpretation.\" Deals <span style=\"color:#47C7FD;\">Ice </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of The Herta's ATK to the targets hit by this instance of Skill and their respective adjacent targets, repeating 2 times. At the end, deals <span style=\"color:#47C7FD;\">Ice </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[i]%</nobr></span> of The Herta's ATK to all enemies.",
    "ultimateCost": 0,
    "break": "15/hit",
    "energy": "30",
@@ -2167,7 +2171,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "When ally targets attack, inflicts 1 stack of \"Interpretation\" on the hit enemy target. After attacking, for every 1 target hit by this attack, regenerates <nobr>#1[i]</nobr> fixed Energy for The Herta, counting up to a maximum of 5 targets. When using Enhanced Skill and if the primary target's \"Interpretation\" stack reaches <nobr>42</nobr>, increases <span style=\"color:#47C7FD;\">Ice </span>DMG dealt by The Herta by <nobr>#2[i]%</nobr> until the end of this attack.",
+    "descHash": "When ally targets attack, inflicts 1 stack of \"Interpretation\" on the hit enemy target. After attacking, for every 1 target hit by this attack, regenerates <nobr>#1[i]</nobr> fixed Energy for The Herta, counting up to a maximum of 5 targets. When using Enhanced Skill, if the primary target's \"Interpretation\" stack reaches <nobr>42</nobr>, increases the <span style=\"color:#47C7FD;\">Ice </span>DMG dealt by The Herta by <nobr>#2[i]%</nobr>, lasting until the end of this attack.",
     "ultimateCost": 0,
     "id": 29473604,
     "name": "Aloofly Honest",
@@ -2308,7 +2312,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "When entering battle, if the team has 2 or more characters following the Path of Erudition, then increases all allies' CRIT DMG by <nobr>#1[i]%</nobr>, calculates at least <nobr>#2[i]</nobr> targets when the Trace \"Aloofly Honest\" calculates hit targets, applies <nobr>#3[i]</nobr> stack(s) of \"Interpretation\" to the target that has the highest current \"Interpretation\" stacks among the hit enemy targets after attacking, and additionally applies <nobr>#4[i]</nobr> stack(s) of \"Interpretation\" if the attacker is a character following the Path of Erudition.",
+    "descHash": "When entering battle, if the team has 2 or more Erudition characters, increases all allies' CRIT DMG by <nobr>#1[i]%</nobr>. And the Trace \"Aloofly Honest\" counts at least <nobr>#2[i]</nobr> target(s) when calculating the number of targets hit. After attacking, applies <nobr>#3[i]</nobr> \"Interpretation\" stack(s) to the target that has the highest existing \"Interpretation\" stacks among the hit enemy targets. If the attacker is an Erudition character, then additionally applies <nobr>#4[i]</nobr> \"Interpretation\" stack(s).",
     "ultimateCost": 0,
     "id": 29648208,
     "name": "Message From Beyond the Veil",
@@ -2422,7 +2426,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "For every 1 stack of \"Interpretation\" inflicted on enemy targets, The Herta gains 1 stack of \"Answer\" up to <nobr>#2[i]</nobr> stack(s). When using the Ultimate, every stack of \"Answer\" increases the Ultimate's DMG multiplier by <nobr>#1[f1]%</nobr>.",
+    "descHash": "For every 1 stack of \"Interpretation\" inflicted on enemy targets, The Herta gains 1 stack of \"Answer,\" up to a max of <nobr>#2[i]</nobr> stack(s). When using Ultimate, each \"Answer\" stack increases this instance of Ultimate's DMG multiplier by <nobr>#1[f1]%</nobr>.",
     "ultimateCost": 0,
     "id": 29382444,
     "name": "Starved Landscape of Vacua",
@@ -3103,7 +3107,7 @@
  "storyItems": [
   {
    "title": "Character Details",
-   "text": "Genius Society #83, Madam Herta, resides deep within the Clock Tower at the edge of the cosmos, pursuing the ultimate mysteries of the universe as a sorceress. <br />Thanks to de-aging technology, she maintains the youthful appearance of her prime. Disliking mundane affairs, she typically delegates such tasks to her puppets.",
+   "text": "Genius Society #83, Madam Herta, resides deep within the Clock Tower at the edge of the cosmos, pursuing the ultimate mysteries of the universe as a sorceress. <br />Thanks to de-aging technology, she maintains a youthful appearance. Disliking mundane affairs, she typically delegates such tasks to her puppets.",
    "unlockRequirement": ""
   },
   {
@@ -3113,17 +3117,17 @@
   },
   {
    "title": "Character Story: Part II",
-   "text": "<b>Memorial Symposium: Celebrating Madam Herta's ██th Birthday</b><br />Meeting Minutes — Topic One: A Retrospective of Madam Herta's Scientific Achievements<br />Topic Two: Anecdotes and Stories from Madam Herta's Life<br />...<br />Meeting Minutes — Topic Five: Panel Discussion: \"Exploring the Boundaries of Science and its Profound Implications\"<br />...<br />Meeting Minutes — Special Agenda 1: Moment of Silence: Breaking news from reliable media reports that Madam Herta has passed away...<br />Special Agenda 2: Madam Herta Makes an Unexpected Appearance and Delivers a Speech!<br /><b>Madam Herta's Speech:</b><br />\"Thank you all for your heartfelt condolences. Unfortunately, it seems I must disappoint some of you yet again.\"<br /><br />\"Are you... Madam Herta?\"<br />\"Is this a puppet of Madam Herta?\"<br />\"Did your paper on de-aging... actually work!?\"<br />\"Madam Herta, we need an explanation!\"<br />...<br />Madam Herta cleared her throat and lifted her scepter aloft —<br />\"It's all thanks to Magic.\"<br /><br />\"Madam Herta, hold on a moment!\"<br />\"It's impossible! The de-aging concept is purely theoretical. We're light-years away from actual application...\"<br />\"Science? Can she even be called a scientist anymore? That's just absurd!\"<br />\"Not to kill the vibe, but how do you always manage to make such a stunning entrance?\"<br /><br />\"Pretty amusing, isn't it? The press loves to churn out fake news for headlines, while the old timers can't wait for me to bite the dust, hoping to prove my anti-aging theory is just a pipe dream.\"<br />She switches off the conference video and calmly resumes her afternoon tea.<br />\"All your theories have been shown to have potential, yet... future scholars have never truly captured your essence, making replication impossible.\"The calm woman sips her tea.<br />\"Logic: The so-called 'magic' of youth Madam Herta mentions is her biting satire. Deductive: The theory's core principles involve reversing energy and manipulating time, which requires exacting conditions. Computation: ...\"<br />Her smile broadens as she slides a plum pastry across to the Intellitron, cutting off its monologue.<br />\"Some truths don't need to be spoken. Here, have a treat.\"",
+   "text": "<b>Memorial Symposium: Celebrating Madam Herta's ██th Birthday</b><br />Meeting Minutes, Topic One: A Retrospective of Madam Herta's Scientific Achievements<br />Meeting Minutes, Topic Two: Anecdotes and Stories from Madam Herta's Life<br />...<br />Meeting Minutes, Topic Five: Panel Discussion on \"Exploring the Boundaries of Science and its Profound Implications\"<br />...<br />Meeting Minutes, Provisional Topic: Moment of Silence. Breaking news from reliable media sources, Madam Herta has passed away...<br />Meeting Minutes, Provisional Topic 2: Madam Herta Makes an Unexpected Appearance and Delivers a Speech!<br /><b>Madam Herta's Speech:</b><br />\"Thank you all for your heartfelt condolences. Unfortunately, it seems I must disappoint some of you yet again.\"<br /><br />\"Are you... Madam Herta?\"<br />\"Is this a puppet of Madam Herta?\"<br />\"Did your paper on de-aging... actually work!?\"<br />\"Madam Herta, we need an explanation!\"<br />...<br />Madam Herta cleared her throat and lifted her scepter aloft —<br />\"It's all thanks to Magic.\"<br /><br />\"Madam Herta, hold on a moment!\"<br />\"It's impossible! The de-aging concept is purely theoretical. We're light-years away from actual application...\"<br />\"Science? Can she even be called a scientist anymore? That's just absurd!\"<br />\"Not to kill the vibe, but how do you always manage to make such a stunning entrance?\"<br /><br />\"Pretty amusing, isn't it? The press loves to churn out fake news for headlines, while the old timers can't wait for me to bite the dust, hoping to prove my anti-aging theory is just a pipe dream.\"<br />She switches off the conference video and calmly resumes her afternoon tea.<br />\"All your theories have been shown to have potential, yet... future scholars have never truly captured your essence, making replication impossible.\" The calm woman sips her tea.<br />\"Logic: The so-called 'magic' of youth Madam Herta mentions is her biting satire. Deductive: The theory's core principles involve reversing energy and manipulating time, which requires exacting conditions. Computation: ...\"<br />Her smile broadens as she slides a plum pastry across to the Intellitron, cutting off his monologue.<br />\"Some truths don't need to be spoken. Here, have a treat.\"",
    "unlockRequirement": "Unlocked at Character Level <nobr>40</nobr>"
   },
   {
    "title": "Character Story: Part III",
-   "text": "On the edge of the galaxy, within a desolate, lifeless star system, a mysterious tower flickers in and out of view amid a swirling vortex.<br /><br />\"I refuse to wear myself out in this sprawling mansion.\"<br />She surveyed the vast, empty room, signaling the puppets to approach.<br />With a series of cheerful clicks and whirls, they danced toward her —<br />\"Madam Herta is a peerless gem!\"<br />\"Madam Herta is an unrivalled genius!\"<br />\"Madam Herta is an inimitable beauty!\"<br />\"Enough already, back to your tasks.\"She dismissed them with a wave of her hand.<br />Three to scrub the floors, two to tend the gardens, and one...<br />\"Brew some coffee. It's chilly today, and I need something warm.\"<br />The brown beans crunched under the grinder, hot water washed over them, and the dark liquid joyfully bubbled.<br />\"Madam Herta, you've received an inquiry from the Intelligentsia Guild. They're challenging your...\"<br />\"Are they still fussing over my 'evident proof'? Just send them a few canned replies from the list.\"<br />\"Madam Herta, Interastral Peace Corporation has sent an invitation...\"<br />\"Tell them their gadgets don't interest me.\"<br />\"Madam Herta, the University of Veritas Prime wishes to name you an honorary professor...\"<br />\"Which institution is that again?\"<br />...<br />Gradually, the puppets handled all mundane affairs, allowing her to vanish from the public eye.<br />Secluded at her tower's apex, she dismissed the external world to unravel the puzzles lingering in her thoughts.<br />\"I wish to know, ████ ███ ██ █████ ██████?\"<br />Thus, the First Mirror came into being.<br />\"I wish to know, ████ ██ ███ ███████ ██ ████?\"<br />Thus, the Second Mirror gleamed into existence.<br />\"I wish to know, ███ ███ █ ███ ████ ███████?\"<br />Thus, the Third Mirror chimed succinctly.<br />\"I wish to know, ███ ██ █ ███ ██████?\"<br />Thus, the Fourth Mirror was formed with reverence.<br />Her whereabouts remained a mystery, as did her reasons for shunning the limelight. Yet, her provocative theories and speculations continued to stir endless discussions.<br /><br />A long time passes. After she has completed her extrapolations, she seems unsatisfied.<br />\"There are no more problems left to solve — this, in itself, is the greatest problem.\"<br />\"Are you saying...\"The mirror understands perfectly.<br />\"Why don't we create more problems?\"",
+   "text": "On the edge of the galaxy, within a desolate, lifeless star system, a mysterious tower flickers in and out of view amid a swirling vortex.<br /><br />\"I refuse to wear myself out in this sprawling mansion.\"<br />She surveyed the vast, empty room, signaling the puppets to approach.<br />With a series of cheerful clicks and whirls, they danced toward her —<br />\"Madam Herta is a peerless gem!\"<br />\"Madam Herta is an unrivalled genius!\"<br />\"Madam Herta is an inimitable beauty!\"<br />\"Enough already, back to your tasks.\" She dismissed them with a wave of her hand.<br />Three to scrub the floors, two to tend the gardens, and one...<br />\"Brew some coffee. It's chilly today, and I need something warm.\"<br />The brown beans crunched under the grinder, hot water washed over them, and the dark liquid joyfully bubbled.<br />\"Madam Herta, you've received an inquiry from the Intelligentsia Guild. They're challenging your...\"<br />\"Are they still fussing over my 'evident proof'? Just send them a few canned replies from the list.\"<br />\"Madam Herta, Interastral Peace Corporation has sent an invitation...\"<br />\"Tell them their gadgets don't interest me.\"<br />\"Madam Herta, the University of Veritas Prime wishes to name you an honorary professor...\"<br />\"Which institution is that again?\"<br />...<br />Gradually, the puppets handled all mundane affairs, allowing her to vanish from the public eye.<br />Secluded at her tower's apex, she dismissed the external world to unravel the puzzles lingering in her thoughts.<br />\"I wish to know, ████ ███ ██ █████ ██████?\"<br />Thus, the First Mirror came into being.<br />\"I wish to know, ████ ██ ███ ███████ ██ ████?\"<br />Thus, the Second Mirror gleamed into existence.<br />\"I wish to know, ███ ███ █ ███ ████ ███████?\"<br />Thus, the Third Mirror chimed succinctly.<br />\"I wish to know, ███ ██ █ ███ ██████?\"<br />Thus, the Fourth Mirror was formed with reverence.<br />Her whereabouts remained a mystery, as did her reasons for shunning the limelight. Yet, her provocative theories and speculations continued to stir endless discussions.<br /><br />A long time passes. After she has completed her extrapolations, she seems unsatisfied.<br />\"There are no more problems left to solve — this, in itself, is the greatest problem.\"<br />\"Are you saying...\"The mirror understands perfectly.<br />\"Why don't we create more problems?\"",
    "unlockRequirement": "Unlocked at Character Level <nobr>60</nobr>"
   },
   {
    "title": "Character Story: Part IV",
-   "text": "Herta: The Simulated Universe has always been simulating the Aeons and asking THEM. This time, we might as well let the Aeon ask me... It'd be great if THEIR question have me at a loss of words.<br />Herta: ...I need to get THEM out first.<br />Simulated Universe: Madam Herta broadcasts to the entire Simulated Universe the answer to the Imaginary Overflow Question. Fail.<br />Simulated Universe: Madam Herta pinches her nose and broadcasts to the entire Simulated Universe a speech praising the Aeons. Fail.<br />Herta: Boring. I'm leaving.<br />Simulated Universe: THEY appear in the blink of an eye. THEIR body is giant as a divine, the cogs and wires intricately intertwined together. THEY observe, calculate, and seek to know everything. THEY give questions, conduct proofs, and obtain answers. THEY do nothing else.<br />Simulated Universe: THEY know too much — You can ask THEM anything. Humans are so ignorant before THEM. Those tiny amounts of experience and knowledge in your head... They are pitifully small in volume.<br />Herta: So, only Nous would give me some respect.<br />Herta: Other humans view my thinking process as incomprehensible magic, and I view your thoughts in the same way. So, all-knowing being, ask me —<br />Nous: ██!<br />Herta: Please speak human.<br />Nous: THEY do not respond and remain silent.<br />Herta:...<br />Herta: I have nothing to say, either.<br />Simulated Universe: You are instantly expelled by some force. The deepest secret of this universe is like an abyss with tentacles, dragging you into inescapable fear.<br />Simulated Universe: Herta has been forcibly logged out.<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Simulated Universe: Herta has re-logged.<br />Herta: Aha! I knew it was you<br />Nous?: THEY said \"HAHA!\" Hahahahaha!<br />Nous?: You bought that? Look. The computing power of the Simulated Universe is swarming here like the patterns of a rainbow lollipop.<br />Nous?: What? You are so sure that THEY won't reply with HAHA?<br />Herta: Heh, because Droidhead would never answer! Questions and doubts are the essence of thought. There is nothing that is forbidden, nothing serves as a boundary, and nothing is regarded as its end —<br />Herta: Unless THEY quit.<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Herta: But you can't just leave like this. As payment, you ask me a question. Don't tell a joke.<br />Aha: Whenever mortals think, Droidhead would laugh! Would you like to become a Masked Fool for me? Let me glance at you?<br />Herta: Get out. I want Idrila.<br />—<align=\"right\">An ancient Simulated Universe operation record</align>",
+   "text": "Herta: The Simulated Universe has always been simulating the Aeons and asking THEM questions. This time, we might as well let the Aeon ask me instead... It'd be great if THEIR question have me at a loss of words.<br />Herta: ...I need to get THEM out first.<br />Simulated Universe: Madam Herta broadcasts to the entire Simulated Universe the answer to the Imaginary Overflow Question. Fail.<br />Simulated Universe: Madam Herta pinches her nose and broadcasts to the entire Simulated Universe a speech praising the Aeons. Fail.<br />Herta: Boring. I'm leaving.<br />Simulated Universe: THEY appear in the blink of an eye. THEIR form looms vast like a deity, with gears and cables intricately entwined in sublime complexity. THEY observe, calculate, and seek to know everything. THEY give questions, conduct proofs, and obtain answers. THEY do nothing else.<br />Simulated Universe: THEY know too much — You can ask THEM anything. Humans are so ignorant before THEM. Those tiny amounts of experience and knowledge in your head... They are pitifully small in volume.<br />Herta: So, only Nous would give me some respect.<br />Herta: Other humans view my thinking process as incomprehensible magic, and I view your thoughts in the same way. So, all-knowing being, ask me —<br />Nous: ██!<br />Herta: Please speak human.<br />Nous: THEY do not respond and remain silent.<br />Herta: ...<br />Herta: I have nothing to say, either.<br />Simulated Universe: You are instantly expelled by some force. The deepest secret of this universe is like an abyss with tentacles, dragging you into inescapable fear.<br />Simulated Universe: Herta has been forcibly logged out.<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Simulated Universe: Herta has re-logged.<br />Herta: Aha! I knew it was you<br />Nous?: THEY said \"HAHA!\" Hahahahaha!<br />Nous?: You bought that? Look. The computing power of the Simulated Universe is swarming here like the patterns of a rainbow lollipop.<br />Nous?: What? You are so sure that THEY won't reply with HAHA?<br />Herta: Heh, because Droidhead would never answer! Questions and doubts are the essence of thought. There is nothing that is forbidden, nothing serves as a boundary, and nothing is regarded as its end —<br />Herta: Unless THEY quit.<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />Herta: But you can't just leave like this. As compensation, ask me a question — but no jokes allowed.<br />Aha: Whenever mortals think, Droidhead would laugh! Would you like to become a Masked Fool for me? Let me glance at you?<br />Herta: Get out. I want Idrila.<br />—<align=\"right\">An ancient Simulated Universe operation record</align>",
    "unlockRequirement": "Unlocked at Character Level <nobr>80</nobr>"
   }
  ],
@@ -3247,7 +3251,7 @@
  "hasServant": false,
  "name": "The Herta",
  "rarity": 5,
- "descHash": "Esteemed Genius Society #83, human, female, young, beautiful, attractive. It's said that she lives in the far edge of the Cosmos, almost never leaving. Sounds like her appearance this time... It must be for some issue that requires a personal touch, right?",
+ "descHash": "Esteemed Genius Society #83, human, female, young, beautiful, attractive. It's said that she lives in the far edge of the Cosmos, almost never leaving. Sounds like her appearance this time... ...must be for some issue that requires a personal touch, right?",
  "artPath": "d924db37f724bc88e8a532c8aef4a82c80348681233b2c5ebae4105188aa8d61",
  "miniIconPath": "77b9c8ca1927b07f6d8bdda58087f23dcb4dec7c605b867d3ab077ee05e53d6e",
  "damageType": {

@@ -34,6 +34,7 @@
     "疑似花萼「大鉱区」",
     "疑似花萼「工造司」",
     "疑似花萼「ホテル・『レバリー』-夢境」",
+    "疑似花萼「『囁きの密林』神悟の樹庭」",
     "クエスト報酬",
     "依頼報酬",
     "エンバー交換"
@@ -88,6 +89,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "「忘却の庭」"
    ]
   },
@@ -106,6 +108,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "デイリー訓練",
     "エンバー交換"
    ]
@@ -125,6 +128,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "依頼報酬"
    ]
   },
@@ -445,7 +449,7 @@
    "id": 1,
    "iconPath": "21bfb09da2a9ca8c559fec989e0012803bfb7e766bd306636f56381d6d68a54d",
    "artPath": "dc114a1e3acc445024840e92c37df11b412b5f7862cd3f00c1fa4e143f24f822",
-   "name": "<ruby>止<rt>や</rt></ruby>まぬ<ruby>争<rt>あらそ</rt></ruby>い",
+   "name": "止まぬ争い",
    "descHash": "ルカが行動する時、指定した敵が裂創状態の場合、ルカの与ダメージ+<nobr>#1[i]%</nobr>、<nobr>#2[i]</nobr>ターン継続。",
    "params": [
     0.15,
@@ -455,8 +459,8 @@
   {
    "id": 2,
    "iconPath": "58133fa0878efdb7914007e69f521069bde305530daa7f75ea688c7fe48cc753",
-   "artPath": "8630fa45cf327d1b6a14c1e9a5219bfca44724f40004d2770614bac1bfe8e549",
-   "name": "オレが<ruby>強<rt>つよ</rt></ruby>い",
+   "artPath": "689bdd5e6fbe18cc5ceecfe696683419a1da6de321eb48e289a93b818c355ac7",
+   "name": "オレが強い",
    "descHash": "物理属性の弱点がある敵に戦闘スキルが命中した場合、「闘志」を<nobr>#1[i]</nobr>層獲得する。",
    "params": [
     1
@@ -466,15 +470,15 @@
    "id": 3,
    "iconPath": "fcc2de45b3ebe1ecf10c544576b5a4f6272f0c30c8e89fd5d412353e59b9ea10",
    "artPath": "f42237779204d835652c5350edc9ae495ed07a7dd5af70ac0a507bf962084340",
-   "name": "リングに<ruby>立<rt>た</rt></ruby>つため<ruby>生<rt>う</rt></ruby>まれた<ruby>男<rt>おとこ</rt></ruby>",
+   "name": "リングに立つため生まれた男",
    "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
    "params": []
   },
   {
    "id": 4,
    "iconPath": "0e0572ae26b7814e33d473bb8959e5eeb8122c230cec16ab016cd934216f110f",
-   "artPath": "d51ea6a26fcf82fdf6a8312dc7d2d33f7b547363a61c7cf9cc210819295fd0ac",
-   "name": "<ruby>不撓不屈<rt>ふとうふくつ</rt></ruby>",
+   "artPath": "ed9a44df1bf1c0c6105ef25db9d770cc42940fc76a3b151ef242abf97f5ab81a",
+   "name": "不撓不屈",
    "descHash": "「闘志」を1層獲得するごとに、攻撃力+<nobr>#1[i]%</nobr>。この効果は最大で<nobr>#2[i]</nobr>層累積できる。",
    "params": [
     0.05,
@@ -485,7 +489,7 @@
    "id": 5,
    "iconPath": "94374c8c86fefd73685ad4f5c10cca1b476b0dcc45717e6bfc5c11ebaba90224",
    "artPath": "b9649e2e7d07dc9547f52486e1f6899a55535a56baaaa77294c52a1b4f2519ed",
-   "name": "<ruby>地炎魂<rt>ちえんだましい</rt></ruby>",
+   "name": "地炎魂",
    "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
    "params": []
   },
@@ -493,7 +497,7 @@
    "id": 6,
    "iconPath": "541fb0ca9bda8231168ee6808f775caefb738c49e4ea030bcaf794cb4a0994cb",
    "artPath": "4860280b2a685d9829acbf83aea63204185b65c7c1fc9d1f3836d1368963c764",
-   "name": "チャンピオンに<ruby>相応<rt>ふさわ</rt></ruby>しい<ruby>喝采<rt>かっさい</rt></ruby>",
+   "name": "チャンピオンに相応しい喝采",
    "descHash": "強化通常攻撃の「砕天拳」が裂創状態の敵に命中した後、その回の攻撃で「裂地拳」を1段行ったごとに、敵に付与された裂創状態が、さらに本来のダメージ<nobr>#1[i]%</nobr>分のダメージを1回発生する。",
    "params": [
     0.08
@@ -526,7 +530,7 @@
    "break": "30",
    "energy": "20",
    "id": 635769,
-   "name": "<ruby>裂地拳<rt>れっちけん</rt></ruby>",
+   "name": "裂地拳",
    "iconPath": "9441fb02cad2c0b6c3845ef21f14f2fe906629935aca4cbad81104339ffd634f",
    "typeDescHash": "通常攻撃",
    "levelReq": 0,
@@ -687,7 +691,7 @@
    "break": "60",
    "energy": "30",
    "id": 920296,
-   "name": "<ruby>裂創拳<rt>れっそうけん</rt></ruby>",
+   "name": "裂創拳",
    "iconPath": "fcc2de45b3ebe1ecf10c544576b5a4f6272f0c30c8e89fd5d412353e59b9ea10",
    "typeDescHash": "戦闘スキル",
    "levelReq": 0,
@@ -1018,7 +1022,7 @@
    "break": "90",
    "energy": "5",
    "id": 836355,
-   "name": "<ruby>勝利<rt>しょうり</rt></ruby>の<ruby>一撃<rt>いちげき</rt></ruby>",
+   "name": "勝利の一撃",
    "iconPath": "08dd381456d3c0730db37488bcfb84e8cf287c7a2cb996c674e41b96e7684d5a",
    "typeDescHash": "必殺技",
    "levelReq": 0,
@@ -1349,7 +1353,7 @@
    "break": "0",
    "energy": "0",
    "id": 351242,
-   "name": "<ruby>飛<rt>と</rt></ruby>び<ruby>散<rt>ち</rt></ruby>る<ruby>火花<rt>ひばな</rt></ruby>",
+   "name": "飛び散る火花",
    "iconPath": "bd3bfce4e88e8caf2df997ec7a605f9a42ee95ddd7d8d52125a9a35ea94e4c70",
    "typeDescHash": "天賦",
    "levelReq": 0,
@@ -1657,7 +1661,7 @@
    "break": "60",
    "energy": "0",
    "id": 435183,
-   "name": "<ruby>先<rt>さき</rt></ruby>を<ruby>行<rt>い</rt></ruby>く<ruby>者<rt>もの</rt></ruby>",
+   "name": "先を行く者",
    "iconPath": "7882229e137dbd56300202f0a9b5c4a7be990dafa5a446189f212bf50d59b5d8",
    "typeDescHash": "秘技",
    "levelReq": 0,
@@ -1682,7 +1686,7 @@
    "break": "60",
    "energy": "20",
    "id": 489350,
-   "name": "<ruby>裂地砕天拳<rt>れっちさいてんけん</rt></ruby>",
+   "name": "裂地砕天拳",
    "iconPath": "be5ab2d9b59ffc0342a19b19a46fac4b10f6634ed3a4548ad0f658c9e74a8209",
    "typeDescHash": "通常攻撃",
    "levelReq": 0,
@@ -2099,7 +2103,7 @@
     "descHash": "「闘志」を1層獲得するたび、さらにEPを<nobr>#1[i]</nobr>回復する。",
     "ultimateCost": 0,
     "id": 276015,
-    "name": "<ruby>循環制動<rt>じゅんかんせいどう</rt></ruby>",
+    "name": "循環制動",
     "iconPath": "86b814bda8ec2f23dd268009a5024b0d790573f446de4eebf056c20ace176395",
     "levelReq": 0,
     "promotionReq": 4,
@@ -2209,7 +2213,7 @@
     "descHash": "強化通常攻撃を行った時、1段の「裂地拳」ごとに、<nobr>#1[i]%</nobr>の<u>固定確率</u>でルカが「裂地拳」をさらに1段行う。追加能力「闘志粉砕」によって行われた「裂地拳」では、この効果は発動しない。",
     "ultimateCost": 0,
     "id": 276016,
-    "name": "<ruby>闘志粉砕<rt>とうしふんさい</rt></ruby>",
+    "name": "闘志粉砕",
     "iconPath": "c863a514167c74326deab39baed7a7f60836052cfd592af952caa11e938044b2",
     "levelReq": 0,
     "promotionReq": 6,
@@ -2956,7 +2960,7 @@
   "iconPath": "9925f4d7d8ac1ad84319601be2e2127dbb697923a7add4d70bf795c7e9045d29",
   "altIconPath": "5821b3e8829f16ad30af2613e5330feea1cd8ead70cf58d18c7bc927f50b5943",
   "color": "#FFFFFF",
-  "name": "<ruby>虚無<rt>きょむ</rt></ruby>",
+  "name": "虚無",
   "rarity": 0
  },
  "pageId": "luka"

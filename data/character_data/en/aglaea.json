@@ -34,6 +34,7 @@
     "Calyx: Great Mine",
     "Calyx: Artisanship Commission",
     "Calyx: The Reverie (Dreamscape)",
+    "Calyx: \"Murmuring Woods\" Grove of Epiphany",
     "Mission rewards",
     "Assignment rewards",
     "Embers Exchange"
@@ -89,6 +90,7 @@
     "Calyx: Outlying Snow Plains",
     "Calyx: Cloudford",
     "Calyx: Dream's Edge",
+    "Calyx: \"Sanctum of Prophecy\" Janusopolis",
     "Forgotten Hall"
    ]
   },
@@ -107,6 +109,7 @@
     "Calyx: Outlying Snow Plains",
     "Calyx: Cloudford",
     "Calyx: Dream's Edge",
+    "Calyx: \"Sanctum of Prophecy\" Janusopolis",
     "Daily Training",
     "Embers Exchange"
    ]
@@ -126,6 +129,7 @@
     "Calyx: Outlying Snow Plains",
     "Calyx: Cloudford",
     "Calyx: Dream's Edge",
+    "Calyx: \"Sanctum of Prophecy\" Janusopolis",
     "Assignment rewards"
    ]
   },
@@ -209,6 +213,7 @@
    "rewardPath": "/material/20170864",
    "comeFrom": [
     "Titankin at Equilibrium Level 2 or higher",
+    "Crepuscular Beasts at Equilibrium Level 2 or higher",
     "Omni-Synthesizer — Material Synthesis",
     "Divergent Universe enemies",
     "Simulated Universe enemies",
@@ -228,6 +233,7 @@
    "rewardPath": "/material/20389475",
    "comeFrom": [
     "Titankin at Equilibrium Level 4 or higher",
+    "Crepuscular Beasts at Equilibrium Level 4 or higher",
     "Omni-Synthesizer — Material Synthesis",
     "Divergent Universe enemies",
     "Simulated Universe enemies",
@@ -247,11 +253,13 @@
    "rewardPath": "/material/20445700",
    "comeFrom": [
     "Titankin",
+    "Crepuscular Beasts",
     "Divergent Universe enemies",
     "Simulated Universe enemies",
     "Assignment Rewards",
     "Embers Exchange",
-    "Omni-Synthesizer — Material Exchange"
+    "Omni-Synthesizer — Material Exchange",
+    "Calyx (Golden)"
    ]
   }
  },
@@ -445,7 +453,7 @@
    "iconPath": "95c8419ac8fce4bf200e0db1948e34c605eeadec7a4c91df590c673f117a0896",
    "artPath": "23f81b50a5e99ee454efedc5dd4aaade0e18c16f8c43c0d3da507ea6d5ce3f69",
    "name": "Drift at the Whim of Venus",
-   "descHash": "Enemies afflicted with \"Seam Stitch\" take <nobr>#1[i]%</nobr> increased DMG. After Aglaea or Garmentmaker attacks this target, Aglaea additionally regenerates <nobr>#2[i]</nobr> Energy.",
+   "descHash": "The enemy afflicted with \"Seam Stitch\" takes <nobr>#1[i]%</nobr> increased DMG. After Aglaea or Garmentmaker attacks this target, additionally regenerates <nobr>#2[i]</nobr> Energy.",
    "params": [
     0.15,
     20
@@ -456,7 +464,7 @@
    "iconPath": "97d0a7b5af567b11fab848e1eb0b4c4a795cfb6e8d5d525cf92fcff1c9437fec",
    "artPath": "4c7131d6d8ad145d77df6a80c49a295b66e5399676c9e8b71e9a9bb5cf41372b",
    "name": "Sail on the Raft of Eyelids",
-   "descHash": "When Aglaea or Garmentmaker takes action, the DMG dealt by Aglaea and Garmentmaker ignores <nobr>#1[i]%</nobr> of the target's DEF. This effect stacks up to <nobr>#2[i]</nobr> time(s) and lasts until any unit, other than Aglaea or Garmentmaker, actively uses an ability.",
+   "descHash": "When Aglaea or Garmentmaker takes action, enables the DMG dealt by Aglaea and Garmentmaker to ignore <nobr>#1[i]%</nobr> of the target's DEF. This effect stacks up to <nobr>#2[i]</nobr> time(s) and lasts until any unit, other than Aglaea or Garmentmaker, actively uses an ability.",
    "params": [
     0.14,
     3
@@ -467,7 +475,7 @@
    "iconPath": "69c62a0fc8a38475f24e66407a39902c89c280fa9bb5dbb3ea41ffa7c1fd8602",
    "artPath": "b426c635784ea8af0e24f7bd564258d778ab6e0ea85a728661717e0cf04a57b1",
    "name": "Bequeath in the Coalescence of Dew",
-   "descHash": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>. Basic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>. Memosprite Talent Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+   "descHash": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Basic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.<br />Memosprite Talent Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
    "params": []
   },
   {
@@ -475,7 +483,7 @@
    "iconPath": "b847b4ecf9528a94928e6fe19a89c8c43827ad74f0150cd98df7c6942f355aa6",
    "artPath": "3289e695e2df837df9d597bd146ef6e877a76ffba2809e00581980bedbe937a6",
    "name": "Flicker Below the Surface of Marble",
-   "descHash": "The SPD Boost effect from the Memosprite Talent has its max stack limit increased by <nobr>#1[i]</nobr>. After Aglaea uses an attack, Garmentmaker can also gain the SPD Boost effect from the Memosprite Talent.",
+   "descHash": "The SPD Boost effect from the Memosprite Talent has its max stack limit increased by <nobr>#1[i]</nobr>. After Aglaea uses an attack, can also make Garmentmaker gain the SPD Boost effect from the Memosprite Talent.",
    "params": [
     1,
     2
@@ -486,7 +494,7 @@
    "iconPath": "c2555a8ced35437413bbe00b83fbadab3513162082077b774a5b0272ba36030f",
    "artPath": "dfaf7874e5ddc4549c12fbd9efaa0c9f1e3746255549b3d7f7129c3a082f7ad6",
    "name": "Weave Under the Shroud of Woe",
-   "descHash": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>. Talent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>. Memosprite Skill Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+   "descHash": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Talent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.<br />Memosprite Skill Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
    "params": []
   },
   {
@@ -494,7 +502,7 @@
    "iconPath": "47871797bc02a8da3379ea1385cdb16abc13101bf261c461a1d2a10b7c2ec0e4",
    "artPath": "5c7f2a5da6fd7be6c3ab7f8a6fd1185ff96c75b49f82edcbe789c59a9701a408",
    "name": "Fluctuate in the Tapestry of Fates",
-   "descHash": "While Aglaea is in \"Supreme Stance,\" increases her and Garmentmaker's Lightning <u>RES PEN</u> by <nobr>#1[i]%</nobr>. When Aglaea or Garmentmaker's SPD is greater than <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>, the DMG dealt by <u>Joint ATK</u> increases by <nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr>/<nobr>#4[i]%</nobr>.",
+   "descHash": "While Aglaea is in \"Supreme Stance,\" increases her and Garmentmaker's Lightning <u>RES PEN</u> by <nobr>#1[i]%</nobr>. When Aglaea's or Garmentmaker's SPD is greater than <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>, the <u>Joint ATK</u> DMG dealt by them increases by <nobr>#2[i]%</nobr>/<nobr>#3[i]%</nobr>/<nobr>#4[i]%</nobr>.",
    "params": [
     0.2,
     0.1,
@@ -695,7 +703,7 @@
   },
   {
    "tagHash": "Summon",
-   "descHash": "Restores HP to Garmentmaker by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of its Max HP. If Garmentmaker is absent, <u>summons the memosprite</u> Garmentmaker and this unit immediately takes action.",
+   "descHash": "Restores HP to Garmentmaker by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of its Max HP. If Garmentmaker is absent, then <u>summons the memosprite</u> Garmentmaker and makes this unit immediately take action.",
    "ultimateCost": 0,
    "break": "0",
    "energy": "20",
@@ -1000,7 +1008,7 @@
   },
   {
    "tagHash": "Enhance",
-   "descHash": "<u>Summons the memosprite</u> Garmentmaker. If Garmentmaker is already on the field, then restores its HP to max. Aglaea enters the \"Supreme Stance\" state and immediately takes action.<br />While in the \"Supreme Stance\" state, Aglaea gains the SPD Boost stacks from Garmentmaker's Memosprite Talent, with each stack increasing her SPD by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Enhances Basic ATK to \"Slash by a Thousandfold Kiss,\" and cannot use Skill. Garmentmaker is immune to <u>Crowd Control debuffs</u>.<br />A countdown appears on the Action Order, with its own SPD set at <nobr>#4[i]</nobr>. Using Ultimate again when the countdown is on the Action Order will reset the countdown. When the countdown's turn starts, Garmentmaker self-destructs. When Garmentmaker disappears, Aglaea's \"Supreme Stance\" state is dispelled.",
+   "descHash": "<u>Summons the memosprite</u> Garmentmaker. If Garmentmaker is already on the field, then restores its HP to max. Aglaea enters the \"Supreme Stance\" state and immediately takes action.<br />While in \"Supreme Stance,\" Aglaea gains the SPD Boost stacks from Garmentmaker's Memosprite Talent, with each stack increasing this unit's SPD by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span>. Enhances Basic ATK to \"Slash by a Thousandfold Kiss,\" and cannot use Skill. Garmentmaker is immune to <u>Crowd Control debuffs</u>.<br />A countdown appears on the Action Order, with its own SPD set at <nobr>#4[i]</nobr>. While the countdown exists, using Ultimate again will reset the countdown. When the countdown's turn starts, Garmentmaker self-destructs. When Garmentmaker disappears, Aglaea dispels the \"Supreme Stance\" state.",
    "ultimateCost": 350,
    "break": "0",
    "energy": "5",
@@ -1722,7 +1730,7 @@
   },
   {
    "tagHash": "",
-   "descHash": "<u>Summons the memosprite</u> Garmentmaker and launches a forward joint attack. After entering battle, regenerates <nobr>#2[i]</nobr> Energy and deals <span style=\"color:#c75de2;\">Lightning </span>DMG equal to <nobr>#1[i]%</nobr> of Aglaea's ATK to all enemy targets. Then, randomly inflicts the \"Seam Stitch\" state to a random enemy target.",
+   "descHash": "<u>Summons the memosprite</u> Garmentmaker and launches a forward joint attack. After entering battle, regenerates <nobr>#2[i]</nobr> Energy and deals <span style=\"color:#c75de2;\">Lightning </span>DMG equal to <nobr>#1[i]%</nobr> of Aglaea's ATK to all enemy targets. Then, randomly inflicts the \"Seam Stitch\" state on a random enemy target.",
    "ultimateCost": 0,
    "break": "60",
    "energy": "0",
@@ -1747,7 +1755,7 @@
   },
   {
    "tagHash": "Blast",
-   "descHash": "Aglaea and Garmentmaker launch a <u>Joint ATK</u> on the target, respectively dealing <span style=\"color:#c75de2;\">Lightning </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> of Aglaea's ATK and <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span> of Garmentmaker's ATK to the target. Also, deal <span style=\"color:#c75de2;\">Lightning </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> of Aglaea's ATK and <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> of Garmentmaker's ATK to adjacent targets.<br />\"Slash by a Thousandfold Kiss\" cannot recover Skill Points.",
+   "descHash": "Aglaea and Garmentmaker launch a <u>Joint ATK</u> on the target, respectively dealing <span style=\"color:#c75de2;\">Lightning </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[f1]%</nobr></span> of Aglaea's ATK and <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#3[f1]%</nobr></span> of Garmentmaker's ATK to the target. Also, respectively deals <span style=\"color:#c75de2;\">Lightning </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> of Aglaea's ATK and <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#4[i]%</nobr></span> of Garmentmaker's ATK to adjacent targets.<br />\"Slash by a Thousandfold Kiss\" cannot recover Skill Points.",
    "ultimateCost": 0,
    "break": "60/hit",
    "energy": "20",
@@ -1927,78 +1935,6 @@
       1.17
      ],
      "level": 9,
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "params": [
-      1.4,
-      0.56,
-      1.4,
-      0.56
-     ],
-     "level": 10,
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "params": [
-      1.4,
-      0.56,
-      1.4,
-      0.56
-     ],
-     "level": 11,
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "params": [
-      1.4,
-      0.56,
-      1.4,
-      0.56
-     ],
-     "level": 12,
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "params": [
-      1.4,
-      0.56,
-      1.4,
-      0.56
-     ],
-     "level": 13,
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "params": [
-      1.4,
-      0.56,
-      1.4,
-      0.56
-     ],
-     "level": 14,
-     "levelReq": 0,
-     "promotionReq": 0,
-     "cost": []
-    },
-    {
-     "params": [
-      1.4,
-      0.56,
-      1.4,
-      0.56
-     ],
-     "level": 15,
      "levelReq": 0,
      "promotionReq": 0,
      "cost": []
@@ -2355,7 +2291,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "While in \"Supreme Stance,\" increases Aglaea and Garmentmaker's ATK by an amount equal to <nobr>#1[i]%</nobr> of Aglaea's SPD plus <nobr>#2[i]%</nobr> of Garmentmaker's SPD.",
+    "descHash": "While in \"Supreme Stance,\" increases Aglaea's and Garmentmaker's ATK by an amount equal to <nobr>#1[i]%</nobr> of Aglaea's SPD plus <nobr>#2[i]%</nobr> of Garmentmaker's SPD.",
     "ultimateCost": 0,
     "id": 12779200,
     "name": "The Myopic's Doom",
@@ -2607,7 +2543,7 @@
     }
    ],
    "embedBonusSkill": {
-    "descHash": "At the start of battle, if this unit's Energy is lower than <nobr>#1[i]%</nobr>, regenerates this unit's Energy until <nobr>#2[i]%</nobr>.",
+    "descHash": "At the start of battle, if this unit's Energy is lower than <nobr>#1[i]%</nobr>, regenerates this unit's Energy to <nobr>#2[i]%</nobr>.",
     "ultimateCost": 0,
     "id": 12722920,
     "name": "The Speeding Sol",
@@ -2751,7 +2687,7 @@
   {
    "id": 1,
    "title": "First Meeting",
-   "text": "O, noble guest from afar. The wind brought me news of you along the golden threads. My name is Aglaea, the Dressmaster of Okhema and one of Amphoreus's Chrysos Heirs. I hope we treat each other with honesty.",
+   "text": "O, noble guest from afar. The wind brought me news of you along the golden threads. My name is Aglaea, the Dressmaster of Okhema and one of Amphoreus' Chrysos Heirs. I hope we treat each other with honesty.",
    "unlockRequirement": "",
    "cnUrl": "871d7cf2d126bbe65a9fb7a41bfbfe9810af31f1972379d92b661e461f9d4eba",
    "jpUrl": "90b614fa71e644be486ab8769f76a4d92da853fd508e3e6bc489c428835a8659",
@@ -2927,6 +2863,26 @@
    "jpUrl": "7cd848a2322da7be0991591dbdef5c6cf2ffaefcc03e8d6155d69b2ae0f969f0",
    "enUrl": "2d168c2b3b17b755e71a6f8805cebde906f3896176d1f2e5cd6b518e62e270ab",
    "krUrl": "00c42559133bf940010f584d2340e5a3ed9239d0a21ece3b79db0d21eae244a2"
+  },
+  {
+   "id": 19,
+   "title": "Added to Team With Tribbie",
+   "text": "Teacher, please continue to guide us forward.",
+   "unlockRequirement": "",
+   "cnUrl": "3153de4cb99810a2fa1da85b5154e4ebe71b100c1da8a0560a677d09e85e1a50",
+   "jpUrl": "8ff1969c6906909e78a887e197a25c1690460857dc943c1de4b3c6a544a60c8e",
+   "enUrl": "61e1d104cc0c3104869c92aab3960552481b4298feaa052315e39ea6029ec824",
+   "krUrl": "9b25d3bdc88fae6c853300027f37febe2310759b07938f9600ed80c5d201c841"
+  },
+  {
+   "id": 20,
+   "title": "Added to Team With Mydei",
+   "text": "At the very least, for now we have the same goal.",
+   "unlockRequirement": "",
+   "cnUrl": "8f1653ea69733999a13abf6f1df23aab3d3573d022ee2f8d818581ce73f4a8b8",
+   "jpUrl": "5181eafc60003a6e764de60597fd4df6d6a70c2f67899c1b4c80cda1c66a3c73",
+   "enUrl": "c7cc6f3a246b91798caf431e6de60f18534535c9287aae6f848a0aabcb338b14",
+   "krUrl": "8d15b1cd3b1d5e3885aeb3e0e1b6ccce97cdd74eaa23440b87fe1d17600f70a0"
   },
   {
    "id": 51,
@@ -3212,7 +3168,7 @@
  "storyItems": [
   {
    "title": "Character Details",
-   "text": "In that holy city kissed by the dawn, the weaver caresses the golden thread and connects destiny.<br />Chrysos Heir bearing the Coreflame of \"Romance\"... You shall summon the heroes of this world, and lead them to once again embark on an endless journey<br /> — Where they will smite down the gods, return the divine fire, and grant rebirth to the dying land of Amphoreus.",
+   "text": "In that holy city kissed by the dawn, the weaver caresses the golden threads, entwining fates.<br />The Chrysos Heir that bears the \"Romance\" Coreflame gathered the world's heroes, leading them on a long journey once more<br />— to topple the gods, reclaim the divine flame, and grant rebirth to the nearly fallen Amphoreus.",
    "unlockRequirement": ""
   },
   {
@@ -3222,7 +3178,7 @@
   },
   {
    "title": "Character Story: Part II",
-   "text": "As time swept by, the garments she designed multiply, as vast as the starry heavens.<br />Yet, curiously, within that grand and ornate wardrobe, many tattered old fabric scraps are carefully preserved.<br /><br />On lands rife with conflict, young warriors set out clad in vibrant attire, yet often return with their uniforms must serve as their shrouds, and sometimes only scraps of their garb can return instead of them. When no one claimed these remnants, she alone collects them.<br />In her fury, she once destroyed lavish garments. The corrupt, pampered nobles did not deserve to parade in the clothing she crafted — even though she herself had once walked among them.<br />And then... there are those little garments, one after another...<br /><br />Throughout the years, they grow up alongside her, sharing songs of past times and dreams of the future<br />— Only after witnessing so much ugliness does she understand the true weight of those innocent words.<br />\"As a dressmaster of Okhema and priest of Mnestia, my duties align with yours.\"<br />\"But the price of salvation...\"<br />\"...is it like yours?\"<br />\"Just like <b>ours</b>.\"<br /><br />In the most visible spot, a simple, unadorned priest's robe hangs. She frequently takes it out to clean and dust, always reminding herself of the vow she made to the deity.<br />\"Please forgive me, for the sake of the most beautiful creation in the world...\"<br />Long ago, at the moment she took hold of the Coreflame, she suddenly \"saw\" in the darkness a breathtaking vista she had never before encountered —<br />In that golden future, there is no more strife, no more death.",
+   "text": "As time swept by, the garments she designed multiply, as vast as the starry heavens.<br />Yet, curiously, within that grand and ornate wardrobe, many tattered old fabric scraps are carefully preserved.<br /><br />On lands rife with conflict, young warriors set out clad in vibrant attire, only to return with their uniform as shrouds — sometimes only scraps of their garb remain. When no one claimed these remnants, she alone collects them.<br />In her fury, she once destroyed lavish garments. The corrupt, pampered nobles did not deserve to parade in the clothing she crafted — even though she herself had once walked among them.<br />And then... there are those little garments, one after another...<br /><br />Throughout the years, they grow up alongside her, sharing songs of past times and dreams of the future<br />— Only after witnessing so much ugliness does she understand the true weight of those innocent words.<br />\"As a dressmaster of Okhema and priest of Mnestia, my duties align with yours.\"<br />\"But the price of salvation...\"<br />\"...is it like yours?\"<br />\"Just like <b>ours</b>.\"<br /><br />In the most visible spot, a simple, unadorned priest's robe hangs. She frequently takes it out to clean and dust, always reminding herself of the vow she made to the deity.<br />\"Please forgive me, for the sake of the most beautiful creation in the world...\"<br />Long ago, at the moment she took hold of the Coreflame, she suddenly \"saw\" in the darkness a breathtaking vista she had never before encountered —<br />In that golden future, there is no more strife, no more death.",
    "unlockRequirement": "Unlocked at Character Level <nobr>40</nobr>"
   },
   {
@@ -3232,7 +3188,7 @@
   },
   {
    "title": "Character Story: Part IV",
-   "text": "To this day, the divine loom spins relentlessly, with numerous Garmentmakers hovering in midair. No one knows why they dance or why they rest.<br />\"Garmentmaker, please head to the plaza. We have guests who have traveled from afar...\"<br /><br />This scene had unfolded countless times before. In the past, she was always the one reaching out, and now, it was others who sought her.<br />At that moment, a young man in silver-white armor stands there, his youthful face marred by hatred and bloodstains.<br />The girl in the purple dress remains silent, leaving a trail of chilling death mingled with the deep fragrance of flowers wherever she goes.<br />A thief, as stealthy as a cat, vanishes from Okhema, but she dismisses it as merely a silly prank.<br />The girl, warm as a faint light, had once healed her scars.<br />And then there is the crown prince from the outlands, the proud scholar —<br />\"If one thread isn't enough, then let a myriad of threads lift the sky...\"<br />She seeks out diverse threads of fate, intertwining them into a resilient net. This net would launch toward the Titans' Coreflames, rekindling it afresh in a new world.<br />\"The Chrysos Heirs will together weave a dazzlingly bright future.\"<br /><br />During a brief pause, she steps up to the window, overlooking the bustling city of Okhema below.<br />\"Garmentmaker, brew me another cup of hot tea, please.\"<br />She shivers slightly, yet her heart is no longer stirred by the sorrows of the past.<br />Invisible golden threads spill from her fingertips, intertwining with the city-state's pulse and heartbeat, with the whisper of wind and patter of rain — all resonating under her touch, like inspiration conjured by the god of romance, pulsing with the promise of new life.<br />After deep thought, she carefully packs away the ornate garments she had crafted in her youth.<br />\"Even if, in the end, I must wear nothing but plain clothes...\"<br /><br />Legend holds that every disciple of Mnestia devotes their entire life to crafting what they deem to be the Ultimate Beauty to present to their deity.<br />It's been a long time since she crafted beautiful garments.<br />Yet, she has never ceased weaving the threads of destiny.",
+   "text": "To this day, the divine loom spins relentlessly, with numerous Garmentmakers hovering in midair. No one knows why they dance or why they rest.<br />\"Garmentmaker, please head to the plaza. We have guests who have traveled from afar...\"<br /><br />This scene had unfolded countless times before. In the past, she was always the one reaching out, and now, it was others who sought her.<br />At that moment, a young man in silver-white armor stands there, his youthful face marred by hatred and bloodstains.<br />The girl in the purple dress remains silent, leaving a trail of chilling death mingled with the deep fragrance of flowers wherever she goes.<br />A thief, as stealthy as a cat, vanishes from Okhema, but she dismisses it as merely a silly prank.<br />The girl, warm as a faint light, had once healed her scars.<br />And then there is the crown prince from the outlands, the proud scholar —<br />\"If one thread isn't enough, then let a myriad of threads lift the sky...\"<br />She seeks out diverse threads of fate, intertwining them into a resilient net. This net would launch toward the Titans' Coreflames, rekindling it afresh in a new world.<br />\"The Chrysos Heirs will together weave a dazzlingly bright future.\"<br /><br />During a brief pause, she steps up to the window, overlooking the bustling city of Okhema below.<br />\"Garmentmaker, brew me another cup of hot tea, please.\"<br />She shivers slightly, yet her heart is no longer stirred by the sorrows of the past.<br />Invisible golden threads spill from her fingertips, intertwining with the city-state's pulse and heartbeat, with the whisper of wind and patter of rain — all resonating under her touch, like inspiration conjured by the god of romance, pulsing with the promise of new life.<br />After deep thought, she carefully packs away the ornate garments she had crafted in her youth.<br />\"Even if, in the end, I must wear nothing but plain clothes...\"<br /><br />Legend holds that every disciple of Mnestia devotes their entire life to crafting what they deem to be the \"ultimate beauty\" to present to their deity.<br />It's been a long time since she crafted beautiful garments.<br />Yet, she has never ceased weaving the threads of destiny.",
    "unlockRequirement": "Unlocked at Character Level <nobr>80</nobr>"
   }
  ],
@@ -3343,12 +3299,16 @@
   "sCoinId": 29328,
   "rankConfig": {
    "3": {
+    "8535737": 1,
+    "8541508": 1,
+    "8842377": 1,
     "14291863": 2,
     "14386037": 1,
     "14598649": 1,
     "14671107": 2
    },
    "5": {
+    "8647019": 1,
     "14364461": 2,
     "14645560": 2
    }
@@ -3366,7 +3326,7 @@
     "icon": "ac07f1f601ea13987c1f07b131d2cc24d64c9d35eee4314b668670c996251b64",
     "tag": "Blast",
     "typeDesc": "Memosprite Skill",
-    "skillDesc": "Deals <span style=\"color:#c75de2;\">Lightning </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> ATK to one enemy and <span style=\"color:#c75de2;\">Lightning </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> ATK to adjacent targets.",
+    "skillDesc": "Deals <span style=\"color:#c75de2;\">Lightning </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]%</nobr></span> of ATK to one enemy and <span style=\"color:#c75de2;\">Lightning </span>DMG equal to <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#2[i]%</nobr></span> of ATK to adjacent targets.",
     "simpleSkillDesc": "Deals minor <span style=\"color:#c75de2;\">Lightning </span>DMG to one enemy target and adjacent targets.",
     "levelData": [
      {
@@ -3552,8 +3512,8 @@
     "icon": "2367834d571302366f81669a8d9f44d60b628b8c4da466c3d8c7174cf2135ab2",
     "tag": "Enhance",
     "typeDesc": "Memosprite Talent",
-    "skillDesc": "After attacking an enemy afflicted with \"Seam Stitch,\" increases this unit's SPD by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]</nobr></span>, stacking up to <nobr>#3[i]</nobr> time(s). During Garmentmaker's turn, automatically uses \"Thorned Snare,\" prioritizing enemies under the \"Seam Stitch\" state.",
-    "simpleSkillDesc": "After attacking an enemy afflicted with \"Seam Stitch,\" <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">increases this unit's SPD</span>. During action, automatically uses attacks, prioritizing enemies under the \"Seam Stitch\" state.",
+    "skillDesc": "After attacking an enemy afflicted with \"Seam Stitch,\" increases this unit's SPD by <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\"><nobr>#1[i]</nobr></span>, stacking up to <nobr>#3[i]</nobr> time(s). When Garmentmaker takes action, automatically uses \"Thorned Snare,\" prioritizing enemies under the \"Seam Stitch\" state.",
+    "simpleSkillDesc": "After attacking an enemy afflicted with \"Seam Stitch,\" <span style=\"display: inline-block; color: #f29e38ff; font-weight:bold;\">increases this unit's SPD</span>. When taking action, automatically uses attacks, prioritizing enemies under the \"Seam Stitch\" state.",
     "levelData": [
      {
       "params": [
@@ -3739,7 +3699,7 @@
     "tag": "Enhance",
     "typeDesc": "Memosprite Talent",
     "skillDesc": "When Garmentmaker is summoned, this unit's <u>action advances</u> by <nobr>#1[i]%</nobr>.",
-    "simpleSkillDesc": "When summoned, this unit's <u>action advances</u>.",
+    "simpleSkillDesc": "When summoned, this unit has its <u>action advanced</u>.",
     "levelData": [
      {
       "params": [
@@ -3905,7 +3865,7 @@
     "tag": "Enhance",
     "typeDesc": "Memosprite Talent",
     "skillDesc": "When Garmentmaker disappears, regenerates <nobr>#1[i]</nobr> Energy for Aglaea.",
-    "simpleSkillDesc": "Regenerates Energy for Aglaea upon disappearing.",
+    "simpleSkillDesc": "Upon disappearing, regenerates Energy for Aglaea.",
     "levelData": [
      {
       "params": [
@@ -4324,7 +4284,7 @@
  },
  "name": "Aglaea",
  "rarity": 5,
- "descHash": "In that holy city kissed by the dawn, the weaver caresses the golden thread and connects destiny. Chrysos Heir bearing the Coreflame of \"Romance\"... You shall summon the heroes of this world, and lead them to once again embark on an endless journey — Where they will smite down the gods, return the divine fire, and grant rebirth to the dying land of Amphoreus.",
+ "descHash": "In that holy city kissed by the dawn, the weaver caresses the golden threads, entwining fates. The Chrysos Heir that bears the \"Romance\" Coreflame gathered the world's heroes, leading them on a long journey once more — to topple the gods, reclaim the divine flame, and grant rebirth to the nearly fallen Amphoreus.",
  "artPath": "82999c40fa963a92e81c2d0c78ce2668a1f4f8ef6ce907769a046f0508f6a626",
  "miniIconPath": "11541ca7bd0dcf33793828b34782395e4edc3efae9e4b08700cbc92d61302428",
  "damageType": {

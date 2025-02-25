@@ -34,6 +34,7 @@
     "疑似花萼「大鉱区」",
     "疑似花萼「工造司」",
     "疑似花萼「ホテル・『レバリー』-夢境」",
+    "疑似花萼「『囁きの密林』神悟の樹庭」",
     "クエスト報酬",
     "依頼報酬",
     "エンバー交換"
@@ -104,6 +105,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "「忘却の庭」"
    ]
   },
@@ -122,6 +124,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "デイリー訓練",
     "エンバー交換"
    ]
@@ -141,6 +144,7 @@
     "疑似花萼「郊外雪原」",
     "疑似花萼「流雲渡し」",
     "疑似花萼「ドリームボーダー」",
+    "疑似花萼「『神託の聖地』ヤヌサポリス」",
     "依頼報酬"
    ]
   },
@@ -445,7 +449,7 @@
    "id": 1,
    "iconPath": "f9c0c8c29d0b2b01aebd8098d4e2cc7c804bb7c16d1d1ff010b161726d7cff64",
    "artPath": "657578c202779d17d9ada38e385ca4d1b94f9315920fa180d0f6aaba7af3e0f2",
-   "name": "<ruby>斬尽<rt>ざんじん</rt></ruby>",
+   "name": "斬尽",
    "descHash": "残りHPが<nobr>#1[i]%</nobr>以下の敵にダメージを与える時、会心率+<nobr>#2[i]%</nobr>。",
    "params": [
     0.8,
@@ -456,7 +460,7 @@
    "id": 2,
    "iconPath": "74c2cada25cea3bf870e451622c1194c5da3891e18278e81651c2d1ea38f3ea1",
    "artPath": "9c4ad7bd99ecb2fbee842df19860d64dab0d29e5b9481049048501414109ae67",
-   "name": "<ruby>蝶舞<rt>ちょうぶ</rt></ruby>",
+   "name": "蝶舞",
    "descHash": "戦闘スキルの加速効果が累積できるようになる、最大で<nobr>#1[i]</nobr>層累積できる。",
    "params": [
     2
@@ -466,7 +470,7 @@
    "id": 3,
    "iconPath": "3bc6f5eff956c65fd786aa59cb4f6f92b05e392432de765f7f27e6f045bccb07",
    "artPath": "4c7ab9ce65a9dba37700563e431ad3f6c5a178ce9e833dbf3b80960af1c26328",
-   "name": "<ruby>繚乱<rt>りょうらん</rt></ruby>",
+   "name": "繚乱",
    "descHash": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
    "params": []
   },
@@ -474,7 +478,7 @@
    "id": 4,
    "iconPath": "fc1807a93cf6390f34f8255fffdb7abfeaad0eb28fda97b3b9eeee628bc1d597",
    "artPath": "087566ba59ea66bcec93d0b053b859f4cd8960c8ab08f236e13dd66a735e3248",
-   "name": "<ruby>掠影<rt>りゃくえい</rt></ruby>",
+   "name": "掠影",
    "descHash": "ゼーレが敵を倒した時、EPを<nobr>#1[i]</nobr>回復する。",
    "params": [
     15
@@ -484,7 +488,7 @@
    "id": 5,
    "iconPath": "376ff0fb28ffa2e248bba3b6e092f734ffb04854d3f850da788a9641dc7f2a15",
    "artPath": "98ed3a51b72112b39d30625a44f2bb5369cea6490c825e1518e48437b1408195",
-   "name": "<ruby>鋒鋭<rt>ほうえい</rt></ruby>",
+   "name": "鋒鋭",
    "descHash": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
    "params": []
   },
@@ -492,7 +496,7 @@
    "id": 6,
    "iconPath": "8791bfd23d69607117f4a340d9c541be00eefc5ae1107b89798333ca505f85ab",
    "artPath": "a94feea21e3c1a11109a7cb7db18772749483f5c42dc58aba1a67416e2531507",
-   "name": "<ruby>離析<rt>りせき</rt></ruby>",
+   "name": "離析",
    "descHash": "必殺技を発動した後、攻撃を受けた敵単体を「乱れ蝶」状態にする、<nobr>#2[i]</nobr>ターン継続。乱れ蝶状態の敵が攻撃を受けた後、ゼーレの必殺技ダメージ<nobr>#1[i]%</nobr>分の量子属性<u>付加ダメージ</u>を1回受ける。その敵が、他の味方に「乱れ蝶」の<u>付加ダメージ</u>を触発され倒された時、ゼーレの天賦は発動しない。<br />ゼーレが<u>戦闘不能状態</u>になった時、敵の「乱れ蝶」状態が解除される。",
    "params": [
     0.15,
@@ -525,7 +529,7 @@
    "break": "30",
    "energy": "20",
    "id": 874343,
-   "name": "<ruby>強襲<rt>きょうしゅう</rt></ruby>",
+   "name": "強襲",
    "iconPath": "3ec1fd32e60be1f08cff1c307b43c686c05cc36d06311500fb62b8eb56dee979",
    "typeDescHash": "通常攻撃",
    "levelReq": 0,
@@ -686,7 +690,7 @@
    "break": "60",
    "energy": "30",
    "id": 589816,
-   "name": "<ruby>還刃<rt>かんじん</rt></ruby>",
+   "name": "還刃",
    "iconPath": "3bc6f5eff956c65fd786aa59cb4f6f92b05e392432de765f7f27e6f045bccb07",
    "typeDescHash": "戦闘スキル",
    "levelReq": 0,
@@ -991,7 +995,7 @@
    "break": "90",
    "energy": "5",
    "id": 673757,
-   "name": "<ruby>乱<rt>みだ</rt></ruby>れ<ruby>蝶<rt>ちょう</rt></ruby>",
+   "name": "乱れ蝶",
    "iconPath": "425915676440c091b5ae848290437d01f130d71e878f7ed72ab3bc139a38e674",
    "typeDescHash": "必殺技",
    "levelReq": 0,
@@ -1266,7 +1270,7 @@
    "break": "0",
    "energy": "0",
    "id": 389230,
-   "name": "<ruby>再現<rt>さいげん</rt></ruby>",
+   "name": "再現",
    "iconPath": "7273726dc4adaec3c99e123515471c2536f9394e69f8683ea9a4634b0d92b983",
    "typeDescHash": "天賦",
    "levelReq": 0,
@@ -1578,7 +1582,7 @@
    "break": "0",
    "energy": "0",
    "id": 272585,
-   "name": "<ruby>幻身<rt>げんしん</rt></ruby>",
+   "name": "幻身",
    "iconPath": "8df2dd1f57b445655f61bc34d8189781c61e9408f263d7ade8e3859c4858285a",
    "typeDescHash": "秘技",
    "levelReq": 0,
@@ -1674,7 +1678,7 @@
     "descHash": "残りHPが<nobr>#1[i]%</nobr>以下の場合、敵に攻撃される確率ダウン。",
     "ultimateCost": 0,
     "id": 310962,
-    "name": "<ruby>夜行<rt>やこう</rt></ruby>",
+    "name": "夜行",
     "iconPath": "c0be8510e38699d33d47248f9107e94ebba8450a8c574fdbd4a77d5924809531",
     "levelReq": 0,
     "promotionReq": 2,
@@ -1782,7 +1786,7 @@
     "descHash": "増幅状態の時、ゼーレの<span style=\"color:#7788ff;\">量子</span>属性<u>耐性貫通</u>+<nobr>#1[i]%</nobr>。",
     "ultimateCost": 0,
     "id": 310965,
-    "name": "<ruby>斬裂<rt>ざんれつ</rt></ruby>",
+    "name": "斬裂",
     "iconPath": "66168380482a8d1789239408ad608d9ef54eff432ce760460b1cfee45d2720e4",
     "levelReq": 0,
     "promotionReq": 4,
@@ -1926,7 +1930,7 @@
     "descHash": "通常攻撃を行った後、ゼーレの次の<u>行動順</u>が<nobr>#1[i]%</nobr>早まる。",
     "ultimateCost": 0,
     "id": 310964,
-    "name": "さざ<ruby>波<rt>なみ</rt></ruby>",
+    "name": "さざ波",
     "iconPath": "90bbca8ee1bcf3417ec8808476e3d797b3665a52be1a7b868388e68bb2dcd387",
     "levelReq": 0,
     "promotionReq": 6,
@@ -2694,7 +2698,7 @@
   "iconPath": "c124f823c629312e7f010bce17fa8d215b4bcb1087ca1e7a3f746a24c4198b76",
   "altIconPath": "e173ee19be5469ac6db23ce8b77109d25ed0ead1ae219b430859aeca1593c322",
   "color": "#FFFFFF",
-  "name": "<ruby>巡狩<rt>じゅんしゅ</rt></ruby>",
+  "name": "巡狩",
   "rarity": 0
  },
  "pageId": "seele"
