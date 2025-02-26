@@ -48,6 +48,7 @@ import utils.app.FontSizeNormalLarge24
 import utils.app.FontSizeNormalSmall
 import utils.app.Language
 import utils.app.Preferences
+import utils.app.UpdateAssetsPopup
 import utils.starbase.StarbaseAPI
 
 
@@ -62,6 +63,8 @@ fun SplashPage(
     val showPopup = remember { mutableStateOf(!Preferences().AppSettings.isLangInitialized()) }
 
     val hasRefreshed = remember { mutableStateOf(false) }
+    val canCheckedUpdate = remember { mutableStateOf(false) }
+    val showUpdatePopup = remember { mutableStateOf(true) }
     LaunchedEffect(Unit) {
         if (!showPopup.value) {
             CoroutineScope(Dispatchers.Default).launch {
@@ -85,8 +88,11 @@ fun SplashPage(
         }
     }
 
-    LaunchedEffect(showPopup.value, hasRefreshed.value){
-        if (!showPopup.value && screenInstance !is Screen.HomePage) {
+    LaunchedEffect(showPopup.value, hasRefreshed.value, showUpdatePopup.value){
+        if(showPopup.value){
+            canCheckedUpdate.value = true
+        }
+        if (!showPopup.value && !showUpdatePopup.value && screenInstance !is Screen.HomePage) {
             screenInstance = Screen.HomePage
             navigator.navigate(Screen.HomePage.route){
                 popUpTo(Screen.SplashPage.route){
@@ -95,6 +101,7 @@ fun SplashPage(
             }
         }
     }
+
 
     //Root Container of this page
     Column(
@@ -227,4 +234,6 @@ fun SplashPage(
 
 
     Language().initAppLanguagePopup(showPopup,hazeState = hazeStateRoot)
+
+    UpdateAssetsPopup(showPopup, hazeStateRoot)
 }
