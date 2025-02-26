@@ -18,35 +18,23 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.DropdownMenuItem
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.OutlinedButton
-import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Text
-import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalUriHandler
-import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
 import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
-import ui.components.BackIcon
-import ui.components.DropdownMenuNoPadding
-import ui.components.HeaderData
-import ui.components.PAGE_HEADER_HEIGHT
-import ui.components.PageHeader
-import ui.components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.About
@@ -85,26 +73,30 @@ import files.ic_selected_orange_circle
 import files.phorphos_caret_down_regular
 import files.phorphos_caret_right_regular
 import getDeviceInfo
-import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import types.Character
 import types.UserAccount
 import types.Wallpaper
+import ui.components.BackIcon
+import ui.components.DropdownMenuNoPadding
+import ui.components.HeaderData
+import ui.components.PAGE_HEADER_HEIGHT
+import ui.components.PageHeader
+import ui.components.defaultHeaderData
+import ui.navigation.Screen
+import ui.navigation.navigateLimited
+import utils.annotation.DoItLater
+import utils.app.Constants
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
 import utils.app.Language
-import utils.annotation.DoItLater
-import ui.navigation.Screen
-import ui.navigation.navigateLimited
-import utils.app.Constants
 import utils.app.Preferences
 import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.showFunctionIsDevelopingToast
 import utils.app.showSuccessToast
-import utils.app.toastInstance
 import utils.starbase.StarbaseAPI
 import kotlin.math.max
 
@@ -113,7 +105,7 @@ val doInit = mutableStateOf(false)
 val doRefresh = mutableStateOf(true)
 
 @Composable
-fun SettingScreen(modifier: Modifier = Modifier, navigator: Navigator, headerData: HeaderData = defaultHeaderData
+fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, headerData: HeaderData = defaultHeaderData
 ){
     val hazeState = remember { HazeState() }
     val wallpaper = Wallpaper.wallpaperList.find { it.id == Settings().getString("backgroundImage", "221000") } ?: Wallpaper.wallpaperList[0]

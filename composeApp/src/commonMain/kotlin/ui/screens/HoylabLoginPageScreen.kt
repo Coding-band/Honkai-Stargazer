@@ -17,11 +17,8 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
-import androidx.compose.foundation.text.KeyboardActions
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
-import androidx.compose.material.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.MutableState
@@ -32,24 +29,21 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalUriHandler
-import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.window.Popup
-import androidx.compose.ui.window.PopupProperties
+import androidx.navigation.NavBackStackEntry
+import androidx.navigation.NavHostController
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
 import com.multiplatform.webview.web.WebView
 import com.multiplatform.webview.web.WebViewState
 import com.multiplatform.webview.web.rememberWebViewState
 import dev.chrisbanes.haze.HazeState
-import files.LoginEnterCookies
 import files.NotOK
 import files.OK
 import files.RemarksInLogin
@@ -64,9 +58,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import moe.tlaster.precompose.navigation.BackStackEntry
-import moe.tlaster.precompose.navigation.Navigator
-import moe.tlaster.precompose.navigation.query
 import types.UserAccount
 import ui.components.AppDialog
 import ui.components.BackIcon
@@ -87,9 +78,7 @@ import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.LongStringXML
 import utils.app.removeStrQuote
-import utils.app.showErrorToast
 import utils.app.showWarningToast
-import utils.device.DeviceInfo
 import utils.hoyolab.HoyolabConst
 import utils.starbase.StarbaseAPI
 
@@ -97,12 +86,12 @@ import utils.starbase.StarbaseAPI
 @Composable
 fun HoyolabLoginPageScreen(
     modifier: Modifier = Modifier,
-    navigator: Navigator,
+    navigator: NavHostController,
     headerData: HeaderData = defaultHeaderData,
-    backStackEntry: BackStackEntry,
+    backStackEntry: NavBackStackEntry,
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ){
-    val serverId = backStackEntry.query<String>("serverId")!!
+    val serverId = backStackEntry.arguments?.getString("serverId")!!
     val serverSelected = HoyolabConst().getServerById(serverId)
     val url = HoyolabConst().getLoginURL(serverSelected)
     val hazeState = remember { HazeState() }

@@ -15,7 +15,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.defaultMinSize
@@ -42,7 +41,6 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -65,6 +63,8 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavBackStackEntry
+import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
@@ -86,9 +86,6 @@ import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.format.byUnicodePattern
 import kotlinx.datetime.toLocalDateTime
-import moe.tlaster.precompose.navigation.BackStackEntry
-import moe.tlaster.precompose.navigation.Navigator
-import moe.tlaster.precompose.navigation.query
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import types.Character
@@ -97,7 +94,6 @@ import types.UserAccount
 import ui.components.CharacterCard
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
-import ui.navigation.isPadMode
 import utils.app.Constants
 import utils.app.Constants.Companion.INFO_MAX_WIDTH
 import utils.app.Constants.Companion.INFO_MIN_WIDTH
@@ -193,11 +189,11 @@ lateinit var maxValueTextWidth : MutableState<ArrayList<Dp>>
 @Composable
 fun ActionOrderSimulatorPageScreen(
     modifier: Modifier = Modifier,
-    navigator: Navigator,
+    navigator: NavHostController,
     headerData: HeaderData = defaultHeaderData,
-    backStackEntry: BackStackEntry,
+    backStackEntry: NavBackStackEntry,
 ) {
-    val index = rememberSaveable { backStackEntry.query<String>("index")!!.toInt() }
+    val index = rememberSaveable { backStackEntry.arguments?.getString("index")!!.toInt() }
     val hazeState = remember { HazeState() }
     val teamListItem = rememberSaveable(stateSaver = TeamListItemSaver) { if(actionOrderTeamList.size < index+1) mutableStateOf(TeamListItem()) else mutableStateOf(actionOrderTeamList[index]) }
     val teamDataListSnap = rememberMutableStateListJsonOf<TeammateItem>().apply { clear() ; addAll(teamListItem.value.teamDataList) }
@@ -296,7 +292,7 @@ fun ActionOrderSimulatorPageScreen(
 }
 
 @Composable
-fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, teamDataListSnap : SnapshotStateList<TeammateItem>,  index: Int, navigator: Navigator, isPopupOpen : MutableState<Boolean>) {
+fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, teamDataListSnap : SnapshotStateList<TeammateItem>,  index: Int, navigator: NavHostController, isPopupOpen : MutableState<Boolean>) {
     Column(modifier = Modifier.wrapContentSize().widthIn(min = INFO_MIN_WIDTH, max = INFO_MAX_WIDTH)) {
         Spacer(modifier = Modifier.statusBarsPadding().height(16.dp))
         //Title of Team, Back Button and Info Button

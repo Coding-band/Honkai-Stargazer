@@ -45,7 +45,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -61,6 +60,7 @@ import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import com.voc.stargazer3.BuildKonfig
@@ -76,16 +76,10 @@ import files.Setting
 import files.donate_ad_bg
 import files.ic_default_avatar
 import files.ic_rounded_option_btn
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
-import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.painterResource
 import types.Character
 import types.ImageFolder
 import types.UserAccount
-import types.UserAccount.Companion.INSTANCE
 import ui.components.HeaderData
 import ui.components.HomePageBlock1x1
 import ui.components.HomePageBlock2x1
@@ -102,7 +96,6 @@ import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
-import utils.app.Language
 import utils.app.Preferences
 import utils.app.ProgressLevelBackground
 import utils.app.ProgressLevelPrimary
@@ -116,13 +109,12 @@ import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.showFunctionIsDevelopingToast
 import utils.app.showWarningToast
-import utils.starbase.StarbaseAPI
 import kotlin.math.min
 
 @Composable
 fun HomePage(
     modifier: Modifier = Modifier,
-    navigator: Navigator,
+    navigator: NavHostController,
     headerData: HeaderData = defaultHeaderData
 ) {
     val threeDotDialogDisplay = remember { mutableStateOf(false) }
@@ -167,7 +159,7 @@ fun HomePage(
 fun UserHelpTeamIcon(
     modifier: Modifier = Modifier,
     character: Character,
-    navigator: Navigator,
+    navigator: NavHostController,
     uid: String
 ) {
     AsyncImage(
@@ -194,7 +186,7 @@ fun UserHelpTeamIcon(
 @Composable
 fun HomePageHeader(
     modifier: Modifier = Modifier,
-    navigator: Navigator,
+    navigator: NavHostController,
     threeDotDialogPos: MutableState<Offset>,
     threeDotDialogDisplay: MutableState<Boolean>,
     userAccount: MutableState<UserAccount>,
@@ -344,7 +336,7 @@ fun HomePageHeader(
 @Composable
 fun HomePageMenuScrollView(
     modifier: Modifier = Modifier,
-    navigator: Navigator,
+    navigator: NavHostController,
     hazeState: HazeState,
     homeMenuBlockList: MutableList<HomePageBlocks.HomePageBlockItem>
 ) {
@@ -474,7 +466,7 @@ fun BetaVersionBox(){
 @Composable
 fun ThreeDotsDialog(
     modifier: Modifier = Modifier,
-    navigator: Navigator = navigatorInstance,
+    navigator: NavHostController = navigatorInstance,
     threeDotDialogPos: MutableState<Offset>,
     hazeState: HazeState = remember { HazeState() },
     threeDotDialogDisplay: MutableState<Boolean>,

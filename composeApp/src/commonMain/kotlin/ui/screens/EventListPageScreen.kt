@@ -7,7 +7,6 @@ import androidx.compose.foundation.interaction.PressInteraction
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -15,7 +14,6 @@ import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
@@ -26,22 +24,14 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
-import coil3.request.CachePolicy
-import coil3.request.ImageRequest
-import coil3.request.crossfade
 import com.russhwolf.settings.Settings
-import ui.components.BackIcon
-import ui.components.HeaderData
-import ui.components.PAGE_HEADER_HEIGHT
-import ui.components.PageHeader
-import ui.components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.Res
@@ -58,19 +48,23 @@ import kotlinx.datetime.TimeZone
 import kotlinx.datetime.format.char
 import kotlinx.datetime.periodUntil
 import kotlinx.datetime.toInstant
-import moe.tlaster.precompose.navigation.Navigator
-import utils.app.Constants
 import types.EventItem
 import types.EventItem.Companion.EventListInstance
+import ui.components.BackIcon
+import ui.components.HeaderData
+import ui.components.PAGE_HEADER_HEIGHT
+import ui.components.PageHeader
+import ui.components.defaultHeaderData
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
+import utils.app.Constants
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
 
 @Composable
 fun EventListPageScreen(
     modifier: Modifier = Modifier,
-    navigator: Navigator,
+    navigator: NavHostController,
     headerData: HeaderData = defaultHeaderData,
 ) {
     val isDateOutside = remember { mutableStateOf(Settings().getBoolean("isDateOutside",true)) }
@@ -79,10 +73,7 @@ fun EventListPageScreen(
 
     Box(modifier = modifier.fillMaxSize()){
         LazyColumn(modifier = Modifier
-            .fillMaxHeight()
             .haze(state = hazeState)
-            .align(Alignment.Center)
-            .widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH)
         ) {
             item {
                 Spacer(Modifier.padding(top = PAGE_HEADER_HEIGHT).statusBarsPadding())
@@ -106,7 +97,7 @@ fun EventListPageScreen(
 }
 
 @Composable
-fun EventItemCard(eventItem: EventItem, isDateOutside: MutableState<Boolean>, navigator: Navigator) {
+fun EventItemCard(eventItem: EventItem, isDateOutside: MutableState<Boolean>, navigator: NavHostController) {
     val currentTime = Clock.System.now()
     val endTime = LocalDateTime.parse(eventItem.end_time,
         LocalDateTime.Format { date(LocalDate.Formats.ISO); char(' '); time(LocalTime.Formats.ISO) }

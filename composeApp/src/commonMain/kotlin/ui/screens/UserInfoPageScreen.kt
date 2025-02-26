@@ -40,24 +40,15 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.TextUnit
-import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.window.Popup
+import androidx.navigation.NavBackStackEntry
+import androidx.navigation.NavHostController
 import coil3.PlatformContext
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
-import ui.components.CharacterCard
-import ui.components.CharacterLcInfoDisplay
-import ui.components.AppDialog
-import ui.components.BackIcon
-import ui.components.HeaderData
-import ui.components.PAGE_HEADER_HEIGHT
-import ui.components.PageHeader
-import ui.components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.PlayerLevel
@@ -74,22 +65,25 @@ import files.ic_arrow_to_down
 import files.ic_list_isolate_pretty
 import files.phorphos_question_fill
 import files.ui_icon_share
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
-import moe.tlaster.precompose.navigation.BackStackEntry
-import moe.tlaster.precompose.navigation.Navigator
-import moe.tlaster.precompose.navigation.query
 import org.jetbrains.compose.resources.painterResource
+import types.UserAccount
+import ui.components.AppDialog
+import ui.components.BackIcon
+import ui.components.CharacterCard
+import ui.components.CharacterLcInfoDisplay
+import ui.components.HeaderData
+import ui.components.PAGE_HEADER_HEIGHT
+import ui.components.PageHeader
+import ui.components.defaultHeaderData
+import ui.navigation.Screen
+import ui.navigation.navigateLimited
+import utils.annotation.DoItLater
 import utils.app.Constants
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
-import types.UserAccount
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
 import utils.app.LongStringXML
-import utils.annotation.DoItLater
-import ui.navigation.Screen
-import ui.navigation.navigateLimited
 import utils.app.getIconByUserAccountIconValue
 import utils.app.newImageLoader
 import utils.app.newImageRequest
@@ -101,13 +95,13 @@ import kotlin.math.min
 @Composable
 fun UserInfoPageScreen(
     modifier: Modifier = Modifier,
-    navigator: Navigator,
+    navigator: NavHostController,
     headerData: HeaderData = defaultHeaderData,
-    backStackEntry: BackStackEntry,
+    backStackEntry: NavBackStackEntry,
 ) {
     val hazeState = remember { HazeState() }
     val context = LocalPlatformContext.current
-    val uid = backStackEntry.query<String>("uid")!!
+    val uid = backStackEntry.arguments?.getString("uid")!!
 
     val userAccount by remember { mutableStateOf(
         if(UserAccount.INSTANCE.uid == uid){
