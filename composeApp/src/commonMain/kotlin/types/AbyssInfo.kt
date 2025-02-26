@@ -70,6 +70,9 @@ data class AbyssInfo(
 
     @SerialName("time")
     val timeInfo: AbyssInfoTime,
+
+    @SerialName("fileName")
+    val fileName: String
 ) {
     companion object{
         fun getAbyssItemById(abyssId: Int, type: AbyssInfoType, abyssFileName: String): AbyssInfo? {
