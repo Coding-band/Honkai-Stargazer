@@ -91,7 +91,7 @@ kotlin {
             implementation(libs.adaptive)
             implementation(libs.coil.network.ktor)
 
-            implementation(libs.navigation.compose)
+            //implementation("org.jetbrains.androidx.navigation:navigation-compose:2.7.0-alpha07")
             implementation(libs.haze) //Haze's BlurView https://github.com/chrisbanes/haze
             implementation(libs.coil)
             implementation(libs.kotlinx.serialization.json)
@@ -114,7 +114,7 @@ kotlin {
             //api(libs.compose.webview.multiplatform)
 
             // Precompose!
-            //api(libs.tlaster.precompose)
+            api(libs.tlaster.precompose)
 
             //Kotlinx DateTime
             implementation(libs.kotlinx.datetime)

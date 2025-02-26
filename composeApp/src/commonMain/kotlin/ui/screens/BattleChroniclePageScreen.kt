@@ -42,8 +42,12 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavBackStackEntry
-import androidx.navigation.NavHostController
+import ui.components.BattleChronicleCard
+import ui.components.DropdownMenuNoPadding
+import ui.components.HeaderData
+import ui.components.PAGE_HEADER_HEIGHT
+import ui.components.PageHeaderAlpha
+import ui.components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.AbyssListSortAscend
@@ -57,18 +61,17 @@ import files.ic_arrow_down_spinner
 import files.ic_exchange_icon
 import files.pom_pom_failed_issue
 import files.ui_icon_exchange
+import moe.tlaster.precompose.navigation.BackStackEntry
+import moe.tlaster.precompose.navigation.Navigator
+import moe.tlaster.precompose.navigation.query
 import org.jetbrains.compose.resources.painterResource
 import types.AbyssInfoList
 import types.AbyssInfoType
+import utils.app.Constants
 import types.UserAbyssRecord
 import types.UserAccount
-import ui.components.BattleChronicleCard
-import ui.components.DropdownMenuNoPadding
-import ui.components.HeaderData
-import ui.components.PAGE_HEADER_HEIGHT
-import ui.components.PageHeaderAlpha
-import ui.components.defaultHeaderData
-import utils.app.Constants
+import utils.annotation.DoItLater
+import utils.app.DpToPx
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormal20
@@ -78,14 +81,14 @@ import utils.app.removeStrQuote
 @Composable
 fun BattleChroniclePageScreen(
     modifier: Modifier = Modifier,
-    navigator: NavHostController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData,
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
-    backStackEntry: NavBackStackEntry,
+    backStackEntry: BackStackEntry,
 ) {
     val hazeState = remember { HazeState() }
     val listState = remember { LazyListState() }
-    val uid = backStackEntry.arguments?.getString("uid")!!
+    val uid = backStackEntry.query<String>("uid")!!
     val userAccount by remember { mutableStateOf(
         if (UserAccount.INSTANCE.uid == uid) {
             UserAccount.INSTANCE

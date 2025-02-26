@@ -30,9 +30,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
+import com.dokar.sonner.ToastType
+import com.dokar.sonner.Toaster
+import com.dokar.sonner.rememberToasterState
+import ui.components.BackIcon
+import ui.components.HeaderData
+import ui.components.PAGE_HEADER_HEIGHT
+import ui.components.PageHeader
+import ui.components.PomPomPopup
+import ui.components.UISearchBar
+import ui.components.defaultHeaderData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import files.PlayerLevel
@@ -41,42 +50,40 @@ import files.UIDFormatError
 import files.UIDNoData
 import files.UIDSearchRecord
 import files.UIDSearchRecordClear
+import files.ic_default_avatar
 import files.pom_pom_failed_issue
+import files.pom_pom_praying
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.painterResource
 import types.UserAccount
+import utils.app.Constants
 import types.UserAccount.Companion.UIDSEARCH
 import types.UserAccountLite
-import ui.components.BackIcon
-import ui.components.HeaderData
-import ui.components.PAGE_HEADER_HEIGHT
-import ui.components.PageHeader
-import ui.components.PomPomPopup
-import ui.components.UISearchBar
-import ui.components.defaultHeaderData
 import ui.components.pomPomPopupInstance
-import ui.navigation.Screen
-import ui.navigation.navigateLimited
-import utils.app.Constants
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.LongStringXML
+import utils.hoyolab.HoyolabConst
+import utils.hoyolab.MihomoRequest
+import ui.navigation.Screen
+import ui.navigation.navigateLimited
+import ui.navigation.navigatorInstance
 import utils.app.PageBottomMask
 import utils.app.getIconByUserAccountIconValue
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
 import utils.app.showWarningToast
-import utils.hoyolab.MihomoRequest
 import utils.starbase.StarbaseAPI
 
 @Composable
 fun UIDSearchPageScreen(
     modifier: Modifier = Modifier,
-    navigator: NavHostController,
+    navigator: Navigator,
     headerData: HeaderData = defaultHeaderData,
 ){
     val hazeState = remember { HazeState() }

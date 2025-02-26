@@ -6,6 +6,7 @@
 
 package ui.screens
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -30,12 +31,12 @@ import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.ImageFolder
-import ui.navigation.Screen
 import utils.app.Black
 import utils.app.BlackAlpha20
 import utils.app.BlackAlpha80
 import utils.app.Stargazer3Theme
 import utils.app.Transparent
+import ui.navigation.Screen
 import utils.app.getAssetsURLByFileName
 import utils.app.newImageRequest
 

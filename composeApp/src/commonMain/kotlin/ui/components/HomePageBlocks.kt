@@ -6,16 +6,20 @@
 
 package ui.components
 
+import androidx.annotation.IntRange
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -27,6 +31,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -35,25 +40,28 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
 import dev.chrisbanes.haze.HazeStyle
 import dev.chrisbanes.haze.hazeChild
 import files.AppStatusLostConnect
 import files.Res
 import files.phorphos_cake_fill
+import getIsLandscape
+import moe.tlaster.precompose.navigation.Navigator
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
-import ui.navigation.Screen
-import ui.navigation.navigateLimited
+import org.jetbrains.compose.resources.stringResource
 import ui.screens.backgroundScreenHazeState
-import ui.screens.globalHazeBlur
+import utils.app.BlackAlpha20
 import utils.app.BlackAlpha80
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
-import utils.app.GradientHomeButton
 import utils.app.TextColorNormal
+import ui.navigation.Screen
+import ui.navigation.navigateLimited
+import ui.screens.globalHazeBlur
+import utils.app.GradientHomeButton
 import utils.app.WhiteAlpha10
 import utils.app.removeStrQuote
 import utils.app.showFunctionIsDevelopingToast
@@ -105,7 +113,7 @@ val gradient = Brush.verticalGradient(
 fun HomePageBlock1x1(
     blockData: HomePageBlocks.HomePageBlockItem,
     modifier: Modifier = Modifier,
-    navigator: NavHostController
+    navigator: Navigator
 ) {
     LaunchedEffect(blockData.itemOnClickCount.value){
         blockData.refresh?.invoke()
@@ -176,7 +184,7 @@ fun HomePageBlock1x1(
 fun HomePageBlock2x1(
     blockData: HomePageBlocks.HomePageBlockItem,
     modifier: Modifier = Modifier,
-    navigator: NavHostController
+    navigator: Navigator
 ) {
     blockData.refresh?.invoke()
 
