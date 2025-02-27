@@ -4,6 +4,8 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.Saver
 import androidx.compose.runtime.saveable.listSaver
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -49,11 +51,14 @@ import io.ktor.client.call.body
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.onDownload
+import io.ktor.client.plugins.timeout
 import io.ktor.client.request.get
 import io.ktor.client.request.head
+import io.ktor.client.request.prepareGet
 import io.ktor.client.statement.HttpResponse
 import io.ktor.client.statement.bodyAsChannel
 import io.ktor.http.HttpHeaders
+import io.ktor.http.Url
 import io.ktor.serialization.kotlinx.json.json
 import io.ktor.util.network.UnresolvedAddressException
 import io.ktor.utils.io.copyTo
@@ -102,6 +107,7 @@ import utils.annotation.VersionUpdateCheck
 import utils.calculator.TeamListItem
 import utils.calculator.TeammateItem
 import utils.starbase.StarbaseAPI
+import writeToFile
 import kotlin.math.pow
 import kotlin.math.roundToInt
 import kotlin.time.Duration
@@ -211,6 +217,39 @@ fun formatDecimal(number: Number, decimalPlaces: Int = 1, isRoundDown: Boolean =
         "B" -> roundedNumber / 1_000_000_000
         "M" -> roundedNumber / 1_000_000
         "K" -> roundedNumber / 1_000
+        else -> roundedNumber
+    }
+
+    val parts = if(isUnited){scaledNumber}else{roundedNumber}.toString().split('.')
+    val integerPart = parts[0].reversed().chunked(3).joinToString(",").reversed()
+    val decimalPart = parts.getOrNull(1)?.padEnd(decimalPlaces, '0') ?: "0".repeat(decimalPlaces)
+    return if (isUnited) {
+        "$integerPart${if (decimalPlaces > 0) {".$decimalPart"} else {""}}$suffix"
+    } else {
+        "$integerPart${if (decimalPlaces > 0) {".$decimalPart"} else {""}}"
+    }
+}
+fun formatDecimalByte(number: Number, decimalPlaces: Int = 1, isRoundDown: Boolean = false, isUnited: Boolean = false): String {
+    val multiplier = 10.0.pow(decimalPlaces)
+    val roundedNumber = if (isRoundDown) {
+        kotlin.math.floor(number.toDouble() * multiplier)
+    } else {
+        kotlin.math.round(number.toDouble() * multiplier)
+    } / multiplier
+
+    val suffix = when {
+        roundedNumber >= 1_048_576L * 1_048_576L -> "TB"
+        roundedNumber >= 1_048_576 * 1024 -> "GB"
+        roundedNumber >= 1_048_576 -> "MB"
+        roundedNumber >= 1_024 -> "KB"
+        else -> ""
+    }
+
+    val scaledNumber = when (suffix) {
+        "T" -> roundedNumber / (1_048_576L * 1_048_576L)
+        "B" -> roundedNumber / (1_048_576 * 1024)
+        "M" -> roundedNumber / (1_048_576)
+        "K" -> roundedNumber / 1_024
         else -> roundedNumber
     }
 
@@ -360,7 +399,118 @@ fun getAssetsStrByFilePath(filePath: String, defaultData : String = "{}"): Strin
         //if(readStr == "{}")  getAssetsJsonStrByFilePath(filePath) else readStr
 }
 
+//ref: https://stackoverflow.com/questions/65082734/how-can-i-download-a-large-file-with-ktor-and-kotlin-with-a-progress-indicator
+@OptIn(ExperimentalCoroutinesApi::class)
+fun downloadFromURLProgress(url: String, downloadProgress: MutableState<Long>, isSuccess: MutableState<Boolean>) {
+    val client = getLocalHttpClient {
+        install(HttpTimeout){ requestTimeoutMillis = 8000 }
+        expectSuccess = true
+    }
+
+    try {
+        isSuccess.value =  runBlocking {
+            return@runBlocking withTimeout(8000) {
+                val response: HttpResponse = client.prepareGet(Url(url)) {
+                    onDownload { bytesSentTotal, contentLength ->
+                        CoroutineScope(Dispatchers.Default).launch {
+                            while (bytesSentTotal < (contentLength ?: 0)) {
+                                downloadProgress.value = bytesSentTotal
+                                if (bytesSentTotal == contentLength) break
+                                delay(10)
+                            }
+                        }
+                    }
+                }.execute()
+
+                //Check whether it is having any errors
+                if (!arrayListOf(200, 201).contains(response.status.value)) {
+                    errorLog(
+                        "UtilTools.kt",
+                        "readFromOnlineURL(url = ${url})",
+                        Exception("HTTP Error Code ${response.status.value} : ${response.status.description}")
+                    )
+                    return@withTimeout false
+                } else {
+                    val fileSystem = FileSystem.SYSTEM
+                    val filePath = getAppSpecificDirectory().resolve("temp").resolve("update.zip")
+                    fileSystem.createDirectories(filePath.parent!!, mustCreate = false)
+
+                    return@withTimeout async {
+                        response.bodyAsChannel().writeToFile(filePath.toString())
+                        delay(500)
+                        extractZip(zipPath = filePath, rootPath = getAppSpecificDirectory())
+                    }.let { it->
+                        it.await()
+                        return@let it.getCompleted()
+                    }
+                }
+            }
+        }
+
+    }catch (e : UnresolvedAddressException){
+        //Cannot find the Address, maybe bcz of u are offline
+         errorLog("UtilTools.kt", "downloadFromURLProgress(url = ${url}, downloadProgress = ${downloadProgress.value})",e)
+        isSuccess.value = false
+    }catch (e : Exception){
+        // All response
+        errorLog("StarbaseRequest", "downloadFromURLProgress(url = ${url}, downloadProgress = ${downloadProgress.value})",e)
+        isSuccess.value = false
+    }
+}
+
+
+fun downloadFromURLProgress2(url: String, downloadProgress: MutableState<Long>) : Boolean {
+    var isSuccess = false
+    return runBlocking {
+        try {
+            HttpClient().prepareGet(
+                url = Url(url),
+                block = {
+                    val timeout = 8000L;
+                    timeout {
+                        requestTimeoutMillis = timeout
+                        connectTimeoutMillis = timeout
+                        socketTimeoutMillis = timeout
+                    }
+
+                    onDownload { bytesSentTotal, contentLength ->
+                        CoroutineScope(Dispatchers.Default).launch {
+
+                            while (bytesSentTotal < (contentLength ?: 0)) {
+                                downloadProgress.value = bytesSentTotal
+                                delay(50)
+                                if (bytesSentTotal == contentLength) break
+                            }
+                        }
+                    }
+                }
+            ).execute { response: HttpResponse ->
+                if (response.status.value in 200..299){
+                    val fileSystem = FileSystem.SYSTEM
+                    val filePath = getAppSpecificDirectory().resolve("temp").resolve("update.zip")
+                    fileSystem.createDirectories(filePath.parent!!, mustCreate = false)
+
+                    response.bodyAsChannel().writeToFile(filePath.toString())
+
+                    isSuccess = extractZip(zipPath = filePath, rootPath = getAppSpecificDirectory())
+
+                    return@execute
+                }else{
+                    errorLog("UtilTools.kt", "downloadFromURLProgress(url = ${url}, downloadProgress = ${downloadProgress.value})", Exception("HTTP Error Code ${response.status.value} : ${response.status.description}"))
+                    return@execute
+                }
+            }
+            return@runBlocking isSuccess
+        }catch (e: Exception){
+            errorLog("UtilTools.kt", "downloadFromURLProgress(url = ${url}, downloadProgress = ${downloadProgress.value})", e)
+            return@runBlocking false
+        }
+    }
+}
+
+
 //downloadFromURLProgress function, keep updating the downloadProgress
+/*
 fun downloadFromURLProgress(url: String, downloadProgress: MutableState<Long>) : Boolean {
     val client = HttpClient()
     try {
@@ -388,8 +538,17 @@ fun downloadFromURLProgress(url: String, downloadProgress: MutableState<Long>) :
                     return@withTimeout false
                 } else {
                     //write what we get into the zip file in temp
-                    FileSystem.SYSTEM.sink(getAppSpecificDirectory().resolve("temp")).buffer().use { sink ->
-                        sink.buffer().writeUtf8(response.body())
+                    val fileSystem = FileSystem.SYSTEM
+                    val file = getAppSpecificDirectory().resolve("temp").resolve("update.zip")
+                    fileSystem.createDirectories(file.parent!!, mustCreate = false)
+
+                    fileSystem.write(file) {
+                        writeUtf8("")
+                    }
+
+                    response.bodyAsChannel().copyTo(FileSystem.SYSTEM.sink(file).buffer())
+                    FileSystem.SYSTEM.sink(file).buffer().use { sink ->
+                        sink.buffer().write(ByteArray(response.body()))
                     }
                     return@withTimeout true
                 }
@@ -404,6 +563,7 @@ fun downloadFromURLProgress(url: String, downloadProgress: MutableState<Long>) :
     }
     return false
 }
+ */
 
 fun extractZip(zipPath: okio.Path, rootPath: okio.Path): Boolean {
     val zipFile = File(zipPath.toString())
@@ -420,11 +580,16 @@ fun extractZip(zipPath: okio.Path, rootPath: okio.Path): Boolean {
                         destPath.makeDirectory()
                     } else {
                         // 是檔案
-                        val sink = FileSystem.SYSTEM.sink(destPath.path.toPath())
-                        zip.readEntry(entry) { _, content, count, _ ->
-                            sink.buffer().write(content)
+
+                        val fileSystem = FileSystem.SYSTEM
+                        val file = destPath.path.toPath()
+                        fileSystem.createDirectories(file.parent!!, mustCreate = false)
+
+                        fileSystem.sink(file).buffer().use { sink ->
+                            zip.readEntry(entry) { _, content, _, _ ->
+                                sink.write(content)
+                            }
                         }
-                        sink.close()
                     }
                 }
             }

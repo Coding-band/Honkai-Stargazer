@@ -12,6 +12,7 @@ import utils.app.LogExportInit
 import utils.app.Stargazer3Theme
 import utils.app.dateTimeStrInit
 import utils.app.newImageLoader
+import utils.app.updateAssetsInit
 
 lateinit var platformContext: ContextFactory
 
@@ -43,6 +44,7 @@ fun App(platformContextFactory: ContextFactory) {
         PomPomInit()
         dateTimeStrInit()
         userAccountErrorMessage()
+        updateAssetsInit()
 
         RootContent()
     }

@@ -9,11 +9,15 @@ import androidx.compose.ui.platform.LocalWindowInfo
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.client.engine.cio.CIO
+import io.ktor.util.cio.writeChannel
+import io.ktor.utils.io.ByteReadChannel
+import io.ktor.utils.io.copyTo
 import okio.Path
 import okio.Path.Companion.toPath
 import org.jetbrains.skia.Image
 import utils.annotation.DoItLater
 import utils.device.DeviceInfo
+import java.io.File
 import java.util.Locale
 
 /**
@@ -94,4 +98,8 @@ actual class ContextFactory {
     actual fun getActivity(): Any {
         TODO("Not yet implemented")
     }
+}
+
+actual suspend fun ByteReadChannel.writeToFile(filepath: String) {
+    this.copyTo(File(filepath).writeChannel())
 }

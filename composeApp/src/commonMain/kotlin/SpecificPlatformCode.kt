@@ -4,6 +4,7 @@ import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.unit.Dp
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
+import io.ktor.utils.io.ByteReadChannel
 import utils.device.DeviceInfo
 import utils.annotation.DoItLater
 
@@ -45,3 +46,6 @@ expect class ContextFactory {
 }
 
 expect fun getAppSpecificDirectory(): okio.Path
+
+//ref: https://stackoverflow.com/questions/78739232/how-to-save-a-response-body-to-a-file-in-kotlin-multiplatform-with-ktor
+expect suspend fun ByteReadChannel.writeToFile(filepath: String)

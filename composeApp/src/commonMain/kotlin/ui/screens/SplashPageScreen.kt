@@ -63,8 +63,8 @@ fun SplashPage(
     val showPopup = remember { mutableStateOf(!Preferences().AppSettings.isLangInitialized()) }
 
     val hasRefreshed = remember { mutableStateOf(false) }
-    val canCheckedUpdate = remember { mutableStateOf(false) }
-    val showUpdatePopup = remember { mutableStateOf(true) }
+    val showUpdatePopup = remember { mutableStateOf(false) } //The Real Update Popup
+    val canUpdatePopup = remember { mutableStateOf(true) } //U can show the popup anytime when the language choice is made
     LaunchedEffect(Unit) {
         if (!showPopup.value) {
             CoroutineScope(Dispatchers.Default).launch {
@@ -89,16 +89,15 @@ fun SplashPage(
     }
 
     LaunchedEffect(showPopup.value, hasRefreshed.value, showUpdatePopup.value){
-        if (!showPopup.value && !showUpdatePopup.value && screenInstance !is Screen.HomePage) {
+        if(!showPopup.value && canUpdatePopup.value){
+            showUpdatePopup.value = true
+        }else if (!showPopup.value && !showUpdatePopup.value && screenInstance !is Screen.HomePage) {
             screenInstance = Screen.HomePage
             navigator.navigate(Screen.HomePage.route){
                 popUpTo(Screen.SplashPage.route){
                     inclusive = true
                 }
             }
-        }else if(!showPopup.value){
-            canCheckedUpdate.value = true
-            showUpdatePopup.value = true
         }
     }
 
@@ -235,5 +234,5 @@ fun SplashPage(
 
     Language().initAppLanguagePopup(showPopup,hazeState = hazeStateRoot)
 
-    UpdateAssetsPopup(showPopup, hazeStateRoot)
+    UpdateAssetsPopup(showUpdatePopup, canUpdatePopup, hazeStateRoot)
 }

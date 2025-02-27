@@ -8,6 +8,13 @@ import androidx.compose.ui.platform.LocalWindowInfo
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.client.engine.darwin.Darwin
+import io.ktor.utils.io.ByteReadChannel
+import io.ktor.utils.io.readAvailable
+import kotlinx.cinterop.ExperimentalForeignApi
+import kotlinx.cinterop.allocArray
+import kotlinx.cinterop.convert
+import kotlinx.cinterop.memScoped
+import kotlinx.cinterop.refTo
 import okio.Path.Companion.toPath
 import org.jetbrains.skia.Image
 import platform.Foundation.NSApplicationSupportDirectory
@@ -24,6 +31,14 @@ import platform.UIKit.UIInterfaceOrientationLandscapeLeft
 import platform.UIKit.UIInterfaceOrientationLandscapeRight
 import platform.UIKit.UIKeyboardAppearanceDark
 import platform.UIKit.UITextField
+import platform.darwin.ByteVar
+import platform.darwin.DISPATCH_QUEUE_PRIORITY_DEFAULT
+import platform.darwin.dispatch_data_create
+import platform.darwin.dispatch_get_global_queue
+import platform.darwin.dispatch_write
+import platform.posix.O_RDWR
+import platform.posix.close
+import platform.posix.open
 import utils.annotation.DoItLater
 import utils.device.DeviceInfo
 
@@ -113,4 +128,34 @@ actual fun getAppSpecificDirectory(): okio.Path {
     val urls = fileManager.URLsForDirectory(NSApplicationSupportDirectory, NSUserDomainMask)
     val appSupportDir = urls.last() as NSURL
     return appSupportDir.path?.toPath() ?: throw IllegalStateException("Could not get the path for app support directory")
+}
+
+private const val BUFFER_SIZE = 4096
+
+@OptIn(ExperimentalForeignApi::class)
+actual suspend fun ByteReadChannel.writeToFile(filepath: String) {
+    val channel = this
+    val queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT.convert(), 0u)
+    val buffer = ByteArray(BUFFER_SIZE)
+    val fd = open(filepath, O_RDWR)
+
+    try {
+        while (!channel.isClosedForRead) {
+            val rs = channel.readAvailable(buffer, 0, BUFFER_SIZE)
+            if (rs < 0) break
+
+            memScoped {
+                val dst = buffer.refTo(0).getPointer(this)
+                val data = dispatch_data_create(dst, rs.convert(), queue) {}
+
+                dispatch_write(fd, data, queue) { _, error ->
+                    if (error != 0) {
+                        channel.cancel(IllegalStateException("Unable to write data to the file $filepath"))
+                    }
+                }
+            }
+        }
+    } finally {
+        close(fd)
+    }
 }
