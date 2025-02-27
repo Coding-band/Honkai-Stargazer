@@ -137,6 +137,8 @@ kotlin {
             //Compose WebView Multiplatform : https://github.com/KevinnZou/compose-webview-multiplatform
             api("io.github.kevinnzou:compose-webview-multiplatform:1.9.40")
 
+            implementation(libs.kmp.io)
+
         }
         desktopMain.dependencies {
             implementation(compose.material3)

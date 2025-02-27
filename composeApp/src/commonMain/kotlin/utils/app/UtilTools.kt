@@ -3,6 +3,7 @@ package utils.app
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.saveable.Saver
 import androidx.compose.runtime.saveable.listSaver
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -17,6 +18,9 @@ import coil3.request.CachePolicy
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import coil3.util.DebugLogger
+import com.oldguy.common.io.File
+import com.oldguy.common.io.FileMode
+import com.oldguy.common.io.ZipFile
 import com.russhwolf.settings.Settings
 import files.IsDone
 import files.MOCMissionPart1
@@ -44,18 +48,22 @@ import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.client.plugins.onDownload
 import io.ktor.client.request.get
 import io.ktor.client.request.head
 import io.ktor.client.statement.HttpResponse
+import io.ktor.client.statement.bodyAsChannel
 import io.ktor.http.HttpHeaders
 import io.ktor.serialization.kotlinx.json.json
 import io.ktor.util.network.UnresolvedAddressException
+import io.ktor.utils.io.copyTo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.IO
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.async
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withTimeout
@@ -78,6 +86,7 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import okio.FileSystem
 import okio.IOException
+import okio.Path.Companion.toPath
 import okio.SYSTEM
 import okio.buffer
 import okio.use
@@ -351,6 +360,82 @@ fun getAssetsStrByFilePath(filePath: String, defaultData : String = "{}"): Strin
         //if(readStr == "{}")  getAssetsJsonStrByFilePath(filePath) else readStr
 }
 
+//downloadFromURLProgress function, keep updating the downloadProgress
+fun downloadFromURLProgress(url: String, downloadProgress: MutableState<Long>) : Boolean {
+    val client = HttpClient()
+    try {
+        return runBlocking {
+            return@runBlocking withTimeout(8000) {
+                val response: HttpResponse = client.get(url){
+                    onDownload { bytesSentTotal, contentLength ->
+                        CoroutineScope(Dispatchers.Default).launch {
+                            while (bytesSentTotal < (contentLength ?: 0)) {
+                                downloadProgress.value = bytesSentTotal
+                                delay(50)
+                                if (bytesSentTotal == contentLength) break
+                            }
+                        }
+                    }
+                }
+
+                //Check whether it is having any errors
+                if (!arrayListOf(200, 201).contains(response.status.value)) {
+                    errorLog(
+                        "UtilTools.kt",
+                        "downloadFromURLProgress(url = ${url}, downloadProgress = ${downloadProgress.value})",
+                        Exception("HTTP Error Code ${response.status.value} : ${response.status.description}")
+                    )
+                    return@withTimeout false
+                } else {
+                    //write what we get into the zip file in temp
+                    FileSystem.SYSTEM.sink(getAppSpecificDirectory().resolve("temp")).buffer().use { sink ->
+                        sink.buffer().writeUtf8(response.body())
+                    }
+                    return@withTimeout true
+                }
+            }
+        }
+    }catch (e : UnresolvedAddressException){
+        //Cannot find the Address, maybe bcz of u are offline
+        // errorLog("UtilTools.kt", "readFromOnlineURL(url = ${url})",e)
+    }catch (e : Exception){
+        // All response
+        errorLog("UtilTools.kt", "downloadFromURLProgress(url = ${url}, downloadProgress = ${downloadProgress.value})",e)
+    }
+    return false
+}
+
+fun extractZip(zipPath: okio.Path, rootPath: okio.Path): Boolean {
+    val zipFile = File(zipPath.toString())
+    val rootFile = File(rootPath.toString())
+    return runBlocking {
+        try {
+            ZipFile(zipFile, FileMode.Read).use { zip ->
+                for (entry in zip.entries) {
+                    val entryName = entry.name.trimStart('/')
+                    // 手動構建目標路徑
+                    val destPath = File("${rootFile.path}/$entryName")
+                    if (entryName.endsWith("/")) {
+                        // 是目錄
+                        destPath.makeDirectory()
+                    } else {
+                        // 是檔案
+                        val sink = FileSystem.SYSTEM.sink(destPath.path.toPath())
+                        zip.readEntry(entry) { _, content, count, _ ->
+                            sink.buffer().write(content)
+                        }
+                        sink.close()
+                    }
+                }
+            }
+            return@runBlocking true
+        } catch (e: Exception) {
+            errorLog("UtilTools.kt", "extractZip(zipPath = $zipPath, rootPath = $rootPath)", e)
+            return@runBlocking false
+        }
+    }
+}
+
 fun checkAssetsUpdate() {
     val client = HttpClient {
         install(ContentNegotiation) {
@@ -464,10 +549,10 @@ fun getFinishTimeStr(finishTime: Long): String {
 }
 
 
-fun writeToFile(filePath: String, content: String) {
+fun writeToFile(filePath: String, content: String, folder: String = "data") {
     val fileSystem = FileSystem.SYSTEM
     //val file = FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("data").resolve(filePath)
-    val file = getAppSpecificDirectory().resolve("data").resolve(filePath)
+    val file = getAppSpecificDirectory().resolve(folder).resolve(filePath)
 
     try {
         // Create directory if it doesn't exist

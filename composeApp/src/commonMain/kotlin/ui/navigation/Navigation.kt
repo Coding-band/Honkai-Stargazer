@@ -254,10 +254,10 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
     NavHost(
         navController = navigator,
         startDestination = Screen.SplashPage.route,
-        enterTransition = { if(isPadMode.value) fadeIn() else slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Left, animationSpec) },
-        exitTransition = { if(isPadMode.value) fadeOut() else slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Left, animationSpec) },
-        popEnterTransition = { if(isPadMode.value) fadeIn() else slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Right, animationSpec) },
-        popExitTransition = { if(isPadMode.value) fadeOut() else slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Right, animationSpec) }
+        enterTransition = { if(isPadMode.value) fadeIn() else slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Left,) },
+        exitTransition = { if(isPadMode.value) fadeOut() else slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Left,) },
+        popEnterTransition = { if(isPadMode.value) fadeIn() else slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Right,) },
+        popExitTransition = { if(isPadMode.value) fadeOut() else slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Right,) }
     ) {
         composable(route = Screen.SplashPage.route) {
             screenInstance = Screen.SplashPage

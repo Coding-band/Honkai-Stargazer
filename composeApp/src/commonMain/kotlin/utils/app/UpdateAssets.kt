@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material.Slider
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -19,10 +20,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Popup
 import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
+import getAppSpecificDirectory
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.IO
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
@@ -34,7 +39,6 @@ import utils.starbase.StarbaseAPI
 private var localCommit = Settings().getString("localCommit", "")
 private lateinit var isProcessing: MutableState<Boolean>
 private lateinit var downloadProgress: MutableState<Long>
-private lateinit var lastSecDownloadProgress: MutableState<Long>
 
 @Serializable
 data class UpdateAssetsInfo (
@@ -71,6 +75,7 @@ enum class DownloadAssetsState {
     ERROR_UNZIP
 }
 
+@OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>, hazeState: HazeState) {
     //First, check what git commit is the user using
@@ -86,7 +91,7 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>, hazeState: HazeState) 
     val infoList = Json.decodeFromString<ArrayList<UpdateAssetsInfo>>(updateAssetsInfo)
     val currIndex = infoList.indexOfFirst { it.commit == localCommit }
     val updateState = checkIsNeedUpdateAssets(infoList, currIndex)
-
+    var url = ""
     when(updateState){
         UpdateAssetsStatus.UP_TO_DATE -> {
             //The user is using the latest version
@@ -96,10 +101,12 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>, hazeState: HazeState) 
             //Found the current commit in the list,
             //The user is using the last release version
             isShowPopup.value = true
+            url = "${StarbaseAPI().getGitHubStaticAssetURL()}/updates/${infoList.first().commit}/${infoList.first().commit}-PATCH.zip"
         }
         UpdateAssetsStatus.FULL -> {
             //The user is using an outdated version
             isShowPopup.value = true
+            url = "${StarbaseAPI().getGitHubStaticAssetURL()}/updates/${infoList.first().commit}/${infoList.first().commit}-FULL.zip"
         }
         UpdateAssetsStatus.SKIP -> {
             //Skipped, maybe the user cannot connect to GitHub?
@@ -115,6 +122,28 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>, hazeState: HazeState) 
         isProcessing = rememberSaveable { mutableStateOf(false) }
     }
     //Show the update dialog to the user
+
+    LaunchedEffect(isProcessing.value, acceptUpdate.value){
+        if(!isProcessing.value && acceptUpdate.value){
+            isProcessing.value = true
+
+            runBlocking {
+                val job = async {
+                    downloadFromURLProgress(url = url, downloadProgress = downloadProgress)
+                    extractZip(zipPath = getAppSpecificDirectory().resolve("temp").resolve("update.zip"), rootPath = getAppSpecificDirectory())
+                }
+
+                job.await()
+                job.getCompleted()
+
+                //Update the local commit
+                Settings().putString("localCommit", infoList.first().commit)
+                isProcessing.value = false
+                isShowPopup.value = false
+            }
+        }
+    }
+
     Popup(alignment = Alignment.Center) {
         AppDialog(
             titleString = if(!acceptUpdate.value) "檢測到更新檔案" else "下載中...",
@@ -129,23 +158,6 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>, hazeState: HazeState) 
             isPopupShow = isShowPopup,
         )
     }
-
-    if(!isProcessing.value){
-        //Start the update process
-        CoroutineScope(Dispatchers.Default).launch {
-            async {
-                isProcessing.value = true
-                val downloadURL = "${StarbaseAPI().getGitHubStaticAssetURL()}/updates/${infoList.first().commit}-${updateState.name}.zip"
-                //Download the file, maybe add a new readFromURLProgress function, keep updating the downloadProgress for every 0.2 second
-
-                //Unzip the file
-
-                //Update the local commit
-
-                //Wait for 1 second for user to see the progress after done.
-            }.await()
-        }
-    }
 }
 
 @Composable
@@ -155,12 +167,6 @@ fun UpdateAssetsPopupDownloading(showPopup: MutableState<Boolean>, latestAssetsI
         downloadProgress.value = 0
     }else{
         downloadProgress = rememberSaveable { mutableStateOf(0L) }
-    }
-
-    if(::lastSecDownloadProgress.isInitialized){
-        lastSecDownloadProgress.value = 0
-    }else{
-        lastSecDownloadProgress = rememberSaveable { mutableStateOf(0L) }
     }
 
     //State can be "DOWNLOADING", "UNZIPPING", "FINISH", "ERROR-NETWORK", "ERROR-UNZIP"
@@ -219,13 +225,6 @@ fun UpdateAssetsPopupAsking(
     }
 }
 
-/**
- * This function will update the assets of the app
- */
-fun UpdateAssetsProcess() {
-
-}
-
 fun checkIsNeedUpdateAssets(infoList : ArrayList<UpdateAssetsInfo>, currIndex: Int): UpdateAssetsStatus {
     return when (currIndex) {
         0 -> {
@@ -237,8 +236,13 @@ fun checkIsNeedUpdateAssets(infoList : ArrayList<UpdateAssetsInfo>, currIndex: I
             UpdateAssetsStatus.PATCH
         }
         else -> {
-            //The user is using an outdated version
-            UpdateAssetsStatus.FULL
+            if(infoList.isEmpty()){
+                //Cannot get the update info (Network error maybe)
+                UpdateAssetsStatus.SKIP
+            }else{
+                //The user is using an outdated version
+                UpdateAssetsStatus.FULL
+            }
         }
     }
 }

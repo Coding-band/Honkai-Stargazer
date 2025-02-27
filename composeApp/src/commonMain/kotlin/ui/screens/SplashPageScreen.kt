@@ -89,9 +89,6 @@ fun SplashPage(
     }
 
     LaunchedEffect(showPopup.value, hasRefreshed.value, showUpdatePopup.value){
-        if(showPopup.value){
-            canCheckedUpdate.value = true
-        }
         if (!showPopup.value && !showUpdatePopup.value && screenInstance !is Screen.HomePage) {
             screenInstance = Screen.HomePage
             navigator.navigate(Screen.HomePage.route){
@@ -99,6 +96,9 @@ fun SplashPage(
                     inclusive = true
                 }
             }
+        }else if(!showPopup.value){
+            canCheckedUpdate.value = true
+            showUpdatePopup.value = true
         }
     }
 
