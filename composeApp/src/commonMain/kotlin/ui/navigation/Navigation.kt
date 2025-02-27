@@ -333,9 +333,10 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
         }
 
         composable(
-            //?fileName={fileName}&path={path}
-            route = "${Screen.LightconeInfoPage.route}/{lcName}?fileName={fileName}&path={path}\",",
+            //?lcName={fileName}&path={path}
+            route = "${Screen.LightconeInfoPage.route}/{lcName}?fileName={fileName}&path={path}",
             arguments = listOf(
+                navArgument("lcName") { type = NavType.StringType ;defaultValue = ""; nullable = false; },
                 navArgument("fileName") { type = NavType.StringType ;defaultValue = ""; nullable = false; },
                 navArgument("path") { type = NavType.StringType ;defaultValue = ""; nullable = false; }
             )

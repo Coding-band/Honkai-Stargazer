@@ -101,6 +101,7 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: Mutable
         if(updateAssetsInfo.isEmpty() || updateAssetsInfo == "{}") {
             //Cannot get the update info (Network error maybe)
             isShowPopup.value = false;
+            canUpdatePopup.value = false;
 
             //Show the warning dialog to the user
             //...
@@ -115,6 +116,7 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: Mutable
             UpdateAssetsStatus.UP_TO_DATE -> {
                 //The user is using the latest version
                 isShowPopup.value = false
+                canUpdatePopup.value = false
             }
             UpdateAssetsStatus.PATCH -> {
                 //Found the current commit in the list,
@@ -130,6 +132,7 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: Mutable
             UpdateAssetsStatus.SKIP -> {
                 //Skipped, maybe the user cannot connect to GitHub?
                 isShowPopup.value = false
+                canUpdatePopup.value = false
             }
         }
 
@@ -138,7 +141,7 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: Mutable
         val denyUpdate = remember { mutableStateOf(false) }
         //Show the update dialog to the user
 
-        if(!denyUpdate.value){
+        if(!denyUpdate.value && isShowPopup.value){
             Popup(alignment = Alignment.Center) {
                 AppDialog(
                     titleString = if(!acceptUpdate.value) "檢測到更新檔案" else "下載中...",
@@ -155,6 +158,7 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: Mutable
             }
         }else{
             isShowPopup.value = false
+            canUpdatePopup.value = false
         }
 
         LaunchedEffect(acceptUpdate.value){

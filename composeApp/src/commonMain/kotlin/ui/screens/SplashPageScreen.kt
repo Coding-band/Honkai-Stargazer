@@ -89,6 +89,7 @@ fun SplashPage(
     }
 
     LaunchedEffect(showPopup.value, hasRefreshed.value, showUpdatePopup.value){
+        println("canUpdatePopup: ${canUpdatePopup.value}, showPopup: ${showPopup.value}, showUpdatePopup: ${showUpdatePopup.value}, screenInstance: $screenInstance, hasRefreshed: ${hasRefreshed.value}")
         if(!showPopup.value && canUpdatePopup.value){
             showUpdatePopup.value = true
         }else if (!showPopup.value && !showUpdatePopup.value && screenInstance !is Screen.HomePage) {

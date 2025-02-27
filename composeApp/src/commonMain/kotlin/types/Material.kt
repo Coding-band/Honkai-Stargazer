@@ -30,7 +30,7 @@ open class Material(
         }
 
         fun getMaterialImageById(officialId: Int): String {
-            return getAssetsURLByFileName(ImageFolder.MATERIAL_ICON,"material_" + materialListJson.jsonObject[officialId.toString()]?.jsonPrimitive?.content)
+            return getAssetsURLByFileName(ImageFolder.MATERIAL_ICON,"material_" + materialListJson.jsonObject[officialId.toString()]?.jsonObject?.get("fileName")?.jsonPrimitive?.content)
         }
     }
 
