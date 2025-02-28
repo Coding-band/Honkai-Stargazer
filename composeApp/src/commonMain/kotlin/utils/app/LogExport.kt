@@ -22,9 +22,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.dokar.sonner.ToastType
-import com.dokar.sonner.ToasterState
-import com.dokar.sonner.rememberToasterState
 import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
 import files.ConfirmBTN
