@@ -343,7 +343,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
 
             PageHeader(navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.BACK)
 
-            UpdateAssetsPopup(showUpdatePopup, canUpdatePopup, hazeState, forceDownload = true)
+            UpdateAssetsPopup(showUpdatePopup, hazeState, forceDownload = true)
         }
     }
 }

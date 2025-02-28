@@ -44,6 +44,7 @@ import ui.components.ThemedProgressBar
 import ui.components.UIButton
 import ui.navigation.refreshInit
 import ui.screens.doInit
+import ui.screens.doRefresh
 import utils.starbase.StarbaseAPI
 
 private var localCommit = Settings().getString("localCommit", "")
@@ -100,14 +101,13 @@ fun updateAssetsInit(){
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
-fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: MutableState<Boolean>, hazeState: HazeState, forceDownload: Boolean = false) {
+fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>, hazeState: HazeState, forceDownload: Boolean = false) {
     if(isShowPopup.value){
         //First, check what git commit is the user using
         val updateAssetsInfo = readFromOnlineURL("${StarbaseAPI().getGitHubStaticAssetURL()}/updates/info.json")
         if(updateAssetsInfo.isEmpty() || updateAssetsInfo == "{}") {
             //Cannot get the update info (Network error maybe)
             isShowPopup.value = false;
-            canUpdatePopup.value = false;
 
             //Show the warning dialog to the user
             //...
@@ -123,7 +123,6 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: Mutable
             UpdateAssetsStatus.UP_TO_DATE -> {
                 //The user is using the latest version
                 isShowPopup.value = false
-                canUpdatePopup.value = false
             }
             UpdateAssetsStatus.PATCH -> {
                 //Found the current commit in the list,
@@ -139,7 +138,6 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: Mutable
             UpdateAssetsStatus.SKIP -> {
                 //Skipped, maybe the user cannot connect to GitHub?
                 isShowPopup.value = false
-                canUpdatePopup.value = false
             }
         }
 
@@ -166,7 +164,6 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: Mutable
             }
         }else{
             isShowPopup.value = false
-            canUpdatePopup.value = false
         }
 
         LaunchedEffect(acceptUpdate.value){
@@ -183,19 +180,16 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: Mutable
                         //Update the local commit
                         Settings().putString("localCommit", infoList.first().commit)
                     }
+
                     isProcessing.value = false
                     isShowPopup.value = false
-                    canUpdatePopup.value = false
-
-                    withContext(Dispatchers.Main){
-                        if(!doInit.value){
-                            doInit.value = true
-                            refreshInit()
-                        }
-                    }
-
                 }.await()
             }
+        }
+    }else{
+        if(!doRefresh.value){
+            doRefresh.value = true
+            refreshInit()
         }
     }
 }
