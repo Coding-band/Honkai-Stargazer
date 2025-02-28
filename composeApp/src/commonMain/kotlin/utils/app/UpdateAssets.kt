@@ -198,7 +198,7 @@ fun UpdateAssetsPopupDownloading(showPopup: MutableState<Boolean>, latestAssetsI
         Spacer(modifier = Modifier.height(24.dp))
         //下載進度: 18.5% (1.85MB / 10.0MB)
         Text("下載進度: ${
-            formatDecimal(downloadProgress.value / fileSize * 100, isRoundDown = true)
+            formatDecimal(downloadProgress.value * 100 / fileSize)
         }% (${
             formatDecimalByte(downloadProgress.value, 2)
         } / ${
