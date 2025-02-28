@@ -94,6 +94,7 @@ import types.UserAccount
 import ui.components.CharacterCard
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
+import ui.navigation.popBackStackLimited
 import utils.app.Constants
 import utils.app.Constants.Companion.INFO_MAX_WIDTH
 import utils.app.Constants.Companion.INFO_MIN_WIDTH
@@ -307,7 +308,7 @@ fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, teamDat
                     .clickable {
                         //Save and Exit
                         actionOrderTeamList[index] = teamListItem.value
-                        navigator.popBackStack()
+                        navigator.popBackStackLimited()
                     }
             ) {
                 Image(

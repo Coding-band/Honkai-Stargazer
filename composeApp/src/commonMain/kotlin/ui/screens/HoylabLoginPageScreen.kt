@@ -101,6 +101,7 @@ import ui.components.pomPomPopupInstance
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
+import ui.navigation.popBackStackLimited
 import utils.annotation.DoItLater
 import utils.app.AppFont
 import utils.app.FontSizeNormal14
@@ -159,7 +160,7 @@ fun HoyolabLoginPageScreen(
                     serverSelected = serverSelected,
                     snackbarHostState = snackbarHostState,
                 )
-                navigator.popBackStack()
+                navigator.popBackStackLimited()
             }
         )
     }

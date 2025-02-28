@@ -620,6 +620,17 @@ fun NavHostController.navigateLimited(route: String, options: NavOptions? = null
         Settings().putLong("lastNavigationTime", currentTime)
     }
 }
+fun NavHostController.popBackStackLimited() {
+    val navigationInterval: Long = 500 // 500ms is enough for most cases
+    val lastNavigationTime: Long = Settings().getLong("lastNavigationTime", 0)
+
+    val currentTime = Clock.System.now().toEpochMilliseconds()
+    print("popBackStackLimited : ${currentTime - lastNavigationTime}")
+    if (currentTime - lastNavigationTime >= navigationInterval) {
+        popBackStack()
+        Settings().putLong("lastNavigationTime", currentTime)
+    }
+}
 
 @Composable
 fun withBGScreen(isPadMode: MutableState<Boolean>, content: @Composable () -> Unit){

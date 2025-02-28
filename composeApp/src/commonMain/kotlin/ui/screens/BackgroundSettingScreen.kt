@@ -49,6 +49,7 @@ import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.UIButton
 import ui.components.defaultHeaderData
+import ui.navigation.popBackStackLimited
 import utils.app.Constants
 import utils.app.DpToPx
 import utils.app.FontSizeNormal16
@@ -197,7 +198,7 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: NavHostCon
                 UIButton(Modifier .weight(1f).height(64.dp), text = removeStrQuote(Res.string.SetWallPaper), onClick = {
                     Settings().putString("backgroundImage", extendedItems[wallpaperIndex.value].id)
                     bgModified.value = true
-                    navigator.popBackStack()
+                    navigator.popBackStackLimited()
                 })
             }
         }

@@ -43,6 +43,7 @@ import files.ui_icon_share
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
+import ui.navigation.popBackStackLimited
 import ui.screens.globalHazeBlur
 
 val PAGE_HEADER_HEIGHT = 72.dp
@@ -65,7 +66,7 @@ class HeaderData(
 @Composable
 fun PageHeader(
     navigator: NavHostController = rememberNavController(),
-    onBack: ((navigator : NavHostController) -> Unit) = { navigator: NavHostController -> navigator.popBackStack() },
+    onBack: ((navigator : NavHostController) -> Unit) = { navigator: NavHostController -> navigator.popBackStackLimited() },
     backIconId: BackIcon = BackIcon.BACK,
     onForward: (() -> Unit) = {},
     forwardIconId: DrawableResource = Res.drawable.bg_transparent,
@@ -153,7 +154,7 @@ fun PageHeader(
 @Composable
 fun PageHeaderAlpha(
     navigator: NavHostController = rememberNavController(),
-    onBack: ((navigator: NavHostController) -> Unit) = { navigator: NavHostController -> navigator.popBackStack() },
+    onBack: ((navigator: NavHostController) -> Unit) = { navigator: NavHostController -> navigator.popBackStackLimited() },
     backIconId: BackIcon = BackIcon.CANCEL,
     onForward: (() -> Unit) = {},
     hazeState: HazeState? = HazeState(),
@@ -182,7 +183,7 @@ fun PageHeaderAlpha(
                     modifier = Modifier
                         .size(40.dp)
                         .align(Alignment.CenterVertically),
-                    onClick = { onBack(navigator) },
+                    onClick = { onBack.invoke(navigator) },
                 ) {
                     Image(
                         painter = painterResource(resource = backIconId.res),
