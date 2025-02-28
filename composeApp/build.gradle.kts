@@ -1,3 +1,4 @@
+import com.android.build.gradle.internal.api.ApkVariantOutputImpl
 import com.codingfeline.buildkonfig.compiler.FieldSpec.Type.INT
 import com.codingfeline.buildkonfig.compiler.FieldSpec.Type.STRING
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
@@ -37,6 +38,7 @@ val versionCodeFinal = properties.getProperty("APP_VERSION_CODE").toInt() + 1
 //BETA | C.BETA | DEV | PRODUCTION
 //VersionUpdateCheck
 val isForAppStore = false
+val isForPlayStore = false
 var appProfile = "C.BETA" //Please Modify this String ONLY IF NECESSERY
 val appVersionCodeName = "SG3"
 
@@ -158,7 +160,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.voc.honkaistargazer"
+    namespace = "com.voc.stargazer3"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
@@ -193,6 +195,7 @@ android {
             applicationId = "com.voc.stargazer3"
             versionName = "${appVersion} (${versionCodeFinal})"
         }
+
         properties.store(file("../gradle.properties").outputStream(),null)
     }
 
@@ -220,6 +223,15 @@ android {
     bundle {
         language {
             enableSplit = false
+        }
+    }
+
+    applicationVariants.all {
+        outputs.all {
+            if (this is ApkVariantOutputImpl) {
+                val suffix = if(isForPlayStore) ".aab" else ".apk"
+                outputFileName = "SG3-${appProfile}-${appVersion} (${versionCodeFinal})$suffix"
+            }
         }
     }
 }
