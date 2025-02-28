@@ -426,8 +426,8 @@ fun downloadFromURLProgress(url: String, downloadProgress: MutableState<Long>, i
                         isDownloading.value = true
                         mainScope.launch {
                             downloadProgress.value = bytesSentTotal
-                            println("Download Progress: $bytesSentTotal, Content Length: $contentLength")
-                            println("-----------------")
+                            //println("Download Progress: $bytesSentTotal, Content Length: $contentLength")
+                            //println("-----------------")
                         }
                     }
                 }.execute()

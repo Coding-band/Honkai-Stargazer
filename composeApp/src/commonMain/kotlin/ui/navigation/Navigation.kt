@@ -196,7 +196,7 @@ fun RootContent() {
         }
 
         Row(modifier = Modifier.haze(hazeStateRoot)) {
-            if(isPadMode.value && screenInstance != Screen.SplashPage){
+            if(isPadMode.value && screenInstance != Screen.SplashPage && screenInstance != Screen.BlankPage){
                 Scaffold(Modifier
                     .width(HOME_WIDTH)
                     .let { if (getScreenSizeInfo().wDP < HOME_WIDTH * 1.5f) it.weight(1f) else it }

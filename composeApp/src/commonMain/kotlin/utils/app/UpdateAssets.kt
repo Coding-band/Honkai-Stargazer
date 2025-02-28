@@ -21,6 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Popup
 import com.russhwolf.settings.Settings
+import com.russhwolf.settings.set
 import dev.chrisbanes.haze.HazeState
 import getAppSpecificDirectory
 import kotlinx.coroutines.CoroutineScope
@@ -97,7 +98,6 @@ fun updateAssetsInit(){
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: MutableState<Boolean>, hazeState: HazeState) {
-
     if(isShowPopup.value){
         //First, check what git commit is the user using
         val updateAssetsInfo = readFromOnlineURL("${StarbaseAPI().getGitHubStaticAssetURL()}/updates/info.json")
@@ -108,6 +108,7 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: Mutable
 
             //Show the warning dialog to the user
             //...
+            showWarningToast("Cannot get the update info (Network error maybe)")
         }
 
         val infoJson = Json.parseToJsonElement(updateAssetsInfo).jsonObject["updates"]
