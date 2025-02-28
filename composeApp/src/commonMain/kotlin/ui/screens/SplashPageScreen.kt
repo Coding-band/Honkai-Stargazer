@@ -90,13 +90,16 @@ fun SplashPage(
     }
 
     LaunchedEffect(showPopup.value, hasRefreshed.value, showUpdatePopup.value){
-        //println("canUpdatePopup: ${canUpdatePopup.value}, showPopup: ${showPopup.value}, showUpdatePopup: ${showUpdatePopup.value}, screenInstance: $screenInstance, hasRefreshed: ${hasRefreshed.value}")
+        println("canUpdatePopup: ${canUpdatePopup.value}, showPopup: ${showPopup.value}, showUpdatePopup: ${showUpdatePopup.value}, screenInstance: $screenInstance, hasRefreshed: ${hasRefreshed.value}")
         //println("showPopup: ${showPopup.value}, showUpdatePopup: ${showUpdatePopup.value}, canUpdatePopup: ${canUpdatePopup.value}, screenInstance: $screenInstance")
         if(!showPopup.value && canUpdatePopup.value){
             showUpdatePopup.value = true
         }else if (!showPopup.value && !showUpdatePopup.value && screenInstance !is Screen.HomePage && screenInstance !is Screen.BlankPage) {
             screenInstance = Screen.HomePage
-            refreshInit()
+            if(!doInit.value){
+                refreshInit()
+                doInit.value = true
+            }
 
             navigator.navigate(Screen.HomePage.route){
                 popUpTo(Screen.SplashPage.route){

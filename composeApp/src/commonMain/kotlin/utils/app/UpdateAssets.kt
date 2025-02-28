@@ -32,6 +32,7 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
@@ -41,6 +42,8 @@ import kotlinx.serialization.json.jsonObject
 import ui.components.AppDialog
 import ui.components.ThemedProgressBar
 import ui.components.UIButton
+import ui.navigation.refreshInit
+import ui.screens.doInit
 import utils.starbase.StarbaseAPI
 
 private var localCommit = Settings().getString("localCommit", "")
@@ -97,7 +100,7 @@ fun updateAssetsInit(){
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
-fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: MutableState<Boolean>, hazeState: HazeState) {
+fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: MutableState<Boolean>, hazeState: HazeState, forceDownload: Boolean = false) {
     if(isShowPopup.value){
         //First, check what git commit is the user using
         val updateAssetsInfo = readFromOnlineURL("${StarbaseAPI().getGitHubStaticAssetURL()}/updates/info.json")
@@ -114,7 +117,7 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: Mutable
         val infoJson = Json.parseToJsonElement(updateAssetsInfo).jsonObject["updates"]
         val infoList = Json.decodeFromJsonElement<ArrayList<UpdateAssetsInfo>>(infoJson!!.jsonArray)
         val currIndex = infoList.indexOfFirst { it.commit == localCommit }
-        val updateState = checkIsNeedUpdateAssets(infoList, currIndex)
+        val updateState = if(forceDownload) UpdateAssetsStatus.FULL else checkIsNeedUpdateAssets(infoList, currIndex)
         var url = ""
         when(updateState){
             UpdateAssetsStatus.UP_TO_DATE -> {
@@ -183,6 +186,13 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: Mutable
                     isProcessing.value = false
                     isShowPopup.value = false
                     canUpdatePopup.value = false
+
+                    withContext(Dispatchers.Main){
+                        if(!doInit.value){
+                            doInit.value = true
+                            refreshInit()
+                        }
+                    }
 
                 }.await()
             }

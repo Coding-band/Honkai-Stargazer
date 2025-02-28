@@ -93,6 +93,7 @@ import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
 import utils.app.Language
 import utils.app.Preferences
+import utils.app.UpdateAssetsPopup
 import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.showFunctionIsDevelopingToast
@@ -111,6 +112,8 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
     val wallpaper = Wallpaper.wallpaperList.find { it.id == Settings().getString("backgroundImage", "221000") } ?: Wallpaper.wallpaperList[0]
 
     val urlHandler = LocalUriHandler.current
+    val showUpdatePopup = remember { mutableStateOf(false) }
+    val canUpdatePopup = remember { mutableStateOf(true) } //Not for use
 
     key(doRecompose.value){
         Box {
@@ -295,6 +298,17 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                             }
                         )
 
+                        //強制下載更新
+                        @DoItLater("Translation")
+                        SettingOptionNavigateBar(
+                            //titleRes = Res.string.SourceCode,
+                            title = "重新下載完整數據",
+                            navigateClick = {
+                                showUpdatePopup.value = true
+                                canUpdatePopup.value = true
+                            }
+                        )
+
                         //App 版本 App Version
                         SettingOptionNavigateBar(
                             titleRes = Res.string.AppVersion,
@@ -328,6 +342,8 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
             }
 
             PageHeader(navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.BACK)
+
+            UpdateAssetsPopup(showUpdatePopup, canUpdatePopup, hazeState, forceDownload = true)
         }
     }
 }
