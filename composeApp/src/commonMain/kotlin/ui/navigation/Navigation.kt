@@ -8,6 +8,7 @@ package ui.navigation
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedContentTransitionScope
+import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -250,14 +251,14 @@ fun refreshInit(){
 @Composable
 fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>){
     //ref: https://github.com/JetBrains/compose-multiplatform/issues/4528#issuecomment-2015222282
-    val animationSpec = tween<IntOffset>(650)
+    val animationSpec = tween<IntOffset>(easing = LinearEasing)
     NavHost(
         navController = navigator,
         startDestination = Screen.SplashPage.route,
-        enterTransition = { if(isPadMode.value) fadeIn() else slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Left,) },
-        exitTransition = { if(isPadMode.value) fadeOut() else slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Left,) },
-        popEnterTransition = { if(isPadMode.value) fadeIn() else slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Right,) },
-        popExitTransition = { if(isPadMode.value) fadeOut() else slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Right,) }
+        enterTransition = { if(isPadMode.value) fadeIn() else slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Left,animationSpec)},
+        exitTransition = { if(isPadMode.value) fadeOut() else slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Left,animationSpec) },
+        popEnterTransition = { if(isPadMode.value) fadeIn() else slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Right,animationSpec) },
+        popExitTransition = { if(isPadMode.value) fadeOut() else slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Right,animationSpec) }
     ) {
         composable(route = Screen.SplashPage.route) {
             screenInstance = Screen.SplashPage

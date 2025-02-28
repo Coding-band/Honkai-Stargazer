@@ -5,11 +5,13 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material.Slider
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -42,7 +44,7 @@ import utils.starbase.StarbaseAPI
 
 private var localCommit = Settings().getString("localCommit", "")
 private lateinit var isProcessing: MutableState<Boolean>
-private lateinit var downloadProgress : MutableState<Long>
+lateinit var downloadProgress : MutableState<Long>
 
 @Serializable
 data class UpdateAssetsInfo (
@@ -95,6 +97,7 @@ fun updateAssetsInit(){
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: MutableState<Boolean>, hazeState: HazeState) {
+
     if(isShowPopup.value){
         //First, check what git commit is the user using
         val updateAssetsInfo = readFromOnlineURL("${StarbaseAPI().getGitHubStaticAssetURL()}/updates/info.json")
@@ -146,6 +149,7 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: Mutable
                 AppDialog(
                     titleString = if(!acceptUpdate.value) "檢測到更新檔案" else "下載中...",
                     hazeState = hazeState,
+                    modifier = Modifier.widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH),
                     components = {
                         if(!acceptUpdate.value) {
                             UpdateAssetsPopupAsking(isShowPopup, infoList.first(),updateState, acceptUpdate, denyUpdate)
@@ -165,28 +169,21 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: Mutable
             if(!isProcessing.value && acceptUpdate.value){
                 isProcessing.value = true
 
-                runBlocking {
-                    delay(500)
+                CoroutineScope(Dispatchers.IO).async {
                     val isSuccess = mutableStateOf(false)
-                    val job = async {
-                        downloadFromURLProgress(url = url, downloadProgress = downloadProgress, isSuccess)
+                    downloadFromURLProgress(url = url, downloadProgress, isSuccess = isSuccess)
 
-
-                        if(!isSuccess.value) {
-                            //Warning ...
-                        }else {
-                            //Update the local commit
-                            Settings().putString("localCommit", infoList.first().commit)
-                        }
-                        isProcessing.value = false
-                        isShowPopup.value = false
-                        canUpdatePopup.value = false
+                    if(!isSuccess.value) {
+                        //Warning ...
+                    }else {
+                        //Update the local commit
+                        Settings().putString("localCommit", infoList.first().commit)
                     }
+                    isProcessing.value = false
+                    isShowPopup.value = false
+                    canUpdatePopup.value = false
 
-                    job.await()
-                    job.getCompleted()
-
-                }
+                }.await()
             }
         }
     }
@@ -195,15 +192,21 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>,canUpdatePopup: Mutable
 @Composable
 fun UpdateAssetsPopupDownloading(showPopup: MutableState<Boolean>, latestAssetsInfo: UpdateAssetsInfo, updateState: UpdateAssetsStatus, downloadProgress: MutableState<Long>) {
     val fileSize = latestAssetsInfo.size["${Language.TextLanguageInstance.folderName}-${updateState.name}"] ?: 0L
-
     //State can be "DOWNLOADING", "UNZIPPING", "FINISH", "ERROR-NETWORK", "ERROR-UNZIP"
-    val downloadState = remember { mutableStateOf(DownloadAssetsState.DOWNLOADING) }
     Column {
         Spacer(modifier = Modifier.height(24.dp))
         //下載進度: 18.5% (1.85MB / 10.0MB)
-        Text("下載進度: ${formatDecimal(downloadProgress.value / fileSize * 100)}% (${formatDecimalByte(downloadProgress.value / 1048576f, 2, isUnited = true)} / ${formatDecimalByte(fileSize / 1048576f,2, isUnited = true) })", style = FontSizeNormal16(), color = Color(0xFF222222))
+        Text("下載進度: ${
+            formatDecimal(downloadProgress.value / fileSize * 100, isRoundDown = true)
+        }% (${
+            formatDecimalByte(downloadProgress.value, 2)
+        } / ${
+            formatDecimalByte(fileSize,2) 
+        })", style = FontSizeNormal16(), color = Color(0xFF222222))
 
         Spacer(modifier = Modifier.height(12.dp))
+
+        //println("From UI : ${downloadProgress.value} / $fileSize")
 
         ThemedProgressBar(
             progress = downloadProgress.value,
@@ -225,9 +228,8 @@ fun UpdateAssetsPopupAsking(
     denyUpdate: MutableState<Boolean>
 ) {
     val fileSizePretty = formatDecimalByte(
-        (latestAssetsInfo.size["${Language.TextLanguageInstance.folderName}-${updateState.name}"] ?: 0L) / 1048576f //Present By MB
+        (latestAssetsInfo.size["${Language.TextLanguageInstance.folderName}-${updateState.name}"] ?: 0L)
         ,2,
-        isUnited = true
     )
     Column {
         Text(text = "更新檔案大小: $fileSizePretty", style = FontSizeNormal16(), color = Color(0xFF222222), modifier = Modifier.align(Alignment.CenterHorizontally))

@@ -67,10 +67,13 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.IO
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.async
+import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeout
 import kotlinx.datetime.Clock
 import kotlinx.datetime.DateTimePeriod
@@ -108,8 +111,10 @@ import utils.calculator.TeamListItem
 import utils.calculator.TeammateItem
 import utils.starbase.StarbaseAPI
 import writeToFile
+import kotlin.coroutines.ContinuationInterceptor
 import kotlin.math.pow
 import kotlin.math.roundToInt
+import kotlin.native.concurrent.ThreadLocal
 import kotlin.time.Duration
 
 /*
@@ -229,7 +234,7 @@ fun formatDecimal(number: Number, decimalPlaces: Int = 1, isRoundDown: Boolean =
         "$integerPart${if (decimalPlaces > 0) {".$decimalPart"} else {""}}"
     }
 }
-fun formatDecimalByte(number: Number, decimalPlaces: Int = 1, isRoundDown: Boolean = false, isUnited: Boolean = false): String {
+fun formatDecimalByte(number: Number, decimalPlaces: Int = 1, isRoundDown: Boolean = true, isUnited: Boolean = true): String {
     val multiplier = 10.0.pow(decimalPlaces)
     val roundedNumber = if (isRoundDown) {
         kotlin.math.floor(number.toDouble() * multiplier)
@@ -246,23 +251,24 @@ fun formatDecimalByte(number: Number, decimalPlaces: Int = 1, isRoundDown: Boole
     }
 
     val scaledNumber = when (suffix) {
-        "T" -> roundedNumber / (1_048_576L * 1_048_576L)
-        "B" -> roundedNumber / (1_048_576 * 1024)
-        "M" -> roundedNumber / (1_048_576)
-        "K" -> roundedNumber / 1_024
+        "TB" -> roundedNumber / (1_048_576L * 1_048_576L)
+        "GB" -> roundedNumber / (1_048_576 * 1024)
+        "MB" -> roundedNumber / 1_048_576
+        "KB" -> roundedNumber / 1_024
         else -> roundedNumber
     }
 
-    val parts = if(isUnited){scaledNumber}else{roundedNumber}.toString().split('.')
+    val roundedScaledNumber = if (isRoundDown) {
+        kotlin.math.floor(scaledNumber * multiplier) / multiplier
+    } else {
+        kotlin.math.round(scaledNumber * multiplier) / multiplier
+    }
+
+    val parts = roundedScaledNumber.toString().split('.')
     val integerPart = parts[0].reversed().chunked(3).joinToString(",").reversed()
     val decimalPart = parts.getOrNull(1)?.padEnd(decimalPlaces, '0') ?: "0".repeat(decimalPlaces)
-    return if (isUnited) {
-        "$integerPart${if (decimalPlaces > 0) {".$decimalPart"} else {""}}$suffix"
-    } else {
-        "$integerPart${if (decimalPlaces > 0) {".$decimalPart"} else {""}}"
-    }
+    return "$integerPart${if (decimalPlaces > 0) {".$decimalPart"} else {""}}$suffix"
 }
-
 /**
  * Convert Px to Dp
  */
@@ -402,22 +408,26 @@ fun getAssetsStrByFilePath(filePath: String, defaultData : String = "{}"): Strin
 //ref: https://stackoverflow.com/questions/65082734/how-can-i-download-a-large-file-with-ktor-and-kotlin-with-a-progress-indicator
 @OptIn(ExperimentalCoroutinesApi::class)
 fun downloadFromURLProgress(url: String, downloadProgress: MutableState<Long>, isSuccess: MutableState<Boolean>) {
+    val isDownloading = mutableStateOf(false)
     val client = getLocalHttpClient {
-        install(HttpTimeout){ requestTimeoutMillis = 8000 }
+        install(HttpTimeout){
+            socketTimeoutMillis =  8000
+            requestTimeoutMillis = 30*60*1000
+        }
         expectSuccess = true
     }
+    val mainScope = CoroutineScope(Dispatchers.Main + SupervisorJob()) // 定義主線程範圍
+
 
     try {
         isSuccess.value =  runBlocking {
-            return@runBlocking withTimeout(8000) {
-                val response: HttpResponse = client.prepareGet(Url(url)) {
+            val response: HttpResponse = client.prepareGet(Url(url)) {
                     onDownload { bytesSentTotal, contentLength ->
-                        CoroutineScope(Dispatchers.Default).launch {
-                            while (bytesSentTotal < (contentLength ?: 0)) {
-                                downloadProgress.value = bytesSentTotal
-                                if (bytesSentTotal == contentLength) break
-                                delay(10)
-                            }
+                        isDownloading.value = true
+                        mainScope.launch {
+                            downloadProgress.value = bytesSentTotal
+                            println("Download Progress: $bytesSentTotal, Content Length: $contentLength")
+                            println("-----------------")
                         }
                     }
                 }.execute()
@@ -429,21 +439,18 @@ fun downloadFromURLProgress(url: String, downloadProgress: MutableState<Long>, i
                         "readFromOnlineURL(url = ${url})",
                         Exception("HTTP Error Code ${response.status.value} : ${response.status.description}")
                     )
-                    return@withTimeout false
+                    return@runBlocking false
                 } else {
                     val fileSystem = FileSystem.SYSTEM
                     val filePath = getAppSpecificDirectory().resolve("temp").resolve("update.zip")
                     fileSystem.createDirectories(filePath.parent!!, mustCreate = false)
 
-                    return@withTimeout async {
+                    val result = async {
                         response.bodyAsChannel().writeToFile(filePath.toString())
                         delay(500)
-                        extractZip(zipPath = filePath, rootPath = getAppSpecificDirectory())
-                    }.let { it->
-                        it.await()
-                        return@let it.getCompleted()
-                    }
-                }
+                        return@async extractZip(zipPath = filePath, rootPath = getAppSpecificDirectory())
+                    }.await()
+                    return@runBlocking result
             }
         }
 
@@ -455,115 +462,10 @@ fun downloadFromURLProgress(url: String, downloadProgress: MutableState<Long>, i
         // All response
         errorLog("StarbaseRequest", "downloadFromURLProgress(url = ${url}, downloadProgress = ${downloadProgress.value})",e)
         isSuccess.value = false
+    }finally {
+        client.close()
     }
 }
-
-
-fun downloadFromURLProgress2(url: String, downloadProgress: MutableState<Long>) : Boolean {
-    var isSuccess = false
-    return runBlocking {
-        try {
-            HttpClient().prepareGet(
-                url = Url(url),
-                block = {
-                    val timeout = 8000L;
-                    timeout {
-                        requestTimeoutMillis = timeout
-                        connectTimeoutMillis = timeout
-                        socketTimeoutMillis = timeout
-                    }
-
-                    onDownload { bytesSentTotal, contentLength ->
-                        CoroutineScope(Dispatchers.Default).launch {
-
-                            while (bytesSentTotal < (contentLength ?: 0)) {
-                                downloadProgress.value = bytesSentTotal
-                                delay(50)
-                                if (bytesSentTotal == contentLength) break
-                            }
-                        }
-                    }
-                }
-            ).execute { response: HttpResponse ->
-                if (response.status.value in 200..299){
-                    val fileSystem = FileSystem.SYSTEM
-                    val filePath = getAppSpecificDirectory().resolve("temp").resolve("update.zip")
-                    fileSystem.createDirectories(filePath.parent!!, mustCreate = false)
-
-                    response.bodyAsChannel().writeToFile(filePath.toString())
-
-                    isSuccess = extractZip(zipPath = filePath, rootPath = getAppSpecificDirectory())
-
-                    return@execute
-                }else{
-                    errorLog("UtilTools.kt", "downloadFromURLProgress(url = ${url}, downloadProgress = ${downloadProgress.value})", Exception("HTTP Error Code ${response.status.value} : ${response.status.description}"))
-                    return@execute
-                }
-            }
-            return@runBlocking isSuccess
-        }catch (e: Exception){
-            errorLog("UtilTools.kt", "downloadFromURLProgress(url = ${url}, downloadProgress = ${downloadProgress.value})", e)
-            return@runBlocking false
-        }
-    }
-}
-
-
-//downloadFromURLProgress function, keep updating the downloadProgress
-/*
-fun downloadFromURLProgress(url: String, downloadProgress: MutableState<Long>) : Boolean {
-    val client = HttpClient()
-    try {
-        return runBlocking {
-            return@runBlocking withTimeout(8000) {
-                val response: HttpResponse = client.get(url){
-                    onDownload { bytesSentTotal, contentLength ->
-                        CoroutineScope(Dispatchers.Default).launch {
-                            while (bytesSentTotal < (contentLength ?: 0)) {
-                                downloadProgress.value = bytesSentTotal
-                                delay(50)
-                                if (bytesSentTotal == contentLength) break
-                            }
-                        }
-                    }
-                }
-
-                //Check whether it is having any errors
-                if (!arrayListOf(200, 201).contains(response.status.value)) {
-                    errorLog(
-                        "UtilTools.kt",
-                        "downloadFromURLProgress(url = ${url}, downloadProgress = ${downloadProgress.value})",
-                        Exception("HTTP Error Code ${response.status.value} : ${response.status.description}")
-                    )
-                    return@withTimeout false
-                } else {
-                    //write what we get into the zip file in temp
-                    val fileSystem = FileSystem.SYSTEM
-                    val file = getAppSpecificDirectory().resolve("temp").resolve("update.zip")
-                    fileSystem.createDirectories(file.parent!!, mustCreate = false)
-
-                    fileSystem.write(file) {
-                        writeUtf8("")
-                    }
-
-                    response.bodyAsChannel().copyTo(FileSystem.SYSTEM.sink(file).buffer())
-                    FileSystem.SYSTEM.sink(file).buffer().use { sink ->
-                        sink.buffer().write(ByteArray(response.body()))
-                    }
-                    return@withTimeout true
-                }
-            }
-        }
-    }catch (e : UnresolvedAddressException){
-        //Cannot find the Address, maybe bcz of u are offline
-        // errorLog("UtilTools.kt", "readFromOnlineURL(url = ${url})",e)
-    }catch (e : Exception){
-        // All response
-        errorLog("UtilTools.kt", "downloadFromURLProgress(url = ${url}, downloadProgress = ${downloadProgress.value})",e)
-    }
-    return false
-}
- */
 
 fun extractZip(zipPath: okio.Path, rootPath: okio.Path): Boolean {
     val zipFile = File(zipPath.toString())
@@ -593,6 +495,7 @@ fun extractZip(zipPath: okio.Path, rootPath: okio.Path): Boolean {
                     }
                 }
             }
+            zipFile.delete()
             return@runBlocking true
         } catch (e: Exception) {
             errorLog("UtilTools.kt", "extractZip(zipPath = $zipPath, rootPath = $rootPath)", e)

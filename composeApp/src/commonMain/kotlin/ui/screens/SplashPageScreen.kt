@@ -43,6 +43,7 @@ import types.UserAccount.Companion.refreshNoteData
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
 import ui.navigation.Screen
+import ui.navigation.refreshInit
 import ui.navigation.screenInstance
 import utils.app.FontSizeNormalLarge24
 import utils.app.FontSizeNormalSmall
@@ -89,10 +90,13 @@ fun SplashPage(
     }
 
     LaunchedEffect(showPopup.value, hasRefreshed.value, showUpdatePopup.value){
-        println("canUpdatePopup: ${canUpdatePopup.value}, showPopup: ${showPopup.value}, showUpdatePopup: ${showUpdatePopup.value}, screenInstance: $screenInstance, hasRefreshed: ${hasRefreshed.value}")
+        //println("canUpdatePopup: ${canUpdatePopup.value}, showPopup: ${showPopup.value}, showUpdatePopup: ${showUpdatePopup.value}, screenInstance: $screenInstance, hasRefreshed: ${hasRefreshed.value}")
         if(!showPopup.value && canUpdatePopup.value){
             showUpdatePopup.value = true
         }else if (!showPopup.value && !showUpdatePopup.value && screenInstance !is Screen.HomePage) {
+
+            refreshInit()
+
             screenInstance = Screen.HomePage
             navigator.navigate(Screen.HomePage.route){
                 popUpTo(Screen.SplashPage.route){

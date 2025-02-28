@@ -221,7 +221,7 @@ class Language() {
         }else{
             setAppLanguage()
             if (doRefresh.value){
-                refreshInit()
+                //refreshInit()
                 doRefresh.value = false
             }
         }
