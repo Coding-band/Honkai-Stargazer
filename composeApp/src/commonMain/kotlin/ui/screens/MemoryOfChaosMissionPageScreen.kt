@@ -291,6 +291,8 @@ fun MemoryOfChaosContent(
     val mocInfoDisplayIndex = remember { mutableStateOf(0) }
     val mocPhaseIndex = remember { mutableStateOf(0) }
 
+    if(mocPhaseList.isEmpty() || mocInfoList == null) return
+
     Box(
         Modifier.background(Brush.linearGradient(listOf(Color(0xFF000000), Color(0x00000000))))
             .border(1.dp, Color(0x66DDDDDD), shape = RoundedCornerShape(4.dp))
