@@ -1,4 +1,4 @@
-package com.voc.honkaistargazer
+package com.voc.stargazer3
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Box
