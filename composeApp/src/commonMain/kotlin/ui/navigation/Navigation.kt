@@ -98,7 +98,7 @@ import ui.screens.refreshPFList
 import ui.screens.refreshRelicList
 import utils.app.Constants.Companion.HOME_WIDTH
 import utils.app.Language
-import utils.app.toastInstance
+import utils.app.snackbarInstance
 
 /**
  * Navigate to a route with a limited interval.
@@ -153,7 +153,6 @@ fun isPadMode(): Boolean {
  */
 @Composable
 fun RootContent() {
-    val snackbarHostState = remember { SnackbarHostState() }
     hazeStateRoot = remember { HazeState() }
     val isPadMode = remember { mutableStateOf(false) }
     val isRotate = remember { mutableStateOf(false) }
@@ -179,7 +178,7 @@ fun RootContent() {
     }
 
     Scaffold(
-        snackbarHost = { SnackbarHost(snackbarHostState) },
+        snackbarHost = { SnackbarHost(snackbarInstance) },
     ) {
 
         AnimatedContent(
@@ -199,10 +198,11 @@ fun RootContent() {
 
         Row(modifier = Modifier.haze(hazeStateRoot)) {
             if(isPadMode.value && screenInstance != Screen.SplashPage){
-                Box(Modifier
+                Scaffold(Modifier
                     .width(HOME_WIDTH)
                     .let { if (getScreenSizeInfo().wDP < HOME_WIDTH * 1.5f) it.weight(1f) else it }
-                    .fillMaxHeight()
+                    .fillMaxHeight(),
+                    snackbarHost = { SnackbarHost(snackbarInstance) },
                 ) {
                     if(globalPadHomePageBg.value){
                         MakeBackground(screen = Screen.HomePage, forceBlur = false)
@@ -632,6 +632,7 @@ fun withBGScreen(isPadMode: MutableState<Boolean>, content: @Composable () -> Un
         //Overlay - For Error Message or Loading Popup
         PomPomPopupUI(hazeState = hazeState)
 
+        /*
         Toaster(
             state = toastInstance,
             richColors = true,
@@ -641,6 +642,7 @@ fun withBGScreen(isPadMode: MutableState<Boolean>, content: @Composable () -> Un
             darkTheme = true,
             modifier = Modifier.navigationBarsPadding()
         )
+         */
     }
 }
 

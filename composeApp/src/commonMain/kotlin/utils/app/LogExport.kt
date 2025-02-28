@@ -27,10 +27,15 @@ import com.dokar.sonner.ToasterState
 import com.dokar.sonner.rememberToasterState
 import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
+import files.ConfirmBTN
 import files.FunctionStillInDevelop
+import files.OK
 import files.Res
 import files.pom_pom_failed_issue
 import getDeviceInfo
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlinx.datetime.Clock
 import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
@@ -55,12 +60,16 @@ import kotlin.time.Duration.Companion.milliseconds
 val dateFormat = LocalDateTime.Format { byUnicodePattern("yyyy-MM-dd'T'HH:mm:ss[.SSS]") }
 
 lateinit var ToastStrFunctionStillInDevelop: String
-lateinit var toastInstance : ToasterState
+//lateinit var toastInstance : ToasterState
+lateinit var snackbarInstance : SnackbarHostState
+lateinit var CLOSE_SNACKBAR : String
 
 @Composable
 fun LogExportInit(){
     ToastStrFunctionStillInDevelop = removeStrQuote(Res.string.FunctionStillInDevelop)
-    toastInstance = rememberToasterState()
+    //toastInstance = rememberToasterState()
+    snackbarInstance = remember { SnackbarHostState() }
+    CLOSE_SNACKBAR = removeStrQuote(Res.string.ConfirmBTN)
 }
 
 @Serializable
@@ -110,34 +119,80 @@ suspend fun raiseErrorMessageSnack(errorString: String, snackbarHostState: Snack
 }
 
 fun showErrorToast(errorLogExportObj: LogExportObj) {
+    //Due to compose-sonner are not keeping maintain, also iOS target will crash when using it
+    /*
     toastInstance.show(
         message = "${errorLogExportObj.className} - ${errorLogExportObj.functionName} : ${errorLogExportObj.exceptionMessage}",
         type = ToastType.Error,
         duration = 30000.milliseconds,
     )
+     */
+    CoroutineScope(Dispatchers.Default).launch {
+        snackbarInstance.showSnackbar(
+            message = "${errorLogExportObj.className} - ${errorLogExportObj.functionName} : ${errorLogExportObj.exceptionMessage}",
+            actionLabel = "CLOSE",
+            duration = SnackbarDuration.Long
+        )
+    }
 }
 
-fun showSuccessToast(toasterState: ToasterState = toastInstance, message: String) {
-    toasterState.show(
+fun showSuccessToast(message: String) {
+    //Due to compose-sonner are not keeping maintain, also iOS target will crash when using it
+    /*
+    toastInstance.show(
         message = message,
         type = ToastType.Success,
         duration = 10000.milliseconds,
     )
+     */
+
+    CoroutineScope(Dispatchers.Default).launch {
+        snackbarInstance.showSnackbar(
+            message = message,
+            actionLabel = CLOSE_SNACKBAR,
+            duration = SnackbarDuration.Short
+        )
+    }
 }
-fun showWarningToast(toasterState: ToasterState = toastInstance, message: String) {
-    toasterState.show(
+fun showWarningToast(message: String) {
+    //Due to compose-sonner are not keeping maintain, so we will use snackbar for iOS
+    /*
+    toastInstance.show(
         message = message,
         type = ToastType.Warning,
         duration = 10000.milliseconds,
     )
+     */
+    CoroutineScope(Dispatchers.Default).launch {
+        snackbarInstance.showSnackbar(
+            message = message,
+            actionLabel = CLOSE_SNACKBAR,
+            duration = SnackbarDuration.Long
+        )
+    }
 }
 
-fun showFunctionIsDevelopingToast(toasterState: ToasterState = toastInstance) {
-    toasterState.show(
-        message = ToastStrFunctionStillInDevelop,
-        type = ToastType.Warning,
-        duration = 5000.milliseconds,
-    )
+fun showFunctionIsDevelopingToast() {
+    //Due to compose-sonner are not keeping maintain, also iOS target will crash when using it
+    /*
+    try {
+        toasterState.show(
+            message = ToastStrFunctionStillInDevelop,
+            type = ToastType.Warning,
+            duration = 5000.milliseconds,
+        )
+    }catch (e: Exception){
+        println("showFunctionIsDevelopingToast : ${e.stackTraceToString()}")
+        errorLog("LogExportObj", "showFunctionIsDevelopingToast", e)
+    }
+    */
+    CoroutineScope(Dispatchers.Default).launch {
+        snackbarInstance.showSnackbar(
+            message = ToastStrFunctionStillInDevelop,
+            actionLabel = CLOSE_SNACKBAR,
+            duration = SnackbarDuration.Short
+        )
+    }
 }
 
 /**

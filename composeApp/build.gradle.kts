@@ -36,7 +36,7 @@ val versionCodeFinal = properties.getProperty("APP_VERSION_CODE").toInt() + 1
 
 //BETA | C.BETA | DEV | PRODUCTION
 //VersionUpdateCheck
-val isForAppStore = true
+val isForAppStore = false
 var appProfile = "C.BETA" //Please Modify this String ONLY IF NECESSERY
 val appVersionCodeName = "SG3"
 
@@ -120,7 +120,7 @@ kotlin {
             implementation(libs.kotlinx.datetime)
 
             //Sonner - Toast
-            implementation(libs.sonner)
+            //implementation(libs.sonner)
 
             implementation(libs.richeditor.compose)
 

@@ -447,7 +447,7 @@ fun downloadFromURLProgress(url: String, downloadProgress: MutableState<Long>, i
 
                     val result = async {
                         response.bodyAsChannel().writeToFile(filePath.toString())
-                        delay(500)
+                        delay(1000)
                         return@async extractZip(zipPath = filePath, rootPath = getAppSpecificDirectory())
                     }.await()
                     return@runBlocking result

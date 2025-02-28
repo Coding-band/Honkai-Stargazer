@@ -9,13 +9,20 @@ import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.client.engine.darwin.Darwin
 import io.ktor.utils.io.ByteReadChannel
+import io.ktor.utils.io.cancel
+import io.ktor.utils.io.copyTo
 import io.ktor.utils.io.readAvailable
-import kotlinx.cinterop.ExperimentalForeignApi
-import kotlinx.cinterop.allocArray
-import kotlinx.cinterop.convert
-import kotlinx.cinterop.memScoped
-import kotlinx.cinterop.refTo
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.runBlocking
+import okio.Buffer
+import okio.FileSystem
 import okio.Path.Companion.toPath
+import okio.Sink
+import okio.Source
+import okio.Timeout
+import okio.buffer
+import okio.use
 import org.jetbrains.skia.Image
 import platform.Foundation.NSApplicationSupportDirectory
 import platform.Foundation.NSBundle
@@ -31,14 +38,6 @@ import platform.UIKit.UIInterfaceOrientationLandscapeLeft
 import platform.UIKit.UIInterfaceOrientationLandscapeRight
 import platform.UIKit.UIKeyboardAppearanceDark
 import platform.UIKit.UITextField
-import platform.darwin.ByteVar
-import platform.darwin.DISPATCH_QUEUE_PRIORITY_DEFAULT
-import platform.darwin.dispatch_data_create
-import platform.darwin.dispatch_get_global_queue
-import platform.darwin.dispatch_write
-import platform.posix.O_RDWR
-import platform.posix.close
-import platform.posix.open
 import utils.annotation.DoItLater
 import utils.device.DeviceInfo
 
@@ -132,12 +131,75 @@ actual fun getAppSpecificDirectory(): okio.Path {
 
 private const val BUFFER_SIZE = 4096
 
+class ByteReadChannelSource(
+    private val channel: ByteReadChannel,
+    private val scope: CoroutineScope = GlobalScope
+) : Source {
+    override fun read(sink: Buffer, byteCount: Long): Long {
+        if (channel.isClosedForRead) return -1L
+
+        return runBlocking(scope.coroutineContext) {
+            val buffer = ByteArray(byteCount.coerceAtMost(8192).toInt())
+            val bytesRead = channel.readAvailable(buffer, 0, buffer.size)
+            if (bytesRead < 0) {
+                -1L
+            } else {
+                sink.write(buffer, 0, bytesRead)
+                bytesRead.toLong()
+            }
+        }
+    }
+
+    override fun close() {
+        channel.cancel()
+    }
+
+    override fun timeout(): Timeout = Timeout.NONE
+}
+
+// 擴展函數
+fun ByteReadChannel.copyToOkio(sink: Sink, limit: Long = Long.MAX_VALUE): Long {
+    val source = ByteReadChannelSource(this)
+    return source.use { okioSource ->
+        val bufferedSink = sink.buffer()
+        var totalBytesCopied = 0L
+        bufferedSink.use {
+            while (totalBytesCopied < limit) {
+                val bytesRead = okioSource.read(bufferedSink.buffer, minOf(limit - totalBytesCopied, 8192L))
+                if (bytesRead == -1L) break
+                totalBytesCopied += bytesRead
+                bufferedSink.flush() // 可選，根據需求決定是否立即刷新
+            }
+            totalBytesCopied
+        }
+    }
+}
+
+actual suspend fun ByteReadChannel.writeToFile(filepath: String) {
+    this.copyToOkio(FileSystem.SYSTEM.sink(filepath.toPath()))
+}
+
+/*
+fun writeChunk(fd: Int, data: dispatch_data_t, queue: dispatch_queue_t): CompletableDeferred<Unit> {
+    val deferred = CompletableDeferred<Unit>()
+    dispatch_write(fd, data, queue) { _, error ->
+        if (error == 0) {
+            deferred.complete(Unit)
+        } else {
+            deferred.completeExceptionally(IOException("Write failed with error $error"))
+        }
+    }
+    return deferred
+}
+
 @OptIn(ExperimentalForeignApi::class)
 actual suspend fun ByteReadChannel.writeToFile(filepath: String) {
     val channel = this
     val queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT.convert(), 0u)
     val buffer = ByteArray(BUFFER_SIZE)
     val fd = open(filepath, O_RDWR)
+
+    val writeOperations = mutableListOf<CompletableDeferred<Unit>>()
 
     try {
         while (!channel.isClosedForRead) {
@@ -148,14 +210,16 @@ actual suspend fun ByteReadChannel.writeToFile(filepath: String) {
                 val dst = buffer.refTo(0).getPointer(this)
                 val data = dispatch_data_create(dst, rs.convert(), queue) {}
 
-                dispatch_write(fd, data, queue) { _, error ->
-                    if (error != 0) {
-                        channel.cancel(IllegalStateException("Unable to write data to the file $filepath"))
-                    }
-                }
+                val deferred = writeChunk(fd, data, queue)
+                writeOperations.add(deferred)
             }
         }
+
+        // 等待所有寫入操作完成
+        writeOperations.awaitAll()
     } finally {
         close(fd)
     }
 }
+
+ */
