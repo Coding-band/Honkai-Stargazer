@@ -1,22 +1,33 @@
 package ui.screens
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -29,11 +40,21 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.platform.LocalClipboard
+import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavBackStackEntry
@@ -52,15 +73,23 @@ import files.SelectAccountInServer
 import files.SelectServerTitle
 import files.TutorialVideo
 import files.UseCookiesToLogin
+import files.bg_transparent
+import files.ic_arrow_down_spinner
+import files.ic_selected_orange_circle
+import files.phorphos_clipboard_regular
+import files.phorphos_clipboard_text_fill
+import files.phorphos_clipboard_text_regular
 import getDeviceInfo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.jetbrains.compose.resources.painterResource
 import types.UserAccount
 import ui.components.AppDialog
 import ui.components.BackIcon
+import ui.components.DropdownMenuNoPadding
 import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
@@ -76,7 +105,9 @@ import utils.annotation.DoItLater
 import utils.app.AppFont
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
+import utils.app.Language.Companion.TextLanguageInstance
 import utils.app.LongStringXML
+import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.showWarningToast
 import utils.hoyolab.HoyolabConst
@@ -297,12 +328,21 @@ fun HoyolabManualLoginPopup(modifier: Modifier = Modifier, showPopup : MutableSt
     val serverList = HoyolabConst.SERVER.entries.filter { it != HoyolabConst.SERVER.UNKNOWN }
     val serverSelectedIndex = remember { mutableStateOf(0) }
     val urlHandler = LocalUriHandler.current
+    val focusManager = LocalFocusManager.current
     var cookieInput by remember { mutableStateOf(TextFieldValue("")) }
+    val isDropDownOpen = remember { mutableStateOf(false) }
+    val density = LocalDensity.current.density
+
+    val optionTextViewSize = remember { mutableStateOf(IntSize.Zero) }
 
     if (showPopup.value){
         //popup properties, is really sad to see that it still need to manually set focusable to true
         //Popup(alignment = Alignment.Center, properties = PopupProperties(focusable = true)) {
-        Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        Box(modifier = modifier.fillMaxSize().pointerInput(Unit){
+            detectTapGestures(onTap = {
+                focusManager.clearFocus()
+            })
+        }, contentAlignment = Alignment.Center) {
             AppDialog(
                 titleString = removeStrQuote(Res.string.SelectServerTitle),
                 hazeState = hazeState,
@@ -320,13 +360,63 @@ fun HoyolabManualLoginPopup(modifier: Modifier = Modifier, showPopup : MutableSt
 
                         item {
                             // Button to change server
-                            UIButton(
-                                text = removeStrQuote(serverList[serverSelectedIndex.value].localeName),
-                                buttonSize = UIButtonSize.NormalLargeText,
-                                onClick = {
-                                    serverSelectedIndex.value = (serverSelectedIndex.value + 1) % serverList.size
+                            Box(
+                                contentAlignment = Alignment.BottomCenter,
+                                modifier = Modifier
+                                    .defaultMinSize(100.dp, 30.dp)
+                                    .wrapContentSize()
+                                    .clickable { isDropDownOpen.value = !isDropDownOpen.value }
+                            ) {
+                                Column(
+                                    modifier = Modifier
+                                        .wrapContentWidth()
+                                        .onSizeChanged { optionTextViewSize.value = it },
+                                ){
+                                    UIButton(
+                                        buttonSize = UIButtonSize.NormalTextLeft,
+                                        text = removeStrQuote(serverList[serverSelectedIndex.value].localeName),
+                                        isAvailable = true,
+                                        onClick = { isDropDownOpen.value = !isDropDownOpen.value },
+                                        icon = Res.drawable.ic_arrow_down_spinner
+                                    )
+                                    Spacer(Modifier.height(8.dp))
                                 }
-                            )
+                                //對於DropdownItem沒法按照設計稿展示，暫時無解
+                                DropdownMenuNoPadding(
+                                    expanded = isDropDownOpen.value,
+                                    onDismissRequest = { isDropDownOpen.value = false },
+                                    modifier = Modifier
+                                        .background(Color(0xFFDDDDDD))
+                                        .width(pxToDp(optionTextViewSize.value.width, density)),
+                                ) {
+                                    serverList.forEachIndexed { index, option ->
+                                        DropdownMenuItem(
+                                            onClick = {
+                                                serverSelectedIndex.value = index
+                                                isDropDownOpen.value = false
+                                                //optionAction(schoolIndex.value)
+                                            },
+                                            modifier = Modifier.background(if(serverSelectedIndex.value == index)
+                                            //Color(0x0F000000) else Color(0x00000000)
+                                                Color(0x0F000000) else Color(0x00000000)
+                                            )
+                                        ) {
+                                            Row{
+                                                Text(
+                                                    text = removeStrQuote(option.localeName),
+                                                    style = FontSizeNormal14(),
+                                                    color = Color.Black,
+                                                    modifier = Modifier.weight(1f)
+                                                )
+                                                Image(
+                                                    painterResource(if (serverSelectedIndex.value == index) Res.drawable.ic_selected_orange_circle else Res.drawable.bg_transparent),
+                                                    contentDescription = null
+                                                )
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
 
                         item {
@@ -339,6 +429,8 @@ fun HoyolabManualLoginPopup(modifier: Modifier = Modifier, showPopup : MutableSt
                             )
                         }
 
+                        item { Spacer(modifier = Modifier.height(4.dp)) }
+
                         item {
                             // Text Field for Cookies Input
                             BoxWithConstraints(
@@ -346,6 +438,7 @@ fun HoyolabManualLoginPopup(modifier: Modifier = Modifier, showPopup : MutableSt
                                     .fillMaxWidth()
                                     .heightIn(128.dp,320.dp)
                             ) {
+                                val clipboard = LocalClipboardManager.current
                                 BasicTextField(
                                     value = cookieInput,
                                     onValueChange = { cookieInput = it },
@@ -353,17 +446,35 @@ fun HoyolabManualLoginPopup(modifier: Modifier = Modifier, showPopup : MutableSt
                                         .background(Color(0xCCFFFFFF), RoundedCornerShape(24.dp))
                                         .heightIn(128.dp,320.dp)
                                         .fillMaxWidth()
-                                        .aspectRatio(1f)
                                         .padding(16.dp),
                                     decorationBox = { innerTextField ->
-                                        if (cookieInput.text.isEmpty()){
-                                            Text(
-                                                text = LongStringXML().LoginViaPCToGetCookies(),
-                                                color = Color.Gray,
-                                                style = TextStyle(fontSize = 14.sp, fontWeight = FontWeight.Normal, fontFamily = AppFont())
+                                        Box(modifier = Modifier.fillMaxSize()){
+                                            if (cookieInput.text.isEmpty()){
+                                                Text(
+                                                    text = LongStringXML().LoginViaPCToGetCookies(),
+                                                    color = Color.Gray,
+                                                    style = TextStyle(fontSize = 14.sp, fontWeight = FontWeight.Normal, fontFamily = AppFont())
+                                                )
+                                            }
+                                            Box(modifier = Modifier.fillMaxSize()){
+                                                innerTextField()
+                                            }
+                                            Image(
+                                                painter = painterResource(Res.drawable.phorphos_clipboard_text_fill),
+                                                contentDescription = "Paste",
+                                                modifier = Modifier
+                                                    .wrapContentSize()
+                                                    .align(Alignment.BottomEnd)
+                                                    .size(48.dp)
+                                                    .background(Color(0xFFDEDFE0), RoundedCornerShape(12.dp))
+                                                    .clickable {
+                                                        cookieInput = TextFieldValue(
+                                                            annotatedString = clipboard.getText() ?: AnnotatedString("")
+                                                        )
+                                                    }
+                                                    .padding(8.dp)
                                             )
                                         }
-                                        innerTextField()
 
                                     },
                                 )
