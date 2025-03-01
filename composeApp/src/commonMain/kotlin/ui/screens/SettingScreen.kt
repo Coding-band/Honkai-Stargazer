@@ -354,7 +354,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                     }
                 }
 
-                item { Box(modifier = Modifier.size(16.dp).navigationBarsPadding()) }
+                item { Box(modifier = Modifier.navigationBarsPadding())}
 
             }
 
@@ -385,22 +385,12 @@ fun SettingOptionNoneBar(
 
             //Options
             Row(modifier = Modifier.weight(16/35f).background(Color(0xCCF3F9FF))){
-                Image(
-                    painter = painterResource(Res.drawable.bg_transparent),
-                    contentDescription = null,
-                    modifier = Modifier.padding(start = 12.dp, top = 12.dp, bottom = 12.dp, end = 0.dp).size(16.dp).align(Alignment.CenterVertically)
-                )
                 Text(
                     color = Color.Black,
                     text = optionStatic,
                     style = FontSizeNormal14(),
                     textAlign = TextAlign.Center,
                     modifier = Modifier.padding(12.dp).weight(1f).align(Alignment.CenterVertically)
-                )
-                Image(
-                    painter = painterResource(Res.drawable.bg_transparent),
-                    contentDescription = null,
-                    modifier = Modifier.padding(start = 0.dp, top = 12.dp, bottom = 12.dp, end = 12.dp).size(16.dp).align(Alignment.CenterVertically)
                 )
             }
         }

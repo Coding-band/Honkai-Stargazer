@@ -625,7 +625,6 @@ fun NavHostController.popBackStackLimited() {
     val lastNavigationTime: Long = Settings().getLong("lastNavigationTime", 0)
 
     val currentTime = Clock.System.now().toEpochMilliseconds()
-    print("popBackStackLimited : ${currentTime - lastNavigationTime}")
     if (currentTime - lastNavigationTime >= navigationInterval) {
         popBackStack()
         Settings().putLong("lastNavigationTime", currentTime)

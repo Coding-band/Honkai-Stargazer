@@ -24,7 +24,6 @@ plugins {
     id("com.codingfeline.buildkonfig").version("0.15.1")
     kotlin("plugin.serialization") version "2.0.10"
 }
-
 /**
  * tasks to gradle.properties
  */

@@ -25,6 +25,7 @@ import com.russhwolf.settings.set
 import dev.chrisbanes.haze.HazeState
 import files.ConfirmBTN
 import files.LaterBTN
+import files.NetworkErrorUnstableConnection
 import files.Res
 import files.UpdateAssetDownloadProgress
 import files.UpdateAssetDownloadingUpdate
@@ -60,7 +61,11 @@ import utils.starbase.StarbaseAPI
 
 private var localCommit = Settings().getString("localCommit", "")
 private lateinit var isProcessing: MutableState<Boolean>
+private var infoList = arrayListOf<UpdateAssetsInfo>()
+private var updateState = UpdateAssetsStatus.SKIP
+
 lateinit var downloadProgress : MutableState<Long>
+lateinit var ERR_NETWORK_UNSTABLE_CONNECTION : String
 
 @Serializable
 data class UpdateAssetsInfo (
@@ -108,49 +113,56 @@ fun updateAssetsInit(){
     }else{
         downloadProgress = rememberSaveable { mutableStateOf(0L) }
     }
+    ERR_NETWORK_UNSTABLE_CONNECTION = removeStrQuote(Res.string.NetworkErrorUnstableConnection)
+}
+
+fun updateCheckInit(forceDownload: Boolean = false) : Boolean{
+    val updateAssetsInfo = readFromOnlineURL("${StarbaseAPI().getGitHubStaticAssetURL()}/updates/info.json")
+    if(updateAssetsInfo.isEmpty() || updateAssetsInfo == "{}") {
+        //Cannot get the update info (Network error maybe)
+
+        //Show the warning dialog to the user
+        //...
+        showWarningToast(ERR_NETWORK_UNSTABLE_CONNECTION)
+        return false
+    }
+
+    val infoJson = Json.parseToJsonElement(updateAssetsInfo).jsonObject["updates"]
+    infoList.clear()
+    infoList = Json.decodeFromJsonElement<ArrayList<UpdateAssetsInfo>>(infoJson!!.jsonArray)
+    val currIndex = infoList.indexOfFirst { it.commit == localCommit }
+    updateState = if(forceDownload) UpdateAssetsStatus.FULL else checkIsNeedUpdateAssets(infoList, currIndex)
+
+    when(updateState){
+        UpdateAssetsStatus.UP_TO_DATE -> {
+            //The user is using the latest version
+            return false
+        }
+        UpdateAssetsStatus.PATCH -> {
+            //Found the current commit in the list,
+            //The user is using the last release version
+            return true
+        }
+        UpdateAssetsStatus.FULL -> {
+            //The user is using an outdated version
+            return true
+        }
+        UpdateAssetsStatus.SKIP -> {
+            //Skipped, maybe the user cannot connect to GitHub?
+            return false
+        }
+    }
 }
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>, hazeState: HazeState, forceDownload: Boolean = false) {
+    if(forceDownload){ //Force download the assets
+        updateCheckInit(forceDownload)
+    }
+
     if(isShowPopup.value){
         //First, check what git commit is the user using
-        val updateAssetsInfo = readFromOnlineURL("${StarbaseAPI().getGitHubStaticAssetURL()}/updates/info.json")
-        if(updateAssetsInfo.isEmpty() || updateAssetsInfo == "{}") {
-            //Cannot get the update info (Network error maybe)
-            isShowPopup.value = false;
-
-            //Show the warning dialog to the user
-            //...
-            showWarningToast("Cannot get the update info (Network error maybe)")
-        }
-
-        val infoJson = Json.parseToJsonElement(updateAssetsInfo).jsonObject["updates"]
-        val infoList = Json.decodeFromJsonElement<ArrayList<UpdateAssetsInfo>>(infoJson!!.jsonArray)
-        val currIndex = infoList.indexOfFirst { it.commit == localCommit }
-        val updateState = if(forceDownload) UpdateAssetsStatus.FULL else checkIsNeedUpdateAssets(infoList, currIndex)
-        var url = ""
-        when(updateState){
-            UpdateAssetsStatus.UP_TO_DATE -> {
-                //The user is using the latest version
-                isShowPopup.value = false
-            }
-            UpdateAssetsStatus.PATCH -> {
-                //Found the current commit in the list,
-                //The user is using the last release version
-                isShowPopup.value = true
-                url = "${StarbaseAPI().getGitHubStaticAssetURL()}/updates/${infoList.first().commit}/${infoList.first().commit}-${Language.TextLanguageInstance.folderName}-PATCH.zip"
-            }
-            UpdateAssetsStatus.FULL -> {
-                //The user is using an outdated version
-                isShowPopup.value = true
-                url = "${StarbaseAPI().getGitHubStaticAssetURL()}/updates/${infoList.first().commit}/${infoList.first().commit}-${Language.TextLanguageInstance.folderName}-FULL.zip"
-            }
-            UpdateAssetsStatus.SKIP -> {
-                //Skipped, maybe the user cannot connect to GitHub?
-                isShowPopup.value = false
-            }
-        }
 
         //UI Part
         val acceptUpdate = remember { mutableStateOf(false) }
@@ -183,7 +195,7 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>, hazeState: HazeState, 
 
                 CoroutineScope(Dispatchers.IO).async {
                     val isSuccess = mutableStateOf(false)
-                    downloadFromURLProgress(url = url, downloadProgress, isSuccess = isSuccess)
+                    downloadFromURLProgress(url = "${StarbaseAPI().getGitHubStaticAssetURL()}/updates/${infoList.first().commit}/${infoList.first().commit}-${Language.TextLanguageInstance.folderName}-${updateState.name}.zip", downloadProgress, isSuccess = isSuccess)
 
                     if(!isSuccess.value) {
                         //Warning ...
@@ -192,8 +204,11 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>, hazeState: HazeState, 
                         Settings().putString("localCommit", infoList.first().commit)
                     }
 
+                    refreshInit()
+                    doRefresh.value = true
                     isProcessing.value = false
                     isShowPopup.value = false
+
                 }.await()
             }
         }

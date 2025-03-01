@@ -31,6 +31,7 @@ import getScreenSizeInfo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.jetbrains.compose.resources.Font
@@ -51,6 +52,7 @@ import utils.app.FontSizeNormalSmall
 import utils.app.Language
 import utils.app.Preferences
 import utils.app.UpdateAssetsPopup
+import utils.app.updateCheckInit
 import utils.starbase.StarbaseAPI
 
 
@@ -65,8 +67,7 @@ fun SplashPage(
     val showPopup = remember { mutableStateOf(!Preferences().AppSettings.isLangInitialized()) }
 
     val hasRefreshed = remember { mutableStateOf(false) }
-    val showUpdatePopup = remember { mutableStateOf(false) } //The Real Update Popup
-    val canUpdatePopup = remember { mutableStateOf(true) } //U can show the popup anytime when the language choice is made
+    val showUpdatePopup = remember { mutableStateOf(updateCheckInit()) } //The Real Update Popup
     LaunchedEffect(Unit) {
         if (!showPopup.value) {
             CoroutineScope(Dispatchers.Default).launch {
@@ -91,10 +92,11 @@ fun SplashPage(
     }
 
     LaunchedEffect(showPopup.value, hasRefreshed.value, showUpdatePopup.value){
-        CoroutineScope(Dispatchers.Default).async {
-            if (!showPopup.value && !showUpdatePopup.value && screenInstance !is Screen.HomePage && screenInstance !is Screen.BlankPage) {
-                screenInstance = Screen.HomePage
+        if (!showPopup.value && !showUpdatePopup.value && screenInstance !is Screen.HomePage && screenInstance !is Screen.BlankPage) {
+            screenInstance = Screen.HomePage
 
+            CoroutineScope(Dispatchers.Default).launch {
+                delay(500)
                 withContext(Dispatchers.Main) {
                     navigator.navigate(Screen.HomePage.route){
                         popUpTo(Screen.SplashPage.route){
@@ -102,10 +104,8 @@ fun SplashPage(
                         }
                     }
                 }
-            }else if(!showPopup.value){
-                showUpdatePopup.value = true
             }
-        }.await()
+        }
     }
 
 
@@ -241,5 +241,7 @@ fun SplashPage(
 
     Language().initAppLanguagePopup(showPopup,hazeState = hazeStateRoot)
 
-    UpdateAssetsPopup(showUpdatePopup, hazeStateRoot)
+    if(!showPopup.value){
+        UpdateAssetsPopup(showUpdatePopup, hazeStateRoot)
+    }
 }

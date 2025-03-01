@@ -9,6 +9,8 @@ package ui.components
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -21,7 +23,9 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.OutlinedButton
+import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -101,48 +105,46 @@ fun PageHeader(
                         .fillMaxSize()
                         .weight(1f)
                 ) {
-                    OutlinedButton(
-                        contentPadding = PaddingValues(0.dp),
-                        colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent),
-                        border = BorderStroke(0.dp, Color(0x00FFFFFF)),
-                        shape = CircleShape,
-                        modifier = Modifier
-                            .size(40.dp)
-                            .align(Alignment.CenterVertically),
-                        onClick = { onBack(navigator) },
+                    Box(modifier = Modifier
+                        .size(40.dp)
+                        .align(Alignment.CenterVertically)
+                        .clickable(
+                            onClick = { onBack.invoke(navigator) },
+                            indication = ripple(),
+                            interactionSource = MutableInteractionSource()
+                        )
                     ) {
                         Image(
                             painter = painterResource(resource = backIconId.res),
                             contentDescription = "Back Icon",
                             modifier = Modifier
                                 .size(40.dp)
-                                .align(Alignment.CenterVertically),
-                            colorFilter = ColorFilter.tint(Color.White),
-
-                            )
+                                .align(Alignment.Center),
+                            colorFilter = ColorFilter.tint(Color.White)
+                        )
                     }
+
                     Box(Modifier.weight(1f)){
                         TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
                     }
-                    OutlinedButton(
-                        contentPadding = PaddingValues(0.dp),
-                        modifier = Modifier
-                            .size(40.dp)
-                            .align(Alignment.CenterVertically),
-                        onClick = { onForward() },
-                        colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent),
-                        border = BorderStroke(0.dp, Color(0x00FFFFFF)),
-                        shape = CircleShape,
-                    ) {
+
+                    Box(modifier = Modifier
+                        .size(40.dp)
+                        .align(Alignment.CenterVertically)
+                        .clickable(
+                            onClick = { onForward.invoke() },
+                            indication = ripple(),
+                            interactionSource = MutableInteractionSource()
+                        )
+                    ){
                         Image(
                             painter = painterResource(resource = forwardIconId),
                             contentDescription = "Forward Icon",
                             modifier = Modifier
                                 .size(40.dp)
-                                .align(Alignment.CenterVertically),
-                            colorFilter = ColorFilter.tint(Color.White),
-
-                            )
+                                .align(Alignment.Center),
+                            colorFilter = ColorFilter.tint(Color.White)
+                        )
                     }
                 }
             }

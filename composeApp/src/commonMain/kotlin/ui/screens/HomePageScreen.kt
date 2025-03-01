@@ -443,7 +443,7 @@ fun BottomView(modifier: Modifier = Modifier){
         )
 
         Box(modifier = Modifier.navigationBarsPadding().fillMaxSize()){
-            Text("這個廣告放了在這裏半年，啊是要加了嗎", color = Color.LightGray, style = FontSizeNormal16(), modifier = Modifier.align(Alignment.Center))
+            //Text("這個廣告放了在這裏半年，啊是要加了嗎", color = Color.LightGray, style = FontSizeNormal16(), modifier = Modifier.align(Alignment.Center))
         }
     }
 }

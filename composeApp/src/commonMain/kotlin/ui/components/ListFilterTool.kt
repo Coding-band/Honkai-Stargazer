@@ -88,6 +88,7 @@ import utils.app.Language
 import utils.app.pxToDp
 import utils.app.rememberMutableStateListJsonOf
 import utils.app.removeStrQuote
+import utils.app.showFunctionIsDevelopingToast
 import kotlin.math.max
 
 
@@ -181,6 +182,7 @@ fun <T> ListFilterTool(
                         )
                         .background(Color(0xCCF3F9FF), RoundedCornerShape(4.dp, 20.dp, 4.dp, 4.dp))
                         .clip(shape = RoundedCornerShape(4.dp, 20.dp, 4.dp, 4.dp))
+                        .clickable {  }
                     ) {
                         Column {
                             //Options
@@ -372,12 +374,15 @@ fun <T> ListFilterTool(
                     }
                 )
                 Spacer(modifier = Modifier.width(12.dp))
+
+                @DoItLater("ListFilterTool Search Button")
                 UIButton(
                     modifierTmp = Modifier.size(46.dp),
                     icon = Res.drawable.ui_icon_search,
                     buttonSize = UIButtonSize.SmallChoice,
                     onClick = {
-                        isShowing.value = "SEARCH"
+                        //isShowing.value = "SEARCH"
+                        showFunctionIsDevelopingToast()
                     }
                 )
             }

@@ -495,7 +495,9 @@ fun extractZip(zipPath: okio.Path, rootPath: okio.Path): Boolean {
                     }
                 }
             }
+            println("Extracted Zip File: $zipPath")
             zipFile.delete()
+            rootFile.delete()
             return@runBlocking true
         } catch (e: Exception) {
             errorLog("UtilTools.kt", "extractZip(zipPath = $zipPath, rootPath = $rootPath)", e)

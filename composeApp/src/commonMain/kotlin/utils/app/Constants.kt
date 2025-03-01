@@ -260,7 +260,10 @@ class Constants {
                 itemId = "ActionOrderListPage",
                 itemTitleRId = Res.string.ActionOrderTitle,
                 itemIconId = Res.drawable.phorphos_align_left_fill,
-                itemOnClickToNavigate = Screen.ActionOrderListPageScreen
+                itemOnClickAction = {
+                    showFunctionIsDevelopingToast()
+                }
+                //itemOnClickToNavigate = Screen.ActionOrderListPageScreen
             ),
             /*
 
