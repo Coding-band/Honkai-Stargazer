@@ -48,6 +48,7 @@ import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import ui.screens.backgroundScreenHazeState
 import ui.screens.globalHazeBlur
+import utils.annotation.DoItLater
 import utils.app.BlackAlpha80
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal16
@@ -102,6 +103,7 @@ val gradient = Brush.verticalGradient(
 )
 
 @Composable
+@DoItLater("Check if v1.4.0 fixes this lot-of-instance-blur-laggy issue")
 fun HomePageBlock1x1(
     blockData: HomePageBlocks.HomePageBlockItem,
     modifier: Modifier = Modifier,
@@ -135,12 +137,25 @@ fun HomePageBlock1x1(
                 HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT
             )
             //.aspectRatio(HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1 / HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT)
-            .hazeChild(
-                backgroundScreenHazeState,
-                shape = RoundedCornerShape(6.dp),
-                style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 20.dp else 0.1.dp, Float.MIN_VALUE)
-            )
-            .fillMaxSize(),
+            .fillMaxSize()
+            /* Check if v1.4.0 fixes this lot-of-instance-laggy issue
+            .let {
+                return@let if(globalHazeBlur.value){
+                    it.hazeChild(
+                        backgroundScreenHazeState,
+                        shape = RoundedCornerShape(6.dp),
+                        style = HazeStyle(
+                            Color.Unspecified,
+                            if (globalHazeBlur.value) 20.dp else 0.1.dp,
+                            Float.MIN_VALUE
+                        )
+                    )
+                }else{
+                    it
+                }
+            }
+             */
+        ,
         border = BorderStroke(1.dp, Color(0x66907C54))
     ) {
         Column {
@@ -173,6 +188,7 @@ fun HomePageBlock1x1(
 }
 
 @Composable
+@DoItLater("Check if v1.4.0 fixes this lot-of-instance-blur-laggy issue")
 fun HomePageBlock2x1(
     blockData: HomePageBlocks.HomePageBlockItem,
     modifier: Modifier = Modifier,
@@ -183,6 +199,8 @@ fun HomePageBlock2x1(
     LaunchedEffect(blockData.itemOnClickCount.value){
         blockData.refresh?.invoke()
     }
+
+
     OutlinedButton(
         contentPadding = PaddingValues(10.dp),
         colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent),
@@ -203,18 +221,26 @@ fun HomePageBlock2x1(
             .defaultMinSize(
                 HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1,
                 HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT
-            )
+            ).fillMaxSize()
             //.aspectRatio(HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_2x1 / HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT)
-            .hazeChild(
-                backgroundScreenHazeState,
-                shape = RoundedCornerShape(6.dp),
-                style = HazeStyle(
-                    Color.Unspecified,
-                    if (globalHazeBlur.value) 20.dp else 0.1.dp,
-                    Float.MIN_VALUE
-                )
-            )
-            .fillMaxSize(),
+            /* Check if v1.4.0 fixes this lot-of-instance-laggy issue
+            .let {
+                return@let if(globalHazeBlur.value){
+                    it.hazeChild(
+                        backgroundScreenHazeState,
+                        shape = RoundedCornerShape(6.dp),
+                        style = HazeStyle(
+                            Color.Unspecified,
+                            if (globalHazeBlur.value) 20.dp else 0.1.dp,
+                            Float.MIN_VALUE
+                        )
+                    )
+                }else{
+                    it
+                }
+            }
+             */
+            ,
         border = BorderStroke(1.dp, Color(0x66907C54))
     ) {
         Row {
