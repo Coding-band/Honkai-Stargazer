@@ -38,6 +38,8 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import dev.chrisbanes.haze.HazeStyle
 import dev.chrisbanes.haze.hazeChild
+import dev.chrisbanes.haze.hazeEffect
+import dev.chrisbanes.haze.hazeSource
 import files.AppStatusLostConnect
 import files.Res
 import files.phorphos_cake_fill
@@ -45,17 +47,24 @@ import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import ui.navigation.Screen
+import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
-import ui.screens.backgroundScreenHazeState
 import ui.screens.globalHazeBlur
 import utils.annotation.DoItLater
 import utils.app.BlackAlpha80
+import utils.app.DefaultZIndex
+import utils.app.DialogPopUpZIndex
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
 import utils.app.GradientHomeButton
+import utils.app.HazeBlurDp10
+import utils.app.HazeBlurDp20
+import utils.app.HazeBlurDp20Alpha
+import utils.app.HomePageBtnZIndex
 import utils.app.TextColorNormal
 import utils.app.WhiteAlpha10
+import utils.app.hazeEffectSG3
 import utils.app.removeStrQuote
 import utils.app.showFunctionIsDevelopingToast
 
@@ -138,23 +147,19 @@ fun HomePageBlock1x1(
             )
             //.aspectRatio(HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1 / HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT)
             .fillMaxSize()
-            /* Check if v1.4.0 fixes this lot-of-instance-laggy issue
             .let {
                 return@let if(globalHazeBlur.value){
-                    it.hazeChild(
-                        backgroundScreenHazeState,
-                        shape = RoundedCornerShape(6.dp),
-                        style = HazeStyle(
-                            Color.Unspecified,
-                            if (globalHazeBlur.value) 20.dp else 0.1.dp,
-                            Float.MIN_VALUE
-                        )
+                    it.hazeSource(
+                        hazeStateRoot,
+                        zIndex = HomePageBtnZIndex
+                    ).hazeEffect(
+                        state = hazeStateRoot,
+                        style = HazeBlurDp20Alpha
                     )
                 }else{
                     it
                 }
             }
-             */
         ,
         border = BorderStroke(1.dp, Color(0x66907C54))
     ) {
@@ -222,6 +227,19 @@ fun HomePageBlock2x1(
                 HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1,
                 HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT
             ).fillMaxSize()
+            .let {
+                return@let if(globalHazeBlur.value){
+                    it.hazeSource(
+                        hazeStateRoot,
+                        zIndex = HomePageBtnZIndex
+                    ).hazeEffect(
+                        state = hazeStateRoot,
+                        style = HazeBlurDp20Alpha
+                    )
+                }else{
+                    it
+                }
+            }
             //.aspectRatio(HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_2x1 / HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT)
             /* Check if v1.4.0 fixes this lot-of-instance-laggy issue
             .let {

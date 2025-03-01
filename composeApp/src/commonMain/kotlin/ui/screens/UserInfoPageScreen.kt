@@ -51,6 +51,7 @@ import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import files.PlayerLevel
 import files.ProducedByStargazer
 import files.PublicChars
@@ -76,6 +77,7 @@ import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.defaultHeaderData
 import ui.navigation.Screen
+import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import utils.annotation.DoItLater
 import utils.app.Constants
@@ -99,7 +101,6 @@ fun UserInfoPageScreen(
     headerData: HeaderData = defaultHeaderData,
     backStackEntry: NavBackStackEntry,
 ) {
-    val hazeState = remember { HazeState() }
     val context = LocalPlatformContext.current
     val uid = backStackEntry.arguments?.getString("uid")!!
 
@@ -139,7 +140,7 @@ fun UserInfoPageScreen(
             modifier = Modifier.padding(
                 start = Constants.SCREEN_SAVE_PADDING,
                 end = Constants.SCREEN_SAVE_PADDING
-            ).haze(hazeState)
+            ).hazeSource(hazeStateRoot)
         ) {
             item(span = { GridItemSpan(maxCurrentLineSpan) }) { Spacer(modifier = Modifier.statusBarsPadding().height(PAGE_HEADER_HEIGHT)) }
             item(span = { GridItemSpan(maxLineSpan) }) { UserInfoBioUI(context, userAccount) }
@@ -241,7 +242,7 @@ fun UserInfoPageScreen(
             navigator = navigator,
             forwardIconId = Res.drawable.ui_icon_share,
             onForward = { /* TODO : Share Function*/ },
-            hazeState = hazeState,
+            hazeState = hazeStateRoot,
             backIconId = BackIcon.CANCEL
         )
 
@@ -281,7 +282,7 @@ fun UserInfoPageScreen(
         Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
             AppDialog(
                 titleString = removeStrQuote(Res.string.PublicChars),
-                hazeState = hazeState,
+                hazeState = hazeStateRoot,
                 components = {
                     Text(
                         LongStringXML().PublicCharDesc(),

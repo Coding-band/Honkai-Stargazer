@@ -67,6 +67,7 @@ import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material.RichText
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import files.NoOnlineData
 import files.RelicDetail
 import files.RelicStatus2Pcs
@@ -103,6 +104,7 @@ import ui.components.PageHeader
 import ui.components.RelicCard
 import ui.components.TitleHeader
 import ui.components.defaultHeaderData
+import ui.navigation.hazeStateRoot
 import utils.app.Constants
 import utils.app.Constants.Companion.RELIC_CARD_WIDTH
 import utils.app.FontSizeNormal12
@@ -141,7 +143,6 @@ fun RelicInfoPage(
     val relicName = backStackEntry.arguments?.getString("relicName")!!.replace("_", " ")
     val relicFileName = backStackEntry.arguments?.getString("fileName")!!
 
-    val hazeState = remember { HazeState() }
     val relicInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Relic.getRelicDataFromJSON(relicFileName, Language.TextLanguageInstance) as JsonElement) }
 
     localCoroutineScope = rememberCoroutineScope();
@@ -185,7 +186,7 @@ fun RelicInfoPage(
         )
 
         //RecycleView
-        LazyColumn(state = listState, modifier = Modifier.haze(hazeState).align(Alignment.Center)) {
+        LazyColumn(state = listState, modifier = Modifier.hazeSource(hazeStateRoot).align(Alignment.Center)) {
             item { RelicBasicInfo(relicInfoJson) }
             item { RelicSetInfo(relicInfoJson, false) }
             //Don't forget to add "StatusBarPadding" !
@@ -197,7 +198,7 @@ fun RelicInfoPage(
         PageHeader(
             navigator = navigator,
             headerData = headerDataPage,
-            hazeState = hazeState,
+            hazeState = hazeStateRoot,
             backIconId = BackIcon.CANCEL,
             forwardIconId = Res.drawable.ic_favourite_btn,
             onForward = {}
@@ -205,9 +206,9 @@ fun RelicInfoPage(
 
         Box(modifier = Modifier.fillMaxSize()) {
             if(dialogDisplay.value){
-                InfoDisplayDialog(dialogTitle.value, dialogComponent.value, modifier = Modifier.align(Alignment.BottomCenter), hazeState, isNavBarVisible = (isNaviBarVisible), isDialogVisible = (dialogDisplay))
+                InfoDisplayDialog(dialogTitle.value, dialogComponent.value, modifier = Modifier.align(Alignment.BottomCenter), hazeStateRoot, isNavBarVisible = (isNaviBarVisible), isDialogVisible = (dialogDisplay))
             } else {
-                InfoNavigatorBar(relicInfoNavItemList, listState, Modifier.align(Alignment.BottomCenter), hazeState = hazeState, isVisible = (isNaviBarVisible), offSet = PAGE_HEADER_HEIGHT)
+                InfoNavigatorBar(relicInfoNavItemList, listState, Modifier.align(Alignment.BottomCenter), hazeState = hazeStateRoot, isVisible = (isNaviBarVisible), offSet = PAGE_HEADER_HEIGHT)
             }
         }
     }

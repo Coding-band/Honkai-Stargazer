@@ -29,6 +29,7 @@ import androidx.compose.ui.util.fastForEach
 import androidx.navigation.NavHostController
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -48,7 +49,9 @@ import ui.components.ListFilterType
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.defaultHeaderData
+import ui.navigation.hazeStateRoot
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
+import utils.app.DefaultZIndex
 import utils.app.PageBottomMask
 import utils.app.rememberMutableStateListJsonOf
 
@@ -89,13 +92,13 @@ fun CharacterListPage(
     navigator: NavHostController,
     headerData: HeaderData = defaultHeaderData
 ) {
-    val hazeState = remember { HazeState() }
+    //val hazeState = remember { HazeState() }
 
     Box {
         LazyVerticalGrid(
             modifier = Modifier
                 .padding(start = 16.dp, end = 16.dp)
-                .haze(state = hazeState),
+                .hazeSource(state = hazeStateRoot, zIndex = DefaultZIndex),
             columns = GridCells.Adaptive(CHAR_CARD_WIDTH),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
@@ -128,11 +131,11 @@ fun CharacterListPage(
             filterType = ListFilterType.CHARACTER,
             filtedList = charListSortable,
             filterChoiceArray = filterChoiceArray,
-            hazeState = hazeState
+            hazeState = hazeStateRoot
         )
 
 
 
-        PageHeader(navigator = navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.CANCEL)
+        PageHeader(navigator = navigator, headerData = headerData, hazeState = hazeStateRoot, backIconId = BackIcon.CANCEL)
     }
 }

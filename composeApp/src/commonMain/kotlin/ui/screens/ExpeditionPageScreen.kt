@@ -35,6 +35,7 @@ import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import files.IsDone
 import files.NoDataYet
 import files.Res
@@ -54,7 +55,9 @@ import ui.components.PageHeader
 import ui.components.RefreshBox
 import ui.components.ThemedProgressBar
 import ui.components.defaultHeaderData
+import ui.navigation.hazeStateRoot
 import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
+import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.getFinishTimeStr
@@ -69,7 +72,6 @@ fun ExpeditionPageScreen(
     navigator: NavHostController,
     headerData: HeaderData = defaultHeaderData
 ) {
-    val hazeState = remember { HazeState() }
     val isRefreshing = remember { mutableStateOf(false) }
     /*
     val pullRefreshState = rememberPullRefreshState(
@@ -97,7 +99,7 @@ fun ExpeditionPageScreen(
                     .padding(start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)
                     .statusBarsPadding()
                     .navigationBarsPadding()
-                    .haze(hazeState)
+                    .hazeSource(hazeStateRoot, zIndex = DefaultZIndex)
             ) {
                 item { Spacer(modifier = Modifier.height(PAGE_HEADER_HEIGHT+12.dp)) }
                 INSTANCE.userNote.expedition.forEachIndexed { index, expendition ->
@@ -116,7 +118,7 @@ fun ExpeditionPageScreen(
         PageHeader(
             navigator = navigator,
             headerData = headerData,
-            hazeState = hazeState,
+            hazeState = hazeStateRoot,
             backIconId = BackIcon.BACK,
             forwardIconId = Res.drawable.phorphos_arrows_clockwise_fill,
             onForward = {

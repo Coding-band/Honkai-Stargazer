@@ -67,6 +67,7 @@ import coil3.compose.LocalPlatformContext
 import com.voc.stargazer3.BuildKonfig
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import files.AccountLogin
 import files.Logout
 import files.ModifyHomePage
@@ -94,6 +95,7 @@ import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
 import utils.annotation.DoItLater
 import utils.app.BlackAlpha30
+import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
@@ -132,7 +134,7 @@ fun HomePage(
         println("RECOMPOSED !")
         Box(modifier = Modifier
             .statusBarsPadding()
-            .haze(hazeState)
+            .hazeSource(hazeState, zIndex = DefaultZIndex)
         ) {
             Column {
                 HomePageHeader(

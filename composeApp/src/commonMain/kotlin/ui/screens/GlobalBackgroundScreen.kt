@@ -24,6 +24,7 @@ import coil3.compose.LocalPlatformContext
 import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import files.Res
 import files.bg_default
 import org.jetbrains.compose.resources.ExperimentalResourceApi
@@ -31,9 +32,12 @@ import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.ImageFolder
 import ui.navigation.Screen
+import ui.navigation.hazeStateRoot
+import utils.app.BackgroundZIndex
 import utils.app.Black
 import utils.app.BlackAlpha20
 import utils.app.BlackAlpha80
+import utils.app.DefaultZIndex
 import utils.app.Stargazer3Theme
 import utils.app.Transparent
 import utils.app.getAssetsURLByFileName
@@ -53,7 +57,7 @@ val gradientBottom = Brush.verticalGradient(
     )
 )
 
-lateinit var backgroundScreenHazeState : HazeState
+//lateinit var backgroundScreenHazeState : HazeState
 val bgModified = mutableStateOf(false)
 val globalHazeBlur = mutableStateOf(Settings().getBoolean("useHazeBlurEffect", true))
 val globalPadHomePageBg = mutableStateOf(Settings().getBoolean("padModeHomePageBG", true))
@@ -61,9 +65,11 @@ val globalPadHomePageBg = mutableStateOf(Settings().getBoolean("padModeHomePageB
 @OptIn(ExperimentalResourceApi::class)
 @Composable
 fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boolean? = null) {
+    /*
     if(!::backgroundScreenHazeState.isInitialized){
         backgroundScreenHazeState = remember { HazeState() }
     }
+     */
     var isBlur = true;
     //var isForceBlur = Settings().getBoolean("useBlurEffect", false) || forceBlur;
     var isGradient = true;
@@ -96,7 +102,7 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boo
     if(forceBlur == false){ isBlur = false; }
 
     Box(
-        Modifier.haze(backgroundScreenHazeState)
+        Modifier.hazeSource(hazeStateRoot, zIndex = BackgroundZIndex)
     ){
         AsyncImage(
             model = newImageRequest(

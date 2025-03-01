@@ -4,6 +4,7 @@ import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -23,6 +24,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
@@ -33,6 +35,8 @@ import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.HazeStyle
 import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeChild
+import dev.chrisbanes.haze.hazeEffect
+import dev.chrisbanes.haze.hazeSource
 import files.Res
 import files.pom_pom_praying
 import kotlinx.coroutines.CoroutineScope
@@ -40,7 +44,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.painterResource
+import ui.navigation.hazeStateRoot
+import utils.app.DialogPopUpZIndex
 import utils.app.FontSizeNormal16
+import utils.app.HazeBlurDp10
+import utils.app.hazeEffectSG3
 import utils.app.pxToDp
 
 lateinit var docCountDown : MutableState<Int>
@@ -57,7 +65,7 @@ fun PomPomInit() {
 
 @Composable
 fun PomPomPopupUI(
-    hazeState: HazeState = remember { HazeState() }
+    hazeState: HazeState = hazeStateRoot
 ) {
 
     docCountDown = remember { mutableStateOf(1) }
@@ -82,14 +90,24 @@ fun PomPomPopupUI(
             // Background
             Box(
                 modifier = Modifier
+
                     .fillMaxWidth(0.5f)
                     .height(uiHeight.value)
                     .align(Alignment.Center)
+                    .clip(RoundedCornerShape(25.dp))
+                    .hazeSource(state = hazeState, zIndex = DialogPopUpZIndex)
+                    .hazeEffectSG3(
+                        state = hazeState,
+                        style = HazeBlurDp10,
+                    )
+                    .background(Color(0x66AAAAAA))
+                    /*
                     .hazeChild(
                         hazeState,
-                        style = HazeStyle(Color(0x66AAAAAA), 10.dp, 0f),
-                        shape = RoundedCornerShape(25.dp)
+                        style = HazeStyle(Color(0x66AAAAAA), null, 10.dp, 0f),
+                        //shape = RoundedCornerShape(25.dp)
                     )
+                 */
             )
 
             // Popup

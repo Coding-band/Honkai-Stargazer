@@ -45,6 +45,7 @@ import com.cheonjaeung.compose.grid.VerticalGrid
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.HazeStyle
 import dev.chrisbanes.haze.hazeChild
+import dev.chrisbanes.haze.hazeSource
 import files.ConfirmBTN
 import files.FilterTitle
 import files.NoDataYet
@@ -74,6 +75,7 @@ import types.CombatType
 import types.FilterEnum
 import types.Lightcone
 import types.Path
+import ui.navigation.hazeStateRoot
 import ui.screens.UserCharPageDivider
 import ui.screens.globalHazeBlur
 import utils.annotation.DoItLater
@@ -81,10 +83,13 @@ import utils.app.Constants
 import utils.app.Constants.Companion.INFO_MAX_WIDTH
 import utils.app.Constants.Companion.INFO_MIN_WIDTH
 import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
+import utils.app.DialogPopUpZIndex
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormal20
+import utils.app.HazeBlurDp10
 import utils.app.Language
+import utils.app.hazeEffectSG3
 import utils.app.pxToDp
 import utils.app.rememberMutableStateListJsonOf
 import utils.app.removeStrQuote
@@ -107,7 +112,7 @@ fun <T> ListFilterTool(
     filterType: ListFilterType,
     filterChoiceArray: SnapshotStateList<FilterEnum>,
     filtedList: MutableState<ArrayList<T>>,
-    hazeState: HazeState = remember { HazeState() }
+    hazeState: HazeState = hazeStateRoot
 ) {
     val isShowing = rememberSaveable { mutableStateOf("NOPE") }
     val isAsc = rememberSaveable { mutableStateOf(false) }
@@ -172,105 +177,70 @@ fun <T> ListFilterTool(
                     .align(Alignment.CenterHorizontally),
             ){
                 if (isShowing.value == "FILTER"){
-                    Box(modifier = Modifier
-                        .widthIn(INFO_MIN_WIDTH, INFO_MAX_WIDTH)
-                        .wrapContentHeight()
-                        .align(Alignment.CenterHorizontally)
-                        .hazeChild(
-                            state = hazeState,
-                            style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 10.dp else 0.1.dp, 0f)
-                        )
-                        .background(Color(0xCCF3F9FF), RoundedCornerShape(4.dp, 20.dp, 4.dp, 4.dp))
-                        .clip(shape = RoundedCornerShape(4.dp, 20.dp, 4.dp, 4.dp))
-                        .clickable {  }
-                    ) {
-                        Column {
-                            //Options
-                            Column(modifier = Modifier.padding(SCREEN_SAVE_PADDING)) {
-                                Row {
-                                    Text(
-                                        text = removeStrQuote(Res.string.FilterTitle),
-                                        style = FontSizeNormal20(),
-                                        color = Color(0xFF222222),
-                                        modifier = Modifier.weight(1f),
-                                    )
+                    AppDialog(modifier = Modifier
+                        .widthIn(INFO_MIN_WIDTH, INFO_MAX_WIDTH),
+                        isPopupShow = mutableStateOf(isShowing.value == "SORT" || isShowing.value == "FILTER"),
+                        titleString = removeStrQuote(Res.string.FilterTitle),
+                        components = {
+                            VerticalGrid(
+                                columns = SimpleGridCells.Fixed(2),
+                                modifier = modifier.fillMaxWidth().wrapContentHeight(),
+                                horizontalArrangement = Arrangement.spacedBy(14.dp),
+                                verticalArrangement = Arrangement.spacedBy(10.dp),
+                            ){
+                                filterChoiceList.mapIndexed { index, any ->
+                                    if(filterChoiceList.size == index+1 && (filterChoiceList.size) % 2 == 1 && any is Path){
+                                        Row {  }
+                                    }
 
-                                    Image(
-                                        painterResource(Res.drawable.ui_icon_close),
-                                        contentDescription = "Close Filter Popup",
-                                        modifier = Modifier
-                                            .clip(CircleShape)
-                                            .size(32.dp)
-                                            .clickable {
-                                                isShowing.value = "NOPE"
-                                            },
-                                        colorFilter = ColorFilter.tint(Color(0xFF222222))
-                                    )
-                                }
-
-                                Box(Modifier.fillMaxWidth().padding(top = 8.dp, bottom = 8.dp), contentAlignment = Alignment.Center) {
-                                    Box(modifier = Modifier.fillMaxWidth(1f).height(1.dp).background(Color(0x1A000000)),)
-                                }
-
-                                VerticalGrid(
-                                    columns = SimpleGridCells.Fixed(2),
-                                    modifier = modifier.fillMaxWidth().wrapContentHeight(),
-                                    horizontalArrangement = Arrangement.spacedBy(14.dp),
-                                    verticalArrangement = Arrangement.spacedBy(10.dp),
-                                ){
-                                    filterChoiceList.mapIndexed { index, any ->
-                                        if(filterChoiceList.size == index+1 && (filterChoiceList.size) % 2 == 1 && any is Path){
-                                            Row {  }
-                                        }
-
-                                        Row(modifier = Modifier
-                                            .background(color = Color(0xFFFFFFFF))
-                                            .clickable {
-                                                if(filterChoiceArray.contains(any)){
-                                                    filterChoiceArray.remove(any)
-                                                }else{
-                                                    filterChoiceArray.add(any)
-                                                }
+                                    Row(modifier = Modifier
+                                        .background(color = Color(0xFFFFFFFF))
+                                        .clickable {
+                                            if(filterChoiceArray.contains(any)){
+                                                filterChoiceArray.remove(any)
+                                            }else{
+                                                filterChoiceArray.add(any)
                                             }
-                                            .padding(8.dp)
-                                        ) {
-                                            Image(
-                                                painterResource(
-                                                    when(any){
-                                                        is CombatType -> any.iconColor
-                                                        is Path ->  any.iconAbyss
-                                                        else -> Res.drawable.pom_pom_failed_issue
-                                                    }
-                                                ),
-                                                contentDescription = "Filter Choice Icon",
-                                                modifier = Modifier.size(20.dp)
-                                            )
-
-                                            Spacer(modifier = Modifier.width(8.dp))
-
-                                            Text(
-                                                text = removeStrQuote(
-                                                    when(any){
-                                                        is CombatType -> any.resName
-                                                        is Path ->  any.resName
-                                                        else -> Res.string.NoDataYet
-                                                    }
-                                                ),
-                                                style = FontSizeNormal14(),
-                                                color = Color(0xFF222222),
-                                                modifier = Modifier.weight(1f).align(Alignment.CenterVertically),
-                                            )
-
-                                            Image(
-                                                painterResource(if(filterChoiceArray.contains(any)) Res.drawable.ui_icon_checkbox_checked else Res.drawable.ui_icon_checkbox_empty),
-                                                contentDescription = "Filter Choice Checkbox",
-                                                modifier = Modifier.size(16.dp).align(Alignment.CenterVertically)
-                                            )
                                         }
+                                        .padding(8.dp)
+                                    ) {
+                                        Image(
+                                            painterResource(
+                                                when(any){
+                                                    is CombatType -> any.iconColor
+                                                    is Path ->  any.iconAbyss
+                                                    else -> Res.drawable.pom_pom_failed_issue
+                                                }
+                                            ),
+                                            contentDescription = "Filter Choice Icon",
+                                            modifier = Modifier.size(20.dp)
+                                        )
+
+                                        Spacer(modifier = Modifier.width(8.dp))
+
+                                        Text(
+                                            text = removeStrQuote(
+                                                when(any){
+                                                    is CombatType -> any.resName
+                                                    is Path ->  any.resName
+                                                    else -> Res.string.NoDataYet
+                                                }
+                                            ),
+                                            style = FontSizeNormal14(),
+                                            color = Color(0xFF222222),
+                                            modifier = Modifier.weight(1f).align(Alignment.CenterVertically),
+                                        )
+
+                                        Image(
+                                            painterResource(if(filterChoiceArray.contains(any)) Res.drawable.ui_icon_checkbox_checked else Res.drawable.ui_icon_checkbox_empty),
+                                            contentDescription = "Filter Choice Checkbox",
+                                            modifier = Modifier.size(16.dp).align(Alignment.CenterVertically)
+                                        )
                                     }
                                 }
                             }
-
+                        },
+                        componentsBottom = {
                             Column(modifier = Modifier.background(Color(0xFF222222)).padding(16.dp)) {
                                 //Checkboxes for "Owned" and "Favorite" ONLY
                                 Row {
@@ -303,7 +273,7 @@ fun <T> ListFilterTool(
                                 }
                             }
                         }
-                    }
+                    )
                 }else if (isShowing.value == "SORT"){
                     //Sorter Spinner Choice
                     Column(modifier = Modifier

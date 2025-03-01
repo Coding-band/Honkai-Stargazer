@@ -55,6 +55,7 @@ import com.mohamedrejeb.richeditor.ui.material3.RichText
 import com.voc.stargazer3.BuildKonfig
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import files.AbyssCharacterUsage
 import files.AbyssTeamUsage
 import files.MOCEffect
@@ -96,8 +97,10 @@ import ui.components.UIButtonSize
 import ui.components.defaultHeaderData
 import ui.components.horizontalFadingEdge
 import ui.navigation.Screen
+import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import utils.app.Constants
+import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.Language.Companion.TextLanguageInstance
@@ -137,8 +140,6 @@ fun MemoryOfChaosMissionPageScreen(
     headerData: HeaderData = defaultHeaderData,
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ) {
-    val hazeState = remember { HazeState() }
-
     val mocChoiceIndex = remember { mutableStateOf(0) }
     val isDialogVisible = remember { mutableStateOf(false) }
     val mocInfoList = AbyssInfo.getAbyssItemById(abyssId = mocList.value[mocChoiceIndex.value].id, type = AbyssInfoType.MemoryOfChaos, abyssFileName = mocList.value[mocChoiceIndex.value].fileName)
@@ -146,7 +147,7 @@ fun MemoryOfChaosMissionPageScreen(
 
     Box(Modifier.fillMaxSize()) {
         LazyColumn(
-            modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).haze(hazeState)
+            modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).hazeSource(hazeStateRoot, zIndex = DefaultZIndex)
         ) {
             item { Spacer(
                 modifier = Modifier
@@ -167,7 +168,7 @@ fun MemoryOfChaosMissionPageScreen(
 
         PageHeaderAlpha(
             navigator = navigator,
-            hazeState = hazeState,
+            hazeState = hazeStateRoot,
             onForward = { navigator.navigateLimited("${Screen.BattleChroniclePageScreen.route}?uid=${UserAccount.INSTANCE.uid}") },
             forwardIconId = Res.drawable.ic_person_btn
         ){
@@ -181,7 +182,7 @@ fun MemoryOfChaosMissionPageScreen(
         InfoDisplayDialog(
             modifier = Modifier.align(Alignment.Center),
             titleString = stringResource(Res.string.MOCEffect),
-            hazeState = hazeState,
+            hazeState = hazeStateRoot,
             isDialogVisible = isDialogVisible,
             components = {
                 RichText(state = richTextState,

@@ -34,6 +34,7 @@ import coil3.compose.LocalPlatformContext
 import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import files.Res
 import files.StatusDays
 import files.StatusHours
@@ -56,8 +57,10 @@ import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.defaultHeaderData
 import ui.navigation.Screen
+import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import utils.app.Constants
+import utils.app.DefaultZIndex
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
 
@@ -68,12 +71,11 @@ fun EventListPageScreen(
     headerData: HeaderData = defaultHeaderData,
 ) {
     val isDateOutside = remember { mutableStateOf(Settings().getBoolean("isDateOutside",true)) }
-    val hazeState = remember { HazeState() }
     val eventList = EventListInstance.filter { it.end_unix > Clock.System.now().toEpochMilliseconds() }.sortedBy { it.end_unix }
 
     Box(modifier = modifier.fillMaxSize()){
         LazyColumn(modifier = Modifier
-            .haze(state = hazeState)
+            .hazeSource(state = hazeStateRoot, zIndex = DefaultZIndex)
         ) {
             item {
                 Spacer(Modifier.padding(top = PAGE_HEADER_HEIGHT).statusBarsPadding())
@@ -90,7 +92,7 @@ fun EventListPageScreen(
         PageHeader(
             navigator = navigator,
             headerData = headerData,
-            hazeState = hazeState,
+            hazeState = hazeStateRoot,
             backIconId = BackIcon.CANCEL,
         )
     }

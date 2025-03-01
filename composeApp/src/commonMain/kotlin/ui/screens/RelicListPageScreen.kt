@@ -28,6 +28,7 @@ import androidx.compose.ui.util.fastForEach
 import androidx.navigation.NavHostController
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -44,7 +45,9 @@ import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.RelicCard
 import ui.components.defaultHeaderData
+import ui.navigation.hazeStateRoot
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
+import utils.app.DefaultZIndex
 import utils.app.PageBottomMask
 
 lateinit var relicList : MutableState<ArrayList<Relic>>
@@ -78,13 +81,12 @@ fun refreshRelicList(){
 
 @Composable
 fun RelicListPage(modifier: Modifier = Modifier, navigator: NavHostController, headerData: HeaderData = defaultHeaderData) {
-    val hazeState = remember { HazeState() }
 
     Box {
         LazyVerticalGrid(
             modifier = Modifier
                 .padding(start = 16.dp, end = 16.dp)
-                .haze(state = hazeState),
+                .hazeSource(state = hazeStateRoot, zIndex = DefaultZIndex),
             columns = GridCells.Adaptive(CHAR_CARD_WIDTH),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
@@ -114,6 +116,6 @@ fun RelicListPage(modifier: Modifier = Modifier, navigator: NavHostController, h
         PageBottomMask()
 
 
-        PageHeader(navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.CANCEL)
+        PageHeader(navigator, headerData = headerData, hazeState = hazeStateRoot, backIconId = BackIcon.CANCEL)
     }
 }

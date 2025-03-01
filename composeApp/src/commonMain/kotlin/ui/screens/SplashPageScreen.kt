@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import files.Res
 import files.app_icon_black_bg
 import files.euclid_circular_a_medium
@@ -113,7 +114,7 @@ fun SplashPage(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .haze(hazeStateRoot)
+            .hazeSource(hazeStateRoot)
             .background(Color.Black)
     ) {
         //Container of App Icon & Ads

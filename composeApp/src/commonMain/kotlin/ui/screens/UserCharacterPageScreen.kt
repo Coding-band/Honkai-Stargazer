@@ -71,6 +71,7 @@ import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import files.CharRank
 import files.CharScore
 import files.Eidolon
@@ -111,6 +112,7 @@ import ui.components.PAGE_HEADER_ALPHA_HEIGHT
 import ui.components.PageHeaderAlpha
 import ui.components.RelicSmallCard
 import ui.components.defaultHeaderData
+import ui.navigation.hazeStateRoot
 import utils.annotation.DoItLater
 import utils.app.AdditionalGreen
 import utils.app.Constants
@@ -159,7 +161,6 @@ fun UserCharacterPageScreen(
     ) }
     val characterId = backStackEntry.arguments?.getString("charId")!!
     val characterFilter = userAccount.characterList.filter { it.officialId == characterId.toIntOrNull() }
-    val hazeState = remember { HazeState() }
     val listState = rememberLazyListState()
     val isScrolling by remember {
         derivedStateOf {
@@ -195,7 +196,7 @@ fun UserCharacterPageScreen(
                         //TODO : Remember to add the Share Function
                     },
                     forwardIconId = Res.drawable.ui_icon_share,
-                    hazeState = hazeState,
+                    hazeState = hazeStateRoot,
 
                     ) {
 
@@ -230,7 +231,7 @@ fun UserCharacterPageScreen(
                     modifier = Modifier.padding(
                         start = Constants.SCREEN_SAVE_PADDING,
                         end = Constants.SCREEN_SAVE_PADDING
-                    ).haze(hazeState)
+                    ).hazeSource(hazeStateRoot)
                 ) {
                     item { Spacer(Modifier.statusBarsPadding().height(PAGE_HEADER_ALPHA_HEIGHT + 240.dp)) }
                     item { CharBioSkillInfo(character, charNameBigHeight) }

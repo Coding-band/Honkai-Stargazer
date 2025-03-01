@@ -38,6 +38,7 @@ import androidx.navigation.compose.rememberNavController
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.HazeStyle
 import dev.chrisbanes.haze.hazeChild
+import dev.chrisbanes.haze.hazeSource
 import files.Res
 import files.bg_transparent
 import files.phorphos_sun_fill
@@ -47,8 +48,15 @@ import files.ui_icon_share
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
+import ui.navigation.hazeStateRoot
 import ui.navigation.popBackStackLimited
 import ui.screens.globalHazeBlur
+import utils.app.DefaultZIndex
+import utils.app.DialogPopUpZIndex
+import utils.app.HazeBlurDp10
+import utils.app.HazeBlurDp10Alpha
+import utils.app.PageHeaderZIndex
+import utils.app.hazeEffectSG3
 
 val PAGE_HEADER_HEIGHT = 72.dp
 val PAGE_HEADER_ALPHA_HEIGHT = 64.dp
@@ -75,10 +83,15 @@ fun PageHeader(
     onForward: (() -> Unit) = {},
     forwardIconId: DrawableResource = Res.drawable.bg_transparent,
     headerData: HeaderData = defaultHeaderData,
-    hazeState: HazeState? = HazeState()
+    hazeState: HazeState = hazeStateRoot
 ) {
     //Background
     DropShadow(
+        modifier = Modifier
+            .hazeSource(state = hazeState, zIndex = PageHeaderZIndex)
+            .hazeEffectSG3(
+                state = hazeState,
+            ),
         color = Color.Black.copy(alpha = 0.5f),
         offset = DpOffset(0.dp, 4.dp),
         radius = 4.dp
@@ -87,10 +100,6 @@ fun PageHeader(
         //Now will use Pure Color Background
         Box(
             Modifier
-                .hazeChild(
-                    state = hazeState!!,
-                    style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 10.dp else 0.1.dp, 0f)
-                )
                 .background(Color(0x33FFFFFF))
                 //.clippedShadow(elevation = 2.dp)
                 .statusBarsPadding()
@@ -100,8 +109,6 @@ fun PageHeader(
                     indication = null,
                     interactionSource = MutableInteractionSource()
                 )
-
-
         ){
             Column {
                 Row(
@@ -166,7 +173,7 @@ fun PageHeaderAlpha(
     onBack: ((navigator: NavHostController) -> Unit) = { navigator: NavHostController -> navigator.popBackStackLimited() },
     backIconId: BackIcon = BackIcon.CANCEL,
     onForward: (() -> Unit) = {},
-    hazeState: HazeState? = HazeState(),
+    hazeState: HazeState = hazeStateRoot,
     forwardIconId: DrawableResource = Res.drawable.ui_icon_share,
     isListScrolling: Boolean = false,
     components: @Composable () -> Unit = {}
@@ -200,11 +207,18 @@ fun PageHeaderAlpha(
                         modifier = Modifier
                             .size(40.dp)
                             .clip(CircleShape)
-                            .hazeChild(
-                                shape = CircleShape,
-                                state = hazeState!!,
-                                style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 10.dp else 0.1.dp, 0f)
+                            .hazeSource(state = hazeState, zIndex = PageHeaderZIndex)
+                            .hazeEffectSG3(
+                                state = hazeState,
+                                style = HazeBlurDp10Alpha,
                             )
+                            /*
+                            .hazeChild(
+                                //shape = CircleShape,
+                                state = hazeState!!,
+                                style = HazeStyle(Color.Unspecified,null, if(globalHazeBlur.value) 10.dp else 0.1.dp, 0f)
+                            )
+                             */
                             .align(Alignment.CenterVertically),
                         colorFilter = ColorFilter.tint(Color.White),
 
@@ -229,10 +243,16 @@ fun PageHeaderAlpha(
                         modifier = Modifier
                             .size(40.dp)
                             .align(Alignment.CenterVertically)
-                            .hazeChild(
-                                shape = CircleShape,
+                            /*.hazeChild(
+                                //shape = CircleShape,
                                 state = hazeState!!,
-                                style = HazeStyle(Color.Unspecified, if(globalHazeBlur.value) 10.dp else 0.1.dp, 0f)
+                                style = HazeStyle(Color.Unspecified,null, if(globalHazeBlur.value) 10.dp else 0.1.dp, 0f)
+                            ),
+                             */
+                            .hazeSource(state = hazeState, zIndex = DialogPopUpZIndex)
+                            .hazeEffectSG3(
+                                state = hazeState,
+                                style = HazeBlurDp10Alpha,
                             ),
                         colorFilter = ColorFilter.tint(Color.White),
 

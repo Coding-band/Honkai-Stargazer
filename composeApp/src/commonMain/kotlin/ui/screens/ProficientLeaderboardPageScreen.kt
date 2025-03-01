@@ -48,6 +48,7 @@ import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import files.CharSoul
 import files.NoDataYet
 import files.Res
@@ -80,6 +81,7 @@ import ui.components.TitleHeader
 import ui.components.defaultHeaderData
 import ui.components.pomPomPopupInstance
 import ui.navigation.Screen
+import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import utils.app.CharWeightList
 import utils.app.Constants
@@ -111,7 +113,6 @@ fun ProficientLeaderboardPageScreen(
     headerData: HeaderData = defaultHeaderData,
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ) {
-    val hazeState = remember { HazeState() }
     val selectedLeaderboardIndex = rememberSaveable { mutableStateOf(0) }
     val schoolList by rememberSaveable { mutableStateOf(arrayListOf(ProficientSchool(schoolIndex = 0, charId = 0))) }
     var leaderboardList by rememberSaveable { mutableStateOf(arrayListOf<CharacterProficient>()) }
@@ -293,7 +294,7 @@ fun ProficientLeaderboardPageScreen(
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
-                    .haze(hazeState),
+                    .hazeSource(hazeStateRoot),
                 verticalArrangement = Arrangement.spacedBy(10.dp)
             ) {
                 item { Spacer(Modifier.height(10.dp)) }
@@ -327,7 +328,7 @@ fun ProficientLeaderboardPageScreen(
 
         PageHeaderAlpha(
             navigator = navigator,
-            hazeState = hazeState,
+            hazeState = hazeStateRoot,
         ) {
             TitleHeader(headerData.titleIconId, headerData.title, headerData.titleRId)
         }

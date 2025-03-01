@@ -52,6 +52,7 @@ import com.mohamedrejeb.richeditor.ui.material3.RichText
 import com.voc.stargazer3.BuildKonfig
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import files.AbyssCharacterUsage
 import files.AbyssTeamUsage
 import files.MOCEffect
@@ -91,6 +92,7 @@ import ui.components.UIButtonSize
 import ui.components.defaultHeaderData
 import ui.components.horizontalFadingEdge
 import ui.navigation.Screen
+import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import utils.app.Constants
 import utils.app.FontSizeNormal14
@@ -129,8 +131,6 @@ fun PureFictionMissionPageScreen(
     headerData: HeaderData = defaultHeaderData,
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ) {
-    val hazeState = remember { HazeState() }
-
     val pfChoiceIndex = remember { mutableStateOf(0) }
     val isDialogVisible = remember { mutableStateOf(false) }
     val pfInfoList = AbyssInfo.getAbyssItemById(abyssId = pfList.value[pfChoiceIndex.value].id, type = AbyssInfoType.PureFiction, abyssFileName = pfList.value[pfChoiceIndex.value].fileName)
@@ -138,7 +138,7 @@ fun PureFictionMissionPageScreen(
 
     Box(Modifier.fillMaxSize()) {
         LazyColumn(
-            modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).haze(hazeState)
+            modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).hazeSource(hazeStateRoot)
         ) {
             item { Spacer(
                 modifier = Modifier
@@ -159,7 +159,7 @@ fun PureFictionMissionPageScreen(
 
         PageHeaderAlpha(
             navigator = navigator,
-            hazeState = hazeState,
+            hazeState = hazeStateRoot,
             onForward = { navigator.navigateLimited("${Screen.BattleChroniclePageScreen.route}?uid=${UserAccount.INSTANCE.uid}") },
             forwardIconId = Res.drawable.ic_person_btn
         ){
@@ -173,7 +173,7 @@ fun PureFictionMissionPageScreen(
         InfoDisplayDialog(
             modifier = Modifier.align(Alignment.Center),
             titleString = stringResource(Res.string.MOCEffect),
-            hazeState = hazeState,
+            hazeState = hazeStateRoot,
             isDialogVisible = isDialogVisible,
             components = {
                 RichText(state = richTextState,

@@ -59,6 +59,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import files.ActionOrderAddItem
 import files.ActionOrderImportedCharData
 import files.ActionOrderItemChosen
@@ -90,6 +91,7 @@ import ui.components.UIButton
 import ui.components.UIButtonSize
 import ui.components.defaultHeaderData
 import ui.navigation.Screen
+import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import utils.annotation.DoItLater
 import utils.app.Constants
@@ -99,6 +101,7 @@ import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import utils.app.Constants.Companion.INFO_MAX_WIDTH
 import utils.app.Constants.Companion.INFO_MIN_WIDTH
 import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
+import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
@@ -162,7 +165,6 @@ fun ActionOrderListPageScreen(
     navigator: NavHostController,
     headerData: HeaderData = defaultHeaderData
 ) {
-    val hazeState = remember { HazeState() }
     val isInit = remember { mutableStateOf(false) }
     val isPopupOpen = remember { mutableStateOf(false) }
     val localCharList = rememberSaveable { mutableStateOf<ArrayList<Character>>(arrayListOf()) }
@@ -183,7 +185,7 @@ fun ActionOrderListPageScreen(
     Box(modifier = modifier.fillMaxSize()){
         LazyColumn(modifier = Modifier
             .padding(start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)
-            .haze(state = hazeState)
+            .hazeSource(state = hazeStateRoot, zIndex = DefaultZIndex)
             //.haze(state = hazeState)
         ) {
             item {
@@ -207,7 +209,7 @@ fun ActionOrderListPageScreen(
         PageHeader(
             navigator = navigator,
             headerData = headerData,
-            hazeState = hazeState,
+            hazeState = hazeStateRoot,
             backIconId = BackIcon.CANCEL,
             forwardIconId = Res.drawable.phorphos_check_regular,
             onForward = {

@@ -52,6 +52,7 @@ import androidx.window.core.layout.WindowWidthSizeClass
 import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import getScreenSizeInfo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -112,7 +113,7 @@ import utils.app.snackbarInstance
 //This should not be there, but CharacterCard need it in clickable, without using @Composable ...
 lateinit var navigatorInstance : NavHostController
 
-private lateinit var hazeStateRoot : HazeState
+lateinit var hazeStateRoot : HazeState
 
 /**
  * Only usage : For GlobalBackground check whether should blur the background
@@ -201,7 +202,7 @@ fun RootContent() {
             }
         }
 
-        Row(modifier = Modifier.haze(hazeStateRoot)) {
+        Row {
             if(isPadMode.value && screenInstance != Screen.SplashPage && screenInstance != Screen.BlankPage){
                 Box(Modifier
                     .width(HOME_WIDTH)
@@ -634,17 +635,16 @@ fun NavHostController.popBackStackLimited() {
 
 @Composable
 fun withBGScreen(isPadMode: MutableState<Boolean>, content: @Composable () -> Unit){
-    val hazeState = remember { HazeState() }
     Box(modifier = Modifier.fillMaxSize()) {
         if(!isPadMode.value){
             MakeBackground(screen = screenInstance)
         }
-        Box(modifier = Modifier.haze(hazeState)){
+        Box {
             content()
         }
 
         //Overlay - For Error Message or Loading Popup
-        PomPomPopupUI(hazeState = hazeState)
+        PomPomPopupUI(hazeState = hazeStateRoot)
 
         /*
         Toaster(

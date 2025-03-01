@@ -39,6 +39,7 @@ import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import files.About
 import files.AboutTheApp
 import files.AccountSetup
@@ -90,10 +91,12 @@ import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.defaultHeaderData
 import ui.navigation.Screen
+import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import utils.annotation.DoItLater
 import utils.annotation.TranslationPls
 import utils.app.Constants
+import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
@@ -114,7 +117,6 @@ val doRefresh = mutableStateOf(false)
 @Composable
 fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, headerData: HeaderData = defaultHeaderData
 ){
-    val hazeState = remember { HazeState() }
     val wallpaper = Wallpaper.wallpaperList.find { it.id == Settings().getString("backgroundImage", "221000") } ?: Wallpaper.wallpaperList[0]
 
     val urlHandler = LocalUriHandler.current
@@ -127,7 +129,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
             LazyColumn (
                 modifier = Modifier
                     .padding(start = 16.dp, end = 16.dp)
-                    .haze(state = hazeState),
+                    .hazeSource(state = hazeStateRoot, zIndex = DefaultZIndex),
             ){
                 //Spacer for padding status bar
                 item { Spacer(modifier = Modifier.statusBarsPadding().height(PAGE_HEADER_HEIGHT)) }
@@ -358,9 +360,9 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
 
             }
 
-            PageHeader(navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.BACK)
+            PageHeader(navigator, headerData = headerData, hazeState = hazeStateRoot, backIconId = BackIcon.BACK)
 
-            UpdateAssetsPopup(showUpdatePopup, hazeState, forceDownload = true)
+            UpdateAssetsPopup(showUpdatePopup, hazeStateRoot, forceDownload = true)
         }
     }
 }

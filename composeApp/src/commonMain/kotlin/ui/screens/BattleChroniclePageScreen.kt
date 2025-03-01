@@ -46,6 +46,7 @@ import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import files.AbyssListSortAscend
 import files.AbyssListSortDescend
 import files.AppStatusNoDataFound
@@ -68,7 +69,9 @@ import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeaderAlpha
 import ui.components.defaultHeaderData
+import ui.navigation.hazeStateRoot
 import utils.app.Constants
+import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormal20
@@ -83,7 +86,6 @@ fun BattleChroniclePageScreen(
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
     backStackEntry: NavBackStackEntry,
 ) {
-    val hazeState = remember { HazeState() }
     val listState = remember { LazyListState() }
     val uid = backStackEntry.arguments?.getString("uid")!!
     val userAccount by remember { mutableStateOf(
@@ -154,7 +156,7 @@ fun BattleChroniclePageScreen(
             modifier = Modifier.padding(
                 start = Constants.SCREEN_SAVE_PADDING,
                 end = Constants.SCREEN_SAVE_PADDING
-            ).haze(hazeState)
+            ).hazeSource(hazeStateRoot, zIndex = DefaultZIndex)
         ) {
             item { Spacer(
                 modifier = Modifier
@@ -238,7 +240,7 @@ fun BattleChroniclePageScreen(
                     Spacer(Modifier.height(8.dp))
                 }
                 BattleChronicleCard(
-                    hazeState = hazeState,
+                    hazeState = hazeStateRoot,
                     data = mocData,
                     type = choiceStrList[choiceChronicleIndex.value].second,
                     title =
@@ -290,7 +292,7 @@ fun BattleChroniclePageScreen(
                     isAsc.value = !isAsc.value
                 },
                 forwardIconId = Res.drawable.ui_icon_exchange,
-                hazeState = hazeState,
+                hazeState = hazeStateRoot,
 
                 ) {
                 Column(Modifier.fillMaxSize()) {

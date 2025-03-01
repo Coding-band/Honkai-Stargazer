@@ -11,6 +11,8 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -18,11 +20,20 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import dev.chrisbanes.haze.HazeDefaults
+import dev.chrisbanes.haze.HazeEffectScope
+import dev.chrisbanes.haze.HazeState
+import dev.chrisbanes.haze.HazeStyle
+import dev.chrisbanes.haze.HazeTint
+import dev.chrisbanes.haze.hazeEffect
 import files.Res
 import files.misans_regular
 import org.jetbrains.compose.resources.Font
 import setKeyboardDarkMode
+import ui.screens.globalHazeBlur
 import ui.screens.gradientBottom
 
 val Purple80 = Color(0xFFD0BCFF)
@@ -161,3 +172,26 @@ fun PageBottomMask(modifier: Modifier = Modifier) {
         )
     }
 }
+
+val HazeBlurDp10 = HazeStyle(Color.Black, null, 10.dp, 0f)
+val HazeBlurDp10Alpha = HazeStyle(Color.Transparent, null, 10.dp, 0f)
+val HazeBlurDp20Alpha = HazeStyle(Color.Transparent, null, 20.dp, 0f)
+val HazeBlurDp20 = HazeStyle(Color.Black, null, 20.dp, 0f)
+const val DialogPopUpZIndex = 200f
+const val PageHeaderZIndex = 100f
+const val HomePageBtnZIndex = 10f
+const val DefaultZIndex = 5f
+const val BackgroundZIndex = 2f
+
+fun Modifier.hazeEffectSG3(
+    state: HazeState,
+    isBlur: MutableState<Boolean> = globalHazeBlur,
+    style: HazeStyle = HazeBlurDp10,
+    block: (HazeEffectScope.() -> Unit)? = {
+        blurEnabled = isBlur.value
+    },
+): Modifier = this.hazeEffect(
+    state = state,
+    style = style,
+    block = block
+)

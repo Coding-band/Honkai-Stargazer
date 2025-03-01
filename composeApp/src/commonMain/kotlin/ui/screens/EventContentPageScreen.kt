@@ -19,6 +19,7 @@ import com.multiplatform.webview.web.WebView
 import com.multiplatform.webview.web.rememberWebViewStateWithHTMLData
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import files.Res
 import files.phorphos_film_slate_fill
 import types.EventItem
@@ -28,7 +29,9 @@ import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.defaultHeaderData
+import ui.navigation.hazeStateRoot
 import utils.app.Constants
+import utils.app.DefaultZIndex
 import utils.app.newImageRequest
 
 //This Header was copy from "rn-branch\src\components\EventScreen\Event\EventWebView\EventWebView.tsx
@@ -97,7 +100,6 @@ fun EventContentPageScreen(
     headerData: HeaderData = defaultHeaderData,
     backStackEntry: NavBackStackEntry,
 ) {
-    val hazeState = remember { HazeState() }
 
     val eventId = backStackEntry.arguments?.getString("eventId")!!
 
@@ -117,7 +119,7 @@ fun EventContentPageScreen(
 
     Box(modifier = modifier.fillMaxSize()){
 
-        LazyColumn(modifier = Modifier.fillMaxSize().haze(hazeState)) {
+        LazyColumn(modifier = Modifier.fillMaxSize().hazeSource(hazeStateRoot, zIndex = DefaultZIndex)) {
             item {
                 Spacer(Modifier.padding(top = PAGE_HEADER_HEIGHT).statusBarsPadding())
             }
@@ -134,7 +136,7 @@ fun EventContentPageScreen(
         PageHeader(
             navigator = navigator,
             headerData = HeaderData(title = eventItem.title, titleIconId = Res.drawable.phorphos_film_slate_fill),
-            hazeState = hazeState,
+            hazeState = hazeStateRoot,
             backIconId = BackIcon.BACK,
         )
 

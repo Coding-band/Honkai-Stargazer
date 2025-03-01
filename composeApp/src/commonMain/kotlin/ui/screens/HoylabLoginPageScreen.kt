@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
@@ -146,7 +147,17 @@ fun HoyolabLoginPageScreen(
     }
 
     Box(modifier = modifier.fillMaxSize()) {
-        WebView(webviewState, modifier = Modifier.statusBarsPadding().padding(top = PAGE_HEADER_HEIGHT).matchParentSize())
+        Column(modifier = Modifier.fillMaxSize()) {
+            WebView(webviewState, modifier = Modifier.statusBarsPadding().padding(top = PAGE_HEADER_HEIGHT).fillMaxSize().weight(1f))
+            Box(modifier = Modifier.background(Color(0xCCF3F9FF)).padding(16.dp).navigationBarsPadding()) {
+                Text(
+                    text = LongStringXML().LoginHint(),
+                    color = Color.Black,
+                    style = FontSizeNormal14(),
+                )
+
+            }
+        }
 
         PageHeader(
             navigator = navigator,

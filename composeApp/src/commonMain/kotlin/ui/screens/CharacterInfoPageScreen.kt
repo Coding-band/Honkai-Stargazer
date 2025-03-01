@@ -38,6 +38,7 @@ import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import files.AdviceLightcones
 import files.AdviceRelics
 import files.AdviceTeams
@@ -84,9 +85,11 @@ import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.StatusType
 import ui.components.defaultHeaderData
+import ui.navigation.hazeStateRoot
 import utils.annotation.DoItLater
 import utils.app.CharWeightList
 import utils.app.Constants.Companion.LOST_IMAGE_DRAWABLE
+import utils.app.DefaultZIndex
 import utils.app.JsonElementSaver
 import utils.app.Language
 import utils.app.newImageRequest
@@ -129,7 +132,6 @@ fun CharacterInfoPage(
     val combatType = valueOfWithDefaultCombatType(backStackEntry.arguments?.getString("combatType")!!)
     val path = valueOfWithDefaultPath(backStackEntry.arguments?.getString("path")!!)
 
-    val hazeState = remember { HazeState() }
     val charInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Character.getCharacterDataFromFileName(characterFileName, Language.TextLanguageInstance) as JsonElement) }
 
     localCoroutineScope = rememberCoroutineScope();
@@ -186,7 +188,7 @@ fun CharacterInfoPage(
             horizontalAlignment = Alignment.CenterHorizontally,
             state = listState,
             modifier = Modifier
-                .haze(hazeState)
+                .hazeSource(hazeStateRoot, zIndex = DefaultZIndex)
                 .align(Alignment.Center),
             verticalArrangement = Arrangement.spacedBy(30.dp)
         ) {
@@ -205,7 +207,7 @@ fun CharacterInfoPage(
         PageHeader(
             navigator = navigator,
             headerData = headerDataPage,
-            hazeState = hazeState,
+            hazeState = hazeStateRoot,
             backIconId = BackIcon.CANCEL,
             forwardIconId = Res.drawable.ic_favourite_btn,
             onForward = {}
@@ -213,9 +215,9 @@ fun CharacterInfoPage(
 
         Box(modifier = Modifier.fillMaxSize()) {
             if(dialogDisplay.value){
-                InfoDisplayDialog(dialogTitle.value, dialogComponent.value, modifier = Modifier.align(Alignment.BottomCenter), hazeState, isNavBarVisible = (isNaviBarVisible), isDialogVisible = (dialogDisplay))
+                InfoDisplayDialog(dialogTitle.value, dialogComponent.value, modifier = Modifier.align(Alignment.BottomCenter), hazeStateRoot, isNavBarVisible = (isNaviBarVisible), isDialogVisible = (dialogDisplay))
             } else {
-                InfoNavigatorBar(charInfoNavItemList, listState, Modifier.align(Alignment.BottomCenter), hazeState = hazeState, isVisible = (isNaviBarVisible), offSet = PAGE_HEADER_HEIGHT)
+                InfoNavigatorBar(charInfoNavItemList, listState, Modifier.align(Alignment.BottomCenter), hazeState = hazeStateRoot, isVisible = (isNaviBarVisible), offSet = PAGE_HEADER_HEIGHT)
             }
         }
     }

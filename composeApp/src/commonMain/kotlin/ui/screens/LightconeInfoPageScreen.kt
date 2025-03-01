@@ -41,6 +41,7 @@ import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
+import dev.chrisbanes.haze.hazeSource
 import files.AdviceCharacters
 import files.BasicStatus
 import files.LightconeEffect
@@ -78,6 +79,8 @@ import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.StatusType
 import ui.components.defaultHeaderData
+import ui.navigation.hazeStateRoot
+import utils.app.DefaultZIndex
 import utils.app.JsonElementSaver
 import utils.app.Language
 import utils.app.newImageRequest
@@ -111,8 +114,6 @@ fun LightconeInfoPage(
     val lightconeName = backStackEntry.arguments?.getString("lcName")!!.replace("_", " ")
     val lightconeFileName = backStackEntry.arguments?.getString("fileName")!!
     val path = valueOfWithDefaultPath(backStackEntry.arguments?.getString("path")!!)
-
-    val hazeState = remember { HazeState() }
     val lcInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Lightcone.getLightconeDataFromJSON(lightconeFileName, Language.TextLanguageInstance) as JsonElement) }
 
     localCoroutineScope = rememberCoroutineScope();
@@ -156,7 +157,7 @@ fun LightconeInfoPage(
         )
 
         //RecycleView
-        LazyColumn(state = listState, modifier = Modifier.haze(hazeState).align(Alignment.Center)) {
+        LazyColumn(state = listState, modifier = Modifier.hazeSource(hazeStateRoot, zIndex = DefaultZIndex).align(Alignment.Center)) {
             item { InfoBioColumn(lcInfoJson, combatType = null, path, isUserOwned = false, isFullEidolon = false, pageSize = pageSize) }
             //Don't forget to add "StatusBarPadding" !
             item { InfoBasicStatus(lcInfoJson, StatusType.LIGHTCONE) }
@@ -170,7 +171,7 @@ fun LightconeInfoPage(
         PageHeader(
             navigator = navigator,
             headerData = headerDataPage,
-            hazeState = hazeState,
+            hazeState = hazeStateRoot,
             backIconId = BackIcon.CANCEL,
             forwardIconId = Res.drawable.ic_favourite_btn,
             onForward = {}
@@ -178,9 +179,9 @@ fun LightconeInfoPage(
 
         Box(modifier = Modifier.fillMaxSize()) {
             if(dialogDisplay.value){
-                InfoDisplayDialog(dialogTitle.value, dialogComponent.value, modifier = Modifier.align(Alignment.BottomCenter), hazeState, isNavBarVisible = (isNaviBarVisible), isDialogVisible = (dialogDisplay))
+                InfoDisplayDialog(dialogTitle.value, dialogComponent.value, modifier = Modifier.align(Alignment.BottomCenter), hazeStateRoot, isNavBarVisible = (isNaviBarVisible), isDialogVisible = (dialogDisplay))
             } else {
-                InfoNavigatorBar(lcInfoNavItemList, listState, Modifier.align(Alignment.BottomCenter), hazeState = hazeState, isVisible = (isNaviBarVisible), offSet = PAGE_HEADER_HEIGHT)
+                InfoNavigatorBar(lcInfoNavItemList, listState, Modifier.align(Alignment.BottomCenter), hazeState = hazeStateRoot, isVisible = (isNaviBarVisible), offSet = PAGE_HEADER_HEIGHT)
             }
         }
     }
