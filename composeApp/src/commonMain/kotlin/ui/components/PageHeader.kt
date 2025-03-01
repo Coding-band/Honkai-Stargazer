@@ -95,6 +95,11 @@ fun PageHeader(
                 //.clippedShadow(elevation = 2.dp)
                 .statusBarsPadding()
                 .requiredHeight(PAGE_HEADER_HEIGHT)
+                .clickable(
+                    onClick = {  },
+                    indication = null,
+                    interactionSource = MutableInteractionSource()
+                )
 
 
         ){
@@ -107,6 +112,7 @@ fun PageHeader(
                 ) {
                     Box(modifier = Modifier
                         .size(40.dp)
+                        .clip(CircleShape)
                         .align(Alignment.CenterVertically)
                         .clickable(
                             onClick = { onBack.invoke(navigator) },
@@ -136,6 +142,7 @@ fun PageHeader(
                             indication = ripple(),
                             interactionSource = MutableInteractionSource()
                         )
+                        .clip(CircleShape)
                     ){
                         Image(
                             painter = painterResource(resource = forwardIconId),

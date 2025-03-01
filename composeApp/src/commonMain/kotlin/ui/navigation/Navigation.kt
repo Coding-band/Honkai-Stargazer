@@ -182,6 +182,7 @@ fun RootContent() {
     }
 
     Scaffold(
+        modifier = Modifier.onSizeChanged { isRotate.value = !isRotate.value },
         snackbarHost = { SnackbarHost(snackbarInstance, modifier = Modifier.navigationBarsPadding()) }
     ) {
 
@@ -191,18 +192,18 @@ fun RootContent() {
             transitionSpec = {
                 fadeIn(tween(500)) togetherWith fadeOut(tween(1000))
             },
-            modifier = Modifier.onSizeChanged { isRotate.value = !isRotate.value }
         ) {
             if(it) {
                 MakeBackground(screen = screenInstance, forceBlur = true)
             }else{
-                MakeBackground(screen = screenInstance)
+                //Better sleep early
+                if(!globalPadHomePageBg.value) MakeBackground(screen = screenInstance)
             }
         }
 
         Row(modifier = Modifier.haze(hazeStateRoot)) {
             if(isPadMode.value && screenInstance != Screen.SplashPage && screenInstance != Screen.BlankPage){
-                Scaffold(Modifier
+                Box(Modifier
                     .width(HOME_WIDTH)
                     .let { if (getScreenSizeInfo().wDP < HOME_WIDTH * 1.5f) it.weight(1f) else it }
                     .fillMaxHeight(),

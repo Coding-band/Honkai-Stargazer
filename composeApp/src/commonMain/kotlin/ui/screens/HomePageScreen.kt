@@ -89,6 +89,7 @@ import ui.components.UIButton
 import ui.components.UIButtonSize
 import ui.components.defaultHeaderData
 import ui.navigation.Screen
+import ui.navigation.isPadMode
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
 import utils.annotation.DoItLater
@@ -125,9 +126,7 @@ fun HomePage(
     val homeMenuBlockList = remember { mutableStateOf(Preferences().HomePageMenu.getHomePageMenuArray()) }
 
     checkHasErrorLogFromLastCrash()
-    if(!arrayListOf("PRODUCTION", "RELEASE", "PRODUCTION_GP").contains(BuildKonfig.appProfile) ) {
-        BetaVersionBox()
-    }
+    VersionBox()
 
     key(doRecompose.value){
         println("RECOMPOSED !")
@@ -359,7 +358,7 @@ fun HomePageMenuScrollView(
         ) {
             items(count = reorderHomeMenuBlockList.size, span = { index ->
 
-                maxItemInRow.value = maxLineSpan
+                if(index == 0) maxItemInRow.value = maxLineSpan
 
                 when (reorderHomeMenuBlockList[index].itemType) {
                     HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W1H1 -> GridItemSpan(1)
@@ -383,7 +382,7 @@ fun HomePageMenuScrollView(
                 }
             }
         }
-        BottomView()
+        //BottomView()
     }
 }
 
@@ -449,7 +448,7 @@ fun BottomView(modifier: Modifier = Modifier){
 }
 
 @Composable
-fun BetaVersionBox(){
+fun VersionBox(){
     Box(modifier = Modifier.fillMaxSize().statusBarsPadding()){
         Box(modifier = Modifier
             .background(Color.Black)
@@ -458,7 +457,7 @@ fun BetaVersionBox(){
             .wrapContentSize()
         ){
             Text(
-                text = if(BuildKonfig.appProfile == "DEV") {"DEV"} else BuildKonfig.appVersionName,
+                text = BuildKonfig.appVersionName,
                 style = FontSizeNormal12(),
                 color = TextColorNormalDim,
                 modifier = Modifier.align(Alignment.Center).wrapContentSize()
