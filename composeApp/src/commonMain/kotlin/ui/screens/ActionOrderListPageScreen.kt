@@ -487,7 +487,9 @@ fun TeamListItemCard(
                 ) {
                     item { Spacer(Modifier.height(12.dp)) }
                     items(teamListItem.teamDataList.size) { index ->
-                        CharacterCard(character = teamListItem.teamDataList[index].character)
+                        Box(modifier = Modifier.size(CHAR_CARD_WIDTH, CHAR_CARD_HEIGHT)) {
+                            CharacterCard(character = teamListItem.teamDataList[index].character)
+                        }
                         if (index < teamListItem.teamDataList.size - 1) {
                             Spacer(Modifier.width(8.dp))
                         }

@@ -262,7 +262,7 @@ class Constants {
                 itemIconId = Res.drawable.phorphos_align_left_fill,
                 itemOnClickAction = {
                     showFunctionIsDevelopingToast()
-                }
+                },
                 //itemOnClickToNavigate = Screen.ActionOrderListPageScreen
             ),
             /*

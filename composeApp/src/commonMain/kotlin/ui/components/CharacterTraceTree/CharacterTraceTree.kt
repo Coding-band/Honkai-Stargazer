@@ -68,6 +68,7 @@ import ui.components.MaterialCard
 import ui.components.ThemedSlider
 import ui.components.TitleHeader
 import utils.app.Constants
+import utils.app.Constants.Companion.MATERIAL_CARD_HEIGHT
 import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
 import utils.app.Constants.Companion.TRACE_TREE_BASE_WIDTH
 import utils.app.Constants.Companion.getTraceTreeScale
@@ -499,7 +500,7 @@ fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
                     infoLevel = treeItem.levelData.size.toFloat()
                 }
                 val sortedMaterialKeyList = treeItem.levelData[infoLevel.toInt() - 1].cost.sortedBy { cost -> cost.officialId }
-                LazyRow(modifier = Modifier.fillMaxWidth()) {
+                LazyRow(modifier = Modifier.fillMaxWidth().height(MATERIAL_CARD_HEIGHT)) {
                     for ((index, key) in sortedMaterialKeyList.withIndex()) {
                         item(key = key.officialId) {
                             if (index != 0) {

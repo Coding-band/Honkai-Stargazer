@@ -139,8 +139,6 @@ fun HomePageBlock1x1(
         },
         shape = RoundedCornerShape(6.dp),
         modifier = Modifier
-            .background(GradientHomeButton, RoundedCornerShape(6.dp))
-            .background(WhiteAlpha10, RoundedCornerShape(6.dp))
             .defaultMinSize(
                 HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1,
                 HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT
@@ -160,6 +158,8 @@ fun HomePageBlock1x1(
                     it
                 }
             }
+            .background(GradientHomeButton, RoundedCornerShape(6.dp))
+            .background(WhiteAlpha10, RoundedCornerShape(6.dp))
         ,
         border = BorderStroke(1.dp, Color(0x66907C54))
     ) {
@@ -221,8 +221,6 @@ fun HomePageBlock2x1(
         },
         shape = RoundedCornerShape(6.dp),
         modifier = Modifier
-            .background(GradientHomeButton, RoundedCornerShape(6.dp))
-            .background(WhiteAlpha10, RoundedCornerShape(6.dp))
             .defaultMinSize(
                 HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1,
                 HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT
@@ -240,7 +238,10 @@ fun HomePageBlock2x1(
                     it
                 }
             }
-            //.aspectRatio(HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_2x1 / HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT)
+            .background(GradientHomeButton, RoundedCornerShape(6.dp))
+            .background(WhiteAlpha10, RoundedCornerShape(6.dp))
+
+        //.aspectRatio(HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_2x1 / HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT)
             /* Check if v1.4.0 fixes this lot-of-instance-laggy issue
             .let {
                 return@let if(globalHazeBlur.value){

@@ -122,7 +122,7 @@ fun InfoNavigatorBar(
                             state = hazeState,
                             style = HazeBlurDp20
                         )
-                        .background(Color(0xCC222222), shape = RoundedCornerShape(25.dp))
+                        .background(Color(0xCC222222))
                         /*.hazeChild(
                             hazeState,
                             style = HazeStyle(Color.Unspecified, null,if(globalHazeBlur.value) 20.dp else 0.1.dp, Float.MIN_VALUE),
@@ -150,17 +150,18 @@ fun InfoNavigatorBar(
             Box(modifier = Modifier.fillMaxWidth().clickable(indication = null, onClick = {}, interactionSource = remember { MutableInteractionSource() })) {
                 Box(
                     modifier = Modifier.align(Alignment.Center)
-                        .background(Color(0xCC222222), shape = RoundedCornerShape(25.dp))
                         .border(
                             width = 2.dp,
                             color = Color(0xCC3C3C43),
                             shape = RoundedCornerShape(25.dp)
                         )
+                        .clip(shape = RoundedCornerShape(25.dp))
                         .hazeSource(state = hazeState, zIndex = DialogPopUpZIndex)
                         .hazeEffectSG3(
                             state = hazeState,
                             style = HazeBlurDp20
                         )
+                        .background(Color(0xCC222222))
                         /*.hazeChild(
                             hazeState,
                             style = HazeStyle(Color.Unspecified, null, if(globalHazeBlur.value) 20.dp else 0.1.dp, Float.MIN_VALUE),
