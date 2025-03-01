@@ -136,7 +136,6 @@ class UserAccount(
                 val userCards = api.getGameRecordCard(INSTANCE.hoyolabId).data
 
 
-                @DoItLater("Translation")
                 if (userCards is JsonNull) {
                     showWarningToast(message = UserAccountWarningCookiesInvalid)
                     return

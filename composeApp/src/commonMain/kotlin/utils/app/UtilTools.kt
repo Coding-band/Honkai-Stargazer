@@ -877,6 +877,15 @@ fun String.replaceStr(replaceValueJsonArray: JsonArray, key: String = "Value") :
     return returnString
 }
 
+fun String.replaceStrRes(replaceValueArray: ArrayList<String>) : String{
+    var returnString = this
+
+    replaceValueArray.forEachIndexed { index, str ->
+        returnString = returnString.replace("$"+"{${index+1}}", str)
+    }
+    return returnString
+}
+
 /**
  * Boolean to Int
  */

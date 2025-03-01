@@ -61,9 +61,12 @@ import files.Notifi
 import files.NotifiAll
 import files.OsVersion
 import files.Res
+import files.SettingDeviceModel
+import files.SettingInternalVersionCode
 import files.SettingPadModeHomePageShowBg
 import files.SettingPersonalPageDisable
 import files.SettingPersonalPageShow
+import files.SettingReDownloadFullData
 import files.SourceCode
 import files.SupportUs
 import files.SwitchOff
@@ -89,6 +92,7 @@ import ui.components.defaultHeaderData
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import utils.annotation.DoItLater
+import utils.annotation.TranslationPls
 import utils.app.Constants
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
@@ -304,10 +308,9 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                         )
 
                         //強制下載更新
-                        @DoItLater("Translation")
                         SettingOptionNavigateBar(
                             //titleRes = Res.string.SourceCode,
-                            title = "重新下載完整數據",
+                            title = removeStrQuote(Res.string.SettingReDownloadFullData),
                             navigateClick = {
                                 showUpdatePopup.value = true
                                 canUpdatePopup.value = true
@@ -324,10 +327,9 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                         )
 
                         //App 內部版本號 App Internal VersionName
-                        @DoItLater("Translation")
                         SettingOptionNavigateBar(
-                            title = "內部版本號",
-                            navigateDesc = "${BuildKonfig.appProfile} ${BuildKonfig.appVersionName} (${BuildKonfig.appVersionCode})",
+                            title = removeStrQuote(Res.string.SettingInternalVersionCode),
+                            navigateDesc = "${BuildKonfig.appProfile} ${BuildKonfig.appVersionCode}",
                             navigateClick = {
                                 showSuccessToast(message = Constants.CLARA_KAMOJI)
                             }
@@ -345,9 +347,8 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                             optionStatic = "${getDeviceInfo().deviceOSName} ${getDeviceInfo().deviceOSVersion}",
                         )
                         //裝置型號名稱 Model Name
-                        @DoItLater("Translation")
                         SettingOptionNoneBar(
-                            title = "裝置型號",
+                            title = removeStrQuote(Res.string.SettingDeviceModel),
                             optionStatic = getDeviceInfo().deviceModel,
                         )
                     }

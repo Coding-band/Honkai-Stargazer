@@ -23,6 +23,15 @@ import androidx.compose.ui.window.Popup
 import com.russhwolf.settings.Settings
 import com.russhwolf.settings.set
 import dev.chrisbanes.haze.HazeState
+import files.ConfirmBTN
+import files.LaterBTN
+import files.Res
+import files.UpdateAssetDownloadProgress
+import files.UpdateAssetDownloadingUpdate
+import files.UpdateAssetFoundUpdate
+import files.UpdateAssetUpdateSize
+import files.UpdateAssetUpdateSuggestionWiFi
+import files.UpdateAssetUpdateTheHerta
 import getAppSpecificDirectory
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -45,6 +54,8 @@ import ui.components.UIButton
 import ui.navigation.refreshInit
 import ui.screens.doInit
 import ui.screens.doRefresh
+import utils.annotation.DoItLater
+import utils.annotation.TranslationPls
 import utils.starbase.StarbaseAPI
 
 private var localCommit = Settings().getString("localCommit", "")
@@ -149,7 +160,7 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>, hazeState: HazeState, 
         if(!denyUpdate.value && isShowPopup.value){
             Popup(alignment = Alignment.Center) {
                 AppDialog(
-                    titleString = if(!acceptUpdate.value) "檢測到更新檔案" else "下載中...",
+                    titleString = removeStrQuote(if(!acceptUpdate.value) Res.string.UpdateAssetFoundUpdate else Res.string.UpdateAssetDownloadingUpdate),
                     hazeState = hazeState,
                     modifier = Modifier.widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH),
                     components = {
@@ -201,13 +212,11 @@ fun UpdateAssetsPopupDownloading(showPopup: MutableState<Boolean>, latestAssetsI
     Column {
         Spacer(modifier = Modifier.height(24.dp))
         //下載進度: 18.5% (1.85MB / 10.0MB)
-        Text("下載進度: ${
-            formatDecimal(downloadProgress.value * 100 / fileSize)
-        }% (${
-            formatDecimalByte(downloadProgress.value, 2)
-        } / ${
-            formatDecimalByte(fileSize,2) 
-        })", style = FontSizeNormal16(), color = Color(0xFF222222))
+        Text(removeStrQuote(Res.string.UpdateAssetDownloadProgress).replaceStrRes(arrayListOf(
+            formatDecimal(downloadProgress.value * 100 / fileSize),
+            formatDecimalByte(downloadProgress.value, 2),
+            formatDecimalByte(fileSize,2))
+        ), style = FontSizeNormal16(), color = Color(0xFF222222))
 
         Spacer(modifier = Modifier.height(12.dp))
 
@@ -237,15 +246,15 @@ fun UpdateAssetsPopupAsking(
         ,2,
     )
     Column {
-        Text(text = "更新檔案大小: $fileSizePretty", style = FontSizeNormal16(), color = Color(0xFF222222), modifier = Modifier.align(Alignment.CenterHorizontally))
+        Text(text = removeStrQuote(Res.string.UpdateAssetUpdateSize).replaceStrRes(fileSizePretty), style = FontSizeNormal16(), color = Color(0xFF222222), modifier = Modifier.align(Alignment.CenterHorizontally))
         Spacer(modifier = Modifier.height(8.dp))
-        Text("推薦在WI-FI環境下進行更新", style = FontSizeNormal16(), color = Color(0xFF222222), modifier = Modifier.align(Alignment.CenterHorizontally))
+        Text(removeStrQuote(Res.string.UpdateAssetUpdateSuggestionWiFi), style = FontSizeNormal16(), color = Color(0xFF222222), modifier = Modifier.align(Alignment.CenterHorizontally))
         Spacer(modifier = Modifier.height(8.dp))
-        Text("黑塔女士舉世無雙！黑塔女士聰明絕頂！黑塔女士沉魚落雁！", style = FontSizeNormalSmall(), color = Color(0x33222222), modifier = Modifier.align(Alignment.CenterHorizontally))
+        Text(removeStrQuote(Res.string.UpdateAssetUpdateTheHerta), style = FontSizeNormalSmall(), color = Color(0x33222222), modifier = Modifier.align(Alignment.CenterHorizontally))
         Spacer(modifier = Modifier.height(8.dp))
         Row {
             UIButton(
-                text = "之後吧",
+                text = removeStrQuote(Res.string.LaterBTN),
                 onClick = {
                     denyUpdate.value = true
                     isShowPopup.value = false
@@ -254,7 +263,7 @@ fun UpdateAssetsPopupAsking(
             )
             Spacer(modifier = Modifier.width(8.dp))
             UIButton(
-                text = "確定",
+                text = removeStrQuote(Res.string.ConfirmBTN),
                 onClick = {
                     acceptUpdate.value = true
                 },
