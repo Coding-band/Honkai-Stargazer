@@ -156,14 +156,14 @@ fun LightconeInfoPage(
         )
 
         //RecycleView
-        LazyColumn(state = listState, modifier = Modifier.haze(hazeState).align(Alignment.Center).navigationBarsPadding()) {
+        LazyColumn(state = listState, modifier = Modifier.haze(hazeState).align(Alignment.Center)) {
             item { InfoBioColumn(lcInfoJson, combatType = null, path, isUserOwned = false, isFullEidolon = false, pageSize = pageSize) }
             //Don't forget to add "StatusBarPadding" !
             item { InfoBasicStatus(lcInfoJson, StatusType.LIGHTCONE) }
             item { InfoLcMetamorphosis(lcInfoJson) }
             item { InfoAdviceCharacter(lightconeFileName) }
             item { InfoStory(lcInfoJson, isLcStory = true) }
-            item { Box(modifier = Modifier.height(72.dp)) }
+            item { Box(modifier = Modifier.height(72.dp).navigationBarsPadding()) }
 
         }
 

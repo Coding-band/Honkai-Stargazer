@@ -32,6 +32,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -90,19 +91,21 @@ fun SplashPage(
     }
 
     LaunchedEffect(showPopup.value, hasRefreshed.value, showUpdatePopup.value){
-        println("canUpdatePopup: ${canUpdatePopup.value}, showPopup: ${showPopup.value}, showUpdatePopup: ${showUpdatePopup.value}, screenInstance: $screenInstance, hasRefreshed: ${hasRefreshed.value}")
-        //println("showPopup: ${showPopup.value}, showUpdatePopup: ${showUpdatePopup.value}, canUpdatePopup: ${canUpdatePopup.value}, screenInstance: $screenInstance")
-        if (!showPopup.value && !showUpdatePopup.value && screenInstance !is Screen.HomePage && screenInstance !is Screen.BlankPage) {
-            screenInstance = Screen.HomePage
+        CoroutineScope(Dispatchers.Default).async {
+            if (!showPopup.value && !showUpdatePopup.value && screenInstance !is Screen.HomePage && screenInstance !is Screen.BlankPage) {
+                screenInstance = Screen.HomePage
 
-            navigator.navigate(Screen.HomePage.route){
-                popUpTo(Screen.SplashPage.route){
-                    inclusive = true
+                withContext(Dispatchers.Main) {
+                    navigator.navigate(Screen.HomePage.route){
+                        popUpTo(Screen.SplashPage.route){
+                            inclusive = true
+                        }
+                    }
                 }
+            }else if(!showPopup.value){
+                showUpdatePopup.value = true
             }
-        }else if(!showPopup.value){
-            showUpdatePopup.value = true
-        }
+        }.await()
     }
 
 

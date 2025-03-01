@@ -180,7 +180,7 @@ fun UIDSearchPageScreen(
                 )
             }
 
-            LazyColumn(modifier = Modifier.navigationBarsPadding()) {
+            LazyColumn {
                 items(
                     count = searchRecordList.size,
                     key = { index -> searchRecordList[index].hashCode() }
@@ -265,7 +265,7 @@ fun UIDSearchPageScreen(
                 }
 
                 item{
-                    Box(modifier = Modifier.height(64.dp))
+                    Box(modifier = Modifier.height(64.dp).navigationBarsPadding())
                 }
 
             }

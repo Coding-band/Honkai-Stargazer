@@ -30,8 +30,6 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import ui.navigation.refreshInit
-import ui.screens.doInit
-import ui.screens.doRefresh
 
 
 //App語言 Language for App (R.string)
@@ -220,10 +218,6 @@ class Language() {
             }
         }else{
             setAppLanguage()
-            if (doRefresh.value){
-                //refreshInit()
-                doRefresh.value = false
-            }
         }
     }
 }

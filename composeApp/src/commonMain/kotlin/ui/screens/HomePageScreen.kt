@@ -21,6 +21,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredSize
@@ -432,6 +433,7 @@ fun reorderHomePageBlock(items: MutableList<HomePageBlocks.HomePageBlockItem>, c
 fun BottomView(modifier: Modifier = Modifier){
     Box(modifier = Modifier
         .heightIn(64.dp, 100.dp)){
+        //Background Image
         Image(
             modifier = Modifier.fillMaxWidth(),
             painter = painterResource(resource = Res.drawable.donate_ad_bg),
@@ -440,13 +442,15 @@ fun BottomView(modifier: Modifier = Modifier){
             colorFilter = ColorFilter.tint(Color(0xCCFFFFFF), BlendMode.Lighten)
         )
 
-        Text("恭喜您，看到了一條我發呆寫的廣告", color = Color.LightGray, style = FontSizeNormal16(), modifier = Modifier.align(Alignment.Center))
+        Box(modifier = Modifier.navigationBarsPadding().fillMaxSize()){
+            Text("這個廣告放了在這裏半年，啊是要加了嗎", color = Color.LightGray, style = FontSizeNormal16(), modifier = Modifier.align(Alignment.Center))
+        }
     }
 }
 
 @Composable
 fun BetaVersionBox(){
-    Box(modifier = Modifier.fillMaxSize()){
+    Box(modifier = Modifier.fillMaxSize().statusBarsPadding()){
         Box(modifier = Modifier
             .background(Color.Black)
             .padding(start = 12.dp, end = 12.dp, top = 2.dp, bottom = 2.dp)

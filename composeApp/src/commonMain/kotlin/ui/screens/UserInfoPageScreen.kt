@@ -139,7 +139,7 @@ fun UserInfoPageScreen(
             modifier = Modifier.padding(
                 start = Constants.SCREEN_SAVE_PADDING,
                 end = Constants.SCREEN_SAVE_PADDING
-            ).haze(hazeState).navigationBarsPadding()
+            ).haze(hazeState)
         ) {
             item(span = { GridItemSpan(maxCurrentLineSpan) }) { Spacer(modifier = Modifier.statusBarsPadding().height(PAGE_HEADER_HEIGHT)) }
             item(span = { GridItemSpan(maxLineSpan) }) { UserInfoBioUI(context, userAccount) }
@@ -223,7 +223,7 @@ fun UserInfoPageScreen(
             item(span = { GridItemSpan(maxLineSpan) }) { UserInfoBioUI2(context, userAccount) }
 
             item(span = { GridItemSpan(maxLineSpan) }) {
-                Box {
+                Box(modifier = Modifier.navigationBarsPadding()) {
                     Text(
                         text = removeStrQuote(Res.string.ProducedByStargazer),
                         textAlign = TextAlign.Center,
@@ -233,6 +233,7 @@ fun UserInfoPageScreen(
                         )
                 }
             }
+
         }
 
         PageHeader(

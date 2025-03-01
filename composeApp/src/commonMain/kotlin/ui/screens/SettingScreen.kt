@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
@@ -103,7 +105,7 @@ import kotlin.math.max
 
 val doRecompose = mutableStateOf(false)
 val doInit = mutableStateOf(false)
-val doRefresh = mutableStateOf(true)
+val doRefresh = mutableStateOf(false)
 
 @Composable
 fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, headerData: HeaderData = defaultHeaderData
@@ -209,6 +211,8 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                 }
 
                 //通知 Notification
+                /*
+
                 item {
                     SettingCategory(title = removeStrQuote(Res.string.Notifi), isAvailable = false) {
                         //所有通知 All Notification
@@ -247,6 +251,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                         )
                     }
                 }
+                 */
 
                 //支持我們 Support Us
                 item {
@@ -309,18 +314,23 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                             }
                         )
 
-                        //App 版本 App Version
+                        //App 版本 App VersionName
                         SettingOptionNavigateBar(
                             titleRes = Res.string.AppVersion,
-                            navigateDesc =
-                            "${
-                                if (arrayListOf("PRODUCTION", "RELEASE").contains(BuildKonfig.appProfile)) {
-                                    " "
-                                }else if (arrayListOf("PRODUCTION_GP").contains(BuildKonfig.appProfile)) "GP " else "${BuildKonfig.appProfile} "
-                            }${BuildKonfig.appVersionName} (${BuildKonfig.appVersionCode})",
+                            navigateDesc = BuildKonfig.appVersionName,
                             navigateClick = {
                                 showSuccessToast(message = Constants.CLARA_KAMOJI)
-                            } //@DoItLater("Add the function of invite link")
+                            }
+                        )
+
+                        //App 內部版本號 App Internal VersionName
+                        @DoItLater("Translation")
+                        SettingOptionNavigateBar(
+                            title = "內部版本號",
+                            navigateDesc = "${BuildKonfig.appProfile} ${BuildKonfig.appVersionName} (${BuildKonfig.appVersionCode})",
+                            navigateClick = {
+                                showSuccessToast(message = Constants.CLARA_KAMOJI)
+                            }
                         )
 
                         //App 開發代號 Codename
@@ -334,10 +344,16 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                             titleRes = Res.string.OsVersion,
                             optionStatic = "${getDeviceInfo().deviceOSName} ${getDeviceInfo().deviceOSVersion}",
                         )
+                        //裝置型號名稱 Model Name
+                        @DoItLater("Translation")
+                        SettingOptionNoneBar(
+                            title = "裝置型號",
+                            optionStatic = getDeviceInfo().deviceModel,
+                        )
                     }
                 }
 
-                item { Spacer(modifier = Modifier.height(PAGE_HEADER_HEIGHT).navigationBarsPadding()) }
+                item { Box(modifier = Modifier.size(16.dp).navigationBarsPadding()) }
 
             }
 
@@ -357,7 +373,7 @@ fun SettingOptionNoneBar(
     Column {
         Row(Modifier.background(Color(0xCCF3F9FF))) {
             //Title
-            Row(modifier = Modifier.weight(19/35f)){
+            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically)){
                 Text(
                     color = Color.Black,
                     text = title ?: removeStrQuote(titleRes),
@@ -371,7 +387,7 @@ fun SettingOptionNoneBar(
                 Image(
                     painter = painterResource(Res.drawable.bg_transparent),
                     contentDescription = null,
-                    modifier = Modifier.padding(12.dp).size(16.dp).align(Alignment.CenterVertically)
+                    modifier = Modifier.padding(start = 12.dp, top = 12.dp, bottom = 12.dp, end = 0.dp).size(16.dp).align(Alignment.CenterVertically)
                 )
                 Text(
                     color = Color.Black,
@@ -383,7 +399,7 @@ fun SettingOptionNoneBar(
                 Image(
                     painter = painterResource(Res.drawable.bg_transparent),
                     contentDescription = null,
-                    modifier = Modifier.padding(12.dp).size(16.dp).align(Alignment.CenterVertically)
+                    modifier = Modifier.padding(start = 0.dp, top = 12.dp, bottom = 12.dp, end = 12.dp).size(16.dp).align(Alignment.CenterVertically)
                 )
             }
         }
@@ -408,7 +424,7 @@ fun SettingOptionDropDownBar(
     Column {
         Row(Modifier.background(Color(0xCCF3F9FF))) {
             //Title
-            Row(modifier = Modifier.weight(19/35f)){
+            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically)){
                 Text(
                     color = Color.Black,
                     text = title ?: removeStrQuote(titleRes),
@@ -431,7 +447,7 @@ fun SettingOptionDropDownBar(
                     Image(
                         painter = painterResource(Res.drawable.bg_transparent),
                         contentDescription = null,
-                        modifier = Modifier.padding(12.dp).size(16.dp).align(Alignment.CenterVertically)
+                        modifier = Modifier.padding(start = 12.dp, top = 12.dp, bottom = 12.dp, end = 0.dp).size(16.dp).align(Alignment.CenterVertically)
                     )
                     Text(
                         color = Color.Black,
@@ -443,7 +459,7 @@ fun SettingOptionDropDownBar(
                     Image(
                         painter = painterResource(Res.drawable.phorphos_caret_down_regular),
                         contentDescription = null,
-                        modifier = Modifier.padding(12.dp).size(16.dp).align(Alignment.CenterVertically)
+                        modifier = Modifier.padding(start = 0.dp, top = 12.dp, bottom = 12.dp, end = 12.dp).size(16.dp).align(Alignment.CenterVertically)
                     )
                 }
                 //對於DropdownItem沒法按照設計稿展示，暫時無解
@@ -502,7 +518,7 @@ fun SettingOptionDropDownTFBar(
     Column {
         Row(Modifier.background(Color(0xCCF3F9FF))) {
             //Title
-            Row(modifier = Modifier.weight(19/35f)){
+            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically)){
                 Text(
                     color = Color.Black,
                     text = title ?: removeStrQuote(titleRes),
@@ -525,7 +541,7 @@ fun SettingOptionDropDownTFBar(
                     Image(
                         painter = painterResource(Res.drawable.bg_transparent),
                         contentDescription = null,
-                        modifier = Modifier.padding(12.dp).size(16.dp).align(Alignment.CenterVertically)
+                        modifier = Modifier.padding(start = 12.dp, top = 12.dp, bottom = 12.dp, end = 0.dp).size(16.dp).align(Alignment.CenterVertically)
                     )
                     Text(
                         color = Color.Black,
@@ -537,7 +553,7 @@ fun SettingOptionDropDownTFBar(
                     Image(
                         painter = painterResource(Res.drawable.phorphos_caret_down_regular),
                         contentDescription = null,
-                        modifier = Modifier.padding(12.dp).size(16.dp).align(Alignment.CenterVertically)
+                        modifier = Modifier.padding(start = 0.dp, top = 12.dp, bottom = 12.dp, end = 12.dp).size(16.dp).align(Alignment.CenterVertically)
                     )
                 }
                 //對於DropdownItem沒法按照設計稿展示，暫時無解
@@ -588,7 +604,7 @@ fun SettingOptionNavigateBar(
     Column {
         Row(Modifier.background(Color(0xCCF3F9FF))) {
             //Title
-            Row(modifier = Modifier.weight(19/35f)){
+            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically)){
                 Text(
                     color = Color.Black,
                     text = title ?: removeStrQuote(titleRes),
@@ -602,7 +618,7 @@ fun SettingOptionNavigateBar(
                 Image(
                     painter = painterResource(Res.drawable.bg_transparent),
                     contentDescription = null,
-                    modifier = Modifier.padding(12.dp).size(16.dp).align(Alignment.CenterVertically)
+                    modifier = Modifier.padding(start = 12.dp, top = 12.dp, bottom = 12.dp, end = 0.dp).size(16.dp).align(Alignment.CenterVertically)
                 )
                 Text(
                     color = Color.Black,
@@ -614,7 +630,7 @@ fun SettingOptionNavigateBar(
                 Image(
                     painter = painterResource(Res.drawable.phorphos_caret_right_regular),
                     contentDescription = null,
-                    modifier = Modifier.padding(12.dp).size(16.dp).align(Alignment.CenterVertically)
+                    modifier = Modifier.padding(start = 0.dp, top = 12.dp, bottom = 12.dp, end = 12.dp ).size(16.dp).align(Alignment.CenterVertically)
                 )
             }
         }

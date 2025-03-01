@@ -37,6 +37,7 @@ import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
@@ -173,7 +174,12 @@ fun UserCharacterPageScreen(
     val charNameBigHeight = remember { mutableStateOf(20) }
     val isInited = rememberSaveable { mutableStateOf(false) }
 
+
     if(character == null){ navigator.popBackStack() }else{
+        val charScoreLocal = remember { mutableStateOf(getCharScore(character, 0)) }
+        val overPercentage = remember { mutableStateOf(getProfRankResult(charScoreLocal.value, character, 0, uid)) }
+        val gradRequirement = remember { mutableStateOf(getGradAttrAndValue(character, 0)) }
+
         Box(modifier = modifier
             .fillMaxSize()
         ){
@@ -230,9 +236,9 @@ fun UserCharacterPageScreen(
                     item { CharBioSkillInfo(character, charNameBigHeight) }
                     item { LightconeInfo(character) }
                     item { RelicInfo(character) }
-                    item { ProficientScoreInfo(character, uid, isInited) }
+                    item { ProficientScoreInfo(character, uid, isInited, charScoreLocal, overPercentage, gradRequirement) }
 
-                    item { Spacer(Modifier.statusBarsPadding()) }
+                    item { Spacer(Modifier.navigationBarsPadding()) }
                 }
             }
         }
@@ -242,8 +248,7 @@ fun UserCharacterPageScreen(
 }
 
 @Composable
-fun ProficientScoreInfo(character: Character, uid: String, isInited: MutableState<Boolean>) {
-
+fun ProficientScoreInfo(character: Character, uid: String, isInited: MutableState<Boolean>, charScoreLocal: MutableState<Float>, overPercentage: MutableState<Float>, gradRequirement: MutableState<ArrayList<Pair<AttributeExchange, Float>>>) {
     //Divider
     UserCharPageDivider()
 
@@ -253,15 +258,6 @@ fun ProficientScoreInfo(character: Character, uid: String, isInited: MutableStat
     val optionTextViewSize = remember { mutableStateOf(IntSize.Zero) }
     val density = LocalDensity.current.density
 
-    val charScoreLocal = remember { mutableStateOf(0f) }
-    val overPercentage = remember { mutableStateOf(-1f) }
-
-    //Init Data - CharScore and OverPercentage, only once
-    if (!isInited.value) {
-        charScoreLocal.value = getCharScore(character, schoolIndex.value)
-        overPercentage.value = getProfRankResult(charScoreLocal.value, character, schoolIndex.value, uid)
-        isInited.value = true
-    }
 
     val scoreInfoList = arrayListOf(
         Res.string.CharScore to charScoreLocal.value,
@@ -269,13 +265,16 @@ fun ProficientScoreInfo(character: Character, uid: String, isInited: MutableStat
         //Res.string.RelicScore to 123.4f,
         //Res.string.RelicRank to "B",
     )
-
-    val gradRequirement = getGradAttrAndValue(character, schoolIndex.value)
+    LaunchedEffect(schoolIndex.value){
+        val charScore = getCharScore(character, schoolIndex.value)
+        charScoreLocal.value = charScore
+        overPercentage.value = getProfRankResult(charScore, character, schoolIndex.value, uid)
+        gradRequirement.value = getGradAttrAndValue(character, schoolIndex.value)
+    }
 
     Box(modifier = Modifier.fillMaxWidth().wrapContentHeight()) {
 
-        Column(modifier = Modifier.widthIn(INFO_MIN_WIDTH, INFO_MAX_WIDTH).wrapContentHeight().align(
-            Alignment.Center)) {
+        Column(modifier = Modifier.widthIn(INFO_MIN_WIDTH, INFO_MAX_WIDTH).wrapContentHeight().align(Alignment.Center)) {
             //Title and Spinner
             Row {
                 Text(
@@ -394,7 +393,7 @@ fun ProficientScoreInfo(character: Character, uid: String, isInited: MutableStat
             Spacer(Modifier.height(8.dp))
 
             Column {
-                for (req in gradRequirement){
+                for (req in gradRequirement.value){
                     val charHsrProperties = character.characterStatus!!.characterProperties!!.find { it.attributeExchange == req.first }
                     val charValue = charHsrProperties?.valueFinal ?: 0f
 
@@ -462,7 +461,7 @@ fun ProficientScoreInfo(character: Character, uid: String, isInited: MutableStat
                 text = removeStrQuote(Res.string.ProducedByStargazer),
                 style = FontSizeNormal12(),
                 color = Color.White,
-                modifier = Modifier.align(Alignment.CenterHorizontally).navigationBarsPadding()
+                modifier = Modifier.align(Alignment.CenterHorizontally)
             )
 
         }

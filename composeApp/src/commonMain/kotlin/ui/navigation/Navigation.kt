@@ -21,6 +21,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.Scaffold
 import androidx.compose.material.SnackbarHost
@@ -181,7 +182,7 @@ fun RootContent() {
     }
 
     Scaffold(
-        snackbarHost = { SnackbarHost(snackbarInstance) },
+        snackbarHost = { SnackbarHost(snackbarInstance, modifier = Modifier.navigationBarsPadding()) }
     ) {
 
         AnimatedContent(
@@ -205,7 +206,6 @@ fun RootContent() {
                     .width(HOME_WIDTH)
                     .let { if (getScreenSizeInfo().wDP < HOME_WIDTH * 1.5f) it.weight(1f) else it }
                     .fillMaxHeight(),
-                    snackbarHost = { SnackbarHost(snackbarInstance) },
                 ) {
                     if(globalPadHomePageBg.value){
                         MakeBackground(screen = Screen.HomePage, forceBlur = false)

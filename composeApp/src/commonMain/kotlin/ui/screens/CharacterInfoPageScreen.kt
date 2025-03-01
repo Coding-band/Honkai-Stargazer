@@ -187,8 +187,7 @@ fun CharacterInfoPage(
             state = listState,
             modifier = Modifier
                 .haze(hazeState)
-                .align(Alignment.Center)
-                .navigationBarsPadding(),
+                .align(Alignment.Center),
             verticalArrangement = Arrangement.spacedBy(30.dp)
         ) {
             item { InfoBioColumn(charInfoJson, combatType, path, isUserOwned = false, isFullEidolon = false, pageSize = pageSize) }
@@ -199,7 +198,7 @@ fun CharacterInfoPage(
             item { InfoAdviceRelic(charWeightJsonObject) }
             item { InfoAdviceTeammate(charWeightJsonObject, characterId, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
             item { InfoStory(charInfoJson) }
-            item { Box(modifier = Modifier.height(72.dp)) }
+            item { Box(modifier = Modifier.height(72.dp).navigationBarsPadding()) }
 
         }
 
