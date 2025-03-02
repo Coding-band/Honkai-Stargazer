@@ -167,6 +167,7 @@ fun RootContent() {
     key(isRotate.value) {
         globalWindowWidthSizeClass = currentWindowAdaptiveInfo().windowSizeClass.windowWidthSizeClass
         isPadMode.value = isPadMode()
+        Language().setAppLanguage()
     }
 
     key(doInit.value){

@@ -383,6 +383,8 @@ fun HomePageMenuScrollView(
                     }
                 }
             }
+
+            item { Box(modifier = Modifier.size(16.dp).navigationBarsPadding()) }
         }
         //BottomView()
     }

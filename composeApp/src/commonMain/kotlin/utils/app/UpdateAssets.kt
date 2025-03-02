@@ -162,7 +162,15 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>, hazeState: HazeState, 
     }
 
     if(isShowPopup.value){
-        //First, check what git commit is the user using
+        //First, check is latestAssetsInfo empty or not
+        if(infoList.isEmpty()){
+            //Cannot get the update info (Network error maybe)
+            //Show the warning dialog to the user
+            //...
+            showWarningToast(ERR_NETWORK_UNSTABLE_CONNECTION)
+            isShowPopup.value = false
+            return
+        }
 
         //UI Part
         val acceptUpdate = remember { mutableStateOf(false) }

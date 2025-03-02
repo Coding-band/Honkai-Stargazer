@@ -191,7 +191,7 @@ fun CharacterEidolonBox(eidolonList: ArrayList<Eidolon>, selectIndex : MutableSt
                                     selectIndex.value = eidolon.eidolonIndex
                                     dialogTitleLocal.value = eidolon.name
                                     dialogDisplayLocal.value = true
-                                    dialogComponentLocal.value = { EidolonDialogComponent(eidolon) }
+                                    dialogComponentLocal.value = { EidolonDialogComponent(eidolon, selectIndex.value) }
                                 }
                                 dialogLastTrigTypeLocal.value = lastTrigTypeTag
                             }),
@@ -245,7 +245,7 @@ Please use K1 instead of K2 version of RichText
 */
 
 @Composable
-fun EidolonDialogComponent(eidolon: Eidolon){
+fun EidolonDialogComponent(eidolon: Eidolon, selectIndex: Int) {
     val richTextState = rememberRichTextState()
     richTextState.setHtml(htmlDescApplier(eidolon.desc, eidolon.params))
 
@@ -281,7 +281,7 @@ fun EidolonDialogComponent(eidolon: Eidolon){
         Spacer(Modifier.width(6.dp))
 
         Column {
-            Text(removeStrQuote(Res.string.CharSoul).replace("$"+"{1}",""), color = Color(0xFF333333))
+            Text(removeStrQuote(Res.string.CharSoul).replace("$"+"{1}",selectIndex.toString()), color = Color(0xFF333333))
             RichText(richTextState, color = Color(0xFF666666),style = FontSizeNormal14(),)
         }
     }

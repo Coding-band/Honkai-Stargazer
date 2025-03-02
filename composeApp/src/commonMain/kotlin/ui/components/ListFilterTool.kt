@@ -316,6 +316,7 @@ fun <T> ListFilterTool(
                 .navigationBarsPadding()
                 .padding(start = 32.dp, end = 32.dp, bottom = 16.dp)
                 .wrapContentWidth()
+                .widthIn(72.dp + 116.dp, 116.dp + 212.dp)
                 .align(Alignment.CenterHorizontally)
             ) {
                 UIButton(
@@ -323,26 +324,28 @@ fun <T> ListFilterTool(
                     icon = Res.drawable.ui_icon_filter,
                     buttonSize = UIButtonSize.SmallChoice,
                     onClick = {
-                        isShowing.value = "FILTER"
+                        isShowing.value = if("FILTER" == isShowing.value) "NOPE" else "FILTER"
                     }
                 )
                 Spacer(modifier = Modifier.width(12.dp))
-                UIButton(
-                    modifierTmp = Modifier
-                        .widthIn(72.dp,212.dp)
-                        .height(46.dp)
-                        .onSizeChanged { sorterButtonWidth.value = pxToDp(it.width, density = density) },
-                    text = removeStrQuote(sortChoiceList[sortChoiceIndex.value]),
-                    icon = if(isAsc.value){ Res.drawable.ic_sort_asc }else{ Res.drawable.ic_sort_desc },
-                    buttonSize = UIButtonSize.NormalTextLeftWithLine,
-                    onClick = {
-                        isShowing.value = if("SORT" == isShowing.value) "NOPE" else "SORT"
-                    },
-                    iconOnClick = {
-                        isAsc.value = !isAsc.value
-                        isReloadState.value = true
-                    }
-                )
+                Row(modifier = Modifier.weight(1f)) {
+                    UIButton(
+                        modifierTmp = Modifier
+                            .fillMaxWidth()
+                            .height(46.dp)
+                            .onSizeChanged { sorterButtonWidth.value = pxToDp(it.width, density = density) },
+                        text = removeStrQuote(sortChoiceList[sortChoiceIndex.value]),
+                        icon = if(isAsc.value){ Res.drawable.ic_sort_asc }else{ Res.drawable.ic_sort_desc },
+                        buttonSize = UIButtonSize.NormalTextLeftWithLine,
+                        onClick = {
+                            isShowing.value = if("SORT" == isShowing.value) "NOPE" else "SORT"
+                        },
+                        iconOnClick = {
+                            isAsc.value = !isAsc.value
+                            isReloadState.value = true
+                        }
+                    )
+                }
                 Spacer(modifier = Modifier.width(12.dp))
 
                 @DoItLater("ListFilterTool Search Button")
