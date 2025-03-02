@@ -22,6 +22,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -113,6 +114,7 @@ import kotlin.math.max
 val doRecompose = mutableStateOf(false)
 val doInit = mutableStateOf(false)
 val doRefresh = mutableStateOf(false)
+lateinit var showUpdatePopupInSetting : MutableState<Boolean>
 
 @Composable
 fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, headerData: HeaderData = defaultHeaderData
@@ -120,7 +122,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
     val wallpaper = Wallpaper.wallpaperList.find { it.id == Settings().getString("backgroundImage", "221000") } ?: Wallpaper.wallpaperList[0]
 
     val urlHandler = LocalUriHandler.current
-    val showUpdatePopup = remember { mutableStateOf(false) }
+    showUpdatePopupInSetting = remember { mutableStateOf(false) }
     val canUpdatePopup = remember { mutableStateOf(true) } //Not for use
 
     key(doRecompose.value){
@@ -314,7 +316,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                             //titleRes = Res.string.SourceCode,
                             title = removeStrQuote(Res.string.SettingReDownloadFullData),
                             navigateClick = {
-                                showUpdatePopup.value = true
+                                showUpdatePopupInSetting.value = true
                                 canUpdatePopup.value = true
                             }
                         )
@@ -362,7 +364,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
 
             PageHeader(navigator, headerData = headerData, hazeState = hazeStateRoot, backIconId = BackIcon.BACK)
 
-            UpdateAssetsPopup(showUpdatePopup, hazeStateRoot, forceDownload = true)
+            UpdateAssetsPopup(showUpdatePopupInSetting, hazeStateRoot, forceDownload = true)
         }
     }
 }

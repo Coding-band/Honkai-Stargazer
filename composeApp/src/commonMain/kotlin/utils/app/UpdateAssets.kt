@@ -59,7 +59,7 @@ import utils.annotation.DoItLater
 import utils.annotation.TranslationPls
 import utils.starbase.StarbaseAPI
 
-private var localCommit = Settings().getString("localCommit", "")
+private var localCommit = Settings().getString("localCommit-${Language.TextLanguageInstance.folderName}", "")
 private lateinit var isProcessing: MutableState<Boolean>
 private var infoList = arrayListOf<UpdateAssetsInfo>()
 private var updateState = UpdateAssetsStatus.SKIP
@@ -201,7 +201,7 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>, hazeState: HazeState, 
                         //Warning ...
                     }else {
                         //Update the local commit
-                        Settings().putString("localCommit", infoList.first().commit)
+                        Settings().putString("localCommit-${Language.TextLanguageInstance.folderName}", infoList.first().commit)
                     }
 
                     refreshInit()

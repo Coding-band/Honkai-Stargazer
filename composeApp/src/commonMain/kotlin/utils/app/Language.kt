@@ -21,6 +21,7 @@ import ui.components.UIButton
 import dev.chrisbanes.haze.HazeState
 import files.LanguageSetup
 import files.Res
+import getAppSpecificDirectory
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -29,7 +30,10 @@ import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
+import okio.FileSystem
+import okio.SYSTEM
 import ui.navigation.refreshInit
+import ui.screens.showUpdatePopupInSetting
 
 
 //App語言 Language for App (R.string)
@@ -141,8 +145,13 @@ class Language() {
     fun setTextLanguage(lang: TextLanguage, isFirstInit: Boolean = false){
         Settings().putString("textLanguage", lang.name)
         TextLanguageInstance = lang
-        if(!isFirstInit){
+
+        val fileTest = FileSystem.SYSTEM.exists(getAppSpecificDirectory().resolve("data").resolve("character_data").resolve(lang.folderName).resolve("seele.json"))
+
+        if(!isFirstInit && fileTest){
             refreshInit()
+        }else if (!isFirstInit && !fileTest){
+            showUpdatePopupInSetting.value = true
         }
     }
 
