@@ -73,12 +73,14 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boo
     var isBlur = true;
     //var isForceBlur = Settings().getBoolean("useBlurEffect", false) || forceBlur;
     var isGradient = true;
-    val backgroundImage = mutableStateOf(
-        getAssetsURLByFileName(
-            ImageFolder.BGS,
-            Settings().getString("backgroundImage", "221000")
+    val backgroundImage = remember {
+        mutableStateOf(
+            getAssetsURLByFileName(
+                ImageFolder.BGS,
+                Settings().getString("backgroundImage", "221000")
+            )
         )
-    )
+    }
 
     LaunchedEffect(bgModified.value) {
         if(bgModified.value){
