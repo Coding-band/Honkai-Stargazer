@@ -469,6 +469,7 @@ fun downloadFromURLProgress(url: String, downloadProgress: MutableState<Long>, i
 
 fun extractZip(zipPath: okio.Path, rootPath: okio.Path): Boolean {
     val zipFile = File(zipPath.toString())
+    val zipParentFile = File(zipPath.parent.toString())
     val rootFile = File(rootPath.toString())
     return runBlocking {
         try {
@@ -477,27 +478,31 @@ fun extractZip(zipPath: okio.Path, rootPath: okio.Path): Boolean {
                     val entryName = entry.name.trimStart('/')
                     // 手動構建目標路徑
                     val destPath = File("${rootFile.path}/$entryName")
-                    if (entryName.endsWith("/")) {
-                        // 是目錄
-                        destPath.makeDirectory()
-                    } else {
-                        // 是檔案
 
-                        val fileSystem = FileSystem.SYSTEM
-                        val file = destPath.path.toPath()
+                    //println("-------")
+                    val fileSystem = FileSystem.SYSTEM
+                    val file = destPath.path.toPath()
+                    //println("Extracting File: $entryName  (${destPath.path}), isExist: ${fileSystem.exists(file)}")
+                    //println("Parent? : ${file.parent}  isExist: ${if(file.parent != null) fileSystem.exists(file.parent!!) else false}")
+                    if(file.parent != null && !fileSystem.exists(file.parent!!)){
                         fileSystem.createDirectories(file.parent!!, mustCreate = false)
+                        //println("Parent is created: ${fileSystem.exists(file.parent!!)}")
+                    }
+                    //println("Parent? : ${file.parent}  isExistAfterCreates: ${if(file.parent != null) fileSystem.exists(file.parent!!) else false}")
 
-                        fileSystem.sink(file).buffer().use { sink ->
-                            zip.readEntry(entry) { _, content, _, _ ->
-                                sink.write(content)
-                            }
+                    fileSystem.sink(file).buffer().use { sink ->
+                        zip.readEntry(entry) { _, content, _, _ ->
+                            //println("Sink Write: ${content.size}")
+                            sink.write(content)
                         }
+                        //println("File $entryName (${destPath.path}) exists: ${fileSystem.exists(file)}")
                     }
                 }
             }
-            println("Extracted Zip File: $zipPath")
+            //println("Extracted Zip File: $zipPath")
             zipFile.delete()
-            rootFile.delete()
+            zipParentFile.delete()
+
             return@runBlocking true
         } catch (e: Exception) {
             errorLog("UtilTools.kt", "extractZip(zipPath = $zipPath, rootPath = $rootPath)", e)
@@ -649,6 +654,7 @@ fun readFromFile(filePath: String, localOnly : Boolean = false, defaultData : St
     //println(getAppSpecificDirectory())
     val file = getAppSpecificDirectory().resolve("data").resolve(filePath)
 
+    //println("file ${file} is exist: ${fileSystem.exists(file)})")
     try {
         // Check if the file exists
         if (!fileSystem.exists(file)) {

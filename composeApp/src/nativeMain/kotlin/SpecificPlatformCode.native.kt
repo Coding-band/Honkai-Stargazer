@@ -168,7 +168,6 @@ fun ByteReadChannel.copyToOkio(sink: Sink, limit: Long = Long.MAX_VALUE): Long {
                 val bytesRead = okioSource.read(bufferedSink.buffer, minOf(limit - totalBytesCopied, 8192L))
                 if (bytesRead == -1L) break
                 totalBytesCopied += bytesRead
-                bufferedSink.flush() // 可選，根據需求決定是否立即刷新
             }
             totalBytesCopied
         }
@@ -176,50 +175,10 @@ fun ByteReadChannel.copyToOkio(sink: Sink, limit: Long = Long.MAX_VALUE): Long {
 }
 
 actual suspend fun ByteReadChannel.writeToFile(filepath: String) {
+    val path = filepath.toPath()
+    val parent = path.parent
+    if (parent != null && !FileSystem.SYSTEM.exists(parent)) {
+        FileSystem.SYSTEM.createDirectories(parent)
+    }
     this.copyToOkio(FileSystem.SYSTEM.sink(filepath.toPath()))
 }
-
-/*
-fun writeChunk(fd: Int, data: dispatch_data_t, queue: dispatch_queue_t): CompletableDeferred<Unit> {
-    val deferred = CompletableDeferred<Unit>()
-    dispatch_write(fd, data, queue) { _, error ->
-        if (error == 0) {
-            deferred.complete(Unit)
-        } else {
-            deferred.completeExceptionally(IOException("Write failed with error $error"))
-        }
-    }
-    return deferred
-}
-
-@OptIn(ExperimentalForeignApi::class)
-actual suspend fun ByteReadChannel.writeToFile(filepath: String) {
-    val channel = this
-    val queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT.convert(), 0u)
-    val buffer = ByteArray(BUFFER_SIZE)
-    val fd = open(filepath, O_RDWR)
-
-    val writeOperations = mutableListOf<CompletableDeferred<Unit>>()
-
-    try {
-        while (!channel.isClosedForRead) {
-            val rs = channel.readAvailable(buffer, 0, BUFFER_SIZE)
-            if (rs < 0) break
-
-            memScoped {
-                val dst = buffer.refTo(0).getPointer(this)
-                val data = dispatch_data_create(dst, rs.convert(), queue) {}
-
-                val deferred = writeChunk(fd, data, queue)
-                writeOperations.add(deferred)
-            }
-        }
-
-        // 等待所有寫入操作完成
-        writeOperations.awaitAll()
-    } finally {
-        close(fd)
-    }
-}
-
- */
