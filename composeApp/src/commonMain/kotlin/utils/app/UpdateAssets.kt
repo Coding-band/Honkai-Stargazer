@@ -27,6 +27,8 @@ import files.ConfirmBTN
 import files.LaterBTN
 import files.NetworkErrorUnstableConnection
 import files.Res
+import files.UpdateAssetDownloadFull
+import files.UpdateAssetDownloadFullSizeReason
 import files.UpdateAssetDownloadProgress
 import files.UpdateAssetDownloadingUpdate
 import files.UpdateAssetFoundUpdate
@@ -180,7 +182,10 @@ fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>, hazeState: HazeState, 
         if(!denyUpdate.value && isShowPopup.value){
             Popup(alignment = Alignment.Center) {
                 AppDialog(
-                    titleString = removeStrQuote(if(!acceptUpdate.value) Res.string.UpdateAssetFoundUpdate else Res.string.UpdateAssetDownloadingUpdate),
+                    titleString = removeStrQuote(
+                        if(!acceptUpdate.value) { //Asking the user to update or not
+                            if(updateState == UpdateAssetsStatus.FULL) Res.string.UpdateAssetDownloadFull else Res.string.UpdateAssetFoundUpdate
+                        } else Res.string.UpdateAssetDownloadingUpdate), //Downloading the assets
                     hazeState = hazeState,
                     modifier = Modifier.widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH),
                     components = {
@@ -271,6 +276,10 @@ fun UpdateAssetsPopupAsking(
     Column {
         Text(text = removeStrQuote(Res.string.UpdateAssetUpdateSize).replaceStrRes(fileSizePretty), style = FontSizeNormal16(), color = Color(0xFF222222), modifier = Modifier.align(Alignment.CenterHorizontally))
         Spacer(modifier = Modifier.height(8.dp))
+        if(updateState == UpdateAssetsStatus.FULL){
+            Text(removeStrQuote(Res.string.UpdateAssetDownloadFullSizeReason), style = FontSizeNormalSmall(), color = Color(0x66222222), modifier = Modifier.align(Alignment.CenterHorizontally))
+            Spacer(modifier = Modifier.height(8.dp))
+        }
         Text(removeStrQuote(Res.string.UpdateAssetUpdateSuggestionWiFi), style = FontSizeNormal16(), color = Color(0xFF222222), modifier = Modifier.align(Alignment.CenterHorizontally))
         Spacer(modifier = Modifier.height(8.dp))
         Text(removeStrQuote(Res.string.UpdateAssetUpdateTheHerta), style = FontSizeNormalSmall(), color = Color(0x33222222), modifier = Modifier.align(Alignment.CenterHorizontally))
