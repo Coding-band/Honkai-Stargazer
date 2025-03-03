@@ -88,6 +88,7 @@ import ui.screens.SplashPage
 import ui.screens.UIDSearchPageScreen
 import ui.screens.UserCharacterPageScreen
 import ui.screens.UserInfoPageScreen
+import ui.screens.bgModified
 import ui.screens.doInit
 import ui.screens.globalPadHomePageBg
 import ui.screens.initActionOrderTeamList
@@ -202,7 +203,12 @@ fun RootContent() {
                     .fillMaxHeight(),
                 ) {
                     if(globalPadHomePageBg.value){
-                        MakeBackground(screen = Screen.HomePage, forceBlur = false)
+                        key(bgModified.value){
+                            if(bgModified.value){
+                                MakeBackground(screen = Screen.HomePage, forceBlur = false)
+                            }
+                            MakeBackground(screen = Screen.HomePage, forceBlur = false)
+                        }
                     }
                     HomePage(
                         navigator = navigatorInstance,
