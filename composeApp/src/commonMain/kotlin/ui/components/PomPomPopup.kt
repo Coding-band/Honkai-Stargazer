@@ -28,6 +28,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
@@ -37,6 +38,7 @@ import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeChild
 import dev.chrisbanes.haze.hazeEffect
 import dev.chrisbanes.haze.hazeSource
+import files.AppStatusLoading
 import files.Res
 import files.pom_pom_praying
 import kotlinx.coroutines.CoroutineScope
@@ -50,6 +52,7 @@ import utils.app.FontSizeNormal16
 import utils.app.HazeBlurDp10
 import utils.app.hazeEffectSG3
 import utils.app.pxToDp
+import utils.app.removeStrQuote
 
 lateinit var docCountDown : MutableState<Int>
 lateinit var pomPomPopupInstance: MutableState<PomPomPopup>
@@ -133,9 +136,10 @@ fun PomPomPopupUI(
                     )
                     Spacer(modifier = Modifier.height(16.dp))
                     Text(
-                        text = "Pom Pom is praying${".".repeat(docCountDown.value)}",
+                        text = "${removeStrQuote(Res.string.AppStatusLoading)}${".".repeat(docCountDown.value)}",
                         color = Color.White,
                         style = FontSizeNormal16(),
+                        textAlign = TextAlign.Center,
                         modifier = Modifier.align(Alignment.CenterHorizontally)
                     )
                 }

@@ -59,6 +59,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
@@ -93,11 +94,13 @@ import utils.app.FontSizeNormal20
 import utils.app.Language
 import utils.app.formatDecimal
 import utils.app.newImageRequest
+import utils.app.rememberMutableStateListJsonOf
 import utils.app.removeStrQuote
 import utils.app.replaceStrRes
 import utils.hoyolab.MihomoRequest
 import utils.starbase.StarbaseAPI
 
+@Serializable
 data class ProficientSchool(
     val zhName: String = CLARA_KAMOJI,
     val enName: String = "Default",
@@ -114,8 +117,8 @@ fun ProficientLeaderboardPageScreen(
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ) {
     val selectedLeaderboardIndex = rememberSaveable { mutableStateOf(0) }
-    val schoolList by rememberSaveable { mutableStateOf(arrayListOf(ProficientSchool(schoolIndex = 0, charId = 0))) }
-    var leaderboardList by rememberSaveable { mutableStateOf(arrayListOf<CharacterProficient>()) }
+    val schoolList = rememberMutableStateListJsonOf<ProficientSchool>(ProficientSchool(schoolIndex = 0, charId = 0))
+    val leaderboardList = rememberMutableStateListJsonOf<CharacterProficient>()
     val isExpandSchoolDropdown = remember { mutableStateOf(false) }
     val optionTextViewSize = remember { mutableStateOf(IntSize.Zero) }
     val density = LocalDensity.current.density
@@ -164,7 +167,7 @@ fun ProficientLeaderboardPageScreen(
                     )
                     //println("Leadeboard in ${schoolList[selectedLeaderboardIndex.value].zhName} (${schoolList[selectedLeaderboardIndex.value].schoolIndex}) : ${request.size}")
 
-                    leaderboardList = request
+                    leaderboardList.apply { clear(); addAll(request) }
                 }.await()
             }
         }
@@ -180,7 +183,8 @@ fun ProficientLeaderboardPageScreen(
                     )
                     //println("Leadeboard in ${schoolList[selectedLeaderboardIndex.value].zhName} (${schoolList[selectedLeaderboardIndex.value].schoolIndex}) : ${request.size}")
 
-                    leaderboardList = request
+
+                    leaderboardList.apply { clear(); addAll(request) }
                 }.await()
             }
         }
@@ -322,6 +326,8 @@ fun ProficientLeaderboardPageScreen(
                         ProfLeaderboardItem(item,navigator)
                     }
                 }
+
+                item { Spacer(modifier = Modifier.navigationBarsPadding()) }
                 //Comments & Suggestions
             }
         }
