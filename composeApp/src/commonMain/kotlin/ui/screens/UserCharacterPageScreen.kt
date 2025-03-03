@@ -46,6 +46,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
@@ -151,6 +152,7 @@ fun UserCharacterPageScreen(
     headerData: HeaderData = defaultHeaderData,
     backStackEntry: NavBackStackEntry,
 ) {
+    val isScreenShotMode = remember { mutableStateOf(false) }
     val uid = backStackEntry.arguments?.getString("uid")!!
     val userAccount by remember { mutableStateOf(
         if (UserAccount.INSTANCE.uid == uid) {
@@ -186,7 +188,8 @@ fun UserCharacterPageScreen(
         ){
             CharacterInfoFadeImg(
                 fileName = character.registName!!,
-                isVisible = !isScrolling //alpha = scrollToAlpha
+                isVisible = if(!isScreenShotMode.value) !isScrolling else true, //alpha = scrollToAlpha
+                isScreenShotMode = isScreenShotMode,
             )
 
             Column {
@@ -194,6 +197,7 @@ fun UserCharacterPageScreen(
                     navigator = navigator,
                     onForward = {
                         //TODO : Remember to add the Share Function
+                        isScreenShotMode.value = !isScreenShotMode.value
                     },
                     forwardIconId = Res.drawable.ui_icon_share,
                     hazeState = hazeStateRoot,
@@ -233,7 +237,7 @@ fun UserCharacterPageScreen(
                         end = Constants.SCREEN_SAVE_PADDING
                     ).hazeSource(hazeStateRoot)
                 ) {
-                    item { Spacer(Modifier.statusBarsPadding().height(PAGE_HEADER_ALPHA_HEIGHT + 240.dp)) }
+                    item { if(isScreenShotMode.value) Spacer(modifier = Modifier.statusBarsPadding().height(1.dp)) else Spacer(Modifier.statusBarsPadding().height(PAGE_HEADER_ALPHA_HEIGHT + 240.dp)) }
                     item { CharBioSkillInfo(character, charNameBigHeight) }
                     item { LightconeInfo(character) }
                     item { RelicInfo(character) }
@@ -974,7 +978,8 @@ fun StatusFullUI(status : HsrProperties){
 fun CharacterInfoFadeImg(
     modifier: Modifier = Modifier,
     fileName: String,
-    isVisible: Boolean = true
+    isVisible: Boolean = true,
+    isScreenShotMode: MutableState<Boolean>,
 ) {
     Box(modifier = Modifier.fillMaxSize()) {
         AnimatedVisibility(
@@ -989,6 +994,13 @@ fun CharacterInfoFadeImg(
                 )),
                 contentDescription = "Character Full Image",
                 contentScale = ContentScale.Fit,
+                modifier = Modifier.let {
+                    if (isScreenShotMode.value){
+                        it.alpha(0.4f)
+                    }else {
+                        it
+                    }
+                }
                 //imageLoader = UtilTools().newImageLoader(LocalPlatformContext.current)
             )
         }
