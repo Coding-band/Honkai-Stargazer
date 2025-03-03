@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!--
   ~ Project Honkai Stargazer and app Stargazer (星穹觀星者) were
   ~ Organized & Develop by Coding Band.
   ~ Copyright © 2024 Coding Band 版權所有
   -->
 <resources>
-
     <!--server-->
     <string name="asia">"Asia"</string>
     <string name="europe">"Europe"</string>
@@ -15,7 +13,6 @@
     <string name="cn1">"星穹列车"</string>
     <string name="cn2">"无名客"</string>
     <string name="Trailblazer">"開拓者"</string>
-
     <!--path-->
     <string name="Abundance">"豊穣"</string>
     <string name="Destruction">"破滅"</string>
@@ -24,7 +21,8 @@
     <string name="Hunt">"巡狩"</string>
     <string name="Nihility">"虚無"</string>
     <string name="Preservation">"存護"</string>
-
+    <!--20250114 - New Path : Remembrance -->
+    <string name="Remembrance">"記憶"</string>
     <!--element (combat type)-->
     <string name="Physical">"物理"</string>
     <string name="Wind">"風"</string>
@@ -33,9 +31,6 @@
     <string name="Lightning">"雷"</string>
     <string name="Quantum">"量子"</string>
     <string name="Imaginary">"虚数"</string>
-    <!--20250114 - New Path : Remembrance -->
-    <string name="Remembrance">"記憶"</string>
-
     <!--relic-->
     <string name="RelicPropBody">"胴体"</string>
     <string name="RelicPropFeet">"脚部"</string>
@@ -45,7 +40,6 @@
     <string name="RelicPropFeetShort">"脚部"</string>
     <string name="RelicPropPlanarSphereShort">"球体"</string>
     <string name="RelicPropLinkRopeShort">"ロープ"</string>
-
     <!--ui - main page-->
     <string name="Character">"キャラクター"</string>
     <string name="CharacterList">"キャラクター一覽"</string>
@@ -70,7 +64,6 @@
     <string name="SimulatedUniverse">"模擬宇宙"</string>
     <string name="Event">"イベント"</string>
     <string name="Codes">"シリアルコー​​ド"</string>
-
     <!--ui - filter and sort-->
     <string name="SortByTime">"実装日時"</string>
     <string name="SortByName">"名前 (英語)"</string>
@@ -86,7 +79,6 @@
     <string name="FilterFindCharacter">"キャラクター検索"</string>
     <string name="FilterFindLightcone">"光円錐検索"</string>
     <string name="FilterFindRelic">"遺物検索"</string>
-
     <!--ui - character, lightcone, relic pages-->
     <string name="BasicStatus">"基礎ステータス"</string>
     <string name="SkillDesc">"スキル説明"</string>
@@ -106,13 +98,11 @@
     <string name="MainAffix">"メインステータス"</string>
     <string name="SubAffix">"サブステータス"</string>
     <string name="CommentNumber">"${1} コメント"</string>
-
     <!--ui - Memory Of Chaos-->
     <string name="PlayersBattleReport">"${1} の戦績"</string>
     <string name="PlayersRemainRounds">"${1} 残りラウンド"</string>
     <string name="PlayersAverageRounds">"${1} 平均ラウンド"</string>
     <string name="PlayersRounds">"${1} ラウンド"</string>
-
     <!--ui - Setting Page-->
     <string name="Navigate">"移動"</string>
     <string name="SwitchOn">"オン"</string>
@@ -148,18 +138,14 @@
     <string name="SelectServerTitle">"サーバー選択"</string>
     <string name="RemarksInLogin">"ログインの注意点"</string>
     <string name="CopyToClipBoard">"コピーしました！"</string>
-    <string name="FailToCopy">"コピー失敗</string>
-
+    <string name="FailToCopy">\"コピー失敗</string>
     <!--ui - WallPaper Page-->
     <string name="SaveWallPaper">"保存"</string>
     <string name="SetWallPaper">"セット"</string>
-
     <!--ui - Code Page-->
     <string name="HasCopy">"コピーしました"</string>
-
     <!--toast-->
     <string name="PleaseLogin">"ログインしてください！"</string>
-
     <!--Add in 20240114 - User Info Page
     E.g. 10 Days Before / 30mins Before || In the User Info Page -> Status, which shows how long does he/she offline-->
     <string name="UserInfoLastLoginAt">"${1} Before"</string>
@@ -167,7 +153,6 @@
     <string name="UserInfoStatus">"ステータス"</string>
     <string name="UserInfoGamePlayerLevel">"開拓レベル"</string>
     <string name="UserInfoCountComments">"コメント"</string>
-
     <!--Equilibrium level-->
     <string name="UserInfoGameWorldLevel">"均衡レベル"</string>
     <string name="UserInfoLastOnlineTime">"最終オンライン時刻"</string>
@@ -179,14 +164,11 @@
     <string name="UserCharLevelLv">"Lv."</string>
     <string name="UserCharLevelSoul">"星魂"</string>
     <string name="ProducedByStargazer">"Produced By Stargazer"</string>
-
     <!--Add in 20240114 - After 2.0.15-->
     <string name="NoOnlineData">"データなし"</string>
-
     <!--Add in 20240115 - Lightcone Info Page Buttons-->
     <string name="LightconeEffect">"光円錐効果"</string>
     <string name="LightconeStory">"光円錐ストーリー"</string>
-
     <!--Add in 20240116 - For identify the relic sub stat-->
     <string name="UseBlurEffect">"ぼかし効果を使用"</string>
     <string name="ATTR_CRIT_RATE">"会心率"</string>
@@ -211,48 +193,37 @@
     <string name="ATTR_PHYSICAL_DMG">"物理属性与ダメージ"</string>
     <string name="ATTR_SP_RATE">"EP回復効率"</string>
     <string name="ATTR_HEAL_RATE">"Heal Bonus"</string>
-
     <!--Add in 20240117 - Setting Page-->
     <string name="UnLockAll">"すべてのロックを解除"</string>
-    <string name="BlurOn">"ぼかし</string>
-    <string name="BlurOff">"ぼかし</string>
+    <string name="BlurOn">\"ぼかし</string>
+    <string name="BlurOff">\"ぼかし</string>
     <string name="GetCharAndUnLock">"所有時にロックを解除"</string>
     <string name="Leaderboard">"リーダーボード"</string>
     <string name="UIDSearch">"UID 検索"</string>
     <string name="PublicChars">"キャラクター表示"</string>
     <string name="Switch">"切り替え"</string>
-
     <!--Add in 20240118 - User Character Info Page-->
     <string name="Comments">"${1} コメント"</string>
     <string name="UserOwned">"購入済み"</string>
     <string name="FullEidolon">"E6"</string>
-
     <!--普攻-->
     <string name="TraceNormalATK">"通常攻撃"</string>
-
     <!--戰技-->
     <string name="TraceSkill">"スキル"</string>
-
     <!--終結技-->
     <string name="TraceUltimate">"必殺技"</string>
-
     <!--天賦-->
     <string name="TraceTalent">"天賦"</string>
-
     <!--秘技-->
     <string name="TraceTechnique">"秘技"</string>
-
     <!--疊影-->
     <string name="Superimpose">"Superimpose ${1}"</string>
     <string name="RelicScore">"Relic Score"</string>
     <string name="CharScore">"Char. Score"</string>
-
     <!--In the User Character's Info Page, showing the ranking (SS, A, B, ...) of the score-->
     <string name="RelicRank">"Relic Rank"</string>
-
     <!--In the User Character's Info Page, showing the ranking (SS, A, B, ...) of the score-->
     <string name="CharRank">"Char. Rank"</string>
-
     <!--In the User Character's Info Page, showing percentage of character's graduation-->
     <string name="CharGradRate">"Char. Grad%"</string>
     <string name="LackOfUserData">"No leaderboard since lack of user data"</string>
@@ -270,24 +241,19 @@
     <string name="StatusDays">"${1}d"</string>
     <string name="StatusToday">"Today ${1}"</string>
     <string name="StatusTomorrow">"TMR ${1}"</string>
-
     <!--Lightcone Superimpose Level-->
     <string name="SuperimposeLvl">"Sup.${1}"</string>
-
     <!--That character is not equipping any lightcones-->
     <string name="SuperimposeNotEquipped">"N/A"</string>
-
     <!--Notification-->
     <string name="TrailblazerNoti">"Trailblazer Notification!"</string>
-
     <!--Character Page Comment Function-->
-    <string name="CommentFailed">"Failed to comment, error</string>
+    <string name="CommentFailed">\"Failed to comment, error</string>
     <string name="CommentPlsEnterComment">"Please enter your comment"</string>
     <string name="CommentHaventLogin">"Please login first!"</string>
     <string name="CommentSuccessful">"Success!"</string>
     <string name="CommentTextInputHint">"Help me, Mr. Svarog!"</string>
     <string name="CommentInDiscussion">"In \"${1}'s Disccusion\""</string>
-
     <!--Memory Of Chaos (Leaderboard, MOC info)-->
     <string name="MOCMissionInfoTitle">"Mission Info"</string>
     <string name="MOCSkipped">"Skipped"</string>
@@ -310,7 +276,6 @@
     <string name="MOCShowMore">"Show More"</string>
     <string name="MOCRounds">"${1} Rounds"</string>
     <string name="MOCStars">"${1} Stars"</string>
-
     <!--UID Search-->
     <string name="Searching">"Searching..."</string>
     <string name="UIDEnter">"Please Enter UID"</string>
@@ -318,105 +283,83 @@
     <string name="UIDNoData">"No Data"</string>
     <string name="UIDSearchRecord">"Search Records"</string>
     <string name="UIDSearchRecordClear">"Clear"</string>
-
     <!--Redeem Star Rail Code-->
     <string name="RedeemCodeForever">"Forever"</string>
     <string name="RedeemCodeUntil">"Until ${1}"</string>
     <string name="RedeemCodeExpired">"Expired"</string>
-
     <!--Setting Page-->
     <string name="SettingPersonalPage">"Show Personal Page"</string>
     <string name="SettingPersonalPageShow">"Show"</string>
     <string name="SettingPersonalPageDisable">"Disable"</string>
     <string name="SettingChangedWallpaper">"Changed wallpaper to \"${1}\""</string>
     <string name="SettingSaveWallpaperSuccess">"Saved wallpaper successfully"</string>
-    <string name="SettingSaveWallpaperError">"Error on saving wallpaper</string>
-
+    <string name="SettingSaveWallpaperError">\"Error on saving wallpaper</string>
     <!--Toast display / Donation Bar at the Home Page's bottom-->
     <string name="FunctionStillInDevelop">"This function is still in development"</string>
     <string name="LoginEnterCookies">"Please enter Cookies!"</string>
     <string name="ConfirmBTN">"Confirm"</string>
     <string name="ShareSuccess">"Share Successfully!"</string>
-    <string name="ShareError">"Share Failed</string>
+    <string name="ShareError">\"Share Failed</string>
     <string name="CodeAll">"ALL Servers"</string>
     <string name="CharSoulShort">"E${1}"</string>
     <string name="PlsDonateUs">"Pls consider to donate for supporting us, thx!"</string>
     <string name="DonateInRandomCount">"Random"</string>
-
     <!--20240122 -> Home Page Button-->
     <string name="MemoryOfChaosShort">"MOC"</string>
     <string name="ScoreLevel">"Proficiency"</string>
     <string name="MemoryOfChaosLeaderboard">"MOC Leaderboard"</string>
     <string name="ScoreLevelLeaderboard">"Proficiency Leaderboard"</string>
-
     <!--20240125 -> Home Page Button-->
     <string name="PureFiction">"虚構叙事"</string>
-
     <!--20240126 -> Home Page Button & Pure Fiction (Leaderboard & Info Page)-->
     <string name="PureFictionShort">"虚構"</string>
     <string name="PureFictionLeaderboard">"虚構叙事リーダーボード"</string>
-
     <!--Short form for display in Home Page-->
     <string name="About">"About"</string>
-
     <!--Full form for display in Setting Page-->
     <string name="AboutTheApp">"About Stargazer"</string>
-
     <!--Pure Fiction Score, in Pure Fiction Leaderboard-->
     <string name="PFScore">"${1} pts"</string>
-
     <!--20240127-->
     <string name="EventDuration">"Duration"</string>
-
     <!--20240128-->
     <string name="Upgrade">"Upgrade"</string>
-
     <!--In the bottom of User Character's Info Page-->
     <string name="OverWholeServerUser">"Top ${1}% of all users in record"</string>
-
     <!--20240129
     User Info Page -> Status-->
     <string name="NoCommentYet">"No comments yet ..."</string>
-
     <!--20240131
     Navigate User to read codes in GitHub, belongs to the "About" page-->
     <string name="SourceCode">"Source Code"</string>
     <string name="PrevPage">"Previous Page"</string>
     <string name="NextPage">"Next Page"</string>
-
     <!--20240209 - Warp Simulator-->
     <string name="LotterySimulator">"Warp Simulator"</string>
     <string name="MakeOnePull">"Warp x1"</string>
     <string name="MakeTenPull">"Warp x10"</string>
     <string name="TutorialVideo">"Instructional Video"</string>
-
     <!--Donation Message-->
-    <string name="DonationDesc">Thanks for your donation, your support is important for us in improving this app, all donations will be used in &lt;span style="color</string>
+    <string name="DonationDesc">Thanks for your donation, your support is important for us in improving this app, all donations will be used in &lt;span style=\"color</string>
     <string name="DonateUs">Donate Us</string>
-    <string name="ShareToOthers">"Trailblazers, the vast universe is full of endless secrets, and on your journey to pursue the secrets, a reliable guide will help you! Stargazer is not only a Star Rail Assistant App that includes development suggestions, data query, training ranking, and other functions, but also a powerful partner for your exploration journey! Download now and start your own interstellar adventure!\nApp Store</string>
-
+    <string name="ShareToOthers">\"Trailblazers, the vast universe is full of endless secrets, and on your journey to pursue the secrets, a reliable guide will help you! Stargazer is not only a Star Rail Assistant App that includes development suggestions, data query, training ranking, and other functions, but also a powerful partner for your exploration journey! Download now and start your own interstellar adventure!\nApp Store</string>
     <!--20240218 - Common Errors
     Errors when user try to use in-app-purchase in BETA version, deprecated-->
     <string name="ErrorDonationInBeta">"Donation is not available in BETA"</string>
     <string name="ErrorIdentifier">"Unable for find the donation..."</string>
     <string name="ErrorPurchaseAlready">"Please wait a minute and retry again"</string>
-
     <!--20240219 - Permissions and isNotch ...-->
     <string name="ErrorscreenshotPermissionRejected">"Permission for accessing screenshot was rejected, please press the button again/ grant the permission in system setting."</string>
-
     <!--The buttom button / geasure bar-->
     <string name="UserCustomHasNotch">"Notch Adaptation"</string>
-
     <!--iPhone 15 new design (靈動島)-->
     <string name="UserCustomHasDynamicIsland">"Dynamic Island Adaptation"</string>
-
     <!--20240302 - Warp Simulator (Record page)-->
     <string name="LotterySimulatorRecord">"Warp Simulator Record"</string>
     <string name="LotterySimulatorRecordNotice">"Records shown below are NOT from in-game, only from Simulator"</string>
     <string name="LotteryRecordType">"Type"</string>
     <string name="LotteryRecordName">"Name"</string>
     <string name="LotteryRecordTime">"Time"</string>
-
     <!--20240308 ~ 0311 - Warp Analysis-->
     <string name="WrapAnalysis">"Warp Analysis"</string>
     <string name="WrapNeedInit">"No reviews yet. Please click the button in the bottom-let corner to import the wrap URL."</string>
@@ -432,34 +375,71 @@
     <string name="WrapTotalPull">"Total Pulled"</string>
     <string name="WrapPopUpURLTitle">"Paste the Wrap URL"</string>
     <string name="WrapPopUpURLInfo">"Please paste the Wrap URL below"</string>
-
     <!--Show when u don't enter the URL / token in Toast-->
     <string name="WrapPopUpURLToast">"Please enter the Wrap URL!"</string>
     <string name="WrapPopUpURLTextArea">"Pleas put the Wrap URL in there"</string>
     <string name="WrapPopUpURLTutorial">"How to get the Wrap URL?"</string>
     <string name="WrapPopUpURLAnalysisButton">"Analysis"</string>
-    <string name="WrapPopUpURLProgress">"Analysis Progess</string>
-
-    <!--Show when it's reading your Wrap Record one-by-one from official server
-    20240325 - Codename (Just like Android's Mashmellow, Nought, Pie, etc...), for devs to know which version easily-->
+    <string name="WrapPopUpURLProgress">\"Analysis Progess</string>
+    <!--20240325 - Codename (Just like Android's Mashmellow, Nought, Pie, etc...), for devs to know which version easily-->
     <string name="AppInnerVersionCode">"Codename"</string>
-
     <!--20240328 - Warp Analysis-->
     <string name="VisitToDCServer">"Please visit our Discord Server for getting solutions / help"</string>
-
     <!--20240403 - New Update
     Replaced "ManuallySetup"-->
     <string name="UseCookiesToLogin">"Login via Cookies"</string>
-
     <!--Character Info -> Advice Team-->
     <string name="PressToView">"Press To View"</string>
-
     <!--Character Info -> Advice Team -> Press To View-->
     <string name="MatchRequirementChar">"Characters that matched【${1}】"</string>
-
     <!--Character Info -> Advice Team -> Press To View-->
     <string name="RequirementOR">" OR "</string>
-
     <!--Character Info -> Advice Team -> Press To View-->
     <string name="RequirementAND">" AND "</string>
+    <!--20250207 - Action Order -->
+    <string name="ActionOrderTitle">"Action Order Tool"</string>
+    <string name="ActionOrderAddItem">"Add"</string>
+    <string name="ActionOrderItemChosen">"Chosen"</string>
+    <string name="ActionOrderImportedCharData">"Imported User ${1}'s Character Data"</string>
+    <string name="ActionOrderModify">"Modify"</string>
+    <string name="ActionOrderInitSkillPoint">"Init. Skill Point"</string>
+    <string name="ActionOrderMaxSkillPoint">"Max Skill Point"</string>
+    <string name="ActionOrderEnemySpeedTitle">"Enemy's Speed"</string>
+    <string name="ActionOrderEnemySpeedExtSlow">"Ext. Slow"</string>
+    <string name="ActionOrderEnemySpeedSlow">"Slow"</string>
+    <string name="ActionOrderEnemySpeedMid">"Normal"</string>
+    <string name="ActionOrderEnemySpeedHigh">"High"</string>
+    <string name="ActionOrderEnemySpeedExtHigh">"Ext. High"</string>
+    <string name="ActionOrderSimulatorShowAllProcess">"All Process"</string>
+    <string name="ActionOrderSimulatorSkillPoint">"Skill Pt."</string>
+    <string name="ActionOrderSimulatorCharEnergy">"Energy"</string>
+    <string name="ActionOrderSimulatorActionValue">"Total Action Value"</string>
+    <string name="ActionOrderSimulatorActionTimes">"Action Times"</string>
+    <string name="ActionOrderSimulatorSimulateRounds">"Simulate Rounds"</string>
+    <!--20250220 - Missing Translation -->
+    <string name="AbyssCharacterUsage">"Character Usage"</string>
+    <string name="AbyssTeamUsage">"Team Usage"</string>
+    <string name="AbyssListSortDescend">"Descend"</string>
+    <string name="AbyssListSortAscend">"Ascend"</string>
+    <string name="UserAccountWarningCookiesInvalid">"Cookies are invalid, please follow the steps of video and try again."</string>
+    <string name="UserAccountWarningNoAccountRecord">"Cannot find any Star Rail accounts in there, please check your account and try again."</string>
+    <string name="UserAccountWarningIncorrectServer">"Seems you chose the incorrect server, please choose the correct server and try again."</string>
+    <!--20250221 - Added Translation -->
+    <string name="SettingPadModeHomePageShowBg">"HomePage display background in tablet mode"</string>
+    <!--20250301 - Added Translation -->
+    <string name="SettingReDownloadFullData">"Re-Download Full Data"</string>
+    <string name="SettingInternalVersionCode">"Internal Version Code"</string>
+    <string name="SettingDeviceModel">"Device Model"</string>
+    <string name="UpdateAssetFoundUpdate">"Hey! Update Founded"</string>
+    <string name="UpdateAssetUpdateSize">"File Size: ${1}"</string>
+    <string name="UpdateAssetUpdateSuggestionWiFi">"Recommend download when connected to Wi-Fi"</string>
+    <string name="UpdateAssetUpdateTheHerta">"Madam Herta is a peerless gem. Madam Herta is an unrivalled genius. Madam Herta is an inimitable beauty."</string>
+    <string name="UpdateAssetDownloadingUpdate">"Downloading..."</string>
+    <string name="UpdateAssetDownloadProgress">"Progress：${1} (${2}/${3})"</string>
+    <string name="NetworkErrorUnstableConnection">"【Connection Issue】Please Check Your Network Connection"</string>
+    <string name="NetworkErrorTimedOut">"【Request Timeout】It's fine, let's try later"</string>
+    <string name="DenyBTN">"Cancel"</string>
+    <string name="LaterBTN">"Later"</string>
+    <string name="UpdateAssetDownloadFull">"Download Full Data"</string>
+    <string name="UpdateAssetDownloadFullSizeReason">"Loading Speed can be improved after downloaded full data"</string>
 </resources>
