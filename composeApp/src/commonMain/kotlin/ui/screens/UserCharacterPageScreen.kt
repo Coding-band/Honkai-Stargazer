@@ -1,6 +1,8 @@
 package ui.screens
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
@@ -137,6 +139,7 @@ import utils.app.newImageRequest
 import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.replaceStrRes
+import utils.app.showFunctionIsDevelopingToast
 import utils.calculator.getCharRange
 import utils.calculator.getCharScore
 import utils.calculator.getGradAttrAndValue
@@ -152,7 +155,6 @@ fun UserCharacterPageScreen(
     headerData: HeaderData = defaultHeaderData,
     backStackEntry: NavBackStackEntry,
 ) {
-    val isScreenShotMode = remember { mutableStateOf(false) }
     val uid = backStackEntry.arguments?.getString("uid")!!
     val userAccount by remember { mutableStateOf(
         if (UserAccount.INSTANCE.uid == uid) {
@@ -188,8 +190,7 @@ fun UserCharacterPageScreen(
         ){
             CharacterInfoFadeImg(
                 fileName = character.registName!!,
-                isVisible = if(!isScreenShotMode.value) !isScrolling else true, //alpha = scrollToAlpha
-                isScreenShotMode = isScreenShotMode,
+                isScrollMode = isScrolling, //alpha = scrollToAlpha
             )
 
             Column {
@@ -197,7 +198,7 @@ fun UserCharacterPageScreen(
                     navigator = navigator,
                     onForward = {
                         //TODO : Remember to add the Share Function
-                        isScreenShotMode.value = !isScreenShotMode.value
+                        showFunctionIsDevelopingToast()
                     },
                     forwardIconId = Res.drawable.ui_icon_share,
                     hazeState = hazeStateRoot,
@@ -237,7 +238,7 @@ fun UserCharacterPageScreen(
                         end = Constants.SCREEN_SAVE_PADDING
                     ).hazeSource(hazeStateRoot)
                 ) {
-                    item { if(isScreenShotMode.value) Spacer(modifier = Modifier.statusBarsPadding().height(1.dp)) else Spacer(Modifier.statusBarsPadding().height(PAGE_HEADER_ALPHA_HEIGHT + 240.dp)) }
+                    item { Spacer(Modifier.statusBarsPadding().height(PAGE_HEADER_ALPHA_HEIGHT + 240.dp)) }
                     item { CharBioSkillInfo(character, charNameBigHeight) }
                     item { LightconeInfo(character) }
                     item { RelicInfo(character) }
@@ -978,32 +979,20 @@ fun StatusFullUI(status : HsrProperties){
 fun CharacterInfoFadeImg(
     modifier: Modifier = Modifier,
     fileName: String,
-    isVisible: Boolean = true,
-    isScreenShotMode: MutableState<Boolean>,
+    isScrollMode: Boolean = true,
 ) {
+    val alpha by animateFloatAsState(targetValue = if (isScrollMode) 0.4f else 1f)
+    //val alpha by animateFloatAsState(targetValue = if (isScrollMode) 0.4f else 1f, animationSpec = tween(500))
     Box(modifier = Modifier.fillMaxSize()) {
-        AnimatedVisibility(
-            visible = isVisible,
-            enter = fadeIn(),
-            exit = fadeOut(),
-            modifier = Modifier.fillMaxWidth().wrapContentHeight().align(Alignment.TopCenter)
-        ) {
-            AsyncImage(
-                model = newImageRequest(context = LocalPlatformContext.current, data = Character.getCharacterImageFromFileName(
-                    ImageFolder.CHAR_FADE, fileName
-                )),
-                contentDescription = "Character Full Image",
-                contentScale = ContentScale.Fit,
-                modifier = Modifier.let {
-                    if (isScreenShotMode.value){
-                        it.alpha(0.4f)
-                    }else {
-                        it
-                    }
-                }
-                //imageLoader = UtilTools().newImageLoader(LocalPlatformContext.current)
-            )
-        }
+        AsyncImage(
+            model = newImageRequest(context = LocalPlatformContext.current, data = Character.getCharacterImageFromFileName(
+                ImageFolder.CHAR_FADE, fileName
+            )),
+            contentDescription = "Character Full Image",
+            contentScale = ContentScale.Fit,
+            modifier = Modifier.fillMaxWidth().wrapContentHeight().align(Alignment.TopCenter).alpha(alpha)
+            //imageLoader = UtilTools().newImageLoader(LocalPlatformContext.current)
+        )
         Box(
             modifier = Modifier.fillMaxWidth().fillMaxHeight(0.5f).background(
                 Brush.verticalGradient(
