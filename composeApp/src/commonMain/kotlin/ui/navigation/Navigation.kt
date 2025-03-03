@@ -28,6 +28,7 @@ import androidx.compose.material.SnackbarHost
 import androidx.compose.material.SnackbarHostState
 import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
@@ -188,19 +189,9 @@ fun RootContent() {
         snackbarHost = { SnackbarHost(snackbarInstance, modifier = Modifier.navigationBarsPadding()) }
     ) {
 
-        AnimatedContent(
-            targetState = isPadMode.value,
-            //Transition should fade in and out, also must make sure NO BLACK SCREEN
-            transitionSpec = {
-                fadeIn(tween(500)) togetherWith fadeOut(tween(1000))
-            },
-        ) {
-            if(it) {
-                MakeBackground(screen = screenInstance, forceBlur = true)
-            }else{
-                //Better sleep early
-                if(!globalPadHomePageBg.value) MakeBackground(screen = screenInstance)
-            }
+
+        if(isPadMode.value){
+            MakeBackground(screen = screenInstance, forceBlur = isPadMode.value)
         }
 
         Row {
@@ -636,6 +627,8 @@ fun NavHostController.popBackStackLimited() {
 
 @Composable
 fun withBGScreen(isPadMode: MutableState<Boolean>, content: @Composable () -> Unit){
+    val rememberedScreenInstance = remember { mutableStateOf(screenInstance) }
+
     Box(modifier = Modifier.fillMaxSize()) {
         if(!isPadMode.value){
             MakeBackground(screen = screenInstance)

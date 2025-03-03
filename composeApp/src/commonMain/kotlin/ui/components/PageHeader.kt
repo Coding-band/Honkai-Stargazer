@@ -174,7 +174,7 @@ fun PageHeaderAlpha(
     backIconId: BackIcon = BackIcon.CANCEL,
     onForward: (() -> Unit) = {},
     hazeState: HazeState = hazeStateRoot,
-    forwardIconId: DrawableResource = Res.drawable.ui_icon_share,
+    forwardIconId: DrawableResource = Res.drawable.bg_transparent,
     isListScrolling: Boolean = false,
     components: @Composable () -> Unit = {}
 ){
@@ -249,11 +249,17 @@ fun PageHeaderAlpha(
                                 style = HazeStyle(Color.Unspecified,null, if(globalHazeBlur.value) 10.dp else 0.1.dp, 0f)
                             ),
                              */
-                            .hazeSource(state = hazeState, zIndex = DialogPopUpZIndex)
-                            .hazeEffectSG3(
-                                state = hazeState,
-                                style = HazeBlurDp10Alpha,
-                            ),
+                            .let {
+                                if (forwardIconId != Res.drawable.bg_transparent){
+                                    it.hazeSource(state = hazeState, zIndex = DialogPopUpZIndex)
+                                        .hazeEffectSG3(
+                                            state = hazeState,
+                                            style = HazeBlurDp10Alpha,
+                                        )
+                                }else{
+                                    it
+                                }
+                            },
                         colorFilter = ColorFilter.tint(Color.White),
 
                         )

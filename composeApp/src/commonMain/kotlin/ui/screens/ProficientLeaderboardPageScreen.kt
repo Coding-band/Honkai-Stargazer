@@ -334,7 +334,7 @@ fun ProficientLeaderboardPageScreen(
 
         PageHeaderAlpha(
             navigator = navigator,
-            hazeState = hazeStateRoot,
+            hazeState = hazeStateRoot
         ) {
             TitleHeader(headerData.titleIconId, headerData.title, headerData.titleRId)
         }

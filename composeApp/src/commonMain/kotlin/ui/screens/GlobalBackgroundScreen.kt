@@ -119,7 +119,9 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boo
             contentDescription = "",
             contentScale = ContentScale.Crop,
             error = painterResource(Res.drawable.bg_default),
-            modifier = Modifier.fillMaxSize().blur(if (isBlur) 20.dp else 0.1.dp)
+            modifier = Modifier.fillMaxSize().let {
+                if(isBlur) it.blur(20.dp) else it
+            }
         )
         Box(
             modifier = Modifier.matchParentSize().background(
