@@ -631,7 +631,7 @@ fun withBGScreen(isPadMode: MutableState<Boolean>, content: @Composable () -> Un
 
     Box(modifier = Modifier.fillMaxSize()) {
         if(!isPadMode.value){
-            MakeBackground(screen = screenInstance)
+            MakeBackground(screen = rememberedScreenInstance.value)
         }
         Box {
             content()
