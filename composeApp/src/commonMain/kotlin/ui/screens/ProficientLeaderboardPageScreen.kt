@@ -149,6 +149,8 @@ fun ProficientLeaderboardPageScreen(
                             )
                         }
                     }
+
+                    schoolList.reverse()
                 }.await()
 
                 withContext(Dispatchers.Main) {
