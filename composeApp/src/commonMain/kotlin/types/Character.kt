@@ -17,6 +17,7 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.JsonNull
 import kotlinx.serialization.json.decodeFromJsonElement
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
@@ -75,6 +76,12 @@ open class Character(
 
         fun getCharacterDataFromFileName(characterFileName : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance) : JsonElement {
             return getAssetsJsonByFilePath("character_data/${textLanguage.folderName}/${characterFileName}.json")
+        }
+
+        fun getCharacterFromExtListJson(charId: String) : JsonElement? {
+            return charExtListJson.jsonArray.firstOrNull {
+                it.jsonObject["officialId"]!!.jsonPrimitive.content == charId
+            }
         }
 
         /**

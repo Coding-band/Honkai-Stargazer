@@ -60,6 +60,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.datetime.Clock
+import types.Wallpaper.Companion.initWallpaperList
 import ui.components.HeaderData
 import ui.components.PomPomPopupUI
 import ui.components.defaultHeaderData
@@ -174,6 +175,7 @@ fun RootContent() {
 
     key(doInit.value){
         if (!doInit.value){
+            initWallpaperList()
             initCharList()
             initLcList()
             initRelicList()

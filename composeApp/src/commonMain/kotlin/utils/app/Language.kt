@@ -119,6 +119,10 @@ class Language() {
     companion object{
         var TextLanguageInstance = TextLanguage.valueOf(Settings().getString("textLanguage", TextLanguage.EN.name))
         var AppLanguageInstance = AppLanguage.valueOf(Settings().getString("appLanguage", AppLanguage.EN.name))
+
+        fun getTextLanguageByLocaleName(localeName: String): TextLanguage {
+            return TextLanguage.values().firstOrNull { it.localeName == localeName } ?: TextLanguage.EN
+        }
     }
 
     @Composable

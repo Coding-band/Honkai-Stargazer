@@ -8,8 +8,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
@@ -38,8 +36,6 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
-import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.About
 import files.AboutTheApp
@@ -55,12 +51,6 @@ import files.HaveNotUsed
 import files.InviteOthers
 import files.LanguageSetup
 import files.Navigate
-import files.NotiExpedition
-import files.NotiMission
-import files.NotiSimulatedUniverse
-import files.NotiStamina
-import files.Notifi
-import files.NotifiAll
 import files.OsVersion
 import files.Res
 import files.SettingDeviceModel
@@ -80,6 +70,8 @@ import files.ic_selected_orange_circle
 import files.phorphos_caret_down_regular
 import files.phorphos_caret_right_regular
 import getDeviceInfo
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import types.Character
@@ -95,7 +87,6 @@ import ui.navigation.Screen
 import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import utils.annotation.DoItLater
-import utils.annotation.TranslationPls
 import utils.app.Constants
 import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal14
@@ -192,7 +183,10 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                         //更換桌布 Change Wallpaper
                         SettingOptionNavigateBar(
                             titleRes = Res.string.ChangeWallPaper,
-                            navigateDesc = wallpaper.localeName ?: Character.getCharacterItemFromJSON(wallpaper.id).displayName ?: "?",
+                            navigateDesc =
+                                wallpaper.locale?.get(Language.TextLanguageInstance) ?: wallpaper.locale?.get(Language.TextLanguage.EN) ?:
+                                Character.getCharacterFromExtListJson(wallpaper.id)?.jsonObject?.get("localeName")?.jsonObject?.get(Language.TextLanguageInstance.folderName)?.jsonPrimitive?.content ?:
+                                wallpaper.id,
                             navigateClick = { navigator.navigateLimited(Screen.BackgroundSettingScreen.route) }
                         )
 

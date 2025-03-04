@@ -1,48 +1,56 @@
 package ui.screens
 
-import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
-import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.GridItemSpan
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
-import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
+import files.GetCharAndUnLock
 import files.Res
 import files.SetWallPaper
-import getDeviceInfo
-import kotlinx.coroutines.launch
+import files.phorphos_lock_regular
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
+import org.jetbrains.compose.resources.painterResource
 import types.Character
-import types.ImageFolder
+import types.UserAccount
 import types.Wallpaper
+import types.isUnlockSpecials
 import ui.components.BackIcon
 import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
@@ -51,159 +59,128 @@ import ui.components.UIButton
 import ui.components.defaultHeaderData
 import ui.navigation.popBackStackLimited
 import utils.app.Constants
-import utils.app.DpToPx
 import utils.app.FontSizeNormal16
-import utils.app.getAssetsURLByFileName
+import utils.app.Language
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
 
 //All the background image can find in /commonMain/composeResources/files/images/bgs
 //U can use the function UtilTools().getAssetsWebpByFileName to get the image
 
-@OptIn(ExperimentalFoundationApi::class, ExperimentalMaterialApi::class)
 @Composable
 fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, headerData: HeaderData = defaultHeaderData){
 
     val hazeState = remember { HazeState() }
-    val coroutineScope = rememberCoroutineScope()
-    val density = LocalDensity.current.density
-    //val isBlur = remember { mutableStateOf(Settings().getBoolean("useBlurEffect", true)) }
+    val context = LocalPlatformContext.current
+    val currentWallpaper = Wallpaper.getPreferenceWallpaper()
+    val wallpaperIndex = remember { mutableStateOf(kotlin.math.max(0, Wallpaper.wallpaperList.indexOf(currentWallpaper))) }
 
-    val extendedItems = listOf(Wallpaper.wallpaperList[Wallpaper.wallpaperList.size - 2], Wallpaper.wallpaperList.last()) + Wallpaper.wallpaperList + listOf(Wallpaper.wallpaperList.first() , Wallpaper.wallpaperList[1])
-    val currentWallpaper = extendedItems.find { wallpaper: Wallpaper ->
-        wallpaper.id == Settings().getString("backgroundImage", "221000")
-    }
-
-    val wallpaperIndex = remember {
-        mutableStateOf(
-            when (extendedItems.indexOf(currentWallpaper)) {
-                -1 -> { 2 }
-                0 -> { extendedItems.lastIndexOf(currentWallpaper) }
-                else -> { extendedItems.indexOf(currentWallpaper) }
-            }
-        )
-    }
-
-    val listState = rememberLazyListState(wallpaperIndex.value, -DpToPx(32.dp, density))
+    println("UserAccount.INSTANCE.role")
+    println(UserAccount.INSTANCE.role)
+    println(UserAccount.INSTANCE.isUnlockSpecials() )
 
     Box(modifier = Modifier.navigationBarsPadding()){
-        Column(modifier = Modifier.fillMaxSize()) {
-            Spacer(modifier = Modifier.statusBarsPadding().height(PAGE_HEADER_HEIGHT))
-
-            Spacer(modifier = Modifier.height(14.dp))
-
-            //Remove : Not adapted to the new UI
-            /*
-            Row (Modifier.widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).align(Alignment.CenterHorizontally)){
-                UIButton(Modifier.weight(1f).height(64.dp), text = "Test 1")
-                Spacer(modifier = Modifier.width(10.dp))
-                UIButton(Modifier.weight(1f).height(64.dp),
-                    text = "${removeStrQuote(Res.string.UseBlurEffect)}: ${removeStrQuote(if(isBlur.value) Res.string.SwitchOn else Res.string.SwitchOff)}",
-                    onClick = {
-                        isBlur.value = !isBlur.value
-                        Settings().putBoolean("useBlurEffect", isBlur.value)
-                })
-            }
-            Spacer(modifier = Modifier.height(34.dp))
-             */
-
-            if (getDeviceInfo().deviceOSName.lowercase().let { it.contains("mac") || it.contains("windows") }){
-                Text(
-                    text = "SHIFT + Mouse_Wheel to Change Background",
-                    style = FontSizeNormal16(),
-                    color = Color.White,
-                    modifier = Modifier.align(Alignment.CenterHorizontally)
+        //Waterfall-type Background Image List
+        LazyVerticalGrid(
+            columns = GridCells.Adaptive(160.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+            modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING),
+        ){
+            item(span = { GridItemSpan(maxCurrentLineSpan) }) {
+                Spacer(
+                    modifier = Modifier
+                        .statusBarsPadding()
+                        .height(PAGE_HEADER_HEIGHT)
                 )
             }
-            Spacer(modifier = Modifier.height(14.dp))
+            items(Wallpaper.wallpaperList){ item ->
+                val isMatchRequirememt = if(!item.requireOwnChar || UserAccount.INSTANCE.isUnlockSpecials() ) true else (item.requireOwnChar && !UserAccount.INSTANCE.characterList.none { it.officialId.toString() == item.id })
+                val aspectRation = rememberSaveable { mutableStateOf(720/1642f) }
+                Column(modifier.wrapContentSize()){
 
-            //在這裡，我們透過使用LazyRow來實現一個，透過橫向滑動來選擇背景的功能
-            //當中目前選取的背景將會在正中央完整展示，其前、後的背景則只會展示右方/左方部分的背景
-            //必須確保三張背景高度一致，Scale一致，且背景間有20.dp width 的間隔
+                    Box{
+                        //Background Image
+                        AsyncImage(
+                            model = newImageRequest(data = Wallpaper.getWallpaperURLById(item),context = context),
+                            contentDescription = "Wallpaper",
+                            contentScale = ContentScale.FillBounds,
+                            modifier = Modifier
+                                .wrapContentHeight()
+                                .aspectRatio(aspectRation.value)
+                                .clickable {
+                                    wallpaperIndex.value = Wallpaper.wallpaperList.indexOf(item)
+                                }.let {
+                                    if(item.id == Wallpaper.wallpaperList[wallpaperIndex.value].id) it.border(width = 2.dp, color = Color(0xFFDBC291)) else it
+                                },
+                            onSuccess = { imageResult ->
+                                aspectRation.value = imageResult.result.image.width / imageResult.result.image.height.toFloat()
+                            }
+                        )
 
-
-            LaunchedEffect(listState.isScrollInProgress){
-                if(!listState.isScrollInProgress){
-                    wallpaperIndex.value = listState.firstVisibleItemIndex + 1
-                    if(wallpaperIndex.value >= extendedItems.size - 2 && !listState.isScrollInProgress){
-                        coroutineScope.launch {
-                            listState.scrollToItem(2,-DpToPx(32.dp, density))
-                        }
-                    }else if(wallpaperIndex.value <= 1 && !listState.isScrollInProgress){
-                        coroutineScope.launch {
-                            listState.scrollToItem(extendedItems.size - 3 ,-DpToPx(32.dp, density))
-                        }
-                    }
-                }
-            }
-
-            BoxWithConstraints(modifier = Modifier.fillMaxSize().weight(1f)) {
-                val screenWidth = mutableStateOf(maxWidth)
-                val flingBehavior = rememberSnapFlingBehavior(listState)
-
-                LazyRow(
-                    state = listState,
-                    modifier = Modifier.fillMaxWidth(),
-                    flingBehavior = flingBehavior,
-
-                ){
-                    itemsIndexed(extendedItems) { index, wallpaper ->
-                        Row {
-                            Spacer(Modifier.width(10.dp))
+                        //Overlay - if not matching the unlocked requirement
+                        if(!isMatchRequirememt){
                             Box(
                                 modifier = Modifier
-                            ) {
-                                // 背景圖片
-                                AsyncImage(
-                                    model = newImageRequest(context = LocalPlatformContext.current, getAssetsURLByFileName(ImageFolder.BGS, wallpaper.fileName)),
-                                    contentScale = ContentScale.Crop,
-                                    contentDescription = "Background Image",
-                                    modifier = Modifier
-                                        .width(screenWidth.value - 80.dp)
-                                        .fillParentMaxHeight(),
-                                )
+                                    .matchParentSize()
+                                    .align(Alignment.Center)
+                                    .background(Color.Black.copy(alpha = 0.6f))
+                                    .clickable {  }
+                            ){
+                                //Text - Get that character to unlock
+                                Column(modifier = Modifier.fillMaxWidth().wrapContentHeight().align(Alignment.Center)) {
+                                    Image(
+                                        painter = painterResource(Res.drawable.phorphos_lock_regular),
+                                        contentDescription = "Lock Icon",
+                                        modifier = Modifier
+                                            .align(Alignment.CenterHorizontally)
+                                            .size(32.dp),
+                                        colorFilter = ColorFilter.tint(Color.White)
+                                    )
+                                    Text(
+                                        text = removeStrQuote(Res.string.GetCharAndUnLock),
+                                        style = FontSizeNormal16(),
+                                        color = Color.White,
+                                        textAlign = TextAlign.Center,
+                                        modifier = Modifier.fillMaxWidth()
+                                    )
+                                }
                             }
-                            Spacer(Modifier.width(10.dp))
                         }
+
                     }
+                    Spacer(modifier = Modifier.height(10.dp))
+                    Text(
+                        text = item.locale?.get(Language.TextLanguageInstance) ?: item.locale?.get(Language.TextLanguage.EN) ?:
+                        Character.getCharacterFromExtListJson(item.id)?.jsonObject?.get("localeName")?.jsonObject?.get(Language.TextLanguageInstance.folderName)?.jsonPrimitive?.content ?:
+                        item.id,
+                        style = FontSizeNormal16(),
+                        color = if(item.id == Wallpaper.wallpaperList[wallpaperIndex.value].id) Color(0xFFDBC291) else Color.White,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth()
+                    )
                 }
             }
 
-
-            Spacer(modifier = Modifier.height(14.dp))
-
-            Text(
-                text = extendedItems[wallpaperIndex.value].localeName
-                    ?: Character.getCharacterItemFromJSON(
-                        extendedItems[wallpaperIndex.value].fileName.split(
-                            "-"
-                        )[0]
-                    ).displayName ?: "Unknown",
-                style = FontSizeNormal16(),
-                color = Color.White,
-                modifier = Modifier.align(Alignment.CenterHorizontally)
-            )
-
-            Spacer(modifier = Modifier.height(34.dp))
-
-            Row (Modifier.widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).align(Alignment.CenterHorizontally)){
-                /*
-                UIButton(Modifier.weight(1f).height(64.dp), text = removeStrQuote(Res.string.SaveWallPaper), onClick = {
-                    showFunctionIsDevelopingToast()
-                })
-
-                Spacer(modifier = Modifier.width(10.dp))
-                 */
-
-                UIButton(Modifier .weight(1f).height(64.dp), text = removeStrQuote(Res.string.SetWallPaper), onClick = {
-                    Settings().putString("backgroundImage", extendedItems[wallpaperIndex.value].id)
-                    bgModified.value = true
-                    navigator.popBackStackLimited()
-                })
+            item {
+                Spacer(modifier = Modifier.height(64.dp).navigationBarsPadding())
             }
+        }
+
+        //"Confirm" UI Button
+        Row (modifier = Modifier
+            .widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH)
+            .padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
+            .align(Alignment.BottomCenter)
+            .navigationBarsPadding()
+        ){
+            UIButton(Modifier.weight(0.5f).wrapContentHeight(), text = removeStrQuote(Res.string.SetWallPaper), onClick = {
+                Wallpaper.setPreferenceWallpaper(Wallpaper.wallpaperList[wallpaperIndex.value].id)
+                bgModified.value = true
+                navigator.popBackStackLimited()
+            })
         }
 
         PageHeader(navigator = navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.BACK)
     }
-
 }
