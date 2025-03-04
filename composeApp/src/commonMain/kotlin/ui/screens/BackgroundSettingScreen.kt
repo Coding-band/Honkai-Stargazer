@@ -40,6 +40,7 @@ import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
+import dev.chrisbanes.haze.hazeSource
 import files.GetCharAndUnLock
 import files.Res
 import files.SetWallPaper
@@ -57,8 +58,10 @@ import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.UIButton
 import ui.components.defaultHeaderData
+import ui.navigation.hazeStateRoot
 import ui.navigation.popBackStackLimited
 import utils.app.Constants
+import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal16
 import utils.app.Language
 import utils.app.newImageRequest
@@ -69,15 +72,9 @@ import utils.app.removeStrQuote
 
 @Composable
 fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, headerData: HeaderData = defaultHeaderData){
-
-    val hazeState = remember { HazeState() }
     val context = LocalPlatformContext.current
     val currentWallpaper = Wallpaper.getPreferenceWallpaper()
     val wallpaperIndex = remember { mutableStateOf(kotlin.math.max(0, Wallpaper.wallpaperList.indexOf(currentWallpaper))) }
-
-    println("UserAccount.INSTANCE.role")
-    println(UserAccount.INSTANCE.role)
-    println(UserAccount.INSTANCE.isUnlockSpecials() )
 
     Box(modifier = Modifier.navigationBarsPadding()){
         //Waterfall-type Background Image List
@@ -85,7 +82,7 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: NavHostCon
             columns = GridCells.Adaptive(160.dp),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
-            modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING),
+            modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).hazeSource(state = hazeStateRoot, zIndex = DefaultZIndex),
         ){
             item(span = { GridItemSpan(maxCurrentLineSpan) }) {
                 Spacer(
@@ -163,7 +160,7 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: NavHostCon
             }
 
             item {
-                Spacer(modifier = Modifier.height(64.dp).navigationBarsPadding())
+                Spacer(modifier = Modifier.size(64.dp).navigationBarsPadding())
             }
         }
 
@@ -181,6 +178,6 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: NavHostCon
             })
         }
 
-        PageHeader(navigator = navigator, headerData = headerData, hazeState = hazeState, backIconId = BackIcon.BACK)
+        PageHeader(navigator = navigator, headerData = headerData, hazeState = hazeStateRoot, backIconId = BackIcon.BACK)
     }
 }

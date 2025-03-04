@@ -112,6 +112,9 @@ class UserAccount(
                 }
             }
 
+            Settings().putString("cookies", INSTANCE.cookies)
+            Settings().putString("hoyolabId", INSTANCE.hoyolabId)
+
             //println("INSTANCE.cookies : ${INSTANCE.cookies}")
 
             refreshUserAccount()
@@ -165,6 +168,7 @@ class UserAccount(
                         INSTANCE.chestOpened = userInfo.jsonObject["data"]!!.jsonArray[3].jsonObject["value"]!!.jsonPrimitive.int
                         INSTANCE.isLogin = true
 
+                        Settings().putString("uid", INSTANCE.uid)
                     }
                 }
 
@@ -419,6 +423,8 @@ class UserAccount(
             //return Json.decodeFromString<UserAccount>(readFromFile("userAccount.json", true))
             val account = StarbaseAPI().getUserAccountInfoInit()
             account.isLogin = true
+            account.cookies = Settings().getString("cookies", "")
+            account.hoyolabId = Settings().getString("hoyolabId", "")
             return if(account.uid == "000000000" && account.username == "Unknown") loadLocal() else account
         }
 
@@ -444,8 +450,7 @@ fun UserAccount.isShowAds() : Boolean {
         AdPlan.SPONSOR -> false
         AdPlan.INVITER -> false
         AdPlan.EVENT -> false
-        AdPlan.CBETA_TESTER -> false
-        AdPlan.BETA_TESTER -> false
+        AdPlan.TESTER -> false
         AdPlan.DEV -> false
         else -> true
     }
@@ -492,7 +497,7 @@ data class UserExpedition(
 
 @Serializable
 enum class AdPlan(){
-    NORMAL, SPONSOR, INVITER, EVENT, CBETA_TESTER, BETA_TESTER,DEV
+    NORMAL, SPONSOR, INVITER, EVENT, TESTER,DEV
 }
 @Serializable
 enum class Role(){

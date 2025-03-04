@@ -41,6 +41,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.UserAbyssRecord.Companion.refreshMOCData
 import types.UserAbyssRecord.Companion.refreshPFData
 import types.UserAccount.Companion.INSTANCE
+import types.UserAccount.Companion.getUID
 import types.UserAccount.Companion.refreshCharacterList
 import types.UserAccount.Companion.refreshNoteData
 import types.UserAccount.Companion.refreshUserAccount
@@ -72,8 +73,9 @@ fun SplashPage(
     val showUpdatePopup = remember { mutableStateOf(updateCheckInit()) } //The Real Update Popup
     LaunchedEffect(Unit) {
         if (!showPopup.value) {
+            println("getUID() : ${getUID()} || hasRefreshed : ${hasRefreshed.value}")
             CoroutineScope(Dispatchers.Default).launch {
-                if (INSTANCE.uid != "000000000" && !hasRefreshed.value) {
+                if (getUID() != "000000000" && !hasRefreshed.value) {
                     async {
                         refreshUserAccount()
                         refreshMOCData()
