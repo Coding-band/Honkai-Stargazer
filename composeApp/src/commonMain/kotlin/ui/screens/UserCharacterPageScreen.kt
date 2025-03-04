@@ -981,7 +981,7 @@ fun CharacterInfoFadeImg(
     fileName: String,
     isScrollMode: Boolean = true,
 ) {
-    val alpha by animateFloatAsState(targetValue = if (isScrollMode) 0.4f else 1f)
+    val alpha by animateFloatAsState(targetValue = if (isScrollMode) 0.4f else 1f, animationSpec = tween(1000))
     //val alpha by animateFloatAsState(targetValue = if (isScrollMode) 0.4f else 1f, animationSpec = tween(500))
     Box(modifier = Modifier.fillMaxSize()) {
         AsyncImage(

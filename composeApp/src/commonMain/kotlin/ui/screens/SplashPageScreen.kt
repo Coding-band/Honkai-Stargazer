@@ -73,7 +73,6 @@ fun SplashPage(
     val showUpdatePopup = remember { mutableStateOf(updateCheckInit()) } //The Real Update Popup
     LaunchedEffect(Unit) {
         if (!showPopup.value) {
-            println("getUID() : ${getUID()} || hasRefreshed : ${hasRefreshed.value}")
             CoroutineScope(Dispatchers.Default).launch {
                 if (getUID() != "000000000" && !hasRefreshed.value) {
                     async {
@@ -88,7 +87,6 @@ fun SplashPage(
                         StarbaseAPI().updateMOCData()
                     }.await()
                 }
-
                 hasRefreshed.value = true
             }
         }
