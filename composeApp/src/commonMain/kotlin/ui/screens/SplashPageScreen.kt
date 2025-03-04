@@ -43,6 +43,7 @@ import types.UserAbyssRecord.Companion.refreshPFData
 import types.UserAccount.Companion.INSTANCE
 import types.UserAccount.Companion.refreshCharacterList
 import types.UserAccount.Companion.refreshNoteData
+import types.UserAccount.Companion.refreshUserAccount
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
 import ui.navigation.Screen
@@ -74,8 +75,7 @@ fun SplashPage(
             CoroutineScope(Dispatchers.Default).launch {
                 if (INSTANCE.uid != "000000000" && !hasRefreshed.value) {
                     async {
-                        refreshCharacterList()
-                        refreshNoteData()
+                        refreshUserAccount()
                         refreshMOCData()
                         refreshPFData()
                         Preferences().Leaderboard.updatedLeaderboard()

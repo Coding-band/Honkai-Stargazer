@@ -24,6 +24,7 @@ import kotlinx.serialization.json.jsonNull
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.long
+import types.UserAccount.Companion.INSTANCE
 import utils.app.Preferences
 import utils.annotation.DoItLater
 import utils.app.errorLog
@@ -121,12 +122,14 @@ class UserAccount(
         fun resetUserAccount(){
             INSTANCE = UserAccount()
             writeToFile("userAccount.json", "{}")
+            Settings().putString("uid","000000000")
+            Settings().putString("acc","?")
             Preferences().CharList.resetCharList()
             Preferences().Leaderboard.resetLeaderboard()
             UserAbyssRecord.INSTANCE = UserAbyssRecord()
         }
 
-        private fun refreshUserAccount() {
+        fun refreshUserAccount() {
             try {
                 val api = HoyolabAPI(INSTANCE.server.platform, INSTANCE.cookies)
 
@@ -161,6 +164,7 @@ class UserAccount(
                         INSTANCE.achievements = userInfo.jsonObject["data"]!!.jsonArray[2].jsonObject["value"]!!.jsonPrimitive.int
                         INSTANCE.chestOpened = userInfo.jsonObject["data"]!!.jsonArray[3].jsonObject["value"]!!.jsonPrimitive.int
                         INSTANCE.isLogin = true
+
                     }
                 }
 
@@ -396,7 +400,9 @@ class UserAccount(
             }
         }
 
-
+        fun getUID() : String{
+            return Settings().getString("uid", "000000000")
+        }
 
         //Reaction between UserAccount and Database Server
 
@@ -410,6 +416,13 @@ class UserAccount(
         private fun load() : UserAccount{
             //val userAccount = Json.decodeFromString<UserAccount>(Settings().getString("userAccount", Json.encodeToString(UserAccount())))
             //userAccount.characterList = Json.decodeFromString<ArrayList<Character>>(Settings().getString("userAccountCharList", Json.encodeToString(arrayListOf<Character>())))
+            //return Json.decodeFromString<UserAccount>(readFromFile("userAccount.json", true))
+            val account = StarbaseAPI().getUserAccountInfoInit()
+            account.isLogin = true
+            return if(account.uid == "000000000" && account.username == "Unknown") loadLocal() else account
+        }
+
+        private fun loadLocal() : UserAccount{
             return Json.decodeFromString<UserAccount>(readFromFile("userAccount.json", true))
         }
     }
@@ -424,6 +437,26 @@ fun getCookieValue(cookieString: String, key: String): String? {
         }
     }
     return null
+}
+
+fun UserAccount.isShowAds() : Boolean {
+    return when(adPlan){
+        AdPlan.SPONSOR -> false
+        AdPlan.INVITER -> false
+        AdPlan.EVENT -> false
+        AdPlan.CBETA_TESTER -> false
+        AdPlan.BETA_TESTER -> false
+        AdPlan.DEV -> false
+        else -> true
+    }
+}
+fun UserAccount.isUnlockSpecials() : Boolean {
+    return when(role){
+        Role.CBETA_TESTER -> true
+        Role.BETA_TESTER -> true
+        Role.DEV -> true
+        else -> false
+    }
 }
 
 
@@ -459,10 +492,10 @@ data class UserExpedition(
 
 @Serializable
 enum class AdPlan(){
-    NORMAL, SPONSOR, INVITER, EVENT, BETATESTER,DEV
+    NORMAL, SPONSOR, INVITER, EVENT, CBETA_TESTER, BETA_TESTER,DEV
 }
 @Serializable
 enum class Role(){
-    USER, BETATESTER,DEV
+    USER, CBETA_TESTER, BETA_TESTER,DEV
 }
 
