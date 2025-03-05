@@ -118,6 +118,7 @@ import ui.components.defaultHeaderData
 import ui.navigation.hazeStateRoot
 import utils.annotation.DoItLater
 import utils.app.AdditionalGreen
+import utils.app.CharWeightList
 import utils.app.Constants
 import utils.app.Constants.Companion.INFO_MAX_WIDTH
 import utils.app.Constants.Companion.INFO_MIN_WIDTH
@@ -178,12 +179,32 @@ fun UserCharacterPageScreen(
     val charNameVisible = remember { mutableStateOf(true) }
     val charNameBigHeight = remember { mutableStateOf(20) }
     val isInited = rememberSaveable { mutableStateOf(false) }
-
+    val defaultSchoolName = "默認流派 - Default"
 
     if(character == null){ navigator.popBackStack() }else{
         val charScoreLocal = remember { mutableStateOf(getCharScore(character, 0)) }
         val overPercentage = remember { mutableStateOf(getProfRankResult(charScoreLocal.value, character, 0, uid)) }
         val gradRequirement = remember { mutableStateOf(getGradAttrAndValue(character, 0)) }
+        val schoolIndex = remember { mutableStateOf(0) }
+        val schoolDataNameArray = remember { arrayListOf("默認流派 - Default") }
+
+        if(CharWeightList.INSTANCE.jsonObject[characterId] != null){
+            val charWeight = CharWeightList.INSTANCE.jsonObject[characterId]!!.jsonArray
+            schoolDataNameArray.clear()
+            for (i in 0 until charWeight.size){
+                schoolDataNameArray.add(charWeight[i].jsonObject[if(Language.TextLanguageInstance.folderName.contains("zh")) "zh_name" else "en_name"]!!.jsonPrimitive.content)
+            }
+        }else{
+            schoolDataNameArray.clear()
+            schoolDataNameArray.add(defaultSchoolName)
+        }
+
+        LaunchedEffect(schoolIndex.value){
+            val charScore = getCharScore(character, schoolIndex.value)
+            charScoreLocal.value = charScore
+            overPercentage.value = getProfRankResult(charScore, character, schoolIndex.value, uid)
+            gradRequirement.value = getGradAttrAndValue(character, schoolIndex.value)
+        }
 
         Box(modifier = modifier
             .fillMaxSize()
@@ -242,7 +263,7 @@ fun UserCharacterPageScreen(
                     item { CharBioSkillInfo(character, charNameBigHeight) }
                     item { LightconeInfo(character) }
                     item { RelicInfo(character) }
-                    item { ProficientScoreInfo(character, uid, isInited, charScoreLocal, overPercentage, gradRequirement) }
+                    item { ProficientScoreInfo(character, schoolDataNameArray, schoolIndex, charScoreLocal, overPercentage, gradRequirement) }
 
                     item { Spacer(Modifier.navigationBarsPadding()) }
                 }
@@ -254,13 +275,11 @@ fun UserCharacterPageScreen(
 }
 
 @Composable
-fun ProficientScoreInfo(character: Character, uid: String, isInited: MutableState<Boolean>, charScoreLocal: MutableState<Float>, overPercentage: MutableState<Float>, gradRequirement: MutableState<ArrayList<Pair<AttributeExchange, Float>>>) {
+fun ProficientScoreInfo(character: Character, schoolDataNameArray: ArrayList<String>, schoolIndex: MutableState<Int>, charScoreLocal: MutableState<Float>, overPercentage: MutableState<Float>, gradRequirement: MutableState<ArrayList<Pair<AttributeExchange, Float>>>) {
     //Divider
     UserCharPageDivider()
 
     val isExpandSchoolDropdown = remember { mutableStateOf(false) }
-    val schoolDataNameArray = arrayListOf("默認流派")
-    val schoolIndex = remember { mutableStateOf(0) }
     val optionTextViewSize = remember { mutableStateOf(IntSize.Zero) }
     val density = LocalDensity.current.density
 
@@ -271,12 +290,6 @@ fun ProficientScoreInfo(character: Character, uid: String, isInited: MutableStat
         //Res.string.RelicScore to 123.4f,
         //Res.string.RelicRank to "B",
     )
-    LaunchedEffect(schoolIndex.value){
-        val charScore = getCharScore(character, schoolIndex.value)
-        charScoreLocal.value = charScore
-        overPercentage.value = getProfRankResult(charScore, character, schoolIndex.value, uid)
-        gradRequirement.value = getGradAttrAndValue(character, schoolIndex.value)
-    }
 
     Box(modifier = Modifier.fillMaxWidth().wrapContentHeight()) {
 

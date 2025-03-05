@@ -370,9 +370,10 @@ fun SettingOptionNoneBar(
     optionStatic: String = "?",
 ){
     Column {
+        val itemMaxHeight = remember { mutableStateOf(20.dp) }
         Row(Modifier.background(Color(0xCCF3F9FF))) {
             //Title
-            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically)){
+            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically).onSizeChanged { itemMaxHeight.value = it.height.dp }){
                 Text(
                     color = Color.Black,
                     text = title ?: removeStrQuote(titleRes),
@@ -382,7 +383,7 @@ fun SettingOptionNoneBar(
             }
 
             //Options
-            Row(modifier = Modifier.weight(16/35f).background(Color(0xCCF3F9FF))){
+            Row(modifier = Modifier.weight(16/35f).background(Color(0xCCF3F9FF)).height(itemMaxHeight.value)){
                 Text(
                     color = Color.Black,
                     text = optionStatic,
@@ -411,9 +412,10 @@ fun SettingOptionDropDownBar(
     val density = LocalDensity.current.density
 
     Column {
+        val itemMaxHeight = remember { mutableStateOf(20.dp) }
         Row(Modifier.background(Color(0xCCF3F9FF))) {
             //Title
-            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically)){
+            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically).onSizeChanged { itemMaxHeight.value = it.height.dp }){
                 Text(
                     color = Color.Black,
                     text = title ?: removeStrQuote(titleRes),
@@ -431,6 +433,7 @@ fun SettingOptionDropDownBar(
                 Row(
                     modifier = Modifier
                         .background(Color(0xCCF3F9FF))
+                        .height(itemMaxHeight.value)
                         .onSizeChanged { optionTextViewSize.value = it },
                 ){
                     Image(
@@ -593,9 +596,10 @@ fun SettingOptionNavigateBar(
     navigateClick: () -> Unit = {},
 ){
     Column {
+        val itemMaxHeight = remember { mutableStateOf(20.dp) }
         Row(Modifier.background(Color(0xCCF3F9FF))) {
             //Title
-            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically)){
+            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically).onSizeChanged { itemMaxHeight.value = it.height.dp }){
                 Text(
                     color = Color.Black,
                     text = title ?: removeStrQuote(titleRes),
@@ -605,7 +609,7 @@ fun SettingOptionNavigateBar(
             }
 
             //Options
-            Row(modifier = Modifier.weight(16/35f).background(Color(0xCCF3F9FF)).clickable { navigateClick() }){
+            Row(modifier = Modifier.weight(16/35f).background(Color(0xCCF3F9FF)).height(itemMaxHeight.value).clickable { navigateClick() }){
                 Image(
                     painter = painterResource(Res.drawable.bg_transparent),
                     contentDescription = null,
