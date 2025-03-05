@@ -30,6 +30,7 @@ import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
@@ -41,6 +42,7 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.platform.UriHandler
 import androidx.compose.ui.unit.IntOffset
 import androidx.navigation.NavHostController
 import androidx.navigation.NavOptions
@@ -118,6 +120,8 @@ lateinit var navigatorInstance : NavHostController
 
 lateinit var hazeStateRoot : HazeState
 
+lateinit var urlHandler: UriHandler
+
 /**
  * Only usage : For GlobalBackground check whether should blur the background
  *
@@ -166,6 +170,7 @@ fun RootContent() {
     val navigator = rememberNavController()
     val focusManager = LocalFocusManager.current
     navigatorInstance = navigator
+    urlHandler = LocalUriHandler.current
 
     key(isRotate.value) {
         globalWindowWidthSizeClass = currentWindowAdaptiveInfo().windowSizeClass.windowWidthSizeClass
@@ -443,9 +448,11 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
         }
         composable(
             route = Screen.MapPageScreen.route) {
-            screenInstance = Screen.MapPageScreen
-            LocalUriHandler.current.openUri("https://act.hoyolab.com/sr/app/interactive-map/index.html?lang=${Language.TextLanguageInstance.hoyolabName}")
-            navigator.popBackStack()
+            //val uriHandler = LocalUriHandler.current
+            LaunchedEffect(Unit){
+                navigator.popBackStack()
+                //uriHandler.openUri("https://act.hoyolab.com/sr/app/interactive-map/index.html?lang=${Language.TextLanguageInstance.hoyolabName}")
+            }
             /*
             withBGScreen(isPadMode){
                     MapPageScreen(

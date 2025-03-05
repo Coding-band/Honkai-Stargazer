@@ -1,6 +1,7 @@
 package utils.app
 
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import files.ActionOrderTitle
@@ -49,6 +50,7 @@ import org.jetbrains.compose.resources.DrawableResource
 import types.UserAccount
 import ui.components.HomePageBlocks
 import ui.navigation.Screen
+import ui.navigation.urlHandler
 import utils.annotation.DoItLater
 
 
@@ -253,7 +255,10 @@ class Constants {
                 itemId = "MapPage",
                 itemTitleRId = Res.string.Map,
                 itemIconId = Res.drawable.phorphos_map_trifold_fill,
-                itemOnClickToNavigate = Screen.MapPageScreen
+                //itemOnClickToNavigate = Screen.MapPageScreen
+                itemOnClickAction = {
+                    urlHandler.openUri("https://act.hoyolab.com/sr/app/interactive-map/index.html?lang=${Language.TextLanguageInstance.hoyolabName}")
+                }
             ),
 
             HomePageBlocks.HomePageBlockItem(
