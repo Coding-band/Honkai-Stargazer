@@ -45,6 +45,7 @@ import types.UserAccount.Companion.getUID
 import types.UserAccount.Companion.refreshCharacterList
 import types.UserAccount.Companion.refreshNoteData
 import types.UserAccount.Companion.refreshUserAccount
+import types.Wallpaper.Companion.initWallpaperList
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
 import ui.navigation.Screen
@@ -97,7 +98,7 @@ fun SplashPage(
             screenInstance = Screen.HomePage
 
             CoroutineScope(Dispatchers.Default).launch {
-                delay(500)
+                initWallpaperList()
                 withContext(Dispatchers.Main) {
                     navigator.navigate(Screen.HomePage.route){
                         popUpTo(Screen.SplashPage.route){

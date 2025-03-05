@@ -48,6 +48,7 @@ import kotlinx.coroutines.withContext
 import types.UserAccount
 import types.UserAccount.Companion.INSTANCE
 import types.UserExpedition
+import types.UserNoteState
 import ui.components.BackIcon
 import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
@@ -102,11 +103,11 @@ fun ExpeditionPageScreen(
                     .hazeSource(hazeStateRoot, zIndex = DefaultZIndex)
             ) {
                 item { Spacer(modifier = Modifier.height(PAGE_HEADER_HEIGHT+12.dp)) }
-                INSTANCE.userNote.expedition.forEachIndexed { index, expendition ->
+                UserNoteState.value.expedition.forEachIndexed { index, expendition ->
                     item {
                         ExpenditionItem(expendition)
                     }
-                    if(index < INSTANCE.userNote.expedition.size - 1){
+                    if(index < UserNoteState.value.expedition.size - 1){
                         item { Spacer(modifier = Modifier.height(12.dp)) }
                     }
                 }

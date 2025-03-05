@@ -5,6 +5,7 @@ import androidx.compose.material.SnackbarHostState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import com.multiplatform.webview.cookie.Cookie
 import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
@@ -43,11 +44,14 @@ import utils.starbase.StarbaseAPI
 lateinit var UserAccountWarningCookiesInvalid : String
 lateinit var UserAccountWarningNoAccountRecord : String
 lateinit var UserAccountWarningIncorrectServer : String
+lateinit var UserNoteState : MutableState<UserNote>
+
 @Composable
 fun userAccountErrorMessage(){
     UserAccountWarningCookiesInvalid = removeStrQuote(Res.string.UserAccountWarningCookiesInvalid)
     UserAccountWarningNoAccountRecord = removeStrQuote(Res.string.UserAccountWarningNoAccountRecord)
     UserAccountWarningIncorrectServer = removeStrQuote(Res.string.UserAccountWarningIncorrectServer)
+    UserNoteState = remember { mutableStateOf(UserNote()) }
 }
 
 @Serializable
@@ -138,7 +142,6 @@ class UserAccount(
 
                 if(INSTANCE.cookies == "" || INSTANCE.hoyolabId == ""){ return }
                 //Get User UID & Account Info
-                val userCardBody = api.getGameRecordCard(INSTANCE.hoyolabId)
                 val userCards = api.getGameRecordCard(INSTANCE.hoyolabId).data
 
 
@@ -358,10 +361,10 @@ class UserAccount(
 
         fun refreshNoteData(){
             try{
-                if(INSTANCE.uid == "000000000"){ return }
+                if(getUID() == "000000000"){ return }
 
                 val api = HoyolabAPI(INSTANCE.server.platform, INSTANCE.cookies)
-                val userNoteData = api.getHsrNote(INSTANCE.uid, INSTANCE.server).data
+                val userNoteData = api.getHsrNote(getUID(), INSTANCE.server).data
 
                 if(userNoteData !is JsonNull && !userNoteData.jsonObject.isEmpty()){
                     val userNoteJson = userNoteData.jsonObject
@@ -377,6 +380,7 @@ class UserAccount(
                     note.weeklyBossChances = userNoteJson["weekly_cocoon_cnt"]!!.jsonPrimitive.int
                     note.availableExpedition = userNoteJson["accepted_epedition_num"]!!.jsonPrimitive.int
                     note.totalExpedition = userNoteJson["total_expedition_num"]!!.jsonPrimitive.int
+                    note.isInited = true
 
                     val expeditionJson = userNoteJson["expeditions"]!!.jsonArray
                     println("[HoYoLab] Updated Note Data: size = ${expeditionJson.size}, ${Json.encodeToString(expeditionJson)}")
@@ -398,6 +402,7 @@ class UserAccount(
                     }
                     //Implement when all data is updated
                     INSTANCE.userNote = note
+                    UserNoteState.value = note
                 }
             }catch (e : Exception){
                 errorLog("UserAccount", "refreshCharacterList()", e)
@@ -466,7 +471,6 @@ fun UserAccount.isUnlockSpecials() : Boolean {
 
 
 
-
 @Serializable
 data class UserNote(
     var currStamina: Int = 0,
@@ -480,9 +484,9 @@ data class UserNote(
     var weeklyBossChances: Int = 0,
     var availableExpedition: Int = 0,
     var totalExpedition: Int = 4,
-    var expedition: ArrayList<UserExpedition> = arrayListOf()
+    var expedition: ArrayList<UserExpedition> = arrayListOf(),
+    var isInited: Boolean = false
 ){
-
 }
 
 @Serializable

@@ -180,7 +180,6 @@ fun RootContent() {
 
     key(doInit.value){
         if (!doInit.value){
-            initWallpaperList()
             initCharList()
             initLcList()
             initRelicList()

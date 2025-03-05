@@ -48,6 +48,7 @@ import files.ranking_s_text
 import files.ranking_ss_text
 import org.jetbrains.compose.resources.DrawableResource
 import types.UserAccount
+import types.UserNoteState
 import ui.components.HomePageBlocks
 import ui.navigation.Screen
 import ui.navigation.urlHandler
@@ -180,22 +181,40 @@ class Constants {
                 itemType = HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1,
                 itemOnClickAction = {count -> count.value = (count.value + 1) % 2},
             ).onRefresh { self ->
-                self.itemTopHighlight = if(self.itemOnClickCount.value == 0) "${UserAccount.INSTANCE.userNote.currStamina}" else "${UserAccount.INSTANCE.userNote.currReserveStamina}"
-                self.itemTop = if(self.itemOnClickCount.value == 0) "/${UserAccount.INSTANCE.userNote.maxStamina}" else "/2400"
-                self.itemBottom = if(self.itemOnClickCount.value == 0) getFinishTimeStr(UserAccount.INSTANCE.userNote.staminaRecoverTime) else "----"
+                if(!UserNoteState.value.isInited){
+                    self.itemTopHighlight = "--"
+                    self.itemTop = "/--"
+                    self.itemBottom = "----"
+                }else{
+                    self.itemTopHighlight = if(self.itemOnClickCount.value == 0) "${UserNoteState.value.currStamina}" else "${UserNoteState.value.currReserveStamina}"
+                    self.itemTop = if(self.itemOnClickCount.value == 0) "/${UserNoteState.value.maxStamina}" else "/2400"
+                    self.itemBottom = if(self.itemOnClickCount.value == 0) getFinishTimeStr(UserNoteState.value.staminaRecoverTime) else "----"
+                }
 
             },
             HomePageBlocks.HomePageBlockItem(
                 itemId = "DailyMissionPage",
-                itemTitle = "${UserAccount.INSTANCE.userNote.currTrainScore}/${UserAccount.INSTANCE.userNote.maxTrainScore}",
+                itemTitle = "--/--",
                 itemIconId = Res.drawable.phorphos_calendar_fill
-            ),
+            ).onRefresh {
+                if(!UserNoteState.value.isInited) {
+                    it.itemTitle = "--/--"
+                }else{
+                    it.itemTitle = "${UserNoteState.value.currTrainScore}/${UserNoteState.value.maxTrainScore}"
+                }
+            },
 
             HomePageBlocks.HomePageBlockItem(
                 itemId = "UniversialScore",
-                itemTitle = "${formatDecimal(UserAccount.INSTANCE.userNote.currUniversialScore, isUnited = true)}/${formatDecimal(UserAccount.INSTANCE.userNote.targetUniversialScore, isUnited = true)}",
+                itemTitle = "--/--",
                 itemIconId = Res.drawable.phorphos_planet_fill
-            ),
+            ).onRefresh {
+                if(!UserNoteState.value.isInited) {
+                    it.itemTitle = "--/--"
+                }else{
+                    it.itemTitle = "${formatDecimal(UserNoteState.value.currUniversialScore, isUnited = true)}/${formatDecimal(UserNoteState.value.targetUniversialScore, isUnited = true)}"
+                }
+            },
 
             HomePageBlocks.HomePageBlockItem(
                 itemId = "ExpeditionPage",
@@ -204,17 +223,23 @@ class Constants {
                 itemType = HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1,
                 itemOnClickToNavigate = Screen.ExpeditionPageScreen
             ).onRefresh { self ->
-                self.itemTopHighlight = "${UserAccount.INSTANCE.userNote.availableExpedition}"
-                self.itemTop = "/${UserAccount.INSTANCE.userNote.totalExpedition}"
-                self.itemBottom =
-                    if(UserAccount.INSTANCE.userNote.expedition.isEmpty()) {
-                        "----"
-                    } else if(UserAccount.INSTANCE.userNote.expedition.none { it.remainingTime != 0 }){
-                        StatusFinished
-                    } else {
-                        getFinishTimeStr(UserAccount.INSTANCE.userNote.expedition.filter { it.remainingTime != 0 }
-                            .maxOfOrNull { it.finishTime } ?: 0)
-                    }
+                if (!UserNoteState.value.isInited) {
+                    self.itemTopHighlight = "--"
+                    self.itemTop = "/--"
+                    self.itemBottom = "----"
+                }else{
+                    self.itemTopHighlight = "${UserNoteState.value.availableExpedition}"
+                    self.itemTop = "/${UserNoteState.value.totalExpedition}"
+                    self.itemBottom =
+                        if(UserNoteState.value.expedition.isEmpty()) {
+                            "----"
+                        } else if(UserNoteState.value.expedition.none { it.remainingTime != 0 }){
+                            StatusFinished
+                        } else {
+                            getFinishTimeStr(UserNoteState.value.expedition.filter { it.remainingTime != 0 }
+                                .maxOfOrNull { it.finishTime } ?: 0)
+                        }
+                }
 
             },
             HomePageBlocks.HomePageBlockItem(
