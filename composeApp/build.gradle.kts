@@ -38,7 +38,7 @@ val versionCodeFinal = properties.getProperty("APP_VERSION_CODE").toInt() + 1
 //VersionUpdateCheck
 val isForAppStore = true
 val isForPlayStore = false
-var appProfile = "C.BETA" //Please Modify this String ONLY IF NECESSERY
+var appProfile = "PRODUCTION" //Please Modify this String ONLY IF NECESSERY
 val appVersionCodeName = "SG3"
 
 initGradleProperties()
@@ -235,7 +235,11 @@ android {
     }
 }
 
-
+val macExtraPlistKeys: String
+    get() = """
+      <key>ITSAppUsesNonExemptEncryption</key>
+      <false/>
+    """.trimIndent()
 
 compose.desktop {
     application {
@@ -267,6 +271,9 @@ compose.desktop {
                 //ref : https://github.com/JetBrains/compose-multiplatform/blob/master/tutorials/Signing_and_notarization_on_macOS/README.md#configuring-gradle
                 bundleID = "com.voc.stargazer3"
                 minimumSystemVersion = "12.0"
+                infoPlist{
+                    extraKeysRawXml = macExtraPlistKeys
+                }
                 signing {
                     appStore = isForAppStore //https://youtrack.jetbrains.com/issue/CMP-4272
                     sign.set(isForAppStore) //https://github.com/electron/notarize/issues/120#issuecomment-1605886244
