@@ -505,14 +505,15 @@ fun SettingOptionDropDownTFBar(
 
 
     Column {
+        val itemMaxHeight = remember { mutableStateOf(20.dp) }
         Row(Modifier.background(Color(0xCCF3F9FF))) {
             //Title
-            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically)){
+            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically).onSizeChanged { itemMaxHeight.value = it.height.dp }){
                 Text(
                     color = Color.Black,
                     text = title ?: removeStrQuote(titleRes),
                     style = FontSizeNormal14(),
-                    modifier = Modifier.padding(12.dp).align(Alignment.CenterVertically)
+                    modifier = Modifier.padding(12.dp).align(Alignment.CenterVertically),
                 )
             }
 
@@ -525,6 +526,7 @@ fun SettingOptionDropDownTFBar(
                 Row(
                     modifier = Modifier
                         .background(Color(0xCCF3F9FF))
+                        .height(itemMaxHeight.value)
                         .onSizeChanged { optionTextViewSize.value = it },
                 ){
                     Image(
