@@ -30,6 +30,7 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
@@ -145,6 +146,7 @@ fun HomePageBlock1x1(
             )
             //.aspectRatio(HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1 / HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT)
             .fillMaxSize()
+            .clip(RoundedCornerShape(6.dp))
             .let {
                 return@let if(globalHazeBlur.value){
                     it.hazeSource(
@@ -225,6 +227,7 @@ fun HomePageBlock2x1(
                 HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1,
                 HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT
             ).fillMaxSize()
+            .clip(RoundedCornerShape(6.dp))
             .let {
                 return@let if(globalHazeBlur.value){
                     it.hazeSource(

@@ -371,9 +371,10 @@ fun SettingOptionNoneBar(
 ){
     Column {
         val itemMaxHeight = remember { mutableStateOf(20.dp) }
+        val density = LocalDensity.current.density
         Row(Modifier.background(Color(0xCCF3F9FF))) {
             //Title
-            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically).onSizeChanged { itemMaxHeight.value = it.height.dp }){
+            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically).onSizeChanged { itemMaxHeight.value = pxToDp(it.height, density) }){
                 Text(
                     color = Color.Black,
                     text = title ?: removeStrQuote(titleRes),
@@ -415,7 +416,7 @@ fun SettingOptionDropDownBar(
         val itemMaxHeight = remember { mutableStateOf(20.dp) }
         Row(Modifier.background(Color(0xCCF3F9FF))) {
             //Title
-            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically).onSizeChanged { itemMaxHeight.value = it.height.dp }){
+            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically).onSizeChanged { itemMaxHeight.value = pxToDp(it.height, density) }){
                 Text(
                     color = Color.Black,
                     text = title ?: removeStrQuote(titleRes),
@@ -511,7 +512,7 @@ fun SettingOptionDropDownTFBar(
         val itemMaxHeight = remember { mutableStateOf(20.dp) }
         Row(Modifier.background(Color(0xCCF3F9FF))) {
             //Title
-            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically).onSizeChanged { itemMaxHeight.value = it.height.dp }){
+            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically).onSizeChanged { itemMaxHeight.value = pxToDp(it.height, density) }){
                 Text(
                     color = Color.Black,
                     text = title ?: removeStrQuote(titleRes),
@@ -597,9 +598,10 @@ fun SettingOptionNavigateBar(
 ){
     Column {
         val itemMaxHeight = remember { mutableStateOf(20.dp) }
+        val density = LocalDensity.current.density
         Row(Modifier.background(Color(0xCCF3F9FF))) {
             //Title
-            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically).onSizeChanged { itemMaxHeight.value = it.height.dp }){
+            Row(modifier = Modifier.weight(19/35f).align(Alignment.CenterVertically).onSizeChanged { itemMaxHeight.value = pxToDp(it.height, density) }){
                 Text(
                     color = Color.Black,
                     text = title ?: removeStrQuote(titleRes),

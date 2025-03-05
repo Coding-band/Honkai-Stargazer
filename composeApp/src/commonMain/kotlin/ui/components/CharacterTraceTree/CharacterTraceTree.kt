@@ -466,9 +466,8 @@ fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
                 params = treeItem.levelData[infoLevel.toInt()-1].params
                 Spacer(Modifier.height(8.dp))
                 Row(Modifier.height(20.dp)){
-                    Text("Lv.${infoLevel.toInt()}/${treeItem.levelData.size}", modifier = Modifier.defaultMinSize(minWidth = 60.dp).wrapContentWidth().align(
+                    Text("Lv.${infoLevel.toInt()}/${treeItem.levelData.size}", modifier = Modifier.defaultMinSize(minWidth = 80.dp).wrapContentWidth().align(
                         Alignment.CenterVertically), color = Color.Black)
-                    Spacer(Modifier.width(24.dp))
                     ThemedSlider(infoLevel, { infoLevel = it}, valueRange = 1f .. treeItem.levelData.size.toFloat(), steps = 0)
                 }
             }
@@ -500,6 +499,9 @@ fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
                     infoLevel = treeItem.levelData.size.toFloat()
                 }
                 val sortedMaterialKeyList = treeItem.levelData[infoLevel.toInt() - 1].cost.sortedBy { cost -> cost.officialId }
+
+                Spacer(Modifier.height(8.dp))
+
                 LazyRow(modifier = Modifier.fillMaxWidth().height(MATERIAL_CARD_HEIGHT)) {
                     for ((index, key) in sortedMaterialKeyList.withIndex()) {
                         item(key = key.officialId) {
