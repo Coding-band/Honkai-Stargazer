@@ -119,6 +119,9 @@ fun HomePageBlock1x1(
     modifier: Modifier = Modifier,
     navigator: NavHostController
 ) {
+
+    blockData.refresh?.invoke()
+
     LaunchedEffect(blockData.itemOnClickCount.value){
         blockData.refresh?.invoke()
     }
