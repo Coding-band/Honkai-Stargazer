@@ -12,6 +12,8 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.runtime.toMutableStateList
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.TextRange
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.Dp
 import coil3.ImageLoader
 import coil3.PlatformContext
@@ -954,6 +956,11 @@ val CharacterProficientSaver: Saver<SnapshotStateList<CharacterProficient>, Any>
 val ProficientSchoolSaver: Saver<SnapshotStateList<ProficientSchool>, Any> = listSaver(
     save = { listOf(Json.encodeToString(it.toMutableList())) },
     restore = { Json.decodeFromString(it[0]) as SnapshotStateList<ProficientSchool> }
+)
+
+val TextFieldValueSaver: Saver<TextFieldValue, Any> = listSaver(
+    save = { listOf(it.text) },
+    restore = { TextFieldValue(it[0] as String) }
 )
 
 @Composable

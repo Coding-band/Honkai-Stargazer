@@ -9,7 +9,6 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -22,8 +21,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
@@ -34,19 +31,18 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import com.cheonjaeung.compose.grid.SimpleGridCells
 import com.cheonjaeung.compose.grid.VerticalGrid
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.HazeStyle
-import dev.chrisbanes.haze.hazeChild
-import dev.chrisbanes.haze.hazeSource
 import files.ConfirmBTN
+import files.FilterFindCharacter
+import files.FilterFindLightcone
+import files.FilterFindRelic
 import files.FilterTitle
 import files.NoDataYet
 import files.Res
@@ -75,25 +71,17 @@ import types.CombatType
 import types.FilterEnum
 import types.Lightcone
 import types.Path
+import types.Relic
 import ui.navigation.hazeStateRoot
-import ui.screens.UserCharPageDivider
-import ui.screens.globalHazeBlur
 import utils.annotation.DoItLater
-import utils.app.Constants
 import utils.app.Constants.Companion.INFO_MAX_WIDTH
 import utils.app.Constants.Companion.INFO_MIN_WIDTH
 import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
-import utils.app.DialogPopUpZIndex
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
-import utils.app.FontSizeNormal20
-import utils.app.HazeBlurDp10
 import utils.app.Language
-import utils.app.hazeEffectSG3
 import utils.app.pxToDp
-import utils.app.rememberMutableStateListJsonOf
 import utils.app.removeStrQuote
-import utils.app.showFunctionIsDevelopingToast
 import kotlin.math.max
 
 
@@ -114,6 +102,7 @@ fun <T> ListFilterTool(
     filtedList: MutableState<ArrayList<T>>,
     hazeState: HazeState = hazeStateRoot
 ) {
+    val searchKey = remember { mutableStateOf("") }
     val isShowing = rememberSaveable { mutableStateOf("NOPE") }
     val isAsc = rememberSaveable { mutableStateOf(false) }
     val sortChoiceIndex = rememberSaveable { mutableStateOf(0) }
@@ -152,7 +141,11 @@ fun <T> ListFilterTool(
     //For Language Change -> Apply Sort and Filter
     key(Language.TextLanguageInstance, isReloadState.value){
         if(isReloadState.value){
-            filtedList.value = applySortAndFilter(originList, sortChoiceList[sortChoiceIndex.value], filterChoiceArray, filterType, isAsc.value)
+            if(isShowing.value == "SEARCH") {
+                filtedList.value = applySearch(originList, searchKey)
+            }else{
+                filtedList.value = applySortAndFilter(originList, sortChoiceList[sortChoiceIndex.value], filterChoiceArray, filterType, isAsc.value)
+            }
             isReloadState.value = false
         }
     }
@@ -307,7 +300,6 @@ fun <T> ListFilterTool(
                 }
             }
 
-
             Box(modifier = Modifier.height(8.dp))
 
             //Bottom Tool Row
@@ -319,48 +311,88 @@ fun <T> ListFilterTool(
                 .widthIn(72.dp + 116.dp, 116.dp + 212.dp)
                 .align(Alignment.CenterHorizontally)
             ) {
-                UIButton(
-                    modifierTmp = Modifier.size(46.dp),
-                    icon = Res.drawable.ui_icon_filter,
-                    buttonSize = UIButtonSize.SmallChoice,
-                    onClick = {
-                        isShowing.value = if("FILTER" == isShowing.value) "NOPE" else "FILTER"
+                if (isShowing.value == "SEARCH"){
+                    //Search Bar
+                    Column(modifier = Modifier
+                        .fillMaxWidth()
+                    ) {
+                        UISearchBar(
+                            inputString = searchKey,
+                            hintRes = when(filterType){
+                                ListFilterType.CHARACTER -> Res.string.FilterFindCharacter
+                                ListFilterType.LIGHTCONE -> Res.string.FilterFindLightcone
+                                ListFilterType.RELIC -> Res.string.FilterFindRelic
+                            },
+                            searchIcon = Res.drawable.ui_icon_search,
+                            cancelIcon = Res.drawable.ui_icon_close,
+                            onClick = { isReloadState.value = true },
+                            onCancel = { text, inputString ->
+                                if(text.value.text.isEmpty() || text.value.text == "") {
+                                    isShowing.value = "NONE"
+                                }
+                                inputString.value = ""
+                                text.value = TextFieldValue("")
+                            }
+                        )
                     }
-                )
-                Spacer(modifier = Modifier.width(12.dp))
-                Row(modifier = Modifier.weight(1f)) {
+                }else{
+
                     UIButton(
-                        modifierTmp = Modifier
-                            .fillMaxWidth()
-                            .height(46.dp)
-                            .onSizeChanged { sorterButtonWidth.value = pxToDp(it.width, density = density) },
-                        text = removeStrQuote(sortChoiceList[sortChoiceIndex.value]),
-                        icon = if(isAsc.value){ Res.drawable.ic_sort_asc }else{ Res.drawable.ic_sort_desc },
-                        buttonSize = UIButtonSize.NormalTextLeftWithLine,
+                        modifierTmp = Modifier.size(46.dp),
+                        icon = Res.drawable.ui_icon_filter,
+                        buttonSize = UIButtonSize.SmallChoice,
                         onClick = {
-                            isShowing.value = if("SORT" == isShowing.value) "NOPE" else "SORT"
-                        },
-                        iconOnClick = {
-                            isAsc.value = !isAsc.value
-                            isReloadState.value = true
+                            isShowing.value = if("FILTER" == isShowing.value) "NOPE" else "FILTER"
+                        }
+                    )
+                    Spacer(modifier = Modifier.width(12.dp))
+                    Row(modifier = Modifier.weight(1f)) {
+                        UIButton(
+                            modifierTmp = Modifier
+                                .fillMaxWidth()
+                                .height(46.dp)
+                                .onSizeChanged { sorterButtonWidth.value = pxToDp(it.width, density = density) },
+                            text = removeStrQuote(sortChoiceList[sortChoiceIndex.value]),
+                            icon = if(isAsc.value){ Res.drawable.ic_sort_asc }else{ Res.drawable.ic_sort_desc },
+                            buttonSize = UIButtonSize.NormalTextLeftWithLine,
+                            onClick = {
+                                isShowing.value = if("SORT" == isShowing.value) "NOPE" else "SORT"
+                            },
+                            iconOnClick = {
+                                isAsc.value = !isAsc.value
+                                isReloadState.value = true
+                            }
+                        )
+                    }
+                    Spacer(modifier = Modifier.width(12.dp))
+                    UIButton(
+                        modifierTmp = Modifier.size(46.dp),
+                        icon = Res.drawable.ui_icon_search,
+                        buttonSize = UIButtonSize.SmallChoice,
+                        onClick = {
+                            isShowing.value = if("SEARCH" == isShowing.value) "NOPE" else "SEARCH"
                         }
                     )
                 }
-                Spacer(modifier = Modifier.width(12.dp))
-
-                @DoItLater("ListFilterTool Search Button")
-                UIButton(
-                    modifierTmp = Modifier.size(46.dp),
-                    icon = Res.drawable.ui_icon_search,
-                    buttonSize = UIButtonSize.SmallChoice,
-                    onClick = {
-                        //isShowing.value = "SEARCH"
-                        showFunctionIsDevelopingToast()
-                    }
-                )
             }
         }
     }
+}
+
+fun <T> applySearch(
+    originList: ArrayList<T>,
+    searchKey: MutableState<String>
+) : ArrayList<T> {
+    return ArrayList(
+        originList.filter {
+            when(it){
+                is Character -> (it.displayName?.contains(searchKey.value) ?: false) || (it.registName?.contains(searchKey.value) ?: false)
+                is Lightcone -> (it.displayName?.contains(searchKey.value) ?: false) || (it.registName?.contains(searchKey.value) ?: false)
+                is Relic -> (it.displayName?.contains(searchKey.value) ?: false) || (it.registName?.contains(searchKey.value) ?: false)
+                else -> false
+            }
+        }
+    )
 }
 
 fun <T> applySortAndFilter(
