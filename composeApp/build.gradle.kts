@@ -249,7 +249,7 @@ compose.desktop {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb, TargetFormat.Exe, TargetFormat.Pkg)
             packageName = "Stargazer 3${if(appProfile.contains("PRODUCTION")) "" else " ($appProfile)"}"
             packageVersion = appVersionDesktop
-            copyright = "Copyright © 2024 Coding Band 版權所有"
+            copyright = "Copyright © 2025 Coding Band 版權所有"
             description = "Stargazer 3 is an unofficial multiplatform app developed by Coding Band."
             vendor = "Coding Band"
 
