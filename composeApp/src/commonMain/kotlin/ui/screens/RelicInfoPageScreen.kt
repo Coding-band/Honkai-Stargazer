@@ -200,8 +200,8 @@ fun RelicInfoPage(
             headerData = headerDataPage,
             hazeState = hazeStateRoot,
             backIconId = BackIcon.CANCEL,
-            forwardIconId = Res.drawable.ic_favourite_btn,
-            onForward = {}
+            //forwardIconId = Res.drawable.ic_favourite_btn,
+            //onForward = {}
         )
 
         Box(modifier = Modifier.fillMaxSize()) {

@@ -195,6 +195,15 @@ class Constants {
             HomePageBlocks.HomePageBlockItem(
                 itemId = "DailyMissionPage",
                 itemTitle = "--/--",
+                itemOnClickAction = {
+                    showSuccessToast(
+                        if(!UserNoteState.value.isInited) {
+                            "--/--"
+                        }else{
+                            "${UserNoteState.value.currTrainScore}/${UserNoteState.value.maxTrainScore}"
+                        }
+                    )
+                },
                 itemIconId = Res.drawable.phorphos_calendar_fill
             ).onRefresh {
                 if(!UserNoteState.value.isInited) {
@@ -207,6 +216,13 @@ class Constants {
             HomePageBlocks.HomePageBlockItem(
                 itemId = "UniversialScore",
                 itemTitle = "--/--",
+                itemOnClickAction = { showSuccessToast(
+                    if(!UserNoteState.value.isInited) {
+                        "--/--"
+                    }else{
+                        "${formatDecimal(UserNoteState.value.currUniversialScore, isUnited = true)}/${formatDecimal(UserNoteState.value.targetUniversialScore, isUnited = true)}"
+                    }
+                ) },
                 itemIconId = Res.drawable.phorphos_planet_fill
             ).onRefresh {
                 if(!UserNoteState.value.isInited) {
@@ -286,6 +302,7 @@ class Constants {
                 }
             ),
 
+            /*
             HomePageBlocks.HomePageBlockItem(
                 itemId = "ActionOrderListPage",
                 itemTitleRId = Res.string.ActionOrderTitle,
@@ -295,6 +312,8 @@ class Constants {
                 },
                 //itemOnClickToNavigate = Screen.ActionOrderListPageScreen
             ),
+
+             */
             /*
 
             HomePageBlocks.HomePageBlockItem(

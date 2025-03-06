@@ -65,6 +65,7 @@ val defaultHeaderData = HeaderData(title = "?", titleIconId = Res.drawable.phorp
 enum class BackIcon(var res: DrawableResource) {
     BACK(res = Res.drawable.ui_icon_back),
     CANCEL(res = Res.drawable.ui_icon_close),
+    NULL(res = Res.drawable.bg_transparent)
     //... More Icon will be added later
 }
 
@@ -80,7 +81,7 @@ fun PageHeader(
     navigator: NavHostController = rememberNavController(),
     onBack: ((navigator : NavHostController) -> Unit) = { navigator: NavHostController -> navigator.popBackStackLimited() },
     backIconId: BackIcon = BackIcon.BACK,
-    onForward: (() -> Unit) = {},
+    onForward: ((navigator : NavHostController) -> Unit) = {},
     forwardIconId: DrawableResource = Res.drawable.bg_transparent,
     headerData: HeaderData = defaultHeaderData,
     hazeState: HazeState = hazeStateRoot
@@ -121,11 +122,17 @@ fun PageHeader(
                         .size(40.dp)
                         .clip(CircleShape)
                         .align(Alignment.CenterVertically)
-                        .clickable(
-                            onClick = { onBack.invoke(navigator) },
-                            indication = ripple(),
-                            interactionSource = MutableInteractionSource()
-                        )
+                        .let {
+                            if(backIconId != BackIcon.NULL){
+                                it.clickable(
+                                    onClick = { onBack.invoke(navigator) },
+                                    indication = ripple(),
+                                    interactionSource = MutableInteractionSource()
+                                )
+                            }else{
+                                it
+                            }
+                        }
                     ) {
                         Image(
                             painter = painterResource(resource = backIconId.res),
@@ -144,11 +151,17 @@ fun PageHeader(
                     Box(modifier = Modifier
                         .size(40.dp)
                         .align(Alignment.CenterVertically)
-                        .clickable(
-                            onClick = { onForward.invoke() },
-                            indication = ripple(),
-                            interactionSource = MutableInteractionSource()
-                        )
+                        .let {
+                            if(forwardIconId != Res.drawable.bg_transparent){
+                                it.clickable(
+                                    onClick = { onForward.invoke(navigator) },
+                                    indication = ripple(),
+                                    interactionSource = MutableInteractionSource()
+                                )
+                            }else{
+                                it
+                            }
+                        }
                         .clip(CircleShape)
                     ){
                         Image(
@@ -206,12 +219,6 @@ fun PageHeaderAlpha(
                         contentDescription = "Back Icon",
                         modifier = Modifier
                             .size(40.dp)
-                            .clip(CircleShape)
-                            .hazeSource(state = hazeState, zIndex = PageHeaderZIndex)
-                            .hazeEffectSG3(
-                                state = hazeState,
-                                style = HazeBlurDp10Alpha,
-                            )
                             /*
                             .hazeChild(
                                 //shape = CircleShape,
@@ -227,42 +234,34 @@ fun PageHeaderAlpha(
                 Box(Modifier.weight(1f)){
                     components()
                 }
-                OutlinedButton(
-                    contentPadding = PaddingValues(0.dp),
-                    modifier = Modifier
-                        .size(40.dp)
-                        .align(Alignment.CenterVertically),
-                    onClick = { onForward() },
-                    colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color(0x33FFFFFF)),
-                    border = BorderStroke(0.dp, Color(0x00FFFFFF)),
-                    shape = CircleShape,
-                ) {
-                    Image(
-                        painter = painterResource(resource = forwardIconId),
-                        contentDescription = "Forward Icon",
+                if(forwardIconId != Res.drawable.bg_transparent){
+                    OutlinedButton(
+                        contentPadding = PaddingValues(0.dp),
                         modifier = Modifier
                             .size(40.dp)
-                            .align(Alignment.CenterVertically)
+                            .align(Alignment.CenterVertically),
+                        onClick = { onForward() },
+                        colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color(0x33FFFFFF)),
+                        border = BorderStroke(0.dp, Color(0x00FFFFFF)),
+                        shape = CircleShape,
+                    ) {
+                        Image(
+                            painter = painterResource(resource = forwardIconId),
+                            contentDescription = "Forward Icon",
+                            modifier = Modifier
+                                .size(40.dp)
+                                .align(Alignment.CenterVertically)
                             /*.hazeChild(
                                 //shape = CircleShape,
                                 state = hazeState!!,
                                 style = HazeStyle(Color.Unspecified,null, if(globalHazeBlur.value) 10.dp else 0.1.dp, 0f)
                             ),
                              */
-                            .let {
-                                if (forwardIconId != Res.drawable.bg_transparent){
-                                    it.hazeSource(state = hazeState, zIndex = DialogPopUpZIndex)
-                                        .hazeEffectSG3(
-                                            state = hazeState,
-                                            style = HazeBlurDp10Alpha,
-                                        )
-                                }else{
-                                    it
-                                }
-                            },
-                        colorFilter = ColorFilter.tint(Color.White),
+                            ,
+                            colorFilter = ColorFilter.tint(Color.White),
 
-                        )
+                            )
+                    }
                 }
             }
         }

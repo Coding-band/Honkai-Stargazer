@@ -63,7 +63,7 @@ lateinit var CLOSE_SNACKBAR : String
 
 @Composable
 fun LogExportInit(){
-    ToastStrFunctionStillInDevelop = removeStrQuote(Res.string.FunctionStillInDevelop)
+    ToastStrFunctionStillInDevelop = "〒▽〒"//removeStrQuote(Res.string.FunctionStillInDevelop)
     //toastInstance = rememberToasterState()
     snackbarInstance = remember { SnackbarHostState() }
     CLOSE_SNACKBAR = removeStrQuote(Res.string.ConfirmBTN)

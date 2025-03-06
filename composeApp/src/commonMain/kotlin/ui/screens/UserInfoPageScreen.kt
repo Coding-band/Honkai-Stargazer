@@ -90,6 +90,7 @@ import utils.app.getIconByUserAccountIconValue
 import utils.app.newImageLoader
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
+import utils.app.showFunctionIsDevelopingToast
 import utils.app.showSuccessToast
 import kotlin.math.min
 
@@ -241,7 +242,7 @@ fun UserInfoPageScreen(
             headerData = headerData,
             navigator = navigator,
             forwardIconId = Res.drawable.ui_icon_share,
-            onForward = { /* TODO : Share Function*/ },
+            onForward = { showFunctionIsDevelopingToast() },
             hazeState = hazeStateRoot,
             backIconId = BackIcon.CANCEL
         )
