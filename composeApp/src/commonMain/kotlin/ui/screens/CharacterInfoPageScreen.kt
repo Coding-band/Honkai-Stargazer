@@ -200,7 +200,7 @@ fun CharacterInfoPage(
             item { InfoAdviceRelic(charWeightJsonObject) }
             item { InfoAdviceTeammate(charWeightJsonObject, characterId, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
             item { InfoStory(charInfoJson) }
-            item { Box(modifier = Modifier.height(72.dp).navigationBarsPadding()) }
+            item { Box(modifier = Modifier.navigationBarsPadding().height(72.dp)) }
 
         }
 

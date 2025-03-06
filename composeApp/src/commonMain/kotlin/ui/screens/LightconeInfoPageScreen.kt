@@ -164,7 +164,7 @@ fun LightconeInfoPage(
             item { InfoLcMetamorphosis(lcInfoJson) }
             item { InfoAdviceCharacter(lightconeFileName) }
             item { InfoStory(lcInfoJson, isLcStory = true) }
-            item { Box(modifier = Modifier.height(72.dp).navigationBarsPadding()) }
+            item { Box(modifier = Modifier.navigationBarsPadding().height(72.dp)) }
 
         }
 

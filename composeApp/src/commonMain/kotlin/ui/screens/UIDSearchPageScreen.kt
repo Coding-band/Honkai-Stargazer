@@ -266,7 +266,7 @@ fun UIDSearchPageScreen(
                 }
 
                 item{
-                    Box(modifier = Modifier.height(64.dp).navigationBarsPadding())
+                    Box(modifier = Modifier.navigationBarsPadding().height(64.dp))
                 }
 
             }

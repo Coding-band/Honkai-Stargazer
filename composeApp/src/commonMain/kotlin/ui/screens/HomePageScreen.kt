@@ -384,7 +384,7 @@ fun HomePageMenuScrollView(
                 }
             }
 
-            item { Box(modifier = Modifier.size(16.dp).navigationBarsPadding()) }
+            item { Box(modifier = Modifier.navigationBarsPadding().size(16.dp)) }
         }
         //BottomView()
     }

@@ -201,7 +201,7 @@ fun ActionOrderListPageScreen(
                 }
             }
             item {
-                Spacer(Modifier.height(64.dp).navigationBarsPadding())
+                Spacer(Modifier.navigationBarsPadding().height(64.dp))
             }
 
         }

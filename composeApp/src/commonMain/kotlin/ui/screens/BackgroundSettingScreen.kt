@@ -160,7 +160,7 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: NavHostCon
             }
 
             item {
-                Spacer(modifier = Modifier.size(64.dp).navigationBarsPadding())
+                Spacer(modifier = Modifier.navigationBarsPadding().size(64.dp))
             }
         }
 

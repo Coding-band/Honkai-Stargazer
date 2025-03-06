@@ -192,7 +192,7 @@ fun RelicInfoPage(
             //Don't forget to add "StatusBarPadding" !
             item { if(isRelic) RelicSetInfo(relicInfoJson, isRelic) }
             item { RelicSetsCardDisplay(relicName, relicInfoJson, isRelic) }
-            item { Box(modifier = Modifier.height(72.dp).navigationBarsPadding()) }
+            item { Box(modifier = Modifier.navigationBarsPadding().height(72.dp)) }
         }
 
         PageHeader(
