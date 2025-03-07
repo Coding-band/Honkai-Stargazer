@@ -42,7 +42,7 @@ class CharWeightList(){
         }
 
         private fun getWeightListJson(): JsonElement{
-            val jsonUrl = "${StarbaseAPI().getStarbaseStaticFolderURL()}/charWeightList.json"
+            val jsonUrl = "${StarbaseAPI().getGitHubStaticAssetURL()}/data/charWeightList.json"
             val client = getLocalHttpClient {
                 install(HttpTimeout){
                     requestTimeoutMillis = 6000
