@@ -13,7 +13,7 @@ import java.util.Properties
  * VersionUpdateCheck
  * Environment Area - App Version
  */
-val appVersionDesktop = "1.0.0"
+val appVersionDesktop = "1.0.1"
 
 
 plugins {
@@ -335,6 +335,7 @@ fun initGradleProperties(){
     properties["APP_PROFILE"] = appProfile
     properties["APP_VERSION"] = appVersion
     properties["APP_VERSION_CODENAME"] = appVersionCodeName
+    properties["APP_VERSION_DESKTOP"] = appVersionDesktop
     properties["APP_VERSION_CODE"] = versionCodeFinal.toString()
     properties.store(file("../gradle.properties").outputStream(),null)
 }

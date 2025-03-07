@@ -120,6 +120,7 @@
 				B92378962B6B1156000C7307 /* Frameworks */,
 				7555FF79242A565900829871 /* Resources */,
 				C3E7261F2C64AA36009EB467 /* Embed Frameworks */,
+				C3350AC12D7B203800F5E146 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -196,6 +197,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		C3350AC12D7B203800F5E146 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n\n# Path to gradle.properties\nGRADLE_PROPS=\"../gradle.properties\"\n\n# Read properties from gradle.properties\nAPP_VERSION_CODE=$(grep '^APP_VERSION_CODE=' \"$GRADLE_PROPS\" | cut -d'=' -f2)\nAPP_VERSION_DESKTOP=$(grep '^APP_VERSION_DESKTOP=' \"$GRADLE_PROPS\" | cut -d'=' -f2)\n\n# Set the values in the Xcode project\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $APP_VERSION_CODE\" \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $APP_VERSION_DESKTOP\" \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\n";
+		};
 		F36B1CEB2AD83DDC00CB74D5 /* Compile Kotlin Framework */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
