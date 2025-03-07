@@ -167,6 +167,7 @@ fun initVar(){
     initMOCList()
     initPFList()
     initActionOrderTeamList()
+    initWallpaperList()
     println("INITED!")
 }
 

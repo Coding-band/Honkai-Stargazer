@@ -2,6 +2,9 @@ package types
 
 import com.russhwolf.settings.Settings
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonArray
+import kotlinx.serialization.json.JsonNull
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.booleanOrNull
 import kotlinx.serialization.json.jsonArray
@@ -10,6 +13,8 @@ import kotlinx.serialization.json.jsonPrimitive
 import utils.app.Language
 import utils.app.getAssetsJsonByFilePath
 import utils.app.getAssetsURLByFileName
+import utils.app.readFromOnlineURL
+import utils.starbase.StarbaseAPI
 
 @Serializable
 data class Wallpaper(
@@ -38,9 +43,10 @@ data class Wallpaper(
         )
 
         fun initWallpaperList(){
-            val jsonArray = getAssetsJsonByFilePath("bgs.json", defaultData = "[]").jsonArray
+            val jsonStr = readFromOnlineURL("${StarbaseAPI().getGitHubStaticAssetURL()}/data/bgs.json", defaultData = "[]")
+            val jsonArray = Json.parseToJsonElement(jsonStr)
 
-            if(jsonArray.isEmpty()) return
+            if(jsonArray is JsonNull || jsonArray !is JsonArray || jsonArray.isEmpty()) return
 
             val tmpList = jsonArray.map {
                 val localeNameJsonObject = it.jsonObject["locale"]

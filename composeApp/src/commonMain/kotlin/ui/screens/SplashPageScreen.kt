@@ -101,7 +101,6 @@ fun SplashPage(
             screenInstance = Screen.HomePage
 
             CoroutineScope(Dispatchers.Default).launch {
-                initWallpaperList()
                 withContext(Dispatchers.Main) {
                     navigator.navigate(Screen.HomePage.route){
                         popUpTo(Screen.SplashPage.route){
