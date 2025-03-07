@@ -20,9 +20,28 @@ data class Wallpaper(
 ){
     companion object {
         val wallpaperList: ArrayList<Wallpaper> = arrayListOf()
+        val DEFAULT_WALLPAPER = Wallpaper("221000", "221000", mapOf(
+                Language.TextLanguage.ZH_CN to "无名路途",
+                Language.TextLanguage.ZH_HK to "無名路途",
+                Language.TextLanguage.JP to "ナナシの道",
+                Language.TextLanguage.KR to "무명객의 여정",
+                Language.TextLanguage.ES to "Camino de los Anónimos",
+                Language.TextLanguage.FR to "Voyage des Sans Noms",
+                Language.TextLanguage.RU to "Путешествие Безымянных",
+                Language.TextLanguage.TH to "การเดินทางนิรนาม",
+                Language.TextLanguage.VI to "Hành Trình Không Tên",
+                Language.TextLanguage.DE to "Abenteuer der Namenlosen",
+                Language.TextLanguage.PT to "Jornada Inominada",
+                Language.TextLanguage.EN to "Nameless Journey"
+            ),
+            requireOwnChar = false
+        )
 
         fun initWallpaperList(){
             val jsonArray = getAssetsJsonByFilePath("bgs.json", defaultData = "[]").jsonArray
+
+            if(jsonArray.isEmpty()) return
+
             val tmpList = jsonArray.map {
                 val localeNameJsonObject = it.jsonObject["locale"]
                 return@map Wallpaper(
@@ -42,12 +61,8 @@ data class Wallpaper(
             wallpaperList.addAll(tmpList)
         }
 
-        fun getWallpaperById(id: String): Wallpaper? {
-            return wallpaperList.find { it.id == id }
-        }
-
         fun getPreferenceWallpaper(): Wallpaper {
-            return wallpaperList.find { it.id == Settings().getString("backgroundImage", "221000") } ?: wallpaperList.first()
+            return wallpaperList.find { it.id == Settings().getString("backgroundImage", "221000") } ?: wallpaperList.firstOrNull() ?: DEFAULT_WALLPAPER
         }
 
         fun setPreferenceWallpaper(id: String) {

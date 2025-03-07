@@ -110,7 +110,7 @@ lateinit var showUpdatePopupInSetting : MutableState<Boolean>
 @Composable
 fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, headerData: HeaderData = defaultHeaderData
 ){
-    val wallpaper = Wallpaper.wallpaperList.find { it.id == Settings().getString("backgroundImage", "221000") } ?: Wallpaper.wallpaperList[0]
+    val wallpaper = Wallpaper.getPreferenceWallpaper()
 
     val urlHandler = LocalUriHandler.current
     showUpdatePopupInSetting = remember { mutableStateOf(false) }
