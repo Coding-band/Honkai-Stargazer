@@ -25,10 +25,7 @@ import utils.starbase.StarbaseAPI
 class CharWeightList(){
     companion object{
         const val prefKeyJson = "charWeightListJson"
-        var INSTANCE = Json.parseToJsonElement(Settings().getString(
-            prefKeyJson, Json.encodeToString(
-                getWeightListJson()
-            )))
+        var INSTANCE = getWeightListJson()
 
         fun update(force : Boolean = false){
             if(!Preferences().CharWeightList.isUpdateCharWeightListNow() && !force) return
@@ -42,53 +39,7 @@ class CharWeightList(){
         }
 
         private fun getWeightListJson(): JsonElement{
-            val jsonUrl = "${StarbaseAPI().getGitHubStaticAssetURL()}/data/charWeightList.json"
-            val client = getLocalHttpClient {
-                install(HttpTimeout){
-                    requestTimeoutMillis = 6000
-                }
-                install(ContentNegotiation){
-                    json()
-                }
-                install(UserAgent){
-                    agent = "Stargazer 3 (v${AppInfoInstance.appVersionName})"
-                }
-                expectSuccess = true
-
-                defaultRequest {
-                    url(jsonUrl)
-                }
-            }
-
-            try {
-                return runBlocking {
-                    return@runBlocking withTimeout(6000) {
-                        val response: HttpResponse = client.get(jsonUrl)
-                        //Check whether it is having any errors
-                        if (!arrayListOf(200, 201).contains(response.status.value)) {
-                            errorLog(
-                                "CharWeightList",
-                                "getWeightListJson()",
-                                Exception("HTTP Error Code ${response.status.value} : ${response.status.description}")
-                            )
-                            return@withTimeout Json.parseToJsonElement("{}")
-
-                        } else {
-                            return@withTimeout response.body()
-                        }
-                    }
-                }
-
-            }catch (e : UnresolvedAddressException){
-                //Cannot find the Address, maybe bcz of u are offline
-                //errorLogExport("HoyolabRequest", "send(url = ${url}, body = ${body})",e)
-                e.printStackTrace()
-            }catch (e : Exception){
-                // All response
-                errorLog("CharWeightList", "getWeightListJson()",e)
-            }
-
-            return Json.parseToJsonElement("{}")
+            return Json.parseToJsonElement(readFromOnlineURL("${StarbaseAPI().getGitHubStaticAssetURL()}/data/charWeightList.json"))
         }
     }
 }

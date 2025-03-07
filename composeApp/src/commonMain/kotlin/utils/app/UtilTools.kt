@@ -519,6 +519,7 @@ fun checkAssetsUpdate() {
             json()
         }
         install(HttpTimeout) {
+            socketTimeoutMillis =  3000
             requestTimeoutMillis = 8000
         }
     }
@@ -717,7 +718,10 @@ fun readFromFile(filePath: String, localOnly : Boolean = false, defaultData : St
  */
 fun readFromOnlineURL(url: String, defaultData: String = "{}"): String {
     val client = getLocalHttpClient {
-        install(HttpTimeout){ requestTimeoutMillis = 8000 }
+        install(HttpTimeout){
+            socketTimeoutMillis =  3000
+            requestTimeoutMillis = 8000
+        }
         install(ContentNegotiation){ json() }
         expectSuccess = true
     }

@@ -44,6 +44,7 @@ class HoyolabRequest(
     ) : HoyolabResponse {
         val client = getLocalHttpClient {
             install(HttpTimeout){
+                socketTimeoutMillis =  3000
                 requestTimeoutMillis = 8000
             }
             install(ContentNegotiation){
@@ -111,6 +112,7 @@ class HoyolabRequest(
     ) : HoyolabResponse {
         val client = getLocalHttpClient {
             install(HttpTimeout){
+                socketTimeoutMillis =  3000
                 requestTimeoutMillis = 8000
             }
             install(ContentNegotiation){

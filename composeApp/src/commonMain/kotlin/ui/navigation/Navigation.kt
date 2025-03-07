@@ -159,6 +159,17 @@ fun isPadMode(): Boolean {
     }
 }
 
+@Composable
+fun initVar(){
+    initCharList()
+    initLcList()
+    initRelicList()
+    initMOCList()
+    initPFList()
+    initActionOrderTeamList()
+    println("INITED!")
+}
+
 /**
  * Root Frame of the app.
  */
@@ -180,13 +191,7 @@ fun RootContent() {
 
     key(doInit.value){
         if (!doInit.value){
-            initCharList()
-            initLcList()
-            initRelicList()
-            initMOCList()
-            initPFList()
-            initActionOrderTeamList()
-            println("INITED!")
+            initVar()
             doInit.value = true
         }
     }

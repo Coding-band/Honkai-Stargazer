@@ -51,6 +51,7 @@ import ui.components.defaultHeaderData
 import ui.navigation.Screen
 import ui.navigation.refreshInit
 import ui.navigation.screenInstance
+import utils.app.CharWeightList
 import utils.app.FontSizeNormalLarge24
 import utils.app.FontSizeNormalSmall
 import utils.app.Language
@@ -81,6 +82,8 @@ fun SplashPage(
                         refreshMOCData()
                         refreshPFData()
                         Preferences().Leaderboard.updatedLeaderboard()
+
+                        CharWeightList.INSTANCE
 
                         StarbaseAPI().updateUserAccountInfo()
                         StarbaseAPI().updateCharData()
