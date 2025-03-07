@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -136,7 +137,7 @@ fun InfoBioColumn(
 
             Box(Modifier.height(6.dp))
 
-            Row {
+            Row(modifier = Modifier.navigationBarsPadding()) {
                 if (path !== null) {
                     Image(
                         painter = painterResource(path.iconWhite),
