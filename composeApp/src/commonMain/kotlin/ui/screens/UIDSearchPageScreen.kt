@@ -152,7 +152,7 @@ fun UIDSearchPageScreen(
                         }
                     }
                 }
-            })
+            }, isFocus = false)
 
             Text(
                 text = LongStringXML().UIDOnlySupportFullUID(),

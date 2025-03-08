@@ -332,7 +332,8 @@ fun <T> ListFilterTool(
                                 }
                                 inputString.value = ""
                                 text.value = TextFieldValue("")
-                            }
+                            },
+                            isFocus = isShowing.value == "SEARCH",
                         )
                     }
                 }else{
