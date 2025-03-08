@@ -134,8 +134,8 @@ fun CharacterInfoPage(
     val characterName = route.charName.replace("_", " ")
     val characterFileName = route.fileName
     val characterId = route.charId
-    val combatType = route.combatType
-    val path = route.path
+    val combatType = valueOfWithDefaultCombatType(route.combatType)
+    val path = valueOfWithDefaultPath(route.path)
 
     val charInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Character.getCharacterDataFromFileName(characterFileName, Language.TextLanguageInstance) as JsonElement) }
 

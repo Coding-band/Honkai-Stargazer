@@ -75,7 +75,7 @@ fun LightconeCard(
         LightconeInfoRoute(
             lcName = lightcone.registName!!,
             fileName = lightcone.fileName!!,
-            path = lightcone.path
+            path = lightcone.path.name
         )
     ) },
     overrideNameComponent: @Composable (() -> Unit)? = null,

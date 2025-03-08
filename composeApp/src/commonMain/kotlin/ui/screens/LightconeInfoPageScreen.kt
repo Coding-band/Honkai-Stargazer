@@ -118,7 +118,7 @@ fun LightconeInfoPage(
     val route = backStackEntry.toRoute<LightconeInfoRoute>()
     val lightconeName = route.lcName
     val lightconeFileName = route.fileName
-    val path = route.path
+    val path = valueOfWithDefaultPath(route.path)
     val lcInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Lightcone.getLightconeDataFromJSON(lightconeFileName, Language.TextLanguageInstance) as JsonElement) }
 
     localCoroutineScope = rememberCoroutineScope();

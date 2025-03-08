@@ -73,8 +73,8 @@ fun CharacterCard(
         CharacterInfoRoute(
             charName = character.registName!!,
             fileName = character.fileName ?: "?",
-            combatType = character.combatType,
-            path = character.path,
+            combatType = character.combatType.name,
+            path = character.path.name,
             charId = character.officialId ?: -1
         )
     ) },

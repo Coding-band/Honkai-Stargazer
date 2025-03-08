@@ -10,13 +10,13 @@ import types.Path
 data class CharacterInfoRoute(
     val charName: String,
     val fileName: String,
-    val combatType: CombatType,
-    val path: Path,
+    val combatType: String,
+    val path: String,
     val charId: Int
 )
 
 @Serializable
-data class LightconeInfoRoute(val lcName: String, val fileName: String, val path: Path)
+data class LightconeInfoRoute(val lcName: String, val fileName: String, val path: String)
 
 @Serializable
 data class RelicInfoRoute(val relicName: String, val fileName: String)
