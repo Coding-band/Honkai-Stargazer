@@ -46,6 +46,7 @@ import org.jetbrains.compose.resources.painterResource
 import types.Character
 import types.ImageFolder
 import types.Lightcone
+import ui.navigation.LightconeInfoRoute
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
@@ -71,12 +72,12 @@ fun LightconeCard(
     lightcone: Lightcone,
     displayName: String? = lightcone.displayName,
     onClick: () -> Unit = { navigatorInstance.navigateLimited(
-        Screen.LightconeInfoPage.route
-                + "/${lightcone.registName!!.replace(" ","_")}"
-                + "?fileName=${lightcone.fileName}"
-                + "&path=${lightcone.path}"
-
-    ) }, //按下後會做甚麼
+        LightconeInfoRoute(
+            lcName = lightcone.registName!!,
+            fileName = lightcone.fileName!!,
+            path = lightcone.path
+        )
+    ) },
     overrideNameComponent: @Composable (() -> Unit)? = null,
     isDisplayCombatPath: Boolean = true,
     isDisplayName : Boolean = true,

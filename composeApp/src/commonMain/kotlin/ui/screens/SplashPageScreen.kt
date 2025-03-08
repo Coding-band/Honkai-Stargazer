@@ -48,7 +48,9 @@ import types.UserAccount.Companion.refreshUserAccount
 import types.Wallpaper.Companion.initWallpaperList
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
+import ui.navigation.HomeRoute
 import ui.navigation.Screen
+import ui.navigation.SplashRoute
 import ui.navigation.refreshInit
 import ui.navigation.screenInstance
 import utils.app.CharWeightList
@@ -102,8 +104,8 @@ fun SplashPage(
 
             CoroutineScope(Dispatchers.Default).launch {
                 withContext(Dispatchers.Main) {
-                    navigator.navigate(Screen.HomePage.route){
-                        popUpTo(Screen.SplashPage.route){
+                    navigator.navigate(HomeRoute){
+                        popUpTo(SplashRoute){
                             inclusive = true
                         }
                     }

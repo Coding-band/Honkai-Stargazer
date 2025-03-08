@@ -45,6 +45,7 @@ import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.platform.UriHandler
 import androidx.compose.ui.unit.IntOffset
+import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.NavOptions
 import androidx.navigation.NavType
@@ -52,11 +53,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import androidx.navigation.toRoute
 import androidx.window.core.layout.WindowWidthSizeClass
 import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
+import getDeviceInfo
 import getScreenSizeInfo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -108,7 +111,10 @@ import ui.screens.refreshPFList
 import ui.screens.refreshRelicList
 import utils.app.Constants.Companion.HOME_WIDTH
 import utils.app.Language
+import utils.app.isIosPlatform
 import utils.app.snackbarInstance
+import utils.app.valueOfWithDefaultCombatType
+import utils.app.valueOfWithDefaultPath
 
 /**
  * Navigate to a route with a limited interval.
@@ -264,368 +270,305 @@ fun refreshInit(){
     }
 }
 
+
 @Composable
 fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>){
     //ref: https://github.com/JetBrains/compose-multiplatform/issues/4528#issuecomment-2015222282
     val animationSpec = tween<IntOffset>(easing = LinearEasing)
-    NavHost(
-        navController = navigator,
-        startDestination = Screen.SplashPage.route,
-        enterTransition = { if(isPadMode.value) fadeIn() else slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Left,animationSpec)},
-        exitTransition = { if(isPadMode.value) fadeOut() else slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Left,animationSpec) },
-        popEnterTransition = { if(isPadMode.value) fadeIn() else slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Right,animationSpec) },
-        popExitTransition = { if(isPadMode.value) fadeOut() else slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Right,animationSpec) }
-    ) {
-        composable(route = Screen.SplashPage.route) {
-            screenInstance = Screen.SplashPage
-            SplashPage(
-                navigator = navigator,
-                headerData = Screen.SplashPage.headerData
-            )
-        }
-        composable(route = Screen.HomePage.route) {
-            screenInstance = Screen.HomePage
-            withBGScreen(isPadMode){
-                if(!isPadMode.value) {
-                    HomePage(
-                        navigator = navigator,
-                        headerData = Screen.HomePage.headerData
-                    )
-                }else{
-                    BlankPage(
-                        navigator = navigator,
-                        headerData = Screen.BlankPage.headerData
-                    )
-                }
-            }
-        }
+    if(isIosPlatform()){
+        NavHost(
+            navController = navigator,
+            startDestination = SplashRoute,
+            builder = navBuilder(isPadMode, navigator)
+        )
+    }else{
+        NavHost(
+            navController = navigator,
+            startDestination = SplashRoute,
+            enterTransition = { if(isPadMode.value) fadeIn() else slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Left,animationSpec)},
+            exitTransition = { if(isPadMode.value) fadeOut() else slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Left,animationSpec) },
+            popEnterTransition = { if(isPadMode.value) fadeIn() else slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Right,animationSpec) },
+            popExitTransition = { if(isPadMode.value) fadeOut() else slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Right,animationSpec) },
+            builder = navBuilder(isPadMode, navigator)
+        )
+    }
+}
 
-        composable(route = Screen.CharacterListPage.route) {
-            screenInstance = Screen.CharacterListPage
-            withBGScreen(isPadMode){
-                CharacterListPage(
+fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) : NavGraphBuilder.() -> Unit = {
+    composable<SplashRoute> {
+        screenInstance = Screen.SplashPage
+        SplashPage(
+            navigator = navigator,
+            headerData = Screen.SplashPage.headerData
+        )
+    }
+    composable<HomeRoute>{
+        screenInstance = Screen.HomePage
+        withBGScreen(isPadMode){
+            if(!isPadMode.value) {
+                HomePage(
                     navigator = navigator,
-                    headerData = Screen.CharacterListPage.headerData
+                    headerData = Screen.HomePage.headerData
+                )
+            }else{
+                BlankPage(
+                    navigator = navigator,
+                    headerData = Screen.BlankPage.headerData
                 )
             }
-        }
-        composable(route = Screen.LightconeListPage.route) {
-            screenInstance = Screen.LightconeListPage
-            withBGScreen(isPadMode){
-                LightconeListPage(
-                    navigator = navigator,
-                    headerData = Screen.LightconeListPage.headerData
-                )
-            }
-        }
-        composable(route = Screen.RelicListPage.route) {
-            screenInstance = Screen.RelicListPage
-            withBGScreen(isPadMode){
-                RelicListPage(
-                    navigator = navigator,
-                    headerData = Screen.RelicListPage.headerData
-                )
-            }
-        }
-
-        composable(
-            //?fileName={fileName}&combatType={combatType}&path={path}&charId={charId}
-            route = "${Screen.CharacterInfoPage.route}/{charName}?fileName={fileName}&combatType={combatType}&path={path}&charId={charId}",
-            arguments = listOf(
-                navArgument("charName") { type = NavType.StringType ;defaultValue = ""; nullable = false; },
-                navArgument("fileName") { type = NavType.StringType ;defaultValue = ""; nullable = false; },
-                navArgument("combatType") { type = NavType.StringType ;defaultValue = ""; nullable = false; },
-                navArgument("path") { type = NavType.StringType ;defaultValue = ""; nullable = false; },
-                navArgument("charName") { type = NavType.StringType ;defaultValue = ""; nullable = false; },
-            )
-        ) { backStackEntry ->
-            screenInstance = Screen.CharacterInfoPage
-            withBGScreen(isPadMode){
-                CharacterInfoPage(
-                    navigator = navigator,
-                    headerData = Screen.CharacterInfoPage.headerData,
-                    backStackEntry = backStackEntry
-                )
-            }
-        }
-
-        composable(
-            //?lcName={fileName}&path={path}
-            route = "${Screen.LightconeInfoPage.route}/{lcName}?fileName={fileName}&path={path}",
-            arguments = listOf(
-                navArgument("lcName") { type = NavType.StringType ;defaultValue = ""; nullable = false; },
-                navArgument("fileName") { type = NavType.StringType ;defaultValue = ""; nullable = false; },
-                navArgument("path") { type = NavType.StringType ;defaultValue = ""; nullable = false; }
-            )
-        ) { backStackEntry ->
-            screenInstance = Screen.LightconeListPage
-            withBGScreen(isPadMode){
-                    LightconeInfoPage(
-                        navigator = navigator,
-                        headerData = Screen.LightconeInfoPage.headerData,
-                        backStackEntry = backStackEntry
-                    )
-                }
-        }
-
-        //?fileName={fileName}
-        composable(
-            route = "${Screen.RelicInfoPage.route}/{relicName}?fileName={fileName}",
-            arguments = listOf(
-                navArgument("fileName") { type = NavType.StringType ;defaultValue = ""; nullable = false; }
-            )
-        ) { backStackEntry ->
-            screenInstance = Screen.RelicInfoPage
-            withBGScreen(isPadMode){
-                    RelicInfoPage(
-                        navigator = navigator,
-                        headerData = Screen.RelicInfoPage.headerData,
-                        backStackEntry = backStackEntry,
-                    )
-                }
-        }
-
-        composable(
-            route = Screen.SettingScreen.route) {
-            screenInstance = Screen.SettingScreen
-            withBGScreen(isPadMode){
-                SettingScreen(
-                    navigator = navigator,
-                    headerData = Screen.SettingScreen.headerData
-                    )
-            }
-        }
-
-        composable(
-            route = Screen.BackgroundSettingScreen.route) {
-            screenInstance = Screen.BackgroundSettingScreen
-            withBGScreen(isPadMode){
-                    BackgroundSettingScreen(
-                        navigator = navigator,
-                        headerData = Screen.BackgroundSettingScreen.headerData
-                    )
-                }
-        }
-
-        //?serverId={serverId}
-        composable(
-            route = Screen.HoyolabLoginPageScreen.route +"?serverId={serverId}",
-            arguments = listOf(
-                navArgument("serverId") { type = NavType.StringType ;defaultValue = ""; nullable = false; }
-            )
-        ) { backStackEntry ->
-            screenInstance = Screen.HoyolabLoginPageScreen
-            withBGScreen(isPadMode){
-                    HoyolabLoginPageScreen(
-                        navigator = navigator,
-                        headerData = Screen.HoyolabLoginPageScreen.headerData,
-                        backStackEntry = backStackEntry,
-                    )
-                }
-        }
-
-        composable(
-            route = Screen.EventListPageScreen.route) {
-            screenInstance = Screen.EventListPageScreen
-            withBGScreen(isPadMode){
-                    EventListPageScreen(
-                        navigator = navigator,
-                        headerData = Screen.EventListPageScreen.headerData
-                    )
-                }
-        }
-
-        //?eventId={eventId}
-        composable(
-            route = Screen.EventContentPageScreen.route +"?eventId={eventId}",
-            arguments = listOf(
-                navArgument("eventId") { type = NavType.StringType ;defaultValue = ""; nullable = false; }
-            )
-        ) { backStackEntry ->
-            screenInstance = Screen.EventContentPageScreen
-            withBGScreen(isPadMode){
-                    EventContentPageScreen(
-                        navigator = navigator,
-                        headerData = Screen.EventContentPageScreen.headerData,
-                        backStackEntry = backStackEntry,
-                    )
-                }
-
-        }
-        composable(
-            route = Screen.MapPageScreen.route) {
-            //val uriHandler = LocalUriHandler.current
-            LaunchedEffect(Unit){
-                navigator.popBackStack()
-                //uriHandler.openUri("https://act.hoyolab.com/sr/app/interactive-map/index.html?lang=${Language.TextLanguageInstance.hoyolabName}")
-            }
-            /*
-            withBGScreen(isPadMode){
-                    MapPageScreen(
-                        navigator = navigator,
-                        headerData = Screen.MapPageScreen.headerData
-                    )
-                }
-             */
-
-        }
-
-        //?uid={uid}
-        composable(
-            route = Screen.UserInfoPageScreen.route +"?uid={uid}",
-            arguments = listOf(
-                navArgument("uid") { type = NavType.StringType ;defaultValue = ""; nullable = false; }
-            )
-        ) { backStackEntry ->
-            screenInstance = Screen.UserInfoPageScreen
-            withBGScreen(isPadMode){
-                    UserInfoPageScreen(
-                        navigator = navigator,
-                        headerData = Screen.UserInfoPageScreen.headerData,
-                        backStackEntry = backStackEntry,
-                    )
-                }
-
-        }
-
-        //?uid={uid}&charId={charId}
-        composable(
-            route = Screen.UserCharacterPageScreen.route +"?uid={uid}&charId={charId}",
-            arguments = listOf(
-                navArgument("uid") { type = NavType.StringType ;defaultValue = ""; nullable = false; },
-                navArgument("charId") { type = NavType.StringType ;defaultValue = ""; nullable = false; }
-            )
-        ) { backStackEntry ->
-            screenInstance = Screen.UserCharacterPageScreen
-            withBGScreen(isPadMode){
-                    UserCharacterPageScreen(
-                        navigator = navigator,
-                        headerData = Screen.UserCharacterPageScreen.headerData,
-                        backStackEntry = backStackEntry,
-                    )
-                }
-
-        }
-        composable(
-            route = Screen.UIDSearchPageScreen.route) {
-            screenInstance = Screen.UIDSearchPageScreen
-            withBGScreen(isPadMode){
-                    UIDSearchPageScreen(
-                        navigator = navigator,
-                        headerData = Screen.UIDSearchPageScreen.headerData
-                    )
-                }
-
-        }
-        composable(
-            route = Screen.MemoryOfChaosMissionPageScreen.route) {
-            screenInstance = Screen.MemoryOfChaosMissionPageScreen
-            withBGScreen(isPadMode){
-                    MemoryOfChaosMissionPageScreen(
-                        navigator = navigator,
-                        headerData = Screen.MemoryOfChaosMissionPageScreen.headerData
-                    )
-                }
-
-        }
-        //?uid={uid}
-        composable(
-            route = Screen.BattleChroniclePageScreen.route + "?uid={uid}",
-            arguments = listOf(
-                navArgument("uid") { type = NavType.StringType ;defaultValue = ""; nullable = false; }
-            )
-            
-        ) { backStackEntry ->
-            screenInstance = Screen.BattleChroniclePageScreen
-            withBGScreen(isPadMode){
-                    BattleChroniclePageScreen(
-                        navigator = navigator,
-                        headerData = Screen.BattleChroniclePageScreen.headerData,
-                        backStackEntry = backStackEntry,
-                    )
-                }
-
-        }
-        composable(
-            route = Screen.PureFictionMissionPageScreen.route) {
-            screenInstance = Screen.PureFictionMissionPageScreen
-            withBGScreen(isPadMode){
-                    PureFictionMissionPageScreen(
-                        navigator = navigator,
-                        headerData = Screen.PureFictionMissionPageScreen.headerData
-                    )
-                }
-
-        }
-        composable(
-            route = Screen.AboutStargazerPageScreen.route) {
-            screenInstance = Screen.AboutStargazerPageScreen
-            withBGScreen(isPadMode){
-                    AboutStargazerPageScreen(
-                        navigator = navigator,
-                        headerData = Screen.AboutStargazerPageScreen.headerData
-                    )
-                }
-
-        }
-        composable(
-            route = Screen.ExpeditionPageScreen.route) {
-            screenInstance = Screen.ExpeditionPageScreen
-            withBGScreen(isPadMode){
-                ExpeditionPageScreen(
-                        navigator = navigator,
-                        headerData = Screen.ExpeditionPageScreen.headerData
-                    )
-                }
-
-        }
-        composable(
-            route = Screen.ProficientLeaderboardPageScreen.route) {
-            screenInstance = Screen.ProficientLeaderboardPageScreen
-            withBGScreen(isPadMode){
-                ProficientLeaderboardPageScreen(
-                        navigator = navigator,
-                        headerData = Screen.ProficientLeaderboardPageScreen.headerData
-                    )
-                }
-
-        }
-        composable(
-            route = Screen.ActionOrderListPageScreen.route) {
-            screenInstance = Screen.ActionOrderListPageScreen
-            withBGScreen(isPadMode){
-                ActionOrderListPageScreen(
-                    navigator = navigator,
-                    headerData = Screen.ActionOrderListPageScreen.headerData
-                )
-            }
-
-        }
-
-        //?index={index}
-        composable(
-            route = Screen.ActionOrderSimulatorPageScreen.route + "?index={index}",
-            arguments = listOf(
-                navArgument("index") { type = NavType.StringType ;defaultValue = ""; nullable = false; }
-            )
-        ) { backStackEntry ->
-            screenInstance = Screen.ActionOrderSimulatorPageScreen
-            withBGScreen(isPadMode){
-                ActionOrderSimulatorPageScreen(
-                    navigator = navigator,
-                    headerData = Screen.ActionOrderSimulatorPageScreen.headerData,
-                    backStackEntry = backStackEntry,
-                )
-            }
-
         }
     }
+
+    composable<CharacterListRoute> {
+        screenInstance = Screen.CharacterListPage
+        withBGScreen(isPadMode){
+            CharacterListPage(
+                navigator = navigator,
+                headerData = Screen.CharacterListPage.headerData
+            )
+        }
+    }
+    composable<LightconeListRoute> {
+        screenInstance = Screen.LightconeListPage
+        withBGScreen(isPadMode){
+            LightconeListPage(
+                navigator = navigator,
+                headerData = Screen.LightconeListPage.headerData
+            )
+        }
+    }
+    composable<RelicListRoute> {
+        screenInstance = Screen.RelicListPage
+        withBGScreen(isPadMode){
+            RelicListPage(
+                navigator = navigator,
+                headerData = Screen.RelicListPage.headerData
+            )
+        }
+    }
+
+    composable<CharacterInfoRoute> { backStackEntry ->
+        screenInstance = Screen.CharacterInfoPage
+        withBGScreen(isPadMode) {
+            CharacterInfoPage(
+                navigator = navigator,
+                headerData = Screen.CharacterInfoPage.headerData,
+                backStackEntry = backStackEntry
+            )
+        }
+    }
+
+    composable<LightconeInfoRoute> { backStackEntry ->
+        screenInstance = Screen.LightconeInfoPage
+        withBGScreen(isPadMode){
+            LightconeInfoPage(
+                navigator = navigator,
+                headerData = Screen.LightconeInfoPage.headerData,
+                backStackEntry = backStackEntry
+            )
+        }
+    }
+
+    //?fileName={fileName}
+    composable<RelicInfoRoute> { backStackEntry ->
+        screenInstance = Screen.RelicInfoPage
+        withBGScreen(isPadMode){
+            RelicInfoPage(
+                navigator = navigator,
+                headerData = Screen.RelicInfoPage.headerData,
+                backStackEntry = backStackEntry,
+            )
+        }
+    }
+
+    composable<SettingRoute> {
+        screenInstance = Screen.SettingScreen
+        withBGScreen(isPadMode){
+            SettingScreen(
+                navigator = navigator,
+                headerData = Screen.SettingScreen.headerData
+            )
+        }
+    }
+
+    composable<BackgroundSettingRoute> {
+        screenInstance = Screen.BackgroundSettingScreen
+        withBGScreen(isPadMode){
+            BackgroundSettingScreen(
+                navigator = navigator,
+                headerData = Screen.BackgroundSettingScreen.headerData
+            )
+        }
+    }
+
+    //?serverId={serverId}
+    composable<HoyolabLoginRoute> { backStackEntry ->
+        screenInstance = Screen.HoyolabLoginPageScreen
+        withBGScreen(isPadMode){
+            HoyolabLoginPageScreen(
+                navigator = navigator,
+                headerData = Screen.HoyolabLoginPageScreen.headerData,
+                backStackEntry = backStackEntry,
+            )
+        }
+    }
+
+    composable<EventListRoute> {
+        screenInstance = Screen.EventListPageScreen
+        withBGScreen(isPadMode){
+            EventListPageScreen(
+                navigator = navigator,
+                headerData = Screen.EventListPageScreen.headerData
+            )
+        }
+    }
+
+    //?eventId={eventId}
+    composable<EventContentRoute> { backStackEntry ->
+        screenInstance = Screen.EventContentPageScreen
+        withBGScreen(isPadMode){
+            EventContentPageScreen(
+                navigator = navigator,
+                headerData = Screen.EventContentPageScreen.headerData,
+                backStackEntry = backStackEntry,
+            )
+        }
+
+    }
+    composable<MapRoute> {
+        //val uriHandler = LocalUriHandler.current
+        LaunchedEffect(Unit){
+            navigator.popBackStack()
+        }
+    }
+
+    //?uid={uid}
+    composable<UserInfoRoute> { backStackEntry ->
+        screenInstance = Screen.UserInfoPageScreen
+        withBGScreen(isPadMode){
+            UserInfoPageScreen(
+                navigator = navigator,
+                headerData = Screen.UserInfoPageScreen.headerData,
+                backStackEntry = backStackEntry,
+            )
+        }
+
+    }
+
+    //?uid={uid}&charId={charId}
+    composable<UserCharacterRoute> { backStackEntry ->
+        screenInstance = Screen.UserCharacterPageScreen
+        withBGScreen(isPadMode){
+            UserCharacterPageScreen(
+                navigator = navigator,
+                headerData = Screen.UserCharacterPageScreen.headerData,
+                backStackEntry = backStackEntry,
+            )
+        }
+
+    }
+    composable<UIDSearchRoute> {
+        screenInstance = Screen.UIDSearchPageScreen
+        withBGScreen(isPadMode){
+            UIDSearchPageScreen(
+                navigator = navigator,
+                headerData = Screen.UIDSearchPageScreen.headerData
+            )
+        }
+
+    }
+    composable<MemoryOfChaosMissionRoute> {
+        screenInstance = Screen.MemoryOfChaosMissionPageScreen
+        withBGScreen(isPadMode){
+            MemoryOfChaosMissionPageScreen(
+                navigator = navigator,
+                headerData = Screen.MemoryOfChaosMissionPageScreen.headerData
+            )
+        }
+
+    }
+    //?uid={uid}
+    composable<BattleChronicleRoute> { backStackEntry ->
+        screenInstance = Screen.BattleChroniclePageScreen
+        withBGScreen(isPadMode){
+            BattleChroniclePageScreen(
+                navigator = navigator,
+                headerData = Screen.BattleChroniclePageScreen.headerData,
+                backStackEntry = backStackEntry,
+            )
+        }
+
+    }
+    composable<PureFictionMissionRoute> {
+        screenInstance = Screen.PureFictionMissionPageScreen
+        withBGScreen(isPadMode){
+            PureFictionMissionPageScreen(
+                navigator = navigator,
+                headerData = Screen.PureFictionMissionPageScreen.headerData
+            )
+        }
+
+    }
+    composable<AboutStargazerRoute> {
+        screenInstance = Screen.AboutStargazerPageScreen
+        withBGScreen(isPadMode){
+            AboutStargazerPageScreen(
+                navigator = navigator,
+                headerData = Screen.AboutStargazerPageScreen.headerData
+            )
+        }
+
+    }
+    composable<ExpeditionRoute> {
+        screenInstance = Screen.ExpeditionPageScreen
+        withBGScreen(isPadMode){
+            ExpeditionPageScreen(
+                navigator = navigator,
+                headerData = Screen.ExpeditionPageScreen.headerData
+            )
+        }
+
+    }
+    composable<ProficientLeaderboardRoute> {
+        screenInstance = Screen.ProficientLeaderboardPageScreen
+        withBGScreen(isPadMode){
+            ProficientLeaderboardPageScreen(
+                navigator = navigator,
+                headerData = Screen.ProficientLeaderboardPageScreen.headerData
+            )
+        }
+
+    }
+    composable<ActionOrderListRoute> {
+        screenInstance = Screen.ActionOrderListPageScreen
+        withBGScreen(isPadMode){
+            ActionOrderListPageScreen(
+                navigator = navigator,
+                headerData = Screen.ActionOrderListPageScreen.headerData
+            )
+        }
+
+    }
+
+    //?index={index}
+    composable<ActionOrderSimulatorRoute> { backStackEntry ->
+        screenInstance = Screen.ActionOrderSimulatorPageScreen
+        withBGScreen(isPadMode){
+            ActionOrderSimulatorPageScreen(
+                navigator = navigator,
+                headerData = Screen.ActionOrderSimulatorPageScreen.headerData,
+                backStackEntry = backStackEntry,
+            )
+        }
+
+    }
+
 }
 
 /**
  * Navigate to a route with a limited interval.
  */
-fun NavHostController.navigateLimited(route: String, options: NavOptions? = null) {
+fun NavHostController.navigateLimited(route: Any, options: NavOptions? = null) {
     val navigationInterval: Long = 500 // 500ms is enough for most cases
     val lastNavigationTime: Long = Settings().getLong("lastNavigationTime", 0)
 

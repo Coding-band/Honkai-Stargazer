@@ -60,6 +60,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
+import androidx.navigation.toRoute
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import com.mohamedrejeb.richeditor.model.RichTextState
@@ -104,6 +105,8 @@ import ui.components.PageHeader
 import ui.components.RelicCard
 import ui.components.TitleHeader
 import ui.components.defaultHeaderData
+import ui.navigation.CharacterInfoRoute
+import ui.navigation.RelicInfoRoute
 import ui.navigation.hazeStateRoot
 import utils.app.Constants
 import utils.app.Constants.Companion.RELIC_CARD_WIDTH
@@ -140,8 +143,9 @@ fun RelicInfoPage(
 ) {
 
     var density = LocalDensity.current.density
-    val relicName = backStackEntry.arguments?.getString("relicName")!!.replace("_", " ")
-    val relicFileName = backStackEntry.arguments?.getString("fileName")!!
+    val route = backStackEntry.toRoute<RelicInfoRoute>()
+    val relicName = route.relicName
+    val relicFileName = route.fileName
 
     val relicInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Relic.getRelicDataFromJSON(relicFileName, Language.TextLanguageInstance) as JsonElement) }
 

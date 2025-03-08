@@ -83,6 +83,7 @@ import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.defaultHeaderData
+import ui.navigation.BackgroundSettingRoute
 import ui.navigation.Screen
 import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
@@ -187,7 +188,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                                 wallpaper.locale?.get(Language.TextLanguageInstance) ?: wallpaper.locale?.get(Language.TextLanguage.EN) ?:
                                 Character.getCharacterFromExtListJson(wallpaper.id)?.jsonObject?.get("localeName")?.jsonObject?.get(Language.TextLanguageInstance.folderName)?.jsonPrimitive?.content ?:
                                 wallpaper.id,
-                            navigateClick = { navigator.navigateLimited(Screen.BackgroundSettingScreen.route) }
+                            navigateClick = { navigator.navigateLimited(BackgroundSettingRoute) }
                         )
 
                         //啟用模糊效果

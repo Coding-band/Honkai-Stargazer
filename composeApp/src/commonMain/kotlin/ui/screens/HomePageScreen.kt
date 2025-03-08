@@ -90,6 +90,9 @@ import ui.components.UIButton
 import ui.components.UIButtonSize
 import ui.components.defaultHeaderData
 import ui.navigation.Screen
+import ui.navigation.SettingRoute
+import ui.navigation.UserCharacterRoute
+import ui.navigation.UserInfoRoute
 import ui.navigation.isPadMode
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
@@ -178,7 +181,7 @@ fun UserHelpTeamIcon(
             .border(1.5.dp, Color(0xFFD3D3D3), CircleShape)
             .clickable {
                 if (uid != "") {
-                    navigator.navigateLimited("${Screen.UserCharacterPageScreen.route}?uid=${uid}&charId=${character.officialId}")
+                    navigator.navigateLimited(UserCharacterRoute(uid, character.officialId!!.toString()))
                 }
             }
     )
@@ -222,7 +225,7 @@ fun HomePageHeader(
                         .border(1.dp, Color(0x66907C54), CircleShape)
                         .clickable {
                             if (userAccount.value.isLogin) {
-                                navigator.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=${userAccount.value.uid}")
+                                navigator.navigateLimited(UserInfoRoute(userAccount.value.uid))
                             }else{
                                 showWarningToast(message = pleaseLoginStr)
                             }
@@ -524,7 +527,7 @@ fun ThreeDotsDialog(
                             textRes = Res.string.Setting,
                             onClick = {
                                 threeDotDialogDisplay.value =
-                                    false; navigator.navigateLimited(Screen.SettingScreen.route)
+                                    false; navigator.navigateLimited(SettingRoute)
                             },
                             buttonSize = UIButtonSize.SmallChoice
                         )

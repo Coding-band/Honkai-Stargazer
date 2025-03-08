@@ -60,6 +60,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
+import androidx.navigation.toRoute
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
 import com.multiplatform.webview.web.WebView
@@ -99,6 +100,8 @@ import ui.components.UIButton
 import ui.components.UIButtonSize
 import ui.components.defaultHeaderData
 import ui.components.pomPomPopupInstance
+import ui.navigation.CharacterInfoRoute
+import ui.navigation.HoyolabLoginRoute
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
@@ -109,6 +112,9 @@ import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.Language.Companion.TextLanguageInstance
 import utils.app.LongStringXML
+import utils.app.isLinuxPlatform
+import utils.app.isMacOSPlatform
+import utils.app.isWindowsPlatform
 import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.showWarningToast
@@ -124,7 +130,8 @@ fun HoyolabLoginPageScreen(
     backStackEntry: NavBackStackEntry,
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ){
-    val serverId = backStackEntry.arguments?.getString("serverId")!!
+    val route = backStackEntry.toRoute<HoyolabLoginRoute>()
+    val serverId = route.serverId
     val serverSelected = HoyolabConst().getServerById(serverId)
     val url = HoyolabConst().getLoginURL(serverSelected)
     val hazeState = remember { HazeState() }
@@ -312,12 +319,10 @@ fun HoyolabServerSelectPopup(modifier: Modifier = Modifier, showPopup : MutableS
                                         showPopup.value = false
 
                                         //@DoItLater("Implement JCEF later")
-                                        if(getDeviceInfo().deviceOSName.lowercase().let {
-                                            it.contains("mac") || it.contains("windows") || it.contains("linux")
-                                        }){
+                                        if(isWindowsPlatform() || isMacOSPlatform() || isLinuxPlatform()){
                                             showWarningToast(message = "PC端暫不支援Hoyoverse通行證登錄，請使用Cookies登錄\nCurrently PC does not support Hoyoverse Passport login yet, please use cookies to login instead.")
                                         }else{
-                                            navigatorInstance.navigateLimited("${Screen.HoyolabLoginPageScreen.route}?serverId=${server.serverId}")
+                                            navigatorInstance.navigateLimited(HoyolabLoginRoute(server.serverId))
                                         }
                                     }
                                 )

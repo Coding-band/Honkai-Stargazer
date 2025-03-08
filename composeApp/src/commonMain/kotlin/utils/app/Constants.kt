@@ -50,7 +50,18 @@ import org.jetbrains.compose.resources.DrawableResource
 import types.UserAccount
 import types.UserNoteState
 import ui.components.HomePageBlocks
+import ui.navigation.CharacterInfoRoute
+import ui.navigation.CharacterListRoute
+import ui.navigation.EventListRoute
+import ui.navigation.ExpeditionRoute
+import ui.navigation.LightconeListRoute
+import ui.navigation.MemoryOfChaosMissionRoute
+import ui.navigation.ProficientLeaderboardRoute
+import ui.navigation.PureFictionMissionRoute
+import ui.navigation.RelicInfoRoute
+import ui.navigation.RelicListRoute
 import ui.navigation.Screen
+import ui.navigation.UIDSearchRoute
 import ui.navigation.urlHandler
 import utils.annotation.DoItLater
 
@@ -153,25 +164,25 @@ class Constants {
                 itemId = "CharacterListPage",
                 itemTitleRId = Res.string.Character,
                 itemIconId = Res.drawable.phorphos_person_fill,
-                itemOnClickToNavigate = Screen.CharacterListPage,
+                itemOnClickToNavigate = CharacterListRoute,
             ),
             HomePageBlocks.HomePageBlockItem(
                 itemId = "LightconeListPage",
                 itemTitleRId = Res.string.Lightcone,
                 itemIconId = Res.drawable.phorphos_sword_fill,
-                itemOnClickToNavigate = Screen.LightconeListPage,
+                itemOnClickToNavigate = LightconeListRoute,
             ),
             HomePageBlocks.HomePageBlockItem(
                 itemId = "RelicListPage",
                 itemTitleRId = Res.string.Relic,
                 itemIconId = Res.drawable.phorphos_baseball_cap_fill,
-                itemOnClickToNavigate = Screen.RelicListPage,
+                itemOnClickToNavigate = RelicListRoute,
             ),
             HomePageBlocks.HomePageBlockItem(
                 itemId = "UIDSearchPage",
                 itemTitleRId = Res.string.UIDSearch,
                 itemIconId = Res.drawable.phorphos_alien_fill,
-                itemOnClickToNavigate = Screen.UIDSearchPageScreen,
+                itemOnClickToNavigate = UIDSearchRoute,
             ),
             @DoItLater("Add Time Count Down later")
             HomePageBlocks.HomePageBlockItem(
@@ -237,7 +248,7 @@ class Constants {
                 itemTitleRId = Res.string.Expedition,
                 itemIconId = Res.drawable.phorphos_users_fill,
                 itemType = HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1,
-                itemOnClickToNavigate = Screen.ExpeditionPageScreen
+                itemOnClickToNavigate = ExpeditionRoute
             ).onRefresh { self ->
                 if (!UserNoteState.value.isInited) {
                     self.itemTopHighlight = "--"
@@ -262,25 +273,25 @@ class Constants {
                 itemId = "MOCPage",
                 itemTitleRId = Res.string.MemoryOfChaos,
                 itemIconId = Res.drawable.phorphos_medal_military_fill,
-                itemOnClickToNavigate = Screen.MemoryOfChaosMissionPageScreen
+                itemOnClickToNavigate = MemoryOfChaosMissionRoute
             ),
             HomePageBlocks.HomePageBlockItem(
                 itemId = "PFPage",
                 itemTitleRId = Res.string.PureFiction,
                 itemIconId = Res.drawable.phorphos_atom_fill,
-                itemOnClickToNavigate = Screen.PureFictionMissionPageScreen
+                itemOnClickToNavigate = PureFictionMissionRoute
             ),
             HomePageBlocks.HomePageBlockItem(
                 itemId = "EventListPage",
                 itemTitleRId = Res.string.Event,
                 itemIconId = Res.drawable.phorphos_film_slate_fill,
-                itemOnClickToNavigate = Screen.EventListPageScreen
+                itemOnClickToNavigate = EventListRoute
             ),
             HomePageBlocks.HomePageBlockItem(
                 itemId = "ScoreLevelLeaderboard",
                 itemTitleRId = Res.string.ScoreLevelLeaderboard,
                 itemIconId = Res.drawable.phorphos_trophy_fill,
-                itemOnClickToNavigate = Screen.ProficientLeaderboardPageScreen
+                itemOnClickToNavigate = ProficientLeaderboardRoute
             ),
             HomePageBlocks.HomePageBlockItem(
                 itemId = "MemoryOfChaosLeaderboard",

@@ -96,6 +96,7 @@ import ui.components.UIButton
 import ui.components.UIButtonSize
 import ui.components.defaultHeaderData
 import ui.components.horizontalFadingEdge
+import ui.navigation.BattleChronicleRoute
 import ui.navigation.Screen
 import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
@@ -169,7 +170,7 @@ fun MemoryOfChaosMissionPageScreen(
         PageHeaderAlpha(
             navigator = navigator,
             hazeState = hazeStateRoot,
-            onForward = { navigator.navigateLimited("${Screen.BattleChroniclePageScreen.route}?uid=${UserAccount.INSTANCE.uid}") },
+            onForward = { navigator.navigateLimited(BattleChronicleRoute(UserAccount.INSTANCE.uid)) },
             forwardIconId = Res.drawable.ic_person_btn
         ){
             TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)

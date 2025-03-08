@@ -56,6 +56,7 @@ import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.defaultHeaderData
+import ui.navigation.EventContentRoute
 import ui.navigation.Screen
 import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
@@ -123,7 +124,7 @@ fun EventItemCard(eventItem: EventItem, isDateOutside: MutableState<Boolean>, na
 
                 is PressInteraction.Release -> {
                     if (isLongClick.not()) {
-                        navigator.navigateLimited("${Screen.EventContentPageScreen.route}?eventId=${eventItem.ann_id}")
+                        navigator.navigateLimited(EventContentRoute(eventItem.ann_id))
                     }
 
                 }

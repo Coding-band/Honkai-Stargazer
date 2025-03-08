@@ -58,6 +58,7 @@ import ui.components.UISearchBar
 import ui.components.defaultHeaderData
 import ui.components.pomPomPopupInstance
 import ui.navigation.Screen
+import ui.navigation.UserInfoRoute
 import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import utils.app.Constants
@@ -141,7 +142,7 @@ fun UIDSearchPageScreen(
                             withContext(Dispatchers.Main){
                                 isQuerying.value = false
                                 pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
-                                navigator.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=${searchWords.value}")
+                                navigator.navigateLimited(UserInfoRoute(searchWords.value))
                             }
                         }else{
                             isQuerying.value = false
@@ -213,7 +214,7 @@ fun UIDSearchPageScreen(
                                     withContext(Dispatchers.Main) {
                                         pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
                                         isQuerying.value = false
-                                        navigator.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=${item.uid}")
+                                        navigator.navigateLimited(UserInfoRoute(item.uid))
                                     }
                                 }
                             }

@@ -21,6 +21,9 @@ import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.defaultHeaderData
 import utils.app.Language
+import utils.app.isLinuxPlatform
+import utils.app.isMacOSPlatform
+import utils.app.isWindowsPlatform
 import utils.app.showWarningToast
 
 @Composable
@@ -34,9 +37,7 @@ fun MapPageScreen(
 
     val uriHandler = LocalUriHandler.current
     LaunchedEffect(Unit) {
-        if(getDeviceInfo().deviceOSName.lowercase().let {
-                it.contains("mac") || it.contains("windows") || it.contains("linux")
-            }){
+        if(isWindowsPlatform() || isMacOSPlatform() || isLinuxPlatform()){
             //Since this is temporately, dont need translation
             showWarningToast(message = "PC端暫不支援內嵌瀏覽器\nCurrently PC does not support WebView")
             uriHandler.openUri("https://act.hoyolab.com/sr/app/interactive-map/index.html?lang=${Language.TextLanguageInstance.hoyolabName}")

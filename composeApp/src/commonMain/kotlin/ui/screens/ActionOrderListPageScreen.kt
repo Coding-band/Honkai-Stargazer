@@ -90,6 +90,7 @@ import ui.components.PageHeader
 import ui.components.UIButton
 import ui.components.UIButtonSize
 import ui.components.defaultHeaderData
+import ui.navigation.ActionOrderSimulatorRoute
 import ui.navigation.Screen
 import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
@@ -457,7 +458,7 @@ fun TeamListItemCard(
         .background(Color(0xCCF3F9FF), RoundedCornerShape(4.dp, 20.dp, 4.dp, 4.dp))
         .clip(shape = RoundedCornerShape(4.dp, 20.dp, 4.dp, 4.dp))
         .clickable {
-            navigator.navigateLimited("${Screen.ActionOrderSimulatorPageScreen.route}?index=$index")
+            navigator.navigateLimited(ActionOrderSimulatorRoute(index))
         }
     ) {
         //Content

@@ -42,6 +42,7 @@ import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import types.ImageFolder
 import types.Relic
+import ui.navigation.RelicInfoRoute
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
@@ -62,11 +63,11 @@ fun RelicCard(
     level: Int? = -1,
     ascensionPhase: Int? = -1, //Rank 突破等級
     onClick: () -> Unit = { navigatorInstance.navigateLimited(
-        Screen.RelicInfoPage.route
-                + "/${relic.registName!!.replace(" ","_")}"
-                + "?fileName=${relic.fileName}"
-
-    ) }, //按下後會做甚麼
+        RelicInfoRoute(
+            relicName = relic.registName!!,
+            fileName = relic.fileName!!
+        )
+    ) },
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     Box(
@@ -145,10 +146,10 @@ fun RelicSmallCard(
     relic: Relic,
     pieceIndex : Int = 1,
     onClick: () -> Unit = { navigatorInstance.navigateLimited(
-        Screen.RelicInfoPage.route
-                + "/${relic.registName!!.replace(" ","_")}"
-                + "?fileName=${relic.fileName}"
-
+        RelicInfoRoute(
+            relicName = relic.registName!!,
+            fileName = relic.fileName!!
+        )
     ) }, //按下後會做甚麼
 ){
     Box(

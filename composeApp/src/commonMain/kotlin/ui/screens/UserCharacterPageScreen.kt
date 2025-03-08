@@ -66,6 +66,7 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
+import androidx.navigation.toRoute
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import com.cheonjaeung.compose.grid.SimpleGridCells
@@ -115,6 +116,7 @@ import ui.components.PAGE_HEADER_ALPHA_HEIGHT
 import ui.components.PageHeaderAlpha
 import ui.components.RelicSmallCard
 import ui.components.defaultHeaderData
+import ui.navigation.UserCharacterRoute
 import ui.navigation.hazeStateRoot
 import utils.annotation.DoItLater
 import utils.app.AdditionalGreen
@@ -156,7 +158,10 @@ fun UserCharacterPageScreen(
     headerData: HeaderData = defaultHeaderData,
     backStackEntry: NavBackStackEntry,
 ) {
-    val uid = backStackEntry.arguments?.getString("uid")!!
+    val route = backStackEntry.toRoute<UserCharacterRoute>()
+    val uid = route.uid
+    val characterId = route.charId
+    
     val userAccount by remember { mutableStateOf(
         if (UserAccount.INSTANCE.uid == uid) {
             UserAccount.INSTANCE
@@ -164,7 +169,6 @@ fun UserCharacterPageScreen(
             UserAccount.UIDSEARCH
         }
     ) }
-    val characterId = backStackEntry.arguments?.getString("charId")!!
     val characterFilter = userAccount.characterList.filter { it.officialId == characterId.toIntOrNull() }
     val listState = rememberLazyListState()
     val isScrolling by remember {

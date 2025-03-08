@@ -13,6 +13,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
+import androidx.navigation.toRoute
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import com.multiplatform.webview.web.WebView
@@ -29,6 +30,7 @@ import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.defaultHeaderData
+import ui.navigation.EventContentRoute
 import ui.navigation.hazeStateRoot
 import utils.app.Constants
 import utils.app.DefaultZIndex
@@ -101,7 +103,8 @@ fun EventContentPageScreen(
     backStackEntry: NavBackStackEntry,
 ) {
 
-    val eventId = backStackEntry.arguments?.getString("eventId")!!
+    val route = backStackEntry.toRoute<EventContentRoute>()
+    val eventId = route.eventId.toString()
 
     val eventItem = EventListInstance.filter { it.ann_id == (eventId.toIntOrNull() ?: 0) }[0]
 

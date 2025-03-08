@@ -82,6 +82,7 @@ import ui.components.TitleHeader
 import ui.components.defaultHeaderData
 import ui.components.pomPomPopupInstance
 import ui.navigation.Screen
+import ui.navigation.UserCharacterRoute
 import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import utils.app.CharWeightList
@@ -368,7 +369,7 @@ fun ProfLeaderboardItem(charProf: CharacterProficient, navigator: NavHostControl
                 withContext(Dispatchers.Main){
                     pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
                     isQuerying.value = false
-                    navigator.navigateLimited("${Screen.UserCharacterPageScreen.route}?uid=${charProf.playerId}&charId=${charProf.charId}")
+                    navigator.navigateLimited(UserCharacterRoute(charProf.playerId.toString(), charProf.charId.toString()))
                 }
             }
         }

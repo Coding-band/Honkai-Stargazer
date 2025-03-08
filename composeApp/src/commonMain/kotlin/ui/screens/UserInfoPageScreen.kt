@@ -46,6 +46,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
+import androidx.navigation.toRoute
 import coil3.PlatformContext
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
@@ -77,6 +78,8 @@ import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.defaultHeaderData
 import ui.navigation.Screen
+import ui.navigation.UserCharacterRoute
+import ui.navigation.UserInfoRoute
 import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import utils.annotation.DoItLater
@@ -103,7 +106,8 @@ fun UserInfoPageScreen(
     backStackEntry: NavBackStackEntry,
 ) {
     val context = LocalPlatformContext.current
-    val uid = backStackEntry.arguments?.getString("uid")!!
+    val route = backStackEntry.toRoute<UserInfoRoute>()
+    val uid = route.uid
 
     val userAccount by remember { mutableStateOf(
         if(UserAccount.INSTANCE.uid == uid){
@@ -180,7 +184,7 @@ fun UserInfoPageScreen(
                         overrideNameComponent = { CharacterLcInfoDisplay(character) },
                         isDisplayName = !isDisplayLcInfo.value,
                         isDisplayCombatPath = false,
-                        onClick = { navigator.navigateLimited("${Screen.UserCharacterPageScreen.route}?uid=${uid}&charId=${character.officialId}") }
+                        onClick = { navigator.navigateLimited(UserCharacterRoute(uid, character.officialId!!.toString())) }
                     )
                 }
             }
@@ -202,7 +206,7 @@ fun UserInfoPageScreen(
                             overrideNameComponent = { CharacterLcInfoDisplay(character) },
                             isDisplayName = !isDisplayLcInfo.value,
                             isDisplayCombatPath = false ,
-                            onClick = { navigator.navigateLimited("${Screen.UserCharacterPageScreen.route}?uid=${uid}&charId=${character.officialId}") }
+                            onClick = { navigator.navigateLimited(UserCharacterRoute(uid, character.officialId!!.toString())) }
                         )
                     }
                 }

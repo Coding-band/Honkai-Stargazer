@@ -65,6 +65,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
+import androidx.navigation.toRoute
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
@@ -94,6 +95,7 @@ import types.UserAccount
 import ui.components.CharacterCard
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
+import ui.navigation.ActionOrderSimulatorRoute
 import ui.navigation.popBackStackLimited
 import utils.app.Constants
 import utils.app.Constants.Companion.INFO_MAX_WIDTH
@@ -194,8 +196,9 @@ fun ActionOrderSimulatorPageScreen(
     headerData: HeaderData = defaultHeaderData,
     backStackEntry: NavBackStackEntry,
 ) {
-    val index = rememberSaveable { backStackEntry.arguments?.getString("index")!!.toInt() }
-    val hazeState = remember { HazeState() }
+    val route = backStackEntry.toRoute<ActionOrderSimulatorRoute>()
+    val index = rememberSaveable { route.index }
+
     val teamListItem = rememberSaveable(stateSaver = TeamListItemSaver) { if(actionOrderTeamList.size < index+1) mutableStateOf(TeamListItem()) else mutableStateOf(actionOrderTeamList[index]) }
     val teamDataListSnap = rememberMutableStateListJsonOf<TeammateItem>().apply { clear() ; addAll(teamListItem.value.teamDataList) }
     val isInit = remember { mutableStateOf(false) }

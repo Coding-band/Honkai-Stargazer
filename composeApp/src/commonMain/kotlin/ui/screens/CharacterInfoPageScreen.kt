@@ -34,6 +34,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
+import androidx.navigation.toRoute
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
@@ -85,6 +86,7 @@ import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.StatusType
 import ui.components.defaultHeaderData
+import ui.navigation.CharacterInfoRoute
 import ui.navigation.hazeStateRoot
 import utils.annotation.DoItLater
 import utils.app.CharWeightList
@@ -114,6 +116,7 @@ val charInfoNavItemList = arrayOf<InfoNavigateItem>(
 
 private const val scrollPxTrigInvisible = 250f
 
+
 @OptIn(FlowPreview::class)
 @Composable
 fun CharacterInfoPage(
@@ -126,11 +129,13 @@ fun CharacterInfoPage(
 
     @DoItLater("Use rememberStatus")
     var density = LocalDensity.current.density
-    val characterName = backStackEntry.arguments?.getString("charName")!!.replace("_", " ")
-    val characterFileName = backStackEntry.arguments?.getString("fileName")!!
-    val characterId = backStackEntry.arguments?.getString("charId")!!
-    val combatType = valueOfWithDefaultCombatType(backStackEntry.arguments?.getString("combatType")!!)
-    val path = valueOfWithDefaultPath(backStackEntry.arguments?.getString("path")!!)
+
+    val route = backStackEntry.toRoute<CharacterInfoRoute>()
+    val characterName = route.charName.replace("_", " ")
+    val characterFileName = route.fileName
+    val characterId = route.charId
+    val combatType = route.combatType
+    val path = route.path
 
     val charInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Character.getCharacterDataFromFileName(characterFileName, Language.TextLanguageInstance) as JsonElement) }
 
@@ -169,7 +174,7 @@ fun CharacterInfoPage(
     val dialogTitle = remember { mutableStateOf("Nope") }
     val selectedSectIndex = remember { mutableStateOf(0) } //流派
 
-    val singleCharWeightJsonElement = CharWeightList.INSTANCE.jsonObject[characterId]
+    val singleCharWeightJsonElement = CharWeightList.INSTANCE.jsonObject[characterId.toString()]
     var charWeightJsonObject : JsonObject? = null
 
     if(singleCharWeightJsonElement != null && singleCharWeightJsonElement.jsonArray.size > 0){
@@ -198,7 +203,7 @@ fun CharacterInfoPage(
             item { CharacterEidolon(charInfoJson, characterName, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
             item { InfoAdviceLightcone(charWeightJsonObject) }
             item { InfoAdviceRelic(charWeightJsonObject) }
-            item { InfoAdviceTeammate(charWeightJsonObject, characterId, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
+            item { InfoAdviceTeammate(charWeightJsonObject, characterId.toString(), dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
             item { InfoStory(charInfoJson) }
             item { Box(modifier = Modifier.navigationBarsPadding().height(72.dp)) }
 

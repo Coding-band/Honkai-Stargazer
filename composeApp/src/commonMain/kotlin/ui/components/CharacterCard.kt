@@ -46,6 +46,7 @@ import files.SuperimposeNotEquipped
 import org.jetbrains.compose.resources.painterResource
 import types.Character
 import types.ImageFolder
+import ui.navigation.CharacterInfoRoute
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
@@ -69,14 +70,14 @@ fun CharacterCard(
     character: Character,
     displayName: String? = character.displayName,
     onClick: () -> Unit = { navigatorInstance.navigateLimited(
-        Screen.CharacterInfoPage.route
-                + "/${character.registName!!.replace(" ","_")}"
-                + "?fileName=${character.fileName}"
-                + "&combatType=${character.combatType}"
-                + "&path=${character.path}"
-                + "&charId=${character.officialId}"
-
-    ) }, //按下後會做甚麼
+        CharacterInfoRoute(
+            charName = character.registName!!,
+            fileName = character.fileName ?: "?",
+            combatType = character.combatType,
+            path = character.path,
+            charId = character.officialId ?: -1
+        )
+    ) },
     overrideNameComponent: @Composable (() -> Unit)? = null,
     isDisplayCombatPath: Boolean = true,
     isDisplayName : Boolean = true,

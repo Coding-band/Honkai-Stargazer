@@ -44,6 +44,7 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
+import androidx.navigation.toRoute
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
@@ -69,6 +70,7 @@ import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeaderAlpha
 import ui.components.defaultHeaderData
+import ui.navigation.BattleChronicleRoute
 import ui.navigation.hazeStateRoot
 import utils.app.Constants
 import utils.app.DefaultZIndex
@@ -86,8 +88,10 @@ fun BattleChroniclePageScreen(
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
     backStackEntry: NavBackStackEntry,
 ) {
+    val route = backStackEntry.toRoute<BattleChronicleRoute>()
+    val uid = route.uid
+
     val listState = remember { LazyListState() }
-    val uid = backStackEntry.arguments?.getString("uid")!!
     val userAccount by remember { mutableStateOf(
         if (UserAccount.INSTANCE.uid == uid) {
             UserAccount.INSTANCE

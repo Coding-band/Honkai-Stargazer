@@ -47,6 +47,7 @@ import files.StatusSeconds
 import files.StatusToday
 import files.StatusTomorrow
 import getAppSpecificDirectory
+import getDeviceInfo
 import getLocalHttpClient
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
@@ -560,6 +561,26 @@ fun checkAssetsUpdate() {
             client.close()
         }
     }
+}
+
+fun isIosPlatform(): Boolean {
+    return listOf("iOS", "iPadOS").contains(getDeviceInfo().deviceOSName)
+}
+
+fun isAndroidPlatform(): Boolean {
+    return getDeviceInfo().deviceOSName == "Android"
+}
+
+fun isMacOSPlatform(): Boolean {
+    return getDeviceInfo().deviceOSName == "macOS"
+}
+
+fun isWindowsPlatform(): Boolean {
+    return getDeviceInfo().deviceOSName == "Windows"
+}
+
+fun isLinuxPlatform(): Boolean {
+    return getDeviceInfo().deviceOSName == "Linux"
 }
 
 lateinit var StatusDays : String

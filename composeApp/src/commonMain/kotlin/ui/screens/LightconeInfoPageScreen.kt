@@ -37,6 +37,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
+import androidx.navigation.toRoute
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
@@ -79,6 +80,9 @@ import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.StatusType
 import ui.components.defaultHeaderData
+import ui.navigation.CharacterInfoRoute
+import ui.navigation.LightconeInfoRoute
+import ui.navigation.RelicInfoRoute
 import ui.navigation.hazeStateRoot
 import utils.app.DefaultZIndex
 import utils.app.JsonElementSaver
@@ -111,9 +115,10 @@ fun LightconeInfoPage(
 ) {
 
     var density = LocalDensity.current.density
-    val lightconeName = backStackEntry.arguments?.getString("lcName")!!.replace("_", " ")
-    val lightconeFileName = backStackEntry.arguments?.getString("fileName")!!
-    val path = valueOfWithDefaultPath(backStackEntry.arguments?.getString("path")!!)
+    val route = backStackEntry.toRoute<LightconeInfoRoute>()
+    val lightconeName = route.lcName
+    val lightconeFileName = route.fileName
+    val path = route.path
     val lcInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Lightcone.getLightconeDataFromJSON(lightconeFileName, Language.TextLanguageInstance) as JsonElement) }
 
     localCoroutineScope = rememberCoroutineScope();

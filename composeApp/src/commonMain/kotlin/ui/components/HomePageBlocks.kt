@@ -82,7 +82,7 @@ class HomePageBlocks {
         var itemType: HomePageBlockItemType = HomePageBlockItemType.W1H1,
 
         var itemOnClickAction: ((count : MutableState<Int>) -> Unit)? = null,
-        var itemOnClickToNavigate: Screen? = null,
+        var itemOnClickToNavigate: Any? = null,
     ) {
         var itemTopHighlight: String? = ""
         var itemTop: String? = ""
@@ -132,7 +132,7 @@ fun HomePageBlock1x1(
         onClick = {
             if (blockData.itemOnClickToNavigate !== null) {
                 println("Ok I'm Navigating to " + blockData.itemOnClickToNavigate)
-                navigator.navigateLimited(blockData.itemOnClickToNavigate!!.route)
+                navigator.navigateLimited(blockData.itemOnClickToNavigate!!)
             }
 
             if(blockData.itemOnClickAction == null && blockData.itemOnClickToNavigate == null){
@@ -216,7 +216,7 @@ fun HomePageBlock2x1(
         colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent),
         onClick = {
             if (blockData.itemOnClickToNavigate !== null) {
-                navigator.navigateLimited(blockData.itemOnClickToNavigate!!.route)
+                navigator.navigateLimited(blockData.itemOnClickToNavigate!!)
             }
             if (blockData.itemOnClickAction == null && blockData.itemOnClickToNavigate == null) {
                 showFunctionIsDevelopingToast()
