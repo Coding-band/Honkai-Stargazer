@@ -275,7 +275,7 @@ fun refreshInit(){
 fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>){
     //ref: https://github.com/JetBrains/compose-multiplatform/issues/4528#issuecomment-2015222282
     val animationSpec = tween<IntOffset>(easing = LinearEasing)
-    if(isIosPlatform()){
+    if(isIosPlatform() && !isPadMode.value){
         NavHost(
             navController = navigator,
             startDestination = SplashRoute,
