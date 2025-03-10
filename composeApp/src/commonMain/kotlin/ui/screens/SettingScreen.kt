@@ -83,6 +83,7 @@ import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.defaultHeaderData
+import ui.navigation.AboutStargazerRoute
 import ui.navigation.BackgroundSettingRoute
 import ui.navigation.Screen
 import ui.navigation.hazeStateRoot
@@ -293,8 +294,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                         SettingOptionNavigateBar(
                             titleRes = Res.string.AboutTheApp,
                             navigateClick = {
-                                showFunctionIsDevelopingToast()
-                                //navigator.navigateLimited(Screen.AboutStargazerPageScreen.route)
+                                navigator.navigateLimited(AboutStargazerRoute)
                             }
                         )
 
