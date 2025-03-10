@@ -1,6 +1,12 @@
 package utils.app
 
+import androidx.compose.animation.AnimatedContentTransitionScope
+import androidx.compose.animation.EnterTransition
+import androidx.compose.animation.ExitTransition
+import androidx.compose.animation.SizeTransform
 import androidx.compose.animation.core.CubicBezierEasing
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
@@ -23,6 +29,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavBackStackEntry
 import dev.chrisbanes.haze.HazeDefaults
 import dev.chrisbanes.haze.HazeEffectScope
 import dev.chrisbanes.haze.HazeState
@@ -86,6 +93,53 @@ private val LightColorScheme = lightColors(
     onSurface = Color(0xFF1C1B1F),
     */
 )
+
+object SG3NavTransitions {
+    val enterTransition:
+            AnimatedContentTransitionScope<NavBackStackEntry>.() -> EnterTransition = {
+        slideIntoContainer(
+            towards = AnimatedContentTransitionScope.SlideDirection.Start,
+            animationSpec = tween(
+                durationMillis = 250,
+                easing = if(isIosPlatform()) LinearEasing else BezierEasing2O48
+            )
+        )
+    }
+    val exitTransition:
+            AnimatedContentTransitionScope<NavBackStackEntry>.() -> ExitTransition = {
+        slideOutOfContainer(
+            towards = AnimatedContentTransitionScope.SlideDirection.Start,
+            animationSpec = tween(
+                durationMillis = 250,
+                easing = if(isIosPlatform()) LinearEasing else BezierEasing2O48
+            ),
+            targetOffset = { fullOffset -> (fullOffset * 0.3f).toInt() }
+        )
+    }
+    val popEnterTransition:
+            AnimatedContentTransitionScope<NavBackStackEntry>.() -> EnterTransition = {
+        slideIntoContainer(
+            towards = AnimatedContentTransitionScope.SlideDirection.End,
+            animationSpec = tween(
+                durationMillis = 250,
+                easing = if(isIosPlatform()) LinearEasing else BezierEasing2O48
+            ),
+            initialOffset = { fullOffset -> (fullOffset * 0.3f).toInt() }
+        )
+    }
+    val popExitTransition:
+            AnimatedContentTransitionScope<NavBackStackEntry>.() -> ExitTransition = {
+        slideOutOfContainer(
+            towards = AnimatedContentTransitionScope.SlideDirection.End,
+            animationSpec = tween(
+                durationMillis = 250,
+                easing = if(isIosPlatform()) LinearEasing else BezierEasing2O48
+            )
+        )
+    }
+    val sizeTransform:
+            (AnimatedContentTransitionScope<NavBackStackEntry>.() -> SizeTransform?)? = null
+}
 
 @Composable
 fun Stargazer3Theme(

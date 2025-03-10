@@ -28,7 +28,7 @@ fun App(platformContextFactory: ContextFactory) {
     setSingletonImageLoaderFactory { context ->
         newImageLoader(
             context,
-            arrayOf("C.BETA","BETA","DEV").contains(BuildKonfig.appProfile)
+            arrayOf("DEV").contains(BuildKonfig.appProfile)
         )
     }
     Stargazer3Theme(

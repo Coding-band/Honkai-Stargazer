@@ -109,8 +109,11 @@ import ui.screens.refreshLcList
 import ui.screens.refreshMOCList
 import ui.screens.refreshPFList
 import ui.screens.refreshRelicList
+import utils.app.BezierEasing2O48
+import utils.app.Constants
 import utils.app.Constants.Companion.HOME_WIDTH
 import utils.app.Language
+import utils.app.SG3NavTransitions
 import utils.app.isIosPlatform
 import utils.app.snackbarInstance
 import utils.app.valueOfWithDefaultCombatType
@@ -274,24 +277,16 @@ fun refreshInit(){
 @Composable
 fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>){
     //ref: https://github.com/JetBrains/compose-multiplatform/issues/4528#issuecomment-2015222282
-    val animationSpec = tween<IntOffset>(easing = LinearEasing)
-    if(isIosPlatform() && !isPadMode.value){
-        NavHost(
-            navController = navigator,
-            startDestination = SplashRoute,
-            builder = navBuilder(isPadMode, navigator)
-        )
-    }else{
-        NavHost(
-            navController = navigator,
-            startDestination = SplashRoute,
-            enterTransition = { if(isPadMode.value) fadeIn() else slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Left,animationSpec)},
-            exitTransition = { if(isPadMode.value) fadeOut() else slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Left,animationSpec) },
-            popEnterTransition = { if(isPadMode.value) fadeIn() else slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Right,animationSpec) },
-            popExitTransition = { if(isPadMode.value) fadeOut() else slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Right,animationSpec) },
-            builder = navBuilder(isPadMode, navigator)
-        )
-    }
+    val animationSpec = tween<IntOffset>(easing = BezierEasing2O48)
+    NavHost(
+        navController = navigator,
+        startDestination = SplashRoute,
+        enterTransition = if(isPadMode.value) { { fadeIn() } } else SG3NavTransitions.enterTransition,
+        exitTransition = if(isPadMode.value) { { fadeOut() } } else SG3NavTransitions.exitTransition,
+        popEnterTransition = if(isPadMode.value) { { fadeIn() } } else SG3NavTransitions.popEnterTransition,
+        popExitTransition = if(isPadMode.value) { { fadeOut() } } else SG3NavTransitions.popExitTransition,
+        builder = navBuilder(isPadMode, navigator)
+    )
 }
 
 fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) : NavGraphBuilder.() -> Unit = {
