@@ -47,6 +47,7 @@ import files.AdviceCharacters
 import files.BasicStatus
 import files.LightconeEffect
 import files.LightconeStory
+import files.NoDataYet
 import files.NoOnlineData
 import files.Res
 import files.bg_lightcone_artwork_back
@@ -125,7 +126,7 @@ fun LightconeInfoPage(
     localSnackbarHostState = snackbarHostState!!;
 
     if (lcInfoJson !is JsonObject || lcInfoJson.jsonObject.isEmpty()) {
-        showWarningToast(message = removeStrQuote(Res.string.NoOnlineData))
+        showWarningToast(message = removeStrQuote(Res.string.NoDataYet))
         navigator.popBackStack()
         return
     }

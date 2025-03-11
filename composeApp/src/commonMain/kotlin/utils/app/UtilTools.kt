@@ -26,6 +26,7 @@ import com.oldguy.common.io.File
 import com.oldguy.common.io.FileMode
 import com.oldguy.common.io.ZipFile
 import com.russhwolf.settings.Settings
+import com.voc.stargazer3.BuildKonfig
 import files.IsDone
 import files.MOCMissionPart1
 import files.MOCMissionPart10
@@ -581,6 +582,16 @@ fun isWindowsPlatform(): Boolean {
 
 fun isLinuxPlatform(): Boolean {
     return getDeviceInfo().deviceOSName == "Linux"
+}
+
+fun isProductionEnv() : Boolean {
+    return BuildKonfig.appProfile == "PRODUCTION" || BuildKonfig.appProfile == "PRODUCTION_GP"
+}
+fun isBetaEnv() : Boolean {
+    return BuildKonfig.appProfile == "BETA" || BuildKonfig.appProfile == "C.BETA"
+}
+fun isDevEnv() : Boolean {
+    return BuildKonfig.appProfile == "DEV"
 }
 
 lateinit var StatusDays : String

@@ -46,6 +46,7 @@ import files.AdviceTeams
 import files.BasicStatus
 import files.CharacterStory
 import files.Eidolon
+import files.NoDataYet
 import files.NoOnlineData
 import files.Res
 import files.TraceTree
@@ -145,7 +146,7 @@ fun CharacterInfoPage(
 
     //Maybe we should make a PomPom Image with "Please Check your Network" Text
     if (charInfoJson !is JsonObject || charInfoJson.jsonObject.isEmpty()) {
-        showWarningToast(message = removeStrQuote(Res.string.NoOnlineData))
+        showWarningToast(message = removeStrQuote(Res.string.NoDataYet))
         navigator.popBackStack()
         return
     }

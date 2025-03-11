@@ -69,6 +69,7 @@ import com.mohamedrejeb.richeditor.ui.material.RichText
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
+import files.NoDataYet
 import files.NoOnlineData
 import files.RelicDetail
 import files.RelicStatus2Pcs
@@ -153,7 +154,7 @@ fun RelicInfoPage(
     localSnackbarHostState = snackbarHostState!!;
 
     if (relicInfoJson !is JsonObject || relicInfoJson.jsonObject.isEmpty()) {
-        showWarningToast(message = removeStrQuote(Res.string.NoOnlineData))
+        showWarningToast(message = removeStrQuote(Res.string.NoDataYet))
         navigator.popBackStack()
         return
     }

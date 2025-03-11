@@ -115,7 +115,7 @@ suspend fun raiseErrorMessageSnack(errorString: String, snackbarHostState: Snack
 
 }
 
-fun showErrorToast(errorLogExportObj: LogExportObj) {
+fun showErrorToast(errorLogExportObj: LogExportObj, forceDisplay: Boolean = false) {
     //Due to compose-sonner are not keeping maintain, also iOS target will crash when using it
     /*
     toastInstance.show(
@@ -124,6 +124,8 @@ fun showErrorToast(errorLogExportObj: LogExportObj) {
         duration = 30000.milliseconds,
     )
      */
+    if(!forceDisplay || isProductionEnv()) return
+
     CoroutineScope(Dispatchers.Default).launch {
         snackbarInstance.showSnackbar(
             message = "${errorLogExportObj.className} - ${errorLogExportObj.functionName} : ${errorLogExportObj.exceptionMessage}",
