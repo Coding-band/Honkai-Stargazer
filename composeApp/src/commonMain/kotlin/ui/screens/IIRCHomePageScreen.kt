@@ -2,6 +2,7 @@ package ui.screens
 
 import NavigationBar
 import NavigationItemData
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -66,6 +67,7 @@ import utils.app.FontSizeNormal14
 import utils.app.formatDecimal
 import utils.app.formatDecimalSci
 
+
 @Composable
 fun IIRCHomePageScreen(
     navigator: NavController = rememberNavController(),
@@ -89,9 +91,9 @@ fun IIRCHomePageScreen(
                 .fillMaxSize()
                 .weight(1f)) {
                 when(selectedItem.value){
-                    0 -> androidx.compose.animation.AnimatedVisibility(visible = true){ RedeemPage() }
-                    1 -> androidx.compose.animation.AnimatedVisibility(visible = true){ UpgradePage() }
-                    2 -> androidx.compose.animation.AnimatedVisibility(visible = true){ ResearchPage() }
+                    0 ->  RedeemPage()
+                    1 ->  UpgradePage()
+                    2 ->  ResearchPage()
                 }
             }
 
@@ -104,11 +106,12 @@ fun IIRCHomePageScreen(
     }
 }
 
-@OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun RedeemPage() {
-    Box(){
+    Box{
         val minItemSize = 96.dp
+        val currentDisplayPage = remember { mutableStateOf("WORLD") }
+
         LazyVerticalGrid(
             columns = GridCells.Adaptive(minItemSize),
             contentPadding = PaddingValues(start = 8.dp, end = 8.dp, top = 8.dp, bottom = 64.dp),
@@ -119,7 +122,11 @@ fun RedeemPage() {
                 .hazeSource(hazeStateRoot)
 
         ) {
-            items(20) {it ->
+            items(when(currentDisplayPage.value){
+                "WORLD" -> 20
+                "CITY" -> 10
+                else -> 5
+            }) {it ->
                 ItemGridView(it * 10, it)
             }
         }

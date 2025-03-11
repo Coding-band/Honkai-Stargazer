@@ -64,6 +64,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
+import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
@@ -78,6 +79,7 @@ import files.Setting
 import files.donate_ad_bg
 import files.ic_default_avatar
 import files.ic_rounded_option_btn
+import files.intelstellar_resource_corp_white_icon
 import org.jetbrains.compose.resources.painterResource
 import types.Character
 import types.ImageFolder
@@ -89,6 +91,7 @@ import ui.components.HomePageBlocks
 import ui.components.UIButton
 import ui.components.UIButtonSize
 import ui.components.defaultHeaderData
+import ui.navigation.IIRCHomePageRoute
 import ui.navigation.Screen
 import ui.navigation.SettingRoute
 import ui.navigation.UserCharacterRoute
@@ -97,7 +100,9 @@ import ui.navigation.isPadMode
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
 import utils.annotation.DoItLater
+import utils.annotation.TranslationPls
 import utils.app.BlackAlpha30
+import utils.app.Constants.Companion.HOME_PAGE_MENU_DEFAULT
 import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
@@ -130,10 +135,23 @@ fun HomePage(
     val userAccount = remember { mutableStateOf(UserAccount.INSTANCE) }
     val homeMenuBlockList = remember { mutableStateOf(Preferences().HomePageMenu.getHomePageMenuArray()) }
 
+    @TranslationPls
+    if(Settings().getBoolean("isUnlockedIIRC", false) && homeMenuBlockList.value.filter { it.itemId == "IIRCHomePageScreen" }.isEmpty()){
+        homeMenuBlockList.value.add(
+            HomePageBlocks.HomePageBlockItem(
+                itemId = "IIRCHomePageScreen",
+                itemTitle = "星際資源公司",
+                itemIconId = Res.drawable.intelstellar_resource_corp_white_icon,
+                itemOnClickToNavigate = IIRCHomePageRoute
+            )
+        )
+    }
+
     checkHasErrorLogFromLastCrash()
     VersionBox()
 
     key(doRecompose.value){
+        Preferences.HomePageMenuClass().setHomePageMenuArray(homeMenuBlockList.value)
         println("RECOMPOSED !")
         Box(modifier = Modifier
             .statusBarsPadding()
