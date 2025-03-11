@@ -56,3 +56,4 @@ data class ActionOrderSimulatorRoute(val index: Int)
 @Serializable object ExpeditionRoute
 @Serializable object ProficientLeaderboardRoute
 @Serializable object ActionOrderListRoute
+@Serializable object IIRCHomePageRoute

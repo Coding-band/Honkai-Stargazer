@@ -21,8 +21,10 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -226,6 +228,9 @@ fun PageBottomMask(modifier: Modifier = Modifier) {
         )
     }
 }
+
+@Composable
+fun FontShadow() = TextStyle(shadow = Shadow(color = Color.Black, offset = Offset(2.0f, 2.0f)))
 
 val HazeBlurDp10 = HazeStyle(Color.Black, null, 10.dp, 0f)
 val HazeBlurDp10Alpha = HazeStyle(Color.Transparent, null, 10.dp, 0f)

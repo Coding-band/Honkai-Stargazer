@@ -34,6 +34,7 @@ import files.phorphos_note_blank_regular
 import files.phorphos_person_fill
 import files.phorphos_sliders_horizontal_fill
 import files.phorphos_star_fill
+import files.phorphos_star_regular
 import files.phorphos_sword_fill
 import files.phorphos_trophy_fill
 import files.phorphos_users_fill
@@ -166,5 +167,9 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     data object ActionOrderSimulatorPageScreen : Screen(
         "ActionOrderSimulatorPageScreen",
         HeaderData(titleRId = Res.string.ActionOrderTitle, titleIconId = Res.drawable.phorphos_align_left_fill)
+    )
+    data object IIRCHomePageScreen : Screen(
+        "IIRCHomePageScreen",
+        HeaderData(titleIconId = Res.drawable.phorphos_star_fill)
     )
 }

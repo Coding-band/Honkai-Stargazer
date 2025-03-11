@@ -85,9 +85,11 @@ import ui.components.PageHeader
 import ui.components.defaultHeaderData
 import ui.navigation.AboutStargazerRoute
 import ui.navigation.BackgroundSettingRoute
+import ui.navigation.IIRCHomePageRoute
 import ui.navigation.Screen
 import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
+import ui.screens.iirc.IIRCHomePageScreen
 import utils.annotation.DoItLater
 import utils.app.Constants
 import utils.app.DefaultZIndex
@@ -325,12 +327,18 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                             }
                         )
 
+                        val versionNameClickTimes = remember { mutableStateOf(0) }
                         //App 內部版本號 App Internal VersionName
                         SettingOptionNavigateBar(
                             title = removeStrQuote(Res.string.SettingInternalVersionCode),
                             navigateDesc = "${BuildKonfig.appProfile} ${BuildKonfig.appVersionCode}",
                             navigateClick = {
-                                showSuccessToast(message = Constants.CLARA_KAMOJI)
+                                if(versionNameClickTimes.value >= 5){
+                                    navigator.navigateLimited(IIRCHomePageRoute)
+                                }else{
+                                    versionNameClickTimes.value++
+                                    showSuccessToast(message = "${versionNameClickTimes.value} / 5")
+                                }
                             }
                         )
 

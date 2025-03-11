@@ -98,6 +98,7 @@ import ui.screens.UserInfoPageScreen
 import ui.screens.bgModified
 import ui.screens.doInit
 import ui.screens.globalPadHomePageBg
+import ui.screens.iirc.IIRCHomePageScreen
 import ui.screens.initActionOrderTeamList
 import ui.screens.initCharList
 import ui.screens.initLcList
@@ -553,6 +554,17 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
                 navigator = navigator,
                 headerData = Screen.ActionOrderSimulatorPageScreen.headerData,
                 backStackEntry = backStackEntry,
+            )
+        }
+
+    }
+
+    composable<IIRCHomePageRoute> {
+        screenInstance = Screen.IIRCHomePageScreen
+        withBGScreen(isPadMode){
+            IIRCHomePageScreen(
+                navigator = navigator,
+                headerData = Screen.IIRCHomePageScreen.headerData,
             )
         }
 
