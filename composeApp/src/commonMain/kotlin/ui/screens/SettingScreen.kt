@@ -72,6 +72,8 @@ import files.phorphos_caret_right_regular
 import getDeviceInfo
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import okio.FileSystem
+import okio.SYSTEM
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import types.Character
@@ -102,6 +104,7 @@ import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.showFunctionIsDevelopingToast
 import utils.app.showSuccessToast
+import utils.app.showWarningToast
 import utils.starbase.StarbaseAPI
 import kotlin.math.max
 
@@ -317,6 +320,21 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                             }
                         )
 
+                        //一鍵清理緩存
+                        @TranslationPls
+                        SettingOptionNavigateBar(
+                            title = "一鍵清理緩存",
+                            navigateClick = {
+                                try {
+                                    FileSystem.SYSTEM.deleteRecursively(FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("image_cache"))
+                                }catch (e: Exception){
+                                    showWarningToast(message = "緩存清理完成")
+                                    e.printStackTrace()
+                                }
+                                showSuccessToast(message = "緩存清理完成")
+                            }
+                        )
+
                         //App 版本 App VersionName
                         SettingOptionNavigateBar(
                             titleRes = Res.string.AppVersion,
@@ -335,7 +353,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                                 @TranslationPls
                                 val totalClickToUnlock = 5
                                 if(Settings().getBoolean("isUnlockedIIRC",false) || versionNameClickTimes.value >= totalClickToUnlock){
-                                    Settings().putString("isUnlockedIIRC", "true")
+                                    Settings().putBoolean("isUnlockedIIRC", true)
                                     navigator.navigateLimited(IIRCHomePageRoute)
                                 }else{
                                     versionNameClickTimes.value++

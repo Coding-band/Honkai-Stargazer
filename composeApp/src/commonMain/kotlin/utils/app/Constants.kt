@@ -361,21 +361,6 @@ class Constants {
                 itemOnClickToNavigate = Screen.WithBGHeaderScreen
             ),
              */
-
-        ).let {
-            @TranslationPls
-            if(Settings().getBoolean("isUnlockedIIRC", false)){
-                it.add(
-                    HomePageBlocks.HomePageBlockItem(
-                        itemId = "IIRCHomePageScreen",
-                        itemTitle = "星際資源公司",
-                        itemIconId = Res.drawable.intelstellar_resource_corp_white_icon,
-                        itemOnClickToNavigate = IIRCHomePageRoute
-                    )
-                )
-            }
-
-            return@let it
-        }
+        )
     }
 }
