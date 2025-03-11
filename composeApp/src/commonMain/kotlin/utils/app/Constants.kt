@@ -4,6 +4,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.russhwolf.settings.Settings
 import files.ActionOrderTitle
 import files.Character
 import files.Event
@@ -22,6 +23,7 @@ import files.Stamina
 import files.UIDSearch
 import files.WrapAnalysis
 import files.ico_lost_img
+import files.intelstellar_resource_corp_white_icon
 import files.phorphos_alien_fill
 import files.phorphos_align_left_fill
 import files.phorphos_atom_fill
@@ -54,6 +56,7 @@ import ui.navigation.CharacterInfoRoute
 import ui.navigation.CharacterListRoute
 import ui.navigation.EventListRoute
 import ui.navigation.ExpeditionRoute
+import ui.navigation.IIRCHomePageRoute
 import ui.navigation.LightconeListRoute
 import ui.navigation.MemoryOfChaosMissionRoute
 import ui.navigation.ProficientLeaderboardRoute
@@ -64,6 +67,7 @@ import ui.navigation.Screen
 import ui.navigation.UIDSearchRoute
 import ui.navigation.urlHandler
 import utils.annotation.DoItLater
+import utils.annotation.TranslationPls
 
 
 class Constants {
@@ -357,6 +361,21 @@ class Constants {
                 itemOnClickToNavigate = Screen.WithBGHeaderScreen
             ),
              */
-        )
+
+        ).let {
+            @TranslationPls
+            if(Settings().getBoolean("isUnlockedIIRC", false)){
+                it.add(
+                    HomePageBlocks.HomePageBlockItem(
+                        itemId = "IIRCHomePageScreen",
+                        itemTitle = "星際資源公司",
+                        itemIconId = Res.drawable.intelstellar_resource_corp_white_icon,
+                        itemOnClickToNavigate = IIRCHomePageRoute
+                    )
+                )
+            }
+
+            return@let it
+        }
     }
 }

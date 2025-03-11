@@ -6,40 +6,28 @@
 
 package ui.navigation
 
-import androidx.compose.animation.AnimatedContent
-import androidx.compose.animation.AnimatedContentTransitionScope
-import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
-import androidx.compose.animation.slideInHorizontally
-import androidx.compose.animation.slideOutHorizontally
-import androidx.compose.animation.togetherWith
-import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.navigationBarsPadding
-import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.Scaffold
 import androidx.compose.material.SnackbarHost
-import androidx.compose.material.SnackbarHostState
 import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalUriHandler
@@ -48,18 +36,12 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.NavOptions
-import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navArgument
-import androidx.navigation.toRoute
 import androidx.window.core.layout.WindowWidthSizeClass
 import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
-import dev.chrisbanes.haze.hazeSource
-import getDeviceInfo
 import getScreenSizeInfo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -98,7 +80,7 @@ import ui.screens.UserInfoPageScreen
 import ui.screens.bgModified
 import ui.screens.doInit
 import ui.screens.globalPadHomePageBg
-import ui.screens.iirc.IIRCHomePageScreen
+import ui.screens.IIRCHomePageScreen
 import ui.screens.initActionOrderTeamList
 import ui.screens.initCharList
 import ui.screens.initLcList
@@ -111,14 +93,10 @@ import ui.screens.refreshMOCList
 import ui.screens.refreshPFList
 import ui.screens.refreshRelicList
 import utils.app.BezierEasing2O48
-import utils.app.Constants
 import utils.app.Constants.Companion.HOME_WIDTH
 import utils.app.Language
 import utils.app.SG3NavTransitions
-import utils.app.isIosPlatform
 import utils.app.snackbarInstance
-import utils.app.valueOfWithDefaultCombatType
-import utils.app.valueOfWithDefaultPath
 
 /**
  * Navigate to a route with a limited interval.

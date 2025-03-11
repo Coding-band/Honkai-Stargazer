@@ -86,11 +86,10 @@ import ui.components.defaultHeaderData
 import ui.navigation.AboutStargazerRoute
 import ui.navigation.BackgroundSettingRoute
 import ui.navigation.IIRCHomePageRoute
-import ui.navigation.Screen
 import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
-import ui.screens.iirc.IIRCHomePageScreen
 import utils.annotation.DoItLater
+import utils.annotation.TranslationPls
 import utils.app.Constants
 import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal14
@@ -333,11 +332,14 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                             title = removeStrQuote(Res.string.SettingInternalVersionCode),
                             navigateDesc = "${BuildKonfig.appProfile} ${BuildKonfig.appVersionCode}",
                             navigateClick = {
-                                if(versionNameClickTimes.value >= 5){
+                                @TranslationPls
+                                val totalClickToUnlock = 5
+                                if(Settings().getBoolean("isUnlockedIIRC",false) || versionNameClickTimes.value >= totalClickToUnlock){
+                                    Settings().putString("isUnlockedIIRC", "true")
                                     navigator.navigateLimited(IIRCHomePageRoute)
                                 }else{
                                     versionNameClickTimes.value++
-                                    showSuccessToast(message = "${versionNameClickTimes.value} / 5")
+                                    showSuccessToast(message = "再點擊 ${totalClickToUnlock - versionNameClickTimes.value} 次即可解鎖小彩蛋")
                                 }
                             }
                         )

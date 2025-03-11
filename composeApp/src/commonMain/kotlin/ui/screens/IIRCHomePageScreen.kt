@@ -1,4 +1,4 @@
-package ui.screens.iirc
+package ui.screens
 
 import NavigationBar
 import NavigationItemData
@@ -23,6 +23,7 @@ import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material.Divider
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -47,7 +48,6 @@ import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.Res
 import files.ic_fire
-import files.ui_icon_gift
 import files.ui_icon_grid
 import files.ui_icon_missing
 import files.ui_icon_research
@@ -56,12 +56,15 @@ import files.ui_icon_transfer
 import files.ui_icon_upgrade
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.vectorResource
+import types.CombatType
 import ui.components.HeaderData
 import ui.components.iirc.HoverButtonBar
 import ui.components.iirc.MultiplyEnum
 import ui.navigation.hazeStateRoot
+import utils.app.FontShadow
 import utils.app.FontSizeNormal14
 import utils.app.formatDecimal
+import utils.app.formatDecimalSci
 
 @Composable
 fun IIRCHomePageScreen(
@@ -202,8 +205,6 @@ fun ResearchPage(){
 
 @Composable
 fun CurrencyUI(){
-    val minItemSize = 120.dp
-
     Row(
         modifier = Modifier
             .wrapContentHeight()
@@ -218,33 +219,29 @@ fun CurrencyUI(){
                 .fillMaxWidth()
         ) {
             LazyVerticalGrid(
-                columns = GridCells.Adaptive(minItemSize),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                columns = GridCells.Fixed(3),
+                verticalArrangement = Arrangement.spacedBy(2.dp),
+                horizontalArrangement = Arrangement.spacedBy(2.dp),
                 modifier = Modifier.fillMaxWidth().wrapContentHeight().align(Alignment.CenterVertically)
             ) {
-                items(5) {
+                items(CombatType.entries.filterNot { it == CombatType.Unspecified }) { it ->
                     //Currency UI 貨幣UI
-                    Row(
-                        modifier = Modifier
-                    ) {
+                    Row{
                         //Currency Icon 貨幣圖標
                         Image(
-                            painter = painterResource(resource = Res.drawable.ic_fire),
+                            painter = painterResource(resource = it.iconColor),
                             contentDescription = "Currency Icon",
-                            modifier = Modifier
-                                .height(24.dp)
+                            modifier = Modifier.height(32.dp)
                         )
                         Spacer(modifier = Modifier.width(4.dp))
                         Text(
-                            formatDecimal(
-                                10000000,
-                                decimalPlaces = 2,
-                                isUnited = true
+                            formatDecimalSci(
+                                123456789,
+                                decimalPlaces = 2
                             ),
                             modifier = Modifier.align(Alignment.CenterVertically).wrapContentWidth(),
-                            style = FontSizeNormal14(),
-                            color = Color.White,
+                            style = FontSizeNormal14()+ FontShadow(),
+                            color = Color.White ,
                             maxLines = 1,
                         )
                     }
@@ -254,7 +251,7 @@ fun CurrencyUI(){
         //Spacer Dash Line 間隔線
         //SpacerDashLine(modifier = Modifier.fillMaxHeight().width(0.5.dp), orientation = LineOrientation.VERTICAL)
 
-        //Gift Icon 禮物圖標
+        /*//Gift Icon 禮物圖標
         Image(
             painter = painterResource(resource = Res.drawable.ui_icon_gift),
             contentDescription = "Gift Icon",
@@ -265,6 +262,8 @@ fun CurrencyUI(){
                 .padding(8.dp),
             colorFilter = ColorFilter.tint(Color.White),
         )
+
+         */
     }
 }
 

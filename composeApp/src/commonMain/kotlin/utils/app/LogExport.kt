@@ -115,7 +115,7 @@ suspend fun raiseErrorMessageSnack(errorString: String, snackbarHostState: Snack
 
 }
 
-fun showErrorToast(errorLogExportObj: LogExportObj, forceDisplay: Boolean = false) {
+fun showErrorToast(errorLogExportObj: LogExportObj, forceDisplay: Boolean = false, dismissPrevious: Boolean = false) {
     //Due to compose-sonner are not keeping maintain, also iOS target will crash when using it
     /*
     toastInstance.show(
@@ -127,6 +127,7 @@ fun showErrorToast(errorLogExportObj: LogExportObj, forceDisplay: Boolean = fals
     if(!forceDisplay || isProductionEnv()) return
 
     CoroutineScope(Dispatchers.Default).launch {
+        if(dismissPrevious) snackbarInstance.currentSnackbarData?.dismiss()
         snackbarInstance.showSnackbar(
             message = "${errorLogExportObj.className} - ${errorLogExportObj.functionName} : ${errorLogExportObj.exceptionMessage}",
             actionLabel = "CLOSE",
@@ -135,7 +136,7 @@ fun showErrorToast(errorLogExportObj: LogExportObj, forceDisplay: Boolean = fals
     }
 }
 
-fun showSuccessToast(message: String) {
+fun showSuccessToast(message: String, dismissPrevious: Boolean = true) {
     //Due to compose-sonner are not keeping maintain, also iOS target will crash when using it
     /*
     toastInstance.show(
@@ -146,6 +147,7 @@ fun showSuccessToast(message: String) {
      */
 
     CoroutineScope(Dispatchers.Default).launch {
+        if(dismissPrevious) snackbarInstance.currentSnackbarData?.dismiss()
         snackbarInstance.showSnackbar(
             message = message,
             actionLabel = CLOSE_SNACKBAR,
@@ -153,7 +155,7 @@ fun showSuccessToast(message: String) {
         )
     }
 }
-fun showWarningToast(message: String) {
+fun showWarningToast(message: String, dismissPrevious: Boolean = false) {
     //Due to compose-sonner are not keeping maintain, so we will use snackbar for iOS
     /*
     toastInstance.show(
@@ -163,6 +165,7 @@ fun showWarningToast(message: String) {
     )
      */
     CoroutineScope(Dispatchers.Default).launch {
+        if(dismissPrevious) snackbarInstance.currentSnackbarData?.dismiss()
         snackbarInstance.showSnackbar(
             message = message,
             actionLabel = CLOSE_SNACKBAR,

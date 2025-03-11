@@ -79,7 +79,7 @@ fun ItemGridView(currHave : Int = 0, ableToBuy : Int = 0){
                 "鐵礦",
                 color = Color.White,
                 modifier = Modifier.fillMaxWidth(),
-                style = FontSizeNormal14() + FontShadow(),
+                style = FontSizeNormal14() ,
                 textAlign = TextAlign.Center,
 
                 )
@@ -92,7 +92,7 @@ fun ItemGridView(currHave : Int = 0, ableToBuy : Int = 0){
                 Text(
                     "x${currHave}",
                     color = Color.White,
-                    style = FontSizeNormal12() + FontShadow(),
+                    style = FontSizeNormal12() ,
                     textAlign = TextAlign.Center,
                 )
 
@@ -101,7 +101,7 @@ fun ItemGridView(currHave : Int = 0, ableToBuy : Int = 0){
                     Text(
                         "+${ableToBuy}",
                         color = Color.Green,
-                        style = FontSizeNormal12() + FontShadow(),
+                        style = FontSizeNormal12() ,
                         textAlign = TextAlign.Start
                     )
                 }
@@ -123,7 +123,7 @@ fun ItemGridView(currHave : Int = 0, ableToBuy : Int = 0){
                     "+123.45K/s",
                     color = Color.White,
                     modifier = Modifier.wrapContentWidth(),
-                    style = FontSizeNormal12() + FontShadow(),
+                    style = FontSizeNormal12() ,
                 )
             }
         }
@@ -176,21 +176,21 @@ fun ItemUpgradeView(){
                     text = "鐵礦",
                     color = Color.White,
                     modifier = Modifier.wrapContentWidth().wrapContentHeight(),
-                    style = FontSizeNormal16() + FontShadow(),
+                    style = FontSizeNormal16() ,
                     textAlign = TextAlign.Start,
                 )
                 Text(
                     text = "物品收益 +25%",
                     color = Color.Green,
                     modifier = Modifier.wrapContentWidth().wrapContentHeight().padding(start = 8.dp),
-                    style = FontSizeNormal14() + FontShadow(),
+                    style = FontSizeNormal14() ,
                     textAlign = TextAlign.Start,
                 )
                 Text(
                     text = "當前等級: 10 (+250%)",
                     color = Color.LightGray,
                     modifier = Modifier.wrapContentWidth().wrapContentHeight().padding(start = 8.dp),
-                    style = FontSizeNormal14() + FontShadow(),
+                    style = FontSizeNormal14() ,
                     textAlign = TextAlign.Start,
                 )
             }
@@ -212,7 +212,7 @@ fun ItemUpgradeView(){
                         text = "100.00M",
                         color = Color.White,
                         modifier = Modifier.wrapContentWidth().wrapContentHeight(),
-                        style = FontSizeNormal14() + FontShadow(),
+                        style = FontSizeNormal14() ,
                         textAlign = TextAlign.Start,
                     )
                 }
@@ -269,7 +269,7 @@ fun ItemResearchView(){
                 text = "解鎖條件：",
                 color = Color.White,
                 modifier = Modifier.fillMaxWidth(),
-                style = FontSizeNormal16() + FontShadow(),
+                style = FontSizeNormal16() ,
                 textAlign = TextAlign.Start,
             )
 
@@ -291,7 +291,7 @@ fun ItemResearchView(){
                             text = "100",
                             color = Color.Gray,
                             modifier = Modifier.wrapContentSize().align(Alignment.CenterHorizontally),
-                            style = FontSizeNormal12() + FontShadow(),
+                            style = FontSizeNormal12() ,
                             textAlign = TextAlign.Center,
                         )
                     }

@@ -1,18 +1,13 @@
 package utils.app
 
-import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.Saver
 import androidx.compose.runtime.saveable.listSaver
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.runtime.toMutableStateList
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.Dp
 import coil3.ImageLoader
@@ -44,7 +39,6 @@ import files.Res
 import files.StatusDays
 import files.StatusHours
 import files.StatusMinutes
-import files.StatusSeconds
 import files.StatusToday
 import files.StatusTomorrow
 import getAppSpecificDirectory
@@ -55,29 +49,22 @@ import io.ktor.client.call.body
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.onDownload
-import io.ktor.client.plugins.timeout
 import io.ktor.client.request.get
-import io.ktor.client.request.head
 import io.ktor.client.request.prepareGet
 import io.ktor.client.statement.HttpResponse
 import io.ktor.client.statement.bodyAsChannel
-import io.ktor.http.HttpHeaders
 import io.ktor.http.Url
 import io.ktor.serialization.kotlinx.json.json
 import io.ktor.util.network.UnresolvedAddressException
-import io.ktor.utils.io.copyTo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.IO
-import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.async
-import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeout
 import kotlinx.datetime.Clock
 import kotlinx.datetime.DateTimePeriod
@@ -85,19 +72,16 @@ import kotlinx.datetime.Instant
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.plus
 import kotlinx.datetime.toLocalDateTime
-import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.double
-import kotlinx.serialization.json.encodeToJsonElement
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import okio.FileSystem
-import okio.IOException
 import okio.Path.Companion.toPath
 import okio.SYSTEM
 import okio.buffer
@@ -115,11 +99,12 @@ import utils.calculator.TeamListItem
 import utils.calculator.TeammateItem
 import utils.starbase.StarbaseAPI
 import writeToFile
-import kotlin.coroutines.ContinuationInterceptor
+import kotlin.math.abs
+import kotlin.math.floor
+import kotlin.math.log10
 import kotlin.math.pow
+import kotlin.math.round
 import kotlin.math.roundToInt
-import kotlin.native.concurrent.ThreadLocal
-import kotlin.time.Duration
 
 /*
  * --------- Deprecated Soon ---------
@@ -208,9 +193,9 @@ fun newImageRequest(context: PlatformContext, data: Any, crossFade : Boolean = t
 fun formatDecimal(number: Number, decimalPlaces: Int = 1, isRoundDown: Boolean = false, isUnited: Boolean = false): String {
     val multiplier = 10.0.pow(decimalPlaces)
     val roundedNumber = if (isRoundDown) {
-        kotlin.math.floor(number.toDouble() * multiplier)
+        floor(number.toDouble() * multiplier)
     } else {
-        kotlin.math.round(number.toDouble() * multiplier)
+        round(number.toDouble() * multiplier)
     } / multiplier
 
     val suffix = when {
@@ -241,9 +226,9 @@ fun formatDecimal(number: Number, decimalPlaces: Int = 1, isRoundDown: Boolean =
 fun formatDecimalByte(number: Number, decimalPlaces: Int = 1, isRoundDown: Boolean = true, isUnited: Boolean = true): String {
     val multiplier = 10.0.pow(decimalPlaces)
     val roundedNumber = if (isRoundDown) {
-        kotlin.math.floor(number.toDouble() * multiplier)
+        floor(number.toDouble() * multiplier)
     } else {
-        kotlin.math.round(number.toDouble() * multiplier)
+        round(number.toDouble() * multiplier)
     } / multiplier
 
     val suffix = when {
@@ -263,15 +248,53 @@ fun formatDecimalByte(number: Number, decimalPlaces: Int = 1, isRoundDown: Boole
     }
 
     val roundedScaledNumber = if (isRoundDown) {
-        kotlin.math.floor(scaledNumber * multiplier) / multiplier
+        floor(scaledNumber * multiplier) / multiplier
     } else {
-        kotlin.math.round(scaledNumber * multiplier) / multiplier
+        round(scaledNumber * multiplier) / multiplier
     }
 
     val parts = roundedScaledNumber.toString().split('.')
     val integerPart = parts[0].reversed().chunked(3).joinToString(",").reversed()
     val decimalPart = parts.getOrNull(1)?.padEnd(decimalPlaces, '0') ?: "0".repeat(decimalPlaces)
     return "$integerPart${if (decimalPlaces > 0) {".$decimalPart"} else {""}}$suffix"
+}
+fun formatDecimalSci(number: Number, decimalPlaces: Int = 2): String {
+    // 處理零的情況
+    if (number.toDouble() == 0.0) {
+        return "0"
+    }
+
+    // 確定正負號並取絕對值
+    val sign = if (number.toDouble() < 0) "-" else ""
+    val num = abs(number.toDouble())
+
+    // 計算指數
+    val exponent = floor(log10(num)).toInt()
+    // 計算係數
+    val coefficient = num / 10.0.pow(exponent.toDouble())
+
+    // 將係數調整到 [1, 10) 範圍內
+    var adjustedCoefficient = coefficient
+    var adjustedExponent = exponent
+    if (adjustedCoefficient >= 10) {
+        adjustedCoefficient /= 10
+        adjustedExponent += 1
+    }
+
+    // 手動格式化係數到指定小數位數
+    val multiplier = 10.0.pow(decimalPlaces.toDouble())
+    val rounded = round(adjustedCoefficient * multiplier) / multiplier
+    val coeffStr = rounded.toString().let {
+        val parts = it.split(".")
+        val integerPart = parts[0]
+        val decimalPart = if (parts.size > 1) parts[1] else ""
+        // 補齊小數位數
+        val paddedDecimal = decimalPart.padEnd(decimalPlaces, '0').take(decimalPlaces)
+        "$integerPart.$paddedDecimal"
+    }
+
+    // 組合最終結果
+    return "$sign$coeffStr"+"e$adjustedExponent"
 }
 /**
  * Convert Px to Dp
