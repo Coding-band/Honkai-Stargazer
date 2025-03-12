@@ -38,7 +38,7 @@ open class Lightcone(
     var fileName : String? = "",
     var rarity : Int = 4,
     var path : Path = Path.Unspecified,
-    var releaseVersion : String = "1.0.0",
+    var version : String = "1.0.0",
     var displayName : String? = "未知",
     var lcAttrData: AttrData? = null,
 
@@ -80,7 +80,7 @@ open class Lightcone(
                         registName = (listDataJson.jsonObject["name"]!!.jsonPrimitive.content),
                         rarity = listDataJson.jsonObject["rare"]!!.jsonPrimitive.int,
                         path = (valueOfWithDefaultPath(listDataJson.jsonObject["path"]!!.jsonPrimitive.content)),
-                        releaseVersion = (listDataJson.jsonObject["version"]!!.jsonPrimitive.content),
+                        version = (listDataJson.jsonObject["version"]!!.jsonPrimitive.content),
                         displayName = listExtDataJson.jsonObject["localeName"]!!.jsonObject[textLanguage.folderName]?.jsonPrimitive?.content ?: "?",
                         lcAttrData = if(requireAttrData){ Json.decodeFromJsonElement<AttrData>(listExtDataJson.jsonObject["attrData"]!!) } else { null },
                     )

@@ -9,6 +9,9 @@ package types
 import androidx.compose.runtime.saveable.Saver
 import androidx.compose.runtime.saveable.listSaver
 import androidx.compose.ui.graphics.ImageBitmap
+import files.RelicTypePlanar
+import files.RelicTypeRelic
+import files.Res
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.async
@@ -20,12 +23,19 @@ import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
+import org.jetbrains.compose.resources.DrawableResource
+import org.jetbrains.compose.resources.StringResource
 import utils.app.Language
 import utils.app.getAssetsJsonByFilePath
 import utils.app.getAssetsURLByFileName
 import utils.app.getImageNameByRegistName
 import utils.hoyolab.AttributeExchange
 
+@Serializable
+enum class RelicType(var chName : String,var resName : StringResource) : FilterEnum{
+    ORNAMENTS("飾物", Res.string.RelicTypeRelic),
+    RELIC("遺器", Res.string.RelicTypePlanar)
+}
 
 @Serializable
 open class Relic(
@@ -34,8 +44,9 @@ open class Relic(
     var fileName : String? = "",
     var rarity : Int? = 5, //其實沒甚麼用 因爲肯定是五星的
     var displayName : String? = "未知", //Localed Name,
-
+    var type: RelicType = RelicType.RELIC,
     var level: Int = -1,
+    var version : String = "1.0.0",
     var properties: ArrayList<HsrProperties> = arrayListOf(),
 ){
     companion object {
@@ -67,6 +78,8 @@ open class Relic(
                     return@async Relic(
                         officialId = relicFileName.toInt(),
                         fileName = relicFileName,
+                        version = (listDataJson.jsonObject["version"]!!.jsonPrimitive.content),
+                        type = RelicType.valueOf(listDataJson.jsonObject["type"]!!.jsonPrimitive.content),
                         registName = (listDataJson.jsonObject["name"]?.jsonPrimitive?.content),
                         displayName = listExtDataJson.jsonObject["localeName"]!!.jsonObject[textLanguage.folderName]?.jsonPrimitive?.content ?: "?",
                     )
