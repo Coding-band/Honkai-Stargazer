@@ -21,6 +21,8 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.material.Checkbox
+import androidx.compose.material.CheckboxDefaults
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
@@ -32,6 +34,7 @@ import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.input.TextFieldValue
@@ -72,14 +75,18 @@ import types.FilterEnum
 import types.Lightcone
 import types.Path
 import types.Relic
+import types.RelicType
+import types.UserAccount
 import ui.navigation.hazeStateRoot
 import utils.annotation.DoItLater
+import utils.annotation.TranslationPls
 import utils.app.Constants.Companion.INFO_MAX_WIDTH
 import utils.app.Constants.Companion.INFO_MIN_WIDTH
 import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.Language
+import utils.app.Preferences
 import utils.app.pxToDp
 import utils.app.removeStrQuote
 import kotlin.math.max
@@ -107,6 +114,8 @@ fun <T> ListFilterTool(
     val isAsc = rememberSaveable { mutableStateOf(false) }
     val sortChoiceIndex = rememberSaveable { mutableStateOf(0) }
     val isReloadState = rememberSaveable { mutableStateOf(true) }
+    val isFilterOwned = rememberSaveable { mutableStateOf(false) }
+    val isFilterFavourite = rememberSaveable { mutableStateOf(false) }
     val sortChoiceList = arrayListOf(
         Res.string.SortByTime,
         Res.string.SortByName,
@@ -118,6 +127,8 @@ fun <T> ListFilterTool(
     ).filter {
         if(filterType == ListFilterType.LIGHTCONE){
             it != Res.string.SortByEnergy
+        }else if(filterType == ListFilterType.RELIC){
+            it == Res.string.SortByName || it == Res.string.SortByTime
         }else{
             true
         }
@@ -130,8 +141,11 @@ fun <T> ListFilterTool(
             if(i < CombatType.entries.filterNot { it == CombatType.Unspecified }.size && filterType == ListFilterType.CHARACTER){
                 add(CombatType.entries[i])
             }
-            if(i < Path.entries.filterNot { it == Path.Unspecified }.size){
+            if(i < Path.entries.filterNot { it == Path.Unspecified }.size && filterType != ListFilterType.RELIC){
                 add(Path.entries[i])
+            }
+            if(i < RelicType.entries.size && filterType == ListFilterType.RELIC){
+                add(RelicType.entries[i])
             }
         }
     }
@@ -144,7 +158,7 @@ fun <T> ListFilterTool(
             if(isShowing.value == "SEARCH") {
                 filtedList.value = applySearch(originList, searchKey)
             }else{
-                filtedList.value = applySortAndFilter(originList, sortChoiceList[sortChoiceIndex.value], filterChoiceArray, filterType, isAsc.value)
+                filtedList.value = applySortAndFilter(originList, sortChoiceList[sortChoiceIndex.value], filterChoiceArray, filterType, isAsc.value, isFilterOwned.value, isFilterFavourite.value)
             }
             isReloadState.value = false
         }
@@ -158,7 +172,6 @@ fun <T> ListFilterTool(
         ) {
             val sorterButtonWidth = remember { mutableStateOf(212.dp) }
 
-            @DoItLater("收藏 & 已擁有選擇")
             AnimatedVisibility(
                 visible = isShowing.value == "SORT" || isShowing.value == "FILTER",
                 enter = fadeIn(),
@@ -197,25 +210,28 @@ fun <T> ListFilterTool(
                                         }
                                         .padding(8.dp)
                                     ) {
-                                        Image(
-                                            painterResource(
-                                                when(any){
-                                                    is CombatType -> any.iconColor
-                                                    is Path ->  any.iconAbyss
-                                                    else -> Res.drawable.pom_pom_failed_issue
-                                                }
-                                            ),
-                                            contentDescription = "Filter Choice Icon",
-                                            modifier = Modifier.size(20.dp)
-                                        )
+                                        if(any !is RelicType){
+                                            Image(
+                                                painterResource(
+                                                    when(any){
+                                                        is CombatType -> any.iconColor
+                                                        is Path ->  any.iconAbyss
+                                                        else -> Res.drawable.pom_pom_failed_issue
+                                                    }
+                                                ),
+                                                contentDescription = "Filter Choice Icon",
+                                                modifier = Modifier.size(20.dp)
+                                            )
 
-                                        Spacer(modifier = Modifier.width(8.dp))
+                                            Spacer(modifier = Modifier.width(8.dp))
+                                        }
 
                                         Text(
                                             text = removeStrQuote(
                                                 when(any){
                                                     is CombatType -> any.resName
                                                     is Path ->  any.resName
+                                                    is RelicType -> any.resName
                                                     else -> Res.string.NoDataYet
                                                 }
                                             ),
@@ -237,9 +253,45 @@ fun <T> ListFilterTool(
                             Column(modifier = Modifier.background(Color(0xFF222222)).padding(16.dp)) {
                                 //Checkboxes for "Owned" and "Favorite" ONLY
                                 Row {
+                                    if(filterType == ListFilterType.CHARACTER){
+                                        Text(
+                                            text = "僅已擁有",
+                                            style = FontSizeNormal14(),
+                                            color = Color(0xFFFFFFFF),
+                                        )
 
+                                        Spacer(modifier = Modifier.width(6.dp))
+
+                                        Image(
+                                            painterResource(if(isFilterOwned.value) Res.drawable.ui_icon_checkbox_checked else Res.drawable.ui_icon_checkbox_empty),
+                                            contentDescription = "Filter Owned Choice Checkbox",
+                                            modifier = Modifier.size(16.dp).align(Alignment.CenterVertically).clickable {
+                                                isFilterOwned.value = !isFilterOwned.value
+                                            },
+                                            colorFilter = if(!isFilterOwned.value) ColorFilter.tint(Color.White) else null
+                                        )
+
+                                        Spacer(modifier = Modifier.width(16.dp))
+
+                                    }
+                                    Text(
+                                        text = "僅收藏",
+                                        style = FontSizeNormal14(),
+                                        color = Color(0xFFFFFFFF),
+                                    )
+
+                                    Spacer(modifier = Modifier.width(6.dp))
+
+                                    Image(
+                                        painterResource(if(isFilterFavourite.value) Res.drawable.ui_icon_checkbox_checked else Res.drawable.ui_icon_checkbox_empty),
+                                        contentDescription = "Filter Owned Choice Checkbox",
+                                        modifier = Modifier.size(16.dp).align(Alignment.CenterVertically).clickable {
+                                            isFilterFavourite.value = !isFilterFavourite.value
+                                        },
+                                        colorFilter = if(!isFilterFavourite.value) ColorFilter.tint(Color.White) else null
+                                    )
                                 }
-                                //Spacer(Modifier.height(12.dp))
+                                Spacer(Modifier.height(12.dp))
                                 Row {
                                     UIButton(
                                         modifierTmp = Modifier.fillMaxWidth().weight(1f),
@@ -401,7 +453,9 @@ fun <T> applySortAndFilter(
     sortChoice: StringResource,
     filterChoiceArray: SnapshotStateList<FilterEnum>,
     filterType: ListFilterType,
-    isAsc: Boolean
+    isAsc: Boolean,
+    isFilterOwned: Boolean,
+    isFilterFavourite: Boolean
 ): ArrayList<T> {
 
     //if isAllPathAllow and isAllCombatTypeAllow, then return originList
@@ -409,6 +463,7 @@ fun <T> applySortAndFilter(
     //else if isAllCombatTypeAllow, then filter by Path, return originList with only checked Path
     //else, return originList with only checked Path and CombatType
     val filterPaths = filterChoiceArray.filterIsInstance<Path>()
+    val filterTypes = filterChoiceArray.filterIsInstance<RelicType>()
     val filterCombatType = filterChoiceArray.filterIsInstance<CombatType>()
 
 
@@ -418,11 +473,20 @@ fun <T> applySortAndFilter(
                 ListFilterType.CHARACTER -> {
                     val character = it as Character
                     (filterPaths.isEmpty() || filterPaths.contains(character.path)) &&
-                            (filterCombatType.isEmpty() || filterCombatType.contains(character.combatType))
+                            (filterCombatType.isEmpty() || filterCombatType.contains(character.combatType)) &&
+                            (!isFilterOwned || isFilterOwned && !UserAccount.INSTANCE.characterList.none { it.officialId == character.officialId }) &&
+                            (!isFilterFavourite || Preferences.FavouriteClass.checkIsFavourite(character.officialId.toString(), Preferences.FavouriteClass.TYPE.CHAR))
                 }
                 ListFilterType.LIGHTCONE -> {
                     val lightcone = it as Lightcone
-                    (filterPaths.isEmpty() || filterPaths.contains(lightcone.path))
+                    (filterPaths.isEmpty() || filterPaths.contains(lightcone.path)) &&
+                            (!isFilterFavourite || Preferences.FavouriteClass.checkIsFavourite(lightcone.officialId.toString(), Preferences.FavouriteClass.TYPE.LC))
+
+                }
+                ListFilterType.RELIC -> {
+                    val relic = it as Relic
+                    (filterTypes.isEmpty() || filterTypes.contains(relic.type)) &&
+                            (!isFilterFavourite || Preferences.FavouriteClass.checkIsFavourite(relic.officialId.toString(), Preferences.FavouriteClass.TYPE.RELIC))
                 }
                 else -> true
             }
@@ -438,6 +502,7 @@ fun <T> applySortAndFilter(
                 Res.string.SortByHp -> (it as Character).characterAttrData!!.hp
                 Res.string.SortByEnergy -> (it as Character).characterAttrData!!.energy
                 Res.string.SortByRare -> (it as Character).rarity
+                //Res.string.SortByTime -> (it as Character).version
                 else -> null
             }
             ListFilterType.LIGHTCONE -> when (sortChoice) {
@@ -447,6 +512,12 @@ fun <T> applySortAndFilter(
                 Res.string.SortByHp -> (it as Lightcone).lcAttrData!!.hp
                 Res.string.SortByEnergy -> (it as Lightcone).lcAttrData!!.energy
                 Res.string.SortByRare -> (it as Lightcone).rarity
+                //Res.string.SortByTime -> (it as Lightcone).version
+                else -> null
+            }
+            ListFilterType.RELIC -> when(sortChoice){
+                Res.string.SortByName -> (it as Relic).registName
+                //Res.string.SortByTime -> (it as Relic).version
                 else -> null
             }
             else -> null
