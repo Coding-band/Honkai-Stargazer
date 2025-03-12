@@ -31,6 +31,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
@@ -58,6 +59,8 @@ import files.ui_icon_upgrade
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.vectorResource
 import types.CombatType
+import types.IIRC
+import types.IIRCWorld
 import ui.components.HeaderData
 import ui.components.iirc.HoverButtonBar
 import ui.components.iirc.MultiplyEnum
@@ -67,6 +70,12 @@ import utils.app.FontSizeNormal14
 import utils.app.formatDecimal
 import utils.app.formatDecimalSci
 
+lateinit var iircWorldInfo: MutableState<ArrayList<IIRCWorld>>
+
+@Composable
+fun initIIRC(){
+    iircWorldInfo = rememberSaveable(stateSaver = IIRC.WorldListSaver) { mutableStateOf(arrayListOf()) }
+}
 
 @Composable
 fun IIRCHomePageScreen(
@@ -124,7 +133,7 @@ fun RedeemPage() {
         ) {
             items(when(currentDisplayPage.value){
                 "WORLD" -> 20
-                "CITY" -> 10
+                "AREA1" -> 10
                 else -> 5
             }) {it ->
                 ItemGridView(it * 10, it)

@@ -1,24 +1,39 @@
 package types
 
+import androidx.compose.runtime.saveable.Saver
+import androidx.compose.runtime.saveable.listSaver
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonArray
+import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.decodeFromJsonElement
+import kotlinx.serialization.json.jsonArray
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
+import types.Character.Companion.charExtListJson
 import utils.app.Language
+import utils.app.getAssetsJsonByFilePath
 
 @Serializable
-data class IIRCItem(
+data class IIRCCharacter(
     val id: Int,
     val name: Map<Language.TextLanguage, String>,
-    val description: String = "",
     val isUnlocked: Boolean = false,
     val isVisible: Boolean = false,
     val count: Int = 0,
     val status: IIRCItemStatus = IIRCItemStatus(),
-    val unlockRequirements: List<IIRCItemUnlockRequirement> = emptyList(),
+    val upgradeRequirements: List<IIRCItemUpgradeRequirement> = emptyList(),
     val visibleRequirements: List<IIRCItemVisibleRequirement> = emptyList(),
 )
 
 @Serializable
-data class IIRCItemUnlockRequirement(
-    val element: CombatType = CombatType.Physical,
+data class IIRCItemUpgradeRequirement(
+    val currencyType: IIRCCurrecyType = IIRCCurrecyType.CREDIT,
     val value: Int = 10,
 )
 @Serializable
@@ -31,24 +46,65 @@ data class IIRCItemVisibleRequirement(
 data class IIRCItemStatus(
     val basicValue: Int = 1,
     val additionValue: Int = 0,
-    val bonusPercentage: Float = 0f,
 )
 
 @Serializable
 data class IIRCWorld(
     val id: Int,
     val name: Map<Language.TextLanguage, String>,
-    val description: String = "",
-    val items: List<IIRCItem> = emptyList(),
+    val characters: List<IIRCCharacter> = emptyList(),
     val isVisible: Boolean = false,
 )
 
 @Serializable
 data class IIRCPlayerInfo(
     val restartTimes: Int = 0,
-    val elementValues: Map<CombatType, Long> = mapOf(Pair(CombatType.Physical, 0L)),
+    val currencyValues: Map<IIRCCurrecyType, Long> = mapOf(Pair(IIRCCurrecyType.CREDIT, 100L)),
     val finalRate: Float = 1f,
-    val items: ArrayList<IIRCItem> = arrayListOf(),
+    val characters: ArrayList<IIRCCharacter> = arrayListOf(),
     val worlds: ArrayList<IIRCWorld> = arrayListOf(),
     val isPlayMusic: Boolean = true,
 )
+
+@Serializable
+enum class IIRCCurrecyType {
+    CREDIT,
+    HERTAREUM,
+    SHIELD,
+    STRALE,
+    CLOCK_CREDIT,
+    CELESTIAL_AMBROSIA,
+}
+
+open class IIRC {
+    companion object {
+        /*
+        val iircWorldInfo = getIIRCWorldInfoFromJSON()
+        val iircCharInfo = getIIRCCharInfoFromJSON()
+
+        private fun getIIRCWorldInfoFromJSON() : ArrayList<IIRCWorld> {
+            val iircWorldJson = getAssetsJsonByFilePath("easter_egg/iirc/iirc_world.json", defaultData = "[]")
+
+            if(iircWorldJson !is JsonArray || iircWorldJson.jsonArray.isEmpty()) return arrayListOf()
+
+            return runBlocking {
+                val job = async(Dispatchers.Default){
+                    val listExtDataJson = charExtListJson.jsonArray.firstOrNull { charData -> charData.jsonObject["officialId"]!!.jsonPrimitive.content == charId } ?: return@async Character(path = Path.Unspecified, )
+                    // World-level
+                    for(world in iircWorldJson.jsonArray){
+
+                    }
+                    return@async arrayListOf<IIRCWorld>()
+                }
+            }
+
+        }
+
+
+         */
+        val WorldListSaver: Saver<ArrayList<IIRCWorld>, Any> = listSaver(
+            save = { listOf(Json.encodeToString(it)) },
+            restore = { Json.decodeFromString(it[0]) }
+        )
+    }
+}
