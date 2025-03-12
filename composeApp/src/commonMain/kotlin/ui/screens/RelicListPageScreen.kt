@@ -41,6 +41,8 @@ import types.Relic
 import ui.components.BackIcon
 import ui.components.HeaderData
 import ui.components.LIST_FILTER_TOOL_HEIGHT
+import ui.components.ListFilterTool
+import ui.components.ListFilterType
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.RelicCard
@@ -115,6 +117,13 @@ fun RelicListPage(modifier: Modifier = Modifier, navigator: NavHostController, h
 
         PageBottomMask()
 
+        ListFilterTool(
+            originList = relicList.value,
+            filterType = ListFilterType.RELIC,
+            filtedList = relicListSortable,
+            filterChoiceArray = filterChoiceArray,
+            hazeState = hazeStateRoot
+        )
 
         PageHeader(navigator, headerData = headerData, hazeState = hazeStateRoot, backIconId = BackIcon.CANCEL)
     }
