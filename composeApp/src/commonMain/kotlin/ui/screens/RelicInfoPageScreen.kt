@@ -76,6 +76,7 @@ import files.RelicStatus2Pcs
 import files.RelicStatus4Pcs
 import files.Res
 import files.ic_favourite_btn
+import files.ic_favourite_btn_selected
 import files.phorphos_chats_circle_regular
 import files.phorphos_dice_four_regular
 import files.phorphos_dice_two_regular
@@ -115,6 +116,7 @@ import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.JsonElementSaver
 import utils.app.Language
+import utils.app.Preferences
 import utils.app.TextColorNormalDim
 import utils.app.htmlDescApplier
 import utils.app.newImageRequest
@@ -200,13 +202,22 @@ fun RelicInfoPage(
             item { Box(modifier = Modifier.navigationBarsPadding().height(72.dp)) }
         }
 
+        val isFavourite = remember { mutableStateOf(Preferences.FavouriteClass.checkIsFavourite(relicFileName, Preferences.FavouriteClass.TYPE.RELIC)) }
         PageHeader(
             navigator = navigator,
             headerData = headerDataPage,
             hazeState = hazeStateRoot,
             backIconId = BackIcon.CANCEL,
-            //forwardIconId = Res.drawable.ic_favourite_btn,
-            //onForward = {}
+            forwardIconId = if(isFavourite.value) Res.drawable.ic_favourite_btn_selected else Res.drawable.ic_favourite_btn,
+            onForward = {
+                if(isFavourite.value) {
+                    Preferences.FavouriteClass.addToFavouriteList(relicFileName, Preferences.FavouriteClass.TYPE.RELIC)
+                } else {
+                    Preferences.FavouriteClass.addToFavouriteList(relicFileName, Preferences.FavouriteClass.TYPE.RELIC)
+                }
+
+                isFavourite.value = !isFavourite.value
+            }
         )
 
         Box(modifier = Modifier.fillMaxSize()) {

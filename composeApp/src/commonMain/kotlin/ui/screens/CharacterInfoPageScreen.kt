@@ -51,6 +51,7 @@ import files.NoOnlineData
 import files.Res
 import files.TraceTree
 import files.ic_favourite_btn
+import files.ic_favourite_btn_selected
 import files.phorphos_baseball_cap_regular
 import files.phorphos_chats_circle_regular
 import files.phorphos_info_regular
@@ -95,6 +96,7 @@ import utils.app.Constants.Companion.LOST_IMAGE_DRAWABLE
 import utils.app.DefaultZIndex
 import utils.app.JsonElementSaver
 import utils.app.Language
+import utils.app.Preferences
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
 import utils.app.showWarningToast
@@ -210,13 +212,22 @@ fun CharacterInfoPage(
 
         }
 
+        val isFavourite = remember { mutableStateOf(Preferences.FavouriteClass.checkIsFavourite(characterId.toString(), Preferences.FavouriteClass.TYPE.CHAR)) }
         PageHeader(
             navigator = navigator,
             headerData = headerDataPage,
             hazeState = hazeStateRoot,
             backIconId = BackIcon.CANCEL,
-            //forwardIconId = Res.drawable.ic_favourite_btn,
-            //onForward = {}
+            forwardIconId = if(isFavourite.value) Res.drawable.ic_favourite_btn_selected else Res.drawable.ic_favourite_btn,
+            onForward = {
+                if(isFavourite.value) {
+                    Preferences.FavouriteClass.addToFavouriteList(characterId.toString(), Preferences.FavouriteClass.TYPE.CHAR)
+                } else {
+                    Preferences.FavouriteClass.addToFavouriteList(characterId.toString(), Preferences.FavouriteClass.TYPE.CHAR)
+                }
+
+                isFavourite.value = !isFavourite.value
+            }
         )
 
         Box(modifier = Modifier.fillMaxSize()) {

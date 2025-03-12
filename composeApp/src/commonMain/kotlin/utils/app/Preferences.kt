@@ -25,7 +25,68 @@ class Preferences {
         val LEADERBOARD_UPDATE_MINS = 60
         val KEY_HYB_CHAR_LIST_LAST_UPDATE_TIME = "lastUpdateHoyolabCharListTime"
         val KEY_HYB_LEADERBOARD_LAST_UPDATE_TIME = "lastUpdateHoyolabLeaderboardTime"
+    }
 
+    class FavouriteClass {
+        companion object{
+            val charFavourList = getFavouriteList(TYPE.CHAR)
+            val lcFavourList = getFavouriteList(TYPE.LC)
+            val relicFavourList = getFavouriteList(TYPE.RELIC)
+
+            fun setFavouriteList(favourList: ArrayList<String> = charFavourList, type: TYPE = TYPE.CHAR){
+                Settings().putString(when(type){
+                    TYPE.CHAR -> "charFavouriteList"
+                    TYPE.LC -> "lcFavouriteList"
+                    TYPE.RELIC -> "relicFavouriteList"
+                }, Json.encodeToString(favourList))
+            }
+
+            fun getFavouriteList(type: TYPE = TYPE.CHAR) : ArrayList<String> {
+                return Json.decodeFromString(
+                    Settings().getString(
+                        when(type){
+                            TYPE.CHAR -> "charFavouriteList"
+                            TYPE.LC -> "lcFavouriteList"
+                            TYPE.RELIC -> "relicFavouriteList"
+                        },
+                        "[]"
+                    )
+                )
+            }
+
+            fun checkIsFavourite(itemId: String, type: TYPE = TYPE.CHAR): Boolean {
+                return when(type){
+                    TYPE.CHAR -> charFavourList
+                    TYPE.LC -> lcFavourList
+                    TYPE.RELIC -> relicFavourList
+                }.contains(itemId)
+            }
+
+            fun addToFavouriteList(itemId: String, type: TYPE = TYPE.CHAR){
+                val tempList = when(type){
+                    TYPE.CHAR -> charFavourList
+                    TYPE.LC -> lcFavourList
+                    TYPE.RELIC -> relicFavourList
+                }
+
+                tempList.add(itemId)
+                setFavouriteList(tempList, type)
+            }
+
+            fun removeFromFavouriteList(itemId: String, type: TYPE = TYPE.CHAR){
+                val tempList = when(type){
+                    TYPE.CHAR -> charFavourList
+                    TYPE.LC -> lcFavourList
+                    TYPE.RELIC -> relicFavourList
+                }
+
+                tempList.remove(itemId)
+                setFavouriteList(tempList, type)
+            }
+        }
+
+
+        enum class TYPE {CHAR, LC, RELIC}
     }
 
     class CharListClass{

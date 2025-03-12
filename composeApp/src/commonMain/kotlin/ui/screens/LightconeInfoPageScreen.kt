@@ -53,6 +53,7 @@ import files.Res
 import files.bg_lightcone_artwork_back
 import files.bg_lightcone_artwork_front
 import files.ic_favourite_btn
+import files.ic_favourite_btn_selected
 import files.phorphos_chats_circle_regular
 import files.phorphos_info_regular
 import files.phorphos_person_fill
@@ -88,6 +89,7 @@ import ui.navigation.hazeStateRoot
 import utils.app.DefaultZIndex
 import utils.app.JsonElementSaver
 import utils.app.Language
+import utils.app.Preferences
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
 import utils.app.showWarningToast
@@ -174,13 +176,22 @@ fun LightconeInfoPage(
 
         }
 
+        val isFavourite = remember { mutableStateOf(Preferences.FavouriteClass.checkIsFavourite(lightconeFileName, Preferences.FavouriteClass.TYPE.LC)) }
         PageHeader(
             navigator = navigator,
             headerData = headerDataPage,
             hazeState = hazeStateRoot,
             backIconId = BackIcon.CANCEL,
-            //forwardIconId = Res.drawable.ic_favourite_btn,
-            //onForward = {}
+            forwardIconId = if(isFavourite.value) Res.drawable.ic_favourite_btn_selected else Res.drawable.ic_favourite_btn,
+            onForward = {
+                if(isFavourite.value) {
+                    Preferences.FavouriteClass.addToFavouriteList(lightconeFileName, Preferences.FavouriteClass.TYPE.LC)
+                } else {
+                    Preferences.FavouriteClass.addToFavouriteList(lightconeFileName, Preferences.FavouriteClass.TYPE.LC)
+                }
+
+                isFavourite.value = !isFavourite.value
+            }
         )
 
         Box(modifier = Modifier.fillMaxSize()) {
