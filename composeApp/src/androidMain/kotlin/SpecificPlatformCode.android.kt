@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory
 import android.os.Build
 import androidx.activity.ComponentActivity
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
@@ -26,6 +27,7 @@ import okio.Path.Companion.toPath
 import utils.device.DeviceInfo
 import java.io.File
 import java.util.Locale
+import kotlin.system.exitProcess
 
 /**
  * This is the declaration kt file for specific-platform function
@@ -114,4 +116,19 @@ actual class ContextFactory(private val activity: ComponentActivity) {
 
 actual suspend fun ByteReadChannel.writeToFile(filepath: String) {
     this.copyTo(File(filepath).writeChannel())
+}
+
+actual fun exitApp() {
+    exitProcess(0)
+}
+
+@Composable
+actual fun kcefSetUpActual(
+    downloadProgress: MutableState<Float>,
+    isProcessing: MutableState<Boolean>,
+    kcefStatus: MutableState<KCEFStatus>
+) {
+    downloadProgress.value = 1f
+    isProcessing.value = false
+    kcefStatus.value = KCEFStatus.FINISH
 }

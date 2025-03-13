@@ -112,7 +112,7 @@ kotlin {
             implementation(libs.ktor.client.serialization)
 
             // use api since the desktop app need to access the Cef to initialize it.
-            //api(libs.compose.webview.multiplatform)
+            api(libs.compose.webview.multiplatform)
 
             // Precompose!
             //api(libs.tlaster.precompose)
@@ -136,7 +136,7 @@ kotlin {
             implementation("com.cheonjaeung.compose.grid:grid:2.1.0")
 
             //Compose WebView Multiplatform : https://github.com/KevinnZou/compose-webview-multiplatform
-            api("io.github.kevinnzou:compose-webview-multiplatform:1.9.40")
+            //api("io.github.kevinnzou:compose-webview-multiplatform:1.9.40")
 
             implementation(libs.kmp.io)
 

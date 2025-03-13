@@ -197,6 +197,8 @@ fun initDataAfterLogin(
 
         }
 
+        println("webviewState.cookieManager.getCookies(url) : ${if(webviewState != null && url != null) webviewState.cookieManager.getCookies(url) else listOf("WRT")}")
+
         UserAccount.pasteCookies(if(webviewState != null && url != null) webviewState.cookieManager.getCookies(url) else cookieList, serverSelected, snackbarHostState)
         StarbaseAPI().updateUserAccountInfo()
         StarbaseAPI().updateCharData()

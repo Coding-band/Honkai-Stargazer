@@ -21,6 +21,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
@@ -56,6 +57,7 @@ import ui.navigation.screenInstance
 import utils.app.CharWeightList
 import utils.app.FontSizeNormalLarge24
 import utils.app.FontSizeNormalSmall
+import utils.app.KCEFPopup
 import utils.app.Language
 import utils.app.Preferences
 import utils.app.UpdateAssetsPopup
@@ -72,9 +74,11 @@ fun SplashPage(
 ) {
     val hazeStateRoot = remember { HazeState() }
     val showPopup = remember { mutableStateOf(!Preferences().AppSettings.isLangInitialized()) }
+    val showJCEFPopup = remember { mutableStateOf(false) }
 
     val hasRefreshed = remember { mutableStateOf(false) }
     val showUpdatePopup = remember { mutableStateOf(updateCheckInit()) } //The Real Update Popup
+    val isJCEFInited = Settings().getBoolean("isJCEFInited", true)
     LaunchedEffect(Unit) {
         if (!showPopup.value) {
             CoroutineScope(Dispatchers.Default).launch {
@@ -98,15 +102,19 @@ fun SplashPage(
         }
     }
 
-    LaunchedEffect(showPopup.value, hasRefreshed.value, showUpdatePopup.value){
-        if (!showPopup.value && !showUpdatePopup.value && screenInstance !is Screen.HomePage && screenInstance !is Screen.BlankPage) {
-            screenInstance = Screen.HomePage
+    LaunchedEffect(showPopup.value, hasRefreshed.value, showUpdatePopup.value, showJCEFPopup.value){
+        if (!showPopup.value && !showUpdatePopup.value && screenInstance !is Screen.HomePage && screenInstance !is Screen.BlankPage && !showJCEFPopup.value) {
+            if(!isJCEFInited){
+                showJCEFPopup.value = true
+            }else{
+                screenInstance = Screen.HomePage
 
-            CoroutineScope(Dispatchers.Default).launch {
-                withContext(Dispatchers.Main) {
-                    navigator.navigate(HomeRoute){
-                        popUpTo(SplashRoute){
-                            inclusive = true
+                CoroutineScope(Dispatchers.Default).launch {
+                    withContext(Dispatchers.Main) {
+                        navigator.navigate(HomeRoute){
+                            popUpTo(SplashRoute){
+                                inclusive = true
+                            }
                         }
                     }
                 }
@@ -249,5 +257,10 @@ fun SplashPage(
 
     if(!showPopup.value){
         UpdateAssetsPopup(showUpdatePopup, hazeStateRoot)
+    }
+
+    if(!showPopup.value && !showUpdatePopup.value){
+        //JCEF Popup
+        KCEFPopup(showJCEFPopup, hazeStateRoot)
     }
 }

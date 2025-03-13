@@ -67,8 +67,8 @@ private lateinit var isProcessing: MutableState<Boolean>
 private var infoList = arrayListOf<UpdateAssetsInfo>()
 private var updateState = UpdateAssetsStatus.SKIP
 
-lateinit var downloadProgress : MutableState<Long>
-lateinit var ERR_NETWORK_UNSTABLE_CONNECTION : String
+private lateinit var downloadProgress : MutableState<Long>
+private lateinit var ERR_NETWORK_UNSTABLE_CONNECTION : String
 
 @Serializable
 data class UpdateAssetsInfo (

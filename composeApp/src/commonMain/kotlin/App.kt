@@ -11,6 +11,7 @@ import utils.app.Language
 import utils.app.LogExportInit
 import utils.app.Stargazer3Theme
 import utils.app.dateTimeStrInit
+import utils.app.kcefPopUpInit
 import utils.app.newImageLoader
 import utils.app.updateAssetsInit
 
@@ -45,7 +46,7 @@ fun App(platformContextFactory: ContextFactory) {
         dateTimeStrInit()
         userAccountErrorMessage()
         updateAssetsInit()
-
+        kcefPopUpInit()
         RootContent()
     }
 }

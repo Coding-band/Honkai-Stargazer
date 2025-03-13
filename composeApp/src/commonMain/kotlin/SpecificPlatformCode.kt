@@ -1,6 +1,6 @@
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.ui.graphics.ImageBitmap
-import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.unit.Dp
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
@@ -49,3 +49,11 @@ expect fun getAppSpecificDirectory(): okio.Path
 
 //ref: https://stackoverflow.com/questions/78739232/how-to-save-a-response-body-to-a-file-in-kotlin-multiplatform-with-ktor
 expect suspend fun ByteReadChannel.writeToFile(filepath: String)
+
+expect fun exitApp(): Unit
+
+enum class KCEFStatus {
+    ASKING, ACCEPT_DOWNLOAD, DENY, FINISH, REQUIRE_RESTART
+}
+@Composable
+expect fun kcefSetUpActual(downloadProgress: MutableState<Float>, isProcessing: MutableState<Boolean>, kcefStatus: MutableState<KCEFStatus>)

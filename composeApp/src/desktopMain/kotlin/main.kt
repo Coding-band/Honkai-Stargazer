@@ -1,5 +1,7 @@
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -9,6 +11,7 @@ import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.WindowState
 import androidx.compose.ui.window.application
 import coil3.size.Dimension
+import com.russhwolf.settings.Settings
 import dev.datlag.kcef.KCEF
 import dev.datlag.kcef.KCEFBuilder
 import files.Res
@@ -16,7 +19,9 @@ import files.app_icon
 import files.app_icon_black_bg
 import files.app_name
 import io.ktor.websocket.Frame
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.jetbrains.compose.resources.painterResource
 import utils.annotation.DoItLater
@@ -33,54 +38,16 @@ fun main() = application {
         state = WindowState(width = 1280.dp, height = 720.dp)
     ) {
 
-        @DoItLater("JCEF, do it later")
+        if(!Settings().hasKey("isJCEFInited")) {Settings().putBoolean("isJCEFInited", false)}
         App(ContextFactory()) //Since Desktop does not have Context
-        /* JCEF, do it later
-        var restartRequired by remember { mutableStateOf(false) }
-        var downloading by remember { mutableStateOf(0F) }
-        var initialized by remember { mutableStateOf(false) }
 
-        LaunchedEffect(Unit) {
+        LaunchedEffect(Unit){
+            if(!Settings().getBoolean("isJCEFInited", false)) return@LaunchedEffect
             withContext(Dispatchers.IO) {
                 KCEF.init(builder = {
                     installDir(File("kcef-bundle"))
-                    progress {
-                        onDownloading {
-                            downloading = max(it, 0F)
-                        }
-                        onInitialized {
-                            initialized = true
-                        }
-                    }
-                    settings {
-                        cachePath = File("cache").absolutePath
-                    }
-                }, onError = {
-                    it?.printStackTrace()
-                }, onRestartRequired = {
-                    restartRequired = true
                 })
             }
         }
-
-        if (restartRequired) {
-            Frame.Text(text = "Restart required.")
-        } else {
-            if (initialized) {
-                App()
-            } else {
-                Frame.Text(text = "Downloading $downloading%")
-            }
-        }
-
-        DisposableEffect(Unit) {
-            onDispose {
-                KCEF.disposeBlocking()
-            }
-        }
-
-         */
-
     }
-
 }

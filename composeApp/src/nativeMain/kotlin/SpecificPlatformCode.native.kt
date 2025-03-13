@@ -1,4 +1,5 @@
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.graphics.ImageBitmap
@@ -10,7 +11,6 @@ import io.ktor.client.HttpClientConfig
 import io.ktor.client.engine.darwin.Darwin
 import io.ktor.utils.io.ByteReadChannel
 import io.ktor.utils.io.cancel
-import io.ktor.utils.io.copyTo
 import io.ktor.utils.io.readAvailable
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.GlobalScope
@@ -40,6 +40,7 @@ import platform.UIKit.UIKeyboardAppearanceDark
 import platform.UIKit.UITextField
 import utils.annotation.DoItLater
 import utils.device.DeviceInfo
+import kotlin.system.exitProcess
 
 /**
  * This is the declaration kt file for specific-platform function
@@ -181,4 +182,19 @@ actual suspend fun ByteReadChannel.writeToFile(filepath: String) {
         FileSystem.SYSTEM.createDirectories(parent)
     }
     this.copyToOkio(FileSystem.SYSTEM.sink(filepath.toPath()))
+}
+
+actual fun exitApp() {
+    exitProcess(0)
+}
+
+@Composable
+actual fun kcefSetUpActual(
+    downloadProgress: MutableState<Float>,
+    isProcessing: MutableState<Boolean>,
+    kcefStatus: MutableState<KCEFStatus>
+) {
+    downloadProgress.value = 1f
+    isProcessing.value = false
+    kcefStatus.value = KCEFStatus.FINISH
 }
