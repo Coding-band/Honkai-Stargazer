@@ -286,7 +286,7 @@ fun HomePageHeader(
                                 .fillMaxWidth()
                         ) {
                             item {
-                                val filterResult = userAccount.value.characterList.filter { it.characterStatus != null && it.characterStatus!!.isHelper }
+                                val filterResult = userAccount.value.characterList.filter { it.characterStatus != null && it.characterStatus!!.isHelper > 0 }.sortedBy { it.characterStatus!!.isHelper }
                                 if (filterResult.isNotEmpty()) {
                                     filterResult.forEach { UserHelpTeamIcon(character = it, navigator = navigator, uid = userAccount.value.uid) }
                                 }else if(userAccount.value.characterList.size > 0){

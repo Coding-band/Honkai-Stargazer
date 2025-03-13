@@ -27,6 +27,6 @@ data class CharacterStatus(
     var equippingRelicLinkRope: Relic? = null,
 
     var characterProperties: ArrayList<HsrProperties>? = null,
-    var isHelper: Boolean = false,
+    var isHelper: Int = 0, // 0 as false, 1,2,...,8 as position of that helper
 
     )

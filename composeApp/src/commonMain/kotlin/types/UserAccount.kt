@@ -38,6 +38,7 @@ import utils.hoyolab.HoyolabRequest
 import utils.app.showWarningToast
 import utils.app.writeToFile
 import utils.device.AppInfo
+import utils.hoyolab.MihomoRequest
 import utils.hoyolab.genDSv2
 import utils.starbase.StarbaseAPI
 
@@ -233,6 +234,7 @@ class UserAccount(
 
         fun refreshCharacterListHoyolab() {
             try {
+                val helperList = MihomoRequest(INSTANCE.uid).getCharIdListByMihomo()
                 val api = HoyolabAPI(INSTANCE.server.platform, INSTANCE.cookies)
                 val userFull = api.getHsrFullData(INSTANCE.uid, INSTANCE.server)
 
@@ -287,6 +289,7 @@ class UserAccount(
 
                             eidolon = characterData["rank"]!!.jsonPrimitive.int,
                             //ascension = characterData["ascend"]!!.jsonPrimitive.int,
+                            isHelper = helperList.indexOf(characterData["id"]!!.jsonPrimitive.int.toString()) + 1
                         )
 
                         characterList.add(character)

@@ -130,7 +130,7 @@ fun UserInfoPageScreen(
     val isDisplayLcInfo = remember { mutableStateOf(false) }
     val showPopup = remember { mutableStateOf(false) }
 
-    val helperListOrigin = userAccount.characterList.filter { it.characterStatus?.isHelper == true }
+    val helperListOrigin = userAccount.characterList.filter { if(it.characterStatus != null) it.characterStatus!!.isHelper > 0 else false }.sortedBy { it.characterStatus!!.isHelper }
 
     val helperList = helperListOrigin.ifEmpty { userAccount.characterList.slice(0..min(7, userAccount.characterList.size-1)) }
     val finalCharList = userAccount.characterList.filter { it !in helperList }

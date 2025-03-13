@@ -125,7 +125,7 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
 
                         if (characters != null) {
                             userAccount.characterList.clear()
-                            for (characterElement in characters.jsonArray) {
+                            characters.jsonArray.mapIndexed { index, characterElement ->
                                 val characterObj = characterElement.jsonObject
                                 val character =
                                     Character.getCharacterItemFromJSON(characterObj["id"]!!.jsonPrimitive.content)
@@ -140,6 +140,7 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                                     traceSkillLevel = charSkill.filter { it.jsonObject["type"]!!.jsonPrimitive.content == "BPSkill" }[0].jsonObject["level"]!!.jsonPrimitive.int,
                                     traceUltimateLevel = charSkill.filter { it.jsonObject["type"]!!.jsonPrimitive.content == "Ultra" }[0].jsonObject["level"]!!.jsonPrimitive.int,
                                     traceTalentLevel = charSkill.filter { it.jsonObject["type"]!!.jsonPrimitive.content == "Talent" }[0].jsonObject["level"]!!.jsonPrimitive.int,
+                                    isHelper = index + 1
                                 )
 
                                 //Lightcone
@@ -309,6 +310,35 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                 return@async userAccount
             }
 
+            job.await()
+            job.getCompleted()
+        }
+    }
+
+    @OptIn(ExperimentalCoroutinesApi::class)
+    fun getCharIdListByMihomo() : List<String> {
+        return runBlocking {
+            val job = async(Dispatchers.Default) {
+                val srInfoParsed = getSRInfoParsed()
+                try{
+                    if (srInfoParsed is JsonObject && !srInfoParsed.isEmpty() && !(srInfoParsed.jsonObject.containsKey("detail") && srInfoParsed.jsonObject["detail"] !== null)) {
+                        val characters = srInfoParsed.jsonObject["characters"]
+                        if (characters != null) {
+                            return@async characters.jsonArray.map { it.jsonObject["id"]!!.jsonPrimitive.content }
+                        }
+                    }
+                    return@async listOf<String>()
+                }catch (e : Exception){
+                    if(
+                        srInfoParsed is JsonObject &&
+                        !srInfoParsed.isEmpty() &&
+                        !(srInfoParsed.jsonObject.containsKey("detail"))
+                    ){
+                        errorLog("MihomoRequest", "getUserAccountByMiHomo()",e)
+                    }
+                    return@async listOf<String>()
+                }
+            }
             job.await()
             job.getCompleted()
         }
