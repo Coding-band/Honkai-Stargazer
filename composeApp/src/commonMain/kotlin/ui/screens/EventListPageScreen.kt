@@ -62,13 +62,19 @@ import ui.components.PomPomPopup
 import ui.components.defaultHeaderData
 import ui.components.pomPomPopupInstance
 import ui.navigation.EventContentRoute
+import ui.navigation.HoyolabLoginRoute
 import ui.navigation.Screen
 import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
+import ui.navigation.navigatorInstance
 import utils.app.Constants
 import utils.app.DefaultZIndex
+import utils.app.isLinuxPlatform
+import utils.app.isMacOSPlatform
+import utils.app.isWindowsPlatform
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
+import utils.app.showWarningToast
 
 @Composable
 fun EventListPageScreen(
@@ -138,7 +144,11 @@ fun EventItemCard(eventItem: EventItem, isDateOutside: MutableState<Boolean>, na
 
                 is PressInteraction.Release -> {
                     if (isLongClick.not()) {
-                        navigator.navigateLimited(EventContentRoute(eventItem.ann_id))
+                        if(isWindowsPlatform() || isMacOSPlatform() || isLinuxPlatform()){
+                            showWarningToast(message = "PC端暫不支援內嵌式網頁，請見諒\nApologize for the inconvenience that currently Webview is not fully support in PC")
+                        }else{
+                            navigator.navigateLimited(EventContentRoute(eventItem.ann_id))
+                        }
                     }
 
                 }

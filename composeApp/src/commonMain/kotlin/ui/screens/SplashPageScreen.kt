@@ -78,7 +78,7 @@ fun SplashPage(
 
     val hasRefreshed = remember { mutableStateOf(false) }
     val showUpdatePopup = remember { mutableStateOf(updateCheckInit()) } //The Real Update Popup
-    val isJCEFInited = Settings().getBoolean("isJCEFInited", true)
+    //val isJCEFInited = Settings().getBoolean("isJCEFInited", true)
     LaunchedEffect(Unit) {
         if (!showPopup.value) {
             CoroutineScope(Dispatchers.Default).launch {
@@ -104,9 +104,9 @@ fun SplashPage(
 
     LaunchedEffect(showPopup.value, hasRefreshed.value, showUpdatePopup.value, showJCEFPopup.value){
         if (!showPopup.value && !showUpdatePopup.value && screenInstance !is Screen.HomePage && screenInstance !is Screen.BlankPage && !showJCEFPopup.value) {
-            if(!isJCEFInited){
-                showJCEFPopup.value = true
-            }else{
+            //if(!isJCEFInited){
+            //     showJCEFPopup.value = true
+            //}else{
                 screenInstance = Screen.HomePage
 
                 CoroutineScope(Dispatchers.Default).launch {
@@ -118,7 +118,7 @@ fun SplashPage(
                         }
                     }
                 }
-            }
+            //}
         }
     }
 
@@ -260,7 +260,7 @@ fun SplashPage(
     }
 
     if(!showPopup.value && !showUpdatePopup.value){
-        //JCEF Popup
+        //KCEF Popup
         KCEFPopup(showJCEFPopup, hazeStateRoot)
     }
 }

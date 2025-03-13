@@ -592,19 +592,19 @@ fun isIosPlatform(): Boolean {
 }
 
 fun isAndroidPlatform(): Boolean {
-    return getDeviceInfo().deviceOSName == "Android"
+    return getDeviceInfo().deviceOSName.contains("Android")
 }
 
 fun isMacOSPlatform(): Boolean {
-    return getDeviceInfo().deviceOSName == "macOS"
+    return getDeviceInfo().deviceOSName.contains("macOS")
 }
 
 fun isWindowsPlatform(): Boolean {
-    return getDeviceInfo().deviceOSName == "Windows"
+    return getDeviceInfo().deviceOSName.contains("Windows")
 }
 
 fun isLinuxPlatform(): Boolean {
-    return getDeviceInfo().deviceOSName == "Linux"
+    return getDeviceInfo().deviceOSName.contains("Linux")
 }
 
 fun isProductionEnv() : Boolean {

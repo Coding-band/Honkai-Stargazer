@@ -107,6 +107,7 @@ import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
 import ui.navigation.popBackStackLimited
 import utils.annotation.DoItLater
+import utils.annotation.TranslationPls
 import utils.app.AppFont
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
@@ -196,8 +197,6 @@ fun initDataAfterLogin(
             pomPomPopupInstance.value = PomPomPopup(isDisplay = true)
 
         }
-
-        println("webviewState.cookieManager.getCookies(url) : ${if(webviewState != null && url != null) webviewState.cookieManager.getCookies(url) else listOf("WRT")}")
 
         UserAccount.pasteCookies(if(webviewState != null && url != null) webviewState.cookieManager.getCookies(url) else cookieList, serverSelected, snackbarHostState)
         StarbaseAPI().updateUserAccountInfo()
@@ -321,6 +320,7 @@ fun HoyolabServerSelectPopup(modifier: Modifier = Modifier, showPopup : MutableS
                                         showPopup.value = false
 
                                         //@DoItLater("Implement JCEF later")
+                                        @TranslationPls
                                         if(isWindowsPlatform() || isMacOSPlatform() || isLinuxPlatform()){
                                             showWarningToast(message = "PC端暫不支援Hoyoverse通行證登錄，請使用Cookies登錄\nCurrently PC does not support Hoyoverse Passport login yet, please use cookies to login instead.")
                                         }else{
