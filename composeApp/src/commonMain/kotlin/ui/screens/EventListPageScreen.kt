@@ -39,6 +39,9 @@ import files.Res
 import files.StatusDays
 import files.StatusHours
 import files.StatusMinutes
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.datetime.Clock
@@ -55,7 +58,9 @@ import ui.components.BackIcon
 import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
+import ui.components.PomPomPopup
 import ui.components.defaultHeaderData
+import ui.components.pomPomPopupInstance
 import ui.navigation.EventContentRoute
 import ui.navigation.Screen
 import ui.navigation.hazeStateRoot
@@ -72,7 +77,16 @@ fun EventListPageScreen(
     headerData: HeaderData = defaultHeaderData,
 ) {
     val isDateOutside = remember { mutableStateOf(Settings().getBoolean("isDateOutside",true)) }
-    val eventList = EventListInstance.filter { it.end_unix > Clock.System.now().toEpochMilliseconds() }.sortedBy { it.end_unix }
+    val eventList = remember { mutableStateOf(listOf<EventItem>()) }
+
+    //Update Once when Launched - 2O48 will be glad to see smooth
+    LaunchedEffect(Unit){
+        CoroutineScope(Dispatchers.Default).async {
+            pomPomPopupInstance.value = PomPomPopup(isDisplay = true)
+            eventList.value = EventListInstance.filter { it.end_unix > Clock.System.now().toEpochMilliseconds() }.sortedBy { it.end_unix }
+            pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
+        }.await()
+    }
 
     Box(modifier = modifier.fillMaxSize()){
         LazyColumn(modifier = Modifier
@@ -81,8 +95,8 @@ fun EventListPageScreen(
             item {
                 Spacer(Modifier.padding(top = PAGE_HEADER_HEIGHT).statusBarsPadding())
             }
-            items(eventList.size) { index ->
-                EventItemCard(eventList[index], isDateOutside, navigator)
+            items(eventList.value.size) { index ->
+                EventItemCard(eventList.value[index], isDateOutside, navigator)
             }
             item {
                 Spacer(Modifier.padding(top = 16.dp).navigationBarsPadding())

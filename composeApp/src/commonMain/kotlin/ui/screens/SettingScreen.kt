@@ -20,6 +20,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
@@ -70,6 +71,9 @@ import files.ic_selected_orange_circle
 import files.phorphos_caret_down_regular
 import files.phorphos_caret_right_regular
 import getDeviceInfo
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import okio.FileSystem
@@ -116,11 +120,22 @@ lateinit var showUpdatePopupInSetting : MutableState<Boolean>
 @Composable
 fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, headerData: HeaderData = defaultHeaderData
 ){
-    val wallpaper = Wallpaper.getPreferenceWallpaper()
 
     val urlHandler = LocalUriHandler.current
     showUpdatePopupInSetting = remember { mutableStateOf(false) }
     val canUpdatePopup = remember { mutableStateOf(true) } //Not for use
+    val wallpaperName = remember { mutableStateOf("----") }
+
+    LaunchedEffect(Settings().getString("backgroundImage", "221000")){
+        CoroutineScope(Dispatchers.Default).async {
+            val wallpaper = Wallpaper.getPreferenceWallpaper()
+            wallpaperName.value =
+                wallpaper.locale?.get(Language.TextLanguageInstance) ?:
+                wallpaper.locale?.get(Language.TextLanguage.EN) ?:
+                Character.getCharacterFromExtListJson(wallpaper.id)?.jsonObject?.get("localeName")?.jsonObject?.get(Language.TextLanguageInstance.folderName)?.jsonPrimitive?.content ?:
+                wallpaper.id
+        }.await()
+    }
 
     key(doRecompose.value){
         Box {
@@ -189,10 +204,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                         //更換桌布 Change Wallpaper
                         SettingOptionNavigateBar(
                             titleRes = Res.string.ChangeWallPaper,
-                            navigateDesc =
-                                wallpaper.locale?.get(Language.TextLanguageInstance) ?: wallpaper.locale?.get(Language.TextLanguage.EN) ?:
-                                Character.getCharacterFromExtListJson(wallpaper.id)?.jsonObject?.get("localeName")?.jsonObject?.get(Language.TextLanguageInstance.folderName)?.jsonPrimitive?.content ?:
-                                wallpaper.id,
+                            navigateDesc = wallpaperName.value,
                             navigateClick = { navigator.navigateLimited(BackgroundSettingRoute) }
                         )
 
@@ -328,7 +340,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                                 try {
                                     FileSystem.SYSTEM.deleteRecursively(FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("image_cache"))
                                 }catch (e: Exception){
-                                    showWarningToast(message = "緩存清理完成")
+                                    showWarningToast(message = "緩存清理失敗，請稍後再試")
                                     e.printStackTrace()
                                 }
                                 showSuccessToast(message = "緩存清理完成")

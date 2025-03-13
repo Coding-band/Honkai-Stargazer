@@ -258,7 +258,7 @@ fun CharacterInfoFullImgWithRare(
                 model = newImageRequest(
                     context = LocalPlatformContext.current,
                     data = imageURL.value,
-                    crossFade = false
+                    crossFade = true
                 ),
                 contentDescription = "Character Full Image",
                 contentScale = ContentScale.Fit,onError = { error ->
