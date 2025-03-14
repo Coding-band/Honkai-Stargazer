@@ -24,8 +24,13 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
+import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
+import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridItemSpan
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -34,6 +39,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
@@ -44,6 +52,8 @@ import files.GetCharAndUnLock
 import files.Res
 import files.SetWallPaper
 import files.phorphos_lock_regular
+import files.ui_icon_close
+import files.ui_icon_search
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
@@ -56,6 +66,7 @@ import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.UIButton
+import ui.components.UISearchBar
 import ui.components.defaultHeaderData
 import ui.navigation.hazeStateRoot
 import ui.navigation.popBackStackLimited
@@ -64,6 +75,7 @@ import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal16
 import utils.app.Language
 import utils.app.newImageRequest
+import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.toLocaleMap
 
@@ -75,23 +87,56 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: NavHostCon
     val context = LocalPlatformContext.current
     val currentWallpaper = Wallpaper.getPreferenceWallpaper()
     val wallpaperIndex = remember { mutableStateOf(kotlin.math.max(0, Wallpaper.wallpaperList.indexOf(currentWallpaper))) }
+    val isSearch = remember { mutableStateOf(false) } //Will be t/f when the search bar is clicked
+    val searchInput = remember { mutableStateOf("") }
+    val displayList = remember { mutableStateOf(Wallpaper.wallpaperList) }
+    val confirmButtonHeight = remember { mutableStateOf(46.dp) }
+    val density = LocalDensity.current.density
+
+    LaunchedEffect(isSearch.value){
+        displayList.value = ArrayList(
+            Wallpaper.wallpaperList.filter {
+                it.id.lowercase().contains(searchInput.value.lowercase()) ||
+                        it.fileName.lowercase().contains(searchInput.value.lowercase()) ||
+                        mappingLocaleMap(it.locale ?: mapOf(), searchInput) ||
+                        mappingLocaleMap(Character.getCharacterFromExtListJson(it.id)?.jsonObject?.get("localeName")?.jsonObject?.toLocaleMap() ?: mapOf(), searchInput) ?: false
+                //mappingLocaleMap((it.locale ?: mapOf()), searchInput)
+            }
+        )
+    }
 
     Box(modifier = Modifier.navigationBarsPadding()){
         //Waterfall-type Background Image List
-        LazyVerticalGrid(
-            columns = GridCells.Adaptive(160.dp),
+        LazyVerticalStaggeredGrid(
+            columns = StaggeredGridCells.Adaptive(160.dp),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp),
             modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).hazeSource(state = hazeStateRoot, zIndex = DefaultZIndex),
         ){
-            item(span = { GridItemSpan(maxCurrentLineSpan) }) {
+            item(span = StaggeredGridItemSpan.FullLine) {
                 Spacer(
                     modifier = Modifier
                         .statusBarsPadding()
                         .height(PAGE_HEADER_HEIGHT)
                 )
             }
-            items(Wallpaper.wallpaperList){ item ->
+
+            item(span = StaggeredGridItemSpan.FullLine) {
+                UISearchBar(
+                    inputString = searchInput,
+                    onClick = { isSearch.value = !isSearch.value },
+                    onCancel = { text, inputStr ->
+                        inputStr.value = ""
+                        text.value = TextFieldValue("")
+                        isSearch.value = !isSearch.value
+                    },
+                    searchIcon = Res.drawable.ui_icon_search,
+                    cancelIcon = Res.drawable.ui_icon_close,
+                    isFocus = false,
+                    modifier = Modifier.padding(top = 12.dp, bottom = 12.dp)
+                )
+            }
+            items(count = displayList.value.size){ index ->
+                val item = Wallpaper.wallpaperList.find { it.id == displayList.value[index].id } ?: return@items
                 val isMatchRequirememt = if(!item.requireOwnChar || UserAccount.INSTANCE.isUnlockSpecials() ) true else (item.requireOwnChar && !UserAccount.INSTANCE.characterList.none { it.officialId.toString() == item.id })
                 val aspectRation = rememberSaveable { mutableStateOf(720/1642f) }
                 Column(modifier.wrapContentSize()){
@@ -156,11 +201,15 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: NavHostCon
                         textAlign = TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
                     )
+                    Spacer(modifier = Modifier.height(10.dp))
                 }
             }
 
-            item {
-                Spacer(modifier = Modifier.navigationBarsPadding().size(64.dp))
+            item(span = StaggeredGridItemSpan.FullLine) {
+                Column {
+                    //println("confirmButtonHeight : ${confirmButtonHeight.value}")
+                    Spacer(modifier = Modifier.navigationBarsPadding().height(confirmButtonHeight.value + 16.dp))
+                }
             }
         }
 
@@ -171,7 +220,7 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: NavHostCon
             .align(Alignment.BottomCenter)
             .navigationBarsPadding()
         ){
-            UIButton(Modifier.weight(0.5f).wrapContentHeight(), text = removeStrQuote(Res.string.SetWallPaper), onClick = {
+            UIButton(Modifier.weight(0.5f).wrapContentHeight().onGloballyPositioned { confirmButtonHeight.value = pxToDp(it.size.height, density) }, text = removeStrQuote(Res.string.SetWallPaper), onClick = {
                 Wallpaper.setPreferenceWallpaper(Wallpaper.wallpaperList[wallpaperIndex.value].id)
                 Wallpaper.setPreferenceWallpaperLocaleName(
                     Wallpaper.wallpaperList[wallpaperIndex.value].locale ?:
@@ -185,4 +234,12 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: NavHostCon
 
         PageHeader(navigator = navigator, headerData = headerData, hazeState = hazeStateRoot, backIconId = BackIcon.BACK)
     }
+}
+
+private fun mappingLocaleMap(localeMap : Map<Language.TextLanguage, String>, searchInput: MutableState<String>): Boolean {
+    var isMatch = false
+    localeMap.mapValues { mapEntry ->
+        if(!isMatch) isMatch = mapEntry.value.lowercase().contains(searchInput.value.lowercase())
+    }
+    return isMatch
 }
