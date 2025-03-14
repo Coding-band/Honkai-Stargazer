@@ -76,6 +76,7 @@ import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.double
 import kotlinx.serialization.json.jsonArray
@@ -965,10 +966,26 @@ fun Boolean.toInt() = if (this) 1 else 0
  */
 fun Int.toBoolean() = this != 0
 
+fun JsonObject.toSubJsonElementMap(): Map<String, JsonElement> {
+    return this.mapValues { it.value }
+}
+
+fun JsonObject.toLocaleMap(): Map<Language.TextLanguage, String> {
+    val tmpMap = mutableMapOf<Language.TextLanguage, String>()
+    this.map {map ->
+        tmpMap[Language.TextLanguage.entries.firstOrNull{it.folderName == map.key} ?: Language.TextLanguage.EN] = map.value.jsonPrimitive.content
+    }
+    return tmpMap
+}
+
 /** 你在想甚麼呀？ */
 private fun CosImageOfVocchi(){
     println("No Way...?...ok?")
 }
+
+/*
+ * --------- Type Saver 各種通用類型的Saver ---------
+ */
 
 val JsonElementSaver: Saver<JsonElement, Any> = listSaver(
     save = { listOf(it.toString()) },

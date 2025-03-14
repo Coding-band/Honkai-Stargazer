@@ -38,9 +38,10 @@ fun main() = application {
         state = WindowState(width = 1280.dp, height = 720.dp)
     ) {
 
-        if(!Settings().hasKey("isJCEFInited")) {Settings().putBoolean("isJCEFInited", false)}
+        //if(!Settings().hasKey("isJCEFInited")) {Settings().putBoolean("isJCEFInited", false)}
         App(ContextFactory()) //Since Desktop does not have Context
 
+        /*
         LaunchedEffect(Unit){
             if(!Settings().getBoolean("isJCEFInited", false)) return@LaunchedEffect
             withContext(Dispatchers.IO) {
@@ -49,5 +50,7 @@ fun main() = application {
                 })
             }
         }
+
+         */
     }
 }

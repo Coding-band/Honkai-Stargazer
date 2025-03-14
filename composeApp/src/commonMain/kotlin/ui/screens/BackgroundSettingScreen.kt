@@ -39,7 +39,6 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
-import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import files.GetCharAndUnLock
 import files.Res
@@ -66,6 +65,7 @@ import utils.app.FontSizeNormal16
 import utils.app.Language
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
+import utils.app.toLocaleMap
 
 //All the background image can find in /commonMain/composeResources/files/images/bgs
 //U can use the function UtilTools().getAssetsWebpByFileName to get the image
@@ -173,6 +173,11 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: NavHostCon
         ){
             UIButton(Modifier.weight(0.5f).wrapContentHeight(), text = removeStrQuote(Res.string.SetWallPaper), onClick = {
                 Wallpaper.setPreferenceWallpaper(Wallpaper.wallpaperList[wallpaperIndex.value].id)
+                Wallpaper.setPreferenceWallpaperLocaleName(
+                    Wallpaper.wallpaperList[wallpaperIndex.value].locale ?:
+                    Character.getCharacterFromExtListJson(Wallpaper.wallpaperList[wallpaperIndex.value].id)?.jsonObject?.get("localeName")?.jsonObject?.toLocaleMap() ?:
+                    mapOf()
+                )
                 bgModified.value = true
                 navigator.popBackStackLimited()
             })

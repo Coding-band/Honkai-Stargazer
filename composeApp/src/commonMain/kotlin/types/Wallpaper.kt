@@ -2,6 +2,7 @@ package types
 
 import com.russhwolf.settings.Settings
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonNull
@@ -64,11 +65,18 @@ data class Wallpaper(
                 )
             }
             wallpaperList.clear()
-            wallpaperList.addAll(tmpList)
+            wallpaperList.addAll(tmpList.reversed())
         }
 
         fun getPreferenceWallpaper(): Wallpaper {
             return wallpaperList.find { it.id == Settings().getString("backgroundImage", "221000") } ?: wallpaperList.firstOrNull() ?: DEFAULT_WALLPAPER
+        }
+
+        fun getPreferenceWallpaperLocaleName(textLanguage: Language.TextLanguage = Language.TextLanguageInstance): String {
+            return Json.parseToJsonElement(Settings().getString("backgroundLangSet", Json.encodeToString(DEFAULT_WALLPAPER))).jsonObject[textLanguage.folderName]?.jsonPrimitive?.content ?: "?"
+        }
+        fun setPreferenceWallpaperLocaleName(nameMap: Map<Language.TextLanguage, String>) {
+            Settings().putString("backgroundLangSet", Json.encodeToString(nameMap))
         }
 
         fun setPreferenceWallpaper(id: String) {

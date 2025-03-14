@@ -113,6 +113,7 @@ import utils.starbase.StarbaseAPI
 import kotlin.math.max
 
 val doRecompose = mutableStateOf(false)
+val doRecomposeText = mutableStateOf(false)
 val doInit = mutableStateOf(false)
 val doRefresh = mutableStateOf(false)
 lateinit var showUpdatePopupInSetting : MutableState<Boolean>
@@ -126,18 +127,12 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
     val canUpdatePopup = remember { mutableStateOf(true) } //Not for use
     val wallpaperName = remember { mutableStateOf("----") }
 
-    LaunchedEffect(Settings().getString("backgroundImage", "221000")){
-        CoroutineScope(Dispatchers.Default).async {
-            val wallpaper = Wallpaper.getPreferenceWallpaper()
-            wallpaperName.value =
-                wallpaper.locale?.get(Language.TextLanguageInstance) ?:
-                wallpaper.locale?.get(Language.TextLanguage.EN) ?:
-                Character.getCharacterFromExtListJson(wallpaper.id)?.jsonObject?.get("localeName")?.jsonObject?.get(Language.TextLanguageInstance.folderName)?.jsonPrimitive?.content ?:
-                wallpaper.id
-        }.await()
+    LaunchedEffect(Settings().getString("backgroundImage", "221000"), Language.TextLanguageInstance, doRecomposeText.value){
+        wallpaperName.value = Wallpaper.getPreferenceWallpaperLocaleName()
     }
 
     key(doRecompose.value){
+
         Box {
 
             LazyColumn (
@@ -185,7 +180,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
                             titleRes = Res.string.DocumentLanguage,
                             optionSavedChoice = Language.TextLanguageInstance.localeName,
                             optionList = Language().getTextLangLocaleNameList(),
-                            optionAction = { index: Int -> Language().setTextLanguage(Language().getTextLangEnumList()[index]) ; Language.TextLanguageInstance = Language().getTextLangEnumList()[index] }
+                            optionAction = { index: Int -> Language().setTextLanguage(Language().getTextLangEnumList()[index]) ; Language.TextLanguageInstance = Language().getTextLangEnumList()[index] ; doRecomposeText.value = !doRecomposeText.value}
                         )
 
                         //App語言 App Language
