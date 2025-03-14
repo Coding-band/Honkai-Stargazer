@@ -461,7 +461,7 @@ fun downloadFromURLProgress(url: String, downloadProgress: MutableState<Long>, i
                 }.execute()
 
                 //Check whether it is having any errors
-                if (!arrayListOf(200, 201).contains(response.status.value)) {
+                if (!arrayListOf(200,201,408).contains(response.status.value)) {
                     errorLog(
                         "UtilTools.kt",
                         "readFromOnlineURL(url = ${url})",
@@ -788,7 +788,7 @@ fun readFromOnlineURL(url: String, defaultData: String = "{}"): String {
                 val response: HttpResponse = client.get(url)
 
                 //Check whether it is having any errors
-                if (!arrayListOf(200, 201).contains(response.status.value)) {
+                if (!arrayListOf(200,201,408).contains(response.status.value)) {
                     errorLog(
                         "UtilTools.kt",
                         "readFromOnlineURL(url = ${url})",

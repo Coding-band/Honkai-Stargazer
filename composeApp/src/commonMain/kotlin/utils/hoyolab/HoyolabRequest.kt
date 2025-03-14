@@ -82,7 +82,7 @@ class HoyolabRequest(
                 }
 
                 //Check whether it is having any errors
-                if (!arrayListOf(200,201).contains(response.status.value)){
+                if (!arrayListOf(200,201,408).contains(response.status.value)){
                     errorLog("HoyolabRequest", "send(url = ${url}, body = ${body})",Exception("HTTP Error Code ${response.status.value} : ${response.status.description}"))
                     return@runBlocking HoyolabResponse(
                         -9800,
@@ -104,7 +104,7 @@ class HoyolabRequest(
             errorLog("HoyolabRequest", "send(url = ${url}, body = ${body})",e)
         }
 
-        return HoyolabResponse(-9999,"Timed Out", Json.parseToJsonElement("{}"))
+        return HoyolabResponse(-9999,"Request Time Expired", Json.parseToJsonElement("{}"))
     }
 
     fun getPlainTxt(
@@ -129,7 +129,7 @@ class HoyolabRequest(
                     val response: HttpResponse = client.get(url)
 
                     //Check whether it is having any errors
-                    if (!arrayListOf(200, 201).contains(response.status.value)) {
+                    if (!arrayListOf(200, 201, 408).contains(response.status.value)) {
                         errorLog(
                             "HoyolabRequest",
                             "send(url = ${url}",
@@ -155,7 +155,7 @@ class HoyolabRequest(
             // All response
             errorLog("HoyolabRequest", "getPlainTxt(url = ${url})",e)
         }
-        return HoyolabResponse(-9999,"Timed Out", Json.parseToJsonElement("{}"))
+        return HoyolabResponse(-9999,"Undefined Error", Json.parseToJsonElement("{}"))
 
     }
 }
