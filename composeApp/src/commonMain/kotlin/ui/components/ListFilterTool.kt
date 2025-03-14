@@ -439,9 +439,9 @@ fun <T> applySearch(
     return ArrayList(
         originList.filter {
             when(it){
-                is Character -> (it.displayName?.contains(searchKey.value) ?: false) || (it.registName?.contains(searchKey.value) ?: false)
-                is Lightcone -> (it.displayName?.contains(searchKey.value) ?: false) || (it.registName?.contains(searchKey.value) ?: false)
-                is Relic -> (it.displayName?.contains(searchKey.value) ?: false) || (it.registName?.contains(searchKey.value) ?: false)
+                is Character -> (it.displayName?.lowercase()?.contains(searchKey.value.lowercase()) ?: false) || (it.registName?.lowercase()?.contains(searchKey.value.lowercase()) ?: false)
+                is Lightcone -> (it.displayName?.lowercase()?.contains(searchKey.value.lowercase()) ?: false) || (it.registName?.lowercase()?.contains(searchKey.value.lowercase()) ?: false)
+                is Relic -> (it.displayName?.lowercase()?.contains(searchKey.value.lowercase()) ?: false) || (it.registName?.lowercase()?.contains(searchKey.value.lowercase()) ?: false)
                 else -> false
             }
         }
