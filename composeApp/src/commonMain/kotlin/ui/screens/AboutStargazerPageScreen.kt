@@ -5,26 +5,20 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.widthIn
-import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
@@ -33,43 +27,30 @@ import androidx.compose.material.Chip
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
-import androidx.compose.ui.graphics.Shadow
-import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
-import com.cheonjaeung.compose.grid.SimpleGridCells
-import com.cheonjaeung.compose.grid.VerticalGrid
-import com.multiplatform.webview.web.WebView
-import com.multiplatform.webview.web.rememberWebViewStateWithHTMLData
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.AboutTheApp
 import files.Res
 import files._2O48
-import files.codingband
 import files.phorphos_discord_logo_regular
 import files.phorphos_film_slate_fill
 import files.phorphos_github_logo_regular
 import files.vocaloid2048
-import files.vocchi
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
 import ui.components.BackIcon
-import ui.components.DropShadow
 import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
-import ui.components.defaultHeaderData
-import ui.navigation.hazeStateRoot
 import ui.navigation.urlHandler
 import utils.app.Constants
 import utils.app.DefaultZIndex
@@ -77,28 +58,25 @@ import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormal20
-import utils.app.FontSizeNormalSmall
 import utils.app.GradReachYellow
-import utils.app.LongStringXML
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
 import utils.starbase.StarbaseAPI
 
 @Composable
 fun AboutStargazerPageScreen(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData
+    hazeState: HazeState
 ) {
 
     val listState = rememberLazyListState()
 
-    Box(modifier = modifier.fillMaxSize()){
+    Box(modifier = Modifier.fillMaxSize()){
         LazyColumn(
             horizontalAlignment = Alignment.CenterHorizontally,
             state = listState,
             modifier = Modifier
-                .hazeSource(hazeStateRoot, zIndex = DefaultZIndex)
+                .hazeSource(hazeState, zIndex = DefaultZIndex)
                 //.widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH)
                 .padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING),
             verticalArrangement = Arrangement.spacedBy(16.dp)
@@ -113,7 +91,7 @@ fun AboutStargazerPageScreen(
         PageHeader(
             navigator = navigator,
             headerData = HeaderData(title = removeStrQuote(Res.string.AboutTheApp), titleIconId = Res.drawable.phorphos_film_slate_fill),
-            hazeState = hazeStateRoot,
+            hazeState = hazeState,
             backIconId = BackIcon.BACK,
         )
     }

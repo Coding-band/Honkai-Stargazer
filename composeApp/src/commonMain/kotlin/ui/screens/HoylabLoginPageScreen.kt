@@ -125,9 +125,8 @@ import utils.starbase.StarbaseAPI
 @DoItLater("Implement the HoyolabLoginPageScreen Webview later")
 @Composable
 fun HoyolabLoginPageScreen(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData,
+    hazeState: HazeState,
     backStackEntry: NavBackStackEntry,
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ){
@@ -135,7 +134,6 @@ fun HoyolabLoginPageScreen(
     val serverId = route.serverId
     val serverSelected = HoyolabConst().getServerById(serverId)
     val url = HoyolabConst().getLoginURL(serverSelected)
-    val hazeState = remember { HazeState() }
     val coroutineScope = rememberCoroutineScope()
     val webviewState = rememberWebViewState(url = url)
 
@@ -154,7 +152,7 @@ fun HoyolabLoginPageScreen(
         onDispose {  }
     }
 
-    Box(modifier = modifier.fillMaxSize()) {
+    Box(modifier = Modifier.fillMaxSize()) {
         Column(modifier = Modifier.fillMaxSize()) {
             WebView(webviewState, modifier = Modifier.statusBarsPadding().padding(top = PAGE_HEADER_HEIGHT).fillMaxSize().weight(1f))
             Box(modifier = Modifier.background(Color(0xCCF3F9FF)).padding(16.dp).navigationBarsPadding()) {
@@ -169,7 +167,7 @@ fun HoyolabLoginPageScreen(
 
         PageHeader(
             navigator = navigator,
-            headerData = headerData,
+            headerData = Screen.HoyolabLoginPageScreen.headerData,
             hazeState = hazeState,
             backIconId = BackIcon.CANCEL,
             onBack = {

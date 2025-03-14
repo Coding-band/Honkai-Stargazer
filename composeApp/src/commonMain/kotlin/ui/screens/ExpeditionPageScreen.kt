@@ -34,7 +34,6 @@ import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.IsDone
 import files.NoDataYet
@@ -46,17 +45,14 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import types.UserAccount
-import types.UserAccount.Companion.INSTANCE
 import types.UserExpedition
 import types.UserNoteState
 import ui.components.BackIcon
-import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.RefreshBox
 import ui.components.ThemedProgressBar
-import ui.components.defaultHeaderData
-import ui.navigation.hazeStateRoot
+import ui.navigation.Screen
 import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
 import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal14
@@ -69,9 +65,8 @@ import utils.app.removeStrQuote
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun ExpeditionPageScreen(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData
+    hazeState: HazeState
 ) {
     val isRefreshing = remember { mutableStateOf(false) }
     /*
@@ -100,7 +95,7 @@ fun ExpeditionPageScreen(
                     .padding(start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)
                     .statusBarsPadding()
                     .navigationBarsPadding()
-                    .hazeSource(hazeStateRoot, zIndex = DefaultZIndex)
+                    .hazeSource(hazeState, zIndex = DefaultZIndex)
             ) {
                 item { Spacer(modifier = Modifier.height(PAGE_HEADER_HEIGHT+12.dp)) }
                 UserNoteState.value.expedition.forEachIndexed { index, expendition ->
@@ -118,8 +113,8 @@ fun ExpeditionPageScreen(
 
         PageHeader(
             navigator = navigator,
-            headerData = headerData,
-            hazeState = hazeStateRoot,
+            headerData = Screen.ExpeditionPageScreen.headerData,
+            hazeState = hazeState,
             backIconId = BackIcon.BACK,
             forwardIconId = Res.drawable.phorphos_arrows_clockwise_fill,
             onForward = {

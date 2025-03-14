@@ -124,25 +124,18 @@ import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.showWarningToast
 
-private lateinit var localCoroutineScope: CoroutineScope;
-private lateinit var localSnackbarHostState: SnackbarHostState;
-
-val relicInfoNavItemList = arrayOf<InfoNavigateItem>(
+val relicInfoNavItemList = arrayOf(
     InfoNavigateItem(Res.drawable.phorphos_dice_two_regular, 1, Res.string.RelicStatus2Pcs),
     InfoNavigateItem(Res.drawable.phorphos_dice_four_regular, 2, Res.string.RelicStatus4Pcs),
     InfoNavigateItem(Res.drawable.phorphos_chats_circle_regular, 3, Res.string.RelicDetail),
 )
 
-private const val scrollPxTrigInvisible = 250f
-
 @OptIn(FlowPreview::class)
 @Composable
 fun RelicInfoPage(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData,
+    hazeState: HazeState,
     backStackEntry: NavBackStackEntry,
-    snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ) {
 
     var density = LocalDensity.current.density
@@ -151,9 +144,6 @@ fun RelicInfoPage(
     val relicFileName = route.fileName
 
     val relicInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Relic.getRelicDataFromJSON(relicFileName, Language.TextLanguageInstance) as JsonElement) }
-
-    localCoroutineScope = rememberCoroutineScope();
-    localSnackbarHostState = snackbarHostState!!;
 
     if (relicInfoJson !is JsonObject || relicInfoJson.jsonObject.isEmpty()) {
         showWarningToast(message = removeStrQuote(Res.string.NoDataYet))

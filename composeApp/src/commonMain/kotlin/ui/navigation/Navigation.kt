@@ -190,10 +190,8 @@ fun RootContent() {
         modifier = Modifier.onSizeChanged { isRotate.value = !isRotate.value },
         snackbarHost = { SnackbarHost(snackbarInstance, modifier = Modifier.navigationBarsPadding()) }
     ) {
-
-
         if(isPadMode.value){
-            MakeBackground(screen = screenInstance, forceBlur = isPadMode.value)
+            MakeBackground(screen = screenInstance, forceBlur = isPadMode.value, hazeState = hazeStateRoot)
         }
 
         Row {
@@ -203,17 +201,14 @@ fun RootContent() {
                     .let { if (getScreenSizeInfo().wDP < HOME_WIDTH * 1.5f) it.weight(1f) else it }
                     .fillMaxHeight(),
                 ) {
-                    if(globalPadHomePageBg.value){
-                        key(bgModified.value){
-                            if(bgModified.value){
-                                MakeBackground(screen = Screen.HomePage, forceBlur = false)
-                            }
-                            MakeBackground(screen = Screen.HomePage, forceBlur = false)
+                    key(bgModified.value){
+                        if(globalPadHomePageBg.value){
+                            MakeBackground(screen = Screen.HomePage, forceBlur = false, hazeState = hazeStateRoot)
                         }
                     }
                     HomePage(
                         navigator = navigatorInstance,
-                        headerData = Screen.HomePage.headerData
+                        hazeState = hazeStateRoot
                     )
                 }
             }
@@ -259,7 +254,6 @@ fun refreshInit(){
 @Composable
 fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>){
     //ref: https://github.com/JetBrains/compose-multiplatform/issues/4528#issuecomment-2015222282
-    val animationSpec = tween<IntOffset>(easing = BezierEasing2O48)
     NavHost(
         navController = navigator,
         startDestination = SplashRoute,
@@ -281,16 +275,17 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
     }
     composable<HomeRoute>{
         screenInstance = Screen.HomePage
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             if(!isPadMode.value) {
                 HomePage(
                     navigator = navigator,
-                    headerData = Screen.HomePage.headerData
+                    hazeState = hazeState
                 )
             }else{
                 BlankPage(
                     navigator = navigator,
-                    headerData = Screen.BlankPage.headerData
+                    hazeState = hazeState
+
                 )
             }
         }
@@ -298,49 +293,49 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
 
     composable<CharacterListRoute> {
         screenInstance = Screen.CharacterListPage
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             CharacterListPage(
                 navigator = navigator,
-                headerData = Screen.CharacterListPage.headerData
+                hazeState = hazeState
             )
         }
     }
     composable<LightconeListRoute> {
         screenInstance = Screen.LightconeListPage
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             LightconeListPage(
                 navigator = navigator,
-                headerData = Screen.LightconeListPage.headerData
+                hazeState = hazeState
             )
         }
     }
     composable<RelicListRoute> {
         screenInstance = Screen.RelicListPage
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             RelicListPage(
                 navigator = navigator,
-                headerData = Screen.RelicListPage.headerData
+                hazeState = hazeState
             )
         }
     }
 
     composable<CharacterInfoRoute> { backStackEntry ->
         screenInstance = Screen.CharacterInfoPage
-        withBGScreen(isPadMode) {
+        withBGScreen(isPadMode) { hazeState ->
             CharacterInfoPage(
                 navigator = navigator,
-                headerData = Screen.CharacterInfoPage.headerData,
-                backStackEntry = backStackEntry
+                hazeState = hazeState,
+                backStackEntry = backStackEntry,
             )
         }
     }
 
     composable<LightconeInfoRoute> { backStackEntry ->
         screenInstance = Screen.LightconeInfoPage
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             LightconeInfoPage(
                 navigator = navigator,
-                headerData = Screen.LightconeInfoPage.headerData,
+                hazeState = hazeState,
                 backStackEntry = backStackEntry
             )
         }
@@ -349,10 +344,10 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
     //?fileName={fileName}
     composable<RelicInfoRoute> { backStackEntry ->
         screenInstance = Screen.RelicInfoPage
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             RelicInfoPage(
                 navigator = navigator,
-                headerData = Screen.RelicInfoPage.headerData,
+                hazeState = hazeState,
                 backStackEntry = backStackEntry,
             )
         }
@@ -360,20 +355,20 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
 
     composable<SettingRoute> {
         screenInstance = Screen.SettingScreen
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             SettingScreen(
                 navigator = navigator,
-                headerData = Screen.SettingScreen.headerData
+                hazeState = hazeState
             )
         }
     }
 
     composable<BackgroundSettingRoute> {
         screenInstance = Screen.BackgroundSettingScreen
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             BackgroundSettingScreen(
                 navigator = navigator,
-                headerData = Screen.BackgroundSettingScreen.headerData
+                hazeState = hazeState
             )
         }
     }
@@ -381,10 +376,10 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
     //?serverId={serverId}
     composable<HoyolabLoginRoute> { backStackEntry ->
         screenInstance = Screen.HoyolabLoginPageScreen
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             HoyolabLoginPageScreen(
                 navigator = navigator,
-                headerData = Screen.HoyolabLoginPageScreen.headerData,
+                hazeState = hazeState,
                 backStackEntry = backStackEntry,
             )
         }
@@ -392,10 +387,10 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
 
     composable<EventListRoute> {
         screenInstance = Screen.EventListPageScreen
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             EventListPageScreen(
                 navigator = navigator,
-                headerData = Screen.EventListPageScreen.headerData
+                hazeState = hazeState
             )
         }
     }
@@ -403,10 +398,10 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
     //?eventId={eventId}
     composable<EventContentRoute> { backStackEntry ->
         screenInstance = Screen.EventContentPageScreen
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             EventContentPageScreen(
                 navigator = navigator,
-                headerData = Screen.EventContentPageScreen.headerData,
+                hazeState = hazeState,
                 backStackEntry = backStackEntry,
             )
         }
@@ -422,10 +417,10 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
     //?uid={uid}
     composable<UserInfoRoute> { backStackEntry ->
         screenInstance = Screen.UserInfoPageScreen
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             UserInfoPageScreen(
                 navigator = navigator,
-                headerData = Screen.UserInfoPageScreen.headerData,
+                hazeState = hazeState,
                 backStackEntry = backStackEntry,
             )
         }
@@ -435,10 +430,10 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
     //?uid={uid}&charId={charId}
     composable<UserCharacterRoute> { backStackEntry ->
         screenInstance = Screen.UserCharacterPageScreen
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             UserCharacterPageScreen(
                 navigator = navigator,
-                headerData = Screen.UserCharacterPageScreen.headerData,
+                hazeState = hazeState,
                 backStackEntry = backStackEntry,
             )
         }
@@ -446,20 +441,20 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
     }
     composable<UIDSearchRoute> {
         screenInstance = Screen.UIDSearchPageScreen
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             UIDSearchPageScreen(
                 navigator = navigator,
-                headerData = Screen.UIDSearchPageScreen.headerData
+                hazeState = hazeState
             )
         }
 
     }
     composable<MemoryOfChaosMissionRoute> {
         screenInstance = Screen.MemoryOfChaosMissionPageScreen
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             MemoryOfChaosMissionPageScreen(
                 navigator = navigator,
-                headerData = Screen.MemoryOfChaosMissionPageScreen.headerData
+                hazeState = hazeState
             )
         }
 
@@ -467,10 +462,10 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
     //?uid={uid}
     composable<BattleChronicleRoute> { backStackEntry ->
         screenInstance = Screen.BattleChroniclePageScreen
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             BattleChroniclePageScreen(
                 navigator = navigator,
-                headerData = Screen.BattleChroniclePageScreen.headerData,
+                hazeState = hazeState,
                 backStackEntry = backStackEntry,
             )
         }
@@ -478,50 +473,50 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
     }
     composable<PureFictionMissionRoute> {
         screenInstance = Screen.PureFictionMissionPageScreen
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             PureFictionMissionPageScreen(
                 navigator = navigator,
-                headerData = Screen.PureFictionMissionPageScreen.headerData
+                hazeState = hazeState
             )
         }
 
     }
     composable<AboutStargazerRoute> {
         screenInstance = Screen.AboutStargazerPageScreen
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             AboutStargazerPageScreen(
                 navigator = navigator,
-                headerData = Screen.AboutStargazerPageScreen.headerData
+                hazeState = hazeState
             )
         }
 
     }
     composable<ExpeditionRoute> {
         screenInstance = Screen.ExpeditionPageScreen
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             ExpeditionPageScreen(
                 navigator = navigator,
-                headerData = Screen.ExpeditionPageScreen.headerData
+                hazeState = hazeState
             )
         }
 
     }
     composable<ProficientLeaderboardRoute> {
         screenInstance = Screen.ProficientLeaderboardPageScreen
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             ProficientLeaderboardPageScreen(
                 navigator = navigator,
-                headerData = Screen.ProficientLeaderboardPageScreen.headerData
+                hazeState = hazeState
             )
         }
 
     }
     composable<ActionOrderListRoute> {
         screenInstance = Screen.ActionOrderListPageScreen
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             ActionOrderListPageScreen(
                 navigator = navigator,
-                headerData = Screen.ActionOrderListPageScreen.headerData
+                hazeState = hazeState
             )
         }
 
@@ -530,10 +525,10 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
     //?index={index}
     composable<ActionOrderSimulatorRoute> { backStackEntry ->
         screenInstance = Screen.ActionOrderSimulatorPageScreen
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             ActionOrderSimulatorPageScreen(
                 navigator = navigator,
-                headerData = Screen.ActionOrderSimulatorPageScreen.headerData,
+                hazeState = hazeState,
                 backStackEntry = backStackEntry,
             )
         }
@@ -542,10 +537,10 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
 
     composable<IIRCHomePageRoute> {
         screenInstance = Screen.IIRCHomePageScreen
-        withBGScreen(isPadMode){
+        withBGScreen(isPadMode){ hazeState ->
             IIRCHomePageScreen(
                 navigator = navigator,
-                headerData = Screen.IIRCHomePageScreen.headerData,
+                hazeState = hazeState
             )
         }
 
@@ -578,20 +573,21 @@ fun NavHostController.popBackStackLimited() {
 }
 
 @Composable
-fun withBGScreen(isPadMode: MutableState<Boolean>, content: @Composable () -> Unit){
+fun withBGScreen(isPadMode: MutableState<Boolean>, content: @Composable (HazeState) -> Unit){
     val rememberedScreenInstance = remember { mutableStateOf(screenInstance) }
+    val hazeStateLocal = if(isPadMode.value) hazeStateRoot else remember { HazeState() }
 
     Box(modifier = Modifier.fillMaxSize()) {
         if(!isPadMode.value){
-            MakeBackground(screen = rememberedScreenInstance.value)
+            MakeBackground(screen = rememberedScreenInstance.value, hazeState = hazeStateLocal)
         }
         Box(modifier = Modifier.imePadding()) {
-            content()
+            content(hazeStateLocal)
         }
 
         //Overlay - For Error Message or Loading Popup, only show in page when is Pad Mode
         if(isPadMode.value){
-            PomPomPopupUI(hazeState = hazeStateRoot)
+            PomPomPopupUI(hazeState = hazeStateLocal)
         }
 
         /*
@@ -610,9 +606,8 @@ fun withBGScreen(isPadMode: MutableState<Boolean>, content: @Composable () -> Un
 
 @Composable
 fun BlankPage(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData
+    hazeState: HazeState,
 ){
     Box(modifier = Modifier.fillMaxHeight().fillMaxHeight()){
 

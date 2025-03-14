@@ -136,10 +136,8 @@ fun refreshMOCList(){
 @Composable
 @Preview
 fun MemoryOfChaosMissionPageScreen(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData,
-    snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
+    hazeState: HazeState
 ) {
     val mocChoiceIndex = remember { mutableStateOf(0) }
     val isDialogVisible = remember { mutableStateOf(false) }
@@ -173,6 +171,7 @@ fun MemoryOfChaosMissionPageScreen(
             onForward = { navigator.navigateLimited(BattleChronicleRoute(UserAccount.INSTANCE.uid)) },
             forwardIconId = Res.drawable.ic_person_btn
         ){
+            val headerData = Screen.MemoryOfChaosMissionPageScreen.headerData
             TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
         }
 

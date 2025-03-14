@@ -23,7 +23,6 @@ import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.Res
 import files.bg_default
@@ -37,7 +36,6 @@ import utils.app.BackgroundZIndex
 import utils.app.Black
 import utils.app.BlackAlpha20
 import utils.app.BlackAlpha80
-import utils.app.DefaultZIndex
 import utils.app.Stargazer3Theme
 import utils.app.Transparent
 import utils.app.getAssetsURLByFileName
@@ -64,7 +62,11 @@ val globalPadHomePageBg = mutableStateOf(Settings().getBoolean("padModeHomePageB
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
-fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boolean? = null) {
+fun MakeBackground(
+    screen: Screen,
+    forceBlur: Boolean? = null,
+    hazeState: HazeState = hazeStateRoot
+) {
     /*
     if(!::backgroundScreenHazeState.isInitialized){
         backgroundScreenHazeState = remember { HazeState() }
@@ -104,7 +106,7 @@ fun MakeBackground(modifier: Modifier = Modifier, screen: Screen, forceBlur: Boo
     if(forceBlur == false){ isBlur = false; }
 
     Box(
-        Modifier.hazeSource(hazeStateRoot, zIndex = BackgroundZIndex)
+        Modifier.hazeSource(hazeState, zIndex = BackgroundZIndex)
     ){
         AsyncImage(
             model = newImageRequest(

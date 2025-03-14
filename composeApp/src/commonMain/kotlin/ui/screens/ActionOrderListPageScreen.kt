@@ -58,7 +58,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.ActionOrderAddItem
 import files.ActionOrderImportedCharData
@@ -84,15 +83,12 @@ import types.HsrProperties
 import types.UserAccount
 import ui.components.BackIcon
 import ui.components.CharacterCard
-import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.UIButton
 import ui.components.UIButtonSize
-import ui.components.defaultHeaderData
 import ui.navigation.ActionOrderSimulatorRoute
 import ui.navigation.Screen
-import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import utils.annotation.DoItLater
 import utils.app.Constants
@@ -162,9 +158,8 @@ fun initActionOrderTeamList(){
 @DoItLater("Allow user to Export and Import TeamList")
 @Composable
 fun ActionOrderListPageScreen(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData
+    hazeState: HazeState
 ) {
     val isInit = remember { mutableStateOf(false) }
     val isPopupOpen = remember { mutableStateOf(false) }
@@ -183,10 +178,10 @@ fun ActionOrderListPageScreen(
         }
     }
 
-    Box(modifier = modifier.fillMaxSize()){
+    Box(modifier = Modifier.fillMaxSize()){
         LazyColumn(modifier = Modifier
             .padding(start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)
-            .hazeSource(state = hazeStateRoot, zIndex = DefaultZIndex)
+            .hazeSource(state = hazeState, zIndex = DefaultZIndex)
             //.haze(state = hazeState)
         ) {
             item {
@@ -209,8 +204,8 @@ fun ActionOrderListPageScreen(
 
         PageHeader(
             navigator = navigator,
-            headerData = headerData,
-            hazeState = hazeStateRoot,
+            headerData = Screen.ActionOrderListPageScreen.headerData,
+            hazeState = hazeState,
             backIconId = BackIcon.CANCEL,
             forwardIconId = Res.drawable.phorphos_check_regular,
             onForward = {

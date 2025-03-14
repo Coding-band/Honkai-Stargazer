@@ -25,7 +25,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.DropdownMenuItem
-import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -46,7 +45,6 @@ import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
 import androidx.navigation.toRoute
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.AbyssListSortAscend
 import files.AbyssListSortDescend
@@ -66,12 +64,9 @@ import types.UserAbyssRecord
 import types.UserAccount
 import ui.components.BattleChronicleCard
 import ui.components.DropdownMenuNoPadding
-import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeaderAlpha
-import ui.components.defaultHeaderData
 import ui.navigation.BattleChronicleRoute
-import ui.navigation.hazeStateRoot
 import utils.app.Constants
 import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal14
@@ -82,10 +77,8 @@ import utils.app.removeStrQuote
 
 @Composable
 fun BattleChroniclePageScreen(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData,
-    snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
+    hazeState: HazeState,
     backStackEntry: NavBackStackEntry,
 ) {
     val route = backStackEntry.toRoute<BattleChronicleRoute>()
@@ -160,7 +153,7 @@ fun BattleChroniclePageScreen(
             modifier = Modifier.padding(
                 start = Constants.SCREEN_SAVE_PADDING,
                 end = Constants.SCREEN_SAVE_PADDING
-            ).hazeSource(hazeStateRoot, zIndex = DefaultZIndex)
+            ).hazeSource(hazeState, zIndex = DefaultZIndex)
         ) {
             item { Spacer(
                 modifier = Modifier
@@ -244,7 +237,7 @@ fun BattleChroniclePageScreen(
                     Spacer(Modifier.height(8.dp))
                 }
                 BattleChronicleCard(
-                    hazeState = hazeStateRoot,
+                    hazeState = hazeState,
                     data = mocData,
                     type = choiceStrList[choiceChronicleIndex.value].second,
                     title =
@@ -296,7 +289,7 @@ fun BattleChroniclePageScreen(
                     isAsc.value = !isAsc.value
                 },
                 forwardIconId = Res.drawable.ui_icon_exchange,
-                hazeState = hazeStateRoot,
+                hazeState = hazeState,
 
                 ) {
                 Column(Modifier.fillMaxSize()) {

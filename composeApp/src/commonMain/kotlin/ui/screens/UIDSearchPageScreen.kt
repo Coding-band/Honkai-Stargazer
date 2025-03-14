@@ -33,6 +33,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
+import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import files.PlayerLevel
 import files.Res
@@ -50,16 +51,13 @@ import types.UserAccount
 import types.UserAccount.Companion.UIDSEARCH
 import types.UserAccountLite
 import ui.components.BackIcon
-import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.PomPomPopup
 import ui.components.UISearchBar
-import ui.components.defaultHeaderData
 import ui.components.pomPomPopupInstance
 import ui.navigation.Screen
 import ui.navigation.UserInfoRoute
-import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import utils.app.Constants
 import utils.app.FontSizeNormal12
@@ -76,9 +74,8 @@ import utils.starbase.StarbaseAPI
 
 @Composable
 fun UIDSearchPageScreen(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData,
+    hazeState: HazeState
 ){
     val listState = rememberLazyListState()
     val searchWords = remember { mutableStateOf("") }
@@ -96,7 +93,7 @@ fun UIDSearchPageScreen(
         val wrongFormatStr = removeStrQuote(Res.string.UIDFormatError)
         val isQuerying = remember { mutableStateOf(false) }
         Column(
-            modifier = Modifier.fillMaxSize().hazeSource(hazeStateRoot).padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
+            modifier = Modifier.fillMaxSize().hazeSource(hazeState).padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
         ) {
             Spacer(Modifier.padding(top = PAGE_HEADER_HEIGHT + 8.dp).statusBarsPadding())
 
@@ -357,8 +354,8 @@ fun UIDSearchPageScreen(
 
         PageHeader(
             navigator = navigator,
-            headerData = headerData,
-            hazeState = hazeStateRoot,
+            headerData = Screen.UIDSearchPageScreen.headerData,
+            hazeState = hazeState,
             backIconId = BackIcon.CANCEL,
         )
     }

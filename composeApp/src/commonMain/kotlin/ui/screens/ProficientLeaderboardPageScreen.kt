@@ -23,15 +23,12 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.DropdownMenuItem
-import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -47,7 +44,6 @@ import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.CharSoul
 import files.NoDataYet
@@ -74,16 +70,13 @@ import types.ImageFolder
 import types.Lightcone
 import types.UserAccount.Companion.UIDSEARCH
 import ui.components.DropdownMenuNoPadding
-import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeaderAlpha
 import ui.components.PomPomPopup
 import ui.components.TitleHeader
-import ui.components.defaultHeaderData
 import ui.components.pomPomPopupInstance
 import ui.navigation.Screen
 import ui.navigation.UserCharacterRoute
-import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import utils.app.CharWeightList
 import utils.app.Constants
@@ -112,10 +105,8 @@ data class ProficientSchool(
 
 @Composable
 fun ProficientLeaderboardPageScreen(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData,
-    snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
+    hazeState: HazeState
 ) {
     val selectedLeaderboardIndex = rememberSaveable { mutableStateOf(0) }
     val schoolList = rememberMutableStateListJsonOf<ProficientSchool>(ProficientSchool(schoolIndex = 0, charId = 0))
@@ -301,7 +292,7 @@ fun ProficientLeaderboardPageScreen(
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
-                    .hazeSource(hazeStateRoot),
+                    .hazeSource(hazeState),
                 verticalArrangement = Arrangement.spacedBy(10.dp)
             ) {
                 item { Spacer(Modifier.height(10.dp)) }
@@ -337,8 +328,9 @@ fun ProficientLeaderboardPageScreen(
 
         PageHeaderAlpha(
             navigator = navigator,
-            hazeState = hazeStateRoot
+            hazeState = hazeState
         ) {
+            val headerData = Screen.ProficientLeaderboardPageScreen.headerData
             TitleHeader(headerData.titleIconId, headerData.title, headerData.titleRId)
         }
     }

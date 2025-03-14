@@ -23,7 +23,6 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
@@ -41,14 +40,12 @@ import androidx.navigation.toRoute
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.AdviceCharacters
 import files.BasicStatus
 import files.LightconeEffect
 import files.LightconeStory
 import files.NoDataYet
-import files.NoOnlineData
 import files.Res
 import files.bg_lightcone_artwork_back
 import files.bg_lightcone_artwork_front
@@ -59,7 +56,6 @@ import files.phorphos_info_regular
 import files.phorphos_person_fill
 import files.phorphos_person_regular
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
@@ -81,11 +77,7 @@ import ui.components.InfoStory
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.StatusType
-import ui.components.defaultHeaderData
-import ui.navigation.CharacterInfoRoute
 import ui.navigation.LightconeInfoRoute
-import ui.navigation.RelicInfoRoute
-import ui.navigation.hazeStateRoot
 import utils.app.DefaultZIndex
 import utils.app.JsonElementSaver
 import utils.app.Language
@@ -95,26 +87,18 @@ import utils.app.removeStrQuote
 import utils.app.showWarningToast
 import utils.app.valueOfWithDefaultPath
 
-private lateinit var localCoroutineScope: CoroutineScope;
-private lateinit var localSnackbarHostState: SnackbarHostState;
-
-val lcInfoNavItemList = arrayOf<InfoNavigateItem>(
+val lcInfoNavItemList = arrayOf(
     InfoNavigateItem(Res.drawable.phorphos_info_regular, 1, Res.string.BasicStatus),
     InfoNavigateItem(Res.drawable.phorphos_info_regular, 2, Res.string.LightconeEffect),
     InfoNavigateItem(Res.drawable.phorphos_person_regular, 3, Res.string.AdviceCharacters),
     InfoNavigateItem(Res.drawable.phorphos_chats_circle_regular, 4, Res.string.LightconeStory),
 )
 
-private const val scrollPxTrigInvisible = 250f
-
-@OptIn(FlowPreview::class)
 @Composable
 fun LightconeInfoPage(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData,
+    hazeState: HazeState,
     backStackEntry: NavBackStackEntry,
-    snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ) {
 
     var density = LocalDensity.current.density
@@ -124,8 +108,6 @@ fun LightconeInfoPage(
     val path = valueOfWithDefaultPath(route.path)
     val lcInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Lightcone.getLightconeDataFromJSON(lightconeFileName, Language.TextLanguageInstance) as JsonElement) }
 
-    localCoroutineScope = rememberCoroutineScope();
-    localSnackbarHostState = snackbarHostState!!;
 
     if (lcInfoJson !is JsonObject || lcInfoJson.jsonObject.isEmpty()) {
         showWarningToast(message = removeStrQuote(Res.string.NoDataYet))
@@ -165,7 +147,7 @@ fun LightconeInfoPage(
         )
 
         //RecycleView
-        LazyColumn(state = listState, modifier = Modifier.hazeSource(hazeStateRoot, zIndex = DefaultZIndex).align(Alignment.Center)) {
+        LazyColumn(state = listState, modifier = Modifier.hazeSource(hazeState, zIndex = DefaultZIndex).align(Alignment.Center)) {
             item { InfoBioColumn(lcInfoJson, combatType = null, path, isUserOwned = false, isFullEidolon = false, pageSize = pageSize) }
             //Don't forget to add "StatusBarPadding" !
             item { InfoBasicStatus(lcInfoJson, StatusType.LIGHTCONE) }
@@ -180,7 +162,7 @@ fun LightconeInfoPage(
         PageHeader(
             navigator = navigator,
             headerData = headerDataPage,
-            hazeState = hazeStateRoot,
+            hazeState = hazeState,
             backIconId = BackIcon.CANCEL,
             forwardIconId = if(isFavourite.value) Res.drawable.ic_favourite_btn_selected else Res.drawable.ic_favourite_btn,
             onForward = {
@@ -196,9 +178,9 @@ fun LightconeInfoPage(
 
         Box(modifier = Modifier.fillMaxSize()) {
             if(dialogDisplay.value){
-                InfoDisplayDialog(dialogTitle.value, dialogComponent.value, modifier = Modifier.align(Alignment.BottomCenter), hazeStateRoot, isNavBarVisible = (isNaviBarVisible), isDialogVisible = (dialogDisplay))
+                InfoDisplayDialog(dialogTitle.value, dialogComponent.value, modifier = Modifier.align(Alignment.BottomCenter), hazeState, isNavBarVisible = (isNaviBarVisible), isDialogVisible = (dialogDisplay))
             } else {
-                InfoNavigatorBar(lcInfoNavItemList, listState, Modifier.align(Alignment.BottomCenter), hazeState = hazeStateRoot, isVisible = (isNaviBarVisible), offSet = PAGE_HEADER_HEIGHT)
+                InfoNavigatorBar(lcInfoNavItemList, listState, Modifier.align(Alignment.BottomCenter), hazeState = hazeState, isVisible = (isNaviBarVisible), offSet = PAGE_HEADER_HEIGHT)
             }
         }
     }

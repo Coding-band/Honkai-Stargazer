@@ -2,7 +2,6 @@ package ui.screens
 
 import NavigationBar
 import NavigationItemData
-import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -33,7 +32,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
@@ -49,7 +47,6 @@ import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.Res
-import files.ic_fire
 import files.ui_icon_grid
 import files.ui_icon_missing
 import files.ui_icon_research
@@ -61,13 +58,10 @@ import org.jetbrains.compose.resources.vectorResource
 import types.CombatType
 import types.IIRC
 import types.IIRCWorld
-import ui.components.HeaderData
 import ui.components.iirc.HoverButtonBar
 import ui.components.iirc.MultiplyEnum
-import ui.navigation.hazeStateRoot
 import utils.app.FontShadow
 import utils.app.FontSizeNormal14
-import utils.app.formatDecimal
 import utils.app.formatDecimalSci
 
 lateinit var iircWorldInfo: MutableState<ArrayList<IIRCWorld>>
@@ -80,8 +74,7 @@ fun initIIRC(){
 @Composable
 fun IIRCHomePageScreen(
     navigator: NavController = rememberNavController(),
-    modifier: Modifier = Modifier,
-    headerData: HeaderData = HeaderData()
+    hazeState: HazeState
 ) {
     val selectedItem = remember { mutableStateOf(0) }
 
@@ -100,9 +93,9 @@ fun IIRCHomePageScreen(
                 .fillMaxSize()
                 .weight(1f)) {
                 when(selectedItem.value){
-                    0 ->  RedeemPage()
-                    1 ->  UpgradePage()
-                    2 ->  ResearchPage()
+                    0 ->  RedeemPage(hazeState = hazeState)
+                    1 ->  UpgradePage(hazeState = hazeState)
+                    2 ->  ResearchPage(hazeState = hazeState)
                 }
             }
 
@@ -116,7 +109,7 @@ fun IIRCHomePageScreen(
 }
 
 @Composable
-fun RedeemPage() {
+fun RedeemPage(hazeState : HazeState) {
     Box{
         val minItemSize = 96.dp
         val currentDisplayPage = remember { mutableStateOf("WORLD") }
@@ -128,7 +121,7 @@ fun RedeemPage() {
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             modifier = Modifier
                 .fillMaxSize()
-                .hazeSource(hazeStateRoot)
+                .hazeSource(hazeState)
 
         ) {
             items(when(currentDisplayPage.value){
@@ -141,7 +134,7 @@ fun RedeemPage() {
         }
 
         Box(modifier = Modifier.align(Alignment.BottomCenter).padding(8.dp)){
-            HoverButtonBar(hazeState = hazeStateRoot, choiceList = MultiplyEnum.entries){ item, choosedIndex ->
+            HoverButtonBar(hazeState = hazeState, choiceList = MultiplyEnum.entries){ item, choosedIndex ->
                 Text(
                     text = item.text,
                     color = Color(if (MultiplyEnum.entries[choosedIndex] == item) 0xFFFFFFFF else 0x99FFFFFF),
@@ -154,8 +147,7 @@ fun RedeemPage() {
 }
 
 @Composable
-fun UpgradePage(){
-    val hazeState = remember { HazeState() }
+fun UpgradePage(hazeState : HazeState){
     val choiceList = arrayListOf<ImageVector>(
         vectorResource(Res.drawable.ui_icon_missing),
         vectorResource(Res.drawable.ui_icon_missing),
@@ -195,8 +187,7 @@ fun UpgradePage(){
 }
 
 @Composable
-fun ResearchPage(){
-    val hazeState = remember { HazeState() }
+fun ResearchPage(hazeState : HazeState){
     val choiceList = arrayListOf<ImageVector>(vectorResource(Res.drawable.ui_icon_missing))
 
     //Root of Research Page 研究頁面

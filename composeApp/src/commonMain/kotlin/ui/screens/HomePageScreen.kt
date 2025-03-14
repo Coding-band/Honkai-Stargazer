@@ -61,6 +61,7 @@ import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
@@ -125,13 +126,11 @@ import kotlin.math.min
 
 @Composable
 fun HomePage(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData
+    hazeState: HazeState,
 ) {
     val threeDotDialogDisplay = remember { mutableStateOf(false) }
     val threeDotDialogPos = remember { mutableStateOf<Offset>(Offset(0f, 0f)) }
-    val hazeState = remember { HazeState() }
     val userAccount = remember { mutableStateOf(UserAccount.INSTANCE) }
     val homeMenuBlockList = remember { mutableStateOf(Preferences().HomePageMenu.getHomePageMenuArray()) }
 
@@ -155,7 +154,7 @@ fun HomePage(
         println("RECOMPOSED !")
         Box(modifier = Modifier
             .statusBarsPadding()
-            .hazeSource(hazeState, zIndex = DefaultZIndex)
+            //.hazeSource(hazeState, zIndex = DefaultZIndex)
         ) {
             Column {
                 HomePageHeader(
@@ -395,10 +394,12 @@ fun HomePageMenuScrollView(
                     when (blockData.itemType) {
                         HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W1H1 -> HomePageBlock1x1(
                             blockData,
+                            hazeState = hazeState,
                             navigator = navigator
                         )
                         HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1 -> HomePageBlock2x1(
                             blockData,
+                            hazeState = hazeState,
                             navigator = navigator
                         )
                     }
@@ -496,7 +497,7 @@ fun ThreeDotsDialog(
     modifier: Modifier = Modifier,
     navigator: NavHostController = navigatorInstance,
     threeDotDialogPos: MutableState<Offset>,
-    hazeState: HazeState = remember { HazeState() },
+    hazeState: HazeState,
     threeDotDialogDisplay: MutableState<Boolean>,
     userAccount: MutableState<UserAccount>,
 ){

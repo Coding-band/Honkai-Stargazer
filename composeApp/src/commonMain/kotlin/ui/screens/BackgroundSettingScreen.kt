@@ -20,10 +20,6 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.GridItemSpan
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
 import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
 import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridItemSpan
@@ -47,6 +43,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
+import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import files.GetCharAndUnLock
 import files.Res
@@ -62,13 +59,11 @@ import types.UserAccount
 import types.Wallpaper
 import types.isUnlockSpecials
 import ui.components.BackIcon
-import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.UIButton
 import ui.components.UISearchBar
-import ui.components.defaultHeaderData
-import ui.navigation.hazeStateRoot
+import ui.navigation.Screen
 import ui.navigation.popBackStackLimited
 import utils.app.Constants
 import utils.app.DefaultZIndex
@@ -83,7 +78,10 @@ import utils.app.toLocaleMap
 //U can use the function UtilTools().getAssetsWebpByFileName to get the image
 
 @Composable
-fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, headerData: HeaderData = defaultHeaderData){
+fun BackgroundSettingScreen(
+    navigator: NavHostController,
+    hazeState: HazeState
+){
     val context = LocalPlatformContext.current
     val currentWallpaper = Wallpaper.getPreferenceWallpaper()
     val wallpaperIndex = remember { mutableStateOf(kotlin.math.max(0, Wallpaper.wallpaperList.indexOf(currentWallpaper))) }
@@ -110,7 +108,7 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: NavHostCon
         LazyVerticalStaggeredGrid(
             columns = StaggeredGridCells.Adaptive(160.dp),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
-            modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).hazeSource(state = hazeStateRoot, zIndex = DefaultZIndex),
+            modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).hazeSource(state = hazeState, zIndex = DefaultZIndex),
         ){
             item(span = StaggeredGridItemSpan.FullLine) {
                 Spacer(
@@ -139,7 +137,7 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: NavHostCon
                 val item = Wallpaper.wallpaperList.find { it.id == displayList.value[index].id } ?: return@items
                 val isMatchRequirememt = if(!item.requireOwnChar || UserAccount.INSTANCE.isUnlockSpecials() ) true else (item.requireOwnChar && !UserAccount.INSTANCE.characterList.none { it.officialId.toString() == item.id })
                 val aspectRation = rememberSaveable { mutableStateOf(720/1642f) }
-                Column(modifier.wrapContentSize()){
+                Column(modifier = Modifier.wrapContentSize()){
 
                     Box{
                         //Background Image
@@ -232,7 +230,7 @@ fun BackgroundSettingScreen(modifier: Modifier = Modifier, navigator: NavHostCon
             })
         }
 
-        PageHeader(navigator = navigator, headerData = headerData, hazeState = hazeStateRoot, backIconId = BackIcon.BACK)
+        PageHeader(navigator = navigator, headerData = Screen.BackgroundSettingScreen.headerData, hazeState = hazeState, backIconId = BackIcon.BACK)
     }
 }
 

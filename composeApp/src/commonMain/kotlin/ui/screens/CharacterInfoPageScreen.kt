@@ -89,7 +89,6 @@ import ui.components.PageHeader
 import ui.components.StatusType
 import ui.components.defaultHeaderData
 import ui.navigation.CharacterInfoRoute
-import ui.navigation.hazeStateRoot
 import utils.annotation.DoItLater
 import utils.app.CharWeightList
 import utils.app.Constants.Companion.LOST_IMAGE_DRAWABLE
@@ -104,10 +103,7 @@ import utils.app.showWarningToast
 import utils.app.valueOfWithDefaultCombatType
 import utils.app.valueOfWithDefaultPath
 
-private lateinit var localCoroutineScope: CoroutineScope;
-private lateinit var localSnackbarHostState: SnackbarHostState;
-
-val charInfoNavItemList = arrayOf<InfoNavigateItem>(
+val charInfoNavItemList = arrayOf(
     InfoNavigateItem(Res.drawable.phorphos_info_regular, 1, Res.string.BasicStatus),
     InfoNavigateItem(Res.drawable.phorphos_tree_structure_regular, 2, Res.string.TraceTree),
     InfoNavigateItem(Res.drawable.phorphos_star_half_regular, 3, Res.string.Eidolon),
@@ -115,20 +111,13 @@ val charInfoNavItemList = arrayOf<InfoNavigateItem>(
     InfoNavigateItem(Res.drawable.phorphos_baseball_cap_regular, 5, Res.string.AdviceRelics),
     InfoNavigateItem(Res.drawable.phorphos_person_regular, 6, Res.string.AdviceTeams),
     InfoNavigateItem(Res.drawable.phorphos_chats_circle_regular, 7, Res.string.CharacterStory),
+)
 
-    )
-
-private const val scrollPxTrigInvisible = 250f
-
-
-@OptIn(FlowPreview::class)
 @Composable
 fun CharacterInfoPage(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData,
+    hazeState: HazeState,
     backStackEntry: NavBackStackEntry,
-    snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
 ) {
 
     @DoItLater("Use rememberStatus")
@@ -142,9 +131,6 @@ fun CharacterInfoPage(
     val path = valueOfWithDefaultPath(route.path)
 
     val charInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Character.getCharacterDataFromFileName(characterFileName, Language.TextLanguageInstance) as JsonElement) }
-
-    localCoroutineScope = rememberCoroutineScope();
-    localSnackbarHostState = snackbarHostState!!;
 
 
     //Maybe we should make a PomPom Image with "Please Check your Network" Text
@@ -197,7 +183,7 @@ fun CharacterInfoPage(
             horizontalAlignment = Alignment.CenterHorizontally,
             state = listState,
             modifier = Modifier
-                .hazeSource(hazeStateRoot, zIndex = DefaultZIndex)
+                .hazeSource(hazeState, zIndex = DefaultZIndex)
                 .align(Alignment.Center),
             verticalArrangement = Arrangement.spacedBy(30.dp)
         ) {
@@ -217,7 +203,7 @@ fun CharacterInfoPage(
         PageHeader(
             navigator = navigator,
             headerData = headerDataPage,
-            hazeState = hazeStateRoot,
+            hazeState = hazeState,
             backIconId = BackIcon.CANCEL,
             forwardIconId = if(isFavourite.value) Res.drawable.ic_favourite_btn_selected else Res.drawable.ic_favourite_btn,
             onForward = {
@@ -232,9 +218,9 @@ fun CharacterInfoPage(
 
         Box(modifier = Modifier.fillMaxSize()) {
             if(dialogDisplay.value){
-                InfoDisplayDialog(dialogTitle.value, dialogComponent.value, modifier = Modifier.align(Alignment.BottomCenter), hazeStateRoot, isNavBarVisible = (isNaviBarVisible), isDialogVisible = (dialogDisplay))
+                InfoDisplayDialog(dialogTitle.value, dialogComponent.value, modifier = Modifier.align(Alignment.BottomCenter), hazeState, isNavBarVisible = (isNaviBarVisible), isDialogVisible = (dialogDisplay))
             } else {
-                InfoNavigatorBar(charInfoNavItemList, listState, Modifier.align(Alignment.BottomCenter), hazeState = hazeStateRoot, isVisible = (isNaviBarVisible), offSet = PAGE_HEADER_HEIGHT)
+                InfoNavigatorBar(charInfoNavItemList, listState, Modifier.align(Alignment.BottomCenter), hazeState = hazeState, isVisible = (isNaviBarVisible), offSet = PAGE_HEADER_HEIGHT)
             }
         }
     }

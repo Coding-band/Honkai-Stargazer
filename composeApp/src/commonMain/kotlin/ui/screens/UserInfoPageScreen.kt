@@ -80,7 +80,6 @@ import ui.components.defaultHeaderData
 import ui.navigation.Screen
 import ui.navigation.UserCharacterRoute
 import ui.navigation.UserInfoRoute
-import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import utils.annotation.DoItLater
 import utils.app.Constants
@@ -100,9 +99,8 @@ import kotlin.math.min
 @DoItLater("Get User Data from Database / API")
 @Composable
 fun UserInfoPageScreen(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData,
+    hazeState: HazeState,
     backStackEntry: NavBackStackEntry,
 ) {
     val context = LocalPlatformContext.current
@@ -135,7 +133,7 @@ fun UserInfoPageScreen(
     val helperList = helperListOrigin.ifEmpty { userAccount.characterList.slice(0..min(7, userAccount.characterList.size-1)) }
     val finalCharList = userAccount.characterList.filter { it !in helperList }
 
-    Box(modifier = modifier.fillMaxSize()) {
+    Box(modifier = Modifier.fillMaxSize()) {
 
         LazyVerticalGrid(
             columns = GridCells.Adaptive(CHAR_CARD_WIDTH),
@@ -145,7 +143,7 @@ fun UserInfoPageScreen(
             modifier = Modifier.padding(
                 start = Constants.SCREEN_SAVE_PADDING,
                 end = Constants.SCREEN_SAVE_PADDING
-            ).hazeSource(hazeStateRoot)
+            ).hazeSource(hazeState)
         ) {
             item(span = { GridItemSpan(maxCurrentLineSpan) }) { Spacer(modifier = Modifier.statusBarsPadding().height(PAGE_HEADER_HEIGHT)) }
             item(span = { GridItemSpan(maxLineSpan) }) { UserInfoBioUI(context, userAccount) }
@@ -243,11 +241,11 @@ fun UserInfoPageScreen(
         }
 
         PageHeader(
-            headerData = headerData,
+            headerData = Screen.UserInfoPageScreen.headerData,
             navigator = navigator,
             forwardIconId = Res.drawable.ui_icon_share,
             onForward = { showFunctionIsDevelopingToast() },
-            hazeState = hazeStateRoot,
+            hazeState = hazeState,
             backIconId = BackIcon.CANCEL
         )
 
@@ -284,10 +282,10 @@ fun UserInfoPageScreen(
     }
 
     if(showPopup.value){
-        Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
             AppDialog(
                 titleString = removeStrQuote(Res.string.PublicChars),
-                hazeState = hazeStateRoot,
+                hazeState = hazeState,
                 components = {
                     Text(
                         LongStringXML().PublicCharDesc(),

@@ -33,7 +33,6 @@ import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.Res
 import files.StatusDays
@@ -55,18 +54,13 @@ import kotlinx.datetime.toInstant
 import types.EventItem
 import types.EventItem.Companion.EventListInstance
 import ui.components.BackIcon
-import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.PomPomPopup
-import ui.components.defaultHeaderData
 import ui.components.pomPomPopupInstance
 import ui.navigation.EventContentRoute
-import ui.navigation.HoyolabLoginRoute
 import ui.navigation.Screen
-import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
-import ui.navigation.navigatorInstance
 import utils.app.Constants
 import utils.app.DefaultZIndex
 import utils.app.isLinuxPlatform
@@ -78,9 +72,8 @@ import utils.app.showWarningToast
 
 @Composable
 fun EventListPageScreen(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData,
+    hazeState: HazeState
 ) {
     val isDateOutside = remember { mutableStateOf(Settings().getBoolean("isDateOutside",true)) }
     val eventList = remember { mutableStateOf(listOf<EventItem>()) }
@@ -94,9 +87,9 @@ fun EventListPageScreen(
         }.await()
     }
 
-    Box(modifier = modifier.fillMaxSize()){
+    Box(modifier = Modifier.fillMaxSize()){
         LazyColumn(modifier = Modifier
-            .hazeSource(state = hazeStateRoot, zIndex = DefaultZIndex)
+            .hazeSource(state = hazeState, zIndex = DefaultZIndex)
         ) {
             item {
                 Spacer(Modifier.padding(top = PAGE_HEADER_HEIGHT).statusBarsPadding())
@@ -112,8 +105,8 @@ fun EventListPageScreen(
 
         PageHeader(
             navigator = navigator,
-            headerData = headerData,
-            hazeState = hazeStateRoot,
+            headerData = Screen.EventListPageScreen.headerData,
+            hazeState = hazeState,
             backIconId = BackIcon.CANCEL,
         )
     }

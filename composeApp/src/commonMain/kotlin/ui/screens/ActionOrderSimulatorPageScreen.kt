@@ -191,9 +191,8 @@ lateinit var maxValueTextWidth : MutableState<ArrayList<Dp>>
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun ActionOrderSimulatorPageScreen(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData,
+    hazeState: HazeState,
     backStackEntry: NavBackStackEntry,
 ) {
     val route = backStackEntry.toRoute<ActionOrderSimulatorRoute>()
@@ -221,7 +220,7 @@ fun ActionOrderSimulatorPageScreen(
     }
 
     //UI
-    BoxWithConstraints(modifier = modifier.fillMaxSize()) {
+    BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
         val isWideScreen = maxWidth > 750.dp
 
         if (isWideScreen) {

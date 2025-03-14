@@ -127,10 +127,8 @@ fun refreshPFList(){
 @Composable
 @Preview
 fun PureFictionMissionPageScreen(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData,
-    snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
+    hazeState: HazeState,
 ) {
     val pfChoiceIndex = remember { mutableStateOf(0) }
     val isDialogVisible = remember { mutableStateOf(false) }
@@ -164,6 +162,7 @@ fun PureFictionMissionPageScreen(
             onForward = { navigator.navigateLimited(BattleChronicleRoute(UserAccount.INSTANCE.uid)) },
             forwardIconId = Res.drawable.ic_person_btn
         ){
+            val headerData = Screen.PureFictionMissionPageScreen.headerData
             TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
         }
 

@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
@@ -19,7 +18,6 @@ import coil3.compose.LocalPlatformContext
 import com.multiplatform.webview.web.WebView
 import com.multiplatform.webview.web.rememberWebViewStateWithHTMLData
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.Res
 import files.phorphos_film_slate_fill
@@ -29,9 +27,7 @@ import ui.components.BackIcon
 import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
-import ui.components.defaultHeaderData
 import ui.navigation.EventContentRoute
-import ui.navigation.hazeStateRoot
 import utils.app.Constants
 import utils.app.DefaultZIndex
 import utils.app.newImageRequest
@@ -97,9 +93,8 @@ val headerHTML = "<meta name=\"viewport\" content=\"initial-scale=1.0, maximum-s
 
 @Composable
 fun EventContentPageScreen(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData,
+    hazeState: HazeState,
     backStackEntry: NavBackStackEntry,
 ) {
 
@@ -120,9 +115,9 @@ fun EventContentPageScreen(
     val webViewState = rememberWebViewStateWithHTMLData(htmlData)
 
 
-    Box(modifier = modifier.fillMaxSize()){
+    Box(modifier = Modifier.fillMaxSize()){
 
-        LazyColumn(modifier = Modifier.fillMaxSize().hazeSource(hazeStateRoot, zIndex = DefaultZIndex)) {
+        LazyColumn(modifier = Modifier.fillMaxSize().hazeSource(hazeState, zIndex = DefaultZIndex)) {
             item {
                 Spacer(Modifier.padding(top = PAGE_HEADER_HEIGHT).statusBarsPadding())
             }
@@ -139,7 +134,7 @@ fun EventContentPageScreen(
         PageHeader(
             navigator = navigator,
             headerData = HeaderData(title = eventItem.title, titleIconId = Res.drawable.phorphos_film_slate_fill),
-            hazeState = hazeStateRoot,
+            hazeState = hazeState,
             backIconId = BackIcon.BACK,
         )
 

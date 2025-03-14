@@ -47,7 +47,7 @@ import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.RelicCard
 import ui.components.defaultHeaderData
-import ui.navigation.hazeStateRoot
+import ui.navigation.Screen
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import utils.app.DefaultZIndex
 import utils.app.PageBottomMask
@@ -82,13 +82,16 @@ fun refreshRelicList(){
 }
 
 @Composable
-fun RelicListPage(modifier: Modifier = Modifier, navigator: NavHostController, headerData: HeaderData = defaultHeaderData) {
+fun RelicListPage(
+    navigator: NavHostController,
+    hazeState: HazeState
+) {
 
     Box {
         LazyVerticalGrid(
             modifier = Modifier
                 .padding(start = 16.dp, end = 16.dp)
-                .hazeSource(state = hazeStateRoot, zIndex = DefaultZIndex),
+                .hazeSource(state = hazeState, zIndex = DefaultZIndex),
             columns = GridCells.Adaptive(CHAR_CARD_WIDTH),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
@@ -122,9 +125,9 @@ fun RelicListPage(modifier: Modifier = Modifier, navigator: NavHostController, h
             filterType = ListFilterType.RELIC,
             filtedList = relicListSortable,
             filterChoiceArray = filterChoiceArray,
-            hazeState = hazeStateRoot
+            hazeState = hazeState
         )
 
-        PageHeader(navigator, headerData = headerData, hazeState = hazeStateRoot, backIconId = BackIcon.CANCEL)
+        PageHeader(navigator, headerData = Screen.RelicListPage.headerData, hazeState = hazeState, backIconId = BackIcon.CANCEL)
     }
 }

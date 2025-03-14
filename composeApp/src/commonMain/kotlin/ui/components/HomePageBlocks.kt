@@ -37,6 +37,7 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.HazeStyle
 import dev.chrisbanes.haze.hazeChild
 import dev.chrisbanes.haze.hazeEffect
@@ -116,7 +117,7 @@ val gradient = Brush.verticalGradient(
 @DoItLater("Check if v1.4.0 fixes this lot-of-instance-blur-laggy issue")
 fun HomePageBlock1x1(
     blockData: HomePageBlocks.HomePageBlockItem,
-    modifier: Modifier = Modifier,
+    hazeState: HazeState,
     navigator: NavHostController
 ) {
 
@@ -153,10 +154,10 @@ fun HomePageBlock1x1(
             .let {
                 return@let if(globalHazeBlur.value){
                     it.hazeSource(
-                        hazeStateRoot,
+                        hazeState,
                         zIndex = HomePageBtnZIndex
                     ).hazeEffect(
-                        state = hazeStateRoot,
+                        state = hazeState,
                         style = HazeBlurDp20Alpha
                     )
                 }else{
@@ -201,7 +202,7 @@ fun HomePageBlock1x1(
 @DoItLater("Check if v1.4.0 fixes this lot-of-instance-blur-laggy issue")
 fun HomePageBlock2x1(
     blockData: HomePageBlocks.HomePageBlockItem,
-    modifier: Modifier = Modifier,
+    hazeState: HazeState,
     navigator: NavHostController
 ) {
     blockData.refresh?.invoke()
@@ -234,10 +235,10 @@ fun HomePageBlock2x1(
             .let {
                 return@let if(globalHazeBlur.value){
                     it.hazeSource(
-                        hazeStateRoot,
+                        hazeState,
                         zIndex = HomePageBtnZIndex
                     ).hazeEffect(
-                        state = hazeStateRoot,
+                        state = hazeState,
                         style = HazeBlurDp20Alpha
                     )
                 }else{

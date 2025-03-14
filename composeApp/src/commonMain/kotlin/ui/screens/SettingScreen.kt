@@ -37,6 +37,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
+import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import files.About
 import files.AboutTheApp
@@ -71,28 +72,20 @@ import files.ic_selected_orange_circle
 import files.phorphos_caret_down_regular
 import files.phorphos_caret_right_regular
 import getDeviceInfo
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
-import kotlinx.serialization.json.jsonObject
-import kotlinx.serialization.json.jsonPrimitive
 import okio.FileSystem
 import okio.SYSTEM
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
-import types.Character
 import types.UserAccount
 import types.Wallpaper
 import ui.components.BackIcon
 import ui.components.DropdownMenuNoPadding
-import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
-import ui.components.defaultHeaderData
 import ui.navigation.AboutStargazerRoute
 import ui.navigation.BackgroundSettingRoute
 import ui.navigation.IIRCHomePageRoute
-import ui.navigation.hazeStateRoot
+import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import utils.annotation.DoItLater
 import utils.annotation.TranslationPls
@@ -119,7 +112,9 @@ val doRefresh = mutableStateOf(false)
 lateinit var showUpdatePopupInSetting : MutableState<Boolean>
 
 @Composable
-fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, headerData: HeaderData = defaultHeaderData
+fun SettingScreen(
+    navigator: NavHostController,
+    hazeState: HazeState
 ){
 
     val urlHandler = LocalUriHandler.current
@@ -138,7 +133,7 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
             LazyColumn (
                 modifier = Modifier
                     .padding(start = 16.dp, end = 16.dp)
-                    .hazeSource(state = hazeStateRoot, zIndex = DefaultZIndex),
+                    .hazeSource(state = hazeState, zIndex = DefaultZIndex),
             ){
                 //Spacer for padding status bar
                 item { Spacer(modifier = Modifier.statusBarsPadding().height(PAGE_HEADER_HEIGHT)) }
@@ -392,9 +387,9 @@ fun SettingScreen(modifier: Modifier = Modifier, navigator: NavHostController, h
 
             }
 
-            PageHeader(navigator, headerData = headerData, hazeState = hazeStateRoot, backIconId = BackIcon.BACK)
+            PageHeader(navigator, headerData = Screen.SettingScreen.headerData, hazeState = hazeState, backIconId = BackIcon.BACK)
 
-            UpdateAssetsPopup(showUpdatePopupInSetting, hazeStateRoot, forceDownload = true)
+            UpdateAssetsPopup(showUpdatePopupInSetting, hazeState, forceDownload = true)
         }
     }
 }

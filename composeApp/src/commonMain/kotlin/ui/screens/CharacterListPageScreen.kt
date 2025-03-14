@@ -49,6 +49,7 @@ import ui.components.ListFilterType
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.defaultHeaderData
+import ui.navigation.Screen
 import ui.navigation.hazeStateRoot
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import utils.app.DefaultZIndex
@@ -88,9 +89,8 @@ fun refreshCharList(){
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun CharacterListPage(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData
+    hazeState: HazeState
 ) {
     //val hazeState = remember { HazeState() }
 
@@ -98,7 +98,7 @@ fun CharacterListPage(
         LazyVerticalGrid(
             modifier = Modifier
                 .padding(start = 16.dp, end = 16.dp)
-                .hazeSource(state = hazeStateRoot, zIndex = DefaultZIndex),
+                .hazeSource(state = hazeState, zIndex = DefaultZIndex),
             columns = GridCells.Adaptive(CHAR_CARD_WIDTH),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
@@ -131,11 +131,11 @@ fun CharacterListPage(
             filterType = ListFilterType.CHARACTER,
             filtedList = charListSortable,
             filterChoiceArray = filterChoiceArray,
-            hazeState = hazeStateRoot
+            hazeState = hazeState
         )
 
 
 
-        PageHeader(navigator = navigator, headerData = headerData, hazeState = hazeStateRoot, backIconId = BackIcon.CANCEL)
+        PageHeader(navigator = navigator, headerData = Screen.CharacterListPage.headerData, hazeState = hazeState, backIconId = BackIcon.CANCEL)
     }
 }

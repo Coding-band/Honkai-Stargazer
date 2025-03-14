@@ -1,10 +1,7 @@
 package ui.screens
 
-import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -74,7 +71,6 @@ import com.cheonjaeung.compose.grid.VerticalGrid
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.CharRank
 import files.CharScore
@@ -111,13 +107,10 @@ import types.ImageFolder
 import types.Lightcone
 import types.UserAccount
 import ui.components.DropdownMenuNoPadding
-import ui.components.HeaderData
 import ui.components.PAGE_HEADER_ALPHA_HEIGHT
 import ui.components.PageHeaderAlpha
 import ui.components.RelicSmallCard
-import ui.components.defaultHeaderData
 import ui.navigation.UserCharacterRoute
-import ui.navigation.hazeStateRoot
 import utils.annotation.DoItLater
 import utils.app.AdditionalGreen
 import utils.app.CharWeightList
@@ -153,9 +146,8 @@ import utils.starbase.StarbaseAPI
 @DoItLater("Confirm that work when charStatus is null")
 @Composable
 fun UserCharacterPageScreen(
-    modifier: Modifier = Modifier,
     navigator: NavHostController,
-    headerData: HeaderData = defaultHeaderData,
+    hazeState: HazeState,
     backStackEntry: NavBackStackEntry,
 ) {
     val route = backStackEntry.toRoute<UserCharacterRoute>()
@@ -210,9 +202,7 @@ fun UserCharacterPageScreen(
             gradRequirement.value = getGradAttrAndValue(character, schoolIndex.value)
         }
 
-        Box(modifier = modifier
-            .fillMaxSize()
-        ){
+        Box(modifier = Modifier.fillMaxSize()){
             CharacterInfoFadeImg(
                 fileName = character.registName!!,
                 isScrollMode = isScrolling, //alpha = scrollToAlpha
@@ -226,7 +216,7 @@ fun UserCharacterPageScreen(
                         showFunctionIsDevelopingToast()
                     },
                     forwardIconId = Res.drawable.ui_icon_share,
-                    hazeState = hazeStateRoot,
+                    hazeState = hazeState,
 
                     ) {
 
@@ -261,7 +251,7 @@ fun UserCharacterPageScreen(
                     modifier = Modifier.padding(
                         start = Constants.SCREEN_SAVE_PADDING,
                         end = Constants.SCREEN_SAVE_PADDING
-                    ).hazeSource(hazeStateRoot)
+                    ).hazeSource(hazeState)
                 ) {
                     item { Spacer(Modifier.statusBarsPadding().height(PAGE_HEADER_ALPHA_HEIGHT + 240.dp)) }
                     item { CharBioSkillInfo(character, charNameBigHeight) }
