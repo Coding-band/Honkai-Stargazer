@@ -102,7 +102,7 @@ fun SplashPage(
         }
     }
 
-    LaunchedEffect(showPopup.value, hasRefreshed.value, showUpdatePopup.value, showJCEFPopup.value){
+    LaunchedEffect(showPopup.value, showUpdatePopup.value, showJCEFPopup.value){
         if (!showPopup.value && !showUpdatePopup.value && screenInstance !is Screen.HomePage && screenInstance !is Screen.BlankPage && !showJCEFPopup.value) {
             //if(!isJCEFInited){
             //     showJCEFPopup.value = true
@@ -259,8 +259,10 @@ fun SplashPage(
         UpdateAssetsPopup(showUpdatePopup, hazeStateRoot)
     }
 
+    /*
     if(!showPopup.value && !showUpdatePopup.value){
         //KCEF Popup
         KCEFPopup(showJCEFPopup, hazeStateRoot)
     }
+     */
 }

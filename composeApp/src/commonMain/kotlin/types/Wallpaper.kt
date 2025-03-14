@@ -73,7 +73,7 @@ data class Wallpaper(
         }
 
         fun getPreferenceWallpaperLocaleName(textLanguage: Language.TextLanguage = Language.TextLanguageInstance): String {
-            return Json.parseToJsonElement(Settings().getString("backgroundLangSet", Json.encodeToString(DEFAULT_WALLPAPER))).jsonObject[textLanguage.folderName]?.jsonPrimitive?.content ?: "?"
+            return Json.parseToJsonElement(Settings().getString("backgroundLangSet", Json.encodeToString(DEFAULT_WALLPAPER.locale))).jsonObject[textLanguage.folderName]?.jsonPrimitive?.content ?: "?"
         }
         fun setPreferenceWallpaperLocaleName(nameMap: Map<Language.TextLanguage, String>) {
             Settings().putString("backgroundLangSet", Json.encodeToString(nameMap))
