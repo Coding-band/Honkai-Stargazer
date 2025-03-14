@@ -213,7 +213,7 @@ fun RelicInfoPage(
                 if(isFavourite.value) {
                     Preferences.FavouriteClass.addToFavouriteList(relicFileName, Preferences.FavouriteClass.TYPE.RELIC)
                 } else {
-                    Preferences.FavouriteClass.addToFavouriteList(relicFileName, Preferences.FavouriteClass.TYPE.RELIC)
+                    Preferences.FavouriteClass.removeFromFavouriteList(relicFileName, Preferences.FavouriteClass.TYPE.RELIC)
                 }
 
                 isFavourite.value = !isFavourite.value

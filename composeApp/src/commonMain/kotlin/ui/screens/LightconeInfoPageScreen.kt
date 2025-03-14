@@ -187,7 +187,7 @@ fun LightconeInfoPage(
                 if(isFavourite.value) {
                     Preferences.FavouriteClass.addToFavouriteList(lightconeFileName, Preferences.FavouriteClass.TYPE.LC)
                 } else {
-                    Preferences.FavouriteClass.addToFavouriteList(lightconeFileName, Preferences.FavouriteClass.TYPE.LC)
+                    Preferences.FavouriteClass.removeFromFavouriteList(lightconeFileName, Preferences.FavouriteClass.TYPE.LC)
                 }
 
                 isFavourite.value = !isFavourite.value

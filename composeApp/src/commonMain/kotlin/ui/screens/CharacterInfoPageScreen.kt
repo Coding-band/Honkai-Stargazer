@@ -223,7 +223,7 @@ fun CharacterInfoPage(
                 if(isFavourite.value) {
                     Preferences.FavouriteClass.addToFavouriteList(characterId.toString(), Preferences.FavouriteClass.TYPE.CHAR)
                 } else {
-                    Preferences.FavouriteClass.addToFavouriteList(characterId.toString(), Preferences.FavouriteClass.TYPE.CHAR)
+                    Preferences.FavouriteClass.removeFromFavouriteList(characterId.toString(), Preferences.FavouriteClass.TYPE.CHAR)
                 }
 
                 isFavourite.value = !isFavourite.value
