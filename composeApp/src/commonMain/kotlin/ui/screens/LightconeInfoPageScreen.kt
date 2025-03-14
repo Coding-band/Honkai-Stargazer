@@ -184,7 +184,7 @@ fun LightconeInfoPage(
             backIconId = BackIcon.CANCEL,
             forwardIconId = if(isFavourite.value) Res.drawable.ic_favourite_btn_selected else Res.drawable.ic_favourite_btn,
             onForward = {
-                if(isFavourite.value) {
+                if(!isFavourite.value) {
                     Preferences.FavouriteClass.addToFavouriteList(lightconeFileName, Preferences.FavouriteClass.TYPE.LC)
                 } else {
                     Preferences.FavouriteClass.removeFromFavouriteList(lightconeFileName, Preferences.FavouriteClass.TYPE.LC)

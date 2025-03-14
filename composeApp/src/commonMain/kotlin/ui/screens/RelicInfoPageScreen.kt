@@ -210,7 +210,7 @@ fun RelicInfoPage(
             backIconId = BackIcon.CANCEL,
             forwardIconId = if(isFavourite.value) Res.drawable.ic_favourite_btn_selected else Res.drawable.ic_favourite_btn,
             onForward = {
-                if(isFavourite.value) {
+                if(!isFavourite.value) {
                     Preferences.FavouriteClass.addToFavouriteList(relicFileName, Preferences.FavouriteClass.TYPE.RELIC)
                 } else {
                     Preferences.FavouriteClass.removeFromFavouriteList(relicFileName, Preferences.FavouriteClass.TYPE.RELIC)

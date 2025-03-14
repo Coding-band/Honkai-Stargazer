@@ -97,6 +97,7 @@ import utils.app.DefaultZIndex
 import utils.app.JsonElementSaver
 import utils.app.Language
 import utils.app.Preferences
+import utils.app.Preferences.FavouriteClass.Companion.charFavourList
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
 import utils.app.showWarningToast
@@ -220,12 +221,11 @@ fun CharacterInfoPage(
             backIconId = BackIcon.CANCEL,
             forwardIconId = if(isFavourite.value) Res.drawable.ic_favourite_btn_selected else Res.drawable.ic_favourite_btn,
             onForward = {
-                if(isFavourite.value) {
+                if(!isFavourite.value) {
                     Preferences.FavouriteClass.addToFavouriteList(characterId.toString(), Preferences.FavouriteClass.TYPE.CHAR)
                 } else {
                     Preferences.FavouriteClass.removeFromFavouriteList(characterId.toString(), Preferences.FavouriteClass.TYPE.CHAR)
                 }
-
                 isFavourite.value = !isFavourite.value
             }
         )
