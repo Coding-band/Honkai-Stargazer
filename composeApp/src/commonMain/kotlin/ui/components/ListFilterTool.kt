@@ -187,6 +187,7 @@ fun <T> ListFilterTool(
                         .widthIn(INFO_MIN_WIDTH, INFO_MAX_WIDTH),
                         isPopupShow = mutableStateOf(isShowing.value == "SORT" || isShowing.value == "FILTER"),
                         titleString = removeStrQuote(Res.string.FilterTitle),
+                        hazeState = hazeState,
                         components = {
                             VerticalGrid(
                                 columns = SimpleGridCells.Fixed(2),

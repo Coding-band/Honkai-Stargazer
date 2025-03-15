@@ -352,6 +352,7 @@ fun SettingScreen(
                             title = removeStrQuote(Res.string.SettingInternalVersionCode),
                             navigateDesc = "${BuildKonfig.appProfile} ${BuildKonfig.appVersionCode}",
                             navigateClick = {
+                                /*
                                 @TranslationPls
                                 val totalClickToUnlock = 5
                                 if(Settings().getBoolean("isUnlockedIIRC",false) || versionNameClickTimes.value >= totalClickToUnlock){
@@ -361,6 +362,8 @@ fun SettingScreen(
                                     versionNameClickTimes.value++
                                     showSuccessToast(message = "再點擊 ${totalClickToUnlock - versionNameClickTimes.value} 次即可解鎖小彩蛋")
                                 }
+                                 */
+                                showFunctionIsDevelopingToast()
                             }
                         )
 
