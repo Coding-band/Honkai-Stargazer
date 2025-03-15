@@ -184,6 +184,7 @@ class Language() {
     fun getTextLangLocaleNameList(): ArrayList<String> {
         val langLocaleNameList = arrayListOf<String>()
         TextLanguage.entries.forEach { language ->
+            if(language != TextLanguage.IT && language != TextLanguage.TR && language != TextLanguage.ID)
             langLocaleNameList.add(language.localeName)
         }
 
