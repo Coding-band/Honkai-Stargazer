@@ -40,10 +40,10 @@ import ui.screens.showUpdatePopupInSetting
 class Language() {
 
     enum class AppLanguage(var localeName: String, var folderName: String, var localeCode: String, var hoyolabName: String) {
-        VOCCHINESE("粵語", "yue", "zh-HK", "zh-tw"),
+        VOCCHINESE("粵語", "yue", "zh-MO", "zh-tw"),
         EN("English", "en", "en", "en-us"),
         ZH_CN("简体中文", "zh_cn", "zh-CN", "zh-cn"),
-        ZH_HK("繁體中文", "zh_hk", "zh-TW", "zh-tw"),
+        ZH_HK("繁體中文", "zh_hk", "zh-HK", "zh-tw"),
         JP("日本語", "jp", "ja-JP", "ja-jp"),
         FR("Français", "fr", "fr-FR", "fr-fr"),
         RU("Русский", "ru", "ru-RU", "ru-ru"),

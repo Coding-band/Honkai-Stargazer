@@ -23,6 +23,9 @@ import androidx.compose.ui.window.Popup
 import dev.chrisbanes.haze.HazeState
 import exitApp
 import files.ConfirmBTN
+import files.KCEFInstallDescription
+import files.KCEFInstallDoneMessage
+import files.KCEFInstallTitle
 import files.LaterBTN
 import files.NetworkErrorUnstableConnection
 import files.Res
@@ -35,7 +38,6 @@ import ui.components.ThemedProgressBar
 import ui.components.UIButton
 import ui.navigation.refreshInit
 import ui.screens.doRefresh
-import utils.annotation.TranslationPls
 
 private lateinit var isProcessing: MutableState<Boolean>
 private lateinit var downloadProgress : MutableState<Float>
@@ -65,11 +67,10 @@ fun KCEFPopup(isShowPopup: MutableState<Boolean>, hazeState: HazeState) {
         val fileSize: MutableState<Long> = rememberSaveable { mutableStateOf(1L) }
         //Show the update dialog to the user
 
-        @TranslationPls
         if(kcefState.value != KCEFStatus.DENY && isShowPopup.value){
             Popup(alignment = Alignment.Center) {
                 AppDialog(
-                    titleString = "安裝 KCEF", //Downloading the assets
+                    titleString = removeStrQuote(Res.string.KCEFInstallTitle), //Downloading the assets
                     hazeState = hazeState,
                     modifier = Modifier.widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH),
                     components = {
@@ -136,8 +137,7 @@ private fun KCEFPopupAsking(
     kcefStatus: MutableState<KCEFStatus>,
 ) {
     Column {
-        @TranslationPls
-        Text(text = "KCEF用於提供電腦版嵌入式瀏覽器 (Webview) 服務\n若不安裝，部分網頁功能可能無法使用", style = FontSizeNormal16(), color = Color(0xFF222222), modifier = Modifier.align(Alignment.CenterHorizontally))
+        Text(text = removeStrQuote(Res.string.KCEFInstallDescription), style = FontSizeNormal16(), color = Color(0xFF222222), modifier = Modifier.align(Alignment.CenterHorizontally))
         Spacer(modifier = Modifier.height(8.dp))
         Text(removeStrQuote(Res.string.UpdateAssetUpdateSuggestionWiFi), style = FontSizeNormal16(), color = Color(0xFF222222), modifier = Modifier.align(Alignment.CenterHorizontally))
         Spacer(modifier = Modifier.height(8.dp))
@@ -170,8 +170,7 @@ private fun KCEFPopupRequestRestart(
     kcefStatus: MutableState<KCEFStatus>,
 ) {
     Column {
-        @TranslationPls
-        Text(text = "安裝完成，請按下按鈕關閉App", style = FontSizeNormal16(), color = Color(0xFF222222), modifier = Modifier.align(Alignment.CenterHorizontally))
+        Text(text = removeStrQuote(Res.string.KCEFInstallDoneMessage), style = FontSizeNormal16(), color = Color(0xFF222222), modifier = Modifier.align(Alignment.CenterHorizontally))
         Spacer(modifier = Modifier.height(8.dp))
         Row {
             UIButton(

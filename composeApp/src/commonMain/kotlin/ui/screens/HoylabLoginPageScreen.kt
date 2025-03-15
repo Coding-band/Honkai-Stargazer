@@ -67,6 +67,7 @@ import com.multiplatform.webview.web.WebView
 import com.multiplatform.webview.web.WebViewState
 import com.multiplatform.webview.web.rememberWebViewState
 import dev.chrisbanes.haze.HazeState
+import files.LoginPCNotAcceptViaWebsiteYet
 import files.NotOK
 import files.OK
 import files.RemarksInLogin
@@ -107,7 +108,6 @@ import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
 import ui.navigation.popBackStackLimited
 import utils.annotation.DoItLater
-import utils.annotation.TranslationPls
 import utils.app.AppFont
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
@@ -312,15 +312,14 @@ fun HoyolabServerSelectPopup(modifier: Modifier = Modifier, showPopup : MutableS
                         // Different Server Choices
                         for (server in HoyolabConst.SERVER.entries.filter { it != HoyolabConst.SERVER.UNKNOWN }) {
                             item {
+                                val loginPCNotAcceptMsg = removeStrQuote(Res.string.LoginPCNotAcceptViaWebsiteYet)
                                 UIButton(
                                     text = removeStrQuote(server.localeName),
                                     onClick = {
                                         showPopup.value = false
 
-                                        //@DoItLater("Implement JCEF later")
-                                        @TranslationPls
                                         if(isWindowsPlatform() || isMacOSPlatform() || isLinuxPlatform()){
-                                            showWarningToast(message = "PC端暫不支援Hoyoverse通行證登錄，請使用Cookies登錄\nCurrently PC does not support Hoyoverse Passport login yet, please use cookies to login instead.")
+                                            showWarningToast(message = loginPCNotAcceptMsg)
                                         }else{
                                             navigatorInstance.navigateLimited(HoyolabLoginRoute(server.serverId))
                                         }

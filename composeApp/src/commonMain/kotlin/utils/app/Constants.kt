@@ -67,7 +67,6 @@ import ui.navigation.Screen
 import ui.navigation.UIDSearchRoute
 import ui.navigation.urlHandler
 import utils.annotation.DoItLater
-import utils.annotation.TranslationPls
 
 
 class Constants {
@@ -188,7 +187,6 @@ class Constants {
                 itemIconId = Res.drawable.phorphos_alien_fill,
                 itemOnClickToNavigate = UIDSearchRoute,
             ),
-            @DoItLater("Add Time Count Down later")
             HomePageBlocks.HomePageBlockItem(
                 itemId = "Stamina",
                 itemTitleRId = Res.string.Stamina,

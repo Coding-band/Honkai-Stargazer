@@ -78,8 +78,6 @@ import types.Relic
 import types.RelicType
 import types.UserAccount
 import ui.navigation.hazeStateRoot
-import utils.annotation.DoItLater
-import utils.annotation.TranslationPls
 import utils.app.Constants.Companion.INFO_MAX_WIDTH
 import utils.app.Constants.Companion.INFO_MIN_WIDTH
 import utils.app.Constants.Companion.SCREEN_SAVE_PADDING

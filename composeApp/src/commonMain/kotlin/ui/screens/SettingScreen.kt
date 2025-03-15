@@ -55,11 +55,14 @@ import files.LanguageSetup
 import files.Navigate
 import files.OsVersion
 import files.Res
+import files.SettingCleanCacheFailed
+import files.SettingCleanCacheSuccessed
 import files.SettingDeviceModel
 import files.SettingInternalVersionCode
 import files.SettingPadModeHomePageShowBg
 import files.SettingPersonalPageDisable
 import files.SettingPersonalPageShow
+import files.SettingPressToCleanCache
 import files.SettingReDownloadFullData
 import files.SourceCode
 import files.SupportUs
@@ -88,7 +91,6 @@ import ui.navigation.IIRCHomePageRoute
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import utils.annotation.DoItLater
-import utils.annotation.TranslationPls
 import utils.app.Constants
 import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal14
@@ -296,7 +298,6 @@ fun SettingScreen(
                 item {
                     SettingCategory(title = removeStrQuote(Res.string.About)) {
                         //關於應用程式 About The App
-                        @DoItLater("openUrl or Remake AboutStargazerPageScreen")
                         SettingOptionNavigateBar(
                             titleRes = Res.string.AboutTheApp,
                             navigateClick = {
@@ -323,17 +324,17 @@ fun SettingScreen(
                         )
 
                         //一鍵清理緩存
-                        @TranslationPls
+                        val cacheCleanFailedMsg = removeStrQuote(Res.string.SettingCleanCacheFailed)
+                        val cacheCleanSuccessMsg = removeStrQuote(Res.string.SettingCleanCacheSuccessed)
                         SettingOptionNavigateBar(
-                            title = "一鍵清理緩存",
+                            title = removeStrQuote(Res.string.SettingPressToCleanCache),
                             navigateClick = {
                                 try {
                                     FileSystem.SYSTEM.deleteRecursively(FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("image_cache"))
                                 }catch (e: Exception){
-                                    showWarningToast(message = "緩存清理失敗，請稍後再試")
-                                    e.printStackTrace()
+                                    showWarningToast(message = cacheCleanFailedMsg)
                                 }
-                                showSuccessToast(message = "緩存清理完成")
+                                showSuccessToast(message = cacheCleanSuccessMsg)
                             }
                         )
 

@@ -71,6 +71,7 @@ import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.AccountLogin
+import files.IIRCTitle
 import files.Logout
 import files.ModifyHomePage
 import files.PlayerLevel
@@ -101,7 +102,6 @@ import ui.navigation.isPadMode
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
 import utils.annotation.DoItLater
-import utils.annotation.TranslationPls
 import utils.app.BlackAlpha30
 import utils.app.Constants.Companion.HOME_PAGE_MENU_DEFAULT
 import utils.app.DefaultZIndex
@@ -134,12 +134,11 @@ fun HomePage(
     val userAccount = remember { mutableStateOf(UserAccount.INSTANCE) }
     val homeMenuBlockList = remember { mutableStateOf(Preferences().HomePageMenu.getHomePageMenuArray()) }
 
-    @TranslationPls
-    if(Settings().getBoolean("isUnlockedIIRC", false) && homeMenuBlockList.value.filter { it.itemId == "IIRCHomePageScreen" }.isEmpty()){
+    if(Settings().getBoolean("isUnlockedIIRC", false) && homeMenuBlockList.value.none { it.itemId == "IIRCHomePageScreen" }){
         homeMenuBlockList.value.add(
             HomePageBlocks.HomePageBlockItem(
                 itemId = "IIRCHomePageScreen",
-                itemTitle = "星際資源公司",
+                itemTitleRId = Res.string.IIRCTitle,
                 itemIconId = Res.drawable.intelstellar_resource_corp_white_icon,
                 itemOnClickToNavigate = IIRCHomePageRoute
             )
