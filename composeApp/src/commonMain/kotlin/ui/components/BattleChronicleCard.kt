@@ -111,11 +111,13 @@ fun BattleChronicleCard(
             Spacer(Modifier.height(4.dp))
             //DateTime & Score
             Row {
-                Text(
-                    text = data[0].recordTime,
-                    color = Color.White,
-                    style = FontSizeNormal12()
-                )
+                if(data[0].recordTime != null){
+                    Text(
+                        text = data[0].recordTime!!,
+                        color = Color.White,
+                        style = FontSizeNormal12()
+                    )
+                }
                 Spacer(Modifier.weight(1f))
 
                 val score1 = if (data.isNotEmpty()) data[0].score else 0

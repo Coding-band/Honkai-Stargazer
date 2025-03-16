@@ -3,10 +3,13 @@ package types
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonNull
+import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.boolean
 import kotlinx.serialization.json.decodeFromJsonElement
 import kotlinx.serialization.json.int
+import kotlinx.serialization.json.intOrNull
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
@@ -21,7 +24,8 @@ data class UserAbyssRecord(
         Preferences().Leaderboard.getLocalMOCDataString()),
     var userCurrPFList: ArrayList<UserAbyssRecordData> = Json.decodeFromString<ArrayList<UserAbyssRecordData>>(
         Preferences().Leaderboard.getLocalPFDataString()),
-    var userCurrASList: ArrayList<UserAbyssRecordData> = arrayListOf(),
+    var userCurrASList: ArrayList<UserAbyssRecordData> = Json.decodeFromString<ArrayList<UserAbyssRecordData>>(
+        Preferences().Leaderboard.getLocalASDataString()),
 ){
     companion object{
         var INSTANCE = UserAbyssRecord()
@@ -168,6 +172,80 @@ data class UserAbyssRecord(
             }
         }
 
+        fun refreshASData(){
+            try{
+                if(UserAccount.INSTANCE.uid == "000000000"){ return }
+                //if(!Preferences().Leaderboard.isUpdateLeaderboardNow()){ return }
+
+                val api = HoyolabAPI(UserAccount.INSTANCE.server.platform, UserAccount.INSTANCE.cookies)
+                val userASCurr = api.getHsrApocalypticShadow(UserAccount.INSTANCE.uid, UserAccount.INSTANCE.server, 1).data
+                val userASLast = api.getHsrApocalypticShadow(UserAccount.INSTANCE.uid, UserAccount.INSTANCE.server, 2).data
+                val asList = arrayListOf<UserAbyssRecordData>()
+                repeat(2){
+                    val userAS = if (it == 0) userASCurr else userASLast
+                    if(userAS !is JsonNull && !userAS.jsonObject.isEmpty()){
+                        val asId = userAS.jsonObject["groups"]!!.jsonArray[it].jsonObject["schedule_id"]!!.jsonPrimitive.int
+                        val asDetails = userAS.jsonObject["all_floor_detail"]?.jsonArray
+
+                        if(!asDetails.isNullOrEmpty()){
+                            for (pfDetail in asDetails){
+                                val detail = pfDetail.jsonObject
+                                val floor = detail["maze_id"]!!.jsonPrimitive.int % 10
+                                val star = detail["star_num"]!!.jsonPrimitive.int
+                                val isFastPass = detail["is_fast"]!!.jsonPrimitive.boolean
+
+                                repeat(2){
+                                    val nodeData = if (it == 0){ detail["node_1"]!!.jsonObject } else { detail["node_2"]!!.jsonObject }
+                                    val charList = arrayListOf<UserAbyssCharData>()
+                                    val score = nodeData.jsonObject["score"]?.jsonPrimitive?.content?.toIntOrNull() ?: -1
+                                    val bossDefeated = nodeData.jsonObject["boss_defeated"]!!.jsonPrimitive.boolean
+                                    val buffId = if(nodeData.jsonObject["buff"] != JsonNull) {nodeData.jsonObject["buff"]?.jsonObject?.get("id")?.jsonPrimitive?.intOrNull ?: -1} else -1
+
+                                    //Character Data of this node
+                                    for (avatar in nodeData.jsonObject["avatars"]!!.jsonArray){
+                                        val avatarObj = avatar.jsonObject
+                                        charList.add(
+                                            UserAbyssCharData(
+                                                charId = avatarObj["id"]!!.jsonPrimitive.int,
+                                                charLevel = avatarObj["level"]!!.jsonPrimitive.int,
+                                                charEidolon = avatarObj["rank"]!!.jsonPrimitive.int
+                                            )
+                                        )
+                                    }
+                                    asList.add(UserAbyssRecordData(
+                                        id = asId,
+                                        floor = floor,
+                                        partId = it + 1,
+                                        star = star,
+                                        score = score,
+                                        recordTime = if(nodeData.jsonObject["challenge_time"] is JsonNull) null else HoyolabConst.HoyolabTime()
+                                            .getDateTimeFromHoyolabTime(
+                                                Json.decodeFromJsonElement<HoyolabConst.HoyolabTime>(
+                                                    nodeData.jsonObject["challenge_time"]!!
+                                                )
+                                            ),
+                                        isFastPass = isFastPass,
+                                        isBossDefeated = bossDefeated,
+                                        buffId = buffId,
+                                        charList = charList,
+                                    ))
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+                println("[HoYoLab] Updated AS Data: size = ${asList.size}, ${Json.encodeToString(asList)}")
+                INSTANCE.userCurrASList = asList
+                Preferences().Leaderboard.setLocalASDataString(Json.encodeToString(asList))
+
+
+            }catch (e : Exception){
+                errorLog("UserAccount", "refreshASData()", e)
+            }
+        }
+
         //TODO: Add AS Data
     }
 }
@@ -185,10 +263,12 @@ data class UserAbyssRecordData(
     val id: Int,
     val floor: Int,
     val partId: Int,
-    val recordTime: String,
-    val roundUsed: Int,
+    val recordTime: String? = null,
+    val roundUsed: Int = -1,
     val star: Int = -1,
     val score: Int = -1,
     val isFastPass: Boolean = false,
+    val isBossDefeated: Boolean = false,
+    val buffId: Int = -1,
     val charList: ArrayList<UserAbyssCharData> = arrayListOf(),
 )

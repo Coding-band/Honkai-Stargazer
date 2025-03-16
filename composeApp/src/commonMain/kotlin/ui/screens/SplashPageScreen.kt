@@ -39,6 +39,7 @@ import kotlinx.coroutines.withContext
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import types.UserAbyssRecord.Companion.refreshASData
 import types.UserAbyssRecord.Companion.refreshMOCData
 import types.UserAbyssRecord.Companion.refreshPFData
 import types.UserAccount.Companion.INSTANCE
@@ -87,15 +88,20 @@ fun SplashPage(
                         refreshUserAccount()
                         refreshMOCData()
                         refreshPFData()
+                        refreshASData()
                         Preferences().Leaderboard.updatedLeaderboard()
 
                         CharWeightList.INSTANCE
-
+                    }.await()
+                    launch {
                         StarbaseAPI().updateUserAccountInfo()
                         StarbaseAPI().updateCharData()
-                        StarbaseAPI().updatePFData()
                         StarbaseAPI().updateMOCData()
-                    }.await()
+                        StarbaseAPI().updatePFData()
+                        //StarbaseAPI().updatASData()
+                        println("AS THERE!")
+                        println(Preferences().Leaderboard.getLocalASDataString())
+                    }
                 }
                 hasRefreshed.value = true
             }
