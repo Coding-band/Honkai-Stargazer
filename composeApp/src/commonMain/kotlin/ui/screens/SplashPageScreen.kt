@@ -93,14 +93,13 @@ fun SplashPage(
 
                         CharWeightList.INSTANCE
                     }.await()
+                    
                     launch {
                         StarbaseAPI().updateUserAccountInfo()
                         StarbaseAPI().updateCharData()
                         StarbaseAPI().updateMOCData()
                         StarbaseAPI().updatePFData()
-                        //StarbaseAPI().updatASData()
-                        println("AS THERE!")
-                        println(Preferences().Leaderboard.getLocalASDataString())
+                        StarbaseAPI().updateASData()
                     }
                 }
                 hasRefreshed.value = true

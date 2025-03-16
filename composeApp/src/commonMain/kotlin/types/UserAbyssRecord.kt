@@ -103,7 +103,7 @@ data class UserAbyssRecord(
         fun refreshPFData(){
             try{
                 if(UserAccount.INSTANCE.uid == "000000000"){ return }
-                if(!Preferences().Leaderboard.isUpdateLeaderboardNow()){ return }
+                //if(!Preferences().Leaderboard.isUpdateLeaderboardNow()){ return }
 
                 val api = HoyolabAPI(UserAccount.INSTANCE.server.platform, UserAccount.INSTANCE.cookies)
                 val userPfCurr = api.getHsrPureFiction(UserAccount.INSTANCE.uid, UserAccount.INSTANCE.server, 1).data
@@ -128,6 +128,7 @@ data class UserAbyssRecord(
                                     val nodeData = if (it == 0){ detail["node_1"]!!.jsonObject } else { detail["node_2"]!!.jsonObject }
                                     val charList = arrayListOf<UserAbyssCharData>()
                                     val score = nodeData.jsonObject["score"]?.jsonPrimitive?.content?.toIntOrNull() ?: -1
+                                    val buffId = if(nodeData.jsonObject["buff"] != JsonNull) {nodeData.jsonObject["buff"]?.jsonObject?.get("id")?.jsonPrimitive?.intOrNull ?: -1} else -1
 
                                     //Character Data of this node
                                     for (avatar in nodeData.jsonObject["avatars"]!!.jsonArray){
@@ -153,6 +154,7 @@ data class UserAbyssRecord(
                                                     nodeData.jsonObject["challenge_time"]!!
                                                 )
                                             ),
+                                        buffId = buffId,
                                         isFastPass = isFastPass,
                                         charList = charList,
                                     ))
@@ -268,7 +270,7 @@ data class UserAbyssRecordData(
     val star: Int = -1,
     val score: Int = -1,
     val isFastPass: Boolean = false,
-    val isBossDefeated: Boolean = false,
+    val isBossDefeated: Boolean? = false,
     val buffId: Int = -1,
     val charList: ArrayList<UserAbyssCharData> = arrayListOf(),
 )
