@@ -18,6 +18,8 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -25,6 +27,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
@@ -34,6 +37,9 @@ import files.PlayersRounds
 import files.Res
 import files.ic_moc_star
 import org.jetbrains.compose.resources.painterResource
+import types.AbyssInfo
+import types.AbyssInfoList
+import types.AbyssInfoList.Companion.getAbyssInfoFileNameById
 import types.AbyssInfoType
 import types.Character
 import types.CharacterStatus
@@ -41,10 +47,13 @@ import types.UserAbyssRecordData
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
+import utils.app.Language.Companion.TextLanguageInstance
 import utils.app.getMocPhaseStrByIndex
 import utils.app.newImageRequest
+import utils.app.readFromFile
 import utils.app.removeStrQuote
 import utils.app.replaceStrRes
+import utils.starbase.StarbaseAPI
 
 @Composable
 fun BattleChronicleCard(
@@ -143,34 +152,50 @@ fun BattleChronicleCard(
             repeat(2){
                 //fix: Display the node 1 twice
                 val charList = data[it].charList
-
                 Column(Modifier.fillMaxWidth().wrapContentHeight()) {
-                    // Buff Icon & Description
-                    Row {
-                        // Buff Icon
-                        AsyncImage(
-                            model = newImageRequest(context = context, "https://raw.githubusercontent.com/Coding-band/SG3-Assets/refs/heads/main/images/buff_icons/ActivityBattleBuff140.png"),
-                            contentDescription = null,
-                            modifier = Modifier.size(36.dp).padding(4.dp).background(Color(0xCC000000), CircleShape).border(1.dp, Color.White, CircleShape)
-                        )
 
-                        // Buff Name & Description
-                        Column {
-                            Text(
-                                text = "Buff Name",
-                                color = Color.White,
-                                style = FontSizeNormal14(),
-                                maxLines = 1
-                            )
-                            Text(
-                                text = "Buff Description",
-                                color = Color(0xCCFFFFFF),
-                                style = FontSizeNormal12(),
-                                maxLines = 3
-                            )
-                        }
+                    val buffIcon = remember { mutableStateOf("---") }
+                    val buffName = remember { mutableStateOf("---") }
+                    val buffDesc = remember { mutableStateOf("---") }
+
+                    val buffData = AbyssInfo.getAbyssItemById(data[it].id, type, getAbyssInfoFileNameById(data[it].id, type))
+                    if(buffData != null){
+                        val buffItem = buffData.buffList.find { buff -> buff.buffId == data[it].buffId.toString() }
+                        buffIcon.value = (StarbaseAPI().getGitHubStaticAssetURL()+"/images/buff_icons/${buffItem?.buffIcon}.webp")
+                        buffName.value = buffItem?.nameList?.get(TextLanguageInstance) ?: "???"
+                        buffDesc.value = buffItem?.descList?.get(TextLanguageInstance) ?: "???"
                     }
-                    Spacer(Modifier.height(4.dp))
+
+                    // Buff Icon & Description
+                    if(buffName.value != "---" && buffName.value != "???"){
+                        Row {
+                            // Buff Icon
+                            AsyncImage(
+                                model = newImageRequest(context = context, buffIcon.value),
+                                contentDescription = null,
+                                modifier = Modifier.size(36.dp).padding(4.dp).background(Color(0xCC000000), CircleShape).border(1.dp, Color.White, CircleShape)
+                            )
+
+                            // Buff Name & Description
+                            Column {
+                                Text(
+                                    text = buffName.value,
+                                    color = Color.White,
+                                    style = FontSizeNormal14(),
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis
+                                )
+                                Text(
+                                    text = buffDesc.value,
+                                    color = Color(0xCCFFFFFF),
+                                    style = FontSizeNormal12(),
+                                    maxLines = 3,
+                                    overflow = TextOverflow.Ellipsis
+                                )
+                            }
+                        }
+                        Spacer(Modifier.height(4.dp))
+                    }
 
                     // Character Display
                     NonLazyGrid(

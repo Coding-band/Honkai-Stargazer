@@ -35,6 +35,8 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.decodeFromJsonElement
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
@@ -69,6 +71,9 @@ data class AbyssInfo(
 
     @SerialName("desc")
     val descList: Map<Language.TextLanguage, String> = mapOf(),
+
+    @SerialName("buff")
+    val buffList: ArrayList<AbyssInfoBuff> = arrayListOf(),
 
     @SerialName("time")
     val timeInfo: AbyssInfoTime,
@@ -177,6 +182,34 @@ data class AbyssInfoList(
             }
 
         }
+
+        @OptIn(ExperimentalCoroutinesApi::class)
+        fun getAbyssInfoFileNameById(abyssId: Int, type: AbyssInfoType): String {
+            return runBlocking {
+                val job = async(Dispatchers.Default) {
+                    try {
+                        val abyssJson =
+                            when(type){
+                                AbyssInfoType.MemoryOfChaos -> mocListJson
+                                AbyssInfoType.PureFiction -> pfListJson
+                                AbyssInfoType.ApocalypticShadow -> asListJson
+                            }
+
+                        val abyssList = Json.decodeFromJsonElement<ArrayList<AbyssInfoList>>(abyssJson)
+
+                        val abyssFiltered = abyssList.filter { it.id == abyssId }
+                        if(abyssFiltered.isEmpty()) return@async "???"
+                        return@async abyssFiltered[0].fileName
+                    }catch (e: Exception) {
+                        errorLog("AbyssInfoList", "getAbyssTitleLocaleNameById(abyssId = $abyssId, type = $type)", e)
+                        return@async "???"
+                    }
+                }
+                job.await()
+                job.getCompleted()
+            }
+
+        }
         val Saver: Saver<AbyssInfoList, Any> = Saver(
             save = { Json.encodeToString(it) },
             restore = { Json.decodeFromString<AbyssInfoList>(it as String) }
@@ -272,3 +305,19 @@ enum class AbyssInfoCombatType(
     @SerialName("Unspecified")
     Unspecified("未知", Res.string.HaveNotUsed, Res.drawable.pom_pom_failed_issue, Res.drawable.pom_pom_failed_issue);
 }
+
+
+@Serializable
+data class AbyssInfoBuff(
+    @SerialName("buffId")
+    val buffId: String,
+
+    @SerialName("buffIcon")
+    val buffIcon: String,
+
+    @SerialName("name")
+    val nameList: Map<Language.TextLanguage, String> = mapOf(),
+
+    @SerialName("desc")
+    val descList: Map<Language.TextLanguage, String> = mapOf(),
+)
