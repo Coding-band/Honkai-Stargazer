@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -25,6 +26,8 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
 import files.MOCSkipped
 import files.PlayersRounds
@@ -39,6 +42,7 @@ import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.getMocPhaseStrByIndex
+import utils.app.newImageRequest
 import utils.app.removeStrQuote
 import utils.app.replaceStrRes
 
@@ -52,6 +56,7 @@ fun BattleChronicleCard(
     isSelected : Boolean? = null,
     //asData: UserASRecord? = null,
 ) {
+    val context = LocalPlatformContext.current
     Column(
         modifier
             .border(1.dp, Color(0x66DDDDDD), shape = RoundedCornerShape(4.dp))
@@ -140,6 +145,34 @@ fun BattleChronicleCard(
                 val charList = data[it].charList
 
                 Column(Modifier.fillMaxWidth().wrapContentHeight()) {
+                    // Buff Icon & Description
+                    Row {
+                        // Buff Icon
+                        AsyncImage(
+                            model = newImageRequest(context = context, "https://raw.githubusercontent.com/Coding-band/SG3-Assets/refs/heads/main/images/buff_icons/ActivityBattleBuff140.png"),
+                            contentDescription = null,
+                            modifier = Modifier.size(36.dp).padding(4.dp).background(Color(0xCC000000), CircleShape).border(1.dp, Color.White, CircleShape)
+                        )
+
+                        // Buff Name & Description
+                        Column {
+                            Text(
+                                text = "Buff Name",
+                                color = Color.White,
+                                style = FontSizeNormal14(),
+                                maxLines = 1
+                            )
+                            Text(
+                                text = "Buff Description",
+                                color = Color(0xCCFFFFFF),
+                                style = FontSizeNormal12(),
+                                maxLines = 3
+                            )
+                        }
+                    }
+                    Spacer(Modifier.height(4.dp))
+
+                    // Character Display
                     NonLazyGrid(
                         columns = 4,
                         itemCount = charList.size ?: 0,
