@@ -158,10 +158,17 @@ fun BattleChronicleCard(
                     val buffName = remember { mutableStateOf("---") }
                     val buffDesc = remember { mutableStateOf("---") }
 
-                    val buffData = AbyssInfo.getAbyssItemById(data[it].id, type, getAbyssInfoFileNameById(data[it].id, type))
-                    if(buffData != null){
-                        val buffItem = buffData.buffList.find { buff -> buff.buffId == data[it].buffId.toString() }
-                        buffIcon.value = (StarbaseAPI().getGitHubStaticAssetURL()+"/images/buff_icons/${buffItem?.buffIcon}.webp")
+                    val buffData = remember(data[it].id) {
+                        mutableStateOf<AbyssInfo?>(null)
+                    }
+
+                    LaunchedEffect(data[it].id) {
+                        buffData.value = AbyssInfo.getAbyssItemById(data[it].id, type, getAbyssInfoFileNameById(data[it].id, type))
+                    }
+
+                    buffData.value?.let { bdata ->
+                        val buffItem = bdata.buffList.find { buff -> buff.buffId == data[it].buffId.toString() }
+                        buffIcon.value = (StarbaseAPI().getGitHubStaticAssetURL() + "/images/buff_icons/${buffItem?.buffIcon}.webp")
                         buffName.value = buffItem?.nameList?.get(TextLanguageInstance) ?: "???"
                         buffDesc.value = buffItem?.descList?.get(TextLanguageInstance) ?: "???"
                     }
@@ -194,7 +201,7 @@ fun BattleChronicleCard(
                                 )
                             }
                         }
-                        Spacer(Modifier.height(4.dp))
+                        Spacer(Modifier.height(8.dp))
                     }
 
                     // Character Display

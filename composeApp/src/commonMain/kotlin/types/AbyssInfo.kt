@@ -76,7 +76,7 @@ data class AbyssInfo(
     val buffList: ArrayList<AbyssInfoBuff> = arrayListOf(),
 
     @SerialName("time")
-    val timeInfo: AbyssInfoTime,
+    val timeInfo: AbyssInfoTime = AbyssInfoTime(0, 0),
 ) {
     companion object{
         fun getAbyssItemById(abyssId: Int, type: AbyssInfoType, abyssFileName: String): AbyssInfo? {

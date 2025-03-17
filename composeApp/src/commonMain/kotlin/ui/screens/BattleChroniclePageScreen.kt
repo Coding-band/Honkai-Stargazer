@@ -115,12 +115,12 @@ fun BattleChroniclePageScreen(
         AbyssInfoType.ApocalypticShadow -> userAbyssRecord.userCurrASList
     }
 
-    val mocIds = userAbyssRecord.userCurrMOCList.map { it.id }.distinct().sortedDescending()
-    val pfIds = userAbyssRecord.userCurrPFList.map { it.id }.distinct().sortedDescending()
-    val asIds = userAbyssRecord.userCurrASList.map { it.id }.distinct().sortedDescending()
-    val mocTitles = mocIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.MemoryOfChaos) }
-    val pfTitles = pfIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.PureFiction) }
-    val asTitles = asIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.ApocalypticShadow) }
+    val mocIds = remember { userAbyssRecord.userCurrMOCList.map { it.id }.distinct().sortedDescending() }
+    val pfIds = remember { userAbyssRecord.userCurrPFList.map { it.id }.distinct().sortedDescending() }
+    val asIds = remember { userAbyssRecord.userCurrASList.map { it.id }.distinct().sortedDescending() }
+    val mocTitles = remember { mocIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.MemoryOfChaos) } }
+    val pfTitles = remember { pfIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.PureFiction) } }
+    val asTitles = remember { asIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.ApocalypticShadow) } }
 
     val isAsc = remember { mutableStateOf(false) }
 
@@ -129,12 +129,7 @@ fun BattleChroniclePageScreen(
         removeStrQuote(Res.string.AbyssListSortDescend),
         removeStrQuote(Res.string.AbyssListSortAscend),
     )
-    val ids = remember { mutableStateOf(mocIds) }
-    ids.value = when (choiceStrList[choiceChronicleIndex.value].second) {
-        AbyssInfoType.MemoryOfChaos -> mocIds
-        AbyssInfoType.PureFiction -> pfIds
-        AbyssInfoType.ApocalypticShadow -> asIds
-    }
+
     val density = LocalDensity.current.density
     val sorttedAbyssList = choiceChronicle.value
         .asSequence()
@@ -145,7 +140,6 @@ fun BattleChroniclePageScreen(
         .sortedByDescending { it.first().id }
         .toList()
 
-    val sorttedAbyssListAsc = sorttedAbyssList.reversed()
     val isDisplayPageHeader = remember { mutableStateOf(true) }
 
     //Check if it can scroll up (forward), then hide the header
@@ -235,7 +229,7 @@ fun BattleChroniclePageScreen(
             }
 
             items(count = sorttedAbyssList.size) { index ->
-                val mocDataList = (if(isAsc.value){ sorttedAbyssListAsc } else sorttedAbyssList)
+                val mocDataList = (if(isAsc.value){ sorttedAbyssList.asReversed() } else sorttedAbyssList)
                 val mocData = mocDataList[index]
                 if(index > 0 && mocDataList[index - 1].first().id != mocData.first().id) {
                     Spacer(Modifier.height(8.dp))
@@ -251,7 +245,11 @@ fun BattleChroniclePageScreen(
                         AbyssInfoType.MemoryOfChaos -> mocTitles
                         AbyssInfoType.PureFiction -> pfTitles
                         AbyssInfoType.ApocalypticShadow -> asTitles
-                    }[ids.value.indexOf(mocData.first().id)],
+                    }[(when (choiceStrList[choiceChronicleIndex.value].second) {
+                        AbyssInfoType.MemoryOfChaos -> mocIds
+                        AbyssInfoType.PureFiction -> pfIds
+                        AbyssInfoType.ApocalypticShadow -> asIds
+                    }).indexOf(mocData.first().id)],
                 )
                 if (index < sorttedAbyssList.size - 1) {
                     Spacer(Modifier.height(8.dp))
