@@ -48,6 +48,7 @@ import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import files.AbyssListSortAscend
 import files.AbyssListSortDescend
+import files.ApocalypticShadow
 import files.AppStatusNoDataFound
 import files.MOCMyBattleReport
 import files.MemoryOfChaos
@@ -105,7 +106,7 @@ fun BattleChroniclePageScreen(
     val choiceStrList = listOf(
         removeStrQuote(Res.string.MemoryOfChaos) to AbyssInfoType.MemoryOfChaos,
         removeStrQuote(Res.string.PureFiction) to AbyssInfoType.PureFiction,
-        //removeStrQuote(Res.string.ApocalypticShadow) to AbyssInfoType.ApocalypticShadow,
+        removeStrQuote(Res.string.ApocalypticShadow) to AbyssInfoType.ApocalypticShadow,
     )
     val choiceChronicle = remember { mutableStateOf(userAbyssRecord.userCurrMOCList) }
     choiceChronicle.value = when (choiceStrList[choiceChronicleIndex.value].second) {
@@ -116,10 +117,10 @@ fun BattleChroniclePageScreen(
 
     val mocIds = userAbyssRecord.userCurrMOCList.map { it.id }.distinct().sortedDescending()
     val pfIds = userAbyssRecord.userCurrPFList.map { it.id }.distinct().sortedDescending()
-    val asIds = listOf<Int>()//userAbyssRecord.userCurrASList.map { it.id }.distinct().sortedDescending()
+    val asIds = userAbyssRecord.userCurrASList.map { it.id }.distinct().sortedDescending()
     val mocTitles = mocIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.MemoryOfChaos) }
     val pfTitles = pfIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.PureFiction) }
-    val asTitles = listOf<String>() //asIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.ApocalypticShadow) }
+    val asTitles = asIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.ApocalypticShadow) }
 
     val isAsc = remember { mutableStateOf(false) }
 
@@ -321,12 +322,5 @@ fun BattleChroniclePageScreen(
                 }
             }
         }
-    }
-}
-
-@Composable
-fun BattleChronicleTopFilter() {
-    Column {
-        //TODO : Add the Filter Function
     }
 }

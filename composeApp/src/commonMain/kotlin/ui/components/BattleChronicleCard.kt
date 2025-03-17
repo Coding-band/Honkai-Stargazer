@@ -76,17 +76,19 @@ fun BattleChronicleCard(
                     )
 
                     //Remaining Rounds
-                    Text(
-                        text = if(data[0].isFastPass) {
-                            removeStrQuote(Res.string.MOCSkipped)
-                        } else {
-                            removeStrQuote(Res.string.PlayersRounds).replaceStrRes(
-                                data[0].roundUsed.toString(),
-                            )
-                        },
-                        color = Color(0xCCFFFFFF),
-                        style = FontSizeNormal12()
-                    )
+                    if(data[0].roundUsed != -1 || data[0].isFastPass) {
+                        Text(
+                            text = if(data[0].isFastPass) {
+                                removeStrQuote(Res.string.MOCSkipped)
+                            } else {
+                                removeStrQuote(Res.string.PlayersRounds).replaceStrRes(
+                                    data[0].roundUsed.toString(),
+                                )
+                            },
+                            color = Color(0xCCFFFFFF),
+                            style = FontSizeNormal12()
+                        )
+                    }
                 }
 
                 Spacer(Modifier.weight(1f))
