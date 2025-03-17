@@ -52,6 +52,8 @@ enum class AbyssInfoType {
     MemoryOfChaos,
     @SerialName("PureFiction")
     PureFiction,
+    @SerialName("ApocalypticShadow")
+    ApocalypticShadow,
 }
 
 /**
@@ -91,6 +93,7 @@ data class AbyssInfo(
                     when(type){
                         AbyssInfoType.MemoryOfChaos -> "memory_of_chao_data/$abyssFileName.json"
                         AbyssInfoType.PureFiction -> "pure_fiction_data/$abyssFileName.json"
+                        AbyssInfoType.ApocalypticShadow -> "apocalyptic_shadow_data/$abyssFileName.json"
                     },
                     defaultData = "[]"
                 )
@@ -99,41 +102,6 @@ data class AbyssInfo(
             }catch (e: Exception) {
                 errorLog("AbyssInfo", "getAbyssItemByMocId(abyssId = $abyssId, type = $type)", e)
                 return null
-            }
-        }
-
-        @VersionUpdateCheck
-        @Deprecated("Instead via accessing the `fileName` key in the abyss list json")
-        fun getAbyssFileNameById(abyssId: Int, type: AbyssInfoType): String {
-            when(type){
-                AbyssInfoType.MemoryOfChaos -> {
-                    return when(abyssId){
-                        1008 -> "chao_1.5.0_2"
-                        1009 -> "chao_1.6.0_1"
-                        1010 -> "chao_1.6.0_2"
-                        1011 -> "chao_2.0.0_1"
-                        1012 -> "chao_2.0.0_2"
-                        1013 -> "chao_2.1.0_1"
-                        1014 -> "chao_2.2.0_1"
-                        1015 -> "chao_2.2.0_2"
-                        1016 -> "chao_2.3.0"
-                        1017 -> "chao_2.4.0"
-                        else -> "UNKNOWN_ID"
-                    }
-                }
-                AbyssInfoType.PureFiction -> {
-                    return when(abyssId){
-                        2001 -> "pure_fiction_1"
-                        2002 -> "pure_fiction_2"
-                        2003 -> "pure_fiction_3"
-                        2004 -> "pure_fiction_4"
-                        2005 -> "pure_fiction_5"
-                        2006 -> "pure_fiction_6"
-                        2007 -> "pure_fiction_7"
-                        2008 -> "pure_fiction_8"
-                        else -> "UNKNOWN_ID"
-                    }
-                }
             }
         }
     }
@@ -152,6 +120,7 @@ data class AbyssInfoList(
     companion object{
         val mocListJson = getAssetsJsonByFilePath("memory_of_chao_data/chao_list.json", defaultData = "[]")
         val pfListJson = getAssetsJsonByFilePath("pure_fiction_data/pf_list.json", defaultData = "[]")
+        val asListJson = getAssetsJsonByFilePath("apocalyptic_shadow_data/as_list.json", defaultData = "[]")
 
         @OptIn(ExperimentalCoroutinesApi::class)
         fun getAbyssList(type: AbyssInfoType): ArrayList<AbyssInfoList> {
@@ -163,6 +132,7 @@ data class AbyssInfoList(
                             when(type){
                                 AbyssInfoType.MemoryOfChaos -> "memory_of_chao_data/chao_list.json"
                                 AbyssInfoType.PureFiction -> "pure_fiction_data/pf_list.json"
+                                AbyssInfoType.ApocalypticShadow -> "apocalyptic_shadow_data/as_list.json"
                             },
                             defaultData = "[]"
                         )
@@ -189,6 +159,7 @@ data class AbyssInfoList(
                             when(type){
                                 AbyssInfoType.MemoryOfChaos -> mocListJson
                                 AbyssInfoType.PureFiction -> pfListJson
+                                AbyssInfoType.ApocalypticShadow -> asListJson
                             }
 
                         val abyssList = Json.decodeFromJsonElement<ArrayList<AbyssInfoList>>(abyssJson)

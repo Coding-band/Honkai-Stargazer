@@ -93,7 +93,7 @@ fun SplashPage(
 
                         CharWeightList.INSTANCE
                     }.await()
-                    
+
                     launch {
                         StarbaseAPI().updateUserAccountInfo()
                         StarbaseAPI().updateCharData()

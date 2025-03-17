@@ -105,17 +105,21 @@ fun BattleChroniclePageScreen(
     val choiceStrList = listOf(
         removeStrQuote(Res.string.MemoryOfChaos) to AbyssInfoType.MemoryOfChaos,
         removeStrQuote(Res.string.PureFiction) to AbyssInfoType.PureFiction,
+        //removeStrQuote(Res.string.ApocalypticShadow) to AbyssInfoType.ApocalypticShadow,
     )
     val choiceChronicle = remember { mutableStateOf(userAbyssRecord.userCurrMOCList) }
     choiceChronicle.value = when (choiceStrList[choiceChronicleIndex.value].second) {
         AbyssInfoType.MemoryOfChaos -> userAbyssRecord.userCurrMOCList
         AbyssInfoType.PureFiction -> userAbyssRecord.userCurrPFList
+        AbyssInfoType.ApocalypticShadow -> userAbyssRecord.userCurrASList
     }
 
     val mocIds = userAbyssRecord.userCurrMOCList.map { it.id }.distinct().sortedDescending()
     val pfIds = userAbyssRecord.userCurrPFList.map { it.id }.distinct().sortedDescending()
+    val asIds = listOf<Int>()//userAbyssRecord.userCurrASList.map { it.id }.distinct().sortedDescending()
     val mocTitles = mocIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.MemoryOfChaos) }
     val pfTitles = pfIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.PureFiction) }
+    val asTitles = listOf<String>() //asIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.ApocalypticShadow) }
 
     val isAsc = remember { mutableStateOf(false) }
 
@@ -128,6 +132,7 @@ fun BattleChroniclePageScreen(
     ids.value = when (choiceStrList[choiceChronicleIndex.value].second) {
         AbyssInfoType.MemoryOfChaos -> mocIds
         AbyssInfoType.PureFiction -> pfIds
+        AbyssInfoType.ApocalypticShadow -> asIds
     }
     val density = LocalDensity.current.density
     val sorttedAbyssList = choiceChronicle.value
@@ -244,6 +249,7 @@ fun BattleChroniclePageScreen(
                     when (choiceStrList[choiceChronicleIndex.value].second) {
                         AbyssInfoType.MemoryOfChaos -> mocTitles
                         AbyssInfoType.PureFiction -> pfTitles
+                        AbyssInfoType.ApocalypticShadow -> asTitles
                     }[ids.value.indexOf(mocData.first().id)],
                 )
                 if (index < sorttedAbyssList.size - 1) {
