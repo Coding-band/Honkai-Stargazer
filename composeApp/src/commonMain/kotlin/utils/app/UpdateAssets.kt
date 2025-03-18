@@ -131,6 +131,7 @@ fun updateCheckInit(forceDownload: Boolean = false) : Boolean{
     val infoJson = Json.parseToJsonElement(updateAssetsInfo).jsonObject["updates"]
     infoList.clear()
     infoList = Json.decodeFromJsonElement<ArrayList<UpdateAssetsInfo>>(infoJson!!.jsonArray)
+    infoList.sortByDescending { it.createAtUnix }
     val currIndex = infoList.indexOfFirst { it.commit == localCommit }
     updateState = if(forceDownload) UpdateAssetsStatus.FULL else checkIsNeedUpdateAssets(infoList, currIndex)
 
