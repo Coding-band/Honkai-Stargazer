@@ -43,9 +43,11 @@ import com.cheonjaeung.compose.grid.SimpleGridCells
 import com.cheonjaeung.compose.grid.VerticalGrid
 import dev.chrisbanes.haze.HazeState
 import files.ConfirmBTN
+import files.FilterFavourite
 import files.FilterFindCharacter
 import files.FilterFindLightcone
 import files.FilterFindRelic
+import files.FilterOwned
 import files.FilterTitle
 import files.NoDataYet
 import files.Res
@@ -57,6 +59,7 @@ import files.SortByHp
 import files.SortByName
 import files.SortByRare
 import files.SortByTime
+import files.UserOwned
 import files.bg_transparent
 import files.ic_selected_orange_circle
 import files.ic_sort_asc
@@ -254,7 +257,7 @@ fun <T> ListFilterTool(
                                 Row {
                                     if(filterType == ListFilterType.CHARACTER){
                                         Text(
-                                            text = "僅已擁有",
+                                            text = removeStrQuote(Res.string.FilterOwned),
                                             style = FontSizeNormal14(),
                                             color = Color(0xFFFFFFFF),
                                         )
@@ -274,7 +277,7 @@ fun <T> ListFilterTool(
 
                                     }
                                     Text(
-                                        text = "僅收藏",
+                                        text = removeStrQuote(Res.string.FilterFavourite),
                                         style = FontSizeNormal14(),
                                         color = Color(0xFFFFFFFF),
                                     )
@@ -300,6 +303,8 @@ fun <T> ListFilterTool(
                                             //Reset All Filters
                                             filterChoiceArray.clear()
                                             isReloadState.value = true
+                                            isFilterOwned.value = false
+                                            isFilterFavourite.value = false
                                             isShowing.value = "NOPE"
                                         }
                                     )
@@ -309,7 +314,7 @@ fun <T> ListFilterTool(
                                         text = removeStrQuote(Res.string.ConfirmBTN),
                                         buttonSize = UIButtonSize.Normal,
                                         onClick = {
-                                            //Reset All Filters
+                                            //Confirm and Apply Filters
                                             isReloadState.value = true
                                             isShowing.value = "NOPE"
                                         }

@@ -21,6 +21,7 @@ import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.OutlinedButton
 import androidx.compose.material.ripple
@@ -120,7 +121,6 @@ fun PageHeader(
                 ) {
                     Box(modifier = Modifier
                         .size(40.dp)
-                        .clip(CircleShape)
                         .align(Alignment.CenterVertically)
                         .let {
                             if(backIconId != BackIcon.NULL){
@@ -129,6 +129,7 @@ fun PageHeader(
                                     indication = ripple(),
                                     interactionSource = MutableInteractionSource()
                                 )
+                                    .clip(RoundedCornerShape(12.dp))
                             }else{
                                 it
                             }
