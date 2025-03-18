@@ -34,8 +34,10 @@ import types.HsrProperties
 import types.Lightcone
 import types.Relic
 import types.UserAccount
+import utils.app.ERR_NETWORK_UNSTABLE_CONNECTION
 import utils.app.Language
 import utils.app.errorLog
+import utils.app.showWarningToast
 
 class MihomoRequest(val uid : String, val language: Language.TextLanguage = Language.TextLanguageInstance) {
 
@@ -69,13 +71,16 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
                     val response: HttpResponse = client.get(mihomoUrl)
                     //Check whether it is having any errors
                     if (!arrayListOf(200, 201, 404).contains(response.status.value)) {
-                        errorLog(
-                            "MihomoRequest",
-                            "getSRInfoParsed(uid = ${uid}, lang = ${language})",
-                            Exception("HTTP Error Code ${response.status.value} : ${response.status.description}")
-                        )
-                        return@withTimeout Json.parseToJsonElement("{}")
-
+                        if(!(response.body() as String).contains("detail")){
+                            errorLog(
+                                "MihomoRequest",
+                                "getSRInfoParsed(uid = ${uid}, lang = ${language})",
+                                Exception("HTTP Error Code ${response.status.value} : ${response.status.description}")
+                            )
+                            return@withTimeout Json.parseToJsonElement("{}")
+                        }else{
+                            return@withTimeout response.body()
+                        }
                     } else {
                         return@withTimeout response.body()
                     }
@@ -85,9 +90,10 @@ class MihomoRequest(val uid : String, val language: Language.TextLanguage = Lang
         }catch (e : UnresolvedAddressException){
             //Cannot find the Address, maybe bcz of u are offline
             //errorLogExport("HoyolabRequest", "send(url = ${url}, body = ${body})",e)
-            e.printStackTrace()
+            //e.printStackTrace()
+            showWarningToast(ERR_NETWORK_UNSTABLE_CONNECTION)
         }catch (e : ClientRequestException){
-            if(e.response.status.value != 404){
+            if(!listOf(404).contains(e.response.status.value) ){
                 errorLog("MihomoRequest", "getSRInfoParsed(uid = ${uid}, lang = ${language})",e)
             }
         }catch (e : Exception){

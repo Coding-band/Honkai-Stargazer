@@ -41,7 +41,6 @@ import ui.screens.doRefresh
 
 private lateinit var isProcessing: MutableState<Boolean>
 private lateinit var downloadProgress : MutableState<Float>
-private lateinit var ERR_NETWORK_UNSTABLE_CONNECTION : String
 
 @Composable
 fun kcefPopUpInit(){
@@ -55,7 +54,6 @@ fun kcefPopUpInit(){
     }else{
         downloadProgress = rememberSaveable { mutableStateOf(0f) }
     }
-    ERR_NETWORK_UNSTABLE_CONNECTION = removeStrQuote(Res.string.NetworkErrorUnstableConnection)
 }
 
 @OptIn(ExperimentalCoroutinesApi::class)

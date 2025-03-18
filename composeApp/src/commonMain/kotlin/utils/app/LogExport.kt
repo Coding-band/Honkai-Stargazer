@@ -26,6 +26,7 @@ import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
 import files.ConfirmBTN
 import files.FunctionStillInDevelop
+import files.NetworkErrorUnstableConnection
 import files.OK
 import files.Res
 import files.pom_pom_failed_issue
@@ -60,6 +61,7 @@ lateinit var ToastStrFunctionStillInDevelop: String
 //lateinit var toastInstance : ToasterState
 lateinit var snackbarInstance : SnackbarHostState
 lateinit var CLOSE_SNACKBAR : String
+lateinit var ERR_NETWORK_UNSTABLE_CONNECTION : String
 
 @Composable
 fun LogExportInit(){
@@ -67,6 +69,7 @@ fun LogExportInit(){
     //toastInstance = rememberToasterState()
     snackbarInstance = remember { SnackbarHostState() }
     CLOSE_SNACKBAR = removeStrQuote(Res.string.ConfirmBTN)
+    ERR_NETWORK_UNSTABLE_CONNECTION = removeStrQuote(Res.string.NetworkErrorUnstableConnection)
 }
 
 @Serializable
@@ -227,6 +230,7 @@ fun errorLog(className: String, functionName: String, error: Exception) {
     showErrorToast(logExportObj)
 
     if(BuildKonfig.appProfile == "DEV" || BuildKonfig.appProfile == "C.BETA" || BuildKonfig.appProfile == "BETA"){
+        print("[THIS MESSAGE IS FOR DEVELOPER] : ")
         error.printStackTrace()
     }
 }

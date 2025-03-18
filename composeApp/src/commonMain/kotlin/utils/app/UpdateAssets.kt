@@ -68,7 +68,6 @@ private var infoList = arrayListOf<UpdateAssetsInfo>()
 private var updateState = UpdateAssetsStatus.SKIP
 
 private lateinit var downloadProgress : MutableState<Long>
-private lateinit var ERR_NETWORK_UNSTABLE_CONNECTION : String
 
 @Serializable
 data class UpdateAssetsInfo (
@@ -116,7 +115,6 @@ fun updateAssetsInit(){
     }else{
         downloadProgress = rememberSaveable { mutableStateOf(0L) }
     }
-    ERR_NETWORK_UNSTABLE_CONNECTION = removeStrQuote(Res.string.NetworkErrorUnstableConnection)
 }
 
 fun updateCheckInit(forceDownload: Boolean = false) : Boolean{

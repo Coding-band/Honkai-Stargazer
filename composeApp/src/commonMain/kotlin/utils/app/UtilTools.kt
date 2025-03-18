@@ -806,7 +806,7 @@ fun readFromOnlineURL(url: String, defaultData: String = "{}"): String {
        // errorLog("UtilTools.kt", "readFromOnlineURL(url = ${url})",e)
     }catch (e : Exception){
         // All response
-        errorLog("StarbaseRequest", "readFromOnlineURL(url = ${url})",e)
+        errorLog("UtilTools.kt", "readFromOnlineURL(url = ${url})",e)
     }
     return defaultData
 }
