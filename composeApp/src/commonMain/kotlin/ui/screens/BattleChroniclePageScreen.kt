@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
@@ -147,13 +148,15 @@ fun BattleChroniclePageScreen(
         isDisplayPageHeader.value = ((listState.firstVisibleItemIndex == 0) && (listState.firstVisibleItemScrollOffset <= 0))
     }
 
-    Box(modifier = Modifier) {
+    Box(modifier = Modifier.fillMaxSize()) {
         LazyColumn(
             state = listState,
             modifier = Modifier.padding(
                 start = Constants.SCREEN_SAVE_PADDING,
                 end = Constants.SCREEN_SAVE_PADDING
             ).hazeSource(hazeState, zIndex = DefaultZIndex)
+                .widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH)
+                .align(Alignment.Center),
         ) {
             item { Spacer(
                 modifier = Modifier
@@ -261,7 +264,10 @@ fun BattleChroniclePageScreen(
         }
 
         if(sorttedAbyssList.isEmpty()) {
-            Box(Modifier.fillMaxSize()) {
+            Box(Modifier.fillMaxSize()
+                .widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH)
+                .align(Alignment.Center)
+            ) {
                 Column(
                     modifier = Modifier.fillMaxWidth(1/2f).align(Alignment.Center),
                     verticalArrangement = Arrangement.Center,

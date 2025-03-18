@@ -262,8 +262,7 @@ fun EidolonDialogComponent(eidolon: Eidolon, selectIndex: Int) {
             AsyncImage(
                 model = newImageRequest(
                     LocalPlatformContext.current,
-                    getAssetsURLByFileName(ImageFolder.CHAR_SOUL, eidolon.soulIconName),
-                    false
+                    getAssetsURLByFileName(ImageFolder.CHAR_SOUL, eidolon.soulIconName)
                 ),
                 modifier = Modifier.size(50.5.dp).align(Alignment.Center),
                 contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Soul Icon",

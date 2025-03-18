@@ -84,6 +84,7 @@ import ui.navigation.navigateLimited
 import utils.annotation.DoItLater
 import utils.app.Constants
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
+import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
@@ -143,7 +144,7 @@ fun UserInfoPageScreen(
             modifier = Modifier.padding(
                 start = Constants.SCREEN_SAVE_PADDING,
                 end = Constants.SCREEN_SAVE_PADDING
-            ).hazeSource(hazeState)
+            ).hazeSource(hazeState, zIndex = DefaultZIndex)
         ) {
             item(span = { GridItemSpan(maxCurrentLineSpan) }) { Spacer(modifier = Modifier.statusBarsPadding().height(PAGE_HEADER_HEIGHT)) }
             item(span = { GridItemSpan(maxLineSpan) }) { UserInfoBioUI(context, userAccount) }
