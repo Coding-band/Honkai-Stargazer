@@ -104,8 +104,8 @@ fun RelicListPage(
                         .height(PAGE_HEADER_HEIGHT)
                 )
             }
-            items(count = relicListSortable.value.size) { index ->
-                RelicCard(relic = relicListSortable.value[index])
+            items(count = relicListSortable.value.size, key = { index -> relicListSortable.value[index].officialId!!}) { index ->
+                RelicCard(relic = relicListSortable.value[index], modifier = Modifier.animateItem())
             }
 
             item(span = { GridItemSpan(maxLineSpan) }) {

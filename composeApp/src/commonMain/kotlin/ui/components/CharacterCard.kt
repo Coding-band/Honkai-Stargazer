@@ -6,10 +6,12 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -17,6 +19,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.requiredWidth
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.CircleShape
@@ -82,6 +85,7 @@ fun CharacterCard(
     isDisplayCombatPath: Boolean = true,
     isDisplayName : Boolean = true,
     isDisplayLevel : Boolean = false,
+    modifier: Modifier = Modifier
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     val overrideNameComponentScaledHeight = remember { mutableStateOf(0.dp) }
@@ -90,7 +94,7 @@ fun CharacterCard(
     //UI of the Character Card
     //Container of the Character Card
     Box(
-        modifier = Modifier
+        modifier = modifier
             .widthIn(CHAR_CARD_WIDTH, CHAR_CARD_WIDTH*2)
             .aspectRatio(CHAR_CARD_WIDTH/ (CHAR_CARD_HEIGHT + overrideNameComponentScaledHeight.value))
             .clip(
@@ -114,19 +118,19 @@ fun CharacterCard(
     ) {
         //Character Icon & Name / Level
         Column(modifier = Modifier.fillMaxSize()) {
-            Box(modifier = Modifier.fillMaxWidth().weight(1f)) {
-                Box{
-                    AsyncImage(
-                        model = Character.getCharacterImageFromFileName(
-                            ImageFolder.CHAR_ICON,
-                            getImageNameByRegistName(character.registName!!)
-                        ),
-                        contentDescription = "Character Icon",
-                        modifier = Modifier
-                            .widthIn(CHAR_CARD_WIDTH, CHAR_CARD_WIDTH*2).align(Alignment.BottomCenter),
-                        contentScale = ContentScale.Crop,
-                    )
-                }
+            val imageBoxWidth = remember { mutableStateOf(CHAR_CARD_WIDTH) }
+            BoxWithConstraints(modifier = Modifier.widthIn(CHAR_CARD_WIDTH, CHAR_CARD_WIDTH*2).weight(1f)) {
+                imageBoxWidth.value = this.maxWidth
+                AsyncImage(
+                    model = Character.getCharacterImageFromFileName(
+                        ImageFolder.CHAR_ICON,
+                        getImageNameByRegistName(character.registName!!)
+                    ),
+                    contentDescription = "Character Icon",
+                    modifier = Modifier
+                        .width(imageBoxWidth.value).fillMaxHeight(),
+                    contentScale = ContentScale.Crop,
+                )
 
 
                 if(character.characterStatus != null &&

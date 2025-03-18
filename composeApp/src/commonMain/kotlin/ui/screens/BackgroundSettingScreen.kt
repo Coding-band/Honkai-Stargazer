@@ -133,11 +133,11 @@ fun BackgroundSettingScreen(
                     modifier = Modifier.padding(top = 12.dp, bottom = 12.dp)
                 )
             }
-            items(count = displayList.value.size){ index ->
+            items(count = displayList.value.size, key = { index -> displayList.value[index].id }){ index ->
                 val item = Wallpaper.wallpaperList.find { it.id == displayList.value[index].id } ?: return@items
                 val isMatchRequirememt = if(!item.requireOwnChar || UserAccount.INSTANCE.isUnlockSpecials() ) true else (item.requireOwnChar && !UserAccount.INSTANCE.characterList.none { it.officialId.toString() == item.id })
                 val aspectRation = rememberSaveable { mutableStateOf(720/1642f) }
-                Column(modifier = Modifier.wrapContentSize()){
+                Column(modifier = Modifier.wrapContentSize().animateItem()){
 
                     Box{
                         //Background Image

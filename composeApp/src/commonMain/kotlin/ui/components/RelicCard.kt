@@ -68,10 +68,11 @@ fun RelicCard(
             fileName = relic.fileName!!
         )
     ) },
+    modifier: Modifier = Modifier
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     Box(
-        modifier = Modifier
+        modifier = modifier
             .widthIn(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH *2).wrapContentHeight()
             .clip(
                 RoundedCornerShape(

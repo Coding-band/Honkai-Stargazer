@@ -111,8 +111,8 @@ fun CharacterListPage(
                         .height(PAGE_HEADER_HEIGHT)
                 )
             }
-            items(count = charListSortable.value.size) { index ->
-                CharacterCard(character = charListSortable.value[index])
+            items(count = charListSortable.value.size, key = { index -> charListSortable.value[index].officialId!! }) { index ->
+                CharacterCard(character = charListSortable.value[index], modifier = Modifier.animateItem())
             }
             item(span = { GridItemSpan(maxLineSpan) }) {
                 Spacer(

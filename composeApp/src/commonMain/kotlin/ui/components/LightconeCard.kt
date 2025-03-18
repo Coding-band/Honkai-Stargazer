@@ -82,10 +82,11 @@ fun LightconeCard(
     isDisplayCombatPath: Boolean = true,
     isDisplayName : Boolean = true,
     isDisplayLevel : Boolean = false,
+    modifier: Modifier = Modifier
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     Box(
-        modifier = Modifier
+        modifier = modifier
             .widthIn(LC_CARD_WIDTH, LC_CARD_WIDTH*2)
             .wrapContentHeight()
             .clip(

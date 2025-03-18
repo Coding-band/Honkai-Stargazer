@@ -105,8 +105,8 @@ fun LightconeListPage(
                         .height(PAGE_HEADER_HEIGHT)
                 )
             }
-            items(count = lcListSortable.value.size) { index ->
-                LightconeCard(lightcone = lcListSortable.value[index])
+            items(count = lcListSortable.value.size, key = { index -> lcListSortable.value[index].officialId!!}) { index ->
+                LightconeCard(lightcone = lcListSortable.value[index], modifier = Modifier.animateItem())
             }
 
             item(span = { GridItemSpan(maxLineSpan) }) {
