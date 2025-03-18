@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -73,18 +72,19 @@ fun MaterialCard(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Box(modifier = Modifier.fillMaxWidth().weight(1f)){
-                AsyncImage(
-                    model = newImageRequest(
-                        LocalPlatformContext.current,
-                        Material.getMaterialImageById(material.officialId)
-                    ),
-                    modifier = Modifier
-                        .padding(6.dp)
-                        .aspectRatio(1f)
-                        .align(Alignment.Center),
-                    contentScale = ContentScale.Crop,
-                    contentDescription = "Material Icon",
-                )
+                Box{
+                    AsyncImage(
+                        model = newImageRequest(
+                            LocalPlatformContext.current,
+                            Material.getMaterialImageById(material.officialId)
+                        ),
+                        modifier = Modifier
+                            .padding(6.dp)
+                            .align(Alignment.Center),
+                        contentScale = ContentScale.Crop,
+                        contentDescription = "Material Icon",
+                    )
+                }
 
             }
             Row(

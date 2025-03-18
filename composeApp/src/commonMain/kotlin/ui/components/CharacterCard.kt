@@ -114,18 +114,19 @@ fun CharacterCard(
     ) {
         //Character Icon & Name / Level
         Column(modifier = Modifier.fillMaxSize()) {
-            Box {
-                AsyncImage(
-                    model = Character.getCharacterImageFromFileName(
-                        ImageFolder.CHAR_ICON,
-                        getImageNameByRegistName(character.registName!!)
-                    ),
-                    contentDescription = "Character Icon",
-                    modifier = Modifier
-                        .widthIn(CHAR_CARD_WIDTH, CHAR_CARD_WIDTH*2)
-                        .aspectRatio(1f),
-                    contentScale = ContentScale.Crop,
-                )
+            Box(modifier = Modifier.fillMaxWidth().weight(1f)) {
+                Box{
+                    AsyncImage(
+                        model = Character.getCharacterImageFromFileName(
+                            ImageFolder.CHAR_ICON,
+                            getImageNameByRegistName(character.registName!!)
+                        ),
+                        contentDescription = "Character Icon",
+                        modifier = Modifier
+                            .widthIn(CHAR_CARD_WIDTH, CHAR_CARD_WIDTH*2).align(Alignment.BottomCenter),
+                        contentScale = ContentScale.Crop,
+                    )
+                }
 
 
                 if(character.characterStatus != null &&
