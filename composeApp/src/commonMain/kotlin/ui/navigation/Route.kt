@@ -1,9 +1,7 @@
 package ui.navigation
 
 import kotlinx.serialization.Serializable
-import types.CombatType
-import types.Path
-
+import types.AbyssInfoType
 
 
 @Serializable
@@ -34,7 +32,7 @@ data class UserInfoRoute(val uid: String)
 data class UserCharacterRoute(val uid: String, val charId: String)
 
 @Serializable
-data class BattleChronicleRoute(val uid: String)
+data class BattleChronicleRoute(val uid: String, val abyssInfoType: String)
 
 @Serializable
 data class ActionOrderSimulatorRoute(val index: Int)

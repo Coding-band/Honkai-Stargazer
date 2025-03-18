@@ -27,7 +27,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.DropdownMenuItem
-import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
 import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
@@ -51,7 +50,6 @@ import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
 import com.voc.stargazer3.BuildKonfig
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.AbyssCharacterUsage
 import files.AbyssTeamUsage
@@ -82,7 +80,6 @@ import types.AbyssInfoList
 import types.AbyssInfoType
 import types.UserAccount
 import ui.components.DropdownMenuNoPadding
-import ui.components.HeaderData
 import ui.components.InfoDisplayDialog
 import ui.components.MonsterCard
 import ui.components.PAGE_HEADER_HEIGHT
@@ -90,7 +87,6 @@ import ui.components.PageHeaderAlpha
 import ui.components.TitleHeader
 import ui.components.UIButton
 import ui.components.UIButtonSize
-import ui.components.defaultHeaderData
 import ui.components.horizontalFadingEdge
 import ui.navigation.BattleChronicleRoute
 import ui.navigation.Screen
@@ -160,7 +156,10 @@ fun PureFictionMissionPageScreen(
         PageHeaderAlpha(
             navigator = navigator,
             hazeState = hazeStateRoot,
-            onForward = { navigator.navigateLimited(BattleChronicleRoute(UserAccount.INSTANCE.uid)) },
+            onForward = { navigator.navigateLimited(BattleChronicleRoute(
+                UserAccount.INSTANCE.uid,
+                AbyssInfoType.PureFiction.name
+            )) },
             forwardIconId = Res.drawable.ic_person_btn
         ){
             val headerData = Screen.PureFictionMissionPageScreen.headerData

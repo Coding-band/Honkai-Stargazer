@@ -157,7 +157,10 @@ fun ApocalypticShadowMissionPageScreen(
         PageHeaderAlpha(
             navigator = navigator,
             hazeState = hazeStateRoot,
-            onForward = { navigator.navigateLimited(BattleChronicleRoute(UserAccount.INSTANCE.uid)) },
+            onForward = { navigator.navigateLimited(BattleChronicleRoute(
+                UserAccount.INSTANCE.uid,
+                AbyssInfoType.ApocalypticShadow.name
+            )) },
             forwardIconId = Res.drawable.ic_person_btn
         ){
             val headerData = Screen.ApocalypticShadowMissionPageScreen.headerData

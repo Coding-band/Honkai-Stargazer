@@ -85,6 +85,7 @@ fun BattleChroniclePageScreen(
 ) {
     val route = backStackEntry.toRoute<BattleChronicleRoute>()
     val uid = route.uid
+    val abyssInfoType = AbyssInfoType.valueOf(route.abyssInfoType)
 
     val listState = remember { LazyListState() }
     val userAccount by remember { mutableStateOf(
@@ -103,12 +104,12 @@ fun BattleChroniclePageScreen(
         }
     ) }
 
-    val choiceChronicleIndex = remember { mutableStateOf(0) }
     val choiceStrList = listOf(
         removeStrQuote(Res.string.MemoryOfChaos) to AbyssInfoType.MemoryOfChaos,
         removeStrQuote(Res.string.PureFiction) to AbyssInfoType.PureFiction,
         removeStrQuote(Res.string.ApocalypticShadow) to AbyssInfoType.ApocalypticShadow,
     )
+    val choiceChronicleIndex = remember { mutableStateOf(choiceStrList.indexOfFirst { it.second == abyssInfoType }) }
     val choiceChronicle = remember { mutableStateOf(userAbyssRecord.userCurrMOCList) }
     choiceChronicle.value = when (choiceStrList[choiceChronicleIndex.value].second) {
         AbyssInfoType.MemoryOfChaos -> userAbyssRecord.userCurrMOCList
