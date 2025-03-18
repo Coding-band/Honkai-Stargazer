@@ -132,7 +132,7 @@ fun HomePage(
     val threeDotDialogDisplay = remember { mutableStateOf(false) }
     val threeDotDialogPos = remember { mutableStateOf<Offset>(Offset(0f, 0f)) }
     val userAccount = remember { mutableStateOf(UserAccount.INSTANCE) }
-    val homeMenuBlockList = remember { mutableStateOf(Preferences().HomePageMenu.getHomePageMenuArray()) }
+    val homeMenuBlockList = remember { mutableStateOf(HOME_PAGE_MENU_DEFAULT) }
 
     if(Settings().getBoolean("isUnlockedIIRC", false) && homeMenuBlockList.value.none { it.itemId == "IIRCHomePageScreen" }){
         homeMenuBlockList.value.add(

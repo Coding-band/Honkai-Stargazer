@@ -55,6 +55,7 @@ import ui.components.defaultHeaderData
 import ui.screens.AboutStargazerPageScreen
 import ui.screens.ActionOrderListPageScreen
 import ui.screens.ActionOrderSimulatorPageScreen
+import ui.screens.ApocalypticShadowMissionPageScreen
 import ui.screens.BackgroundSettingScreen
 import ui.screens.BattleChroniclePageScreen
 import ui.screens.CharacterInfoPage
@@ -81,12 +82,14 @@ import ui.screens.bgModified
 import ui.screens.doInit
 import ui.screens.globalPadHomePageBg
 import ui.screens.IIRCHomePageScreen
+import ui.screens.initASList
 import ui.screens.initActionOrderTeamList
 import ui.screens.initCharList
 import ui.screens.initLcList
 import ui.screens.initMOCList
 import ui.screens.initPFList
 import ui.screens.initRelicList
+import ui.screens.refreshASList
 import ui.screens.refreshCharList
 import ui.screens.refreshLcList
 import ui.screens.refreshMOCList
@@ -155,6 +158,7 @@ fun initVar(){
     initRelicList()
     initMOCList()
     initPFList()
+    initASList()
     initActionOrderTeamList()
     initWallpaperList()
     println("INITED!")
@@ -245,6 +249,7 @@ fun refreshInit(){
             refreshRelicList()
             refreshPFList()
             refreshMOCList()
+            refreshASList()
             println("REFRESHED!")
         }.await()
     }
@@ -539,6 +544,17 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
         screenInstance = Screen.IIRCHomePageScreen
         withBGScreen(isPadMode){ hazeState ->
             IIRCHomePageScreen(
+                navigator = navigator,
+                hazeState = hazeState
+            )
+        }
+
+    }
+
+    composable<ApocalypticShadowMissionRoute> {
+        screenInstance = Screen.ApocalypticShadowMissionPageScreen
+        withBGScreen(isPadMode){ hazeState ->
+            ApocalypticShadowMissionPageScreen(
                 navigator = navigator,
                 hazeState = hazeState
             )

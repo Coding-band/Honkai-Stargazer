@@ -27,7 +27,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.DropdownMenuItem
-import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
 import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
@@ -51,7 +50,6 @@ import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
 import com.voc.stargazer3.BuildKonfig
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.AbyssCharacterUsage
 import files.AbyssTeamUsage
@@ -82,7 +80,6 @@ import types.AbyssInfoList
 import types.AbyssInfoType
 import types.UserAccount
 import ui.components.DropdownMenuNoPadding
-import ui.components.HeaderData
 import ui.components.InfoDisplayDialog
 import ui.components.MonsterCard
 import ui.components.PAGE_HEADER_HEIGHT
@@ -90,13 +87,13 @@ import ui.components.PageHeaderAlpha
 import ui.components.TitleHeader
 import ui.components.UIButton
 import ui.components.UIButtonSize
-import ui.components.defaultHeaderData
 import ui.components.horizontalFadingEdge
 import ui.navigation.BattleChronicleRoute
 import ui.navigation.Screen
 import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import utils.app.Constants
+import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.Language.Companion.TextLanguageInstance
@@ -104,19 +101,19 @@ import utils.app.getMocPhaseStrListByMocLen
 import utils.app.pxToDp
 import utils.app.removeStrQuote
 
-lateinit var pfList : MutableState<ArrayList<AbyssInfoList>>
+lateinit var asList : MutableState<ArrayList<AbyssInfoList>>
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
-fun initPFList(){
-    pfList = rememberSaveable(stateSaver = AbyssInfoList.ListSaver) { mutableStateOf(arrayListOf()) }
+fun initASList(){
+    asList = rememberSaveable(stateSaver = AbyssInfoList.ListSaver) { mutableStateOf(arrayListOf()) }
 }
 
 @OptIn(ExperimentalCoroutinesApi::class)
-fun refreshPFList(){
-    pfList.value = runBlocking {
+fun refreshASList(){
+    asList.value = runBlocking {
         val job = async(Dispatchers.Default) {
-            return@async AbyssInfoList.getAbyssList(type = AbyssInfoType.PureFiction)
+            return@async AbyssInfoList.getAbyssList(type = AbyssInfoType.ApocalypticShadow)
                 .sortedByDescending { it.id }
                 .filter { (BuildKonfig.appProfile != "DEV") && it.time.begin <= Clock.System.now().toEpochMilliseconds() } as ArrayList<AbyssInfoList>
         }
@@ -127,18 +124,18 @@ fun refreshPFList(){
 
 @Composable
 @Preview
-fun PureFictionMissionPageScreen(
+fun ApocalypticShadowMissionPageScreen(
     navigator: NavHostController,
-    hazeState: HazeState,
+    hazeState: HazeState
 ) {
-    val pfChoiceIndex = remember { mutableStateOf(0) }
+    val asChoiceIndex = remember { mutableStateOf(0) }
     val isDialogVisible = remember { mutableStateOf(false) }
-    val pfInfoList = AbyssInfo.getAbyssItemById(abyssId = pfList.value[pfChoiceIndex.value].id, type = AbyssInfoType.PureFiction, abyssFileName = pfList.value[pfChoiceIndex.value].fileName)
+    val asInfoList = AbyssInfo.getAbyssItemById(abyssId = asList.value[asChoiceIndex.value].id, type = AbyssInfoType.ApocalypticShadow, abyssFileName = asList.value[asChoiceIndex.value].fileName)
 
 
     Box(Modifier.fillMaxSize()) {
         LazyColumn(
-            modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).hazeSource(hazeStateRoot)
+            modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).hazeSource(hazeStateRoot, zIndex = DefaultZIndex)
         ) {
             item { Spacer(
                 modifier = Modifier
@@ -146,13 +143,13 @@ fun PureFictionMissionPageScreen(
                     .height(PAGE_HEADER_HEIGHT)
             ) }
 
-            //Spinner of MOC
-            item { PureFictionIdSpinner(pfList.value, pfChoiceIndex, isDialogVisible) }
+            //Spinner of AS
+            item { ApocalypticShadowIdSpinner(asList.value, asChoiceIndex, isDialogVisible) }
 
             item { Spacer(Modifier.height(8.dp)) }
 
             //Mission Info / Usages
-            item { PureFictionContent(pfInfoList) }
+            item { ApocalypticShadowContent(asInfoList) }
 
             //Comments & Suggestions
         }
@@ -163,13 +160,13 @@ fun PureFictionMissionPageScreen(
             onForward = { navigator.navigateLimited(BattleChronicleRoute(UserAccount.INSTANCE.uid)) },
             forwardIconId = Res.drawable.ic_person_btn
         ){
-            val headerData = Screen.PureFictionMissionPageScreen.headerData
+            val headerData = Screen.ApocalypticShadowMissionPageScreen.headerData
             TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
         }
 
 
         val richTextState = rememberRichTextState()
-        richTextState.setHtml(pfInfoList?.descList?.get(TextLanguageInstance) ?: "?")
+        richTextState.setHtml(asInfoList?.descList?.get(TextLanguageInstance) ?: "?")
 
         InfoDisplayDialog(
             modifier = Modifier.align(Alignment.Center),
@@ -188,9 +185,9 @@ fun PureFictionMissionPageScreen(
 }
 
 @Composable
-fun PureFictionIdSpinner(
-    pfList: List<AbyssInfoList>,
-    pfChoiceIndex: MutableState<Int>,
+fun ApocalypticShadowIdSpinner(
+    asList: List<AbyssInfoList>,
+    asChoiceIndex: MutableState<Int>,
     isDialogVisible: MutableState<Boolean>
 ){
     val density = LocalDensity.current.density
@@ -213,7 +210,7 @@ fun PureFictionIdSpinner(
             ){
                 UIButton(
                     buttonSize = UIButtonSize.NormalTextLeft,
-                    text = pfList[pfChoiceIndex.value].nameList[TextLanguageInstance] ?: "?",
+                    text = asList[asChoiceIndex.value].nameList[TextLanguageInstance] ?: "?",
                     isAvailable = true,
                     onClick = { isDropDownOpen.value = !isDropDownOpen.value },
                     icon = Res.drawable.ic_arrow_down_spinner
@@ -228,14 +225,14 @@ fun PureFictionIdSpinner(
                     .background(Color(0xFFDDDDDD))
                     .width(pxToDp(optionTextViewSize.value.width, density)),
             ) {
-                pfList.forEachIndexed { index, option ->
+                asList.forEachIndexed { index, option ->
                     DropdownMenuItem(
                         onClick = {
-                            pfChoiceIndex.value = index
+                            asChoiceIndex.value = index
                             isDropDownOpen.value = false
                             //optionAction(schoolIndex.value)
                         },
-                        modifier = Modifier.background(if(pfChoiceIndex.value == index)
+                        modifier = Modifier.background(if(asChoiceIndex.value == index)
                         //Color(0x0F000000) else Color(0x00000000)
                             Color(0x0F000000) else Color(0x00000000)
                         )
@@ -248,7 +245,7 @@ fun PureFictionIdSpinner(
                                 modifier = Modifier.weight(1f)
                             )
                             Image(
-                                painterResource(if (pfChoiceIndex.value == index) Res.drawable.ic_selected_orange_circle else Res.drawable.bg_transparent),
+                                painterResource(if (asChoiceIndex.value == index) Res.drawable.ic_selected_orange_circle else Res.drawable.bg_transparent),
                                 contentDescription = null
                             )
                         }
@@ -271,14 +268,20 @@ fun PureFictionIdSpinner(
 
 @Preview
 @Composable
-fun PureFictionContent(
-    pfInfoList: AbyssInfo?
+fun ApocalypticShadowContent(
+    asInfoList: AbyssInfo?
 ){
     val density = LocalDensity.current.density
-    val pfPhaseList = getMocPhaseStrListByMocLen(pfInfoList?.missionList?.size ?: -1)
-    val usageTextList = listOf(removeStrQuote(Res.string.MOCMissionInfoTitle),removeStrQuote(Res.string.AbyssCharacterUsage),removeStrQuote(Res.string.AbyssTeamUsage))
-    val pfInfoDisplayIndex = remember { mutableStateOf(0) }
-    val pfPhaseIndex = remember { mutableStateOf(0) }
+    val asPhaseList = getMocPhaseStrListByMocLen(asInfoList?.missionList?.size ?: -1)
+    val usageTextList = listOf(
+        removeStrQuote(Res.string.MOCMissionInfoTitle),
+        removeStrQuote(Res.string.AbyssCharacterUsage),
+        removeStrQuote(Res.string.AbyssTeamUsage)
+    )
+    val asInfoDisplayIndex = remember { mutableStateOf(0) }
+    val asPhaseIndex = remember { mutableStateOf(0) }
+
+    if(asPhaseList.isEmpty() || asInfoList == null) return
 
     Box(
         Modifier.background(Brush.linearGradient(listOf(Color(0xFF000000), Color(0x00000000))))
@@ -295,11 +298,11 @@ fun PureFictionContent(
                         interactionSource = remember { MutableInteractionSource() },
                         indication = ripple(radius = 4.dp),
                         onClick = {
-                            pfInfoDisplayIndex.value = (pfInfoDisplayIndex.value + 1) % usageTextList.size
+                            asInfoDisplayIndex.value = (asInfoDisplayIndex.value + 1) % usageTextList.size
                         }
                     )
                 ) {
-                    Text(usageTextList[pfInfoDisplayIndex.value], style = FontSizeNormal16(), color = Color.White)
+                    Text(usageTextList[asInfoDisplayIndex.value], style = FontSizeNormal16(), color = Color.White)
                     Spacer(Modifier.width(4.dp))
                     Image(painterResource(Res.drawable.ic_exchange_icon), modifier = Modifier.size(12.dp).align(Alignment.CenterVertically), colorFilter = ColorFilter.tint(Color.White), contentDescription = null)
                 }
@@ -322,7 +325,7 @@ fun PureFictionContent(
                             .onSizeChanged { optionTextViewSize.value = it },
                     ) {
                         Spacer(Modifier.width(16.dp))
-                        Text(pfPhaseList[pfPhaseIndex.value], style = FontSizeNormal16(), color = Color.White)
+                        Text(asPhaseList[asPhaseIndex.value], style = FontSizeNormal16(), color = Color.White)
                         Spacer(Modifier.width(4.dp))
                         Image(painterResource(Res.drawable.ic_arrow_down_spinner), modifier = Modifier.size(12.dp).align(Alignment.CenterVertically), colorFilter = ColorFilter.tint(Color.White), contentDescription = null)
                     }
@@ -334,7 +337,7 @@ fun PureFictionContent(
                             .background(Color(0xFF3E3E47))
                             .width(pxToDp(optionTextViewSize.value.width, density)),
                     ) {
-                        pfPhaseList.forEachIndexed { index, option ->
+                        asPhaseList.forEachIndexed { index, option ->
                             DropdownMenuItem(
                                 modifier = Modifier.align(Alignment.CenterHorizontally),
                                 contentPadding = PaddingValues(
@@ -342,7 +345,7 @@ fun PureFictionContent(
                                     horizontal = 0.dp
                                 ),
                                 onClick = {
-                                    pfPhaseIndex.value = index
+                                    asPhaseIndex.value = index
                                     isDropDownOpen.value = false
                                     //optionAction(schoolIndex.value)
                                 }
@@ -365,8 +368,8 @@ fun PureFictionContent(
             repeat(2){phase ->
                 //Showing Floor & Phase
                 val phaseInfo = when(phase){
-                    0 -> pfInfoList?.missionList?.get(pfPhaseIndex.value)?.part1
-                    1 -> pfInfoList?.missionList?.get(pfPhaseIndex.value)?.part2
+                    0 -> asInfoList?.missionList?.get(asPhaseIndex.value)?.part1
+                    1 -> asInfoList?.missionList?.get(asPhaseIndex.value)?.part2
                     else -> null
                 }
 
@@ -375,7 +378,7 @@ fun PureFictionContent(
                 Row(Modifier.fillMaxWidth()) {
                     Spacer(Modifier.width(24.dp))
                     Column(Modifier.requiredWidth(40.dp).align(Alignment.CenterVertically).wrapContentSize(), horizontalAlignment = Alignment.CenterHorizontally) {
-                        Text("${pfPhaseIndex.value+1}-${phase+1}", style = FontSizeNormal16(), color = Color.White)
+                        Text("${asPhaseIndex.value+1}-${phase+1}", style = FontSizeNormal16(), color = Color.White)
                         Spacer(Modifier.height(4.dp))
                         //Weakness Combat Type of Phase
                         Row {
@@ -433,20 +436,20 @@ fun PureFictionContent(
             Column {
                 Spacer(Modifier.height(4.dp))
                 Text(
-                    text = if (pfInfoDisplayIndex.value == 0) {
+                    text = if (asInfoDisplayIndex.value == 0) {
                         val dateFormat = LocalDateTime.Format { byUnicodePattern("yyyy-MM-dd") }
 
                         "${
                             dateFormat.format(
-                                Instant.fromEpochMilliseconds(pfInfoList?.timeInfo?.begin ?: 0L).toLocalDateTime(TimeZone.currentSystemDefault())
+                                Instant.fromEpochMilliseconds(asInfoList?.timeInfo?.begin ?: 0L).toLocalDateTime(TimeZone.currentSystemDefault())
                             )
                         } ~ ${
                             dateFormat.format(
-                                Instant.fromEpochMilliseconds(pfInfoList?.timeInfo?.end ?: 0L).toLocalDateTime(TimeZone.currentSystemDefault())
+                                Instant.fromEpochMilliseconds(asInfoList?.timeInfo?.end ?: 0L).toLocalDateTime(TimeZone.currentSystemDefault())
                             )
                         }"
                     } else {
-                        usageTextList[pfInfoDisplayIndex.value]
+                        usageTextList[asInfoDisplayIndex.value]
                     },
                     textAlign = TextAlign.Center,
                     style = FontSizeNormal16(),

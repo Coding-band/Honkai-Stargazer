@@ -52,6 +52,7 @@ data class ActionOrderSimulatorRoute(val index: Int)
 @Serializable object UIDSearchRoute
 @Serializable object MemoryOfChaosMissionRoute
 @Serializable object PureFictionMissionRoute
+@Serializable object ApocalypticShadowMissionRoute
 @Serializable object AboutStargazerRoute
 @Serializable object ExpeditionRoute
 @Serializable object ProficientLeaderboardRoute

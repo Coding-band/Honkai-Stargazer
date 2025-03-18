@@ -6,6 +6,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.russhwolf.settings.Settings
 import files.ActionOrderTitle
+import files.ApocalypticShadow
 import files.Character
 import files.Event
 import files.Expedition
@@ -32,6 +33,7 @@ import files.phorphos_calendar_fill
 import files.phorphos_chart_bar_fill
 import files.phorphos_chart_bar_horizontal_fill
 import files.phorphos_film_slate_fill
+import files.phorphos_hourglass_fill
 import files.phorphos_map_trifold_fill
 import files.phorphos_medal_military_fill
 import files.phorphos_moon_fill
@@ -52,6 +54,7 @@ import org.jetbrains.compose.resources.DrawableResource
 import types.UserAccount
 import types.UserNoteState
 import ui.components.HomePageBlocks
+import ui.navigation.ApocalypticShadowMissionRoute
 import ui.navigation.CharacterInfoRoute
 import ui.navigation.CharacterListRoute
 import ui.navigation.EventListRoute
@@ -283,6 +286,15 @@ class Constants {
                 itemIconId = Res.drawable.phorphos_atom_fill,
                 itemOnClickToNavigate = PureFictionMissionRoute
             ),
+            /*
+            NOT READY @DoItLater
+            HomePageBlocks.HomePageBlockItem(
+                itemId = "ASPage",
+                itemTitleRId = Res.string.ApocalypticShadow,
+                itemIconId = Res.drawable.phorphos_hourglass_fill,
+                itemOnClickToNavigate = ApocalypticShadowMissionRoute
+            ),
+             */
             HomePageBlocks.HomePageBlockItem(
                 itemId = "EventListPage",
                 itemTitleRId = Res.string.Event,
@@ -295,6 +307,8 @@ class Constants {
                 itemIconId = Res.drawable.phorphos_trophy_fill,
                 itemOnClickToNavigate = ProficientLeaderboardRoute
             ),
+            /*
+            Removed, merged into <MOC/PF/AS> Info Page
             HomePageBlocks.HomePageBlockItem(
                 itemId = "MemoryOfChaosLeaderboard",
                 itemTitleRId = Res.string.MemoryOfChaosLeaderboard,
@@ -305,6 +319,7 @@ class Constants {
                 itemTitleRId = Res.string.PureFictionLeaderboard,
                 itemIconId = Res.drawable.phorphos_chart_bar_horizontal_fill
             ),
+             */
             HomePageBlocks.HomePageBlockItem(
                 itemId = "MapPage",
                 itemTitleRId = Res.string.Map,

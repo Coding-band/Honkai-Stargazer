@@ -27,6 +27,7 @@ import files.phorphos_baseball_cap_fill
 import files.phorphos_film_slate_regular
 import files.phorphos_game_controller_fill
 import files.phorphos_game_controller_regular
+import files.phorphos_hourglass_fill
 import files.phorphos_house_fill
 import files.phorphos_map_trifold_fill
 import files.phorphos_medal_military_fill
@@ -171,5 +172,9 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     data object IIRCHomePageScreen : Screen(
         "IIRCHomePageScreen",
         HeaderData(titleIconId = Res.drawable.phorphos_star_fill)
+    )
+    data object ApocalypticShadowMissionPageScreen : Screen(
+        "ApocalypticShadowMissionPageScreen",
+        HeaderData(titleIconId = Res.drawable.phorphos_hourglass_fill)
     )
 }

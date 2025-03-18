@@ -89,6 +89,7 @@ import types.UserAccount
 import ui.components.DropdownMenuNoPadding
 import ui.components.HeaderData
 import ui.components.InfoDisplayDialog
+import ui.components.MonsterCard
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeaderAlpha
 import ui.components.TitleHeader
@@ -467,35 +468,6 @@ fun MemoryOfChaosContent(
                     color = Color(0xFFDDDDDD),
                     modifier = Modifier.fillMaxWidth()
                 )
-            }
-        }
-    }
-}
-
-@Composable
-fun MonsterCard(monsterInfo: AbyssInfoMonster){
-    val context = LocalPlatformContext.current
-
-    Column(verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
-        Box(Modifier.size(48.dp).background(Brush.verticalGradient(Constants.getCardBgColorByRare(1)), shape = RoundedCornerShape(4.dp)).wrapContentHeight(), contentAlignment = Alignment.Center) {
-            AsyncImage(
-                model = newImageRequest(
-                    context = context,
-                    getAssetsURLByFileName(
-                        ImageFolder.MONSTER_ICON,
-                        "monster_${getImageNameByRegistName(monsterInfo.registName)}"
-                    )
-                ),
-                contentDescription = null,
-                modifier = Modifier.size(32.dp),
-                //onError = { println("${it.result.throwable.message} : ${it.result.throwable.stackTraceToString()}") }
-            )
-        }
-
-        Spacer(Modifier.height(3.dp))
-        Row{
-            repeat(monsterInfo.monsterWeakness.size) {
-                Image(painterResource(monsterInfo.monsterWeakness[it].iconColor), modifier = Modifier.size(16.dp) ,contentDescription = null)
             }
         }
     }
