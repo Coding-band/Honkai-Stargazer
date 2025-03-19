@@ -71,6 +71,7 @@ import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
 import types.Character
 import types.ImageFolder
+import types.UserAccount
 import ui.components.BackIcon
 import ui.components.CharacterEidolon
 import ui.components.CharacterTraceTree.CharacterTraceTree
@@ -164,11 +165,11 @@ fun CharacterInfoPage(
     val dialogTitle = remember { mutableStateOf("Nope") }
     val selectedSectIndex = remember { mutableStateOf(0) } //流派
 
-    val singleCharWeightJsonElement = CharWeightList.INSTANCE.jsonObject[characterId.toString()]
-    var charWeightJsonObject : JsonObject? = null
+    val singleCharWeightJsonElement = remember { CharWeightList.INSTANCE.jsonObject[characterId.toString()] }
+    var charWeightJsonObject : JsonObject? = remember { null }
 
     if(singleCharWeightJsonElement != null && singleCharWeightJsonElement.jsonArray.size > 0){
-        charWeightJsonObject = singleCharWeightJsonElement.jsonArray[selectedSectIndex.value].jsonObject
+        charWeightJsonObject = remember { singleCharWeightJsonElement.jsonArray[selectedSectIndex.value].jsonObject }
     }
 
     BoxWithConstraints {
@@ -187,7 +188,7 @@ fun CharacterInfoPage(
                 .align(Alignment.Center),
             verticalArrangement = Arrangement.spacedBy(30.dp)
         ) {
-            item { InfoBioColumn(charInfoJson, combatType, path, isUserOwned = false, isFullEidolon = false, pageSize = pageSize) }
+            item { InfoBioColumn(charInfoJson, combatType, path, isUserOwned = !UserAccount.INSTANCE.characterList.none { it.officialId!! == characterId }, isFullEidolon = false, pageSize = pageSize) }
             item { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
             item { CharacterTraceTree(charInfoJson, path, characterName, dialogTitle, dialogDisplay,dialogLastTrigType,  dialogComponent) }
             item { CharacterEidolon(charInfoJson, characterName, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }

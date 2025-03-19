@@ -22,6 +22,7 @@ expect fun getIsLandscape(): Boolean;
 data class ScreenSizeInfo(val hPX: Int, val wPX: Int, val hDP: Dp, val wDP: Dp)
 
 @Composable
+@Deprecated("Use BoxWithConstraints() instead")
 expect fun getScreenSizeInfo(): ScreenSizeInfo
 
 @Composable

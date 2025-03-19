@@ -3,6 +3,7 @@ package ui.screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -29,7 +30,6 @@ import files.Res
 import files.app_icon_black_bg
 import files.euclid_circular_a_medium
 import files.star_peace_icon
-import getScreenSizeInfo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -136,14 +136,14 @@ fun SplashPage(
             .background(Color.Black)
     ) {
         //Container of App Icon & Ads
-        Box(
+        BoxWithConstraints(
             modifier = Modifier.fillMaxSize().weight(1f)
         ) {
 
             Image(
                 painter = painterResource(Res.drawable.app_icon_black_bg),
                 modifier = Modifier
-                    .padding(bottom = getScreenSizeInfo().hDP.times(0.15f))
+                    .padding(bottom = maxHeight.times(0.15f))
                     .size(134.dp, 134.dp)
                     .align(Alignment.Center),
                 contentDescription = "App Icon In Splash Page"

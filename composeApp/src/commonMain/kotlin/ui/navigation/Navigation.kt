@@ -10,6 +10,7 @@ import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -42,7 +43,6 @@ import androidx.navigation.compose.rememberNavController
 import androidx.window.core.layout.WindowWidthSizeClass
 import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
-import getScreenSizeInfo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -97,6 +97,7 @@ import ui.screens.refreshPFList
 import ui.screens.refreshRelicList
 import utils.app.BezierEasing2O48
 import utils.app.Constants.Companion.HOME_WIDTH
+import utils.app.Constants.Companion.INFO_MAX_WIDTH
 import utils.app.Language
 import utils.app.SG3NavTransitions
 import utils.app.snackbarInstance
@@ -190,54 +191,45 @@ fun RootContent() {
         }
     }
 
+    val screenWidth = remember { mutableStateOf(INFO_MAX_WIDTH) }
     Scaffold(
         modifier = Modifier.onSizeChanged { isRotate.value = !isRotate.value },
         snackbarHost = { SnackbarHost(snackbarInstance, modifier = Modifier.navigationBarsPadding()) }
     ) {
-        if(isPadMode.value){
-            MakeBackground(screen = screenInstance, forceBlur = isPadMode.value, hazeState = hazeStateRoot)
-        }
+        BoxWithConstraints {
+            screenWidth.value = maxWidth
+            if(isPadMode.value){
+                MakeBackground(screen = screenInstance, forceBlur = isPadMode.value, hazeState = hazeStateRoot)
+            }
 
-        Row {
-            if(isPadMode.value && screenInstance != Screen.SplashPage && screenInstance != Screen.BlankPage){
-                Box(Modifier
-                    .width(HOME_WIDTH)
-                    .let { if (getScreenSizeInfo().wDP < HOME_WIDTH * 1.5f) it.weight(1f) else it }
-                    .fillMaxHeight(),
-                ) {
-                    key(bgModified.value){
-                        if(globalPadHomePageBg.value){
-                            MakeBackground(screen = Screen.HomePage, forceBlur = false, hazeState = hazeStateRoot)
+            Row {
+                if(isPadMode.value && screenInstance != Screen.SplashPage && screenInstance != Screen.BlankPage){
+                    Box(Modifier
+                        .width(HOME_WIDTH)
+                        .let { if (screenWidth.value < HOME_WIDTH * 1.5f) it.weight(1f) else it }
+                        .fillMaxHeight(),
+                    ) {
+                        key(bgModified.value){
+                            if(globalPadHomePageBg.value){
+                                MakeBackground(screen = Screen.HomePage, forceBlur = false, hazeState = hazeStateRoot)
+                            }
                         }
+                        HomePage(
+                            navigator = navigatorInstance,
+                            hazeState = hazeStateRoot
+                        )
                     }
-                    HomePage(
-                        navigator = navigatorInstance,
-                        hazeState = hazeStateRoot
-                    )
+                }
+                Box(Modifier.weight(1f)) {
+                    NavHostInit(navigatorInstance, isPadMode)
                 }
             }
-            Box(Modifier.weight(1f)) {
-                NavHostInit(navigatorInstance, isPadMode)
+
+            // Overlay - only show in global when is not Pad Mode
+            if (!isPadMode.value){
+                PomPomPopupUI(hazeState = hazeStateRoot)
             }
         }
-
-        // Overlay - only show in global when is not Pad Mode
-        if (!isPadMode.value){
-            PomPomPopupUI(hazeState = hazeStateRoot)
-        }
-
-        /*
-        PomPomPopupUI(hazeState = hazeStateRoot)
-
-        Toaster(
-            state = toastInstance,
-            richColors = true,
-            maxVisibleToasts = 10,
-            alignment = Alignment.BottomCenter,
-            showCloseButton = true,
-            darkTheme = true,
-        )
-         */
     }
 }
 

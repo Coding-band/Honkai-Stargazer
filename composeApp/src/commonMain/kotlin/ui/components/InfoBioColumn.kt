@@ -33,7 +33,6 @@ import androidx.compose.ui.unit.sp
 import files.Res
 import files.UserOwned
 import files.ui_icon_star
-import getScreenSizeInfo
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonObject
@@ -55,7 +54,7 @@ fun InfoBioColumn(
     path: types.Path? = null,
     isUserOwned: Boolean = true,
     isFullEidolon: Boolean = false,
-    pageSize: Pair<Dp, Dp> = Pair(getScreenSizeInfo().wDP, getScreenSizeInfo().hDP)
+    pageSize: Pair<Dp, Dp> = Pair(120.dp, 120.dp)
     ) {
 
     val itemName = remember { infoJson.jsonObject["name"]!!.jsonPrimitive.content }

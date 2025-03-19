@@ -9,6 +9,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -27,6 +28,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -82,7 +84,6 @@ import files.phorphos_dice_four_regular
 import files.phorphos_dice_two_regular
 import files.phorphos_person_fill
 import files.ui_icon_star
-import getScreenSizeInfo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.distinctUntilChanged
@@ -99,6 +100,7 @@ import types.ImageFolder
 import types.Relic
 import ui.components.BackIcon
 import ui.components.HeaderData
+import ui.components.InfoBioColumn
 import ui.components.InfoDisplayDialog
 import ui.components.InfoNavigateItem
 import ui.components.InfoNavigatorBar
@@ -173,7 +175,8 @@ fun RelicInfoPage(
     val dialogLastTrigType = remember { mutableStateOf("NONE") }
     val dialogTitle = remember { mutableStateOf("Nope") }
 
-    Box {
+    BoxWithConstraints {
+        val pageSize = Pair(maxWidth, maxHeight)
 
         val isRelic = relicFileName.toInt() < 300
         RelicInfoFullImgWithRare(
@@ -183,10 +186,9 @@ fun RelicInfoPage(
         )
 
         //RecycleView
-        LazyColumn(state = listState, modifier = Modifier.hazeSource(hazeStateRoot).align(Alignment.Center)) {
-            item { RelicBasicInfo(relicInfoJson) }
+        LazyColumn(state = listState, modifier = Modifier.hazeSource(hazeState).align(Alignment.Center)) {
+            item { InfoBioColumn(relicInfoJson, pageSize = pageSize, isUserOwned = false) }
             item { RelicSetInfo(relicInfoJson, false) }
-            //Don't forget to add "StatusBarPadding" !
             item { if(isRelic) RelicSetInfo(relicInfoJson, isRelic) }
             item { RelicSetsCardDisplay(relicName, relicInfoJson, isRelic) }
             item { Box(modifier = Modifier.navigationBarsPadding().height(72.dp)) }
@@ -196,7 +198,7 @@ fun RelicInfoPage(
         PageHeader(
             navigator = navigator,
             headerData = headerDataPage,
-            hazeState = hazeStateRoot,
+            hazeState = hazeState,
             backIconId = BackIcon.CANCEL,
             forwardIconId = if(isFavourite.value) Res.drawable.ic_favourite_btn_selected else Res.drawable.ic_favourite_btn,
             onForward = {
@@ -212,50 +214,9 @@ fun RelicInfoPage(
 
         Box(modifier = Modifier.fillMaxSize()) {
             if(dialogDisplay.value){
-                InfoDisplayDialog(dialogTitle.value, dialogComponent.value, modifier = Modifier.align(Alignment.BottomCenter), hazeStateRoot, isNavBarVisible = (isNaviBarVisible), isDialogVisible = (dialogDisplay))
+                InfoDisplayDialog(dialogTitle.value, dialogComponent.value, modifier = Modifier.align(Alignment.BottomCenter), hazeState, isNavBarVisible = (isNaviBarVisible), isDialogVisible = (dialogDisplay))
             } else {
-                InfoNavigatorBar(relicInfoNavItemList, listState, Modifier.align(Alignment.BottomCenter), hazeState = hazeStateRoot, isVisible = (isNaviBarVisible), offSet = PAGE_HEADER_HEIGHT)
-            }
-        }
-    }
-}
-
-@Composable
-fun RelicBasicInfo(infoJson: JsonElement){
-
-    var columnHeightDp by remember { mutableStateOf(110.dp) }
-    val density = LocalDensity.current.density
-    val itemName = remember { infoJson.jsonObject["name"]!!.jsonPrimitive.content }
-    val itemRarity = remember { infoJson.jsonObject["rarity"]!!.jsonPrimitive.int }
-
-    Column {
-        Box(modifier = Modifier.height(getScreenSizeInfo().hDP - columnHeightDp))
-
-        Column(modifier = Modifier.padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
-            .onSizeChanged { item ->
-                columnHeightDp = pxToDp(item.height, density)
-            }) {
-            Row() {
-                Text(
-                    modifier = Modifier.padding(end = 8.dp),
-                    text = itemName,
-                    style = FontSizeNormal14(),
-                    fontSize = 32.sp,
-                    color = Color.White,
-                )
-            }
-
-            Box(Modifier.height(8.dp))
-
-            Row {
-                repeat(itemRarity) {
-                    Image(
-                        modifier = Modifier.size(24.dp,28.dp),
-                        painter = painterResource(Res.drawable.ui_icon_star),
-                        contentScale = ContentScale.FillHeight,
-                        contentDescription = "Stars to represent Rarity"
-                    )
-                }
+                InfoNavigatorBar(relicInfoNavItemList, listState, Modifier.align(Alignment.BottomCenter), hazeState = hazeState, isVisible = (isNaviBarVisible), offSet = PAGE_HEADER_HEIGHT)
             }
         }
     }
@@ -279,7 +240,7 @@ fun RelicSetInfo(infoJson: JsonElement, isShowing4Set: Boolean){
         htmlDescApplier(skill[0].jsonObject["desc"]!!.jsonPrimitive.content,paramList )
     }
 
-    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)){
+    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding().widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)){
         if (isShowing4Set){
             TitleHeader(iconRId = Res.drawable.phorphos_dice_four_regular, titleRId = Res.string.RelicStatus4Pcs)
         }else{
@@ -314,10 +275,13 @@ fun RelicInfoFullImgWithRare(
             visible = isVisible,
             enter = fadeIn(),
             exit = fadeOut(),
-            modifier = Modifier.fillMaxWidth().wrapContentHeight().align(Alignment.Center)
+            modifier = Modifier.widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).wrapContentHeight().align(Alignment.Center)
         ) {
-            Column(modifier = Modifier.width(getScreenSizeInfo().wDP - 36.dp).aspectRatio(1f).sizeIn(
-                Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)) {
+            Column(modifier = Modifier
+                .wrapContentHeight()
+                .padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
+                .align(Alignment.Center)
+            ) {
                 Row{
                     AsyncImage(
                         model = newImageRequest(context = LocalPlatformContext.current, Relic.getRelicImageFromJSON(if(isRelic) ImageFolder.RELIC_ICON else ImageFolder.ORMANENT_ICON, fileName, if(isRelic) 1 else 5)),
@@ -368,112 +332,94 @@ fun RelicSetsCardDisplay(
     relicJson: JsonElement,
     isRelic: Boolean = true,
 ) {
-    Column(
-        modifier = Modifier.widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH).fillMaxWidth().statusBarsPadding().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
-    ) {
-        TitleHeader(
-            iconRId = Res.drawable.phorphos_chats_circle_regular, titleRId = Res.string.RelicDetail
-        )
+    Box(modifier = Modifier.fillMaxWidth().wrapContentHeight().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)) {
+        Column(
+            modifier = Modifier.wrapContentWidth().statusBarsPadding().align(Alignment.Center)
+        ) {
+            TitleHeader(
+                iconRId = Res.drawable.phorphos_chats_circle_regular, titleRId = Res.string.RelicDetail
+            )
 
-        //Empty Blank
-        Spacer(modifier = Modifier.height(24.dp))
+            //Empty Blank
+            Spacer(modifier = Modifier.height(24.dp))
 
-        Box(modifier = Modifier.fillMaxWidth().wrapContentHeight()) {
-            LazyRow(
-                state = rememberLazyListState(),
-                horizontalArrangement = Arrangement.spacedBy(12.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.align(Alignment.Center).wrapContentSize()
-            ) {
-                for (index in if (isRelic) { 1..4 } else { 5..6 }) {
-                    item{
-                        Box(
-                            modifier = Modifier.widthIn(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH *1.5f).wrapContentHeight()
-                                .clip(
-                                RoundedCornerShape(
-                                    topEnd = 15.dp,
-                                    topStart = 4.dp,
-                                    bottomEnd = 4.dp,
-                                    bottomStart = 4.dp
-                                )
-                            )
-                        ) {
-                            Column {
-                                Box(
-                                    modifier = Modifier.defaultMinSize(
-                                        Constants.RELIC_CARD_WIDTH, Constants.RELIC_CARD_WIDTH
-                                    ).clip(
+            Box(modifier = Modifier.fillMaxWidth().widthIn(RELIC_CARD_WIDTH / 2, RELIC_CARD_WIDTH).wrapContentHeight()) {
+                LazyRow(
+                    state = rememberLazyListState(),
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.align(Alignment.Center).wrapContentSize()
+                ) {
+                    for (index in if (isRelic) { 1..4 } else { 5..6 }) {
+                        item{
+                            Box(
+                                modifier = Modifier.widthIn(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH *1.5f).wrapContentHeight()
+                                    .clip(
                                         RoundedCornerShape(
                                             topEnd = 15.dp,
                                             topStart = 4.dp,
                                             bottomEnd = 4.dp,
                                             bottomStart = 4.dp
                                         )
-                                    ).clickable(
-                                        onClick = { },
-                                        indication = ripple(),
-                                        interactionSource = remember { MutableInteractionSource() }
                                     )
-                                ) {
-                                    AsyncImage(
-                                        model = newImageRequest(
-                                            context = LocalPlatformContext.current,
-                                            Relic.getRelicImageFromJSON(
-                                                if (isRelic) ImageFolder.RELIC_ICON else ImageFolder.ORMANENT_ICON,
-                                                relicSetName, index
+                            ) {
+                                Column {
+                                    Box(
+                                        modifier = Modifier.defaultMinSize(
+                                            Constants.RELIC_CARD_WIDTH, Constants.RELIC_CARD_WIDTH
+                                        ).clip(
+                                            RoundedCornerShape(
+                                                topEnd = 15.dp,
+                                                topStart = 4.dp,
+                                                bottomEnd = 4.dp,
+                                                bottomStart = 4.dp
                                             )
-                                        ),
-                                        contentDescription = "Relic Icon",
-                                        modifier = Modifier.fillMaxWidth().aspectRatio(1f).background(
-                                            Brush.verticalGradient(
-                                                colors = Constants.getCardBgColorByRare(relicJson.jsonObject["rarity"]!!.jsonPrimitive.int)
-                                            )
-                                        ),
-                                        contentScale = ContentScale.Crop
+                                        ).clickable(
+                                            onClick = { },
+                                            indication = ripple(),
+                                            interactionSource = remember { MutableInteractionSource() }
+                                        )
+                                    ) {
+                                        AsyncImage(
+                                            model = newImageRequest(
+                                                context = LocalPlatformContext.current,
+                                                Relic.getRelicImageFromJSON(
+                                                    if (isRelic) ImageFolder.RELIC_ICON else ImageFolder.ORMANENT_ICON,
+                                                    relicSetName, index
+                                                )
+                                            ),
+                                            contentDescription = "Relic Icon",
+                                            modifier = Modifier.fillMaxWidth().aspectRatio(1f).background(
+                                                Brush.verticalGradient(
+                                                    colors = Constants.getCardBgColorByRare(relicJson.jsonObject["rarity"]!!.jsonPrimitive.int)
+                                                )
+                                            ),
+                                            contentScale = ContentScale.Crop
 
-                                    )
+                                        )
+                                    }
+                                    Row(
+                                        Modifier.fillMaxWidth().wrapContentHeight(),
+                                        verticalAlignment = Alignment.CenterVertically,
+                                        horizontalArrangement = Arrangement.Center
+                                    ) {
+                                        Text(
+                                            text = relicJson.jsonObject["pieces"]!!.jsonObject[index.toString()]!!.jsonObject["name"]!!.jsonPrimitive.content,
+                                            textAlign = TextAlign.Center,
+                                            style = FontSizeNormal12(),
+                                            color = TextColorNormalDim,
+                                            maxLines = 2,
+                                            overflow = TextOverflow.Ellipsis,
+                                            modifier = Modifier.widthIn(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH *2).wrapContentHeight()
+                                        )
+                                    }
+                                    Spacer(modifier = Modifier.height(2.dp))
                                 }
-                                Row(
-                                    Modifier.fillMaxWidth().wrapContentHeight(),
-                                    verticalAlignment = Alignment.CenterVertically,
-                                    horizontalArrangement = Arrangement.Center
-                                ) {
-                                    Text(
-                                        text = relicJson.jsonObject["pieces"]!!.jsonObject[index.toString()]!!.jsonObject["name"]!!.jsonPrimitive.content,
-                                        textAlign = TextAlign.Center,
-                                        style = FontSizeNormal12(),
-                                        color = TextColorNormalDim,
-                                        maxLines = 2,
-                                        overflow = TextOverflow.Ellipsis,
-                                        modifier = Modifier.widthIn(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH *2).wrapContentHeight()
-                                    )
-                                }
-                                Spacer(modifier = Modifier.height(2.dp))
                             }
                         }
                     }
                 }
             }
-        }
-    }
-}
-
-@Preview
-@Composable
-fun RelicCardPreview() {
-    LazyVerticalGrid(
-        columns = GridCells.Adaptive(80.dp),
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp),
-    ) {
-        items(count = 4) {
-            RelicCard(
-                relic = Relic(
-                    officialId = 312,
-                    registName = "Penacony, Land of the Dreams",
-                    fileName = "312",
-                ),
-            )
         }
     }
 }
