@@ -2,6 +2,7 @@ package ui.navigation
 
 import files.AboutTheApp
 import files.ActionOrderTitle
+import files.ApocalypticShadow
 import files.ChangeWallPaper
 import files.CharacterList
 import files.Event
@@ -176,6 +177,6 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     )
     data object ApocalypticShadowMissionPageScreen : Screen(
         "ApocalypticShadowMissionPageScreen",
-        HeaderData(titleIconId = Res.drawable.phorphos_hourglass_fill)
+        HeaderData(titleIconId = Res.drawable.phorphos_hourglass_fill, titleRId = Res.string.ApocalypticShadow)
     )
 }

@@ -159,7 +159,7 @@ fun ApocalypticShadowMissionPageScreen(
 
         PageHeaderAlpha(
             navigator = navigator,
-            hazeState = hazeStateRoot,
+            hazeState = hazeState,
             onForward = { navigator.navigateLimited(BattleChronicleRoute(
                 UserAccount.INSTANCE.uid,
                 AbyssInfoType.ApocalypticShadow.name
