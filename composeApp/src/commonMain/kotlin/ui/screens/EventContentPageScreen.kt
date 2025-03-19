@@ -4,17 +4,23 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
 import androidx.navigation.toRoute
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
+import com.mohamedrejeb.richeditor.annotation.ExperimentalRichTextApi
+import com.mohamedrejeb.richeditor.model.rememberRichTextState
+import com.mohamedrejeb.richeditor.ui.material3.RichText
 import com.multiplatform.webview.web.WebView
 import com.multiplatform.webview.web.rememberWebViewStateWithHTMLData
 import dev.chrisbanes.haze.HazeState
@@ -30,7 +36,12 @@ import ui.components.PageHeader
 import ui.navigation.EventContentRoute
 import utils.app.Constants
 import utils.app.DefaultZIndex
+import utils.app.FontSizeNormal14
+import utils.app.isLinuxPlatform
+import utils.app.isMacOSPlatform
+import utils.app.isWindowsPlatform
 import utils.app.newImageRequest
+import utils.app.showWarningToast
 
 //This Header was copy from "rn-branch\src\components\EventScreen\Event\EventWebView\EventWebView.tsx
 val headerHTML = "<meta name=\"viewport\" content=\"initial-scale=1.0, maximum-scale=1.0\" />\n" +
@@ -91,6 +102,7 @@ val headerHTML = "<meta name=\"viewport\" content=\"initial-scale=1.0, maximum-s
         "\n" +
         "</style>"
 
+@OptIn(ExperimentalRichTextApi::class)
 @Composable
 fun EventContentPageScreen(
     navigator: NavHostController,
@@ -112,7 +124,6 @@ fun EventContentPageScreen(
             +
             "</body>").trimIndent()
 
-    val webViewState = rememberWebViewStateWithHTMLData(htmlData)
 
 
     Box(modifier = Modifier.fillMaxSize()){
@@ -125,7 +136,18 @@ fun EventContentPageScreen(
                 eventImageDisplay(eventItem)
             }
             item {
-                WebView(webViewState, modifier = Modifier.padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING))
+                if(isWindowsPlatform() || isMacOSPlatform() || isLinuxPlatform()){
+                    val richTextState = rememberRichTextState()
+                    RichText(
+                        state = richTextState.setHtml(htmlData),
+                        color = Color.White,
+                        style = FontSizeNormal14(),
+                        modifier = Modifier.fillMaxWidth().wrapContentHeight()
+                    )
+                }else{
+                    val webViewState = rememberWebViewStateWithHTMLData(htmlData)
+                    WebView(webViewState, modifier = Modifier.padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING))
+                }
 
                 Spacer(Modifier.navigationBarsPadding())
             }

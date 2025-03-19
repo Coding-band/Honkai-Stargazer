@@ -24,6 +24,7 @@ import files.phorphos_alien_fill
 import files.phorphos_align_left_fill
 import files.phorphos_atom_fill
 import files.phorphos_baseball_cap_fill
+import files.phorphos_film_slate_fill
 import files.phorphos_film_slate_regular
 import files.phorphos_game_controller_fill
 import files.phorphos_game_controller_regular
@@ -115,7 +116,7 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     )
     data object EventListPageScreen : Screen(
         "EventListPageScreen",
-        HeaderData(titleRId = Res.string.Event, titleIconId = Res.drawable.phorphos_film_slate_regular)
+        HeaderData(titleRId = Res.string.Event, titleIconId = Res.drawable.phorphos_film_slate_fill)
     )
     data object EventContentPageScreen : Screen(
         "EventContentPageScreen",

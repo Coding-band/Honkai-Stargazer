@@ -27,6 +27,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.onSizeChanged
@@ -100,6 +101,10 @@ import utils.app.Constants.Companion.HOME_WIDTH
 import utils.app.Constants.Companion.INFO_MAX_WIDTH
 import utils.app.Language
 import utils.app.SG3NavTransitions
+import utils.app.isLinuxPlatform
+import utils.app.isMacOSPlatform
+import utils.app.isWindowsPlatform
+import utils.app.showWarningToast
 import utils.app.snackbarInstance
 
 /**
@@ -384,11 +389,16 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
 
     composable<EventListRoute> {
         screenInstance = Screen.EventListPageScreen
+        val alreadyDisplayWarning = rememberSaveable { mutableStateOf(false) }
         withBGScreen(isPadMode){ hazeState ->
             EventListPageScreen(
                 navigator = navigator,
                 hazeState = hazeState
             )
+            if((isWindowsPlatform() || isMacOSPlatform() || isLinuxPlatform()) && (!alreadyDisplayWarning.value)){
+                showWarningToast(message = "PC端暫不支援內嵌式網頁，請見諒\nApologize for the inconvenience that currently Webview is not fully support in PC", dismissPrevious = true)
+                alreadyDisplayWarning.value = true
+            }
         }
     }
 

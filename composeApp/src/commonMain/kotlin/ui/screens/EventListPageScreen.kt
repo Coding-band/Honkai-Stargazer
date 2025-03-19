@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Text
 import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
@@ -94,8 +95,10 @@ fun EventListPageScreen(
             item {
                 Spacer(Modifier.padding(top = PAGE_HEADER_HEIGHT).statusBarsPadding())
             }
-            items(eventList.value.size) { index ->
-                EventItemCard(eventList.value[index], isDateOutside, navigator)
+            items(eventList.value){
+                if(it.banner != ""){
+                    EventItemCard(eventItem = it, isDateOutside = isDateOutside, navigator = navigator)
+                }
             }
             item {
                 Spacer(Modifier.padding(top = 16.dp).navigationBarsPadding())
@@ -137,11 +140,14 @@ fun EventItemCard(eventItem: EventItem, isDateOutside: MutableState<Boolean>, na
 
                 is PressInteraction.Release -> {
                     if (isLongClick.not()) {
+                        navigator.navigateLimited(EventContentRoute(eventItem.ann_id))
+                        /*
                         if(isWindowsPlatform() || isMacOSPlatform() || isLinuxPlatform()){
                             showWarningToast(message = "PC端暫不支援內嵌式網頁，請見諒\nApologize for the inconvenience that currently Webview is not fully support in PC")
                         }else{
                             navigator.navigateLimited(EventContentRoute(eventItem.ann_id))
                         }
+                         */
                     }
 
                 }

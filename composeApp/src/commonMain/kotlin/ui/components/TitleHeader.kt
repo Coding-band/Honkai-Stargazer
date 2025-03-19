@@ -9,14 +9,17 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import files.AppStatusLostConnect
 import files.Res
@@ -41,12 +44,18 @@ fun TitleHeader(iconRId : DrawableResource, titleString: String? = null, titleRI
             modifier = Modifier.size(32.dp),
             colorFilter = ColorFilter.tint(Color.White)
         )
-        Row {
+        Row(modifier = Modifier.wrapContentWidth()) {
             Spacer(
                 modifier = Modifier
                     .height(2.dp)
-                    .width(50.dp)
+                    .requiredWidth(50.dp)
                     .background(Color(0x66FFFFFF))
+                    .align(Alignment.CenterVertically),
+            )
+            Spacer(
+                modifier = Modifier
+                    .height(2.dp)
+                    .requiredWidth(12.dp)
                     .align(Alignment.CenterVertically),
             )
             Text(
@@ -59,12 +68,19 @@ fun TitleHeader(iconRId : DrawableResource, titleString: String? = null, titleRI
                 } else titleString,
                 color = TextColorNormal,
                 style = FontSizeNormal14(),
-                modifier = Modifier.padding(start = 12.dp, end = 12.dp)
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis
             )
             Spacer(
                 modifier = Modifier
                     .height(2.dp)
-                    .width(50.dp)
+                    .requiredWidth(12.dp)
+                    .align(Alignment.CenterVertically),
+            )
+            Spacer(
+                modifier = Modifier
+                    .height(2.dp)
+                    .requiredWidth(50.dp)
                     .background(Color(0x66FFFFFF))
                     .align(Alignment.CenterVertically),
             )
