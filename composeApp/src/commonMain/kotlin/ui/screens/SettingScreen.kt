@@ -25,6 +25,7 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -87,7 +88,6 @@ import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.navigation.AboutStargazerRoute
 import ui.navigation.BackgroundSettingRoute
-import ui.navigation.IIRCHomePageRoute
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import utils.annotation.DoItLater
@@ -123,7 +123,6 @@ fun SettingScreen(
     showUpdatePopupInSetting = remember { mutableStateOf(false) }
     val canUpdatePopup = remember { mutableStateOf(true) } //Not for use
     val wallpaperName = remember { mutableStateOf("----") }
-
     LaunchedEffect(Settings().getString("backgroundImage", "221000"), Language.TextLanguageInstance, doRecomposeText.value){
         wallpaperName.value = Wallpaper.getPreferenceWallpaperLocaleName()
     }
@@ -393,7 +392,9 @@ fun SettingScreen(
 
             PageHeader(navigator, headerData = Screen.SettingScreen.headerData, hazeState = hazeState, backIconId = BackIcon.BACK)
 
-            UpdateAssetsPopup(showUpdatePopupInSetting, hazeState, forceDownload = true)
+            if(showUpdatePopupInSetting.value){
+                UpdateAssetsPopup(showUpdatePopupInSetting, hazeState, forceDownload = true)
+            }
         }
     }
 }

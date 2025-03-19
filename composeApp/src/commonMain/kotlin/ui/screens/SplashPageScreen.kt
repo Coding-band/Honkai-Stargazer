@@ -2,7 +2,6 @@ package ui.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -22,9 +21,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.Res
 import files.app_icon_black_bg
@@ -33,7 +30,6 @@ import files.star_peace_icon
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.jetbrains.compose.resources.Font
@@ -42,23 +38,17 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.UserAbyssRecord.Companion.refreshASData
 import types.UserAbyssRecord.Companion.refreshMOCData
 import types.UserAbyssRecord.Companion.refreshPFData
-import types.UserAccount.Companion.INSTANCE
 import types.UserAccount.Companion.getUID
-import types.UserAccount.Companion.refreshCharacterList
-import types.UserAccount.Companion.refreshNoteData
 import types.UserAccount.Companion.refreshUserAccount
-import types.Wallpaper.Companion.initWallpaperList
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
 import ui.navigation.HomeRoute
 import ui.navigation.Screen
 import ui.navigation.SplashRoute
-import ui.navigation.refreshInit
 import ui.navigation.screenInstance
 import utils.app.CharWeightList
 import utils.app.FontSizeNormalLarge24
 import utils.app.FontSizeNormalSmall
-import utils.app.KCEFPopup
 import utils.app.Language
 import utils.app.Preferences
 import utils.app.UpdateAssetsPopup

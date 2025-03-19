@@ -6,13 +6,10 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
-import androidx.compose.material.Slider
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.SideEffect
-import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -22,11 +19,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Popup
 import com.russhwolf.settings.Settings
-import com.russhwolf.settings.set
 import dev.chrisbanes.haze.HazeState
 import files.ConfirmBTN
 import files.LaterBTN
-import files.NetworkErrorUnstableConnection
 import files.Res
 import files.UpdateAssetDownloadFull
 import files.UpdateAssetDownloadFullSizeReason
@@ -36,16 +31,11 @@ import files.UpdateAssetFoundUpdate
 import files.UpdateAssetUpdateSize
 import files.UpdateAssetUpdateSuggestionWiFi
 import files.UpdateAssetUpdateTheHerta
-import getAppSpecificDirectory
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.IO
 import kotlinx.coroutines.async
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
@@ -56,10 +46,7 @@ import ui.components.AppDialog
 import ui.components.ThemedProgressBar
 import ui.components.UIButton
 import ui.navigation.refreshInit
-import ui.screens.doInit
 import ui.screens.doRefresh
-import utils.annotation.DoItLater
-import utils.annotation.TranslationPls
 import utils.starbase.StarbaseAPI
 
 private var localCommit = Settings().getString("localCommit-${Language.TextLanguageInstance.folderName}", "")
@@ -158,7 +145,11 @@ fun updateCheckInit(forceDownload: Boolean = false) : Boolean{
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
-fun UpdateAssetsPopup(isShowPopup: MutableState<Boolean>, hazeState: HazeState, forceDownload: Boolean = false) {
+fun UpdateAssetsPopup(
+    isShowPopup: MutableState<Boolean>,
+    hazeState: HazeState,
+    forceDownload: Boolean = false,
+) {
     if(forceDownload){ //Force download the assets
         updateCheckInit(forceDownload)
     }
