@@ -50,8 +50,8 @@ open class Relic(
     var properties: ArrayList<HsrProperties> = arrayListOf(),
 ){
     companion object {
-        val relicListJson = getRelicListFromJSON()
-        val relicExtListJson = getRelicExtListFromJSON()
+        private var relicListJson = getRelicListFromJSON()
+        private var relicExtListJson = getRelicExtListFromJSON()
 
         private fun getRelicListFromJSON() : JsonElement {
             return getAssetsJsonByFilePath("relic_data/relic_list.json", defaultData = "[]")
@@ -66,6 +66,19 @@ open class Relic(
 
         fun getRelicImageFromJSON(imageFolderType: ImageFolder, imageFileName : String, index: Int = -1) : String {
             return getAssetsURLByFileName(imageFolderType, getImageNameByRegistName("${imageFileName}${if(index > 0) {"_${index}"} else ""}"))
+        }
+
+        fun getRelicListJson() : JsonElement {
+            return relicListJson
+        }
+
+        fun getRelicExtListJson() : JsonElement {
+            return relicExtListJson
+        }
+
+        fun refreshRelicJson(){
+            relicListJson = getRelicListFromJSON()
+            relicExtListJson = getRelicExtListFromJSON()
         }
 
         @OptIn(ExperimentalCoroutinesApi::class)

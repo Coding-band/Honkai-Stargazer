@@ -62,8 +62,6 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
 import types.Character
-import types.Character.Companion.charExtListJson
-import types.Character.Companion.charListJson
 import types.CharacterProficient
 import types.CombatType
 import types.ImageFolder
@@ -123,8 +121,8 @@ fun ProficientLeaderboardPageScreen(
                     //println("KEYS: ${CharWeightList.INSTANCE.jsonObject.keys.size}")
                     schoolList.clear()
                     CharWeightList.INSTANCE.jsonObject.mapKeys { item ->
-                        val listDataJson = charListJson.jsonArray.firstOrNull { charData -> charData.jsonObject["charId"]!!.jsonPrimitive.content == item.key }
-                        val listExtDataJson = charExtListJson.jsonArray.firstOrNull { charData -> charData.jsonObject["officialId"]!!.jsonPrimitive.content == item.key }
+                        val listDataJson = Character.getCharListJson().jsonArray.firstOrNull { charData -> charData.jsonObject["charId"]!!.jsonPrimitive.content == item.key }
+                        val listExtDataJson = Character.getCharExtListJson().jsonArray.firstOrNull { charData -> charData.jsonObject["officialId"]!!.jsonPrimitive.content == item.key }
 
                         if (listExtDataJson == null || listDataJson == null) return@mapKeys
 
@@ -338,7 +336,7 @@ fun ProficientLeaderboardPageScreen(
 
 @Composable
 fun ProfLeaderboardItem(charProf: CharacterProficient, navigator: NavHostController) {
-    val lcDataJson = Lightcone.lcListJson.jsonArray.firstOrNull { lcData -> lcData.jsonObject["fileName"]!!.jsonPrimitive.int == charProf.lcId }
+    val lcDataJson = Lightcone.getLcListJson().jsonArray.firstOrNull { lcData -> lcData.jsonObject["fileName"]!!.jsonPrimitive.int == charProf.lcId }
     val lcName = lcDataJson?.jsonObject?.get("name")?.jsonPrimitive?.content ?: ""
     val isQuerying = remember { mutableStateOf(false) }
     Row(

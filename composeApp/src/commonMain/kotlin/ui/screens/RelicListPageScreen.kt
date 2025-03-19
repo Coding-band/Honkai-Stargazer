@@ -35,6 +35,7 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.JsonArray
+import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import types.Relic
@@ -64,13 +65,15 @@ fun initRelicList(){
 
 @OptIn(ExperimentalCoroutinesApi::class)
 fun refreshRelicList(){
+    Relic.refreshRelicJson()
+
     relicList.value = runBlocking {
         val job = CoroutineScope(Dispatchers.Default).async {
             val tmpList = arrayListOf<Relic>()
-            if (Relic.relicListJson !is JsonArray) {
+            if (Relic.getRelicListJson() !is JsonArray) {
                 return@async tmpList
             }
-            (Relic.relicListJson).fastForEach { jsonElement ->
+            (Relic.getRelicListJson().jsonArray).fastForEach { jsonElement ->
                 tmpList.add(Relic.getRelicItemFromJSON(jsonElement.jsonObject["fileName"]?.jsonPrimitive?.content!!))
             }
             return@async tmpList

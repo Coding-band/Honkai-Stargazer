@@ -47,8 +47,8 @@ open class Lightcone(
 ){
     @DoItLater("Rearrange those function later")
     companion object {
-        val lcListJson = getLightconeListFromJSON()
-        val lcExtListJson = getLightconeExtListFromJSON()
+        private var lcListJson = getLightconeListFromJSON()
+        private var lcExtListJson = getLightconeExtListFromJSON()
 
         private fun getLightconeListFromJSON() : JsonElement {
             return getAssetsJsonByFilePath("lightcone_data/lightcone_list.json", defaultData = "[]")
@@ -63,6 +63,19 @@ open class Lightcone(
 
         fun getLightconeImageFromJSON(imageFolderType: ImageFolder, lightconeName : String) : String {
             return getAssetsURLByFileName(imageFolderType, getImageNameByRegistName(lightconeName))
+        }
+
+        fun getLcListJson() : JsonElement {
+            return lcListJson
+        }
+
+        fun getLcExtListJson() : JsonElement {
+            return lcExtListJson
+        }
+
+        fun refreshLcJson() {
+            lcListJson = getLightconeListFromJSON()
+            lcExtListJson = getLightconeExtListFromJSON()
         }
 
         @OptIn(ExperimentalCoroutinesApi::class)

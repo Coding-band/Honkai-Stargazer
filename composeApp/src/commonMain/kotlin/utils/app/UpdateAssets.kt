@@ -205,6 +205,7 @@ fun UpdateAssetsPopup(
                         //Warning ...
                     }else {
                         //Update the local commit
+                        downloadProgress.value = 0L
                         Settings().putString("localCommit-${Language.TextLanguageInstance.folderName}", infoList.first().commit)
                     }
 

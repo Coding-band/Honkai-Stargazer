@@ -64,8 +64,8 @@ open class Character(
         Male, Female, Unspecified
     }
     companion object {
-        val charListJson = getCharacterListFromJSON()
-        val charExtListJson = getCharacterExtListFromJSON()
+        private var charListJson = getCharacterListFromJSON()
+        private var charExtListJson = getCharacterExtListFromJSON()
 
         private fun getCharacterListFromJSON() : JsonElement {
             return getAssetsJsonByFilePath("character_data/character_list.json", defaultData = "[]")
@@ -82,6 +82,17 @@ open class Character(
             return charExtListJson.jsonArray.firstOrNull {
                 it.jsonObject["officialId"]!!.jsonPrimitive.content == charId
             }
+        }
+
+        fun getCharListJson() : JsonElement {
+            return charListJson
+        }
+        fun getCharExtListJson() : JsonElement {
+            return charExtListJson
+        }
+        fun refreshCharJson() {
+            charListJson = getCharacterListFromJSON()
+            charExtListJson = getCharacterExtListFromJSON()
         }
 
         /**

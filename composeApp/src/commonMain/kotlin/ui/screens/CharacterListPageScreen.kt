@@ -36,6 +36,7 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.JsonArray
+import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import types.Character
@@ -69,13 +70,15 @@ fun initCharList() {
 
 @OptIn(ExperimentalCoroutinesApi::class)
 fun refreshCharList(){
+    Character.refreshCharJson()
+
     charList.value = runBlocking {
         val job = CoroutineScope(Dispatchers.Default).async {
             val tmpCharList = arrayListOf<Character>()
-            if (Character.charListJson !is JsonArray) {
+            if (Character.getCharListJson() !is JsonArray) {
                 return@async tmpCharList
             }
-            (Character.charListJson).fastForEach { jsonElement ->
+            (Character.getCharListJson().jsonArray).fastForEach { jsonElement ->
                 tmpCharList.add(Character.getCharacterItemFromJSON(jsonElement.jsonObject["charId"]?.jsonPrimitive?.content!!, requireAttrData = true))
             }
             return@async tmpCharList
