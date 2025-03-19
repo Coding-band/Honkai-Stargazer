@@ -286,15 +286,12 @@ class Constants {
                 itemIconId = Res.drawable.phorphos_atom_fill,
                 itemOnClickToNavigate = PureFictionMissionRoute
             ),
-            /*
-            NOT READY @DoItLater
             HomePageBlocks.HomePageBlockItem(
                 itemId = "ASPage",
                 itemTitleRId = Res.string.ApocalypticShadow,
                 itemIconId = Res.drawable.phorphos_hourglass_fill,
                 itemOnClickToNavigate = ApocalypticShadowMissionRoute
             ),
-             */
             HomePageBlocks.HomePageBlockItem(
                 itemId = "EventListPage",
                 itemTitleRId = Res.string.Event,

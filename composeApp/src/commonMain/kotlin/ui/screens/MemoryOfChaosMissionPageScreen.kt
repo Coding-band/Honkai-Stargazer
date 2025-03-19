@@ -8,6 +8,7 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -373,7 +374,7 @@ fun MemoryOfChaosContent(
                     else -> null
                 }
 
-                if(phaseInfo == null) return@repeat
+                if(phaseInfo == null) return
 
                 Row(Modifier.fillMaxWidth()) {
                     Spacer(Modifier.width(24.dp))
@@ -381,7 +382,7 @@ fun MemoryOfChaosContent(
                         Text("${mocPhaseIndex.value+1}-${phase+1}", style = FontSizeNormal16(), color = Color.White)
                         Spacer(Modifier.height(4.dp))
                         //Weakness Combat Type of Phase
-                        Row {
+                        FlowRow(modifier = Modifier.wrapContentSize(), maxItemsInEachRow = 2) {
                             repeat(phaseInfo.weaknessList.size) {
                                 Image(painterResource(phaseInfo.weaknessList[it].iconColor), modifier = Modifier.size(16.dp) ,contentDescription = null)
                             }
@@ -398,7 +399,7 @@ fun MemoryOfChaosContent(
                                 else -> null
                             }
 
-                            if(monsterInfo.isNullOrEmpty()) return
+                            if(monsterInfo.isNullOrEmpty()) return@repeat
 
                             Row {
                                 MonsterCard(monsterInfo[0])
