@@ -123,9 +123,15 @@ data class AbyssInfoList(
     @SerialName("time") val time: AbyssInfoTime
 ){
     companion object{
-        val mocListJson = getAssetsJsonByFilePath("memory_of_chao_data/chao_list.json", defaultData = "[]")
-        val pfListJson = getAssetsJsonByFilePath("pure_fiction_data/pf_list.json", defaultData = "[]")
-        val asListJson = getAssetsJsonByFilePath("apocalyptic_shadow_data/as_list.json", defaultData = "[]")
+        private var mocListJson = getAssetsJsonByFilePath("memory_of_chao_data/chao_list.json", defaultData = "[]")
+        private var pfListJson = getAssetsJsonByFilePath("pure_fiction_data/pf_list.json", defaultData = "[]")
+        private var asListJson = getAssetsJsonByFilePath("apocalyptic_shadow_data/as_list.json", defaultData = "[]")
+
+        fun refreshListJson() {
+            mocListJson = getAssetsJsonByFilePath("memory_of_chao_data/chao_list.json", defaultData = "[]")
+            pfListJson = getAssetsJsonByFilePath("pure_fiction_data/pf_list.json", defaultData = "[]")
+            asListJson = getAssetsJsonByFilePath("apocalyptic_shadow_data/as_list.json", defaultData = "[]")
+        }
 
         @OptIn(ExperimentalCoroutinesApi::class)
         fun getAbyssList(type: AbyssInfoType): ArrayList<AbyssInfoList> {

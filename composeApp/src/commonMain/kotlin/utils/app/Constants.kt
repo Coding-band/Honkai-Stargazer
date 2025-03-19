@@ -68,7 +68,11 @@ import ui.navigation.RelicInfoRoute
 import ui.navigation.RelicListRoute
 import ui.navigation.Screen
 import ui.navigation.UIDSearchRoute
+import ui.navigation.navigateLimited
 import ui.navigation.urlHandler
+import ui.screens.asList
+import ui.screens.mocList
+import ui.screens.pfList
 import utils.annotation.DoItLater
 
 
@@ -195,7 +199,7 @@ class Constants {
                 itemTitleRId = Res.string.Stamina,
                 itemIconId = Res.drawable.phorphos_moon_fill,
                 itemType = HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1,
-                itemOnClickAction = {count -> count.value = (count.value + 1) % 2},
+                itemOnClickAction = {count, navigate -> count.value = (count.value + 1) % 2},
             ).onRefresh { self ->
                 if(!UserNoteState.value.isInited){
                     self.itemTopHighlight = "--"
@@ -211,7 +215,7 @@ class Constants {
             HomePageBlocks.HomePageBlockItem(
                 itemId = "DailyMissionPage",
                 itemTitle = "--/--",
-                itemOnClickAction = {
+                itemOnClickAction = { _, _ ->
                     showSuccessToast(
                         if(!UserNoteState.value.isInited) {
                             "--/--"
@@ -232,7 +236,8 @@ class Constants {
             HomePageBlocks.HomePageBlockItem(
                 itemId = "UniversialScore",
                 itemTitle = "--/--",
-                itemOnClickAction = { showSuccessToast(
+                itemOnClickAction = { _, _ ->
+                    showSuccessToast(
                     if(!UserNoteState.value.isInited) {
                         "--/--"
                     }else{
@@ -278,19 +283,38 @@ class Constants {
                 itemId = "MOCPage",
                 itemTitleRId = Res.string.MemoryOfChaos,
                 itemIconId = Res.drawable.phorphos_medal_military_fill,
-                itemOnClickToNavigate = MemoryOfChaosMissionRoute
+                itemOnClickAction = {
+                        _, navigate ->
+                    if(mocList.value.isEmpty()){
+                        showWarningToast(message = ERR_NETWORK_UNSTABLE_CONNECTION)
+                    }else{
+                        navigate.navigateLimited(MemoryOfChaosMissionRoute)
+                    }
+                }
             ),
             HomePageBlocks.HomePageBlockItem(
                 itemId = "PFPage",
                 itemTitleRId = Res.string.PureFiction,
                 itemIconId = Res.drawable.phorphos_atom_fill,
-                itemOnClickToNavigate = PureFictionMissionRoute
+                itemOnClickAction = { _, navigate ->
+                    if(pfList.value.isEmpty()){
+                        showWarningToast(message = ERR_NETWORK_UNSTABLE_CONNECTION)
+                    }else{
+                        navigate.navigateLimited(PureFictionMissionRoute)
+                    }
+                }
             ),
             HomePageBlocks.HomePageBlockItem(
                 itemId = "ASPage",
                 itemTitleRId = Res.string.ApocalypticShadow,
                 itemIconId = Res.drawable.phorphos_hourglass_fill,
-                itemOnClickToNavigate = ApocalypticShadowMissionRoute
+                itemOnClickAction = { _, navigate ->
+                    if(asList.value.isEmpty()){
+                        showWarningToast(message = ERR_NETWORK_UNSTABLE_CONNECTION)
+                    }else{
+                        navigate.navigateLimited(ApocalypticShadowMissionRoute)
+                    }
+                }
             ),
             HomePageBlocks.HomePageBlockItem(
                 itemId = "EventListPage",
@@ -322,7 +346,7 @@ class Constants {
                 itemTitleRId = Res.string.Map,
                 itemIconId = Res.drawable.phorphos_map_trifold_fill,
                 //itemOnClickToNavigate = Screen.MapPageScreen
-                itemOnClickAction = {
+                itemOnClickAction = { _ , _ ->
                     urlHandler.openUri("https://act.hoyolab.com/sr/app/interactive-map/index.html?lang=${Language.TextLanguageInstance.hoyolabName}")
                 }
             ),

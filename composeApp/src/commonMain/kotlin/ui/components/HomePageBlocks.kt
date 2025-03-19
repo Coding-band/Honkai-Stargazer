@@ -82,7 +82,7 @@ class HomePageBlocks {
         var itemIconId: DrawableResource = Res.drawable.phorphos_cake_fill,
         var itemType: HomePageBlockItemType = HomePageBlockItemType.W1H1,
 
-        var itemOnClickAction: ((count : MutableState<Int>) -> Unit)? = null,
+        var itemOnClickAction: ((count : MutableState<Int>, navigator: NavHostController) -> Unit)? = null,
         var itemOnClickToNavigate: Any? = null,
     ) {
         var itemTopHighlight: String? = ""
@@ -140,7 +140,7 @@ fun HomePageBlock1x1(
                 showFunctionIsDevelopingToast()
             }
 
-            blockData.itemOnClickAction?.invoke(blockData.itemOnClickCount)
+            blockData.itemOnClickAction?.invoke(blockData.itemOnClickCount, navigator)
         },
         shape = RoundedCornerShape(6.dp),
         modifier = Modifier
@@ -223,7 +223,7 @@ fun HomePageBlock2x1(
                 showFunctionIsDevelopingToast()
             }
 
-            blockData.itemOnClickAction?.invoke(blockData.itemOnClickCount)
+            blockData.itemOnClickAction?.invoke(blockData.itemOnClickCount, navigator)
         },
         shape = RoundedCornerShape(6.dp),
         modifier = Modifier

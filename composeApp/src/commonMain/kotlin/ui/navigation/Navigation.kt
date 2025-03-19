@@ -49,6 +49,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.datetime.Clock
+import types.AbyssInfo
+import types.AbyssInfoList
 import types.Wallpaper.Companion.initWallpaperList
 import ui.components.HeaderData
 import ui.components.PomPomPopupUI
@@ -244,6 +246,7 @@ fun refreshInit(){
             refreshCharList()
             refreshLcList()
             refreshRelicList()
+            AbyssInfoList.refreshListJson()
             refreshPFList()
             refreshMOCList()
             refreshASList()
