@@ -137,7 +137,7 @@ fun PureFictionMissionPageScreen(
 
     Box(Modifier.fillMaxSize()) {
         LazyColumn(
-            modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).hazeSource(hazeStateRoot)
+            modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).hazeSource(hazeState)
         ) {
             item { Spacer(
                 modifier = Modifier
@@ -158,7 +158,7 @@ fun PureFictionMissionPageScreen(
 
         PageHeaderAlpha(
             navigator = navigator,
-            hazeState = hazeStateRoot,
+            hazeState = hazeState,
             onForward = { navigator.navigateLimited(BattleChronicleRoute(
                 UserAccount.INSTANCE.uid,
                 AbyssInfoType.PureFiction.name
@@ -176,7 +176,7 @@ fun PureFictionMissionPageScreen(
         InfoDisplayDialog(
             modifier = Modifier.align(Alignment.Center),
             titleString = stringResource(Res.string.MOCEffect),
-            hazeState = hazeStateRoot,
+            hazeState = hazeState,
             isDialogVisible = isDialogVisible,
             components = {
                 RichText(state = richTextState,

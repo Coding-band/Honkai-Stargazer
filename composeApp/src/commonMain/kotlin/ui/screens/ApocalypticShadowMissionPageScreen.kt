@@ -6,6 +6,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.FlowRow
@@ -25,28 +26,38 @@ import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.Text
 import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
 import com.voc.stargazer3.BuildKonfig
@@ -56,7 +67,6 @@ import files.AbyssCharacterUsage
 import files.AbyssTeamUsage
 import files.MOCEffect
 import files.MOCMissionInfoTitle
-import files.NetworkErrorUnstableConnection
 import files.Res
 import files.bg_transparent
 import files.ic_arrow_down_spinner
@@ -79,7 +89,11 @@ import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.AbyssInfo
 import types.AbyssInfoList
+import types.AbyssInfoTeamUsage
 import types.AbyssInfoType
+import types.AbyssInfoUsage
+import types.Character
+import types.ImageFolder
 import types.UserAccount
 import ui.components.DropdownMenuNoPadding
 import ui.components.InfoDisplayDialog
@@ -92,17 +106,20 @@ import ui.components.UIButtonSize
 import ui.components.horizontalFadingEdge
 import ui.navigation.BattleChronicleRoute
 import ui.navigation.Screen
-import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import utils.app.Constants
 import utils.app.DefaultZIndex
+import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.Language.Companion.TextLanguageInstance
+import utils.app.formatDecimal
 import utils.app.getMocPhaseStrListByMocLen
+import utils.app.newImageRequest
 import utils.app.pxToDp
+import utils.app.rememberMutableStateListJsonOf
 import utils.app.removeStrQuote
-import utils.app.showWarningToast
+import utils.starbase.StarbaseAPI
 
 lateinit var asList : MutableState<ArrayList<AbyssInfoList>>
 
@@ -134,11 +151,27 @@ fun ApocalypticShadowMissionPageScreen(
     val asChoiceIndex = remember { mutableStateOf(0) }
     val isDialogVisible = remember { mutableStateOf(false) }
     val asInfoList = AbyssInfo.getAbyssItemById(abyssId = asList.value[asChoiceIndex.value].id, type = AbyssInfoType.ApocalypticShadow, abyssFileName = asList.value[asChoiceIndex.value].fileName)
+    var asCharUsageList = rememberMutableStateListJsonOf<AbyssInfoUsage>()
+    var asTeamUsageList = rememberMutableStateListJsonOf<AbyssInfoTeamUsage>()
 
+    val asInfoDisplayIndex = remember { mutableStateOf(0) } //0: Mission Info, 1: Char Usage, 2: Team Usage
+    val asFloorIndex = remember { mutableStateOf(0) } //0: Phase 1, 1: Phase 2
+
+    LaunchedEffect(asChoiceIndex.value, asFloorIndex.value) {
+        async {
+            asCharUsageList.clear()
+            asCharUsageList.addAll(StarbaseAPI().getAbyssCharUsage(
+                abyssId = asList.value[asChoiceIndex.value].id,
+                floor = asFloorIndex.value+1,
+                abyssInfoType = AbyssInfoType.ApocalypticShadow,
+            ))
+        }.await()
+        //asTeamUsageList.value = asInfoList?.teamUsageList ?: arrayListOf()
+    }
 
     Box(Modifier.fillMaxSize()) {
         LazyColumn(
-            modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).hazeSource(hazeStateRoot, zIndex = DefaultZIndex)
+            modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).hazeSource(hazeState, zIndex = DefaultZIndex)
         ) {
             item { Spacer(
                 modifier = Modifier
@@ -152,7 +185,7 @@ fun ApocalypticShadowMissionPageScreen(
             item { Spacer(Modifier.height(8.dp)) }
 
             //Mission Info / Usages
-            item { ApocalypticShadowContent(asInfoList) }
+            item { ApocalypticShadowContent(asInfoList, asCharUsageList, asTeamUsageList, asInfoDisplayIndex, asFloorIndex) }
 
             //Comments & Suggestions
         }
@@ -177,7 +210,7 @@ fun ApocalypticShadowMissionPageScreen(
         InfoDisplayDialog(
             modifier = Modifier.align(Alignment.Center),
             titleString = stringResource(Res.string.MOCEffect),
-            hazeState = hazeStateRoot,
+            hazeState = hazeState,
             isDialogVisible = isDialogVisible,
             components = {
                 RichText(state = richTextState,
@@ -275,8 +308,13 @@ fun ApocalypticShadowIdSpinner(
 @Preview
 @Composable
 fun ApocalypticShadowContent(
-    asInfoList: AbyssInfo?
+    asInfoList: AbyssInfo?,
+    asCharUsageList: SnapshotStateList<AbyssInfoUsage>,
+    asTeamUsageList: SnapshotStateList<AbyssInfoTeamUsage>,
+    asInfoDisplayIndex: MutableState<Int>,
+    asFloorIndex: MutableState<Int>
 ){
+    val context = LocalPlatformContext.current
     val density = LocalDensity.current.density
     val asPhaseList = getMocPhaseStrListByMocLen(asInfoList?.missionList?.size ?: -1)
     val usageTextList = listOf(
@@ -284,8 +322,6 @@ fun ApocalypticShadowContent(
         removeStrQuote(Res.string.AbyssCharacterUsage),
         removeStrQuote(Res.string.AbyssTeamUsage)
     )
-    val asInfoDisplayIndex = remember { mutableStateOf(0) }
-    val asPhaseIndex = remember { mutableStateOf(0) }
 
     if(asPhaseList.isEmpty() || asInfoList == null) return
 
@@ -331,7 +367,7 @@ fun ApocalypticShadowContent(
                             .onSizeChanged { optionTextViewSize.value = it },
                     ) {
                         Spacer(Modifier.width(16.dp))
-                        Text(asPhaseList[asPhaseIndex.value], style = FontSizeNormal16(), color = Color.White)
+                        Text(asPhaseList[asFloorIndex.value], style = FontSizeNormal16(), color = Color.White)
                         Spacer(Modifier.width(4.dp))
                         Image(painterResource(Res.drawable.ic_arrow_down_spinner), modifier = Modifier.size(12.dp).align(Alignment.CenterVertically), colorFilter = ColorFilter.tint(Color.White), contentDescription = null)
                     }
@@ -351,7 +387,7 @@ fun ApocalypticShadowContent(
                                     horizontal = 0.dp
                                 ),
                                 onClick = {
-                                    asPhaseIndex.value = index
+                                    asFloorIndex.value = index
                                     isDropDownOpen.value = false
                                     //optionAction(schoolIndex.value)
                                 }
@@ -371,70 +407,104 @@ fun ApocalypticShadowContent(
 
             Spacer(Modifier.height(8.dp))
 
-            repeat(2){phase ->
-                //Showing Floor & Phase
-                val phaseInfo = when(phase){
-                    0 -> asInfoList.missionList[asPhaseIndex.value].part1
-                    1 -> asInfoList.missionList[asPhaseIndex.value].part2
-                    else -> null
-                }
+            //Only for Char Usage & Mission Info
+            if(asInfoDisplayIndex.value != 2){
+                repeat(2){phase ->
+                    //Showing Floor & Phase
+                    val phaseInfo = when(phase){
+                        0 -> asInfoList.missionList[asFloorIndex.value].part1
+                        1 -> asInfoList.missionList[asFloorIndex.value].part2
+                        else -> null
+                    }
 
-                if(phaseInfo == null) return@repeat
+                    if(phaseInfo == null) return@repeat
 
-                Row(Modifier.fillMaxWidth()) {
-                    Spacer(Modifier.width(24.dp))
-                    Column(Modifier.requiredWidth(40.dp).align(Alignment.CenterVertically).wrapContentSize(), horizontalAlignment = Alignment.CenterHorizontally) {
-                        Text("${asPhaseIndex.value+1}-${phase+1}", style = FontSizeNormal16(), color = Color.White)
-                        Spacer(Modifier.height(4.dp))
-                        //Weakness Combat Type of Phase
-                        FlowRow(modifier = Modifier.wrapContentSize(), maxItemsInEachRow = 2)  {
-                            repeat(phaseInfo.weaknessList.size) {
-                                Image(painterResource(phaseInfo.weaknessList[it].iconColor), modifier = Modifier.size(16.dp) ,contentDescription = null)
+                    // Summary of Weakness Combat Type in This Phase
+                    Row(Modifier.fillMaxWidth()) {
+                        Spacer(Modifier.width(24.dp))
+                        Column(Modifier.requiredWidth(40.dp).align(Alignment.CenterVertically).wrapContentSize(), horizontalAlignment = Alignment.CenterHorizontally) {
+                            Text("${asFloorIndex.value+1}-${phase+1}", style = FontSizeNormal16(), color = Color.White)
+                            Spacer(Modifier.height(4.dp))
+                            //Weakness Combat Type of Phase
+                            FlowRow(modifier = Modifier.wrapContentSize(), maxItemsInEachRow = 2)  {
+                                repeat(phaseInfo.weaknessList.size) {
+                                    Image(painterResource(phaseInfo.weaknessList[it].iconColor), modifier = Modifier.size(16.dp) ,contentDescription = null)
+                                }
                             }
                         }
-                    }
-                    Spacer(Modifier.width(24.dp))
+                        Spacer(Modifier.width(24.dp))
 
-                    //Monster Info
-                    Column(Modifier.weight(1f).fillMaxWidth().wrapContentHeight()) {
-                        repeat(2){
-                            val monsterInfo = when(it){
-                                0 -> phaseInfo.monsterWaveInfo1
-                                1 -> phaseInfo.monsterWaveInfo2
-                                else -> null
-                            }
+                        if(asInfoDisplayIndex.value == 0){
+                            //Monster Info
+                            Column(Modifier.weight(1f).fillMaxWidth().wrapContentHeight()) {
+                                repeat(2){
+                                    val monsterInfo = when(it){
+                                        0 -> phaseInfo.monsterWaveInfo1
+                                        1 -> phaseInfo.monsterWaveInfo2
+                                        else -> null
+                                    }
 
-                            if(monsterInfo.isNullOrEmpty()) return@repeat
+                                    if(monsterInfo.isNullOrEmpty()) return@repeat
 
-                            Row {
-                                MonsterCard(monsterInfo[0])
-                                Spacer(Modifier.width(8.dp))
-
-                                val scrollState = rememberScrollState()
-                                Row(Modifier.horizontalScroll(scrollState).horizontalFadingEdge(scrollState, 16.dp, Color.Black), verticalAlignment = Alignment.CenterVertically) {
-                                    monsterInfo.forEachIndexed { index, monster ->
-                                        if(index == 0) return@forEachIndexed
+                                    Row {
+                                        MonsterCard(monsterInfo[0])
                                         Spacer(Modifier.width(8.dp))
-                                        MonsterCard(monster)
-                                        Spacer(Modifier.width(8.dp))
+
+                                        val scrollState = rememberScrollState()
+                                        Row(Modifier.horizontalScroll(scrollState).horizontalFadingEdge(scrollState, 16.dp, Color.Black), verticalAlignment = Alignment.CenterVertically) {
+                                            monsterInfo.forEachIndexed { index, monster ->
+                                                if(index == 0) return@forEachIndexed
+                                                Spacer(Modifier.width(8.dp))
+                                                MonsterCard(monster)
+                                                Spacer(Modifier.width(8.dp))
+                                            }
+                                        }
+                                    }
+
+                                    if(it == 0){
+                                        Spacer(Modifier.height(8.dp))
                                     }
                                 }
                             }
-
-                            if(it == 0){
-                                Spacer(Modifier.height(8.dp))
+                        }else {
+                            val maxWidthOfItem = remember { mutableStateOf(48.dp) }
+                            FlowRow(
+                                maxLines = 2,
+                                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                verticalArrangement = Arrangement.spacedBy(16.dp),
+                                itemVerticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                for (item in asCharUsageList.filter { it.phase == (phase+1) }.sortedByDescending { it.rate }){
+                                    Column(modifier = Modifier.width(maxWidthOfItem.value).align(Alignment.CenterVertically)) {
+                                        AsyncImage(
+                                            model = newImageRequest(context = context, data = Character.getCharacterImageFromOfficialId(ImageFolder.CHAR_ICON, item.id)),
+                                            contentDescription = null,
+                                            modifier = Modifier.size(48.dp).clip(CircleShape).align(Alignment.CenterHorizontally)
+                                        )
+                                        Text(
+                                            text = "${formatDecimal(item.rate*100, isRoundDown = true)}%",
+                                            style = FontSizeNormal12(),
+                                            color = Color.White,
+                                            textAlign = TextAlign.Center,
+                                            modifier = Modifier.fillMaxWidth()
+                                                .onGloballyPositioned {
+                                                    maxWidthOfItem.value = androidx.compose.ui.unit.max(maxWidthOfItem.value, pxToDp(it.size.width, density))
+                                            }
+                                        )
+                                    }
+                                }
                             }
                         }
                     }
-                }
 
-                if (phase == 0){
-                    Spacer(Modifier.height(8.dp))
-                    //Divider
-                    Box(Modifier.fillMaxWidth().padding(top = 12.dp, bottom = 12.dp), contentAlignment = Alignment.Center) {
-                        Box(modifier = Modifier.fillMaxWidth().height(1.dp).background(Color(0x66F3F9FF)))
+                    if (phase == 0){
+                        Spacer(Modifier.height(8.dp))
+                        //Divider
+                        Box(Modifier.fillMaxWidth().padding(top = 12.dp, bottom = 12.dp), contentAlignment = Alignment.Center) {
+                            Box(modifier = Modifier.fillMaxWidth().height(1.dp).background(Color(0x66F3F9FF)))
+                        }
+                        Spacer(Modifier.height(8.dp))
                     }
-                    Spacer(Modifier.height(8.dp))
                 }
             }
 

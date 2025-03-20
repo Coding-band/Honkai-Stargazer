@@ -80,7 +80,9 @@ import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.AbyssInfo
 import types.AbyssInfoList
+import types.AbyssInfoTeamUsage
 import types.AbyssInfoType
+import types.AbyssInfoUsage
 import types.UserAccount
 import ui.components.DropdownMenuNoPadding
 import ui.components.InfoDisplayDialog
@@ -136,10 +138,9 @@ fun MemoryOfChaosMissionPageScreen(
     val isDialogVisible = remember { mutableStateOf(false) }
     val mocInfoList = AbyssInfo.getAbyssItemById(abyssId = mocList.value[mocChoiceIndex.value].id, type = AbyssInfoType.MemoryOfChaos, abyssFileName = mocList.value[mocChoiceIndex.value].fileName)
 
-
     Box(Modifier.fillMaxSize()) {
         LazyColumn(
-            modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).hazeSource(hazeStateRoot, zIndex = DefaultZIndex)
+            modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).hazeSource(hazeState, zIndex = DefaultZIndex)
         ) {
             item { Spacer(
                 modifier = Modifier
@@ -160,7 +161,7 @@ fun MemoryOfChaosMissionPageScreen(
 
         PageHeaderAlpha(
             navigator = navigator,
-            hazeState = hazeStateRoot,
+            hazeState = hazeState,
             onForward = { navigator.navigateLimited(BattleChronicleRoute(UserAccount.INSTANCE.uid, AbyssInfoType.MemoryOfChaos.name)) },
             forwardIconId = Res.drawable.ic_person_btn
         ){
@@ -175,7 +176,7 @@ fun MemoryOfChaosMissionPageScreen(
         InfoDisplayDialog(
             modifier = Modifier.align(Alignment.Center),
             titleString = stringResource(Res.string.MOCEffect),
-            hazeState = hazeStateRoot,
+            hazeState = hazeState,
             isDialogVisible = isDialogVisible,
             components = {
                 RichText(state = richTextState,

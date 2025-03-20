@@ -327,3 +327,27 @@ data class AbyssInfoBuff(
     @SerialName("desc")
     val descList: Map<Language.TextLanguage, String> = mapOf(),
 )
+
+@Serializable
+data class AbyssInfoUsage(
+    @SerialName("id")
+    val id: String,
+
+    @SerialName("rate")
+    val rate: Float = 0f,
+
+    val phase: Int = 1,
+)
+
+@Serializable
+data class AbyssInfoTeamUsage(
+    @SerialName("id")
+    val id: String,
+
+    @SerialName("rate")
+    val rate: Float = 0f,
+
+    @SerialName("buff_info")
+    val buffInfo : ArrayList<AbyssInfoUsage> = arrayListOf(),
+
+)
