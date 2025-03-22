@@ -228,8 +228,8 @@ android {
     applicationVariants.all {
         outputs.all {
             if (this is ApkVariantOutputImpl) {
-                val suffix = if(isForPlayStore) ".aab" else ".apk"
-                outputFileName = "SG3-${appProfile}-${appVersion} (${versionCodeFinal})$suffix"
+                val suffix = outputFileName.split(".").last()
+                outputFileName = "SG3-${appProfile}-${appVersion} (${versionCodeFinal}).$suffix"
             }
         }
     }
