@@ -6,6 +6,7 @@
 
 package ui.screens
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -25,7 +26,10 @@ import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import files.Res
+import files.apocalyptic_shadow_bg
 import files.bg_default
+import files.memory_of_chaos_bg
+import files.pure_fiction_bg
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -108,23 +112,40 @@ fun MakeBackground(
     Box(
         Modifier.hazeSource(hazeState, zIndex = BackgroundZIndex)
     ){
-        AsyncImage(
-            model = newImageRequest(
-                context = LocalPlatformContext.current,
-                when(screen){
-                    Screen.BackgroundSettingScreen -> getAssetsURLByFileName(ImageFolder.BGS, "bg_light")
-                    Screen.MemoryOfChaosMissionPageScreen -> getAssetsURLByFileName(ImageFolder.BGS, "memory_of_chaos_bg")
-                    Screen.PureFictionMissionPageScreen -> getAssetsURLByFileName(ImageFolder.BGS, "pure_fiction_bg")
-                    else -> backgroundImage.value
+        if(listOf(
+                Screen.BackgroundSettingScreen,
+                Screen.PureFictionMissionPageScreen,
+                Screen.MemoryOfChaosMissionPageScreen,
+                Screen.ApocalypticShadowMissionPageScreen,
+        ).contains(screen)){
+            Image(
+                painter = when(screen){
+                    Screen.BackgroundSettingScreen -> painterResource(Res.drawable.bg_default)
+                    Screen.MemoryOfChaosMissionPageScreen -> painterResource(Res.drawable.memory_of_chaos_bg)
+                    Screen.PureFictionMissionPageScreen -> painterResource(Res.drawable.pure_fiction_bg)
+                    Screen.ApocalypticShadowMissionPageScreen -> painterResource(Res.drawable.apocalyptic_shadow_bg)
+                    else -> painterResource(Res.drawable.bg_default)
+                },
+                contentDescription = "",
+                contentScale = ContentScale.Crop,
+                modifier = Modifier.fillMaxSize().let {
+                    if(isBlur) it.blur(20.dp) else it
                 }
-            ),
-            contentDescription = "",
-            contentScale = ContentScale.Crop,
-            error = painterResource(Res.drawable.bg_default),
-            modifier = Modifier.fillMaxSize().let {
-                if(isBlur) it.blur(20.dp) else it
-            }
-        )
+            )
+        }else{
+            AsyncImage(
+                model = newImageRequest(
+                    context = LocalPlatformContext.current,
+                    backgroundImage.value
+                ),
+                contentDescription = "",
+                contentScale = ContentScale.Crop,
+                error = painterResource(Res.drawable.bg_default),
+                modifier = Modifier.fillMaxSize().let {
+                    if(isBlur) it.blur(20.dp) else it
+                }
+            )
+        }
         Box(
             modifier = Modifier.matchParentSize().background(
                 if (isGradient) gradientBottom else Brush.linearGradient(listOf(Color.Transparent,Color.Transparent))
