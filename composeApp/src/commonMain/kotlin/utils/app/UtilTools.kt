@@ -35,6 +35,7 @@ import files.MOCMissionPart6
 import files.MOCMissionPart7
 import files.MOCMissionPart8
 import files.MOCMissionPart9
+import files.NoDataYet
 import files.Res
 import files.StatusDays
 import files.StatusHours
@@ -353,7 +354,8 @@ fun htmlDescApplierImpl(htmlText: String) : String{
  * Get MOC Phase's Name (Res.string) List by MOC Length
  */
 @Composable
-fun getMocPhaseStrListByMocLen(mocLen: Int): ArrayList<String> {
+fun getMocPhaseStrListByMocLen(mocLen: Int = 0): ArrayList<String> {
+    if(mocLen == -1) return arrayListOf(removeStrQuote(Res.string.NoDataYet))
     val mocPhaseStrList = ArrayList<String>()
     for (index in 0 until mocLen) {
         mocPhaseStrList.add(

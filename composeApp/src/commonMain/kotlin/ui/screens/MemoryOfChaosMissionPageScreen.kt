@@ -56,7 +56,6 @@ import files.AbyssCharacterUsage
 import files.AbyssTeamUsage
 import files.MOCEffect
 import files.MOCMissionInfoTitle
-import files.NetworkErrorUnstableConnection
 import files.NoDataYet
 import files.Res
 import files.bg_transparent
@@ -80,9 +79,7 @@ import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.AbyssInfo
 import types.AbyssInfoList
-import types.AbyssInfoTeamUsage
 import types.AbyssInfoType
-import types.AbyssInfoUsage
 import types.UserAccount
 import ui.components.DropdownMenuNoPadding
 import ui.components.InfoDisplayDialog
@@ -95,7 +92,6 @@ import ui.components.UIButtonSize
 import ui.components.horizontalFadingEdge
 import ui.navigation.BattleChronicleRoute
 import ui.navigation.Screen
-import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import utils.app.Constants
 import utils.app.DefaultZIndex
@@ -105,7 +101,6 @@ import utils.app.Language.Companion.TextLanguageInstance
 import utils.app.getMocPhaseStrListByMocLen
 import utils.app.pxToDp
 import utils.app.removeStrQuote
-import utils.app.showWarningToast
 
 lateinit var mocList : MutableState<ArrayList<AbyssInfoList>>
 
@@ -463,5 +458,19 @@ fun MemoryOfChaosContent(
                 )
             }
         }
+    }
+}
+
+@Composable
+fun AbyssNoDataContent(){
+    Box(
+        Modifier.fillMaxSize().padding(4.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(
+            text = stringResource(Res.string.NoDataYet),
+            style = FontSizeNormal14(),
+            color = Color.White
+        )
     }
 }

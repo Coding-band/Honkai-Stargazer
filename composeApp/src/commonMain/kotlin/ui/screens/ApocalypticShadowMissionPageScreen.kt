@@ -26,10 +26,6 @@ import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -89,7 +85,6 @@ import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.AbyssInfo
 import types.AbyssInfoList
-import types.AbyssInfoTeamUsage
 import types.AbyssInfoType
 import types.AbyssInfoUsage
 import types.Character
@@ -151,8 +146,8 @@ fun ApocalypticShadowMissionPageScreen(
     val asChoiceIndex = remember { mutableStateOf(0) }
     val isDialogVisible = remember { mutableStateOf(false) }
     val asInfoList = AbyssInfo.getAbyssItemById(abyssId = asList.value[asChoiceIndex.value].id, type = AbyssInfoType.ApocalypticShadow, abyssFileName = asList.value[asChoiceIndex.value].fileName)
-    var asCharUsageList = rememberMutableStateListJsonOf<AbyssInfoUsage>()
-    var asTeamUsageList = rememberMutableStateListJsonOf<AbyssInfoTeamUsage>()
+    val asCharUsageList = rememberMutableStateListJsonOf<AbyssInfoUsage>()
+    val asTeamUsageList = rememberMutableStateListJsonOf<AbyssInfoUsage>()
 
     val asInfoDisplayIndex = remember { mutableStateOf(0) } //0: Mission Info, 1: Char Usage, 2: Team Usage
     val asFloorIndex = remember { mutableStateOf(0) } //0: Phase 1, 1: Phase 2
@@ -165,8 +160,14 @@ fun ApocalypticShadowMissionPageScreen(
                 floor = asFloorIndex.value+1,
                 abyssInfoType = AbyssInfoType.ApocalypticShadow,
             ))
+
+            asTeamUsageList.clear()
+            asTeamUsageList.addAll(StarbaseAPI().getAbyssTeamUsage(
+                abyssId = asList.value[asChoiceIndex.value].id,
+                floor = asFloorIndex.value+1,
+                abyssInfoType = AbyssInfoType.ApocalypticShadow,
+            ))
         }.await()
-        //asTeamUsageList.value = asInfoList?.teamUsageList ?: arrayListOf()
     }
 
     Box(Modifier.fillMaxSize()) {
@@ -310,13 +311,14 @@ fun ApocalypticShadowIdSpinner(
 fun ApocalypticShadowContent(
     asInfoList: AbyssInfo?,
     asCharUsageList: SnapshotStateList<AbyssInfoUsage>,
-    asTeamUsageList: SnapshotStateList<AbyssInfoTeamUsage>,
+    asTeamUsageList: SnapshotStateList<AbyssInfoUsage>,
     asInfoDisplayIndex: MutableState<Int>,
     asFloorIndex: MutableState<Int>
 ){
     val context = LocalPlatformContext.current
     val density = LocalDensity.current.density
     val asPhaseList = getMocPhaseStrListByMocLen(asInfoList?.missionList?.size ?: -1)
+
     val usageTextList = listOf(
         removeStrQuote(Res.string.MOCMissionInfoTitle),
         removeStrQuote(Res.string.AbyssCharacterUsage),
@@ -408,19 +410,22 @@ fun ApocalypticShadowContent(
             Spacer(Modifier.height(8.dp))
 
             //Only for Char Usage & Mission Info
-            if(asInfoDisplayIndex.value != 2){
-                repeat(2){phase ->
-                    //Showing Floor & Phase
-                    val phaseInfo = when(phase){
-                        0 -> asInfoList.missionList[asFloorIndex.value].part1
-                        1 -> asInfoList.missionList[asFloorIndex.value].part2
-                        else -> null
-                    }
 
-                    if(phaseInfo == null) return@repeat
+            repeat(2){phase ->
+                //Showing Floor & Phase
+                val phaseInfo = when(phase){
+                    0 -> asInfoList.missionList[asFloorIndex.value].part1
+                    1 -> asInfoList.missionList[asFloorIndex.value].part2
+                    else -> null
+                }
 
-                    // Summary of Weakness Combat Type in This Phase
-                    Row(Modifier.fillMaxWidth()) {
+                if(phaseInfo == null) return@repeat
+
+                // Summary of Weakness Combat Type in This Phase
+                Row(Modifier.fillMaxWidth()) {
+
+                    //Phase & Weakness Combat Type, dont show in Team Usage
+                    if(asInfoDisplayIndex.value < 2) {
                         Spacer(Modifier.width(24.dp))
                         Column(Modifier.requiredWidth(40.dp).align(Alignment.CenterVertically).wrapContentSize(), horizontalAlignment = Alignment.CenterHorizontally) {
                             Text("${asFloorIndex.value+1}-${phase+1}", style = FontSizeNormal16(), color = Color.White)
@@ -433,78 +438,126 @@ fun ApocalypticShadowContent(
                             }
                         }
                         Spacer(Modifier.width(24.dp))
+                    }
 
-                        if(asInfoDisplayIndex.value == 0){
-                            //Monster Info
-                            Column(Modifier.weight(1f).fillMaxWidth().wrapContentHeight()) {
-                                repeat(2){
-                                    val monsterInfo = when(it){
-                                        0 -> phaseInfo.monsterWaveInfo1
-                                        1 -> phaseInfo.monsterWaveInfo2
-                                        else -> null
-                                    }
+                    val maxWidthOfItem = remember { mutableStateOf(48.dp) }
+                    if(asInfoDisplayIndex.value == 0){
+                        //Monster Info
+                        Column(Modifier.weight(1f).fillMaxWidth().wrapContentHeight()) {
+                            repeat(2){
+                                val monsterInfo = when(it){
+                                    0 -> phaseInfo.monsterWaveInfo1
+                                    1 -> phaseInfo.monsterWaveInfo2
+                                    else -> null
+                                }
 
-                                    if(monsterInfo.isNullOrEmpty()) return@repeat
+                                if(monsterInfo.isNullOrEmpty()) return@repeat
 
-                                    Row {
-                                        MonsterCard(monsterInfo[0])
-                                        Spacer(Modifier.width(8.dp))
+                                Row {
+                                    MonsterCard(monsterInfo[0])
+                                    Spacer(Modifier.width(8.dp))
 
-                                        val scrollState = rememberScrollState()
-                                        Row(Modifier.horizontalScroll(scrollState).horizontalFadingEdge(scrollState, 16.dp, Color.Black), verticalAlignment = Alignment.CenterVertically) {
-                                            monsterInfo.forEachIndexed { index, monster ->
-                                                if(index == 0) return@forEachIndexed
-                                                Spacer(Modifier.width(8.dp))
-                                                MonsterCard(monster)
-                                                Spacer(Modifier.width(8.dp))
-                                            }
+                                    val scrollState = rememberScrollState()
+                                    Row(Modifier.horizontalScroll(scrollState).horizontalFadingEdge(scrollState, 16.dp, Color.Black), verticalAlignment = Alignment.CenterVertically) {
+                                        monsterInfo.forEachIndexed { index, monster ->
+                                            if(index == 0) return@forEachIndexed
+                                            Spacer(Modifier.width(8.dp))
+                                            MonsterCard(monster)
+                                            Spacer(Modifier.width(8.dp))
                                         }
                                     }
+                                }
 
-                                    if(it == 0){
-                                        Spacer(Modifier.height(8.dp))
-                                    }
+                                if(it == 0){
+                                    Spacer(Modifier.height(8.dp))
                                 }
                             }
-                        }else {
-                            val maxWidthOfItem = remember { mutableStateOf(48.dp) }
-                            FlowRow(
-                                maxLines = 2,
-                                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                                verticalArrangement = Arrangement.spacedBy(16.dp),
-                                itemVerticalAlignment = Alignment.CenterVertically,
-                            ) {
-                                for (item in asCharUsageList.filter { it.phase == (phase+1) }.sortedByDescending { it.rate }){
-                                    Column(modifier = Modifier.width(maxWidthOfItem.value).align(Alignment.CenterVertically)) {
-                                        AsyncImage(
-                                            model = newImageRequest(context = context, data = Character.getCharacterImageFromOfficialId(ImageFolder.CHAR_ICON, item.id)),
-                                            contentDescription = null,
-                                            modifier = Modifier.size(48.dp).clip(CircleShape).align(Alignment.CenterHorizontally)
-                                        )
-                                        Text(
-                                            text = "${formatDecimal(item.rate*100, isRoundDown = true)}%",
-                                            style = FontSizeNormal12(),
-                                            color = Color.White,
-                                            textAlign = TextAlign.Center,
-                                            modifier = Modifier.fillMaxWidth()
-                                                .onGloballyPositioned {
-                                                    maxWidthOfItem.value = androidx.compose.ui.unit.max(maxWidthOfItem.value, pxToDp(it.size.width, density))
+                        }
+                    }else if(asInfoDisplayIndex.value == 1){
+                        FlowRow(
+                            maxLines = 2,
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                            verticalArrangement = Arrangement.spacedBy(16.dp),
+                            itemVerticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            for (item in asCharUsageList.filter { it.phase == (phase+1) }.sortedByDescending { it.rate }){
+                                Column(modifier = Modifier.width(maxWidthOfItem.value).align(Alignment.CenterVertically)) {
+                                    AsyncImage(
+                                        model = newImageRequest(context = context, data = Character.getCharacterImageFromOfficialId(ImageFolder.CHAR_ICON, item.id)),
+                                        contentDescription = null,
+                                        modifier = Modifier.size(48.dp).clip(CircleShape).align(Alignment.CenterHorizontally)
+                                    )
+                                    Text(
+                                        text = "${formatDecimal(item.rate*100, isRoundDown = true)}%",
+                                        style = FontSizeNormal12(),
+                                        color = Color.White,
+                                        textAlign = TextAlign.Center,
+                                        modifier = Modifier.fillMaxWidth()
+                                            .onGloballyPositioned {
+                                                maxWidthOfItem.value = androidx.compose.ui.unit.max(maxWidthOfItem.value, pxToDp(it.size.width, density))
                                             }
+                                    )
+                                }
+                            }
+                        }
+                    }else if (asInfoDisplayIndex.value == 2){
+                        Column {
+                            for (item in asTeamUsageList.filter { it.phase == (phase+1) }.sortedByDescending { it.rate }){
+                                //Row that show all characters in a team
+                                val scrollState = rememberScrollState()
+                                Row(modifier =  Modifier.horizontalScroll(scrollState).horizontalFadingEdge(scrollState, 16.dp, Color.Black)) {
+                                    Text(
+                                        text = "${formatDecimal(item.rate*100, isRoundDown = true)}%",
+                                        style = FontSizeNormal14(),
+                                        color = Color.White,
+                                        textAlign = TextAlign.Center,
+                                        modifier = Modifier.wrapContentWidth().requiredWidth(64.dp).align(Alignment.CenterVertically)
+                                    )
+
+                                    Spacer(Modifier.width(8.dp))
+
+                                    //Character Icon
+                                    val charIdList = (item.id).chunked(4)
+                                    charIdList.forEach { charId ->
+                                        AsyncImage(
+                                            model = newImageRequest(context = context, data = Character.getCharacterImageFromOfficialId(ImageFolder.CHAR_ICON, charId)),
+                                            contentDescription = null,
+                                            modifier = Modifier.size(36.dp).clip(CircleShape).align(Alignment.CenterVertically)
                                         )
+                                        Spacer(Modifier.width(4.dp))
+                                    }
+
+                                    item.buffInfo.filter { it.id != "-1" }.map { buff ->
+                                        val buffIcon = asInfoList.buffList.find { it.buffId == buff.id }
+                                        if(buffIcon == null) return
+                                        Column(modifier = Modifier.wrapContentWidth().align(Alignment.CenterVertically)) {
+                                            AsyncImage(
+                                                model = newImageRequest(context = context, data = (StarbaseAPI().getGitHubStaticAssetURL() + "/images/buff_icons/${buffIcon.buffIcon}.webp")),
+                                                contentDescription = null,
+                                                modifier = Modifier.size(32.dp).padding(4.dp).background(Color(0xCC000000), CircleShape).border(1.dp, Color.White, CircleShape)
+                                            )
+                                            Text(
+                                                text = "${formatDecimal(item.rate*100, isRoundDown = true)}%",
+                                                style = FontSizeNormal12(),
+                                                color = Color.White,
+                                                textAlign = TextAlign.Center,
+                                                modifier = Modifier.width(40.dp)
+                                            )
+                                        }
                                     }
                                 }
                             }
                         }
                     }
+                }
 
-                    if (phase == 0){
-                        Spacer(Modifier.height(8.dp))
-                        //Divider
-                        Box(Modifier.fillMaxWidth().padding(top = 12.dp, bottom = 12.dp), contentAlignment = Alignment.Center) {
-                            Box(modifier = Modifier.fillMaxWidth().height(1.dp).background(Color(0x66F3F9FF)))
-                        }
-                        Spacer(Modifier.height(8.dp))
+                if (phase == 0){
+                    Spacer(Modifier.height(8.dp))
+                    //Divider
+                    Box(Modifier.fillMaxWidth().padding(top = 12.dp, bottom = 12.dp), contentAlignment = Alignment.Center) {
+                        Box(modifier = Modifier.fillMaxWidth().height(1.dp).background(Color(0x66F3F9FF)))
                     }
+                    Spacer(Modifier.height(8.dp))
                 }
             }
 
