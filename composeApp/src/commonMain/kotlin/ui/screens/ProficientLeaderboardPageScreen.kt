@@ -199,12 +199,13 @@ fun ProficientLeaderboardPageScreen(
                         .wrapContentSize()
                         .clip(RoundedCornerShape(43.dp))
                         .padding(start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)
-                        .clickable { isExpandSchoolDropdown.value = !isExpandSchoolDropdown.value }
                 ) {
                     if(!schoolList.isEmpty()){
                         Row(
                             modifier = Modifier.background(Color(0x66000000), RoundedCornerShape(43.dp))
                                 .wrapContentWidth()
+                                .clip(RoundedCornerShape(43.dp))
+                                .clickable { isExpandSchoolDropdown.value = !isExpandSchoolDropdown.value }
                                 .onSizeChanged { optionTextViewSize.value = it },
                         ) {
                             Row(verticalAlignment = Alignment.CenterVertically) {

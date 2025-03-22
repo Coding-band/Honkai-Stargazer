@@ -129,7 +129,6 @@ fun PageHeader(
                                     indication = ripple(),
                                     interactionSource = MutableInteractionSource()
                                 )
-                                    .clip(RoundedCornerShape(12.dp))
                             }else{
                                 it
                             }

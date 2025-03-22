@@ -157,7 +157,6 @@ fun BattleChroniclePageScreen(
                 end = Constants.SCREEN_SAVE_PADDING
             ).hazeSource(hazeState, zIndex = DefaultZIndex)
                 .widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH)
-                .align(Alignment.Center),
         ) {
             item { Spacer(
                 modifier = Modifier
