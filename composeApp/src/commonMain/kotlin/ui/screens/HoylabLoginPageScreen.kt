@@ -155,7 +155,7 @@ fun HoyolabLoginPageScreen(
     Box(modifier = Modifier.fillMaxSize()) {
         Column(modifier = Modifier.fillMaxSize()) {
             WebView(webviewState, modifier = Modifier.statusBarsPadding().padding(top = PAGE_HEADER_HEIGHT).fillMaxSize().weight(1f))
-            Box(modifier = Modifier.background(Color(0xCCF3F9FF)).padding(16.dp).navigationBarsPadding()) {
+            Box(modifier = Modifier.background(Color(0xCCF3F9FF)).fillMaxWidth().padding(16.dp).navigationBarsPadding()) {
                 Text(
                     text = LongStringXML().LoginHint(),
                     color = Color.Black,

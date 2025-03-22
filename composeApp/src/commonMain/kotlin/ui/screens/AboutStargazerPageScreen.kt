@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.sizeIn
@@ -59,6 +60,7 @@ import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormal20
 import utils.app.GradReachYellow
+import utils.app.LongStringXML
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
 import utils.starbase.StarbaseAPI
@@ -86,6 +88,7 @@ fun AboutStargazerPageScreen(
             item { AboutCodingBand() }
             item { SpecialThanks() }
             item { Declaration() }
+            item { Spacer(modifier = Modifier.navigationBarsPadding()) }
         }
 
         PageHeader(
@@ -107,9 +110,7 @@ fun AboutSG3(){
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = "Stargazer 3 (星穹觀星者 3) 是由Coding Band開發的一款跨平台星鐵第三方助手應用，旨在協助開拓者的實用工具。\n\n" +
-                    "我們期望能透過本次迭代，能為各位開拓者提供更多元化的平台選擇，優化以往在使用體驗上的不足，以及對貢獻者友善。\n\n" +
-                    "由於開發人員人力有限，部分在上一版本的功能將暫時不納入初版。我們會盡力在未來版本重新編寫及推出相關功能。",
+            text = LongStringXML().AboutSG3Desc(),
             style = FontSizeNormal16(),
             color = Color.White
         )
@@ -184,8 +185,7 @@ fun AboutCodingBand(){
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = "Coding Band 是一個專注於開發具實用性、鑽研軟體内藝術和趣味性的開發團隊。\n\n"+
-            "參與了本次開發的成員：",
+            text = LongStringXML().AboutSG3CodingBand(),
             style = FontSizeNormal16(),
             color = Color.White
         )
@@ -216,7 +216,7 @@ fun SpecialThanks(){
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = "特別感謝參與本次封測人員：",
+            text = LongStringXML().AboutSG3SpecialThanks(),
             style = FontSizeNormal16(),
             color = Color.White
         )
@@ -261,9 +261,7 @@ fun Declaration(){
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = "請注意：本專案及應用程式並不屬於 miHoYo Co., Ltd. 且並未獲得其認可。Stargazer 3（星穹觀星者 3）僅為一款由粉絲自行開發之數據提供 App，本應用程式所提供的資料只作參考用途。 不會對其所載任何資料的準確性及完整作任何程度保證。\n\n"+
-                    "「Stargazer (星穹觀星者)」專案内使用之各素材版權歸該版權所有者擁有。\n" +
-                    "「Stargazer (星穹觀星者)」專案原始碼著作權歸 Coding Band 所有。",
+            text = LongStringXML().AboutSG3Disclaimer(),
             style = FontSizeNormal16(),
             color = Color.White
         )
