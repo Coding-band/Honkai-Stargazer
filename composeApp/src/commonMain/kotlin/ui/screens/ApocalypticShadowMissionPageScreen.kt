@@ -1,5 +1,8 @@
 package ui.screens
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -26,6 +29,7 @@ import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -83,10 +87,14 @@ import kotlinx.datetime.toLocalDateTime
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import types.AbyssCharUsageContent
 import types.AbyssInfo
 import types.AbyssInfoList
+import types.AbyssInfoTimeContent
 import types.AbyssInfoType
 import types.AbyssInfoUsage
+import types.AbyssMonsterInfoContent
+import types.AbyssTeamUsageContent
 import types.Character
 import types.ImageFolder
 import types.UserAccount
@@ -151,6 +159,7 @@ fun ApocalypticShadowMissionPageScreen(
 
     val asInfoDisplayIndex = remember { mutableStateOf(0) } //0: Mission Info, 1: Char Usage, 2: Team Usage
     val asFloorIndex = remember { mutableStateOf(0) } //0: Phase 1, 1: Phase 2
+    val asUsageUpdateMS = remember { mutableStateOf(0L) }
 
     LaunchedEffect(asChoiceIndex.value, asFloorIndex.value) {
         async {
@@ -167,11 +176,21 @@ fun ApocalypticShadowMissionPageScreen(
                 floor = asFloorIndex.value+1,
                 abyssInfoType = AbyssInfoType.ApocalypticShadow,
             ))
+
+            asUsageUpdateMS.value = Clock.System.now().toEpochMilliseconds()
         }.await()
+    }
+
+    val isDisplayPageHeader = remember { mutableStateOf(true) }
+    val listState = remember { LazyListState() }
+    //Check if it can scroll up (forward), then hide the header
+    LaunchedEffect(listState.firstVisibleItemIndex, listState.firstVisibleItemScrollOffset) {
+        isDisplayPageHeader.value = ((listState.firstVisibleItemIndex == 0) && (listState.firstVisibleItemScrollOffset <= 0))
     }
 
     Box(Modifier.fillMaxSize()) {
         LazyColumn(
+            state = listState,
             modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).hazeSource(hazeState, zIndex = DefaultZIndex)
         ) {
             item { Spacer(
@@ -186,22 +205,28 @@ fun ApocalypticShadowMissionPageScreen(
             item { Spacer(Modifier.height(8.dp)) }
 
             //Mission Info / Usages
-            item { ApocalypticShadowContent(asInfoList, asCharUsageList, asTeamUsageList, asInfoDisplayIndex, asFloorIndex) }
+            item { ApocalypticShadowContent(asInfoList, asCharUsageList, asTeamUsageList, asInfoDisplayIndex, asFloorIndex, asUsageUpdateMS) }
 
             //Comments & Suggestions
         }
 
-        PageHeaderAlpha(
-            navigator = navigator,
-            hazeState = hazeState,
-            onForward = { navigator.navigateLimited(BattleChronicleRoute(
-                UserAccount.INSTANCE.uid,
-                AbyssInfoType.ApocalypticShadow.name
-            )) },
-            forwardIconId = Res.drawable.ic_person_btn
+        AnimatedVisibility(
+            isDisplayPageHeader.value,
+            enter = fadeIn(),
+            exit = fadeOut()
         ){
-            val headerData = Screen.ApocalypticShadowMissionPageScreen.headerData
-            TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
+            PageHeaderAlpha(
+                navigator = navigator,
+                hazeState = hazeState,
+                onForward = { navigator.navigateLimited(BattleChronicleRoute(
+                    UserAccount.INSTANCE.uid,
+                    AbyssInfoType.ApocalypticShadow.name
+                )) },
+                forwardIconId = Res.drawable.ic_person_btn
+            ){
+                val headerData = Screen.ApocalypticShadowMissionPageScreen.headerData
+                TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
+            }
         }
 
 
@@ -241,6 +266,7 @@ fun ApocalypticShadowIdSpinner(
                 .defaultMinSize(100.dp, 30.dp)
                 .wrapContentSize()
                 .weight(1f)
+                .clip(RoundedCornerShape(23.dp))
                 .clickable { isDropDownOpen.value = !isDropDownOpen.value }
         ) {
             Column(
@@ -255,7 +281,6 @@ fun ApocalypticShadowIdSpinner(
                     onClick = { isDropDownOpen.value = !isDropDownOpen.value },
                     icon = Res.drawable.ic_arrow_down_spinner
                 )
-                Spacer(Modifier.height(8.dp))
             }
             //對於DropdownItem沒法按照設計稿展示，暫時無解
             DropdownMenuNoPadding(
@@ -313,9 +338,9 @@ fun ApocalypticShadowContent(
     asCharUsageList: SnapshotStateList<AbyssInfoUsage>,
     asTeamUsageList: SnapshotStateList<AbyssInfoUsage>,
     asInfoDisplayIndex: MutableState<Int>,
-    asFloorIndex: MutableState<Int>
+    asFloorIndex: MutableState<Int>,
+    asUsageUpdateMS: MutableState<Long>
 ){
-    val context = LocalPlatformContext.current
     val density = LocalDensity.current.density
     val asPhaseList = getMocPhaseStrListByMocLen(asInfoList?.missionList?.size ?: -1)
 
@@ -440,114 +465,10 @@ fun ApocalypticShadowContent(
                         Spacer(Modifier.width(24.dp))
                     }
 
-                    val maxWidthOfItem = remember { mutableStateOf(48.dp) }
-                    if(asInfoDisplayIndex.value == 0){
-                        //Monster Info
-                        Column(Modifier.weight(1f).fillMaxWidth().wrapContentHeight()) {
-                            repeat(2){
-                                val monsterInfo = when(it){
-                                    0 -> phaseInfo.monsterWaveInfo1
-                                    1 -> phaseInfo.monsterWaveInfo2
-                                    else -> null
-                                }
-
-                                if(monsterInfo.isNullOrEmpty()) return@repeat
-
-                                Row {
-                                    MonsterCard(monsterInfo[0])
-                                    Spacer(Modifier.width(8.dp))
-
-                                    val scrollState = rememberScrollState()
-                                    Row(Modifier.horizontalScroll(scrollState).horizontalFadingEdge(scrollState, 16.dp, Color.Black), verticalAlignment = Alignment.CenterVertically) {
-                                        monsterInfo.forEachIndexed { index, monster ->
-                                            if(index == 0) return@forEachIndexed
-                                            Spacer(Modifier.width(8.dp))
-                                            MonsterCard(monster)
-                                            Spacer(Modifier.width(8.dp))
-                                        }
-                                    }
-                                }
-
-                                if(it == 0){
-                                    Spacer(Modifier.height(8.dp))
-                                }
-                            }
-                        }
-                    }else if(asInfoDisplayIndex.value == 1){
-                        FlowRow(
-                            maxLines = 2,
-                            horizontalArrangement = Arrangement.spacedBy(8.dp),
-                            verticalArrangement = Arrangement.spacedBy(16.dp),
-                            itemVerticalAlignment = Alignment.CenterVertically,
-                        ) {
-                            for (item in asCharUsageList.filter { it.phase == (phase+1) }.sortedByDescending { it.rate }){
-                                Column(modifier = Modifier.width(maxWidthOfItem.value).align(Alignment.CenterVertically)) {
-                                    AsyncImage(
-                                        model = newImageRequest(context = context, data = Character.getCharacterImageFromOfficialId(ImageFolder.CHAR_ICON, item.id)),
-                                        contentDescription = null,
-                                        modifier = Modifier.size(48.dp).clip(CircleShape).align(Alignment.CenterHorizontally)
-                                    )
-                                    Text(
-                                        text = "${formatDecimal(item.rate*100, isRoundDown = true)}%",
-                                        style = FontSizeNormal12(),
-                                        color = Color.White,
-                                        textAlign = TextAlign.Center,
-                                        modifier = Modifier.fillMaxWidth()
-                                            .onGloballyPositioned {
-                                                maxWidthOfItem.value = androidx.compose.ui.unit.max(maxWidthOfItem.value, pxToDp(it.size.width, density))
-                                            }
-                                    )
-                                }
-                            }
-                        }
-                    }else if (asInfoDisplayIndex.value == 2){
-                        Column {
-                            for (item in asTeamUsageList.filter { it.phase == (phase+1) }.sortedByDescending { it.rate }){
-                                //Row that show all characters in a team
-                                val scrollState = rememberScrollState()
-                                Row(modifier =  Modifier.horizontalScroll(scrollState).horizontalFadingEdge(scrollState, 16.dp, Color.Black)) {
-                                    Text(
-                                        text = "${formatDecimal(item.rate*100, isRoundDown = true)}%",
-                                        style = FontSizeNormal14(),
-                                        color = Color.White,
-                                        textAlign = TextAlign.Center,
-                                        modifier = Modifier.wrapContentWidth().requiredWidth(64.dp).align(Alignment.CenterVertically)
-                                    )
-
-                                    Spacer(Modifier.width(8.dp))
-
-                                    //Character Icon
-                                    val charIdList = (item.id).chunked(4)
-                                    charIdList.forEach { charId ->
-                                        AsyncImage(
-                                            model = newImageRequest(context = context, data = Character.getCharacterImageFromOfficialId(ImageFolder.CHAR_ICON, charId)),
-                                            contentDescription = null,
-                                            modifier = Modifier.size(36.dp).clip(CircleShape).align(Alignment.CenterVertically)
-                                        )
-                                        Spacer(Modifier.width(4.dp))
-                                    }
-
-                                    item.buffInfo.filter { it.id != "-1" }.map { buff ->
-                                        val buffIcon = asInfoList.buffList.find { it.buffId == buff.id }
-                                        if(buffIcon == null) return
-                                        Column(modifier = Modifier.wrapContentWidth().align(Alignment.CenterVertically)) {
-                                            AsyncImage(
-                                                model = newImageRequest(context = context, data = (StarbaseAPI().getGitHubStaticAssetURL() + "/images/buff_icons/${buffIcon.buffIcon}.webp")),
-                                                contentDescription = null,
-                                                modifier = Modifier.size(32.dp).padding(4.dp).background(Color(0xCC000000), CircleShape).border(1.dp, Color.White, CircleShape)
-                                            )
-                                            Text(
-                                                text = "${formatDecimal(item.rate*100, isRoundDown = true)}%",
-                                                style = FontSizeNormal12(),
-                                                color = Color.White,
-                                                textAlign = TextAlign.Center,
-                                                modifier = Modifier.width(40.dp)
-                                            )
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                    when (asInfoDisplayIndex.value) {
+                        0 -> AbyssMonsterInfoContent(modifier = Modifier.weight(1f), phaseInfo = phaseInfo)
+                        1 -> AbyssCharUsageContent(charUsageList = asCharUsageList, phase = phase)
+                        2 -> AbyssTeamUsageContent(teamUsageList = asTeamUsageList, infoList = asInfoList, phase = phase)
                     }
                 }
 
@@ -561,30 +482,8 @@ fun ApocalypticShadowContent(
                 }
             }
 
-            Column {
-                Spacer(Modifier.height(4.dp))
-                Text(
-                    text = if (asInfoDisplayIndex.value == 0) {
-                        val dateFormat = LocalDateTime.Format { byUnicodePattern("yyyy-MM-dd") }
+            AbyssInfoTimeContent(infoList = asInfoList, infoDisplayIndex = asInfoDisplayIndex, infoUsageUpdateMS = asUsageUpdateMS)
 
-                        "${
-                            dateFormat.format(
-                                Instant.fromEpochMilliseconds(asInfoList?.timeInfo?.begin ?: 0L).toLocalDateTime(TimeZone.currentSystemDefault())
-                            )
-                        } ~ ${
-                            dateFormat.format(
-                                Instant.fromEpochMilliseconds(asInfoList?.timeInfo?.end ?: 0L).toLocalDateTime(TimeZone.currentSystemDefault())
-                            )
-                        }"
-                    } else {
-                        usageTextList[asInfoDisplayIndex.value]
-                    },
-                    textAlign = TextAlign.Center,
-                    style = FontSizeNormal16(),
-                    color = Color(0xFFDDDDDD),
-                    modifier = Modifier.fillMaxWidth()
-                )
-            }
         }
     }
 }

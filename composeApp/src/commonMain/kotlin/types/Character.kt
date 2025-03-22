@@ -107,6 +107,11 @@ open class Character(
             return getCharacterImageFromFileName(imageFolder, listDataJson.jsonObject["name"]!!.jsonPrimitive.content)
         }
 
+        fun getCharacterRarityFromOfficialId(charId : String) : Int {
+            val listDataJson = charListJson.jsonArray.find { data -> data.jsonObject["charId"]!!.jsonPrimitive.content == charId } ?: return 4
+            return listDataJson.jsonObject["rare"]!!.jsonPrimitive.int
+        }
+
         @OptIn(ExperimentalCoroutinesApi::class)
         fun getCharacterItemFromJSON(charId : String, textLanguage: Language.TextLanguage = Language.TextLanguageInstance, requireAttrData: Boolean = false) : Character {
             return runBlocking {

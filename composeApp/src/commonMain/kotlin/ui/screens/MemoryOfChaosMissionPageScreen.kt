@@ -1,10 +1,12 @@
 package ui.screens
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -25,16 +27,18 @@ import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.Text
 import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -56,7 +60,6 @@ import files.AbyssCharacterUsage
 import files.AbyssTeamUsage
 import files.MOCEffect
 import files.MOCMissionInfoTitle
-import files.NoDataYet
 import files.Res
 import files.bg_transparent
 import files.ic_arrow_down_spinner
@@ -69,27 +72,25 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import kotlinx.datetime.Clock
-import kotlinx.datetime.Instant
-import kotlinx.datetime.LocalDateTime
-import kotlinx.datetime.TimeZone
-import kotlinx.datetime.format.byUnicodePattern
-import kotlinx.datetime.toLocalDateTime
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import types.AbyssCharUsageContent
 import types.AbyssInfo
 import types.AbyssInfoList
+import types.AbyssInfoTimeContent
 import types.AbyssInfoType
+import types.AbyssInfoUsage
+import types.AbyssMonsterInfoContent
+import types.AbyssTeamUsageContent
 import types.UserAccount
 import ui.components.DropdownMenuNoPadding
 import ui.components.InfoDisplayDialog
-import ui.components.MonsterCard
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeaderAlpha
 import ui.components.TitleHeader
 import ui.components.UIButton
 import ui.components.UIButtonSize
-import ui.components.horizontalFadingEdge
 import ui.navigation.BattleChronicleRoute
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
@@ -100,7 +101,9 @@ import utils.app.FontSizeNormal16
 import utils.app.Language.Companion.TextLanguageInstance
 import utils.app.getMocPhaseStrListByMocLen
 import utils.app.pxToDp
+import utils.app.rememberMutableStateListJsonOf
 import utils.app.removeStrQuote
+import utils.starbase.StarbaseAPI
 
 lateinit var mocList : MutableState<ArrayList<AbyssInfoList>>
 
@@ -133,8 +136,47 @@ fun MemoryOfChaosMissionPageScreen(
     val isDialogVisible = remember { mutableStateOf(false) }
     val mocInfoList = AbyssInfo.getAbyssItemById(abyssId = mocList.value[mocChoiceIndex.value].id, type = AbyssInfoType.MemoryOfChaos, abyssFileName = mocList.value[mocChoiceIndex.value].fileName)
 
+    val mocCharUsageList = rememberMutableStateListJsonOf<AbyssInfoUsage>()
+    val mocTeamUsageList = rememberMutableStateListJsonOf<AbyssInfoUsage>()
+
+    val mocInfoDisplayIndex = remember { mutableStateOf(0) } //0: Mission Info, 1: Char Usage, 2: Team Usage
+    val mocFloorIndex = remember { mutableStateOf(0) } //0: Phase 1, 1: Phase 2
+    val mocUsageUpdateMS = remember { mutableStateOf(0L) }
+
+    LaunchedEffect(mocChoiceIndex.value, mocFloorIndex.value) {
+        async {
+            mocCharUsageList.clear()
+            mocTeamUsageList.clear()
+
+            if(asList.value.size < mocChoiceIndex.value+1) return@async
+
+            mocCharUsageList.addAll(
+                StarbaseAPI().getAbyssCharUsage(
+                abyssId = asList.value[mocChoiceIndex.value].id,
+                floor = mocFloorIndex.value+1,
+                abyssInfoType = AbyssInfoType.ApocalypticShadow,
+            ))
+
+            mocTeamUsageList.addAll(
+                StarbaseAPI().getAbyssTeamUsage(
+                abyssId = asList.value[mocChoiceIndex.value].id,
+                floor = mocFloorIndex.value+1,
+                abyssInfoType = AbyssInfoType.ApocalypticShadow,
+            ))
+            mocUsageUpdateMS.value = Clock.System.now().toEpochMilliseconds()
+        }.await()
+    }
+
+    val isDisplayPageHeader = remember { mutableStateOf(true) }
+    val listState = remember { LazyListState() }
+    //Check if it can scroll up (forward), then hide the header
+    LaunchedEffect(listState.firstVisibleItemIndex, listState.firstVisibleItemScrollOffset) {
+        isDisplayPageHeader.value = ((listState.firstVisibleItemIndex == 0) && (listState.firstVisibleItemScrollOffset <= 0))
+    }
+
     Box(Modifier.fillMaxSize()) {
         LazyColumn(
+            state = listState,
             modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).hazeSource(hazeState, zIndex = DefaultZIndex)
         ) {
             item { Spacer(
@@ -149,19 +191,25 @@ fun MemoryOfChaosMissionPageScreen(
             item { Spacer(Modifier.height(8.dp)) }
 
             //Mission Info / Usages
-            item { MemoryOfChaosContent(mocInfoList) }
+            item { MemoryOfChaosContent(mocInfoList, mocCharUsageList, mocTeamUsageList, mocInfoDisplayIndex, mocFloorIndex, mocUsageUpdateMS) }
 
             //Comments & Suggestions
         }
 
-        PageHeaderAlpha(
-            navigator = navigator,
-            hazeState = hazeState,
-            onForward = { navigator.navigateLimited(BattleChronicleRoute(UserAccount.INSTANCE.uid, AbyssInfoType.MemoryOfChaos.name)) },
-            forwardIconId = Res.drawable.ic_person_btn
+        AnimatedVisibility(
+            isDisplayPageHeader.value,
+            enter = fadeIn(),
+            exit = fadeOut()
         ){
-            val headerData = Screen.MemoryOfChaosMissionPageScreen.headerData
-            TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
+            PageHeaderAlpha(
+                navigator = navigator,
+                hazeState = hazeState,
+                onForward = { navigator.navigateLimited(BattleChronicleRoute(UserAccount.INSTANCE.uid, AbyssInfoType.MemoryOfChaos.name)) },
+                forwardIconId = Res.drawable.ic_person_btn
+            ){
+                val headerData = Screen.MemoryOfChaosMissionPageScreen.headerData
+                TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
+            }
         }
 
 
@@ -201,6 +249,7 @@ fun MemoryOfChaosIdSpinner(
                 .defaultMinSize(100.dp, 30.dp)
                 .wrapContentSize()
                 .weight(1f)
+                .clip(RoundedCornerShape(23.dp))
                 .clickable { isDropDownOpen.value = !isDropDownOpen.value }
         ) {
             Column(
@@ -215,7 +264,6 @@ fun MemoryOfChaosIdSpinner(
                     onClick = { isDropDownOpen.value = !isDropDownOpen.value },
                     icon = Res.drawable.ic_arrow_down_spinner
                 )
-                Spacer(Modifier.height(8.dp))
             }
             //對於DropdownItem沒法按照設計稿展示，暫時無解
             DropdownMenuNoPadding(
@@ -269,7 +317,12 @@ fun MemoryOfChaosIdSpinner(
 @Preview
 @Composable
 fun MemoryOfChaosContent(
-    mocInfoList: AbyssInfo?
+    mocInfoList: AbyssInfo?,
+    mocCharUsageList: SnapshotStateList<AbyssInfoUsage>,
+    mocTeamUsageList: SnapshotStateList<AbyssInfoUsage>,
+    mocInfoDisplayIndex: MutableState<Int>,
+    mocFloorIndex: MutableState<Int>,
+    mocUsageUpdateMS: MutableState<Long>
 ){
     val density = LocalDensity.current.density
     val mocPhaseList = getMocPhaseStrListByMocLen(mocInfoList?.missionList?.size ?: -1)
@@ -278,10 +331,6 @@ fun MemoryOfChaosContent(
         removeStrQuote(Res.string.AbyssCharacterUsage),
         removeStrQuote(Res.string.AbyssTeamUsage)
     )
-    val mocInfoDisplayIndex = remember { mutableStateOf(0) }
-    val mocPhaseIndex = remember { mutableStateOf(0) }
-
-    if(mocPhaseList.isEmpty() || mocInfoList == null) return
 
     Box(
         Modifier.background(Brush.linearGradient(listOf(Color(0xFF000000), Color(0x00000000))))
@@ -325,7 +374,7 @@ fun MemoryOfChaosContent(
                             .onSizeChanged { optionTextViewSize.value = it },
                     ) {
                         Spacer(Modifier.width(16.dp))
-                        Text(mocPhaseList[mocPhaseIndex.value], style = FontSizeNormal16(), color = Color.White)
+                        Text(mocPhaseList[mocFloorIndex.value], style = FontSizeNormal16(), color = Color.White)
                         Spacer(Modifier.width(4.dp))
                         Image(painterResource(Res.drawable.ic_arrow_down_spinner), modifier = Modifier.size(12.dp).align(Alignment.CenterVertically), colorFilter = ColorFilter.tint(Color.White), contentDescription = null)
                     }
@@ -345,7 +394,7 @@ fun MemoryOfChaosContent(
                                     horizontal = 0.dp
                                 ),
                                 onClick = {
-                                    mocPhaseIndex.value = index
+                                    mocFloorIndex.value = index
                                     isDropDownOpen.value = false
                                     //optionAction(schoolIndex.value)
                                 }
@@ -368,57 +417,35 @@ fun MemoryOfChaosContent(
             repeat(2){phase ->
                 //Showing Floor & Phase
                 val phaseInfo = when(phase){
-                    0 -> mocInfoList?.missionList?.get(mocPhaseIndex.value)?.part1
-                    1 -> mocInfoList?.missionList?.get(mocPhaseIndex.value)?.part2
+                    0 -> mocInfoList?.missionList?.get(mocFloorIndex.value)?.part1
+                    1 -> mocInfoList?.missionList?.get(mocFloorIndex.value)?.part2
                     else -> null
                 }
 
                 if(phaseInfo == null) return
 
                 Row(Modifier.fillMaxWidth()) {
-                    Spacer(Modifier.width(24.dp))
-                    Column(Modifier.requiredWidth(40.dp).align(Alignment.CenterVertically).wrapContentSize(), horizontalAlignment = Alignment.CenterHorizontally) {
-                        Text("${mocPhaseIndex.value+1}-${phase+1}", style = FontSizeNormal16(), color = Color.White)
-                        Spacer(Modifier.height(4.dp))
-                        //Weakness Combat Type of Phase
-                        FlowRow(modifier = Modifier.wrapContentSize(), maxItemsInEachRow = 2) {
-                            repeat(phaseInfo.weaknessList.size) {
-                                Image(painterResource(phaseInfo.weaknessList[it].iconColor), modifier = Modifier.size(16.dp) ,contentDescription = null)
-                            }
-                        }
-                    }
-                    Spacer(Modifier.width(24.dp))
 
-                    //Monster Info
-                    Column(Modifier.weight(1f).fillMaxWidth().wrapContentHeight()) {
-                        repeat(2){
-                            val monsterInfo = when(it){
-                                0 -> phaseInfo.monsterWaveInfo1
-                                1 -> phaseInfo.monsterWaveInfo2
-                                else -> null
-                            }
-
-                            if(monsterInfo.isNullOrEmpty()) return@repeat
-
-                            Row {
-                                MonsterCard(monsterInfo[0])
-                                Spacer(Modifier.width(8.dp))
-
-                                val scrollState = rememberScrollState()
-                                Row(Modifier.horizontalScroll(scrollState).horizontalFadingEdge(scrollState, 16.dp, Color.Black), verticalAlignment = Alignment.CenterVertically) {
-                                    monsterInfo.forEachIndexed { index, monster ->
-                                        if(index == 0) return@forEachIndexed
-                                        Spacer(Modifier.width(8.dp))
-                                        MonsterCard(monster)
-                                        Spacer(Modifier.width(8.dp))
-                                    }
+                    //Phase & Weakness Combat Type, dont show in Team Usage
+                    if(mocInfoDisplayIndex.value < 2) {
+                        Spacer(Modifier.width(24.dp))
+                        Column(Modifier.requiredWidth(40.dp).align(Alignment.CenterVertically).wrapContentSize(), horizontalAlignment = Alignment.CenterHorizontally) {
+                            Text("${mocFloorIndex.value+1}-${phase+1}", style = FontSizeNormal16(), color = Color.White)
+                            Spacer(Modifier.height(4.dp))
+                            //Weakness Combat Type of Phase
+                            FlowRow(modifier = Modifier.wrapContentSize(), maxItemsInEachRow = 2)  {
+                                repeat(phaseInfo.weaknessList.size) {
+                                    Image(painterResource(phaseInfo.weaknessList[it].iconColor), modifier = Modifier.size(16.dp) ,contentDescription = null)
                                 }
                             }
-
-                            if(it == 0){
-                                Spacer(Modifier.height(8.dp))
-                            }
                         }
+                        Spacer(Modifier.width(24.dp))
+                    }
+
+                    when (mocInfoDisplayIndex.value) {
+                        0 -> AbyssMonsterInfoContent(modifier = Modifier.weight(1f), phaseInfo = phaseInfo)
+                        1 -> AbyssCharUsageContent(charUsageList = mocCharUsageList, phase = phase)
+                        2 -> AbyssTeamUsageContent(teamUsageList = mocTeamUsageList, infoList = mocInfoList, phase = phase)
                     }
                 }
 
@@ -431,46 +458,7 @@ fun MemoryOfChaosContent(
                     Spacer(Modifier.height(8.dp))
                 }
             }
-
-
-            Column {
-                Spacer(Modifier.height(4.dp))
-                Text(
-                    text = if (mocInfoDisplayIndex.value == 0) {
-                        val dateFormat = LocalDateTime.Format { byUnicodePattern("yyyy-MM-dd") }
-
-                        "${
-                            dateFormat.format(
-                                Instant.fromEpochMilliseconds(mocInfoList?.timeInfo?.begin ?: 0L).toLocalDateTime(TimeZone.currentSystemDefault())
-                            )
-                        } ~ ${
-                            dateFormat.format(
-                                Instant.fromEpochMilliseconds(mocInfoList?.timeInfo?.end ?: 0L).toLocalDateTime(TimeZone.currentSystemDefault())
-                            )
-                        }"
-                    } else {
-                        usageTextList[mocInfoDisplayIndex.value]
-                    },
-                    textAlign = TextAlign.Center,
-                    style = FontSizeNormal16(),
-                    color = Color(0xFFDDDDDD),
-                    modifier = Modifier.fillMaxWidth()
-                )
-            }
+            AbyssInfoTimeContent(infoDisplayIndex = mocInfoDisplayIndex, infoList = mocInfoList, infoUsageUpdateMS = mocUsageUpdateMS)
         }
-    }
-}
-
-@Composable
-fun AbyssNoDataContent(){
-    Box(
-        Modifier.fillMaxSize().padding(4.dp),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(
-            text = stringResource(Res.string.NoDataYet),
-            style = FontSizeNormal14(),
-            color = Color.White
-        )
     }
 }

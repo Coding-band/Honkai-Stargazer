@@ -1,11 +1,15 @@
 package ui.screens
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.FlowRow
@@ -25,28 +29,35 @@ import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.Text
 import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
 import com.voc.stargazer3.BuildKonfig
@@ -56,7 +67,6 @@ import files.AbyssCharacterUsage
 import files.AbyssTeamUsage
 import files.MOCEffect
 import files.MOCMissionInfoTitle
-import files.NetworkErrorUnstableConnection
 import files.Res
 import files.bg_transparent
 import files.ic_arrow_down_spinner
@@ -77,9 +87,17 @@ import kotlinx.datetime.toLocalDateTime
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import types.AbyssCharUsageContent
 import types.AbyssInfo
 import types.AbyssInfoList
+import types.AbyssInfoPhase
+import types.AbyssInfoTimeContent
 import types.AbyssInfoType
+import types.AbyssInfoUsage
+import types.AbyssMonsterInfoContent
+import types.AbyssTeamUsageContent
+import types.Character
+import types.ImageFolder
 import types.UserAccount
 import ui.components.DropdownMenuNoPadding
 import ui.components.InfoDisplayDialog
@@ -92,16 +110,19 @@ import ui.components.UIButtonSize
 import ui.components.horizontalFadingEdge
 import ui.navigation.BattleChronicleRoute
 import ui.navigation.Screen
-import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import utils.app.Constants
+import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.Language.Companion.TextLanguageInstance
+import utils.app.formatDecimal
 import utils.app.getMocPhaseStrListByMocLen
+import utils.app.newImageRequest
 import utils.app.pxToDp
+import utils.app.rememberMutableStateListJsonOf
 import utils.app.removeStrQuote
-import utils.app.showWarningToast
+import utils.starbase.StarbaseAPI
 
 lateinit var pfList : MutableState<ArrayList<AbyssInfoList>>
 
@@ -133,10 +154,47 @@ fun PureFictionMissionPageScreen(
     val pfChoiceIndex = remember { mutableStateOf(0) }
     val isDialogVisible = remember { mutableStateOf(false) }
     val pfInfoList = AbyssInfo.getAbyssItemById(abyssId = pfList.value[pfChoiceIndex.value].id, type = AbyssInfoType.PureFiction, abyssFileName = pfList.value[pfChoiceIndex.value].fileName)
+    val pfCharUsageList = rememberMutableStateListJsonOf<AbyssInfoUsage>()
+    val pfTeamUsageList = rememberMutableStateListJsonOf<AbyssInfoUsage>()
 
+    val pfInfoDisplayIndex = remember { mutableStateOf(0) } //0: Mission Info, 1: Char Usage, 2: Team Usage
+    val pfFloorIndex = remember { mutableStateOf(0) } //0: Phase 1, 1: Phase 2
+    val pfUsageUpdateMS = remember { mutableStateOf(0L) }
+
+    LaunchedEffect(pfChoiceIndex.value, pfFloorIndex.value) {
+        async {
+            pfCharUsageList.clear()
+            pfCharUsageList.addAll(
+                StarbaseAPI().getAbyssCharUsage(
+                    abyssId = pfList.value[pfChoiceIndex.value].id,
+                    floor = pfFloorIndex.value+1,
+                    abyssInfoType = AbyssInfoType.PureFiction,
+                ))
+
+            println("pfCharUsageList [abyssId = ${pfList.value[pfChoiceIndex.value].id}, floor = ${pfFloorIndex.value+1}): $pfCharUsageList")
+
+            pfTeamUsageList.clear()
+            pfTeamUsageList.addAll(
+                StarbaseAPI().getAbyssTeamUsage(
+                    abyssId = pfList.value[pfChoiceIndex.value].id,
+                    floor = pfFloorIndex.value+1,
+                    abyssInfoType = AbyssInfoType.PureFiction,
+                ))
+
+            pfUsageUpdateMS.value = Clock.System.now().toEpochMilliseconds()
+        }.await()
+    }
+
+    val isDisplayPageHeader = remember { mutableStateOf(true) }
+    val listState = remember { LazyListState() }
+    //Check if it can scroll up (forward), then hide the header
+    LaunchedEffect(listState.firstVisibleItemIndex, listState.firstVisibleItemScrollOffset) {
+        isDisplayPageHeader.value = ((listState.firstVisibleItemIndex == 0) && (listState.firstVisibleItemScrollOffset <= 0))
+    }
 
     Box(Modifier.fillMaxSize()) {
         LazyColumn(
+            state = listState,
             modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).hazeSource(hazeState)
         ) {
             item { Spacer(
@@ -151,22 +209,28 @@ fun PureFictionMissionPageScreen(
             item { Spacer(Modifier.height(8.dp)) }
 
             //Mission Info / Usages
-            item { PureFictionContent(pfInfoList) }
+            item { PureFictionContent(pfInfoList, pfCharUsageList, pfTeamUsageList, pfInfoDisplayIndex, pfFloorIndex, pfUsageUpdateMS) }
 
             //Comments & Suggestions
         }
 
-        PageHeaderAlpha(
-            navigator = navigator,
-            hazeState = hazeState,
-            onForward = { navigator.navigateLimited(BattleChronicleRoute(
-                UserAccount.INSTANCE.uid,
-                AbyssInfoType.PureFiction.name
-            )) },
-            forwardIconId = Res.drawable.ic_person_btn
+        AnimatedVisibility(
+            isDisplayPageHeader.value,
+            enter = fadeIn(),
+            exit = fadeOut()
         ){
-            val headerData = Screen.PureFictionMissionPageScreen.headerData
-            TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
+            PageHeaderAlpha(
+                navigator = navigator,
+                hazeState = hazeState,
+                onForward = { navigator.navigateLimited(BattleChronicleRoute(
+                    UserAccount.INSTANCE.uid,
+                    AbyssInfoType.PureFiction.name
+                )) },
+                forwardIconId = Res.drawable.ic_person_btn
+            ){
+                val headerData = Screen.PureFictionMissionPageScreen.headerData
+                TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
+            }
         }
 
 
@@ -206,6 +270,7 @@ fun PureFictionIdSpinner(
                 .defaultMinSize(100.dp, 30.dp)
                 .wrapContentSize()
                 .weight(1f)
+                .clip(RoundedCornerShape(23.dp))
                 .clickable { isDropDownOpen.value = !isDropDownOpen.value }
         ) {
             Column(
@@ -220,7 +285,6 @@ fun PureFictionIdSpinner(
                     onClick = { isDropDownOpen.value = !isDropDownOpen.value },
                     icon = Res.drawable.ic_arrow_down_spinner
                 )
-                Spacer(Modifier.height(8.dp))
             }
             //對於DropdownItem沒法按照設計稿展示，暫時無解
             DropdownMenuNoPadding(
@@ -274,13 +338,21 @@ fun PureFictionIdSpinner(
 @Preview
 @Composable
 fun PureFictionContent(
-    pfInfoList: AbyssInfo?
+    pfInfoList: AbyssInfo?,
+    pfCharUsageList: SnapshotStateList<AbyssInfoUsage>,
+    pfTeamUsageList: SnapshotStateList<AbyssInfoUsage>,
+    pfInfoDisplayIndex: MutableState<Int>,
+    pfFloorIndex: MutableState<Int>,
+    pfUsageUpdateMS: MutableState<Long>
 ){
     val density = LocalDensity.current.density
     val pfPhaseList = getMocPhaseStrListByMocLen(pfInfoList?.missionList?.size ?: -1)
-    val usageTextList = listOf(removeStrQuote(Res.string.MOCMissionInfoTitle),removeStrQuote(Res.string.AbyssCharacterUsage),removeStrQuote(Res.string.AbyssTeamUsage))
-    val pfInfoDisplayIndex = remember { mutableStateOf(0) }
-    val pfPhaseIndex = remember { mutableStateOf(0) }
+
+    val usageTextList = listOf(
+        removeStrQuote(Res.string.MOCMissionInfoTitle),
+        removeStrQuote(Res.string.AbyssCharacterUsage),
+        removeStrQuote(Res.string.AbyssTeamUsage)
+    )
 
     Box(
         Modifier.background(Brush.linearGradient(listOf(Color(0xFF000000), Color(0x00000000))))
@@ -324,7 +396,7 @@ fun PureFictionContent(
                             .onSizeChanged { optionTextViewSize.value = it },
                     ) {
                         Spacer(Modifier.width(16.dp))
-                        Text(pfPhaseList[pfPhaseIndex.value], style = FontSizeNormal16(), color = Color.White)
+                        Text(pfPhaseList[pfFloorIndex.value], style = FontSizeNormal16(), color = Color.White)
                         Spacer(Modifier.width(4.dp))
                         Image(painterResource(Res.drawable.ic_arrow_down_spinner), modifier = Modifier.size(12.dp).align(Alignment.CenterVertically), colorFilter = ColorFilter.tint(Color.White), contentDescription = null)
                     }
@@ -344,7 +416,7 @@ fun PureFictionContent(
                                     horizontal = 0.dp
                                 ),
                                 onClick = {
-                                    pfPhaseIndex.value = index
+                                    pfFloorIndex.value = index
                                     isDropDownOpen.value = false
                                     //optionAction(schoolIndex.value)
                                 }
@@ -367,57 +439,35 @@ fun PureFictionContent(
             repeat(2){phase ->
                 //Showing Floor & Phase
                 val phaseInfo = when(phase){
-                    0 -> pfInfoList?.missionList?.get(pfPhaseIndex.value)?.part1
-                    1 -> pfInfoList?.missionList?.get(pfPhaseIndex.value)?.part2
+                    0 -> pfInfoList?.missionList?.get(pfFloorIndex.value)?.part1
+                    1 -> pfInfoList?.missionList?.get(pfFloorIndex.value)?.part2
                     else -> null
                 }
 
                 if(phaseInfo == null) return@repeat
 
                 Row(Modifier.fillMaxWidth()) {
-                    Spacer(Modifier.width(24.dp))
-                    Column(Modifier.requiredWidth(40.dp).align(Alignment.CenterVertically).wrapContentSize(), horizontalAlignment = Alignment.CenterHorizontally) {
-                        Text("${pfPhaseIndex.value+1}-${phase+1}", style = FontSizeNormal16(), color = Color.White)
-                        Spacer(Modifier.height(4.dp))
-                        //Weakness Combat Type of Phase
-                        FlowRow(modifier = Modifier.wrapContentSize(), maxItemsInEachRow = 2) {
-                            repeat(phaseInfo.weaknessList.size) {
-                                Image(painterResource(phaseInfo.weaknessList[it].iconColor), modifier = Modifier.size(16.dp) ,contentDescription = null)
-                            }
-                        }
-                    }
-                    Spacer(Modifier.width(24.dp))
 
-                    //Monster Info
-                    Column(Modifier.weight(1f).fillMaxWidth().wrapContentHeight()) {
-                        repeat(2){
-                            val monsterInfo = when(it){
-                                0 -> phaseInfo.monsterWaveInfo1
-                                1 -> phaseInfo.monsterWaveInfo2
-                                else -> null
-                            }
-
-                            if(monsterInfo.isNullOrEmpty()) return@repeat
-
-                            Row {
-                                MonsterCard(monsterInfo[0])
-                                Spacer(Modifier.width(8.dp))
-
-                                val scrollState = rememberScrollState()
-                                Row(Modifier.horizontalScroll(scrollState).horizontalFadingEdge(scrollState, 16.dp, Color.Black), verticalAlignment = Alignment.CenterVertically) {
-                                    monsterInfo.forEachIndexed { index, monster ->
-                                        if(index == 0) return@forEachIndexed
-                                        Spacer(Modifier.width(8.dp))
-                                        MonsterCard(monster)
-                                        Spacer(Modifier.width(8.dp))
-                                    }
+                    //Phase & Weakness Combat Type, dont show in Team Usage
+                    if(pfInfoDisplayIndex.value < 2) {
+                        Spacer(Modifier.width(24.dp))
+                        Column(Modifier.requiredWidth(40.dp).align(Alignment.CenterVertically).wrapContentSize(), horizontalAlignment = Alignment.CenterHorizontally) {
+                            Text("${pfFloorIndex.value+1}-${phase+1}", style = FontSizeNormal16(), color = Color.White)
+                            Spacer(Modifier.height(4.dp))
+                            //Weakness Combat Type of Phase
+                            FlowRow(modifier = Modifier.wrapContentSize(), maxItemsInEachRow = 2)  {
+                                repeat(phaseInfo.weaknessList.size) {
+                                    Image(painterResource(phaseInfo.weaknessList[it].iconColor), modifier = Modifier.size(16.dp) ,contentDescription = null)
                                 }
                             }
-
-                            if(it == 0){
-                                Spacer(Modifier.height(8.dp))
-                            }
                         }
+                        Spacer(Modifier.width(24.dp))
+                    }
+
+                    when (pfInfoDisplayIndex.value) {
+                        0 -> AbyssMonsterInfoContent(modifier = Modifier.weight(1f), phaseInfo = phaseInfo)
+                        1 -> AbyssCharUsageContent(charUsageList = pfCharUsageList, phase = phase)
+                        2 -> AbyssTeamUsageContent(teamUsageList = pfTeamUsageList, infoList = pfInfoList, phase = phase)
                     }
                 }
 
@@ -431,31 +481,7 @@ fun PureFictionContent(
                 }
             }
 
-
-            Column {
-                Spacer(Modifier.height(4.dp))
-                Text(
-                    text = if (pfInfoDisplayIndex.value == 0) {
-                        val dateFormat = LocalDateTime.Format { byUnicodePattern("yyyy-MM-dd") }
-
-                        "${
-                            dateFormat.format(
-                                Instant.fromEpochMilliseconds(pfInfoList?.timeInfo?.begin ?: 0L).toLocalDateTime(TimeZone.currentSystemDefault())
-                            )
-                        } ~ ${
-                            dateFormat.format(
-                                Instant.fromEpochMilliseconds(pfInfoList?.timeInfo?.end ?: 0L).toLocalDateTime(TimeZone.currentSystemDefault())
-                            )
-                        }"
-                    } else {
-                        usageTextList[pfInfoDisplayIndex.value]
-                    },
-                    textAlign = TextAlign.Center,
-                    style = FontSizeNormal16(),
-                    color = Color(0xFFDDDDDD),
-                    modifier = Modifier.fillMaxWidth()
-                )
-            }
+            AbyssInfoTimeContent(infoList = pfInfoList, infoUsageUpdateMS = pfUsageUpdateMS, infoDisplayIndex = pfInfoDisplayIndex)
         }
     }
 }

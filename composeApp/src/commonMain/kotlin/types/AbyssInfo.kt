@@ -1,12 +1,53 @@
 package types
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredWidth
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.Saver
 import androidx.compose.runtime.saveable.listSaver
+import androidx.compose.runtime.snapshots.SnapshotStateList
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.max
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
 import files.Fire
 import files.HaveNotUsed
 import files.Ice
 import files.Imaginary
 import files.Lightning
+import files.NoDataYet
 import files.Physical
 import files.Quantum
 import files.Res
@@ -31,6 +72,12 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
+import kotlinx.datetime.Instant
+import kotlinx.datetime.LocalDateTime
+import kotlinx.datetime.TimeZone
+import kotlinx.datetime.format.FormatStringsInDatetimeFormats
+import kotlinx.datetime.format.byUnicodePattern
+import kotlinx.datetime.toLocalDateTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
@@ -40,13 +87,24 @@ import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.decodeFromJsonElement
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
+import ui.components.MonsterCard
+import ui.components.horizontalFadingEdge
 import utils.app.Language
 import utils.app.Language.Companion.TextLanguageInstance
 import utils.annotation.VersionUpdateCheck
+import utils.app.Constants
+import utils.app.FontSizeNormal12
+import utils.app.FontSizeNormal14
+import utils.app.FontSizeNormal16
 import utils.app.errorLog
+import utils.app.formatDecimal
 import utils.app.getAssetsJsonByFilePath
 import utils.app.getAssetsJsonStrByFilePath
 import utils.app.getAssetsStrByFilePath
+import utils.app.newImageRequest
+import utils.app.pxToDp
+import utils.app.removeStrQuote
+import utils.starbase.StarbaseAPI
 
 @Serializable
 enum class AbyssInfoType {
@@ -337,17 +395,208 @@ data class AbyssInfoUsage(
     val rate: Float = 0f,
 
     val phase: Int = 1,
+
+    @SerialName("buff_info")
+    val buffInfo : ArrayList<AbyssInfoBuffUsage> = arrayListOf(),
 )
 
 @Serializable
-data class AbyssInfoTeamUsage(
+data class AbyssInfoBuffUsage(
     @SerialName("id")
     val id: String,
 
     @SerialName("rate")
     val rate: Float = 0f,
-
-    @SerialName("buff_info")
-    val buffInfo : ArrayList<AbyssInfoUsage> = arrayListOf(),
-
 )
+
+// ---------------------------- Composable --------------------------------
+
+@Composable
+fun AbyssNoDataContent(){
+    Box(
+        Modifier.wrapContentWidth().fillMaxHeight().padding(4.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(
+            text = removeStrQuote(Res.string.NoDataYet),
+            style = FontSizeNormal14(),
+            color = Color.White,
+            modifier = Modifier.align(Alignment.Center)
+        )
+    }
+}
+
+@Composable
+fun AbyssCharUsageContent(charUsageList: SnapshotStateList<AbyssInfoUsage>, phase: Int){
+    val maxWidthOfItem = remember { mutableStateOf(36.dp) }
+    val context = LocalPlatformContext.current
+    val density = LocalDensity.current.density
+
+    if(charUsageList.isEmpty()){
+        AbyssNoDataContent()
+    }else{
+        FlowRow(
+            maxLines = 2,
+            horizontalArrangement = Arrangement.spacedBy(6.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+            itemVerticalAlignment = Alignment.CenterVertically,
+        ) {
+            for (item in charUsageList.filter { it.phase == (phase+1) }.sortedByDescending { it.rate }){
+                Column(modifier = Modifier.width(maxWidthOfItem.value).align(Alignment.CenterVertically)) {
+                    AsyncImage(
+                        model = newImageRequest(context = context, data = Character.getCharacterImageFromOfficialId(
+                            ImageFolder.CHAR_ICON, item.id)),
+                        contentDescription = null,
+                        modifier = Modifier.size(36.dp).clip(CircleShape).align(Alignment.CenterHorizontally)
+                    )
+                    Text(
+                        text = "${formatDecimal(item.rate*100, isRoundDown = true)}%",
+                        style = FontSizeNormal12(),
+                        color = Color.White,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.wrapContentWidth()
+                            .onGloballyPositioned {
+                                maxWidthOfItem.value = max(maxWidthOfItem.value, pxToDp(it.size.width, density))
+                            }
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun AbyssTeamUsageContent(teamUsageList: SnapshotStateList<AbyssInfoUsage>, infoList: AbyssInfo? , phase: Int){
+    val maxWidthOfItem = remember { mutableStateOf(32.dp) }
+    val context = LocalPlatformContext.current
+    val density = LocalDensity.current.density
+
+    if(teamUsageList.isEmpty()){
+        AbyssNoDataContent()
+    }else{
+        Column {
+            for (item in teamUsageList.filter { it.phase == (phase+1) }.sortedByDescending { it.rate }){
+                //Row that show all characters in a team
+                val scrollState = rememberScrollState()
+                Row(modifier =  Modifier.horizontalScroll(scrollState).horizontalFadingEdge(scrollState, 16.dp, Color.Black)) {
+                    Text(
+                        text = "${formatDecimal(item.rate*100, isRoundDown = true)}%",
+                        style = FontSizeNormal14(),
+                        color = Color.White,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.wrapContentWidth().requiredWidth(64.dp).align(Alignment.CenterVertically)
+                    )
+
+                    Spacer(Modifier.width(8.dp))
+
+                    //Character Icon
+                    val charIdList = (item.id).chunked(4)
+                    charIdList.forEach { charId ->
+                        AsyncImage(
+                            model = newImageRequest(context = context, data = Character.getCharacterImageFromOfficialId(
+                                ImageFolder.CHAR_ICON, charId)),
+                            contentDescription = null,
+                            contentScale = ContentScale.FillBounds,
+                            modifier = Modifier
+                                .size(36.dp)
+                                .background(brush = Brush.linearGradient(Constants.getCardBgColorByRare(Character.getCharacterRarityFromOfficialId(charId))), CircleShape)
+                                .clip(CircleShape)
+                                .align(Alignment.CenterVertically)
+                        )
+                        Spacer(Modifier.width(2.dp))
+                    }
+
+                    if(infoList == null) return
+                    item.buffInfo.filter { it.id != "-1" }.map { buff ->
+                        val buffIcon = infoList.buffList.find { it.buffId == buff.id }
+                        if(buffIcon == null) return
+                        Column(modifier = Modifier.wrapContentWidth().align(Alignment.CenterVertically)) {
+                            AsyncImage(
+                                model = newImageRequest(context = context, data = (StarbaseAPI().getGitHubStaticAssetURL() + "/images/buff_icons/${buffIcon.buffIcon}.webp")),
+                                contentDescription = null,
+                                contentScale = ContentScale.FillBounds,
+                                modifier = Modifier.size(32.dp).padding(4.dp).background(Color(0xCC000000), CircleShape).border(1.dp, Color.White, CircleShape).align(Alignment.CenterHorizontally)
+                            )
+                            Text(
+                                text = "${formatDecimal(item.rate*100, isRoundDown = true)}%",
+                                style = FontSizeNormal12(),
+                                color = Color.White,
+                                textAlign = TextAlign.Center,
+                                modifier = Modifier.width(40.dp)
+                            )
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@Composable
+fun AbyssMonsterInfoContent(modifier: Modifier = Modifier, phaseInfo: AbyssInfoPhase){
+    Column(modifier.fillMaxWidth().wrapContentHeight()) {
+        repeat(2){
+            val monsterInfo = when(it){
+                0 -> phaseInfo.monsterWaveInfo1
+                1 -> phaseInfo.monsterWaveInfo2
+                else -> null
+            }
+
+            if(monsterInfo.isNullOrEmpty()) return@repeat
+
+            Row {
+                MonsterCard(monsterInfo[0])
+                Spacer(Modifier.width(8.dp))
+
+                val scrollState = rememberScrollState()
+                Row(Modifier.horizontalScroll(scrollState).horizontalFadingEdge(scrollState, 16.dp, Color.Black), verticalAlignment = Alignment.CenterVertically) {
+                    monsterInfo.forEachIndexed { index, monster ->
+                        if(index == 0) return@forEachIndexed
+                        Spacer(Modifier.width(8.dp))
+                        MonsterCard(monster)
+                        Spacer(Modifier.width(8.dp))
+                    }
+                }
+            }
+
+            if(it == 0){
+                Spacer(Modifier.height(8.dp))
+            }
+        }
+    }
+}
+
+@OptIn(FormatStringsInDatetimeFormats::class)
+@Composable
+fun AbyssInfoTimeContent(infoDisplayIndex: MutableState<Int>, infoList: AbyssInfo?, infoUsageUpdateMS: MutableState<Long>){
+    Column {
+        Spacer(Modifier.height(4.dp))
+        Text(
+            text = if (infoDisplayIndex.value == 0) {
+                val dateFormat = LocalDateTime.Format { byUnicodePattern("yyyy-MM-dd") }
+
+                "${
+                    dateFormat.format(
+                        Instant.fromEpochMilliseconds(infoList?.timeInfo?.begin ?: 0L).toLocalDateTime(
+                            TimeZone.currentSystemDefault())
+                    )
+                } ~ ${
+                    dateFormat.format(
+                        Instant.fromEpochMilliseconds(infoList?.timeInfo?.end ?: 0L).toLocalDateTime(
+                            TimeZone.currentSystemDefault())
+                    )
+                }"
+            } else {
+                val dateFormat = LocalDateTime.Format { byUnicodePattern("yyyy-MM-dd HH:mm") }
+                dateFormat.format(
+                    Instant.fromEpochMilliseconds(infoUsageUpdateMS.value).toLocalDateTime(TimeZone.currentSystemDefault())
+                )
+            },
+            textAlign = TextAlign.Center,
+            style = FontSizeNormal16(),
+            color = Color(0xFFDDDDDD),
+            modifier = Modifier.fillMaxWidth()
+        )
+    }
+}
