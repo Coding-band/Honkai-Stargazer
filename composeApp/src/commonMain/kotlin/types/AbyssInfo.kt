@@ -1,7 +1,9 @@
 package types
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -19,6 +21,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.itemsIndexed
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Text
@@ -32,8 +37,10 @@ import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalDensity
@@ -60,6 +67,7 @@ import files.element_lightning
 import files.element_physical
 import files.element_quantum
 import files.element_wind
+import files.ic_arrow_to_down
 import files.ic_fire
 import files.ic_ice
 import files.ic_imaginary
@@ -87,6 +95,7 @@ import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.decodeFromJsonElement
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
+import org.jetbrains.compose.resources.painterResource
 import ui.components.MonsterCard
 import ui.components.horizontalFadingEdge
 import utils.app.Language
@@ -435,31 +444,48 @@ fun AbyssCharUsageContent(charUsageList: SnapshotStateList<AbyssInfoUsage>, phas
     if(charUsageList.isEmpty()){
         AbyssNoDataContent()
     }else{
-        FlowRow(
-            maxLines = 2,
-            horizontalArrangement = Arrangement.spacedBy(6.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
-            itemVerticalAlignment = Alignment.CenterVertically,
-        ) {
-            for (item in charUsageList.filter { it.phase == (phase+1) }.sortedByDescending { it.rate }){
-                Column(modifier = Modifier.width(maxWidthOfItem.value).align(Alignment.CenterVertically)) {
-                    AsyncImage(
-                        model = newImageRequest(context = context, data = Character.getCharacterImageFromOfficialId(
-                            ImageFolder.CHAR_ICON, item.id)),
-                        contentDescription = null,
-                        modifier = Modifier.size(36.dp).clip(CircleShape).align(Alignment.CenterHorizontally)
-                    )
-                    Text(
-                        text = "${formatDecimal(item.rate*100, isRoundDown = true)}%",
-                        style = FontSizeNormal12(),
-                        color = Color.White,
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.wrapContentWidth()
-                            .onGloballyPositioned {
-                                maxWidthOfItem.value = max(maxWidthOfItem.value, pxToDp(it.size.width, density))
-                            }
-                    )
+        val maxRowWhenNotExpand = 2
+        val charUsageListSorted = charUsageList.filter { it.phase == (phase+1) && it.id != "?" }.sortedByDescending { it.rate }
+        val isDisplayFullList = remember { mutableStateOf(false) }
+
+        Column {
+            FlowRow(
+                maxLines = if(isDisplayFullList.value) Int.MAX_VALUE else 2,
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                verticalArrangement = Arrangement.spacedBy(16.dp),
+                itemVerticalAlignment = Alignment.CenterVertically,
+            ) {
+                for (item in charUsageListSorted){
+                    Column(modifier = Modifier.width(maxWidthOfItem.value).align(Alignment.CenterVertically)) {
+                        AsyncImage(
+                            model = newImageRequest(context = context, data = Character.getCharacterImageFromOfficialId(
+                                ImageFolder.CHAR_ICON, item.id)),
+                            contentDescription = null,
+                            modifier = Modifier.size(36.dp).clip(CircleShape).align(Alignment.CenterHorizontally)
+                        )
+                        Text(
+                            text = "${formatDecimal(item.rate*100, isRoundDown = true)}%",
+                            style = FontSizeNormal12(),
+                            color = Color.White,
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier.wrapContentWidth()
+                                .onGloballyPositioned {
+                                    maxWidthOfItem.value = max(maxWidthOfItem.value, pxToDp(it.size.width, density))
+                                }
+                        )
+                    }
                 }
+            }
+
+            Box(Modifier.fillMaxWidth().wrapContentHeight(), contentAlignment = Alignment.Center) {
+                Image(
+                    painter = painterResource(Res.drawable.ic_arrow_to_down),
+                    modifier = Modifier.size(24.dp).clip(CircleShape).padding(4.dp)
+                        .rotate(if (isDisplayFullList.value) 180f else 0f)
+                        .clickable { isDisplayFullList.value = !isDisplayFullList.value },
+                    colorFilter = ColorFilter.tint(Color(0x66F3F9FF)),
+                    contentDescription = "Expand / Collapse List"
+                )
             }
         }
     }
@@ -474,8 +500,12 @@ fun AbyssTeamUsageContent(teamUsageList: SnapshotStateList<AbyssInfoUsage>, info
     if(teamUsageList.isEmpty()){
         AbyssNoDataContent()
     }else{
+        val maxRowWhenNotExpand = 4
+        val teamUsageListSorted = teamUsageList.filter { it.phase == (phase+1) }.sortedByDescending { it.rate }
+        val isDisplayFullList = remember { mutableStateOf(false) }
         Column {
-            for (item in teamUsageList.filter { it.phase == (phase+1) }.sortedByDescending { it.rate }){
+            teamUsageListSorted.forEachIndexed { index, item ->
+                if(!isDisplayFullList.value && index >= maxRowWhenNotExpand) return@forEachIndexed
                 //Row that show all characters in a team
                 val scrollState = rememberScrollState()
                 Row(modifier =  Modifier.horizontalScroll(scrollState).horizontalFadingEdge(scrollState, 16.dp, Color.Black)) {
@@ -503,7 +533,7 @@ fun AbyssTeamUsageContent(teamUsageList: SnapshotStateList<AbyssInfoUsage>, info
                                 .clip(CircleShape)
                                 .align(Alignment.CenterVertically)
                         )
-                        Spacer(Modifier.width(2.dp))
+                        Spacer(Modifier.width(4.dp))
                     }
 
                     if(infoList == null) return
@@ -526,6 +556,21 @@ fun AbyssTeamUsageContent(teamUsageList: SnapshotStateList<AbyssInfoUsage>, info
                             )
                         }
                     }
+                }
+
+                Spacer(Modifier.height(8.dp))
+            }
+
+            if(teamUsageListSorted.size > maxRowWhenNotExpand){
+                Box(Modifier.fillMaxWidth().wrapContentHeight(), contentAlignment = Alignment.Center) {
+                    Image(
+                        painter = painterResource(Res.drawable.ic_arrow_to_down),
+                        modifier = Modifier.size(24.dp).clip(CircleShape).padding(4.dp)
+                            .rotate(if (isDisplayFullList.value) 180f else 0f)
+                            .clickable { isDisplayFullList.value = !isDisplayFullList.value },
+                        colorFilter = ColorFilter.tint(Color(0x66F3F9FF)),
+                        contentDescription = "Expand / Collapse List"
+                    )
                 }
             }
         }
