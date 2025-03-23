@@ -148,20 +148,20 @@ fun MemoryOfChaosMissionPageScreen(
             mocCharUsageList.clear()
             mocTeamUsageList.clear()
 
-            if(asList.value.size < mocChoiceIndex.value+1) return@async
+            if(mocList.value.size < mocChoiceIndex.value+1) return@async
 
             mocCharUsageList.addAll(
                 StarbaseAPI().getAbyssCharUsage(
-                abyssId = asList.value[mocChoiceIndex.value].id,
+                abyssId = mocList.value[mocChoiceIndex.value].id,
                 floor = mocFloorIndex.value+1,
-                abyssInfoType = AbyssInfoType.ApocalypticShadow,
+                abyssInfoType = AbyssInfoType.MemoryOfChaos,
             ))
 
             mocTeamUsageList.addAll(
                 StarbaseAPI().getAbyssTeamUsage(
-                abyssId = asList.value[mocChoiceIndex.value].id,
+                abyssId = mocList.value[mocChoiceIndex.value].id,
                 floor = mocFloorIndex.value+1,
-                abyssInfoType = AbyssInfoType.ApocalypticShadow,
+                abyssInfoType = AbyssInfoType.MemoryOfChaos,
             ))
             mocUsageUpdateMS.value = Clock.System.now().toEpochMilliseconds()
         }.await()

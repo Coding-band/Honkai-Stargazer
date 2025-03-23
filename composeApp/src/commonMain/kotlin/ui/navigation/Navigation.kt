@@ -209,26 +209,30 @@ fun RootContent() {
                 MakeBackground(screen = screenInstance, forceBlur = isPadMode.value, hazeState = hazeStateRoot)
             }
 
-            Row {
-                if(isPadMode.value && screenInstance != Screen.SplashPage && screenInstance != Screen.BlankPage){
-                    Box(Modifier
-                        .width(HOME_WIDTH)
-                        .let { if (screenWidth.value < HOME_WIDTH * 1.5f) it.weight(1f) else it }
-                        .fillMaxHeight(),
-                    ) {
-                        key(bgModified.value){
-                            if(globalPadHomePageBg.value){
-                                MakeBackground(screen = Screen.HomePage, forceBlur = false, hazeState = hazeStateRoot)
+            if(screenInstance == Screen.SplashPage){
+                NavHostInit(navigatorInstance, isPadMode)
+            }else{
+                Row {
+                    if(isPadMode.value && screenInstance != Screen.SplashPage && screenInstance != Screen.BlankPage){
+                        Box(Modifier
+                            .width(HOME_WIDTH)
+                            .let { if (screenWidth.value < HOME_WIDTH * 1.5f) it.weight(1f) else it }
+                            .fillMaxHeight(),
+                        ) {
+                            key(bgModified.value){
+                                if(globalPadHomePageBg.value){
+                                    MakeBackground(screen = Screen.HomePage, forceBlur = false, hazeState = hazeStateRoot)
+                                }
                             }
+                            HomePage(
+                                navigator = navigatorInstance,
+                                hazeState = hazeStateRoot
+                            )
                         }
-                        HomePage(
-                            navigator = navigatorInstance,
-                            hazeState = hazeStateRoot
-                        )
                     }
-                }
-                Box(Modifier.weight(1f)) {
-                    NavHostInit(navigatorInstance, isPadMode)
+                    Box(Modifier.weight(1f)) {
+                        NavHostInit(navigatorInstance, isPadMode)
+                    }
                 }
             }
 

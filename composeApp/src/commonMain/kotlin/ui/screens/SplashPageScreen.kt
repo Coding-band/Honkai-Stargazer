@@ -102,8 +102,6 @@ fun SplashPage(
             //if(!isJCEFInited){
             //     showJCEFPopup.value = true
             //}else{
-                screenInstance = Screen.HomePage
-
                 CoroutineScope(Dispatchers.Default).launch {
                     withContext(Dispatchers.Main) {
                         navigator.navigate(HomeRoute){
