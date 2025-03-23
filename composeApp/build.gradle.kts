@@ -13,7 +13,7 @@ import java.util.Properties
  * VersionUpdateCheck
  * Environment Area - App Version
  */
-val appVersionDesktop = "1.0.1"
+val appVersionDesktop = "1.0.2"
 
 
 plugins {
@@ -38,7 +38,7 @@ val versionCodeFinal = properties.getProperty("APP_VERSION_CODE").toInt() + 1
 //VersionUpdateCheck
 val isForAppStore = true
 val isForPlayStore = false
-var appProfile = "C.BETA" //Please Modify this String ONLY IF NECESSERY
+var appProfile = "PRODUCTION" //Please Modify this String ONLY IF NECESSERY
 val appVersionCodeName = "SG3"
 
 initGradleProperties()
