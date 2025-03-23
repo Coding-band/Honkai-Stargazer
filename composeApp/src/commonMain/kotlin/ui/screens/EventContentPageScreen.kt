@@ -37,6 +37,7 @@ import ui.navigation.EventContentRoute
 import utils.app.Constants
 import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal14
+import utils.app.isAndroidPlatform
 import utils.app.isLinuxPlatform
 import utils.app.isMacOSPlatform
 import utils.app.isWindowsPlatform
@@ -136,7 +137,7 @@ fun EventContentPageScreen(
                 eventImageDisplay(eventItem)
             }
             item {
-                if(isWindowsPlatform() || isMacOSPlatform() || isLinuxPlatform()){
+                if(!isAndroidPlatform() ){
                     val richTextState = rememberRichTextState()
                     RichText(
                         state = richTextState.setHtml(htmlData),
