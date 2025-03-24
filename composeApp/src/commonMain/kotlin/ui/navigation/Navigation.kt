@@ -103,6 +103,7 @@ import utils.app.Constants.Companion.HOME_WIDTH
 import utils.app.Constants.Companion.INFO_MAX_WIDTH
 import utils.app.Language
 import utils.app.SG3NavTransitions
+import utils.app.isAndroidPlatform
 import utils.app.isLinuxPlatform
 import utils.app.isMacOSPlatform
 import utils.app.isWindowsPlatform
@@ -402,8 +403,8 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
                 navigator = navigator,
                 hazeState = hazeState
             )
-            if((isWindowsPlatform() || isMacOSPlatform() || isLinuxPlatform()) && (!alreadyDisplayWarning.value)){
-                showWarningToast(message = "PC端暫不支援內嵌式網頁，請見諒\nApologize for the inconvenience that currently Webview is not fully support in PC", dismissPrevious = true)
+            if((!isAndroidPlatform()) && (!alreadyDisplayWarning.value)){
+                showWarningToast(message = "暫不支援內嵌式網頁，請見諒\nApologize for the inconvenience that currently Webview is not fully supported", dismissPrevious = true)
                 alreadyDisplayWarning.value = true
             }
         }
