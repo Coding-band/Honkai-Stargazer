@@ -1,4 +1,4 @@
-![星穹觀星者3宣傳Banner](./docs/close_beta/ANDROID_ZH.png)
+![星穹觀星者3宣傳Banner](./docs/release/ANDROID_ZH.png)
 
 # 星穹觀星者 3
 
@@ -8,67 +8,19 @@
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![Make With Love](https://img.shields.io/badge/make_with_%E2%9D%A4%EF%B8%8F-white)
+![Version](https://img.shields.io/badge/🛠️v1.0.2-grey)
 
 星穹觀星者 3 是由團隊[<span style="color:#E31576">Coding Band</span>](https://github.com/Coding-Band)開發
 - [<span style="color:#00CCFF">2O48](https://github.com/2O48) : UI/UX 設計
-- [<span style="color:#FF99CC">夜芷冰](https://github.com/Vocaloid2048) : Team Leader 兼代碼編寫
-- [<span style="color:#EE3333">Somebody<span style="color:#CCCCCC">](https://github.com/ilikecatgirls) : 後端API代碼編寫
+- [<span style="color:#FF99CC">夜芷冰](https://github.com/Vocaloid2048) : Team Leader 兼全棧代碼編寫
+- [<span style="color:#EE3333">Somebody<span style="color:#CCCCCC">](https://github.com/ilikecatgirls) : 部分後端API代碼編寫
 
-將於 Google Play Store 和 App Store 上架，讓使用 Android 和 iOS 的開拓者都能夠體驗星穹觀星者 3。
+將於 Google Play Store 和 App Store 上架，讓使用 Android, iOS & MacOS 的開拓者都能夠體驗星穹觀星者 3。
 未來也會透過GitHub分發其他平台的版本。
 
 | <span style="color:#FF99CC">📢 如果不介意的話，可以透過BuyMeACoffee支持我們</span><br> | <a href="https://www.buymeacoffee.com/codingband"><img src="https://img.buymeacoffee.com/button-api/?text=Support Us&emoji=☕&slug=codingband&button_colour=ff76ac&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a> |
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <span style="color:#FF9900">📧 歡迎聯絡我們合作</span><br>             | [![Offical Discord Server](https://dcbadge.vercel.app/api/server/uXatcbWKv2?theme=discord-inverted)](https://discord.gg/uXatcbWKv2)                                                                                                                        |
-
-### 封測招募
->目前星穹觀星者 3 (Stargazer 3) 正招募封測人員<br>
->請參閱下方的招募條件及要求，並私訊`@yukina4096`以申請封測資格。
-
-### 封測細節
-- 封測平台 : Android, iOS為主，歡迎同時申請iPadOS, MacOS, Windows
-- 封測人數 : 30 人 (不包括原SG3封測員)
-- 封測時間 : 2025年2月19日 - 2025年3月5日
-  - 封測期間仍接受申請
-- 封測內容：
-  - 角色、光錐、遺器資料頁面
-  - 用戶登入
-    - Hoyoverse通行證 (僅Android, iOS)，Cookies登入
-  - 用戶當前數據
-    - 主頁面展示數據
-    - 用戶角色詳細頁面
-  - 排行榜
-    - 角色評分
-    - 混沌、虛構、末日（提供最多使用率）
-  - 大螢幕支援（iPad, Desktop)
-
-#### 招募條件
-- 擁有 Android 或 iOS 裝置
-  - Android : Android 7.0 或以上
-  - iOS : iOS 15 或以上
-  - Desktop : Windows 10 / MacOS 14.0 或以上
-- 願意測試及主動提供反饋
-- 願意遵守封測規則
-- 星鐵玩家將會優先考慮
-
-*若您有意申請本次招募，歡迎先加入我們的伺服器、並私信`@yukina4096`:*
-- 您想參加測試的平台(Android, iOS, MacOS, Windows)
-- 您的電郵地址 (iOS 的話請記得提供有綁定 Apple ID 的電郵)
-- 您的星穹鐵道 UID （方便我們紀錄錯誤之類，測試時請用該 UID 的帳戶登錄）
-我們會在收到您的申請後盡快回覆，並在伺服器給予相應的身份組謝謝！<br>
-原SG3封測員亦會自動獲得測試資格，無需再次申請。
-![yukina4096](./docs/close_beta/yukina4096.png)
-
-
-#### 要求
-- 不得公開、私下分發任何封測版本予任何人
-- 不得拆包、捉包、反編譯、重新打包App（[按我看App源碼](https://github.com/Coding-band/Honkai-Stargazer)）
-- 封測版本並不代表正式版，版本僅用作各方面早期測試，務必注意
-- 不得惡意攻擊伺服器/使伺服器無法正常提供服務
-- 請留意，團隊内所有成員均為志願工作，並不會有任何報酬，亦不會向其收取任何費用
-- 任何違反規則者將被永久停止測試資格，並列入黑名單
-- 請按照我們在Discord伺服器頻道内的指示進行測試
-
 
 ### Crowdin 翻譯進度
 
@@ -86,13 +38,28 @@
 ![chs translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=zh-CN&style=for-the-badge&logo=crowdin&query=%24.progress.11.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
 ![Vocchinese translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=yue&style=for-the-badge&logo=crowdin&query=%24.progress.12.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
 
-## <span style="color:#569CD6">App 特點 - 為何選擇星穹觀星者 3？
+## <span style="color:#569CD6">App 功能
+### 主要分為以下類別：
+  - 角色、光錐、遺器資料查閱
+  - 用戶當前數據、擁有角色詳情
+  - 角色/隊伍使用率排行榜
+  - 練度排行榜
+### 未來的功能
+  - 排軸（1.1 版本）
+  - 躍遷分析（投票）
+  - 躍遷模擬（投票）
+  - 通知功能（考慮中）
+  - 還有其他想法嗎？歡迎與我們分享~
 
-(之後補充)
-
-## <span style="color:#569CD6">App螢幕截圖
-| ![screenshot1](./docs/close_beta/1.jpg) | ![screenshot2](./docs/close_beta/2.jpg) | ![screenshot3](./docs/close_beta/3.jpg) | ![screenshot4](./docs/close_beta/4.jpg) |
+## <span style="color:#569CD6">手機螢幕截圖 (拍攝於2025/03/25)
+| ![phone_screenshot1](./docs/release/p1.png) | ![phone_screenshot2](./docs/release/p2.png) | ![phone_screenshot3](./docs/release/p3.png) | ![phone_screenshot4](./docs/release/p4.png) |
 |-----------------------------------------|-----------------------------------------|-----------------------------------------|-----------------------------------------|
+| ![phone_screenshot5](./docs/release/p5.png) | ![phone_screenshot6](./docs/release/p6.png) | ![phone_screenshot7](./docs/release/p7.png) | ![phone_screenshot8](./docs/release/p8.png) |
+
+## <span style="color:#569CD6">寬螢幕（Desktop）螢幕截圖 (拍攝於2025/03/25)
+| ![desktop_screenshot1](./docs/release/d1.png) | ![desktop_screenshot2](./docs/release/d2.png) | ![desktop_screenshot3](./docs/release/d3.png) | ![desktop_screenshot4](./docs/release/d4.png) |
+|-----------------------------------------|-----------------------------------------|-----------------------------------------|-----------------------------------------|
+| ![desktop_screenshot5](./docs/release/d5.png) | ![desktop_screenshot6](./docs/release/d6.png) | ![desktop_screenshot7](./docs/release/d7.png) | ![desktop_screenshot8](./docs/release/d8.png) |
 
 ## <span style="color:#569CD6">幫幫我，開拓者
 
@@ -105,7 +72,7 @@
 
 ### <span style="color:#338899">Beta 測試員 </span>（在功能推出前先幫忙找 Bug）
 
-- 人數：200 人 (Android 和 iOS)
+- 人數：100 人 (Android 和 iOS)
 - 需要遵守<守則>
 - 違犯規則者將被永久停止測試資格
 - 請私信`@yukina4096` 提出申請，並提供以下資料 :
@@ -132,7 +99,7 @@ Coding Band 由 3 位核心成員組成,分別是 :<br>
 - 《設計大佬》[2O48](https://github.com/2O48)
 - 《禮貌貓咪》[夜芷冰](https://github.com/Vocaloid2048)
 - 《Furina》[Somebody](https://github.com/ilikecatgirls)
-  ![用黑塔的圖片代替](./readme/release/image/coding_band_4_ppl.png)
+  ![用黑塔的圖片代替](./docs/coding_band_herta_ppl.png)
 
 ## 後日談 - 為何重寫？
 (之後補充)
