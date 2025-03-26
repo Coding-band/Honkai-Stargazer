@@ -199,6 +199,9 @@ fun initDataAfterLogin(
         UserAccount.pasteCookies(if(webviewState != null && url != null) webviewState.cookieManager.getCookies(url) else cookieList, serverSelected, snackbarHostState)
         StarbaseAPI().updateUserAccountInfo()
         StarbaseAPI().updateCharData()
+        StarbaseAPI().updateASData()
+        StarbaseAPI().updatePFData()
+        StarbaseAPI().updateMOCData()
         withContext(Dispatchers.Main){
             pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
             doRecompose.value = !doRecompose.value
