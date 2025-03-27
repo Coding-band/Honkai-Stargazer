@@ -8,17 +8,18 @@
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![Make With Love](https://img.shields.io/badge/make_with_%E2%9D%A4%EF%B8%8F-white)
+![Compose Multiplatform](https://img.shields.io/badge/Compose_Multiplatform-blue)
 ![Version](https://img.shields.io/badge/🛠️v1.0.2-grey)
 
 星穹觀星者 3 是由團隊[<span style="color:#E31576">Coding Band</span>](https://github.com/Coding-Band)開發
 - [<span style="color:#00CCFF">2O48](https://github.com/2O48) : UI/UX 設計
-- [<span style="color:#FF99CC">夜芷冰](https://github.com/Vocaloid2048) : Team Leader 兼全棧代碼編寫
+- [<span style="color:#FF99CC">夜芷冰](https://github.com/Vocaloid2048) : Team Leader 兼全棧代碼編寫 (Head-to-Tail)
 - [<span style="color:#EE3333">Somebody<span style="color:#CCCCCC">](https://github.com/ilikecatgirls) : 部分後端API代碼編寫
 
 將於 Google Play Store 和 App Store 上架，讓使用 Android, iOS & MacOS 的開拓者都能夠體驗星穹觀星者 3。
 未來也會透過GitHub分發其他平台的版本。
 
-| <span style="color:#FF99CC">📢 如果不介意的話，可以透過BuyMeACoffee支持我們</span><br> | <a href="https://www.buymeacoffee.com/codingband"><img src="https://img.buymeacoffee.com/button-api/?text=Support Us&emoji=☕&slug=codingband&button_colour=ff76ac&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a> |
+| <span style="color:#FF99CC">📢 如果不介意的話，可以透過Buy Me A Coffee支持我們</span><br> | <a href="https://www.buymeacoffee.com/codingband"><img src="https://img.buymeacoffee.com/button-api/?text=Support Us&emoji=☕&slug=codingband&button_colour=ff76ac&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a> |
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <span style="color:#FF9900">📧 歡迎聯絡我們合作</span><br>             | [![Offical Discord Server](https://dcbadge.vercel.app/api/server/uXatcbWKv2?theme=discord-inverted)](https://discord.gg/uXatcbWKv2)                                                                                                                        |
 
@@ -37,6 +38,14 @@
 ![cht translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=zh-HK&style=for-the-badge&logo=crowdin&query=%24.progress.10.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
 ![chs translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=zh-CN&style=for-the-badge&logo=crowdin&query=%24.progress.11.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
 ![Vocchinese translation](<https://img.shields.io/badge/dynamic/json?color=blue&label=yue&style=for-the-badge&logo=crowdin&query=%24.progress.12.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-15282854-638808.json>)
+
+## <span style="color:#569CD6">有別於第二代：
+- 支援Windows & MacOS了！
+- 對平板、電腦使用體驗作出優化
+- 輕量化App，減少下載大小
+- 一堆介面上的修正（設計師的要求）
+- 使用 *Compose Multiplatform* 編寫
+- 等等...
 
 ## <span style="color:#569CD6">App 功能
 ### 主要分為以下類別：
@@ -60,6 +69,8 @@
 | ![desktop_screenshot1](./docs/release/d1.png) | ![desktop_screenshot2](./docs/release/d2.png) | ![desktop_screenshot3](./docs/release/d3.png) | ![desktop_screenshot4](./docs/release/d4.png) |
 |-----------------------------------------|-----------------------------------------|-----------------------------------------|-----------------------------------------|
 | ![desktop_screenshot5](./docs/release/d5.png) | ![desktop_screenshot6](./docs/release/d6.png) | ![desktop_screenshot7](./docs/release/d7.png) | ![desktop_screenshot8](./docs/release/d8.png) |
+
+
 
 ## <span style="color:#569CD6">幫幫我，開拓者
 
