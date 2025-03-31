@@ -1,6 +1,7 @@
 package utils.app
 
 import com.russhwolf.settings.Settings
+import kotlinx.datetime.Clock
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import ui.components.HomePageBlocks
@@ -22,7 +23,7 @@ class Preferences {
     private class Constants{
         val CHAR_LIST_UPDATE_MINS = 15
         val CHAR_WEIGHT_LIST_UPDATE_MINS = 15
-        val LEADERBOARD_UPDATE_MINS = 60
+        val LEADERBOARD_UPDATE_MINS = 15
         val KEY_HYB_CHAR_LIST_LAST_UPDATE_TIME = "lastUpdateHoyolabCharListTime"
         val KEY_HYB_LEADERBOARD_LAST_UPDATE_TIME = "lastUpdateHoyolabLeaderboardTime"
     }
@@ -176,6 +177,27 @@ class Preferences {
         fun setLocalASDataString(charList: String){
             Settings().putString("localASData", charList)
         }
+
+        fun getIsForceUpdateAS(): Boolean {
+            return Settings().getBoolean("forceUpdateAS-20250401", true)
+        }
+        fun setIsForceUpdateAS(isForceUpdateLeaderboard: Boolean){
+            Settings().putBoolean("forceUpdateAS-20250401", isForceUpdateLeaderboard)
+        }
+
+        fun getIsForceUpdatePF(): Boolean {
+            return Settings().getBoolean("forceUpdatePF-20250401", true)
+        }
+        fun setIsForceUpdatePF(isForceUpdateLeaderboard: Boolean){
+            Settings().putBoolean("forceUpdatePF-20250401", isForceUpdateLeaderboard)
+        }
+
+        fun getIsForceUpdateMOC(): Boolean {
+            return Settings().getBoolean("forceUpdateMOC-20250401", true)
+        }
+        fun setIsForceUpdateMOC(isForceUpdateLeaderboard: Boolean){
+            Settings().putBoolean("forceUpdateMOC-20250401", isForceUpdateLeaderboard)
+        }
     }
 
     //CharWeightList
@@ -206,6 +228,19 @@ class Preferences {
         fun setIsShowChar(isShowChar: Boolean){
             Settings().putBoolean("isShowChar", isShowChar)
         }
+        fun getDeviceFPRefreshTime(): Long {
+            return Settings().getLong("deviceFPRefreshTime", 0L)
+        }
+        fun setDeviceFPRefreshTime(time: Long = Clock.System.now().toEpochMilliseconds()){
+            Settings().putLong("deviceFPRefreshTime", time)
+        }
+        fun getDeviceFP(): String {
+            return Settings().getString("deviceFP", "")
+        }
+        fun setDeviceFP(deviceFP: String){
+            Settings().putString("deviceFP", deviceFP)
+        }
+
     }
 
     class HomePageMenuClass(){

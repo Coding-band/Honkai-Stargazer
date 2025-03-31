@@ -1,6 +1,5 @@
 package types
 
-import TestCookies
 import androidx.compose.material.SnackbarHostState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
@@ -125,6 +124,7 @@ class UserAccount(
             refreshUserAccount()
             UserAbyssRecord.refreshMOCData()
             UserAbyssRecord.refreshPFData()
+            UserAbyssRecord.refreshASData()
         }
 
         fun resetUserAccount(){
@@ -187,6 +187,8 @@ class UserAccount(
                 refreshNoteData()
 
                 save()
+
+
 
             }catch (e : Exception){
                 resetUserAccount()

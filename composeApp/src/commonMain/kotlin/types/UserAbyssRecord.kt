@@ -17,6 +17,7 @@ import utils.app.Preferences
 import utils.app.errorLog
 import utils.hoyolab.HoyolabAPI
 import utils.hoyolab.HoyolabConst
+import utils.starbase.StarbaseAPI
 
 @Serializable
 data class UserAbyssRecord(
@@ -33,7 +34,7 @@ data class UserAbyssRecord(
         fun refreshMOCData(){
             try{
                 if(UserAccount.INSTANCE.uid == "000000000"){ return }
-                if(!Preferences().Leaderboard.isUpdateLeaderboardNow()){ return }
+                if(!Preferences().Leaderboard.isUpdateLeaderboardNow() && !Preferences.LeaderboardClass().getIsForceUpdateMOC()){ return }
 
                 val api = HoyolabAPI(UserAccount.INSTANCE.server.platform, UserAccount.INSTANCE.cookies)
 
@@ -93,7 +94,6 @@ data class UserAbyssRecord(
                 }
                 println("[HoYoLab] Updated MOC Data: size = ${mocList.size}, ${Json.encodeToString(mocList)}")
                 INSTANCE.userCurrMOCList = mocList
-                Preferences().Leaderboard.setLocalMOCDataString(Json.encodeToString(mocList))
 
             }catch (e : Exception){
                 errorLog("UserAccount", "refreshMOCData()", e)
@@ -103,7 +103,7 @@ data class UserAbyssRecord(
         fun refreshPFData(){
             try{
                 if(UserAccount.INSTANCE.uid == "000000000"){ return }
-                //if(!Preferences().Leaderboard.isUpdateLeaderboardNow()){ return }
+                if(!Preferences().Leaderboard.isUpdateLeaderboardNow() && !Preferences.LeaderboardClass().getIsForceUpdateMOC()){ return }
 
                 val api = HoyolabAPI(UserAccount.INSTANCE.server.platform, UserAccount.INSTANCE.cookies)
                 val userPfCurr = api.getHsrPureFiction(UserAccount.INSTANCE.uid, UserAccount.INSTANCE.server, 1).data
@@ -167,7 +167,6 @@ data class UserAbyssRecord(
 
                 println("[HoYoLab] Updated PF Data: size = ${pfList.size}, ${Json.encodeToString(pfList)}")
                 INSTANCE.userCurrPFList = pfList
-                Preferences().Leaderboard.setLocalPFDataString(Json.encodeToString(pfList))
 
             }catch (e : Exception){
                 errorLog("UserAccount", "refreshPFData()", e)
@@ -177,7 +176,7 @@ data class UserAbyssRecord(
         fun refreshASData(){
             try{
                 if(UserAccount.INSTANCE.uid == "000000000"){ return }
-                //if(!Preferences().Leaderboard.isUpdateLeaderboardNow()){ return }
+                if(!Preferences().Leaderboard.isUpdateLeaderboardNow() && !Preferences.LeaderboardClass().getIsForceUpdateMOC()){ return }
 
                 val api = HoyolabAPI(UserAccount.INSTANCE.server.platform, UserAccount.INSTANCE.cookies)
                 val userASCurr = api.getHsrApocalypticShadow(UserAccount.INSTANCE.uid, UserAccount.INSTANCE.server, 1).data
@@ -240,7 +239,6 @@ data class UserAbyssRecord(
 
                 println("[HoYoLab] Updated AS Data: size = ${asList.size}, ${Json.encodeToString(asList)}")
                 INSTANCE.userCurrASList = asList
-                Preferences().Leaderboard.setLocalASDataString(Json.encodeToString(asList))
 
 
             }catch (e : Exception){
