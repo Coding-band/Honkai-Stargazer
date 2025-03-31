@@ -152,6 +152,7 @@ fun ProficientLeaderboardPageScreen(
 
     LaunchedEffect(isInited.value) {
         if (isInited.value && schoolList.isNotEmpty()) {
+            if(selectedLeaderboardIndex.value >= schoolList.size) return@LaunchedEffect
             CoroutineScope(Dispatchers.Default).launch {
                 async {
                     val request = StarbaseAPI().getProfLeaderboardList(
@@ -167,6 +168,7 @@ fun ProficientLeaderboardPageScreen(
 
     LaunchedEffect(selectedLeaderboardIndex.value) {
         if(isInited.value){
+            if(selectedLeaderboardIndex.value >= schoolList.size) return@LaunchedEffect
             CoroutineScope(Dispatchers.Default).launch {
                 async {
                     val request = StarbaseAPI().getProfLeaderboardList(
@@ -200,7 +202,7 @@ fun ProficientLeaderboardPageScreen(
                         .clip(RoundedCornerShape(43.dp))
                         .padding(start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)
                 ) {
-                    if(!schoolList.isEmpty()){
+                    if(!schoolList.isEmpty() && selectedLeaderboardIndex.value < schoolList.size){
                         Row(
                             modifier = Modifier.background(Color(0x66000000), RoundedCornerShape(43.dp))
                                 .wrapContentWidth()
