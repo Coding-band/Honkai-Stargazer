@@ -78,6 +78,7 @@ import files.PlayerLevel
 import files.PleaseLogin
 import files.Res
 import files.Setting
+import files.UserOwned
 import files.donate_ad_bg
 import files.ic_default_avatar
 import files.ic_rounded_option_btn
@@ -85,6 +86,7 @@ import files.intelstellar_resource_corp_white_icon
 import org.jetbrains.compose.resources.painterResource
 import types.Character
 import types.ImageFolder
+import types.Role
 import types.UserAccount
 import ui.components.HeaderData
 import ui.components.HomePageBlock1x1
@@ -265,18 +267,51 @@ fun HomePageHeader(
                             .padding(start = 8.dp, end = 8.dp)
                             .weight(1f)
                     ) {
-                        //User Name - Hmm interesting Kt
-                        Text(
-                            text = userAccount.value.username,
-                            modifier = Modifier
-                                .weight(1f)
-                                .fillMaxSize()
-                                .wrapContentHeight(align = Alignment.CenterVertically),
-                            color = TextColorNormal,
-                            style = FontSizeNormalLarge24(),
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis,
-                        )
+                        //User Name & Role Tag - Hmm interesting Kt
+                        Row(modifier = Modifier.weight(1f)) {
+                            //User Role Tag
+                            if(userAccount.value.role != Role.USER && (userAccount.value.role.prefixEmoji != null || userAccount.value.role.prefixIcon != null) ){
+                                Row(
+                                    Modifier.padding(4.dp).clip(CircleShape)
+                                        .background(
+                                            Color(0xFFF3F9FF)
+                                        ).align(Alignment.CenterVertically)
+                                ) {
+                                    if(userAccount.value.role.prefixEmoji != null) {
+                                        Text(
+                                            modifier = Modifier.padding(4.dp),
+                                            text = "${userAccount.value.role.prefixEmoji}",
+                                            style = FontSizeNormal12(),
+                                            color = Color(0xFF393A5C),
+                                        )
+                                    }else if(userAccount.value.role.prefixIcon != null){
+                                        Image(
+                                            modifier = Modifier.padding(6.dp).size(16.dp),
+                                            painter = painterResource(userAccount.value.role.prefixIcon!!),
+                                            contentDescription = "Role Icon",
+                                        )
+                                    }
+                                }
+                                Spacer(modifier = Modifier.width(4.dp))
+                            }
+
+                            //User Name
+                            Text(
+                                text = userAccount.value.username,
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .fillMaxSize()
+                                    .wrapContentHeight(align = Alignment.CenterVertically),
+                                color = TextColorNormal,
+                                style = FontSizeNormalLarge24(),
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis,
+                            )
+
+                            Spacer(modifier = Modifier.width(4.dp))
+
+
+                        }
                         //Helping Team
                         LazyRow(
                             modifier = Modifier

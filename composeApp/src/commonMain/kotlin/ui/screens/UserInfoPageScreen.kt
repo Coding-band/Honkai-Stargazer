@@ -41,6 +41,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -68,6 +69,7 @@ import files.ic_list_isolate_pretty
 import files.phorphos_question_fill
 import files.ui_icon_share
 import org.jetbrains.compose.resources.painterResource
+import types.Role
 import types.UserAccount
 import ui.components.AppDialog
 import ui.components.BackIcon
@@ -89,6 +91,7 @@ import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
 import utils.app.LongStringXML
+import utils.app.TextColorNormal
 import utils.app.getIconByUserAccountIconValue
 import utils.app.newImageLoader
 import utils.app.newImageRequest
@@ -337,6 +340,42 @@ fun UserInfoBioUI(context: PlatformContext, userAccount: UserAccount) {
             style = FontSizeNormalLarge24(),
             color = Color.White
         )
+
+
+        //User Name & Role Tag - Hmm interesting Kt
+        Row(horizontalArrangement = Arrangement.Center, modifier = Modifier.align(Alignment.CenterHorizontally)) {
+            //User Role Tag
+            if(userAccount.role != Role.USER && (userAccount.role.prefixEmoji != null || userAccount.role.prefixIcon != null) ){
+                Row(
+                        Modifier.padding(6.dp).clip(CircleShape)
+                            .background(
+                                Color(0xFFF3F9FF)
+                            ).align(Alignment.CenterVertically)
+                    ) {
+                        if(userAccount.role.prefixEmoji != null) {
+                            Text(
+                                modifier = Modifier.padding(6.dp),
+                                text = "${userAccount.role.prefixEmoji}",
+                                style = FontSizeNormal12(),
+                                color = Color(0xFF393A5C),
+                            )
+                        }else if(userAccount.role.prefixIcon != null){
+                            Image(
+                                modifier = Modifier.padding(6.dp).size(16.dp),
+                                painter = painterResource(userAccount.role.prefixIcon!!),
+                                contentDescription = "Role Icon",
+                            )
+                        }
+
+                        Text(
+                            modifier = Modifier.padding(start = 0.dp, end = 6.dp, top = 6.dp, bottom = 6.dp),
+                            text = if(userAccount.role.strRes != null) removeStrQuote(userAccount.role.strRes!!) else userAccount.role.name.uppercase(),
+                            style = FontSizeNormal12(),
+                            color = Color(0xFF393A5C),
+                        )
+                    }
+            }
+        }
 
         Text(
             text = "${userAccount.uid}·${removeStrQuote(

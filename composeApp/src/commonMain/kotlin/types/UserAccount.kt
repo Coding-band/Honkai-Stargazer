@@ -9,6 +9,10 @@ import com.multiplatform.webview.cookie.Cookie
 import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
 import files.Res
+import files.RoleBetaTester
+import files.RoleCBetaTester
+import files.RoleDev
+import files.RoleDonor
 import files.UserAccountWarningCookiesInvalid
 import files.UserAccountWarningIncorrectServer
 import files.UserAccountWarningNoAccountRecord
@@ -24,6 +28,8 @@ import kotlinx.serialization.json.jsonNull
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.long
+import org.jetbrains.compose.resources.DrawableResource
+import org.jetbrains.compose.resources.StringResource
 import types.UserAccount.Companion.INSTANCE
 import utils.app.Preferences
 import utils.annotation.DoItLater
@@ -509,7 +515,11 @@ enum class AdPlan(){
     NORMAL, SPONSOR, INVITER, EVENT, TESTER,DEV
 }
 @Serializable
-enum class Role(){
-    USER, CBETA_TESTER, BETA_TESTER,DEV
+enum class Role(val prefixEmoji: String? = null,val prefixIcon: DrawableResource? = null,val strRes: StringResource? = null){
+    USER,
+    CBETA_TESTER(prefixEmoji = "🌠", strRes = Res.string.RoleCBetaTester),
+    BETA_TESTER(prefixEmoji = "🅱️", strRes = Res.string.RoleBetaTester),
+    DEV(prefixEmoji = "🎸", strRes = Res.string.RoleDev),
+    DONOR(prefixEmoji = "💎", strRes = Res.string.RoleDonor),
 }
 
