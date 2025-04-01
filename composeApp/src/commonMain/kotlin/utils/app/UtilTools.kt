@@ -8,7 +8,13 @@ import androidx.compose.runtime.saveable.listSaver
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.runtime.toMutableStateList
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
 import coil3.ImageLoader
 import coil3.PlatformContext
@@ -909,6 +915,50 @@ fun getImageNameByRegistName(registName: String, isCharFullImg: Boolean = false,
     }
 
     return registNameFinal
+}
+
+@Composable
+fun getAnnotatedStrFromSpan(
+    donationDesc: String,
+    textStyle: TextStyle = FontSizeNormal14()
+): AnnotatedString {
+    // 更新正則表達式以匹配 style="color:#xxxxxx"
+    val spanRegex = Regex("<span style=\"color:(#[0-9A-Fa-f]{6});\">(.*?)</span>")
+    return buildAnnotatedString {
+        var lastIndex = 0
+        spanRegex.findAll(donationDesc).forEach { matchResult ->
+            // 添加匹配前的普通文本
+            append(donationDesc.substring(lastIndex, matchResult.range.first))
+
+            // 提取顏色和文本內容
+            val colorHex = matchResult.groupValues[1] // e.g., "#DD8200"
+            val text = matchResult.groupValues[2] // 內嵌文本
+
+            // 將顏色從 HEX 轉換為 Compose 的 Color 對象
+            val color = Color(colorHex.removePrefix("#").toLong(16) or 0xFF000000)
+
+            println("ANNOTATED: ${text}, color = $color")
+            // 應用樣式並添加文本
+            withStyle(
+                style = SpanStyle(
+                    color = color,
+                    fontSize = textStyle.fontSize,
+                    fontFamily = textStyle.fontFamily,
+                    fontWeight = textStyle.fontWeight
+                )
+            ) {
+                append(text)
+            }
+
+            // 更新 lastIndex 到匹配結束位置
+            lastIndex = matchResult.range.last + 1
+        }
+
+        // 添加剩餘的文本（如果有）
+        if (lastIndex < donationDesc.length) {
+            append(donationDesc.substring(lastIndex))
+        }
+    }
 }
 
 /*

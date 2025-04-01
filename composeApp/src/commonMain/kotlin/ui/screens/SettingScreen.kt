@@ -93,12 +93,16 @@ import ui.navigation.navigateLimited
 import utils.annotation.DoItLater
 import utils.app.Constants
 import utils.app.DefaultZIndex
+import utils.app.DonationPopUp
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
 import utils.app.Language
 import utils.app.Preferences
 import utils.app.UpdateAssetsPopup
+import utils.app.isAndroidPlatform
+import utils.app.isLinuxPlatform
+import utils.app.isWindowsPlatform
 import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.showFunctionIsDevelopingToast
@@ -112,6 +116,7 @@ val doRecomposeText = mutableStateOf(false)
 val doInit = mutableStateOf(false)
 val doRefresh = mutableStateOf(false)
 lateinit var showUpdatePopupInSetting : MutableState<Boolean>
+lateinit var showDonationPopupInSetting : MutableState<Boolean>
 
 @Composable
 fun SettingScreen(
@@ -121,6 +126,7 @@ fun SettingScreen(
 
     val urlHandler = LocalUriHandler.current
     showUpdatePopupInSetting = remember { mutableStateOf(false) }
+    showDonationPopupInSetting = remember { mutableStateOf(false) }
     val canUpdatePopup = remember { mutableStateOf(true) } //Not for use
     val wallpaperName = remember { mutableStateOf("----") }
     LaunchedEffect(Settings().getString("backgroundImage", "221000"), Language.TextLanguageInstance, doRecomposeText.value){
@@ -271,7 +277,11 @@ fun SettingScreen(
                         SettingOptionNavigateBar(
                             titleRes = Res.string.DonateUs,
                             navigateClick = {
-                                showFunctionIsDevelopingToast()
+                                if(isWindowsPlatform() || isLinuxPlatform() || isAndroidPlatform() && BuildKonfig.appProfile != "PRODUCTION_GP"){
+                                    urlHandler.openUri("https://buymeacoffee.com/codingband")
+                                }else{
+                                    showDonationPopupInSetting.value = true
+                                }
                             } //@DoItLater("Add the function of donation")
                         )
 
@@ -394,6 +404,9 @@ fun SettingScreen(
 
             if(showUpdatePopupInSetting.value){
                 UpdateAssetsPopup(showUpdatePopupInSetting, hazeState, forceDownload = true)
+            }
+            if(showDonationPopupInSetting.value){
+                DonationPopUp(showDonationPopupInSetting, hazeState)
             }
         }
     }

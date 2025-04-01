@@ -103,6 +103,7 @@ import utils.app.Constants.Companion.HOME_WIDTH
 import utils.app.Constants.Companion.INFO_MAX_WIDTH
 import utils.app.Language
 import utils.app.SG3NavTransitions
+import utils.app.initPurchase
 import utils.app.isAndroidPlatform
 import utils.app.isLinuxPlatform
 import utils.app.isMacOSPlatform
@@ -162,6 +163,7 @@ fun isPadMode(): Boolean {
 
 @Composable
 fun initVar(){
+    initPurchase()
     initCharList()
     initLcList()
     initRelicList()
