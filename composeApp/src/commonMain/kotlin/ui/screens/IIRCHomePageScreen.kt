@@ -3,6 +3,8 @@ package ui.screens
 import NavigationBar
 import NavigationItemData
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -24,6 +26,7 @@ import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Divider
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -33,6 +36,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.graphicsLayer
@@ -47,6 +51,7 @@ import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.Res
+import files.ui_icon_close
 import files.ui_icon_grid
 import files.ui_icon_missing
 import files.ui_icon_research
@@ -57,12 +62,18 @@ import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.vectorResource
 import types.CombatType
 import types.IIRC
+import types.IIRCCurrecyType
 import types.IIRCWorld
 import ui.components.iirc.HoverButtonBar
 import ui.components.iirc.MultiplyEnum
+import ui.navigation.navigatorInstance
+import ui.navigation.popBackStackLimited
+import utils.app.DefaultZIndex
 import utils.app.FontShadow
 import utils.app.FontSizeNormal14
 import utils.app.formatDecimalSci
+import utils.app.hazeEffectSG3
+import utils.app.toInt
 
 lateinit var iircWorldInfo: MutableState<ArrayList<IIRCWorld>>
 
@@ -124,12 +135,8 @@ fun RedeemPage(hazeState : HazeState) {
                 .hazeSource(hazeState)
 
         ) {
-            items(when(currentDisplayPage.value){
-                "WORLD" -> 20
-                "AREA1" -> 10
-                else -> 5
-            }) {it ->
-                ItemGridView(it * 10, it)
+            items(charList.value.filter { it.officialId!! in 1000 ..< 1100}.sortedBy { it.officialId }) {it ->
+                ItemGridView(it, (it.officialId!! < 1005).toInt(), (it.officialId!! < 1005).toInt())
             }
         }
 
@@ -198,7 +205,7 @@ fun ResearchPage(hazeState : HazeState){
             modifier = Modifier
                 .fillMaxSize()
                 .graphicsLayer { alpha = 0.99f }
-                .haze(hazeState)
+                .hazeSource(hazeState, DefaultZIndex)
         ) {
             items(20) {it ->
                 Column {
@@ -225,25 +232,44 @@ fun CurrencyUI(){
                 .wrapContentHeight()
                 .fillMaxWidth()
         ) {
+            Box(
+                modifier = Modifier
+                    .size(36.dp)
+                    .clip(shape = CircleShape)
+                    .background(Color(0x33FFFFFF))
+                    .clickable {
+                        navigatorInstance.popBackStackLimited()
+                    }
+            ) {
+                Image(
+                    painter = painterResource(Res.drawable.ui_icon_close),
+                    contentDescription = "Exit Without Saving",
+                    modifier = Modifier.size(24.dp).align(Alignment.Center),
+                    colorFilter = ColorFilter.tint(Color.White),
+                )
+            }
+
+            Spacer(modifier = Modifier.width(8.dp))
+
             LazyVerticalGrid(
                 columns = GridCells.Fixed(3),
                 verticalArrangement = Arrangement.spacedBy(2.dp),
                 horizontalArrangement = Arrangement.spacedBy(2.dp),
                 modifier = Modifier.fillMaxWidth().wrapContentHeight().align(Alignment.CenterVertically)
             ) {
-                items(CombatType.entries.filterNot { it == CombatType.Unspecified }) { it ->
+                items(IIRCCurrecyType.entries) { it ->
                     //Currency UI 貨幣UI
                     Row{
                         //Currency Icon 貨幣圖標
                         Image(
-                            painter = painterResource(resource = it.iconColor),
+                            painter = painterResource(resource = it.icon),
                             contentDescription = "Currency Icon",
                             modifier = Modifier.height(32.dp)
                         )
                         Spacer(modifier = Modifier.width(4.dp))
                         Text(
                             formatDecimalSci(
-                                123456789,
+                                if(it == IIRCCurrecyType.CREDIT) 401000 else 0,
                                 decimalPlaces = 2
                             ),
                             modifier = Modifier.align(Alignment.CenterVertically).wrapContentWidth(),

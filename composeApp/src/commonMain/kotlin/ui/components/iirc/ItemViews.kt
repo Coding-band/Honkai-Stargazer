@@ -31,24 +31,36 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
 import files.Res
 import files.element_fire
 import files.ic_fire
+import files.material_credit
+import files.phorphos_lock_regular
 import files.pom_pom
 import org.jetbrains.compose.resources.painterResource
+import types.Character
+import types.ImageFolder
+import utils.app.Constants
 import utils.app.FontShadow
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
+import utils.app.formatDecimalSci
+import utils.app.getImageNameByRegistName
 
 @Composable
-fun ItemGridView(currHave : Int = 0, ableToBuy : Int = 0){
+fun ItemGridView(character: Character, currHave : Int = 0, ableToBuy : Int = 0){
     Box(
         modifier = Modifier
-            .background(Color.Black, RoundedCornerShape(12.dp))
+            .background(brush = Brush.verticalGradient(Constants.getCardBgColorByRare(character.rarity)), RoundedCornerShape(12.dp))
             .border(
                 1.dp,
                 if (ableToBuy > 0) Color.White else Color.Transparent,
@@ -63,11 +75,22 @@ fun ItemGridView(currHave : Int = 0, ableToBuy : Int = 0){
             )
     ){
         //Image of that item 物品圖片
+        /*
         Image(
             painter = painterResource(resource = Res.drawable.pom_pom),
             contentDescription = "Item Image",
             modifier = Modifier
                 .fillMaxSize()
+        )
+         */
+        AsyncImage(
+            model = Character.getCharacterImageFromFileName(
+                ImageFolder.CHAR_ICON,
+                getImageNameByRegistName(character.registName!!)
+            ),
+            contentDescription = "Character Icon",
+            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop,
         )
 
         //Column with item info 物品資訊
@@ -76,34 +99,36 @@ fun ItemGridView(currHave : Int = 0, ableToBuy : Int = 0){
             .padding(4.dp), horizontalAlignment = Alignment.CenterHorizontally) {
             //Item name 物品名稱
             Text(
-                "鐵礦",
+                character.displayName ?: "??",
                 color = Color.White,
                 modifier = Modifier.fillMaxWidth(),
-                style = FontSizeNormal14() ,
+                style = FontSizeNormal14() + FontShadow(),
                 textAlign = TextAlign.Center,
 
                 )
             // Item amount 物品數量
-            Row(
-                horizontalArrangement = Arrangement.Center,
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text(
-                    "x${currHave}",
-                    color = Color.White,
-                    style = FontSizeNormal12() ,
-                    textAlign = TextAlign.Center,
-                )
-
-                if(ableToBuy > 0){
-                    Spacer(modifier = Modifier.width(2.dp))
+            if(currHave > 0){
+                Row(
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
                     Text(
-                        "+${ableToBuy}",
-                        color = Color.Green,
-                        style = FontSizeNormal12() ,
-                        textAlign = TextAlign.Start
+                        "x${currHave}",
+                        color = Color.White,
+                        style = FontSizeNormal12() + FontShadow(),
+                        textAlign = TextAlign.Center,
                     )
+
+                    if(ableToBuy > 0){
+                        Spacer(modifier = Modifier.width(2.dp))
+                        Text(
+                            "+${ableToBuy}",
+                            color = Color.Green,
+                            style = FontSizeNormal12()+ FontShadow(),
+                            textAlign = TextAlign.Start
+                        )
+                    }
                 }
             }
 
@@ -112,7 +137,7 @@ fun ItemGridView(currHave : Int = 0, ableToBuy : Int = 0){
             //Item provided currency count 物品提供的貨幣數量
             Row(modifier = Modifier.padding(start = 4.dp, end = 4.dp)) {
                 Image(
-                    painter = painterResource(resource = Res.drawable.element_fire),
+                    painter = painterResource(resource = Res.drawable.material_credit),
                     contentDescription = "Currency Icon",
                     modifier = Modifier
                         .height(16.dp)
@@ -120,10 +145,30 @@ fun ItemGridView(currHave : Int = 0, ableToBuy : Int = 0){
                 )
                 Spacer(modifier = Modifier.width(2.dp))
                 Text(
-                    "+123.45K/s",
+                    formatDecimalSci(if(ableToBuy > 0) 2024 else 0, 2),
                     color = Color.White,
                     modifier = Modifier.wrapContentWidth(),
-                    style = FontSizeNormal12() ,
+                    style = FontSizeNormal12() + FontShadow(),
+                )
+            }
+        }
+
+        // Mask with lock icon when ableToBuy = 0
+
+        if(ableToBuy <= 0){
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(Color(0xAA000000))
+                    .padding(8.dp)
+            ) {
+                Image(
+                    painter = painterResource(resource = Res.drawable.phorphos_lock_regular),
+                    colorFilter = ColorFilter.tint(Color.White),
+                    contentDescription = "Lock Icon",
+                    modifier = Modifier
+                        .size(36.dp)
+                        .align(Alignment.Center)
                 )
             }
         }

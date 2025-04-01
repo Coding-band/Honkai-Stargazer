@@ -2,9 +2,17 @@ package types
 
 import androidx.compose.runtime.saveable.Saver
 import androidx.compose.runtime.saveable.listSaver
+import files.Res
+import files.material_celestial_ambrosia
+import files.material_clock_credits
+import files.material_credit
+import files.material_hertareum
+import files.material_shield
+import files.material_strale
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import org.jetbrains.compose.resources.DrawableResource
 import utils.app.Language
 
 @Serializable
@@ -55,13 +63,13 @@ data class IIRCPlayerInfo(
 )
 
 @Serializable
-enum class IIRCCurrecyType {
-    CREDIT,
-    HERTAREUM,
-    SHIELD,
-    STRALE,
-    CLOCK_CREDIT,
-    CELESTIAL_AMBROSIA,
+enum class IIRCCurrecyType(val icon: DrawableResource) {
+    CREDIT(Res.drawable.material_credit),
+    HERTAREUM(Res.drawable.material_hertareum),
+    SHIELD(Res.drawable.material_shield),
+    STRALE(Res.drawable.material_strale),
+    CLOCK_CREDIT(Res.drawable.material_clock_credits),
+    CELESTIAL_AMBROSIA(Res.drawable.material_celestial_ambrosia),
 }
 
 open class IIRC {
