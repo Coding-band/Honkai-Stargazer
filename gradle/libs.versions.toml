@@ -10,6 +10,7 @@ compose-plugin = "1.8.0-alpha04"
 composeBoxshadow = "0.2.2"
 composeDropshadow = "0.2.2"
 composeWebviewMultiplatform = "1.9.40"
+grid = "2.1.0"
 haze = "1.4.0"
 kmpIo = "0.1.6"
 kotlin = "2.1.0"
@@ -27,6 +28,7 @@ okio = "3.9.1"
 precompose = "1.7.0-alpha03"
 richeditorCompose = "1.0.0-rc08"
 sonner = "0.3.8"
+purchases-kmp = "1.7.2+13.26.0"
 
 [libraries]
 # Coil dependencies
@@ -39,6 +41,7 @@ adaptive = { module = "org.jetbrains.compose.material3.adaptive:adaptive", versi
 compose-dropshadow = { module = "io.github.kubode.compose.shadow:compose-dropshadow", version.ref = "composeDropshadow" }
 compose-boxshadow = { module = "io.github.kubode.compose.shadow:compose-boxshadow", version.ref = "composeBoxshadow" }
 compose-webview-multiplatform = { module = "io.github.kevinnzou:compose-webview-multiplatform", version.ref = "composeWebviewMultiplatform" }
+grid = { module = "com.cheonjaeung.compose.grid:grid", version.ref = "grid" }
 kmp-io = { module = "io.github.skolson:kmp-io", version.ref = "kmpIo" }
 navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 tlaster-precompose = { module = "moe.tlaster:precompose", version.ref = "precompose" }
@@ -68,6 +71,7 @@ haze = { module = "dev.chrisbanes.haze:haze", version.ref = "haze" }
 okio = { module = "com.squareup.okio:okio", version.ref = "okio" }
 richeditor-compose = { module = "com.mohamedrejeb.richeditor:richeditor-compose", version.ref = "richeditorCompose" }
 sonner = { module = "io.github.dokar3:sonner", version.ref = "sonner" }
+purchases-core = { module = "com.revenuecat.purchases:purchases-kmp-core", version.ref = "purchases-kmp" }
 
 
 [plugins]

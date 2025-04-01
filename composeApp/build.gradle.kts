@@ -133,14 +133,23 @@ kotlin {
             //implementation(libs.compose.multiplatform.screen.capture)
 
             //VerticalGrid
-            implementation("com.cheonjaeung.compose.grid:grid:2.1.0")
+            implementation(libs.grid)
 
             //Compose WebView Multiplatform : https://github.com/KevinnZou/compose-webview-multiplatform
             //api("io.github.kevinnzou:compose-webview-multiplatform:1.9.40")
 
+            //RevenueCat
+            implementation(libs.purchases.core)
+
             implementation(libs.kmp.io)
 
         }
+        named { it.lowercase().startsWith("ios") }.configureEach {
+            languageSettings {
+                optIn("kotlinx.cinterop.ExperimentalForeignApi")
+            }
+        }
+
         desktopMain.dependencies {
             implementation(compose.material3)
             implementation(compose.desktop.currentOs) {
