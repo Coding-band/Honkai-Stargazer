@@ -71,6 +71,7 @@ import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.AccountLogin
+import files.Donation
 import files.IIRCTitle
 import files.Logout
 import files.ModifyHomePage
@@ -107,6 +108,7 @@ import utils.annotation.DoItLater
 import utils.app.BlackAlpha30
 import utils.app.Constants.Companion.HOME_PAGE_MENU_DEFAULT
 import utils.app.DefaultZIndex
+import utils.app.DonationPopUp
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
@@ -122,6 +124,7 @@ import utils.app.getIconByUserAccountIconValue
 import utils.app.newImageRequest
 import utils.app.pxToDp
 import utils.app.removeStrQuote
+import utils.app.showDonationPopup
 import utils.app.showFunctionIsDevelopingToast
 import utils.app.showWarningToast
 import kotlin.math.min
@@ -175,6 +178,9 @@ fun HomePage(
 
         ThreeDotsDialog(navigator = navigator, threeDotDialogPos = threeDotDialogPos, hazeState = hazeState, threeDotDialogDisplay = threeDotDialogDisplay, userAccount = userAccount)
 
+        if(showDonationPopup.value){
+            DonationPopUp(showDonationPopup, hazeState)
+        }
     }
 }
 
@@ -573,6 +579,12 @@ fun ThreeDotsDialog(
                         UIButton(
                             textRes = Res.string.ModifyHomePage,
                             onClick = { showFunctionIsDevelopingToast() },
+                            buttonSize = UIButtonSize.SmallChoice
+                        )
+                        Spacer(Modifier.height(10.dp))
+                        UIButton(
+                            textRes = Res.string.Donation,
+                            onClick = { showDonationPopup.value = true },
                             buttonSize = UIButtonSize.SmallChoice
                         )
                         Spacer(Modifier.height(10.dp))

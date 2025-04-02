@@ -1,19 +1,20 @@
 package utils.app
 
-import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Popup
 import com.mohamedrejeb.richeditor.annotation.ExperimentalRichTextApi
@@ -23,17 +24,16 @@ import com.revenuecat.purchases.kmp.LogLevel
 import com.revenuecat.purchases.kmp.Purchases
 import com.revenuecat.purchases.kmp.configure
 import com.revenuecat.purchases.kmp.models.StoreProduct
-import com.revenuecat.purchases.kmp.models.StoreTransaction
+import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
 import dev.chrisbanes.haze.HazeState
 import files.DonateUs
-import files.Donation
 import files.DonationDesc
-import files.KCEFInstallTitle
 import files.Res
+import files.pom_pom_gift
+import org.jetbrains.compose.resources.painterResource
 import types.UserAccount
 import ui.components.AppDialog
-import ui.components.ThemedProgressBar
 import ui.components.UIButton
 
 private val DonationChoiceList = listOf(
@@ -48,8 +48,11 @@ private val DonationChoiceList = listOf(
 private const val PURCHASE_GOOGLE_KEY = "goog_BpnfBRwPJTJTYljNFCHGzpZDqUM"
 private const val PURCHASE_APPLE_KEY = "appl_rYZMbREirAEzhROzBryDmtGiXSg"
 private var productList: List<StoreProduct> = emptyList()
+lateinit var showDonationPopup : MutableState<Boolean>
 
+@Composable
 fun initPurchase() {
+    showDonationPopup = remember { mutableStateOf(false) }
     // Check if the platform is supported
     if(!isIosPlatform() && !isMacOSPlatform() && !isAndroidPlatform()) {
         return
@@ -68,26 +71,26 @@ fun initPurchase() {
 
     Purchases.logLevel = if(BuildKonfig.appProfile == "DEV") { LogLevel.DEBUG } else { LogLevel.INFO }
     Purchases.configure(apiKey = apiKey) { appUserId = if(UserAccount.getUID() == "000000000") null else UserAccount.getUID() }
-    Purchases.sharedInstance.getProducts(localDonationChoiceList, onSuccess = {
-        productList
+    Purchases.sharedInstance.getProducts(localDonationChoiceList, onSuccess = { list ->
+        productList = list
     }, onError = {
         println("Error fetching products: $it")
     })
 }
 
-fun doPurchase(itemId: String){
+fun doPurchase(itemId: String, isSuccess: MutableState<Boolean>){
+    // Suffix for the product ID based on the platform
     val donationIdSuffix = when {
         isIosPlatform() || isMacOSPlatform()-> "_as"
         else -> "_gp"
     }
 
     try {
-        println("productList : $productList")
         val product = productList.find { it.id == itemId + donationIdSuffix }
 
         if(product == null){
             showWarningToast(
-                message = "Product not found : $itemId + donationIdSuffix",
+                message = "Product not found : ${itemId + donationIdSuffix}",
                 dismissPrevious = true
             )
         }
@@ -96,7 +99,12 @@ fun doPurchase(itemId: String){
             storeProduct = product!!,
             onSuccess = { storeTransaction, customerInfo ->
                 // Handle successful purchase
-                println("Purchase successful: $storeTransaction")
+                isSuccess.value = true
+                showSuccessToast(
+                    message = "Purchase Success, Thank you for your donation!",
+                    dismissPrevious = true
+                )
+                Language().setAppLanguage()
             },
             onError = { error, isUserCancel ->
                 if(!isUserCancel){
@@ -105,12 +113,8 @@ fun doPurchase(itemId: String){
                         message = "Purchase failed: ${error.message}",
                         dismissPrevious = true
                     )
-                }else{
-                    showWarningToast(
-                        message = "Purchased Canceled",
-                        dismissPrevious = true
-                    )
                 }
+                Language().setAppLanguage()
             }
         )
     }catch (e: Exception){
@@ -123,16 +127,31 @@ fun DonationPopUp(
     isShowPopup: MutableState<Boolean>,
     hazeState: HazeState,
 ) {
+    val isSuccessDonation = remember { mutableStateOf(false) }
     if(isShowPopup.value){
+        val urlHandler = LocalUriHandler.current
+        if(
+            isWindowsPlatform() ||
+            isLinuxPlatform() ||
+            isAndroidPlatform() && BuildKonfig.appProfile != "PRODUCTION_GP"
+        ){
+            urlHandler.openUri("https://buymeacoffee.com/codingband")
+            return
+        }
+
         Popup(alignment = Alignment.Center) {
             AppDialog(
                 titleString = removeStrQuote(Res.string.DonateUs), //Downloading the assets
                 hazeState = hazeState,
-                modifier = Modifier.widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH),
                 components = {
-                    DonationPopupContent()
+                    if(isSuccessDonation.value){
+                        DonationSuccessPopupContent()
+                    }else{
+                        DonationPopupContent(isSuccessDonation)
+                    }
                 },
                 isPopupShow = isShowPopup,
+                isDialog = true
             )
         }
     }
@@ -142,6 +161,7 @@ fun DonationPopUp(
 @OptIn(ExperimentalRichTextApi::class)
 @Composable
 private fun DonationPopupContent(
+    isSuccess: MutableState<Boolean>
 ) {
     LazyColumn(
         modifier = Modifier
@@ -165,9 +185,48 @@ private fun DonationPopupContent(
         ) { item ->
             UIButton(
                 text = "${removeStrQuote(Res.string.DonateUs)} ${item.first}",
-                onClick = { doPurchase(item.second) },
+                onClick = { doPurchase(item.second, isSuccess) },
             )
             Spacer(modifier = Modifier.height(12.dp))
+        }
+
+    }
+
+
+}
+
+
+@OptIn(ExperimentalRichTextApi::class)
+@Composable
+private fun DonationSuccessPopupContent(
+) {
+    LazyColumn(
+        modifier = Modifier
+            .widthIn(Constants.INFO_MIN_WIDTH, Constants.INFO_MAX_WIDTH),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        item {
+            Image(
+                painter = painterResource(Res.drawable.pom_pom_gift),
+                contentDescription = null,
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        item {
+            Text(
+                text = "十分感謝您的捐贈！",
+                style = FontSizeNormal20(),
+                color = Color(0xFF222222),
+            )
+        }
+
+        item {
+            Text(
+                text = "當您登入後，我們會向您的帳號發送捐贈者徽章",
+                style = FontSizeNormal16(),
+                color = Color(0xFF222222),
+            )
         }
 
     }
