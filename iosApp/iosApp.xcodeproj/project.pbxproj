@@ -11,8 +11,8 @@
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
-		C30156632D9B9C2C00FF6870 /* PurchasesHybridCommon in Frameworks */ = {isa = PBXBuildFile; productRef = C30156622D9B9C2C00FF6870 /* PurchasesHybridCommon */; };
-		C30156652D9B9C2C00FF6870 /* PurchasesHybridCommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = C30156642D9B9C2C00FF6870 /* PurchasesHybridCommonUI */; };
+		C30156672D9CDD8800FF6870 /* PurchasesHybridCommon in Frameworks */ = {isa = PBXBuildFile; productRef = C30156662D9CDD8800FF6870 /* PurchasesHybridCommon */; };
+		C30156692D9CDD8800FF6870 /* PurchasesHybridCommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = C30156682D9CDD8800FF6870 /* PurchasesHybridCommonUI */; };
 		C3E7261D2C64AA36009EB467 /* composeApp.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39E621A2C64A88D00D91754 /* composeApp.xcframework */; };
 		C3E7261E2C64AA36009EB467 /* composeApp.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C39E621A2C64A88D00D91754 /* composeApp.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -48,8 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C30156632D9B9C2C00FF6870 /* PurchasesHybridCommon in Frameworks */,
-				C30156652D9B9C2C00FF6870 /* PurchasesHybridCommonUI in Frameworks */,
+				C30156672D9CDD8800FF6870 /* PurchasesHybridCommon in Frameworks */,
+				C30156692D9CDD8800FF6870 /* PurchasesHybridCommonUI in Frameworks */,
 				C3E7261D2C64AA36009EB467 /* composeApp.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,8 +132,8 @@
 			);
 			name = iosApp;
 			packageProductDependencies = (
-				C30156622D9B9C2C00FF6870 /* PurchasesHybridCommon */,
-				C30156642D9B9C2C00FF6870 /* PurchasesHybridCommonUI */,
+				C30156662D9CDD8800FF6870 /* PurchasesHybridCommon */,
+				C30156682D9CDD8800FF6870 /* PurchasesHybridCommonUI */,
 			);
 			productName = iosApp;
 			productReference = 7555FF7B242A565900829871 /* Stargazer 3 DEV.app */;
@@ -677,12 +677,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C30156622D9B9C2C00FF6870 /* PurchasesHybridCommon */ = {
+		C30156662D9CDD8800FF6870 /* PurchasesHybridCommon */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C30156612D9B9C2C00FF6870 /* XCRemoteSwiftPackageReference "purchases-hybrid-common" */;
 			productName = PurchasesHybridCommon;
 		};
-		C30156642D9B9C2C00FF6870 /* PurchasesHybridCommonUI */ = {
+		C30156682D9CDD8800FF6870 /* PurchasesHybridCommonUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C30156612D9B9C2C00FF6870 /* XCRemoteSwiftPackageReference "purchases-hybrid-common" */;
 			productName = PurchasesHybridCommonUI;

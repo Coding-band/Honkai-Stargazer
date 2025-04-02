@@ -238,11 +238,6 @@ fun RootContent() {
                     }
                 }
             }
-
-            // Overlay - only show in global when is not Pad Mode
-            if (!isPadMode.value){
-                PomPomPopupUI(hazeState = hazeStateRoot)
-            }
         }
     }
 }
@@ -614,9 +609,8 @@ fun withBGScreen(isPadMode: MutableState<Boolean>, content: @Composable (HazeSta
         }
 
         //Overlay - For Error Message or Loading Popup, only show in page when is Pad Mode
-        if(isPadMode.value){
-            PomPomPopupUI(hazeState = hazeStateLocal)
-        }
+
+        PomPomPopupUI(hazeState = hazeStateLocal)
 
         /*
         Toaster(

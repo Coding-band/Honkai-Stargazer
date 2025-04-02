@@ -35,6 +35,7 @@ import org.jetbrains.compose.resources.painterResource
 import types.UserAccount
 import ui.components.AppDialog
 import ui.components.UIButton
+import utils.annotation.TranslationPls
 
 private val DonationChoiceList = listOf(
     "$1" to "sg3_donation_usd_1",
@@ -64,7 +65,7 @@ fun initPurchase() {
         else -> PURCHASE_GOOGLE_KEY
     }
     val donationIdSuffix = when {
-        isIosPlatform() || isMacOSPlatform()-> "_as"
+        isIosPlatform() || isMacOSPlatform()-> "_asr"
         else -> "_gp"
     }
     val localDonationChoiceList = DonationChoiceList.map { it.second + donationIdSuffix }
@@ -81,7 +82,7 @@ fun initPurchase() {
 fun doPurchase(itemId: String, isSuccess: MutableState<Boolean>){
     // Suffix for the product ID based on the platform
     val donationIdSuffix = when {
-        isIosPlatform() || isMacOSPlatform()-> "_as"
+        isIosPlatform() || isMacOSPlatform()-> "_asr"
         else -> "_gp"
     }
 
@@ -196,7 +197,6 @@ private fun DonationPopupContent(
 }
 
 
-@OptIn(ExperimentalRichTextApi::class)
 @Composable
 private fun DonationSuccessPopupContent(
 ) {
@@ -213,6 +213,7 @@ private fun DonationSuccessPopupContent(
             Spacer(modifier = Modifier.height(8.dp))
         }
 
+        @TranslationPls
         item {
             Text(
                 text = "十分感謝您的捐贈！",
@@ -221,6 +222,7 @@ private fun DonationSuccessPopupContent(
             )
         }
 
+        @TranslationPls
         item {
             Text(
                 text = "當您登入後，我們會向您的帳號發送捐贈者徽章",
