@@ -137,6 +137,7 @@ fun DonationPopUp(
             isAndroidPlatform() && BuildKonfig.appProfile != "PRODUCTION_GP"
         ){
             urlHandler.openUri("https://buymeacoffee.com/codingband")
+            isShowPopup.value = false
             return
         }
 
