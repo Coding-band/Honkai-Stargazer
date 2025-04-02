@@ -187,6 +187,7 @@ fun UpdateAssetsPopup(
                         }
                     },
                     isPopupShow = isShowPopup,
+                    isDialog = true,
                 )
             }
         }else{

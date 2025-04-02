@@ -297,7 +297,8 @@ fun UserInfoPageScreen(
                         color = Color(0xFF666666)
                     )
                 },
-                isPopupShow = showPopup
+                isPopupShow = showPopup,
+                isDialog = true,
             )
         }
     }

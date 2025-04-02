@@ -231,6 +231,7 @@ fun HoyolabServerRemarksPopup(modifier: Modifier = Modifier, showPopup : Mutable
             AppDialog(
                 titleString = removeStrQuote(Res.string.RemarksInLogin),
                 hazeState = hazeState,
+                isDialog = true,
                 components = {
                     val richTextState = rememberRichTextState()
                     richTextState.setHtml(LongStringXML().LoginPolicy())
@@ -280,6 +281,7 @@ fun HoyolabServerSelectPopup(modifier: Modifier = Modifier, showPopup : MutableS
             AppDialog(
                 titleString = removeStrQuote(Res.string.SelectServerTitle),
                 hazeState = hazeState,
+                isDialog = true,
                 components = {
                     LazyColumn(verticalArrangement = Arrangement.spacedBy(12.dp), state = rememberLazyListState()) {
                         item {
@@ -365,6 +367,7 @@ fun HoyolabManualLoginPopup(modifier: Modifier = Modifier, showPopup : MutableSt
             AppDialog(
                 titleString = removeStrQuote(Res.string.SelectServerTitle),
                 hazeState = hazeState,
+                isDialog = true,
                 components = {
                     val lazyListState = rememberLazyListState()
                     LazyColumn(verticalArrangement = Arrangement.spacedBy(12.dp), state = lazyListState) {

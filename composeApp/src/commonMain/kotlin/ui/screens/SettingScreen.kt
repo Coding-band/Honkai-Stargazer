@@ -105,6 +105,7 @@ import utils.app.isLinuxPlatform
 import utils.app.isWindowsPlatform
 import utils.app.pxToDp
 import utils.app.removeStrQuote
+import utils.app.showDonationPopup
 import utils.app.showFunctionIsDevelopingToast
 import utils.app.showSuccessToast
 import utils.app.showWarningToast
@@ -116,7 +117,6 @@ val doRecomposeText = mutableStateOf(false)
 val doInit = mutableStateOf(false)
 val doRefresh = mutableStateOf(false)
 lateinit var showUpdatePopupInSetting : MutableState<Boolean>
-lateinit var showDonationPopupInSetting : MutableState<Boolean>
 
 @Composable
 fun SettingScreen(
@@ -126,7 +126,6 @@ fun SettingScreen(
 
     val urlHandler = LocalUriHandler.current
     showUpdatePopupInSetting = remember { mutableStateOf(false) }
-    showDonationPopupInSetting = remember { mutableStateOf(false) }
     val canUpdatePopup = remember { mutableStateOf(true) } //Not for use
     val wallpaperName = remember { mutableStateOf("----") }
     LaunchedEffect(Settings().getString("backgroundImage", "221000"), Language.TextLanguageInstance, doRecomposeText.value){
@@ -277,11 +276,7 @@ fun SettingScreen(
                         SettingOptionNavigateBar(
                             titleRes = Res.string.DonateUs,
                             navigateClick = {
-                                if(isWindowsPlatform() || isLinuxPlatform() || isAndroidPlatform() && BuildKonfig.appProfile != "PRODUCTION_GP"){
-                                    urlHandler.openUri("https://buymeacoffee.com/codingband")
-                                }else{
-                                    showDonationPopupInSetting.value = true
-                                }
+                                showDonationPopup.value = true
                             } //@DoItLater("Add the function of donation")
                         )
 
@@ -405,8 +400,8 @@ fun SettingScreen(
             if(showUpdatePopupInSetting.value){
                 UpdateAssetsPopup(showUpdatePopupInSetting, hazeState, forceDownload = true)
             }
-            if(showDonationPopupInSetting.value){
-                DonationPopUp(showDonationPopupInSetting, hazeState)
+            if(showDonationPopup.value){
+                DonationPopUp(showDonationPopup, hazeState)
             }
         }
     }

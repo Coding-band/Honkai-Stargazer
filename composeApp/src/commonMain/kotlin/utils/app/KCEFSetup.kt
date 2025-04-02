@@ -81,6 +81,7 @@ fun KCEFPopup(isShowPopup: MutableState<Boolean>, hazeState: HazeState) {
                         }
                     },
                     isPopupShow = isShowPopup,
+                    isDialog = true,
                 )
             }
         }else{

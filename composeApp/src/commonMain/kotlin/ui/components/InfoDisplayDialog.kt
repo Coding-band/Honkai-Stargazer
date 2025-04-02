@@ -38,6 +38,7 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.Dialog
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.HazeStyle
 import dev.chrisbanes.haze.hazeChild
@@ -86,80 +87,115 @@ fun AppDialog(
     componentsBottom: @Composable () -> Unit = {},
     modifier: Modifier = Modifier,
     hazeState: HazeState = hazeStateRoot,
-    isPopupShow: MutableState<Boolean>
+    isPopupShow: MutableState<Boolean>,
+    isDialog: Boolean = false,
 ) {
-
-    val focusManager = LocalFocusManager.current
 
     if(isPopupShow.value) {
         //Dialog
-        Box(modifier = modifier
-            .padding(20.dp)
-            .wrapContentHeight()
-            .clip(
-                RoundedCornerShape(
-                    topStart = 4.dp,
-                    topEnd = 16.dp,
-                    bottomStart = 4.dp,
-                    bottomEnd = 4.dp
+        if(isDialog){
+            Dialog(onDismissRequest = {}){
+                AppDialogContent(
+                    titleString = titleString,
+                    components = components,
+                    componentsBottom = componentsBottom,
+                    modifier = modifier,
+                    hazeState = hazeState,
+                    isPopupShow = isPopupShow,
+                    isDialog = isDialog
                 )
+            }
+        }else{
+            AppDialogContent(
+                titleString = titleString,
+                components = components,
+                componentsBottom = componentsBottom,
+                modifier = modifier,
+                hazeState = hazeState,
+                isPopupShow = isPopupShow,
+                isDialog = isDialog
             )
-            .hazeSource(state = hazeState, zIndex = DialogPopUpZIndex)
-            .hazeEffectSG3(
-                state = hazeState,
-                isBlur = globalHazeBlur,
-                style = HazeBlurDp20
+        }
+    }
+}
+
+@Composable
+fun AppDialogContent(
+    titleString: String,
+    components: @Composable () -> Unit,
+    componentsBottom: @Composable () -> Unit = {},
+    modifier: Modifier = Modifier,
+    hazeState: HazeState = hazeStateRoot,
+    isPopupShow: MutableState<Boolean>,
+    isDialog: Boolean = false,
+) {
+    val focusManager = LocalFocusManager.current
+    Box(modifier = modifier
+        .padding(if(isDialog) 0.dp else 20.dp)
+        .wrapContentHeight()
+        .clip(
+            RoundedCornerShape(
+                topStart = 4.dp,
+                topEnd = 16.dp,
+                bottomStart = 4.dp,
+                bottomEnd = 4.dp
             )
-            .background(Color(0xCCF3F9FF))
-            .pointerInput(Unit){
-                detectTapGestures(onTap = {
-                    focusManager.clearFocus()
-                })
-            },
-        ) {
-            //Inner padding
-            Column {
+        )
+        .hazeSource(state = hazeState, zIndex = DialogPopUpZIndex)
+        .hazeEffectSG3(
+            state = hazeState,
+            isBlur = globalHazeBlur,
+            style = HazeBlurDp20
+        )
+        .background(Color(0xCCF3F9FF))
+        .pointerInput(Unit){
+            detectTapGestures(onTap = {
+                focusManager.clearFocus()
+            })
+        },
+    ) {
+        //Inner padding
+        Column {
 
-                Column(modifier = Modifier.padding(16.dp)) {
-                    //Title & Exit Button
-                    Row {
-                        Text(
-                            titleString,
-                            style = FontSizeNormal20(),
-                            color = Color.Black,
-                            maxLines = 1,
-                            modifier = Modifier.align(Alignment.CenterVertically).weight(1f)
-                        )
-                        OutlinedButton(
-                            contentPadding = PaddingValues(0.dp),
-                            modifier = Modifier
-                                .size(40.dp)
-                                .align(Alignment.CenterVertically),
-                            onClick = { isPopupShow.value = false },
-                            colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent),
-                            border = BorderStroke(0.dp, Color(0x00FFFFFF)),
-                            shape = CircleShape,
-                        ) {
-                            Image(
-                                painter = painterResource(Res.drawable.ui_icon_close),
-                                contentDescription = "Press to Close Dialog",
-                                modifier = Modifier.size(40.dp),
-                                colorFilter = ColorFilter.tint(Color(0xFF222222))
-                            )
-                        }
-                    }
-
-                    Spacer(modifier = Modifier.height(2.dp))
-                    Box(
-                        modifier = Modifier.fillMaxWidth().height(2.dp).background(Color(0x0F000000))
+            Column(modifier = Modifier.padding(16.dp)) {
+                //Title & Exit Button
+                Row {
+                    Text(
+                        titleString,
+                        style = FontSizeNormal20(),
+                        color = Color.Black,
+                        maxLines = 1,
+                        modifier = Modifier.align(Alignment.CenterVertically).weight(1f)
                     )
-                    Spacer(modifier = Modifier.height(6.dp))
-
-                    components()
+                    OutlinedButton(
+                        contentPadding = PaddingValues(0.dp),
+                        modifier = Modifier
+                            .size(40.dp)
+                            .align(Alignment.CenterVertically),
+                        onClick = { isPopupShow.value = false },
+                        colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color.Transparent),
+                        border = BorderStroke(0.dp, Color(0x00FFFFFF)),
+                        shape = CircleShape,
+                    ) {
+                        Image(
+                            painter = painterResource(Res.drawable.ui_icon_close),
+                            contentDescription = "Press to Close Dialog",
+                            modifier = Modifier.size(40.dp),
+                            colorFilter = ColorFilter.tint(Color(0xFF222222))
+                        )
+                    }
                 }
 
-                componentsBottom()
+                Spacer(modifier = Modifier.height(2.dp))
+                Box(
+                    modifier = Modifier.fillMaxWidth().height(2.dp).background(Color(0x0F000000))
+                )
+                Spacer(modifier = Modifier.height(6.dp))
+
+                components()
             }
+
+            componentsBottom()
         }
     }
 }
