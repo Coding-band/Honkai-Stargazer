@@ -37,7 +37,7 @@ val versionCodeFinal = properties.getProperty("APP_VERSION_CODE").toInt() + 1
 //BETA | C.BETA | DEV | PRODUCTION
 //VersionUpdateCheck
 val isForAppStore = true
-val isForPlayStore = true
+val isForPlayStore = false
 var appProfile = "PRODUCTION" //Please Modify this String ONLY IF NECESSERY
 val appVersionCodeName = "SG3"
 

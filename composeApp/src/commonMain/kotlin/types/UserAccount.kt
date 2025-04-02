@@ -85,6 +85,7 @@ class UserAccount(
 
     var adPlan : AdPlan = AdPlan.NORMAL,
     var role: Role = Role.USER,
+    var donor: Boolean = false,
     var lastLoginTime: Long = 0,
 ){
     companion object{

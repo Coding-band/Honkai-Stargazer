@@ -40,6 +40,7 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
@@ -92,6 +93,7 @@ import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
 import utils.app.LongStringXML
 import utils.app.TextColorNormal
+import utils.app.TextDonorColorBrush
 import utils.app.getIconByUserAccountIconValue
 import utils.app.newImageLoader
 import utils.app.newImageRequest
@@ -338,7 +340,11 @@ fun UserInfoBioUI(context: PlatformContext, userAccount: UserAccount) {
         Text(
             userAccount.username,
             modifier = Modifier.align(Alignment.CenterHorizontally).padding(2.dp),
-            style = FontSizeNormalLarge24(),
+            style = FontSizeNormalLarge24() + if(userAccount.donor) {
+                TextStyle(brush = TextDonorColorBrush)
+            } else {
+                TextStyle(color = TextColorNormal)
+            },
             color = Color.White
         )
 
@@ -353,14 +359,7 @@ fun UserInfoBioUI(context: PlatformContext, userAccount: UserAccount) {
                                 Color(0xFFF3F9FF)
                             ).align(Alignment.CenterVertically)
                     ) {
-                        if(userAccount.role.prefixEmoji != null) {
-                            Text(
-                                modifier = Modifier.padding(6.dp),
-                                text = "${userAccount.role.prefixEmoji}",
-                                style = FontSizeNormal12(),
-                                color = Color(0xFF393A5C),
-                            )
-                        }else if(userAccount.role.prefixIcon != null){
+                        if(userAccount.role.prefixIcon != null){
                             Image(
                                 modifier = Modifier.padding(6.dp).size(16.dp),
                                 painter = painterResource(userAccount.role.prefixIcon!!),
@@ -369,12 +368,30 @@ fun UserInfoBioUI(context: PlatformContext, userAccount: UserAccount) {
                         }
 
                         Text(
-                            modifier = Modifier.padding(start = 0.dp, end = 6.dp, top = 6.dp, bottom = 6.dp),
-                            text = if(userAccount.role.strRes != null) removeStrQuote(userAccount.role.strRes!!) else userAccount.role.name.uppercase(),
+                            modifier = Modifier.padding(start = 6.dp, end = 6.dp, top = 6.dp, bottom = 6.dp),
+                            text =
+                                "${if(userAccount.role.prefixEmoji != null) "${userAccount.role.prefixEmoji }" else ""}${if(userAccount.role.strRes != null) removeStrQuote(userAccount.role.strRes!!) else userAccount.role.name.uppercase()}",
                             style = FontSizeNormal12(),
                             color = Color(0xFF393A5C),
                         )
                     }
+            }
+
+            println(" userAccount.donor = ${userAccount.donor}")
+            if(userAccount.donor){
+                Row(
+                    Modifier.padding(6.dp).clip(CircleShape)
+                        .background(
+                            Color(0xFFF3F9FF)
+                        ).align(Alignment.CenterVertically)
+                ) {
+                    Text(
+                        modifier = Modifier.padding(start = 6.dp, end = 6.dp, top = 6.dp, bottom = 6.dp),
+                        text = "${Role.DONOR.prefixEmoji!!} ${removeStrQuote(Role.DONOR.strRes!!)}",
+                        style = FontSizeNormal12(),
+                        color = Color(0xFF393A5C),
+                    )
+                }
             }
         }
 

@@ -52,6 +52,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.BlendMode
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
@@ -59,6 +60,7 @@ import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavBackStackEntry
@@ -119,6 +121,7 @@ import utils.app.ProgressLevelPrimary
 import utils.app.TextColorLevel
 import utils.app.TextColorNormal
 import utils.app.TextColorNormalDim
+import utils.app.TextDonorColorBrush
 import utils.app.checkHasErrorLogFromLastCrash
 import utils.app.getIconByUserAccountIconValue
 import utils.app.newImageRequest
@@ -273,49 +276,34 @@ fun HomePageHeader(
                             .padding(start = 8.dp, end = 8.dp)
                             .weight(1f)
                     ) {
-                        //User Name & Role Tag - Hmm interesting Kt
+                        //User Name & Role Tag Prefix - Hmm interesting Kt
                         Row(modifier = Modifier.weight(1f)) {
-                            //User Role Tag
-                            if(userAccount.value.role != Role.USER && (userAccount.value.role.prefixEmoji != null || userAccount.value.role.prefixIcon != null) ){
-                                Row(
-                                    Modifier.padding(4.dp).clip(CircleShape)
-                                        .background(
-                                            Color(0xFFF3F9FF)
-                                        ).align(Alignment.CenterVertically)
-                                ) {
-                                    if(userAccount.value.role.prefixEmoji != null) {
-                                        Text(
-                                            modifier = Modifier.padding(4.dp),
-                                            text = "${userAccount.value.role.prefixEmoji}",
-                                            style = FontSizeNormal12(),
-                                            color = Color(0xFF393A5C),
-                                        )
-                                    }else if(userAccount.value.role.prefixIcon != null){
-                                        Image(
-                                            modifier = Modifier.padding(6.dp).size(16.dp),
-                                            painter = painterResource(userAccount.value.role.prefixIcon!!),
-                                            contentDescription = "Role Icon",
-                                        )
-                                    }
-                                }
-                                Spacer(modifier = Modifier.width(4.dp))
+                            //User Name
+                            if(userAccount.value.role.prefixIcon != null){
+                                Image(
+                                    modifier = Modifier
+                                        .size(24.dp),
+                                    painter = painterResource(userAccount.value.role.prefixIcon!!),
+                                    contentDescription = "User Role Icon"
+                                )
                             }
 
-                            //User Name
                             Text(
-                                text = userAccount.value.username,
+                                text = "${userAccount.value.role.prefixEmoji ?: ""}${userAccount.value.username}",
                                 modifier = Modifier
                                     .weight(1f)
                                     .fillMaxSize()
                                     .wrapContentHeight(align = Alignment.CenterVertically),
-                                color = TextColorNormal,
-                                style = FontSizeNormalLarge24(),
+                                style = FontSizeNormalLarge24() + if(userAccount.value.donor) {
+                                    TextStyle(brush = TextDonorColorBrush)
+                                } else {
+                                    TextStyle(color = TextColorNormal)
+                                },
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis,
                             )
 
                             Spacer(modifier = Modifier.width(4.dp))
-
 
                         }
                         //Helping Team

@@ -63,6 +63,9 @@ val TextColorNormal = Color(0xFFFFFFFF)
 val TextColorNormalDim = Color(0xFFDDDDDD)
 val TextColorNormalDimCC = Color(0xCCDDDDDD)
 val TextColorLevel = Color(0xFFDBC291)
+val TextDonorColorBrush = Brush.verticalGradient(
+    colors = listOf(Color(0xFF57C1FF), Color(0xFFFFFFFF)),
+)
 val Transparent = Color(0x00000000)
 val ProgressLevelBackground = Color(0xFF666666)
 val ProgressLevelPrimary = Color(0xFFDBC291)
