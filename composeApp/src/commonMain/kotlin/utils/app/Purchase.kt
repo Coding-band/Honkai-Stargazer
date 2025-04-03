@@ -35,6 +35,8 @@ import org.jetbrains.compose.resources.painterResource
 import types.UserAccount
 import ui.components.AppDialog
 import ui.components.UIButton
+import ui.screens.doDonorRefresh
+import ui.screens.doRecompose
 import utils.annotation.TranslationPls
 
 private val DonationChoiceList = listOf(
@@ -101,10 +103,8 @@ fun doPurchase(itemId: String, isSuccess: MutableState<Boolean>){
             onSuccess = { storeTransaction, customerInfo ->
                 // Handle successful purchase
                 isSuccess.value = true
-                showSuccessToast(
-                    message = "Purchase Success, Thank you for your donation!",
-                    dismissPrevious = true
-                )
+                UserAccount.INSTANCE.donor = true
+                doDonorRefresh.value = !doDonorRefresh.value
                 Language().setAppLanguage()
             },
             onError = { error, isUserCancel ->

@@ -288,20 +288,24 @@ fun HomePageHeader(
                                 )
                             }
 
-                            Text(
-                                text = "${userAccount.value.role.prefixEmoji ?: ""}${userAccount.value.username}",
-                                modifier = Modifier
-                                    .weight(1f)
-                                    .fillMaxSize()
-                                    .wrapContentHeight(align = Alignment.CenterVertically),
-                                style = FontSizeNormalLarge24() + if(userAccount.value.donor) {
-                                    TextStyle(brush = TextDonorColorBrush)
-                                } else {
-                                    TextStyle(color = TextColorNormal)
-                                },
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis,
-                            )
+                            key(doDonorRefresh.value){
+                                println("userAccount.value.donor = ${userAccount.value.donor}")
+                                Text(
+                                    text = "${userAccount.value.role.prefixEmoji ?: ""}${userAccount.value.username}",
+                                    modifier = Modifier
+                                        .weight(1f)
+                                        .fillMaxSize()
+                                        .wrapContentHeight(align = Alignment.CenterVertically),
+                                    style = FontSizeNormalLarge24() + if(userAccount.value.donor) {
+                                        TextStyle(brush = TextDonorColorBrush)
+                                    } else {
+                                        TextStyle(color = TextColorNormal)
+                                    },
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis,
+                                )
+                            }
+
 
                             Spacer(modifier = Modifier.width(4.dp))
 

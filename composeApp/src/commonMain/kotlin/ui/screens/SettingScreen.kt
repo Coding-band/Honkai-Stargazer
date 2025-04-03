@@ -113,6 +113,7 @@ import utils.starbase.StarbaseAPI
 import kotlin.math.max
 
 val doRecompose = mutableStateOf(false)
+val doDonorRefresh = mutableStateOf(false)
 val doRecomposeText = mutableStateOf(false)
 val doInit = mutableStateOf(false)
 val doRefresh = mutableStateOf(false)
