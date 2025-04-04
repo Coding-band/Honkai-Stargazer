@@ -31,6 +31,7 @@ import kotlinx.serialization.json.long
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import types.UserAccount.Companion.INSTANCE
+import ui.screens.doDonorRefresh
 import utils.app.Preferences
 import utils.annotation.DoItLater
 import utils.app.errorLog
@@ -439,8 +440,6 @@ class UserAccount(
             //userAccount.characterList = Json.decodeFromString<ArrayList<Character>>(Settings().getString("userAccountCharList", Json.encodeToString(arrayListOf<Character>())))
             //return Json.decodeFromString<UserAccount>(readFromFile("userAccount.json", true))
             val account = StarbaseAPI().getUserAccountInfoInit()
-            println("INSTANCE LOAD : account.uid & account.username : ${account.uid} & ${account.username}")
-            println(account.donor)
             account.isLogin = true
             account.cookies = Settings().getString("cookies", "")
             account.hoyolabId = Settings().getString("hoyolabId", "")
