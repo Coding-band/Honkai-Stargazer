@@ -1043,6 +1043,10 @@ val JsonElementSaver: Saver<JsonElement, Any> = listSaver(
     save = { listOf(it.toString()) },
     restore = { Json.parseToJsonElement(it[0]) }
 )
+val JsonObjectSaver: Saver<JsonObject, Any> = listSaver(
+    save = { listOf(it.toString()) },
+    restore = { Json.parseToJsonElement(it[0]).jsonObject }
+)
 
 fun <T> SnapshotStateList<T>.swapList(newList: List<T>){
     clear()

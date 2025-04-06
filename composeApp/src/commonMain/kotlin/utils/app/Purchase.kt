@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -24,20 +25,21 @@ import com.revenuecat.purchases.kmp.LogLevel
 import com.revenuecat.purchases.kmp.Purchases
 import com.revenuecat.purchases.kmp.configure
 import com.revenuecat.purchases.kmp.models.StoreProduct
-import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
 import dev.chrisbanes.haze.HazeState
 import files.DonateUs
 import files.DonationDesc
 import files.Res
 import files.pom_pom_gift
+import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.JsonObject
 import org.jetbrains.compose.resources.painterResource
 import types.UserAccount
 import ui.components.AppDialog
 import ui.components.UIButton
 import ui.screens.doDonorRefresh
-import ui.screens.doRecompose
 import utils.annotation.TranslationPls
+import utils.starbase.StarbaseAPI
 
 private val DonationChoiceList = listOf(
     "$1" to "sg3_donation_usd_1",
@@ -93,7 +95,7 @@ fun doPurchase(itemId: String, isSuccess: MutableState<Boolean>){
 
         if(product == null){
             showWarningToast(
-                message = "Product not found : ${itemId + donationIdSuffix}",
+                message = "Product not found : ${itemId + donationIdSuffix}, please check did your device logged in Google Play already.",
                 dismissPrevious = true
             )
         }
@@ -128,6 +130,7 @@ fun DonationPopUp(
     isShowPopup: MutableState<Boolean>,
     hazeState: HazeState,
 ) {
+    val donationMonthData = rememberSaveable(saver = JsonObjectSaver) { (StarbaseAPI().getDonationSumThisMonth()) }
     val isSuccessDonation = remember { mutableStateOf(false) }
     if(isShowPopup.value){
         val urlHandler = LocalUriHandler.current
@@ -149,7 +152,7 @@ fun DonationPopUp(
                     if(isSuccessDonation.value){
                         DonationSuccessPopupContent()
                     }else{
-                        DonationPopupContent(isSuccessDonation)
+                        DonationPopupContent(isSuccessDonation, donationMonthData)
                     }
                 },
                 isPopupShow = isShowPopup,
@@ -163,7 +166,8 @@ fun DonationPopUp(
 @OptIn(ExperimentalRichTextApi::class)
 @Composable
 private fun DonationPopupContent(
-    isSuccess: MutableState<Boolean>
+    isSuccess: MutableState<Boolean>,
+    donationMonthData: JsonObject,
 ) {
     LazyColumn(
         modifier = Modifier
@@ -172,6 +176,7 @@ private fun DonationPopupContent(
     ) {
         item {
             val richTextState = rememberRichTextState()
+            val richTextState2 = rememberRichTextState()
             richTextState.setHtml(removeStrQuote(Res.string.DonationDesc))
             RichText(
                 state = richTextState,
@@ -179,6 +184,31 @@ private fun DonationPopupContent(
                 fontFamily = FontSizeNormal14().fontFamily,
                 fontWeight = FontSizeNormal14().fontWeight
             )
+            Spacer(modifier = Modifier.height(6.dp))
+
+            //进行任意一项捐赠即可获取特殊标识（需先绑定崩坏：星穹铁道账号），每月订阅用户还可使用其他進階功能（稍後公布）。
+            /*
+            richTextState2.setHtml(removeStrQuote(Res.string.DonationDesc2))
+            RichText(
+                state = richTextState2,
+                fontSize = FontSizeNormal14().fontSize,
+                fontFamily = FontSizeNormal14().fontFamily,
+                fontWeight = FontSizeNormal14().fontWeight
+            )
+             */
+            Spacer(modifier = Modifier.height(10.dp))
+
+            // Progress bar with PomPom Chief
+
+            // Display the donation amount for this month
+
+            @TranslationPls
+            Text(
+                text = "本月已完成${donationMonthData["percent"]}% (${donationMonthData["total"]} / ${donationMonthData["target"]})",
+                style = FontSizeNormal16(),
+                color = Color(0xFF222222),
+            )
+
             Spacer(modifier = Modifier.height(10.dp))
         }
 
