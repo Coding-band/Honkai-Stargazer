@@ -121,9 +121,11 @@ fun IIRCHomePageScreen(
 
 @Composable
 fun RedeemPage(hazeState : HazeState) {
+
     Box{
         val minItemSize = 96.dp
         val currentDisplayPage = remember { mutableStateOf("WORLD") }
+        val currList = remember { mutableStateOf(arrayListOf<IIRC>()) }
 
         LazyVerticalGrid(
             columns = GridCells.Adaptive(minItemSize),

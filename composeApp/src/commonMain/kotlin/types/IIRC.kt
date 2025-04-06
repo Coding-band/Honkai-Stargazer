@@ -9,15 +9,29 @@ import files.material_credit
 import files.material_hertareum
 import files.material_shield
 import files.material_strale
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.IO
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonArray
+import kotlinx.serialization.json.boolean
+import kotlinx.serialization.json.decodeFromJsonElement
+import kotlinx.serialization.json.int
+import kotlinx.serialization.json.jsonArray
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.DrawableResource
 import utils.app.Language
+import utils.app.readFromOnlineURL
+import utils.starbase.StarbaseAPI
 
 @Serializable
 data class IIRCCharacter(
     val id: Int,
+    val worldId: Int,
     val name: Map<Language.TextLanguage, String>,
     val isUnlocked: Boolean = false,
     val isVisible: Boolean = false,
@@ -74,30 +88,61 @@ enum class IIRCCurrecyType(val icon: DrawableResource) {
 
 open class IIRC {
     companion object {
-        /*
-        val iircWorldInfo = getIIRCWorldInfoFromJSON()
+        // final variables
         val iircCharInfo = getIIRCCharInfoFromJSON()
+        val iircWorldInfo = getIIRCWorldInfoFromJSON()
 
         private fun getIIRCWorldInfoFromJSON() : ArrayList<IIRCWorld> {
-            val iircWorldJson = getAssetsJsonByFilePath("easter_egg/iirc/iirc_world.json", defaultData = "[]")
+            val iircWorldJson = Json.parseToJsonElement(readFromOnlineURL(StarbaseAPI().getGitHubStaticAssetURL()+"/data/iirc/iirc_world.json", defaultData = "[]"))
 
             if(iircWorldJson !is JsonArray || iircWorldJson.jsonArray.isEmpty()) return arrayListOf()
 
-            return runBlocking {
-                val job = async(Dispatchers.Default){
-                    val listExtDataJson = charExtListJson.jsonArray.firstOrNull { charData -> charData.jsonObject["officialId"]!!.jsonPrimitive.content == charId } ?: return@async Character(path = Path.Unspecified, )
-                    // World-level
-                    for(world in iircWorldJson.jsonArray){
-
+            return runBlocking(Dispatchers.IO) {
+                val iircWorldArrayList = arrayListOf<IIRCWorld>()
+                async {
+                    iircWorldJson.jsonArray.map {
+                        iircWorldArrayList.add(
+                            IIRCWorld(
+                                id = it.jsonObject["id"]!!.jsonPrimitive.int,
+                                name = Json.decodeFromJsonElement(it.jsonObject["name"]!!),
+                                characters = iircCharInfo.filter { char -> char.worldId == it.jsonObject["id"]!!.jsonPrimitive.int },
+                                isVisible = it.jsonObject["isVisible"]!!.jsonPrimitive.boolean
+                            )
+                        )
                     }
-                    return@async arrayListOf<IIRCWorld>()
-                }
+                    return@async iircWorldArrayList
+                }.await()
             }
 
         }
 
+        private fun getIIRCCharInfoFromJSON() : ArrayList<IIRCCharacter> {
+            val iircCharJson = Json.parseToJsonElement(readFromOnlineURL(StarbaseAPI().getGitHubStaticAssetURL()+"/data/iirc/iirc_char.json", defaultData = "[]"))
 
-         */
+            if(iircCharJson !is JsonArray || iircCharJson.jsonArray.isEmpty()) return arrayListOf()
+
+            return runBlocking(Dispatchers.IO) {
+                async {
+                    iircCharJson.jsonArray.map {
+                        /*
+                        IIRCCharacter(
+                            id = it.jsonObject["id"]!!.jsonPrimitive.int,
+                            worldId = it.jsonObject["worldId"]!!.jsonPrimitive.int,
+                            name = Json.decodeFromJsonElement(it.jsonObject["name"]!!),
+                            isUnlocked = it.jsonObject["isUnlocked"]!!.jsonPrimitive.boolean,
+                            isVisible = it.jsonObject["isVisible"]!!.jsonPrimitive.boolean,
+                            count = it.jsonObject["count"]!!.jsonPrimitive.int,
+                            status = Json.decodeFromJsonElement(it.jsonObject["status"]!!),
+                            upgradeRequirements = Json.decodeFromJsonElement(it.jsonObject["upgradeRequirements"]!!),
+                            visibleRequirements = Json.decodeFromJsonElement(it.jsonObject["visibleRequirements"]!!)
+                        )
+
+                         */
+                    }
+                }.await() as ArrayList<IIRCCharacter>
+            }
+        }
+
         val WorldListSaver: Saver<ArrayList<IIRCWorld>, Any> = listSaver(
             save = { listOf(Json.encodeToString(it)) },
             restore = { Json.decodeFromString(it[0]) }
