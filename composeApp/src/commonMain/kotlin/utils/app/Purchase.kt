@@ -43,6 +43,7 @@ import com.revenuecat.purchases.kmp.LogLevel
 import com.revenuecat.purchases.kmp.Purchases
 import com.revenuecat.purchases.kmp.configure
 import com.revenuecat.purchases.kmp.models.StoreProduct
+import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
 import dev.chrisbanes.haze.HazeState
 import files.DonateUs
@@ -141,6 +142,7 @@ fun doPurchase(itemId: String, isSuccess: MutableState<Boolean>){
                 // Handle successful purchase
                 isSuccess.value = true
                 UserAccount.INSTANCE.donor = true
+                Settings().putBoolean("donorNeedRedeem", UserAccount.getUID() == "000000000")
                 doDonorRefresh.value = !doDonorRefresh.value
                 Language().setAppLanguage()
             },

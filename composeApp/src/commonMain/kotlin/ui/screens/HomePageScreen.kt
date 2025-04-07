@@ -296,7 +296,7 @@ fun HomePageHeader(
                                         .weight(1f)
                                         .fillMaxSize()
                                         .wrapContentHeight(align = Alignment.CenterVertically),
-                                    style = FontSizeNormalLarge24() + if(userAccount.value.donor) {
+                                    style = FontSizeNormalLarge24() + if(userAccount.value.donor || Settings().getBoolean("donorNeedRedeem", false)) {
                                         TextStyle(brush = TextDonorColorBrush)
                                     } else {
                                         TextStyle(color = TextColorNormal)

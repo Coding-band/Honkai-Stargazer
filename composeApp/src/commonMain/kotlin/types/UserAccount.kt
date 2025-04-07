@@ -179,6 +179,9 @@ class UserAccount(
                         INSTANCE.achievements = userInfo.jsonObject["data"]!!.jsonArray[2].jsonObject["value"]!!.jsonPrimitive.int
                         INSTANCE.chestOpened = userInfo.jsonObject["data"]!!.jsonArray[3].jsonObject["value"]!!.jsonPrimitive.int
                         INSTANCE.isLogin = true
+                        if(Settings().getBoolean("donorNeedRedeem", false)){
+                            INSTANCE.donor = true
+                        }
 
                         Settings().putString("uid", INSTANCE.uid)
                     }
