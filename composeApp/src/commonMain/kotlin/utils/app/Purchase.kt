@@ -89,8 +89,6 @@ fun initPurchase() {
         if(isIosPlatform()) PURCHASE_APPLE_KEY else PURCHASE_GOOGLE_KEY,
         productList
     )
-
-    println(productList.value.size)
 }
 
 fun doPurchase(itemId: String, isSuccess: MutableState<Boolean>){
