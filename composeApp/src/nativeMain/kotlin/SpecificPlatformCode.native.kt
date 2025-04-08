@@ -272,21 +272,20 @@ actual fun doPurchaseImpl(itemId: String, isSuccess: MutableState<Boolean>, prod
 
 actual fun initPurchaseImpl(
     productIdList: List<Pair<String, String>>,
-    apiKey: String
-) : List<Any> {
+    apiKey: String,
+    productList: MutableState<List<Any>>
+) {
     // iOS version
     // Initialize purchase related variables or states here
     val donationIdSuffix = "_asr"
     val localDonationChoiceList = productIdList.map { it.second + donationIdSuffix }
-    var returnList = emptyList<Any>()
 
     // Initialize Purchases SDK
     Purchases.logLevel = if(BuildKonfig.appProfile == "DEV") { LogLevel.DEBUG } else { LogLevel.INFO }
     Purchases.configure(apiKey = apiKey) { appUserId = if(UserAccount.getUID() == "000000000") null else UserAccount.getUID() }
     Purchases.sharedInstance.getProducts(localDonationChoiceList, onSuccess = { list ->
-        returnList = list
+        productList.value = list
     }, onError = {
         println("Error fetching products: $it")
     })
-    return returnList
 }

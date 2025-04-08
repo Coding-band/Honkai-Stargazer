@@ -72,7 +72,7 @@ private val DonationChoiceList = listOf(
 
 private const val PURCHASE_GOOGLE_KEY = "goog_BpnfBRwPJTJTYljNFCHGzpZDqUM"
 private const val PURCHASE_APPLE_KEY = "appl_rYZMbREirAEzhROzBryDmtGiXSg"
-private var productList: List<Any> = emptyList()
+private var productList: MutableState<List<Any>> = mutableStateOf(emptyList())
 lateinit var showDonationPopup : MutableState<Boolean>
 lateinit var DONATION_FAILED : String
 lateinit var DONATION_PRODUCT_NOT_FIND : String
@@ -84,14 +84,17 @@ fun initPurchase() {
     DONATION_PRODUCT_NOT_FIND = removeStrQuote(Res.string.DonationCannotFindProduct)
 
     // Initialize the product list (List<Any> since JVM not support List<StoreProduct>)
-    productList = initPurchaseImpl(
+    initPurchaseImpl(
         DonationChoiceList,
         if(isIosPlatform()) PURCHASE_APPLE_KEY else PURCHASE_GOOGLE_KEY,
+        productList
     )
+
+    println(productList.value.size)
 }
 
 fun doPurchase(itemId: String, isSuccess: MutableState<Boolean>){
-    doPurchaseImpl(itemId, isSuccess, productList)
+    doPurchaseImpl(itemId, isSuccess, productList.value)
 }
 
 @Composable

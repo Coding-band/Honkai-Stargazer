@@ -177,7 +177,7 @@ actual fun doPurchaseImpl(itemId: String, isSuccess: MutableState<Boolean>, prod
 actual fun initPurchaseImpl(
     productIdList: List<Pair<String, String>>,
     apiKey: String,
-) : List<Any> {
+    productList: MutableState<List<Any>>
+) {
     // Since RevenueCat SDK is not support jvm, we will not implement this function
-    return emptyList()
 }
