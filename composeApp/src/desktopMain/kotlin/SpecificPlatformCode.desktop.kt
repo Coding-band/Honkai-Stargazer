@@ -167,3 +167,17 @@ actual fun kcefSetUpActual(downloadProgress: MutableState<Float>, isProcessing: 
             })
         }
 }
+
+
+actual fun doPurchaseImpl(itemId: String, isSuccess: MutableState<Boolean>, productList: List<Any>) {
+    // Ideally, this should be not trigged, and nothing to do for JVM
+    isSuccess.value = true
+}
+
+actual fun initPurchaseImpl(
+    productIdList: List<Pair<String, String>>,
+    apiKey: String,
+) : List<Any> {
+    // Since RevenueCat SDK is not support jvm, we will not implement this function
+    return emptyList()
+}

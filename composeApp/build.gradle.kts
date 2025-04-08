@@ -38,7 +38,7 @@ val versionCodeFinal = properties.getProperty("APP_VERSION_CODE").toInt() + 1
 //VersionUpdateCheck
 val isForAppStore = true
 val isForPlayStore = true
-var appProfile = "PRODUCTION" //Please Modify this String ONLY IF NECESSERY
+var appProfile = "PRODUCTION_GP" //Please Modify this String ONLY IF NECESSERY
 val appVersionCodeName = "SG3"
 
 if(isForPlayStore) appProfile = "PRODUCTION_GP"
@@ -83,6 +83,8 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            //RevenueCat
+            implementation(libs.purchases.core)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -140,9 +142,6 @@ kotlin {
             //Compose WebView Multiplatform : https://github.com/KevinnZou/compose-webview-multiplatform
             //api("io.github.kevinnzou:compose-webview-multiplatform:1.9.40")
 
-            //RevenueCat
-            implementation(libs.purchases.core)
-
             implementation(libs.kmp.io)
 
         }
@@ -163,6 +162,8 @@ kotlin {
         }
         nativeMain.dependencies {
             implementation("io.ktor:ktor-client-darwin:3.0.0")
+            //RevenueCat
+            implementation(libs.purchases.core)
         }
     }
 

@@ -6,6 +6,12 @@ import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.toComposeImageBitmap
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalWindowInfo
+import com.revenuecat.purchases.kmp.LogLevel
+import com.revenuecat.purchases.kmp.Purchases
+import com.revenuecat.purchases.kmp.configure
+import com.revenuecat.purchases.kmp.models.StoreProduct
+import com.russhwolf.settings.Settings
+import com.voc.stargazer3.BuildKonfig
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.client.engine.darwin.Darwin
@@ -38,7 +44,15 @@ import platform.UIKit.UIInterfaceOrientationLandscapeLeft
 import platform.UIKit.UIInterfaceOrientationLandscapeRight
 import platform.UIKit.UIKeyboardAppearanceDark
 import platform.UIKit.UITextField
+import types.UserAccount
+import ui.screens.doDonorRefresh
 import utils.annotation.DoItLater
+import utils.app.DONATION_FAILED
+import utils.app.DONATION_PRODUCT_NOT_FIND
+import utils.app.Language
+import utils.app.errorLog
+import utils.app.replaceStrRes
+import utils.app.showWarningToast
 import utils.device.DeviceInfo
 import kotlin.system.exitProcess
 
@@ -197,4 +211,82 @@ actual fun kcefSetUpActual(
     downloadProgress.value = 1f
     isProcessing.value = false
     kcefStatus.value = KCEFStatus.FINISH
+}
+
+actual fun doPurchaseImpl(itemId: String, isSuccess: MutableState<Boolean>, productList: List<Any>) {
+    // Suffix for the product ID based on the platform
+    val donationIdSuffix = "_asr"
+
+    // Check if the product list is empty, return if it is (Since it may from JVM)
+    if(productList.isEmpty()) return
+
+    try {
+        // Find the product in the list using the itemId and suffix
+        val product = (productList as List<StoreProduct>).find { it.id == itemId + donationIdSuffix }
+
+        if(product == null){
+            showWarningToast(
+                message = DONATION_PRODUCT_NOT_FIND.replaceStrRes(itemId + donationIdSuffix),
+                dismissPrevious = true
+            )
+        }
+
+        // Proceed with the purchase using the found product
+        Purchases.sharedInstance.purchase(
+            storeProduct = product!!,
+            onSuccess = { storeTransaction, customerInfo ->
+                // Handle successful purchase & update user account, preventing:
+                // 1. User restart the app after purchasing
+                // 2. User login failed (Wrong Server / No Record of that account in Star Rail)
+                // 3. User would like to not login
+                // 4. User would like to login very later (in any time)
+                // We may not support this situation :
+                // User would like to redeem at the one account that no donor role, but they first logged in to another account that have donor role already
+                // If you are seeking for help, please contact us via Discord
+                isSuccess.value = true // Returning result, allow to dismiss the dialog
+                UserAccount.INSTANCE.donor = true // Update the donor status locally
+                Settings().putBoolean("donorNeedRedeem", UserAccount.getUID() == "000000000") // Update the donor status in settings for later use
+                doDonorRefresh.value = !doDonorRefresh.value // Trigger the refresh of the donor status
+                Language().setAppLanguage() // Refresh again the app language
+            },
+            onError = { error, isUserCancel ->
+                if(!isUserCancel){
+                    // Handle purchase error
+                    showWarningToast(
+                        message = DONATION_FAILED.replaceStrRes(error.message),
+                        dismissPrevious = true
+                    )
+                }
+                Language().setAppLanguage() // Refresh again the app language
+            }
+        )
+    }catch (e: Exception){
+        errorLog(
+            className = "SpecificPlatformCode.android.kt",
+            functionName = "doPurchaseImpl",
+            error = e,
+        )
+    }
+}
+
+
+actual fun initPurchaseImpl(
+    productIdList: List<Pair<String, String>>,
+    apiKey: String
+) : List<Any> {
+    // iOS version
+    // Initialize purchase related variables or states here
+    val donationIdSuffix = "_asr"
+    val localDonationChoiceList = productIdList.map { it.second + donationIdSuffix }
+    var returnList = emptyList<Any>()
+
+    // Initialize Purchases SDK
+    Purchases.logLevel = if(BuildKonfig.appProfile == "DEV") { LogLevel.DEBUG } else { LogLevel.INFO }
+    Purchases.configure(apiKey = apiKey) { appUserId = if(UserAccount.getUID() == "000000000") null else UserAccount.getUID() }
+    Purchases.sharedInstance.getProducts(localDonationChoiceList, onSuccess = { list ->
+        returnList = list
+    }, onError = {
+        println("Error fetching products: $it")
+    })
+    return returnList
 }

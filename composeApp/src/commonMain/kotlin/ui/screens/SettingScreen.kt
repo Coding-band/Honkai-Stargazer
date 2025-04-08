@@ -54,6 +54,7 @@ import files.HaveNotUsed
 import files.InviteOthers
 import files.LanguageSetup
 import files.Navigate
+import files.NoDataYet
 import files.OsVersion
 import files.Res
 import files.SettingCleanCacheFailed
@@ -102,6 +103,7 @@ import utils.app.Preferences
 import utils.app.UpdateAssetsPopup
 import utils.app.isAndroidPlatform
 import utils.app.isLinuxPlatform
+import utils.app.isMacOSPlatform
 import utils.app.isWindowsPlatform
 import utils.app.pxToDp
 import utils.app.removeStrQuote
@@ -401,8 +403,22 @@ fun SettingScreen(
             if(showUpdatePopupInSetting.value){
                 UpdateAssetsPopup(showUpdatePopupInSetting, hazeState, forceDownload = true)
             }
+
             if(showDonationPopup.value){
-                DonationPopUp(showDonationPopup, hazeState)
+                if(
+                    isWindowsPlatform() ||
+                    isLinuxPlatform() ||
+                    isAndroidPlatform() && BuildKonfig.appProfile != "PRODUCTION_GP"
+                ){
+                    ui.navigation.urlHandler.openUri("https://buymeacoffee.com/codingband")
+                    showDonationPopup.value = false
+                }else if(isMacOSPlatform()){
+                    showWarningToast(
+                        message = removeStrQuote(Res.string.NoDataYet),
+                    )
+                } else{
+                    DonationPopUp(showDonationPopup, hazeState)
+                }
             }
         }
     }

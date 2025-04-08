@@ -77,6 +77,7 @@ import files.Donation
 import files.IIRCTitle
 import files.Logout
 import files.ModifyHomePage
+import files.NoDataYet
 import files.PlayerLevel
 import files.PleaseLogin
 import files.Res
@@ -106,6 +107,7 @@ import ui.navigation.UserInfoRoute
 import ui.navigation.isPadMode
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
+import ui.navigation.urlHandler
 import utils.annotation.DoItLater
 import utils.app.BlackAlpha30
 import utils.app.Constants.Companion.HOME_PAGE_MENU_DEFAULT
@@ -124,6 +126,10 @@ import utils.app.TextColorNormalDim
 import utils.app.TextDonorColorBrush
 import utils.app.checkHasErrorLogFromLastCrash
 import utils.app.getIconByUserAccountIconValue
+import utils.app.isAndroidPlatform
+import utils.app.isLinuxPlatform
+import utils.app.isMacOSPlatform
+import utils.app.isWindowsPlatform
 import utils.app.newImageRequest
 import utils.app.pxToDp
 import utils.app.removeStrQuote
@@ -182,7 +188,20 @@ fun HomePage(
         ThreeDotsDialog(navigator = navigator, threeDotDialogPos = threeDotDialogPos, hazeState = hazeState, threeDotDialogDisplay = threeDotDialogDisplay, userAccount = userAccount)
 
         if(showDonationPopup.value){
-            DonationPopUp(showDonationPopup, hazeState)
+            if(
+                isWindowsPlatform() ||
+                isLinuxPlatform() ||
+                isAndroidPlatform() && BuildKonfig.appProfile != "PRODUCTION_GP"
+            ){
+                urlHandler.openUri("https://buymeacoffee.com/codingband")
+                showDonationPopup.value = false
+            }else if(isMacOSPlatform()){
+                showWarningToast(
+                    message = removeStrQuote(Res.string.NoDataYet),
+                )
+            } else{
+                DonationPopUp(showDonationPopup, hazeState)
+            }
         }
     }
 }

@@ -2,8 +2,6 @@ package utils.app
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -34,18 +32,13 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.max
-import androidx.compose.ui.unit.min
 import androidx.compose.ui.window.Popup
 import com.mohamedrejeb.richeditor.annotation.ExperimentalRichTextApi
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
-import com.revenuecat.purchases.kmp.LogLevel
-import com.revenuecat.purchases.kmp.Purchases
-import com.revenuecat.purchases.kmp.configure
-import com.revenuecat.purchases.kmp.models.StoreProduct
-import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
 import dev.chrisbanes.haze.HazeState
+import doPurchaseImpl
 import files.DonateUs
 import files.DonationCannotFindProduct
 import files.DonationDesc
@@ -57,18 +50,13 @@ import files.DonationTargetFinishRate
 import files.Res
 import files.pom_pom_gift
 import files.yunli_eating
-import kotlinx.serialization.json.JsonElement
+import initPurchaseImpl
 import kotlinx.serialization.json.JsonObject
-import kotlinx.serialization.json.double
-import kotlinx.serialization.json.doubleOrNull
-import kotlinx.serialization.json.float
 import kotlinx.serialization.json.floatOrNull
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
-import types.UserAccount
 import ui.components.AppDialog
 import ui.components.UIButton
-import ui.screens.doDonorRefresh
 import utils.annotation.TranslationPls
 import utils.starbase.StarbaseAPI
 import kotlin.math.min
@@ -84,7 +72,7 @@ private val DonationChoiceList = listOf(
 
 private const val PURCHASE_GOOGLE_KEY = "goog_BpnfBRwPJTJTYljNFCHGzpZDqUM"
 private const val PURCHASE_APPLE_KEY = "appl_rYZMbREirAEzhROzBryDmtGiXSg"
-private var productList: List<StoreProduct> = emptyList()
+private var productList: List<Any> = emptyList()
 lateinit var showDonationPopup : MutableState<Boolean>
 lateinit var DONATION_FAILED : String
 lateinit var DONATION_PRODUCT_NOT_FIND : String
@@ -94,72 +82,16 @@ fun initPurchase() {
     showDonationPopup = remember { mutableStateOf(false) }
     DONATION_FAILED = removeStrQuote(Res.string.DonationFailed)
     DONATION_PRODUCT_NOT_FIND = removeStrQuote(Res.string.DonationCannotFindProduct)
-    // Check if the platform is supported
-    if(!isIosPlatform() && !isMacOSPlatform() && !isAndroidPlatform()) {
-        return
-    }
 
-    // Initialize purchase related variables or states here
-    val apiKey = when {
-        isIosPlatform() || isMacOSPlatform() -> PURCHASE_APPLE_KEY
-        else -> PURCHASE_GOOGLE_KEY
-    }
-    val donationIdSuffix = when {
-        isIosPlatform() || isMacOSPlatform()-> "_asr"
-        else -> "_gp"
-    }
-    val localDonationChoiceList = DonationChoiceList.map { it.second + donationIdSuffix }
-
-    Purchases.logLevel = if(BuildKonfig.appProfile == "DEV") { LogLevel.DEBUG } else { LogLevel.INFO }
-    Purchases.configure(apiKey = apiKey) { appUserId = if(UserAccount.getUID() == "000000000") null else UserAccount.getUID() }
-    Purchases.sharedInstance.getProducts(localDonationChoiceList, onSuccess = { list ->
-        productList = list
-    }, onError = {
-        println("Error fetching products: $it")
-    })
+    // Initialize the product list (List<Any> since JVM not support List<StoreProduct>)
+    productList = initPurchaseImpl(
+        DonationChoiceList,
+        if(isIosPlatform()) PURCHASE_APPLE_KEY else PURCHASE_GOOGLE_KEY,
+    )
 }
 
 fun doPurchase(itemId: String, isSuccess: MutableState<Boolean>){
-    // Suffix for the product ID based on the platform
-    val donationIdSuffix = when {
-        isIosPlatform() || isMacOSPlatform()-> "_asr"
-        else -> "_gp"
-    }
-
-    try {
-        val product = productList.find { it.id == itemId + donationIdSuffix }
-
-        if(product == null){
-            showWarningToast(
-                message = DONATION_PRODUCT_NOT_FIND.replaceStrRes(itemId + donationIdSuffix),
-                dismissPrevious = true
-            )
-        }
-
-        Purchases.sharedInstance.purchase(
-            storeProduct = product!!,
-            onSuccess = { storeTransaction, customerInfo ->
-                // Handle successful purchase
-                isSuccess.value = true
-                UserAccount.INSTANCE.donor = true
-                Settings().putBoolean("donorNeedRedeem", UserAccount.getUID() == "000000000")
-                doDonorRefresh.value = !doDonorRefresh.value
-                Language().setAppLanguage()
-            },
-            onError = { error, isUserCancel ->
-                if(!isUserCancel){
-                    // Handle purchase error
-                    showWarningToast(
-                        message = DONATION_FAILED.replaceStrRes(error.message),
-                        dismissPrevious = true
-                    )
-                }
-                Language().setAppLanguage()
-            }
-        )
-    }catch (e: Exception){
-        e.printStackTrace()
-    }
+    doPurchaseImpl(itemId, isSuccess, productList)
 }
 
 @Composable
@@ -171,6 +103,8 @@ fun DonationPopUp(
     val isSuccessDonation = remember { mutableStateOf(false) }
     if(isShowPopup.value){
         val urlHandler = LocalUriHandler.current
+
+        // Check whether it is both not App Store and Play Store
         if(
             isWindowsPlatform() ||
             isLinuxPlatform() ||
@@ -179,11 +113,19 @@ fun DonationPopUp(
             urlHandler.openUri("https://buymeacoffee.com/codingband")
             isShowPopup.value = false
             return
+        }else if (
+            isMacOSPlatform() //App Store - MacOS (Buy Me A Coffee is denied in App Store)
+        ){
+            @TranslationPls
+            showWarningToast(message = "MacOS donation is not supported yet", dismissPrevious = true)
+            isShowPopup.value = false
+            return
         }
 
+        // Otherwise, we will continue to show the donation popup
         Popup(alignment = Alignment.Center) {
             AppDialog(
-                titleString = removeStrQuote(Res.string.DonateUs), //Downloading the assets
+                titleString = removeStrQuote(Res.string.DonateUs),
                 hazeState = hazeState,
                 components = {
                     if(isSuccessDonation.value){
@@ -214,6 +156,8 @@ private fun DonationPopupContent(
         item {
             val richTextState = rememberRichTextState()
             val richTextState2 = rememberRichTextState()
+
+            // Donation description & further notes
             richTextState.setHtml(removeStrQuote(Res.string.DonationDesc))
             RichText(
                 state = richTextState,
@@ -221,9 +165,8 @@ private fun DonationPopupContent(
                 fontFamily = FontSizeNormal14().fontFamily,
                 fontWeight = FontSizeNormal14().fontWeight
             )
-            Spacer(modifier = Modifier.height(6.dp))
 
-            //进行任意一项捐赠即可获取特殊标识（需先绑定崩坏：星穹铁道账号），每月订阅用户还可使用其他進階功能（稍後公布）。
+            Spacer(modifier = Modifier.height(6.dp))
 
             richTextState2.setHtml(removeStrQuote(Res.string.DonationDesc2))
             RichText(
@@ -294,10 +237,7 @@ private fun DonationPopupContent(
             )
             Spacer(modifier = Modifier.height(12.dp))
         }
-
     }
-
-
 }
 
 
@@ -310,6 +250,7 @@ private fun DonationSuccessPopupContent(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         item {
+            // PomPom Gift Image - Thanks for donation
             Image(
                 painter = painterResource(Res.drawable.pom_pom_gift),
                 contentDescription = null,
@@ -317,7 +258,6 @@ private fun DonationSuccessPopupContent(
             Spacer(modifier = Modifier.height(8.dp))
         }
 
-        @TranslationPls
         item {
             Text(
                 text = removeStrQuote(Res.string.DonationSuccessThanking),
@@ -326,7 +266,6 @@ private fun DonationSuccessPopupContent(
             )
         }
 
-        @TranslationPls
         item {
             Text(
                 text = removeStrQuote(Res.string.DonationSuccessFurtherNotes),

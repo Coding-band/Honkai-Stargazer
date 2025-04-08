@@ -57,3 +57,7 @@ enum class KCEFStatus {
 }
 @Composable
 expect fun kcefSetUpActual(downloadProgress: MutableState<Float>, isProcessing: MutableState<Boolean>, kcefStatus: MutableState<KCEFStatus>)
+
+expect fun initPurchaseImpl(productIdList : List<Pair<String, String>>, apiKey: String) : List<Any>
+
+expect fun doPurchaseImpl(itemId: String, isSuccess: MutableState<Boolean>, productList: List<Any>)
