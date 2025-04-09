@@ -69,8 +69,10 @@ import files.ic_person_btn
 import files.ic_selected_orange_circle
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.IO
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
 import kotlinx.datetime.Clock
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
@@ -144,29 +146,31 @@ fun MemoryOfChaosMissionPageScreen(
     val mocUsageUpdateMS = remember { mutableStateOf(0L) }
 
     LaunchedEffect(mocChoiceIndex.value, mocFloorIndex.value) {
-        async {
+        withContext(Dispatchers.IO) {
             mocCharUsageList.clear()
             mocTeamUsageList.clear()
 
-            if(mocList.value.size < mocChoiceIndex.value+1) return@async
+            if(mocList.value.size < mocChoiceIndex.value+1) return@withContext
 
-            mocCharUsageList.addAll(
-                StarbaseAPI().getAbyssCharUsage(
+            val charUsage = StarbaseAPI().getAbyssCharUsage(
                 abyssId = mocList.value[mocChoiceIndex.value].id,
                 floor = mocFloorIndex.value+1,
-                abyssInfoType = AbyssInfoType.MemoryOfChaos,
-            ))
+                abyssInfoType = AbyssInfoType.MemoryOfChaos
+            )
 
-            mocTeamUsageList.addAll(
-                StarbaseAPI().getAbyssTeamUsage(
+            val teamUsage = StarbaseAPI().getAbyssTeamUsage(
                 abyssId = mocList.value[mocChoiceIndex.value].id,
                 floor = mocFloorIndex.value+1,
-                abyssInfoType = AbyssInfoType.MemoryOfChaos,
-            ))
-            mocUsageUpdateMS.value = Clock.System.now().toEpochMilliseconds()
-        }.await()
+                abyssInfoType = AbyssInfoType.MemoryOfChaos
+            )
+
+            withContext(Dispatchers.Main) {
+                mocCharUsageList.addAll(charUsage)
+                mocTeamUsageList.addAll(teamUsage)
+                mocUsageUpdateMS.value = Clock.System.now().toEpochMilliseconds()
+            }
+        }
     }
-
     val isDisplayPageHeader = remember { mutableStateOf(true) }
     val listState = remember { LazyListState() }
     //Check if it can scroll up (forward), then hide the header

@@ -76,8 +76,10 @@ import files.ic_person_btn
 import files.ic_selected_orange_circle
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.IO
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
 import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
 import kotlinx.datetime.LocalDateTime
@@ -162,23 +164,28 @@ fun ApocalypticShadowMissionPageScreen(
     val asUsageUpdateMS = remember { mutableStateOf(0L) }
 
     LaunchedEffect(asChoiceIndex.value, asFloorIndex.value) {
-        async {
+        withContext(Dispatchers.IO) {
             asCharUsageList.clear()
-            asCharUsageList.addAll(StarbaseAPI().getAbyssCharUsage(
-                abyssId = asList.value[asChoiceIndex.value].id,
-                floor = asFloorIndex.value+1,
-                abyssInfoType = AbyssInfoType.ApocalypticShadow,
-            ))
-
             asTeamUsageList.clear()
-            asTeamUsageList.addAll(StarbaseAPI().getAbyssTeamUsage(
+
+            val charUsage = StarbaseAPI().getAbyssCharUsage(
                 abyssId = asList.value[asChoiceIndex.value].id,
                 floor = asFloorIndex.value+1,
                 abyssInfoType = AbyssInfoType.ApocalypticShadow,
-            ))
+            )
 
-            asUsageUpdateMS.value = Clock.System.now().toEpochMilliseconds()
-        }.await()
+            val teamUsage = StarbaseAPI().getAbyssTeamUsage(
+                abyssId = asList.value[asChoiceIndex.value].id,
+                floor = asFloorIndex.value+1,
+                abyssInfoType = AbyssInfoType.ApocalypticShadow,
+            )
+
+            withContext(Dispatchers.Main) {
+                asCharUsageList.addAll(charUsage)
+                asTeamUsageList.addAll(teamUsage)
+                asUsageUpdateMS.value = Clock.System.now().toEpochMilliseconds()
+            }
+        }
     }
 
     val isDisplayPageHeader = remember { mutableStateOf(true) }

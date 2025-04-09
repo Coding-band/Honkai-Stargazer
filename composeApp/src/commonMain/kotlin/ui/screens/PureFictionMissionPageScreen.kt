@@ -76,8 +76,10 @@ import files.ic_person_btn
 import files.ic_selected_orange_circle
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.IO
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
 import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
 import kotlinx.datetime.LocalDateTime
@@ -162,27 +164,30 @@ fun PureFictionMissionPageScreen(
     val pfUsageUpdateMS = remember { mutableStateOf(0L) }
 
     LaunchedEffect(pfChoiceIndex.value, pfFloorIndex.value) {
-        async {
+        withContext(Dispatchers.IO) {
             pfCharUsageList.clear()
-            pfCharUsageList.addAll(
-                StarbaseAPI().getAbyssCharUsage(
-                    abyssId = pfList.value[pfChoiceIndex.value].id,
-                    floor = pfFloorIndex.value+1,
-                    abyssInfoType = AbyssInfoType.PureFiction,
-                ))
-
-            println("pfCharUsageList [abyssId = ${pfList.value[pfChoiceIndex.value].id}, floor = ${pfFloorIndex.value+1}): $pfCharUsageList")
-
             pfTeamUsageList.clear()
-            pfTeamUsageList.addAll(
-                StarbaseAPI().getAbyssTeamUsage(
-                    abyssId = pfList.value[pfChoiceIndex.value].id,
-                    floor = pfFloorIndex.value+1,
-                    abyssInfoType = AbyssInfoType.PureFiction,
-                ))
 
-            pfUsageUpdateMS.value = Clock.System.now().toEpochMilliseconds()
-        }.await()
+            if(pfList.value.size < pfChoiceIndex.value+1) return@withContext
+
+            val charUsage = StarbaseAPI().getAbyssCharUsage(
+                abyssId = pfList.value[pfChoiceIndex.value].id,
+                floor = pfFloorIndex.value+1,
+                abyssInfoType = AbyssInfoType.PureFiction,
+            )
+
+            val teamUsage = StarbaseAPI().getAbyssTeamUsage(
+                abyssId = pfList.value[pfChoiceIndex.value].id,
+                floor = pfFloorIndex.value+1,
+                abyssInfoType = AbyssInfoType.PureFiction,
+            )
+
+            withContext(Dispatchers.Main){
+                pfCharUsageList.addAll(charUsage)
+                pfTeamUsageList.addAll(teamUsage)
+                pfUsageUpdateMS.value = Clock.System.now().toEpochMilliseconds()
+            }
+        }
     }
 
     val isDisplayPageHeader = remember { mutableStateOf(true) }
