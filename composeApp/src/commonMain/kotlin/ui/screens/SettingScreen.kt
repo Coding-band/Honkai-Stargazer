@@ -345,17 +345,17 @@ fun SettingScreen(
                             }
                         )
 
-                        //App 版本 App VersionName
+                        //App 版本 App VersionName i.e. (2025.04.09)
                         SettingOptionNavigateBar(
                             titleRes = Res.string.AppVersion,
                             navigateDesc = BuildKonfig.appVersionName,
                             navigateClick = {
-                                showSuccessToast(message = Constants.CLARA_KAMOJI)
+                                showSuccessToast(message = BuildKonfig.appVersionName)
                             }
                         )
 
                         val versionNameClickTimes = remember { mutableStateOf(0) }
-                        //App 內部版本號 App Internal VersionName
+                        //App 內部版本號 App Internal VersionName i.e. (BETA 8750)
                         SettingOptionNavigateBar(
                             title = removeStrQuote(Res.string.SettingInternalVersionCode),
                             navigateDesc = "${BuildKonfig.appProfile} ${BuildKonfig.appVersionCode}",
@@ -371,7 +371,7 @@ fun SettingScreen(
                                     showSuccessToast(message = "再點擊 ${totalClickToUnlock - versionNameClickTimes.value} 次即可解鎖小彩蛋")
                                 }
                                  */
-                                showFunctionIsDevelopingToast()
+                                showSuccessToast(message = "${BuildKonfig.appProfile} ${BuildKonfig.appVersionCode}")
                             }
                         )
 

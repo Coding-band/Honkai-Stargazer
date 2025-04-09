@@ -13,7 +13,7 @@ import java.util.Properties
  * VersionUpdateCheck
  * Environment Area - App Version
  */
-val appVersionDesktop = "1.0.3"
+val appVersionDesktop = "1.0.4"
 
 
 plugins {
@@ -39,7 +39,7 @@ val versionCodeFinal = properties.getProperty("APP_VERSION_CODE").toInt() + 1
 val isForAppStore = true
 val isForPlayStore = false
 var appProfile = "BETA" //Please Modify this String ONLY IF NECESSERY
-val appVersionCodeName = "SG3"
+val appVersionCodeName = "Firefly"
 
 if(isForPlayStore) appProfile = "PRODUCTION_GP"
 
@@ -265,12 +265,21 @@ compose.desktop {
             description = "Stargazer 3 is an unofficial multiplatform app developed by Coding Band."
             vendor = "Coding Band"
 
+            val betaIconSuffix = if(
+                when(appProfile){
+                    "BETA" -> true
+                    "C.BETA" -> true
+                    "DEV" -> true
+                    else -> false
+                }
+            ) { "_beta" } else { "" }
+
             linux {
-                iconFile.set(project.file("icon/app_icon.png"))
+                iconFile.set(project.file("icon/app_icon${betaIconSuffix}.png"))
                 shortcut = true
             }
             windows {
-                iconFile.set(project.file("icon/app_icon.ico"))
+                iconFile.set(project.file("icon/app_icon${betaIconSuffix}.ico"))
                 shortcut = true
                 msiPackageVersion = "1.0.$versionCodeFinal"
                 menu = true
@@ -278,7 +287,7 @@ compose.desktop {
             }
             macOS{
                 packageName = "Stargazer 3"
-                iconFile.set(project.file("icon/app_icon.icns"))
+                iconFile.set(project.file("icon/app_icon${betaIconSuffix}.icns"))
                 packageBuildVersion = versionCodeFinal.toString()
                 //ref : https://github.com/JetBrains/compose-multiplatform/blob/master/tutorials/Signing_and_notarization_on_macOS/README.md#configuring-gradle
                 bundleID = "com.voc.stargazer3"
