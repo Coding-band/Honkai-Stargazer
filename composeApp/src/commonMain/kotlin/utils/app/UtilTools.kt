@@ -605,7 +605,7 @@ fun isAndroidPlatform(): Boolean {
 }
 
 fun isMacOSPlatform(): Boolean {
-    return getDeviceInfo().deviceOSName.contains("macOS")
+    return getDeviceInfo().deviceOSName.contains("Mac")
 }
 
 fun isWindowsPlatform(): Boolean {
