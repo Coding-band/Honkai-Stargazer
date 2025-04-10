@@ -85,6 +85,7 @@ import files.phorphos_clipboard_text_regular
 import getDeviceInfo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -196,11 +197,15 @@ fun initDataAfterLogin(
 
         }
 
-        UserAccount.pasteCookies(if(webviewState != null && url != null) webviewState.cookieManager.getCookies(url) else cookieList, serverSelected, snackbarHostState)
-        StarbaseAPI().updateCharData()
-        StarbaseAPI().updateASData()
-        StarbaseAPI().updatePFData()
-        StarbaseAPI().updateMOCData()
+        async {
+            UserAccount.pasteCookies(if(webviewState != null && url != null) webviewState.cookieManager.getCookies(url) else cookieList, serverSelected, snackbarHostState)
+            StarbaseAPI().updateUserAccountInfo()
+            StarbaseAPI().updateCharData()
+            StarbaseAPI().updateASData()
+            StarbaseAPI().updatePFData()
+            StarbaseAPI().updateMOCData()
+        }.await()
+
         withContext(Dispatchers.Main){
             pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
             doRecompose.value = !doRecompose.value

@@ -16,6 +16,9 @@ import files.RoleDonor
 import files.UserAccountWarningCookiesInvalid
 import files.UserAccountWarningIncorrectServer
 import files.UserAccountWarningNoAccountRecord
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
@@ -93,6 +96,7 @@ class UserAccount(
         var INSTANCE = load()
         var UIDSEARCH : UserAccount = UserAccount()
 
+        @OptIn(ExperimentalCoroutinesApi::class)
         fun pasteCookies(
             cookieList: Any,
             serverSelected: HoyolabConst.SERVER,
@@ -127,14 +131,10 @@ class UserAccount(
             Settings().putString("cookies", INSTANCE.cookies)
             Settings().putString("hoyolabId", INSTANCE.hoyolabId)
 
-            //println("INSTANCE.cookies : ${INSTANCE.cookies}")
-            val accountInfoUpdated = StarbaseAPI().updateUserAccountInfo()
-            if(accountInfoUpdated){
-                refreshUserAccount()
-                UserAbyssRecord.refreshMOCData()
-                UserAbyssRecord.refreshPFData()
-                UserAbyssRecord.refreshASData()
-            }
+            refreshUserAccount()
+            UserAbyssRecord.refreshMOCData()
+            UserAbyssRecord.refreshPFData()
+            UserAbyssRecord.refreshASData()
         }
 
         fun resetUserAccount(){
