@@ -14,6 +14,7 @@ import files.Login
 import files.MOCMyBattleReport
 import files.Map
 import files.MemoryOfChaos
+import files.ModifyHomePage
 import files.PureFiction
 import files.RelicList
 import files.Res
@@ -41,6 +42,7 @@ import files.phorphos_star_regular
 import files.phorphos_sword_fill
 import files.phorphos_trophy_fill
 import files.phorphos_users_fill
+import files.phorphos_warehouse_fill
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
 
@@ -178,5 +180,9 @@ sealed class Screen(val route: String, val headerData: HeaderData = defaultHeade
     data object ApocalypticShadowMissionPageScreen : Screen(
         "ApocalypticShadowMissionPageScreen",
         HeaderData(titleIconId = Res.drawable.phorphos_hourglass_fill, titleRId = Res.string.ApocalypticShadow)
+    )
+    data object HomePageBlockEditPageScreen : Screen(
+        "HomePageBlockEditPageScreen",
+        HeaderData(titleIconId = Res.drawable.phorphos_house_fill, titleRId = Res.string.ModifyHomePage)
     )
 }

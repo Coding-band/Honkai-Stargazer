@@ -67,6 +67,7 @@ import ui.screens.EventContentPageScreen
 import ui.screens.EventListPageScreen
 import ui.screens.ExpeditionPageScreen
 import ui.screens.HomePage
+import ui.screens.HomePageBlockEditPageScreen
 import ui.screens.HoyolabLoginPageScreen
 import ui.screens.LightconeInfoPage
 import ui.screens.LightconeListPage
@@ -562,6 +563,16 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
         screenInstance = Screen.ApocalypticShadowMissionPageScreen
         withBGScreen(isPadMode){ hazeState ->
             ApocalypticShadowMissionPageScreen(
+                navigator = navigator,
+                hazeState = hazeState
+            )
+        }
+
+    }
+    composable<HomePageBlockEditRoute> {
+        screenInstance = Screen.HomePageBlockEditPageScreen
+        withBGScreen(isPadMode){ hazeState ->
+            HomePageBlockEditPageScreen(
                 navigator = navigator,
                 hazeState = hazeState
             )
