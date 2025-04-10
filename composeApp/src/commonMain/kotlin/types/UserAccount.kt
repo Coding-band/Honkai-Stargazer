@@ -128,11 +128,13 @@ class UserAccount(
             Settings().putString("hoyolabId", INSTANCE.hoyolabId)
 
             //println("INSTANCE.cookies : ${INSTANCE.cookies}")
-
-            refreshUserAccount()
-            UserAbyssRecord.refreshMOCData()
-            UserAbyssRecord.refreshPFData()
-            UserAbyssRecord.refreshASData()
+            val accountInfoUpdated = StarbaseAPI().updateUserAccountInfo()
+            if(accountInfoUpdated){
+                refreshUserAccount()
+                UserAbyssRecord.refreshMOCData()
+                UserAbyssRecord.refreshPFData()
+                UserAbyssRecord.refreshASData()
+            }
         }
 
         fun resetUserAccount(){

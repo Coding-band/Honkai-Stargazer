@@ -47,6 +47,7 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import org.jetbrains.compose.resources.painterResource
+import utils.annotation.TranslationPls
 import utils.device.AppInfo
 import utils.device.DeviceInfo
 import utils.app.LogExportObj.Companion.SnackbarHostStateInstance
@@ -300,6 +301,7 @@ fun checkHasErrorLogFromLastCrash() {
             },
             text = {
                 Column {
+                    @TranslationPls
                     Text(
                         "It seems there have some bugs caused crashes previously. Could you please sare the error log to us for bug-fixing?\n" +
                                 "We will only collect:\n" +

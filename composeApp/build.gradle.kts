@@ -194,6 +194,7 @@ android {
             versionName = "DEV ${appVersion} (${versionCodeFinal})"
         }
         create("beta"){
+            applicationId = "com.voc.stargazer3.beta"
             versionName = "BETA ${appVersion} (${versionCodeFinal})"
         }
         create("closeBeta"){
