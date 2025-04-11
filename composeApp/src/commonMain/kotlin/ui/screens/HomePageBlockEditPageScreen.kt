@@ -41,10 +41,11 @@ import ui.components.HomePageBlockItem
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.navigation.Screen
+import ui.navigation.popBackStackLimited
 import utils.app.Constants
-import utils.app.Constants.Companion.HOME_PAGE_MENU_ID_LIST
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
+import utils.app.Preferences
 import utils.app.removeStrQuote
 
 @Composable
@@ -52,7 +53,7 @@ fun HomePageBlockEditPageScreen(
     navigator: NavHostController,
     hazeState: HazeState
 ){
-    val reorderList = remember { mutableStateOf(HOME_PAGE_MENU_ID_LIST) }
+    val reorderList = remember { mutableStateOf(Preferences().HomePageMenu.getShowMenuList()) }
 
     Box(modifier = Modifier
         .fillMaxSize()
@@ -124,6 +125,11 @@ fun HomePageBlockEditPageScreen(
             headerData = Screen.ExpeditionPageScreen.headerData,
             hazeState = hazeState,
             backIconId = BackIcon.BACK,
+            onBack = { nav ->
+                Preferences().HomePageMenu.setShowMenuListById(reorderList.value)
+                doRecompose.value = !doRecompose.value
+                nav.popBackStackLimited()
+            }
         )
     }
 }

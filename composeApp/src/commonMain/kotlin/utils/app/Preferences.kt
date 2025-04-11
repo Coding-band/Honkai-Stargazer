@@ -265,22 +265,26 @@ class Preferences {
             Settings().putString("homePageMenuArray", Json.encodeToString(menuStrArray))
         }
 
-        fun getShowMenuList(): ArrayList<HomePageBlockItem>{
+        fun getShowMenuList(): List<String>{
             val showMenuListStr = Settings().getString("showMenuList", Json.encodeToString(HOME_PAGE_MENU_ID_LIST))
             return Json.decodeFromString(showMenuListStr)
         }
 
-        fun getShowMenuBlockList() : ArrayList<HomePageBlockItem>{
+        fun getShowMenuBlockList() : List<HomePageBlockItem>{
             val showMenuListStr = Settings().getString("showMenuList", Json.encodeToString(HOME_PAGE_MENU_ID_LIST))
-            val showMenuList = Json.decodeFromString<ArrayList<String>>(showMenuListStr)
-            return HOME_PAGE_MENU_DEFAULT.filter { showMenuList.contains(it.itemId) } as ArrayList<HomePageBlockItem>
+            val showMenuList = Json.decodeFromString<List<String>>(showMenuListStr)
+
+            val showMenuBlockList = HOME_PAGE_MENU_DEFAULT.filter { showMenuList.contains(it.itemId) }
+            val showMenuBlockListMap = showMenuBlockList.associateBy { it.itemId }
+            val sortedShowMenuBlockList = showMenuList.mapNotNull { showMenuBlockListMap[it] }
+            return sortedShowMenuBlockList
         }
 
-        fun setShowMenuListById(showMenuIdList: ArrayList<String>){
+        fun setShowMenuListById(showMenuIdList: List<String>){
             Settings().putString("showMenuList", Json.encodeToString(showMenuIdList))
         }
 
-        fun setShowMenuListByBlock(showMenuBlockList: ArrayList<HomePageBlockItem>){
+        fun setShowMenuListByBlock(showMenuBlockList: List<HomePageBlockItem>){
             val menuStrArray = showMenuBlockList.filter { it.itemIsDisplay }.map { it.itemId }
             Settings().putString("showMenuList", Json.encodeToString(menuStrArray))
         }

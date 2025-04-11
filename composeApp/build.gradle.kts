@@ -144,6 +144,9 @@ kotlin {
 
             implementation(libs.kmp.io)
 
+            //Drag and drop
+            implementation(libs.reorderable)
+
         }
         named { it.lowercase().startsWith("ios") }.configureEach {
             languageSettings {

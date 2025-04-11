@@ -70,7 +70,6 @@ import com.voc.stargazer3.BuildKonfig
 import dev.chrisbanes.haze.HazeState
 import files.AccountLogin
 import files.Donation
-import files.IIRCTitle
 import files.Logout
 import files.ModifyHomePage
 import files.NoDataYet
@@ -81,7 +80,6 @@ import files.Setting
 import files.donate_ad_bg
 import files.ic_default_avatar
 import files.ic_rounded_option_btn
-import files.intelstellar_resource_corp_white_icon
 import org.jetbrains.compose.resources.painterResource
 import types.Character
 import types.ImageFolder
@@ -92,7 +90,6 @@ import ui.components.HomePageBlockItem
 import ui.components.UIButton
 import ui.components.UIButtonSize
 import ui.navigation.HomePageBlockEditRoute
-import ui.navigation.IIRCHomePageRoute
 import ui.navigation.SettingRoute
 import ui.navigation.UserCharacterRoute
 import ui.navigation.UserInfoRoute
@@ -101,7 +98,6 @@ import ui.navigation.navigatorInstance
 import ui.navigation.urlHandler
 import utils.annotation.DoItLater
 import utils.app.BlackAlpha30
-import utils.app.Constants.Companion.HOME_PAGE_MENU_DEFAULT
 import utils.app.DonationPopUp
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
@@ -134,8 +130,9 @@ fun HomePage(
     val threeDotDialogDisplay = remember { mutableStateOf(false) }
     val threeDotDialogPos = remember { mutableStateOf<Offset>(Offset(0f, 0f)) }
     val userAccount = remember { mutableStateOf(UserAccount.INSTANCE) }
-    val homeMenuBlockList = remember { mutableStateOf(HOME_PAGE_MENU_DEFAULT) }
+    val homeMenuBlockList = remember { mutableStateOf(Preferences().HomePageMenu.getShowMenuBlockList().toMutableList()) }
 
+    /*
     if(Settings().getBoolean("isUnlockedIIRC", false) && homeMenuBlockList.value.none { it.itemId == "IIRCHomePageScreen" }){
         homeMenuBlockList.value.add(
             HomePageBlockItem(
@@ -146,12 +143,13 @@ fun HomePage(
             )
         )
     }
+     */
 
     checkHasErrorLogFromLastCrash()
     VersionBox()
 
     key(doRecompose.value){
-        Preferences.HomePageMenuClass().setHomePageMenuArray(homeMenuBlockList.value)
+        homeMenuBlockList.value = Preferences().HomePageMenu.getShowMenuBlockList().toMutableList()
         println("RECOMPOSED !")
         Box(modifier = Modifier
             .statusBarsPadding()
@@ -402,10 +400,10 @@ fun HomePageMenuScrollView(
     homeMenuBlockList: MutableList<HomePageBlockItem>
 ) {
     val maxItemInRow = remember { mutableStateOf(4) }
-    var reorderHomeMenuBlockList by remember { mutableStateOf(reorderHomePageBlock(homeMenuBlockList, maxItemInRow.value)) }
+    var reorderHomeMenuBlockList by remember { mutableStateOf(homeMenuBlockList) }
 
     LaunchedEffect(Unit){
-        reorderHomeMenuBlockList = reorderHomePageBlock(homeMenuBlockList, maxItemInRow.value)
+        reorderHomeMenuBlockList = homeMenuBlockList
     }
 
     Column {
