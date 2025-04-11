@@ -5,7 +5,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,15 +14,14 @@ import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.key
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.snapshots.SnapshotStateList
-import androidx.compose.runtime.toMutableStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -37,10 +35,10 @@ import files.ic_item_add
 import files.ic_item_remove
 import files.ic_item_reorder
 import org.jetbrains.compose.resources.painterResource
-import sh.calvin.reorderable.ReorderableItem
-import sh.calvin.reorderable.rememberReorderableLazyListState
+import sh.calvin.reorderable.ReorderableColumn
 import ui.components.BackIcon
 import ui.components.HomePageBlockItem
+import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.navigation.Screen
 import utils.app.Constants
@@ -54,73 +52,71 @@ fun HomePageBlockEditPageScreen(
     navigator: NavHostController,
     hazeState: HazeState
 ){
-    val reorderList = remember { HOME_PAGE_MENU_ID_LIST.toMutableStateList() }
+    val reorderList = remember { mutableStateOf(HOME_PAGE_MENU_ID_LIST) }
 
     Box(modifier = Modifier
         .fillMaxSize()
     ){
-        FlowRow(modifier = Modifier
-            .padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
-            .navigationBarsPadding()
-        ){
-            // Item that shown
-            Column {
-                // Title
+        val listState = rememberLazyListState()
+        LazyColumn(
+            state = listState,
+            modifier = Modifier
+                .padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
+                .navigationBarsPadding()
+        ) {
+            item {
+                Spacer(modifier = Modifier.height(PAGE_HEADER_HEIGHT))
+            }
+
+            // Title
+            item {
                 Text(
                     text = "已展示物件",
                     style = FontSizeNormal16(),
                     modifier = Modifier.padding(top = 4.dp, bottom = 4.dp)
                 )
+            }
 
-                val showListState = rememberLazyListState()
-                val reorderableListState = rememberReorderableLazyListState(showListState){
-                    from, to ->
-                    // Move from to to
-                    reorderList.add(to.index, reorderList.removeAt(from.index))
-                }
-                // Reorderable List
-                LazyColumn(
-                    state = showListState,
-                    modifier = Modifier.wrapContentHeight()
-                ) {
-                    //Modify later
-                    items(reorderList, key = {it}){item ->
+            // List Item that shown in HomePage Menu
+            item {
+                ReorderableColumn(
+                    list = reorderList.value,
+                    onSettle = { fromIndex, toIndex ->
+                        reorderList.value = reorderList.value.toMutableList().apply { add(toIndex, removeAt(fromIndex)) }
+                    },
+                ){ index, item, isDragging ->
+                    key(item){
                         val block = Constants.HOME_PAGE_MENU_DEFAULT.firstOrNull { it.itemId == item }
-
                         if (block != null) {
-                            ReorderableItem(reorderableListState, key = block.itemId){
-                                ItemListBlock(blockItem = block, reorderList, draggableModifier = Modifier.draggableHandle())
-                            }
+                            block.itemIsDisplay = true
+                            ItemListBlock(blockItem = block, reorderList, draggableModifier = Modifier.draggableHandle())
                         }
                     }
                 }
             }
-            // Item that not shown
-            Column {
-                // Title
+
+            // Title - Not Shown
+            item {
                 Text(
                     text = "未展示物件",
                     style = FontSizeNormal16(),
                     modifier = Modifier.padding(top = 4.dp, bottom = 4.dp)
                 )
+            }
 
-                // Reorderable List
-
-                val noShowListState = rememberLazyListState()
-                LazyColumn(
-                    state = noShowListState,
-                    modifier = Modifier.wrapContentHeight()
-                ) {
-                    items(HOME_PAGE_MENU_ID_LIST.filter { item -> reorderList.contains(item) }){item ->
-                        val block = Constants.HOME_PAGE_MENU_DEFAULT.firstOrNull { it.itemId == item }
-
+            // List Item that not shown in HomePage Menu
+            item {
+                Column {
+                    Constants.HOME_PAGE_MENU_DEFAULT.filter { !reorderList.value.contains(it.itemId) }.map {item ->
+                        val block = Constants.HOME_PAGE_MENU_DEFAULT.firstOrNull { it.itemId == item.itemId }
                         if (block != null) {
+                            block.itemIsDisplay = false
                             ItemListBlock(blockItem = block, reorderList)
                         }
                     }
+
                 }
             }
-
         }
 
         PageHeader(
@@ -133,14 +129,21 @@ fun HomePageBlockEditPageScreen(
 }
 
 @Composable
-private fun ItemListBlock(blockItem: HomePageBlockItem, listRef: SnapshotStateList<String>, draggableModifier: Modifier = Modifier){
+private fun ItemListBlock(blockItem: HomePageBlockItem, listRef: MutableState<List<String>>, draggableModifier: Modifier = Modifier){
     Column(modifier = Modifier.background(Color(0xCCF3F9FF))) {
         Row(modifier = Modifier.padding(12.dp)) {
             // Image that for press to Disable / Enable
             Image(
                 painter = painterResource(if(blockItem.itemIsDisplay) Res.drawable.ic_item_remove else Res.drawable.ic_item_add),
                 contentDescription = if(blockItem.itemIsDisplay) "Disable" else "Enable",
-                modifier = Modifier.size(18.dp).align(Alignment.CenterVertically).clickable { listRef.remove(blockItem.itemId) },
+                modifier = Modifier.size(18.dp).align(Alignment.CenterVertically).clickable {
+                    if(blockItem.itemIsDisplay) {
+                        listRef.value = listRef.value.toMutableList().apply { remove(blockItem.itemId) }
+                    }else{
+                        listRef.value = listRef.value.toMutableList().apply { add(blockItem.itemId) }
+                    }
+                    blockItem.itemIsDisplay = !blockItem.itemIsDisplay
+                },
                 colorFilter = ColorFilter.tint(Color(0xFF000000)),
             )
 

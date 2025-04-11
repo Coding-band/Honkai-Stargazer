@@ -76,7 +76,7 @@ data class HomePageBlockItem(
     var itemTitleRId: StringResource? = null,
     var itemIconId: DrawableResource = Res.drawable.phorphos_cake_fill,
     var itemType: HomePageBlockItemType = HomePageBlockItemType.W1H1,
-    var itemIsDisplay: Boolean = true,
+    var itemIsDisplay: Boolean = false,
     var itemOnClickAction: ((count : MutableState<Int>, navigator: NavHostController) -> Unit)? = null,
     var itemOnClickToNavigate: Any? = null,
 ) {
