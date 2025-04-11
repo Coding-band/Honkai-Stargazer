@@ -1,37 +1,26 @@
 package utils.app
 
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.russhwolf.settings.Settings
-import files.ActionOrderTitle
 import files.ApocalypticShadow
 import files.Character
 import files.Event
 import files.Expedition
 import files.Lightcone
-import files.LotterySimulator
 import files.Map
 import files.MemoryOfChaos
-import files.MemoryOfChaosLeaderboard
 import files.PureFiction
-import files.PureFictionLeaderboard
 import files.Relic
 import files.Res
 import files.ScoreLevelLeaderboard
 import files.Stamina
 import files.UIDSearch
-import files.WrapAnalysis
 import files.ico_lost_img
-import files.intelstellar_resource_corp_white_icon
 import files.phorphos_alien_fill
-import files.phorphos_align_left_fill
 import files.phorphos_atom_fill
 import files.phorphos_baseball_cap_fill
 import files.phorphos_calendar_fill
-import files.phorphos_chart_bar_fill
-import files.phorphos_chart_bar_horizontal_fill
 import files.phorphos_film_slate_fill
 import files.phorphos_hourglass_fill
 import files.phorphos_map_trifold_fill
@@ -39,8 +28,6 @@ import files.phorphos_medal_military_fill
 import files.phorphos_moon_fill
 import files.phorphos_person_fill
 import files.phorphos_planet_fill
-import files.phorphos_shooting_star_fill
-import files.phorphos_star_of_david_fill
 import files.phorphos_sword_fill
 import files.phorphos_trophy_fill
 import files.phorphos_users_fill
@@ -51,29 +38,23 @@ import files.ranking_d_text
 import files.ranking_s_text
 import files.ranking_ss_text
 import org.jetbrains.compose.resources.DrawableResource
-import types.UserAccount
 import types.UserNoteState
-import ui.components.HomePageBlocks
+import ui.components.HomePageBlockItem
 import ui.navigation.ApocalypticShadowMissionRoute
-import ui.navigation.CharacterInfoRoute
 import ui.navigation.CharacterListRoute
 import ui.navigation.EventListRoute
 import ui.navigation.ExpeditionRoute
-import ui.navigation.IIRCHomePageRoute
 import ui.navigation.LightconeListRoute
 import ui.navigation.MemoryOfChaosMissionRoute
 import ui.navigation.ProficientLeaderboardRoute
 import ui.navigation.PureFictionMissionRoute
-import ui.navigation.RelicInfoRoute
 import ui.navigation.RelicListRoute
-import ui.navigation.Screen
 import ui.navigation.UIDSearchRoute
 import ui.navigation.navigateLimited
 import ui.navigation.urlHandler
 import ui.screens.asList
 import ui.screens.mocList
 import ui.screens.pfList
-import utils.annotation.DoItLater
 
 
 class Constants {
@@ -169,36 +150,53 @@ class Constants {
 
         val LOST_IMAGE_DRAWABLE = Res.drawable.ico_lost_img
 
-        var HOME_PAGE_MENU_DEFAULT = arrayListOf<HomePageBlocks.HomePageBlockItem>(
-            HomePageBlocks.HomePageBlockItem(
+        val HOME_PAGE_MENU_ID_LIST = listOf(
+            "CharacterListPage",
+            "LightconeListPage",
+            "RelicListPage",
+            "UIDSearchPage",
+            "Stamina",
+            "DailyMissionPage",
+            "UniversialScore",
+            "ExpeditionPage",
+            "MOCPage",
+            "PFPage",
+            "ASPage",
+            "ScoreLevelLeaderboard",
+            "MapPage",
+            "EventListPage",
+        )
+
+        var HOME_PAGE_MENU_DEFAULT = arrayListOf<HomePageBlockItem>(
+            HomePageBlockItem(
                 itemId = "CharacterListPage",
                 itemTitleRId = Res.string.Character,
                 itemIconId = Res.drawable.phorphos_person_fill,
                 itemOnClickToNavigate = CharacterListRoute,
             ),
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemId = "LightconeListPage",
                 itemTitleRId = Res.string.Lightcone,
                 itemIconId = Res.drawable.phorphos_sword_fill,
                 itemOnClickToNavigate = LightconeListRoute,
             ),
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemId = "RelicListPage",
                 itemTitleRId = Res.string.Relic,
                 itemIconId = Res.drawable.phorphos_baseball_cap_fill,
                 itemOnClickToNavigate = RelicListRoute,
             ),
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemId = "UIDSearchPage",
                 itemTitleRId = Res.string.UIDSearch,
                 itemIconId = Res.drawable.phorphos_alien_fill,
                 itemOnClickToNavigate = UIDSearchRoute,
             ),
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemId = "Stamina",
                 itemTitleRId = Res.string.Stamina,
                 itemIconId = Res.drawable.phorphos_moon_fill,
-                itemType = HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1,
+                itemType = HomePageBlockItem.HomePageBlockItemType.W2H1,
                 itemOnClickAction = {count, navigate -> count.value = (count.value + 1) % 2},
             ).onRefresh { self ->
                 if(!UserNoteState.value.isInited){
@@ -212,7 +210,7 @@ class Constants {
                 }
 
             },
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemId = "DailyMissionPage",
                 itemTitle = "--/--",
                 itemOnClickAction = { _, _ ->
@@ -233,7 +231,7 @@ class Constants {
                 }
             },
 
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemId = "UniversialScore",
                 itemTitle = "--/--",
                 itemOnClickAction = { _, _ ->
@@ -253,11 +251,11 @@ class Constants {
                 }
             },
 
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemId = "ExpeditionPage",
                 itemTitleRId = Res.string.Expedition,
                 itemIconId = Res.drawable.phorphos_users_fill,
-                itemType = HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1,
+                itemType = HomePageBlockItem.HomePageBlockItemType.W2H1,
                 itemOnClickToNavigate = ExpeditionRoute
             ).onRefresh { self ->
                 if (!UserNoteState.value.isInited) {
@@ -279,7 +277,7 @@ class Constants {
                 }
 
             },
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemId = "MOCPage",
                 itemTitleRId = Res.string.MemoryOfChaos,
                 itemIconId = Res.drawable.phorphos_medal_military_fill,
@@ -292,7 +290,7 @@ class Constants {
                     }
                 }
             ),
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemId = "PFPage",
                 itemTitleRId = Res.string.PureFiction,
                 itemIconId = Res.drawable.phorphos_atom_fill,
@@ -304,7 +302,7 @@ class Constants {
                     }
                 }
             ),
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemId = "ASPage",
                 itemTitleRId = Res.string.ApocalypticShadow,
                 itemIconId = Res.drawable.phorphos_hourglass_fill,
@@ -316,13 +314,13 @@ class Constants {
                     }
                 }
             ),
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemId = "EventListPage",
                 itemTitleRId = Res.string.Event,
                 itemIconId = Res.drawable.phorphos_film_slate_fill,
                 itemOnClickToNavigate = EventListRoute
             ),
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemId = "ScoreLevelLeaderboard",
                 itemTitleRId = Res.string.ScoreLevelLeaderboard,
                 itemIconId = Res.drawable.phorphos_trophy_fill,
@@ -330,18 +328,18 @@ class Constants {
             ),
             /*
             Removed, merged into <MOC/PF/AS> Info Page
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemId = "MemoryOfChaosLeaderboard",
                 itemTitleRId = Res.string.MemoryOfChaosLeaderboard,
                 itemIconId = Res.drawable.phorphos_chart_bar_fill
             ),
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemId = "PureFictionLeaderboard",
                 itemTitleRId = Res.string.PureFictionLeaderboard,
                 itemIconId = Res.drawable.phorphos_chart_bar_horizontal_fill
             ),
              */
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemId = "MapPage",
                 itemTitleRId = Res.string.Map,
                 itemIconId = Res.drawable.phorphos_map_trifold_fill,
@@ -352,7 +350,7 @@ class Constants {
             ),
 
             /*
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemId = "ActionOrderListPage",
                 itemTitleRId = Res.string.ActionOrderTitle,
                 itemIconId = Res.drawable.phorphos_align_left_fill,
@@ -365,12 +363,12 @@ class Constants {
              */
             /*
 
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemId = "LotterySimulator",
                 itemTitleRId = Res.string.LotterySimulator,
                 itemIconId = Res.drawable.phorphos_star_of_david_fill
             ),
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemId = "WrapAnalysisPage",
                 itemTitleRId = Res.string.WrapAnalysis,
                 itemIconId = Res.drawable.phorphos_shooting_star_fill
@@ -379,17 +377,17 @@ class Constants {
 
             /*
 
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemTitleRId = Res.string.MOCMissionPart1,
                 itemIconId = Res.drawable.phorphos_shooting_star_fill,
                 itemOnClickToNavigate = Screen.BlankScreen
             ),
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemTitleRId = Res.string.MOCMissionPart2,
                 itemIconId = Res.drawable.phorphos_shooting_star_fill,
                 itemOnClickToNavigate = Screen.WithBGScreen
             ),
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemTitleRId = Res.string.MOCMissionPart3,
                 itemIconId = Res.drawable.phorphos_shooting_star_fill,
                 itemOnClickToNavigate = Screen.WithBGHeaderScreen

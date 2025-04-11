@@ -52,7 +52,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.BlendMode
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
@@ -63,15 +62,12 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
-import dev.chrisbanes.haze.hazeSource
 import files.AccountLogin
 import files.Donation
 import files.IIRCTitle
@@ -82,7 +78,6 @@ import files.PlayerLevel
 import files.PleaseLogin
 import files.Res
 import files.Setting
-import files.UserOwned
 import files.donate_ad_bg
 import files.ic_default_avatar
 import files.ic_rounded_option_btn
@@ -90,32 +85,26 @@ import files.intelstellar_resource_corp_white_icon
 import org.jetbrains.compose.resources.painterResource
 import types.Character
 import types.ImageFolder
-import types.Role
 import types.UserAccount
-import ui.components.HeaderData
 import ui.components.HomePageBlock1x1
 import ui.components.HomePageBlock2x1
-import ui.components.HomePageBlocks
+import ui.components.HomePageBlockItem
 import ui.components.UIButton
 import ui.components.UIButtonSize
-import ui.components.defaultHeaderData
+import ui.navigation.HomePageBlockEditRoute
 import ui.navigation.IIRCHomePageRoute
-import ui.navigation.Screen
 import ui.navigation.SettingRoute
 import ui.navigation.UserCharacterRoute
 import ui.navigation.UserInfoRoute
-import ui.navigation.isPadMode
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
 import ui.navigation.urlHandler
 import utils.annotation.DoItLater
 import utils.app.BlackAlpha30
 import utils.app.Constants.Companion.HOME_PAGE_MENU_DEFAULT
-import utils.app.DefaultZIndex
 import utils.app.DonationPopUp
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
-import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
 import utils.app.Preferences
 import utils.app.ProgressLevelBackground
@@ -134,7 +123,6 @@ import utils.app.newImageRequest
 import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.showDonationPopup
-import utils.app.showFunctionIsDevelopingToast
 import utils.app.showWarningToast
 import kotlin.math.min
 
@@ -150,7 +138,7 @@ fun HomePage(
 
     if(Settings().getBoolean("isUnlockedIIRC", false) && homeMenuBlockList.value.none { it.itemId == "IIRCHomePageScreen" }){
         homeMenuBlockList.value.add(
-            HomePageBlocks.HomePageBlockItem(
+            HomePageBlockItem(
                 itemId = "IIRCHomePageScreen",
                 itemTitleRId = Res.string.IIRCTitle,
                 itemIconId = Res.drawable.intelstellar_resource_corp_white_icon,
@@ -411,7 +399,7 @@ fun HomePageMenuScrollView(
     modifier: Modifier = Modifier,
     navigator: NavHostController,
     hazeState: HazeState,
-    homeMenuBlockList: MutableList<HomePageBlocks.HomePageBlockItem>
+    homeMenuBlockList: MutableList<HomePageBlockItem>
 ) {
     val maxItemInRow = remember { mutableStateOf(4) }
     var reorderHomeMenuBlockList by remember { mutableStateOf(reorderHomePageBlock(homeMenuBlockList, maxItemInRow.value)) }
@@ -434,21 +422,21 @@ fun HomePageMenuScrollView(
                 if(index == 0) maxItemInRow.value = maxLineSpan
 
                 when (reorderHomeMenuBlockList[index].itemType) {
-                    HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W1H1 -> GridItemSpan(1)
-                    HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1 -> GridItemSpan(2)
+                    HomePageBlockItem.HomePageBlockItemType.W1H1 -> GridItemSpan(1)
+                    HomePageBlockItem.HomePageBlockItemType.W2H1 -> GridItemSpan(2)
                 }
 
             }) { index ->
-                val blockData: HomePageBlocks.HomePageBlockItem = reorderHomeMenuBlockList[index];
+                val blockData: HomePageBlockItem = reorderHomeMenuBlockList[index];
                 Box(Modifier.layoutId("HomePageItemBox")){
 
                     when (blockData.itemType) {
-                        HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W1H1 -> HomePageBlock1x1(
+                        HomePageBlockItem.HomePageBlockItemType.W1H1 -> HomePageBlock1x1(
                             blockData,
                             hazeState = hazeState,
                             navigator = navigator
                         )
-                        HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1 -> HomePageBlock2x1(
+                        HomePageBlockItem.HomePageBlockItemType.W2H1 -> HomePageBlock2x1(
                             blockData,
                             hazeState = hazeState,
                             navigator = navigator
@@ -464,12 +452,12 @@ fun HomePageMenuScrollView(
 }
 
 // Arrange items to avoid gaps
-fun reorderHomePageBlock(items: MutableList<HomePageBlocks.HomePageBlockItem>, columns: Int): List<HomePageBlocks.HomePageBlockItem> {
-    val grid = mutableListOf<MutableList<HomePageBlocks.HomePageBlockItem?>>()
-    val arrangedItems = mutableListOf<HomePageBlocks.HomePageBlockItem>()
+fun reorderHomePageBlock(items: MutableList<HomePageBlockItem>, columns: Int): List<HomePageBlockItem> {
+    val grid = mutableListOf<MutableList<HomePageBlockItem?>>()
+    val arrangedItems = mutableListOf<HomePageBlockItem>()
 
     for (item in items) {
-        if (item.itemType == HomePageBlocks.HomePageBlockItem.HomePageBlockItemType.W2H1) {
+        if (item.itemType == HomePageBlockItem.HomePageBlockItemType.W2H1) {
             // Try to place a 2x1 item
             var placed = false
             for (row in grid) {
@@ -589,7 +577,7 @@ fun ThreeDotsDialog(
                         Spacer(Modifier.height(10.dp))
                         UIButton(
                             textRes = Res.string.ModifyHomePage,
-                            onClick = { showFunctionIsDevelopingToast() },
+                            onClick = { threeDotDialogDisplay.value = false; navigator.navigateLimited(HomePageBlockEditRoute) },
                             buttonSize = UIButtonSize.SmallChoice
                         )
                         Spacer(Modifier.height(10.dp))

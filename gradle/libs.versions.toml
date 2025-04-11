@@ -6,7 +6,7 @@ android-minSdk = "26"
 android-targetSdk = "35"
 androidx-activityCompose = "1.10.1"
 coil = "3.0.4"
-compose-plugin = "1.8.0-alpha04"
+compose-plugin = "1.8.0-beta02"
 composeBoxshadow = "0.2.2"
 composeDropshadow = "0.2.2"
 composeWebviewMultiplatform = "1.9.40"
@@ -29,6 +29,7 @@ precompose = "1.7.0-alpha03"
 richeditorCompose = "1.0.0-rc08"
 sonner = "0.3.8"
 purchases-kmp = "1.7.2+13.26.0"
+reorderable = "2.4.3"
 
 [libraries]
 # Coil dependencies
@@ -72,7 +73,7 @@ okio = { module = "com.squareup.okio:okio", version.ref = "okio" }
 richeditor-compose = { module = "com.mohamedrejeb.richeditor:richeditor-compose", version.ref = "richeditorCompose" }
 sonner = { module = "io.github.dokar3:sonner", version.ref = "sonner" }
 purchases-core = { module = "com.revenuecat.purchases:purchases-kmp-core", version.ref = "purchases-kmp" }
-
+reorderable = { module = "sh.calvin.reorderable:reorderable", version.ref = "reorderable" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

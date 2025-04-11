@@ -70,39 +70,39 @@ import utils.app.hazeEffectSG3
 import utils.app.removeStrQuote
 import utils.app.showFunctionIsDevelopingToast
 
-class HomePageBlocks {
-    val HOME_PAGE_BLOCK_WIDTH_1x1 = 80.dp
-    val HOME_PAGE_BLOCK_WIDTH_2x1 = 180.dp
-    val HOME_PAGE_BLOCK_HEIGHT = 90.dp
+data class HomePageBlockItem(
+    var itemId: String ,
+    var itemTitle: String? = null,
+    var itemTitleRId: StringResource? = null,
+    var itemIconId: DrawableResource = Res.drawable.phorphos_cake_fill,
+    var itemType: HomePageBlockItemType = HomePageBlockItemType.W1H1,
+    var itemIsDisplay: Boolean = true,
+    var itemOnClickAction: ((count : MutableState<Int>, navigator: NavHostController) -> Unit)? = null,
+    var itemOnClickToNavigate: Any? = null,
+) {
+    var itemTopHighlight: String? = ""
+    var itemTop: String? = ""
+    var itemBottom: String? = ""
+    var refresh: (() -> Unit)? = null
+    val itemOnClickCount = mutableStateOf(0)
 
-    class HomePageBlockItem(
-        var itemId: String ,
-        var itemTitle: String? = null,
-        var itemTitleRId: StringResource? = null,
-        var itemIconId: DrawableResource = Res.drawable.phorphos_cake_fill,
-        var itemType: HomePageBlockItemType = HomePageBlockItemType.W1H1,
+    companion object{
+        val HOME_PAGE_BLOCK_WIDTH_1x1 = 80.dp
+        val HOME_PAGE_BLOCK_WIDTH_2x1 = 180.dp
+        val HOME_PAGE_BLOCK_HEIGHT = 90.dp
+    }
 
-        var itemOnClickAction: ((count : MutableState<Int>, navigator: NavHostController) -> Unit)? = null,
-        var itemOnClickToNavigate: Any? = null,
-    ) {
-        var itemTopHighlight: String? = ""
-        var itemTop: String? = ""
-        var itemBottom: String? = ""
-        var refresh: (() -> Unit)? = null
-        val itemOnClickCount = mutableStateOf(0)
+    enum class HomePageBlockItemType(val width: Int, val height: Int) {
+        W1H1(1, 1), W2H1(2, 1)
+    }
 
-        enum class HomePageBlockItemType(val width: Int, val height: Int) {
-            W1H1(1, 1), W2H1(2, 1)
-        }
+    override fun toString(): String {
+        return "HomePageBlockItem(itemTitle='$itemTitle', itemTitleRId='$itemTitleRId', itemIconId=$itemIconId, itemType=$itemType, itemTopHightlight='$itemTopHighlight', itemTop='$itemTop', itemBottom='$itemBottom')"
+    }
 
-        override fun toString(): String {
-            return "HomePageBlockItem(itemTitle='$itemTitle', itemTitleRId='$itemTitleRId', itemIconId=$itemIconId, itemType=$itemType, itemTopHightlight='$itemTopHighlight', itemTop='$itemTop', itemBottom='$itemBottom')"
-        }
-
-        fun onRefresh(action : (self : HomePageBlockItem) -> Unit): HomePageBlockItem {
-            refresh = { action(this) }
-            return this
-        }
+    fun onRefresh(action : (self : HomePageBlockItem) -> Unit): HomePageBlockItem {
+        refresh = { action(this) }
+        return this
     }
 }
 
@@ -116,7 +116,7 @@ val gradient = Brush.verticalGradient(
 @Composable
 @DoItLater("Check if v1.4.0 fixes this lot-of-instance-blur-laggy issue")
 fun HomePageBlock1x1(
-    blockData: HomePageBlocks.HomePageBlockItem,
+    blockData: HomePageBlockItem,
     hazeState: HazeState,
     navigator: NavHostController
 ) {
@@ -145,10 +145,9 @@ fun HomePageBlock1x1(
         shape = RoundedCornerShape(6.dp),
         modifier = Modifier
             .defaultMinSize(
-                HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1,
-                HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT
+                HomePageBlockItem.HOME_PAGE_BLOCK_WIDTH_1x1,
+                HomePageBlockItem.HOME_PAGE_BLOCK_HEIGHT
             )
-            //.aspectRatio(HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1 / HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT)
             .fillMaxSize()
             .clip(RoundedCornerShape(6.dp))
             .let {
@@ -201,7 +200,7 @@ fun HomePageBlock1x1(
 @Composable
 @DoItLater("Check if v1.4.0 fixes this lot-of-instance-blur-laggy issue")
 fun HomePageBlock2x1(
-    blockData: HomePageBlocks.HomePageBlockItem,
+    blockData: HomePageBlockItem,
     hazeState: HazeState,
     navigator: NavHostController
 ) {
@@ -228,8 +227,8 @@ fun HomePageBlock2x1(
         shape = RoundedCornerShape(6.dp),
         modifier = Modifier
             .defaultMinSize(
-                HomePageBlocks().HOME_PAGE_BLOCK_WIDTH_1x1,
-                HomePageBlocks().HOME_PAGE_BLOCK_HEIGHT
+                HomePageBlockItem.HOME_PAGE_BLOCK_WIDTH_1x1,
+                HomePageBlockItem.HOME_PAGE_BLOCK_HEIGHT
             ).fillMaxSize()
             .clip(RoundedCornerShape(6.dp))
             .let {

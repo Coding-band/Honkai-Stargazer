@@ -4,9 +4,10 @@ import com.russhwolf.settings.Settings
 import kotlinx.datetime.Clock
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
-import ui.components.HomePageBlocks
+import ui.components.HomePageBlockItem
 import ui.screens.actionOrderTeamList
 import utils.app.Constants.Companion.HOME_PAGE_MENU_DEFAULT
+import utils.app.Constants.Companion.HOME_PAGE_MENU_ID_LIST
 import utils.calculator.TeamListItem
 import utils.starbase.StarbaseAPI
 
@@ -244,10 +245,11 @@ class Preferences {
     }
 
     class HomePageMenuClass(){
-        fun getHomePageMenuArray(): ArrayList<HomePageBlocks.HomePageBlockItem>{
+        @Deprecated("Use getShowMenuList() instead")
+        fun getHomePageMenuArray(): ArrayList<HomePageBlockItem>{
             val homePageMenuArrayStr = Settings().getString("homePageMenuArray", Json.encodeToString(
                 HOME_PAGE_MENU_DEFAULT.map { it.itemId }))
-            val homePageMeun : ArrayList<HomePageBlocks.HomePageBlockItem>  = arrayListOf()
+            val homePageMeun : ArrayList<HomePageBlockItem>  = arrayListOf()
 
             val homePageMenuArray = Json.decodeFromString<ArrayList<String>>(homePageMenuArrayStr)
             homePageMenuArray.forEach { itemId ->
@@ -256,9 +258,31 @@ class Preferences {
             }
             return homePageMeun
         }
-        fun setHomePageMenuArray(homePageMenuArray: ArrayList<HomePageBlocks.HomePageBlockItem>){
+
+        @Deprecated("Use setShowMenuList() instead")
+        fun setHomePageMenuArray(homePageMenuArray: ArrayList<HomePageBlockItem>){
             val menuStrArray = homePageMenuArray.map { it.itemId }
             Settings().putString("homePageMenuArray", Json.encodeToString(menuStrArray))
+        }
+
+        fun getShowMenuList(): ArrayList<HomePageBlockItem>{
+            val showMenuListStr = Settings().getString("showMenuList", Json.encodeToString(HOME_PAGE_MENU_ID_LIST))
+            return Json.decodeFromString(showMenuListStr)
+        }
+
+        fun getShowMenuBlockList() : ArrayList<HomePageBlockItem>{
+            val showMenuListStr = Settings().getString("showMenuList", Json.encodeToString(HOME_PAGE_MENU_ID_LIST))
+            val showMenuList = Json.decodeFromString<ArrayList<String>>(showMenuListStr)
+            return HOME_PAGE_MENU_DEFAULT.filter { showMenuList.contains(it.itemId) } as ArrayList<HomePageBlockItem>
+        }
+
+        fun setShowMenuListById(showMenuIdList: ArrayList<String>){
+            Settings().putString("showMenuList", Json.encodeToString(showMenuIdList))
+        }
+
+        fun setShowMenuListByBlock(showMenuBlockList: ArrayList<HomePageBlockItem>){
+            val menuStrArray = showMenuBlockList.filter { it.itemIsDisplay }.map { it.itemId }
+            Settings().putString("showMenuList", Json.encodeToString(menuStrArray))
         }
     }
 
