@@ -10,6 +10,8 @@ import files.Expedition
 import files.Lightcone
 import files.Map
 import files.MemoryOfChaos
+import files.NotiMission
+import files.NotiSimulatedUniverse
 import files.PureFiction
 import files.Relic
 import files.Res
@@ -213,6 +215,7 @@ class Constants {
             HomePageBlockItem(
                 itemId = "DailyMissionPage",
                 itemTitle = "--/--",
+                itemTitleRId = Res.string.NotiMission,
                 itemOnClickAction = { _, _ ->
                     showSuccessToast(
                         if(!UserNoteState.value.isInited) {
@@ -234,6 +237,7 @@ class Constants {
             HomePageBlockItem(
                 itemId = "UniversialScore",
                 itemTitle = "--/--",
+                itemTitleRId = Res.string.NotiSimulatedUniverse,
                 itemOnClickAction = { _, _ ->
                     showSuccessToast(
                     if(!UserNoteState.value.isInited) {

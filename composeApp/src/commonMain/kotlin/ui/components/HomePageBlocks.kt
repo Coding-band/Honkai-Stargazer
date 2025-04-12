@@ -38,8 +38,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.HazeStyle
-import dev.chrisbanes.haze.hazeChild
 import dev.chrisbanes.haze.hazeEffect
 import dev.chrisbanes.haze.hazeSource
 import files.AppStatusLostConnect
@@ -48,32 +46,25 @@ import files.phorphos_cake_fill
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
-import ui.navigation.Screen
-import ui.navigation.hazeStateRoot
 import ui.navigation.navigateLimited
 import ui.screens.globalHazeBlur
 import utils.annotation.DoItLater
 import utils.app.BlackAlpha80
-import utils.app.DefaultZIndex
-import utils.app.DialogPopUpZIndex
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
 import utils.app.GradientHomeButton
-import utils.app.HazeBlurDp10
-import utils.app.HazeBlurDp20
 import utils.app.HazeBlurDp20Alpha
 import utils.app.HomePageBtnZIndex
 import utils.app.TextColorNormal
 import utils.app.WhiteAlpha10
-import utils.app.hazeEffectSG3
 import utils.app.removeStrQuote
 import utils.app.showFunctionIsDevelopingToast
 
 data class HomePageBlockItem(
     var itemId: String ,
-    var itemTitle: String? = null,
-    var itemTitleRId: StringResource? = null,
+    var itemTitle: String? = null, //Can Override itemTitleRId even itemTitleRId is not null
+    var itemTitleRId: StringResource? = null, //Basic Priority
     var itemIconId: DrawableResource = Res.drawable.phorphos_cake_fill,
     var itemType: HomePageBlockItemType = HomePageBlockItemType.W1H1,
     var itemIsDisplay: Boolean = false,
@@ -182,10 +173,12 @@ fun HomePageBlock1x1(
                 text =
                 if (blockData.itemTitle === null && blockData.itemTitleRId === null) {
                     removeStrQuote(Res.string.AppStatusLostConnect)
+                }else if(blockData.itemTitle !== null){
+                    blockData.itemTitle!!
                 }else if(blockData.itemTitleRId !== null){
                     removeStrQuote(blockData.itemTitleRId!!)
-                }else {
-                    blockData.itemTitle!!
+                }else{
+                    "?"
                 },
                 Modifier
                     .align(Alignment.CenterHorizontally),
@@ -283,13 +276,15 @@ fun HomePageBlock2x1(
                 Spacer(modifier = Modifier.height(7.dp))
                 Text(
                     text =
-                    if (blockData.itemTitle === null && blockData.itemTitleRId === null) {
-                        removeStrQuote(Res.string.AppStatusLostConnect)
-                    } else if (blockData.itemTitleRId !== null) {
-                        removeStrQuote(blockData.itemTitleRId!!)
-                    } else {
-                        blockData.itemTitle!!
-                    },
+                        if (blockData.itemTitle === null && blockData.itemTitleRId === null) {
+                            removeStrQuote(Res.string.AppStatusLostConnect)
+                        }else if(blockData.itemTitle !== null){
+                            blockData.itemTitle!!
+                        }else if(blockData.itemTitleRId !== null){
+                            removeStrQuote(blockData.itemTitleRId!!)
+                        }else{
+                            "?"
+                        },
                     Modifier
                         .align(Alignment.CenterHorizontally),
                     color = TextColorNormal,
