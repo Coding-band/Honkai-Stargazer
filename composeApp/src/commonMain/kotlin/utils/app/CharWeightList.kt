@@ -1,45 +1,18 @@
 package utils.app
 
-import com.russhwolf.settings.Settings
-import getLocalHttpClient
-import io.ktor.client.call.body
-import io.ktor.client.plugins.HttpTimeout
-import io.ktor.client.plugins.UserAgent
-import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
-import io.ktor.client.plugins.defaultRequest
-import io.ktor.client.request.get
-import io.ktor.client.statement.HttpResponse
-import io.ktor.serialization.kotlinx.json.json
-import io.ktor.util.network.UnresolvedAddressException
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withTimeout
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
-import utils.device.AppInfo.Companion.AppInfoInstance
-import utils.starbase.StarbaseAPI
 
 @Serializable
 class CharWeightList(){
     companion object{
-        const val prefKeyJson = "charWeightListJson"
-        var INSTANCE = getWeightListJson()
+        var INSTANCE = Preferences().CharWeightList.getCharWeightList()
 
-        fun update(force : Boolean = false){
-            if(!Preferences().CharWeightList.isUpdateCharWeightListNow() && !force) return
-            val json = getWeightListJson()
+        fun forceUpdate(){
+            val json = (Preferences().CharWeightList.getCharWeightList())
             if(json is JsonObject && json.isNotEmpty()){
                 INSTANCE = json
-                Settings().putString(prefKeyJson, json.toString())
-                Preferences().CharWeightList.updatedCharWeightList()
-                println("CharWeightList Updated")
             }
-        }
-
-        private fun getWeightListJson(): JsonElement{
-            return Json.parseToJsonElement(readFromOnlineURL("${StarbaseAPI().getGitHubStaticAssetURL()}/data/charWeightList.json"))
         }
     }
 }

@@ -145,7 +145,7 @@ import utils.calculator.getLcAttrData
 import utils.hoyolab.AttributeExchange
 import utils.starbase.StarbaseAPI
 
-@DoItLater("Confirm that work when charStatus is null")
+@DoItLater("Known that even if the grad requirement is presented, but due to grad weight may not be > 0, it will not display")
 @Composable
 fun UserCharacterPageScreen(
     navigator: NavHostController,

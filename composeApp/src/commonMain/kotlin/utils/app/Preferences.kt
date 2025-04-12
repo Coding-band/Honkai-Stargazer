@@ -4,6 +4,7 @@ import com.russhwolf.settings.Settings
 import kotlinx.datetime.Clock
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonElement
 import ui.components.HomePageBlockItem
 import ui.screens.actionOrderTeamList
 import utils.app.Constants.Companion.HOME_PAGE_MENU_DEFAULT
@@ -209,8 +210,17 @@ class Preferences {
 
             return (currentSysTime - lastUpdateTime > Constants().CHAR_WEIGHT_LIST_UPDATE_MINS * 60 * 1000)
         }
-        fun updatedCharWeightList(){
+        @Deprecated("Since moved to GitHub, no need to wait for 15mins anymore to update")
+        fun updateCharWeightList(json: JsonElement){
             Settings().putLong(Constants().KEY_HYB_CHAR_LIST_LAST_UPDATE_TIME, StarbaseAPI().getSystemTime())
+            writeToFile("charWeightList.json", Json.encodeToString(json))
+        }
+        fun getCharWeightList(): JsonElement {
+            val fromOnline = readFromOnlineURL("${StarbaseAPI().getGitHubStaticAssetURL()}/data/charWeightList.json", defaultData = "{}")
+            if(fromOnline != "{}") {
+                writeToFile("charWeightList.json", fromOnline)
+            }
+            return Json.parseToJsonElement(if(fromOnline == "{}") readFromFile("charWeightList.json", true, "{}") else fromOnline)
         }
 
     }

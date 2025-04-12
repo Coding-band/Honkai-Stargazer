@@ -6,8 +6,8 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import utils.app.CharWeightList
 import types.Character
+import utils.app.CharWeightList
 import utils.hoyolab.AttributeExchange
 import kotlin.math.max
 import kotlin.math.min
@@ -143,10 +143,6 @@ fun getGradAttrAndValue(character: Character, schoolIndex: Int): ArrayList<Pair<
     val gradPairs = arrayListOf<Pair<AttributeExchange, Float>>()
     character.characterStatus!!.characterProperties!!.map {it ->
         val name = it.attributeExchange.key
-        val attrValue = min(
-            it.valueFinal + (if(name == "sp_rate") 1 else 0), // sp_rate屬性加 100%
-            if(name == "sp_rate") 2.0f else Float.MAX_VALUE // sp_rate屬性最大值為200%
-        )
         val weightValue = charScoreWeight.jsonObject["attr"]!!.jsonObject[name]
         val gradValue = charScoreWeight.jsonObject["grad"]!!.jsonObject[name]
 
