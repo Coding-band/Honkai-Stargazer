@@ -1,3 +1,4 @@
+
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.SideEffect
@@ -40,6 +41,8 @@ import platform.Foundation.NSUserDomainMask
 import platform.Foundation.timeIntervalSince1970
 import platform.UIKit.UIApplication
 import platform.UIKit.UIDevice
+import platform.UIKit.UIImpactFeedbackGenerator
+import platform.UIKit.UIImpactFeedbackStyle
 import platform.UIKit.UIInterfaceOrientationLandscapeLeft
 import platform.UIKit.UIInterfaceOrientationLandscapeRight
 import platform.UIKit.UIKeyboardAppearanceDark
@@ -288,4 +291,10 @@ actual fun initPurchaseImpl(
     }, onError = {
         println("Error fetching products: $it")
     })
+}
+
+actual fun performHapticFeedback(intensity: Float, context: ContextFactory) {
+    val generator = UIImpactFeedbackGenerator(UIImpactFeedbackStyle.UIImpactFeedbackStyleRigid)
+    generator.prepare()
+    generator.impactOccurredWithIntensity(intensity.toDouble())
 }

@@ -1,10 +1,14 @@
 
+import android.Manifest
 import android.app.Activity
 import android.content.Context
 import android.content.res.Configuration
 import android.graphics.BitmapFactory
 import android.os.Build
+import android.os.VibrationEffect
+import android.os.Vibrator
 import androidx.activity.ComponentActivity
+import androidx.annotation.RequiresPermission
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.SideEffect
@@ -15,6 +19,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.unit.dp
+import androidx.core.content.ContextCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.revenuecat.purchases.kmp.LogLevel
 import com.revenuecat.purchases.kmp.Purchases
@@ -36,8 +41,6 @@ import utils.app.DONATION_FAILED
 import utils.app.DONATION_PRODUCT_NOT_FIND
 import utils.app.Language
 import utils.app.errorLog
-import utils.app.isIosPlatform
-import utils.app.isMacOSPlatform
 import utils.app.replaceStrRes
 import utils.app.showWarningToast
 import utils.device.DeviceInfo
@@ -223,4 +226,12 @@ actual fun initPurchaseImpl(
     }, onError = {
         println("Error fetching products: $it")
     })
+}
+
+@RequiresPermission(Manifest.permission.VIBRATE)
+actual fun performHapticFeedback(intensity: Float, context: ContextFactory) {
+    val amplitude = (intensity.coerceIn(0f, 1f) * 255).toInt()
+    val effect = VibrationEffect.createOneShot(50, amplitude)
+    val vibrator = ContextCompat.getSystemService(context.getContext() as Context, Vibrator::class.java) as Vibrator
+    vibrator.vibrate(effect)
 }

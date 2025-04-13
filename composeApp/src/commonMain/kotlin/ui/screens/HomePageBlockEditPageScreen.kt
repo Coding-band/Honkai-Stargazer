@@ -35,6 +35,8 @@ import files.ic_item_add
 import files.ic_item_remove
 import files.ic_item_reorder
 import org.jetbrains.compose.resources.painterResource
+import performHapticFeedback
+import platformContext
 import sh.calvin.reorderable.ReorderableColumn
 import ui.components.BackIcon
 import ui.components.HomePageBlockItem
@@ -92,6 +94,11 @@ fun HomePageBlockEditPageScreen(
                             block.itemIsDisplay = true
                             ItemListBlock(blockItem = block, reorderList, draggableModifier = Modifier.draggableHandle())
                         }
+                    }
+
+                    //Make Device Vibrate when dragging
+                    if(isDragging){
+                        performHapticFeedback(intensity = 1.0f, context = platformContext)
                     }
                 }
             }

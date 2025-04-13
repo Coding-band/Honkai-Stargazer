@@ -1,6 +1,5 @@
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -180,4 +179,8 @@ actual fun initPurchaseImpl(
     productList: MutableState<List<Any>>
 ) {
     // Since RevenueCat SDK is not support jvm, we will not implement this function
+}
+
+actual fun performHapticFeedback(intensity: Float, context: ContextFactory) {
+    // Nothing to do for Desktop
 }

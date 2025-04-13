@@ -1,3 +1,4 @@
+
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.ui.graphics.ImageBitmap
@@ -6,7 +7,6 @@ import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.utils.io.ByteReadChannel
 import utils.device.DeviceInfo
-import utils.annotation.DoItLater
 
 /**
  * This is the declaration kt file for specific-platform function
@@ -61,3 +61,5 @@ expect fun kcefSetUpActual(downloadProgress: MutableState<Float>, isProcessing: 
 expect fun initPurchaseImpl(productIdList : List<Pair<String, String>>, apiKey: String,productList: MutableState<List<Any>>)
 
 expect fun doPurchaseImpl(itemId: String, isSuccess: MutableState<Boolean>, productList: List<Any>)
+
+expect fun performHapticFeedback(intensity: Float, context: ContextFactory)
