@@ -66,6 +66,7 @@ import types.CharacterProficient
 import types.CombatType
 import types.ImageFolder
 import types.Lightcone
+import types.UserAccount
 import types.UserAccount.Companion.UIDSEARCH
 import ui.components.DropdownMenuNoPadding
 import ui.components.PAGE_HEADER_HEIGHT
@@ -83,6 +84,7 @@ import utils.app.Constants.Companion.LOST_IMAGE_DRAWABLE
 import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal20
+import utils.app.GradReachYellow
 import utils.app.Language
 import utils.app.formatDecimal
 import utils.app.newImageRequest
@@ -384,7 +386,7 @@ fun ProfLeaderboardItem(charProf: CharacterProficient, navigator: NavHostControl
         Text(
             text = charProf.playerName,
             style = FontSizeNormal20(),
-            color = Color.White,
+            color = if(charProf.playerId.toString() == UserAccount.INSTANCE.uid) GradReachYellow else Color.White,
             modifier = Modifier.align(Alignment.CenterVertically).weight(1f)
         )
 
