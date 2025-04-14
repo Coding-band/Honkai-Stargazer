@@ -213,6 +213,20 @@ class Constants {
 
             },
             HomePageBlockItem(
+                itemId = "StaminaSmall",
+                itemTitleRId = Res.string.Stamina,
+                itemIconId = Res.drawable.phorphos_moon_fill,
+                itemType = HomePageBlockItem.HomePageBlockItemType.W1H1,
+                itemOnClickAction = {count, navigate -> count.value = (count.value + 1) % 2},
+            ).onRefresh { self ->
+                if(!UserNoteState.value.isInited){
+                    self.itemTitle = "--/--"
+                }else{
+                    self.itemTitle = if(self.itemOnClickCount.value == 0) "${UserNoteState.value.currStamina}/${UserNoteState.value.maxStamina}" else "${UserNoteState.value.currReserveStamina}/2400"
+                }
+
+            },
+            HomePageBlockItem(
                 itemId = "DailyMissionPage",
                 itemTitle = "--/--",
                 itemTitleRId = Res.string.NotiMission,
@@ -278,6 +292,20 @@ class Constants {
                             getFinishTimeStr(UserNoteState.value.expedition.filter { it.remainingTime != 0 }
                                 .maxOfOrNull { it.finishTime } ?: 0)
                         }
+                }
+
+            },
+            HomePageBlockItem(
+                itemId = "ExpeditionPageSmall",
+                itemTitleRId = Res.string.Expedition,
+                itemIconId = Res.drawable.phorphos_users_fill,
+                itemType = HomePageBlockItem.HomePageBlockItemType.W1H1,
+                itemOnClickToNavigate = ExpeditionRoute
+            ).onRefresh { self ->
+                if (!UserNoteState.value.isInited) {
+                    self.itemTitle = "--/--"
+                }else{
+                    self.itemTitle = "${UserNoteState.value.availableExpedition}/${UserNoteState.value.totalExpedition}"
                 }
 
             },
