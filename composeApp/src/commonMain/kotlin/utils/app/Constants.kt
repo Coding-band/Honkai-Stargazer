@@ -7,6 +7,7 @@ import files.ApocalypticShadow
 import files.Character
 import files.Event
 import files.Expedition
+import files.IIRCTitle
 import files.Lightcone
 import files.Map
 import files.MemoryOfChaos
@@ -46,6 +47,7 @@ import ui.navigation.ApocalypticShadowMissionRoute
 import ui.navigation.CharacterListRoute
 import ui.navigation.EventListRoute
 import ui.navigation.ExpeditionRoute
+import ui.navigation.IIRCHomePageRoute
 import ui.navigation.LightconeListRoute
 import ui.navigation.MemoryOfChaosMissionRoute
 import ui.navigation.ProficientLeaderboardRoute
@@ -168,6 +170,8 @@ class Constants {
             "MapPage",
             "EventListPage",
         )
+
+        val IIRC_MENU_ID = "IIRCHomePage"
 
         var HOME_PAGE_MENU_DEFAULT = arrayListOf<HomePageBlockItem>(
             HomePageBlockItem(
@@ -358,19 +362,6 @@ class Constants {
                 itemIconId = Res.drawable.phorphos_trophy_fill,
                 itemOnClickToNavigate = ProficientLeaderboardRoute
             ),
-            /*
-            Removed, merged into <MOC/PF/AS> Info Page
-            HomePageBlockItem(
-                itemId = "MemoryOfChaosLeaderboard",
-                itemTitleRId = Res.string.MemoryOfChaosLeaderboard,
-                itemIconId = Res.drawable.phorphos_chart_bar_fill
-            ),
-            HomePageBlockItem(
-                itemId = "PureFictionLeaderboard",
-                itemTitleRId = Res.string.PureFictionLeaderboard,
-                itemIconId = Res.drawable.phorphos_chart_bar_horizontal_fill
-            ),
-             */
             HomePageBlockItem(
                 itemId = "MapPage",
                 itemTitleRId = Res.string.Map,
@@ -379,6 +370,12 @@ class Constants {
                 itemOnClickAction = { _ , _ ->
                     urlHandler.openUri("https://act.hoyolab.com/sr/app/interactive-map/index.html?lang=${Language.TextLanguageInstance.hoyolabName}")
                 }
+            ),
+            HomePageBlockItem(
+                itemId = "IIRCHomePage",
+                itemTitleRId = Res.string.IIRCTitle,
+                itemIconId = Res.drawable.phorphos_planet_fill,
+                itemOnClickToNavigate = IIRCHomePageRoute
             ),
 
             /*
@@ -407,24 +404,6 @@ class Constants {
             ),
             */
 
-            /*
-
-            HomePageBlockItem(
-                itemTitleRId = Res.string.MOCMissionPart1,
-                itemIconId = Res.drawable.phorphos_shooting_star_fill,
-                itemOnClickToNavigate = Screen.BlankScreen
-            ),
-            HomePageBlockItem(
-                itemTitleRId = Res.string.MOCMissionPart2,
-                itemIconId = Res.drawable.phorphos_shooting_star_fill,
-                itemOnClickToNavigate = Screen.WithBGScreen
-            ),
-            HomePageBlockItem(
-                itemTitleRId = Res.string.MOCMissionPart3,
-                itemIconId = Res.drawable.phorphos_shooting_star_fill,
-                itemOnClickToNavigate = Screen.WithBGHeaderScreen
-            ),
-             */
         )
     }
 }

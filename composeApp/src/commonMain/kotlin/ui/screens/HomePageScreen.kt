@@ -6,14 +6,10 @@
 
 package ui.screens
 
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -46,13 +42,10 @@ import androidx.compose.material.IconButton
 import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -63,11 +56,11 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
@@ -89,8 +82,6 @@ import files.ic_default_avatar
 import files.ic_rounded_option_btn
 import files.ui_icon_close
 import org.jetbrains.compose.resources.painterResource
-import sh.calvin.reorderable.ReorderableItem
-import sh.calvin.reorderable.rememberReorderableLazyGridState
 import types.Character
 import types.ImageFolder
 import types.UserAccount
@@ -106,7 +97,6 @@ import ui.navigation.UserInfoRoute
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
 import ui.navigation.urlHandler
-import utils.annotation.DoItLater
 import utils.app.BlackAlpha30
 import utils.app.Constants
 import utils.app.DonationPopUp
@@ -427,6 +417,8 @@ fun HomePageMenuScrollView(
     )
      */
     val menuSettingRowHeight = remember { mutableStateOf(0.dp) }
+    val menuItemHeight = remember { mutableStateOf(0.dp) }
+    val density = LocalDensity.current.density
     Column {
         LazyVerticalGrid(
             state = lazyGridState,
@@ -445,7 +437,9 @@ fun HomePageMenuScrollView(
                 }
             }, key = { it }) { index ->
                 val homeMenuItem = Constants.HOME_PAGE_MENU_DEFAULT.first { it.itemId == index }
-                Box(Modifier.layoutId("HomePageItemBox")){
+                Box(Modifier.layoutId("HomePageItemBox").onSizeChanged {
+                    menuItemHeight.value = androidx.compose.ui.unit.max(pxToDp(it.height, density), HomePageBlockItem.HOME_PAGE_BLOCK_HEIGHT)
+                }){
                     when (homeMenuItem.itemType) {
                         HomePageBlockItem.HomePageBlockItemType.W1H1 -> HomePageBlock1x1(
                             homeMenuItem,
@@ -594,6 +588,7 @@ fun ThreeDotsDialog(
                     Column(modifier = Modifier.padding(15.dp)) {
                         UIButton(
                             textRes = if (userAccount.value.isLogin) Res.string.Logout else Res.string.AccountLogin,
+                            buttonSize = UIButtonSize.SmallChoice,
                             onClick = {
                                 threeDotDialogDisplay.value = false;
                                 if (userAccount.value.isLogin) {
@@ -605,29 +600,32 @@ fun ThreeDotsDialog(
                                     showLoginPopUp.value = true
                                 }
                             },
-                            buttonSize = UIButtonSize.SmallChoice
+
                         )
                         Spacer(Modifier.height(10.dp))
                         UIButton(
                             textRes = Res.string.ModifyHomePage,
-                            onClick = { threeDotDialogDisplay.value = false; navigator.navigateLimited(HomePageBlockEditRoute) },
+                            buttonSize = UIButtonSize.SmallChoice,
                             // onClick = { threeDotDialogDisplay.value = false; isEditMenuMode.value = true;},
-                            buttonSize = UIButtonSize.SmallChoice
+                            onClick = { threeDotDialogDisplay.value = false; navigator.navigateLimited(HomePageBlockEditRoute) },
+
                         )
                         Spacer(Modifier.height(10.dp))
                         UIButton(
                             textRes = Res.string.Donation,
+                            buttonSize = UIButtonSize.SmallChoice,
                             onClick = { showDonationPopup.value = true },
-                            buttonSize = UIButtonSize.SmallChoice
+
                         )
                         Spacer(Modifier.height(10.dp))
                         UIButton(
                             textRes = Res.string.Setting,
+                            buttonSize = UIButtonSize.SmallChoice,
                             onClick = {
                                 threeDotDialogDisplay.value =
                                     false; navigator.navigateLimited(SettingRoute)
                             },
-                            buttonSize = UIButtonSize.SmallChoice
+
                         )
                     }
                 }
@@ -666,27 +664,30 @@ private fun HomePageMenuItemActionRow(homeMenuList: MutableState<List<String>>){
     if(isEditMenuMode.value){
         Row (modifier = Modifier.navigationBarsPadding().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING, bottom = 8.dp)){
             UIButton(
+                modifierTmp = Modifier.weight(1f),
                 text = "Reset",
                 onClick = {
                     isEditMenuMode.value = false
                     homeMenuList.value = Constants.HOME_PAGE_MENU_ID_LIST
                     Preferences().HomePageMenu.setShowMenuListById(Constants.HOME_PAGE_MENU_ID_LIST)
                 },
-                modifierTmp = Modifier.weight(1f)
+
             )
             Spacer(modifier = Modifier.width(8.dp))
             UIButton(
+                modifierTmp = Modifier.weight(1f),
                 text = "Add",
                 onClick = {},
-                modifierTmp = Modifier.weight(1f)
+
             )
             Spacer(modifier = Modifier.width(8.dp))
             UIButton(
+                modifierTmp = Modifier.weight(1f),
                 text = "Save",
                 onClick = {
                     isEditMenuMode.value = false
                 },
-                modifierTmp = Modifier.weight(1f)
+
             )
         }
     }

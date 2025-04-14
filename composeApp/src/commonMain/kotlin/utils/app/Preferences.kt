@@ -298,6 +298,14 @@ class Preferences {
             val menuStrArray = showMenuBlockList.filter { it.itemIsDisplay }.map { it.itemId }
             Settings().putString("showMenuList", Json.encodeToString(menuStrArray))
         }
+
+        fun addNewVersionItemInMenuList(itemId: String){
+            val showMenuList = getShowMenuList().toMutableList()
+            if(!showMenuList.contains(itemId)){
+                showMenuList.add(itemId)
+                setShowMenuListById(showMenuList)
+            }
+        }
     }
 
     class ActionOrderClass(){

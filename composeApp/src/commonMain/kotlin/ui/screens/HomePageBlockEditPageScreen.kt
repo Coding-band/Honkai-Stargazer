@@ -26,12 +26,18 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
+import files.ConfirmBTN
 import files.Res
+import files.Reset
 import files.ic_item_add
 import files.ic_item_remove
 import files.ic_item_reorder
@@ -40,9 +46,11 @@ import performHapticFeedback
 import platformContext
 import sh.calvin.reorderable.ReorderableColumn
 import ui.components.BackIcon
+import ui.components.DropShadow
 import ui.components.HomePageBlockItem
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
+import ui.components.UIButton
 import ui.navigation.Screen
 import ui.navigation.popBackStackLimited
 import utils.annotation.TranslationPls
@@ -51,6 +59,7 @@ import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.Preferences
+import utils.app.pxToDp
 import utils.app.removeStrQuote
 
 @Composable
@@ -64,6 +73,8 @@ fun HomePageBlockEditPageScreen(
         .fillMaxSize()
     ){
         val listState = rememberLazyListState()
+        val actionRowHeight = remember { mutableStateOf(0.dp) }
+        val density = LocalDensity.current.density
         LazyColumn(
             state = listState,
             modifier = Modifier
@@ -121,7 +132,10 @@ fun HomePageBlockEditPageScreen(
             // List Item that not shown in HomePage Menu
             item {
                 Column {
-                    Constants.HOME_PAGE_MENU_DEFAULT.filter { !reorderList.value.contains(it.itemId) }.map {item ->
+                    Constants.HOME_PAGE_MENU_DEFAULT.filter {
+                        !reorderList.value.contains(it.itemId) &&
+                                if (Settings().getBoolean("isUnlockedIIRC", false)) true else it.itemId != Constants.IIRC_MENU_ID //IIRC Easter Egg
+                    }.map {item ->
                         val block = Constants.HOME_PAGE_MENU_DEFAULT.firstOrNull { it.itemId == item.itemId }
                         if (block != null) {
                             block.itemIsDisplay = false
@@ -131,6 +145,51 @@ fun HomePageBlockEditPageScreen(
 
                 }
             }
+
+            item {
+                Spacer(modifier = Modifier.height(actionRowHeight.value + 8.dp))
+            }
+        }
+
+        Row(modifier = Modifier
+            .align(Alignment.BottomCenter)
+            .onGloballyPositioned { actionRowHeight.value = pxToDp(it.size.height, density) }
+            .navigationBarsPadding()
+            .padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING, bottom = 4.dp)
+        ) {
+            DropShadow(
+                modifier = Modifier.weight(1f),
+                color = Color(0x33000000),
+                offset = DpOffset(0.dp, 4.dp),
+                radius = 16.dp,
+            ) {
+                UIButton(
+                    textRes = Res.string.Reset,
+                    onClick = {
+                        Preferences().HomePageMenu.setShowMenuListById(Constants.HOME_PAGE_MENU_ID_LIST)
+                        doRecompose.value = !doRecompose.value
+                        navigator.popBackStackLimited()
+                    },
+                )
+            }
+
+            Spacer(modifier = Modifier.width(8.dp))
+
+            DropShadow(
+                modifier = Modifier.weight(1f),
+                color = Color(0x33000000),
+                offset = DpOffset(0.dp, 4.dp),
+                radius = 16.dp,
+            ) {
+                UIButton(
+                    textRes = Res.string.ConfirmBTN,
+                    onClick = {
+                        Preferences().HomePageMenu.setShowMenuListById(reorderList.value)
+                        doRecompose.value = !doRecompose.value
+                        navigator.popBackStackLimited()
+                    },
+                )
+            }
         }
 
         PageHeader(
@@ -139,8 +198,6 @@ fun HomePageBlockEditPageScreen(
             hazeState = hazeState,
             backIconId = BackIcon.BACK,
             onBack = { nav ->
-                Preferences().HomePageMenu.setShowMenuListById(reorderList.value)
-                doRecompose.value = !doRecompose.value
                 nav.popBackStackLimited()
             }
         )

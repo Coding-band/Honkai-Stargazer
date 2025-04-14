@@ -25,7 +25,6 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -89,9 +88,11 @@ import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.navigation.AboutStargazerRoute
 import ui.navigation.BackgroundSettingRoute
+import ui.navigation.IIRCHomePageRoute
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import utils.annotation.DoItLater
+import utils.annotation.TranslationPls
 import utils.app.Constants
 import utils.app.DefaultZIndex
 import utils.app.DonationPopUp
@@ -360,17 +361,16 @@ fun SettingScreen(
                             title = removeStrQuote(Res.string.SettingInternalVersionCode),
                             navigateDesc = "${BuildKonfig.appProfile} ${BuildKonfig.appVersionCode}",
                             navigateClick = {
-                                /*
                                 @TranslationPls
                                 val totalClickToUnlock = 5
                                 if(Settings().getBoolean("isUnlockedIIRC",false) || versionNameClickTimes.value >= totalClickToUnlock){
                                     Settings().putBoolean("isUnlockedIIRC", true)
+                                    Preferences().HomePageMenu.addNewVersionItemInMenuList(Constants.IIRC_MENU_ID)
                                     navigator.navigateLimited(IIRCHomePageRoute)
                                 }else{
                                     versionNameClickTimes.value++
                                     showSuccessToast(message = "再點擊 ${totalClickToUnlock - versionNameClickTimes.value} 次即可解鎖小彩蛋")
                                 }
-                                 */
                                 showSuccessToast(message = "${BuildKonfig.appProfile} ${BuildKonfig.appVersionCode}")
                             }
                         )
