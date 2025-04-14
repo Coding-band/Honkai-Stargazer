@@ -163,6 +163,7 @@ fun HomePage(
     VersionBox()
 
     key(doRecompose.value){
+        homeMenuList.value = Preferences().HomePageMenu.getShowMenuList()
         println("RECOMPOSED !")
         Box(modifier = Modifier
             .statusBarsPadding()

@@ -30,6 +30,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import dev.chrisbanes.haze.HazeState
+import dev.chrisbanes.haze.hazeSource
 import files.Res
 import files.ic_item_add
 import files.ic_item_remove
@@ -44,7 +45,9 @@ import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.navigation.Screen
 import ui.navigation.popBackStackLimited
+import utils.annotation.TranslationPls
 import utils.app.Constants
+import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.Preferences
@@ -65,13 +68,15 @@ fun HomePageBlockEditPageScreen(
             state = listState,
             modifier = Modifier
                 .padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
+                .hazeSource(hazeState, DefaultZIndex)
                 .navigationBarsPadding()
         ) {
             item {
-                Spacer(modifier = Modifier.height(PAGE_HEADER_HEIGHT))
+                Spacer(modifier = Modifier.height(PAGE_HEADER_HEIGHT + 8.dp))
             }
 
             // Title
+            @TranslationPls
             item {
                 Text(
                     text = "已展示物件",
@@ -84,8 +89,13 @@ fun HomePageBlockEditPageScreen(
             item {
                 ReorderableColumn(
                     list = reorderList.value,
+                    onMove = {
+                        performHapticFeedback(intensity = 0.5f, context = platformContext)
+                    },
                     onSettle = { fromIndex, toIndex ->
-                        reorderList.value = reorderList.value.toMutableList().apply { add(toIndex, removeAt(fromIndex)) }
+                        reorderList.value = reorderList.value.toMutableList().apply {
+                            add(toIndex, removeAt(fromIndex))
+                        }
                     },
                 ){ index, item, isDragging ->
                     key(item){
@@ -95,15 +105,11 @@ fun HomePageBlockEditPageScreen(
                             ItemListBlock(blockItem = block, reorderList, draggableModifier = Modifier.draggableHandle())
                         }
                     }
-
-                    //Make Device Vibrate when dragging
-                    if(isDragging){
-                        performHapticFeedback(intensity = 1.0f, context = platformContext)
-                    }
                 }
             }
 
             // Title - Not Shown
+            @TranslationPls
             item {
                 Text(
                     text = "未展示物件",
@@ -174,7 +180,12 @@ private fun ItemListBlock(blockItem: HomePageBlockItem, listRef: MutableState<Li
 
             // Text for that block
             Text(
-                text = if(blockItem.itemTitleRId != null) {removeStrQuote(blockItem.itemTitleRId!!)} else null ?: blockItem.itemTitle ?: "?",
+                text = "${if(blockItem.itemTitleRId != null) {removeStrQuote(blockItem.itemTitleRId!!)} else null ?: blockItem.itemTitle ?: "?"} (${
+                    when(blockItem.itemType) {
+                        HomePageBlockItem.HomePageBlockItemType.W1H1 -> "1x1"
+                        HomePageBlockItem.HomePageBlockItemType.W2H1 -> "2x1"
+                    }
+                })",
                 style = FontSizeNormal14(),
                 color = Color(0xFF000000),
                 modifier = Modifier.align(Alignment.CenterVertically).weight(1f),
