@@ -109,7 +109,8 @@ val gradient = Brush.verticalGradient(
 fun HomePageBlock1x1(
     blockData: HomePageBlockItem,
     hazeState: HazeState,
-    navigator: NavHostController
+    navigator: NavHostController,
+    //draggableModifier: Modifier = Modifier
 ) {
 
     blockData.refresh?.invoke()
@@ -134,7 +135,7 @@ fun HomePageBlock1x1(
             blockData.itemOnClickAction?.invoke(blockData.itemOnClickCount, navigator)
         },
         shape = RoundedCornerShape(6.dp),
-        modifier = Modifier
+        modifier = Modifier //draggableModifier if need
             .defaultMinSize(
                 HomePageBlockItem.HOME_PAGE_BLOCK_WIDTH_1x1,
                 HomePageBlockItem.HOME_PAGE_BLOCK_HEIGHT

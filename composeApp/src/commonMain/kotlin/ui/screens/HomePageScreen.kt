@@ -6,10 +6,14 @@
 
 package ui.screens
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -34,6 +38,8 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.IconButton
@@ -61,6 +67,7 @@ import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
@@ -80,7 +87,10 @@ import files.Setting
 import files.donate_ad_bg
 import files.ic_default_avatar
 import files.ic_rounded_option_btn
+import files.ui_icon_close
 import org.jetbrains.compose.resources.painterResource
+import sh.calvin.reorderable.ReorderableItem
+import sh.calvin.reorderable.rememberReorderableLazyGridState
 import types.Character
 import types.ImageFolder
 import types.UserAccount
@@ -98,6 +108,7 @@ import ui.navigation.navigatorInstance
 import ui.navigation.urlHandler
 import utils.annotation.DoItLater
 import utils.app.BlackAlpha30
+import utils.app.Constants
 import utils.app.DonationPopUp
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
@@ -122,6 +133,9 @@ import utils.app.showDonationPopup
 import utils.app.showWarningToast
 import kotlin.math.min
 
+@Deprecated("Since this design is too complicated for me")
+private lateinit var isEditMenuMode: MutableState<Boolean>
+
 @Composable
 fun HomePage(
     navigator: NavHostController,
@@ -130,8 +144,8 @@ fun HomePage(
     val threeDotDialogDisplay = remember { mutableStateOf(false) }
     val threeDotDialogPos = remember { mutableStateOf<Offset>(Offset(0f, 0f)) }
     val userAccount = remember { mutableStateOf(UserAccount.INSTANCE) }
-    val homeMenuBlockList = remember { mutableStateOf(Preferences().HomePageMenu.getShowMenuBlockList().toMutableList()) }
-
+    val homeMenuList = remember { mutableStateOf(Preferences().HomePageMenu.getShowMenuList()) }
+    isEditMenuMode = remember { mutableStateOf(false) }
     /*
     if(Settings().getBoolean("isUnlockedIIRC", false) && homeMenuBlockList.value.none { it.itemId == "IIRCHomePageScreen" }){
         homeMenuBlockList.value.add(
@@ -149,7 +163,6 @@ fun HomePage(
     VersionBox()
 
     key(doRecompose.value){
-        homeMenuBlockList.value = Preferences().HomePageMenu.getShowMenuBlockList().toMutableList()
         println("RECOMPOSED !")
         Box(modifier = Modifier
             .statusBarsPadding()
@@ -166,7 +179,7 @@ fun HomePage(
                 HomePageMenuScrollView(
                     navigator = navigator,
                     hazeState = hazeState,
-                    homeMenuBlockList = homeMenuBlockList.value
+                    homeMenuList = homeMenuList
                 )
             }
         }
@@ -174,6 +187,7 @@ fun HomePage(
         ThreeDotsDialog(navigator = navigator, threeDotDialogPos = threeDotDialogPos, hazeState = hazeState, threeDotDialogDisplay = threeDotDialogDisplay, userAccount = userAccount)
 
         if(showDonationPopup.value){
+            homeMenuList.value = Preferences().HomePageMenu.getShowMenuList()
             if(
                 isWindowsPlatform() ||
                 isLinuxPlatform() ||
@@ -397,59 +411,79 @@ fun HomePageMenuScrollView(
     modifier: Modifier = Modifier,
     navigator: NavHostController,
     hazeState: HazeState,
-    homeMenuBlockList: MutableList<HomePageBlockItem>
+    homeMenuList: MutableState<List<String>>,
 ) {
-    val maxItemInRow = remember { mutableStateOf(4) }
-    var reorderHomeMenuBlockList by remember { mutableStateOf(homeMenuBlockList) }
-
-    LaunchedEffect(Unit){
-        reorderHomeMenuBlockList = homeMenuBlockList
-    }
-
+    val lazyGridState = rememberLazyGridState()
+    /* Depreacted, for the HomeMenuBlock Reorderable
+    val reorderableLazyGridState = rememberReorderableLazyGridState(
+        lazyGridState,
+        onMove = { from, to ->
+            homeMenuList.value = homeMenuList.value.toMutableList().apply {
+                add(to.index, removeAt(from.index))
+            }
+            Preferences().HomePageMenu.setShowMenuListById(homeMenuList.value)
+        }
+    )
+     */
+    val menuSettingRowHeight = remember { mutableStateOf(0.dp) }
     Column {
         LazyVerticalGrid(
+            state = lazyGridState,
             modifier = Modifier
-                .padding(start = 16.dp, end = 16.dp)
+                .padding(start = 16.dp, end = 16.dp + menuSettingRowHeight.value)
                 .weight(1f),
             columns = GridCells.Adaptive(80.dp),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            items(count = reorderHomeMenuBlockList.size, span = { index ->
-
-                if(index == 0) maxItemInRow.value = maxLineSpan
-
-                when (reorderHomeMenuBlockList[index].itemType) {
+            items(homeMenuList.value, span = { index ->
+                val homeMenuItem = Constants.HOME_PAGE_MENU_DEFAULT.first { it.itemId == index }
+                when (homeMenuItem.itemType) {
                     HomePageBlockItem.HomePageBlockItemType.W1H1 -> GridItemSpan(1)
                     HomePageBlockItem.HomePageBlockItemType.W2H1 -> GridItemSpan(2)
                 }
-
-            }) { index ->
-                val blockData: HomePageBlockItem = reorderHomeMenuBlockList[index];
+            }, key = { it }) { index ->
+                val homeMenuItem = Constants.HOME_PAGE_MENU_DEFAULT.first { it.itemId == index }
                 Box(Modifier.layoutId("HomePageItemBox")){
-
-                    when (blockData.itemType) {
+                    when (homeMenuItem.itemType) {
                         HomePageBlockItem.HomePageBlockItemType.W1H1 -> HomePageBlock1x1(
-                            blockData,
+                            homeMenuItem,
                             hazeState = hazeState,
-                            navigator = navigator
+                            navigator = navigator,
+                            //draggableModifier = draggableModifier
                         )
                         HomePageBlockItem.HomePageBlockItemType.W2H1 -> HomePageBlock2x1(
-                            blockData,
+                            homeMenuItem,
                             hazeState = hazeState,
                             navigator = navigator
                         )
                     }
                 }
+
+
+                /* Deprecated, Since this design is too complicated for me
+                ReorderableItem(reorderableLazyGridState, key = homeMenuItem.itemId){
+                    val draggableModifier = Modifier.draggableHandle(enabled = isEditMenuMode.value)
+
+                    //HomePageItemBox
+
+                    // Delete button, just a small "cross" button at the left-top of box
+                    // HomePageMenuItemDeleteButton(homeMenuList = homeMenuList, id = homeMenuItem.itemId)
+                }
+                 */
             }
 
             item { Box(modifier = Modifier.navigationBarsPadding().size(16.dp)) }
         }
         //BottomView()
+
+        // Deprecated, Since this design is too complicated for me
+        // HomePageMenuItemActionRow(homeMenuList = homeMenuList)
     }
 }
 
 // Arrange items to avoid gaps
+@Deprecated("Since the Home Page Modify Function Implemented")
 fun reorderHomePageBlock(items: MutableList<HomePageBlockItem>, columns: Int): List<HomePageBlockItem> {
     val grid = mutableListOf<MutableList<HomePageBlockItem?>>()
     val arrangedItems = mutableListOf<HomePageBlockItem>()
@@ -491,7 +525,7 @@ fun reorderHomePageBlock(items: MutableList<HomePageBlockItem>, columns: Int): L
 
 
 @Composable
-@DoItLater("Ads function")
+// For Ads or banner
 fun BottomView(modifier: Modifier = Modifier){
     Box(modifier = Modifier
         .heightIn(64.dp, 100.dp)){
@@ -576,6 +610,7 @@ fun ThreeDotsDialog(
                         UIButton(
                             textRes = Res.string.ModifyHomePage,
                             onClick = { threeDotDialogDisplay.value = false; navigator.navigateLimited(HomePageBlockEditRoute) },
+                            // onClick = { threeDotDialogDisplay.value = false; isEditMenuMode.value = true;},
                             buttonSize = UIButtonSize.SmallChoice
                         )
                         Spacer(Modifier.height(10.dp))
@@ -600,4 +635,58 @@ fun ThreeDotsDialog(
     }
 
     HoyolabServerRemarksPopup(showPopup = showLoginPopUp, hazeState = hazeState)
+}
+
+@Deprecated("Since this design is too complicated for me")
+@Composable
+private fun HomePageMenuItemDeleteButton(homeMenuList: MutableState<List<String>>, id: String) {
+    if (isEditMenuMode.value){
+        Image(
+            modifier = Modifier
+                .size(16.dp)
+                .background(Color(0xCCFF00000), CircleShape)
+                .clip(CircleShape)
+                .clickable {
+                    homeMenuList.value = homeMenuList.value.toMutableList().apply {
+                        remove(id)
+                    }
+                    Preferences().HomePageMenu.setShowMenuListById(homeMenuList.value)
+                },
+            painter = painterResource(Res.drawable.ui_icon_close),
+            colorFilter = ColorFilter.tint(Color.White),
+            contentDescription = "Delete Menu Item"
+        )
+    }
+}
+
+@Deprecated("Since this design is too complicated for me")
+@Composable
+private fun HomePageMenuItemActionRow(homeMenuList: MutableState<List<String>>){
+    if(isEditMenuMode.value){
+        Row (modifier = Modifier.navigationBarsPadding().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING, bottom = 8.dp)){
+            UIButton(
+                text = "Reset",
+                onClick = {
+                    isEditMenuMode.value = false
+                    homeMenuList.value = Constants.HOME_PAGE_MENU_ID_LIST
+                    Preferences().HomePageMenu.setShowMenuListById(Constants.HOME_PAGE_MENU_ID_LIST)
+                },
+                modifierTmp = Modifier.weight(1f)
+            )
+            Spacer(modifier = Modifier.width(8.dp))
+            UIButton(
+                text = "Add",
+                onClick = {},
+                modifierTmp = Modifier.weight(1f)
+            )
+            Spacer(modifier = Modifier.width(8.dp))
+            UIButton(
+                text = "Save",
+                onClick = {
+                    isEditMenuMode.value = false
+                },
+                modifierTmp = Modifier.weight(1f)
+            )
+        }
+    }
 }
