@@ -35,6 +35,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import dev.chrisbanes.haze.HazeState
@@ -80,7 +81,7 @@ data class HomePageBlockItem(
     companion object{
         val HOME_PAGE_BLOCK_WIDTH_1x1 = 80.dp
         val HOME_PAGE_BLOCK_WIDTH_2x1 = 180.dp
-        val HOME_PAGE_BLOCK_HEIGHT = 90.dp
+        val HOME_PAGE_BLOCK_HEIGHT = 96.dp
     }
 
     enum class HomePageBlockItemType(val width: Int, val height: Int) {
@@ -185,6 +186,8 @@ fun HomePageBlock1x1(
                     .align(Alignment.CenterHorizontally),
                 color = TextColorNormal,
                 style = FontSizeNormal12(),
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
                 textAlign = TextAlign.Center,
             )
         }
