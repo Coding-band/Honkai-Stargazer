@@ -195,7 +195,7 @@ fun HomePageBlockEditPageScreen(
 
         PageHeader(
             navigator = navigator,
-            headerData = Screen.ExpeditionPageScreen.headerData,
+            headerData = Screen.HomePageBlockEditPageScreen.headerData,
             hazeState = hazeState,
             backIconId = BackIcon.BACK,
             onBack = { nav ->
