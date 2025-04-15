@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -27,7 +26,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
-import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
@@ -41,12 +39,9 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.focus.FocusRequester
-import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.onSizeChanged
-import androidx.compose.ui.platform.LocalClipboard
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalFocusManager
@@ -79,10 +74,7 @@ import files.UseCookiesToLogin
 import files.bg_transparent
 import files.ic_arrow_down_spinner
 import files.ic_selected_orange_circle
-import files.phorphos_clipboard_regular
 import files.phorphos_clipboard_text_fill
-import files.phorphos_clipboard_text_regular
-import getDeviceInfo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -94,15 +86,12 @@ import types.UserAccount
 import ui.components.AppDialog
 import ui.components.BackIcon
 import ui.components.DropdownMenuNoPadding
-import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.PomPomPopup
 import ui.components.UIButton
 import ui.components.UIButtonSize
-import ui.components.defaultHeaderData
 import ui.components.pomPomPopupInstance
-import ui.navigation.CharacterInfoRoute
 import ui.navigation.HoyolabLoginRoute
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
@@ -112,7 +101,6 @@ import utils.annotation.DoItLater
 import utils.app.AppFont
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
-import utils.app.Language.Companion.TextLanguageInstance
 import utils.app.LongStringXML
 import utils.app.isLinuxPlatform
 import utils.app.isMacOSPlatform
@@ -130,6 +118,7 @@ fun HoyolabLoginPageScreen(
     hazeState: HazeState,
     backStackEntry: NavBackStackEntry,
     snackbarHostState: SnackbarHostState? = remember { SnackbarHostState() },
+    pageHeader: MutableState<@Composable () -> Unit>
 ){
     val route = backStackEntry.toRoute<HoyolabLoginRoute>()
     val serverId = route.serverId
@@ -153,19 +142,7 @@ fun HoyolabLoginPageScreen(
         onDispose {  }
     }
 
-    Box(modifier = Modifier.fillMaxSize()) {
-        Column(modifier = Modifier.fillMaxSize()) {
-            WebView(webviewState, modifier = Modifier.statusBarsPadding().padding(top = PAGE_HEADER_HEIGHT).fillMaxSize().weight(1f))
-            Box(modifier = Modifier.background(Color(0xCCF3F9FF)).fillMaxWidth().padding(16.dp).navigationBarsPadding()) {
-                Text(
-                    text = LongStringXML().LoginHint(),
-                    color = Color.Black,
-                    style = FontSizeNormal14(),
-                )
-
-            }
-        }
-
+    pageHeader.value = {
         PageHeader(
             navigator = navigator,
             headerData = Screen.HoyolabLoginPageScreen.headerData,
@@ -181,6 +158,21 @@ fun HoyolabLoginPageScreen(
                 navigator.popBackStackLimited()
             }
         )
+    }
+
+
+    Box(modifier = Modifier.fillMaxSize()) {
+        Column(modifier = Modifier.fillMaxSize()) {
+            WebView(webviewState, modifier = Modifier.statusBarsPadding().padding(top = PAGE_HEADER_HEIGHT).fillMaxSize().weight(1f))
+            Box(modifier = Modifier.background(Color(0xCCF3F9FF)).fillMaxWidth().padding(16.dp).navigationBarsPadding()) {
+                Text(
+                    text = LongStringXML().LoginHint(),
+                    color = Color.Black,
+                    style = FontSizeNormal14(),
+                )
+
+            }
+        }
     }
 }
 

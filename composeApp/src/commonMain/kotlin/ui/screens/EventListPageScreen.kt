@@ -64,17 +64,14 @@ import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import utils.app.Constants
 import utils.app.DefaultZIndex
-import utils.app.isLinuxPlatform
-import utils.app.isMacOSPlatform
-import utils.app.isWindowsPlatform
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
-import utils.app.showWarningToast
 
 @Composable
 fun EventListPageScreen(
     navigator: NavHostController,
-    hazeState: HazeState
+    hazeState: HazeState,
+    pageHeader: MutableState<@Composable () -> Unit>
 ) {
     val isDateOutside = remember { mutableStateOf(Settings().getBoolean("isDateOutside",true)) }
     val eventList = remember { mutableStateOf(listOf<EventItem>()) }
@@ -88,6 +85,15 @@ fun EventListPageScreen(
         }.await()
     }
 
+    pageHeader.value = {
+        PageHeader(
+            navigator = navigator,
+            headerData = Screen.EventListPageScreen.headerData,
+            hazeState = hazeState,
+            backIconId = BackIcon.CANCEL,
+        )
+    }
+    
     Box(modifier = Modifier.fillMaxSize()){
         LazyColumn(modifier = Modifier
             .hazeSource(state = hazeState, zIndex = DefaultZIndex)
@@ -106,12 +112,8 @@ fun EventListPageScreen(
 
         }
 
-        PageHeader(
-            navigator = navigator,
-            headerData = Screen.EventListPageScreen.headerData,
-            hazeState = hazeState,
-            backIconId = BackIcon.CANCEL,
-        )
+
+
     }
 }
 

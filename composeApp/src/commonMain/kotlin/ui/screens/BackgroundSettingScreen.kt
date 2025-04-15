@@ -80,7 +80,8 @@ import utils.app.toLocaleMap
 @Composable
 fun BackgroundSettingScreen(
     navigator: NavHostController,
-    hazeState: HazeState
+    hazeState: HazeState,
+    pageHeader: MutableState<@Composable () -> Unit>,
 ){
     val context = LocalPlatformContext.current
     val currentWallpaper = Wallpaper.getPreferenceWallpaper()
@@ -100,6 +101,15 @@ fun BackgroundSettingScreen(
                         mappingLocaleMap(Character.getCharacterFromExtListJson(it.id)?.jsonObject?.get("localeName")?.jsonObject?.toLocaleMap() ?: mapOf(), searchInput) ?: false
                 //mappingLocaleMap((it.locale ?: mapOf()), searchInput)
             }
+        )
+    }
+
+    pageHeader.value = {
+        PageHeader(
+            navigator = navigator,
+            headerData = Screen.BackgroundSettingScreen.headerData,
+            hazeState = hazeState,
+            backIconId = BackIcon.BACK
         )
     }
 
@@ -229,8 +239,6 @@ fun BackgroundSettingScreen(
                 navigator.popBackStackLimited()
             })
         }
-
-        PageHeader(navigator = navigator, headerData = Screen.BackgroundSettingScreen.headerData, hazeState = hazeState, backIconId = BackIcon.BACK)
     }
 }
 

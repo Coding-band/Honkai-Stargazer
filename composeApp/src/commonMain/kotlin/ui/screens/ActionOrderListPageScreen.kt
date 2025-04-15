@@ -159,7 +159,8 @@ fun initActionOrderTeamList(){
 @Composable
 fun ActionOrderListPageScreen(
     navigator: NavHostController,
-    hazeState: HazeState
+    hazeState: HazeState,
+    pageHeader: MutableState<@Composable () -> Unit>,
 ) {
     val isInit = remember { mutableStateOf(false) }
     val isPopupOpen = remember { mutableStateOf(false) }
@@ -176,6 +177,19 @@ fun ActionOrderListPageScreen(
             }
             isInit.value = true
         }
+    }
+
+    pageHeader.value = {
+        PageHeader(
+            navigator = navigator,
+            headerData = Screen.ActionOrderListPageScreen.headerData,
+            hazeState = hazeState,
+            backIconId = BackIcon.CANCEL,
+            forwardIconId = Res.drawable.phorphos_check_regular,
+            onForward = {
+                //多選功能
+            }
+        )
     }
 
     Box(modifier = Modifier.fillMaxSize()){
@@ -201,17 +215,6 @@ fun ActionOrderListPageScreen(
             }
 
         }
-
-        PageHeader(
-            navigator = navigator,
-            headerData = Screen.ActionOrderListPageScreen.headerData,
-            hazeState = hazeState,
-            backIconId = BackIcon.CANCEL,
-            forwardIconId = Res.drawable.phorphos_check_regular,
-            onForward = {
-                //多選功能
-            }
-        )
 
         //Button for 添加
         UIButton(

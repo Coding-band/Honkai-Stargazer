@@ -22,6 +22,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -66,7 +67,8 @@ import utils.app.removeStrQuote
 @Composable
 fun ExpeditionPageScreen(
     navigator: NavHostController,
-    hazeState: HazeState
+    hazeState: HazeState,
+    pageHeader: MutableState<@Composable () -> Unit>,
 ) {
     val isRefreshing = remember { mutableStateOf(false) }
     /*
@@ -84,6 +86,23 @@ fun ExpeditionPageScreen(
      */
     val scrollState = rememberLazyListState()
     val coroutineScope = rememberCoroutineScope()
+
+    pageHeader.value = {
+        PageHeader(
+            navigator = navigator,
+            headerData = Screen.ExpeditionPageScreen.headerData,
+            hazeState = hazeState,
+            backIconId = BackIcon.BACK,
+            forwardIconId = Res.drawable.phorphos_arrows_clockwise_fill,
+            onForward = {
+                isRefreshing.value = true
+                CoroutineScope(Dispatchers.Default).launch {
+                    async { UserAccount.refreshNoteData() }.await()
+                    withContext(Dispatchers.Main) { isRefreshing.value = false }
+                }
+            }
+        )
+    }
 
     Box(modifier = Modifier.fillMaxSize()) {
         RefreshBox(isRefreshing.value) {
@@ -110,21 +129,6 @@ fun ExpeditionPageScreen(
 
             //PullRefreshIndicator(isRefreshing.value, pullRefreshState, Modifier.align(Alignment.TopCenter).padding(top = PAGE_HEADER_HEIGHT))
         }
-
-        PageHeader(
-            navigator = navigator,
-            headerData = Screen.ExpeditionPageScreen.headerData,
-            hazeState = hazeState,
-            backIconId = BackIcon.BACK,
-            forwardIconId = Res.drawable.phorphos_arrows_clockwise_fill,
-            onForward = {
-                isRefreshing.value = true
-                CoroutineScope(Dispatchers.Default).launch {
-                    async { UserAccount.refreshNoteData() }.await()
-                    withContext(Dispatchers.Main) { isRefreshing.value = false }
-                }
-            }
-        )
     }
 }
 

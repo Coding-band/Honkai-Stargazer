@@ -28,6 +28,7 @@ import androidx.compose.material.Chip
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -68,10 +69,20 @@ import utils.starbase.StarbaseAPI
 @Composable
 fun AboutStargazerPageScreen(
     navigator: NavHostController,
-    hazeState: HazeState
+    hazeState: HazeState,
+    pageHeader: MutableState<@Composable () -> Unit>,
 ) {
 
     val listState = rememberLazyListState()
+
+    pageHeader.value = {
+        PageHeader(
+            navigator = navigator,
+            headerData = HeaderData(title = removeStrQuote(Res.string.AboutTheApp), titleIconId = Res.drawable.phorphos_film_slate_fill),
+            hazeState = hazeState,
+            backIconId = BackIcon.BACK,
+        )
+    }
 
     Box(modifier = Modifier.fillMaxSize()){
         LazyColumn(
@@ -90,13 +101,6 @@ fun AboutStargazerPageScreen(
             item { Declaration() }
             item { Spacer(modifier = Modifier.navigationBarsPadding()) }
         }
-
-        PageHeader(
-            navigator = navigator,
-            headerData = HeaderData(title = removeStrQuote(Res.string.AboutTheApp), titleIconId = Res.drawable.phorphos_film_slate_fill),
-            hazeState = hazeState,
-            backIconId = BackIcon.BACK,
-        )
     }
 }
 

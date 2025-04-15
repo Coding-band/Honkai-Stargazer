@@ -3,7 +3,6 @@ package ui.screens
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -21,8 +20,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
@@ -31,11 +28,8 @@ import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
 import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
@@ -44,7 +38,6 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
@@ -54,12 +47,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
 import androidx.navigation.toRoute
@@ -69,10 +60,8 @@ import com.mohamedrejeb.richeditor.model.RichTextState
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material.RichText
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.NoDataYet
-import files.NoOnlineData
 import files.RelicDetail
 import files.RelicStatus2Pcs
 import files.RelicStatus4Pcs
@@ -83,8 +72,6 @@ import files.phorphos_chats_circle_regular
 import files.phorphos_dice_four_regular
 import files.phorphos_dice_two_regular
 import files.phorphos_person_fill
-import files.ui_icon_star
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.serialization.json.JsonElement
@@ -94,8 +81,6 @@ import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
-import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
 import types.ImageFolder
 import types.Relic
 import ui.components.BackIcon
@@ -106,12 +91,8 @@ import ui.components.InfoNavigateItem
 import ui.components.InfoNavigatorBar
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
-import ui.components.RelicCard
 import ui.components.TitleHeader
-import ui.components.defaultHeaderData
-import ui.navigation.CharacterInfoRoute
 import ui.navigation.RelicInfoRoute
-import ui.navigation.hazeStateRoot
 import utils.app.Constants
 import utils.app.Constants.Companion.RELIC_CARD_WIDTH
 import utils.app.FontSizeNormal12
@@ -122,7 +103,6 @@ import utils.app.Preferences
 import utils.app.TextColorNormalDim
 import utils.app.htmlDescApplier
 import utils.app.newImageRequest
-import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.showWarningToast
 
@@ -138,8 +118,8 @@ fun RelicInfoPage(
     navigator: NavHostController,
     hazeState: HazeState,
     backStackEntry: NavBackStackEntry,
+    pageHeader: MutableState<@Composable () -> Unit>
 ) {
-
     var density = LocalDensity.current.density
     val route = backStackEntry.toRoute<RelicInfoRoute>()
     val relicName = route.relicName
@@ -175,6 +155,26 @@ fun RelicInfoPage(
     val dialogLastTrigType = remember { mutableStateOf("NONE") }
     val dialogTitle = remember { mutableStateOf("Nope") }
 
+    pageHeader.value = {
+        val isFavourite = remember { mutableStateOf(Preferences.FavouriteClass.checkIsFavourite(relicFileName, Preferences.FavouriteClass.TYPE.RELIC)) }
+        PageHeader(
+            navigator = navigator,
+            headerData = headerDataPage,
+            hazeState = hazeState,
+            backIconId = BackIcon.CANCEL,
+            forwardIconId = if(isFavourite.value) Res.drawable.ic_favourite_btn_selected else Res.drawable.ic_favourite_btn,
+            onForward = {
+                if(!isFavourite.value) {
+                    Preferences.FavouriteClass.addToFavouriteList(relicFileName, Preferences.FavouriteClass.TYPE.RELIC)
+                } else {
+                    Preferences.FavouriteClass.removeFromFavouriteList(relicFileName, Preferences.FavouriteClass.TYPE.RELIC)
+                }
+
+                isFavourite.value = !isFavourite.value
+            }
+        )
+    }
+
     BoxWithConstraints {
         val pageSize = Pair(maxWidth, maxHeight)
 
@@ -193,24 +193,6 @@ fun RelicInfoPage(
             item { RelicSetsCardDisplay(relicName, relicInfoJson, isRelic) }
             item { Box(modifier = Modifier.navigationBarsPadding().height(72.dp)) }
         }
-
-        val isFavourite = remember { mutableStateOf(Preferences.FavouriteClass.checkIsFavourite(relicFileName, Preferences.FavouriteClass.TYPE.RELIC)) }
-        PageHeader(
-            navigator = navigator,
-            headerData = headerDataPage,
-            hazeState = hazeState,
-            backIconId = BackIcon.CANCEL,
-            forwardIconId = if(isFavourite.value) Res.drawable.ic_favourite_btn_selected else Res.drawable.ic_favourite_btn,
-            onForward = {
-                if(!isFavourite.value) {
-                    Preferences.FavouriteClass.addToFavouriteList(relicFileName, Preferences.FavouriteClass.TYPE.RELIC)
-                } else {
-                    Preferences.FavouriteClass.removeFromFavouriteList(relicFileName, Preferences.FavouriteClass.TYPE.RELIC)
-                }
-
-                isFavourite.value = !isFavourite.value
-            }
-        )
 
         Box(modifier = Modifier.fillMaxSize()) {
             if(dialogDisplay.value){

@@ -132,7 +132,7 @@ fun refreshMOCList(){
 @Preview
 fun MemoryOfChaosMissionPageScreen(
     navigator: NavHostController,
-    hazeState: HazeState
+    hazeState: HazeState,
 ) {
     val mocChoiceIndex = remember { mutableStateOf(0) }
     val isDialogVisible = remember { mutableStateOf(false) }

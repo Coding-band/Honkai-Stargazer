@@ -20,14 +20,12 @@ import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastForEach
 import androidx.navigation.NavHostController
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -40,14 +38,12 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import types.Lightcone
 import ui.components.BackIcon
-import ui.components.HeaderData
 import ui.components.LIST_FILTER_TOOL_HEIGHT
 import ui.components.LightconeCard
 import ui.components.ListFilterTool
 import ui.components.ListFilterType
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
-import ui.components.defaultHeaderData
 import ui.navigation.Screen
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import utils.app.DefaultZIndex
@@ -88,8 +84,18 @@ fun refreshLcList(){
 @Composable
 fun LightconeListPage(
     navigator: NavHostController,
-    hazeState: HazeState
+    hazeState: HazeState,
+    pageHeader: MutableState<@Composable () -> Unit>
 ) {
+
+    pageHeader.value = {
+        PageHeader(
+            navigator = navigator,
+            headerData = Screen.LightconeListPage.headerData,
+            hazeState = hazeState,
+            backIconId = BackIcon.CANCEL
+        )
+    }
 
     Box {
         LazyVerticalGrid(
@@ -131,7 +137,5 @@ fun LightconeListPage(
             filterChoiceArray = filterChoiceArray,
             hazeState = hazeState
         )
-
-        PageHeader(navigator = navigator, headerData = Screen.LightconeListPage.headerData, hazeState = hazeState, backIconId = BackIcon.CANCEL)
     }
 }

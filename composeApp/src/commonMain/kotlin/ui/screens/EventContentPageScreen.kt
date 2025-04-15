@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavBackStackEntry
@@ -38,11 +39,7 @@ import utils.app.Constants
 import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal14
 import utils.app.isAndroidPlatform
-import utils.app.isLinuxPlatform
-import utils.app.isMacOSPlatform
-import utils.app.isWindowsPlatform
 import utils.app.newImageRequest
-import utils.app.showWarningToast
 
 //This Header was copy from "rn-branch\src\components\EventScreen\Event\EventWebView\EventWebView.tsx
 val headerHTML = "<meta name=\"viewport\" content=\"initial-scale=1.0, maximum-scale=1.0\" />\n" +
@@ -109,6 +106,7 @@ fun EventContentPageScreen(
     navigator: NavHostController,
     hazeState: HazeState,
     backStackEntry: NavBackStackEntry,
+    pageHeader: MutableState<@Composable () -> Unit>
 ) {
 
     val route = backStackEntry.toRoute<EventContentRoute>()
@@ -126,6 +124,14 @@ fun EventContentPageScreen(
             "</body>").trimIndent()
 
 
+    pageHeader.value = {
+        PageHeader(
+            navigator = navigator,
+            headerData = HeaderData(title = eventItem.title, titleIconId = Res.drawable.phorphos_film_slate_fill),
+            hazeState = hazeState,
+            backIconId = BackIcon.BACK,
+        )
+    }
 
     Box(modifier = Modifier.fillMaxSize()){
 
@@ -154,12 +160,7 @@ fun EventContentPageScreen(
             }
         }
 
-        PageHeader(
-            navigator = navigator,
-            headerData = HeaderData(title = eventItem.title, titleIconId = Res.drawable.phorphos_film_slate_fill),
-            hazeState = hazeState,
-            backIconId = BackIcon.BACK,
-        )
+
 
     }
 }

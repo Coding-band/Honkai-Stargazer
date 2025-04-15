@@ -14,14 +14,12 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.material.SnackbarHostState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
@@ -38,7 +36,6 @@ import androidx.navigation.toRoute
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.AdviceLightcones
 import files.AdviceRelics
@@ -47,7 +44,6 @@ import files.BasicStatus
 import files.CharacterStory
 import files.Eidolon
 import files.NoDataYet
-import files.NoOnlineData
 import files.Res
 import files.TraceTree
 import files.ic_favourite_btn
@@ -60,8 +56,6 @@ import files.phorphos_person_regular
 import files.phorphos_star_half_regular
 import files.phorphos_sword_regular
 import files.phorphos_tree_structure_regular
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
@@ -88,7 +82,6 @@ import ui.components.InfoStory
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
 import ui.components.StatusType
-import ui.components.defaultHeaderData
 import ui.navigation.CharacterInfoRoute
 import utils.annotation.DoItLater
 import utils.app.CharWeightList
@@ -97,7 +90,6 @@ import utils.app.DefaultZIndex
 import utils.app.JsonElementSaver
 import utils.app.Language
 import utils.app.Preferences
-import utils.app.Preferences.FavouriteClass.Companion.charFavourList
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
 import utils.app.showWarningToast
@@ -119,6 +111,7 @@ fun CharacterInfoPage(
     navigator: NavHostController,
     hazeState: HazeState,
     backStackEntry: NavBackStackEntry,
+    pageHeader: MutableState<@Composable () -> Unit>,
 ) {
 
     @DoItLater("Use rememberStatus")
@@ -172,6 +165,26 @@ fun CharacterInfoPage(
         charWeightJsonObject = remember { singleCharWeightJsonElement.jsonArray[selectedSectIndex.value].jsonObject }
     }
 
+    val isFavourite = remember { mutableStateOf(Preferences.FavouriteClass.checkIsFavourite(characterId.toString(), Preferences.FavouriteClass.TYPE.CHAR)) }
+
+    pageHeader.value = {
+        PageHeader(
+            navigator = navigator,
+            headerData = headerDataPage,
+            hazeState = hazeState,
+            backIconId = BackIcon.CANCEL,
+            forwardIconId = if(isFavourite.value) Res.drawable.ic_favourite_btn_selected else Res.drawable.ic_favourite_btn,
+            onForward = {
+                if(!isFavourite.value) {
+                    Preferences.FavouriteClass.addToFavouriteList(characterId.toString(), Preferences.FavouriteClass.TYPE.CHAR)
+                } else {
+                    Preferences.FavouriteClass.removeFromFavouriteList(characterId.toString(), Preferences.FavouriteClass.TYPE.CHAR)
+                }
+                isFavourite.value = !isFavourite.value
+            }
+        )
+    }
+
     BoxWithConstraints {
         val pageSize = Pair(maxWidth, maxHeight)
         CharacterInfoFullImgWithRare(
@@ -199,23 +212,6 @@ fun CharacterInfoPage(
             item { Box(modifier = Modifier.navigationBarsPadding().height(72.dp)) }
 
         }
-
-        val isFavourite = remember { mutableStateOf(Preferences.FavouriteClass.checkIsFavourite(characterId.toString(), Preferences.FavouriteClass.TYPE.CHAR)) }
-        PageHeader(
-            navigator = navigator,
-            headerData = headerDataPage,
-            hazeState = hazeState,
-            backIconId = BackIcon.CANCEL,
-            forwardIconId = if(isFavourite.value) Res.drawable.ic_favourite_btn_selected else Res.drawable.ic_favourite_btn,
-            onForward = {
-                if(!isFavourite.value) {
-                    Preferences.FavouriteClass.addToFavouriteList(characterId.toString(), Preferences.FavouriteClass.TYPE.CHAR)
-                } else {
-                    Preferences.FavouriteClass.removeFromFavouriteList(characterId.toString(), Preferences.FavouriteClass.TYPE.CHAR)
-                }
-                isFavourite.value = !isFavourite.value
-            }
-        )
 
         Box(modifier = Modifier.fillMaxSize()) {
             if(dialogDisplay.value){

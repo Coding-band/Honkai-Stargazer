@@ -106,7 +106,7 @@ data class ProficientSchool(
 @Composable
 fun ProficientLeaderboardPageScreen(
     navigator: NavHostController,
-    hazeState: HazeState
+    hazeState: HazeState,
 ) {
     val selectedLeaderboardIndex = rememberSaveable { mutableStateOf(0) }
     val schoolList = rememberMutableStateListJsonOf<ProficientSchool>(ProficientSchool(schoolIndex = 0, charId = 0))

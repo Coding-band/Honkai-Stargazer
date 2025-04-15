@@ -28,6 +28,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -42,7 +43,6 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -53,7 +53,6 @@ import coil3.PlatformContext
 import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.haze
 import dev.chrisbanes.haze.hazeSource
 import files.PlayerLevel
 import files.ProducedByStargazer
@@ -76,10 +75,8 @@ import ui.components.AppDialog
 import ui.components.BackIcon
 import ui.components.CharacterCard
 import ui.components.CharacterLcInfoDisplay
-import ui.components.HeaderData
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
-import ui.components.defaultHeaderData
 import ui.navigation.Screen
 import ui.navigation.UserCharacterRoute
 import ui.navigation.UserInfoRoute
@@ -108,6 +105,7 @@ fun UserInfoPageScreen(
     navigator: NavHostController,
     hazeState: HazeState,
     backStackEntry: NavBackStackEntry,
+    pageHeader: MutableState<@Composable () -> Unit>,
 ) {
     val context = LocalPlatformContext.current
     val route = backStackEntry.toRoute<UserInfoRoute>()
@@ -138,6 +136,17 @@ fun UserInfoPageScreen(
 
     val helperList = helperListOrigin.ifEmpty { userAccount.characterList.slice(0..min(7, userAccount.characterList.size-1)) }
     val finalCharList = userAccount.characterList.filter { it !in helperList }
+
+    pageHeader.value = {
+        PageHeader(
+            headerData = Screen.UserInfoPageScreen.headerData,
+            navigator = navigator,
+            forwardIconId = Res.drawable.ui_icon_share,
+            onForward = { showFunctionIsDevelopingToast() },
+            hazeState = hazeState,
+            backIconId = BackIcon.CANCEL
+        )
+    }
 
     Box(modifier = Modifier.fillMaxSize()) {
 
@@ -246,14 +255,9 @@ fun UserInfoPageScreen(
 
         }
 
-        PageHeader(
-            headerData = Screen.UserInfoPageScreen.headerData,
-            navigator = navigator,
-            forwardIconId = Res.drawable.ui_icon_share,
-            onForward = { showFunctionIsDevelopingToast() },
-            hazeState = hazeState,
-            backIconId = BackIcon.CANCEL
-        )
+
+
+
 
         /*
 

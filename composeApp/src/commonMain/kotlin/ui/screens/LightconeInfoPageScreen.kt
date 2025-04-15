@@ -16,7 +16,6 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.material.SnackbarHostState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
@@ -55,7 +54,6 @@ import files.phorphos_chats_circle_regular
 import files.phorphos_info_regular
 import files.phorphos_person_fill
 import files.phorphos_person_regular
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
@@ -99,6 +97,7 @@ fun LightconeInfoPage(
     navigator: NavHostController,
     hazeState: HazeState,
     backStackEntry: NavBackStackEntry,
+    pageHeader: MutableState<@Composable () -> Unit>,
 ) {
 
     var density = LocalDensity.current.density
@@ -138,6 +137,26 @@ fun LightconeInfoPage(
     val dialogLastTrigType = remember { mutableStateOf("NONE") }
     val dialogTitle = remember { mutableStateOf("Nope") }
 
+    pageHeader.value = {
+        val isFavourite = remember { mutableStateOf(Preferences.FavouriteClass.checkIsFavourite(lightconeFileName, Preferences.FavouriteClass.TYPE.LC)) }
+        PageHeader(
+            navigator = navigator,
+            headerData = headerDataPage,
+            hazeState = hazeState,
+            backIconId = BackIcon.CANCEL,
+            forwardIconId = if(isFavourite.value) Res.drawable.ic_favourite_btn_selected else Res.drawable.ic_favourite_btn,
+            onForward = {
+                if(!isFavourite.value) {
+                    Preferences.FavouriteClass.addToFavouriteList(lightconeFileName, Preferences.FavouriteClass.TYPE.LC)
+                } else {
+                    Preferences.FavouriteClass.removeFromFavouriteList(lightconeFileName, Preferences.FavouriteClass.TYPE.LC)
+                }
+
+                isFavourite.value = !isFavourite.value
+            }
+        )
+    }
+
     BoxWithConstraints {
         val pageSize = Pair(maxWidth, maxHeight)
 
@@ -157,24 +176,6 @@ fun LightconeInfoPage(
             item { Box(modifier = Modifier.navigationBarsPadding().height(72.dp)) }
 
         }
-
-        val isFavourite = remember { mutableStateOf(Preferences.FavouriteClass.checkIsFavourite(lightconeFileName, Preferences.FavouriteClass.TYPE.LC)) }
-        PageHeader(
-            navigator = navigator,
-            headerData = headerDataPage,
-            hazeState = hazeState,
-            backIconId = BackIcon.CANCEL,
-            forwardIconId = if(isFavourite.value) Res.drawable.ic_favourite_btn_selected else Res.drawable.ic_favourite_btn,
-            onForward = {
-                if(!isFavourite.value) {
-                    Preferences.FavouriteClass.addToFavouriteList(lightconeFileName, Preferences.FavouriteClass.TYPE.LC)
-                } else {
-                    Preferences.FavouriteClass.removeFromFavouriteList(lightconeFileName, Preferences.FavouriteClass.TYPE.LC)
-                }
-
-                isFavourite.value = !isFavourite.value
-            }
-        )
 
         Box(modifier = Modifier.fillMaxSize()) {
             if(dialogDisplay.value){

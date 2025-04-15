@@ -22,6 +22,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -75,7 +76,8 @@ import utils.starbase.StarbaseAPI
 @Composable
 fun UIDSearchPageScreen(
     navigator: NavHostController,
-    hazeState: HazeState
+    hazeState: HazeState,
+    pageHeader: MutableState<@Composable () -> Unit>,
 ){
     val listState = rememberLazyListState()
     val searchWords = remember { mutableStateOf("") }
@@ -352,11 +354,14 @@ fun UIDSearchPageScreen(
 
         PageBottomMask()
 
-        PageHeader(
-            navigator = navigator,
-            headerData = Screen.UIDSearchPageScreen.headerData,
-            hazeState = hazeState,
-            backIconId = BackIcon.CANCEL,
-        )
+        pageHeader.value = {
+            PageHeader(
+                navigator = navigator,
+                headerData = Screen.UIDSearchPageScreen.headerData,
+                hazeState = hazeState,
+                backIconId = BackIcon.CANCEL,
+            )
+        }
+
     }
 }

@@ -125,7 +125,8 @@ lateinit var showUpdatePopupInSetting : MutableState<Boolean>
 @Composable
 fun SettingScreen(
     navigator: NavHostController,
-    hazeState: HazeState
+    hazeState: HazeState,
+    pageHeader: MutableState<@Composable () -> Unit>,
 ){
 
     val urlHandler = LocalUriHandler.current
@@ -134,6 +135,15 @@ fun SettingScreen(
     val wallpaperName = remember { mutableStateOf("----") }
     LaunchedEffect(Settings().getString("backgroundImage", "221000"), Language.TextLanguageInstance, doRecomposeText.value){
         wallpaperName.value = Wallpaper.getPreferenceWallpaperLocaleName()
+    }
+
+    pageHeader.value = {
+        PageHeader(
+            navigator = navigator,
+            headerData = Screen.SettingScreen.headerData,
+            hazeState = hazeState,
+            backIconId = BackIcon.BACK
+        )
     }
 
     key(doRecompose.value){
@@ -397,8 +407,6 @@ fun SettingScreen(
                 item { Box(modifier = Modifier.navigationBarsPadding())}
 
             }
-
-            PageHeader(navigator, headerData = Screen.SettingScreen.headerData, hazeState = hazeState, backIconId = BackIcon.BACK)
 
             if(showUpdatePopupInSetting.value){
                 UpdateAssetsPopup(showUpdatePopupInSetting, hazeState, forceDownload = true)

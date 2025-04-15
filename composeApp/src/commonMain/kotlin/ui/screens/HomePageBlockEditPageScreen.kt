@@ -66,9 +66,22 @@ import utils.app.removeStrQuote
 @Composable
 fun HomePageBlockEditPageScreen(
     navigator: NavHostController,
-    hazeState: HazeState
+    hazeState: HazeState,
+    pageHeader: MutableState<@Composable () -> Unit>,
 ){
     val reorderList = remember { mutableStateOf(Preferences().HomePageMenu.getShowMenuList()) }
+
+    pageHeader.value = {
+        PageHeader(
+            navigator = navigator,
+            headerData = Screen.HomePageBlockEditPageScreen.headerData,
+            hazeState = hazeState,
+            backIconId = BackIcon.BACK,
+            onBack = { nav ->
+                nav.popBackStackLimited()
+            }
+        )
+    }
 
     Box(modifier = Modifier
         .fillMaxSize()
@@ -192,16 +205,6 @@ fun HomePageBlockEditPageScreen(
                 )
             }
         }
-
-        PageHeader(
-            navigator = navigator,
-            headerData = Screen.HomePageBlockEditPageScreen.headerData,
-            hazeState = hazeState,
-            backIconId = BackIcon.BACK,
-            onBack = { nav ->
-                nav.popBackStackLimited()
-            }
-        )
     }
 }
 
