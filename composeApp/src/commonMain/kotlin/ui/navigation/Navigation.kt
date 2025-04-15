@@ -6,17 +6,19 @@
 
 package ui.navigation
 
-import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.displayCutout
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material.Scaffold
 import androidx.compose.material.SnackbarHost
 import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
@@ -30,11 +32,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.layout.positionInWindow
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.platform.UriHandler
-import androidx.compose.ui.unit.IntOffset
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.NavOptions
@@ -49,12 +54,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.datetime.Clock
-import types.AbyssInfo
 import types.AbyssInfoList
 import types.Wallpaper.Companion.initWallpaperList
-import ui.components.HeaderData
 import ui.components.PomPomPopupUI
-import ui.components.defaultHeaderData
 import ui.screens.AboutStargazerPageScreen
 import ui.screens.ActionOrderListPageScreen
 import ui.screens.ActionOrderSimulatorPageScreen
@@ -69,6 +71,7 @@ import ui.screens.ExpeditionPageScreen
 import ui.screens.HomePage
 import ui.screens.HomePageBlockEditPageScreen
 import ui.screens.HoyolabLoginPageScreen
+import ui.screens.IIRCHomePageScreen
 import ui.screens.LightconeInfoPage
 import ui.screens.LightconeListPage
 import ui.screens.MakeBackground
@@ -85,7 +88,6 @@ import ui.screens.UserInfoPageScreen
 import ui.screens.bgModified
 import ui.screens.doInit
 import ui.screens.globalPadHomePageBg
-import ui.screens.IIRCHomePageScreen
 import ui.screens.initASList
 import ui.screens.initActionOrderTeamList
 import ui.screens.initCharList
@@ -99,16 +101,13 @@ import ui.screens.refreshLcList
 import ui.screens.refreshMOCList
 import ui.screens.refreshPFList
 import ui.screens.refreshRelicList
-import utils.app.BezierEasing2O48
 import utils.app.Constants.Companion.HOME_WIDTH
 import utils.app.Constants.Companion.INFO_MAX_WIDTH
 import utils.app.Language
 import utils.app.SG3NavTransitions
 import utils.app.initPurchase
 import utils.app.isAndroidPlatform
-import utils.app.isLinuxPlatform
-import utils.app.isMacOSPlatform
-import utils.app.isWindowsPlatform
+import utils.app.pxToDp
 import utils.app.showWarningToast
 import utils.app.snackbarInstance
 
@@ -203,6 +202,8 @@ fun RootContent() {
     }
 
     val screenWidth = remember { mutableStateOf(INFO_MAX_WIDTH) }
+    val homePageWithCutOutWidth = remember { mutableStateOf(0.dp) }
+    val density = LocalDensity.current.density
     Scaffold(
         modifier = Modifier.onSizeChanged { isRotate.value = !isRotate.value },
         snackbarHost = { SnackbarHost(snackbarInstance, modifier = Modifier.navigationBarsPadding()) }
@@ -211,26 +212,42 @@ fun RootContent() {
             screenWidth.value = maxWidth
             if(isPadMode.value){
                 MakeBackground(screen = screenInstance, forceBlur = isPadMode.value, hazeState = hazeStateRoot)
-            }
 
-            if(screenInstance == Screen.SplashPage){
-                NavHostInit(navigatorInstance, isPadMode)
-            }else{
-                Row {
-                    if(isPadMode.value && screenInstance != Screen.SplashPage && screenInstance != Screen.BlankPage){
-                        Box(Modifier
-                            .width(HOME_WIDTH)
+                if(isPadMode.value && screenInstance != Screen.SplashPage && screenInstance != Screen.BlankPage){
+                    Row {
+                        Box(modifier = Modifier
+                            .width(HOME_WIDTH + homePageWithCutOutWidth.value)
                             .let { if (screenWidth.value < HOME_WIDTH * 1.5f) it.weight(1f) else it }
-                            .fillMaxHeight(),
+                            .fillMaxHeight()
                         ) {
                             key(bgModified.value){
                                 if(globalPadHomePageBg.value){
                                     MakeBackground(screen = Screen.HomePage, forceBlur = false, hazeState = hazeStateRoot)
                                 }
                             }
+                        }
+                        Box(Modifier.weight(1f)) {
+                        }
+                    }
+                }
+            }
+
+            if(screenInstance == Screen.SplashPage){
+                NavHostInit(navigatorInstance, isPadMode)
+            }else{
+                Row(modifier = Modifier.then(if(isPadMode()) Modifier.windowInsetsPadding(WindowInsets.displayCutout) else Modifier)) {
+                    if(isPadMode.value && screenInstance != Screen.SplashPage && screenInstance != Screen.BlankPage){
+                        Box(Modifier
+                            .width(HOME_WIDTH)
+                            .let { if (screenWidth.value < HOME_WIDTH * 1.5f) it.weight(1f) else it }
+                            .fillMaxHeight()
+                            .onGloballyPositioned {
+                                homePageWithCutOutWidth.value = pxToDp(it.positionInWindow().x.toInt(), density)
+                            }
+                        ) {
                             HomePage(
                                 navigator = navigatorInstance,
-                                hazeState = hazeStateRoot
+                                hazeState = hazeStateRoot,
                             )
                         }
                     }
