@@ -45,6 +45,7 @@ import ui.components.defaultHeaderData
 import ui.navigation.HomeRoute
 import ui.navigation.Screen
 import ui.navigation.SplashRoute
+import ui.navigation.navigateLimited
 import ui.navigation.screenInstance
 import utils.app.CharWeightList
 import utils.app.FontSizeNormalLarge24
@@ -104,7 +105,7 @@ fun SplashPage(
             //}else{
                 CoroutineScope(Dispatchers.Default).launch {
                     withContext(Dispatchers.Main) {
-                        navigator.navigate(HomeRoute){
+                        navigator.navigateLimited(HomeRoute){
                             popUpTo(SplashRoute){
                                 inclusive = true
                             }

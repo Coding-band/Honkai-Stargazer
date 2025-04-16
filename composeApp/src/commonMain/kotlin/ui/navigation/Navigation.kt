@@ -40,6 +40,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.NavOptions
+import androidx.navigation.NavOptionsBuilder
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -630,6 +631,18 @@ fun NavHostController.navigateLimited(route: Any, options: NavOptions? = null) {
         Settings().putLong("lastNavigationTime", currentTime)
     }
 }
+
+fun NavHostController.navigateLimited(route: Any, builder: NavOptionsBuilder.() -> Unit) {
+    val navigationInterval: Long = 500 // 500ms is enough for most cases
+    val lastNavigationTime: Long = Settings().getLong("lastNavigationTime", 0)
+
+    val currentTime = Clock.System.now().toEpochMilliseconds()
+    if (currentTime - lastNavigationTime >= navigationInterval) {
+        navigate(route, builder)
+        Settings().putLong("lastNavigationTime", currentTime)
+    }
+}
+
 fun NavHostController.popBackStackLimited() {
     val navigationInterval: Long = 500 // 500ms is enough for most cases
     val lastNavigationTime: Long = Settings().getLong("lastNavigationTime", 0)
