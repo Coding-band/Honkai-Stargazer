@@ -11,6 +11,9 @@
 ![Compose Multiplatform](https://img.shields.io/badge/Compose_Multiplatform-blue)
 ![Version](https://img.shields.io/badge/🛠️v1.0.2-grey)
 
+[![wakatime](https://wakatime.com/badge/user/ca727ba5-9112-4612-b454-d5e407277a51/project/f84843ea-fb70-4a3c-bef2-9e895f362256.svg)](https://wakatime.com/badge/user/ca727ba5-9112-4612-b454-d5e407277a51/project/f84843ea-fb70-4a3c-bef2-9e895f362256) + 
+[![wakatime](https://wakatime.com/badge/user/ca727ba5-9112-4612-b454-d5e407277a51/project/edfacefa-c10c-4841-ae8f-86b95ab1ddb3.svg)](https://wakatime.com/badge/user/ca727ba5-9112-4612-b454-d5e407277a51/project/edfacefa-c10c-4841-ae8f-86b95ab1ddb3)
+
 星穹觀星者 3 是由團隊[<span style="color:#E31576">Coding Band</span>](https://github.com/Coding-Band)開發
 - [<span style="color:#00CCFF">2O48](https://github.com/2O48) : UI/UX 設計
 - [<span style="color:#FF99CC">夜芷冰](https://github.com/Vocaloid2048) : Team Leader 兼全棧代碼編寫 (Head-to-Tail)
