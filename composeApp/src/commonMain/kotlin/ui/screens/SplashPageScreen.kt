@@ -30,6 +30,7 @@ import files.star_peace_icon
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.jetbrains.compose.resources.Font
@@ -72,10 +73,11 @@ fun SplashPage(
     val showUpdatePopup = remember { mutableStateOf(updateCheckInit()) } //The Real Update Popup
     //val isJCEFInited = Settings().getBoolean("isJCEFInited", true)
     LaunchedEffect(Unit) {
+        delay(100)
         if (!showPopup.value) {
             CoroutineScope(Dispatchers.Default).launch {
                 if (getUID() != "000000000" && !hasRefreshed.value) {
-                    async {
+                    launch {
                         refreshUserAccount()
                         refreshMOCData()
                         refreshPFData()
@@ -83,7 +85,7 @@ fun SplashPage(
                         Preferences().Leaderboard.updatedLeaderboard()
 
                         CharWeightList.INSTANCE
-                    }.await()
+                    }
 
                     launch {
                         StarbaseAPI().updateUserAccountInfo()
@@ -93,7 +95,9 @@ fun SplashPage(
                         StarbaseAPI().updateASData()
                     }
                 }
-                hasRefreshed.value = true
+                withContext(Dispatchers.Main) {
+                    hasRefreshed.value = true
+                }
             }
         }
     }
