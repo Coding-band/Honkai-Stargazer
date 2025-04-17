@@ -147,6 +147,11 @@ kotlin {
             //Drag and drop
             implementation(libs.reorderable)
 
+            //Scrollbar & Indicator
+
+            implementation(libs.fastscroller.core)
+            implementation (libs.fastscroller.material3)
+            implementation (libs.fastscroller.indicator)
         }
         named { it.lowercase().startsWith("ios") }.configureEach {
             languageSettings {

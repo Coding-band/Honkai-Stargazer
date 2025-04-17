@@ -16,9 +16,11 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
+import androidx.compose.material3.surfaceColorAtElevation
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Alignment
@@ -27,6 +29,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shadow
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
@@ -41,6 +44,9 @@ import dev.chrisbanes.haze.HazeStyle
 import dev.chrisbanes.haze.hazeEffect
 import files.Res
 import files.misans_regular
+import io.github.oikvpqya.compose.fastscroller.ScrollbarStyle
+import io.github.oikvpqya.compose.fastscroller.ThumbStyle
+import io.github.oikvpqya.compose.fastscroller.TrackStyle
 import org.jetbrains.compose.resources.Font
 import setKeyboardDarkMode
 import ui.screens.globalHazeBlur
@@ -270,3 +276,22 @@ fun Modifier.hazeEffectSG3(
     style = style,
     block = block
 )
+
+@Composable
+fun SG3ScrollbarStyle(): ScrollbarStyle {
+    return ScrollbarStyle(
+        minimalHeight = 4.dp,
+        thickness = 8.dp,
+        hoverDurationMillis = 300,
+        thumbStyle = ThumbStyle(
+            shape = RoundedCornerShape(4.dp),
+            unhoverColor = Color.Black.copy(0.5f),
+            hoverColor = Color.Black.copy(0.5f),
+        ),
+        trackStyle = TrackStyle(
+            shape = RoundedCornerShape(4.dp),
+            unhoverColor = Color.Transparent,
+            hoverColor = Color.Transparent,
+        ),
+    )
+}
