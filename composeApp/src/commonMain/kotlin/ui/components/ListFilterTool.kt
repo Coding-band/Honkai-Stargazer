@@ -6,6 +6,7 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,10 +18,13 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Checkbox
 import androidx.compose.material.CheckboxDefaults
 import androidx.compose.material.Text
@@ -168,6 +172,8 @@ fun <T> ListFilterTool(
     // UI
     Box(Modifier.fillMaxSize()) {
         Column(modifier = Modifier
+            .statusBarsPadding()
+            .padding(top = PAGE_HEADER_HEIGHT)
             .wrapContentHeight()
             .align(Alignment.BottomCenter)
         ) {
@@ -192,7 +198,9 @@ fun <T> ListFilterTool(
                         components = {
                             VerticalGrid(
                                 columns = SimpleGridCells.Fixed(2),
-                                modifier = modifier.fillMaxWidth().wrapContentHeight(),
+                                modifier = modifier.fillMaxWidth().wrapContentHeight().verticalScroll(
+                                    rememberScrollState()
+                                ),
                                 horizontalArrangement = Arrangement.spacedBy(14.dp),
                                 verticalArrangement = Arrangement.spacedBy(10.dp),
                             ){

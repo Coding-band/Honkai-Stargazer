@@ -157,7 +157,7 @@ fun AppDialogContent(
         //Inner padding
         Column {
 
-            Column(modifier = Modifier.padding(16.dp)) {
+            Column(modifier = Modifier.padding(16.dp).weight(1f)) {
                 //Title & Exit Button
                 Row {
                     Text(
