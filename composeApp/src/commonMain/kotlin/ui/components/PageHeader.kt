@@ -283,6 +283,8 @@ fun PageHeaderAlpha(
 
                             )
                     }
+                }else{
+                    Box(Modifier.size(40.dp))
                 }
             }
         }
