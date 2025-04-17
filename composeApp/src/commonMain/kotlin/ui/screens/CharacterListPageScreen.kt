@@ -92,12 +92,15 @@ fun CharacterListPage(
     pageHeader: MutableState<@Composable () -> Unit>,
 ) {
 
+    val gridState = rememberLazyGridState()
+
     pageHeader.value = {
         PageHeader(
             navigator = navigator,
             headerData = Screen.CharacterListPage.headerData,
             hazeState = hazeState,
-            backIconId = BackIcon.CANCEL
+            backIconId = BackIcon.CANCEL,
+            gridState = gridState
         )
     }
 
@@ -109,7 +112,7 @@ fun CharacterListPage(
             columns = GridCells.Adaptive(CHAR_CARD_WIDTH),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
-            state = rememberLazyGridState(),
+            state = gridState,
         ) {
             item(span = { GridItemSpan(maxCurrentLineSpan) }) {
                 Spacer(

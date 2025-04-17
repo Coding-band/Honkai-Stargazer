@@ -20,6 +20,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.lazy.LazyListState
+import androidx.compose.foundation.lazy.grid.LazyGridState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ButtonDefaults
@@ -27,6 +29,7 @@ import androidx.compose.material.OutlinedButton
 import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -46,6 +49,9 @@ import files.phorphos_sun_fill
 import files.ui_icon_back
 import files.ui_icon_close
 import files.ui_icon_share
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
@@ -85,8 +91,12 @@ fun PageHeader(
     onForward: ((navigator : NavHostController) -> Unit) = {},
     forwardIconId: DrawableResource = Res.drawable.bg_transparent,
     headerData: HeaderData = defaultHeaderData,
-    hazeState: HazeState = hazeStateRoot
+    hazeState: HazeState = hazeStateRoot,
+    listState: LazyListState? = null,
+    gridState: LazyGridState? = null,
 ) {
+    val coroutineScope = rememberCoroutineScope()
+
     //Background
     DropShadow(
         modifier = Modifier
@@ -107,7 +117,18 @@ fun PageHeader(
                 .statusBarsPadding()
                 .requiredHeight(PAGE_HEADER_HEIGHT)
                 .clickable(
-                    onClick = {  },
+                    onClick = {
+                        if(listState != null){
+                            coroutineScope.launch{
+                                listState.animateScrollToItem(0)
+                            }
+                        }
+                        if(gridState != null){
+                            coroutineScope.launch{
+                                gridState.animateScrollToItem(0)
+                            }
+                        }
+                    },
                     indication = null,
                     interactionSource = MutableInteractionSource()
                 )
