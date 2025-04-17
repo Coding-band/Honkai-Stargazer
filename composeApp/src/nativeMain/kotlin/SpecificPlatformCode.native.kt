@@ -4,6 +4,7 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.asSkiaBitmap
 import androidx.compose.ui.graphics.toComposeImageBitmap
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalWindowInfo
@@ -66,6 +67,10 @@ import kotlin.system.exitProcess
 
 actual fun getImageBitmapByByteArray(byteArray: ByteArray): ImageBitmap {
     return Image.makeFromEncoded(byteArray).toComposeImageBitmap()
+}
+
+actual fun getByteArrayByImageBitmap(imageBitmap: ImageBitmap): ByteArray {
+    return Image.makeFromBitmap(imageBitmap.asSkiaBitmap()).encodeToData()!!.bytes
 }
 
 @Composable

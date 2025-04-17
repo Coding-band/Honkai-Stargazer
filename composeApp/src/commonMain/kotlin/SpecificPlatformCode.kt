@@ -15,6 +15,8 @@ import utils.device.DeviceInfo
 
 expect fun getImageBitmapByByteArray(byteArray: ByteArray): ImageBitmap;
 
+expect fun getByteArrayByImageBitmap(imageBitmap: ImageBitmap): ByteArray;
+
 @Composable
 expect fun getIsLandscape(): Boolean;
 

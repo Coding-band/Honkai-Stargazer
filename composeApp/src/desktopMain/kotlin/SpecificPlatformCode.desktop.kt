@@ -5,6 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.asSkiaBitmap
 import androidx.compose.ui.graphics.toComposeImageBitmap
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalWindowInfo
@@ -38,6 +39,11 @@ import kotlin.system.exitProcess
 actual fun getImageBitmapByByteArray(byteArray: ByteArray): ImageBitmap {
     val skiaImage = Image.makeFromEncoded(byteArray)
     return skiaImage.toComposeImageBitmap()
+}
+
+actual fun getByteArrayByImageBitmap(imageBitmap: ImageBitmap): ByteArray {
+    val skiaImage = Image.makeFromBitmap(imageBitmap.asSkiaBitmap())
+    return skiaImage.encodeToData()!!.bytes
 }
 
 

@@ -3,16 +3,20 @@ import android.Manifest
 import android.app.Activity
 import android.content.Context
 import android.content.res.Configuration
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.ImageDecoder
 import android.os.Build
 import android.os.VibrationEffect
 import android.os.Vibrator
 import androidx.activity.ComponentActivity
 import androidx.annotation.RequiresPermission
+import androidx.compose.foundation.Image
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
@@ -44,7 +48,9 @@ import utils.app.errorLog
 import utils.app.replaceStrRes
 import utils.app.showWarningToast
 import utils.device.DeviceInfo
+import java.io.ByteArrayOutputStream
 import java.io.File
+import java.nio.ByteBuffer
 import java.util.Locale
 import kotlin.system.exitProcess
 
@@ -59,6 +65,18 @@ actual fun getImageBitmapByByteArray(byteArray: ByteArray): ImageBitmap {
     val bitmap : ImageBitmap = BitmapFactory.decodeByteArray(byteArray,0,byteArray.size).asImageBitmap()
     bitmap.prepareToDraw()
     return bitmap;
+}
+
+actual fun getByteArrayByImageBitmap(imageBitmap: ImageBitmap): ByteArray {
+    // 將 Compose 的 ImageBitmap 轉為 Android 的 Bitmap
+    val androidBitmap: Bitmap = imageBitmap.asAndroidBitmap()
+
+    // 使用 ByteArrayOutputStream 將 Bitmap 壓縮為 PNG 格式的 ByteArray
+    val outputStream = ByteArrayOutputStream()
+    androidBitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
+
+    // 返回 ByteArray
+    return outputStream.toByteArray()
 }
 
 @Composable

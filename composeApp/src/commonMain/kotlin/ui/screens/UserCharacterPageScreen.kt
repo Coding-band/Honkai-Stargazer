@@ -40,6 +40,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -47,11 +48,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.graphics.layer.drawLayer
+import androidx.compose.ui.graphics.rememberGraphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.onSizeChanged
@@ -61,6 +67,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.toSize
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
 import androidx.navigation.toRoute
@@ -95,6 +102,9 @@ import files.ic_selected_orange_circle
 import files.phorphos_caret_down_regular
 import files.ui_icon_share
 import files.ui_icon_star
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.float
 import kotlinx.serialization.json.jsonArray
@@ -138,6 +148,7 @@ import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.replaceStrRes
 import utils.app.showFunctionIsDevelopingToast
+import utils.app.writeToFileImageBitmap
 import utils.calculator.getCharRange
 import utils.calculator.getCharScore
 import utils.calculator.getGradAttrAndValue
@@ -179,6 +190,16 @@ fun UserCharacterPageScreen(
     val isInited = rememberSaveable { mutableStateOf(false) }
     val defaultSchoolName = "默認流派 - Default"
 
+    // 用於存儲每個項目的高度，鍵為索引，值為高度（像素）
+    val itemHeights = remember { mutableStateMapOf<Int, Float>() }
+    val itemIndex = remember { mutableStateOf(0) }
+    val density = LocalDensity.current
+
+    // 計算總高度
+    val totalHeight by derivedStateOf {
+        itemHeights.values.sum() // 所有已記錄項目高度的總和
+    }
+
     if(character == null){
         navigator.popBackStack()
     }else{
@@ -187,6 +208,8 @@ fun UserCharacterPageScreen(
         val gradRequirement = remember { mutableStateOf(arrayListOf<Pair<AttributeExchange, Float>>()) }
         val schoolIndex = remember { mutableStateOf(0) }
         val schoolDataNameArray = remember { arrayListOf("默認流派 - Default") }
+
+        val graphicsLayer = rememberGraphicsLayer()
 
         LaunchedEffect(Unit){
             if(isInited.value) return@LaunchedEffect
@@ -224,12 +247,16 @@ fun UserCharacterPageScreen(
                 PageHeaderAlpha(
                     navigator = navigator,
                     onForward = {
-                        //TODO : Remember to add the Share Function
+                        /*
+                        CoroutineScope(Dispatchers.Default).launch {
+                            val bitmap = graphicsLayer.toImageBitmap()
+                            writeToFileImageBitmap("${userAccount.username}_${userAccount.uid}.png", bitmap)
+                        }
+                         */
                         showFunctionIsDevelopingToast()
                     },
                     forwardIconId = Res.drawable.ui_icon_share,
                     hazeState = hazeState,
-
                     ) {
 
                     Column(Modifier.fillMaxSize()) {
@@ -257,21 +284,40 @@ fun UserCharacterPageScreen(
 
                 charNameVisible.value = (listState.firstVisibleItemIndex > 0 && listState.firstVisibleItemScrollOffset > charNameBigHeight.value || listState.firstVisibleItemIndex > 1 )
 
-
                 LazyColumn(
                     state = listState,
                     modifier = Modifier.padding(
                         start = Constants.SCREEN_SAVE_PADDING,
                         end = Constants.SCREEN_SAVE_PADDING
                     ).hazeSource(hazeState)
+                        .drawWithContent {
+                            // 繪製背景，覆蓋整個列表的總高度
+                            drawRect(
+                                color = Color.Gray.copy(alpha = 0.2f),
+                                topLeft = Offset(0f, 0f),
+                                size = Size(size.width, totalHeight)
+                            )
+                            // 繪製原始內容
+                            drawContent()
+                        }
                 ) {
-                    item { Spacer(Modifier.statusBarsPadding().height(PAGE_HEADER_ALPHA_HEIGHT + 240.dp)) }
-                    item { CharBioSkillInfo(character, charNameBigHeight) }
-                    item { LightconeInfo(character) }
-                    item { RelicInfo(character) }
-                    item { ProficientScoreInfo(character, schoolDataNameArray, schoolIndex, charScoreLocal, overPercentage, gradRequirement) }
+                    item { Spacer(Modifier.statusBarsPadding().height(PAGE_HEADER_ALPHA_HEIGHT + 240.dp).addItemHeight(itemHeights, itemIndex)) }
+                    item { Box(modifier =  Modifier.addItemHeight(itemHeights, itemIndex)){ CharBioSkillInfo(character, charNameBigHeight) } }
+                    item { Box(modifier =  Modifier.addItemHeight(itemHeights, itemIndex)){ LightconeInfo(character) } }
+                    item { Box(modifier =  Modifier.addItemHeight(itemHeights, itemIndex)){ RelicInfo(character) } }
+                    item {
+                        Box(modifier =  Modifier.addItemHeight(itemHeights, itemIndex)){
+                            ProficientScoreInfo(
+                                character,
+                                schoolDataNameArray,
+                                schoolIndex,
+                                charScoreLocal,
+                                overPercentage,
+                                gradRequirement
+                            )
+                        } }
 
-                    item { Spacer(Modifier.navigationBarsPadding()) }
+                    item { Spacer(Modifier.navigationBarsPadding().addItemHeight(itemHeights, itemIndex)) }
                 }
             }
         }
@@ -1025,4 +1071,12 @@ fun CharacterInfoFadeImg(
 
 fun getProfRankResult(score: Float, character: Character, schoolIndex: Int, uid: String): Float {
     return StarbaseAPI().getSpecificUserCharProfOver(character.officialId!!, schoolId = schoolIndex, myScore = score, uid = uid)
+}
+
+fun Modifier.addItemHeight(itemHeights: MutableMap<Int, Float>, itemIndex: MutableState<Int>): Modifier {
+    return this.onGloballyPositioned { coordinates ->
+        // 記錄項目的真實高度（轉換為像素）
+        val height = coordinates.size.toSize().height
+        itemHeights[itemIndex.value] = height
+    }
 }

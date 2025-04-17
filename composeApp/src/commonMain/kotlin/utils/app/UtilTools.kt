@@ -9,6 +9,8 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.runtime.toMutableStateList
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.toPixelMap
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
@@ -16,6 +18,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
+import coil3.BitmapImage
 import coil3.ImageLoader
 import coil3.PlatformContext
 import coil3.disk.DiskCache
@@ -49,6 +52,7 @@ import files.StatusMinutes
 import files.StatusToday
 import files.StatusTomorrow
 import getAppSpecificDirectory
+import getByteArrayByImageBitmap
 import getDeviceInfo
 import getLocalHttpClient
 import io.ktor.client.HttpClient
@@ -714,6 +718,28 @@ fun writeToFile(filePath: String, content: String, folder: String = "data") {
         errorLog("UtilTools.kt", "writeToFile(${filePath}, ...)", e)
     }
 }
+
+fun writeToFileImageBitmap(filePath: String, content: ImageBitmap, folder: String = "data") {
+    val fileSystem = FileSystem.SYSTEM
+    //val file = FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("data").resolve(filePath)
+    val file = getAppSpecificDirectory().resolve(folder).resolve(filePath)
+
+    try {
+        // Create directory if it doesn't exist
+        fileSystem.createDirectories(file.parent!!, mustCreate = false)
+
+        // Write to file
+        fileSystem.openReadWrite(file).use { fileHandle ->
+            fileHandle.sink().buffer().use { sink ->
+                sink.write( getByteArrayByImageBitmap(content))
+            }
+        }
+
+    } catch (e: Exception) {
+        errorLog("UtilTools.kt", "writeToFile(${filePath}, ...)", e)
+    }
+}
+
 
 fun readFromFile(filePath: String, localOnly : Boolean = false, defaultData : String = "{}"): String {
     val fileSystem = FileSystem.SYSTEM
