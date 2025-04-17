@@ -53,7 +53,7 @@ fun UIButton(
     isAvailable: Boolean = true,
     buttonSize: UIButtonSize = UIButtonSize.Normal,
     onClick: () -> Unit = {},
-    iconOnClick: () -> Unit = {}
+    iconOnClick: () -> Unit = { onClick.invoke() }
 ) {
     var modifier = modifierTmp
     modifier = if (textRes == null && text == null && icon != null) {
