@@ -36,6 +36,7 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
@@ -104,6 +105,7 @@ import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
 import utils.app.Preferences
+import utils.app.SG3VerticalScrollbar
 import utils.app.TextColorNormalDim
 import utils.app.rememberMutableStateListJsonOf
 import utils.app.removeStrQuote
@@ -179,6 +181,8 @@ fun ActionOrderListPageScreen(
         }
     }
 
+    val listState = rememberLazyListState()
+
     pageHeader.value = {
         PageHeader(
             navigator = navigator,
@@ -188,14 +192,16 @@ fun ActionOrderListPageScreen(
             forwardIconId = Res.drawable.phorphos_check_regular,
             onForward = {
                 //多選功能
-            }
+            },
+            listState = listState
         )
     }
 
     Box(modifier = Modifier.fillMaxSize()){
         LazyColumn(modifier = Modifier
             .padding(start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)
-            .hazeSource(state = hazeState, zIndex = DefaultZIndex)
+            .hazeSource(state = hazeState, zIndex = DefaultZIndex),
+            listState
             //.haze(state = hazeState)
         ) {
             item {
@@ -257,6 +263,8 @@ fun ActionOrderListPageScreen(
                 }
             }
         }
+
+        SG3VerticalScrollbar(listState = listState)
     }
 
 

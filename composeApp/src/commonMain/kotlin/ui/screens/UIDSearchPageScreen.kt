@@ -66,6 +66,7 @@ import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.LongStringXML
 import utils.app.PageBottomMask
+import utils.app.SG3VerticalScrollbar
 import utils.app.getIconByUserAccountIconValue
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
@@ -89,6 +90,16 @@ fun UIDSearchPageScreen(
                     navControllerInstance.navigateLimited("${Screen.UserInfoPageScreen.route}?uid=800333171")
                 },
      */
+
+    pageHeader.value = {
+        PageHeader(
+            navigator = navigator,
+            headerData = Screen.UIDSearchPageScreen.headerData,
+            hazeState = hazeState,
+            backIconId = BackIcon.CANCEL,
+            listState = listState
+        )
+    }
 
     Box{
         val noDataStr = removeStrQuote(Res.string.UIDNoData)
@@ -179,10 +190,10 @@ fun UIDSearchPageScreen(
                 )
             }
 
-            LazyColumn {
+            LazyColumn(state = listState) {
                 items(
                     count = searchRecordList.size,
-                    key = { index -> searchRecordList[index].hashCode() }
+                    key = { index -> searchRecordList[index].hashCode() },
                 ) { index ->
                     val item = searchRecordList[index]
                     Box(
@@ -269,6 +280,8 @@ fun UIDSearchPageScreen(
 
             }
 
+            SG3VerticalScrollbar(listState = listState)
+
             /*
             DragDropColumn(
                 modifier = Modifier.weight(1f).fillMaxSize(),
@@ -354,14 +367,6 @@ fun UIDSearchPageScreen(
 
         PageBottomMask()
 
-        pageHeader.value = {
-            PageHeader(
-                navigator = navigator,
-                headerData = Screen.UIDSearchPageScreen.headerData,
-                hazeState = hazeState,
-                backIconId = BackIcon.CANCEL,
-            )
-        }
 
     }
 }

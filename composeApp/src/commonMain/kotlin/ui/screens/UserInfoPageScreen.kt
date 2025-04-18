@@ -89,6 +89,7 @@ import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
 import utils.app.LongStringXML
+import utils.app.SG3VerticalScrollbar
 import utils.app.TextColorNormal
 import utils.app.TextDonorColorBrush
 import utils.app.getIconByUserAccountIconValue
@@ -144,12 +145,12 @@ fun UserInfoPageScreen(
             forwardIconId = Res.drawable.ui_icon_share,
             onForward = { showFunctionIsDevelopingToast() },
             hazeState = hazeState,
-            backIconId = BackIcon.CANCEL
+            backIconId = BackIcon.CANCEL,
+            gridState = lazyGridState
         )
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
-
         LazyVerticalGrid(
             columns = GridCells.Adaptive(CHAR_CARD_WIDTH),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
@@ -253,11 +254,10 @@ fun UserInfoPageScreen(
                 }
             }
 
+
         }
 
-
-
-
+        SG3VerticalScrollbar(gridState = lazyGridState)
 
         /*
 

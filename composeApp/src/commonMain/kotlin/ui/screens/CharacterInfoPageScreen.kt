@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.runtime.Composable
@@ -57,8 +56,6 @@ import files.phorphos_person_regular
 import files.phorphos_star_half_regular
 import files.phorphos_sword_regular
 import files.phorphos_tree_structure_regular
-import io.github.oikvpqya.compose.fastscroller.VerticalScrollbar
-import io.github.oikvpqya.compose.fastscroller.rememberScrollbarAdapter
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
@@ -93,7 +90,7 @@ import utils.app.DefaultZIndex
 import utils.app.JsonElementSaver
 import utils.app.Language
 import utils.app.Preferences
-import utils.app.SG3ScrollbarStyle
+import utils.app.SG3VerticalScrollbar
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
 import utils.app.showWarningToast
@@ -185,7 +182,8 @@ fun CharacterInfoPage(
                     Preferences.FavouriteClass.removeFromFavouriteList(characterId.toString(), Preferences.FavouriteClass.TYPE.CHAR)
                 }
                 isFavourite.value = !isFavourite.value
-            }
+            },
+            listState = listState
         )
     }
 
@@ -217,12 +215,7 @@ fun CharacterInfoPage(
 
         }
 
-        VerticalScrollbar(
-            modifier = Modifier.align(Alignment.TopEnd).padding(top = PAGE_HEADER_HEIGHT, bottom = 16.dp).fillMaxHeight(),
-            adapter = rememberScrollbarAdapter(scrollState = listState),
-            style = SG3ScrollbarStyle(),
-            enablePressToScroll = true,
-        )
+        SG3VerticalScrollbar(listState = listState)
 
         Box(modifier = Modifier.fillMaxSize()) {
             if(dialogDisplay.value){

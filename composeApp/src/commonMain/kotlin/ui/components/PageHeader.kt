@@ -22,13 +22,12 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.grid.LazyGridState
+import androidx.compose.foundation.lazy.staggeredgrid.LazyStaggeredGridState
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.OutlinedButton
 import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -40,28 +39,18 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.HazeStyle
-import dev.chrisbanes.haze.hazeChild
 import dev.chrisbanes.haze.hazeSource
 import files.Res
 import files.bg_transparent
 import files.phorphos_sun_fill
 import files.ui_icon_back
 import files.ui_icon_close
-import files.ui_icon_share
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import ui.navigation.hazeStateRoot
 import ui.navigation.popBackStackLimited
-import ui.screens.globalHazeBlur
-import utils.app.DefaultZIndex
-import utils.app.DialogPopUpZIndex
-import utils.app.HazeBlurDp10
-import utils.app.HazeBlurDp10Alpha
 import utils.app.PageHeaderZIndex
 import utils.app.hazeEffectSG3
 
@@ -94,6 +83,7 @@ fun PageHeader(
     hazeState: HazeState = hazeStateRoot,
     listState: LazyListState? = null,
     gridState: LazyGridState? = null,
+    staggedGridState: LazyStaggeredGridState? = null,
 ) {
     val coroutineScope = rememberCoroutineScope()
 
@@ -126,6 +116,11 @@ fun PageHeader(
                         if(gridState != null){
                             coroutineScope.launch{
                                 gridState.animateScrollToItem(0)
+                            }
+                        }
+                        if(staggedGridState != null){
+                            coroutineScope.launch{
+                                staggedGridState.animateScrollToItem(0)
                             }
                         }
                     },

@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -101,6 +102,7 @@ import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormalLarge24
 import utils.app.Language
 import utils.app.Preferences
+import utils.app.SG3VerticalScrollbar
 import utils.app.UpdateAssetsPopup
 import utils.app.isAndroidPlatform
 import utils.app.isLinuxPlatform
@@ -128,6 +130,7 @@ fun SettingScreen(
     hazeState: HazeState,
     pageHeader: MutableState<@Composable () -> Unit>,
 ){
+    val listState = rememberLazyListState()
 
     val urlHandler = LocalUriHandler.current
     showUpdatePopupInSetting = remember { mutableStateOf(false) }
@@ -142,18 +145,19 @@ fun SettingScreen(
             navigator = navigator,
             headerData = Screen.SettingScreen.headerData,
             hazeState = hazeState,
-            backIconId = BackIcon.BACK
+            backIconId = BackIcon.BACK,
+            listState = listState
         )
     }
 
     key(doRecompose.value){
 
         Box {
-
             LazyColumn (
                 modifier = Modifier
                     .padding(start = 16.dp, end = 16.dp)
                     .hazeSource(state = hazeState, zIndex = DefaultZIndex),
+                state = listState
             ){
                 //Spacer for padding status bar
                 item { Spacer(modifier = Modifier.statusBarsPadding().height(PAGE_HEADER_HEIGHT)) }
@@ -407,6 +411,8 @@ fun SettingScreen(
                 item { Box(modifier = Modifier.navigationBarsPadding())}
 
             }
+
+            SG3VerticalScrollbar(listState = listState)
 
             if(showUpdatePopupInSetting.value){
                 UpdateAssetsPopup(showUpdatePopupInSetting, hazeState, forceDownload = true)

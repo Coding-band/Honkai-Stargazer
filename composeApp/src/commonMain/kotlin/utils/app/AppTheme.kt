@@ -7,6 +7,7 @@ import androidx.compose.animation.SizeTransform
 import androidx.compose.animation.core.CubicBezierEasing
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
@@ -16,11 +17,12 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyListState
+import androidx.compose.foundation.lazy.grid.LazyGridState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
-import androidx.compose.material3.surfaceColorAtElevation
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Alignment
@@ -29,7 +31,6 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shadow
-import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
@@ -47,8 +48,11 @@ import files.misans_regular
 import io.github.oikvpqya.compose.fastscroller.ScrollbarStyle
 import io.github.oikvpqya.compose.fastscroller.ThumbStyle
 import io.github.oikvpqya.compose.fastscroller.TrackStyle
+import io.github.oikvpqya.compose.fastscroller.VerticalScrollbar
+import io.github.oikvpqya.compose.fastscroller.rememberScrollbarAdapter
 import org.jetbrains.compose.resources.Font
 import setKeyboardDarkMode
+import ui.components.PAGE_HEADER_HEIGHT
 import ui.screens.globalHazeBlur
 import ui.screens.gradientBottom
 
@@ -281,7 +285,7 @@ fun Modifier.hazeEffectSG3(
 fun SG3ScrollbarStyle(): ScrollbarStyle {
     return ScrollbarStyle(
         minimalHeight = 4.dp,
-        thickness = 8.dp,
+        thickness = 4.dp,
         hoverDurationMillis = 300,
         thumbStyle = ThumbStyle(
             shape = RoundedCornerShape(4.dp),
@@ -294,4 +298,40 @@ fun SG3ScrollbarStyle(): ScrollbarStyle {
             hoverColor = Color.Transparent,
         ),
     )
+}
+
+@Composable
+fun SG3VerticalScrollbar(scrollState : ScrollState){
+    Box(modifier = Modifier.fillMaxSize()){
+        VerticalScrollbar(
+            modifier = Modifier.align(Alignment.TopEnd).padding(top = PAGE_HEADER_HEIGHT, bottom = 16.dp).fillMaxHeight(),
+            adapter = rememberScrollbarAdapter(scrollState = scrollState),
+            style = SG3ScrollbarStyle(),
+            enablePressToScroll = false,
+        )
+    }
+}
+
+@Composable
+fun SG3VerticalScrollbar(listState: LazyListState){
+    Box(modifier = Modifier.fillMaxSize()){
+        VerticalScrollbar(
+            modifier = Modifier.align(Alignment.TopEnd).padding(top = PAGE_HEADER_HEIGHT, bottom = 16.dp).fillMaxHeight(),
+            adapter = rememberScrollbarAdapter(scrollState = listState),
+            style = SG3ScrollbarStyle(),
+            enablePressToScroll = false,
+        )
+    }
+}
+
+@Composable
+fun SG3VerticalScrollbar(gridState: LazyGridState){
+    Box(modifier = Modifier.fillMaxSize()){
+        VerticalScrollbar(
+            modifier = Modifier.align(Alignment.TopEnd).padding(top = PAGE_HEADER_HEIGHT, bottom = 16.dp).fillMaxHeight(),
+            adapter = rememberScrollbarAdapter(scrollState = gridState),
+            style = SG3ScrollbarStyle(),
+            enablePressToScroll = false,
+        )
+    }
 }

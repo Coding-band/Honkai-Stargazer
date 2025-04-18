@@ -101,6 +101,7 @@ import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.Language.Companion.TextLanguageInstance
+import utils.app.SG3VerticalScrollbar
 import utils.app.getMocPhaseStrListByMocLen
 import utils.app.pxToDp
 import utils.app.rememberMutableStateListJsonOf
@@ -216,6 +217,7 @@ fun MemoryOfChaosMissionPageScreen(
             }
         }
 
+        SG3VerticalScrollbar(listState = listState)
 
         val richTextState = rememberRichTextState()
         richTextState.setHtml(mocInfoList?.descList?.get(TextLanguageInstance) ?: "?")

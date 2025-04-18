@@ -18,6 +18,7 @@ import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.Text
 import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
@@ -64,6 +65,7 @@ import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import utils.app.Constants
 import utils.app.DefaultZIndex
+import utils.app.SG3VerticalScrollbar
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
 
@@ -85,6 +87,8 @@ fun EventListPageScreen(
         }.await()
     }
 
+    val listState = rememberLazyListState()
+
     pageHeader.value = {
         PageHeader(
             navigator = navigator,
@@ -96,7 +100,8 @@ fun EventListPageScreen(
     
     Box(modifier = Modifier.fillMaxSize()){
         LazyColumn(modifier = Modifier
-            .hazeSource(state = hazeState, zIndex = DefaultZIndex)
+            .hazeSource(state = hazeState, zIndex = DefaultZIndex),
+            listState
         ) {
             item {
                 Spacer(Modifier.padding(top = PAGE_HEADER_HEIGHT).statusBarsPadding())
@@ -112,7 +117,7 @@ fun EventListPageScreen(
 
         }
 
-
+        SG3VerticalScrollbar(listState = listState)
 
     }
 }

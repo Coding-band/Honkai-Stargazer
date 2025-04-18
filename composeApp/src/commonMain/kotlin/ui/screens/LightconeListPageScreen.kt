@@ -48,6 +48,7 @@ import ui.navigation.Screen
 import utils.app.Constants.Companion.CHAR_CARD_WIDTH
 import utils.app.DefaultZIndex
 import utils.app.PageBottomMask
+import utils.app.SG3VerticalScrollbar
 
 lateinit var lcList : MutableState<ArrayList<Lightcone>>
 lateinit var lcListSortable : MutableState<ArrayList<Lightcone>>
@@ -87,13 +88,14 @@ fun LightconeListPage(
     hazeState: HazeState,
     pageHeader: MutableState<@Composable () -> Unit>
 ) {
-
+    val gridState = rememberLazyGridState()
     pageHeader.value = {
         PageHeader(
             navigator = navigator,
             headerData = Screen.LightconeListPage.headerData,
             hazeState = hazeState,
-            backIconId = BackIcon.CANCEL
+            backIconId = BackIcon.CANCEL,
+            gridState = gridState
         )
     }
 
@@ -105,7 +107,7 @@ fun LightconeListPage(
             columns = GridCells.Adaptive(CHAR_CARD_WIDTH),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
-            state = rememberLazyGridState(),
+            state = gridState,
         ) {
             item(span = { GridItemSpan(maxCurrentLineSpan) }) {
                 Spacer(
@@ -129,6 +131,8 @@ fun LightconeListPage(
 
 
         PageBottomMask()
+
+        SG3VerticalScrollbar(gridState = gridState)
 
         ListFilterTool(
             originList = lcList.value,

@@ -20,9 +20,11 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.lazy.grid.LazyGridState
 import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
 import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
 import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridItemSpan
+import androidx.compose.foundation.lazy.staggeredgrid.rememberLazyStaggeredGridState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -69,6 +71,7 @@ import utils.app.Constants
 import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal16
 import utils.app.Language
+import utils.app.SG3VerticalScrollbar
 import utils.app.newImageRequest
 import utils.app.pxToDp
 import utils.app.removeStrQuote
@@ -91,6 +94,7 @@ fun BackgroundSettingScreen(
     val displayList = remember { mutableStateOf(Wallpaper.wallpaperList) }
     val confirmButtonHeight = remember { mutableStateOf(46.dp) }
     val density = LocalDensity.current.density
+    val gridState = rememberLazyStaggeredGridState()
 
     LaunchedEffect(isSearch.value){
         displayList.value = ArrayList(
@@ -109,13 +113,15 @@ fun BackgroundSettingScreen(
             navigator = navigator,
             headerData = Screen.BackgroundSettingScreen.headerData,
             hazeState = hazeState,
-            backIconId = BackIcon.BACK
+            backIconId = BackIcon.BACK,
+            staggedGridState = gridState,
         )
     }
 
     Box(modifier = Modifier.navigationBarsPadding()){
         //Waterfall-type Background Image List
         LazyVerticalStaggeredGrid(
+            state = gridState,
             columns = StaggeredGridCells.Adaptive(160.dp),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             modifier = Modifier.fillMaxSize().padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING).hazeSource(state = hazeState, zIndex = DefaultZIndex),
@@ -239,6 +245,8 @@ fun BackgroundSettingScreen(
                 navigator.popBackStackLimited()
             })
         }
+
+        SG3VerticalScrollbar(gridState = LazyGridState(gridState.firstVisibleItemIndex, gridState.firstVisibleItemScrollOffset))
     }
 }
 

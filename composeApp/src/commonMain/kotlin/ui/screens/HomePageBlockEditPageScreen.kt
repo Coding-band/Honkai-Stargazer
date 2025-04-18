@@ -60,6 +60,7 @@ import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.Preferences
+import utils.app.SG3VerticalScrollbar
 import utils.app.pxToDp
 import utils.app.removeStrQuote
 
@@ -71,6 +72,8 @@ fun HomePageBlockEditPageScreen(
 ){
     val reorderList = remember { mutableStateOf(Preferences().HomePageMenu.getShowMenuList()) }
 
+    val listState = rememberLazyListState()
+
     pageHeader.value = {
         PageHeader(
             navigator = navigator,
@@ -79,14 +82,14 @@ fun HomePageBlockEditPageScreen(
             backIconId = BackIcon.BACK,
             onBack = { nav ->
                 nav.popBackStackLimited()
-            }
+            },
+            listState = listState
         )
     }
 
     Box(modifier = Modifier
         .fillMaxSize()
     ){
-        val listState = rememberLazyListState()
         val actionRowHeight = remember { mutableStateOf(0.dp) }
         val density = LocalDensity.current.density
         LazyColumn(
@@ -205,6 +208,8 @@ fun HomePageBlockEditPageScreen(
                 )
             }
         }
+
+        SG3VerticalScrollbar(listState = listState)
     }
 }
 

@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Modifier
@@ -38,6 +39,7 @@ import ui.navigation.EventContentRoute
 import utils.app.Constants
 import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal14
+import utils.app.SG3VerticalScrollbar
 import utils.app.isAndroidPlatform
 import utils.app.newImageRequest
 
@@ -124,18 +126,21 @@ fun EventContentPageScreen(
             "</body>").trimIndent()
 
 
+    val listState = rememberLazyListState()
+
     pageHeader.value = {
         PageHeader(
             navigator = navigator,
             headerData = HeaderData(title = eventItem.title, titleIconId = Res.drawable.phorphos_film_slate_fill),
             hazeState = hazeState,
             backIconId = BackIcon.BACK,
+            listState = listState
         )
     }
 
     Box(modifier = Modifier.fillMaxSize()){
 
-        LazyColumn(modifier = Modifier.fillMaxSize().hazeSource(hazeState, zIndex = DefaultZIndex)) {
+        LazyColumn(modifier = Modifier.fillMaxSize().hazeSource(hazeState, zIndex = DefaultZIndex), listState) {
             item {
                 Spacer(Modifier.padding(top = PAGE_HEADER_HEIGHT).statusBarsPadding())
             }
@@ -160,7 +165,7 @@ fun EventContentPageScreen(
             }
         }
 
-
+        SG3VerticalScrollbar(listState = listState)
 
     }
 }

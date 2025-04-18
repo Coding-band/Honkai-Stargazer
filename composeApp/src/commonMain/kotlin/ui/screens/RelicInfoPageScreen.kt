@@ -100,6 +100,7 @@ import utils.app.FontSizeNormal14
 import utils.app.JsonElementSaver
 import utils.app.Language
 import utils.app.Preferences
+import utils.app.SG3VerticalScrollbar
 import utils.app.TextColorNormalDim
 import utils.app.htmlDescApplier
 import utils.app.newImageRequest
@@ -171,7 +172,8 @@ fun RelicInfoPage(
                 }
 
                 isFavourite.value = !isFavourite.value
-            }
+            },
+            listState = listState
         )
     }
 
@@ -193,6 +195,8 @@ fun RelicInfoPage(
             item { RelicSetsCardDisplay(relicName, relicInfoJson, isRelic) }
             item { Box(modifier = Modifier.navigationBarsPadding().height(72.dp)) }
         }
+
+        SG3VerticalScrollbar(listState = listState)
 
         Box(modifier = Modifier.fillMaxSize()) {
             if(dialogDisplay.value){

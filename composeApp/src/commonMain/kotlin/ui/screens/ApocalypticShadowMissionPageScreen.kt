@@ -7,9 +7,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.FlowRow
@@ -30,8 +28,6 @@ import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.Text
@@ -49,15 +45,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
-import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import coil3.compose.AsyncImage
-import coil3.compose.LocalPlatformContext
 import com.mohamedrejeb.richeditor.model.rememberRichTextState
 import com.mohamedrejeb.richeditor.ui.material3.RichText
 import com.voc.stargazer3.BuildKonfig
@@ -81,11 +74,6 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import kotlinx.datetime.Clock
-import kotlinx.datetime.Instant
-import kotlinx.datetime.LocalDateTime
-import kotlinx.datetime.TimeZone
-import kotlinx.datetime.format.byUnicodePattern
-import kotlinx.datetime.toLocalDateTime
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -97,30 +85,24 @@ import types.AbyssInfoType
 import types.AbyssInfoUsage
 import types.AbyssMonsterInfoContent
 import types.AbyssTeamUsageContent
-import types.Character
-import types.ImageFolder
 import types.UserAccount
 import ui.components.DropdownMenuNoPadding
 import ui.components.InfoDisplayDialog
-import ui.components.MonsterCard
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeaderAlpha
 import ui.components.TitleHeader
 import ui.components.UIButton
 import ui.components.UIButtonSize
-import ui.components.horizontalFadingEdge
 import ui.navigation.BattleChronicleRoute
 import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import utils.app.Constants
 import utils.app.DefaultZIndex
-import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.Language.Companion.TextLanguageInstance
-import utils.app.formatDecimal
+import utils.app.SG3VerticalScrollbar
 import utils.app.getMocPhaseStrListByMocLen
-import utils.app.newImageRequest
 import utils.app.pxToDp
 import utils.app.rememberMutableStateListJsonOf
 import utils.app.removeStrQuote
@@ -236,6 +218,7 @@ fun ApocalypticShadowMissionPageScreen(
             }
         }
 
+        SG3VerticalScrollbar(listState = listState)
 
         val richTextState = rememberRichTextState()
         richTextState.setHtml(asInfoList?.descList?.get(TextLanguageInstance) ?: "?")

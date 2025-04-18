@@ -106,6 +106,7 @@ import utils.app.FontSizeNormalLarge24
 import utils.app.Preferences
 import utils.app.ProgressLevelBackground
 import utils.app.ProgressLevelPrimary
+import utils.app.SG3VerticalScrollbar
 import utils.app.TextColorLevel
 import utils.app.TextColorNormal
 import utils.app.TextColorNormalDim
@@ -419,61 +420,64 @@ fun HomePageMenuScrollView(
     val menuSettingRowHeight = remember { mutableStateOf(0.dp) }
     val menuItemHeight = remember { mutableStateOf(0.dp) }
     val density = LocalDensity.current.density
-    Column {
-        LazyVerticalGrid(
-            state = lazyGridState,
-            modifier = Modifier
-                .padding(start = 16.dp, end = 16.dp + menuSettingRowHeight.value)
-                .weight(1f),
-            columns = GridCells.Adaptive(80.dp),
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
-        ) {
-            items(homeMenuList.value, span = { index ->
-                val homeMenuItem = Constants.HOME_PAGE_MENU_DEFAULT.first { it.itemId == index }
-                when (homeMenuItem.itemType) {
-                    HomePageBlockItem.HomePageBlockItemType.W1H1 -> GridItemSpan(1)
-                    HomePageBlockItem.HomePageBlockItemType.W2H1 -> GridItemSpan(2)
-                }
-            }, key = { it }) { index ->
-                val homeMenuItem = Constants.HOME_PAGE_MENU_DEFAULT.first { it.itemId == index }
-                Box(Modifier.layoutId("HomePageItemBox").onSizeChanged {
-                    menuItemHeight.value = androidx.compose.ui.unit.max(pxToDp(it.height, density), HomePageBlockItem.HOME_PAGE_BLOCK_HEIGHT)
-                }){
+    Box{
+        Column {
+            LazyVerticalGrid(
+                state = lazyGridState,
+                modifier = Modifier
+                    .padding(start = 16.dp, end = 16.dp + menuSettingRowHeight.value)
+                    .weight(1f),
+                columns = GridCells.Adaptive(80.dp),
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                items(homeMenuList.value, span = { index ->
+                    val homeMenuItem = Constants.HOME_PAGE_MENU_DEFAULT.first { it.itemId == index }
                     when (homeMenuItem.itemType) {
-                        HomePageBlockItem.HomePageBlockItemType.W1H1 -> HomePageBlock1x1(
-                            homeMenuItem,
-                            hazeState = hazeState,
-                            navigator = navigator,
-                            //draggableModifier = draggableModifier
-                        )
-                        HomePageBlockItem.HomePageBlockItemType.W2H1 -> HomePageBlock2x1(
-                            homeMenuItem,
-                            hazeState = hazeState,
-                            navigator = navigator
-                        )
+                        HomePageBlockItem.HomePageBlockItemType.W1H1 -> GridItemSpan(1)
+                        HomePageBlockItem.HomePageBlockItemType.W2H1 -> GridItemSpan(2)
                     }
+                }, key = { it }) { index ->
+                    val homeMenuItem = Constants.HOME_PAGE_MENU_DEFAULT.first { it.itemId == index }
+                    Box(Modifier.layoutId("HomePageItemBox").onSizeChanged {
+                        menuItemHeight.value = androidx.compose.ui.unit.max(pxToDp(it.height, density), HomePageBlockItem.HOME_PAGE_BLOCK_HEIGHT)
+                    }){
+                        when (homeMenuItem.itemType) {
+                            HomePageBlockItem.HomePageBlockItemType.W1H1 -> HomePageBlock1x1(
+                                homeMenuItem,
+                                hazeState = hazeState,
+                                navigator = navigator,
+                                //draggableModifier = draggableModifier
+                            )
+                            HomePageBlockItem.HomePageBlockItemType.W2H1 -> HomePageBlock2x1(
+                                homeMenuItem,
+                                hazeState = hazeState,
+                                navigator = navigator
+                            )
+                        }
+                    }
+
+
+                    /* Deprecated, Since this design is too complicated for me
+                    ReorderableItem(reorderableLazyGridState, key = homeMenuItem.itemId){
+                        val draggableModifier = Modifier.draggableHandle(enabled = isEditMenuMode.value)
+
+                        //HomePageItemBox
+
+                        // Delete button, just a small "cross" button at the left-top of box
+                        // HomePageMenuItemDeleteButton(homeMenuList = homeMenuList, id = homeMenuItem.itemId)
+                    }
+                     */
                 }
 
-
-                /* Deprecated, Since this design is too complicated for me
-                ReorderableItem(reorderableLazyGridState, key = homeMenuItem.itemId){
-                    val draggableModifier = Modifier.draggableHandle(enabled = isEditMenuMode.value)
-
-                    //HomePageItemBox
-
-                    // Delete button, just a small "cross" button at the left-top of box
-                    // HomePageMenuItemDeleteButton(homeMenuList = homeMenuList, id = homeMenuItem.itemId)
-                }
-                 */
+                item { Box(modifier = Modifier.navigationBarsPadding().size(16.dp)) }
             }
+            //BottomView()
 
-            item { Box(modifier = Modifier.navigationBarsPadding().size(16.dp)) }
+            // Deprecated, Since this design is too complicated for me
+            // HomePageMenuItemActionRow(homeMenuList = homeMenuList)
         }
-        //BottomView()
-
-        // Deprecated, Since this design is too complicated for me
-        // HomePageMenuItemActionRow(homeMenuList = homeMenuList)
+        SG3VerticalScrollbar(gridState = lazyGridState)
     }
 }
 

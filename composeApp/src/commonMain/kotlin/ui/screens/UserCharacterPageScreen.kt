@@ -48,16 +48,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.draw.rotate
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.RectangleShape
-import androidx.compose.ui.graphics.layer.drawLayer
-import androidx.compose.ui.graphics.rememberGraphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.onSizeChanged
@@ -102,9 +97,6 @@ import files.ic_selected_orange_circle
 import files.phorphos_caret_down_regular
 import files.ui_icon_share
 import files.ui_icon_star
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.float
 import kotlinx.serialization.json.jsonArray
@@ -139,6 +131,7 @@ import utils.app.FontSizeNormalSmall
 import utils.app.GradReachYellow
 import utils.app.JsonElementSaver
 import utils.app.Language
+import utils.app.SG3VerticalScrollbar
 import utils.app.formatDecimal
 import utils.app.getAssetsURLByFileName
 import utils.app.getImageNameByRegistName
@@ -148,7 +141,6 @@ import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.replaceStrRes
 import utils.app.showFunctionIsDevelopingToast
-import utils.app.writeToFileImageBitmap
 import utils.calculator.getCharRange
 import utils.calculator.getCharScore
 import utils.calculator.getGradAttrAndValue
@@ -209,7 +201,7 @@ fun UserCharacterPageScreen(
         val schoolIndex = remember { mutableStateOf(0) }
         val schoolDataNameArray = remember { arrayListOf("默認流派 - Default") }
 
-        val graphicsLayer = rememberGraphicsLayer()
+        //val graphicsLayer = rememberGraphicsLayer()
 
         LaunchedEffect(Unit){
             if(isInited.value) return@LaunchedEffect
@@ -290,6 +282,7 @@ fun UserCharacterPageScreen(
                         start = Constants.SCREEN_SAVE_PADDING,
                         end = Constants.SCREEN_SAVE_PADDING
                     ).hazeSource(hazeState)
+                        /*
                         .drawWithContent {
                             // 繪製背景，覆蓋整個列表的總高度
                             drawRect(
@@ -300,6 +293,7 @@ fun UserCharacterPageScreen(
                             // 繪製原始內容
                             drawContent()
                         }
+                         */
                 ) {
                     item { Spacer(Modifier.statusBarsPadding().height(PAGE_HEADER_ALPHA_HEIGHT + 240.dp).addItemHeight(itemHeights, itemIndex)) }
                     item { Box(modifier =  Modifier.addItemHeight(itemHeights, itemIndex)){ CharBioSkillInfo(character, charNameBigHeight) } }
@@ -320,6 +314,8 @@ fun UserCharacterPageScreen(
                     item { Spacer(Modifier.navigationBarsPadding().addItemHeight(itemHeights, itemIndex)) }
                 }
             }
+
+            SG3VerticalScrollbar(listState = listState)
         }
     }
 

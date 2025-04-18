@@ -58,6 +58,7 @@ import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
 import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
+import utils.app.SG3VerticalScrollbar
 import utils.app.getFinishTimeStr
 import utils.app.getRemainingTimeStr
 import utils.app.newImageRequest
@@ -84,7 +85,7 @@ fun ExpeditionPageScreen(
         refreshing = isRefreshing.value
     )
      */
-    val scrollState = rememberLazyListState()
+    val listState = rememberLazyListState()
     val coroutineScope = rememberCoroutineScope()
 
     pageHeader.value = {
@@ -100,14 +101,15 @@ fun ExpeditionPageScreen(
                     async { UserAccount.refreshNoteData() }.await()
                     withContext(Dispatchers.Main) { isRefreshing.value = false }
                 }
-            }
+            },
+            listState = listState
         )
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
         RefreshBox(isRefreshing.value) {
             LazyColumn(
-                state = scrollState,
+                state = listState,
                 modifier = Modifier
                     //.pullRefresh(pullRefreshState)
                     .fillMaxSize()
@@ -126,6 +128,8 @@ fun ExpeditionPageScreen(
                     }
                 }
             }
+
+            SG3VerticalScrollbar(listState = listState)
 
             //PullRefreshIndicator(isRefreshing.value, pullRefreshState, Modifier.align(Alignment.TopCenter).padding(top = PAGE_HEADER_HEIGHT))
         }

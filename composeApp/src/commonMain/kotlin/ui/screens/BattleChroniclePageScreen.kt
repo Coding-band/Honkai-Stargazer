@@ -74,6 +74,7 @@ import utils.app.DefaultZIndex
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormal20
+import utils.app.SG3VerticalScrollbar
 import utils.app.pxToDp
 import utils.app.removeStrQuote
 
@@ -327,5 +328,7 @@ fun BattleChroniclePageScreen(
                 }
             }
         }
+
+        SG3VerticalScrollbar(listState = listState)
     }
 }

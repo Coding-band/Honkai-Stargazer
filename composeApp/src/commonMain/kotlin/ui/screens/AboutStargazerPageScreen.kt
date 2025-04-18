@@ -62,6 +62,7 @@ import utils.app.FontSizeNormal16
 import utils.app.FontSizeNormal20
 import utils.app.GradReachYellow
 import utils.app.LongStringXML
+import utils.app.SG3VerticalScrollbar
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
 import utils.starbase.StarbaseAPI
@@ -81,6 +82,7 @@ fun AboutStargazerPageScreen(
             headerData = HeaderData(title = removeStrQuote(Res.string.AboutTheApp), titleIconId = Res.drawable.phorphos_film_slate_fill),
             hazeState = hazeState,
             backIconId = BackIcon.BACK,
+            listState = listState
         )
     }
 
@@ -101,6 +103,8 @@ fun AboutStargazerPageScreen(
             item { Declaration() }
             item { Spacer(modifier = Modifier.navigationBarsPadding()) }
         }
+
+        SG3VerticalScrollbar(listState = listState)
     }
 }
 

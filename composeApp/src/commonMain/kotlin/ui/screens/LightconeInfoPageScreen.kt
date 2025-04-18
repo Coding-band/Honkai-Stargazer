@@ -80,6 +80,7 @@ import utils.app.DefaultZIndex
 import utils.app.JsonElementSaver
 import utils.app.Language
 import utils.app.Preferences
+import utils.app.SG3VerticalScrollbar
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
 import utils.app.showWarningToast
@@ -153,7 +154,8 @@ fun LightconeInfoPage(
                 }
 
                 isFavourite.value = !isFavourite.value
-            }
+            },
+            listState = listState
         )
     }
 
@@ -176,6 +178,8 @@ fun LightconeInfoPage(
             item { Box(modifier = Modifier.navigationBarsPadding().height(72.dp)) }
 
         }
+
+        SG3VerticalScrollbar(listState = listState)
 
         Box(modifier = Modifier.fillMaxSize()) {
             if(dialogDisplay.value){

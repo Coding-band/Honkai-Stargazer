@@ -20,6 +20,7 @@ import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.DropdownMenuItem
@@ -86,6 +87,7 @@ import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal20
 import utils.app.GradReachYellow
 import utils.app.Language
+import utils.app.SG3VerticalScrollbar
 import utils.app.formatDecimal
 import utils.app.newImageRequest
 import utils.app.rememberMutableStateListJsonOf
@@ -185,6 +187,8 @@ fun ProficientLeaderboardPageScreen(
             }
         }
     }
+
+    val listState = rememberLazyListState()
 
     Box(Modifier.fillMaxSize()) {
         Column {
@@ -291,7 +295,9 @@ fun ProficientLeaderboardPageScreen(
                 }
             }
 
+
             LazyColumn(
+                state = listState,
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(start = Constants.SCREEN_SAVE_PADDING, end = Constants.SCREEN_SAVE_PADDING)
@@ -327,7 +333,10 @@ fun ProficientLeaderboardPageScreen(
                 item { Spacer(modifier = Modifier.navigationBarsPadding()) }
                 //Comments & Suggestions
             }
+
         }
+
+        SG3VerticalScrollbar(listState = listState)
 
         PageHeaderAlpha(
             navigator = navigator,
