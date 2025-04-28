@@ -72,7 +72,7 @@ fun InfoDisplayDialog(
         AppDialog(
             titleString = titleString,
             components = components,
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier,
             hazeState = hazeState,
             isPopupShow = isDialogVisible
         )
@@ -157,7 +157,7 @@ fun AppDialogContent(
         //Inner padding
         Column {
 
-            Column(modifier = Modifier.padding(16.dp).weight(1f)) {
+            Column(modifier = Modifier.padding(16.dp).wrapContentHeight().weight(1f, fill = false)) {
                 //Title & Exit Button
                 Row {
                     Text(

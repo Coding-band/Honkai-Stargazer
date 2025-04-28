@@ -186,6 +186,7 @@ fun <T> ListFilterTool(
                 modifier = Modifier
                     .wrapContentWidth()
                     .wrapContentHeight()
+                    .weight(1f, fill = false)
                     .padding(start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)
                     .align(Alignment.CenterHorizontally),
             ){
