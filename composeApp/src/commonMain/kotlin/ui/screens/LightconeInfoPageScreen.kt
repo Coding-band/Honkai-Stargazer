@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.runtime.Composable
@@ -31,7 +32,9 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
@@ -82,6 +85,7 @@ import utils.app.Language
 import utils.app.Preferences
 import utils.app.SG3VerticalScrollbar
 import utils.app.newImageRequest
+import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.showWarningToast
 import utils.app.valueOfWithDefaultPath
@@ -224,12 +228,14 @@ fun LightconeInfoFullImageContent(
     modifier: Modifier = Modifier,
     fileName: String,
 ) {
+    val imageSize = remember { mutableStateOf(Pair(1.dp,1.dp)) }
+    val density = LocalDensity.current.density
     Box(modifier = modifier) {
         Image(
             painter = painterResource(Res.drawable.bg_lightcone_artwork_back),
-            modifier = modifier.offset((12).dp, (12).dp),
+            modifier = modifier.offset((12).dp, (12).dp).size(imageSize.value.first, imageSize.value.second),
             contentDescription = "Lightcone Back Image",
-            contentScale = ContentScale.FillBounds,
+            contentScale = ContentScale.Fit,
         )
         AsyncImage(
             model = newImageRequest(
@@ -238,15 +244,17 @@ fun LightconeInfoFullImageContent(
                     ImageFolder.LC_ARTWORK, fileName
                 )
             ),
-            modifier = modifier,
+            modifier = modifier.onGloballyPositioned {
+                imageSize.value = Pair(pxToDp(it.size.width, density), pxToDp(it.size.height, density))
+            },
             contentDescription = "Lightcone Full Image",
             contentScale = ContentScale.Fit,
         )
         Image(
             painter = painterResource(Res.drawable.bg_lightcone_artwork_front),
             contentDescription = "Lightcone Front Image",
-            modifier = modifier.offset((-12).dp, (-12).dp),
-            contentScale = ContentScale.FillBounds,
+            modifier = modifier.offset((-12).dp, (-12).dp).size(imageSize.value.first, imageSize.value.second),
+            contentScale = ContentScale.Fit,
         )
 
     }
