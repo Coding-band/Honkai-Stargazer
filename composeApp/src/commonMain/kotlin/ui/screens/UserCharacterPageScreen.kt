@@ -183,14 +183,14 @@ fun UserCharacterPageScreen(
     val defaultSchoolName = "默認流派 - Default"
 
     // 用於存儲每個項目的高度，鍵為索引，值為高度（像素）
-    val itemHeights = remember { mutableStateMapOf<Int, Float>() }
-    val itemIndex = remember { mutableStateOf(0) }
+    //val itemHeights = remember { mutableStateMapOf<Int, Float>() }
+    //val itemIndex = remember { mutableStateOf(0) }
     val density = LocalDensity.current
 
     // 計算總高度
-    val totalHeight by derivedStateOf {
-        itemHeights.values.sum() // 所有已記錄項目高度的總和
-    }
+    //val totalHeight by derivedStateOf {
+    //    itemHeights.values.sum() // 所有已記錄項目高度的總和
+    //}
 
     if(character == null){
         navigator.popBackStack()
@@ -228,6 +228,7 @@ fun UserCharacterPageScreen(
 
             pomPomPopupInstance.value = PomPomPopup(false)
         }
+
 
         Box(modifier = Modifier.fillMaxSize()){
             CharacterInfoFadeImg(
@@ -295,23 +296,12 @@ fun UserCharacterPageScreen(
                         }
                          */
                 ) {
-                    item { Spacer(Modifier.statusBarsPadding().height(PAGE_HEADER_ALPHA_HEIGHT + 240.dp).addItemHeight(itemHeights, itemIndex)) }
-                    item { Box(modifier =  Modifier.addItemHeight(itemHeights, itemIndex)){ CharBioSkillInfo(character, charNameBigHeight) } }
-                    item { Box(modifier =  Modifier.addItemHeight(itemHeights, itemIndex)){ LightconeInfo(character) } }
-                    item { Box(modifier =  Modifier.addItemHeight(itemHeights, itemIndex)){ RelicInfo(character) } }
-                    item {
-                        Box(modifier =  Modifier.addItemHeight(itemHeights, itemIndex)){
-                            ProficientScoreInfo(
-                                character,
-                                schoolDataNameArray,
-                                schoolIndex,
-                                charScoreLocal,
-                                overPercentage,
-                                gradRequirement
-                            )
-                        } }
-
-                    item { Spacer(Modifier.navigationBarsPadding().addItemHeight(itemHeights, itemIndex)) }
+                    item { Spacer(Modifier.statusBarsPadding().height(PAGE_HEADER_ALPHA_HEIGHT + 240.dp)) }
+                    item { CharBioSkillInfo(character, charNameBigHeight) }
+                    item { LightconeInfo(character) }
+                    item { RelicInfo(character) }
+                    item { ProficientScoreInfo(character, schoolDataNameArray, schoolIndex, charScoreLocal, overPercentage, gradRequirement) }
+                    item { Spacer(Modifier.navigationBarsPadding()) }
                 }
             }
 
@@ -1067,12 +1057,4 @@ fun CharacterInfoFadeImg(
 
 fun getProfRankResult(score: Float, character: Character, schoolIndex: Int, uid: String): Float {
     return StarbaseAPI().getSpecificUserCharProfOver(character.officialId!!, schoolId = schoolIndex, myScore = score, uid = uid)
-}
-
-fun Modifier.addItemHeight(itemHeights: MutableMap<Int, Float>, itemIndex: MutableState<Int>): Modifier {
-    return this.onGloballyPositioned { coordinates ->
-        // 記錄項目的真實高度（轉換為像素）
-        val height = coordinates.size.toSize().height
-        itemHeights[itemIndex.value] = height
-    }
 }
