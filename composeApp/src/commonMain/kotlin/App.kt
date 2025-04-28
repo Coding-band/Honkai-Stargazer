@@ -1,6 +1,8 @@
 
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.unit.Density
 import coil3.compose.setSingletonImageLoaderFactory
 import com.voc.stargazer3.BuildKonfig
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -16,6 +18,7 @@ import utils.app.newImageLoader
 import utils.app.updateAssetsInit
 
 lateinit var platformContext: ContextFactory
+lateinit var globalDensity: Density
 
 @Composable
 @Preview
@@ -25,6 +28,7 @@ lateinit var platformContext: ContextFactory
          * - Display specific screen as the login in Figma Design expect
          */
 fun App(platformContextFactory: ContextFactory) {
+    globalDensity = LocalDensity.current
     platformContext = platformContextFactory
     setSingletonImageLoaderFactory { context ->
         newImageLoader(

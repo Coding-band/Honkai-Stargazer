@@ -30,6 +30,7 @@ import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.DropdownMenuItem
@@ -97,6 +98,7 @@ import files.ic_selected_orange_circle
 import files.phorphos_caret_down_regular
 import files.ui_icon_share
 import files.ui_icon_star
+import kotlinx.datetime.Clock
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.float
 import kotlinx.serialization.json.jsonArray
@@ -117,6 +119,7 @@ import ui.components.pomPomPopupInstance
 import ui.navigation.UserCharacterRoute
 import utils.annotation.DoItLater
 import utils.app.AdditionalGreen
+import utils.app.CaptureLazyColumnScreenshot
 import utils.app.CharWeightList
 import utils.app.Constants
 import utils.app.Constants.Companion.INFO_MAX_WIDTH
@@ -182,16 +185,6 @@ fun UserCharacterPageScreen(
     val isInited = rememberSaveable { mutableStateOf(false) }
     val defaultSchoolName = "默認流派 - Default"
 
-    // 用於存儲每個項目的高度，鍵為索引，值為高度（像素）
-    //val itemHeights = remember { mutableStateMapOf<Int, Float>() }
-    //val itemIndex = remember { mutableStateOf(0) }
-    val density = LocalDensity.current
-
-    // 計算總高度
-    //val totalHeight by derivedStateOf {
-    //    itemHeights.values.sum() // 所有已記錄項目高度的總和
-    //}
-
     if(character == null){
         navigator.popBackStack()
     }else{
@@ -202,6 +195,9 @@ fun UserCharacterPageScreen(
         val schoolDataNameArray = remember { arrayListOf("默認流派 - Default") }
 
         //val graphicsLayer = rememberGraphicsLayer()
+
+        val density = LocalDensity.current
+
 
         LaunchedEffect(Unit){
             if(isInited.value) return@LaunchedEffect
@@ -240,12 +236,7 @@ fun UserCharacterPageScreen(
                 PageHeaderAlpha(
                     navigator = navigator,
                     onForward = {
-                        /*
-                        CoroutineScope(Dispatchers.Default).launch {
-                            val bitmap = graphicsLayer.toImageBitmap()
-                            writeToFileImageBitmap("${userAccount.username}_${userAccount.uid}.png", bitmap)
-                        }
-                         */
+                        isShare.value = true
                         showFunctionIsDevelopingToast()
                     },
                     forwardIconId = Res.drawable.ui_icon_share,
@@ -277,31 +268,66 @@ fun UserCharacterPageScreen(
 
                 charNameVisible.value = (listState.firstVisibleItemIndex > 0 && listState.firstVisibleItemScrollOffset > charNameBigHeight.value || listState.firstVisibleItemIndex > 1 )
 
+                val itemList = listOf<@Composable () -> Unit>(
+                    { CharBioSkillInfo(character, charNameBigHeight) },
+                    { LightconeInfo(character) },
+                    { RelicInfo(character) },
+                    { ProficientScoreInfo(character, schoolDataNameArray, schoolIndex, charScoreLocal, overPercentage, gradRequirement) },
+                    { Spacer(Modifier.navigationBarsPadding()) }
+                )
+
+                val displayPlaceholderItem = listOf<@Composable () -> Unit>({ Spacer(Modifier.statusBarsPadding().height(PAGE_HEADER_ALPHA_HEIGHT + 240.dp)) })
+
+                val charFadeAndNameItem = listOf<@Composable () -> Unit> ({
+                    Box(modifier = Modifier.widthIn(INFO_MIN_WIDTH, INFO_MAX_WIDTH).align(Alignment.CenterHorizontally)) {
+                        CharacterInfoFadeImg(
+                            fileName = character.registName!!,
+                            isScrollMode = isScrolling, //alpha = scrollToAlpha
+                        )
+
+                        Column(modifier = Modifier.align(Alignment.BottomCenter)) {
+                            Text(
+                                "${userAccount.username}${if(charNameVisible.value)"·${character.displayName}" else ""}",
+                                modifier = Modifier.align(Alignment.CenterHorizontally).padding(2.dp),
+                                style = FontSizeNormal16(),
+                                color = Color.White
+                            )
+                            Text(
+                                text = "${userAccount.uid}·${removeStrQuote(userAccount.server.localeName)}",
+                                modifier = Modifier.align(Alignment.CenterHorizontally)
+                                    .padding(2.dp)
+                                    .background(Color(0x4D000000), RoundedCornerShape(49.dp))
+                                    .clip(RoundedCornerShape(49.dp)).padding(8.dp),
+                                style = FontSizeNormal14(),
+                                color = Color.White
+                            )
+                            Spacer(modifier = Modifier.height(16.dp))
+                        }
+                    }
+                })
+
                 LazyColumn(
                     state = listState,
                     modifier = Modifier.padding(
                         start = Constants.SCREEN_SAVE_PADDING,
                         end = Constants.SCREEN_SAVE_PADDING
                     ).hazeSource(hazeState)
-                        /*
-                        .drawWithContent {
-                            // 繪製背景，覆蓋整個列表的總高度
-                            drawRect(
-                                color = Color.Gray.copy(alpha = 0.2f),
-                                topLeft = Offset(0f, 0f),
-                                size = Size(size.width, totalHeight)
-                            )
-                            // 繪製原始內容
-                            drawContent()
-                        }
-                         */
                 ) {
-                    item { Spacer(Modifier.statusBarsPadding().height(PAGE_HEADER_ALPHA_HEIGHT + 240.dp)) }
-                    item { CharBioSkillInfo(character, charNameBigHeight) }
-                    item { LightconeInfo(character) }
-                    item { RelicInfo(character) }
-                    item { ProficientScoreInfo(character, schoolDataNameArray, schoolIndex, charScoreLocal, overPercentage, gradRequirement) }
-                    item { Spacer(Modifier.navigationBarsPadding()) }
+                    items(displayPlaceholderItem + itemList ){
+                        it()
+                    }
+                }
+
+                // Do not want user to this
+                if(isShare.value){
+                    Box(modifier = Modifier.alpha(0f)) {
+                        CaptureLazyColumnScreenshot(
+                            imageName = "${userAccount.username}_${userAccount.uid}_${Clock.System.now().toEpochMilliseconds()}.png",
+                            items = charFadeAndNameItem + itemList,
+                            modifier = Modifier.fillMaxSize().navigationBarsPadding(),
+                            isCapture = isShare,
+                        )
+                    }
                 }
             }
 
