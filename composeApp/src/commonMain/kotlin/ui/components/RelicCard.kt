@@ -18,10 +18,11 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.material.ripple
@@ -42,13 +43,11 @@ import coil3.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
 import types.ImageFolder
 import types.Relic
+import types.RelicType
 import ui.navigation.RelicInfoRoute
-import ui.navigation.Screen
 import ui.navigation.navigateLimited
 import ui.navigation.navigatorInstance
 import utils.app.Constants.Companion.CHAR_CARD_TITLE_HEIGHT
-import utils.app.Constants.Companion.MATERIAL_CARD_TITLE_HEIGHT
-import utils.app.Constants.Companion.RELIC_CARD_HEIGHT
 import utils.app.Constants.Companion.RELIC_CARD_WIDTH
 import utils.app.Constants.Companion.getCardBgColorByRare
 import utils.app.FontSizeNormal12
@@ -68,7 +67,8 @@ fun RelicCard(
             fileName = relic.fileName!!
         )
     ) },
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    isDisplayInList: Boolean = false,
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     Box(
@@ -139,6 +139,18 @@ fun RelicCard(
             }
             Spacer(modifier = Modifier.height(2.dp))
         }
+
+        if(isDisplayInList){
+            Box(modifier = Modifier.padding(4.dp).wrapContentSize().background(Color(0x66000000), CircleShape).size(20.dp)){
+                Text(
+                    if(relic.type == RelicType.RELIC) "4" else "2",
+                    style = FontSizeNormal12(),
+                    color = Color.White,
+                    modifier = Modifier.align(Alignment.Center)
+                )
+            }
+        }
+
     }
 }
 

@@ -6,9 +6,11 @@
 
 package ui.screens
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
@@ -16,12 +18,15 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastForEach
 import androidx.navigation.NavHostController
@@ -37,6 +42,7 @@ import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import types.Relic
+import types.RelicType
 import ui.components.BackIcon
 import ui.components.LIST_FILTER_TOOL_HEIGHT
 import ui.components.ListFilterTool
@@ -115,8 +121,18 @@ fun RelicListPage(
                         .height(PAGE_HEADER_HEIGHT)
                 )
             }
-            items(count = relicListSortable.value.size, key = { index -> relicListSortable.value[index].officialId!!}) { index ->
-                RelicCard(relic = relicListSortable.value[index], modifier = Modifier.animateItem())
+            items(relicListSortable.value.filter { it.type == RelicType.ORNAMENTS }, key = { index -> index.officialId!!}) { index ->
+                RelicCard(relic = index, modifier = Modifier.animateItem(), isDisplayInList = true)
+            }
+
+            item(span = { GridItemSpan(maxLineSpan) }) {
+                Box(Modifier.fillMaxWidth().padding(top = 12.dp, bottom = 12.dp), contentAlignment = Alignment.Center) {
+                    Box(modifier = Modifier.fillMaxWidth().height(1.dp).background(Color(0x66F3F9FF)),)
+                }
+            }
+
+            items(relicListSortable.value.filter { it.type == RelicType.RELIC }, key = { index -> index.officialId!!}) { index ->
+                RelicCard(relic = index, modifier = Modifier.animateItem(), isDisplayInList = true)
             }
 
             item(span = { GridItemSpan(maxLineSpan) }) {
