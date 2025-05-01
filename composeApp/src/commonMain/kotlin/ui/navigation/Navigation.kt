@@ -659,6 +659,11 @@ fun withBGScreen(isPadMode: MutableState<Boolean>, content: @Composable (HazeSta
     val rememberedScreenInstance = remember { mutableStateOf(screenInstance) }
     val hazeStateLocal = if(isPadMode.value) hazeStateRoot else remember { HazeState() }
     val pageHeader = remember { mutableStateOf<@Composable () -> Unit>({}) }
+
+    // Make sure the language will not be changed when the screen is changed
+    // https://discord.com/channels/880921456903618610/880921459546009602/1367305921209962659
+    Language().setAppLanguage()
+
     Box(modifier = Modifier.fillMaxSize()) {
         if(!isPadMode.value){
             MakeBackground(screen = rememberedScreenInstance.value, hazeState = hazeStateLocal)
