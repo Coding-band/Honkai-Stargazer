@@ -23,12 +23,12 @@ lateinit var globalDensity: Density
 @Composable
 @Preview
         /**
-         * - The door of the app, only should put things that need to initize at the beginning of the app start
-         * - Handling and deciding which display case it is (Horizonal / Landscape) , (Pad Mode ? Phone Mode?)
+         * - The door of the app, only should put things that need to initialize at the beginning of the app start
+         * - Handling and deciding which display case it is (Horizontal / Landscape) , (Pad Mode ? Phone Mode?)
          * - Display specific screen as the login in Figma Design expect
          */
 fun App(platformContextFactory: ContextFactory) {
-    globalDensity = LocalDensity.current
+    globalDensity = LocalDensity.current // Not yet applied to the app
     platformContext = platformContextFactory
     setSingletonImageLoaderFactory { context ->
         newImageLoader(

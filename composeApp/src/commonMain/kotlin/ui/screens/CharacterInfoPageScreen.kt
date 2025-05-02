@@ -12,6 +12,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.runtime.Composable
@@ -162,7 +164,7 @@ fun CharacterInfoPage(
     val singleCharWeightJsonElement = remember { CharWeightList.INSTANCE.jsonObject[characterId.toString()] }
     var charWeightJsonObject : JsonObject? = remember { null }
 
-    if(singleCharWeightJsonElement != null && singleCharWeightJsonElement.jsonArray.size > 0){
+    if(singleCharWeightJsonElement != null && singleCharWeightJsonElement.jsonArray.isNotEmpty()){
         charWeightJsonObject = remember { singleCharWeightJsonElement.jsonArray[selectedSectIndex.value].jsonObject }
     }
 
@@ -217,7 +219,7 @@ fun CharacterInfoPage(
 
         SG3VerticalScrollbar(listState = listState)
 
-        Box(modifier = Modifier.fillMaxSize()) {
+        Box(modifier = Modifier.fillMaxSize().padding(top = PAGE_HEADER_HEIGHT).statusBarsPadding()) {
             if(dialogDisplay.value){
                 InfoDisplayDialog(dialogTitle.value, dialogComponent.value, modifier = Modifier.align(Alignment.BottomCenter), hazeState, isNavBarVisible = (isNaviBarVisible), isDialogVisible = (dialogDisplay))
             } else {
