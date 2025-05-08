@@ -23,6 +23,7 @@ import kotlinx.datetime.Clock
 import platformContext
 import shareImageToOther
 import utils.annotation.TranslationPls
+import kotlin.random.Random
 
 @Composable
 fun CaptureLazyColumnScreenshot(
@@ -63,7 +64,7 @@ fun CaptureLazyColumnScreenshot(
     }) { constraints ->
         // 測量所有項目的完整高度
         val contentPlaceable = subcompose("content") {
-            Column(modifier = Modifier.wrapContentWidth()) {
+            Column(modifier = Modifier.wrapContentWidth().background(brush = RamdomLinearGradientGroup[Random.nextInt(RamdomLinearGradientGroup.size)])) {
                 items.map {
                     it()
                 }

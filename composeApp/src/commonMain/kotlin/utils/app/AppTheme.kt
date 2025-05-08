@@ -110,6 +110,27 @@ private val LightColorScheme = lightColors(
     */
 )
 
+val RamdomLinearGradientGroup = listOf(
+    // 調整後的 8 組較深色柔和漸變（原淺色系改進）
+    Brush.linearGradient(colors = listOf(Color(0xFF8CA8D3), Color(0xFF6687B8))), // 晨霧藍（加深）
+    Brush.linearGradient(colors = listOf(Color(0xFFFFA8B8), Color(0xFFFF6F85))), // 桃花粉（加深）
+    Brush.linearGradient(colors = listOf(Color(0xFF8FDBB6), Color(0xFF5EB38A))), // 薄荷綠（加深）
+    Brush.linearGradient(colors = listOf(Color(0xFFB89FE6), Color(0xFF8E6FC7))), // 薰衣草紫（加深）
+    Brush.linearGradient(colors = listOf(Color(0xFFFFB07A), Color(0xFFFF8C4B))), // 日落橙（加深）
+    Brush.linearGradient(colors = listOf(Color(0xFFFF8A80), Color(0xFFFF5C4D))), // 蜜桃珊瑚（加深）
+    Brush.linearGradient(colors = listOf(Color(0xFFB3BCD1), Color(0xFF8795B3))), // 雲朵灰（加深）
+    Brush.linearGradient(colors = listOf(Color(0xFF80D8E8), Color(0xFF4FB2C7))), // 海沫綠（加深）
+    // 原新增的 8 組較深色柔和漸變
+    Brush.linearGradient(colors = listOf(Color(0xFF2A3B5A), Color(0xFF4B6587))), // 深夜藍
+    Brush.linearGradient(colors = listOf(Color(0xFF3F2E56), Color(0xFF6B4E8A))), // 暮色紫
+    Brush.linearGradient(colors = listOf(Color(0xFF2E4B3F), Color(0xFF4A7A5E))), // 森林綠
+    Brush.linearGradient(colors = listOf(Color(0xFF4A2B3C), Color(0xFF7A4E5F))), // 酒紅魅影
+    Brush.linearGradient(colors = listOf(Color(0xFF2F2F2F), Color(0xFF4C5A65))), // 炭灰黑
+    Brush.linearGradient(colors = listOf(Color(0xFF1E4D5C), Color(0xFF3B7A8A))), // 深海青
+    Brush.linearGradient(colors = listOf(Color(0xFF3C2F2F), Color(0xFF6A4E4E))), // 咖啡棕
+    Brush.linearGradient(colors = listOf(Color(0xFF283A5E), Color(0xFF4A6191)))  // 靛藍夜
+)
+
 @Composable
 fun Modifier.notchPaddingLeft (): Modifier {
     val density = LocalDensity.current
