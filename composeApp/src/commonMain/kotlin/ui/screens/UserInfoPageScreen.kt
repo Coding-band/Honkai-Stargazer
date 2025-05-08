@@ -26,7 +26,10 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
+import androidx.compose.material.pullrefresh.pullRefresh
+import androidx.compose.material.pullrefresh.rememberPullRefreshState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.derivedStateOf
@@ -66,17 +69,25 @@ import files.UserInfoLastOnlineTime
 import files.UserInfoOwnedCharacters
 import files.ic_arrow_to_down
 import files.ic_list_isolate_pretty
+import files.phorphos_arrows_clockwise_fill
 import files.phorphos_question_fill
 import files.ui_icon_share
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.jetbrains.compose.resources.painterResource
 import types.Role
 import types.UserAccount
+import types.UserAccount.Companion.UIDSEARCH
 import ui.components.AppDialog
 import ui.components.BackIcon
 import ui.components.CharacterCard
 import ui.components.CharacterLcInfoDisplay
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.components.PageHeader
+import ui.components.RefreshBox
 import ui.navigation.Screen
 import ui.navigation.UserCharacterRoute
 import ui.navigation.UserInfoRoute
@@ -98,8 +109,11 @@ import utils.app.newImageRequest
 import utils.app.removeStrQuote
 import utils.app.showFunctionIsDevelopingToast
 import utils.app.showSuccessToast
+import utils.hoyolab.MihomoRequest
+import utils.starbase.StarbaseAPI
 import kotlin.math.min
 
+@OptIn(ExperimentalMaterialApi::class)
 @DoItLater("Get User Data from Database / API")
 @Composable
 fun UserInfoPageScreen(
@@ -112,7 +126,21 @@ fun UserInfoPageScreen(
     val route = backStackEntry.toRoute<UserInfoRoute>()
     val uid = route.uid
 
-    val userAccount by remember { mutableStateOf(
+    val isRefreshing = remember { mutableStateOf(false) }
+    /*
+    val pullRefreshState = rememberPullRefreshState(
+        onRefresh = {
+            isRefreshing.value = true
+            CoroutineScope(Dispatchers.Default).launch {
+                async { UserAccount.refreshNoteData() }.await()
+                withContext(Dispatchers.Main) { isRefreshing.value = false }
+            }
+        },
+        refreshing = isRefreshing.value
+    )
+     */
+
+    var userAccount by remember { mutableStateOf(
         if(UserAccount.INSTANCE.uid == uid){
             UserAccount.INSTANCE
         } else {
@@ -142,8 +170,23 @@ fun UserInfoPageScreen(
         PageHeader(
             headerData = Screen.UserInfoPageScreen.headerData,
             navigator = navigator,
-            forwardIconId = Res.drawable.ui_icon_share,
-            onForward = { showFunctionIsDevelopingToast() },
+            forwardIconId = Res.drawable.phorphos_arrows_clockwise_fill,
+            onForward = {
+                isRefreshing.value = true
+                CoroutineScope(Dispatchers.Default).launch {
+                    async {
+                        val starbaseResult = StarbaseAPI().getUserAccountInfo(uid, true)
+                        userAccount = if (starbaseResult.uid != "000000000") {
+                            starbaseResult
+                        } else {
+                            MihomoRequest(uid).getUserAccountByMiHomo()
+                        }
+
+
+                    }.await()
+                    withContext(Dispatchers.Main) { isRefreshing.value = false }
+                }
+            },
             hazeState = hazeState,
             backIconId = BackIcon.CANCEL,
             gridState = lazyGridState
@@ -151,144 +194,147 @@ fun UserInfoPageScreen(
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
-        LazyVerticalGrid(
-            columns = GridCells.Adaptive(CHAR_CARD_WIDTH),
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp),
-            state = lazyGridState,
-            modifier = Modifier.padding(
-                start = Constants.SCREEN_SAVE_PADDING,
-                end = Constants.SCREEN_SAVE_PADDING
-            ).hazeSource(hazeState, zIndex = DefaultZIndex)
-        ) {
-            item(span = { GridItemSpan(maxCurrentLineSpan) }) { Spacer(modifier = Modifier.statusBarsPadding().height(PAGE_HEADER_HEIGHT)) }
-            item(span = { GridItemSpan(maxLineSpan) }) { UserInfoBioUI(context, userAccount) }
-            item(span = { GridItemSpan(maxLineSpan) }) {
-                Column(Modifier.fillMaxWidth()) {
-                    Row(Modifier.padding(top = 4.dp, bottom = 4.dp)) {
-                        Text(
-                            removeStrQuote(Res.string.PublicChars),
-                            modifier = Modifier.padding(end = 8.dp),
-                            style = FontSizeNormal16(),
-                            color = Color.White
-                        )
-                        Image(
-                            painter = painterResource(Res.drawable.phorphos_question_fill),
-                            contentDescription = "Button to display how it works",
-                            colorFilter = ColorFilter.tint(Color.White),
-                            modifier = Modifier.size(16.dp).clip(CircleShape).align(Alignment.CenterVertically).clickable { showPopup.value = !showPopup.value }
-                        )
-                        Spacer(Modifier.weight(1f))
+        RefreshBox(isRefreshing.value) {
+            LazyVerticalGrid(
+                columns = GridCells.Adaptive(CHAR_CARD_WIDTH),
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                verticalArrangement = Arrangement.spacedBy(12.dp),
+                state = lazyGridState,
+                modifier = Modifier.padding(
+                    start = Constants.SCREEN_SAVE_PADDING,
+                    end = Constants.SCREEN_SAVE_PADDING
+                ).hazeSource(hazeState, zIndex = DefaultZIndex)
+                    //.pullRefresh(pullRefreshState)
+            ) {
+                item(span = { GridItemSpan(maxCurrentLineSpan) }) { Spacer(modifier = Modifier.statusBarsPadding().height(PAGE_HEADER_HEIGHT)) }
+                item(span = { GridItemSpan(maxLineSpan) }) { UserInfoBioUI(context, userAccount) }
+                item(span = { GridItemSpan(maxLineSpan) }) {
+                    Column(Modifier.fillMaxWidth()) {
+                        Row(Modifier.padding(top = 4.dp, bottom = 4.dp)) {
+                            Text(
+                                removeStrQuote(Res.string.PublicChars),
+                                modifier = Modifier.padding(end = 8.dp),
+                                style = FontSizeNormal16(),
+                                color = Color.White
+                            )
+                            Image(
+                                painter = painterResource(Res.drawable.phorphos_question_fill),
+                                contentDescription = "Button to display how it works",
+                                colorFilter = ColorFilter.tint(Color.White),
+                                modifier = Modifier.size(16.dp).clip(CircleShape).align(Alignment.CenterVertically).clickable { showPopup.value = !showPopup.value }
+                            )
+                            Spacer(Modifier.weight(1f))
 
-                        //這裏不用刷新，是基於當前的狀態短期内不會改變
-                        Text(
-                            removeStrQuote(Res.string.Switch),
-                            modifier = Modifier.padding(end = 8.dp).clip(CircleShape).clickable { isDisplayLcInfo.value = !isDisplayLcInfo.value },
-                            style = FontSizeNormal16(),
-                            color = Color.White
-                        )
+                            //這裏不用刷新，是基於當前的狀態短期内不會改變
+                            Text(
+                                removeStrQuote(Res.string.Switch),
+                                modifier = Modifier.padding(end = 8.dp).clip(CircleShape).clickable { isDisplayLcInfo.value = !isDisplayLcInfo.value },
+                                style = FontSizeNormal16(),
+                                color = Color.White
+                            )
+                        }
                     }
                 }
-            }
 
-            for (character in helperList) {
-                item {
-                    CharacterCard(
-                        character = character,
-                        overrideNameComponent = { CharacterLcInfoDisplay(character) },
-                        isDisplayName = !isDisplayLcInfo.value,
-                        isDisplayCombatPath = false,
-                        onClick = { navigator.navigateLimited(UserCharacterRoute(uid, character.officialId!!.toString())) }
-                    )
-                }
-            }
-
-            item(span = { GridItemSpan(maxLineSpan) }) {
-                Image(
-                    painter = painterResource(Res.drawable.ic_list_isolate_pretty),
-                    modifier = Modifier.fillMaxWidth().wrapContentHeight(),
-                    contentScale = ContentScale.Fit,
-                    contentDescription = "List Pretty Isolator",
-                )
-            }
-
-            if(isDisplayFullList.value){
-                for (character in finalCharList) {
+                for (character in helperList) {
                     item {
                         CharacterCard(
                             character = character,
                             overrideNameComponent = { CharacterLcInfoDisplay(character) },
                             isDisplayName = !isDisplayLcInfo.value,
-                            isDisplayCombatPath = false ,
+                            isDisplayCombatPath = false,
                             onClick = { navigator.navigateLimited(UserCharacterRoute(uid, character.officialId!!.toString())) }
                         )
                     }
                 }
-            }
 
-            item(span = { GridItemSpan(maxLineSpan) }) {
-                Box(Modifier.fillMaxWidth().wrapContentHeight(), contentAlignment = Alignment.Center) {
+                item(span = { GridItemSpan(maxLineSpan) }) {
                     Image(
-                        painter = painterResource(Res.drawable.ic_arrow_to_down),
-                        modifier = Modifier.size(24.dp).clip(CircleShape).padding(4.dp)
-                            .rotate(if (isDisplayFullList.value) 180f else 0f)
-                            .clickable { isDisplayFullList.value = !isDisplayFullList.value },
-                        colorFilter = ColorFilter.tint(Color(0x66F3F9FF)),
-                        contentDescription = "Expand / Collapse List",
-
-                        )
+                        painter = painterResource(Res.drawable.ic_list_isolate_pretty),
+                        modifier = Modifier.fillMaxWidth().wrapContentHeight(),
+                        contentScale = ContentScale.Fit,
+                        contentDescription = "List Pretty Isolator",
+                    )
                 }
+
+                if(isDisplayFullList.value){
+                    for (character in finalCharList) {
+                        item {
+                            CharacterCard(
+                                character = character,
+                                overrideNameComponent = { CharacterLcInfoDisplay(character) },
+                                isDisplayName = !isDisplayLcInfo.value,
+                                isDisplayCombatPath = false ,
+                                onClick = { navigator.navigateLimited(UserCharacterRoute(uid, character.officialId!!.toString())) }
+                            )
+                        }
+                    }
+                }
+
+                item(span = { GridItemSpan(maxLineSpan) }) {
+                    Box(Modifier.fillMaxWidth().wrapContentHeight(), contentAlignment = Alignment.Center) {
+                        Image(
+                            painter = painterResource(Res.drawable.ic_arrow_to_down),
+                            modifier = Modifier.size(24.dp).clip(CircleShape).padding(4.dp)
+                                .rotate(if (isDisplayFullList.value) 180f else 0f)
+                                .clickable { isDisplayFullList.value = !isDisplayFullList.value },
+                            colorFilter = ColorFilter.tint(Color(0x66F3F9FF)),
+                            contentDescription = "Expand / Collapse List",
+
+                            )
+                    }
+                }
+
+                item(span = { GridItemSpan(maxLineSpan) }) { UserInfoBioUI2(context, userAccount) }
+
+                item(span = { GridItemSpan(maxLineSpan) }) {
+                    Box(modifier = Modifier.navigationBarsPadding()) {
+                        Text(
+                            text = removeStrQuote(Res.string.ProducedByStargazer),
+                            textAlign = TextAlign.Center,
+                            style = FontSizeNormal12(),
+                            color = Color.White,
+                            modifier = Modifier.wrapContentSize().padding(8.dp).align(Alignment.Center),
+                            )
+                    }
+                }
+
+
             }
 
-            item(span = { GridItemSpan(maxLineSpan) }) { UserInfoBioUI2(context, userAccount) }
+            SG3VerticalScrollbar(gridState = lazyGridState)
 
-            item(span = { GridItemSpan(maxLineSpan) }) {
-                Box(modifier = Modifier.navigationBarsPadding()) {
-                    Text(
-                        text = removeStrQuote(Res.string.ProducedByStargazer),
-                        textAlign = TextAlign.Center,
-                        style = FontSizeNormal12(),
-                        color = Color.White,
-                        modifier = Modifier.wrapContentSize().padding(8.dp).align(Alignment.Center),
-                        )
-                }
-            }
+            /*
 
-
-        }
-
-        SG3VerticalScrollbar(gridState = lazyGridState)
-
-        /*
-
-        PageHeaderAlpha(
-            navController = navController,
-            forwardIconId = Res.drawable.ui_icon_share,
-            onForward = { /* TODO : Share Function*/ },
-            hazeState = hazeState,
-            isListScrolling = isListScrolling ,
-        ){
-            Box(Modifier
-                .fillMaxSize()
+            PageHeaderAlpha(
+                navController = navController,
+                forwardIconId = Res.drawable.ui_icon_share,
+                onForward = { /* TODO : Share Function*/ },
+                hazeState = hazeState,
+                isListScrolling = isListScrolling ,
             ){
-                Text(
-                    removeStrQuote(Res.string.UserInfoGameData),
-                    modifier = Modifier
-                        .background(Color(0x33FFFFFF),RoundedCornerShape(16.dp))
-                        .clip(RoundedCornerShape(16.dp))
-                        .hazeChild(
-                            state = hazeState!!,
-                            shape = RoundedCornerShape(16.dp),
-                            style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE)
-                        )
-                        .padding(top = 6.dp, bottom = 6.dp, start = 12.dp, end = 12.dp)
-                        .align(Alignment.Center),
-                    color = Color.White,
-                    style = FontSizeNormal16(),
-                )
+                Box(Modifier
+                    .fillMaxSize()
+                ){
+                    Text(
+                        removeStrQuote(Res.string.UserInfoGameData),
+                        modifier = Modifier
+                            .background(Color(0x33FFFFFF),RoundedCornerShape(16.dp))
+                            .clip(RoundedCornerShape(16.dp))
+                            .hazeChild(
+                                state = hazeState!!,
+                                shape = RoundedCornerShape(16.dp),
+                                style = HazeStyle(Color.Unspecified, 20.dp, Float.MIN_VALUE)
+                            )
+                            .padding(top = 6.dp, bottom = 6.dp, start = 12.dp, end = 12.dp)
+                            .align(Alignment.Center),
+                        color = Color.White,
+                        style = FontSizeNormal16(),
+                    )
+                }
             }
+             */
         }
-         */
     }
 
     if(showPopup.value){

@@ -78,7 +78,6 @@ fun ExpeditionPageScreen(
             isRefreshing.value = true
             CoroutineScope(Dispatchers.Default).launch {
                 async { UserAccount.refreshNoteData() }.await()
-                println("WTF")
                 withContext(Dispatchers.Main) { isRefreshing.value = false }
             }
         },
