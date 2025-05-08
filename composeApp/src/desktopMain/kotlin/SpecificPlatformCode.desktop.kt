@@ -197,7 +197,7 @@ actual fun performHapticFeedback(intensity: Float, context: ContextFactory) {
 }
 
 actual fun shareImageToOther(shareTitle: String, image: ImageBitmap, imageName: String, context: ContextFactory) {
-    writeToFileImageBitmap(imageName, image, furtherAction = { path ->
+    writeToFileImageBitmap("$imageName.png", image, furtherAction = { path ->
         @TranslationPls
         showSuccessToast("儲存成功：$path")
 
