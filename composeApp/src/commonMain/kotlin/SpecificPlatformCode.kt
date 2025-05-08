@@ -6,6 +6,7 @@ import androidx.compose.ui.unit.Dp
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.utils.io.ByteReadChannel
+import kotlinx.datetime.Clock
 import utils.device.DeviceInfo
 
 /**
@@ -65,3 +66,5 @@ expect fun initPurchaseImpl(productIdList : List<Pair<String, String>>, apiKey: 
 expect fun doPurchaseImpl(itemId: String, isSuccess: MutableState<Boolean>, productList: List<Any>)
 
 expect fun performHapticFeedback(intensity: Float, context: ContextFactory)
+
+expect fun shareImageToOther(shareTitle: String = "?", image: ImageBitmap, imageName: String = "SG3_${Clock.System.now().toEpochMilliseconds()}", context: ContextFactory = platformContext)

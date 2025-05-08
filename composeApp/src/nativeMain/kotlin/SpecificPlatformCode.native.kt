@@ -20,6 +20,10 @@ import io.ktor.client.engine.darwin.Darwin
 import io.ktor.utils.io.ByteReadChannel
 import io.ktor.utils.io.cancel
 import io.ktor.utils.io.readAvailable
+import kotlinx.cinterop.BetaInteropApi
+import kotlinx.cinterop.ExperimentalForeignApi
+import kotlinx.cinterop.addressOf
+import kotlinx.cinterop.usePinned
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.runBlocking
@@ -34,20 +38,25 @@ import okio.use
 import org.jetbrains.skia.Image
 import platform.Foundation.NSApplicationSupportDirectory
 import platform.Foundation.NSBundle
+import platform.Foundation.NSData
 import platform.Foundation.NSDate
 import platform.Foundation.NSFileManager
 import platform.Foundation.NSURL
 import platform.Foundation.NSUserDefaults
 import platform.Foundation.NSUserDomainMask
+import platform.Foundation.create
 import platform.Foundation.timeIntervalSince1970
+import platform.UIKit.UIActivityViewController
 import platform.UIKit.UIApplication
 import platform.UIKit.UIDevice
+import platform.UIKit.UIImage
 import platform.UIKit.UIImpactFeedbackGenerator
 import platform.UIKit.UIImpactFeedbackStyle
 import platform.UIKit.UIInterfaceOrientationLandscapeLeft
 import platform.UIKit.UIInterfaceOrientationLandscapeRight
 import platform.UIKit.UIKeyboardAppearanceDark
 import platform.UIKit.UITextField
+import platform.UIKit.UIViewController
 import types.UserAccount
 import ui.screens.doDonorRefresh
 import utils.annotation.DoItLater
@@ -302,4 +311,39 @@ actual fun performHapticFeedback(intensity: Float, context: ContextFactory) {
     val generator = UIImpactFeedbackGenerator(UIImpactFeedbackStyle.UIImpactFeedbackStyleRigid)
     generator.prepare()
     generator.impactOccurredWithIntensity(intensity.toDouble())
+}
+
+@OptIn(ExperimentalForeignApi::class, BetaInteropApi::class)
+actual fun shareImageToOther(shareTitle: String, image: ImageBitmap, imageName: String, context: ContextFactory) {
+    // 將 ImageBitmap 轉換為 NSData
+    val skiaImage = Image.makeFromBitmap(image.asSkiaBitmap())
+    val pngData = skiaImage.encodeToData()?.bytes?.let { byteArray ->
+        NSData.create(shareTitle)
+    }
+
+    if(pngData == null) {
+        showWarningToast("iOS Share: pngData is null", false)
+        return
+    }
+
+    // 創建 UIImage
+    val uiImage = UIImage.imageWithData(pngData)
+
+    if(uiImage == null) {
+        showWarningToast("iOS Share: uiImage is null", false)
+        return
+    }
+
+    // 創建 UIActivityViewController
+    val activityViewController = UIActivityViewController(
+        activityItems = listOf(uiImage),
+        applicationActivities = null
+    )
+
+    // 獲取當前的 UIViewController
+    val rootViewController = UIApplication.sharedApplication.keyWindow?.rootViewController as? UIViewController
+        ?: return
+
+    // 顯示 Sharesheet
+    rootViewController.presentViewController(activityViewController, animated = true, completion = null)
 }

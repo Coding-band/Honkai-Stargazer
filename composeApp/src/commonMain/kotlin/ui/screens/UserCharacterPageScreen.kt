@@ -322,7 +322,7 @@ fun UserCharacterPageScreen(
                 if(isShare.value){
                     Box(modifier = Modifier.alpha(0f)) {
                         CaptureLazyColumnScreenshot(
-                            imageName = "${userAccount.username}_${userAccount.uid}_${Clock.System.now().toEpochMilliseconds()}.png",
+                            imageName = "${userAccount.username}_${userAccount.uid}_${Clock.System.now().toEpochMilliseconds()}",
                             items = charFadeAndNameItem + itemList,
                             modifier = Modifier.fillMaxSize().navigationBarsPadding(),
                             isCapture = isShare,

@@ -26,7 +26,12 @@ import okio.Path
 import okio.Path.Companion.toPath
 import org.jetbrains.skia.Image
 import utils.annotation.DoItLater
+import utils.annotation.TranslationPls
+import utils.app.showSuccessToast
+import utils.app.showWarningToast
+import utils.app.writeToFileImageBitmap
 import utils.device.DeviceInfo
+import java.awt.Desktop
 import java.io.File
 import java.util.Locale
 import kotlin.math.max
@@ -189,4 +194,25 @@ actual fun initPurchaseImpl(
 
 actual fun performHapticFeedback(intensity: Float, context: ContextFactory) {
     // Nothing to do for Desktop
+}
+
+actual fun shareImageToOther(shareTitle: String, image: ImageBitmap, imageName: String, context: ContextFactory) {
+    writeToFileImageBitmap(imageName, image, furtherAction = { path ->
+        @TranslationPls
+        showSuccessToast("儲存成功：$path")
+
+        val file = File(path.toString())
+        if (file.exists() && Desktop.isDesktopSupported()) {
+            try {
+                Desktop.getDesktop().open(file)
+            } catch (e: Exception) {
+                e.printStackTrace()
+                @TranslationPls
+                showWarningToast("無法打開圖片：${e.message}")
+            }
+        } else {
+            @TranslationPls
+            showWarningToast("系統不支持打開圖片的操作")
+        }
+    })
 }

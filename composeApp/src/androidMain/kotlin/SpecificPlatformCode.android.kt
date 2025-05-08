@@ -2,10 +2,12 @@
 import android.Manifest
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.ImageDecoder
+import android.net.Uri
 import android.os.Build
 import android.os.VibrationEffect
 import android.os.Vibrator
@@ -24,6 +26,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
+import androidx.core.content.FileProvider
 import androidx.core.view.WindowInsetsControllerCompat
 import com.revenuecat.purchases.kmp.LogLevel
 import com.revenuecat.purchases.kmp.Purchases
@@ -50,6 +53,7 @@ import utils.app.showWarningToast
 import utils.device.DeviceInfo
 import java.io.ByteArrayOutputStream
 import java.io.File
+import java.io.FileOutputStream
 import java.nio.ByteBuffer
 import java.util.Locale
 import kotlin.system.exitProcess
@@ -252,4 +256,24 @@ actual fun performHapticFeedback(intensity: Float, context: ContextFactory) {
     val effect = VibrationEffect.createOneShot(50, amplitude)
     val vibrator = ContextCompat.getSystemService(context.getContext() as Context, Vibrator::class.java) as Vibrator
     vibrator.vibrate(effect)
+}
+
+actual fun shareImageToOther(shareTitle: String, image: ImageBitmap, imageName: String, context: ContextFactory) {
+    val bitmap: Bitmap = image.asAndroidBitmap()
+    val activity = context.getActivity() as Activity
+    val cachePath = File(activity.cacheDir, "screenshots")
+    cachePath.mkdirs()
+    val file = File(cachePath, "$imageName.png")
+    FileOutputStream(file).use { fos ->
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos)
+    }
+
+    val uri: Uri = FileProvider.getUriForFile(activity, "${activity.packageName}.fileprovider", file)
+    val shareIntent = Intent(Intent.ACTION_SEND).apply {
+        type = "image/png"
+        putExtra(Intent.EXTRA_STREAM, uri)
+        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+    }
+    activity.startActivity(Intent.createChooser(shareIntent, shareTitle))
+
 }

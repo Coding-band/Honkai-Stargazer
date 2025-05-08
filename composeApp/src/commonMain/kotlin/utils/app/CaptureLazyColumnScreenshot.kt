@@ -20,6 +20,9 @@ import androidx.compose.ui.unit.Dp
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.datetime.Clock
+import platformContext
+import shareImageToOther
+import utils.annotation.TranslationPls
 
 @Composable
 fun CaptureLazyColumnScreenshot(
@@ -35,7 +38,15 @@ fun CaptureLazyColumnScreenshot(
         coroutineScope.launch {
             delay(1000)
             val bitmap = graphicsLayer.toImageBitmap()
-            writeToFileImageBitmap(imageName, content = bitmap)
+            //writeToFileImageBitmap(imageName, content = bitmap)
+
+            @TranslationPls
+            shareImageToOther(
+                shareTitle = "分享您的角色長圖給...",
+                bitmap,
+                imageName,
+                context = platformContext
+            )
             isCapture.value = false
         }
     }

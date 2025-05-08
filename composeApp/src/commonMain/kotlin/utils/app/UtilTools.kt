@@ -726,7 +726,7 @@ fun writeToFile(filePath: String, content: String, folder: String = "data") {
     }
 }
 
-fun writeToFileImageBitmap(filePath: String, content: ImageBitmap, folder: String = "data") {
+fun writeToFileImageBitmap(filePath: String, content: ImageBitmap, folder: String = "data", furtherAction: (filePath: okio.Path) -> Unit = {}) {
     val fileSystem = FileSystem.SYSTEM
     //val file = FileSystem.SYSTEM_TEMPORARY_DIRECTORY.resolve("data").resolve(filePath)
     val file = getAppSpecificDirectory().resolve(folder).resolve(filePath)
@@ -741,6 +741,8 @@ fun writeToFileImageBitmap(filePath: String, content: ImageBitmap, folder: Strin
                 sink.write( getByteArrayByImageBitmap(content))
             }
         }
+
+        furtherAction.invoke(file)
 
     } catch (e: Exception) {
         errorLog("UtilTools.kt", "writeToFile(${filePath}, ...)", e)
