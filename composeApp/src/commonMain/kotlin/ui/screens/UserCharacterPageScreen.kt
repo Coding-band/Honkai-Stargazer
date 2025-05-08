@@ -143,7 +143,6 @@ import utils.app.newImageRequest
 import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.replaceStrRes
-import utils.app.showFunctionIsDevelopingToast
 import utils.calculator.getCharRange
 import utils.calculator.getCharScore
 import utils.calculator.getGradAttrAndValue
@@ -237,7 +236,6 @@ fun UserCharacterPageScreen(
                     navigator = navigator,
                     onForward = {
                         isShare.value = true
-                        showFunctionIsDevelopingToast()
                     },
                     forwardIconId = Res.drawable.ui_icon_share,
                     hazeState = hazeState,

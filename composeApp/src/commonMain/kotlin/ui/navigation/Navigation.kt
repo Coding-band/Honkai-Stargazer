@@ -281,15 +281,23 @@ fun refreshInit(){
 @Composable
 fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>){
     //ref: https://github.com/JetBrains/compose-multiplatform/issues/4528#issuecomment-2015222282
-    NavHost(
-        navController = navigator,
-        startDestination = SplashRoute,
-        enterTransition = if(isPadMode.value) { { fadeIn() } } else SG3NavTransitions.enterTransition,
-        exitTransition = if(isPadMode.value) { { fadeOut() } } else SG3NavTransitions.exitTransition,
-        popEnterTransition = if(isPadMode.value) { { fadeIn() } } else SG3NavTransitions.popEnterTransition,
-        popExitTransition = if(isPadMode.value) { { fadeOut() } } else SG3NavTransitions.popExitTransition,
-        builder = navBuilder(isPadMode, navigator)
-    )
+    if(isPadMode.value){
+        NavHost(
+            navController = navigator,
+            startDestination = SplashRoute,
+            enterTransition = { fadeIn() } ,
+            exitTransition = { fadeOut() } ,
+            popEnterTransition = { fadeIn() } ,
+            popExitTransition = { fadeOut() } ,
+            builder = navBuilder(isPadMode, navigator)
+        )
+    }else {
+        NavHost(
+            navController = navigator,
+            startDestination = SplashRoute,
+            builder = navBuilder(isPadMode, navigator)
+        )
+    }
 }
 
 fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) : NavGraphBuilder.() -> Unit = {

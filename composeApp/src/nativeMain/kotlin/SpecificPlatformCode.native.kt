@@ -8,6 +8,7 @@ import androidx.compose.ui.graphics.asSkiaBitmap
 import androidx.compose.ui.graphics.toComposeImageBitmap
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalWindowInfo
+import com.oldguy.common.toULongShl
 import com.revenuecat.purchases.kmp.LogLevel
 import com.revenuecat.purchases.kmp.Purchases
 import com.revenuecat.purchases.kmp.configure
@@ -41,10 +42,12 @@ import platform.Foundation.NSBundle
 import platform.Foundation.NSData
 import platform.Foundation.NSDate
 import platform.Foundation.NSFileManager
+import platform.Foundation.NSString
 import platform.Foundation.NSURL
 import platform.Foundation.NSUserDefaults
 import platform.Foundation.NSUserDomainMask
 import platform.Foundation.create
+import platform.Foundation.dataWithBytes
 import platform.Foundation.timeIntervalSince1970
 import platform.UIKit.UIActivityViewController
 import platform.UIKit.UIApplication
@@ -316,34 +319,39 @@ actual fun performHapticFeedback(intensity: Float, context: ContextFactory) {
 @OptIn(ExperimentalForeignApi::class, BetaInteropApi::class)
 actual fun shareImageToOther(shareTitle: String, image: ImageBitmap, imageName: String, context: ContextFactory) {
     // 將 ImageBitmap 轉換為 NSData
-    val skiaImage = Image.makeFromBitmap(image.asSkiaBitmap())
-    val pngData = skiaImage.encodeToData()?.bytes?.let { byteArray ->
-        NSData.create(shareTitle)
-    }
 
-    if(pngData == null) {
-        showWarningToast("iOS Share: pngData is null", false)
+    val imageUI = image.toUIImage()
+    if (imageUI == null) {
+        showWarningToast("Failed to convert image to UIImage")
         return
     }
+    val activityItems = listOf(imageUI, shareTitle)
+    val activityViewController = UIActivityViewController(activityItems = activityItems, applicationActivities = null)
 
-    // 創建 UIImage
-    val uiImage = UIImage.imageWithData(pngData)
+    // Get the top-most view controller to present the activity view controller
+    val rootViewController = UIApplication.sharedApplication.keyWindow?.rootViewController
+    rootViewController?.presentViewController(activityViewController, animated = true, completion = null)
+}
 
-    if(uiImage == null) {
-        showWarningToast("iOS Share: uiImage is null", false)
-        return
+@OptIn(ExperimentalForeignApi::class)
+fun ImageBitmap.toUIImage(): UIImage? {
+    try {
+        // 將 ImageBitmap 轉為 Skia Image，並編碼為 PNG
+        val skiaImage = Image.makeFromBitmap(this.asSkiaBitmap())
+        val imageData = skiaImage.encodeToData() ?: return null
+
+        // 使用 usePinned 將 ByteArray 固定並獲取指針
+        val nsData = imageData.bytes.usePinned { pinned ->
+            NSData.dataWithBytes(
+                bytes = pinned.addressOf(0),
+                length = imageData.size.toULong()
+            )
+        }
+
+        // 從 NSData 創建 UIImage
+        return UIImage.imageWithData(nsData)
+    } catch (e: Exception) {
+        println("Failed to convert ImageBitmap to UIImage: ${e.message}")
+        return null
     }
-
-    // 創建 UIActivityViewController
-    val activityViewController = UIActivityViewController(
-        activityItems = listOf(uiImage),
-        applicationActivities = null
-    )
-
-    // 獲取當前的 UIViewController
-    val rootViewController = UIApplication.sharedApplication.keyWindow?.rootViewController as? UIViewController
-        ?: return
-
-    // 顯示 Sharesheet
-    rootViewController.presentViewController(activityViewController, animated = true, completion = null)
 }
