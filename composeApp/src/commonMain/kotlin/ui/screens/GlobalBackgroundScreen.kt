@@ -58,6 +58,12 @@ val gradientBottom = Brush.verticalGradient(
         Black
     )
 )
+val gradientTop = Brush.verticalGradient(
+    colors = listOf(
+        Black,
+        Transparent,
+    )
+)
 
 //lateinit var backgroundScreenHazeState : HazeState
 val bgModified = mutableStateOf(false)

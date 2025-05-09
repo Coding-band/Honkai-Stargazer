@@ -87,6 +87,7 @@ fun PageHeader(
 ) {
     val coroutineScope = rememberCoroutineScope()
 
+
     //Background
     DropShadow(
         modifier = Modifier
@@ -128,6 +129,10 @@ fun PageHeader(
                     interactionSource = MutableInteractionSource()
                 )
         ){
+
+            //PageTopMask()
+
+
             Column {
                 Row(
                     Modifier

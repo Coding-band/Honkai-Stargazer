@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.displayCutout
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.grid.LazyGridState
@@ -55,6 +56,7 @@ import setKeyboardDarkMode
 import ui.components.PAGE_HEADER_HEIGHT
 import ui.screens.globalHazeBlur
 import ui.screens.gradientBottom
+import ui.screens.gradientTop
 
 val Purple80 = Color(0xFFD0BCFF)
 val PurpleGrey80 = Color(0xFFCCC2DC)
@@ -275,6 +277,14 @@ fun PageBottomMask(modifier: Modifier = Modifier) {
         )
     }
 }
+@Composable
+fun PageTopMask(modifier: Modifier = Modifier) {
+    Box(Modifier.fillMaxSize()) {
+        Box(
+            modifier = Modifier.fillMaxWidth().height(PAGE_HEADER_HEIGHT).background(gradientTop).align(Alignment.TopCenter)
+        )
+    }
+}
 
 @Composable
 fun FontShadow() = TextStyle(shadow = Shadow(color = Color.Black, offset = Offset(2.0f, 2.0f)))
@@ -310,8 +320,8 @@ fun SG3ScrollbarStyle(): ScrollbarStyle {
         hoverDurationMillis = 300,
         thumbStyle = ThumbStyle(
             shape = RoundedCornerShape(4.dp),
-            unhoverColor = Color.Black.copy(0.5f),
-            hoverColor = Color.Black.copy(0.5f),
+            unhoverColor = Color.White.copy(0.5f),
+            hoverColor = Color.White.copy(0.5f),
         ),
         trackStyle = TrackStyle(
             shape = RoundedCornerShape(4.dp),
