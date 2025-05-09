@@ -2,6 +2,7 @@ import com.android.build.gradle.internal.api.ApkVariantOutputImpl
 import com.codingfeline.buildkonfig.compiler.FieldSpec.Type.INT
 import com.codingfeline.buildkonfig.compiler.FieldSpec.Type.STRING
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
+import org.jetbrains.kotlin.compose.compiler.gradle.ComposeFeatureFlag
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
@@ -23,6 +24,7 @@ plugins {
     alias(libs.plugins.compose.compiler)
     id("com.codingfeline.buildkonfig").version("0.15.1")
     kotlin("plugin.serialization") version "2.0.10"
+    id("org.jetbrains.compose.hot-reload") version "1.0.0-alpha09" // <- add this additionally
 }
 /**
  * tasks to gradle.properties
@@ -345,6 +347,10 @@ compose.resources {
     generateResClass = always
 }
 
+// Compose Hot Reload
+composeCompiler {
+    featureFlags.add(ComposeFeatureFlag.OptimizeNonSkippingGroups)
+}
 
 
 

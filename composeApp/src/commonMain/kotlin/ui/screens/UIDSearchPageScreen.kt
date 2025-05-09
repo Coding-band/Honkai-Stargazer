@@ -148,6 +148,11 @@ fun UIDSearchPageScreen(
                             if(searchRecordList.none { it.uid == UIDSEARCH.uid }) {
                                 searchRecordList.add(UserAccountLite(UIDSEARCH.uid, UIDSEARCH.username, UIDSEARCH.level, UIDSEARCH.icon, UIDSEARCH.server))
                                 UserAccountLite.saveSearchRecordList(arrayListOf<UserAccountLite>().apply { addAll(searchRecordList) })
+                            }else{
+                                val index = searchRecordList.indexOfFirst { it.uid == UIDSEARCH.uid }
+                                searchRecordList.add(index, UserAccountLite(UIDSEARCH.uid, UIDSEARCH.username, UIDSEARCH.level, UIDSEARCH.icon, UIDSEARCH.server))
+                                searchRecordList.removeAt(index+1)
+                                UserAccountLite.saveSearchRecordList(arrayListOf<UserAccountLite>().apply { addAll(searchRecordList) })
                             }
                             withContext(Dispatchers.Main){
                                 isQuerying.value = false
@@ -220,6 +225,11 @@ fun UIDSearchPageScreen(
                                             MihomoRequest(item.uid).getUserAccountByMiHomo()
                                         }
                                     }
+
+                                    val index = searchRecordList.indexOfFirst { it.uid == UIDSEARCH.uid }
+                                    searchRecordList.add(index, UserAccountLite(UIDSEARCH.uid, UIDSEARCH.username, UIDSEARCH.level, UIDSEARCH.icon, UIDSEARCH.server))
+                                    searchRecordList.removeAt(index+1)
+                                    UserAccountLite.saveSearchRecordList(arrayListOf<UserAccountLite>().apply { addAll(searchRecordList) })
 
                                     withContext(Dispatchers.Main) {
                                         pomPomPopupInstance.value = PomPomPopup(isDisplay = false)
