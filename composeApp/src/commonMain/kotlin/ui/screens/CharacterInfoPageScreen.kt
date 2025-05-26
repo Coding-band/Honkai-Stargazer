@@ -70,6 +70,7 @@ import types.ImageFolder
 import types.UserAccount
 import ui.components.BackIcon
 import ui.components.CharacterEidolon
+import ui.components.CharacterTraceTree.CharacterTraceTree
 import ui.components.HeaderData
 import ui.components.InfoAdviceLightcone
 import ui.components.InfoAdviceRelic
@@ -206,7 +207,7 @@ fun CharacterInfoPage(
         ) {
             item(key = "InfoBioColumn") { InfoBioColumn(charInfoJson, combatType, path, isUserOwned = !UserAccount.INSTANCE.characterList.none { it.officialId!! == characterId }, isFullEidolon = false, pageSize = pageSize) }
             item(key = "InfoBasicStatus") { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
-            //item(key = "CharacterTraceTree") { CharacterTraceTree(charInfoJson, path, characterName, dialogTitle, dialogDisplay,dialogLastTrigType,  dialogComponent) }
+            item(key = "CharacterTraceTree") { CharacterTraceTree(charInfoJson, path, characterName, dialogTitle, dialogDisplay,dialogLastTrigType,  dialogComponent) }
             item(key = "CharacterEidolon") { CharacterEidolon(charInfoJson, characterName, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
             item(key = "InfoAdviceLightcone") { InfoAdviceLightcone(charWeightJsonObject) }
             item(key = "InfoAdviceRelic") { InfoAdviceRelic(charWeightJsonObject) }

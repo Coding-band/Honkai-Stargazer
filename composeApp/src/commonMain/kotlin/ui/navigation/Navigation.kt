@@ -105,6 +105,7 @@ import utils.app.Language
 import utils.app.SG3NavTransitions
 import utils.app.initPurchase
 import utils.app.isAndroidPlatform
+import utils.app.isIosPlatform
 import utils.app.notchPaddingLeft
 import utils.app.notchPaddingRight
 import utils.app.pxToDp
@@ -291,10 +292,20 @@ fun NavHostInit(navigator : NavHostController, isPadMode: MutableState<Boolean>)
             popExitTransition = { fadeOut() } ,
             builder = navBuilder(isPadMode, navigator)
         )
+    }else if(isIosPlatform()) {
+        NavHost(
+            navController = navigator,
+            startDestination = SplashRoute,
+            builder = navBuilder(isPadMode, navigator)
+        )
     }else {
         NavHost(
             navController = navigator,
             startDestination = SplashRoute,
+            enterTransition = SG3NavTransitions.enterTransition,
+            exitTransition = SG3NavTransitions.exitTransition ,
+            popEnterTransition = SG3NavTransitions.popEnterTransition ,
+            popExitTransition = SG3NavTransitions.popExitTransition ,
             builder = navBuilder(isPadMode, navigator)
         )
     }

@@ -39,8 +39,8 @@ val versionCodeFinal = properties.getProperty("APP_VERSION_CODE").toInt() + 1
 //BETA | C.BETA | DEV | PRODUCTION
 //VersionUpdateCheck
 val isForAppStore = true
-val isForPlayStore = true
-var appProfile = "PRODUCTION" //Please Modify this String ONLY IF NECESSERY
+val isForPlayStore = false
+var appProfile = "BETA" //Please Modify this String ONLY IF NECESSERY
 val appVersionCodeName = "Firefly"
 
 if(isForPlayStore) appProfile = "PRODUCTION_GP"
