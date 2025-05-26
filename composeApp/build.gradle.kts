@@ -14,7 +14,7 @@ import java.util.Properties
  * VersionUpdateCheck
  * Environment Area - App Version
  */
-val appVersionDesktop = "1.0.4"
+val appVersionDesktop = "1.0.5"
 
 
 plugins {
@@ -41,7 +41,7 @@ val versionCodeFinal = properties.getProperty("APP_VERSION_CODE").toInt() + 1
 val isForAppStore = true
 val isForPlayStore = false
 var appProfile = "BETA" //Please Modify this String ONLY IF NECESSERY
-val appVersionCodeName = "Firefly"
+val appVersionCodeName = "Herta"
 
 if(isForPlayStore) appProfile = "PRODUCTION_GP"
 

@@ -3,6 +3,7 @@ package utils.app
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import files.ActionOrderTitle
 import files.ApocalypticShadow
 import files.Character
 import files.Event
@@ -21,6 +22,7 @@ import files.Stamina
 import files.UIDSearch
 import files.ico_lost_img
 import files.phorphos_alien_fill
+import files.phorphos_align_left_fill
 import files.phorphos_atom_fill
 import files.phorphos_baseball_cap_fill
 import files.phorphos_calendar_fill
@@ -43,6 +45,7 @@ import files.ranking_ss_text
 import org.jetbrains.compose.resources.DrawableResource
 import types.UserNoteState
 import ui.components.HomePageBlockItem
+import ui.navigation.ActionOrderListRoute
 import ui.navigation.ApocalypticShadowMissionRoute
 import ui.navigation.CharacterListRoute
 import ui.navigation.EventListRoute
@@ -377,19 +380,13 @@ class Constants {
                 itemIconId = Res.drawable.phorphos_planet_fill,
                 itemOnClickToNavigate = IIRCHomePageRoute
             ),
-
-            /*
             HomePageBlockItem(
                 itemId = "ActionOrderListPage",
                 itemTitleRId = Res.string.ActionOrderTitle,
                 itemIconId = Res.drawable.phorphos_align_left_fill,
-                itemOnClickAction = {
-                    showFunctionIsDevelopingToast()
-                },
-                //itemOnClickToNavigate = Screen.ActionOrderListPageScreen
+                itemOnClickToNavigate = ActionOrderListRoute
             ),
 
-             */
             /*
 
             HomePageBlockItem(

@@ -197,17 +197,17 @@ fun ActionOrderListPageScreen(
         )
     }
 
-    Box(modifier = Modifier.fillMaxSize()){
+    Box{
         LazyColumn(modifier = Modifier
             .padding(start = SCREEN_SAVE_PADDING, end = SCREEN_SAVE_PADDING)
             .hazeSource(state = hazeState, zIndex = DefaultZIndex),
             listState
-            //.haze(state = hazeState)
         ) {
             item {
-                Spacer(Modifier
-                    .statusBarsPadding()
-                    .height(PAGE_HEADER_HEIGHT + 12.dp)
+                Spacer(
+                    modifier = Modifier
+                        .statusBarsPadding()
+                        .height(PAGE_HEADER_HEIGHT + 12.dp)
                 )
             }
             items(actionOrderTeamList.size) { index ->
@@ -217,7 +217,10 @@ fun ActionOrderListPageScreen(
                 }
             }
             item {
-                Spacer(Modifier.navigationBarsPadding().height(64.dp))
+                Spacer(
+                    modifier = Modifier
+                        .navigationBarsPadding()
+                )
             }
 
         }
@@ -285,7 +288,7 @@ fun TeamSelectPopup(
         )) {
             //Padding for Status Bar
             Spacer(Modifier
-                .height(0.dp)
+                .height(PAGE_HEADER_HEIGHT+12.dp)
                 .statusBarsPadding()
             )
 
