@@ -34,8 +34,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.onGloballyPositioned
-import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.Dp
@@ -79,7 +77,6 @@ import utils.app.getAssetsURLByFileName
 import utils.app.getImageNameByRegistName
 import utils.app.htmlDescApplier
 import utils.app.newImageRequest
-import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.starbase.StarbaseAPI
 
@@ -502,7 +499,7 @@ fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
 
                 Spacer(Modifier.height(8.dp))
 
-                LazyRow(modifier = Modifier.fillMaxWidth().height(MATERIAL_CARD_HEIGHT)) {
+                LazyRow(modifier = Modifier.fillMaxWidth().height(if (infoLevel.toInt() > 1) MATERIAL_CARD_HEIGHT else 0.dp)) {
                     for ((index, key) in sortedMaterialKeyList.withIndex()) {
                         item(key = key.officialId) {
                             if (index != 0) {

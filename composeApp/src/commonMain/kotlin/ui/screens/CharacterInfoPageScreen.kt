@@ -70,7 +70,6 @@ import types.ImageFolder
 import types.UserAccount
 import ui.components.BackIcon
 import ui.components.CharacterEidolon
-import ui.components.CharacterTraceTree.CharacterTraceTree
 import ui.components.HeaderData
 import ui.components.InfoAdviceLightcone
 import ui.components.InfoAdviceRelic
@@ -205,15 +204,15 @@ fun CharacterInfoPage(
                 .align(Alignment.Center),
             verticalArrangement = Arrangement.spacedBy(30.dp)
         ) {
-            item { InfoBioColumn(charInfoJson, combatType, path, isUserOwned = !UserAccount.INSTANCE.characterList.none { it.officialId!! == characterId }, isFullEidolon = false, pageSize = pageSize) }
-            item { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
-            item { CharacterTraceTree(charInfoJson, path, characterName, dialogTitle, dialogDisplay,dialogLastTrigType,  dialogComponent) }
-            item { CharacterEidolon(charInfoJson, characterName, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
-            item { InfoAdviceLightcone(charWeightJsonObject) }
-            item { InfoAdviceRelic(charWeightJsonObject) }
-            item { InfoAdviceTeammate(charWeightJsonObject, characterId.toString(), dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
-            item { InfoStory(charInfoJson) }
-            item { Box(modifier = Modifier.navigationBarsPadding().height(72.dp)) }
+            item(key = "InfoBioColumn") { InfoBioColumn(charInfoJson, combatType, path, isUserOwned = !UserAccount.INSTANCE.characterList.none { it.officialId!! == characterId }, isFullEidolon = false, pageSize = pageSize) }
+            item(key = "InfoBasicStatus") { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
+            //item(key = "CharacterTraceTree") { CharacterTraceTree(charInfoJson, path, characterName, dialogTitle, dialogDisplay,dialogLastTrigType,  dialogComponent) }
+            item(key = "CharacterEidolon") { CharacterEidolon(charInfoJson, characterName, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
+            item(key = "InfoAdviceLightcone") { InfoAdviceLightcone(charWeightJsonObject) }
+            item(key = "InfoAdviceRelic") { InfoAdviceRelic(charWeightJsonObject) }
+            item(key = "InfoAdviceTeammate") { InfoAdviceTeammate(charWeightJsonObject, characterId.toString(), dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
+            item(key = "InfoStory") { InfoStory(charInfoJson) }
+            item(key = "PaddingABox") { Box(modifier = Modifier.navigationBarsPadding().height(72.dp)) }
 
         }
 

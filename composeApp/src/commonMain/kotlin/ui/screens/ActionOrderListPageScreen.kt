@@ -173,7 +173,7 @@ fun ActionOrderListPageScreen(
         if(!isInit.value){
             localCharList.value.addAll(UserAccount.INSTANCE.characterList)
             charList.value.forEach { char ->
-                if(UserAccount.INSTANCE.characterList.filter { it.officialId == char.officialId }.isEmpty()){
+                if(UserAccount.INSTANCE.characterList.none { it.officialId == char.officialId }){
                     localCharList.value.add(char)
                 }
             }
