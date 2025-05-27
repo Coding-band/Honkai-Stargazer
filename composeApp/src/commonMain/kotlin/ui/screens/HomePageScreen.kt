@@ -615,13 +615,14 @@ fun ThreeDotsDialog(
 
                         )
                         Spacer(Modifier.height(10.dp))
-                        UIButton(
-                            textRes = Res.string.Donation,
-                            buttonSize = UIButtonSize.SmallChoice,
-                            onClick = { showDonationPopup.value = true },
-
-                        )
-                        Spacer(Modifier.height(10.dp))
+                        if(!isMacOSPlatform()){
+                            UIButton(
+                                textRes = Res.string.Donation,
+                                buttonSize = UIButtonSize.SmallChoice,
+                                onClick = { showDonationPopup.value = true },
+                                )
+                            Spacer(Modifier.height(10.dp))
+                        }
                         UIButton(
                             textRes = Res.string.Setting,
                             buttonSize = UIButtonSize.SmallChoice,

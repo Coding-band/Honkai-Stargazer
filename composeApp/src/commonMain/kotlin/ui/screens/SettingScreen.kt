@@ -291,13 +291,16 @@ fun SettingScreen(
                 item {
                     SettingCategory(title = removeStrQuote(Res.string.SupportUs)) {
                         //捐贈 Donation
-                        SettingOptionNavigateBar(
-                            titleRes = Res.string.DonateUs,
-                            navigateClick = {
-                                showDonationPopup.value = true
-                            } //@DoItLater("Add the function of donation")
-                        )
+                        if(!isMacOSPlatform()){
+                            SettingOptionNavigateBar(
+                                titleRes = Res.string.DonateUs,
+                                navigateClick = {
+                                    showDonationPopup.value = true
+                                } //@DoItLater("Add the function of donation")
+                            )
+                        }
 
+                        /*
                         //邀請使用 Invite Friends To Use Stargazer3
                         SettingOptionNavigateBar(
                             titleRes = Res.string.InviteOthers,
@@ -305,6 +308,7 @@ fun SettingScreen(
                                 showFunctionIsDevelopingToast()
                             } //@DoItLater("Add the function of invite link")
                         )
+                         */
 
                         //Discord Invite Link
                         SettingOptionNavigateBar(
