@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -29,7 +30,6 @@ import files.euclid_circular_a_medium
 import files.star_peace_icon
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -57,7 +57,7 @@ import utils.app.UpdateAssetsPopup
 import utils.app.updateCheckInit
 import utils.starbase.StarbaseAPI
 
-
+lateinit var hasRefreshed: MutableState<Boolean>
 @Preview
 @Composable
 fun SplashPage(
@@ -69,9 +69,13 @@ fun SplashPage(
     val showPopup = remember { mutableStateOf(!Preferences().AppSettings.isLangInitialized()) }
     val showJCEFPopup = remember { mutableStateOf(false) }
 
-    val hasRefreshed = remember { mutableStateOf(false) }
     val showUpdatePopup = remember { mutableStateOf(updateCheckInit()) } //The Real Update Popup
     //val isJCEFInited = Settings().getBoolean("isJCEFInited", true)
+
+    if( !::hasRefreshed.isInitialized) {
+        hasRefreshed = remember { mutableStateOf(false) }
+    }
+
     LaunchedEffect(Unit) {
         delay(100)
         if (!showPopup.value) {
