@@ -65,6 +65,7 @@ import types.TracecTreeLevelData
 import ui.components.MaterialCard
 import ui.components.ThemedSlider
 import ui.components.TitleHeader
+import utils.annotation.DoItLater
 import utils.app.Constants
 import utils.app.Constants.Companion.MATERIAL_CARD_HEIGHT
 import utils.app.Constants.Companion.SCREEN_SAVE_PADDING
@@ -293,6 +294,8 @@ fun getDataFromSkillTreePoints(skillObject: JsonObject, infoJson: JsonElement) :
     )
 }
 
+
+@DoItLater("Check is this usage of AsyncImage is causing lag")
 @Composable
 fun TraceTreeBtn(
     selectedId: MutableState<Int>,
@@ -401,17 +404,6 @@ fun TraceTreeBtn(
 }
 
 @Composable
-fun justTesting(){
-    Box(modifier = Modifier.size(50.dp)){
-        Text("OK")
-    }
-}
-
-/*
-
-Task :composeApp:linkDebugFrameworkIosSimulatorArm64 FAILED
- */
-@Composable
 fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
     var infoLevel by remember { mutableStateOf(1f) }
     var richTextState = rememberRichTextState()
@@ -499,7 +491,7 @@ fun TreePointDialogComponent(treeItemArray: ArrayList<TraceTreeItem>){
 
                 Spacer(Modifier.height(8.dp))
 
-                LazyRow(modifier = Modifier.fillMaxWidth().height(if (infoLevel.toInt() > 1) MATERIAL_CARD_HEIGHT else 0.dp)) {
+                LazyRow(modifier = Modifier.fillMaxWidth().height(if (infoLevel.toInt() > 1 || sortedMaterialKeyList.isNotEmpty()) MATERIAL_CARD_HEIGHT else 0.dp)) {
                     for ((index, key) in sortedMaterialKeyList.withIndex()) {
                         item(key = key.officialId) {
                             if (index != 0) {
