@@ -1,0 +1,547 @@
+<!--
+  ~ Project Honkai Stargazer and app Stargazer (星穹觀星者) were
+  ~ Organized & Develop by Coding Band.
+  ~ Copyright © 2024 Coding Band 版權所有
+  -->
+
+<resources>
+
+    <string name="app_name" translatable="false">"Stargazer 3"</string>
+    <!--server-->
+    <string name="asia">"Asia"</string>
+    <string name="europe">"Europe"</string>
+    <string name="america">"America"</string>
+    <string name="twhkmo">"TW HK MO"</string>
+    <string name="cn1">"星穹列车"</string>
+    <string name="cn2">"无名客"</string>
+    <string name="Trailblazer">"Trailblazer"</string>
+
+    <!--path-->
+    <string name="Abundance">الوفرة</string>
+    <string name="Destruction">التدمير</string>
+    <string name="Erudition">المعرفة</string>
+    <string name="Harmony">الانسجام</string>
+    <string name="Hunt">الصيد</string>
+    <string name="Nihility">العدمية</string>
+    <string name="Preservation">الحفظ</string>
+    <!--20250114 - New Path : Remembrance -->
+    <string name="Remembrance">الذكرى</string>
+
+    <!--element (combat type)-->
+    <string name="Physical">الفيزيائي</string>
+    <string name="Wind">الرياح</string>
+    <string name="Ice">الجليد</string>
+    <string name="Fire">النار</string>
+    <string name="Lightning">البرق</string>
+    <string name="Quantum">الكمي</string>
+    <string name="Imaginary">الخيالي</string>
+
+    <!--relic-->
+    <string name="RelicPropBody">الجسم</string>
+    <string name="RelicPropFeet">القدمين</string>
+    <string name="RelicPropPlanarSphere">الكرة البعدية</string>
+    <string name="RelicPropLinkRope">الحبل الرابط</string>
+    <string name="RelicPropBodyShort">الجسم</string>
+    <string name="RelicPropFeetShort">القدمين</string>
+    <string name="RelicPropPlanarSphereShort">الكرة</string>
+    <string name="RelicPropLinkRopeShort">الحبل</string>
+
+    <!--ui - main page-->
+    <string name="Character">الشخصيات</string>
+    <string name="CharacterList">قائمة الشخصيات</string>
+    <string name="Lightcone">المخروط الضوئي</string>
+    <string name="LightconeList">قائمة المخروط الضوئي</string>
+    <string name="Relic">الآثار</string>
+    <string name="RelicList">قائمة الآثار</string>
+    <string name="Stamina">الطاقة</string>
+    <string name="StaminaIsFull">ممتلئ</string>
+    <string name="Map">الخريطة</string>
+    <string name="Login">تسجيل الدخول</string>
+    <string name="Logout">تسجيل الخروج</string>
+    <string name="Expedition">الاستكشاف</string>
+    <string name="ExpeditionFullName">البعثة</string>
+    <string name="Settings">الإعدادات</string>
+    <string name="MemoryOfChaos">ذاكرة الفوضى</string>
+    <string name="NoDataYet">لا توجد بيانات بعد</string>
+    <string name="IsDone">تم</string>
+    <string name="PlayerLevel">المستوى</string>
+    <string name="AccountLogin">تسجيل الدخول</string>
+    <string name="ModifyHomePage">تعديل الصفحة الرئيسية</string>
+    <string name="SimulatedUniverse">الكون المحاكى</string>
+    <string name="Event">الحدث</string>
+    <string name="Codes">الرموز</string>
+
+    <!--ui - filter and sort-->
+    <string name="SortByTime">تاريخ الإصدار</string>
+    <string name="SortByName">الاسم (بالإنجليزية)</string>
+    <string name="SortByAtk">الهجوم</string>
+    <string name="SortByDef">الدفاع</string>
+    <string name="SortByHp">الصحة</string>
+    <string name="SortByEnergy">الطاقة القصوى</string>
+    <string name="SortByRare">الندرة</string>
+    <string name="Reset">إعادة تعيين</string>
+    <string name="OK">موافق</string>
+    <string name="NotOK">غير موافق</string>
+    <string name="FilterTitle">تصفية</string>
+    <string name="FilterFindCharacter">البحث عن الشخصيات</string>
+    <string name="FilterFindLightcone">البحث عن المخروط الضوئي</string>
+    <string name="FilterFindRelic">البحث عن الآثار</string>
+
+    <!--ui - character, lightcone, relic pages-->
+    <string name="BasicStatus">الحالة الأساسية</string>
+    <string name="SkillDesc">وصف المهارة</string>
+    <string name="SkillDetail">تفاصيل المهارة</string>
+    <string name="RelicDetail">تفاصيل الآثار</string>
+    <string name="TraceTree">شجرة التتبع</string>
+    <string name="TraceEnergyEarn">استعادة الطاقة</string>
+    <string name="Eidolon">الإيدولون</string>
+    <string name="AdviceCharacters">نصائح الشخصيات</string>
+    <string name="AdviceLightcones">نصائح المخروط الضوئي</string>
+    <string name="AdviceTeams">نصائح الفرق</string>
+    <string name="RelicStatus2Pcs">قطعتان</string>
+    <string name="RelicStatus4Pcs">أربع قطع</string>
+    <string name="AdviceRelics">نصائح الآثار</string>
+    <string name="AdviceGetPath">طريقة الوصول</string>
+    <string name="CharacterStory">القصة</string>
+    <string name="MainAffix">السمة الرئيسية</string>
+    <string name="SubAffix">السمة الفرعية</string>
+    <string name="CommentNumber">${1} تعليقات</string>
+
+    <!--ui - Memory Of Chaos-->
+    <string name="PlayersBattleReport">${1} سجل المعركة</string>
+    <string name="PlayersRemainRounds">${1} جولة متبقية</string>
+    <string name="PlayersAverageRounds">${1} جولة في المتوسط</string>
+    <string name="PlayersRounds">${1} جولة</string>
+
+    <!--ui - Setting Page-->
+    <string name="Navigate">التنقل</string>
+    <string name="ONSwitchOn">تشغيل</string>
+    <string name="SwitchOff">إيقاف</string>
+    <string name="AccountSetup">إعداد الحساب (${1})</string>
+    <string name="UseInviteCode">استخدام رمز الدعوة</string>
+    <string name="HaveNotUsed">لم يتم استخدامه بعد</string>
+    <string name="LanguageSetup">إعداد اللغة</string>
+    <string name="DocumentLanguage">لغة الوثيقة</string>
+    <string name="AppLanguage">لغة التطبيق</string>
+    <string name="Customize">تخصيص</string>
+    <string name="UseHSRFont">استخدام خط اللعبة</string>
+    <string name="Wallpaper">الخلفية</string>
+    <string name="ChangeWallPaper">تغيير الخلفية</string>
+    <string name="Notification">الإشعارات</string>
+    <string name="NotifiAll">جميع الإشعارات</string>
+    <string name="NotiStamina">الطاقة</string>
+    <string name="NotiExpedition">البعثة</string>
+    <string name="NotiMission">المهمة اليومية</string>
+    <string name="NotiSimulatedUniverse">الكون المحاكى</string>
+    <string name="SupportUs">ادعمنا</string>
+    <string name="Donation">التبرع</string>
+    <string name="InviteOthers">دعوة الآخرين</string>
+    <string name="DevOptions">خيارات المطور</string>
+    <string name="DevUseCookieLogin">استخدام الكوكيز لتسجيل الدخول</string>
+    <string name="OsVersion">إصدار نظام التشغيل</string>
+    <string name="AppVersion">إصدار التطبيق</string>
+    <string name="SpecialThanks">شكر خاص</string>
+    <string name="Developers">المطورون</string>
+    <string name="SpecialThanksOpenSource">شكر المصادر المفتوحة</string>
+    <string name="SelectAccountInServer">يرجى اختيار الخادم الذي تلعب عليه.</string>
+    <string name="ManuallySetup">الإعداد يدويًا</string>
+    <string name="SelectServerTitle">اختر الخادم</string>
+    <string name="RemarksInLogin">ملاحظات تسجيل الدخول</string>
+    <string name="CopyToClipBoard">تم النسخ إلى الحافظة ~</string>
+    <string name="FailToCopy">فشل في النسخ</string>
+
+    <!--ui - WallPaper Page-->
+    <string name="SaveWallPaper">حفظ</string>
+    <string name="SetWallPaper">تعيين</string>
+
+    <!--ui - Code Page-->
+    <string name="HasCopy">تم النسخ</string>
+
+    <!--toast-->
+    <string name="PleaseLogin">يرجى تسجيل الدخول أولاً!</string>
+
+    <!--Add in 20240114 - User Info Page
+    E.g. 10 Days Before / 30mins Before || In the User Info Page -> Status, which shows how long does he/she offline-->
+    <string name="UserInfoLastLoginAt">${1} قبل</string>
+    <string name="UserInfoGameData">بيانات اللعبة</string>
+    <string name="UserInfoStatus">الحالة</string>
+    <string name="UserInfoGamePlayerLevel">مستوى المستكشف</string>
+    <string name="UserInfoCountComments">التعليقات</string>
+
+    <!--Equilibrium level-->
+    <string name="UserInfoGameWorldLevel">مستوى التوازن</string>
+    <string name="UserInfoLastOnlineTime">آخر وقت الاتصال</string>
+    <string name="UserInfoOwnedCharacters">الشخصيات</string>
+    <string name="UserInfoGameActiveDays">الأيام النشطة</string>
+    <string name="UserInfoGameAchievements">الإنجازات</string>
+    <string name="UserInfoGameOpenedChests">الكنوز</string>
+    <string name="UserInfoGameForgottenHall">القاعة المنسية</string>
+    <string name="UserCharLevelLv">المستوى</string>
+    <string name="UserCharLevelSoul">الإيدولون</string>
+    <string name="ProducedByStargazer">من إنتاج ستارجيزر</string>
+
+    <!--Add in 20240114 - After 2.0.15-->
+    <string name="NoOnlineData">لا يوجد سجل</string>
+
+    <!--Add in 20240115 - Lightcone Info Page Buttons-->
+    <string name="LightconeEffect">تأثير المخروط الضوئي</string>
+    <string name="LightconeStory">قصة المخروط الضوئي</string>
+
+    <!--Add in 20240116 - For identify the relic sub stat-->
+    <string name="UseBlurEffect">استخدام تأثير التمويه</string>
+    <string name="ATTR_CRIT_RATE">معدل النقد</string>
+    <string name="ATTR_CRIT_DMG">ضرر النقد</string>
+    <string name="ATTR_HP">الصحة</string>
+    <string name="ATTR_HPP">الصحة%</string>
+    <string name="ATTR_ATK">الهجوم</string>
+    <string name="ATTR_ATKP">الهجوم%</string>
+    <string name="ATTR_DEF">الدفاع</string>
+    <string name="ATTR_DEFP">الدفاع%</string>
+    <string name="ATTR_SPD">السرعة</string>
+    <string name="ATTR_BREAK_DMG">تأثير الكسر</string>
+    <string name="ATTR_SP">الطاقة القصوى</string>
+    <string name="ATTR_EFFECT_HIT">إصابة التأثير</string>
+    <string name="ATTR_EFFECT_RES">مقاومة التأثير</string>
+    <string name="ATTR_QUANTUM_DMG">ضرر الكم</string>
+    <string name="ATTR_FIRE_DMG">ضرر النار</string>
+    <string name="ATTR_ICE_DMG">ضرر الجليد</string>
+    <string name="ATTR_IMAGINARY_DMG">ضرر الخيال</string>
+    <string name="ATTR_WIND_DMG">ضرر الرياح</string>
+    <string name="ATTR_LIGHTNING_DMG">ضرر البرق</string>
+    <string name="ATTR_PHYSICAL_DMG">ضرر الفيزيائي</string>
+    <string name="ATTR_SP_RATE">تجديد الطاقة</string>
+    <string name="ATTR_HEAL_RATE">مكافأة الشفاء</string>
+
+    <!--Add in 20240117 - Setting Page-->
+    <string name="UnLockAll">فتح الجميع</string>
+    <string name="BlurOn">التمويه</string>
+    <string name="BlurOff">التمويه</string>
+    <string name="GetCharAndUnLock">فتح عند الحصول على تلك الشخصية.</string>
+    <string name="Leaderboard">لوحة الصدارة</string>
+    <string name="UIDSearch">البحث عن UID</string>
+    <string name="PublicChars">الكشف عن الشخصيات المملوكة</string>
+    <string name="Switch">تبديل</string>
+
+    <!--Add in 20240118 - User Character Info Page-->
+    <string name="Comments">${1} تعليقات</string>
+    <string name="UserOwned">مملوك</string>
+    <string name="FullEidolon">إيدولون 6</string>
+
+    <!--普攻-->
+    <string name="TraceNormalATK">الهجوم العادي</string>
+
+    <!--戰技-->
+    <string name="TraceSkill">المهارة</string>
+
+    <!--終結技-->
+    <string name="TraceUltimate">القدرة القصوى</string>
+
+    <!--天賦-->
+    <string name="TraceTalent">الموهبة</string>
+
+    <!--秘技-->
+    <string name="TraceTechnique">التقنية</string>
+
+    <!--疊影-->
+    <string name="Superimpose">تراكب ${1}</string>
+    <string name="RelicScore">درجة الآثار</string>
+    <string name="CharScore">درجة الشخصية</string>
+
+    <!--In the User Character's Info Page, showing the ranking (SS, A, B, ...) of the score-->
+    <string name="RelicRank">رتبة الآثار</string>
+
+    <!--In the User Character's Info Page, showing the ranking (SS, A, B, ...) of the score-->
+    <string name="CharRank">رتبة الشخصية</string>
+
+    <!--In the User Character's Info Page, showing percentage of character's graduation-->
+    <string name="CharGradRate">نسبة تخرج الشخصية%</string>
+    <string name="LackOfUserData">لا توجد نتائج في لوحة الصدارة بسبب نقص بيانات المستخدم</string>
+    <string name="LeaderboardOver">فوق ${1}% من المستخدمين</string>
+    <string name="LeaderboardDataFrom">(البيانات من جميع المستخدمين المسجلين)</string>
+    <string name="AppStatusLoading">بوم بوم يصلي</string>
+    <string name="AppStatusLostConnect">فقدان الاتصال بالقطار...</string>
+    <string name="AppStatusPlayerNoReleaseData">اللاعب لم يكشف عن بياناته</string>
+    <string name="AppStatusNoDataFound">لم يتم العثور على بيانات...</string>
+    <string name="CharSoul">إيدولون ${1}</string>
+    <string name="StatusNow">الآن</string>
+    <string name="StatusHours">${1} ساعات</string>
+    <string name="StatusMinutes">${1} دقائق</string>
+    <string name="StatusSeconds">${1} ثوان</string>
+    <string name="StatusDays">${1} أيام</string>
+    <string name="StatusToday">اليوم ${1}</string>
+    <string name="StatusTomorrow">غدًا ${1}</string>
+
+    <!--Lightcone Superimpose Level-->
+    <string name="SuperimposeLvl">${1}. تراكب</string>
+
+    <!--That character is not equipping any lightcones-->
+    <string name="SuperimposeNotEquipped">غير متوفر</string>
+
+    <!--Notification-->
+    <string name="TrailblazerNoti">إشعار المستكشف!</string>
+
+    <!--Character Page Comment Function-->
+    <string name="CommentFailed">فشل التعليق، خطأ</string>
+    <string name="CommentPlsEnterComment">يرجى إدخال تعليقك</string>
+    <string name="CommentHaventLogin">يرجى تسجيل الدخول أولاً!</string>
+    <string name="CommentSuccessful">نجاح!</string>
+    <string name="CommentTextInputHint">ساعدني، السيد سفاروغ!</string>
+    <string name="CommentInDiscussion">في "نقاش ${1}"</string>
+
+    <!--Memory Of Chaos (Leaderboard, MOC info)-->
+    <string name="MOCMissionInfoTitle">معلومات المهمة</string>
+    <string name="MOCSkipped">تم التخطي</string>
+    <string name="MOCMissionPart1">الجزء الأول</string>
+    <string name="MOCMissionPart2">الجزء الثاني</string>
+    <string name="MOCMissionPart3">الجزء الثالث</string>
+    <string name="MOCMissionPart4">الجزء الرابع</string>
+    <string name="MOCMissionPart5">الجزء الخامس</string>
+    <string name="MOCMissionPart6">الجزء السادس</string>
+    <string name="MOCMissionPart7">الجزء السابع</string>
+    <string name="MOCMissionPart8">الجزء الثامن</string>
+    <string name="MOCMissionPart9">الجزء التاسع</string>
+    <string name="MOCMissionPart10">الجزء العاشر</string>
+    <string name="MOCMissionPart11">الجزء الحادي عشر</string>
+    <string name="MOCMissionPart12">الجزء الثاني عشر</string>
+    <string name="MOCEffect">التأثير</string>
+    <string name="MOCMyBattleReport">تقرير معركتي</string>
+    <string name="MOCPart1">(الجزء الأول)</string>
+    <string name="MOCPart2">(الجزء الثاني)</string>
+    <string name="MOCShowMore">عرض المزيد</string>
+    <string name="MOCRounds">${1} جولات</string>
+    <string name="MOCStars">${1} نجوم</string>
+
+    <!--UID Search-->
+    <string name="Searching">جارٍ البحث...</string>
+    <string name="UIDEnter">يرجى إدخال UID</string>
+    <string name="UIDFormatError">خطأ في تنسيق UID</string>
+    <string name="UIDNoData">لا توجد بيانات</string>
+    <string name="UIDSearchRecord">سجلات البحث</string>
+    <string name="UIDSearchRecordClear">مسح</string>
+
+    <!--Redeem Star Rail Code-->
+    <string name="RedeemCodeForever">إلى الأبد</string>
+    <string name="RedeemCodeUntil">حتى ${1}</string>
+    <string name="RedeemCodeExpired">منتهي الصلاحية</string>
+
+    <!--Setting Page-->
+    <string name="SettingPersonalPage">عرض الصفحة الشخصية</string>
+    <string name="SettingPersonalPageShow">عرض</string>
+    <string name="SettingPersonalPageDisable">تعطيل</string>
+    <string name="SettingChangedWallpaper">تم تعيين الخلفية إلى "${1}"</string>
+    <string name="SettingSaveWallpaperSuccess">تم حفظ الخلفية بنجاح</string>
+    <string name="SettingSaveWallpaperError">خطأ في حفظ الخلفية</string>
+
+    <!--Toast display / Donation Bar at the Home Page's bottom-->
+    <string name="FunctionStillInDevelop">هذه الوظيفة لا تزال قيد التطوير</string>
+    <string name="LoginEnterCookies">يرجى إدخال الكوكيز!</string>
+    <string name="ConfirmBTN">تأكيد</string>
+    <string name="ShareSuccess">تم المشاركة بنجاح!</string>
+    <string name="ShareError">فشلت المشاركة</string>
+    <string name="CodeAll">جميع الخوادم</string>
+    <string name="CharSoulShort">إ ${1}</string>
+    <string name="PlsDonateUs">من فضلك، فكر في التبرع لدعمنا، شكرًا!</string>
+    <string name="DonateInRandomCount">عشوائي</string>
+
+    <!--20240122 -> Home Page Button-->
+    <string name="MemoryOfChaosShort">ذاكرة الفوضى</string>
+    <string name="ScoreLevel">الكفاءة</string>
+    <string name="MemoryOfChaosLeaderboard">لوحة صدارة ذاكرة الفوضى</string>
+    <string name="ScoreLevelLeaderboard">لوحة صدارة الكفاءة</string>
+
+    <!--20240125 -> Home Page Button-->
+    <string name="PureFiction">الخيال النقي</string>
+
+    <!--20240126 -> Home Page Button & Pure Fiction (Leaderboard & Info Page)-->
+    <string name="PureFictionShort">نقي</string>
+    <string name="PureFictionLeaderboard">لوحة صدارة الخيال النقي</string>
+
+    <!--Short form for display in Home Page-->
+    <string name="About">حول</string>
+
+    <!--Full form for display in Setting Page-->
+    <string name="AboutTheApp">حول ستارجيزر</string>
+
+    <!--Pure Fiction Score, in Pure Fiction Leaderboard-->
+    <string name="PFScore">${1} نقاط</string>
+
+    <!--20240127-->
+    <string name="EventDuration">المدة</string>
+
+    <!--20240128-->
+    <string name="Upgrade">ترقية</string>
+
+    <!--In the bottom of User Character's Info Page-->
+    <string name="OverWholeServerUser">أعلى ${1}% من جميع المستخدمين المسجلين</string>
+
+    <!--20240129
+    User Info Page -> Status-->
+    <string name="NoCommentYet">لا توجد تعليقات بعد...</string>
+
+    <!--20240131
+    Navigate User to read codes in GitHub, belongs to the "About" page-->
+    <string name="SourceCode">الكود المصدري</string>
+    <string name="PrevPage">الصفحة السابقة</string>
+    <string name="NextPage">الصفحة التالية</string>
+
+    <!--20240209 - Warp Simulator-->
+    <string name="LotterySimulator">محاكي الوثب</string>
+    <string name="MakeOnePull">وثبة واحدة</string>
+    <string name="MakeTenPull">وثبة عشرة</string>
+    <string name="TutorialVideo">فيديو تعليمي</string>
+
+    <!--Donation Message-->
+    <string name="DonationDesc">شكرًا على تبرعك، دعمك مهم لنا في تحسين هذا التطبيق، جميع التبرعات ستُستخدم في النفقات الضرورية والتحسينات الأخرى.</string>
+    <string name="DonateUs">تبرع لنا</string>
+    <string name="ShareToOthers">المستكشفون، الكون الشاسع مليء بالأسرار التي لا نهائية، وفي رحلتك لاستكشاف هذه الأسرار، سيساعدك دليل موثوق! ستارجيزر ليس فقط تطبيق مساعد لستار ريل يتضمن اقتراحات التطوير، استعلام البيانات، تصنيف التدريب، ووظائف أخرى، بل هو أيضًا شريك قوي لرحلة استكشافك! قم بالتحميل الآن وابدأ مغامرتك الكونية!\nمتجر التطبيقات</string>
+
+    <!--20240218 - Common Errors
+    Errors when user try to use in-app-purchase in BETA version, deprecated-->
+    <string name="ErrorDonationInBeta">التبرع غير متاح في النسخة التجريبية</string>
+    <string name="ErrorIdentifier">غير قادر على العثور على التبرع...</string>
+    <string name="ErrorPurchaseAlready">يرجى المحاولة مرة أخرى بعد دقيقة.</string>
+
+    <!--20240219 - Permissions and isNotch ...-->
+    <string name="ErrorscreenshotPermissionRejected">تم رفض إذن الوصول إلى لقطة الشاشة، يرجى الضغط على الزر مرة أخرى/ منح الإذن في إعدادات النظام.</string>
+
+    <!--The buttom button / geasure bar-->
+    <string name="UserCustomHasNotch">تكييف الشق</string>
+
+    <!--iPhone 15 new design (靈動島)-->
+    <string name="UserCustomHasDynamicIsland">تكييف الجزيرة الديناميكية</string>
+
+    <!--20240302 - Warp Simulator (Record page)-->
+    <string name="LotterySimulatorRecord">سجل محاكي الوثب</string>
+    <string name="LotterySimulatorRecordNotice">السجلات المعروضة أدناه من المحاكي وليس لها علاقة ببيانات اللعبة.</string>
+    <string name="LotteryRecordType">النوع</string>
+    <string name="LotteryRecordName">الاسم</string>
+    <string name="LotteryRecordTime">الوقت</string>
+
+    <!--20240308 ~ 0311 - Warp Analysis-->
+    <string name="WrapAnalysis">تحليل الوثب</string>
+    <string name="WrapNeedInit">لا توجد مراجعات بعد. يرجى النقر على الزر في الزاوية اليسرى السفلية لاستيراد رابط الوثب.</string>
+    <string name="WrapCharPool">وثبة حدث الشخصية</string>
+    <string name="WrapLcPool">وثبة حدث المخروط الضوئي</string>
+    <string name="WrapStaticPool">وثبة عادية</string>
+    <string name="WrapNewbiePool">وثبة الانطلاق</string>
+    <string name="WrapLuckTitle">مراجعة الحظ</string>
+    <string name="WrapDetails">تفاصيل السجلات</string>
+    <string name="WrapFourFiveStarRecord">4 نجوم و5 نجوم</string>
+    <string name="WrapInfoPity">نسبة غير العطف</string>
+    <string name="WrapAvgGetUP">متوسط السحب لـ 5 نجوم</string>
+    <string name="WrapTotalPull">الإجمالي المسحوب</string>
+    <string name="WrapPopUpURLTitle">لصق رابط الوثب</string>
+    <string name="WrapPopUpURLInfo">يرجى لصق رابط الوثب أدناه</string>
+
+    <!--Show when u don't enter the URL / token in Toast-->
+    <string name="WrapPopUpURLToast">يرجى إدخال رابط الوثب!</string>
+    <string name="WrapPopUpURLTextArea">يرجى إدخال رابط الوثب هنا</string>
+    <string name="WrapPopUpURLTutorial">كيفية الحصول على رابط الوثب؟</string>
+    <string name="WrapPopUpURLAnalysisButton">تحليل</string>
+    <string name="WrapPopUpURLProgress">تقدم التحليل</string>
+
+    <!--20240325 - Codename (Just like Android's Mashmellow, Nought, Pie, etc...), for devs to know which version easily-->
+    <string name="AppInnerVersionCode">الاسم الرمزي</string>
+
+    <!--20240328 - Warp Analysis-->
+    <string name="VisitToDCServer">يرجى زيارة خادم الديسكورد الخاص بنا للحصول على حلول/مساعدة</string>
+
+    <!--20240403 - New Update
+    Replaced "ManuallySetup"-->
+    <string name="UseCookiesToLogin">تسجيل الدخول عبر الكوكيز</string>
+
+    <!--Character Info -> Advice Team-->
+    <string name="PressToView">اضغط للعرض</string>
+
+    <!--Character Info -> Advice Team -> Press To View-->
+    <string name="MatchRequirementChar">الشخصيات التي تطابقت مع【${1}】</string>
+
+    <!--Character Info -> Advice Team -> Press To View-->
+    <string name="RequirementOR">أو</string>
+
+    <!--Character Info -> Advice Team -> Press To View-->
+    <string name="RequirementAND">و</string>
+
+    <!--20250207 - Action Order -->
+    <string name="ActionOrderTitle">أداة ترتيب الإجراءات</string>
+    <string name="ActionOrderAddItem">إضافة</string>
+    <string name="ActionOrderItemChosen">تم الاختيار</string>
+    <string name="ActionOrderImportedCharData">تم استيراد بيانات شخصية المستخدم ${1}</string>
+    <string name="ActionOrderModify">تعديل</string>
+    <string name="ActionOrderInitSkillPoint">نقطة المهارة الأولية</string>
+    <string name="ActionOrderMaxSkillPoint">نقطة المهارة القصوى</string>
+    <string name="ActionOrderEnemySpeedTitle">سرعة العدو</string>
+    <string name="ActionOrderEnemySpeedExtSlow">بطيء جدًا</string>
+    <string name="ActionOrderEnemySpeedSlow">بطيء</string>
+    <string name="ActionOrderEnemySpeedMid">عادي</string>
+    <string name="ActionOrderEnemySpeedHigh">عالي</string>
+    <string name="ActionOrderEnemySpeedExtHigh">عالي جدًا</string>
+    <string name="ActionOrderSimulatorShowAllProcess">جميع العمليات</string>
+    <string name="ActionOrderSimulatorSkillPoint">نقطة المهارة</string>
+    <string name="ActionOrderSimulatorCharEnergy">الطاقة</string>
+    <string name="ActionOrderSimulatorActionValue">إجمالي قيمة الإجراء</string>
+    <string name="ActionOrderSimulatorActionTimes">أوقات الإجراء</string>
+    <string name="ActionOrderSimulatorSimulateRounds">محاكاة الجولات</string>
+
+    <!--20250220 - Missing Translation -->
+    <string name="AbyssCharacterUsage">استخدام الشخصية</string>
+    <string name="AbyssTeamUsage">استخدام الفريق</string>
+    <string name="AbyssListSortDescend">تنازلي</string>
+    <string name="AbyssListSortAscend">تصاعدي</string>
+    <string name="UserAccountWarningCookiesInvalid">الكوكيز غير صالحة، يرجى اتباع خطوات الفيديو والمحاولة مرة أخرى.</string>
+    <string name="UserAccountWarningNoAccountRecord">لا يمكن العثور على أي حسابات ستار ريل هناك، يرجى التحقق من حسابك والمحاولة مرة أخرى.</string>
+    <string name="UserAccountWarningIncorrectServer">يبدو أنك اخترت الخادم الخاطئ، يرجى اختيار الخادم الصحيح والمحاولة مرة أخرى.</string>
+
+    <!--20250221 - Added Translation -->
+    <string name="SettingPadModeHomePageShowBg">عرض خلفية الصفحة الرئيسية في وضع الجهاز اللوحي</string>
+    <!--20250301 - Added Translation -->
+    <string name="SettingReDownloadFullData">إعادة تحميل البيانات الكاملة</string>
+    <string name="SettingInternalVersionCode">رمز الإصدار الداخلي</string>
+    <string name="SettingDeviceModel">طراز الجهاز</string>
+    <string name="UpdateAssetFoundUpdate">مرحبًا! تم العثور على تحديث</string>
+    <string name="UpdateAssetUpdateSize">حجم الملف: ${1}</string>
+    <string name="UpdateAssetUpdateSuggestionWiFi">يُوصى بالتحميل عند الاتصال بشبكة Wi-Fi</string>
+    <string name="UpdateAssetUpdateTheHerta">السيدة هيرتا جوهرة لا مثيل لها. السيدة هيرتا عبقرية لا تُضاهى. السيدة هيرتا جميلة لا مثيل لها.</string>
+    <string name="UpdateAssetDownloadingUpdate">جارٍ التحميل...</string>
+    <string name="UpdateAssetDownloadProgress">التقدم: ${1} (${2}/${3})</string>
+    <string name="NetworkErrorUnstableConnection">【مشكلة الاتصال】يرجى التحقق من اتصالك بالشبكة</string>
+    <string name="NetworkErrorTimedOut">【انتهاء مهلة الطلب】لا بأس، دعنا نحاول لاحقًا</string>
+    <string name="DenyBTN">إلغاء</string>
+    <string name="LaterBTN">لاحقًا</string>
+    <string name="UpdateAssetDownloadFull">تحميل البيانات الكاملة</string>
+    <string name="UpdateAssetDownloadFullSizeReason">يمكن تحسين سرعة التحميل بعد تحميل البيانات الكاملة</string>
+
+    <!--20250312 - Added Translation - ListFilterTool -->
+    <string name="RelicTypeRelic">الآثار</string>
+    <string name="RelicTypePlanar">الزخارف البعدية</string>
+    <string name="LoginPCNotAcceptViaWebsiteYet">حاليًا، جهاز الكمبيوتر لا يدعم تسجيل الدخول بجواز هويوفرس، يرجى استخدام الكوكيز لتسجيل الدخول بدلاً من ذلك.</string>
+    <string name="SettingPressToCleanCache">اضغط لتنظيف الذاكرة المؤقتة</string>
+    <string name="SettingCleanCacheFailed">فشل في تنظيف الذاكرة المؤقتة، يرجى المحاولة مرة أخرى لاحقًا.</string>
+    <string name="SettingCleanCacheSuccessed">تم تنظيف الذاكرة المؤقتة بنجاح</string>
+    <string name="KCEFInstallTitle">تثبيت KCEF</string>
+    <string name="KCEFInstallDescription">يُستخدم KCEF لتوفير خدمة المتصفح المدمج (Webview) لإصدار الكمبيوتر\nإذا لم يتم تثبيته، قد لا تكون بعض وظائف الصفحة متاحة</string>
+    <string name="KCEFInstallDoneMessage">اكتمل التثبيت، يرجى الضغط على الزر لإغلاق التطبيق</string>
+    <string name="IIRCTitle">شركة موارد الكون الخاملة</string>
+
+    <!--20250317 - Added Translation -->
+    <string name="ApocalypticShadow">الظل المروع</string>
+    <string name="FilterOwned">مملوك</string>
+    <string name="FilterFavourite">المفضل</string>
+
+    <!--20250401 - Added Translation -->
+    <string name="RoleDev">المطور</string>
+    <string name="RoleCBetaTester">مختبر بيتا مغلق</string>
+    <string name="RoleBetaTester">مختبر بيتا</string>
+    <string name="RoleDonor">المتبرع</string>
+
+    <!--20250408 - Added Translation -->
+    <string name="DonationDesc2">يمكن الحصول على دور المتبرع بأي تبرع (يجب تسجيل الدخول إلى حساب ستار ريل أولاً). يمكن للمستخدمين المشتركين شهريًا استخدام ميزات متقدمة أخرى (لم تُفتح بعد).</string>
+    <string name="DonationTargetFinishRate">${1}% اكتمل هذا الشهر (${2} / ${3})</string>
+    <string name="DonationSuccessThanking">شكرًا جزيلًا على تبرعك!</string>
+    <string name="DonationSuccessFurtherNotes">إذا كانت لديك أي أسئلة، يرجى التواصل معنا عبر الديسكورد / البريد الإلكتروني، شكرًا!</string>
+    <string name="DonationFailed">فشل الشراء: ${1}</string>
+    <string name="DonationCannotFindProduct">لا يمكن العثور على العنصر ${1}، يرجى التأكد من أن الجهاز قد سجل الدخول بنجاح إلى المتجر ذي الصلة</string>
+    <string name="DonationMembership">العضوية</string>
+    <string name="DonationMembershipPurchaseWarning">يرجى ملاحظة أنك قد لا تتمكن من طلب استرداد بعد تفعيل العضوية. إذا كنت ترغب في إلغاء العضوية التلقائية، يرجى التقديم إلى المتجر قبل التجديد.</string>
+
+</resources>

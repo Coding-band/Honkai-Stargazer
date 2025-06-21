@@ -8,7 +8,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.key
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -16,8 +15,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Popup
 import changeLanguage
 import com.russhwolf.settings.Settings
-import ui.components.AppDialog
-import ui.components.UIButton
 import dev.chrisbanes.haze.HazeState
 import files.LanguageSetup
 import files.Res
@@ -32,6 +29,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import okio.FileSystem
 import okio.SYSTEM
+import ui.components.AppDialog
+import ui.components.UIButton
 import ui.navigation.refreshInit
 import ui.screens.showUpdatePopupInSetting
 
@@ -54,6 +53,7 @@ class Language() {
         KR("한국어", "kr", "ko-KR", "ko-kr"),
         TH("ภาษาไทย", "th", "th-TH", "th-th"),
         JYU_YAM("ㄓㄨˋ ㄧㄣ", "zh", "zh-TW", "zh-tw"),
+        ARABIC_HALAL("عربي", "ar", "ar", "ar"),
         UK("Українська", "uk", "uk", "en");
     }
 
