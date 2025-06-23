@@ -13,6 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Popup
+import appLanguageState
 import changeLanguage
 import com.russhwolf.settings.Settings
 import dev.chrisbanes.haze.HazeState
@@ -136,6 +137,9 @@ class Language() {
         val langC = lang.localeCode.split("-")
         changeLanguage(langC[0], langC.getOrNull(1))
         AppLanguageInstance = lang
+        appLanguageState = appLanguageState.apply {
+            value = lang
+        }
         if(isFirstInit){
             TextLanguageInstance = TextLanguage.entries.firstOrNull { it.folderName == lang.folderName } ?: TextLanguage.EN
             setTextLanguage(TextLanguageInstance, isFirstInit)
