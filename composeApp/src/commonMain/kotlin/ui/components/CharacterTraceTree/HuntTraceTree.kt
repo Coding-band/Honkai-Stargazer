@@ -56,7 +56,9 @@ fun HuntTraceTree(infoJson: JsonElement, displayWidth: Dp, selectedId: MutableSt
 
     val selectedId = remember { mutableStateOf(0) }
 
-    val skillTreePointsArray = infoJson.jsonObject["skillTreePoints"]!!.jsonArray.sortedBy { it.jsonObject["anchor"]!!.jsonPrimitive.int }
+    val skillTreePointsArray = infoJson.jsonObject["skillTreePoints"]!!.jsonArray
+        .takeLast(infoJson.jsonObject["skillTreePoints"]!!.jsonArray.size.let { if(it > 6) it/2 else it }) //取後半段的技能樹點
+        .sortedBy { it.jsonObject["anchor"]!!.jsonPrimitive.int }
     val skillTreeCoreArray = infoJson.jsonObject["skills"]!!.jsonArray
 
     val groupNormalATK = jsonArrayToIntArrayList(infoJson.jsonObject["skillGrouping"]!!.jsonArray[0].jsonArray)

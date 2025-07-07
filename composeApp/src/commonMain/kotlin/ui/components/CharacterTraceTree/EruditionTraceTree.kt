@@ -56,8 +56,14 @@ fun EruditionTraceTree(infoJson: JsonElement, displayWidth: Dp, selectedId: Muta
 
     val selectedId = remember { mutableStateOf(0) }
 
-    val skillTreePointsArray = infoJson.jsonObject["skillTreePoints"]!!.jsonArray.sortedBy { it.jsonObject["anchor"]!!.jsonPrimitive.int }
+    val skillTreePointsArray = infoJson.jsonObject["skillTreePoints"]!!.jsonArray
+        .takeLast(infoJson.jsonObject["skillTreePoints"]!!.jsonArray.size.let { if(it > 5) it/2 else it }) //取後半段的技能樹點
+        .sortedBy { it.jsonObject["anchor"]!!.jsonPrimitive.int }
     val skillTreeCoreArray = infoJson.jsonObject["skills"]!!.jsonArray
+
+    skillTreePointsArray.map {
+        println(it.jsonObject["anchor"]!!.jsonPrimitive.int)
+    }
 
     val groupNormalATK = jsonArrayToIntArrayList(infoJson.jsonObject["skillGrouping"]!!.jsonArray[0].jsonArray)
     val groupSkill = jsonArrayToIntArrayList(infoJson.jsonObject["skillGrouping"]!!.jsonArray[1].jsonArray)
