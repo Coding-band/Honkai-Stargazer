@@ -288,7 +288,7 @@ fun PageTopMask(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun FontShadow() = TextStyle(shadow = Shadow(color = Color.Black, offset = Offset(2.0f, 2.0f)))
+fun FontShadow() = TextStyle(shadow = Shadow(color = Color.Black.copy(0.25f), offset = Offset(0.0f, 2.0f)))
 
 val HazeBlurDp10 = HazeStyle(Color.Black, null, 10.dp, 0f)
 val HazeBlurDp10Alpha = HazeStyle(Color.Transparent, null, 10.dp, 0f)

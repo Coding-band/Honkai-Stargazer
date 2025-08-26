@@ -9,17 +9,21 @@ package ui.components
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.grid.LazyGridState
 import androidx.compose.foundation.lazy.staggeredgrid.LazyStaggeredGridState
@@ -27,12 +31,16 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.OutlinedButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Alignment.Companion.TopCenter
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
@@ -53,7 +61,7 @@ import ui.navigation.popBackStackLimited
 import utils.app.PageHeaderZIndex
 import utils.app.hazeEffectSG3
 
-val PAGE_HEADER_HEIGHT = 72.dp
+val PAGE_HEADER_HEIGHT = 64.dp
 val PAGE_HEADER_ALPHA_HEIGHT = 64.dp
 val defaultHeaderData = HeaderData(title = "?", titleIconId = Res.drawable.phorphos_sun_fill)
 
@@ -123,8 +131,10 @@ private fun PageHeaderContent(
     isProgressive: Boolean = false,
 ){
     val coroutineScope = rememberCoroutineScope()
+    val isDisplayBorder = remember { mutableStateOf(false) }
     Box(
         Modifier
+            .border( if(isDisplayBorder.value) BorderStroke(3.dp, Color.White) else BorderStroke(0.dp, Color(0x00FFFFFF)), shape = RectangleShape)
             .background(Brush.verticalGradient(colors = listOf(Color(0x80FFFFFF), Color(0x00FFFFFF))))
             //.clippedShadow(elevation = 2.dp)
             .hazeSource(state = hazeState, zIndex = PageHeaderZIndex)
@@ -160,56 +170,57 @@ private fun PageHeaderContent(
         //PageTopMask()
 
 
-        Column {
-            Row(
-                Modifier
-                    .padding(start = 16.dp, end = 16.dp)
-                    .fillMaxSize()
-                    .weight(1f)
+        Row(
+            Modifier
+                .padding(start = 16.dp, end = 16.dp)
+                .wrapContentHeight()
+                .fillMaxWidth()
+        ) {
+            OutlinedButton(
+                contentPadding = PaddingValues(4.dp),
+                colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color(0x33FFFFFF)),
+                border = BorderStroke(0.dp, Color(0x00FFFFFF)),
+                shape = CircleShape,
+                modifier = Modifier
+                    .size(40.dp)
+                    //.align(Alignment.CenterVertically),
+                    .align(Alignment.CenterVertically),
+                onClick = { onBack.invoke(navigator) },
             ) {
+                Image(
+                    painter = painterResource(resource = backIconId.res),
+                    contentDescription = "Back Icon",
+                    modifier = Modifier
+                        .size(40.dp),
+                    colorFilter = ColorFilter.tint(Color.White)
+                )
+            }
+
+            Box(Modifier.weight(1f)){
+                TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
+            }
+
+            if(forwardIconId != Res.drawable.bg_transparent) {
                 OutlinedButton(
                     contentPadding = PaddingValues(4.dp),
-                    colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color(0x33FFFFFF)),
-                    border = BorderStroke(0.dp, Color(0x00FFFFFF)),
-                    shape = CircleShape,
                     modifier = Modifier
                         .size(40.dp)
                         .align(Alignment.CenterVertically),
-                    onClick = { onBack.invoke(navigator) },
+                    onClick = { onForward.invoke(navigator) ; isDisplayBorder.value = !isDisplayBorder.value },
+                    colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color(0x33FFFFFF)),
+                    border = BorderStroke(0.dp, Color(0x00FFFFFF)),
+                    shape = CircleShape,
                 ) {
                     Image(
-                        painter = painterResource(resource = backIconId.res),
-                        contentDescription = "Back Icon",
+                        painter = painterResource(resource = forwardIconId),
+                        contentDescription = "Forward Icon",
                         modifier = Modifier
                             .size(40.dp),
                         colorFilter = ColorFilter.tint(Color.White)
                     )
                 }
-
-                Box(Modifier.weight(1f)){
-                    TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
-                }
-
-                if(forwardIconId != Res.drawable.bg_transparent) {
-                    OutlinedButton(
-                        contentPadding = PaddingValues(4.dp),
-                        modifier = Modifier
-                            .size(40.dp)
-                            .align(Alignment.CenterVertically),
-                        onClick = { onForward.invoke(navigator) },
-                        colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color(0x33FFFFFF)),
-                        border = BorderStroke(0.dp, Color(0x00FFFFFF)),
-                        shape = CircleShape,
-                    ) {
-                        Image(
-                            painter = painterResource(resource = forwardIconId),
-                            contentDescription = "Forward Icon",
-                            modifier = Modifier
-                                .size(40.dp),
-                            colorFilter = ColorFilter.tint(Color.White)
-                        )
-                    }
-                }
+            }else {
+                Box(Modifier.size(40.dp))
             }
         }
     }

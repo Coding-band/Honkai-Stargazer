@@ -7,11 +7,13 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -26,6 +28,7 @@ import files.Res
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
+import utils.app.FontShadow
 import utils.app.FontSizeNormal14
 import utils.app.TextColorNormal
 import utils.app.removeStrQuote
@@ -34,7 +37,8 @@ import utils.app.removeStrQuote
 fun TitleHeader(iconRId : DrawableResource, titleString: String? = null, titleRId: StringResource? = null){
     Column(
         Modifier
-            .fillMaxSize(),
+            .padding(top = 4.dp)
+            .wrapContentHeight().fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
@@ -67,7 +71,7 @@ fun TitleHeader(iconRId : DrawableResource, titleString: String? = null, titleRI
                         removeStrQuote(titleRId)
                 } else titleString,
                 color = TextColorNormal,
-                style = FontSizeNormal14(),
+                style = FontSizeNormal14() + FontShadow() ,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
             )

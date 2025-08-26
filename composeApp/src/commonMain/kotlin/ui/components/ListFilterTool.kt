@@ -371,7 +371,7 @@ fun <T> ListFilterTool(
             Row(Modifier
                 .wrapContentHeight()
                 .navigationBarsPadding()
-                .padding(start = 32.dp, end = 32.dp, bottom = 16.dp)
+                .padding(start = 32.dp, end = 32.dp)
                 .wrapContentWidth()
                 .widthIn(72.dp + 116.dp, 116.dp + 212.dp)
                 .align(Alignment.CenterHorizontally)

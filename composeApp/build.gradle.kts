@@ -14,7 +14,7 @@ import java.util.Properties
  * VersionUpdateCheck
  * Environment Area - App Version
  */
-val appVersionDesktop = "1.0.5"
+val appVersionDesktop = "1.0.6"
 
 
 plugins {
