@@ -41,6 +41,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavBackStackEntry
 import dev.chrisbanes.haze.HazeEffectScope
+import dev.chrisbanes.haze.HazeProgressive
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.HazeStyle
 import dev.chrisbanes.haze.hazeEffect
@@ -302,9 +303,12 @@ const val BackgroundZIndex = 2f
 fun Modifier.hazeEffectSG3(
     state: HazeState,
     isBlur: MutableState<Boolean> = globalHazeBlur,
+    isProgressive: Boolean = false,
     style: HazeStyle = HazeBlurDp10,
     block: (HazeEffectScope.() -> Unit)? = {
         blurEnabled = isBlur.value
+        progressive = if(isProgressive) HazeProgressive.verticalGradient(startIntensity = 1f, endIntensity = 0f) else null
+        //mask = Brush.verticalGradient(colors = listOf(Color.Black, Color.Transparent), tileMode = TileMode.Decal)
     },
 ): Modifier = this.hazeEffect(
     state = state,

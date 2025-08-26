@@ -26,12 +26,11 @@ import androidx.compose.foundation.lazy.staggeredgrid.LazyStaggeredGridState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.OutlinedButton
-import androidx.compose.material.ripple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.unit.DpOffset
@@ -84,16 +83,20 @@ fun PageHeader(
     listState: LazyListState? = null,
     gridState: LazyGridState? = null,
     staggedGridState: LazyStaggeredGridState? = null,
+    isGradientBlurEffect: Boolean = true,
 ) {
-    val coroutineScope = rememberCoroutineScope()
 
-
+    if(isGradientBlurEffect){
+        PageHeaderContent(navigator, onBack, backIconId, onForward, forwardIconId, headerData, hazeState, listState, gridState, staggedGridState, isProgressive = true)
+        return
+    }
     //Background
     DropShadow(
         modifier = Modifier
             .hazeSource(state = hazeState, zIndex = PageHeaderZIndex)
             .hazeEffectSG3(
                 state = hazeState,
+                isProgressive = false
             ),
         color = Color.Black.copy(alpha = 0.5f),
         offset = DpOffset(0.dp, 4.dp),
@@ -101,103 +104,114 @@ fun PageHeader(
     ) {
         //BlurView can place in there
         //Now will use Pure Color Background
-        Box(
-            Modifier
-                .background(Color(0x33FFFFFF))
-                //.clippedShadow(elevation = 2.dp)
-                .statusBarsPadding()
-                .requiredHeight(PAGE_HEADER_HEIGHT)
-                .clickable(
-                    onClick = {
-                        if(listState != null){
-                            coroutineScope.launch{
-                                listState.animateScrollToItem(0)
-                            }
-                        }
-                        if(gridState != null){
-                            coroutineScope.launch{
-                                gridState.animateScrollToItem(0)
-                            }
-                        }
-                        if(staggedGridState != null){
-                            coroutineScope.launch{
-                                staggedGridState.animateScrollToItem(0)
-                            }
-                        }
-                    },
-                    indication = null,
-                    interactionSource = MutableInteractionSource()
-                )
-        ){
+        PageHeaderContent(navigator, onBack, backIconId, onForward, forwardIconId, headerData, hazeState, listState, gridState, staggedGridState)
+    }
+}
 
-            //PageTopMask()
+@Composable
+private fun PageHeaderContent(
+    navigator: NavHostController = rememberNavController(),
+    onBack: ((navigator : NavHostController) -> Unit) = { navigator: NavHostController -> navigator.popBackStackLimited() },
+    backIconId: BackIcon = BackIcon.BACK,
+    onForward: ((navigator : NavHostController) -> Unit) = {},
+    forwardIconId: DrawableResource = Res.drawable.bg_transparent,
+    headerData: HeaderData = defaultHeaderData,
+    hazeState: HazeState = hazeStateRoot,
+    listState: LazyListState? = null,
+    gridState: LazyGridState? = null,
+    staggedGridState: LazyStaggeredGridState? = null,
+    isProgressive: Boolean = false,
+){
+    val coroutineScope = rememberCoroutineScope()
+    Box(
+        Modifier
+            .background(Brush.verticalGradient(colors = listOf(Color(0x80FFFFFF), Color(0x00FFFFFF))))
+            //.clippedShadow(elevation = 2.dp)
+            .hazeSource(state = hazeState, zIndex = PageHeaderZIndex)
+            .hazeEffectSG3(
+                state = hazeState,
+                isProgressive = isProgressive
+            )
+            .statusBarsPadding()
+            .requiredHeight(PAGE_HEADER_HEIGHT)
+            .clickable(
+                onClick = {
+                    if(listState != null){
+                        coroutineScope.launch{
+                            listState.animateScrollToItem(0)
+                        }
+                    }
+                    if(gridState != null){
+                        coroutineScope.launch{
+                            gridState.animateScrollToItem(0)
+                        }
+                    }
+                    if(staggedGridState != null){
+                        coroutineScope.launch{
+                            staggedGridState.animateScrollToItem(0)
+                        }
+                    }
+                },
+                indication = null,
+                interactionSource = MutableInteractionSource()
+            )
+    ){
+
+        //PageTopMask()
 
 
-            Column {
-                Row(
-                    Modifier
-                        .padding(start = 16.dp, end = 16.dp)
-                        .fillMaxSize()
-                        .weight(1f)
+        Column {
+            Row(
+                Modifier
+                    .padding(start = 16.dp, end = 16.dp)
+                    .fillMaxSize()
+                    .weight(1f)
+            ) {
+                OutlinedButton(
+                    contentPadding = PaddingValues(4.dp),
+                    colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color(0x33FFFFFF)),
+                    border = BorderStroke(0.dp, Color(0x00FFFFFF)),
+                    shape = CircleShape,
+                    modifier = Modifier
+                        .size(40.dp)
+                        .align(Alignment.CenterVertically),
+                    onClick = { onBack.invoke(navigator) },
                 ) {
-                    Box(modifier = Modifier
-                        .size(40.dp)
-                        .align(Alignment.CenterVertically)
-                        .let {
-                            if(backIconId != BackIcon.NULL){
-                                it.clickable(
-                                    onClick = { onBack.invoke(navigator) },
-                                    indication = ripple(),
-                                    interactionSource = MutableInteractionSource()
-                                )
-                            }else{
-                                it
-                            }
-                        }
+                    Image(
+                        painter = painterResource(resource = backIconId.res),
+                        contentDescription = "Back Icon",
+                        modifier = Modifier
+                            .size(40.dp),
+                        colorFilter = ColorFilter.tint(Color.White)
+                    )
+                }
+
+                Box(Modifier.weight(1f)){
+                    TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
+                }
+
+                if(forwardIconId != Res.drawable.bg_transparent) {
+                    OutlinedButton(
+                        contentPadding = PaddingValues(4.dp),
+                        modifier = Modifier
+                            .size(40.dp)
+                            .align(Alignment.CenterVertically),
+                        onClick = { onForward.invoke(navigator) },
+                        colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color(0x33FFFFFF)),
+                        border = BorderStroke(0.dp, Color(0x00FFFFFF)),
+                        shape = CircleShape,
                     ) {
-                        Image(
-                            painter = painterResource(resource = backIconId.res),
-                            contentDescription = "Back Icon",
-                            modifier = Modifier
-                                .size(40.dp)
-                                .align(Alignment.Center),
-                            colorFilter = ColorFilter.tint(Color.White)
-                        )
-                    }
-
-                    Box(Modifier.weight(1f)){
-                        TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
-                    }
-
-                    Box(modifier = Modifier
-                        .size(40.dp)
-                        .align(Alignment.CenterVertically)
-                        .let {
-                            if(forwardIconId != Res.drawable.bg_transparent){
-                                it.clickable(
-                                    onClick = { onForward.invoke(navigator) },
-                                    indication = ripple(),
-                                    interactionSource = MutableInteractionSource()
-                                )
-                            }else{
-                                it
-                            }
-                        }
-                        .clip(CircleShape)
-                    ){
                         Image(
                             painter = painterResource(resource = forwardIconId),
                             contentDescription = "Forward Icon",
                             modifier = Modifier
-                                .size(40.dp)
-                                .align(Alignment.Center),
+                                .size(40.dp),
                             colorFilter = ColorFilter.tint(Color.White)
                         )
                     }
                 }
             }
         }
-
     }
 }
 
