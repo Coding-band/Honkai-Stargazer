@@ -61,7 +61,7 @@ import ui.navigation.popBackStackLimited
 import utils.app.PageHeaderZIndex
 import utils.app.hazeEffectSG3
 
-val PAGE_HEADER_HEIGHT = 64.dp
+val PAGE_HEADER_HEIGHT = 72.dp
 val PAGE_HEADER_ALPHA_HEIGHT = 64.dp
 val defaultHeaderData = HeaderData(title = "?", titleIconId = Res.drawable.phorphos_sun_fill)
 
@@ -206,7 +206,7 @@ private fun PageHeaderContent(
                     modifier = Modifier
                         .size(40.dp)
                         .align(Alignment.CenterVertically),
-                    onClick = { onForward.invoke(navigator) ; isDisplayBorder.value = !isDisplayBorder.value },
+                    onClick = { onForward.invoke(navigator) },
                     colors = ButtonDefaults.outlinedButtonColors(backgroundColor = Color(0x33FFFFFF)),
                     border = BorderStroke(0.dp, Color(0x00FFFFFF)),
                     shape = CircleShape,
