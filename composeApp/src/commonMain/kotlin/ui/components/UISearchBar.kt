@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -42,6 +43,7 @@ import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import utils.app.FontSizeNormal14
 import utils.app.TextFieldValueSaver
+import utils.app.isIosPlatform
 
 @Composable
 fun UISearchBar(
@@ -69,50 +71,54 @@ fun UISearchBar(
         }
     }
 
-    Box(
-        modifier = modifier
-            .fillMaxWidth()
-            .height(46.dp)
-            .background(Color(0xFFDDDDDD), shape = RoundedCornerShape(23.dp)).clip(shape = RoundedCornerShape(23.dp)).clickable {  }
-    ) {
+    Box(modifier = Modifier.let { if (isFocus) it.padding(bottom = 12.dp) else it }){
         Box(
-            modifier = Modifier.padding(5.dp).border(width = 1.dp, color = Color(0x0F000000), shape = RoundedCornerShape(23.dp))
-        ) {
-            Row {
-                Box(modifier = Modifier.clip(CircleShape).clickable { inputString.value = text.value.text ; onClick.invoke() }) {
-                    Image(
-                        painter = painterResource(searchIcon ?: Res.drawable.ui_icon_search),
-                        contentDescription = "UISearch Icon",
-                        modifier = Modifier.fillMaxHeight().padding(8.dp).aspectRatio(1f),
-                        colorFilter = ColorFilter.tint(Color(0xCC000000))
-                    )
-                }
+            modifier = modifier
+                .fillMaxWidth()
+                .height(46.dp)
+                .background(Color(0xFFDDDDDD), shape = RoundedCornerShape(23.dp)).clip(shape = RoundedCornerShape(23.dp)).clickable {  }
 
-                BasicTextField(
-                    value = text.value,
-                    onValueChange = { text.value = it },
-                    singleLine = true,
-                    textStyle = FontSizeNormal14(),
-                    modifier = Modifier.fillMaxWidth().align(Alignment.CenterVertically).weight(1f).padding(start = 16.dp).focusRequester(focusRequester),
-                    keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
-                    keyboardActions = KeyboardActions(onSearch = {
-                        inputString.value = text.value.text ; onClick.invoke()
-                    })
-                )
-                //Box(Modifier.width(2.dp).fillMaxHeight().padding(top = 8.dp, bottom =  8.dp))
-                Box(modifier = Modifier.clip(CircleShape).clickable {
-                    onCancel.invoke(text,inputString)
-                    text.value = TextFieldValue("")
-                    //if(text.isNotEmpty()) text = "" else if (isVisible.value) isVisible.value = false
-                }) {
-                    Image(
-                        painter = painterResource(cancelIcon ?: Res.drawable.ui_icon_close),
-                        contentDescription = "UISearch Icon",
-                        modifier = Modifier.fillMaxHeight().padding(8.dp).aspectRatio(1f),
-                        colorFilter = ColorFilter.tint(Color(0xCC000000))
+        ) {
+            Box(
+                modifier = Modifier.padding(5.dp).border(width = 1.dp, color = Color(0x0F000000), shape = RoundedCornerShape(23.dp))
+            ) {
+                Row {
+                    Box(modifier = Modifier.clip(CircleShape).clickable { inputString.value = text.value.text ; onClick.invoke() }) {
+                        Image(
+                            painter = painterResource(searchIcon ?: Res.drawable.ui_icon_search),
+                            contentDescription = "UISearch Icon",
+                            modifier = Modifier.fillMaxHeight().padding(8.dp).aspectRatio(1f),
+                            colorFilter = ColorFilter.tint(Color(0xCC000000))
+                        )
+                    }
+
+                    BasicTextField(
+                        value = text.value,
+                        onValueChange = { text.value = it },
+                        singleLine = true,
+                        textStyle = FontSizeNormal14(),
+                        modifier = Modifier.fillMaxWidth().align(Alignment.CenterVertically).weight(1f).padding(start = 16.dp).focusRequester(focusRequester),
+                        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+                        keyboardActions = KeyboardActions(onSearch = {
+                            inputString.value = text.value.text ; onClick.invoke()
+                        })
                     )
+                    //Box(Modifier.width(2.dp).fillMaxHeight().padding(top = 8.dp, bottom =  8.dp))
+                    Box(modifier = Modifier.clip(CircleShape).clickable {
+                        onCancel.invoke(text,inputString)
+                        text.value = TextFieldValue("")
+                        //if(text.isNotEmpty()) text = "" else if (isVisible.value) isVisible.value = false
+                    }) {
+                        Image(
+                            painter = painterResource(cancelIcon ?: Res.drawable.ui_icon_close),
+                            contentDescription = "UISearch Icon",
+                            modifier = Modifier.fillMaxHeight().padding(8.dp).aspectRatio(1f),
+                            colorFilter = ColorFilter.tint(Color(0xCC000000))
+                        )
+                    }
                 }
             }
         }
     }
+
 }
