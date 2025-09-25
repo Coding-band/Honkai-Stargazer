@@ -16,7 +16,6 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
-import androidx.compose.ui.graphics.toPixelMap
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
@@ -25,7 +24,6 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import coil3.BitmapImage
 import coil3.ImageLoader
 import coil3.PlatformContext
 import coil3.disk.DiskCache
@@ -912,9 +910,10 @@ fun getImageNameByRegistName(registName: String, isCharFullImg: Boolean = false,
             "trailblazer_${matchResult.groupValues[1].lowercase()}_female"
         })
         .replace("Topaz & Numby","topaz")
-        .replace("Dan Heng • Imbibitor Lunae","dan_heng_il")
+        .replaceDanHengRegistName()
+        //.replace("Dan Heng • Imbibitor Lunae","dan_heng_il")
+        //.replace("Dan Heng • Permansor Terrae","dan_heng_pt")
         .replace("Void","Void_")
-
         .lowercase()
 
         .replace("sam",if ((registName.startsWith("sam") || registName.lowercase() === "sam") && !registName.startsWith("sampo")) "firefly" else "sam")
@@ -950,6 +949,21 @@ fun getImageNameByRegistName(registName: String, isCharFullImg: Boolean = false,
     }
 
     return registNameFinal
+}
+
+// 處理 "Dan Heng • xxxxxx" 類型角色名
+fun String.replaceDanHengRegistName(): String {
+    val parts = this.split("•").map { it.trim() }
+    if (parts.size == 2) {
+        val prefix = parts[0].lowercase().replace(" ", "_")
+        val suffix = parts[1]
+            .split(" ")
+            .filter { it.isNotEmpty() }
+            .map { it.first().lowercaseChar() }
+            .joinToString("")
+        return "${prefix}_$suffix"
+    }
+    return this
 }
 
 @Composable
