@@ -35,7 +35,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.Alignment.Companion.TopCenter
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -60,10 +59,12 @@ import ui.navigation.hazeStateRoot
 import ui.navigation.popBackStackLimited
 import utils.app.PageHeaderZIndex
 import utils.app.hazeEffectSG3
+import utils.app.isWindowsPlatform
 
 val PAGE_HEADER_HEIGHT = 72.dp
 val PAGE_HEADER_ALPHA_HEIGHT = 64.dp
 val defaultHeaderData = HeaderData(title = "?", titleIconId = Res.drawable.phorphos_sun_fill)
+val isOriginBlurEffect = isWindowsPlatform()
 
 enum class BackIcon(var res: DrawableResource) {
     BACK(res = Res.drawable.ui_icon_back),
@@ -91,7 +92,7 @@ fun PageHeader(
     listState: LazyListState? = null,
     gridState: LazyGridState? = null,
     staggedGridState: LazyStaggeredGridState? = null,
-    isGradientBlurEffect: Boolean = true,
+    isGradientBlurEffect: Boolean = !isOriginBlurEffect,
 ) {
 
     if(isGradientBlurEffect){
@@ -134,8 +135,12 @@ private fun PageHeaderContent(
     val isDisplayBorder = remember { mutableStateOf(false) }
     Box(
         Modifier
-            .border( if(isDisplayBorder.value) BorderStroke(3.dp, Color.White) else BorderStroke(0.dp, Color(0x00FFFFFF)), shape = RectangleShape)
-            .background(Brush.verticalGradient(colors = listOf(Color(0x80FFFFFF), Color(0x00FFFFFF))))
+            .let {
+                if(isOriginBlurEffect) it
+                else it
+                    .border( if(isDisplayBorder.value) BorderStroke(3.dp, Color.White) else BorderStroke(0.dp, Color(0x00FFFFFF)), shape = RectangleShape)
+                    .background(Brush.verticalGradient(colors = listOf(Color(0x80FFFFFF), Color(0x00FFFFFF))))
+            }
             //.clippedShadow(elevation = 2.dp)
             .hazeSource(state = hazeState, zIndex = PageHeaderZIndex)
             .hazeEffectSG3(
@@ -169,11 +174,18 @@ private fun PageHeaderContent(
 
         //PageTopMask()
 
+        if(isOriginBlurEffect){
+            Box(modifier = Modifier
+                .fillMaxSize()
+                .background(Color(0x33FFFFFF))){
+            }
+        }
+
 
         Row(
             Modifier
                 .padding(start = 16.dp, end = 16.dp)
-                .wrapContentHeight()
+                .let { if(isOriginBlurEffect) it.fillMaxHeight() else it.wrapContentHeight() }
                 .fillMaxWidth()
         ) {
             OutlinedButton(
@@ -196,7 +208,7 @@ private fun PageHeaderContent(
                 )
             }
 
-            Box(Modifier.weight(1f)){
+            Box(Modifier.weight(1f).let { if(isOriginBlurEffect) it.align(Alignment.CenterVertically) else it }){
                 TitleHeader(headerData.titleIconId,headerData.title,headerData.titleRId)
             }
 
