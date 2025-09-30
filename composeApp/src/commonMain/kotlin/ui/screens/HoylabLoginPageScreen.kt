@@ -196,6 +196,7 @@ fun initDataAfterLogin(
             StarbaseAPI().updateASData()
             StarbaseAPI().updatePFData()
             StarbaseAPI().updateMOCData()
+            StarbaseAPI().updateAAData()
         }.await()
 
         withContext(Dispatchers.Main){

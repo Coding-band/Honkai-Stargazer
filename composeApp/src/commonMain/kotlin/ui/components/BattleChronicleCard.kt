@@ -38,7 +38,6 @@ import files.Res
 import files.ic_moc_star
 import org.jetbrains.compose.resources.painterResource
 import types.AbyssInfo
-import types.AbyssInfoList
 import types.AbyssInfoList.Companion.getAbyssInfoFileNameById
 import types.AbyssInfoType
 import types.Character
@@ -48,9 +47,9 @@ import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
 import utils.app.Language.Companion.TextLanguageInstance
+import utils.app.getAAPhaseStrByIndex
 import utils.app.getMocPhaseStrByIndex
 import utils.app.newImageRequest
-import utils.app.readFromFile
 import utils.app.removeStrQuote
 import utils.app.replaceStrRes
 import utils.starbase.StarbaseAPI
@@ -84,7 +83,10 @@ fun BattleChronicleCard(
                 Column {
                     //Phase
                     Text(
-                        text = "${title}·${getMocPhaseStrByIndex((data[0].floor) - 1)}",
+                        text = when(type){
+                                AbyssInfoType.AnomalyArbitration -> "${title}·${getAAPhaseStrByIndex((data[0].floor) - 1)}"
+                                else -> "${title}·${getMocPhaseStrByIndex((data[0].floor) - 1)}"
+                            },
                         color = Color.White,
                         style = FontSizeNormal16()
                     )
@@ -138,7 +140,7 @@ fun BattleChronicleCard(
 
                 val score1 = if (data.isNotEmpty()) data[0].score else 0
                 val score2 = if(data.size > 1) data[1].score else 0
-                if(score1 != -1 || score2 != -1) {
+                if(score1 != -1 || score2 != -1 && data.size > 1){
                     Text(
                         text = (score1 + score2).toString(),
                         color = Color(0xFFDD8200),
@@ -151,6 +153,7 @@ fun BattleChronicleCard(
             //node 1 & node 2
             repeat(2){
                 //fix: Display the node 1 twice
+                if(it >= data.size) return@repeat
                 val charList = data[it].charList
                 Column(Modifier.fillMaxWidth().wrapContentHeight()) {
 
@@ -222,7 +225,7 @@ fun BattleChronicleCard(
                         )
                     }
 
-                    if(it == 0 && !data[0].isFastPass) {
+                    if(it == 0 && !data[0].isFastPass && data.size >1 ) {
                         Spacer(Modifier.height(4.dp))
                         //Divider
                         Box(Modifier.fillMaxWidth().padding(top = 12.dp, bottom = 12.dp), contentAlignment = Alignment.Center) {

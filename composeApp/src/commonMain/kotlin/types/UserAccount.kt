@@ -17,38 +17,29 @@ import files.UserAccountWarningCookiesInvalid
 import files.UserAccountWarningIncorrectServer
 import files.UserAccountWarningNoAccountRecord
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.async
-import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonNull
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
-import kotlinx.serialization.json.jsonNull
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.long
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
-import types.UserAccount.Companion.INSTANCE
-import ui.screens.doDonorRefresh
 import utils.app.Preferences
-import utils.annotation.DoItLater
 import utils.app.errorLog
 import utils.app.readFromFile
 import utils.app.removeStrQuote
+import utils.app.showWarningToast
+import utils.app.writeToFile
 import utils.hoyolab.AttributeExchange
 import utils.hoyolab.HoyolabAPI
 import utils.hoyolab.HoyolabConst
 import utils.hoyolab.HoyolabRequest
-import utils.app.showWarningToast
-import utils.app.writeToFile
-import utils.device.AppInfo
 import utils.hoyolab.MihomoRequest
-import utils.hoyolab.genDSv2
 import utils.starbase.StarbaseAPI
 
 lateinit var UserAccountWarningCookiesInvalid : String
@@ -135,6 +126,7 @@ class UserAccount(
             UserAbyssRecord.refreshMOCData()
             UserAbyssRecord.refreshPFData()
             UserAbyssRecord.refreshASData()
+            UserAbyssRecord.refreshAAData()
         }
 
         fun resetUserAccount(){

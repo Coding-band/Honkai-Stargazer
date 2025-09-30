@@ -162,13 +162,11 @@ data class AbyssInfo(
                         AbyssInfoType.ApocalypticShadow -> "apocalyptic_shadow_data/$abyssFileName.json"
                         AbyssInfoType.AnomalyArbitration -> "anomaly_arbitration_data/$abyssFileName.json"
                     },
-                    defaultData = "[]"
+                    defaultData = "{}"
                 )
                 val json = Json { ignoreUnknownKeys = true }
                 return json.decodeFromString<AbyssInfo>(abyssJsonStr)
             }catch (e: Exception) {
-                println("getAbyssItemByMocId(abyssId = $abyssId, type = $type)")
-                e.printStackTrace()
                 errorLog("AbyssInfo", "getAbyssItemByMocId(abyssId = $abyssId, type = $type)", e)
                 return null
             }

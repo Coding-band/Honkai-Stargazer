@@ -36,6 +36,10 @@ import com.oldguy.common.io.FileMode
 import com.oldguy.common.io.ZipFile
 import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
+import files.AABoss
+import files.AAMission1
+import files.AAMission2
+import files.AAMission3
 import files.IsDone
 import files.MOCMissionPart1
 import files.MOCMissionPart10
@@ -88,7 +92,6 @@ import kotlinx.datetime.Instant
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.plus
 import kotlinx.datetime.toLocalDateTime
-import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
@@ -413,6 +416,19 @@ fun getMocPhaseStrByIndex(index: Int): String {
         9 -> removeStrQuote(Res.string.MOCMissionPart10)
         10 -> removeStrQuote(Res.string.MOCMissionPart11)
         11 -> removeStrQuote(Res.string.MOCMissionPart12)
+        else -> "?"
+    }
+}
+/**
+ * Get Specific AA Phase's Name String by Index
+ */
+@Composable
+fun getAAPhaseStrByIndex(index: Int): String {
+    return when (index) {
+        0 -> removeStrQuote(Res.string.AAMission1)
+        1 -> removeStrQuote(Res.string.AAMission2)
+        2 -> removeStrQuote(Res.string.AAMission3)
+        3 -> removeStrQuote(Res.string.AABoss)
         else -> "?"
     }
 }

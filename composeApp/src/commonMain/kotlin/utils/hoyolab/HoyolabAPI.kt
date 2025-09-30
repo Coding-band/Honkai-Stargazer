@@ -1,8 +1,8 @@
 package utils.hoyolab
 
 import androidx.annotation.IntRange
-import utils.app.Language
 import utils.annotation.DoItLater
+import utils.app.Language
 
 class HoyolabAPI(platform: HoyolabRequest.PLATFORM = HoyolabRequest.PLATFORM.HOYOLAB, cookies : String) {
     private val hoyolabRequest = HoyolabRequest(platform, cookies)
@@ -94,6 +94,18 @@ class HoyolabAPI(platform: HoyolabRequest.PLATFORM = HoyolabRequest.PLATFORM.HOY
             when(platformLocale){
                 HoyolabRequest.PLATFORM.HOYOLAB -> "https://bbs-api-os.hoyolab.com/game_record/hkrpg/api/challenge_boss?server=${server.serverId}&role_id=${uid}&schedule_type=${scheduleType}&need_all=true"
                 HoyolabRequest.PLATFORM.MIYOUSHE -> "https://api-takumi-record.mihoyo.com/game_record/app/hkrpg/api/challenge_boss?server=${server.serverId}&role_id=${uid}&schedule_type=${scheduleType}&need_all=true"
+            }
+        )
+    }
+
+    /**
+     * 獲取異相仲裁資料
+     */
+    fun getHsrAnomalyArbitration(uid: String, server: HoyolabConst.SERVER = HoyolabConst.SERVER.ASIA, @IntRange(1,2) scheduleType: Long = 1) : HoyolabResponse {
+        return hoyolabRequest.send(
+            when(platformLocale){
+                HoyolabRequest.PLATFORM.HOYOLAB -> "https://bbs-api-os.hoyolab.com/game_record/hkrpg/api/challenge_peak?server=${server.serverId}&role_id=${uid}&schedule_type=${scheduleType}&need_all=true"
+                HoyolabRequest.PLATFORM.MIYOUSHE -> "https://api-takumi-record.mihoyo.com/game_record/app/hkrpg/api/challenge_peak?server=${server.serverId}&role_id=${uid}&schedule_type=${scheduleType}&need_all=true"
             }
         )
     }

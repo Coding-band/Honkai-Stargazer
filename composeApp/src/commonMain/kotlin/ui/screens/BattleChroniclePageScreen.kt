@@ -49,6 +49,7 @@ import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.hazeSource
 import files.AbyssListSortAscend
 import files.AbyssListSortDescend
+import files.AnomalyArbitration
 import files.ApocalypticShadow
 import files.AppStatusNoDataFound
 import files.MOCMyBattleReport
@@ -109,6 +110,7 @@ fun BattleChroniclePageScreen(
         removeStrQuote(Res.string.MemoryOfChaos) to AbyssInfoType.MemoryOfChaos,
         removeStrQuote(Res.string.PureFiction) to AbyssInfoType.PureFiction,
         removeStrQuote(Res.string.ApocalypticShadow) to AbyssInfoType.ApocalypticShadow,
+        removeStrQuote(Res.string.AnomalyArbitration) to AbyssInfoType.AnomalyArbitration,
     )
     val choiceChronicleIndex = remember { mutableStateOf(choiceStrList.indexOfFirst { it.second == abyssInfoType }) }
     val choiceChronicle = remember { mutableStateOf(userAbyssRecord.userCurrMOCList) }
@@ -126,7 +128,7 @@ fun BattleChroniclePageScreen(
     val mocTitles = remember { mocIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.MemoryOfChaos) } }
     val pfTitles = remember { pfIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.PureFiction) } }
     val asTitles = remember { asIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.ApocalypticShadow) } }
-    val aaTitles = remember { asIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.AnomalyArbitration) } }
+    val aaTitles = remember { aaIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.AnomalyArbitration) } }
 
     val isAsc = remember { mutableStateOf(false) }
 

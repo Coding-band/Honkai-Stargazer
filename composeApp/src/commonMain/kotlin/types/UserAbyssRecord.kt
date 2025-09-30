@@ -3,7 +3,9 @@ package types
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonNull
+import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.boolean
+import kotlinx.serialization.json.buildJsonArray
 import kotlinx.serialization.json.decodeFromJsonElement
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.intOrNull
@@ -44,6 +46,7 @@ data class UserAbyssRecord(
                     val userMoc = if (it == 0) userMocCurr else userMocLast
 
                     if(userMoc !is JsonNull && !userMoc.jsonObject.isEmpty()){
+                        if(userMoc.jsonObject["groups"]!!.jsonArray.size <= it) return@repeat
                         val mocId = userMoc.jsonObject["schedule_id"]!!.jsonPrimitive.int
                         val mocDetails = userMoc.jsonObject["all_floor_detail"]?.jsonArray
 
@@ -111,6 +114,7 @@ data class UserAbyssRecord(
                 repeat(2){
                     val userPf = if (it == 0) userPfCurr else userPfLast
                     if(userPf !is JsonNull && !userPf.jsonObject.isEmpty()){
+                        if(userPf.jsonObject["groups"]!!.jsonArray.size <= it) return@repeat
                         val pfId = userPf.jsonObject["groups"]!!.jsonArray[it].jsonObject["schedule_id"]!!.jsonPrimitive.int
                         val pfDetails = userPf.jsonObject["all_floor_detail"]?.jsonArray
 
@@ -183,6 +187,7 @@ data class UserAbyssRecord(
                 repeat(2){
                     val userAS = if (it == 0) userASCurr else userASLast
                     if(userAS !is JsonNull && !userAS.jsonObject.isEmpty()){
+                        if(userAS.jsonObject["groups"]!!.jsonArray.size <= it) return@repeat
                         val asId = userAS.jsonObject["groups"]!!.jsonArray[it].jsonObject["schedule_id"]!!.jsonPrimitive.int
                         val asDetails = userAS.jsonObject["all_floor_detail"]?.jsonArray
 
@@ -244,38 +249,41 @@ data class UserAbyssRecord(
             }
         }
 
-
         fun refreshAAData(){
             try{
                 if(UserAccount.INSTANCE.uid == "000000000"){ return }
                 if(!Preferences().Leaderboard.isUpdateLeaderboardNow() && !Preferences.LeaderboardClass().getIsForceUpdateMOC()){ return }
 
                 val api = HoyolabAPI(UserAccount.INSTANCE.server.platform, UserAccount.INSTANCE.cookies)
-                val userAACurr = api.getHsrApocalypticShadow(UserAccount.INSTANCE.uid, UserAccount.INSTANCE.server, 1).data
-                val userAALast = api.getHsrApocalypticShadow(UserAccount.INSTANCE.uid, UserAccount.INSTANCE.server, 2).data
+                val userAACurr = api.getHsrAnomalyArbitration(UserAccount.INSTANCE.uid, UserAccount.INSTANCE.server, 1).data
+                val userAALast = api.getHsrAnomalyArbitration(UserAccount.INSTANCE.uid, UserAccount.INSTANCE.server, 2).data
                 val aaList = arrayListOf<UserAbyssRecordData>()
+
                 repeat(2){
                     val userAA = if (it == 0) userAACurr else userAALast
                     if(userAA !is JsonNull && !userAA.jsonObject.isEmpty()){
-                        val aaId = userAA.jsonObject["groups"]!!.jsonArray[it].jsonObject["schedule_id"]!!.jsonPrimitive.int
-                        val aaDetails = userAA.jsonObject["all_floor_detail"]?.jsonArray
+                        if(userAA.jsonObject["challenge_peak_records"]!!.jsonArray.size <= it) return@repeat
+                        val aaData = userAA.jsonObject["challenge_peak_records"]!!.jsonArray[it]
+                        if(aaData is JsonNull || aaData == null) return@repeat
+                        val aaId = aaData.jsonObject["group"]!!.jsonObject["group_id"]!!.jsonPrimitive.int
 
-                        if(!aaDetails.isNullOrEmpty()){
-                            for (pfDetail in aaDetails){
-                                val detail = pfDetail.jsonObject
-                                val floor = detail["maze_id"]!!.jsonPrimitive.int % 10
-                                val star = detail["star_num"]!!.jsonPrimitive.int
-                                val isFastPass = detail["is_fast"]!!.jsonPrimitive.boolean
-
-                                repeat(2){
-                                    val nodeData = if (it == 0){ detail["node_1"]!!.jsonObject } else { detail["node_2"]!!.jsonObject }
+                        repeat(2){aaType ->
+                            val aaDetailsElement = aaData.jsonObject[if(aaType == 0) "mob_records" else "boss_record"]
+                            if(aaDetailsElement is JsonNull || aaDetailsElement == null) return@repeat
+                            val aaDetails = if(aaDetailsElement is JsonObject) buildJsonArray { aaDetailsElement.jsonObject } else aaDetailsElement.jsonArray
+                            if(!aaDetails.isNullOrEmpty()){
+                                for (aaDetail in aaDetails){
+                                    if(aaDetail is JsonNull) continue
+                                    val detail = aaDetail.jsonObject
+                                    val floor = detail["maze_id"]!!.jsonPrimitive.int % 100
+                                    val star = detail["star_num"]!!.jsonPrimitive.int
+                                    val isFastPass = detail["is_fast"]!!.jsonPrimitive.boolean
+                                    val buffId = if(detail.jsonObject["buff"] != JsonNull) {detail.jsonObject["buff"]?.jsonObject?.get("id")?.jsonPrimitive?.intOrNull ?: -1} else -1
+                                    val isBossDefeated = detail["has_challenge_record"]!!.jsonPrimitive.boolean
                                     val charList = arrayListOf<UserAbyssCharData>()
-                                    val score = nodeData.jsonObject["score"]?.jsonPrimitive?.content?.toIntOrNull() ?: -1
-                                    val bossDefeated = nodeData.jsonObject["boss_defeated"]!!.jsonPrimitive.boolean
-                                    val buffId = if(nodeData.jsonObject["buff"] != JsonNull) {nodeData.jsonObject["buff"]?.jsonObject?.get("id")?.jsonPrimitive?.intOrNull ?: -1} else -1
 
                                     //Character Data of this node
-                                    for (avatar in nodeData.jsonObject["avatars"]!!.jsonArray){
+                                    for (avatar in detail.jsonObject["avatars"]!!.jsonArray){
                                         val avatarObj = avatar.jsonObject
                                         charList.add(
                                             UserAbyssCharData(
@@ -285,20 +293,20 @@ data class UserAbyssRecord(
                                             )
                                         )
                                     }
+
                                     aaList.add(UserAbyssRecordData(
                                         id = aaId,
                                         floor = floor,
-                                        partId = it + 1,
+                                        partId = 0,
                                         star = star,
-                                        score = score,
-                                        recordTime = if(nodeData.jsonObject["challenge_time"] is JsonNull) null else HoyolabConst.HoyolabTime()
+                                        recordTime = if(detail.jsonObject["challenge_time"] is JsonNull) null else HoyolabConst.HoyolabTime()
                                             .getDateTimeFromHoyolabTime(
                                                 Json.decodeFromJsonElement<HoyolabConst.HoyolabTime>(
-                                                    nodeData.jsonObject["challenge_time"]!!
+                                                    detail.jsonObject["challenge_time"]!!
                                                 )
                                             ),
                                         isFastPass = isFastPass,
-                                        isBossDefeated = bossDefeated,
+                                        isBossDefeated = isBossDefeated,
                                         buffId = buffId,
                                         charList = charList,
                                     ))
