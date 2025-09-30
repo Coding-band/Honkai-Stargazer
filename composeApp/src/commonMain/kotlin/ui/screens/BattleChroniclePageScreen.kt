@@ -116,14 +116,17 @@ fun BattleChroniclePageScreen(
         AbyssInfoType.MemoryOfChaos -> userAbyssRecord.userCurrMOCList
         AbyssInfoType.PureFiction -> userAbyssRecord.userCurrPFList
         AbyssInfoType.ApocalypticShadow -> userAbyssRecord.userCurrASList
+        AbyssInfoType.AnomalyArbitration -> userAbyssRecord.userCurrAAList
     }
 
     val mocIds = remember { userAbyssRecord.userCurrMOCList.map { it.id }.distinct().sortedDescending() }
     val pfIds = remember { userAbyssRecord.userCurrPFList.map { it.id }.distinct().sortedDescending() }
     val asIds = remember { userAbyssRecord.userCurrASList.map { it.id }.distinct().sortedDescending() }
+    val aaIds = remember { userAbyssRecord.userCurrAAList.map { it.id }.distinct().sortedDescending() }
     val mocTitles = remember { mocIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.MemoryOfChaos) } }
     val pfTitles = remember { pfIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.PureFiction) } }
     val asTitles = remember { asIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.ApocalypticShadow) } }
+    val aaTitles = remember { asIds.map { AbyssInfoList.getAbyssTitleLocaleNameById(it, AbyssInfoType.AnomalyArbitration) } }
 
     val isAsc = remember { mutableStateOf(false) }
 
@@ -250,10 +253,12 @@ fun BattleChroniclePageScreen(
                         AbyssInfoType.MemoryOfChaos -> mocTitles
                         AbyssInfoType.PureFiction -> pfTitles
                         AbyssInfoType.ApocalypticShadow -> asTitles
+                        AbyssInfoType.AnomalyArbitration -> aaTitles
                     }[(when (choiceStrList[choiceChronicleIndex.value].second) {
                         AbyssInfoType.MemoryOfChaos -> mocIds
                         AbyssInfoType.PureFiction -> pfIds
                         AbyssInfoType.ApocalypticShadow -> asIds
+                        AbyssInfoType.AnomalyArbitration -> aaIds
                     }).indexOf(mocData.first().id)],
                 )
                 if (index < sorttedAbyssList.size - 1) {

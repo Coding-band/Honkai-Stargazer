@@ -36,6 +36,7 @@ import kotlinx.coroutines.withContext
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import types.UserAbyssRecord.Companion.refreshAAData
 import types.UserAbyssRecord.Companion.refreshASData
 import types.UserAbyssRecord.Companion.refreshMOCData
 import types.UserAbyssRecord.Companion.refreshPFData
@@ -86,6 +87,7 @@ fun SplashPage(
                         refreshMOCData()
                         refreshPFData()
                         refreshASData()
+                        refreshAAData()
                         Preferences().Leaderboard.updatedLeaderboard()
 
                         CharWeightList.INSTANCE
@@ -97,6 +99,7 @@ fun SplashPage(
                         StarbaseAPI().updateMOCData()
                         StarbaseAPI().updatePFData()
                         StarbaseAPI().updateASData()
+                        StarbaseAPI().updateAAData()
                     }
                 }
                 withContext(Dispatchers.Main) {

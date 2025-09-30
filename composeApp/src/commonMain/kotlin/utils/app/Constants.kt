@@ -4,6 +4,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import files.ActionOrderTitle
+import files.AnomalyArbitration
 import files.ApocalypticShadow
 import files.Character
 import files.Event
@@ -26,6 +27,7 @@ import files.phorphos_align_left_fill
 import files.phorphos_atom_fill
 import files.phorphos_baseball_cap_fill
 import files.phorphos_calendar_fill
+import files.phorphos_crown_cross_fill
 import files.phorphos_film_slate_fill
 import files.phorphos_hourglass_fill
 import files.phorphos_map_trifold_fill
@@ -46,6 +48,7 @@ import org.jetbrains.compose.resources.DrawableResource
 import types.UserNoteState
 import ui.components.HomePageBlockItem
 import ui.navigation.ActionOrderListRoute
+import ui.navigation.AnomalyArbitrationMissionRoute
 import ui.navigation.ApocalypticShadowMissionRoute
 import ui.navigation.CharacterListRoute
 import ui.navigation.EventListRoute
@@ -351,6 +354,21 @@ class Constants {
                     }else{
                         navigate.navigateLimited(ApocalypticShadowMissionRoute)
                     }
+                }
+            ),
+            HomePageBlockItem(
+                itemId = "AAPage",
+                itemTitleRId = Res.string.AnomalyArbitration,
+                itemIconId = Res.drawable.phorphos_crown_cross_fill,
+                itemOnClickAction = { _, navigate ->
+                    /*
+                    if(aaList.value.isEmpty()){
+                        showWarningToast(message = ERR_NETWORK_UNSTABLE_CONNECTION)
+                    }else{
+                        navigate.navigateLimited(AnomalyArbitrationMissionRoute)
+                    }
+                     */
+                    navigate.navigateLimited(AnomalyArbitrationMissionRoute)
                 }
             ),
             HomePageBlockItem(

@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -21,9 +20,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.itemsIndexed
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Text
@@ -88,31 +84,27 @@ import kotlinx.datetime.format.byUnicodePattern
 import kotlinx.datetime.toLocalDateTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonObject
-import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.decodeFromJsonElement
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import ui.components.MonsterCard
 import ui.components.horizontalFadingEdge
-import utils.app.Language
-import utils.app.Language.Companion.TextLanguageInstance
-import utils.annotation.VersionUpdateCheck
 import utils.app.Constants
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
 import utils.app.FontSizeNormal16
+import utils.app.Language
+import utils.app.Language.Companion.TextLanguageInstance
 import utils.app.errorLog
 import utils.app.formatDecimal
 import utils.app.getAssetsJsonByFilePath
-import utils.app.getAssetsJsonStrByFilePath
 import utils.app.getAssetsStrByFilePath
 import utils.app.newImageRequest
 import utils.app.pxToDp
 import utils.app.removeStrQuote
+import utils.app.toInt
 import utils.starbase.StarbaseAPI
 
 @Serializable
@@ -123,6 +115,8 @@ enum class AbyssInfoType {
     PureFiction,
     @SerialName("ApocalypticShadow")
     ApocalypticShadow,
+    @SerialName("AnomalyArbitration")
+    AnomalyArbitration,
 }
 
 /**
@@ -166,12 +160,15 @@ data class AbyssInfo(
                         AbyssInfoType.MemoryOfChaos -> "memory_of_chao_data/$abyssFileName.json"
                         AbyssInfoType.PureFiction -> "pure_fiction_data/$abyssFileName.json"
                         AbyssInfoType.ApocalypticShadow -> "apocalyptic_shadow_data/$abyssFileName.json"
+                        AbyssInfoType.AnomalyArbitration -> "anomaly_arbitration_data/$abyssFileName.json"
                     },
                     defaultData = "[]"
                 )
                 val json = Json { ignoreUnknownKeys = true }
                 return json.decodeFromString<AbyssInfo>(abyssJsonStr)
             }catch (e: Exception) {
+                println("getAbyssItemByMocId(abyssId = $abyssId, type = $type)")
+                e.printStackTrace()
                 errorLog("AbyssInfo", "getAbyssItemByMocId(abyssId = $abyssId, type = $type)", e)
                 return null
             }
@@ -193,11 +190,13 @@ data class AbyssInfoList(
         private var mocListJson = getAssetsJsonByFilePath("memory_of_chao_data/chao_list.json", defaultData = "[]")
         private var pfListJson = getAssetsJsonByFilePath("pure_fiction_data/pf_list.json", defaultData = "[]")
         private var asListJson = getAssetsJsonByFilePath("apocalyptic_shadow_data/as_list.json", defaultData = "[]")
+        private var aaListJson = getAssetsJsonByFilePath("anomaly_arbitration_data/aa_list.json", defaultData = "[]")
 
         fun refreshListJson() {
             mocListJson = getAssetsJsonByFilePath("memory_of_chao_data/chao_list.json", defaultData = "[]")
             pfListJson = getAssetsJsonByFilePath("pure_fiction_data/pf_list.json", defaultData = "[]")
             asListJson = getAssetsJsonByFilePath("apocalyptic_shadow_data/as_list.json", defaultData = "[]")
+            aaListJson = getAssetsJsonByFilePath("anomaly_arbitration_data/aa_list.json", defaultData = "[]")
         }
 
         @OptIn(ExperimentalCoroutinesApi::class)
@@ -211,6 +210,7 @@ data class AbyssInfoList(
                                 AbyssInfoType.MemoryOfChaos -> "memory_of_chao_data/chao_list.json"
                                 AbyssInfoType.PureFiction -> "pure_fiction_data/pf_list.json"
                                 AbyssInfoType.ApocalypticShadow -> "apocalyptic_shadow_data/as_list.json"
+                                AbyssInfoType.AnomalyArbitration -> "anomaly_arbitration_data/aa_list.json"
                             },
                             defaultData = "[]"
                         )
@@ -238,6 +238,7 @@ data class AbyssInfoList(
                                 AbyssInfoType.MemoryOfChaos -> mocListJson
                                 AbyssInfoType.PureFiction -> pfListJson
                                 AbyssInfoType.ApocalypticShadow -> asListJson
+                                AbyssInfoType.AnomalyArbitration -> aaListJson
                             }
 
                         val abyssList = Json.decodeFromJsonElement<ArrayList<AbyssInfoList>>(abyssJson)
@@ -266,6 +267,7 @@ data class AbyssInfoList(
                                 AbyssInfoType.MemoryOfChaos -> mocListJson
                                 AbyssInfoType.PureFiction -> pfListJson
                                 AbyssInfoType.ApocalypticShadow -> asListJson
+                                AbyssInfoType.AnomalyArbitration -> aaListJson
                             }
 
                         val abyssList = Json.decodeFromJsonElement<ArrayList<AbyssInfoList>>(abyssJson)
@@ -304,7 +306,10 @@ data class AbyssInfoMission(
     val part1: AbyssInfoPhase,
 
     @SerialName("part2")
-    val part2: AbyssInfoPhase,
+    val part2: AbyssInfoPhase? = null,
+
+    @SerialName("type")
+    val type: String? = "",
 )
 
 @Serializable
@@ -312,14 +317,14 @@ data class AbyssInfoPhase(
     @SerialName("weakness_suggest")
     val weaknessList: ArrayList<AbyssInfoCombatType> = arrayListOf(),
 
-    @SerialName("totalWaves")
-    val totalWaves: Int,
-
     @SerialName("wave1")
     val monsterWaveInfo1: ArrayList<AbyssInfoMonster> = arrayListOf(),
 
     @SerialName("wave2")
     val monsterWaveInfo2: ArrayList<AbyssInfoMonster> = arrayListOf(),
+
+    @SerialName("totalWaves")
+    val totalWaves: Int? = monsterWaveInfo1.isNotEmpty().toInt() + monsterWaveInfo2.isNotEmpty().toInt(),
 )
 
 @Serializable

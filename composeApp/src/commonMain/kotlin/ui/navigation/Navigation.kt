@@ -58,6 +58,7 @@ import ui.components.PomPomPopupUI
 import ui.screens.AboutStargazerPageScreen
 import ui.screens.ActionOrderListPageScreen
 import ui.screens.ActionOrderSimulatorPageScreen
+import ui.screens.AnomalyArbitrationMissionPageScreen
 import ui.screens.ApocalypticShadowMissionPageScreen
 import ui.screens.BackgroundSettingScreen
 import ui.screens.BattleChroniclePageScreen
@@ -86,6 +87,7 @@ import ui.screens.UserInfoPageScreen
 import ui.screens.bgModified
 import ui.screens.doInit
 import ui.screens.globalPadHomePageBg
+import ui.screens.initAAList
 import ui.screens.initASList
 import ui.screens.initActionOrderTeamList
 import ui.screens.initCharList
@@ -93,6 +95,7 @@ import ui.screens.initLcList
 import ui.screens.initMOCList
 import ui.screens.initPFList
 import ui.screens.initRelicList
+import ui.screens.refreshAAList
 import ui.screens.refreshASList
 import ui.screens.refreshCharList
 import ui.screens.refreshLcList
@@ -171,6 +174,7 @@ fun initVar(){
     initMOCList()
     initPFList()
     initASList()
+    initAAList()
     initActionOrderTeamList()
     initWallpaperList()
     println("INITED!")
@@ -273,6 +277,7 @@ fun refreshInit(){
             refreshPFList()
             refreshMOCList()
             refreshASList()
+            refreshAAList()
             println("REFRESHED!")
         }.await()
     }
@@ -617,6 +622,16 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
         screenInstance = Screen.ApocalypticShadowMissionPageScreen
         withBGScreen(isPadMode){ hazeState, pageHeader ->
             ApocalypticShadowMissionPageScreen(
+                navigator = navigator,
+                hazeState = hazeState
+            )
+        }
+
+    }
+    composable<AnomalyArbitrationMissionRoute> {
+        screenInstance = Screen.AnomalyArbitrationMissionPageScreen
+        withBGScreen(isPadMode){ hazeState, pageHeader ->
+            AnomalyArbitrationMissionPageScreen(
                 navigator = navigator,
                 hazeState = hazeState
             )

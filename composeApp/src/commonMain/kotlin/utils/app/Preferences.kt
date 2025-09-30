@@ -2,7 +2,6 @@ package utils.app
 
 import com.russhwolf.settings.Settings
 import kotlinx.datetime.Clock
-import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import ui.components.HomePageBlockItem
@@ -178,6 +177,21 @@ class Preferences {
 
         fun setLocalASDataString(charList: String){
             Settings().putString("localASData", charList)
+        }
+
+        fun getLocalAADataString(): String {
+            return Settings().getString("localAAData", "[]")
+        }
+
+        fun setLocalAADataString(charList: String){
+            Settings().putString("localAAData", charList)
+        }
+
+        fun getIsForceUpdateAA(): Boolean {
+            return Settings().getBoolean("forceUpdateAA-20250930", true)
+        }
+        fun setIsForceUpdateAA(isForceUpdateLeaderboard: Boolean){
+            Settings().putBoolean("forceUpdateAA-20250930", isForceUpdateLeaderboard)
         }
 
         fun getIsForceUpdateAS(): Boolean {

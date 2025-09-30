@@ -1,7 +1,6 @@
 package ui.navigation
 
 import kotlinx.serialization.Serializable
-import types.AbyssInfoType
 
 
 @Serializable
@@ -51,6 +50,7 @@ data class ActionOrderSimulatorRoute(val index: Int)
 @Serializable object MemoryOfChaosMissionRoute
 @Serializable object PureFictionMissionRoute
 @Serializable object ApocalypticShadowMissionRoute
+@Serializable object AnomalyArbitrationMissionRoute
 @Serializable object AboutStargazerRoute
 @Serializable object ExpeditionRoute
 @Serializable object ProficientLeaderboardRoute
