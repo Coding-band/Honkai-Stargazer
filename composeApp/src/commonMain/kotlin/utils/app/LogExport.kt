@@ -25,16 +25,13 @@ import androidx.compose.ui.unit.sp
 import com.russhwolf.settings.Settings
 import com.voc.stargazer3.BuildKonfig
 import files.ConfirmBTN
-import files.FunctionStillInDevelop
 import files.NetworkErrorUnstableConnection
-import files.OK
 import files.Res
 import files.pom_pom_failed_issue
 import getDeviceInfo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.datetime.Clock
 import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.format.FormatStringsInDatetimeFormats
@@ -44,15 +41,15 @@ import kotlinx.serialization.EncodeDefault
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import org.jetbrains.compose.resources.painterResource
 import utils.annotation.TranslationPls
+import utils.app.LogExportObj.Companion.SnackbarHostStateInstance
 import utils.device.AppInfo
 import utils.device.DeviceInfo
-import utils.app.LogExportObj.Companion.SnackbarHostStateInstance
 import utils.starbase.StarbaseAPI
-import kotlin.time.Duration.Companion.milliseconds
+import kotlin.time.Clock
+import kotlin.time.ExperimentalTime
 
 
 @OptIn(FormatStringsInDatetimeFormats::class)
@@ -74,7 +71,7 @@ fun LogExportInit(){
 }
 
 @Serializable
-data class LogExportObj @OptIn(ExperimentalSerializationApi::class) constructor(
+data class LogExportObj @OptIn(ExperimentalSerializationApi::class, ExperimentalTime::class) constructor(
     @SerialName("class_name")
     var className: String,
 
@@ -208,7 +205,7 @@ fun showFunctionIsDevelopingToast() {
  *         errorLogExport("CharacterInfoPageScreen", "CharacterInfoFullImgWithRare()", e)
  *     }
  */
-@OptIn(FormatStringsInDatetimeFormats::class)
+@OptIn(FormatStringsInDatetimeFormats::class, ExperimentalTime::class)
 fun errorLog(className: String, functionName: String, error: Exception) {
     //Prepare what will be export
     val timeStamp = Clock.System.now();

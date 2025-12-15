@@ -73,7 +73,7 @@ import kotlinx.coroutines.IO
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
-import kotlinx.datetime.Clock
+import kotlin.time.Clock
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -107,6 +107,7 @@ import utils.app.pxToDp
 import utils.app.rememberMutableStateListJsonOf
 import utils.app.removeStrQuote
 import utils.starbase.StarbaseAPI
+import kotlin.time.ExperimentalTime
 
 lateinit var asList : MutableState<ArrayList<AbyssInfoList>>
 
@@ -116,7 +117,7 @@ fun initASList(){
     asList = rememberSaveable(stateSaver = AbyssInfoList.ListSaver) { mutableStateOf(arrayListOf()) }
 }
 
-@OptIn(ExperimentalCoroutinesApi::class)
+@OptIn(ExperimentalCoroutinesApi::class, ExperimentalTime::class)
 fun refreshASList(){
     asList.value = runBlocking {
         val job = async(Dispatchers.Default) {
@@ -129,6 +130,7 @@ fun refreshASList(){
     }
 }
 
+@OptIn(ExperimentalTime::class)
 @Composable
 @Preview
 fun ApocalypticShadowMissionPageScreen(

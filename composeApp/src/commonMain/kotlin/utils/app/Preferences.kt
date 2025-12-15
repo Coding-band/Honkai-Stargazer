@@ -1,7 +1,6 @@
 package utils.app
 
 import com.russhwolf.settings.Settings
-import kotlinx.datetime.Clock
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import ui.components.HomePageBlockItem
@@ -10,6 +9,8 @@ import utils.app.Constants.Companion.HOME_PAGE_MENU_DEFAULT
 import utils.app.Constants.Companion.HOME_PAGE_MENU_ID_LIST
 import utils.calculator.TeamListItem
 import utils.starbase.StarbaseAPI
+import kotlin.time.Clock
+import kotlin.time.ExperimentalTime
 
 class Preferences {
     val CharList = CharListClass()
@@ -256,6 +257,7 @@ class Preferences {
         fun getDeviceFPRefreshTime(): Long {
             return Settings().getLong("deviceFPRefreshTime", 0L)
         }
+        @OptIn(ExperimentalTime::class)
         fun setDeviceFPRefreshTime(time: Long = Clock.System.now().toEpochMilliseconds()){
             Settings().putLong("deviceFPRefreshTime", time)
         }

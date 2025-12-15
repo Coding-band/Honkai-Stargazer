@@ -14,6 +14,7 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import utils.app.errorLog
 import utils.hoyolab.HoyolabAPI
+import kotlin.time.ExperimentalTime
 
 @Serializable
 data class EventItem(
@@ -28,6 +29,7 @@ data class EventItem(
     companion object {
         val EventListInstance = EventItem().initEventList().sortedBy { it.end_unix }
     }
+    @OptIn(ExperimentalTime::class)
     fun initEventList() : ArrayList<EventItem>{
         val eventList = ArrayList<EventItem>()
         try {

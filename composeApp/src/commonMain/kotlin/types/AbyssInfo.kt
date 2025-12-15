@@ -76,7 +76,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking
-import kotlinx.datetime.Instant
 import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.format.FormatStringsInDatetimeFormats
@@ -106,6 +105,7 @@ import utils.app.pxToDp
 import utils.app.removeStrQuote
 import utils.app.toInt
 import utils.starbase.StarbaseAPI
+import kotlin.time.ExperimentalTime
 
 @Serializable
 enum class AbyssInfoType {
@@ -615,7 +615,7 @@ fun AbyssMonsterInfoContent(modifier: Modifier = Modifier, phaseInfo: AbyssInfoP
     }
 }
 
-@OptIn(FormatStringsInDatetimeFormats::class)
+@OptIn(FormatStringsInDatetimeFormats::class, ExperimentalTime::class)
 @Composable
 fun AbyssInfoTimeContent(infoDisplayIndex: MutableState<Int>, infoList: AbyssInfo?, infoUsageUpdateMS: MutableState<Long>){
     Column {
@@ -626,19 +626,19 @@ fun AbyssInfoTimeContent(infoDisplayIndex: MutableState<Int>, infoList: AbyssInf
 
                 "${
                     dateFormat.format(
-                        Instant.fromEpochMilliseconds(infoList?.timeInfo?.begin ?: 0L).toLocalDateTime(
+                        kotlin.time.Instant.fromEpochMilliseconds(infoList?.timeInfo?.begin ?: 0L).toLocalDateTime(
                             TimeZone.currentSystemDefault())
                     )
                 } ~ ${
                     dateFormat.format(
-                        Instant.fromEpochMilliseconds(infoList?.timeInfo?.end ?: 0L).toLocalDateTime(
+                        kotlin.time.Instant.fromEpochMilliseconds(infoList?.timeInfo?.end ?: 0L).toLocalDateTime(
                             TimeZone.currentSystemDefault())
                     )
                 }"
             } else {
                 val dateFormat = LocalDateTime.Format { byUnicodePattern("yyyy-MM-dd HH:mm") }
                 dateFormat.format(
-                    Instant.fromEpochMilliseconds(infoUsageUpdateMS.value).toLocalDateTime(TimeZone.currentSystemDefault())
+                    kotlin.time.Instant.fromEpochMilliseconds(infoUsageUpdateMS.value).toLocalDateTime(TimeZone.currentSystemDefault())
                 )
             },
             textAlign = TextAlign.Center,

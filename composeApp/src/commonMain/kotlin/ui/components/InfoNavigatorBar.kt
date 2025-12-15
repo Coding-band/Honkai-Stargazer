@@ -37,18 +37,14 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import dev.chrisbanes.haze.HazeState
-import dev.chrisbanes.haze.HazeStyle
-import dev.chrisbanes.haze.hazeChild
 import dev.chrisbanes.haze.hazeSource
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlinx.datetime.Clock
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import ui.navigation.hazeStateRoot
-import ui.screens.globalHazeBlur
 import utils.app.DialogPopUpZIndex
 import utils.app.DpToPx
 import utils.app.FontSizeNormal12
@@ -56,12 +52,15 @@ import utils.app.HazeBlurDp20
 import utils.app.hazeEffectSG3
 import utils.app.removeStrQuote
 import kotlin.math.min
+import kotlin.time.Clock
+import kotlin.time.ExperimentalTime
 
 data class InfoNavigateItem(
     val itemIcon: DrawableResource, val itemPosIndex: Int, val itemTitle: StringResource
 )
 
 
+@OptIn(ExperimentalTime::class)
 @Preview
 @Composable
 fun InfoNavigatorBar(

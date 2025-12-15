@@ -98,7 +98,7 @@ import files.ic_selected_orange_circle
 import files.phorphos_caret_down_regular
 import files.ui_icon_share
 import files.ui_icon_star
-import kotlinx.datetime.Clock
+import kotlin.time.Clock
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.float
 import kotlinx.serialization.json.jsonArray
@@ -149,7 +149,9 @@ import utils.calculator.getGradAttrAndValue
 import utils.calculator.getLcAttrData
 import utils.hoyolab.AttributeExchange
 import utils.starbase.StarbaseAPI
+import kotlin.time.ExperimentalTime
 
+@OptIn(ExperimentalTime::class)
 @DoItLater("Known that even if the grad requirement is presented, but due to grad weight may not be > 0, it will not display")
 @Composable
 fun UserCharacterPageScreen(

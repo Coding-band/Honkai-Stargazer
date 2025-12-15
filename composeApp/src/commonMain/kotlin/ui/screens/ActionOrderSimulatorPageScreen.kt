@@ -93,8 +93,6 @@ import types.Character
 import types.ImageFolder
 import types.UserAccount
 import ui.components.CharacterCard
-import ui.components.HeaderData
-import ui.components.defaultHeaderData
 import ui.navigation.ActionOrderSimulatorRoute
 import ui.navigation.popBackStackLimited
 import utils.app.Constants
@@ -116,6 +114,7 @@ import utils.calculator.CharAction
 import utils.calculator.TeamListItem
 import utils.calculator.TeammateItem
 import utils.calculator.checkMaxSkillPoint
+import kotlin.time.ExperimentalTime
 
 private lateinit var actionOrdereProcessList : SnapshotStateList<ActionOrderProcessItem> ;
 
@@ -294,6 +293,7 @@ fun ActionOrderSimulatorPageScreen(
     }
 }
 
+@OptIn(ExperimentalTime::class)
 @Composable
 fun ActionOrderItemInfoSetting(teamListItem: MutableState<TeamListItem>, teamDataListSnap : SnapshotStateList<TeammateItem>,  index: Int, navigator: NavHostController, isPopupOpen : MutableState<Boolean>) {
     Column(modifier = Modifier.wrapContentSize().widthIn(min = INFO_MIN_WIDTH, max = INFO_MAX_WIDTH)) {

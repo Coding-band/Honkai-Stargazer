@@ -86,7 +86,6 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withTimeout
-import kotlinx.datetime.Clock
 import kotlinx.datetime.DateTimePeriod
 import kotlinx.datetime.Instant
 import kotlinx.datetime.TimeZone
@@ -125,6 +124,8 @@ import kotlin.math.log10
 import kotlin.math.pow
 import kotlin.math.round
 import kotlin.math.roundToInt
+import kotlin.time.Clock
+import kotlin.time.ExperimentalTime
 
 /*
  * --------- Deprecated Soon ---------
@@ -685,6 +686,7 @@ fun getRemainingTimeStr(remainingTime: Int): String {
 
 }
 
+@OptIn(ExperimentalTime::class)
 fun getFinishTimeStr(remainingTime: Int): String {
     if (remainingTime == 0) return StatusFinished
 
@@ -700,6 +702,7 @@ fun getFinishTimeStr(remainingTime: Int): String {
         "${if(finalLocale.hour < 10) "0" else ""}${finalLocale.hour}:${if(finalLocale.minute < 10) "0" else ""}${finalLocale.minute}")
 }
 
+@OptIn(ExperimentalTime::class)
 fun getFinishTimeStr(finishTime: Long): String {
     val now = Clock.System.now()
     if (finishTime < now.toEpochMilliseconds() / 1000) return StatusFinished

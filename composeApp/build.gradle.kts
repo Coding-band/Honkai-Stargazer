@@ -14,7 +14,7 @@ import java.util.Properties
  * VersionUpdateCheck
  * Environment Area - App Version
  */
-val appVersionDesktop = "1.0.6"
+val appVersionDesktop = "1.0.7"
 
 
 plugins {
@@ -23,8 +23,7 @@ plugins {
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
     id("com.codingfeline.buildkonfig").version("0.15.1")
-    kotlin("plugin.serialization") version "2.0.10"
-    id("org.jetbrains.compose.hot-reload") version "1.0.0-alpha09" // <- add this additionally
+    kotlin("plugin.serialization") version "2.3.0-RC3"
 }
 /**
  * tasks to gradle.properties
@@ -41,7 +40,7 @@ val versionCodeFinal = properties.getProperty("APP_VERSION_CODE").toInt() + 1
 val isForAppStore = true
 val isForPlayStore = false
 var appProfile = "PRODUCTION" //Please Modify this String ONLY IF NECESSERY
-val appVersionCodeName = "Jingliu"
+val appVersionCodeName = "Kafka"
 
 if(isForPlayStore) appProfile = "PRODUCTION_GP"
 

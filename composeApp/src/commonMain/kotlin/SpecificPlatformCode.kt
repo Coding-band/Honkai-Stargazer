@@ -6,8 +6,8 @@ import androidx.compose.ui.unit.Dp
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.utils.io.ByteReadChannel
-import kotlinx.datetime.Clock
 import utils.device.DeviceInfo
+import kotlin.time.ExperimentalTime
 
 /**
  * This is the declaration kt file for specific-platform function
@@ -67,4 +67,5 @@ expect fun doPurchaseImpl(itemId: String, isSuccess: MutableState<Boolean>, prod
 
 expect fun performHapticFeedback(intensity: Float, context: ContextFactory)
 
-expect fun shareImageToOther(shareTitle: String = "?", image: ImageBitmap, imageName: String = "SG3_${Clock.System.now().toEpochMilliseconds()}", context: ContextFactory = platformContext)
+@OptIn(ExperimentalTime::class)
+expect fun shareImageToOther(shareTitle: String = "?", image: ImageBitmap, imageName: String = "SG3_${kotlin.time.Clock.System.now().toEpochMilliseconds()}", context: ContextFactory = platformContext)

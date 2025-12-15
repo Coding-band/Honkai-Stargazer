@@ -1,13 +1,15 @@
 package utils.hoyolab
 
-import kotlinx.datetime.Clock
 import okio.Buffer
 import okio.ByteString.Companion.encodeUtf8
 import okio.HashingSink
 import okio.blackholeSink
 import kotlin.math.floor
 import kotlin.random.Random
+import kotlin.time.Clock
+import kotlin.time.ExperimentalTime
 
+@OptIn(ExperimentalTime::class)
 fun genDSv1(): String {
     val salt = "6s25p5ox5y14umn1p61aqyyvbvvl3lrt"
     val time = Clock.System.now().toEpochMilliseconds()/1000
@@ -28,6 +30,7 @@ fun genDSv1(): String {
  * E.g. queryFromURL = "uid=16299869";
  * @return
  */
+@OptIn(ExperimentalTime::class)
 fun genDSv2(body: String, queryFromURL: String): String {
     val salt = "xV8v4Qu54lUKrEYFZkJhB8cuOh9Asafs"
     val time = Clock.System.now().toEpochMilliseconds()/1000

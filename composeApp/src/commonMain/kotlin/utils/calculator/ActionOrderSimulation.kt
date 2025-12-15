@@ -6,14 +6,16 @@ import files.ActionOrderEnemySpeedHigh
 import files.ActionOrderEnemySpeedMid
 import files.ActionOrderEnemySpeedSlow
 import files.Res
-import kotlinx.datetime.Clock
 import kotlinx.serialization.Serializable
 import org.jetbrains.compose.resources.StringResource
 import types.Character
 import types.UserAccount
 import utils.annotation.VersionUpdateCheck
 import utils.app.Constants.Companion.CLARA_KAMOJI
+import kotlin.time.Clock
+import kotlin.time.ExperimentalTime
 
+@OptIn(ExperimentalTime::class)
 @Serializable
 data class TeamListItem(
     val uid: String = UserAccount.INSTANCE.uid,

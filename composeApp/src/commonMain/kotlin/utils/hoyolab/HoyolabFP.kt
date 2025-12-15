@@ -1,16 +1,13 @@
 package utils.hoyolab
 
-import kotlinx.datetime.Clock
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonObject
 import utils.app.Preferences
-import kotlin.math.floor
-import kotlin.random.Random
+import kotlin.time.Clock
+import kotlin.time.ExperimentalTime
 
 /**
  * Ref: PizzaHelperUnited (https://github.com/pizza-studio/PizzaHelperUnited/blob/main/Packages/PZKit/Sources/PZAccountKit/HoYoAPIs/LoginRelated/GenerateDeviceFingerPrintAPI/GetDeviceFingerPrint.swift)
  */
+@OptIn(ExperimentalTime::class)
 fun getDeviceFingerPrint(
     platform : HoyolabRequest.PLATFORM = HoyolabRequest.PLATFORM.HOYOLAB,
     length: Int = 16,

@@ -112,6 +112,7 @@ import utils.app.removeStrQuote
 import utils.app.replaceStrRes
 import utils.calculator.TeamListItem
 import utils.calculator.TeammateItem
+import kotlin.time.ExperimentalTime
 
 val TEST_LIST = arrayListOf(
     TeamListItem(
@@ -452,6 +453,7 @@ fun getSpecificAttrFromChar(char: Character, attr: Attribute) : HsrProperties? {
     return char.characterStatus?.characterProperties?.find { it.attributeExchange.attribute == attr }
 }
 
+@OptIn(ExperimentalTime::class)
 @DoItLater("Pack this style's card as a Common Component")
 @Composable
 fun TeamListItemCard(

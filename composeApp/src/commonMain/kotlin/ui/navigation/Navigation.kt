@@ -51,7 +51,6 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
-import kotlinx.datetime.Clock
 import types.AbyssInfoList
 import types.Wallpaper.Companion.initWallpaperList
 import ui.components.PomPomPopupUI
@@ -114,6 +113,8 @@ import utils.app.notchPaddingRight
 import utils.app.pxToDp
 import utils.app.showWarningToast
 import utils.app.snackbarInstance
+import kotlin.time.Clock
+import kotlin.time.ExperimentalTime
 
 /**
  * Navigate to a route with a limited interval.
@@ -655,6 +656,7 @@ fun navBuilder(isPadMode: MutableState<Boolean>, navigator: NavHostController) :
 /**
  * Navigate to a route with a limited interval.
  */
+@OptIn(ExperimentalTime::class)
 fun NavHostController.navigateLimited(route: Any, options: NavOptions? = null) {
     val navigationInterval: Long = 500 // 500ms is enough for most cases
     val lastNavigationTime: Long = Settings().getLong("lastNavigationTime", 0)
@@ -666,6 +668,7 @@ fun NavHostController.navigateLimited(route: Any, options: NavOptions? = null) {
     }
 }
 
+@OptIn(ExperimentalTime::class)
 fun NavHostController.navigateLimited(route: Any, builder: NavOptionsBuilder.() -> Unit) {
     val navigationInterval: Long = 500 // 500ms is enough for most cases
     val lastNavigationTime: Long = Settings().getLong("lastNavigationTime", 0)
@@ -677,6 +680,7 @@ fun NavHostController.navigateLimited(route: Any, builder: NavOptionsBuilder.() 
     }
 }
 
+@OptIn(ExperimentalTime::class)
 fun NavHostController.popBackStackLimited() {
     val navigationInterval: Long = 500 // 500ms is enough for most cases
     val lastNavigationTime: Long = Settings().getLong("lastNavigationTime", 0)

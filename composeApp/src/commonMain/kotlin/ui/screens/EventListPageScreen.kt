@@ -45,7 +45,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
-import kotlinx.datetime.Clock
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.LocalTime
@@ -68,7 +67,10 @@ import utils.app.DefaultZIndex
 import utils.app.SG3VerticalScrollbar
 import utils.app.newImageRequest
 import utils.app.removeStrQuote
+import kotlin.time.Clock
+import kotlin.time.ExperimentalTime
 
+@OptIn(ExperimentalTime::class)
 @Composable
 fun EventListPageScreen(
     navigator: NavHostController,
@@ -122,6 +124,7 @@ fun EventListPageScreen(
     }
 }
 
+@OptIn(ExperimentalTime::class)
 @Composable
 fun EventItemCard(eventItem: EventItem, isDateOutside: MutableState<Boolean>, navigator: NavHostController) {
     val currentTime = Clock.System.now()
