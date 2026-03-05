@@ -68,21 +68,34 @@ fun initCharList() {
 fun refreshCharList(){
     Character.refreshCharJson()
 
-    charList.value = runBlocking {
+    val newList = runBlocking {
         val job = CoroutineScope(Dispatchers.Default).async {
-            val tmpCharList = arrayListOf<Character>()
-            if (Character.getCharListJson() !is JsonArray) {
-                return@async tmpCharList
-            }
-            (Character.getCharListJson().jsonArray).fastForEach { jsonElement ->
-                tmpCharList.add(Character.getCharacterItemFromJSON(jsonElement.jsonObject["charId"]?.jsonPrimitive?.content!!, requireAttrData = true))
-            }
-            return@async tmpCharList
+            buildCharListFromJson()
         }
         job.await()
         job.getCompleted()
     }
-    charListSortable.value = charList.value
+    charList.value = newList
+    charListSortable.value = newList
+}
+
+/**
+ * 從 JSON 建立角色列表（純計算，可在任何線程執行）
+ */
+private fun buildCharListFromJson(): ArrayList<Character> {
+    val tmpCharList = arrayListOf<Character>()
+    if (Character.getCharListJson() !is JsonArray) {
+        return tmpCharList
+    }
+    (Character.getCharListJson().jsonArray).fastForEach { jsonElement ->
+        tmpCharList.add(
+            Character.getCharacterItemFromJSON(
+                jsonElement.jsonObject["charId"]?.jsonPrimitive?.content!!,
+                requireAttrData = true
+            )
+        )
+    }
+    return tmpCharList
 }
 
 @OptIn(ExperimentalCoroutinesApi::class)

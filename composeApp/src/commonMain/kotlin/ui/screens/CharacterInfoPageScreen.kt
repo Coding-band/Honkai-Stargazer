@@ -58,7 +58,10 @@ import files.phorphos_person_regular
 import files.phorphos_star_half_regular
 import files.phorphos_sword_regular
 import files.phorphos_tree_structure_regular
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.jsonArray
@@ -89,7 +92,6 @@ import utils.annotation.DoItLater
 import utils.app.CharWeightList
 import utils.app.Constants.Companion.LOST_IMAGE_DRAWABLE
 import utils.app.DefaultZIndex
-import utils.app.JsonElementSaver
 import utils.app.Language
 import utils.app.Preferences
 import utils.app.SG3VerticalScrollbar
@@ -107,6 +109,15 @@ val charInfoNavItemList = arrayOf(
     InfoNavigateItem(Res.drawable.phorphos_baseball_cap_regular, 5, Res.string.AdviceRelics),
     InfoNavigateItem(Res.drawable.phorphos_person_regular, 6, Res.string.AdviceTeams),
     InfoNavigateItem(Res.drawable.phorphos_chats_circle_regular, 7, Res.string.CharacterStory),
+)
+
+/**
+ * 預加載角色資訊頁面需要的數據結構
+ */
+private data class CharInfoPageData(
+    val charInfoJson: JsonElement,
+    val charWeightJsonObject: JsonObject?,
+    val isUserOwned: Boolean,
 )
 
 @Composable
@@ -127,15 +138,77 @@ fun CharacterInfoPage(
     val combatType = valueOfWithDefaultCombatType(route.combatType)
     val path = valueOfWithDefaultPath(route.path)
 
-    val charInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Character.getCharacterDataFromFileName(characterFileName, Language.TextLanguageInstance) as JsonElement) }
+    // 異步加載狀態：避免阻塞主線程
+    val pageData = remember { mutableStateOf<CharInfoPageData?>(null) }
+    val isLoadError = remember { mutableStateOf(false) }
 
+    // 在背景線程加載數據（檔案 I/O + JSON 解析 + CharWeightList 存取）
+    LaunchedEffect(characterFileName, characterId) {
+        val data = withContext(Dispatchers.Default) {
+            // 並行加載 charInfoJson 和 charWeightList
+            val charInfoDeferred = async {
+                Character.getCharacterDataFromFileName(characterFileName, Language.TextLanguageInstance)
+            }
+            val charWeightDeferred = async {
+                try {
+                    val weightInstance = CharWeightList.INSTANCE
+                    if (weightInstance is JsonObject && weightInstance.jsonObject.containsKey(characterId.toString())) {
+                        val singleWeight = weightInstance.jsonObject[characterId.toString()]
+                        if (singleWeight != null && singleWeight.jsonArray.isNotEmpty()) {
+                            singleWeight.jsonArray[0].jsonObject
+                        } else null
+                    } else null
+                } catch (_: Exception) { null }
+            }
+            val isUserOwnedDeferred = async {
+                UserAccount.INSTANCE.characterList.any { it.officialId == characterId }
+            }
 
-    //Maybe we should make a PomPom Image with "Please Check your Network" Text
-    if (charInfoJson !is JsonObject || charInfoJson.jsonObject.isEmpty()) {
+            val charInfoResult = charInfoDeferred.await()
+            val charWeightResult = charWeightDeferred.await()
+            val isUserOwnedResult = isUserOwnedDeferred.await()
+
+            if (charInfoResult !is JsonObject || charInfoResult.jsonObject.isEmpty()) {
+                null // 加載失敗
+            } else {
+                CharInfoPageData(
+                    charInfoJson = charInfoResult,
+                    charWeightJsonObject = charWeightResult,
+                    isUserOwned = isUserOwnedResult,
+                )
+            }
+        }
+
+        if (data == null) {
+            isLoadError.value = true
+        } else {
+            pageData.value = data
+        }
+    }
+
+    // 加載失敗：顯示提示並返回
+    if (isLoadError.value) {
         showWarningToast(message = removeStrQuote(Res.string.NoDataYet))
         navigator.popBackStack()
         return
     }
+
+    // 數據尚未加載完成：顯示角色全圖作為過渡（已由 Coil 異步加載，不會阻塞）
+    val loadedData = pageData.value
+    if (loadedData == null) {
+        Box(modifier = Modifier.fillMaxSize().background(Color.Black)) {
+            CharacterInfoFullImgWithRare(
+                fileName = characterName,
+                isVisible = true
+            )
+        }
+        return
+    }
+
+    // ===== 數據已就緒，渲染完整頁面 =====
+    val charInfoJson = loadedData.charInfoJson
+    val charWeightJsonObject = loadedData.charWeightJsonObject
+    val isUserOwned = loadedData.isUserOwned
 
     val headerDataPage = HeaderData(
         charInfoJson.jsonObject["name"]!!.jsonPrimitive.content,
@@ -161,11 +234,19 @@ fun CharacterInfoPage(
     val dialogTitle = remember { mutableStateOf("Nope") }
     val selectedSectIndex = remember { mutableStateOf(0) } //流派
 
-    val singleCharWeightJsonElement = remember { CharWeightList.INSTANCE.jsonObject[characterId.toString()] }
-    var charWeightJsonObject : JsonObject? = remember { null }
-
-    if(singleCharWeightJsonElement != null && singleCharWeightJsonElement.jsonArray.isNotEmpty()){
-        charWeightJsonObject = remember { singleCharWeightJsonElement.jsonArray[selectedSectIndex.value].jsonObject }
+    // charWeightJsonObject 根據流派選擇更新
+    val currentCharWeightJsonObject = remember(selectedSectIndex.value) {
+        if (charWeightJsonObject != null) {
+            try {
+                val weightInstance = CharWeightList.INSTANCE
+                if (weightInstance is JsonObject) {
+                    val singleWeight = weightInstance.jsonObject[characterId.toString()]
+                    if (singleWeight != null && singleWeight.jsonArray.size > selectedSectIndex.value) {
+                        singleWeight.jsonArray[selectedSectIndex.value].jsonObject
+                    } else charWeightJsonObject
+                } else charWeightJsonObject
+            } catch (_: Exception) { charWeightJsonObject }
+        } else null
     }
 
     val isFavourite = remember { mutableStateOf(Preferences.FavouriteClass.checkIsFavourite(characterId.toString(), Preferences.FavouriteClass.TYPE.CHAR)) }
@@ -205,13 +286,13 @@ fun CharacterInfoPage(
                 .align(Alignment.Center),
             verticalArrangement = Arrangement.spacedBy(30.dp)
         ) {
-            item(key = "InfoBioColumn") { InfoBioColumn(charInfoJson, combatType, path, isUserOwned = !UserAccount.INSTANCE.characterList.none { it.officialId!! == characterId }, isFullEidolon = false, pageSize = pageSize) }
+            item(key = "InfoBioColumn") { InfoBioColumn(charInfoJson, combatType, path, isUserOwned = isUserOwned, isFullEidolon = false, pageSize = pageSize) }
             item(key = "InfoBasicStatus") { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
             item(key = "CharacterTraceTree") { CharacterTraceTree(charInfoJson, path, characterName, dialogTitle, dialogDisplay,dialogLastTrigType,  dialogComponent) }
             item(key = "CharacterEidolon") { CharacterEidolon(charInfoJson, characterName, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
-            item(key = "InfoAdviceLightcone") { InfoAdviceLightcone(charWeightJsonObject) }
-            item(key = "InfoAdviceRelic") { InfoAdviceRelic(charWeightJsonObject) }
-            item(key = "InfoAdviceTeammate") { InfoAdviceTeammate(charWeightJsonObject, characterId.toString(), dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
+            item(key = "InfoAdviceLightcone") { InfoAdviceLightcone(currentCharWeightJsonObject) }
+            item(key = "InfoAdviceRelic") { InfoAdviceRelic(currentCharWeightJsonObject) }
+            item(key = "InfoAdviceTeammate") { InfoAdviceTeammate(currentCharWeightJsonObject, characterId.toString(), dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
             item(key = "InfoStory") { InfoStory(charInfoJson) }
             item(key = "PaddingABox") { Box(modifier = Modifier.navigationBarsPadding().height(72.dp)) }
 
