@@ -8,6 +8,7 @@ package types
 
 import files.Abundance
 import files.Destruction
+import files.Elation
 import files.Erudition
 import files.Harmony
 import files.HaveNotUsed
@@ -21,6 +22,8 @@ import files.path_the_abundance
 import files.path_the_abundance_abyss
 import files.path_the_destruction
 import files.path_the_destruction_abyss
+import files.path_the_elation
+import files.path_the_elation_abyss
 import files.path_the_erudition
 import files.path_the_erudition_abyss
 import files.path_the_harmony
@@ -48,5 +51,6 @@ enum class Path (var chName : String,var resName : StringResource,var iconWhite 
     Nihility("虛無",Res.string.Nihility, Res.drawable.path_the_nihility, Res.drawable.path_the_nihility_abyss),
     Preservation("存謢",Res.string.Preservation, Res.drawable.path_the_preservation, Res.drawable.path_the_preservation_abyss),
     Remembrance("記憶",Res.string.Remembrance, Res.drawable.path_the_remembrance, Res.drawable.path_the_remembrance_abyss),
+    Elation("歡愉", Res.string.Elation, Res.drawable.path_the_elation, Res.drawable.path_the_elation_abyss),
     Unspecified("未知",Res.string.HaveNotUsed, Res.drawable.pom_pom_failed_issue, Res.drawable.pom_pom_failed_issue);
 }

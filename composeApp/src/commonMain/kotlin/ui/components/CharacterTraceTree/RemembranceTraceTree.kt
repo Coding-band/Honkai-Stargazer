@@ -14,20 +14,18 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import files.NihilityTraceTree
 import files.RemembranceTraceTree
 import files.Res
 import kotlinx.serialization.json.JsonElement
-import kotlinx.serialization.json.JsonNull
 import kotlinx.serialization.json.boolean
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
-import utils.app.Constants
 import types.Path
 import types.TraceTreeItem
+import utils.app.Constants
 
 //(x,y) base on Figma, no need to handly calculate
 val remembranceOffsetList = arrayListOf(

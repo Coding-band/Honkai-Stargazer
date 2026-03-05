@@ -133,6 +133,7 @@ fun CharacterTraceTree(
                     Path.Nihility -> NihilityTraceTree(infoJson, displayWidth.value, selectedId, charName)
                     Path.Preservation -> PreservationTraceTree(infoJson, displayWidth.value, selectedId, charName)
                     Path.Remembrance -> RemembranceTraceTree(infoJson, displayWidth.value, selectedId, charName)
+                    Path.Elation -> ElationTraceTree(infoJson, displayWidth.value, selectedId, charName)
                     else -> {}
                 }
             }
@@ -148,7 +149,8 @@ fun getDataFromSkills(
     charFileName: String,
     skillIndex: Int,
     infoJson: JsonElement,
-    isServant: Boolean = false
+    isServant: Boolean = false,
+    isElation: Boolean = false,
 ): ArrayList<TraceTreeItem> {
     val itemReferences = infoJson.jsonObject["itemReferences"];
     //Since the ObjectList store at least 1 data
@@ -304,7 +306,8 @@ fun TraceTreeBtn(
     displayWidth: Dp,
     modifier: Modifier = Modifier,
     offset: ArrayList<Pair<Int, Int>>,
-    isServant: Boolean = false
+    isServant: Boolean = false,
+    isElation: Boolean = false,
 ) {
     val isSelected = (selectedId.value == selfId) && dialogDisplayLocal.value && dialogLastTrigTypeLocal.value == lastTrigTypeTag
 
@@ -323,7 +326,7 @@ fun TraceTreeBtn(
         }
     }
 
-    if(isServant){
+    if(isServant || isElation){
         btnBaseSize = Constants.TRACE_TREE_BTN_CORE_BASE_SIZE
         imgBaseSize = Constants.TRACE_TREE_IMG_CORE_BASE_SIZE
     }
@@ -376,7 +379,7 @@ fun TraceTreeBtn(
         AsyncImage(
             model = newImageRequest(
                 LocalPlatformContext.current,
-                if (selfId <= 5) {
+                if (selfId <= 5 || isElation) {
                     getAssetsURLByFileName(
                         ImageFolder.CHAR_SKILL,
                         getImageNameByRegistName(traceTreeItem[0].iconPath, isCharNoGen = true)
