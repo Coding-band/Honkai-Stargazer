@@ -25,9 +25,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.onGloballyPositioned
-import androidx.compose.ui.layout.onSizeChanged
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.min
 import androidx.compose.ui.zIndex
@@ -54,8 +51,8 @@ import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import org.jetbrains.compose.resources.painterResource
-import types.ImageFolder
 import types.Eidolon
+import types.ImageFolder
 import utils.app.Constants
 import utils.app.Constants.Companion.EIDOLON_FRAME_BASE_HEIGHT
 import utils.app.Constants.Companion.EIDOLON_FRAME_BASE_WIDTH
@@ -67,7 +64,6 @@ import utils.app.getAssetsURLByFileName
 import utils.app.getImageNameByRegistName
 import utils.app.htmlDescApplier
 import utils.app.newImageRequest
-import utils.app.pxToDp
 import utils.app.removeStrQuote
 
 private lateinit var dialogTitleLocal : MutableState<String>
@@ -102,24 +98,27 @@ fun CharacterEidolon(
     dialogLastTrigTypeLocal = dialogLastTrigType
 
     val selectIndex = remember { mutableStateOf(0) }
-    val density = LocalDensity.current.density
 
     if(infoJson.jsonObject["ranks"] != null) {
 
-        val eidolonList: ArrayList<Eidolon> = arrayListOf()
-        val eidolonJsonArray = infoJson.jsonObject["ranks"]!!.jsonArray
+        // 用 remember 快取 eidolonList，避免每次 recomposition 都重新解析 JSON
+        val eidolonList = remember(infoJson, charName) {
+            val list = ArrayList<Eidolon>(6)
+            val eidolonJsonArray = infoJson.jsonObject["ranks"]!!.jsonArray
 
-        for ((index, eidolonJsonItem) in eidolonJsonArray.withIndex()) {
-            eidolonList.add(
-                Eidolon(
-                    eidolonJsonItem.jsonObject["id"]!!.jsonPrimitive.int,
-                    eidolonJsonItem.jsonObject["name"]!!.jsonPrimitive.content,
-                    eidolonJsonItem.jsonObject["descHash"]!!.jsonPrimitive.content,
-                    jsonArrayToFloatArrayList(eidolonJsonItem.jsonObject["params"]!!.jsonArray),
-                    "${getImageNameByRegistName(charName, isCharNoElement = true)}_eidolon${index+1}",
-                    "${getImageNameByRegistName(charName, isCharNoGen = true)}_soul${index+1}",
+            for ((index, eidolonJsonItem) in eidolonJsonArray.withIndex()) {
+                list.add(
+                    Eidolon(
+                        eidolonJsonItem.jsonObject["id"]!!.jsonPrimitive.int,
+                        eidolonJsonItem.jsonObject["name"]!!.jsonPrimitive.content,
+                        eidolonJsonItem.jsonObject["descHash"]!!.jsonPrimitive.content,
+                        jsonArrayToFloatArrayList(eidolonJsonItem.jsonObject["params"]!!.jsonArray),
+                        "${getImageNameByRegistName(charName, isCharNoElement = true)}_eidolon${index+1}",
+                        "${getImageNameByRegistName(charName, isCharNoGen = true)}_soul${index+1}",
+                    )
                 )
-            )
+            }
+            list
         }
 
         BoxWithConstraints(
@@ -152,19 +151,18 @@ fun CharacterEidolon(
 
 @Composable
 fun CharacterEidolonBox(eidolonList: ArrayList<Eidolon>, selectIndex : MutableState<Int>) {
-    val density = LocalDensity.current.density
-    val eidolonScale = remember { mutableStateOf(2f) }
 
     BoxWithConstraints(
         modifier = Modifier
             .fillMaxWidth()
     ) {
-        eidolonScale.value = getEidolonScale(min(maxWidth, EIDOLON_FRAME_BASE_WIDTH * 1.5f))
+        // 直接從 BoxWithConstraints 的 maxWidth 計算，不用 mutableStateOf 避免觸發額外 recomposition
+        val eidolonScale = getEidolonScale(min(maxWidth, EIDOLON_FRAME_BASE_WIDTH * 1.5f))
         Box(
             modifier = Modifier
                 .size(
-                    EIDOLON_FRAME_BASE_WIDTH * eidolonScale.value,
-                    EIDOLON_FRAME_BASE_HEIGHT * eidolonScale.value
+                    EIDOLON_FRAME_BASE_WIDTH * eidolonScale,
+                    EIDOLON_FRAME_BASE_HEIGHT * eidolonScale
                 )
                 .align(Alignment.Center)
         ){
@@ -173,11 +171,11 @@ fun CharacterEidolonBox(eidolonList: ArrayList<Eidolon>, selectIndex : MutableSt
                 //Box for Eidolon Image & Stroke
                 Box(
                     modifier = Modifier
-                        .size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale.value)
+                        .size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale)
                         .zIndex(if (selectIndex.value == eidolon.eidolonIndex) 10f else eidolon.eidolonIndex.toFloat())
                         .offset(
-                            eidolonOffSet[eidolon.eidolonIndex].first.dp.times(eidolonScale.value),
-                            eidolonOffSet[eidolon.eidolonIndex].second.dp.times(eidolonScale.value),
+                            eidolonOffSet[eidolon.eidolonIndex].first.dp.times(eidolonScale),
+                            eidolonOffSet[eidolon.eidolonIndex].second.dp.times(eidolonScale),
                         )
                         .clickable(
                             enabled = true,
@@ -211,7 +209,7 @@ fun CharacterEidolonBox(eidolonList: ArrayList<Eidolon>, selectIndex : MutableSt
                             LocalPlatformContext.current,
                             getAssetsURLByFileName(ImageFolder.CHAR_EIDOLON, eidolon.eidolonImgName)
                         ),
-                        modifier = Modifier.size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale.value),
+                        modifier = Modifier.size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale),
                         contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Image"
                     )
 
@@ -229,7 +227,7 @@ fun CharacterEidolonBox(eidolonList: ArrayList<Eidolon>, selectIndex : MutableSt
                                     else -> Res.drawable.EidolonFrame1
                                 }
                             ),
-                            modifier = Modifier.size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale.value),
+                            modifier = Modifier.size(Constants.EIDOLON_IMG_BASE_SIZE * eidolonScale),
                             contentDescription = "Character Eidolon${eidolon.eidolonIndex}'s Frame"
                         )
                     }

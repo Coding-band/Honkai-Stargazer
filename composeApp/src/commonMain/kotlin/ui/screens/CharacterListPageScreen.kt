@@ -60,8 +60,21 @@ lateinit var filterChoiceArray: SnapshotStateList<FilterEnum>
 @Composable
 fun initCharList() {
     charList = rememberSaveable(stateSaver = Character.ListSaver) { mutableStateOf(arrayListOf()) }
-    charListSortable = rememberSaveable(stateSaver = Character.ListSaver) { mutableStateOf(ArrayList(charList.value)) }
+    // 確保 charListSortable 初始值與 charList 一致，避免 scrollbar 從空列表開始
+    charListSortable = rememberSaveable(stateSaver = Character.ListSaver) {
+        mutableStateOf(ArrayList(charList.value))
+    }
     filterChoiceArray = rememberMutableStateListJsonOf<FilterEnum>()
+
+    // 如果 charList 為空但 JSON 已可用，預先用已有的數據填充
+    // 這確保了首次進入 CharacterListPage 時 scrollbar 就能確定長度
+    if (charList.value.isEmpty()) {
+        val cachedList = buildCharListFromJson()
+        if (cachedList.isNotEmpty()) {
+            charList.value = cachedList
+            charListSortable.value = cachedList
+        }
+    }
 }
 
 @OptIn(ExperimentalCoroutinesApi::class)
@@ -75,6 +88,7 @@ fun refreshCharList(){
         job.await()
         job.getCompleted()
     }
+    // 同時更新，減少中間狀態
     charList.value = newList
     charListSortable.value = newList
 }
@@ -82,7 +96,7 @@ fun refreshCharList(){
 /**
  * 從 JSON 建立角色列表（純計算，可在任何線程執行）
  */
-private fun buildCharListFromJson(): ArrayList<Character> {
+fun buildCharListFromJson(): ArrayList<Character> {
     val tmpCharList = arrayListOf<Character>()
     if (Character.getCharListJson() !is JsonArray) {
         return tmpCharList
