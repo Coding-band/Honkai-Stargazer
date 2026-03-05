@@ -24,11 +24,13 @@ import files.ic_speed
 import files.ic_unknown
 import files.path_the_abundance
 import files.path_the_destruction
+import files.path_the_elation
 import files.path_the_erudition
 import files.path_the_harmony
 import files.path_the_hunt
 import files.path_the_nihility
 import files.path_the_preservation
+import files.path_the_remembrance
 import files.pom_pom_failed_issue
 import files.vocchi
 import org.jetbrains.compose.resources.DrawableResource
@@ -50,6 +52,9 @@ fun getTeamAdviceById(id : Int) : TeamAdvice{
         -401 -> TeamAdvice(-401,"輔助", Res.drawable.ic_unknown)
         -402 -> TeamAdvice(-402,"副C", Res.drawable.ic_unknown)
         -403 -> TeamAdvice(-403,"主C", Res.drawable.ic_unknown)
+
+        -209 -> TeamAdvice(-209,"歡愉", Res.drawable.path_the_elation)
+        -208 -> TeamAdvice(-208,"記憶", Res.drawable.path_the_remembrance)
         -207 -> TeamAdvice(-207,"豐饒", Res.drawable.path_the_abundance)
         -206 -> TeamAdvice(-206,"同諧", Res.drawable.path_the_harmony)
         -205 -> TeamAdvice(-205,"毀滅", Res.drawable.path_the_destruction)
@@ -57,6 +62,7 @@ fun getTeamAdviceById(id : Int) : TeamAdvice{
         -203 -> TeamAdvice(-203,"智識", Res.drawable.path_the_erudition)
         -202 -> TeamAdvice(-202,"巡獵", Res.drawable.path_the_hunt)
         -201 -> TeamAdvice(-201,"存護", Res.drawable.path_the_preservation)
+
         -107 -> TeamAdvice(-107,"量子", Res.drawable.element_quantum)
         -106 -> TeamAdvice(-106,"雷", Res.drawable.element_lightning)
         -105 -> TeamAdvice(-105,"物理", Res.drawable.element_physical)
@@ -64,6 +70,7 @@ fun getTeamAdviceById(id : Int) : TeamAdvice{
         -103 -> TeamAdvice(-103,"火", Res.drawable.element_fire)
         -102 -> TeamAdvice(-102,"風", Res.drawable.element_wind)
         -101 -> TeamAdvice(-101,"冰", Res.drawable.element_ice)
+
         -301 -> TeamAdvice(-301,"DOT", Res.drawable.vocchi)
         -302 -> TeamAdvice(-302,"DOT易傷", Res.drawable.vocchi)
         -303 -> TeamAdvice(-303,"KuruKuru", Res.drawable.ic_kurukuru)

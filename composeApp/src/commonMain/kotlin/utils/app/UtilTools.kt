@@ -948,6 +948,7 @@ fun getImageNameByRegistName(registName: String, isCharFullImg: Boolean = false,
         .replace(".","")
         .replace(" ","_")
         .replace("-","_")
+        .replace("@","_")
 
         .replace("void_ranger","voidranger")
 
