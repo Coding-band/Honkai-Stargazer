@@ -28,20 +28,13 @@ import files.Res
 import files.app_icon_black_bg
 import files.euclid_circular_a_medium
 import files.star_peace_icon
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import types.UserAbyssRecord.Companion.refreshAAData
-import types.UserAbyssRecord.Companion.refreshASData
-import types.UserAbyssRecord.Companion.refreshMOCData
-import types.UserAbyssRecord.Companion.refreshPFData
 import types.UserAccount.Companion.getUID
-import types.UserAccount.Companion.refreshUserAccount
 import ui.components.HeaderData
 import ui.components.defaultHeaderData
 import ui.navigation.HomeRoute
@@ -49,14 +42,13 @@ import ui.navigation.Screen
 import ui.navigation.SplashRoute
 import ui.navigation.navigateLimited
 import ui.navigation.screenInstance
-import utils.app.CharWeightList
 import utils.app.FontSizeNormalLarge24
 import utils.app.FontSizeNormalSmall
 import utils.app.Language
 import utils.app.Preferences
+import utils.app.SplashDataLoader
 import utils.app.UpdateAssetsPopup
 import utils.app.updateCheckInit
-import utils.starbase.StarbaseAPI
 
 lateinit var hasRefreshed: MutableState<Boolean>
 @Preview
@@ -77,53 +69,51 @@ fun SplashPage(
         hasRefreshed = remember { mutableStateOf(false) }
     }
 
+    // 數據加載完成狀態
+    val isDataReady = remember { mutableStateOf(false) }
+
     LaunchedEffect(Unit) {
         delay(100)
         if (!showPopup.value) {
-            CoroutineScope(Dispatchers.Default).launch {
-                if (getUID() != "000000000" && !hasRefreshed.value) {
-                    launch {
-                        refreshUserAccount()
-                        refreshMOCData()
-                        refreshPFData()
-                        refreshASData()
-                        refreshAAData()
-                        Preferences().Leaderboard.updatedLeaderboard()
-
-                        CharWeightList.INSTANCE
+            if (getUID() != "000000000" && !hasRefreshed.value) {
+                // 使用優化後的數據加載器
+                SplashDataLoader.startLoading(
+                    onEssentialComplete = {
+                        // 關鍵數據（用戶帳號、角色權重）加載完成
+                        // 可以安全導航到 HomePage
+                        isDataReady.value = true
+                        hasRefreshed.value = true
+                    },
+                    onAllComplete = {
+                        // 所有下載數據加載完成（上傳仍在背景進行）
+                        // 這裡可以做額外的處理，例如更新 UI 指示器
                     }
-
-                    launch {
-                        StarbaseAPI().updateUserAccountInfo()
-                        StarbaseAPI().updateCharData()
-                        StarbaseAPI().updateMOCData()
-                        StarbaseAPI().updatePFData()
-                        StarbaseAPI().updateASData()
-                        StarbaseAPI().updateAAData()
-                    }
-                }
-                withContext(Dispatchers.Main) {
-                    hasRefreshed.value = true
-                }
+                )
+            } else {
+                // 未登入用戶或已刷新過，直接標記完成
+                isDataReady.value = true
+                hasRefreshed.value = true
             }
         }
     }
 
-    LaunchedEffect(showPopup.value, showUpdatePopup.value, showJCEFPopup.value){
-        if (!showPopup.value && !showUpdatePopup.value && screenInstance !is Screen.HomePage && screenInstance !is Screen.BlankPage && !showJCEFPopup.value) {
-            //if(!isJCEFInited){
-            //     showJCEFPopup.value = true
-            //}else{
-                CoroutineScope(Dispatchers.Default).launch {
-                    withContext(Dispatchers.Main) {
-                        navigator.navigateLimited(HomeRoute){
-                            popUpTo(SplashRoute){
-                                inclusive = true
-                            }
-                        }
+    LaunchedEffect(showPopup.value, showUpdatePopup.value, showJCEFPopup.value, isDataReady.value){
+        // 只有當：1)無彈窗 2)關鍵數據已加載 3)尚未在 HomePage 時才導航
+        val canNavigate = !showPopup.value &&
+                          !showUpdatePopup.value &&
+                          !showJCEFPopup.value &&
+                          (isDataReady.value || getUID() == "000000000") &&
+                          screenInstance !is Screen.HomePage &&
+                          screenInstance !is Screen.BlankPage
+
+        if (canNavigate) {
+            withContext(Dispatchers.Main) {
+                navigator.navigateLimited(HomeRoute){
+                    popUpTo(SplashRoute){
+                        inclusive = true
                     }
                 }
-            //}
+            }
         }
     }
 

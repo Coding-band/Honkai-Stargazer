@@ -30,6 +30,7 @@ import kotlinx.serialization.json.long
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import utils.app.Preferences
+import utils.app.SplashDataLoader
 import utils.app.errorLog
 import utils.app.readFromFile
 import utils.app.removeStrQuote
@@ -137,6 +138,7 @@ class UserAccount(
             Preferences().CharList.resetCharList()
             Preferences().Leaderboard.resetLeaderboard()
             UserAbyssRecord.INSTANCE = UserAbyssRecord()
+            SplashDataLoader.reset()
         }
 
         fun refreshUserAccount() {
