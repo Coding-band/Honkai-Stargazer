@@ -127,10 +127,13 @@ fun HomePageBlockEditPageScreen(
                     },
                 ){ index, item, isDragging ->
                     key(item){
-                        val block = Constants.HOME_PAGE_MENU_DEFAULT.firstOrNull { it.itemId == item }
-                        if (block != null) {
-                            block.itemIsDisplay = true
-                            ItemListBlock(blockItem = block, reorderList, draggableModifier = Modifier.draggableHandle())
+                        // Now you have to use ReorderableItem to contain!
+                        ReorderableItem {
+                            val block = Constants.HOME_PAGE_MENU_DEFAULT.firstOrNull { it.itemId == item }
+                            if (block != null) {
+                                block.itemIsDisplay = true
+                                ItemListBlock(blockItem = block, reorderList, draggableModifier = Modifier.draggableHandle())
+                            }
                         }
                     }
                 }
