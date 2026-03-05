@@ -73,6 +73,8 @@ data class AttributeExchange(
             AttributeExchange(id = 58,key = "break_dmg", attribute = Attribute.ATTR_BREAK_DMG,type = "BreakDamageAddedRatioBase", isPercent = true, isForRelic = false), //Using, for relics
             AttributeExchange(id = 59,key = "break_dmg", attribute = Attribute.ATTR_BREAK_DMG, type = "BreakDamageAddedRatioBase", isPercent = true, isForRelic = true), //Using, for relics
             AttributeExchange(id = 60,key = "sp", isPercent = false), //Using, for relics?
+
+            AttributeExchange(id = 71,key = "elation_dmg", attribute = Attribute.ATTR_ELATION, type = "ElationDamageAddedRatioBase", isPercent = true), //Elation
         )
 
         //FIX : Cannot find if case : isForRelic = true and Expect key is xx_dmg

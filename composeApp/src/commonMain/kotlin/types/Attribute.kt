@@ -7,6 +7,7 @@ import files.ATTR_CRIT_RATE
 import files.ATTR_DEF
 import files.ATTR_EFFECT_HIT
 import files.ATTR_EFFECT_RES
+import files.ATTR_ELATION_DMG
 import files.ATTR_FIRE_DMG
 import files.ATTR_HEAL_RATE
 import files.ATTR_HP
@@ -27,6 +28,7 @@ import files.ic_crit_rate
 import files.ic_def
 import files.ic_effect_hit_rate
 import files.ic_effect_res
+import files.ic_elation_dmg
 import files.ic_energy_regeneration_rate
 import files.ic_fire
 import files.ic_hp
@@ -64,6 +66,7 @@ enum class Attribute(var chName : String, var subName : String, var resName : St
     ATTR_EFFECT_HIT("效果命中","effect_hit", Res.string.ATTR_EFFECT_HIT,Res.drawable.ic_effect_hit_rate),
     ATTR_EFFECT_RES("效果抗性","effect_res", Res.string.ATTR_EFFECT_RES,Res.drawable.ic_effect_res),
     ATTR_SP_RATE("充能效率","sp_rate", Res.string.ATTR_SP_RATE,Res.drawable.ic_energy_regeneration_rate),
+    ATTR_ELATION("歡愉度","elation_dmg", Res.string.ATTR_ELATION_DMG,Res.drawable.ic_elation_dmg),
     ATTR_UNKNOWN("未知","unknown", Res.string.HaveNotUsed,Res.drawable.ic_unknown),
 
 
