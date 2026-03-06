@@ -612,7 +612,7 @@ fun checkAssetsUpdate() {
                 }
 
                 // Save the latest version to the file
-                Settings().getString("assetsVersion", latestVersion)
+                Settings().putString("assetsVersion", latestVersion)
             }
         } catch (e: Exception) {
             errorLog("UtilTools.kt", "checkAssetsUpdate", e)
