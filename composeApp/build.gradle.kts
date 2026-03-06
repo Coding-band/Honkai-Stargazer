@@ -271,7 +271,7 @@ compose.desktop {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb, TargetFormat.Exe, TargetFormat.Pkg)
             packageName = "Stargazer 3${if(appProfile.contains("PRODUCTION")) "" else " ($appProfile)"}"
             packageVersion = appVersionDesktop
-            copyright = "Copyright © 2025 Coding Band 版權所有"
+            copyright = "Copyright © 2026 Coding Band 版權所有"
             description = "Stargazer 3 is an unofficial multiplatform app developed by Coding Band."
             vendor = "Coding Band"
 
@@ -314,6 +314,17 @@ compose.desktop {
                 if(isForAppStore){
                     //ref : https://youtrack.jetbrains.com/issue/CMP-2096
                     //Please don't modify the profile name to other custom name, it will send u a jpackage error :)
+                    /**
+                     * To Updating certificate provisioning profile, please follow the steps below:
+                     * 1. Generate a new CSR file using Keychain Access on your Mac.
+                     * 2. Log in to your Apple Developer account and navigate to the "Certificates, Identifiers & Profiles" section.
+                     * 3. Navigate to the "SG3 Mac App Provisioning Profile" -> Edit -> Select the Mac App Distribution -> Upload CSR. -> Download
+                     * 4. Navigate to the "SG3 Mac App JVM Provisioning Profile" -> Edit -> Select the Mac App Distribution -> Upload CSR. (Probably no need) -> Download
+                     *
+                     * Rename SG3 Mac App Provisioning Profile to embedded.provisionprofile
+                     * Rename SG3 Mac App JVM Provisioning Profile to runtime.provisionprofile
+                     * Then put them in composeApp/stores/ folder.
+                     */
                     provisioningProfile.set(project.file("stores/embedded.provisionprofile"))
                     runtimeProvisioningProfile.set(project.file("stores/runtime.provisionprofile"))
                     entitlementsFile.set(project.file("stores/entitlements.plist"))
