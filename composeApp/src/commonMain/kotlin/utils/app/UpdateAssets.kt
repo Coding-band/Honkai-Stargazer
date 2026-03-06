@@ -49,7 +49,9 @@ import ui.navigation.refreshInit
 import ui.screens.doRefresh
 import utils.starbase.StarbaseAPI
 
-private var localCommit = Settings().getString("localCommit-${Language.TextLanguageInstance.folderName}", "")
+private var localCommit: String
+    get() = Settings().getString("localCommit-${Language.TextLanguageInstance.folderName}", "")
+    set(value) { Settings().putString("localCommit-${Language.TextLanguageInstance.folderName}", value) }
 private lateinit var isProcessing: MutableState<Boolean>
 private var infoList = arrayListOf<UpdateAssetsInfo>()
 private var updateState = UpdateAssetsStatus.SKIP
@@ -207,7 +209,7 @@ fun UpdateAssetsPopup(
                     }else {
                         //Update the local commit
                         downloadProgress.value = 0L
-                        Settings().putString("localCommit-${Language.TextLanguageInstance.folderName}", infoList.first().commit)
+                        localCommit = infoList.first().commit
                     }
 
                     refreshInit()
