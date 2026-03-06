@@ -27,7 +27,6 @@ import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
@@ -72,6 +71,8 @@ import files.phorphos_chats_circle_regular
 import files.phorphos_dice_four_regular
 import files.phorphos_dice_two_regular
 import files.phorphos_person_fill
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.serialization.json.JsonElement
@@ -97,7 +98,6 @@ import utils.app.Constants
 import utils.app.Constants.Companion.RELIC_CARD_WIDTH
 import utils.app.FontSizeNormal12
 import utils.app.FontSizeNormal14
-import utils.app.JsonElementSaver
 import utils.app.Language
 import utils.app.Preferences
 import utils.app.SG3VerticalScrollbar
@@ -113,6 +113,11 @@ val relicInfoNavItemList = arrayOf(
     InfoNavigateItem(Res.drawable.phorphos_chats_circle_regular, 3, Res.string.RelicDetail),
 )
 
+// Small page data holder for async loading
+private data class RelicInfoPageData(
+    val relicInfoJson: JsonElement,
+)
+
 @OptIn(FlowPreview::class)
 @Composable
 fun RelicInfoPage(
@@ -126,20 +131,60 @@ fun RelicInfoPage(
     val relicName = route.relicName
     val relicFileName = route.fileName
 
-    val relicInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Relic.getRelicDataFromJSON(relicFileName, Language.TextLanguageInstance) as JsonElement) }
+    // Async load state: avoid blocking main thread for file I/O / JSON parsing
+    val pageData = remember { mutableStateOf<RelicInfoPageData?>(null) }
+    val isLoadError = remember { mutableStateOf(false) }
 
-    if (relicInfoJson !is JsonObject || relicInfoJson.jsonObject.isEmpty()) {
+    LaunchedEffect(relicFileName) {
+        val data = withContext(Dispatchers.Default) {
+            try {
+                Relic.getRelicDataFromJSON(relicFileName, Language.TextLanguageInstance) as JsonElement
+            } catch (_: Exception) {
+                null
+            }
+        }
+
+        if (data == null || (data is JsonObject && data.jsonObject.isEmpty())) {
+            isLoadError.value = true
+        } else {
+            pageData.value = RelicInfoPageData(data)
+        }
+    }
+
+    // Error handling: show toast and navigate back
+    if (isLoadError.value) {
         showWarningToast(message = removeStrQuote(Res.string.NoDataYet))
         navigator.popBackStack()
         return
     }
 
-    val headerDataPage = HeaderData(
-        relicInfoJson.jsonObject["name"]!!.jsonPrimitive.content,
-        titleIconId = Res.drawable.phorphos_person_fill
-    )
+    // 提取已加載數據（可能為 null = 尚在加載中）
+    val loadedData = pageData.value
+    val relicInfoJson = loadedData?.relicInfoJson
+    val isDataReady = loadedData != null
+    val isRelic = try { relicFileName.toInt() < 300 } catch (_: Exception) { true }
+
+    // Header：加載完成前用遺器名，加載完成後用 JSON 內的名字
+    val headerDataPage = if (relicInfoJson != null) {
+        HeaderData(
+            relicInfoJson.jsonObject["name"]!!.jsonPrimitive.content,
+            titleIconId = Res.drawable.phorphos_person_fill
+        )
+    } else {
+        HeaderData(
+            title = relicName,
+            titleIconId = Res.drawable.phorphos_person_fill
+        )
+    }
 
     val listState = rememberLazyListState()
+
+    // 當數據加載完成後，滾動到頂部
+    LaunchedEffect(isDataReady) {
+        if (isDataReady) {
+            listState.scrollToItem(0)
+        }
+    }
 
     var isNaviBarVisible by rememberSaveable { mutableStateOf(false) }
 
@@ -180,7 +225,6 @@ fun RelicInfoPage(
     BoxWithConstraints {
         val pageSize = Pair(maxWidth, maxHeight)
 
-        val isRelic = relicFileName.toInt() < 300
         RelicInfoFullImgWithRare(
             fileName = relicName,
             isVisible = !isNaviBarVisible, //alpha = scrollToAlpha
@@ -189,11 +233,15 @@ fun RelicInfoPage(
 
         //RecycleView
         LazyColumn(state = listState, modifier = Modifier.hazeSource(hazeState).align(Alignment.Center)) {
-            item { InfoBioColumn(relicInfoJson, pageSize = pageSize, isUserOwned = false) }
-            item { RelicSetInfo(relicInfoJson, false) }
-            item { if(isRelic) RelicSetInfo(relicInfoJson, isRelic) }
-            item { RelicSetsCardDisplay(relicName, relicInfoJson, isRelic) }
-            item { Box(modifier = Modifier.navigationBarsPadding().height(72.dp)) }
+            if (isDataReady && relicInfoJson != null) {
+                item(key = "InfoBioColumn") { InfoBioColumn(relicInfoJson, pageSize = pageSize, isUserOwned = false) }
+                item(key = "RelicSetInfo2Pcs") { RelicSetInfo(relicInfoJson, false) }
+                if (isRelic) {
+                    item(key = "RelicSetInfo4Pcs") { RelicSetInfo(relicInfoJson, true) }
+                }
+                item(key = "RelicSetsCardDisplay") { RelicSetsCardDisplay(relicName, relicInfoJson, isRelic) }
+            }
+            item(key = "PaddingABox") { Box(modifier = Modifier.navigationBarsPadding().height(72.dp)) }
         }
 
         SG3VerticalScrollbar(listState = listState)
@@ -330,14 +378,12 @@ fun RelicSetsCardDisplay(
             Spacer(modifier = Modifier.height(24.dp))
 
             Box(modifier = Modifier.fillMaxWidth().widthIn(RELIC_CARD_WIDTH / 2, RELIC_CARD_WIDTH).wrapContentHeight()) {
-                LazyRow(
-                    state = rememberLazyListState(),
+                Row(
                     horizontalArrangement = Arrangement.spacedBy(12.dp),
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier.align(Alignment.Center).wrapContentSize()
                 ) {
                     for (index in if (isRelic) { 1..4 } else { 5..6 }) {
-                        item{
                             Box(
                                 modifier = Modifier.widthIn(RELIC_CARD_WIDTH, RELIC_CARD_WIDTH *1.5f).wrapContentHeight()
                                     .clip(
@@ -402,7 +448,6 @@ fun RelicSetsCardDisplay(
                                     Spacer(modifier = Modifier.height(2.dp))
                                 }
                             }
-                        }
                     }
                 }
             }

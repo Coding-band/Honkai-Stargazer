@@ -31,11 +31,9 @@ import files.UpdateAssetFoundUpdate
 import files.UpdateAssetUpdateSize
 import files.UpdateAssetUpdateSuggestionWiFi
 import files.UpdateAssetUpdateTheHerta
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.IO
-import kotlinx.coroutines.async
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
@@ -145,7 +143,6 @@ fun updateCheckInit(forceDownload: Boolean = false) : Boolean{
     }
 }
 
-@OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun UpdateAssetsPopup(
     isShowPopup: MutableState<Boolean>,
@@ -200,24 +197,22 @@ fun UpdateAssetsPopup(
             if(!isProcessing.value && acceptUpdate.value){
                 isProcessing.value = true
 
-                CoroutineScope(Dispatchers.IO).async {
-                    val isSuccess = mutableStateOf(false)
-                    downloadFromURLProgress(url = "${StarbaseAPI().getGitHubStaticAssetURL()}/updates/${infoList.first().commit}/${infoList.first().commit}-${Language.TextLanguageInstance.folderName}-${updateState.name}.zip", downloadProgress, isSuccess = isSuccess)
+                val isSuccess = withContext(Dispatchers.IO) {
+                    val successState = mutableStateOf(false)
+                    downloadFromURLProgress(url = "${StarbaseAPI().getGitHubStaticAssetURL()}/updates/${infoList.first().commit}/${infoList.first().commit}-${Language.TextLanguageInstance.folderName}-${updateState.name}.zip", downloadProgress, isSuccess = successState)
+                    successState.value
+                }
 
-                    if(!isSuccess.value) {
-                        //Warning ...
-                    }else {
-                        //Update the local commit
-                        downloadProgress.value = 0L
-                        localCommit = infoList.first().commit
-                    }
+                if(isSuccess) {
+                    //Update the local commit
+                    localCommit = infoList.first().commit
+                    downloadProgress.value = 0L
+                }
 
-                    refreshInit()
-                    doRefresh.value = true
-                    isProcessing.value = false
-                    isShowPopup.value = false
-
-                }.await()
+                refreshInit()
+                doRefresh.value = true
+                isProcessing.value = false
+                isShowPopup.value = false
             }
         }
     }else{

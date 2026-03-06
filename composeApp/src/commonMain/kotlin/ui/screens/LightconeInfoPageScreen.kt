@@ -34,7 +34,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
@@ -57,7 +56,9 @@ import files.phorphos_chats_circle_regular
 import files.phorphos_info_regular
 import files.phorphos_person_fill
 import files.phorphos_person_regular
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.jsonObject
@@ -80,7 +81,6 @@ import ui.components.PageHeader
 import ui.components.StatusType
 import ui.navigation.LightconeInfoRoute
 import utils.app.DefaultZIndex
-import utils.app.JsonElementSaver
 import utils.app.Language
 import utils.app.Preferences
 import utils.app.SG3VerticalScrollbar
@@ -97,6 +97,11 @@ val lcInfoNavItemList = arrayOf(
     InfoNavigateItem(Res.drawable.phorphos_chats_circle_regular, 4, Res.string.LightconeStory),
 )
 
+// Preloaded page data holder for async loading
+private data class LightconeInfoPageData(
+    val lcInfoJson: JsonElement,
+)
+
 @Composable
 fun LightconeInfoPage(
     navigator: NavHostController,
@@ -110,21 +115,59 @@ fun LightconeInfoPage(
     val lightconeName = route.lcName
     val lightconeFileName = route.fileName
     val path = valueOfWithDefaultPath(route.path)
-    val lcInfoJson : JsonElement by rememberSaveable(stateSaver = JsonElementSaver) { mutableStateOf(Lightcone.getLightconeDataFromJSON(lightconeFileName, Language.TextLanguageInstance) as JsonElement) }
+    // Async load state: avoid blocking main thread for file I/O / JSON parsing
+    val pageData = remember { mutableStateOf<LightconeInfoPageData?>(null) }
+    val isLoadError = remember { mutableStateOf(false) }
 
+    LaunchedEffect(lightconeFileName) {
+        val data = withContext(Dispatchers.Default) {
+            try {
+                Lightcone.getLightconeDataFromJSON(lightconeFileName, Language.TextLanguageInstance) as JsonElement
+            } catch (_: Exception) {
+                null
+            }
+        }
 
-    if (lcInfoJson !is JsonObject || lcInfoJson.jsonObject.isEmpty()) {
+        if (data == null || (data is JsonObject && data.jsonObject.isEmpty())) {
+            isLoadError.value = true
+        } else {
+            pageData.value = LightconeInfoPageData(data)
+        }
+    }
+
+    // Error handling: show toast and navigate back
+    if (isLoadError.value) {
         showWarningToast(message = removeStrQuote(Res.string.NoDataYet))
         navigator.popBackStack()
         return
     }
 
-    val headerDataPage = HeaderData(
-        lcInfoJson.jsonObject["name"]!!.jsonPrimitive.content,
-        titleIconId = Res.drawable.phorphos_person_fill
-    )
+    // 提取已加載數據（可能為 null = 尚在加載中）
+    val loadedData = pageData.value
+    val lcInfoJson = loadedData?.lcInfoJson
+    val isDataReady = loadedData != null
+
+    // Header：加載完成前用光錐名，加載完成後用 JSON 內的名字
+    val headerDataPage = if (lcInfoJson != null) {
+        HeaderData(
+            lcInfoJson.jsonObject["name"]!!.jsonPrimitive.content,
+            titleIconId = Res.drawable.phorphos_person_fill
+        )
+    } else {
+        HeaderData(
+            title = lightconeName,
+            titleIconId = Res.drawable.phorphos_person_fill
+        )
+    }
 
     val listState = rememberLazyListState()
+
+    // 當數據加載完成後，滾動到頂部
+    LaunchedEffect(isDataReady) {
+        if (isDataReady) {
+            listState.scrollToItem(0)
+        }
+    }
 
     var isNaviBarVisible by rememberSaveable { mutableStateOf(false) }
 
@@ -173,12 +216,14 @@ fun LightconeInfoPage(
 
         //RecycleView
         LazyColumn(state = listState, modifier = Modifier.hazeSource(hazeState, zIndex = DefaultZIndex).align(Alignment.Center)) {
-            item { InfoBioColumn(lcInfoJson, combatType = null, path, isUserOwned = false, isFullEidolon = false, pageSize = pageSize) }
-            //Don't forget to add "StatusBarPadding" !
-            item { InfoBasicStatus(lcInfoJson, StatusType.LIGHTCONE) }
-            item { InfoLcMetamorphosis(lcInfoJson) }
-            item { InfoAdviceCharacter(lightconeFileName) }
-            item { InfoStory(lcInfoJson, isLcStory = true) }
+            if (isDataReady && lcInfoJson != null) {
+                item { InfoBioColumn(lcInfoJson, combatType = null, path, isUserOwned = false, isFullEidolon = false, pageSize = pageSize) }
+                //Don't forget to add "StatusBarPadding" !
+                item { InfoBasicStatus(lcInfoJson, StatusType.LIGHTCONE) }
+                item { InfoLcMetamorphosis(lcInfoJson) }
+                item { InfoAdviceCharacter(lightconeFileName) }
+                item { InfoStory(lcInfoJson, isLcStory = true) }
+            }
             item { Box(modifier = Modifier.navigationBarsPadding().height(72.dp)) }
 
         }

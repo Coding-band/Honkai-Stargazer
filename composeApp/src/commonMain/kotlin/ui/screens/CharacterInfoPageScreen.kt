@@ -193,29 +193,34 @@ fun CharacterInfoPage(
         return
     }
 
-    // 數據尚未加載完成：顯示角色全圖作為過渡（已由 Coil 異步加載，不會阻塞）
+    // 提取已加載數據（可能為 null = 尚在加載中）
     val loadedData = pageData.value
-    if (loadedData == null) {
-        Box(modifier = Modifier.fillMaxSize().background(Color.Black)) {
-            CharacterInfoFullImgWithRare(
-                fileName = characterName,
-                isVisible = true
-            )
-        }
-        return
+    val charInfoJson = loadedData?.charInfoJson
+    val charWeightJsonObject = loadedData?.charWeightJsonObject
+    val isUserOwned = loadedData?.isUserOwned ?: false
+    val isDataReady = loadedData != null
+
+    // Header：加載完成前用角色名，加載完成後用 JSON 內的名字
+    val headerDataPage = if (charInfoJson != null) {
+        HeaderData(
+            charInfoJson.jsonObject["name"]!!.jsonPrimitive.content,
+            titleIconId = Res.drawable.phorphos_person_fill
+        )
+    } else {
+        HeaderData(
+            title = characterName,
+            titleIconId = Res.drawable.phorphos_person_fill
+        )
     }
 
-    // ===== 數據已就緒，渲染完整頁面 =====
-    val charInfoJson = loadedData.charInfoJson
-    val charWeightJsonObject = loadedData.charWeightJsonObject
-    val isUserOwned = loadedData.isUserOwned
-
-    val headerDataPage = HeaderData(
-        charInfoJson.jsonObject["name"]!!.jsonPrimitive.content,
-        titleIconId = Res.drawable.phorphos_person_fill
-    )
-
     val listState = rememberLazyListState()
+
+    // 當數據加載完成後，滾動到頂部
+    LaunchedEffect(isDataReady) {
+        if (isDataReady) {
+            listState.scrollToItem(0)
+        }
+    }
 
     var isNaviBarVisible by rememberSaveable { mutableStateOf(false) }
 
@@ -235,7 +240,7 @@ fun CharacterInfoPage(
     val selectedSectIndex = remember { mutableStateOf(0) } //流派
 
     // charWeightJsonObject 根據流派選擇更新
-    val currentCharWeightJsonObject = remember(selectedSectIndex.value) {
+    val currentCharWeightJsonObject = remember(selectedSectIndex.value, charWeightJsonObject) {
         if (charWeightJsonObject != null) {
             try {
                 val weightInstance = CharWeightList.INSTANCE
@@ -286,14 +291,16 @@ fun CharacterInfoPage(
                 .align(Alignment.Center),
             verticalArrangement = Arrangement.spacedBy(30.dp)
         ) {
-            item(key = "InfoBioColumn") { InfoBioColumn(charInfoJson, combatType, path, isUserOwned = isUserOwned, isFullEidolon = false, pageSize = pageSize) }
-            item(key = "InfoBasicStatus") { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
-            item(key = "CharacterTraceTree") { CharacterTraceTree(charInfoJson, path, characterName, dialogTitle, dialogDisplay,dialogLastTrigType,  dialogComponent) }
-            item(key = "CharacterEidolon") { CharacterEidolon(charInfoJson, characterName, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
-            item(key = "InfoAdviceLightcone") { InfoAdviceLightcone(currentCharWeightJsonObject) }
-            item(key = "InfoAdviceRelic") { InfoAdviceRelic(currentCharWeightJsonObject) }
-            item(key = "InfoAdviceTeammate") { InfoAdviceTeammate(currentCharWeightJsonObject, characterId.toString(), dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
-            item(key = "InfoStory") { InfoStory(charInfoJson) }
+            if (isDataReady && charInfoJson != null) {
+                item(key = "InfoBioColumn") { InfoBioColumn(charInfoJson, combatType, path, isUserOwned = isUserOwned, isFullEidolon = false, pageSize = pageSize) }
+                item(key = "InfoBasicStatus") { InfoBasicStatus(charInfoJson, StatusType.CHARACTER) }
+                item(key = "CharacterTraceTree") { CharacterTraceTree(charInfoJson, path, characterName, dialogTitle, dialogDisplay,dialogLastTrigType,  dialogComponent) }
+                item(key = "CharacterEidolon") { CharacterEidolon(charInfoJson, characterName, dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
+                item(key = "InfoAdviceLightcone") { InfoAdviceLightcone(currentCharWeightJsonObject) }
+                item(key = "InfoAdviceRelic") { InfoAdviceRelic(currentCharWeightJsonObject) }
+                item(key = "InfoAdviceTeammate") { InfoAdviceTeammate(currentCharWeightJsonObject, characterId.toString(), dialogTitle, dialogDisplay, dialogLastTrigType, dialogComponent) }
+                item(key = "InfoStory") { InfoStory(charInfoJson) }
+            }
             item(key = "PaddingABox") { Box(modifier = Modifier.navigationBarsPadding().height(72.dp)) }
 
         }
