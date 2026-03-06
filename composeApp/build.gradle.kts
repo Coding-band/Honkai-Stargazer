@@ -170,7 +170,7 @@ kotlin {
 
         }
         nativeMain.dependencies {
-            implementation("io.ktor:ktor-client-darwin:3.0.0")
+            implementation(libs.ktor.client.darwin)
             //RevenueCat
             implementation(libs.purchases.core)
         }
